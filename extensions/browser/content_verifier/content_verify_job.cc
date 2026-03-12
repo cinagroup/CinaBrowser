@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -138,7 +138,7 @@ class ScopedContentVerifyJobCrashKey {
  private:
   // These record the extension's version from the extension root of ContentHash
   // and ContentVerify Job. E.g. from:
-  //   "/path/to/chromium/<profile_name>/Extensions/<ext_id>/<ext_version>/""
+  //   "/path/to/Cinaseek/<profile_name>/Extensions/<ext_id>/<ext_version>/""
   //
   // We record <ext_version>.
   base::debug::ScopedCrashKeyString content_hash_ext_root_version_crash_key_;

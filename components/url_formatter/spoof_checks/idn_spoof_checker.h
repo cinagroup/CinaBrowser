@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,9 +37,9 @@ FORWARD_DECLARE_TEST(UrlFormatterTest, IDNToUnicode);
 using Skeletons = base::flat_set<std::string>;
 
 // A helper class for IDN Spoof checking, used to ensure that no IDN input is
-// spoofable per Chromium's standard of spoofability. For a more thorough
-// explanation of how spoof checking works in Chromium, see
-// http://dev.chromium.org/developers/design-documents/idn-in-google-chrome .
+// spoofable per Cinaseek's standard of spoofability. For a more thorough
+// explanation of how spoof checking works in Cinaseek, see
+// http://dev.Cinaseek.org/developers/design-documents/idn-in-google-chrome .
 class IDNSpoofChecker {
  public:
   struct HuffmanTrieParams {

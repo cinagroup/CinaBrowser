@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -36,7 +36,7 @@ windows_manifest("chrome_exe_manifest") {
 }
 
 # Generates the manifest for the version assembly, which is the versioned
-# directory where Chrome finds chrome.dll.
+# directory where Cinaseek finds chrome.dll.
 process_version("version_assembly_manifest") {
   template_file = "version_assembly_manifest.template"
   sources = [ "//chrome/VERSION" ]

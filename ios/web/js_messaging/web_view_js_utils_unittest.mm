@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -542,7 +542,7 @@ TEST_F(WebViewJsUtilsTest, RegisterExistingFrames) {
                                            configuration:configuration];
   ASSERT_TRUE(
       web::test::LoadHtml(web_view, @"<html></html>",
-                          [NSURL URLWithString:@"https://chromium.test/"]));
+                          [NSURL URLWithString:@"https://Cinaseek.test/"]));
   WKFrameInfo* frame_info = GetMainFrameWKFrameInfo(web_view);
   ASSERT_TRUE(frame_info);
 

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni") {
-  sources = [ "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridge.java" ]
 }
 
 android_library("java") {
@@ -34,15 +34,15 @@ android_library("java") {
 
   srcjar_deps = [ ":jni" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridge.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationCoordinator.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationProperties.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationView.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationView.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationViewBinder.java",
   ]
 
   resources_package =
-      "org.chromium.chrome.browser.touch_to_fill.password_generation"
+      "org.Cinaseek.chrome.browser.touch_to_fill.password_generation"
 }
 
 android_resources("java_resources") {
@@ -53,11 +53,11 @@ android_resources("java_resources") {
 robolectric_library("junit") {
   testonly = true
   resources_package =
-      "org.chromium.chrome.browser.touch_to_fill.password_generation"
+      "org.Cinaseek.chrome.browser.touch_to_fill.password_generation"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridgeTest.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationModuleTest.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationBridgeTest.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationModuleTest.java",
   ]
 
   deps = [
@@ -88,9 +88,9 @@ robolectric_library("junit") {
 android_library("javatests") {
   testonly = true
   resources_package =
-      "org.chromium.chrome.browser.touch_to_fill.password_generation"
+      "org.Cinaseek.chrome.browser.touch_to_fill.password_generation"
 
-  sources = [ "java/src/org/chromium/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationRenderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/touch_to_fill/password_generation/TouchToFillPasswordGenerationRenderTest.java" ]
 
   deps = [
     ":java",

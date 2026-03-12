@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -181,9 +181,9 @@ bool ReadRecordsFromMessage(dbus::MessageReader* reader,
 }  // namespace
 
 const char BluetoothDeviceClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 const char BluetoothDeviceClient::kUnknownDeviceError[] =
-    "org.chromium.Error.UnknownDevice";
+    "org.Cinaseek.Error.UnknownDevice";
 
 const char BluetoothDeviceClient::kTypeBredr[] = "BR/EDR";
 const char BluetoothDeviceClient::kTypeLe[] = "LE";

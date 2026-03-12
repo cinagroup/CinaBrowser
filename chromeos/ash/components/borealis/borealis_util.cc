@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ const std::string* WaylandWindowId(const aura::Window* window) {
 
 }  // namespace
 
-const char kBorealisWindowPrefix[] = "org.chromium.guest_os.borealis.";
+const char kBorealisWindowPrefix[] = "org.Cinaseek.guest_os.borealis.";
 
 const char kBorealisAnonymousPrefix[] = "borealis_anon:";
 

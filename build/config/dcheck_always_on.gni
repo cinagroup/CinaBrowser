@@ -1,9 +1,9 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # TODO(crbug.com/40191347): Until the bug is resolved we need to include
-# gclient_args for the definition of build_with_chromium and build_overrides
+# gclient_args for the definition of build_with_Cinaseek and build_overrides
 # for client overrides of that flag. The latter should go away.
 import("//build/config/gclient_args.gni")
 import("//build_overrides/build.gni")
@@ -17,12 +17,12 @@ declare_args() {
 declare_args() {
   # Set to false to disable DCHECK in Release builds. This is enabled by default
   # for non-official builds on the below platforms.
-  # This default only affects Chromium as indicated by build_with_chromium.
+  # This default only affects Cinaseek as indicated by build_with_Cinaseek.
   # Other clients typically set this to false. If another client wants to use
-  # the same default value as Chromium, we'd need to add a separate gclient
-  # variable to replace build_with_chromium here.
+  # the same default value as Cinaseek, we'd need to add a separate gclient
+  # variable to replace build_with_Cinaseek here.
   dcheck_always_on =
-      (build_with_chromium && !is_official_build) || dcheck_is_configurable
+      (build_with_Cinaseek && !is_official_build) || dcheck_is_configurable
 }
 
 declare_args() {

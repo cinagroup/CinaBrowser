@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ class ConnectionToHost {
  public:
   // The UI implementations maintain corresponding definitions of this
   // enumeration in client_session.js and
-  // android/java/src/org/chromium/chromoting/jni/JniInterface.java. Be sure to
+  // android/java/src/org/Cinaseek/chromoting/jni/JniInterface.java. Be sure to
   // update these locations if you make any changes to the ordering.
   enum State {
     INITIALIZING,

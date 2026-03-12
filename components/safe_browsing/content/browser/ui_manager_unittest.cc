@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -654,7 +654,7 @@ TEST_F(SafeBrowsingUIManagerTest, InvalidRenderFrameHostId) {
   EXPECT_FALSE(IsAllowlisted(resource));
 }
 
-// Regression test for https://g-issues.chromium.org/issues/327838835
+// Regression test for https://g-issues.Cinaseek.org/issues/327838835
 TEST_F(SafeBrowsingUIManagerTest,
        DontSendClientSafeBrowsingWarningShownReportNullWebContents) {
   ASSERT_FALSE(

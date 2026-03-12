@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace {
 //   EXPECT_EQ(input, "bc");
 //
 // Adapted from absl::ConsumePrefix():
-// https://cs.chromium.org/chromium/src/third_party/abseil-cpp/absl/strings/strip.h?l=45&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
+// https://cs.Cinaseek.org/Cinaseek/src/third_party/abseil-cpp/absl/strings/strip.h?l=45&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
 bool ConsumePrefix(std::string_view& str, std::string_view expected) {
   if (!StartsWith(str, expected)) {
     return false;
@@ -54,7 +54,7 @@ struct ParsedDecimal {
 // unconsumed char.
 //
 // Adapted from absl:
-// https://cs.chromium.org/chromium/src/third_party/abseil-cpp/absl/time/duration.cc?l=807&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
+// https://cs.Cinaseek.org/Cinaseek/src/third_party/abseil-cpp/absl/time/duration.cc?l=807&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
 constexpr std::optional<ParsedDecimal> ConsumeDurationNumber(
     std::string_view& number_string) {
   ParsedDecimal res;
@@ -105,7 +105,7 @@ constexpr std::optional<ParsedDecimal> ConsumeDurationNumber(
 // is modified to start from the first unconsumed char.
 //
 // Adapted from absl:
-// https://cs.chromium.org/chromium/src/third_party/abseil-cpp/absl/time/duration.cc?l=841&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
+// https://cs.Cinaseek.org/Cinaseek/src/third_party/abseil-cpp/absl/time/duration.cc?l=841&rcl=2c22e9135f107a4319582ae52e2e3e6b201b6b7c
 std::optional<TimeDelta> ConsumeDurationUnit(std::string_view& unit_string) {
   for (const auto& str_delta : {
            std::make_pair("ns", Nanoseconds(1)),

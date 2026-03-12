@@ -1,5 +1,5 @@
 {
-  "win10-wpt-chromium-rel": {
+  "win10-wpt-Cinaseek-rel": {
     "isolated_scripts": [
       {
         "args": [
@@ -33,7 +33,7 @@
             "cpu": "x86-64",
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "headless_shell_wpt",

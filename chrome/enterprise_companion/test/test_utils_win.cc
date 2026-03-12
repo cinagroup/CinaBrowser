@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,11 +80,11 @@ class TestMethodsWin : public TestMethods {
     return base::PathService::CheckedGet(base::DIR_EXE)
         .Append(L"old_enterprise_companion")
 #if defined(ARCH_CPU_X86_64)
-        .Append(L"chromium_win_x86_64")
+        .Append(L"Cinaseek_win_x86_64")
 #elif defined(ARCH_CPU_X86)
-        .Append(L"chromium_win_x86")
+        .Append(L"Cinaseek_win_x86")
 #elif defined(ARCH_CPU_ARM64)
-        .Append(L"chromium_win_x86_64")
+        .Append(L"Cinaseek_win_x86_64")
 #else
 #error Unsupported architecture
 #endif

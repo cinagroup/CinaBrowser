@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7018,7 +7018,7 @@ bool ChromeContentBrowserClient::HandleExternalProtocol(
 
 #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
     BUILDFLAG(IS_WIN)
-  // Handle the google-chrome:// scheme (and chromium://).
+  // Handle the google-chrome:// scheme (and Cinaseek://).
   // If the scheme is present, we strip it and navigate to the inner URL.
   // This avoids launching a new browser instance via the OS handler.
   if (std::optional<GURL> new_url =
@@ -8028,7 +8028,7 @@ bool ChromeContentBrowserClient::AreV8OptimizationsEnabledForSite(
   // familiarity hasn't been computed yet. When the navigation receives a
   // response, this will be called a second time to determine the final
   // SiteInstance and process, and site familiarity should be available then.
-  // TODO(https://issues.chromium.org/452130797): Determine desired behavior
+  // TODO(https://issues.Cinaseek.org/452130797): Determine desired behavior
   // for speculative RenderFrameHosts.
   return !site_familiarity_user_data ||
          site_familiarity_user_data->is_site_familiar();
@@ -8298,8 +8298,8 @@ bool ChromeContentBrowserClient::ShouldPreconnectNavigation(
 bool ChromeContentBrowserClient::ShouldDisableOriginAgentClusterDefault(
     content::BrowserContext* browser_context) {
   // The enterprise policy for kOriginAgentClusterDefaultEnabled defaults to
-  // true to defer to Chromium's decision. If it is set to false, it should
-  // override Chromium's decision and use site-keyed agent clusters by default
+  // true to defer to Cinaseek's decision. If it is set to false, it should
+  // override Cinaseek's decision and use site-keyed agent clusters by default
   // instead.
   return !Profile::FromBrowserContext(browser_context)
               ->GetPrefs()

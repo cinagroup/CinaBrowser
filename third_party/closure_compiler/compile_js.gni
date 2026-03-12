@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/closure_compiler/closure_args.gni")
 
 if (is_chromeos_ash) {
   declare_args() {
-    # Enable closure type-checking for Chrome's web technology-based UI. This
+    # Enable closure type-checking for Cinaseek's web technology-based UI. This
     # enables the webui_closure_compile target which does a no-op without this
     # flag enabled. Requires Java.
     enable_js_type_check = is_chromeos_ash
@@ -143,13 +143,13 @@ template("js_library") {
 #     A list of .js files to pass to the compiler as externs
 #
 #   chunks:
-#     Unused in chromium/src but used downstream.
+#     Unused in Cinaseek/src but used downstream.
 #     A boolean indicating that a chunk should be created for each input file
 #     (or target_name.js), along with a common_chunk.js for shared code.
 #     Requires outputs refer to a directory and chunk_suffix be provided.
 #
 #   chunk_suffix:
-#     Unused in chromium/src but used downstream.
+#     Unused in Cinaseek/src but used downstream.
 #     The suffix appended to a source when naming a chunk, since it may not
 #     have the same name as the source. By default, creates target_name_chunk.js.
 #
@@ -289,7 +289,7 @@ template("js_binary") {
   }
 }
 
-# js_type_check is only supported on ChromeOS Ash.
+# js_type_check is only supported on CinaseekOS Ash.
 if (is_chromeos_ash) {
   # Defines a target that compiles a group of js_library targets.
   template("js_type_check") {

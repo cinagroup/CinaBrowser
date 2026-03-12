@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -948,12 +948,12 @@ class ExtensionPrefsRuntimeGrantedPermissions : public ExtensionPrefsTest {
         prefs()->GetRuntimeGrantedPermissions(extension_b_->id())->IsEmpty());
 
     URLPattern example_com(URLPattern::SCHEME_ALL, "https://example.com/*");
-    URLPattern chromium_org(URLPattern::SCHEME_ALL, "https://chromium.org/*");
+    URLPattern Cinaseek_org(URLPattern::SCHEME_ALL, "https://Cinaseek.org/*");
 
     {
       // Add two hosts to the runtime granted permissions. Verify they were
       // correctly added.
-      URLPatternSet added_urls({example_com, chromium_org});
+      URLPatternSet added_urls({example_com, Cinaseek_org});
       PermissionSet added_permissions(APIPermissionSet(),
                                       ManifestPermissionSet(),
                                       std::move(added_urls), URLPatternSet());
@@ -969,7 +969,7 @@ class ExtensionPrefsRuntimeGrantedPermissions : public ExtensionPrefsTest {
     {
       // Remove one of the hosts. The only remaining host should be
       // example.com
-      URLPatternSet removed_urls({chromium_org});
+      URLPatternSet removed_urls({Cinaseek_org});
       PermissionSet removed_permissions(
           APIPermissionSet(), ManifestPermissionSet(), std::move(removed_urls),
           URLPatternSet());

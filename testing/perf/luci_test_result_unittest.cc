@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -236,7 +236,7 @@ TYPED_TEST_P(LuciTestResultTypedTest, Variant) {
              "variant":{"param/instantiation":"%s"}
            }
          })";
-  // Note that chromium has RTTI disabled. As a result, type_param() and
+  // Note that Cinaseek has RTTI disabled. As a result, type_param() and
   // GetTypeName<> always returns a generic "<type>".
   const std::string expected_json =
       base::StringPrintf(kJsonTemplate, type_param_name.c_str(),

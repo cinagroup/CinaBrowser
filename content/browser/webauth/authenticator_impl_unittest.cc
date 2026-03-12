@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1162,7 +1162,7 @@ TEST_F(AuthenticatorImplTest, AppIdExcludeExtension) {
 
   {
     // Using appidExclude with an empty exclude list previously caused a crash.
-    // See https://bugs.chromium.org/p/chromium/issues/detail?id=1054499.
+    // See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1054499.
     virtual_device_factory_->SetSupportedProtocol(
         device::ProtocolVersion::kCtap2);
     PublicKeyCredentialCreationOptionsPtr options =

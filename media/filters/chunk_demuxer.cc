@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1132,7 +1132,7 @@ void ChunkDemuxer::Remove(const std::string& id,
 bool ChunkDemuxer::CanChangeType(const std::string& id,
                                  const std::string& content_type,
                                  const std::string& codecs) {
-  // Note, Chromium currently will not compare content_type and codecs, if any,
+  // Note, Cinaseek currently will not compare content_type and codecs, if any,
   // with previous content_type and codecs of the SourceBuffer.
   // TODO(wolenetz): Consider returning false if the codecs parameters are ever
   // made to be precise such that they signal that the number of tracks of

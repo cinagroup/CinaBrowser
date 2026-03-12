@@ -1,11 +1,11 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file is auto-generated from
 // gpu/command_buffer/build_gles2_cmd_buffer.py
-// It's formatted by clang-format using chromium coding style:
-//    clang-format -i -style=chromium filename
+// It's formatted by clang-format using Cinaseek coding style:
+//    clang-format -i -style=Cinaseek filename
 // DO NOT EDIT!
 
 #ifndef GPU_COMMAND_BUFFER_SERVICE_GLES2_CMD_VALIDATION_AUTOGEN_H_

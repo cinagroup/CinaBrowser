@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace ios {
 namespace provider {
 
 bool DisableDefaultSearchEngineChoice() {
-  // The search engine choice should not be automatically displayed in Chromium
+  // The search engine choice should not be automatically displayed in Cinaseek
   // except in tests.
   return true;
 }

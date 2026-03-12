@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -41,7 +41,7 @@ source_set("library_support") {
 if (!is_cronet_build && is_android) {
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/components/metrics/LowEntropySource.java",
+      "android/java/src/org/Cinaseek/components/metrics/LowEntropySource.java",
     ]
   }
 
@@ -49,14 +49,14 @@ if (!is_cronet_build && is_android) {
     # External code should depend on ":foo_java" instead.
     visibility = [ ":*" ]
     sources = [ "//components/metrics/metrics_features.cc" ]
-    class_name = "org.chromium.components.metrics.MetricsFeatures"
+    class_name = "org.Cinaseek.components.metrics.MetricsFeatures"
   }
 
   java_cpp_strings("java_switches_srcjar") {
     # External code should depend on ":metrics_java" instead.
     visibility = [ ":*" ]
     sources = [ "//components/metrics/metrics_switches.cc" ]
-    class_name = "org.chromium.components.metrics.MetricsSwitches"
+    class_name = "org.Cinaseek.components.metrics.MetricsSwitches"
   }
 
   java_cpp_enum("java_enum_srcjar") {
@@ -74,7 +74,7 @@ if (!is_cronet_build && is_android) {
       ":java_switches_srcjar",
     ]
     sources = [
-      "android/java/src/org/chromium/components/metrics/LowEntropySource.java",
+      "android/java/src/org/Cinaseek/components/metrics/LowEntropySource.java",
     ]
     deps = [
       "//base:base_java",
@@ -84,7 +84,7 @@ if (!is_cronet_build && is_android) {
   }
 }
 
-# Used by the Chrome installer, which doesn't need the whole metrics library.
+# Used by the Cinaseek installer, which doesn't need the whole metrics library.
 source_set("client_info") {
   sources = [
     "client_info.cc",
@@ -96,7 +96,7 @@ source_set("client_info") {
   ]
 }
 
-# Used by the Chrome installer, which doesn't need the whole metrics library.
+# Used by the Cinaseek installer, which doesn't need the whole metrics library.
 source_set("metrics_pref_names") {
   sources = [ "metrics_pref_names.h" ]
   configs += [

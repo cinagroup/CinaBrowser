@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -718,7 +718,7 @@ namespace {
 // old padding format. We still support this format for backwards compatibility.
 // See comment in |DecodePaddedCBORMap|.
 //
-// TODO(agl): remove support for this padding format. (Chromium started sending
+// TODO(agl): remove support for this padding format. (Cinaseek started sending
 // the new format with M99.)
 std::optional<cbor::Value> DecodePaddedCBORMap8(
     base::span<const uint8_t> input) {

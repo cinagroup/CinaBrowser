@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@
 // 3. Find the failing content_browsertests step.
 // 4. Click the "Deterministic failure" link for the failing test case.
 // 5. Copy the "Actual pixels" data url and paste into browser.
-// 6. Save the image into your chromium checkout in content/test/data/forms/.
+// 6. Save the image into your Cinaseek checkout in content/test/data/forms/.
 
 namespace content {
 

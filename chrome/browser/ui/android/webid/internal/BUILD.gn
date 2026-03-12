@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 import("//tools/grit/grit_rule.gni")
 
 generate_jni("jni") {
-  sources = [ "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionBridge.java" ]
 }
 
 android_library("java") {
@@ -54,16 +54,16 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionBottomSheetContent.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionBridge.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionMediator.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionViewBinder.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/ExpandOnFocusAccessibilityDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionBottomSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/ExpandOnFocusAccessibilityDelegate.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.ui.android.webid"
+  resources_package = "org.Cinaseek.chrome.browser.ui.android.webid"
 }
 
 android_resources("java_resources") {
@@ -98,15 +98,15 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.ui.android.webid"
+  resources_package = "org.Cinaseek.chrome.browser.ui.android.webid"
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionButtonModeControllerTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionButtonModeViewTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionControllerTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionJUnitTestBase.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionViewTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionWidgetModeControllerTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionWidgetModeViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionButtonModeControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionButtonModeViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionJUnitTestBase.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionWidgetModeControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionWidgetModeViewTest.java",
   ]
 
   deps = [
@@ -142,13 +142,13 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.ui.android.webid"
+  resources_package = "org.Cinaseek.chrome.browser.ui.android.webid"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionButtonModeIntegrationTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionIntegrationTest.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionIntegrationTestBase.java",
-    "java/src/org/chromium/chrome/browser/ui/android/webid/AccountSelectionWidgetModeIntegrationTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionButtonModeIntegrationTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionIntegrationTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionIntegrationTestBase.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/android/webid/AccountSelectionWidgetModeIntegrationTest.java",
   ]
 
   deps = [

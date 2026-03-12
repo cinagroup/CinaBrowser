@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,6 +92,6 @@ TEST(ChromeBrowserMainWinTest, GetRestartCommand) {
 TEST(ChromeBrowserMainWinTest, RegisterRestart) {
   const base::CommandLine command_line = base::CommandLine::FromString(
       L"chrome.exe --enable-features=Exp2 --enable-foo -- "
-      L"http://www.chromium.org");
+      L"http://www.Cinaseek.org");
   ChromeBrowserMainPartsWin::RegisterApplicationRestart(command_line);
 }

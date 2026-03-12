@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ class ETWExportController {
   // The keywords that were enabled last time the callback was made.
   uint64_t etw_match_any_keyword_ = 0;
 
-  // The provider is set based on channel for MSEdge, in other Chromium
+  // The provider is set based on channel for MSEdge, in other Cinaseek
   // based browsers all channels use the same GUID/provider.
   std::unique_ptr<TlmProvider> etw_provider_;
 };

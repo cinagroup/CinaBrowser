@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ bool MappableBufferDXGI::Map() {
   // Note: this can be called from multiple threads at the same time. Some of
   // those threads may not have a TaskRunner set.
   // One of such threads is a WebRTC encoder thread.
-  // That thread is not owned by chromium and therefore doesn't have any
+  // That thread is not owned by Cinaseek and therefore doesn't have any
   // blocking scope machinery. But the workload there is supposed to happen
   // synchronously, because this is how the WebRTC architecture is designed.
   base::ScopedAllowBaseSyncPrimitivesOutsideBlockingScope allow;

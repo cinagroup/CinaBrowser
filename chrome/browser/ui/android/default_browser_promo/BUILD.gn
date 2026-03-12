@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,12 +6,12 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoImpressionCounter.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoManager.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMessageController.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMetrics.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoUtils.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoImpressionCounter.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoManager.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMessageController.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMetrics.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserStateProvider.java",
   ]
   deps = [
     "//base:base_java",
@@ -29,16 +29,16 @@ android_library("java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
     "//ui/android:ui_full_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.default_browser_promo"
+  resources_package = "org.Cinaseek.chrome.browser.ui.default_browser_promo"
 }
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoImpressionCounterTest.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoManagerTest.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMessageControllerTest.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoUtilsTest.java",
-    "java/src/org/chromium/chrome/browser/ui/default_browser_promo/DefaultBrowserStateProviderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoImpressionCounterTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoManagerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoMessageControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserPromoUtilsTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/default_browser_promo/DefaultBrowserStateProviderTest.java",
   ]
   deps = [
     ":java",

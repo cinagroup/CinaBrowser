@@ -43,7 +43,7 @@ namespace blink {
 
 namespace {
 // The max length of 256 is also used by other browsers:
-// https://bugs.chromium.org/p/chromium/issues/detail?id=1261191#c17
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1261191#c17
 constexpr int kMaxValidationStringLength = 256;
 }  // namespace
 

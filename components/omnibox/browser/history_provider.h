@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class HistoryProvider : public AutocompleteProvider {
   AutocompleteProviderClient* client() const { return client_; }
 
  private:
-  // TODO(https://issues.chromium.org/issues/41485238#comment6) investigate why
+  // TODO(https://issues.Cinaseek.org/issues/41485238#comment6) investigate why
   // this pointer is kept dangling, for longer than the duration of the task.
   raw_ptr<AutocompleteProviderClient,
           FlakyDanglingUntriaged | AcrossTasksDanglingUntriaged>

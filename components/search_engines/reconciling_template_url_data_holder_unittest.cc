@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -188,7 +188,7 @@ TEST_F(ReconcilingTemplateURLDataHolderTest, Set_SafeWithEmptyPointer) {
 
 TEST_F(ReconcilingTemplateURLDataHolderTest,
        SetAndReconcile_AndroidProvidedUnknown) {
-  auto supplied_engine = GenerateDummyTemplateURLData("unknown.chromium.org");
+  auto supplied_engine = GenerateDummyTemplateURLData("unknown.Cinaseek.org");
   supplied_engine->regulatory_origin = RegulatoryExtensionType::kAndroidEEA;
   supplied_engine->SetURL(yahoo_de.search_url);
 
@@ -200,7 +200,7 @@ TEST_F(ReconcilingTemplateURLDataHolderTest,
   histogram_tester_.ExpectUniqueSample(
       "Omnibox.TemplateUrl.Reconciliation.ByKeyword.Result", false, 1);
 
-  EXPECT_EQ(holder_.Get()->keyword(), u"unknown.chromium.org");
+  EXPECT_EQ(holder_.Get()->keyword(), u"unknown.Cinaseek.org");
   EXPECT_EQ(holder_.Get()->prepopulate_id, 0);
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -146,7 +146,7 @@ void GetTouchscreenDevicesOnUIThread(
 DataCollector::DataCollector() : DataCollector(GetDataCollectorDelegate()) {
   if (mojo_service_manager::IsServiceManagerBound()) {
     mojo_service_manager::GetServiceManagerProxy()->Register(
-        chromeos::mojo_services::kChromiumCrosHealthdDataCollector,
+        chromeos::mojo_services::kCinaseekCrosHealthdDataCollector,
         provider_receiver_.BindNewPipeAndPassRemote());
   }
 }
@@ -155,9 +155,9 @@ DataCollector::DataCollector(Delegate* delegate) : delegate_(delegate) {}
 
 DataCollector::~DataCollector() = default;
 
-mojo::PendingRemote<mojom::ChromiumDataCollector>
+mojo::PendingRemote<mojom::CinaseekDataCollector>
 DataCollector::BindNewPipeAndPassRemote() {
-  mojo::PendingRemote<mojom::ChromiumDataCollector> remote;
+  mojo::PendingRemote<mojom::CinaseekDataCollector> remote;
   receiver_set_.Add(this, remote.InitWithNewPipeAndPassReceiver());
   return remote;
 }
@@ -201,7 +201,7 @@ void DataCollector::DEPRECATED_SetAudioOutputMute(
 void DataCollector::Request(
     chromeos::mojo_service_manager::mojom::ProcessIdentityPtr identity,
     mojo::ScopedMessagePipeHandle receiver) {
-  receiver_set_.Add(this, mojo::PendingReceiver<mojom::ChromiumDataCollector>(
+  receiver_set_.Add(this, mojo::PendingReceiver<mojom::CinaseekDataCollector>(
                               std::move(receiver)));
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 // The status of the download location prompt.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.download
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.download
 enum class DownloadPromptStatus {
   SHOW_INITIAL,     // Show the prompt because it hasn't been shown before.
   SHOW_PREFERENCE,  // Show the prompt because user indicated preference.

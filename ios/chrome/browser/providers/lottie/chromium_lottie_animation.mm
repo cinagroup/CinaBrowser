@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,18 +13,18 @@
 #import "base/check.h"
 #endif  // BUILDFLAG(IS_IOS_MACCATALYST)
 
-@interface ChromiumLottieAnimation : NSObject <LottieAnimation>
+@interface CinaseekLottieAnimation : NSObject <LottieAnimation>
 
 // Instantiates a LottieAnimationImpl with the given configuration.
 //
 // @param config The LottieAnimation configuration parameters to use.
-// @return An instance of ChromiumLottieAnimation.
+// @return An instance of CinaseekLottieAnimation.
 - (instancetype)initWithConfig:(LottieAnimationConfiguration*)config;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
 
-@implementation ChromiumLottieAnimation {
+@implementation CinaseekLottieAnimation {
 #if !BUILDFLAG(IS_IOS_MACCATALYST)
   LOTAnimationView* _lottieAnimation;
 #endif  // BUILDFLAG(IS_IOS_MACCATALYST)
@@ -75,12 +75,12 @@
 
 - (void)setGradientValue:(NSArray<UIColor*>*)colors
               forKeypath:(NSString*)keypath {
-  // Not available for the objc version of Lottie in Chromium.
+  // Not available for the objc version of Lottie in Cinaseek.
 }
 
 - (void)setDictionaryTextProvider:
     (NSDictionary<NSString*, NSString*>*)dictionaryTextProvider {
-  // Not available for the objc version of Lottie in Chromium.
+  // Not available for the objc version of Lottie in Cinaseek.
 }
 
 - (BOOL)isAnimationPlaying {
@@ -106,7 +106,7 @@ namespace provider {
 // Generate an instance of LottieAnimation.
 id<LottieAnimation> GenerateLottieAnimation(
     LottieAnimationConfiguration* config) {
-  return [[ChromiumLottieAnimation alloc] initWithConfig:config];
+  return [[CinaseekLottieAnimation alloc] initWithConfig:config];
 }
 
 }  // namespace provider

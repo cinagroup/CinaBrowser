@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -632,7 +632,7 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        // support max rank up to 5. Because `SerializeBatchNormalization()`
        // emulation code accesses input size along axis, input cannot be a
        // scalar:
-       // https://source.chromium.org/chromium/chromium/src/+/main:services/webnn/tflite/graph_builder_tflite.cc;l=3556;drc=7b1dd7749fbb05ea8469492fe5c03c27fef75e38
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/webnn/tflite/graph_builder_tflite.cc;l=3556;drc=7b1dd7749fbb05ea8469492fe5c03c27fef75e38
        /*batch_normalization_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::NonScalarUpTo(5)},
        /*batch_normalization_mean=*/
@@ -643,10 +643,10 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        /*clamp_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(5)},
        // Scalar is not supported:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/concatenation.h;l=38;drc=31b46e86a93151ca1192009863818d4eaf5df831
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/concatenation.h;l=38;drc=31b46e86a93151ca1192009863818d4eaf5df831
        /*concat_inputs=*/
        {kAllDataTypesExceptUint4, SupportedRanks::NonScalarUpTo(8)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/conv.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/conv.cc
        /*conv2d_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(4)},
        /*conv2d_bias=*/
@@ -664,27 +664,27 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        /*dequantize_linear_scale=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(6)},
        // Limited to 6D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/add.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/add.cc
        /*add_input=*/{kFloat16To32AndInt32To64, SupportedRanks::UpTo(6)},
        // Limited to 6D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/sub.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/sub.h
        /*sub_input=*/{kFloat16To32AndInt32To64, SupportedRanks::UpTo(6)},
        // Limited to 6D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/mul.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/mul.cc
        /*mul_input=*/
        {kFloat16To32AndInt32To64AndUint32, SupportedRanks::UpTo(6)},
        // Limited to 5D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/div.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/div.h
        /*div_input=*/{kFloat16To32AndInt32, SupportedRanks::UpTo(5)},
        // MAX and MIN are limited to 5D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/maximum_minimum.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/maximum_minimum.h
        /*max_input=*/{kFloat16To32AndInt8To64AndUint8, SupportedRanks::UpTo(5)},
        /*min_input=*/{kFloat16To32AndInt8To64AndUint8, SupportedRanks::UpTo(5)},
        // Limited to 4D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/pow.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/pow.cc
        /*pow_input=*/{kFloat16To32AndInt32, SupportedRanks::UpTo(4)},
        // Comparisons are limited to 4D when broadcasting is required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/comparisons.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/comparisons.cc
        /*equal_input=*/{kFloat16To32AndInt32To64, SupportedRanks::UpTo(4)},
        /*greater_input=*/{kFloat16To32AndInt32To64, SupportedRanks::UpTo(4)},
        /*greater_or_equal_input=*/
@@ -696,7 +696,7 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        {kFloat16To32AndInt32To64, SupportedRanks::UpTo(4)},
        // Logical binary operators are limited to 4D when broadcasting is
        // required:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/logical.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/logical.cc
        /*logical_and_input=*/
        {DataTypeConstraint::kUint8, SupportedRanks::UpTo(4)},
        /*logical_or_input=*/
@@ -752,14 +752,14 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        /*expand_input=*/
        {kFloat16To32AndInts8To32AndInt64, SupportedRanks::UpTo(8)},
        // Scalar is not supported:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/gather.h;l=43;drc=49db932a0bdfca060c3e8b0d063a7e8c9f5d2fa5
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/gather.h;l=43;drc=49db932a0bdfca060c3e8b0d063a7e8c9f5d2fa5
        /*gather_input=*/
        {kFloat16To32AndInt8To64AndUint8, SupportedRanks::NonScalarUpTo(8)},
        /*gather_indices=*/
        {DataTypeConstraint::kGatherScatterIndicesSupportedDataTypes,
         SupportedRanks::UpTo(8)},
        // Scalar is not supported:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/gather_nd.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/gather_nd.cc
        /*gather_elements_input=*/
        {kFloat16To32AndInt8To64AndUint8, SupportedRanks::NonScalarUpTo(8)},
        /*gather_elements_indices=*/
@@ -814,20 +814,20 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(2)},
        /*lstm_cell_bias=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(1)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/batch_matmul.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/batch_matmul.h
        /*matmul_input=*/{kFloat16To32AndInt8, SupportedRanks::UpTo(5)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/pad.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/pad.h
        /*pad_input=*/
        {kFloat16To32AndInt32To64AndUint8, SupportedRanks::UpTo(5)},
        // Pooling operators are limited to 4D.
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/pooling.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/pooling.h
        /*average_pool2d_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(4)},
        /*l2_pool2d_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(4)},
        /*max_pool2d_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::Exactly(4)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/prelu.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/prelu.h
        /*prelu_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(4)},
        // TODO(crbug.com/376722724): Support float16 input.
@@ -864,8 +864,8 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        // ReLU is sometimes emulated using maximum.
        /*relu_input=*/
        {kFloat16To32AndInt8To64, SupportedRanks::UpTo(5)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/resize_bilinear.h
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/resize_nearest_neighbor.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/resize_bilinear.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/resize_nearest_neighbor.h
        /*resample2d_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(4)},
        /*reshape_input=*/{kAllDataTypesExceptUint4, SupportedRanks::UpTo(8)},
@@ -879,7 +879,7 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        /*scatter_elements_indices=*/
        {{OperandDataType::kInt32}, SupportedRanks::NonScalarUpTo(8)},
        // Scalar is not supported:
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/scatter_nd.cc
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/scatter_nd.cc
        /*scatter_nd_input=*/
        {kFloat16To32AndInt8To64AndUint32, SupportedRanks::NonScalarUpTo(8)},
        // The indices of tfl.scatter_nd only support int32.
@@ -891,7 +891,7 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        // Polyfilled with linear.
        /*sigmoid_input=*/
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(6)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/slice.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/slice.h
        /*slice_input=*/
        {kFloat16To32AndInts8To32AndInt64, SupportedRanks::UpTo(5)},
        // Transpose is used if the axis is not the last dimension.
@@ -909,7 +909,7 @@ ContextProperties GraphBuilderTflite::GetContextProperties() {
        {DataTypeConstraint::kFloat16To32, SupportedRanks::UpTo(8)},
        /*tile_input=*/
        {kFloat16To32AndInt32To64AndUint8, SupportedRanks::UpTo(8)},
-       // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/transpose.h
+       // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/reference/transpose.h
        /*transpose_input=*/
        {kFloat16To32AndInt8To64AndUint8, SupportedRanks::UpTo(6)},
        // Polyfilled with MUL, requires broadcasting.
@@ -1630,7 +1630,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Clamp& clamp,
   // WebNN clamp maps to TFLite RELU, RELU_N1_TO_1, RELU6 and RELU_0_TO_1
   // without emulation. For those TFLite kernels, input and output have to be
   // dequantized from ints8.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=220;drc=736622ed7d9cf605750afa417b3f4e681eef686c
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=220;drc=736622ed7d9cf605750afa417b3f4e681eef686c
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(clamp.input_operand_id);
   const OperandDataType quantized_type =
@@ -1686,7 +1686,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   }
 
   // Bias must be int32 for conv2d and convTranspose2d.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/conv.cc;l=384;drc=e433dac46a0bb8ffa4b6e600d4d94751768392c0
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/conv.cc;l=384;drc=e433dac46a0bb8ffa4b6e600d4d94751768392c0
   const mojom::DequantizeLinear& bias_dequantize =
       GetDequantizeOp(*conv2d.bias_operand_id);
   if (GetOperand(bias_dequantize.input_operand_id).descriptor.data_type() !=
@@ -1695,7 +1695,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   }
   // The bias must have all-zero zero-points for conv2d and int8 input
   // convTranspose2d.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/transpose_conv.cc;drc=dde56340610b37d2f2696b654be50a74dd25ff84;l=319
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/transpose_conv.cc;drc=dde56340610b37d2f2696b654be50a74dd25ff84;l=319
   if (conv2d.kind == mojom::Conv2d::Kind::kDirect ||
       (conv2d.kind == mojom::Conv2d::Kind::kTransposed &&
        quantized_type == OperandDataType::kInt8)) {
@@ -1743,14 +1743,14 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   }
 
   // uint8 only allows scaler filter scale and bias scale:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=239;drc=2f4e6fd051b670e0e032cc45c6492dd42d054a1c
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=239;drc=2f4e6fd051b670e0e032cc45c6492dd42d054a1c
   if (quantized_type == OperandDataType::kUint8 &&
       filter_scale_values.size() != 1 && bias_scale_values.size() != 1) {
     return std::nullopt;
   }
   // For XNNPack delegate, the bias scale is not really used so it requires
   // input_scale * filter_scale and bias_scale to be about the same.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=303;drc=492dc9719f6e1845f4f5c0553cd5c7651115f671
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=303;drc=492dc9719f6e1845f4f5c0553cd5c7651115f671
   const double input_scale = static_cast<double>(input_scale_values[0]);
   const double output_scale = static_cast<double>(output_scale_values[0]);
   const bool scalar_filter_scale = filter_scale_values.size() == 1;
@@ -1811,8 +1811,8 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Concat& concat) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate and the kernel of concatenation, the scale and zero
   // point of output tensor must be the same as inputs.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3443;drc=b6620a02fa498df5297e53241b54a31f488ca440
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/concatenation.cc;l=217;drc=87b24bc831966733aa45ad8d1a3ea00d3950b245
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3443;drc=b6620a02fa498df5297e53241b54a31f488ca440
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/concatenation.cc;l=217;drc=87b24bc831966733aa45ad8d1a3ea00d3950b245
   base::FixedArray<float> output_scale_values =
       GetQuantizeScaleValue(output_quantize.scale_operand_id);
   base::FixedArray<int64_t> output_zero_point_values =
@@ -1892,7 +1892,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   if (binary.kind == mojom::ElementWiseBinary::Kind::kAdd ||
       binary.kind == mojom::ElementWiseBinary::Kind::kSub) {
     // The `input scale / output scale` must be in the range.
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3957;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3957;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
     const float scale_min = 1.0f / 1024.0f;
     const float scale_max = 256.0f;
 
@@ -1912,7 +1912,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
     }
   } else if (binary.kind == mojom::ElementWiseBinary::Kind::kMul) {
     // The `lhs * rhs input scale / output scale` must be in the range.
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3985;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=3985;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
     const float scale_min = 1.0f / 65536.0f;
     const float scale_max = 256.0f;
     base::CheckedNumeric<float> checked_product_output_scale =
@@ -1926,7 +1926,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   } else if (binary.kind == mojom::ElementWiseBinary::Kind::kMax ||
              binary.kind == mojom::ElementWiseBinary::Kind::kMin) {
     // Inputs and output must have the same scale and zero_point.
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/optimized/optimized_ops.h;l=7101;drc=467a8e68f685f9cfa47ee3fbfca20c22f7f6e893
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/internal/optimized/optimized_ops.h;l=7101;drc=467a8e68f685f9cfa47ee3fbfca20c22f7f6e893
     if (lhs_scale_value != rhs_scale_value ||
         lhs_scale_value != output_scale_value) {
       return std::nullopt;
@@ -1957,7 +1957,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Elu& elu) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate, the input must be dequantized from int8, the input
   // and output scale must be scaler.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4136;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4136;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(elu.input_operand_id);
   if (GetOperand(input_dequantize.input_operand_id).descriptor.data_type() !=
@@ -2044,7 +2044,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Gemm& gemm) {
   }
 
   // The c operand must be optional or int32 data type.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;drc=7930f629a820b2233128fb591789f4d8a41be8d9;l=216
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;drc=7930f629a820b2233128fb591789f4d8a41be8d9;l=216
   if (gemm.c_operand_id) {
     if (!IsDequantizeOutput(*gemm.c_operand_id)) {
       return std::nullopt;
@@ -2068,7 +2068,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Gemm& gemm) {
   }
 
   // Only Int8 is supported for per-channel quantization.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;l=446;drc=997022c9de8c1e4ed9081b8789c1057d0fce0e28
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;l=446;drc=997022c9de8c1e4ed9081b8789c1057d0fce0e28
   size_t number_of_b_scale =
       GetOperand(b_dequantize.scale_operand_id).descriptor.NumberOfElements();
   const bool per_channel_quantization = number_of_b_scale != 1;
@@ -2077,14 +2077,14 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Gemm& gemm) {
   }
   // The transpose operation will be inserted if gemm.b_transpose is false, but
   // quantized transpose only supports per-tensor quantization.
-  // https://source.chromium.org/chromium/chromium/src/+/main:services/webnn/tflite/graph_builder_tflite.cc;drc=87413efa62e18726d73e7f283efef63d4bfd1023;l=4581
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/webnn/tflite/graph_builder_tflite.cc;drc=87413efa62e18726d73e7f283efef63d4bfd1023;l=4581
   if (per_channel_quantization && !gemm.b_transpose) {
     return std::nullopt;
   }
 
   // The a_scale * b_scale should be about the same as c_scale for per-tensor
   // quantization.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=303;drc=492dc9719f6e1845f4f5c0553cd5c7651115f671
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/kernel_util.cc;l=303;drc=492dc9719f6e1845f4f5c0553cd5c7651115f671
   if (!per_channel_quantization && gemm.c_operand_id) {
     base::FixedArray<float> a_scale_values =
         GetQuantizeScaleValue(a_dequantize.scale_operand_id);
@@ -2124,7 +2124,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Pad& pad) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate, input and output operands have to be dequantized from
   // ints8, the scale and zero point of input and output have to be scaler.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4975;drc=884710320aa8a793be1407d8b8091b538658f5e6
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4975;drc=884710320aa8a793be1407d8b8091b538658f5e6
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(pad.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2172,7 +2172,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Pool2d& pool2d) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For the kernel of pooling, the `|input scale - output scale|` must be less
   // than 1.0e-6, and zero point of output tensor must be the same as input.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/pooling.cc;drc=edd09bcc365dcc696d0f23ca7c3dc18f5e1dcdab;l=101
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/pooling.cc;drc=edd09bcc365dcc696d0f23ca7c3dc18f5e1dcdab;l=101
   std::optional<std::pair<OperationId, QuantizateParametersOffset>> next_op =
       IsNextOpQuantize(pool2d.output_operand_id,
                        {GetOperand(input_dequantize.input_operand_id)
@@ -2224,7 +2224,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Reduce& reduce) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate, input and output operands have to be dequantized from
   // ints8, the scale and zero point of input and output have to be scaler.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4683;drc=884710320aa8a793be1407d8b8091b538658f5e6
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4683;drc=884710320aa8a793be1407d8b8091b538658f5e6
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(reduce.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2257,7 +2257,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate, input and output operands have to be dequantized from
   // ints8, the scale and zero point of input and output have to be scaler.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5218;drc=884710320aa8a793be1407d8b8091b538658f5e6
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5218;drc=884710320aa8a793be1407d8b8091b538658f5e6
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(resample2d.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2297,7 +2297,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Reshape& reshape) {
   // For XNNPack delegate, the scale and zero point of input and output have to
   // be scaler, and the scale and zero point of output must be the same as
   // input.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5199;drc=1379ddb0f0535ff846ce0fbad8ee49af303140c4
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5199;drc=1379ddb0f0535ff846ce0fbad8ee49af303140c4
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(reshape.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2345,7 +2345,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Slice& slice) {
   // TODO(crbug.com/413083273): Consider the restriction in GPU delegate.
   // For XNNPack delegate, the scale and zero point of input and output have to
   // be scaler.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5302;drc=02446d66622a0a811448be7bb4ac8939c5b00aa9
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5302;drc=02446d66622a0a811448be7bb4ac8939c5b00aa9
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(slice.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2378,7 +2378,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Softmax& softmax) {
   // For TFLite kernel, the scale of output should be approximately equal
   // to 1.0f / 256.0f and the zero point of output should be equal to -128
   // if data type is int8.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=541;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=541;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(softmax.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2430,7 +2430,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Split& split) {
   // be scaler, and the number of outputs should be in the range of [2, 4]. But
   // there is no limitation on the number of outputs for TFLite kernel, so relax
   // the output number restriction here.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5558;drc=1379ddb0f0535ff846ce0fbad8ee49af303140c4
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5558;drc=1379ddb0f0535ff846ce0fbad8ee49af303140c4
   const mojom::DequantizeLinear& input_dequantize =
       GetDequantizeOp(split.input_operand_id);
   if (!IsInts8AndScalarScale(input_dequantize)) {
@@ -2508,7 +2508,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(const mojom::Sigmoid& sigmoid) {
   base::FixedArray<float> output_scale_values =
       GetQuantizeScaleValue(output_quantize.scale_operand_id);
   // The output scale value must be 1.0f / 256.0f.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=463;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/activations.cc;l=463;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   if (output_scale_values[0] != 1.0f / 256.0f) {
     return std::nullopt;
   }
@@ -2526,7 +2526,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   }
 
   // The alpha value can't be 0.0f.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4151;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4151;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   if (leaky_relu.alpha == 0.0f) {
     return std::nullopt;
   }
@@ -2542,7 +2542,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   const float scale_positive_max = 128.0f;
   const float scale_negative_min = -127.99609375f;
   // The `input scale / output scale` must be in the range.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4162;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4162;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   base::CheckedNumeric<float> checked_positive_scale =
       base::CheckedNumeric(input_scale_values[0]) / output_scale_values[0];
   if (!checked_positive_scale.IsValid() ||
@@ -2552,7 +2552,7 @@ GraphBuilderTflite::CanFuseQuantizeAndGetOutput(
   }
 
   // The `input scale * alpha / output scale` must be in the range.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4171;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=4171;drc=f667feb8a5c6f227b49328ce78a062acc4f81187
   base::CheckedNumeric<float> checked_negative_scale =
       checked_positive_scale * leaky_relu.alpha;
   if (!checked_negative_scale.IsValid() ||
@@ -2609,7 +2609,7 @@ bool GraphBuilderTflite::CanFuseDequantizeForLogicalElementWiseBinary(
   }
 
   // The input operands should be dequantized from ints8.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/comparisons.cc;l=388;drc=e76cd1dd569db9198eb674102f00a718a752487d
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/comparisons.cc;l=388;drc=e76cd1dd569db9198eb674102f00a718a752487d
   const mojom::DequantizeLinear& lhs_dequantize =
       GetDequantizeOp(binary.lhs_operand_id);
   const mojom::DequantizeLinear& rhs_dequantize =
@@ -4980,7 +4980,7 @@ auto GraphBuilderTflite::SerializeGemm(const mojom::Gemm& gemm)
 
   // The TFLite fully connected operator only supports a 1-D bias tensor with
   // `output_channels` dimensions.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;drc=7930f629a820b2233128fb591789f4d8a41be8d9;l=425
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/fully_connected.cc;drc=7930f629a820b2233128fb591789f4d8a41be8d9;l=425
   bool is_emulated_c_expression = false;
   if (gemm.c_operand_id && gemm.beta != 0.0f) {
     const std::vector<uint32_t>& output_shape =
@@ -6635,7 +6635,7 @@ auto GraphBuilderTflite::SerializePad(const mojom::Pad& pad)
       // Avoid setting the padding value tensor to meet XNNPack's requirements
       // that the constant value is 0.0f and the operator code is
       // BuiltinOperator_PAD.
-      // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5025;drc=4e673771b1ee61f0e9f854e2d1420f353c67c401
+      // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/delegates/xnnpack/xnnpack_delegate.cc;l=5025;drc=4e673771b1ee61f0e9f854e2d1420f353c67c401
       const MLNumber& constant_value = pad.mode->get_constant()->value;
       if (constant_value.AsFloat32() == 0.0f) {
         operator_code = ::tflite::BuiltinOperator::BuiltinOperator_PAD;
@@ -7874,7 +7874,7 @@ auto GraphBuilderTflite::SerializeScatterElements(
 
   // The TFLite kernel of scatter_nd expects updates operand's shape to be one
   // dimension when indices operand's shape is two dimensions here:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/scatter_nd.cc;l=64?q=scatter_nd.cc&ss=chromium%2Fchromium%2Fsrc
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/tflite/src/tensorflow/lite/kernels/scatter_nd.cc;l=64?q=scatter_nd.cc&ss=Cinaseek%2FCinaseek%2Fsrc
   //
   // So reshape updates from updates.descriptor.shape() to one dimension
   // (updates.descriptor.NumberOfElements())

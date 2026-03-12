@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ using base::android::ScopedJavaLocalRef;
 namespace {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.notifications
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.notifications
 enum NotificationActionType {
   // NB. Making this a one-line enum breaks code generation! crbug.com/41282083
   BUTTON,

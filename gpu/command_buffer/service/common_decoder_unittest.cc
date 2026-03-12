@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -484,7 +484,7 @@ TEST_F(CommonDecoderTest, GetAsStrings_Success) {
   EXPECT_EQ(std::string(str1.data()), std::string(strings_out[1]));
 }
 
-// Regression test for https://issues.chromium.org/487755344 where negative
+// Regression test for https://issues.Cinaseek.org/487755344 where negative
 // GLint sizes aren't validated out.
 TEST_F(CommonDecoderTest, GetAsStrings_StringsSizeNegative) {
   CommonDecoder::Bucket bucket;

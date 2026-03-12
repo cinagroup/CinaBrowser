@@ -4,13 +4,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_sample_test_apk"
           ],
@@ -33,7 +33,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -46,7 +46,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_sample_test_apk",
         "test_id_prefix": "ninja://components/cronet/android:cronet_sample_test_apk/"
@@ -54,13 +54,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_smoketests_apk"
           ],
@@ -83,7 +83,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -96,7 +96,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_smoketests_apk",
         "test_id_prefix": "ninja://components/cronet/android:cronet_smoketests_apk/"
@@ -104,13 +104,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_smoketests_missing_native_library_instrumentation_apk"
           ],
@@ -133,7 +133,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -146,7 +146,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_smoketests_missing_native_library_instrumentation_apk",
         "test_id_prefix": "ninja://components/cronet/android:cronet_smoketests_missing_native_library_instrumentation_apk/"
@@ -154,13 +154,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_smoketests_platform_only_instrumentation_apk"
           ],
@@ -183,7 +183,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -196,7 +196,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_smoketests_platform_only_instrumentation_apk",
         "test_id_prefix": "ninja://components/cronet/android:cronet_smoketests_platform_only_instrumentation_apk/"
@@ -205,13 +205,13 @@
         "args": [
           "--emulator-enable-network",
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_test_instrumentation_apk"
           ],
@@ -234,7 +234,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "idempotent": false,
           "named_caches": [
@@ -248,7 +248,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 3
         },
         "test": "cronet_test_instrumentation_apk",
@@ -257,13 +257,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cronet_unittests_android"
           ],
@@ -286,7 +286,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -299,7 +299,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_unittests_android",
         "test_id_prefix": "ninja://components/cronet/android:cronet_unittests_android/"
@@ -307,13 +307,13 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_30_google_apis_x86.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "net_unittests"
           ],
@@ -336,7 +336,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -349,7 +349,7 @@
               "caches": "android_30_google_apis_x86"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "net_unittests",

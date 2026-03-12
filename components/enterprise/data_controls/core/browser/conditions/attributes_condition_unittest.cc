@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace data_controls {
 namespace {
 
 constexpr char kGoogleUrl[] = "https://google.com";
-constexpr char kChromiumUrl[] = "https://chromium.org";
+constexpr char kCinaseekUrl[] = "https://Cinaseek.org";
 
 base::Value CreateDict(const std::string& value) {
   auto dict = base::JSONReader::Read(value, base::JSON_ALLOW_TRAILING_COMMAS);
@@ -169,7 +169,7 @@ TEST(AttributesConditionTest, AnyURL) {
       DestinationAttributesCondition::Create(CreateDict(R"({"urls": ["*"]})"));
   ASSERT_TRUE(any_source_url);
   ASSERT_TRUE(any_destination_url);
-  for (const char* url : {kGoogleUrl, kChromiumUrl}) {
+  for (const char* url : {kGoogleUrl, kCinaseekUrl}) {
     ActionContext context = {
         .source = {.url = GURL(url)},
         .destination = {.url = GURL(url)},
@@ -182,40 +182,40 @@ TEST(AttributesConditionTest, AnyURL) {
 TEST(AttributesConditionTest, SpecificSourceURL) {
   auto google_url_source = SourceAttributesCondition::Create(
       CreateDict(R"({"urls": ["google.com"]})"));
-  auto chromium_url_source = SourceAttributesCondition::Create(
-      CreateDict(R"({"urls": ["chromium.org"]})"));
+  auto Cinaseek_url_source = SourceAttributesCondition::Create(
+      CreateDict(R"({"urls": ["Cinaseek.org"]})"));
 
   ASSERT_TRUE(google_url_source);
-  ASSERT_TRUE(chromium_url_source);
+  ASSERT_TRUE(Cinaseek_url_source);
 
   ASSERT_TRUE(
       google_url_source->IsTriggered({.source = {.url = GURL(kGoogleUrl)}}));
-  ASSERT_TRUE(chromium_url_source->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl)}}));
+  ASSERT_TRUE(Cinaseek_url_source->IsTriggered(
+      {.source = {.url = GURL(kCinaseekUrl)}}));
 
   ASSERT_FALSE(
-      google_url_source->IsTriggered({.source = {.url = GURL(kChromiumUrl)}}));
+      google_url_source->IsTriggered({.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(
-      chromium_url_source->IsTriggered({.source = {.url = GURL(kGoogleUrl)}}));
+      Cinaseek_url_source->IsTriggered({.source = {.url = GURL(kGoogleUrl)}}));
 }
 
 TEST(AttributesConditionTest, SpecificDestinationURL) {
   auto google_url_destination = DestinationAttributesCondition::Create(
       CreateDict(R"({"urls": ["google.com"]})"));
-  auto chromium_url_destination = DestinationAttributesCondition::Create(
-      CreateDict(R"({"urls": ["chromium.org"]})"));
+  auto Cinaseek_url_destination = DestinationAttributesCondition::Create(
+      CreateDict(R"({"urls": ["Cinaseek.org"]})"));
 
   ASSERT_TRUE(google_url_destination);
-  ASSERT_TRUE(chromium_url_destination);
+  ASSERT_TRUE(Cinaseek_url_destination);
 
   ASSERT_TRUE(google_url_destination->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
-  ASSERT_TRUE(chromium_url_destination->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
+  ASSERT_TRUE(Cinaseek_url_destination->IsTriggered(
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
 
   ASSERT_FALSE(google_url_destination->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
-  ASSERT_FALSE(chromium_url_destination->IsTriggered(
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
+  ASSERT_FALSE(Cinaseek_url_destination->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
 }
 
@@ -260,7 +260,7 @@ TEST(AttributesConditionTest, URLAndAllComponents) {
       })"));
   ASSERT_TRUE(any_component_or_url);
   for (Component component : kAllComponents) {
-    for (const char* url : {kGoogleUrl, kChromiumUrl}) {
+    for (const char* url : {kGoogleUrl, kCinaseekUrl}) {
       ActionContext context = {
           .destination = {.url = GURL(url), .component = component}};
       ASSERT_TRUE(any_component_or_url->IsTriggered(context));
@@ -278,7 +278,7 @@ TEST(AttributesConditionTest, URLAndOneComponent) {
 
     ASSERT_TRUE(google_and_one_component);
     for (Component context_component : kAllComponents) {
-      for (const char* url : {kGoogleUrl, kChromiumUrl}) {
+      for (const char* url : {kGoogleUrl, kCinaseekUrl}) {
         ActionContext context = {
             .destination = {.url = GURL(url), .component = context_component}};
         if (context_component == condition_component && url == kGoogleUrl) {
@@ -368,11 +368,11 @@ TEST(AttributesConditionTest, URLAndIncognitoDestination) {
   ASSERT_FALSE(url_and_incognito->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(url_and_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .incognito = false}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .incognito = false}}));
   ASSERT_FALSE(url_and_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(
       url_and_incognito->CanBeEvaluated({.destination = {.incognito = true}}));
   ASSERT_FALSE(
@@ -392,11 +392,11 @@ TEST(AttributesConditionTest, URLAndIncognitoDestination) {
   ASSERT_TRUE(url_and_not_incognito->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .incognito = false}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .incognito = false}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(url_and_not_incognito->CanBeEvaluated(
       {.destination = {.incognito = true}}));
   ASSERT_FALSE(url_and_not_incognito->CanBeEvaluated(
@@ -417,11 +417,11 @@ TEST(AttributesConditionTest, URLAndIncognitoSource) {
   ASSERT_FALSE(
       url_and_incognito->IsTriggered({.source = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_incognito->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(url_and_incognito->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .incognito = false}}));
+      {.source = {.url = GURL(kCinaseekUrl), .incognito = false}}));
   ASSERT_FALSE(
-      url_and_incognito->IsTriggered({.source = {.url = GURL(kChromiumUrl)}}));
+      url_and_incognito->IsTriggered({.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(
       url_and_incognito->CanBeEvaluated({.source = {.incognito = true}}));
   ASSERT_FALSE(
@@ -440,11 +440,11 @@ TEST(AttributesConditionTest, URLAndIncognitoSource) {
   ASSERT_TRUE(url_and_not_incognito->IsTriggered(
       {.source = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .incognito = false}}));
+      {.source = {.url = GURL(kCinaseekUrl), .incognito = false}}));
   ASSERT_FALSE(url_and_not_incognito->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl)}}));
+      {.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(
       url_and_not_incognito->CanBeEvaluated({.source = {.incognito = true}}));
   ASSERT_FALSE(
@@ -565,11 +565,11 @@ TEST(AttributesConditionTest, URLAndOtherProfileDestination) {
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .other_profile = false}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .other_profile = false}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(url_and_other_profile->CanBeEvaluated(
       {.destination = {.other_profile = true}}));
   ASSERT_FALSE(url_and_other_profile->CanBeEvaluated(
@@ -589,11 +589,11 @@ TEST(AttributesConditionTest, URLAndOtherProfileDestination) {
   ASSERT_TRUE(url_and_not_other_profile->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .other_profile = false}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .other_profile = false}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl)}}));
+      {.destination = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(url_and_not_other_profile->CanBeEvaluated(
       {.destination = {.other_profile = true}}));
   ASSERT_FALSE(url_and_not_other_profile->CanBeEvaluated(
@@ -614,11 +614,11 @@ TEST(AttributesConditionTest, URLAndOtherProfileSource) {
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
       {.source = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .other_profile = false}}));
+      {.source = {.url = GURL(kCinaseekUrl), .other_profile = false}}));
   ASSERT_FALSE(url_and_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl)}}));
+      {.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(url_and_other_profile->CanBeEvaluated(
       {.source = {.other_profile = true}}));
   ASSERT_FALSE(url_and_other_profile->CanBeEvaluated(
@@ -638,11 +638,11 @@ TEST(AttributesConditionTest, URLAndOtherProfileSource) {
   ASSERT_TRUE(url_and_not_other_profile->IsTriggered(
       {.source = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .other_profile = false}}));
+      {.source = {.url = GURL(kCinaseekUrl), .other_profile = false}}));
   ASSERT_FALSE(url_and_not_other_profile->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl)}}));
+      {.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(url_and_not_other_profile->CanBeEvaluated(
       {.source = {.other_profile = true}}));
   ASSERT_FALSE(url_and_not_other_profile->CanBeEvaluated(
@@ -706,15 +706,15 @@ TEST(AttributesConditionTest, URLOtherProfileIncognitoSource) {
       {.source = {.url = GURL(kGoogleUrl), .incognito = true}}));
   ASSERT_FALSE(condition->IsTriggered(
       {.source = {.url = GURL(kGoogleUrl), .other_profile = true}}));
-  ASSERT_FALSE(condition->IsTriggered({.source = {.url = GURL(kChromiumUrl),
+  ASSERT_FALSE(condition->IsTriggered({.source = {.url = GURL(kCinaseekUrl),
                                                   .incognito = true,
                                                   .other_profile = true}}));
   ASSERT_FALSE(condition->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(condition->IsTriggered(
-      {.source = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.source = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(condition->IsTriggered({.source = {.url = GURL(kGoogleUrl)}}));
-  ASSERT_FALSE(condition->IsTriggered({.source = {.url = GURL(kChromiumUrl)}}));
+  ASSERT_FALSE(condition->IsTriggered({.source = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(condition->CanBeEvaluated({.source = {.incognito = true}}));
   ASSERT_FALSE(condition->CanBeEvaluated({.source = {.incognito = false}}));
 
@@ -742,17 +742,17 @@ TEST(AttributesConditionTest, URLOtherProfileIncognitoDestination) {
   ASSERT_FALSE(condition->IsTriggered(
       {.destination = {.url = GURL(kGoogleUrl), .other_profile = true}}));
   ASSERT_FALSE(
-      condition->IsTriggered({.destination = {.url = GURL(kChromiumUrl),
+      condition->IsTriggered({.destination = {.url = GURL(kCinaseekUrl),
                                               .incognito = true,
                                               .other_profile = true}}));
   ASSERT_FALSE(condition->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .incognito = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .incognito = true}}));
   ASSERT_FALSE(condition->IsTriggered(
-      {.destination = {.url = GURL(kChromiumUrl), .other_profile = true}}));
+      {.destination = {.url = GURL(kCinaseekUrl), .other_profile = true}}));
   ASSERT_FALSE(
       condition->IsTriggered({.destination = {.url = GURL(kGoogleUrl)}}));
   ASSERT_FALSE(
-      condition->IsTriggered({.destination = {.url = GURL(kChromiumUrl)}}));
+      condition->IsTriggered({.destination = {.url = GURL(kCinaseekUrl)}}));
   ASSERT_FALSE(condition->CanBeEvaluated({.destination = {.incognito = true}}));
   ASSERT_FALSE(
       condition->CanBeEvaluated({.destination = {.incognito = false}}));

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ constexpr std::array<const char*, 3> kDebugDetachableBases = {
     "Base A", "Base B", "Base C"};
 
 constexpr const char kDebugOsVersion[] =
-    "Chromium 64.0.3279.0 (Platform 10146.0.0 dev-channel peppy test)";
+    "Cinaseek 64.0.3279.0 (Platform 10146.0.0 dev-channel peppy test)";
 constexpr const char kDebugEnterpriseInfo[] = "Asset ID: 1111";
 constexpr const char kDebugBluetoothName[] = "Bluetooth adapter";
 

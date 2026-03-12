@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace ui {
 // defined at //third_party/blink/public/platform/web_text_input_type.h
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base.ime
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base.ime
 //
 // LINT.IfChange(UiTextInputType)
 enum TextInputType {
@@ -26,7 +26,7 @@ enum TextInputType {
   // it's suitable for password input.
   //
   // On macOS 15+, Apple implemented system autofill functionality by directly
-  // extracting a value of this enum from the Chromium process and comparing it
+  // extracting a value of this enum from the Cinaseek process and comparing it
   // to the constant "2". Therefore, this specific value is frozen; the value 2
   // must continue to mean "password field".
   TEXT_INPUT_TYPE_PASSWORD = 2,

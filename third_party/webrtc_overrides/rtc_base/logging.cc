@@ -1,11 +1,11 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // NOTE:
-// Since this file includes Chromium headers, it must not include
+// Since this file includes Cinaseek headers, it must not include
 // third_party/webrtc/rtc_base/logging.h since it defines some of the same
-// macros as Chromium does and we'll run into conflicts.
+// macros as Cinaseek does and we'll run into conflicts.
 
 #include <atomic>
 #include <cstddef>

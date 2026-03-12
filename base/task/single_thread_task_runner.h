@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ class BASE_EXPORT SingleThreadTaskRunner : public SequencedTaskRunner {
   // CHECKs if the current thread isn't servicing a SingleThreadTaskRunner.
   //
   // See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks.md#Posting-to-the-Current-Virtual_Thread
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/threading_and_tasks.md#Posting-to-the-Current-Virtual_Thread
   // for details
   [[nodiscard]] static const scoped_refptr<SingleThreadTaskRunner>&
   GetCurrentDefault();

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 # Such script would typically wrap all Rust unit tests from a set of related
 # crates (e.g. all crates under //base).
 #
-# The script is primarily useful to enable running the tests on Chromium bots,
+# The script is primarily useful to enable running the tests on Cinaseek bots,
 # but it is also a convenience for having a single entry point for running
 # the tests locally (without having to manually fan out to all the individual
 # executables).

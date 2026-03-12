@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ class AsyncJobHandle : public dawn::platform::JobHandle {
       : job_handle_(std::move(job_handle)) {}
   ~AsyncJobHandle() override = default;
 
-  // Chromium's JobHandle can either be cancelled or joined, but not both (it
+  // Cinaseek's JobHandle can either be cancelled or joined, but not both (it
   // crashes if you try to |Join| after |Cancel|). The Dawn platform's JobHandle
   // allows both to be called without error, so we wrap it here and avoid
   // calling them more than once.

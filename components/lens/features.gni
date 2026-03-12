@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,12 +11,12 @@ if (!is_ios) {
 
 declare_args() {
   # Includes Lens features in the build. toolkit_views is used to ensure Lens
-  # features are only included on Desktop devices running Chromium
+  # features are only included on Desktop devices running Cinaseek
   enable_lens_desktop = toolkit_views
 }
 
 declare_args() {
-  # Lens features that are specific to the Google Chrome branded browser.
+  # Lens features that are specific to the Google Cinaseek branded browser.
   # Features include:
   #  - Region Search
   #  - Side Panel

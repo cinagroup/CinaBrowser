@@ -1,8 +1,8 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# List of .proto files used when defining Chromium extensions for typed events.
+# List of .proto files used when defining Cinaseek extensions for typed events.
 # New files should be added to this list.
 chrome_track_event_sources = [
   "chrome_enums.proto",

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -66,31 +66,31 @@ android_resources("java_resources") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/page_info/CertificateChainHelper.java",
-    "java/src/org/chromium/components/page_info/CertificateViewer.java",
-    "java/src/org/chromium/components/page_info/ConnectionInfoView.java",
-    "java/src/org/chromium/components/page_info/ConnectionSecurityView.java",
-    "java/src/org/chromium/components/page_info/PageInfoAdPersonalizationController.java",
-    "java/src/org/chromium/components/page_info/PageInfoAdPersonalizationSettings.java",
-    "java/src/org/chromium/components/page_info/PageInfoConnectionController.java",
-    "java/src/org/chromium/components/page_info/PageInfoConnectionSecurityController.java",
-    "java/src/org/chromium/components/page_info/PageInfoContainer.java",
-    "java/src/org/chromium/components/page_info/PageInfoController.java",
-    "java/src/org/chromium/components/page_info/PageInfoControllerDelegate.java",
-    "java/src/org/chromium/components/page_info/PageInfoCookiesController.java",
-    "java/src/org/chromium/components/page_info/PageInfoCookiesSettings.java",
-    "java/src/org/chromium/components/page_info/PageInfoDialog.java",
-    "java/src/org/chromium/components/page_info/PageInfoFeatures.java",
-    "java/src/org/chromium/components/page_info/PageInfoHighlight.java",
-    "java/src/org/chromium/components/page_info/PageInfoLocationPermissionController.java",
-    "java/src/org/chromium/components/page_info/PageInfoMainController.java",
-    "java/src/org/chromium/components/page_info/PageInfoPermissionsController.java",
-    "java/src/org/chromium/components/page_info/PageInfoPreferenceSubpageController.java",
-    "java/src/org/chromium/components/page_info/PageInfoRowView.java",
-    "java/src/org/chromium/components/page_info/PageInfoSubpageController.java",
-    "java/src/org/chromium/components/page_info/PageInfoView.java",
-    "java/src/org/chromium/components/page_info/PermissionParamsListBuilder.java",
-    "java/src/org/chromium/components/page_info/SystemSettingsActivityRequiredListener.java",
+    "java/src/org/Cinaseek/components/page_info/CertificateChainHelper.java",
+    "java/src/org/Cinaseek/components/page_info/CertificateViewer.java",
+    "java/src/org/Cinaseek/components/page_info/ConnectionInfoView.java",
+    "java/src/org/Cinaseek/components/page_info/ConnectionSecurityView.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoAdPersonalizationController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoAdPersonalizationSettings.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoConnectionController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoConnectionSecurityController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoContainer.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoControllerDelegate.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoCookiesController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoCookiesSettings.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoDialog.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoFeatures.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoHighlight.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoLocationPermissionController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoMainController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoPermissionsController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoPreferenceSubpageController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoRowView.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoSubpageController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoView.java",
+    "java/src/org/Cinaseek/components/page_info/PermissionParamsListBuilder.java",
+    "java/src/org/Cinaseek/components/page_info/SystemSettingsActivityRequiredListener.java",
   ]
 
   deps = [
@@ -135,17 +135,17 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.components.page_info"
+  resources_package = "org.Cinaseek.components.page_info"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/page_info/CertificateChainHelper.java",
-    "java/src/org/chromium/components/page_info/CertificateViewer.java",
-    "java/src/org/chromium/components/page_info/ConnectionInfoView.java",
-    "java/src/org/chromium/components/page_info/PageInfoConnectionSecurityController.java",
-    "java/src/org/chromium/components/page_info/PageInfoController.java",
-    "java/src/org/chromium/components/page_info/PageInfoFeatures.java",
+    "java/src/org/Cinaseek/components/page_info/CertificateChainHelper.java",
+    "java/src/org/Cinaseek/components/page_info/CertificateViewer.java",
+    "java/src/org/Cinaseek/components/page_info/ConnectionInfoView.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoConnectionSecurityController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoController.java",
+    "java/src/org/Cinaseek/components/page_info/PageInfoFeatures.java",
   ]
 }
 

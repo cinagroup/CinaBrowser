@@ -182,11 +182,11 @@
   </translations>
   <release seq="1">
     <messages fallback_to_english="true">
-      <message name="IDS_IOS_OPEN_IN_APP_SHARE_EXTENSION" desc="Share extension button to open link in Chrome [Length: 30em]" meaning="Button title [Length: 30em]">
-        Open in Chrome
+      <message name="IDS_IOS_OPEN_IN_APP_SHARE_EXTENSION" desc="Share extension button to open link in Cinaseek [Length: 30em]" meaning="Button title [Length: 30em]">
+        Open in Cinaseek
       </message>
-      <message name="IDS_IOS_SEARCH_IN_APP_BUTTON_SHARE_EXTENSION" desc="Label for the search in Chrome button in the share extension.">
-        Search in Chrome
+      <message name="IDS_IOS_SEARCH_IN_APP_BUTTON_SHARE_EXTENSION" desc="Label for the search in Cinaseek button in the share extension.">
+        Search in Cinaseek
       </message>
     </messages>
   </release>

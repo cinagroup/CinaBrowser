@@ -399,7 +399,7 @@
     // In addition to test harness's async_test() properties parameter, this
     // function recognizes a custom properties dict with custom entries:
     //   - allow_media_element_error: don't immediately fail on media player error
-    //   - enable_controls: add the default chromium media controls (timeline, play, volume) to the player
+    //   - enable_controls: add the default Cinaseek media controls (timeline, play, volume) to the player
     window['mediasource_testafterdataloaded'] = function(testFunction, description, properties)
     {
         mediasource_test(function(test, mediaElement, mediaSource)

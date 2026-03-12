@@ -41,7 +41,7 @@ async function applyJitterBufferTarget(t, kind, target) {
 
   const receiver = callee.getReceivers()[0];
 
-  // Workaround for Chromium to pull audio from jitter buffer.
+  // Workaround for Cinaseek to pull audio from jitter buffer.
   if (kind === "audio") {
     const audio = document.createElement("audio");
 

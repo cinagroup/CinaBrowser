@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,13 +9,13 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":shopping_service_jni" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentController.java",
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentProperties.java",
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentProvider.java",
-    "java/src/org/chromium/chrome/browser/commerce/PriceNotificationSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/commerce/PriceTrackingUtils.java",
-    "java/src/org/chromium/chrome/browser/commerce/PriceUtils.java",
-    "java/src/org/chromium/chrome/browser/commerce/ShoppingServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentController.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/PriceNotificationSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/PriceTrackingUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/PriceUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/ShoppingServiceFactory.java",
   ]
 
   deps = [
@@ -48,17 +48,17 @@ android_library("java") {
     "//ui/android:ui_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.commerce"
+  resources_package = "org.Cinaseek.chrome.browser.commerce"
 }
 
 android_library("commerce_bottom_sheet_content_java") {
-  resources_package = "org.chromium.chrome.browser.commerce"
+  resources_package = "org.Cinaseek.chrome.browser.commerce"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContent.java",
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentBinder.java",
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentCoordinator.java",
-    "java/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentMediator.java",
   ]
 
   deps = [
@@ -91,12 +91,12 @@ android_resources("java_resources") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.commerce"
+  resources_package = "org.Cinaseek.chrome.browser.commerce"
 
   sources = [
-    "javatests/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentRenderTest.java",
-    "javatests/src/org/chromium/chrome/browser/commerce/PriceNotificationSettingsFragmentTest.java",
-    "javatests/src/org/chromium/chrome/browser/commerce/PriceUtilsTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentRenderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/commerce/PriceNotificationSettingsFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/commerce/PriceUtilsTest.java",
   ]
 
   deps = [
@@ -136,16 +136,16 @@ android_library("javatests") {
 
 generate_jni("shopping_service_jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/commerce/PriceTrackingUtils.java",
-    "java/src/org/chromium/chrome/browser/commerce/ShoppingServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/PriceTrackingUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/ShoppingServiceFactory.java",
   ]
 }
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.commerce"
+  resources_package = "org.Cinaseek.chrome.browser.commerce"
 
-  sources = [ "junit/src/org/chromium/chrome/browser/commerce/CommerceBottomSheetContentMediatorUnitTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/commerce/CommerceBottomSheetContentMediatorUnitTest.java" ]
 
   deps = [
     ":commerce_bottom_sheet_content_java",

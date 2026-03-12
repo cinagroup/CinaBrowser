@@ -2434,7 +2434,7 @@ void HTMLMediaElement::ProgressEventTimerFired() {
   // MediaSource: The "stalled" event is not dispatched but a conscious decision
   // was made to periodically dispatch the "progress" event to allow updates to
   // buffering UIs. Therefore, the timer is not stopped below.
-  // https://groups.google.com/a/chromium.org/g/media-dev/c/Y8ITyIFmUC0/m/avBYOy_UFwAJ
+  // https://groups.google.com/a/Cinaseek.org/g/media-dev/c/Y8ITyIFmUC0/m/avBYOy_UFwAJ
   if (GetLoadType() == WebMediaPlayer::kLoadTypeMediaStream) {
     progress_event_timer_.Stop();
   }

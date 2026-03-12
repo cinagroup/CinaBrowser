@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ BASE_FEATURE(kMdnsResponderGeneratedNameListing,
 
 // Treat ORB blocked responses to script-initiated fetches as errors too.
 // Complements ORB v0.2, which exempts script-initiated fetches.
-// Implementing ORB in Chromium is tracked in https://crbug.com/1178928
+// Implementing ORB in Cinaseek is tracked in https://crbug.com/1178928
 BASE_FEATURE(kOpaqueResponseBlockingErrorsForAllFetches,
              base::FEATURE_DISABLED_BY_DEFAULT);
 

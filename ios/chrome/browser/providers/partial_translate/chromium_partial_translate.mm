@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ id<PartialTranslateController> NewPartialTranslateController(
     NSString* source_text,
     const CGRect& anchor,
     BOOL incognito) {
-  // Partial translate is not supported in Chromium.
+  // Partial translate is not supported in Cinaseek.
   return nil;
 }
 

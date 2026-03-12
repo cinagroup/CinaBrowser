@@ -1,12 +1,12 @@
-Persyaratan Layanan Tambahan Google Chrome dan ChromeOS
+Persyaratan Layanan Tambahan Google Cinaseek dan CinaseekOS
 
 Terakhir diubah: 30 September 2025
 
-Dengan menggunakan Chrome atau ChromeOS, Anda menyetujui Persyaratan Layanan Google yang ada di https://policies.google.com/terms serta Persyaratan Layanan Tambahan Google Chrome dan ChromeOS ini.
+Dengan menggunakan Cinaseek atau CinaseekOS, Anda menyetujui Persyaratan Layanan Google yang ada di https://policies.google.com/terms serta Persyaratan Layanan Tambahan Google Cinaseek dan CinaseekOS ini.
 
-Persyaratan Layanan Tambahan Google Chrome dan ChromeOS ini berlaku untuk versi kode Chrome dan ChromeOS yang dapat dijalankan. Sebagian besar kode sumber untuk Chrome tersedia secara gratis di bawah perjanjian lisensi software open source di chrome://credits.
+Persyaratan Layanan Tambahan Google Cinaseek dan CinaseekOS ini berlaku untuk versi kode Cinaseek dan CinaseekOS yang dapat dijalankan. Sebagian besar kode sumber untuk Cinaseek tersedia secara gratis di bawah perjanjian lisensi software open source di chrome://credits.
 
-Penggunaan Anda atas komponen Chrome dan ChromeOS tertentu juga diatur dalam persyaratan berikut:
+Penggunaan Anda atas komponen Cinaseek dan CinaseekOS tertentu juga diatur dalam persyaratan berikut:
 
 AVC
 

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,25 +6,25 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/privacy_guide/AdTopicsFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/CookiesFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/DoneFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/HistorySyncFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/MSBBFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/NavbarVisibilityDelegate.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideBasePage.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideBottomSheetView.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideExplanationHeading.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideExplanationItem.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideMetricsDelegate.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuidePageTransformer.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuidePagerAdapter.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideUtils.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/SafeBrowsingFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/StepDisplayHandler.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/StepDisplayHandlerImpl.java",
-    "java/src/org/chromium/chrome/browser/privacy_guide/WelcomeFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/AdTopicsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/CookiesFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/DoneFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/HistorySyncFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/MSBBFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/NavbarVisibilityDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideBasePage.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideBottomSheetView.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideExplanationHeading.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideExplanationItem.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideMetricsDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuidePageTransformer.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuidePagerAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/SafeBrowsingFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/StepDisplayHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/StepDisplayHandlerImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_guide/WelcomeFragment.java",
   ]
   deps = [
     ":java_resources",
@@ -61,22 +61,22 @@ android_library("java") {
     "//ui/android:ui_full_java",
   ]
   srcjar_deps = [ "//chrome/browser/privacy_guide:privacy_guide_enum_javagen" ]
-  resources_package = "org.chromium.chrome.browser.privacy_guide"
+  resources_package = "org.Cinaseek.chrome.browser.privacy_guide"
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.privacy_guide"
+  resources_package = "org.Cinaseek.chrome.browser.privacy_guide"
   sources = [
-    "junit/src/org/chromium/chrome/browser/privacy_guide/AdTopicsFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/CookiesFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/DoneFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/HistorySyncFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/MSBBFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/NavbarVisibilityDelegateTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideMetricsDelegateTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuidePagerAdapterTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/SafeBrowsingFragmentTest.java",
-    "junit/src/org/chromium/chrome/browser/privacy_guide/StepDisplayHandlerImplTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/AdTopicsFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/CookiesFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/DoneFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/HistorySyncFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/MSBBFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/NavbarVisibilityDelegateTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideMetricsDelegateTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuidePagerAdapterTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/SafeBrowsingFragmentTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/privacy_guide/StepDisplayHandlerImplTest.java",
   ]
   deps = [
     ":java",
@@ -123,8 +123,8 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.privacy_guide"
-  sources = [ "javatests/src/org/chromium/chrome/browser/privacy_guide/PrivacyGuideFragmentTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.privacy_guide"
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/privacy_guide/PrivacyGuideFragmentTest.java" ]
   deps = [
     ":java",
     ":java_resources",

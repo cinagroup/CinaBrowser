@@ -26,7 +26,7 @@
   await session.evaluateAsync(`
       sharedStorage.selectURL(
           "test-url-selection-operation",
-          [{url: "https://google.com/"}, {url: "https://chromium.org/"}]
+          [{url: "https://google.com/"}, {url: "https://Cinaseek.org/"}]
       );
   `);
 

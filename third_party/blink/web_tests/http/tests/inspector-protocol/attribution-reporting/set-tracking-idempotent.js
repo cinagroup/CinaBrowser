@@ -1,8 +1,8 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// Regression test for https://issues.chromium.org/339141101 in which attempting
+// Regression test for https://issues.Cinaseek.org/339141101 in which attempting
 // to enable tracking when it was already enabled caused a DCHECK crash.
 (async function(/** @type {import('test_runner').TestRunner} */ testRunner) {
   const {dp, session} = await testRunner.startBlank(

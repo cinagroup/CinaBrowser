@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -123,7 +123,7 @@ buildflag_header("android_buildflags") {
   flags = [ "IS_DESKTOP_ANDROID=$is_desktop_android" ]
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   group("gold_common_pytype") {
     testonly = true
 

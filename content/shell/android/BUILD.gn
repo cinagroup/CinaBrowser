@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,8 +14,8 @@ content_shell_test_manifest =
 
 generate_jni("content_shell_jni_headers") {
   sources = [
-    "java/src/org/chromium/content_shell/Shell.java",
-    "java/src/org/chromium/content_shell/ShellManager.java",
+    "java/src/org/Cinaseek/content_shell/Shell.java",
+    "java/src/org/Cinaseek/content_shell/ShellManager.java",
   ]
 }
 
@@ -83,7 +83,7 @@ android_resources("content_shell_java_resources") {
 
 android_library("content_shell_java") {
   testonly = true
-  resources_package = "org.chromium.content_shell"
+  resources_package = "org.Cinaseek.content_shell"
   deps = [
     ":content_shell_java_resources",
     ":content_shell_manifest",
@@ -105,9 +105,9 @@ android_library("content_shell_java") {
   ]
   srcjar_deps = [ ":content_shell_jni_headers" ]
   sources = [
-    "java/src/org/chromium/content_shell/Shell.java",
-    "java/src/org/chromium/content_shell/ShellManager.java",
-    "java/src/org/chromium/content_shell/ShellViewAndroidDelegate.java",
+    "java/src/org/Cinaseek/content_shell/Shell.java",
+    "java/src/org/Cinaseek/content_shell/ShellManager.java",
+    "java/src/org/Cinaseek/content_shell/ShellViewAndroidDelegate.java",
   ]
 }
 
@@ -115,7 +115,7 @@ jinja_template("content_shell_manifest") {
   testonly = true
   input = "shell_apk/AndroidManifest.xml.jinja2"
   output = content_shell_manifest
-  variables = [ "manifest_package=org.chromium.content_shell_apk" ]
+  variables = [ "manifest_package=org.Cinaseek.content_shell_apk" ]
   if (enable_javaless_renderers) {
     variables += [
       "javaless_renderers=true",
@@ -129,7 +129,7 @@ jinja_template("content_shell_test_manifest") {
   input = "javatests/AndroidManifest.xml"
   includes = [ "shell_apk/AndroidManifest.xml.jinja2" ]
   output = content_shell_test_manifest
-  variables = [ "manifest_package=org.chromium.content_shell_apk.tests" ]
+  variables = [ "manifest_package=org.Cinaseek.content_shell_apk.tests" ]
   if (enable_javaless_renderers) {
     variables += [
       "javaless_renderers=true",
@@ -152,7 +152,7 @@ android_library("content_shell_apk_java") {
 
   srcjar_deps = [ ":content_javatests_aidl" ]
 
-  resources_package = "org.chromium.content_shell_apk"
+  resources_package = "org.Cinaseek.content_shell_apk"
   deps = [
     ":content_shell_apk_resources",
     ":content_shell_java",
@@ -171,19 +171,19 @@ android_library("content_shell_apk_java") {
   ]
 
   sources = [
-    "shell_apk/src/org/chromium/content_shell_apk/ChildProcessLauncherTestUtils.java",
-    "shell_apk/src/org/chromium/content_shell_apk/ContentShellActivity.java",
-    "shell_apk/src/org/chromium/content_shell_apk/ContentShellApplication.java",
-    "shell_apk/src/org/chromium/content_shell_apk/TestChildProcessService.java",
-    "shell_apk/src/org/chromium/content_shell_apk/TestChildProcessService0.java",
-    "shell_apk/src/org/chromium/content_shell_apk/TestChildProcessService1.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/ChildProcessLauncherTestUtils.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/ContentShellActivity.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/ContentShellApplication.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/TestChildProcessService.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/TestChildProcessService0.java",
+    "shell_apk/src/org/Cinaseek/content_shell_apk/TestChildProcessService1.java",
   ]
 }
 
 android_aidl("content_javatests_aidl") {
   import_include = [ "shell_apk/src" ]
   sources =
-      [ "shell_apk/src/org/chromium/content_shell_apk/IChildProcessTest.aidl" ]
+      [ "shell_apk/src/org/Cinaseek/content_shell_apk/IChildProcessTest.aidl" ]
 }
 
 android_assets("content_shell_assets") {
@@ -281,10 +281,10 @@ android_library("content_shell_test_java") {
     "//url:gurl_java",
   ]
   sources = [
-    "javatests/src/org/chromium/content_shell_apk/ContentShellActivityTestRule.java",
-    "javatests/src/org/chromium/content_shell_apk/ContentShellPreconditionsTest.java",
-    "javatests/src/org/chromium/content_shell_apk/ContentShellShellManagementTest.java",
-    "javatests/src/org/chromium/content_shell_apk/ContentShellUrlTest.java",
+    "javatests/src/org/Cinaseek/content_shell_apk/ContentShellActivityTestRule.java",
+    "javatests/src/org/Cinaseek/content_shell_apk/ContentShellPreconditionsTest.java",
+    "javatests/src/org/Cinaseek/content_shell_apk/ContentShellShellManagementTest.java",
+    "javatests/src/org/Cinaseek/content_shell_apk/ContentShellUrlTest.java",
   ]
 }
 
@@ -298,5 +298,5 @@ android_library("content_shell_browsertests_java") {
     "//third_party/androidx:androidx_core_core_java",
     "//ui/android:ui_java",
   ]
-  sources = [ "browsertests/src/org/chromium/content_shell/browsertests/ContentShellBrowserTestActivity.java" ]
+  sources = [ "browsertests/src/org/Cinaseek/content_shell/browsertests/ContentShellBrowserTestActivity.java" ]
 }

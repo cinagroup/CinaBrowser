@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,19 +7,19 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-prompt-evals",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.prompt_eval",
+              "builder_group": "Cinaseek.prompt_eval",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -29,7 +29,7 @@
         {
           "bucket": "ci",
           "builder": "linux-prompt-evals",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -42,7 +42,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -51,6 +51,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.prompt_eval",
-  "recipe": "chromium/eval_prompts"
+  "builder_group": "tryserver.Cinaseek.prompt_eval",
+  "recipe": "Cinaseek/eval_prompts"
 }

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 namespace actor::ui {
 // Enum for status of the tab indicator (icon to the right of the tab title).
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.actor.ui
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.actor.ui
 enum class TabIndicatorStatus {
   // Not visible.
   kNone,

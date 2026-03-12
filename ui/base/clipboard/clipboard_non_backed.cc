@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -915,7 +915,7 @@ void ClipboardNonBacked::ReadData(
 
   // Reading an RFH token written in the clipboard is always allowed as it is
   // used internally by the browser to evaluate other policies.
-  if (format.GetName() != "chromium/x-internal-source-rfh-token" &&
+  if (format.GetName() != "Cinaseek/x-internal-source-rfh-token" &&
       !clipboard_internal.IsReadAllowed(base::OptionalToPtr(data_dst),
                                         ClipboardInternalFormat::kCustom,
                                         format)) {

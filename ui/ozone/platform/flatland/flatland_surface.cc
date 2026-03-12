@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ fuchsia::ui::composition::ContentId CreateImage(
 FlatlandSurface::FlatlandSurface(
     FlatlandSurfaceFactory* flatland_surface_factory,
     gfx::AcceleratedWidget window)
-    : flatland_("Chromium FlatlandSurface",
+    : flatland_("Cinaseek FlatlandSurface",
                 base::BindOnce(&FlatlandSurface::OnFlatlandError,
                                base::Unretained(this))),
       flatland_surface_factory_(flatland_surface_factory),

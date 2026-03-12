@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -220,7 +220,7 @@ void EmitTimeInStageHistogram(base::TimeDelta duration,
 vm_tools::concierge::VmInfo::VmType ToConciergeServiceVmType(
     vm_tools::apps::VmType type) {
   // Keep in sync with
-  // https://source.chromium.org/chromiumos/chromiumos/codesearch/+/HEAD:src/platform2/vm_tools/concierge/vm_util.cc;l=1303
+  // https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/HEAD:src/platform2/vm_tools/concierge/vm_util.cc;l=1303
   using VmType = vm_tools::concierge::VmInfo::VmType;
   using AppsVmType = vm_tools::apps::VmType;
   switch (type) {
@@ -386,7 +386,7 @@ class CrostiniManager::CrostiniRestarter
       // safe set a 8 minute timeout.
       {mojom::InstallerState::kStartContainer, base::Minutes(8)},
       // Configuration may be slow, making timeout 2 hours at first because some
-      // playbooks are gigantic (e.g. Chromium playbook).
+      // playbooks are gigantic (e.g. Cinaseek playbook).
       {mojom::InstallerState::kConfigureContainer, base::Hours(2)},
   };
 

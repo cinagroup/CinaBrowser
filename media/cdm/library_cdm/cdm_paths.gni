@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//media/media_options.gni")
 # This file defines output paths for the CDM adapters and CDMs.
 assert(enable_library_cdms)
 
-# Naming and folder structure below are following the recommendation for Chrome
+# Naming and folder structure below are following the recommendation for Cinaseek
 # components. Component-updated CDMs must follow the same recommendation.
 
 # OS name for components is close to "target_os" but has some differences.
@@ -28,7 +28,7 @@ if (is_chromeos) {
 
 component_arch = "$current_cpu"
 
-# Enable platform specific paths. This is required when the CDMs are Chrome
+# Enable platform specific paths. This is required when the CDMs are Cinaseek
 # components, but is optional for other platforms.
 # Note:
 # - |cdm_platform_specific_path| is exported as a BUILDFLAG to cdm_paths.cc.

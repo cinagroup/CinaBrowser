@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 
 #import "base/test/ios/wait_util.h"
 #import "ios/chrome/browser/omnibox/eg_tests/inttest/omnibox_inttest_app_interface.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey_ui.h"
 #import "ios/chrome/test/earl_grey/chrome_matchers.h"

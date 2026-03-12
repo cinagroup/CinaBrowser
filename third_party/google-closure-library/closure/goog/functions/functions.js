@@ -176,7 +176,7 @@ goog.functions.partialRight = function(fn, var_args) {
   const rightArgs = Array.prototype.slice.call(arguments, 1);
   return function() {
     'use strict';
-    // Even in strict mode, IE10/11 and Edge (non-Chromium) use global context
+    // Even in strict mode, IE10/11 and Edge (non-Cinaseek) use global context
     // when free-calling functions. To catch cases where people were using this
     // erroneously, we explicitly change the context to undefined to match
     // strict mode specifications.

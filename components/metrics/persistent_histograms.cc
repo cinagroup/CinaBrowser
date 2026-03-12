@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ base::FilePath GetSpareFilePath(const base::FilePath& metrics_dir) {
   return base::GlobalHistogramAllocator::ConstructFilePathForSpareFile(
       metrics_dir, kBrowserMetricsName);
 }
-// LINT.ThenChange(/chrome/android/java/src/org/chromium/chrome/browser/backup/ChromeBackupAgentImpl.java)
+// LINT.ThenChange(/chrome/android/java/src/org/Cinaseek/chrome/browser/backup/ChromeBackupAgentImpl.java)
 
 // Logged to UMA - keep in sync with enums.xml.
 enum InitResult {

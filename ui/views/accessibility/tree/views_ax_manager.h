@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ using AuraAXTreeSerializer = ui::AXTreeSerializer<
     ui::AXTreeData*,
     ui::AXNodeData>;
 
-// This class manages a tree of AXNodes for all Chromium Views, serializing
+// This class manages a tree of AXNodes for all Cinaseek Views, serializing
 // updates, handling accessibility events, performing hit tests, etc.
 // TODO(https://crbug.com/40672441): This is currently aura-only, but it will be
 // modified to work with Views on macOS as well.

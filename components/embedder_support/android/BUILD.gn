@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 import("//tools/grit/grit_rule.gni")
 
 generate_jni("simple_factory_key_jni") {
-  sources = [ "java/src/org/chromium/components/embedder_support/simple_factory_key/SimpleFactoryKeyHandle.java" ]
+  sources = [ "java/src/org/Cinaseek/components/embedder_support/simple_factory_key/SimpleFactoryKeyHandle.java" ]
 }
 
 static_library("simple_factory_key") {
@@ -24,10 +24,10 @@ static_library("simple_factory_key") {
 
 generate_jni("util_jni") {
   sources = [
-    "java/src/org/chromium/components/embedder_support/util/EmbedderSupportFeatures.java",
-    "java/src/org/chromium/components/embedder_support/util/InputStreamUtil.java",
-    "java/src/org/chromium/components/embedder_support/util/UrlUtilities.java",
-    "java/src/org/chromium/components/embedder_support/util/WebResourceResponseInfo.java",
+    "java/src/org/Cinaseek/components/embedder_support/util/EmbedderSupportFeatures.java",
+    "java/src/org/Cinaseek/components/embedder_support/util/InputStreamUtil.java",
+    "java/src/org/Cinaseek/components/embedder_support/util/UrlUtilities.java",
+    "java/src/org/Cinaseek/components/embedder_support/util/WebResourceResponseInfo.java",
   ]
 }
 
@@ -72,7 +72,7 @@ static_library("util") {
 }
 
 generate_jni("view_jni") {
-  sources = [ "java/src/org/chromium/components/embedder_support/view/ContentViewRenderView.java" ]
+  sources = [ "java/src/org/Cinaseek/components/embedder_support/view/ContentViewRenderView.java" ]
 }
 
 static_library("view") {
@@ -95,8 +95,8 @@ static_library("view") {
 
 generate_jni("web_contents_delegate_jni") {
   sources = [
-    "java/src/org/chromium/components/embedder_support/delegate/ColorPickerBridge.java",
-    "java/src/org/chromium/components/embedder_support/delegate/WebContentsDelegateAndroid.java",
+    "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerBridge.java",
+    "java/src/org/Cinaseek/components/embedder_support/delegate/WebContentsDelegateAndroid.java",
   ]
 }
 
@@ -125,7 +125,7 @@ static_library("web_contents_delegate") {
 }
 
 generate_jni("context_menu_jni") {
-  sources = [ "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuParams.java" ]
+  sources = [ "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuParams.java" ]
 }
 
 static_library("context_menu") {
@@ -147,8 +147,8 @@ static_library("context_menu") {
 if (current_toolchain == default_toolchain) {
   android_library("browser_context_java") {
     sources = [
-      "java/src/org/chromium/components/embedder_support/browser_context/PartitionResolver.java",
-      "java/src/org/chromium/components/embedder_support/browser_context/PartitionResolverSupplier.java",
+      "java/src/org/Cinaseek/components/embedder_support/browser_context/PartitionResolver.java",
+      "java/src/org/Cinaseek/components/embedder_support/browser_context/PartitionResolverSupplier.java",
     ]
     deps = [
       ":simple_factory_key_java",
@@ -159,7 +159,7 @@ if (current_toolchain == default_toolchain) {
   }
 
   android_library("simple_factory_key_java") {
-    sources = [ "java/src/org/chromium/components/embedder_support/simple_factory_key/SimpleFactoryKeyHandle.java" ]
+    sources = [ "java/src/org/Cinaseek/components/embedder_support/simple_factory_key/SimpleFactoryKeyHandle.java" ]
     deps = [ "//third_party/jni_zero:jni_zero_java" ]
   }
 
@@ -169,23 +169,23 @@ if (current_toolchain == default_toolchain) {
       "//build/android:build_java",
     ]
     sources = [
-      "java/src/org/chromium/components/embedder_support/application/ClassLoaderContextWrapperFactory.java",
-      "java/src/org/chromium/components/embedder_support/application/FontPreloadingWorkaround.java",
+      "java/src/org/Cinaseek/components/embedder_support/application/ClassLoaderContextWrapperFactory.java",
+      "java/src/org/Cinaseek/components/embedder_support/application/FontPreloadingWorkaround.java",
     ]
   }
 
   android_library("util_java") {
     sources = [
-      "java/src/org/chromium/components/embedder_support/util/EmbedderSupportFeatures.java",
-      "java/src/org/chromium/components/embedder_support/util/ExtensionUrlUtil.java",
-      "java/src/org/chromium/components/embedder_support/util/InputStreamUtil.java",
-      "java/src/org/chromium/components/embedder_support/util/LegacyPasswordEchoSettingDelegateImpl.java",
-      "java/src/org/chromium/components/embedder_support/util/Origin.java",
-      "java/src/org/chromium/components/embedder_support/util/PasswordEchoSettingObserver.java",
-      "java/src/org/chromium/components/embedder_support/util/PasswordEchoSettingState.java",
-      "java/src/org/chromium/components/embedder_support/util/UrlConstants.java",
-      "java/src/org/chromium/components/embedder_support/util/UrlUtilities.java",
-      "java/src/org/chromium/components/embedder_support/util/WebResourceResponseInfo.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/EmbedderSupportFeatures.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/ExtensionUrlUtil.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/InputStreamUtil.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/LegacyPasswordEchoSettingDelegateImpl.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/Origin.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/PasswordEchoSettingObserver.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/PasswordEchoSettingState.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/UrlConstants.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/UrlUtilities.java",
+      "java/src/org/Cinaseek/components/embedder_support/util/WebResourceResponseInfo.java",
     ]
 
     deps = [
@@ -206,7 +206,7 @@ if (current_toolchain == default_toolchain) {
   # Intentionally separate to keep dependencies of content view small.
   # TODO(crbug.com/40075084): Remove this library.
   android_library("embedder_util_java") {
-    sources = [ "java/src/org/chromium/components/embedder_support/util/TouchEventFilter.java" ]
+    sources = [ "java/src/org/Cinaseek/components/embedder_support/util/TouchEventFilter.java" ]
 
     deps = [ "//base:base_java" ]
   }
@@ -224,7 +224,7 @@ if (current_toolchain == default_toolchain) {
       "//ui/android:ui_no_recycler_view_java",
     ]
     sources = [
-      "java/src/org/chromium/components/embedder_support/view/ContentView.java",
+      "java/src/org/Cinaseek/components/embedder_support/view/ContentView.java",
     ]
   }
 
@@ -238,8 +238,8 @@ if (current_toolchain == default_toolchain) {
       "//third_party/androidx:androidx_annotation_annotation_java",
     ]
     sources = [
-      "java/src/org/chromium/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilder.java",
-      "java/src/org/chromium/components/embedder_support/virtual_structure/VirtualStructureProvider.java",
+      "java/src/org/Cinaseek/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilder.java",
+      "java/src/org/Cinaseek/components/embedder_support/virtual_structure/VirtualStructureProvider.java",
     ]
   }
 
@@ -253,7 +253,7 @@ if (current_toolchain == default_toolchain) {
       "//ui/android:ui_no_recycler_view_java",
     ]
 
-    sources = [ "java/src/org/chromium/components/embedder_support/view/ContentViewRenderView.java" ]
+    sources = [ "java/src/org/Cinaseek/components/embedder_support/view/ContentViewRenderView.java" ]
   }
 
   java_strings_grd("web_contents_delegate_strings_grd") {
@@ -296,21 +296,21 @@ if (current_toolchain == default_toolchain) {
       "//ui/android:ui_no_recycler_view_java",
       "//url:gurl_java",
     ]
-    resources_package = "org.chromium.components.embedder_support.delegate"
+    resources_package = "org.Cinaseek.components.embedder_support.delegate"
 
     sources = [
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerAdvanced.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerAdvancedComponent.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerBridge.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerCoordinator.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerDialogView.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerProperties.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerSuggestionProperties.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerSuggestionsView.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorPickerViewBinder.java",
-      "java/src/org/chromium/components/embedder_support/delegate/ColorSuggestion.java",
-      "java/src/org/chromium/components/embedder_support/delegate/OnColorChangedListener.java",
-      "java/src/org/chromium/components/embedder_support/delegate/WebContentsDelegateAndroid.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerAdvanced.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerAdvancedComponent.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerBridge.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerCoordinator.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerDialogView.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerProperties.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerSuggestionProperties.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerSuggestionsView.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerViewBinder.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/ColorSuggestion.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/OnColorChangedListener.java",
+      "java/src/org/Cinaseek/components/embedder_support/delegate/WebContentsDelegateAndroid.java",
     ]
   }
 
@@ -335,16 +335,16 @@ if (current_toolchain == default_toolchain) {
 
     srcjar_deps = [ ":context_menu_image_format_enum_javagen" ]
     sources = [
-      "java/src/org/chromium/components/embedder_support/contextmenu/ChipDelegate.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ChipRenderParams.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuItemDelegate.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuNativeDelegate.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuParams.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuPopulator.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuPopulatorFactory.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuSwitches.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuUi.java",
-      "java/src/org/chromium/components/embedder_support/contextmenu/ContextMenuUtils.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ChipDelegate.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ChipRenderParams.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuItemDelegate.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuNativeDelegate.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuParams.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuPopulator.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuPopulatorFactory.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuSwitches.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuUi.java",
+      "java/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuUtils.java",
     ]
   }
 
@@ -357,27 +357,27 @@ if (current_toolchain == default_toolchain) {
       "//third_party/junit",
     ]
     sources = [
-      "native_java_unittests/src/org/chromium/components/embedder_support/util/InputStreamUnittest.java",
-      "native_java_unittests/src/org/chromium/components/embedder_support/util/WebResourceResponseUnittest.java",
+      "native_java_unittests/src/org/Cinaseek/components/embedder_support/util/InputStreamUnittest.java",
+      "native_java_unittests/src/org/Cinaseek/components/embedder_support/util/WebResourceResponseUnittest.java",
     ]
   }
 
-  # See https://bugs.chromium.org/p/chromium/issues/detail?id=908819 for why we
+  # See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=908819 for why we
   # can't put 'java' in the name here.
   generate_jni("native_j_unittests_jni") {
     testonly = true
     sources = [
-      "native_java_unittests/src/org/chromium/components/embedder_support/util/InputStreamUnittest.java",
-      "native_java_unittests/src/org/chromium/components/embedder_support/util/WebResourceResponseUnittest.java",
+      "native_java_unittests/src/org/Cinaseek/components/embedder_support/util/InputStreamUnittest.java",
+      "native_java_unittests/src/org/Cinaseek/components/embedder_support/util/WebResourceResponseUnittest.java",
     ]
   }
 
   robolectric_library("components_embedder_support_junit_tests") {
     sources = [
-      "junit/src/org/chromium/components/embedder_support/contextmenu/ContextMenuParamsUnitTest.java",
-      "junit/src/org/chromium/components/embedder_support/contextmenu/ContextMenuUtilsUnitTest.java",
-      "junit/src/org/chromium/components/embedder_support/util/OriginTest.java",
-      "junit/src/org/chromium/components/embedder_support/view/ContentViewTest.java",
+      "junit/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuParamsUnitTest.java",
+      "junit/src/org/Cinaseek/components/embedder_support/contextmenu/ContextMenuUtilsUnitTest.java",
+      "junit/src/org/Cinaseek/components/embedder_support/util/OriginTest.java",
+      "junit/src/org/Cinaseek/components/embedder_support/view/ContentViewTest.java",
     ]
     deps = [
       ":content_view_java",
@@ -401,12 +401,12 @@ if (current_toolchain == default_toolchain) {
 
   android_library("unit_device_javatests") {
     testonly = true
-    resources_package = "org.chromium.components.embedder_support"
+    resources_package = "org.Cinaseek.components.embedder_support"
 
     sources = [
-      "javatests/src/org/chromium/components/embedder_support/delegate/ColorPickerDialogRenderTest.java",
-      "javatests/src/org/chromium/components/embedder_support/util/ExtensionUrlUtilTest.java",
-      "javatests/src/org/chromium/components/embedder_support/util/UrlUtilitiesUnitTest.java",
+      "javatests/src/org/Cinaseek/components/embedder_support/delegate/ColorPickerDialogRenderTest.java",
+      "javatests/src/org/Cinaseek/components/embedder_support/util/ExtensionUrlUtilTest.java",
+      "javatests/src/org/Cinaseek/components/embedder_support/util/UrlUtilitiesUnitTest.java",
     ]
     deps = [
       ":util_java",
@@ -428,7 +428,7 @@ if (current_toolchain == default_toolchain) {
 
   android_library("virtual_structure_javatests") {
     testonly = true
-    sources = [ "javatests/src/org/chromium/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilderTest.java" ]
+    sources = [ "javatests/src/org/Cinaseek/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilderTest.java" ]
     deps = [
       ":content_view_java",
       ":virtual_structure_java",
@@ -448,7 +448,7 @@ if (current_toolchain == default_toolchain) {
   }
 
   robolectric_library("virtual_structure_junit_tests") {
-    sources = [ "junit/src/org/chromium/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilderUnitTest.java" ]
+    sources = [ "junit/src/org/Cinaseek/components/embedder_support/virtual_structure/PageContentProtoViewStructureBuilderUnitTest.java" ]
     deps = [
       ":virtual_structure_java",
       "//base:base_java_test_support",

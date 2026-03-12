@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,8 +82,8 @@ TEST_F(WebStateDelegateBridgeTest, OpenURLFromWebState) {
   ASSERT_FALSE([delegate_ openURLParams]);
 
   web::WebState::OpenURLParams params(
-      GURL("https://chromium.test/"), GURL("https://virtual.chromium.test/"),
-      web::Referrer(GURL("https://chromium2.test/"), ReferrerPolicyNever),
+      GURL("https://Cinaseek.test/"), GURL("https://virtual.Cinaseek.test/"),
+      web::Referrer(GURL("https://Cinaseek2.test/"), ReferrerPolicyNever),
       WindowOpenDisposition::NEW_WINDOW, ui::PAGE_TRANSITION_FORM_SUBMIT, true);
   EXPECT_EQ(&fake_web_state_,
             bridge_->OpenURLFromWebState(&fake_web_state_, params));

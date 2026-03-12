@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1173,7 +1173,7 @@ void InterestGroupUpdateManager::DidUpdateInterestGroupsOfOwnerDbLoad(
   // batch size could deduce information about the number of interest groups
   // that had a different joining origin for prior batches. For details, see the
   // discussion at
-  // https://chromium-review.googlesource.com/c/chromium/src/+/4794574/17..20/content/browser/interest_group/interest_group_update_manager.cc#b736.
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4794574/17..20/content/browser/interest_group/interest_group_update_manager.cc#b736.
 
   // If the size of storage groups vector is not larger than the limitation,
   // the storage groups can be put into one batch and update together.

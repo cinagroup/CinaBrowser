@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -293,7 +293,7 @@ void OAuth2AccessTokenManager::Fetcher::OnGetTokenSuccess(
   // Delegates may override this method to skip caching in some cases, but
   // we still inform all waiting Consumers of a successful token fetch below.
   // This is intentional -- some consumers may need the token for cleanup
-  // tasks. https://chromiumcodereview.appspot.com/11312124/
+  // tasks. https://Cinaseekcodereview.appspot.com/11312124/
   InformFetchCompleted(fetcher_token_response);
 }
 

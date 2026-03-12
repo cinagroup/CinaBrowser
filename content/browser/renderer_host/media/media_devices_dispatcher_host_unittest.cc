@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -856,7 +856,7 @@ TEST_P(MediaDevicesDispatcherHostTest,
   auto config = blink::mojom::CaptureHandleConfig::New();
   config->all_origins_permitted = true;
   config->permitted_origins = {
-      url::Origin::Create(GURL("https://chromium.org:123"))};
+      url::Origin::Create(GURL("https://Cinaseek.org:123"))};
   EXPECT_CALL(
       *this, MockOnBadMessage(render_frame_host_->GetGlobalId().child_id,
                               bad_message::MDDH_INVALID_ALL_ORIGINS_PERMITTED));
@@ -866,7 +866,7 @@ TEST_P(MediaDevicesDispatcherHostTest,
 TEST_P(MediaDevicesDispatcherHostTest, SetCaptureHandleConfigWithBadOrigin) {
   auto config = blink::mojom::CaptureHandleConfig::New();
   config->permitted_origins = {
-      url::Origin::Create(GURL("https://chromium.org:999999"))  // Invalid.
+      url::Origin::Create(GURL("https://Cinaseek.org:999999"))  // Invalid.
   };
   EXPECT_CALL(*this,
               MockOnBadMessage(render_frame_host_->GetGlobalId().child_id,
@@ -880,7 +880,7 @@ TEST_P(MediaDevicesDispatcherHostTest,
   // Valid (and max-length) handle.
   config->capture_handle = MaxLengthCaptureHandle();
   config->permitted_origins = {
-      url::Origin::Create(GURL("https://chromium.org:123")),
+      url::Origin::Create(GURL("https://Cinaseek.org:123")),
       url::Origin::Create(GURL("ftp://google.com:321"))};
   EXPECT_CALL(*this, MockOnBadMessage(_, _)).Times(0);
   ExpectOnCaptureHandleConfigAccepted(
@@ -894,7 +894,7 @@ TEST_P(MediaDevicesDispatcherHostTest,
   auto config = blink::mojom::CaptureHandleConfig::New();
   config->capture_handle = u"0123456789abcdef";
   config->permitted_origins = {
-      url::Origin::Create(GURL("https://chromium.org:123")),
+      url::Origin::Create(GURL("https://Cinaseek.org:123")),
       url::Origin::Create(GURL("ftp://google.com:321"))};
   EXPECT_CALL(*this, MockOnBadMessage(_, _)).Times(0);
   ExpectOnCaptureHandleConfigAccepted(

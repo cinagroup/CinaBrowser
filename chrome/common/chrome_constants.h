@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ extern const base::FilePath::CharType
     kGoogleChromeForTestingBrowserProcessExecutablePath[];
 extern const base::FilePath::CharType
     kGoogleChromeBrowserProcessExecutablePath[];
-extern const base::FilePath::CharType kChromiumBrowserProcessExecutablePath[];
+extern const base::FilePath::CharType kCinaseekBrowserProcessExecutablePath[];
 // NOTE: if you change the value of kFrameworkName, please don't forget to
 // update components/test/run_all_unittests.cc as well.
 // TODO(tfarina): Remove the comment above, when you fix components to use plist

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ class AppBannerSettingsHelper {
  public:
   // An enum containing possible app menu verbiage for installing a web app.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.banners
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.banners
   enum AppMenuVerbiage {
     APP_MENU_OPTION_UNKNOWN = 0,
     APP_MENU_OPTION_MIN = APP_MENU_OPTION_UNKNOWN,

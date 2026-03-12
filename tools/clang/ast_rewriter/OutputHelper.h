@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 // This is a general helper class for emitting the substitution directives
 // consumed by apply_edits.py.
 // See
-// https://chromium.googlesource.com/chromium/src/+/HEAD/docs/clang_tool_refactoring.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/clang_tool_refactoring.md
 // for general documentation on the format.
 //
 // From a consumer's perspective, the most important functions are `Delete`,

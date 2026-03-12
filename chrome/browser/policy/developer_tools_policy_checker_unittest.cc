@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ TEST_F(DeveloperToolsPolicyCheckerTest, Blocklist) {
 
   EXPECT_TRUE(checker.IsUrlBlockedByPolicy(GURL("http://example.com")));
   EXPECT_TRUE(checker.IsUrlBlockedByPolicy(GURL("http://www.example.com")));
-  EXPECT_FALSE(checker.IsUrlBlockedByPolicy(GURL("http://chromium.org")));
+  EXPECT_FALSE(checker.IsUrlBlockedByPolicy(GURL("http://Cinaseek.org")));
 }
 
 TEST_F(DeveloperToolsPolicyCheckerTest, Allowlist) {
@@ -43,14 +43,14 @@ TEST_F(DeveloperToolsPolicyCheckerTest, Allowlist) {
                                std::move(blocklist));
 
   base::ListValue allowlist;
-  allowlist.Append("chromium.org");
+  allowlist.Append("Cinaseek.org");
   profile_.GetPrefs()->SetList(prefs::kDeveloperToolsAvailabilityAllowlist,
                                std::move(allowlist));
   DeveloperToolsPolicyChecker checker(profile_.GetPrefs());
 
   EXPECT_TRUE(checker.IsUrlBlockedByPolicy(GURL("http://example.com")));
-  EXPECT_FALSE(checker.IsUrlBlockedByPolicy(GURL("http://chromium.org")));
-  EXPECT_TRUE(checker.IsUrlAllowedByPolicy(GURL("http://chromium.org")));
+  EXPECT_FALSE(checker.IsUrlBlockedByPolicy(GURL("http://Cinaseek.org")));
+  EXPECT_TRUE(checker.IsUrlAllowedByPolicy(GURL("http://Cinaseek.org")));
   EXPECT_FALSE(checker.IsUrlAllowedByPolicy(GURL("http://example.com")));
 }
 

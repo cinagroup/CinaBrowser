@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ function_registration("api_registration") {
   sources = chrome_apps_api_schema_files
   impl_dir = "//chrome/browser/apps/platform_apps/api"
   configs = [ "//build/config:precompiled_headers" ]
-  bundle_name = "ChromeApps"
+  bundle_name = "CinaseekApps"
   root_namespace = apps_api_root_namespace
 
   deps = [

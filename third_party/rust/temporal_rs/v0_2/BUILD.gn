@@ -1,8 +1,8 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# @generated from third_party/rust/chromium_crates_io/BUILD.gn.hbs by
+# @generated from third_party/rust/Cinaseek_crates_io/BUILD.gn.hbs by
 # tools/crates/gnrt.
 # Do not edit!
 
@@ -13,53 +13,53 @@ cargo_crate("lib") {
   epoch = "0.2"
   crate_type = "rlib"
   crate_root =
-      "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/lib.rs"
+      "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/lib.rs"
   sources = [
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/duration.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/duration/tests.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/instant.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/now.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_date.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_date_time.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_month_day.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_year_month.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/zoned_date_time.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar/fields.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar/types.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/date.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/normalized.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/tests.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/instant.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/now.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_date.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_date_time.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_month_day.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_time.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_year_month.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/time_zone.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/zoned_date_time.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/zoned_date_time/tests.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/builtins/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/error.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/host.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/iso.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/lib.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/options.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/options/increment.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/options/relative_to.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/parsed_intermediates.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/parsers.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/parsers/time_zone.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/primitive.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/provider.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/rounding.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/sys.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/tzdb.rs",
-    "//third_party/rust/chromium_crates_io/vendor/temporal_rs-v0_2/src/utils.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/duration.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/duration/tests.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/instant.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/now.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_date.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_date_time.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_month_day.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/plain_year_month.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/compiled/zoned_date_time.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar/fields.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/calendar/types.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/date.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/normalized.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/duration/tests.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/instant.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/now.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_date.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_date_time.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_month_day.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_time.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/plain_year_month.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/time_zone.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/zoned_date_time.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/core/zoned_date_time/tests.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/builtins/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/error.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/host.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/iso.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/lib.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/options.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/options/increment.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/options/relative_to.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/parsed_intermediates.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/parsers.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/parsers/time_zone.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/primitive.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/provider.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/rounding.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/sys.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/tzdb.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/temporal_rs-v0_2/src/utils.rs",
   ]
   inputs = []
 
@@ -90,14 +90,14 @@ cargo_crate("lib") {
 
   # Config changes that apply to all `//third_party/rust` crates.
   _configs_to_remove = [
-    # We don't need code coverage data for any `chromium_crates_io` crates.
+    # We don't need code coverage data for any `Cinaseek_crates_io` crates.
     "//build/config/coverage:default_coverage",
 
-    # This is third-party code, so remove `chromium_code` config.  We are not
-    # at the same time adding `//build/config/compiler:no_chromium_code`,
+    # This is third-party code, so remove `Cinaseek_code` config.  We are not
+    # at the same time adding `//build/config/compiler:no_Cinaseek_code`,
     # because 1) we don't want to pull how warnings are handled by that config
     # and 2) that config doesn't have any non-warnings-related stuff.
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   _configs_to_add = []
 

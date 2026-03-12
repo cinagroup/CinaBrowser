@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ class BluetoothTestBase : public testing::Test {
   static const char kTestDeviceAddress2[];
   static const char kTestDeviceAddress3[];
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.device.bluetooth.test
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.device.bluetooth.test
   enum class TestRSSI {
     LOWEST = -81,
     LOWER = -61,
@@ -108,7 +108,7 @@ class BluetoothTestBase : public testing::Test {
     HIGH = -1,
   };
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.device.bluetooth.test
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.device.bluetooth.test
   enum class TestTxPower {
     LOWEST = -40,
     LOWER = -20,

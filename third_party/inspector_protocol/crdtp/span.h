@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ inline span<uint8_t> SpanFrom(const std::string& v) {
 }
 
 // This SpanFrom routine works for std::vector<uint8_t> and
-// std::vector<uint16_t>, but also for base::span<const uint8_t> in Chromium.
+// std::vector<uint16_t>, but also for base::span<const uint8_t> in Cinaseek.
 template <typename C,
           typename = std::enable_if_t<
               std::is_unsigned<typename C::value_type>{} &&

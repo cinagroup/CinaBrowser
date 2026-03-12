@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ GURL StripURL(AutocompleteProviderClient* client,
 }
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-// org.chromium.chrome.browser.omnibox.suggestions.mostvisited)
+// org.Cinaseek.chrome.browser.omnibox.suggestions.mostvisited)
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: SuggestTileType
 enum SuggestTileType { kOther = 0, kURL = 1, kSearch = 2, kCount = 3 };
 

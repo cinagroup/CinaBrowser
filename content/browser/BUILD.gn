@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -112,7 +112,7 @@ source_set("browser") {
     "//build:branding_buildflags",
     "//build:chromecast_buildflags",
     "//build/config/compiler:compiler_buildflags",
-    "//build/util:chromium_git_revision",
+    "//build/util:Cinaseek_git_revision",
     "//cc",
     "//cc/animation",
     "//cc/mojo_embedder",
@@ -2734,7 +2734,7 @@ source_set("browser") {
     ]
   }
 
-  # ChromeOS also defines linux but their memory-monitors conflict.
+  # CinaseekOS also defines linux but their memory-monitors conflict.
   if (is_chromeos) {
     sources += [
       "gpu/chromeos/delegate_to_browser_gpu_service_accelerator_factory.cc",

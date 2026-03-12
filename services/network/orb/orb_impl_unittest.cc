@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -188,7 +188,7 @@ const TestScenario kScenarios[] = {
         "HTTP/1.1 200 OK",                 // response_headers
         "text/html",                       // response_content_type
         MimeType::kHtml,                   // canonical_mime_type
-        {")]}',\n[true, true, false, \"user@chromium.org\"]"},  // packets
+        {")]}',\n[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,  // resource_is_sensitive
         Verdict::kAllow,                       // verdict
         kVerdictPacketForHeadersBasedVerdict,  // verdict_packet
@@ -201,7 +201,7 @@ const TestScenario kScenarios[] = {
         "HTTP/1.1 200 OK",                 // response_headers
         "text/json",                       // response_content_type
         MimeType::kJson,                   // canonical_mime_type
-        {")]}'\n[true, true, false, \"user@chromium.org\"]"},  // packets
+        {")]}'\n[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,  // resource_is_sensitive
         Verdict::kAllow,                       // verdict
         kVerdictPacketForHeadersBasedVerdict,  // verdict_packet
@@ -620,7 +620,7 @@ const TestScenario kScenarios[] = {
         "X-Content-Type-Options: nosniff",  // response_headers
         "text/html",                        // response_content_type
         MimeType::kHtml,                    // canonical_mime_type
-        {")]", "}'\n[true, true, false, \"user@chromium.org\"]"},  // packets
+        {")]", "}'\n[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,                                  // resource_is_sensitive
         Verdict::kBlock,                        // verdict
         kVerdictPacketForHeadersBasedVerdict,   // verdict_packet
@@ -832,7 +832,7 @@ const TestScenario kScenarios[] = {
         "HTTP/1.1 200 OK",             // response_headers
         "text/json",                   // response_content_type
         MimeType::kJson,               // canonical_mime_type
-        {")]", "}'\n[true, true, false, \"user@chromium.org\"]"},  // packets
+        {")]", "}'\n[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,  // resource_is_sensitive
         Verdict::kBlock,            // verdict
         1,                          // verdict_packet
@@ -846,7 +846,7 @@ const TestScenario kScenarios[] = {
         "X-Content-Type-Options: nosniff",  // response_headers
         "application/octet-stream",         // response_content_type
         MimeType::kOthers,                  // canonical_mime_type
-        {")]", "}'\n[true, true, false, \"user@chromium.org\"]"},  // packets
+        {")]", "}'\n[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,  // resource_is_sensitive
         Verdict::kBlock,            // verdict
         1,                          // verdict_packet
@@ -859,7 +859,7 @@ const TestScenario kScenarios[] = {
         "HTTP/1.1 200 OK",             // response_headers
         "application/javascript",      // response_content_type
         MimeType::kOthers,             // canonical_mime_type
-        {"for(;;)", ";[true, true, false, \"user@chromium.org\"]"},  // packets
+        {"for(;;)", ";[true, true, false, \"user@Cinaseek.org\"]"},  // packets
         false,  // resource_is_sensitive
         Verdict::kBlock,            // verdict
         1,                          // verdict_packet

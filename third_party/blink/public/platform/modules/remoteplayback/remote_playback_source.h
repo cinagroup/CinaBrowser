@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ inline constexpr char kRemotePlaybackPresentationUrlScheme[] =
     "remote-playback";
 // The path for RemotePlayback Urls on both Android and Desktop.
 // Needs to be in sync with
-// components/media_router/browser/android/java/src/org/chromium/components/media_router/caf/remoting/RemotingMediaSource.java
+// components/media_router/browser/android/java/src/org/Cinaseek/components/media_router/caf/remoting/RemotingMediaSource.java
 inline constexpr char kRemotePlaybackPresentationUrlPath[] =
     "remote-playback:media-element";
 

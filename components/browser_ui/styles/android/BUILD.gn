@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,9 +7,9 @@ import("//device/vr/buildflags/buildflags.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/styles/ChromeColors.java",
-    "java/src/org/chromium/components/browser_ui/styles/IncognitoColors.java",
-    "java/src/org/chromium/components/browser_ui/styles/SemanticColorUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/styles/CinaseekColors.java",
+    "java/src/org/Cinaseek/components/browser_ui/styles/IncognitoColors.java",
+    "java/src/org/Cinaseek/components/browser_ui/styles/SemanticColorUtils.java",
   ]
   deps = [
     ":java_resources",
@@ -21,7 +21,7 @@ android_library("java") {
     "//third_party/androidx:androidx_core_core_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.components.browser_ui.styles"
+  resources_package = "org.Cinaseek.components.browser_ui.styles"
 }
 
 android_resources("java_resources") {
@@ -278,17 +278,17 @@ android_resources("java_resources") {
     "java/res/values/styles.xml",
     "java/res/values/themes.xml",
     "java/res/values/values.xml",
-    "java/res_chromium/drawable-hdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-hdpi/product_logo_name.png",
-    "java/res_chromium/drawable-mdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-mdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xhdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xxhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xxhdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xxxhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xxxhdpi/product_logo_name.png",
-    "java/res_chromium/raw/signin_spin.json",
+    "java/res_Cinaseek/drawable-hdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-hdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-mdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-mdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xhdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xxhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xxhdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xxxhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xxxhdpi/product_logo_name.png",
+    "java/res_Cinaseek/raw/signin_spin.json",
   ]
 
   if (enable_arcore) {
@@ -305,16 +305,16 @@ android_resources("java_resources") {
 android_resources("chrome_public_apk_resources") {
   resource_overlay = true
   sources = [
-    "java/res_chromium/drawable-hdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-hdpi/product_logo_name.png",
-    "java/res_chromium/drawable-mdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-mdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xhdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xxhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xxhdpi/product_logo_name.png",
-    "java/res_chromium/drawable-xxxhdpi/fre_product_logo.png",
-    "java/res_chromium/drawable-xxxhdpi/product_logo_name.png",
-    "java/res_chromium/raw/signin_spin.json",
+    "java/res_Cinaseek/drawable-hdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-hdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-mdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-mdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xhdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xxhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xxhdpi/product_logo_name.png",
+    "java/res_Cinaseek/drawable-xxxhdpi/fre_product_logo.png",
+    "java/res_Cinaseek/drawable-xxxhdpi/product_logo_name.png",
+    "java/res_Cinaseek/raw/signin_spin.json",
   ]
 }

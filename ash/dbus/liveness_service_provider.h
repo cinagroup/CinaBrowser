@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@ namespace ash {
 // messages.  It can be tested with the following command:
 //
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.LivenessService
-//     /org/chromium/LivenessService
-//     org.chromium.LivenessServiceInterface.CheckLiveness
+//     --dest=org.Cinaseek.LivenessService
+//     /org/Cinaseek/LivenessService
+//     org.Cinaseek.LivenessServiceInterface.CheckLiveness
 //
 // -> method return sender=:1.9 -> dest=:1.27 reply_serial=2
 //

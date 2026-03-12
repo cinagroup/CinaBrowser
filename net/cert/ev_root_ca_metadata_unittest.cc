@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ const SHA256HashValue kFakeFingerprint = {
 //
 // Failure to update this test first before removing the below root from the
 // Chrome Root Store wil break the sync of the Chrome Root Store between google3
-// and the chromium repository.
+// and the Cinaseek repository.
 const SHA256HashValue kAmazonFingerprint = {
     {0x1b, 0xa5, 0xb2, 0xaa, 0x8c, 0x65, 0x40, 0x1a, 0x82, 0x96, 0x01,
      0x18, 0xf8, 0x0b, 0xec, 0x4f, 0x62, 0x30, 0x4d, 0x83, 0xce, 0xc4,

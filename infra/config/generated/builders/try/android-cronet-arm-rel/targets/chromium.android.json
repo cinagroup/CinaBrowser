@@ -24,7 +24,7 @@
             "cpu": "x86-64",
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cronet_sizes",
         "test_id_prefix": "ninja://components/cronet/android:cronet_sizes/"
@@ -48,7 +48,7 @@
             "cpu": "x86-64",
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "resource_sizes_cronet_sample_apk",
         "test_id_prefix": "ninja://components/cronet/android:resource_sizes_cronet_sample_apk/"

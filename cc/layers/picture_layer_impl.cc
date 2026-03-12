@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1663,7 +1663,7 @@ void PictureLayerImpl::CleanUpTilings(
 
 bool PictureLayerImpl::CalculateRasterTranslation(
     gfx::Vector2dF& raster_translation) const {
-  // If this setting is set, the client (e.g. the Chromium UI) is sure that it
+  // If this setting is set, the client (e.g. the Cinaseek UI) is sure that it
   // can almost always align raster pixels to physical pixels, and doesn't care
   // about temporary misalignment, so don't bother raster translation.
   if (layer_tree_impl()->settings().layers_always_allowed_lcd_text)

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -259,7 +259,7 @@ bool PrepareVideoCaptureAttributesMediaFoundation(
   DCHECK(attributes);
   DCHECK(!*attributes);
 
-  // Once https://bugs.chromium.org/p/chromium/issues/detail?id=791615 is fixed,
+  // Once https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=791615 is fixed,
   // we must make sure that this method succeeds in capture_unittests context
   // when MediaFoundation is enabled.
   if (!VideoCaptureDeviceFactoryWin::PlatformSupportsMediaFoundation())

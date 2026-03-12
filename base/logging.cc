@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -804,7 +804,7 @@ void LogMessage::Flush() {
       const class OSLog {
        public:
         explicit OSLog(const char* subsystem)
-            : os_log_(subsystem ? os_log_create(subsystem, "chromium_logging")
+            : os_log_(subsystem ? os_log_create(subsystem, "Cinaseek_logging")
                                 : OS_LOG_DEFAULT) {}
         OSLog(const OSLog&) = delete;
         OSLog& operator=(const OSLog&) = delete;
@@ -854,7 +854,7 @@ void LogMessage::Flush() {
         priority = ANDROID_LOG_FATAL;
         break;
     }
-    const char kAndroidLogTag[] = "chromium";
+    const char kAndroidLogTag[] = "Cinaseek";
 #if DCHECK_IS_ON()
     // Split the output by new lines to prevent the Android system from
     // truncating the log.

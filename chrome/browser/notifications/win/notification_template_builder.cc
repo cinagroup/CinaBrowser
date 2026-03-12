@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 #include "chrome/grit/generated_resources.h"
 #include "components/url_formatter/elide_url.h"
 #include "third_party/icu/source/i18n/unicode/timezone.h"
-#include "third_party/libxml/chromium/xml_writer.h"
+#include "third_party/libxml/Cinaseek/xml_writer.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/gfx/image/image_skia.h"
 #include "ui/message_center/public/cpp/notification.h"
@@ -261,7 +261,7 @@ void WriteActionElement(XmlWriter* xml_writer,
   xml_writer->StartElement(kActionElement);
 
   // All notifications buttons in the incoming-call scenario should be green,
-  // except for the default dismiss button added by Chromium (not by the Action
+  // except for the default dismiss button added by Cinaseek (not by the Action
   // Center), which should be red. This attribute will take effect only if the
   // 'useButtonStyle' attribute has been added to the toast XML element - i.e.,
   // when the notification scenario is INCOMING_CALL.

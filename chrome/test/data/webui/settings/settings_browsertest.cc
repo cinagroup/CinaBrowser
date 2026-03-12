@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -303,7 +303,7 @@ IN_PROC_BROWSER_TEST_F(SettingsTest, LiveTranslate) {
 
 // Copied from Polymer 2 version of tests:
 // Times out on Windows Tests (dbg). See https://crbug.com/41278078.
-// Times out / crashes on chromium.linux/Linux Tests (dbg) crbug.com/41287641
+// Times out / crashes on Cinaseek.linux/Linux Tests (dbg) crbug.com/41287641
 // Flaky everywhere crbug.com/1197768
 IN_PROC_BROWSER_TEST_F(SettingsTest, DISABLED_MainPage) {
   RunTest("settings/settings_main_test.js", "mocha.run()");
@@ -1711,7 +1711,7 @@ IN_PROC_BROWSER_TEST_F(SettingsRouteTest, SafetyHub) {
 }
 
 // Copied from Polymer 2 test:
-// Failing on ChromiumOS dbg. https://crbug.com/263415119
+// Failing on CinaseekOS dbg. https://crbug.com/263415119
 #if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS)) && !defined(NDEBUG)
 #define MAYBE_NonExistentRoute DISABLED_NonExistentRoute
 #else

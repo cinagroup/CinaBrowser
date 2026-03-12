@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ namespace {
 // LINT.IfChange(MultiCookieKeys)
 constexpr char kCookieMultiHeaderNameChars[] = "\0Set-Cookie-Multivalue\0";
 constexpr char kCookieMultiHeaderValueSeparatorChars[] = "\0";
-// LINT.ThenChange(/android_webview/support_library/boundary_interfaces/src/org/chromium/support_lib_boundary/WebViewProviderFactoryBoundaryInterface.java:MultiCookieKeys)
+// LINT.ThenChange(/android_webview/support_library/boundary_interfaces/src/org/Cinaseek/support_lib_boundary/WebViewProviderFactoryBoundaryInterface.java:MultiCookieKeys)
 
 // std::string_literals are banned by the style guide, so this code manually
 // constructs the string_view instances with explicit length to ensure they

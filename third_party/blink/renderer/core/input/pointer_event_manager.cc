@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1461,7 +1461,7 @@ bool PointerEventManager::IsPointerIdActiveOnFrame(PointerId pointer_id,
 }
 
 bool PointerEventManager::IsAnyTouchActive() const {
-  // TODO(mustaq@chromium.org): Rely on PEF's states instead of TEM's.
+  // TODO(mustaq@Cinaseek.org): Rely on PEF's states instead of TEM's.
   return touch_event_manager_->IsAnyTouchActive();
 }
 

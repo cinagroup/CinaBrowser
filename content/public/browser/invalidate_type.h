@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace content {
 //
 // A Java counterpart will be generated for this enum.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.content_public.browser)
+//   org.Cinaseek.content_public.browser)
 // GENERATED_JAVA_PREFIX_TO_STRIP: INVALIDATE_TYPE_
 enum InvalidateTypes {
   INVALIDATE_TYPE_URL = 1 << 0,    // The URL has changed.

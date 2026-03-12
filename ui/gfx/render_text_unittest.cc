@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1854,7 +1854,7 @@ const RunListCase kScriptsRunListCases[] = {
 
     // Common script.
     {"common_tm", u"•bug™", "[0][1->3][4]"},
-    {"common_copyright", u"chromium©", "[0->7][8]"},
+    {"common_copyright", u"Cinaseek©", "[0->7][8]"},
     {"common_math1", u"ℳ: ¬ƒ(x)=½×¾", "[0][1][2][3][4][5][6][7][8][9->11]"},
     {"common_math2", u"𝟏×𝟑", "[0->1][2][3->4]"},
     {"common_numbers", u"🄀𝟭𝟐⒓¹²", "[0->1][2->5][6][7->8]"},

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -38,7 +38,7 @@
 # }
 
 import("//build_overrides/build.gni")
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   import("//components/optimization_guide/features.gni")
 }
 
@@ -57,7 +57,7 @@ minimal_vars_to_forward_to_target = [
 
 declare_args() {
   tflite_target_types = []
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     tflite_target_types += [ "" ]
   }
   if (build_with_internal_optimization_guide) {

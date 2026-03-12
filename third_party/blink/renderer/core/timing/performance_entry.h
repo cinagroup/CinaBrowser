@@ -112,7 +112,7 @@ class CORE_EXPORT PerformanceEntry : public ScriptWrappable {
       // The navigation entry is created lazily, and we want it to always be
       // first for compatibility.
       // TODO: create NT entry eagerly so that we don't have to do this
-      // https://bugs.chromium.org/p/chromium/issues/detail?id=1432565
+      // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1432565
       if (a->EntryTypeEnum() == kNavigation &&
           b->EntryTypeEnum() != kNavigation) {
         return true;

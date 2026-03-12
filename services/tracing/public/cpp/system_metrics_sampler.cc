@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,12 +43,12 @@ SystemMetricsSampler::SystemMetricsSampler(bool system_wide)
 SystemMetricsSampler::~SystemMetricsSampler() = default;
 
 void SystemMetricsSampler::OnSetup(const SetupArgs& args) {
-  if (args.config->chromium_system_metrics_raw().empty()) {
+  if (args.config->Cinaseek_system_metrics_raw().empty()) {
     return;
   }
-  perfetto::protos::gen::ChromiumSystemMetricsConfig config;
-  if (!config.ParseFromString(args.config->chromium_system_metrics_raw())) {
-    DLOG(ERROR) << "Failed to parse chromium_system_metrics";
+  perfetto::protos::gen::CinaseekSystemMetricsConfig config;
+  if (!config.ParseFromString(args.config->Cinaseek_system_metrics_raw())) {
+    DLOG(ERROR) << "Failed to parse Cinaseek_system_metrics";
     return;
   }
   if (config.has_sampling_interval_ms()) {

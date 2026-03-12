@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ constexpr char kParameterClientID[] = "client_id";
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 constexpr char kClientName[] = "Google Chrome";
 #else
-constexpr char kClientName[] = "Chromium";
+constexpr char kClientName[] = "Cinaseek";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 }  // namespace
 

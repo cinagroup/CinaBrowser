@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ struct COMPONENT_EXPORT(APP_TYPES) IconKey {
   UpdateVersion update_version = false;
 
   // If non-zero (or equivalently, not equal to kInvalidResourceId), the
-  // compressed icon is compiled into the Chromium binary as a statically
+  // compressed icon is compiled into the Cinaseek binary as a statically
   // available, int-keyed resource.
   int32_t resource_id = kInvalidResourceId;
 

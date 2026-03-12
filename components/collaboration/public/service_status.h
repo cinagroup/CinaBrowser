@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace collaboration {
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class SigninStatus {
   kNotSignedIn = 0,
   // Signin is disabled either in user setting or by enterprise policy.
@@ -18,7 +18,7 @@ enum class SigninStatus {
 };
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class SyncStatus {
   // Sync-the-feature is disabled but required, or the Sync machinery is fully
   // disabled (e.g. by command-line switch).
@@ -33,7 +33,7 @@ enum class SyncStatus {
 };
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class CollaborationStatus {
   // Users are not allowed to either join or create.
   kDisabled = 0,

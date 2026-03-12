@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -26,10 +26,10 @@ group("jni_headers") {
 
 android_library("java") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/task_manager/TaskManager.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManager.java" ]
 }
 
 android_library_factory("factory_java") {
   deps = [ ":java" ]
-  sources = [ "//chrome/browser/task_manager/internal/android/java/src/org/chromium/chrome/browser/task_manager/TaskManagerFactory.java" ]
+  sources = [ "//chrome/browser/task_manager/internal/android/java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerFactory.java" ]
 }

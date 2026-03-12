@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ namespace arc {
 // and need to be synced with tools/metrics/histograms/enums.xml. This enum
 // class should also be treated as append-only.
 enum class ArcContainerLifetimeEvent {
-  // Note: "container" here means "instance". Outside Chromium, like UMA
+  // Note: "container" here means "instance". Outside Cinaseek, like UMA
   // dashboard, we use the former term.
 
   // Chrome asked session_manager to start an ARC instance (of any kind). We

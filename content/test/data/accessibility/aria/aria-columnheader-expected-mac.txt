@@ -5,9 +5,9 @@ AXWebArea
 ++++++++AXStaticText AXValue='Browser'
 ++++++AXCell AXColumnHeaderUIElements=[:6] AXColumnIndexRange={loc: 1, len: 1} AXRowIndexRange={loc: 0, len: 1}
 ++++++++AXStaticText AXValue='Rendering Engine'
-++++AXRow AXIndex=1 AXTitle='ChromeBlink'
+++++AXRow AXIndex=1 AXTitle='CinaseekBlink'
 ++++++AXCell AXColumnHeaderUIElements=[:4] AXColumnIndexRange={loc: 0, len: 1} AXRowIndexRange={loc: 1, len: 1}
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell AXColumnHeaderUIElements=[:6] AXColumnIndexRange={loc: 1, len: 1} AXRowIndexRange={loc: 1, len: 1}
 ++++++++AXStaticText AXValue='Blink'
 ++++AXRow AXIndex=2 AXTitle='SafariWebKit'
@@ -19,7 +19,7 @@ AXWebArea
 ++++++AXCell AXColumnHeaderUIElements=[:4] AXColumnIndexRange={loc: 0, len: 1} AXRowIndexRange={loc: 0, len: 1}
 ++++++++AXStaticText AXValue='Browser'
 ++++++AXCell AXColumnHeaderUIElements=[:4] AXColumnIndexRange={loc: 0, len: 1} AXRowIndexRange={loc: 1, len: 1}
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell AXColumnHeaderUIElements=[:4] AXColumnIndexRange={loc: 0, len: 1} AXRowIndexRange={loc: 2, len: 1}
 ++++++++AXStaticText AXValue='Safari'
 ++++AXColumn AXHeader=:6 AXIndex=1

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -311,7 +311,7 @@ EmeCodec KeySystemsImpl::GetEmeCodecForString(
   DCHECK_EQ(media_type, EmeMediaType::VIDEO);
 
   // In general EmeCodec doesn't care about codec profiles and assumes the same
-  // level of profile support as Chromium, which is checked in
+  // level of profile support as Cinaseek, which is checked in
   // KeySystemConfigSelector::IsSupportedContentType(). However, there are a few
   // exceptions where we need to know the profile. For example, for VP9, there
   // are older CDMs only supporting profile 0, hence EmeCodec differentiate

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,18 +7,18 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnController.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnProperties.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnView.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnViewBinder.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetContent.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetObserver.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationController.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredController.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredView.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationProperties.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationView.java",
-    "java/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationViewBinder.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnController.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnProperties.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnView.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnViewBinder.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetContent.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetObserver.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationController.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredController.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredView.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationProperties.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationView.java",
+    "java/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationViewBinder.java",
   ]
   deps = [
     ":browser_binding_java",
@@ -42,16 +42,16 @@ android_library("java") {
     "//ui/android:ui_recycler_view_java",
     "//url:url_java",
   ]
-  resources_package = "org.chromium.components.payments"
+  resources_package = "org.Cinaseek.components.payments"
 }
 
 robolectric_library("junit") {
   sources = [
-    "junit/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnTest.java",
-    "junit/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetContentTest.java",
-    "junit/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetObserverTest.java",
-    "junit/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationControllerTest.java",
-    "junit/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredTest.java",
+    "junit/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationAuthnTest.java",
+    "junit/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetContentTest.java",
+    "junit/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationBottomSheetObserverTest.java",
+    "junit/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationControllerTest.java",
+    "junit/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationNoMatchingCredTest.java",
   ]
   deps = [
     ":browser_binding_junit_test",
@@ -86,12 +86,12 @@ robolectric_library("junit") {
     "//url/mojom:url_mojom_gurl_java",
     "//url/mojom:url_mojom_origin_java",
   ]
-  resources_package = "org.chromium.components.payments"
+  resources_package = "org.Cinaseek.components.payments"
 }
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationViewBinderTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationViewBinderTest.java" ]
   deps = [
     ":browser_binding_unit_device_javatests",
     ":java",
@@ -109,7 +109,7 @@ android_library("unit_device_javatests") {
 
 android_library("javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/payments/secure_payment_confirmation/SecurePaymentConfirmationRenderTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/payments/secure_payment_confirmation/SecurePaymentConfirmationRenderTest.java" ]
   deps = [
     ":java",
     "//base:base_java_test_support",
@@ -138,15 +138,15 @@ android_library("javatests") {
 
 generate_jni("browser_binding_jni") {
   sources = [
-    "java/src/org/chromium/components/payments/browser_binding/BrowserBoundKey.java",
-    "java/src/org/chromium/components/payments/browser_binding/BrowserBoundKeyStore.java",
+    "java/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKey.java",
+    "java/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKeyStore.java",
   ]
 }
 
 android_library("browser_binding_java") {
   sources = [
-    "java/src/org/chromium/components/payments/browser_binding/BrowserBoundKey.java",
-    "java/src/org/chromium/components/payments/browser_binding/BrowserBoundKeyStore.java",
+    "java/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKey.java",
+    "java/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKeyStore.java",
   ]
   deps = [
     "//base:base_java",
@@ -158,7 +158,7 @@ android_library("browser_binding_java") {
 }
 
 robolectric_library("browser_binding_junit_test") {
-  sources = [ "junit/src/org/chromium/components/payments/browser_binding/BrowserBoundKeyTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKeyTest.java" ]
   deps = [
     ":browser_binding_java",
     "//base:base_junit_test_support",
@@ -169,7 +169,7 @@ robolectric_library("browser_binding_junit_test") {
 
 android_library("browser_binding_unit_device_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/payments/browser_binding/BrowserBoundKeyStoreTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/payments/browser_binding/BrowserBoundKeyStoreTest.java" ]
   deps = [
     ":browser_binding_java",
     "//base:base_java_test_support",

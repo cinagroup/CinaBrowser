@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ const char kAdviseOnGclientSolution[] =
     "You also need to add this solution to your .gclient:\n"
     "{\n"
     "  \"name\"        : \"webrtc.DEPS\",\n"
-    "  \"url\"         : \"https://chromium.googlesource.com/chromium/deps/"
+    "  \"url\"         : \"https://Cinaseek.googlesource.com/Cinaseek/deps/"
     "webrtc/webrtc.DEPS\",\n"
     "}\n"
     "and run gclient sync. This will download the required ref files.";

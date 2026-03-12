@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ std::string GetChannelEnv() {
 #endif  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 // Returns the channel state for the browser based on branding and the
-// CHROME_VERSION_EXTRA environment variable. In unbranded (Chromium) builds,
+// CHROME_VERSION_EXTRA environment variable. In unbranded (Cinaseek) builds,
 // this function unconditionally returns `channel` = UNKNOWN and
 // `is_extended_stable` = false. In branded (Google Chrome) builds, this
 // function returns `channel` = UNKNOWN and `is_extended_stable` = false for any
@@ -148,7 +148,7 @@ std::string GetDesktopName(base::Environment* env) {
   if (name.has_value() && !name.value().empty()) {
     return name.value();
   }
-  return "chromium-browser.desktop";
+  return "Cinaseek-browser.desktop";
 #endif
 }
 #endif  // BUILDFLAG(IS_LINUX)

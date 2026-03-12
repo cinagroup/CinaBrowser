@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -177,7 +177,7 @@ void AccountChecker::FetchPriceEmailPref() {
           cookies_allowed: NO
           setting:
             "This fetch is only enabled for signed-in users. There's no "
-            "direct Chromium's setting to disable this, but users can manage "
+            "direct Cinaseek's setting to disable this, but users can manage "
             "their preferences by visiting myactivity.google.com."
           chrome_policy {
             BrowserSignin {
@@ -265,7 +265,7 @@ void AccountChecker::OnPriceEmailPrefChanged() {
           cookies_allowed: NO
           setting:
             "This fetch is only enabled for signed-in users. There's no "
-            "direct Chromium's setting to disable this, but users can manage "
+            "direct Cinaseek's setting to disable this, but users can manage "
             "their preferences by visiting myactivity.google.com."
           chrome_policy {
             BrowserSignin {

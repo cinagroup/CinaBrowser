@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ inline base::TimeTicks ToTraceTimestamp(double seconds) {
   return base::TimeTicks() + base::Seconds(seconds);
 }
 
-// This is to avoid error of passing a chromium time internal value.
+// This is to avoid error of passing a Cinaseek time internal value.
 void ToTraceTimestamp(int64_t);
 
 PLATFORM_EXPORT void EnableTracing(const String& category_filter);

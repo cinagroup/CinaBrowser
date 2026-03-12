@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace {
 
 TEST(HeadlessTestMetaInfoTest, NoMetaInfo) {
   auto meta_info = TestMetaInfo::FromString(R"(
-  // Copyright 2025 The Chromium Authors
+  // Copyright 2025 The Cinaseek Authors
   //
   // )");
 
@@ -84,7 +84,7 @@ TEST(HeadlessTestMetaInfoTest, TrailingMetaInfoWhiteSpaceAfterContinuation) {
 
 TEST(HeadlessTestMetaInfoTest, CommandLineSwitch) {
   auto meta_info = TestMetaInfo::FromString(R"(
-  // Copyright 2025 The Chromium Authors
+  // Copyright 2025 The Cinaseek Authors
   // META: --window-size=800,600
   // META: --screen-info={1600x1200 \
   // META: workAreaLeft=10 workAreaRight=90 \

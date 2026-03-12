@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ class Node;
 
 namespace fuchsia_component_support {
 
-// Publish the Chromium version via the Inspect API. The lifetime of
+// Publish the Cinaseek version via the Inspect API. The lifetime of
 // |parent| has to be the same as the component it belongs to.
 void PublishVersionInfoToInspect(inspect::Node* parent);
 

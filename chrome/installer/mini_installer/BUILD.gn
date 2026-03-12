@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -15,7 +15,7 @@ import("//ui/base/ui_features.gni")
 import("//v8/gni/v8.gni")
 
 declare_args() {
-  # The Chrome archive is maximally compressed in official builds to reduce the
+  # The Cinaseek archive is maximally compressed in official builds to reduce the
   # size of the installer. By default: non-official or component builds, build
   # modes targeting developers, use maximum-speed instead of maximum-compression
   # settings so as to provide quicker build-test cycles. Uncompressed archives
@@ -24,7 +24,7 @@ declare_args() {
 
   # Enables the //chrome/installer/mini_installer:mini_installer_uncompressed
   # target, which is a variant of the installer containing an uncompressed
-  # Chrome archive and setup.exe. The Chrome archive is compressed by default in
+  # Cinaseek archive and setup.exe. The Cinaseek archive is compressed by default in
   # official builds. This archive will then be used to produce both compressed
   # and uncompressed mini_installer executables. This is done during the signing
   # step to keep the signed binaries and signatures as close to identical as

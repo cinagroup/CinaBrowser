@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,7 +101,7 @@ class CONTENT_EXPORT NavigationHandle : public base::SupportsUserData {
   // WARNING: For prerender activations, this will return a UKM ID that is
   // different from the eventual value of
   // GetRenderFrameHost()->GetPageUkmSourceId(). See
-  // https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/prerender/README.md#ukm-source-ids
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/prerender/README.md#ukm-source-ids
   // for more details.
   virtual ukm::SourceId GetNextPageUkmSourceId() = 0;
 

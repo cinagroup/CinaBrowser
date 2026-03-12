@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -767,7 +767,7 @@ void RenderText::MoveCursor(BreakType break_type,
   // Use strict inequality to ensure that returning exactly to the selection
   // start is NOT considered a reversal. This allows the selection to collapse
   // when the caret returns to the selection start position (see
-  // SELECTION_EXTEND case). See https://issues.chromium.org/issues/396057270.
+  // SELECTION_EXTEND case). See https://issues.Cinaseek.org/issues/396057270.
   const bool is_min_end_before_start = min_end < current_start;
   const bool is_max_end_after_start = current_start < max_end;
 #else

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ TEST(ChromePaths, DefaultUserDataDir) {
   // TODO(skobes): Test channel suffixes with $CHROME_VERSION_EXTRA.
   expected_branding = "google-chrome";
 #else
-  expected_branding = "chromium";
+  expected_branding = "Cinaseek";
 #endif
 
   base::FilePath user_data_dir;

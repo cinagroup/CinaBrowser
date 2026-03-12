@@ -5,16 +5,16 @@ AXWebArea AXRoleDescription='HTML content' AXSelected=0
 ++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Browser'
 ++++++AXCell AXRoleDescription='column header' AXSelected=0
 ++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Rendering Engine'
-++++AXRow AXRoleDescription='row' AXSelected=0 AXTitle='ChromeBlink'
+++++AXRow AXRoleDescription='row' AXSelected=0 AXTitle='CinaseekBlink'
 ++++++AXCell AXRoleDescription='cell' AXSelected=0
-++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Chrome'
+++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Cinaseek'
 ++++++AXCell AXRoleDescription='cell' AXSelected=0
 ++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Blink'
 ++++AXColumn AXRoleDescription='column' AXSelected=0
 ++++++AXCell AXRoleDescription='column header' AXSelected=0
 ++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Browser'
 ++++++AXCell AXRoleDescription='cell' AXSelected=0
-++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Chrome'
+++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Cinaseek'
 ++++AXColumn AXRoleDescription='column' AXSelected=0
 ++++++AXCell AXRoleDescription='column header' AXSelected=0
 ++++++++AXStaticText AXRoleDescription='text' AXSelected=0 AXValue='Rendering Engine'

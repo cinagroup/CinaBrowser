@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ component("features") {
   deps = [ "//base" ]
 
   # Used by `COMPONENT_EXPORT(HISTORY_FEATURES)` in `features.h` for dynamic
-  # linking. For more info, see: https://chromium.googlesource.com/chromium/src/+/HEAD/docs/component_build.md#exporting-and-importing-symbols
+  # linking. For more info, see: https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/component_build.md#exporting-and-importing-symbols
   defines = [ "IS_HISTORY_FEATURES_IMPL" ]
 }
 

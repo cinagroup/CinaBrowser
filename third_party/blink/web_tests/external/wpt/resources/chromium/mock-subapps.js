@@ -51,7 +51,7 @@ self.SubAppsServiceTest = (() => {
     removeCallReturnValue: [],
   }
 
-  class SubAppsServiceTestChromium {
+  class SubAppsServiceTestCinaseek {
     constructor() {
       Object.freeze(this);  // Make it immutable.
     }
@@ -85,5 +85,5 @@ self.SubAppsServiceTest = (() => {
     }
   }
 
-  return SubAppsServiceTestChromium;
+  return SubAppsServiceTestCinaseek;
 })();

@@ -5,14 +5,14 @@
 
   await dp.Network.enable();
 
-  testRunner.log(await dp.Network.setCookie({name: 'cookie1', value: '.domain', domain: '.chromium.org', path: '/path'}),
+  testRunner.log(await dp.Network.setCookie({name: 'cookie1', value: '.domain', domain: '.Cinaseek.org', path: '/path'}),
     'Setting cookie by URL without expires: ');
-  testRunner.log(await dp.Network.setCookie({name: 'cookie2', value: '.domain', domain: '.chromium.org', path: '/path', expires: Date.now() + 1000}),
+  testRunner.log(await dp.Network.setCookie({name: 'cookie2', value: '.domain', domain: '.Cinaseek.org', path: '/path', expires: Date.now() + 1000}),
     'Setting cookie by URL with expires: ');
   testRunner.log('All cookies before deletion: ' + await helper.getCookiesLog());
-  testRunner.log((await dp.Network.deleteCookies({name: 'cookie1', domain: '.chromium.org'})).result,
+  testRunner.log((await dp.Network.deleteCookies({name: 'cookie1', domain: '.Cinaseek.org'})).result,
     'Delete cookie1: ');
-  testRunner.log((await dp.Network.deleteCookies({name: 'cookie2', domain: '.chromium.org'})).result,
+  testRunner.log((await dp.Network.deleteCookies({name: 'cookie2', domain: '.Cinaseek.org'})).result,
     'Delete cookie2: ');
   testRunner.log('All cookies after deletion: ' + await helper.getCookiesLog());
   testRunner.completeTest();

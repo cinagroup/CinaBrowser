@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -133,7 +133,7 @@ TEST(ProxyConfigServiceWinTest, SetFromIEConfig) {
           // how
           // Internet Explorer applies the settings. For more details on this
           // policy, see:
-          // http://code.google.com/p/chromium/issues/detail?id=55912#c2
+          // http://code.google.com/p/Cinaseek/issues/detail?id=55912#c2
           false,   // auto_detect
           GURL(),  // pac_url
           ProxyRulesExpectation::PerSchemeWithSocks(

@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,7 +16,7 @@ java_cpp_enum("autofill_generated_enums") {
 # Minimal Java library for the AutofillThirdPartyModeContentProvider which will
 # be included in the base module.
 android_library("third_party_provider_java") {
-  sources = [ "java/src/org/chromium/chrome/browser/autofill/AutofillThirdPartyModeContentProvider.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/autofill/AutofillThirdPartyModeContentProvider.java" ]
   deps = [
     "//base:base_java",
     "//base:base_shared_preferences_java",
@@ -27,69 +27,69 @@ android_library("third_party_provider_java") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/autofill/AddressNormalizerFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillAddress.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillClientProviderUtils.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillEditorBase.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillImageFetcher.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillImageFetcherFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillImageFetcherUtils.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillProfileBridge.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillUiUtils.java",
-    "java/src/org/chromium/chrome/browser/autofill/PersonalDataManager.java",
-    "java/src/org/chromium/chrome/browser/autofill/PersonalDataManagerFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/PhoneNumberUtil.java",
-    "java/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePrompt.java",
-    "java/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePromptController.java",
-    "java/src/org/chromium/chrome/browser/autofill/SubKeyRequesterFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPrompt.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptController.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityAttributeUpdateDetails.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityDataManager.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityDataManagerFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/address/AddressEditorCoordinator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/address/AddressEditorMediator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/address/EditorDialogView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/address/EditorDialogViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/address/EditorProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorCoordinator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorMediator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditTextNoAutofillView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorComponentsProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorComponentsUtil.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorComponentsViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorDialogToolbar.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorObserverForTest.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/EditorViewBase.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/date_field/DateFieldProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/date_field/DateFieldValidator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/date_field/DateFieldView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/date_field/DateFieldViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldAdapter.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/HintedDropDownAdapter.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/field/EditorFieldValidator.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/field/FieldProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/field/FieldView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/text_field/TextFieldProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/text_field/TextFieldView.java",
-    "java/src/org/chromium/chrome/browser/autofill/editors/common/text_field/TextFieldViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/helpers/FaviconHelper.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillAiPreference.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsCoordinator.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsFragment.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsMediator.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsProperties.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsViewBinder.java",
-    "java/src/org/chromium/chrome/browser/autofill/options/RadioButtonGroupThirdPartyPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AddressNormalizerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillAddress.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillClientProviderUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillEditorBase.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillImageFetcher.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillImageFetcherFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillImageFetcherUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillProfileBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillUiUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/PersonalDataManager.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/PersonalDataManagerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/PhoneNumberUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePrompt.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePromptController.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SubKeyRequesterFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPrompt.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptController.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityAttributeUpdateDetails.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityDataManager.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityDataManagerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/address/AddressEditorCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/address/AddressEditorMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/address/EditorDialogView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/address/EditorDialogViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/address/EditorProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditTextNoAutofillView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorComponentsProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorComponentsUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorComponentsViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorDialogToolbar.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorObserverForTest.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/EditorViewBase.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/date_field/DateFieldProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/date_field/DateFieldValidator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/date_field/DateFieldView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/date_field/DateFieldViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/HintedDropDownAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/field/EditorFieldValidator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/field/FieldProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/field/FieldView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/text_field/TextFieldProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/text_field/TextFieldView.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/editors/common/text_field/TextFieldViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/helpers/FaviconHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillAiPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/options/RadioButtonGroupThirdPartyPreference.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.autofill"
+  resources_package = "org.Cinaseek.chrome.browser.autofill"
 
   deps = [
     ":java_resources",
@@ -164,7 +164,7 @@ android_library("java") {
 
 android_library("test_support_java") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/autofill/AutofillClientProviderTestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/autofill/AutofillClientProviderTestUtils.java" ]
   deps = [
     ":java",
     "//third_party/androidx:androidx_annotation_annotation_java",
@@ -174,7 +174,7 @@ android_library("test_support_java") {
 }
 
 android_library("bottom_sheet_utils_java") {
-  sources = [ "java/src/org/chromium/chrome/browser/autofill/bottom_sheet_utils/DetailScreenScrollListener.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/autofill/bottom_sheet_utils/DetailScreenScrollListener.java" ]
 
   deps = [
     "//base:base_java",
@@ -186,20 +186,20 @@ android_library("bottom_sheet_utils_java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/autofill/AddressNormalizerFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillClientProviderUtils.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillImageFetcher.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillImageFetcherFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/AutofillProfileBridge.java",
-    "java/src/org/chromium/chrome/browser/autofill/PersonalDataManager.java",
-    "java/src/org/chromium/chrome/browser/autofill/PhoneNumberUtil.java",
-    "java/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePrompt.java",
-    "java/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePromptController.java",
-    "java/src/org/chromium/chrome/browser/autofill/SubKeyRequesterFactory.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPrompt.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptController.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityAttributeUpdateDetails.java",
-    "java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityDataManager.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AddressNormalizerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillClientProviderUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillImageFetcher.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillImageFetcherFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/AutofillProfileBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/PersonalDataManager.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/PhoneNumberUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePrompt.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePromptController.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/SubKeyRequesterFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPrompt.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptController.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityAttributeUpdateDetails.java",
+    "java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityDataManager.java",
   ]
 }
 
@@ -239,18 +239,18 @@ android_resources("java_resources") {
 }
 
 generate_jni("jni_test_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/autofill/AutofillClientProviderTestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/autofill/AutofillClientProviderTestUtils.java" ]
 }
 
 android_library("test_java") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.autofill"
+  resources_package = "org.Cinaseek.chrome.browser.autofill"
 
   sources = [
-    "javatest/src/org/chromium/chrome/browser/autofill/AutofillThirdPartyModeContentProviderIntegrationTest.java",
-    "javatest/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePromptRenderTest.java",
-    "javatest/src/org/chromium/chrome/browser/autofill/editors/address/AddressEditorRenderTest.java",
-    "javatest/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewTest.java",
+    "javatest/src/org/Cinaseek/chrome/browser/autofill/AutofillThirdPartyModeContentProviderIntegrationTest.java",
+    "javatest/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePromptRenderTest.java",
+    "javatest/src/org/Cinaseek/chrome/browser/autofill/editors/address/AddressEditorRenderTest.java",
+    "javatest/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewTest.java",
   ]
 
   deps = [
@@ -289,22 +289,22 @@ android_library("test_java") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.autofill"
+  resources_package = "org.Cinaseek.chrome.browser.autofill"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/autofill/AutofillThirdPartyModeContentProviderTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/SaveUpdateAddressProfilePromptTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityDataManagerTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/bottom_sheet_utils/DetailScreenScrollListenerTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/address/AddressEditorTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorModuleTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/autofill_ai/EntityEditorViewTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/common/date_field/DateFieldViewTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/common/text_field/TextFieldViewUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/autofill/editors/utils/TestUtils.java",
-    "junit/src/org/chromium/chrome/browser/autofill/options/AutofillOptionsTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/AutofillThirdPartyModeContentProviderTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/SaveUpdateAddressProfilePromptTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/AutofillAiSaveUpdateEntityPromptTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityDataManagerTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/bottom_sheet_utils/DetailScreenScrollListenerTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/address/AddressEditorTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorModuleTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/autofill_ai/EntityEditorViewTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/common/date_field/DateFieldViewTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/common/dropdown_field/DropdownFieldViewUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/common/text_field/TextFieldViewUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/editors/utils/TestUtils.java",
+    "junit/src/org/Cinaseek/chrome/browser/autofill/options/AutofillOptionsTest.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ class MEDIA_GPU_EXPORT D3D12ReferenceFrameList {
   size_t size_ = 0;
   // D3D12_VIDEO_DECODE_REFERENCE_FRAMES has ID3D12Resource** ppTexture2Ds, so
   // we have to store raw pointer array here. The pointers are only passed to
-  // D3D12 API and we never dereference it in Chromium.
+  // D3D12 API and we never dereference it in Cinaseek.
   // The lifetime of these |resources_| is managed by |D3D11VideoDecoder|'s
   // |picture_buffers_|. When picture buffers are invalidated, the
   // D3D12VideoDecoderWrapper and its ID3D12VideoDecoder instance will be

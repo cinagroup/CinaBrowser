@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,35 +7,35 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxBridge.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TrackingProtectionSettingsBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TrackingProtectionSettingsBridge.java",
   ]
 }
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/ActivityTypeMapper.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/AdMeasurementFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/FledgeAllSitesFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/FledgeBlockedSitesFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/FledgeFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/FledgeLearnMoreFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/FledgePreference.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PreferenceCategoryWithClickableSummary.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxBridge.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxReferrer.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxSettingsBaseFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxSnackbarController.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/Topic.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicPreference.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicSwitchPreference.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicsBlockedFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicsFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicsHeaderPreference.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicsManageFragment.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TopicsUtils.java",
-    "java/src/org/chromium/chrome/browser/privacy_sandbox/TrackingProtectionSettingsBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/ActivityTypeMapper.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/AdMeasurementFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgeAllSitesFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgeBlockedSitesFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgeFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgeLearnMoreFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgePreference.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PreferenceCategoryWithClickableSummary.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxReferrer.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxSettingsBaseFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxSnackbarController.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/Topic.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicSwitchPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsBlockedFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsHeaderPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsManageFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/privacy_sandbox/TrackingProtectionSettingsBridge.java",
   ]
   deps = [
     ":java_resources",
@@ -84,19 +84,19 @@ android_library("java") {
     ":jni_headers",
     ":privacy_sandbox_enums",
   ]
-  resources_package = "org.chromium.chrome.browser.privacy_sandbox"
+  resources_package = "org.Cinaseek.chrome.browser.privacy_sandbox"
 }
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.privacy_sandbox"
+  resources_package = "org.Cinaseek.chrome.browser.privacy_sandbox"
   sources = [
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/AdMeasurementFragmentTest.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/FledgeFragmentTest.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxBridgeTest.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxSettingsFragmentTest.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/TopicsFragmentTest.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/TopicsManageFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/AdMeasurementFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/FledgeFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxBridgeTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxSettingsFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/TopicsManageFragmentTest.java",
   ]
   deps = [
     ":java",
@@ -149,8 +149,8 @@ android_library("javatests") {
 android_library("test_support_java") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/FakePrivacySandboxBridge.java",
-    "javatests/src/org/chromium/chrome/browser/privacy_sandbox/PrivacySandboxTestUtils.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/FakePrivacySandboxBridge.java",
+    "javatests/src/org/Cinaseek/chrome/browser/privacy_sandbox/PrivacySandboxTestUtils.java",
   ]
   deps = [
     ":java",

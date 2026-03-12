@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -198,7 +198,7 @@ IN_PROC_BROWSER_TEST_F(NoBestEffortTasksTest, LoadExtensionAndSendMessages) {
   // extension permissions).
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
       browser(),
-      embedded_test_server()->GetURL("fake.chromium.org", "/empty.html")));
+      embedded_test_server()->GetURL("fake.Cinaseek.org", "/empty.html")));
 
   // Execute JavaScript in the test page, to send a ping message to the
   // extension and await the reply. The chrome.runtime.sendMessage() operation

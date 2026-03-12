@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1585,7 +1585,7 @@ void PrintRenderFrameHelper::PrintFrameContent(
 
   // Printing embedded pdf plugin has been broken since pdf plugin viewer was
   // moved out-of-process
-  // (https://bugs.chromium.org/p/chromium/issues/detail?id=464269). So don't
+  // (https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=464269). So don't
   // try to handle pdf plugin element until that bug is fixed.
   {
     TRACE_EVENT0("print", "PrintRenderFrameHelper::PrintFrameContent");
@@ -2654,7 +2654,7 @@ void PrintRenderFrameHelper::RequestPrintPreview(PrintPreviewRequestType type,
       //
       // Potential solutions to these bugs and the current chosen tradeoff
       // were discussed on:
-      // https://groups.google.com/u/0/a/chromium.org/g/platform-architecture-dev/c/O45yJShVmZg
+      // https://groups.google.com/u/0/a/Cinaseek.org/g/platform-architecture-dev/c/O45yJShVmZg
       //
       // Bug tracking further investigation into a solution that satisfies
       // both the blocking of the `window.print()` call and loading of

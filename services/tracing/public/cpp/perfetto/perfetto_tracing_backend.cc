@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -150,9 +150,9 @@ class ProducerEndpoint : public perfetto::ProducerEndpoint,
       perfetto::BufferID target_buffer,
       perfetto::BufferExhaustedPolicy) override {
     // Can be called from any thread.
-    // Chromium uses BufferExhaustedPolicy::kDrop to avoid stalling trace
+    // Cinaseek uses BufferExhaustedPolicy::kDrop to avoid stalling trace
     // writers when the chunks in the SMB are exhausted. Stalling could
-    // otherwise lead to deadlocks in chromium, because a stalled mojo IPC
+    // otherwise lead to deadlocks in Cinaseek, because a stalled mojo IPC
     // thread could prevent CommitRequest messages from reaching the perfetto
     // service.
     return MaybeSharedMemoryArbiter()->CreateTraceWriter(

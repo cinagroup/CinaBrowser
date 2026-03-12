@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,17 +87,17 @@ namespace base {
 // * Not all member functions can be used in a constexpr context. This is due to
 //   limitations in both the C++17 language and the Abseil library used for the
 //   implementation.
-// * Since Chromium does not support exceptions, there is no bad_expected_access
+// * Since Cinaseek does not support exceptions, there is no bad_expected_access
 //   exception and the program will just terminate when the exception would have
 //   been thrown. Furthermore, all member functions are marked noexcept.
 // * C++23 allows an implicit conversion from U to expected<T, E> if U is
-//   implicitly convertible to T; the Chromium version only allows an implicit
+//   implicitly convertible to T; the Cinaseek version only allows an implicit
 //   conversion if U is implicitly convertible to T *and* U is *not* implicitly
 //   convertible to E, to guard against bug-prone patterns such as:
 //     // creates an expected value containing true, not an unexpected value
 //     // containing 123L.
 //     expected<bool, long> e = 123L;
-// * Because of the above restriction, the Chromium version also introduces
+// * Because of the above restriction, the Cinaseek version also introduces
 //   `base::ok` as a complement to `base::unexpected` to simplify returning
 //   success values when the implicit conversion above is disallowed.
 // * Calling operator* or operator-> on an unexpected value results in program
@@ -128,7 +128,7 @@ namespace base {
 //     // The C++23 std::expected proposal allows this to be simply written as
 //     //   return result;
 //     //
-//     // However, the Chromium version disallows this if E implicitly converts
+//     // However, the Cinaseek version disallows this if E implicitly converts
 //     // to T, so without base::ok(), this would have to be written as:
 //     //   return base::expected<std::string, std::string>(std::move(result));
 //
@@ -304,7 +304,7 @@ class [[nodiscard, gsl::Owner]] expected final {
       : impl_(std::move(rhs.impl_)) {}
 
   // Deviation from the Standard, which allows implicit conversions as long as U
-  // is implicitly convertible to T: Chromium additionally requires that U is
+  // is implicitly convertible to T: Cinaseek additionally requires that U is
   // not implicitly convertible to E.
   template <typename U = std::remove_cv_t<T>>
     requires(internal::IsValidValueConstruction<T, E, U>)

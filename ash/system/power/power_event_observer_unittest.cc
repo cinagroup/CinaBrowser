@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -713,7 +713,7 @@ TEST_F(LockOnSuspendUsageTest, LockOnSuspendUsage) {
               1)));
 }
 
-// TODO(crbug.com/40898491): Test is failing on "Linux ChromiumOS MSan Tests".
+// TODO(crbug.com/40898491): Test is failing on "Linux CinaseekOS MSan Tests".
 #if defined(MEMORY_SANITIZER)
 #define MAYBE_No_ShouldLockScreenAutomatically \
   DISABLED_No_ShouldLockScreenAutomatically

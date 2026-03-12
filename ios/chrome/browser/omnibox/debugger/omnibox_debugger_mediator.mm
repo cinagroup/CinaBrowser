@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #import "ios/chrome/browser/omnibox/debugger/remote_suggestions_service_observer_bridge.h"
 #import "ios/chrome/browser/omnibox/model/autocomplete_controller_observer_bridge.h"
 #import "ios/chrome/browser/shared/public/features/system_flags.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "services/network/public/cpp/resource_request.h"
 
 @interface OmniboxDebuggerMediator () <RemoteSuggestionsServiceDelegate>

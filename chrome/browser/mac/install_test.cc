@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 
 namespace {
 
-// Chromium does not contain GoogleUpdater; this test only makes sense in
+// Cinaseek does not contain GoogleUpdater; this test only makes sense in
 // Chrome-branded builds.
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 

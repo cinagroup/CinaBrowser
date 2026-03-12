@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2267,7 +2267,7 @@ IN_PROC_BROWSER_TEST_F(SearchPreloadUnifiedBrowserTest,
 #define MAYBE_OpenPrefetchedResponseInBackgroundedTab \
   OpenPrefetchedResponseInBackgroundedTab
 #endif
-// TODO(crbug.com/40272425): Flaky on chromiumos ASAN LSAN and Linux
+// TODO(crbug.com/40272425): Flaky on Cinaseekos ASAN LSAN and Linux
 // ASAN.
 IN_PROC_BROWSER_TEST_F(SearchPreloadUnifiedBrowserTest,
                        MAYBE_OpenPrefetchedResponseInBackgroundedTab) {

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,7 +90,7 @@
 #include "third_party/skia/include/gpu/ganesh/GrYUVABackendTextures.h"
 #include "third_party/skia/include/gpu/ganesh/SkSurfaceGanesh.h"
 #include "third_party/skia/include/gpu/graphite/Context.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "third_party/skia/include/utils/SkNoDrawCanvas.h"
 #include "ui/base/ui_base_features.h"
 #include "ui/gfx/geometry/skia_conversions.h"
@@ -911,7 +911,7 @@ class RasterDecoderImpl final : public RasterDecoder,
   std::optional<size_t> deferred_raster_paint_buffer_offset_;
 
   // Tracing helpers.
-  int raster_chromium_id_ = 0;
+  int raster_Cinaseek_id_ = 0;
 
   // Workaround for https://crbug.com/906453
   bool flush_workaround_disabled_for_test_ = false;
@@ -1080,7 +1080,7 @@ void RasterDecoderImpl::Destroy(bool have_context) {
 
   DCHECK(!have_context || shared_context_state_->IsCurrent(nullptr));
 
-  // Client can call BeginRasterChromium and then channel can be closed and
+  // Client can call BeginRasterCinaseek and then channel can be closed and
   // decoder destroyed. Finish raster first.
   // Note: `have_context` is always false for Vulkan, so we don't gate this code
   // on it.
@@ -1153,8 +1153,8 @@ Capabilities RasterDecoderImpl::GetCapabilities() {
   caps.texture_format_etc1_npot =
       feature_info()->feature_flags().oes_compressed_etc1_rgb8_texture &&
       !feature_info()->workarounds().etc1_power_of_two_only;
-  caps.image_ar30 = feature_info()->feature_flags().chromium_image_ar30;
-  caps.image_ab30 = feature_info()->feature_flags().chromium_image_ab30;
+  caps.image_ar30 = feature_info()->feature_flags().Cinaseek_image_ar30;
+  caps.image_ab30 = feature_info()->feature_flags().Cinaseek_image_ab30;
   caps.render_buffer_format_bgra8888 =
       feature_info()->feature_flags().ext_render_buffer_format_bgra8888;
 
@@ -1166,7 +1166,7 @@ Capabilities RasterDecoderImpl::GetCapabilities() {
         std::min(caps.max_texture_size,
                  feature_info()->workarounds().webgl_or_caps_max_texture_size);
   }
-  caps.sync_query = feature_info()->feature_flags().chromium_sync_query;
+  caps.sync_query = feature_info()->feature_flags().Cinaseek_sync_query;
   caps.msaa_is_slow = gles2::MSAAIsSlow(feature_info()->workarounds());
   caps.avoid_stencil_buffers =
       feature_info()->workarounds().avoid_stencil_buffers;
@@ -1694,7 +1694,7 @@ error::Error RasterDecoderImpl::HandleBeginQueryEXT(
     case GL_COMMANDS_ISSUED_CHROMIUM:
       break;
     case GL_COMMANDS_COMPLETED_CHROMIUM:
-      if (!features().chromium_sync_query) {
+      if (!features().Cinaseek_sync_query) {
         LOCAL_SET_GL_ERROR(GL_INVALID_OPERATION, "glBeginQueryEXT",
                            "not enabled for commands completed queries");
         return error::kNoError;
@@ -2920,7 +2920,7 @@ error::Error RasterDecoderImpl::DoRasterCHROMIUM(GLuint raster_shm_id,
                                                  GLuint font_shm_offset,
                                                  GLuint font_shm_size) {
   TRACE_EVENT1("gpu", "RasterDecoderImpl::DoRasterCHROMIUM", "raster_id",
-               ++raster_chromium_id_);
+               ++raster_Cinaseek_id_);
 
   if (!sk_surface_ && !scoped_shared_image_raster_write_) {
     LOCAL_SET_GL_ERROR(GL_INVALID_OPERATION, "glRasterCHROMIUM",

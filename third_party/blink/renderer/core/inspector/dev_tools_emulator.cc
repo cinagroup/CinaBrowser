@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace {
 static float calculateDeviceScaleAdjustment(int width,
                                             int height,
                                             float deviceScaleFactor) {
-  // Chromium on Android uses a device scale adjustment for fonts used in text
+  // Cinaseek on Android uses a device scale adjustment for fonts used in text
   // autosizing for improved legibility. This function computes this adjusted
   // value for text autosizing.
   // For a description of the Android device scale adjustment algorithm, see:

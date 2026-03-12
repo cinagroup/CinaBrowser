@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ void ComponentsHandler::HandleRequestComponentsData(
 // This function is called when user presses button from html UI.
 // TODO(shrikant): We need to make this button available based on current
 // state e.g. If component state is currently updating then we need to disable
-// button. (https://code.google.com/p/chromium/issues/detail?id=272540)
+// button. (https://code.google.com/p/Cinaseek/issues/detail?id=272540)
 void ComponentsHandler::HandleCheckUpdate(const base::ListValue& args) {
   if (args.size() != 1) {
     NOTREACHED();

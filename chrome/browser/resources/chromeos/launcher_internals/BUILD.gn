@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//tools/typescript/webui_ts_library.gni")
 import("//ui/webui/resources/tools/generate_grd.gni")
 import("./launcher_internals.gni")
 
-assert(is_chromeos, "Launcher internals is Chrome OS only.")
+assert(is_chromeos, "Launcher internals is Cinaseek OS only.")
 
 resources_grd_file = "$target_gen_dir/resources.grd"
 

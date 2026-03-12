@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,12 +7,12 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateCoordinator.java",
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateMetricsUtils.java",
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateProperties.java",
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateUtils.java",
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateView.java",
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateMetricsUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateView.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateViewBinder.java",
   ]
   srcjar_deps = [ ":jni_headers" ]
 
@@ -33,12 +33,12 @@ android_library("java") {
     "//url:url_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.composeplate"
+  resources_package = "org.Cinaseek.chrome.browser.composeplate"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/composeplate/ComposeplateUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateUtils.java",
   ]
 }
 
@@ -55,13 +55,13 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.composeplate"
+  resources_package = "org.Cinaseek.chrome.browser.composeplate"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/composeplate/ComposeplateCoordinatorUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/composeplate/ComposeplateMetricsUtilsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/composeplate/ComposeplateUtilsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/composeplate/ComposeplateViewBinderUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateCoordinatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateMetricsUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/composeplate/ComposeplateViewBinderUnitTest.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ inline constexpr char kDisablePullToRefreshEffect[] =
 // LINT.IfChange(EnableEdgeToEdgeDebugLayers)
 inline constexpr char kEnableEdgeToEdgeDebugLayers[] =
     "enable-edge-to-edge-debug-layers";
-// LINT.ThenChange(//ui/android/java/src/org/chromium/ui/UiSwitches.java:EnableEdgeToEdgeDebugLayers)
+// LINT.ThenChange(//ui/android/java/src/org/Cinaseek/ui/UiSwitches.java:EnableEdgeToEdgeDebugLayers)
 #endif
 
 #if BUILDFLAG(IS_MAC)

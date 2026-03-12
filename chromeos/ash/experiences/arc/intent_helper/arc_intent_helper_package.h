@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace arc {
 // Chrome.
 // This package does not count as a candidate to open ARC apps, so it should be
 // removed from candidate list such as context menu.
-constexpr char kArcIntentHelperPackageName[] = "org.chromium.arc.intent_helper";
+constexpr char kArcIntentHelperPackageName[] = "org.Cinaseek.arc.intent_helper";
 
 }  // namespace arc
 

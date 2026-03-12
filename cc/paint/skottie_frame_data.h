@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 namespace cc {
 
 // The equivalent of skresources::ImageAsset::FrameData, except expressed in
-// terms of Chromium Compositor constructs rather than Skia constructs.
+// terms of Cinaseek Compositor constructs rather than Skia constructs.
 // Represents the image to use for an asset in one frame of a Skottie animation.
 //
 // There's currently no use case for |skresources::ImageAsset::FrameData.matrix|
@@ -26,7 +26,7 @@ struct CC_PAINT_EXPORT SkottieFrameData {
   // versatility for how the image is "backed" (ex: a PaintImageGenerator or
   // PaintRecord can be used).
   PaintImage image;
-  // Chromium version of SkSamplingOptions. Controls resampling quality if the
+  // Cinaseek version of SkSamplingOptions. Controls resampling quality if the
   // image needs to be resized when rendering.
   PaintFlags::FilterQuality quality = PaintFlags::FilterQuality::kLow;
 };

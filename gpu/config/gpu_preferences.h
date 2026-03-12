@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ enum class WebGPUAdapterName : uint32_t {
   kSwiftShader = 3,
 };
 
-// Affecting how chromium handles GPUPowerPreference in
+// Affecting how Cinaseek handles GPUPowerPreference in
 // GPURequestAdapterOptions.
 enum class WebGPUPowerPreference : uint32_t {
   // No explicit power preference.

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -180,7 +180,7 @@ int main(int argc, char** argv) {
   for (size_t i = 0; i < repeats; ++i)
     repeated_contents.append(contents);
 
-  // In Chromium, it's rare that individual files are larger than 4MiB, so cap
+  // In Cinaseek, it's rare that individual files are larger than 4MiB, so cap
   // the chunk size at this value.
   constexpr size_t kMaxBlockSize = 4 << 20;
   for (size_t size = kPageSize; size < std::min(kMaxBlockSize, contents.size());

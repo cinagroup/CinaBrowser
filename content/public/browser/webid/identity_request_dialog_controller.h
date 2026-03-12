@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -150,7 +150,7 @@ class CONTENT_EXPORT IdentityRequestDialogController {
  public:
   // This enum is used to back a histogram. Do not remove or reorder members.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.webid
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.webid
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: IdentityRequestDialogDismissReason
   // LINT.IfChange(DismissReason)
   enum class DismissReason {
@@ -173,7 +173,7 @@ class CONTENT_EXPORT IdentityRequestDialogController {
   // LINT.ThenChange(//tools/metrics/histograms/metadata/blink/enums.xml:FedCmCancelReason)
 
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.webid
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.webid
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: IdentityRequestDialogLinkType
   enum class LinkType { PRIVACY_POLICY, TERMS_OF_SERVICE };
 

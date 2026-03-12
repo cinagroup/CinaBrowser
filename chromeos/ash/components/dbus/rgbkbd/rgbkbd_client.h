@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class Bus;
 
 namespace ash {
 
-// A class to make DBus calls for the org.chromium.Rgbkbd service.
+// A class to make DBus calls for the org.Cinaseek.Rgbkbd service.
 class COMPONENT_EXPORT(RGBKBD_CLIENT) RgbkbdClient {
  public:
   using GetRgbKeyboardCapabilitiesCallback =

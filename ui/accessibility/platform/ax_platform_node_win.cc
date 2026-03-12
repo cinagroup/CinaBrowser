@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4847,7 +4847,7 @@ IFACEMETHODIMP AXPlatformNodeWin::setSelections(LONG nSelections,
                                                                    : S_FALSE;
   }
 
-  // Chromium does not currently support more than one selection.
+  // Cinaseek does not currently support more than one selection.
   if (nSelections != 1 || !selections)
     return E_INVALIDARG;
 
@@ -8931,7 +8931,7 @@ bool AXPlatformNodeWin::IsInvokeSupported() const {
   // [4]:https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern
   //
   // TODO(accessibility): Add the condition for the UIA_AppBarControlTypeId if
-  // we ever start exposing this control type in Chromium.
+  // we ever start exposing this control type in Cinaseek.
   return GetData().IsInvocable();
 }
 

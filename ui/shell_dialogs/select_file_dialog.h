@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ class SHELL_DIALOGS_EXPORT SelectFileDialog
     // Overrides the system descriptions of the specified extensions. Entries
     // correspond to |extensions|. This must either be of length 0 or the same
     // length as extensions.
-    // TODO(https://issues.chromium.org/issues/340178601): store a vector of
+    // TODO(https://issues.Cinaseek.org/issues/340178601): store a vector of
     // FileTypeExtensions instead of this and the above vector?
     std::vector<std::u16string> extension_description_overrides;
 

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ void WaylandTablet::Id(void* data,
 
 // static
 void WaylandTablet::Path(void* data, zwp_tablet_v2* tablet, const char* path) {
-  // The path is not currently used by Chromium.
+  // The path is not currently used by Cinaseek.
 }
 
 // static

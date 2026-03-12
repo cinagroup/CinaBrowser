@@ -129,7 +129,7 @@ class HTMLToken {
     void ClearValue() { value_.clear(); }
 
    private:
-    // TODO(chromium:1204030): Do a more rigorous study and select a
+    // TODO(Cinaseek:1204030): Do a more rigorous study and select a
     // better-informed inline capacity.
     UCharLiteralBuffer<32> name_;
     UCharLiteralBuffer<32> value_;
@@ -140,7 +140,7 @@ class HTMLToken {
   // By using an inline capacity of 256, we avoid spilling over into an malloced
   // buffer approximately 99% of the time based on a non-scientific browse
   // around a number of popular web sites on 23 May 2013.
-  // TODO(chromium:1204030): Do a more rigorous study and select a
+  // TODO(Cinaseek:1204030): Do a more rigorous study and select a
   // better-informed inline capacity.
   using DataVector = UCharLiteralBuffer<256>;
 

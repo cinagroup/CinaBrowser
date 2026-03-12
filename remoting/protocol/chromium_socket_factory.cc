@@ -1,8 +1,8 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "remoting/protocol/chromium_socket_factory.h"
+#include "remoting/protocol/Cinaseek_socket_factory.h"
 
 #include <stddef.h>
 
@@ -443,14 +443,14 @@ void UdpPacketSocket::HandleReadResult(int result) {
 
 }  // namespace
 
-ChromiumPacketSocketFactory::ChromiumPacketSocketFactory(
+CinaseekPacketSocketFactory::CinaseekPacketSocketFactory(
     base::WeakPtr<SessionOptionsProvider> session_options_provider)
     : session_options_provider_(session_options_provider) {}
 
-ChromiumPacketSocketFactory::~ChromiumPacketSocketFactory() = default;
+CinaseekPacketSocketFactory::~CinaseekPacketSocketFactory() = default;
 
 std::unique_ptr<webrtc::AsyncPacketSocket>
-ChromiumPacketSocketFactory::CreateUdpSocket(
+CinaseekPacketSocketFactory::CreateUdpSocket(
     const webrtc::Environment& /*env*/,
     const webrtc::SocketAddress& local_address,
     uint16_t min_port,
@@ -470,7 +470,7 @@ ChromiumPacketSocketFactory::CreateUdpSocket(
 }
 
 std::unique_ptr<webrtc::AsyncListenSocket>
-ChromiumPacketSocketFactory::CreateServerTcpSocket(
+CinaseekPacketSocketFactory::CreateServerTcpSocket(
     const webrtc::Environment& env,
     const webrtc::SocketAddress& local_address,
     uint16_t min_port,
@@ -483,7 +483,7 @@ ChromiumPacketSocketFactory::CreateServerTcpSocket(
 }
 
 std::unique_ptr<webrtc::AsyncPacketSocket>
-ChromiumPacketSocketFactory::CreateClientTcpSocket(
+CinaseekPacketSocketFactory::CreateClientTcpSocket(
     const webrtc::Environment& /*env*/,
     const webrtc::SocketAddress& local_address,
     const webrtc::SocketAddress& remote_address,
@@ -496,7 +496,7 @@ ChromiumPacketSocketFactory::CreateClientTcpSocket(
 }
 
 std::unique_ptr<webrtc::AsyncDnsResolverInterface>
-ChromiumPacketSocketFactory::CreateAsyncDnsResolver() {
+CinaseekPacketSocketFactory::CreateAsyncDnsResolver() {
   return std::make_unique<webrtc::AsyncDnsResolver>();
 }
 

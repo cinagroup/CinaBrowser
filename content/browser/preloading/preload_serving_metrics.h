@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,12 +25,12 @@ enum class PrefetchPotentialCandidateServingResult;
 enum class PrefetchStatus;
 
 // All the structs in this file are "Logs" as defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 
 // Log of `PrefetchContainer`.
 //
 // `PreloadContainerMetrics` is a "Log" object as defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 //
 // `PrefetchContainerMetrics` is owned by a `PrefetchContainer`, filled by the
 // `PrefetchContainer`, and used for the per-`PrefetchContainer` metrics (e.g.
@@ -73,7 +73,7 @@ struct CONTENT_EXPORT PrefetchContainerMetrics final {
 //
 // `PrefetchMatchPrefetchAheadOfPrerenderDebugMetrics` is a "Log" object as
 // defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 //
 // The members are filled by `PrefetchMatchResolver`.
 struct CONTENT_EXPORT PrefetchMatchPrefetchAheadOfPrerenderDebugMetrics final {
@@ -103,7 +103,7 @@ struct CONTENT_EXPORT PrefetchMatchPrefetchAheadOfPrerenderDebugMetrics final {
 // Debug information of prefetch ahead of prerender at prefetch matching.
 //
 // `PreloadMatchPrerenderDebugMetrics` is a "Log" object as defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 //
 // The members are filled by `PrefetchMatchResolver`.
 struct CONTENT_EXPORT PrefetchMatchPrerenderDebugMetrics final {
@@ -129,7 +129,7 @@ struct CONTENT_EXPORT PrefetchMatchPrerenderDebugMetrics final {
 // Log of prefetch matching.
 //
 // `PreloadMatchMetrics` is a "Log" object as defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 //
 // The members are filled by `PrefetchMatchResolver`.
 struct CONTENT_EXPORT PrefetchMatchMetrics final {
@@ -193,7 +193,7 @@ struct CONTENT_EXPORT PrefetchMatchMetrics final {
 // Log of preloads related to a navigation
 //
 // `PreloadServingMetrics` is a "Log" object as defined in
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#Logs
 //
 // The members are filled by `PreloadServingMetrics`.
 struct CONTENT_EXPORT PreloadServingMetrics final {
@@ -245,7 +245,7 @@ class CONTENT_EXPORT PreloadServingMetricsCapsuleImpl final
   // `NavigationHandle`.
   //
   // See
-  // https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#life-of-PreloadServingMetrics
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#life-of-PreloadServingMetrics
   static std::unique_ptr<PreloadServingMetricsCapsule> TakeFromNavigationHandle(
       NavigationHandle& navigation_handle);
 

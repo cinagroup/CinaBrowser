@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -94,7 +94,7 @@ source_set("tests") {
     "//mojo/public/interfaces/bindings/tests:test_interfaces_for_containers_of_optionals",
     "//mojo/public/interfaces/bindings/tests:test_struct_traits_interfaces",
     "//testing/gtest",
-    "//third_party/ipcz/src:ipcz_test_support_chromium",
+    "//third_party/ipcz/src:ipcz_test_support_Cinaseek",
   ]
 
   if (is_ios) {

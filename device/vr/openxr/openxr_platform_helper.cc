@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/vr/openxr/openxr_platform_helper.h"
@@ -119,9 +119,9 @@ XrResult OpenXrPlatformHelper::CreateInstance(XrInstance* instance,
 
   // Same as above, not checking the copied length here as this is mainly for
   // our own usage. However, it seems unlikely this will ever be truncated.
-  base::strlcpy(dest_engine_name, "Chromium");
+  base::strlcpy(dest_engine_name, "Cinaseek");
 
-  // engine version should be the build number of chromium
+  // engine version should be the build number of Cinaseek
   instance_create_info.applicationInfo.engineVersion = build;
 
   instance_create_info.applicationInfo.apiVersion = XR_API_VERSION_1_0;

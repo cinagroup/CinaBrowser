@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ std::wstring GetProgIdFromRegistry(const wchar_t user_choice_path[]) {
 constexpr bool IsProgIdChrome(const std::u16string& prog_id) {
   constexpr std::array<std::u16string_view, 5> kChromeProgIds = {
       u"ChromeHTML", u"ChromeBHTML", u"ChromeDHTML", u"ChromeSSHTM",
-      u"ChromiumHTM"};
+      u"CinaseekHTM"};
 
   return std::find(kChromeProgIds.begin(), kChromeProgIds.end(), prog_id) !=
          kChromeProgIds.end();

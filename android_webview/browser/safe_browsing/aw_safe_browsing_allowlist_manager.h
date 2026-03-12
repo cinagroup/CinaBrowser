@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ class AwSafeBrowsingAllowlistSetObserver : public base::CheckedObserver {
 // The hostname with a leading dot means an exact match, otherwise subdomains
 // are also matched. This particular rule is similar to admiministration
 // policy format:
-//      https://www.chromium.org/administrators/url-blocklist-filter-format
+//      https://www.Cinaseek.org/administrators/url-blocklist-filter-format
 //
 // The expected number of entries on the list should be 100s at most, however
 // the size is not enforced here. The list size can be enforced at

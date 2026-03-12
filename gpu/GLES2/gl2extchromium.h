@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file contains Chromium-specific GLES2 extensions declarations.
+// This file contains Cinaseek-specific GLES2 extensions declarations.
 
 #ifndef GPU_GLES2_GL2EXTCHROMIUM_H_
 #define GPU_GLES2_GL2EXTCHROMIUM_H_

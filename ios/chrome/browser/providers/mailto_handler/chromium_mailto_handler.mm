@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,8 +12,8 @@ namespace ios {
 namespace provider {
 namespace {
 
-// Dummy MailtoHandlerService implementation used for Chromium builds.
-class ChromiumMailtoHandlerService final : public MailtoHandlerService {
+// Dummy MailtoHandlerService implementation used for Cinaseek builds.
+class CinaseekMailtoHandlerService final : public MailtoHandlerService {
  public:
   // MailtoHandlerService implementation.
   NSString* SettingsTitle() const final;
@@ -22,19 +22,19 @@ class ChromiumMailtoHandlerService final : public MailtoHandlerService {
   void HandleMailtoURL(NSURL* url, base::OnceClosure completion) final;
 };
 
-NSString* ChromiumMailtoHandlerService::SettingsTitle() const {
+NSString* CinaseekMailtoHandlerService::SettingsTitle() const {
   return nil;
 }
 
-UIViewController* ChromiumMailtoHandlerService::CreateSettingsController() {
+UIViewController* CinaseekMailtoHandlerService::CreateSettingsController() {
   return nil;
 }
 
-void ChromiumMailtoHandlerService::DismissAllMailtoHandlerInterfaces() {
+void CinaseekMailtoHandlerService::DismissAllMailtoHandlerInterfaces() {
   // nothing to do
 }
 
-void ChromiumMailtoHandlerService::HandleMailtoURL(
+void CinaseekMailtoHandlerService::HandleMailtoURL(
     NSURL* url,
     base::OnceClosure completion) {
   auto callback = base::IgnoreArgs<BOOL>(std::move(completion));
@@ -48,7 +48,7 @@ void ChromiumMailtoHandlerService::HandleMailtoURL(
 
 std::unique_ptr<MailtoHandlerService> CreateMailtoHandlerService(
     MailtoHandlerConfiguration* configuration) {
-  return std::make_unique<ChromiumMailtoHandlerService>();
+  return std::make_unique<CinaseekMailtoHandlerService>();
 }
 
 }  // namespace provider

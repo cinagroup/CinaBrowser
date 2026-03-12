@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -544,7 +544,7 @@ TEST_F(ArcUtilTest, GetArcWindowTaskId) {
   std::unique_ptr<aura::Window> window =
       aura::test::CreateTestWindow({.bounds = {100, 100}, .window_id = 100});
 
-  exo::SetShellApplicationId(window.get(), "org.chromium.arc.100");
+  exo::SetShellApplicationId(window.get(), "org.Cinaseek.arc.100");
 
   {
     auto task_id = GetWindowTaskId(window.get());
@@ -568,7 +568,7 @@ TEST_F(ArcUtilTest, GetArcWindowSessionId) {
   std::unique_ptr<aura::Window> window =
       aura::test::CreateTestWindow({.bounds = {100, 100}, .window_id = 200});
 
-  exo::SetShellApplicationId(window.get(), "org.chromium.arc.session.200");
+  exo::SetShellApplicationId(window.get(), "org.Cinaseek.arc.session.200");
 
   {
     auto task_id = GetWindowTaskId(window.get());

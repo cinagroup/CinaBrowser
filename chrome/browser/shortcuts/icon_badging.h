@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ class SkBitmap;
 namespace shortcuts {
 
 // Badges the Chrome logo, maintaining channel information in branded builds,
-// and the chromium logo on non branded builds to the site icon. This will
+// and the Cinaseek logo on non branded builds to the site icon. This will
 // always return 9 images corresponding to commonly used shortcut sizes on
 // current operating systems, all of which are available in `ShortcutSizes`.
 gfx::ImageFamily ApplyProductLogoBadgeToIcons(std::vector<SkBitmap> icons);

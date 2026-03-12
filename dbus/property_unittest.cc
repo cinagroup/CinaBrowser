@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ class PropertyTest : public testing::Test {
     Properties(ObjectProxy* object_proxy,
                PropertyChangedCallback property_changed_callback)
         : PropertySet(object_proxy,
-                      "org.chromium.TestInterface",
+                      "org.Cinaseek.TestInterface",
                       property_changed_callback) {
       RegisterProperty("Name", &name);
       RegisterProperty("Version", &version);
@@ -82,7 +82,7 @@ class PropertyTest : public testing::Test {
     bus_ = new Bus(std::move(bus_options));
     object_proxy_ = bus_->GetObjectProxy(
         test_service_->service_name(),
-        ObjectPath("/org/chromium/TestObject"));
+        ObjectPath("/org/Cinaseek/TestObject"));
     ASSERT_TRUE(bus_->HasDBusThread());
 
     // Create the properties structure
@@ -296,10 +296,10 @@ TEST_F(PropertyTest, Invalidate) {
   EXPECT_TRUE(properties_->name.is_valid());
 
   // Invalidate name.
-  MethodCall method_call("org.chromium.TestInterface", "PerformAction");
+  MethodCall method_call("org.Cinaseek.TestInterface", "PerformAction");
   MessageWriter writer(&method_call);
   writer.AppendString("InvalidateProperty");
-  writer.AppendObjectPath(ObjectPath("/org/chromium/TestService"));
+  writer.AppendObjectPath(ObjectPath("/org/Cinaseek/TestService"));
   object_proxy_->CallMethod(
       &method_call, ObjectProxy::TIMEOUT_USE_DEFAULT,
       base::BindOnce(&PropertyTest::MethodCallback, base::Unretained(this)));

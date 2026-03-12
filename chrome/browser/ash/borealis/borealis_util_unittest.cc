@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,24 +47,24 @@ TEST_F(BorealisUtilTest, GetBorealisAppIdReturnsId) {
 
 TEST_F(BorealisUtilTest, GetBorealisAppIdFromWindowReturnsEmptyOnFailure) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.wmclass.foo");
+      MakeWindow("org.Cinaseek.guest_os.borealis.wmclass.foo");
   EXPECT_EQ(SteamGameId(window.get()), std::nullopt);
 }
 
 TEST_F(BorealisUtilTest, GetBorealisAppIdFromWindowReturnsId) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.xprop.123");
+      MakeWindow("org.Cinaseek.guest_os.borealis.xprop.123");
   EXPECT_EQ(SteamGameId(window.get()).value(), 123);
 }
 
 TEST_F(BorealisUtilTest, IsNonGameBorealisAppReturnsTrueForNonGameBorealisApp) {
   EXPECT_TRUE(IsNonGameBorealisApp(
-      "borealis_anon:org.chromium.guest_os.borealis.xid.100"));
+      "borealis_anon:org.Cinaseek.guest_os.borealis.xid.100"));
 }
 
 TEST_F(BorealisUtilTest, IsNonGameBorealisAppReturnsFalseForGames) {
   EXPECT_FALSE(
-      IsNonGameBorealisApp("borealis_anon:org.chromium.guest_os.borealis.app"));
+      IsNonGameBorealisApp("borealis_anon:org.Cinaseek.guest_os.borealis.app"));
 }
 
 TEST_F(BorealisUtilTest, SteamGameIdNulloptForUnregistered) {
@@ -82,7 +82,7 @@ TEST_F(BorealisUtilTest, SteamGameIdNulloptForAnonNonGame) {
   TestingProfile prof;
   EXPECT_FALSE(
       SteamGameId(&prof,
-                  "borealis_anon:org.chromium.guest_os.borealis.xid.1337")
+                  "borealis_anon:org.Cinaseek.guest_os.borealis.xid.1337")
           .has_value());
 }
 
@@ -96,7 +96,7 @@ TEST_F(BorealisUtilTest, SteamGameIdWithAnonGame) {
   TestingProfile prof;
   EXPECT_EQ(
       SteamGameId(&prof,
-                  "borealis_anon:org.chromium.guest_os.borealis.xprop.1337")
+                  "borealis_anon:org.Cinaseek.guest_os.borealis.xprop.1337")
           .value(),
       1337);
 }

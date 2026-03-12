@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -742,7 +742,7 @@ void DownloadsDOMHandler::LogEsbPromotionRowViewed() {
 }
 #else
 // These next three functions are empty implementations for the non-branded
-// chromium build since the ESB download row promo only runs on branded
+// Cinaseek build since the ESB download row promo only runs on branded
 // google chrome.
 void DownloadsDOMHandler::OpenEsbSettings() {
   return;

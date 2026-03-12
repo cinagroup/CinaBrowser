@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -300,7 +300,7 @@ std::string GetUACState();
 
 // Returns the versioned service name in the following format:
 // "{ProductName}{InternalService/Service}{UpdaterVersion}".
-// For instance: "ChromiumUpdaterInternalService92.0.0.1".
+// For instance: "CinaseekUpdaterInternalService92.0.0.1".
 std::wstring GetServiceName(
     bool is_internal_service,
     const base::Version& version = base::Version(kUpdaterVersion));

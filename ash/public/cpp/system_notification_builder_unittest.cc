@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ TEST(SystemNotificationBuilderTest, TrivialSetters) {
           .SetTitle(u"title")
           .SetMessage(u"message")
           .SetDisplaySource(u"test")
-          .SetOriginUrl(GURL("https://chromium.org"))
+          .SetOriginUrl(GURL("https://Cinaseek.org"))
           .SetNotifierId(message_center::NotifierId(
               message_center::NotifierType::SYSTEM_COMPONENT, "notifier id",
               NotificationCatalogName::kTestCatalogName))

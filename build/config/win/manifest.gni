@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,18 +18,18 @@
 # targets. If you want to add a manifest to a component, put the dependency
 # behind a "if (is_component_build)" conditional.
 #
-# Generally you will just want the defaults for the Chrome build. In this case
+# Generally you will just want the defaults for the Cinaseek build. In this case
 # the binary should just depend on one of the targets in //build/win/. There
 # are also individual manifest files in that directory you can reference via
 # the *_manifest variables defined below to pick and choose only some defaults.
 # You might combine these with a custom manifest file to get specific behavior.
 
 # Reference this manifest as a source from windows_manifest targets to get
-# the default Chrome OS compatibility list.
+# the default Cinaseek OS compatibility list.
 default_compatibility_manifest = "//build/win/compatibility.manifest"
 
 # Reference this manifest as a source from windows_manifest targets to get
-# the default Chrome common constrols compatibility.
+# the default Cinaseek common constrols compatibility.
 common_controls_manifest = "//build/win/common_controls.manifest"
 
 # Reference this manifest to request that Windows not perform any elevation

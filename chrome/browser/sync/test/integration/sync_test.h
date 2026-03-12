@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,13 +50,13 @@
 //
 // The following macros define how a test is run:
 // - E2E_ONLY: Marks a test to run only as an E2E test against backend servers.
-//             These tests DO NOT run on regular Chromium waterfalls.
-// - E2E_ENABLED: Marks a test to run as an E2E test in addition to Chromium
+//             These tests DO NOT run on regular Cinaseek waterfalls.
+// - E2E_ENABLED: Marks a test to run as an E2E test in addition to Cinaseek
 //                waterfalls.
 //
-// To disable a test from running on Chromium waterfalls, you would still use
+// To disable a test from running on Cinaseek waterfalls, you would still use
 // the default DISABLED_test_name macro. To disable it from running as an E2E
-// test outside Chromium waterfalls you would need to remove the E2E* macro.
+// test outside Cinaseek waterfalls you would need to remove the E2E* macro.
 #define MACRO_CONCAT(prefix, test_name) prefix##_##test_name
 #define E2E_ONLY(test_name) MACRO_CONCAT(DISABLED_E2ETest, test_name)
 #define E2E_ENABLED(test_name) MACRO_CONCAT(test_name, E2ETest)

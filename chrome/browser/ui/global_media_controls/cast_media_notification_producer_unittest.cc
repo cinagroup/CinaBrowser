@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -134,7 +134,7 @@ TEST_F(CastMediaNotificationProducerTest, DismissNotification) {
 TEST_F(CastMediaNotificationProducerTest, RoutesWithoutNotifications) {
   // These routes should not have notification items created for them.
   MediaRoute mirroring_route =
-      CreateRoute("route-1", "urn:x-org.chromium.media:source:tab:*");
+      CreateRoute("route-1", "urn:x-org.Cinaseek.media:source:tab:*");
   MediaRoute multizone_member_route = CreateRoute("route-2", "cast:705D30C6");
   MediaRoute connecting_route = CreateRoute("route-3");
   connecting_route.set_is_connecting(true);

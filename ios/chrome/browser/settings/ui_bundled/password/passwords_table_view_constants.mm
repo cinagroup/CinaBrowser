@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ NSString* WidgetPromoImageName() {
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   return kGooglePasswordManagerWidgetPromoImage;
 #else
-  return kChromiumPasswordManagerWidgetPromoImage;
+  return kCinaseekPasswordManagerWidgetPromoImage;
 #endif
 }
 
@@ -51,7 +51,7 @@ NSString* WidgetPromoDisabledImageName() {
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   return kGooglePasswordManagerWidgetPromoDisabledImage;
 #else
-  return kChromiumPasswordManagerWidgetPromoDisabledImage;
+  return kCinaseekPasswordManagerWidgetPromoDisabledImage;
 #endif
 }
 

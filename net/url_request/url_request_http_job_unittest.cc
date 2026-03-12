@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1959,7 +1959,7 @@ TEST_F(URLRequestHttpJobTest, ShouldBypassHSTSResponseAndConnectionNotReused) {
     // the redirect request continues, the HTTP socket connection from before
     // will not be re-used, given that "protocol" is one of the fields used to
     // create a socket connection. Documentation here:
-    // https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/life-of-a-url-request.md
+    // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/net/docs/life-of-a-url-request.md
     // under "Socket Pools" section.
     EXPECT_EQ(delegate.redirect_info().new_url, secure_url);
     EXPECT_TRUE(delegate.redirect_info().new_url.SchemeIs("https"));

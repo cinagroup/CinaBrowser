@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ ULONG EtwMemoryProviderFlagFromKeyword(std::string_view keyword) {
 // static
 void EtwSystemDataSource::Register(base::ProcessId client_pid) {
   perfetto::DataSourceDescriptor desc;
-  desc.set_name("org.chromium.etw_system");
+  desc.set_name("org.Cinaseek.etw_system");
   perfetto::DataSource<EtwSystemDataSource>::Register(desc, client_pid);
 }
 
@@ -75,7 +75,7 @@ void EtwSystemDataSource::OnSetup(const SetupArgs& args) {
 }
 
 void EtwSystemDataSource::OnStart(const StartArgs&) {
-  static constexpr wchar_t kEtwSystemSessionName[] = L"org.chromium.etw_system";
+  static constexpr wchar_t kEtwSystemSessionName[] = L"org.Cinaseek.etw_system";
 
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 
@@ -98,7 +98,7 @@ void EtwSystemDataSource::OnStart(const StartArgs&) {
     return;
   }
 
-  // MD5 hash of "org.chromium.etw_system".
+  // MD5 hash of "org.Cinaseek.etw_system".
   // 696e5ace-ff06-bfc6-4e63-0198f5b3bc99
   static constexpr GUID kChromeEtwSystemGuid = {
       0x696e5ace,

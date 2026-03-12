@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace ios {
 namespace provider {
 
 // Returns a controller that manages features not declared using
-// BASE_DECLARE_FEATURE. Since components embedded by Chromium and works through
+// BASE_DECLARE_FEATURE. Since components embedded by Cinaseek and works through
 // provider APIs might have no access to `//base`, they can use this API to
 // declare new features dynamically.
 std::unique_ptr<AdditionalFeaturesController>

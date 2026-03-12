@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ class SharingHubModelTest : public ::testing::Test {
 // GetFirstPartyActions() depends on the WebContents being part of a valid
 // browser. We need to break that dependency before this test can be enabled.
 TEST_F(SharingHubModelTest, DISABLED_FirstPartyOptionsOfferedOnAllURLs) {
-  NavigateTo(GURL("https://www.chromium.org"));
+  NavigateTo(GURL("https://www.Cinaseek.org"));
   EXPECT_GT(GetFirstPartyActions().size(), 0u);
   NavigateTo(GURL("chrome://version"));
   EXPECT_GT(GetFirstPartyActions().size(), 0u);

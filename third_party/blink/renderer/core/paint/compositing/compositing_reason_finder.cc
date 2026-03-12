@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -157,7 +157,7 @@ CompositingReasons CompositingReasonsFor3DSceneLeaf(
   // cc::RenderSurfaceReason::k3dTransformFlattening) is required for an
   // element that doesn't preserve 3D but is treated as a 3D object by its
   // parent.  See
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=1256990#c2 for some
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1256990#c2 for some
   // notes on why this is needed.  Briefly, we need to ensure that we don't
   // output quads with a 3d sorting_context of 0 in the middle of the quads
   // that need to be 3D sorted; this is needed to contain any such quads in a

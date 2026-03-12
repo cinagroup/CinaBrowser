@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,12 +100,12 @@ namespace {
 // anyhow).
 
 // TODO(ckitagawa): Add commit hash after landing.
-// Version 9: <TODO>/r6208170 by ckitagawa@chromium.org on 2025-01-28
-// Version 8: 982ef2c1/r323176 by rogerm@chromium.org on 2015-03-31
-// Version 7: 911a634d/r209424 by qsr@chromium.org on 2013-07-01 (depr.)
-// Version 6: 610f923b/r152367 by pkotwicz@chromium.org on 2012-08-20 (depr.)
-// Version 5: e2ee8ae9/r105004 by groby@chromium.org on 2011-10-12 (deprecated)
-// Version 4: 5f104d76/r77288 by sky@chromium.org on 2011-03-08 (deprecated)
+// Version 9: <TODO>/r6208170 by ckitagawa@Cinaseek.org on 2025-01-28
+// Version 8: 982ef2c1/r323176 by rogerm@Cinaseek.org on 2015-03-31
+// Version 7: 911a634d/r209424 by qsr@Cinaseek.org on 2013-07-01 (depr.)
+// Version 6: 610f923b/r152367 by pkotwicz@Cinaseek.org on 2012-08-20 (depr.)
+// Version 5: e2ee8ae9/r105004 by groby@Cinaseek.org on 2011-10-12 (deprecated)
+// Version 4: 5f104d76/r77288 by sky@Cinaseek.org on 2011-03-08 (deprecated)
 // Version 3: 09911bf3/r15 by initial.commit on 2008-07-26 (deprecated)
 
 // Version number of the database.

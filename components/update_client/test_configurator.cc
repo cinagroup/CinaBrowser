@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #include "components/update_client/activity_data_service.h"
 #include "components/update_client/crx_cache.h"
 #include "components/update_client/crx_downloader_factory.h"
-#include "components/update_client/net/network_chromium.h"
+#include "components/update_client/net/network_Cinaseek.h"
 #include "components/update_client/patch/patch_impl.h"
 #include "components/update_client/patcher.h"
 #include "components/update_client/persisted_data.h"
@@ -51,15 +51,15 @@ std::vector<GURL> MakeDefaultUrls() {
 TestConfigurator::TestConfigurator(PrefService* pref_service)
     : enabled_cup_signing_(false),
       pref_service_(pref_service),
-      unzip_factory_(base::MakeRefCounted<update_client::UnzipChromiumFactory>(
+      unzip_factory_(base::MakeRefCounted<update_client::UnzipCinaseekFactory>(
           base::BindRepeating(&unzip::LaunchInProcessUnzipper))),
-      patch_factory_(base::MakeRefCounted<update_client::PatchChromiumFactory>(
+      patch_factory_(base::MakeRefCounted<update_client::PatchCinaseekFactory>(
           base::BindRepeating(&patch::LaunchInProcessFilePatcher))),
       test_shared_loader_factory_(
           base::MakeRefCounted<network::WeakWrapperSharedURLLoaderFactory>(
               &test_url_loader_factory_)),
       network_fetcher_factory_(
-          base::MakeRefCounted<NetworkFetcherChromiumFactory>(
+          base::MakeRefCounted<NetworkFetcherCinaseekFactory>(
               test_shared_loader_factory_,
               base::BindRepeating([](const GURL& url) { return false; }))),
       updater_state_provider_(base::BindRepeating(

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -995,7 +995,7 @@ EventReportValidatorHelper::EventReportValidatorHelper(Profile* profile,
   RealtimeReportingClientFactory::GetForProfile(profile)
       ->SetBrowserCloudPolicyClientForTesting(client_.get());
   identity_test_environment_.MakePrimaryAccountAvailable(
-      "test-user@chromium.org", signin::ConsentLevel::kSignin);
+      "test-user@Cinaseek.org", signin::ConsentLevel::kSignin);
   RealtimeReportingClientFactory::GetForProfile(profile)
       ->SetIdentityManagerForTesting(
           identity_test_environment_.identity_manager());

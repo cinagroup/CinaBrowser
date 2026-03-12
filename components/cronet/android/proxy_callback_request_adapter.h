@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,8 +16,8 @@
 
 namespace cronet {
 
-// Adapter for org.chromium.net.impl.ProxyCallbackRequestImpl (implementation of
-// org.chromium.net.Proxy.Callback.Request).
+// Adapter for org.Cinaseek.net.impl.ProxyCallbackRequestImpl (implementation of
+// org.Cinaseek.net.Proxy.Callback.Request).
 class ProxyCallbackRequestAdapter final {
  public:
   // Create a C++ ProxyCallbackRequestAdapter and a Java

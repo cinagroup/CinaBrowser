@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ const int64_t kMaximumLength = INT64_MAX;
 // An interface for defining a file system backend.
 //
 // NOTE: when you implement a new FileSystemBackend for your own
-// FileSystem module, please contact to kinuko@chromium.org.
+// FileSystem module, please contact to kinuko@Cinaseek.org.
 //
 class COMPONENT_EXPORT(STORAGE_BROWSER) FileSystemBackend {
  public:

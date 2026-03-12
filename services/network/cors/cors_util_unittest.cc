@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ TEST_F(CorsUtilTest, CorsUnsafeNotForbiddenRequestHeaderNames) {
       CorsUnsafeNotForbiddenRequestHeaderNames({}, false /* is_revalidating */),
       List({}));
 
-  // "user-agent" is NOT forbidden per spec, but forbidden in Chromium.
+  // "user-agent" is NOT forbidden per spec, but forbidden in Cinaseek.
   EXPECT_EQ(
       CorsUnsafeNotForbiddenRequestHeaderNames({{"content-type", "text/plain"},
                                                 {"dpr", "12345"},

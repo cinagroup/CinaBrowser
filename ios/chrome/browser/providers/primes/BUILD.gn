@@ -1,9 +1,9 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_primes") {
-  sources = [ "chromium_primes.mm" ]
+source_set("Cinaseek_primes") {
+  sources = [ "Cinaseek_primes.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/primes:primes_api",

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("enterprise_reporting_java") {
   sources = [
-    "java/src/org/chromium/components/enterprise/reporting/SignalsReportingBackgroundTask.java",
-    "java/src/org/chromium/components/enterprise/reporting/SignalsReportingSchedulerBridge.java",
+    "java/src/org/Cinaseek/components/enterprise/reporting/SignalsReportingBackgroundTask.java",
+    "java/src/org/Cinaseek/components/enterprise/reporting/SignalsReportingSchedulerBridge.java",
   ]
 
   srcjar_deps = [ ":jni_headers" ]
@@ -26,7 +26,7 @@ android_library("enterprise_reporting_java") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/enterprise/reporting/SignalsReportingSchedulerBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/enterprise/reporting/SignalsReportingSchedulerBridge.java" ]
 }
 
 source_set("signals_reporting_scheduler") {
@@ -45,8 +45,8 @@ source_set("signals_reporting_scheduler") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.components.enterprise.reporting"
-  sources = [ "junit/src/org/chromium/components/enterprise/reporting/SignalsReportingBackgroundTaskTest.java" ]
+  resources_package = "org.Cinaseek.components.enterprise.reporting"
+  sources = [ "junit/src/org/Cinaseek/components/enterprise/reporting/SignalsReportingBackgroundTaskTest.java" ]
   deps = [
     ":enterprise_reporting_java",
     "//base:base_java",

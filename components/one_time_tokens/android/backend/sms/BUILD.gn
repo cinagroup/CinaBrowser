@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -35,16 +35,16 @@ generate_jni("jni_headers") {
     "//chrome/browser",
   ]
   sources = [
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridge.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridge.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridge.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridge.java",
   ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridge.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridge.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridge.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridge.java",
   ]
 
   deps = [
@@ -58,15 +58,15 @@ android_library("java") {
   ]
 
   resources_package =
-      "org.chromium.components.one_time_tokens.android.backend.sms"
+      "org.Cinaseek.components.one_time_tokens.android.backend.sms"
 }
 
 robolectric_binary("one_time_tokens_junit_tests") {
   testonly = true
 
   sources = [
-    "java/junit/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridgeTest.java",
-    "java/junit/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridgeTest.java",
+    "java/junit/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchDispatcherBridgeTest.java",
+    "java/junit/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetchReceiverBridgeTest.java",
   ]
 
   deps = [
@@ -88,9 +88,9 @@ android_library("sms_otp_fetching_interface_java") {
     "//base:service_loader_java",
   ]
   sources = [
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcher.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcherFactory.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcherFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcher.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcherFactory.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/sms/AndroidSmsOtpFetcherFactoryUpstreamImpl.java",
   ]
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace arc {
 namespace {
 
 constexpr char kUserSessionActiveBroadcastAction[] =
-    "org.chromium.arc.intent_helper.USER_SESSION_ACTIVE";
+    "org.Cinaseek.arc.intent_helper.USER_SESSION_ACTIVE";
 
 // Returns the number of |broadcasts| having the USER_SESSION_ACTIVE action.
 int CountBroadcasts(

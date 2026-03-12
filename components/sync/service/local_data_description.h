@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ struct LocalDataItemModel {
   // PageUrlIcon:
   //   A page URL for which a favicon should be displayed.
   //   Example:
-  //   https://www.chromium.org
+  //   https://www.Cinaseek.org
   // FolderIcon:
   //   The folder icon.
   struct NoIcon {

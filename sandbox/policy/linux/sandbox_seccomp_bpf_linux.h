@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@ namespace policy {
 class SANDBOX_POLICY_EXPORT SandboxSeccompBPF {
  public:
   struct Options {
-    bool use_amd_specific_policies = false;     // For ChromiumOS.
-    bool use_intel_specific_policies = false;   // For ChromiumOS.
-    bool use_virtio_specific_policies = false;  // For ChromiumOS VM.
+    bool use_amd_specific_policies = false;     // For CinaseekOS.
+    bool use_intel_specific_policies = false;   // For CinaseekOS.
+    bool use_virtio_specific_policies = false;  // For CinaseekOS VM.
     bool use_nvidia_specific_policies = false;  // For Linux.
 
     // Options for GPU's PreSandboxHook.

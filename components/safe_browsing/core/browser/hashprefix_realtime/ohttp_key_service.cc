@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ constexpr net::NetworkTrafficAnnotationTag kOhttpKeyTrafficAnnotation =
     destination: GOOGLE_OWNED_SERVICE
     internal {
       contacts {
-        email: "xinghuilu@chromium.org"
+        email: "xinghuilu@Cinaseek.org"
       }
       contacts {
         email: "chrome-counter-abuse-alerts@google.com"
@@ -103,7 +103,7 @@ constexpr net::NetworkTrafficAnnotationTag kOhttpKeyTrafficAnnotation =
     cookies_allowed: NO
     setting:
       "Users can disable this feature by unselecting 'Standard protection' "
-      "in Chromium settings under Security. The feature is enabled by default."
+      "in Cinaseek settings under Security. The feature is enabled by default."
     chrome_policy {
       SafeBrowsingProtectionLevel {
         policy_options {mode: MANDATORY}

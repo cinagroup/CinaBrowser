@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ static std::vector<WebMediaKeySystemMediaCapability> ConvertCapabilities(
       // "If the user agent does not recognize one or more parameters,
       // continue to the next iteration." There is no way to enumerate the
       // parameters, so only look up "codecs" if a single parameter is
-      // present. Chromium expects "codecs" to be provided, so this capability
+      // present. Cinaseek expects "codecs" to be provided, so this capability
       // will be skipped if codecs is not the only parameter specified.
       result[i].mime_type = type.MimeType();
       if (type.GetParameters().ParameterCount() == 1u)

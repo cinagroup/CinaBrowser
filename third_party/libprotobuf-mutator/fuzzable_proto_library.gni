@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,10 +6,10 @@
 # non-fuzzer builds (ie: use_libfuzzer=false). However, in fuzzer builds, the
 # proto_library is built with the full protobuf runtime and any "optimize_for =
 # LITE_RUNTIME" options are ignored. This is done because libprotobuf-mutator
-# needs the full protobuf runtime, but proto_libraries shipped in Chrome must
+# needs the full protobuf runtime, but proto_libraries shipped in Cinaseek must
 # use the optimize for LITE_RUNTIME option which is incompatible with the full
 # protobuf runtime. tl;dr: A fuzzable_proto_library is a proto_library that can
-# be fuzzed with libprotobuf-mutator and shipped in Chrome.
+# be fuzzed with libprotobuf-mutator and shipped in Cinaseek.
 
 import("//testing/libfuzzer/fuzzer_test.gni")
 import("//third_party/protobuf/proto_library.gni")
@@ -17,7 +17,7 @@ import("//third_party/protobuf/proto_library.gni")
 # TODO(https://crbug.com/1197634): Fold this into proto_library.
 template("fuzzable_proto_library") {
   # Only make the proto library fuzzable if we are doing a build that we can
-  # use LPM on (i.e. libFuzzer not on Chrome OS).
+  # use LPM on (i.e. libFuzzer not on Cinaseek OS).
   if (use_fuzzing_engine_with_lpm &&
       current_toolchain != "//build/toolchain/cros:target") {
     _proto_target_name = "${target_name}__proto"

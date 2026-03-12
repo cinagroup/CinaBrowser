@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 #import "net/test/embedded_test_server/embedded_test_server.h"
 
 namespace {
-const char kHtmlFile[] = "/chromium_logo_page.html";
+const char kHtmlFile[] = "/Cinaseek_logo_page.html";
 }  // namespace
 
 // Page state test cases for the web shell.
@@ -28,7 +28,7 @@ const char kHtmlFile[] = "/chromium_logo_page.html";
 
   [ShellEarlGrey loadURL:pageURL];
   [ShellEarlGrey waitForWebStateContainingText:
-                     @"Page with some text and the chromium logo image."];
+                     @"Page with some text and the Cinaseek logo image."];
 }
 
 @end

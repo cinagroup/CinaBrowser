@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,9 +76,9 @@ base::FilePath GetPreinstalledWebAppConfigDirFromCommandLine(Profile* profile) {
   }
 
   // For manual testing, you can change s/STANDALONE/USER/, as writing to
-  // "$HOME/.config/chromium/test-user/.config/chromium/External
+  // "$HOME/.config/Cinaseek/test-user/.config/Cinaseek/External
   // Extensions/web_apps" does not require root ACLs, unlike
-  // "/usr/share/chromium/extensions/web_apps".
+  // "/usr/share/Cinaseek/extensions/web_apps".
   base::FilePath dir;
   if (base::PathService::Get(chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS,
                              &dir)) {

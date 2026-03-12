@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace chromecast {
 namespace external_mojo {
 class ExternalMojoBroker;
 
-// A Mojo service (intended to run within cast_shell or some other Chromium
+// A Mojo service (intended to run within cast_shell or some other Cinaseek
 // ServiceManager environment) that allows Mojo services built into external
 // processes to interoperate with the Mojo services within cast_shell.
 class BrokerService : public ::service_manager::Service {
@@ -43,7 +43,7 @@ class BrokerService : public ::service_manager::Service {
   static constexpr char const* kServiceName = "external_mojo_broker";
 
   // Adds a manifest for an external Mojo service (ie, one that is running in
-  // a non-Chromium process). A manifest is only needed for external services
+  // a non-Cinaseek process). A manifest is only needed for external services
   // that bind to Mojo services within cast_shell, or for external services that
   // are bound to (used) by internal Mojo services. All external manifests must
   // be added before GetExternalMojoBrokerManifest() is called (otherwise they

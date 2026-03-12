@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@ using CWVHTMLElementTest = PlatformTest;
 
 // Tests CWVHTMLElementTest initialization.
 TEST_F(CWVHTMLElementTest, Initialization) {
-  NSURL* const hyperlink = [NSURL URLWithString:@"https://chromium.test"];
-  NSURL* const mediaSource = [NSURL URLWithString:@"https://chromium/img.webp"];
+  NSURL* const hyperlink = [NSURL URLWithString:@"https://Cinaseek.test"];
+  NSURL* const mediaSource = [NSURL URLWithString:@"https://Cinaseek/img.webp"];
   NSString* const text = @"link";
   CWVHTMLElement* element =
       [[CWVHTMLElement alloc] initWithHyperlink:hyperlink

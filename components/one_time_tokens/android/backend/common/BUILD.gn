@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,9 +6,9 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/one_time_tokens/backend/OneTimeTokensBackendErrorCode.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/OneTimeTokensBackendException.java",
-    "java/src/org/chromium/components/one_time_tokens/backend/OneTimeTokensMetricsRecorder.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/OneTimeTokensBackendErrorCode.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/OneTimeTokensBackendException.java",
+    "java/src/org/Cinaseek/components/one_time_tokens/backend/OneTimeTokensMetricsRecorder.java",
   ]
   deps = [
     "$google_play_services_package:google_play_services_basement_java",
@@ -20,7 +20,7 @@ android_library("java") {
 
 robolectric_library("junit") {
   testonly = true
-  sources = [ "java/src/org/chromium/components/one_time_tokens/backend/OneTimeTokensMetricsRecorderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/one_time_tokens/backend/OneTimeTokensMetricsRecorderTest.java" ]
   deps = [
     ":java",
     "$google_play_services_package:google_play_services_basement_java",

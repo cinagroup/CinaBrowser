@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ TEST(MediaSourceTest, ConstructorWithURLString) {
 
 TEST(MediaSourceTest, ForAnyTab) {
   auto source = MediaSource::ForAnyTab();
-  EXPECT_EQ("urn:x-org.chromium.media:source:tab:*", source.id());
+  EXPECT_EQ("urn:x-org.Cinaseek.media:source:tab:*", source.id());
   EXPECT_FALSE(source.TabId().has_value());
   EXPECT_FALSE(source.IsDesktopMirroringSource());
   EXPECT_TRUE(source.IsTabMirroringSource());
@@ -74,7 +74,7 @@ TEST(MediaSourceTest, ForAnyTab) {
 
 TEST(MediaSourceTest, ForTab) {
   auto source = MediaSource::ForTab(123);
-  EXPECT_EQ("urn:x-org.chromium.media:source:tab:123", source.id());
+  EXPECT_EQ("urn:x-org.Cinaseek.media:source:tab:123", source.id());
   EXPECT_EQ(123, source.TabId().value_or(-1));
   EXPECT_FALSE(source.IsDesktopMirroringSource());
   EXPECT_TRUE(source.IsTabMirroringSource());
@@ -88,15 +88,15 @@ TEST(MediaSourceTest, TabMirroringSourceTabId) {
   EXPECT_FALSE(source.TabId().has_value());
   EXPECT_FALSE(source.IsTabMirroringSource());
 
-  source = MediaSource("urn:x-org.chromium.media:source:invalid:123");
+  source = MediaSource("urn:x-org.Cinaseek.media:source:invalid:123");
   EXPECT_FALSE(source.TabId().has_value());
   EXPECT_FALSE(source.IsTabMirroringSource());
 
-  source = MediaSource("urn:x-org.chromium.media:source:tab:abc");
+  source = MediaSource("urn:x-org.Cinaseek.media:source:tab:abc");
   EXPECT_FALSE(source.TabId().has_value());
   EXPECT_FALSE(source.IsTabMirroringSource());
 
-  source = MediaSource("urn:x-org.chromium.media:source:tab:123");
+  source = MediaSource("urn:x-org.Cinaseek.media:source:tab:123");
   EXPECT_EQ(123, source.TabId().value_or(-1));
   EXPECT_TRUE(source.IsTabMirroringSource());
 }
@@ -127,7 +127,7 @@ TEST(MediaSourceTest, RemotePlaybackSourceTabId) {
 TEST(MediaSourceTest, ForDesktopWithoutAudio) {
   std::string media_id = "fakeMediaId";
   auto source = MediaSource::ForDesktop(media_id, false);
-  EXPECT_EQ("urn:x-org.chromium.media:source:desktop:" + media_id, source.id());
+  EXPECT_EQ("urn:x-org.Cinaseek.media:source:desktop:" + media_id, source.id());
   EXPECT_TRUE(source.IsDesktopMirroringSource());
   EXPECT_EQ(media_id, source.DesktopStreamId());
   EXPECT_FALSE(source.IsDesktopSourceWithAudio());
@@ -140,7 +140,7 @@ TEST(MediaSourceTest, ForDesktopWithoutAudio) {
 TEST(MediaSourceTest, ForDesktopWithAudio) {
   std::string media_id = "fakeMediaId";
   auto source = MediaSource::ForDesktop(media_id, true);
-  EXPECT_EQ("urn:x-org.chromium.media:source:desktop:" + media_id +
+  EXPECT_EQ("urn:x-org.Cinaseek.media:source:desktop:" + media_id +
                 "?with_audio=true",
             source.id());
   EXPECT_TRUE(source.IsDesktopMirroringSource());

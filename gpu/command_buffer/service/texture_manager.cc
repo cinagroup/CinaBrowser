@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -358,18 +358,18 @@ bool SizedFormatAvailable(const FeatureInfo* feature_info,
   }
 
   if (internal_format == GL_RGB10_A2_EXT &&
-      (feature_info->feature_flags().chromium_image_ar30 ||
-       feature_info->feature_flags().chromium_image_ab30)) {
+      (feature_info->feature_flags().Cinaseek_image_ar30 ||
+       feature_info->feature_flags().Cinaseek_image_ab30)) {
     return true;
   }
 
   // TODO(dshwang): check if it's possible to remove
   // CHROMIUM_color_buffer_float_rgb. crbug.com/329605
-  if (feature_info->feature_flags().chromium_color_buffer_float_rgb &&
+  if (feature_info->feature_flags().Cinaseek_color_buffer_float_rgb &&
       internal_format == GL_RGB32F) {
     return true;
   }
-  if (feature_info->feature_flags().chromium_color_buffer_float_rgba &&
+  if (feature_info->feature_flags().Cinaseek_color_buffer_float_rgba &&
       internal_format == GL_RGBA32F) {
     return true;
   }

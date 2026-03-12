@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -528,7 +528,7 @@ void VpxVideoEncoder::Initialize(VideoCodecProfile profile,
     } else {
       static_thresh = 100;
       // Tune configs for screen sharing. The values are the same as WebRTC
-      // https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp8/libvpx_vp8_encoder.cc
+      // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp8/libvpx_vp8_encoder.cc
       // 0: camera (default)
       // 1: screen
       // 2: screen with allowing drop frame.
@@ -790,8 +790,8 @@ void VpxVideoEncoder::ChangeOptions(const Options& options,
   // is created.
   // - |options_.frame_size| changes every time ChangeOptions() is called.
   // More info can be found here:
-  //   https://bugs.chromium.org/p/webm/issues/detail?id=1642
-  //   https://bugs.chromium.org/p/webm/issues/detail?id=912
+  //   https://bugs.Cinaseek.org/p/webm/issues/detail?id=1642
+  //   https://bugs.Cinaseek.org/p/webm/issues/detail?id=912
   if (profile_ != VP8PROFILE_ANY) {
     // VP9 resize restrictions
     if (options.frame_size.width() > originally_configured_size_.width() ||

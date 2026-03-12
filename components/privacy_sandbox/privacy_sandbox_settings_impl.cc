@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -672,7 +672,7 @@ bool PrivacySandboxSettingsImpl::IsSharedStorageAllowed(
           {error_message, "\nReturned status ",
            base::NumberToString(int(attestation_status)),
            "; see `PrivacySandboxSettingsImpl::Status` at ",
-           "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/",
+           "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/",
            "components/privacy_sandbox/privacy_sandbox_settings_impl.h."});
     }
     if (console_frame) {
@@ -697,7 +697,7 @@ bool PrivacySandboxSettingsImpl::IsSharedStorageAllowed(
            accessing_origin.Serialize(), " and top-frame origin ",
            top_frame_origin.Serialize(),
            "; see `PrivacySandboxSettingsImpl::Status` at ",
-           "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/",
+           "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/",
            "components/privacy_sandbox/privacy_sandbox_settings_impl.h."});
     }
   } else if (out_debug_message) {
@@ -705,7 +705,7 @@ bool PrivacySandboxSettingsImpl::IsSharedStorageAllowed(
         {"Privacy Sandbox settings returned status ",
          base::NumberToString(int(status)),
          "; see `PrivacySandboxSettingsImpl::Status` at ",
-         "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/",
+         "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/",
          "components/privacy_sandbox/privacy_sandbox_settings_impl.h."});
   }
   JoinHistogram(kIsSharedStorageAllowedHistogram, status);
@@ -728,7 +728,7 @@ bool PrivacySandboxSettingsImpl::IsSharedStorageSelectURLAllowed(
          accessing_origin.Serialize(), " and top-frame origin ",
          top_frame_origin.Serialize(),
          "; see `PrivacySandboxSettingsImpl::Status` at ",
-         "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/",
+         "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/",
          "components/privacy_sandbox/privacy_sandbox_settings_impl.h."});
   }
   return IsAllowed(status);

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace {
 
 class UnzipperImpl : public Unzipper {
  public:
-  explicit UnzipperImpl(UnzipChromiumFactory::Callback callback)
+  explicit UnzipperImpl(UnzipCinaseekFactory::Callback callback)
       : callback_(std::move(callback)) {}
 
   void Unzip(const base::FilePath& zip_file,
@@ -36,18 +36,18 @@ class UnzipperImpl : public Unzipper {
   }
 
  private:
-  const UnzipChromiumFactory::Callback callback_;
+  const UnzipCinaseekFactory::Callback callback_;
 };
 
 }  // namespace
 
-UnzipChromiumFactory::UnzipChromiumFactory(Callback callback)
+UnzipCinaseekFactory::UnzipCinaseekFactory(Callback callback)
     : callback_(std::move(callback)) {}
 
-std::unique_ptr<Unzipper> UnzipChromiumFactory::Create() const {
+std::unique_ptr<Unzipper> UnzipCinaseekFactory::Create() const {
   return std::make_unique<UnzipperImpl>(callback_);
 }
 
-UnzipChromiumFactory::~UnzipChromiumFactory() = default;
+UnzipCinaseekFactory::~UnzipCinaseekFactory() = default;
 
 }  // namespace update_client

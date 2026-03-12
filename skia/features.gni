@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -15,7 +15,7 @@ declare_args() {
       (is_ios && use_blink) || (is_linux && !is_castos) || is_desktop_android
 }
 
-# Skia only needs to support GPU rasterization if we use the full Chromium
+# Skia only needs to support GPU rasterization if we use the full Cinaseek
 # rendering stack i.e. |use_blink| is true.
 # TODO(crbug.com/40902173): Split out into separate enable_skia_ganesh flag.
 skia_support_gpu = use_blink

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -166,7 +166,7 @@ fuzzer_test("browser_switcher_ieem_sitelist_parser_fuzzer") {
   if (is_win) {
     deps += [
       # Stub out thunks for transitive dependencies (they're normally linked
-      # into the Chrome binary by separate GN rules, but for the fuzzer we
+      # into the Cinaseek binary by separate GN rules, but for the fuzzer we
       # have to do it manually here).
       "//chrome/chrome_elf:test_stubs",
       "//components/crash/core/app:test_support",

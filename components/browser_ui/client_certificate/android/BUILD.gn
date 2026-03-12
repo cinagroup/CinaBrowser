@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,12 +13,12 @@ android_resources("java_resources") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/browser_ui/client_certificate/SSLClientCertificateRequest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/client_certificate/SSLClientCertificateRequest.java" ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/components/browser_ui/client_certificate/SSLClientCertificateRequest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/client_certificate/SSLClientCertificateRequest.java" ]
   deps = [
     ":java_resources",
     "//base:base_java",
@@ -31,7 +31,7 @@ android_library("java") {
     "//ui/android:ui_java",
   ]
 
-  resources_package = "org.chromium.components.browser_ui.client_certificate"
+  resources_package = "org.Cinaseek.components.browser_ui.client_certificate"
 }
 
 source_set("android") {
@@ -49,7 +49,7 @@ source_set("android") {
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/components/browser_ui/client_certificate/SSLClientCertificateRequestTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/client_certificate/SSLClientCertificateRequestTest.java" ]
   deps = [
     ":java",
     "//base:base_junit_test_support",

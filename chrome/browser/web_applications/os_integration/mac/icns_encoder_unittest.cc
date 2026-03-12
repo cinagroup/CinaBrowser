@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,9 +68,9 @@ TEST(IcnsEncoderTest, RoundTrip) {
   gfx::Image basic_48 = web_app::test::LoadTestImageFromDisk(
       base::FilePath("chrome/test/data/web_apps/basic-48.png"));
   ASSERT_TRUE(!basic_48.IsEmpty());
-  gfx::Image chromium_32 = web_app::test::LoadTestImageFromDisk(
-      base::FilePath("chrome/test/data/web_apps/chromium-32.png"));
-  ASSERT_TRUE(!chromium_32.IsEmpty());
+  gfx::Image Cinaseek_32 = web_app::test::LoadTestImageFromDisk(
+      base::FilePath("chrome/test/data/web_apps/Cinaseek-32.png"));
+  ASSERT_TRUE(!Cinaseek_32.IsEmpty());
 
   // Add the images to a IcnsEncoder.
   IcnsEncoder encoder;
@@ -79,7 +79,7 @@ TEST(IcnsEncoderTest, RoundTrip) {
   // 128, 48 and 32 are valid sizes, and should cover both encoding paths.
   EXPECT_TRUE(encoder.AddImage(green_128));
   EXPECT_TRUE(encoder.AddImage(basic_48));
-  EXPECT_TRUE(encoder.AddImage(chromium_32));
+  EXPECT_TRUE(encoder.AddImage(Cinaseek_32));
 
   // Save the .icns file to disk.
   base::ScopedTempDir temp_dir;
@@ -106,7 +106,7 @@ TEST(IcnsEncoderTest, RoundTrip) {
                 bitmap.width() == 128)
         << "Loaded width was " << bitmap.width();
     SCOPED_TRACE(bitmap.width());
-    SkBitmap reference = bitmap.width() == 32   ? chromium_32.AsBitmap()
+    SkBitmap reference = bitmap.width() == 32   ? Cinaseek_32.AsBitmap()
                          : bitmap.width() == 48 ? basic_48.AsBitmap()
                                                 : green_128.AsBitmap();
     for (int y = 0; y < bitmap.height(); ++y) {

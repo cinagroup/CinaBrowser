@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class WebSigninTracker : public IdentityManager::Observer,
  public:
   // The outcome of the sign-in.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.browser
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.browser
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: WebSigninTrackerResult
   enum class Result {
     // The web sign-in succeeded and the primary account is now available in

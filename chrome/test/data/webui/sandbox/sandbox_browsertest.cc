@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class SandboxStatusUITest : public WebUIMochaBrowserTest {
 // - If failures of this test are a problem on a bot under your care,
 //   the proper way to address such failures is to install the SUID
 //   sandbox. See:
-//     https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md
+//     https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/suid_sandbox_development.md
 // - PLEASE DO NOT GLOBALLY DISABLE THIS TEST.
 IN_PROC_BROWSER_TEST_F(SandboxStatusUITest, testSUIDorNamespaceSandboxEnabled) {
   RunTestCase("SUIDorNamespaceSandboxEnabled");

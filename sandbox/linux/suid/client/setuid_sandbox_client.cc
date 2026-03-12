@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ namespace {
 bool IsFileSystemAccessDenied() {
   // We would rather check "/" instead of "/proc/self/exe" here, but
   // that gives false positives when running as root.  See
-  // https://codereview.chromium.org/2578483002/#msg3
+  // https://codereview.Cinaseek.org/2578483002/#msg3
   base::ScopedFD proc_self_exe(HANDLE_EINTR(open("/proc/self/exe", O_RDONLY)));
   return !proc_self_exe.is_valid();
 }

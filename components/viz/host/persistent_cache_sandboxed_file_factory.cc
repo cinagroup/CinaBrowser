@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -121,7 +121,7 @@ PersistentCacheSandboxedFileFactory::PersistentCacheSandboxedFileFactory(
   // TODO(crbug.com/399642827): We don't support relative path yet. The flags
   // that are added by AddFlagsForPassingToUntrustedProcess() don't work with
   // relative paths on Windows. See
-  // https://source.chromium.org/chromium/chromium/src/+/main:base/files/file_util_win.cc;drc=c99aa55ee638df4d6f0073c5d950acbda6ab4c6d;l=422
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/files/file_util_win.cc;drc=c99aa55ee638df4d6f0073c5d950acbda6ab4c6d;l=422
   CHECK(cache_root_dir_.IsAbsolute());
 
   background_task_runner_->PostTask(

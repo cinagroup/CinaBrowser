@@ -12,9 +12,9 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "updater_tests",
         "test_id_prefix": "ninja://chrome/updater:updater_tests/"

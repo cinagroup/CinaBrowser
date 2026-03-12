@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ bool ValidateStatus(const HttpResponseHeaders* headers) {
 }  // namespace
 
 WebSocketHttp3HandshakeStream::WebSocketHttp3HandshakeStream(
-    std::unique_ptr<QuicChromiumClientSession::Handle> session,
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session,
     WebSocketStream::ConnectDelegate* connect_delegate,
     std::vector<std::string> requested_sub_protocols,
     std::vector<std::string> requested_extensions,

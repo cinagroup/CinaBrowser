@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -207,7 +207,7 @@ IN_PROC_BROWSER_TEST_F(NewTabPagePreloadBrowserTest,
     GetNewTabPagePreloadPipelineManager()->StartPrefetch(preload_url);
     // TODO(crbug.com/421941586): There is no existing method to be notified of
     // event completeness at the moment as mentioned in
-    // https://chromium-review.googlesource.com/c/chromium/src/+/7408336/comment/3da2c289_ff73b245/
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/7408336/comment/3da2c289_ff73b245/
     // Consider plumbing event completeness notification to avoid RunUntilIdle
     base::RunLoop().RunUntilIdle();
   }

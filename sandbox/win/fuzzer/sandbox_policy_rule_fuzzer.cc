@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
     return 0;
   }
 
-  // As parameters are created by Chromium code the format of the variables must
+  // As parameters are created by Cinaseek code the format of the variables must
   // be correct.
 
   FuzzedDataProvider data_provider(data, size);

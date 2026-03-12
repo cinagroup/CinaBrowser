@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@
 // Your feature name should start with "kAccessibility". There is no need to
 // include the words "enabled" or "experimental", as these are implied. We
 // include accessibility to differentiate these features from others in
-// Chromium.
+// Cinaseek.
 
 namespace features {
 
@@ -388,7 +388,7 @@ AX_BASE_EXPORT bool IsMacAccessibilityOptimizeChildrenChangedEnabled();
 
 // Set NSAccessibilityRemoteUIElement's RemoteUIApp to YES to fix
 // some accessibility bugs in PWA Mac. (Note: When enabling
-// NSAccessibilityRemoteUIElement's RemoteUIApp previously, chromium would hang.
+// NSAccessibilityRemoteUIElement's RemoteUIApp previously, Cinaseek would hang.
 // See: https://crbug.com/1491329).
 AX_BASE_EXPORT BASE_DECLARE_FEATURE(kAccessibilityRemoteUIApp);
 AX_BASE_EXPORT bool IsAccessibilityRemoteUIAppEnabled();

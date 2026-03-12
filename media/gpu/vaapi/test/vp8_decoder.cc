@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ Vp8Decoder::ParseResult Vp8Decoder::ReadNextFrame(
 
 // The implementation of method is mostly lifted from vaapi_utils.h
 // FillVP8DataStructures
-// (https://source.chromium.org/chromium/chromium/src/+/main:media/gpu/vaapi/vaapi_utils.cc;l=195;drc=9d70e034c6a4c2b1ed56c94aace3f3c8d2b1f771).
+// (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/gpu/vaapi/vaapi_utils.cc;l=195;drc=9d70e034c6a4c2b1ed56c94aace3f3c8d2b1f771).
 void Vp8Decoder::FillVp8DataStructures(const Vp8FrameHeader& frame_hdr,
                                        VAIQMatrixBufferVP8& iq_matrix_buf,
                                        VAProbabilityDataBufferVP8& prob_buf,

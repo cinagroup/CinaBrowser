@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,8 +8,8 @@ namespace ios {
 namespace provider {
 namespace {
 
-// Dummy DiscoverFeedService implementation used for Chromium builds.
-class ChromiumDiscoverFeedService final : public DiscoverFeedService {
+// Dummy DiscoverFeedService implementation used for Cinaseek builds.
+class CinaseekDiscoverFeedService final : public DiscoverFeedService {
  public:
   // DiscoverFeedService implementation:
   void CreateFeedModel() final {}
@@ -37,7 +37,7 @@ class ChromiumDiscoverFeedService final : public DiscoverFeedService {
 
 std::unique_ptr<DiscoverFeedService> CreateDiscoverFeedService(
     DiscoverFeedConfiguration* configuration) {
-  return std::make_unique<ChromiumDiscoverFeedService>();
+  return std::make_unique<CinaseekDiscoverFeedService>();
 }
 
 id<DiscoverFeedVisibilityProvider> CreateDiscoverFeedVisibilityProvider(

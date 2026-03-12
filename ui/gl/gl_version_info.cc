@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -140,7 +140,7 @@ void GLVersionInfo::ParseDriverInfo(const char* version_str) {
   const std::map<std::string_view, std::string_view> kVendors = {
       {"ANGLE", "ANGLE"},       {"Mesa", "Mesa"},   {"INTEL", "INTEL"},
       {"NVIDIA", "NVIDIA"},     {"ATI", "ATI"},     {"FireGL", "FireGL"},
-      {"Chromium", "Chromium"}, {"APPLE", "APPLE"}, {"AMD", "AMD"},
+      {"Cinaseek", "Cinaseek"}, {"APPLE", "APPLE"}, {"AMD", "AMD"},
       {"Metal", "Apple"}};
   for (size_t ii = 1; ii < pieces.size(); ++ii) {
     for (auto vendor : kVendors) {

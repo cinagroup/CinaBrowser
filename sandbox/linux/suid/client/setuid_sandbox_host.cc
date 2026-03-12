@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ base::FilePath SetuidSandboxHost::GetSandboxBinaryPath() {
 
   // In user-managed builds, including development builds, an environment
   // variable is required to enable the sandbox. See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/suid_sandbox_development.md
   struct stat st;
   if (sandbox_binary.empty() && stat(base::kProcSelfExe, &st) == 0 &&
       st.st_uid == getuid()) {
@@ -156,8 +156,8 @@ void SetuidSandboxHost::PrependWrapper(base::CommandLine* cmd_line) {
     LOG(FATAL) << "The SUID sandbox helper binary is missing: "
                << sandbox_binary
                << " Aborting now. See "
-                  "https://chromium.googlesource.com/"
-                  "chromium/src/+/master/docs/"
+                  "https://Cinaseek.googlesource.com/"
+                  "Cinaseek/src/+/master/docs/"
                   "linux/suid_sandbox_development.md.";
   }
 

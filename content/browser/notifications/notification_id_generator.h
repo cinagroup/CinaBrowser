@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ namespace content {
 //
 // Also note that several functions in NotificationPlatformBridge class
 // rely on the format of the notification generated here.
-// Code: chrome/android/java/src/org/chromium/chrome/browser/notifications/
+// Code: chrome/android/java/src/org/Cinaseek/chrome/browser/notifications/
 // NotificationPlatformBridge.java
 class CONTENT_EXPORT NotificationIdGenerator {
  public:

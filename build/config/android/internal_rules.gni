@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -434,7 +434,7 @@ template("write_build_config") {
                              [
                                "assets",
                                "bypass_platform_checks",
-                               "chromium_code",
+                               "Cinaseek_code",
                                "create_locales_java_list",
                                "dex_needs_classpath",
                                "direct_deps_only",
@@ -946,7 +946,7 @@ template("test_runner_script") {
           "@WrappedPath(${_rebased_resource_apk})",
         ]
       }
-      if (build_with_chromium) {
+      if (build_with_Cinaseek) {
         _allowlist = "//testing/android/junit/shadows-allowlist.txt"
         data += [ _allowlist ]
         _rebased_allowlist = rebase_path(_allowlist, root_build_dir)
@@ -1259,7 +1259,7 @@ if (enable_java_templates) {
     # The Mapping ID is parsed to when uploading mapping files.
     # See: https://crbug.com/1417308
     _source_file_template =
-        "chromium-$_mapping_basename-$android_channel-$_version_code"
+        "Cinaseek-$_mapping_basename-$android_channel-$_version_code"
 
     _args = [
       "--min-api=${invoker.min_sdk_version}",
@@ -1862,7 +1862,7 @@ if (enable_java_templates) {
         rebase_path(invoker.input_jar, root_build_dir),
         "--stamp",
         rebase_path(outputs[0], root_build_dir),
-        "--chromium-output-dir",
+        "--Cinaseek-output-dir",
         rebase_path(root_build_dir, root_build_dir),
         "--direct-classpath-jars=@FileArg($_rebased_turbine_build_config:interface_classpath)",
         "--full-classpath-jars=@FileArg($_rebased_javac_build_config:javac_full_interface_classpath)",
@@ -2056,13 +2056,13 @@ if (enable_java_templates) {
   #
   #   shared_resources_allowlist_locales: (optional)
   #     If shared_resources_allowlist is used, provide an optional list of
-  #     Chromium locale names to determine which localized shared string
+  #     Cinaseek locale names to determine which localized shared string
   #     resources to put in the final output, even if aapt_locale_allowlist
   #     is defined to a smaller subset.
   #
   #   aapt_locale_allowlist: (optional)
   #     Restrict compiled locale-dependent resources to a specific allowlist.
-  #     NOTE: This is a list of Chromium locale names, not Android ones.
+  #     NOTE: This is a list of Cinaseek locale names, not Android ones.
   #
   #   r_java_root_package_name: (optional)
   #     Short package name for this target's root R java file (ex. input of
@@ -2947,14 +2947,14 @@ if (enable_java_templates) {
   #    .java files in it must match the list of java_files exactly.
   #  javac_jar_path: Path to the final output .jar file.
   #  javac_args: Optional list of extra arguments to pass to javac.
-  #  chromium_code: Whether this corresponds to Chromium-specific sources.
+  #  Cinaseek_code: Whether this corresponds to Cinaseek-specific sources.
   #  requires_android: True if these sources can only run on Android.
   #  additional_jar_files: Optional list of files to copy into the resulting
   #    .jar file (by default, only .class files are put there). Each entry
   #    has the 'srcPath:dstPath' format.
   #  enable_errorprone: If True, use the errorprone compiler to check for
   #    error-prone constructs in the language. If not provided, whether this is
-  #    enabled depends on chromium_code and the global
+  #    enabled depends on Cinaseek_code and the global
   #    use_errorprone_java_compiler variable.
   #  use_turbine: If True, compile headers using turbine.py.
   #  apk_name: Optional APK name. If provided, will tell compile_java.py to also
@@ -3122,8 +3122,8 @@ if (enable_java_templates) {
         ]
       } else {
         args += [ "--classpath=@FileArg($_rebased_build_config:javac_full_interface_classpath)" ]
-        if (invoker.chromium_code) {
-          args += [ "--chromium-code" ]
+        if (invoker.Cinaseek_code) {
+          args += [ "--Cinaseek-code" ]
         }
 
         # Flag enable_kythe_annotations requires
@@ -3151,7 +3151,7 @@ if (enable_java_templates) {
       }
 
       if (invoker.enable_errorprone) {
-        if (build_with_chromium) {
+        if (build_with_Cinaseek) {
           # Pulls in the main errorprone dep transitively.
           _errorprone_dep =
               "//tools/android/errorprone_plugin:errorprone_plugin"
@@ -3174,11 +3174,11 @@ if (enable_java_templates) {
           args += [ "--xep-arg=-XepOpt:JdkObsolete:AndroidMinSdkVersion=${invoker.min_sdk_version}" ]
         }
         inputs += [ _nullaway_jar ]
-        if (build_with_chromium) {
+        if (build_with_Cinaseek) {
           # errorprone requires the plugin directory to detect src dir.
-          # https://source.chromium.org/chromium/chromium/src/+/main:tools/android/errorprone_plugin/src/org/chromium/tools/errorprone/plugin/UseNetworkAnnotations.java;l=84;drc=dfd88085261b662a5c0a1abea1a3b120b08e8e48
+          # https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:tools/android/errorprone_plugin/src/org/Cinaseek/tools/errorprone/plugin/UseNetworkAnnotations.java;l=84;drc=dfd88085261b662a5c0a1abea1a3b120b08e8e48
           inputs += [ "//tools/android/errorprone_plugin/OWNERS" ]
-          args += [ "--has-chromium-plugin" ]
+          args += [ "--has-Cinaseek-plugin" ]
         }
         if (defined(testonly) && testonly) {
           args += [ "--testonly" ]
@@ -3229,7 +3229,7 @@ if (enable_java_templates) {
     forward_variables_from(invoker, TESTONLY_AND_VISIBILITY)
 
     _build_config = invoker.build_config
-    _chromium_code = invoker.chromium_code
+    _Cinaseek_code = invoker.Cinaseek_code
 
     _srcjar_deps = []
     if (defined(invoker.srcjar_deps)) {
@@ -3293,8 +3293,8 @@ if (enable_java_templates) {
 
       args += [ "--classpath=@FileArg($_rebased_build_config:javac_full_interface_classpath)" ]
 
-      if (_chromium_code) {
-        args += [ "--chromium-code" ]
+      if (_Cinaseek_code) {
+        args += [ "--Cinaseek-code" ]
         if (treat_warnings_as_errors) {
           args += [ "--warnings-as-errors" ]
         }
@@ -3384,14 +3384,14 @@ if (enable_java_templates) {
   #  public_deps: Dependencies that this target exposes as part of its public API.
   #    public_deps do not need to be listed in both the 'deps' and 'public_deps' lists.
   #  testonly: True iff target should only be used for tests.
-  #  chromium_code: Optional. Whether this is Chromium-specific code. If not
+  #  Cinaseek_code: Optional. Whether this is Cinaseek-specific code. If not
   #    provided, this is determined automatically, based on the location of
   #    the source files (i.e. anything under third_party/ is not
-  #    Chromium-specific unless it is in a 'chromium' sub-directory).
+  #    Cinaseek-specific unless it is in a 'Cinaseek' sub-directory).
   #  jacoco_never_instrument: Optional. If provided, whether to forbid
   #    instrumentation with the Jacoco coverage processor. If not provided,
   #    this is controlled by the global use_jacoco_coverage build arg variable
-  #    and only used for non-test Chromium code.
+  #    and only used for non-test Cinaseek code.
   #  include_android_sdk: Optional. Whether or not the android SDK dep
   #    should be added to deps. Defaults to true for non-system libraries
   #    that support android.
@@ -3500,20 +3500,20 @@ if (enable_java_templates) {
     }
     _has_sources = _source_files != [] || _srcjar_deps != [] || _srcjars != []
 
-    if (defined(invoker.chromium_code)) {
-      _chromium_code = invoker.chromium_code
+    if (defined(invoker.Cinaseek_code)) {
+      _Cinaseek_code = invoker.Cinaseek_code
     } else {
       # Default based on whether target is in third_party.
-      _chromium_code =
+      _Cinaseek_code =
           filter_exclude([ _target_dir ], [ "*\bthird_party\b*" ]) != []
-      if (!_chromium_code && !_is_prebuilt && _source_files != []) {
-        # Unless third_party code has an org.chromium file in it.
-        _chromium_code =
-            filter_exclude(_source_files, [ "*\bchromium\b*" ]) != _source_files
+      if (!_Cinaseek_code && !_is_prebuilt && _source_files != []) {
+        # Unless third_party code has an org.Cinaseek file in it.
+        _Cinaseek_code =
+            filter_exclude(_source_files, [ "*\bCinaseek\b*" ]) != _source_files
       }
     }
 
-    if (_chromium_code && _has_sources && _target_dir != "//build/android") {
+    if (_Cinaseek_code && _has_sources && _target_dir != "//build/android") {
       _default_deps = [ "//build/android:build_java" ]
     } else {
       _default_deps = []
@@ -3590,7 +3590,7 @@ if (enable_java_templates) {
       }
 
       _jacoco_instrument =
-          use_jacoco_coverage && _chromium_code && _source_files != [] &&
+          use_jacoco_coverage && _Cinaseek_code && _source_files != [] &&
           _build_device_jar && (!defined(invoker.testonly) || !invoker.testonly)
       if (defined(invoker.jacoco_never_instrument)) {
         _jacoco_instrument =
@@ -3845,7 +3845,7 @@ if (enable_java_templates) {
                                  "proto_resources_path",
                                ])
       }
-      chromium_code = _chromium_code
+      Cinaseek_code = _Cinaseek_code
       build_config = _build_config
       is_prebuilt = _is_prebuilt
       if (defined(_dex_needs_classpath)) {
@@ -3939,7 +3939,7 @@ if (enable_java_templates) {
         _enable_errorprone = invoker.enable_errorprone
       } else {
         _enable_errorprone =
-            _java_files != [] && _chromium_code && use_errorprone_java_compiler
+            _java_files != [] && _Cinaseek_code && use_errorprone_java_compiler
       }
       if (_enable_errorprone) {
         # Rely on the header jar to provide all .class files so that it is
@@ -4012,7 +4012,7 @@ if (enable_java_templates) {
           srcjar_deps = _srcjar_deps
           source_files = _source_files
           target_sources_file = _target_sources_file
-          chromium_code = _chromium_code
+          Cinaseek_code = _Cinaseek_code
           include_android_sdk = _requires_robolectric || _requires_android
         }
       }
@@ -4053,7 +4053,7 @@ if (enable_java_templates) {
             target_sources_file = _target_sources_file
           }
           if (!use_turbine) {
-            chromium_code = _chromium_code
+            Cinaseek_code = _Cinaseek_code
           }
           include_android_sdk = _requires_robolectric || _requires_android
 

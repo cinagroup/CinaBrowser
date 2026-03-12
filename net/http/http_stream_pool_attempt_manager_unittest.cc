@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@
 #include "net/log/net_log_with_source.h"
 #include "net/log/test_net_log.h"
 #include "net/proxy_resolution/proxy_retry_info.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
@@ -648,7 +648,7 @@ class HttpStreamPoolAttemptManagerTest : public TestWithTaskEnvironment {
 
   std::set<url::SchemeHostPort> origins_to_force_quic_on_;
 
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   std::vector<std::unique_ptr<QuicTestPacketMaker>> quic_client_makers_;
   std::vector<std::unique_ptr<MockQuicData>> mock_quic_datas_;
 
@@ -4735,7 +4735,7 @@ TEST_F(HttpStreamPoolAttemptManagerTest, QuicSessionAvailableAfterFailure) {
 
     QuicSessionAliasKey alt_quic_key =
         alt_requester.GetStreamKey().CalculateQuicSessionAliasKey();
-    QuicChromiumClientSession* alt_session =
+    QuicCinaseekClientSession* alt_session =
         quic_session_pool()->FindExistingSession(alt_quic_key.session_key(),
                                                  alt_quic_key.destination());
     ASSERT_TRUE(alt_session);
@@ -6012,7 +6012,7 @@ TEST_F(HttpStreamPoolAttemptManagerTest, H3OriginFrameWhileAttemptingQuic) {
 
   QuicSessionAliasKey quic_key1 =
       requester.GetStreamKey().CalculateQuicSessionAliasKey();
-  QuicChromiumClientSession* quic_session1 =
+  QuicCinaseekClientSession* quic_session1 =
       quic_session_pool()->FindExistingSession(quic_key1.session_key(),
                                                quic_key1.destination());
   ASSERT_TRUE(quic_session1);
@@ -6034,7 +6034,7 @@ TEST_F(HttpStreamPoolAttemptManagerTest, H3OriginFrameWhileAttemptingQuic) {
 
   QuicSessionAliasKey quic_key2 =
       preconnector.GetStreamKey().CalculateQuicSessionAliasKey();
-  QuicChromiumClientSession* quic_session2 =
+  QuicCinaseekClientSession* quic_session2 =
       quic_session_pool()->FindExistingSession(quic_key2.session_key(),
                                                quic_key2.destination());
   ASSERT_TRUE(quic_session1);
@@ -8850,7 +8850,7 @@ TEST_F(HttpStreamPoolAltSvcQuicPreconnectTest,
   EXPECT_EQ(preconnector.Preconnect(pool()), ERR_IO_PENDING);
   EXPECT_THAT(preconnector.WaitForResult(), IsOk());
   QuicSessionAliasKey quic_key = stream_key.CalculateQuicSessionAliasKey();
-  QuicChromiumClientSession* quic_session =
+  QuicCinaseekClientSession* quic_session =
       quic_session_pool()->FindExistingSession(quic_key.session_key(),
                                                quic_key.destination());
   EXPECT_TRUE(quic_session);

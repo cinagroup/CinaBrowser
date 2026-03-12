@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 
 android_library("delegate_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/tinker_tank/TinkerTankDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/tinker_tank/TinkerTankDelegate.java",
   ]
   deps = [
     "//base:service_loader_java",

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@
 #include "net/http/http_stream_factory.h"
 #include "net/log/net_log_with_source.h"
 #include "net/quic/network_connection.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_clock_skew_detector.h"
 #include "net/quic/quic_connectivity_monitor.h"
 #include "net/quic/quic_context.h"
@@ -88,7 +88,7 @@ class NetLog;
 class NetworkAnonymizationKey;
 struct NetworkTrafficAnnotationTag;
 class ProxyDelegate;
-class QuicChromiumConnectionHelper;
+class QuicCinaseekConnectionHelper;
 class QuicCryptoClientStreamFactory;
 class QuicServerInfo;
 class QuicSessionPool;
@@ -140,7 +140,7 @@ enum CreateSessionFailure {
   CREATION_ERROR_MAX
 };
 
-// Encapsulates a pending request for a QuicChromiumClientSession.
+// Encapsulates a pending request for a QuicCinaseekClientSession.
 // If the request is still pending when it is destroyed, it will
 // cancel the request with the pool.
 class NET_EXPORT_PRIVATE QuicSessionRequest {
@@ -242,10 +242,10 @@ class NET_EXPORT_PRIVATE QuicSessionRequest {
   void SetPriority(RequestPriority priority);
 
   // Releases the handle to the QUIC session retrieved as a result of Request().
-  std::unique_ptr<QuicChromiumClientSession::Handle> ReleaseSessionHandle();
+  std::unique_ptr<QuicCinaseekClientSession::Handle> ReleaseSessionHandle();
 
   // Sets |session_|.
-  void SetSession(std::unique_ptr<QuicChromiumClientSession::Handle> session);
+  void SetSession(std::unique_ptr<QuicCinaseekClientSession::Handle> session);
 
   NetErrorDetails* net_error_details() { return net_error_details_; }
 
@@ -282,7 +282,7 @@ class NET_EXPORT_PRIVATE QuicSessionRequest {
   CompletionOnceCallback callback_;
   CompletionOnceCallback failed_on_default_network_callback_;
   raw_ptr<NetErrorDetails> net_error_details_;  // Unowned.
-  std::unique_ptr<QuicChromiumClientSession::Handle> session_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session_;
   bool added_to_job_ = false;
   bool removed_from_job_ = false;
 
@@ -300,7 +300,7 @@ class NET_EXPORT_PRIVATE QuicSessionRequest {
   CompletionOnceCallback create_session_callback_;
 };
 
-// Manages a pool of QuicChromiumClientSessions.
+// Manages a pool of QuicCinaseekClientSessions.
 class NET_EXPORT_PRIVATE QuicSessionPool
     : public NetworkChangeNotifier::IPAddressObserver,
       public NetworkChangeNotifier::NetworkObserver,
@@ -342,19 +342,19 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   // Returns a session for `session_key` or if the request can be pooled to an
   // existing session to the IP address of `destination`.
-  QuicChromiumClientSession* FindExistingSession(
+  QuicCinaseekClientSession* FindExistingSession(
       const QuicSessionKey& session_key,
       const url::SchemeHostPort& destination) const;
 
   // Returns a session when an existing session can be used for `destination`
   // that is resolved with `service_endpoint`.
-  QuicChromiumClientSession* HasMatchingIpSessionForServiceEndpoint(
+  QuicCinaseekClientSession* HasMatchingIpSessionForServiceEndpoint(
       const QuicSessionAliasKey& session_alias_key,
       const ServiceEndpoint& service_endpoint,
       const std::set<std::string>& dns_aliases,
       bool use_dns_aliases);
 
-  // Requests a QuicChromiumClientSession to |host_port_pair|, a handle for
+  // Requests a QuicCinaseekClientSession to |host_port_pair|, a handle for
   // which will be owned by |request|.
   // If a matching session already exists, this method will return OK.  If no
   // matching session exists, this will return ERR_IO_PENDING and will invoke
@@ -399,13 +399,13 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   // Called by a session when it is going away and no more streams should be
   // created on it.
-  void OnSessionGoingAway(QuicChromiumClientSession* session);
+  void OnSessionGoingAway(QuicCinaseekClientSession* session);
 
   // Called by a session after it shuts down.
-  void OnSessionClosed(QuicChromiumClientSession* session);
+  void OnSessionClosed(QuicCinaseekClientSession* session);
 
   // Called by a session when it blackholes after the handshake is confirmed.
-  void OnBlackholeAfterHandshakeConfirmed(QuicChromiumClientSession* session);
+  void OnBlackholeAfterHandshakeConfirmed(QuicCinaseekClientSession* session);
 
   // Cancels a pending request. Does nothing if the request is not active.
   // This method is virtual to facilitate mocking for tests.
@@ -515,7 +515,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
   // It returns the amount of time waiting job should be delayed.
   base::TimeDelta GetTimeDelayForWaitingJob(const QuicSessionKey& session_key);
 
-  QuicChromiumConnectionHelper* helper() { return helper_.get(); }
+  QuicCinaseekConnectionHelper* helper() { return helper_.get(); }
 
   quic::QuicAlarmFactory* alarm_factory() { return alarm_factory_.get(); }
 
@@ -529,9 +529,9 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   // Inject a QUIC session for testing various edge cases.
   void ActivateSessionForTesting(
-      std::unique_ptr<QuicChromiumClientSession> new_session);
+      std::unique_ptr<QuicCinaseekClientSession> new_session);
 
-  void DeactivateSessionForTesting(QuicChromiumClientSession* session);
+  void DeactivateSessionForTesting(QuicCinaseekClientSession* session);
 
   // Set a time delay for waiting job for testing.
   void SetTimeDelayForWaitingJobForTesting(base::TimeDelta delay);
@@ -567,15 +567,15 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   using SessionMap =
       std::map<QuicSessionKey,
-               raw_ptr<QuicChromiumClientSession, CtnExperimental>>;
-  using SessionIdSet = std::set<std::unique_ptr<QuicChromiumClientSession>,
+               raw_ptr<QuicCinaseekClientSession, CtnExperimental>>;
+  using SessionIdSet = std::set<std::unique_ptr<QuicCinaseekClientSession>,
                                 base::UniquePtrComparator>;
   using AliasSet = std::set<QuicSessionAliasKey>;
-  using SessionAliasMap = std::map<QuicChromiumClientSession*, AliasSet>;
+  using SessionAliasMap = std::map<QuicCinaseekClientSession*, AliasSet>;
   using SessionSet =
-      std::set<raw_ptr<QuicChromiumClientSession, SetExperimental>>;
+      std::set<raw_ptr<QuicCinaseekClientSession, SetExperimental>>;
   using IPAliasMap = std::map<IPEndPoint, SessionSet>;
-  using SessionPeerIPMap = std::map<QuicChromiumClientSession*, IPEndPoint>;
+  using SessionPeerIPMap = std::map<QuicCinaseekClientSession*, IPEndPoint>;
   using JobMap = std::map<QuicSessionKey, std::unique_ptr<Job>>;
   using DnsAliasesBySessionKeyMap =
       std::map<QuicSessionKey, std::set<std::string>>;
@@ -587,7 +587,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
   // during connection.
   static void LogConnectionIpPooling(bool pooled);
 
-  QuicChromiumClientSession* HasMatchingIpSession(
+  QuicCinaseekClientSession* HasMatchingIpSession(
       const QuicSessionAliasKey& key,
       const std::vector<IPEndPoint>& ip_endpoints,
       const std::set<std::string>& aliases,
@@ -595,7 +595,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
   // Returns true if IP matching can be waived when trying to send requests to
   // |destination| on |session|.
   bool CanWaiveIpMatching(const url::SchemeHostPort& destination,
-                          QuicChromiumClientSession* session) const;
+                          QuicCinaseekClientSession* session) const;
   void OnJobComplete(Job* job,
                      std::optional<base::TimeTicks> proxy_connect_start_time,
                      int rv);
@@ -632,7 +632,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
       base::TimeTicks dns_resolution_start_time,
       base::TimeTicks dns_resolution_end_time,
       const NetLogWithSource& net_log,
-      raw_ptr<QuicChromiumClientSession>* session,
+      raw_ptr<QuicCinaseekClientSession>* session,
       handles::NetworkHandle* network,
       MultiplexedSessionCreationInitiator preconnet_origin,
       std::optional<ConnectionManagementConfig> connection_management_config);
@@ -664,7 +664,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
       bool require_confirmation,
       IPEndPoint local_address,
       IPEndPoint proxy_peer_address,
-      std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream,
+      std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream,
       std::string user_agent,
       const NetLogWithSource& net_log,
       handles::NetworkHandle network);
@@ -704,7 +704,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   // Called when the Job for the given key has created and confirmed a session.
   void ActivateSession(const QuicSessionAliasKey& key,
-                       QuicChromiumClientSession* session,
+                       QuicCinaseekClientSession* session,
                        std::set<std::string> dns_aliases);
 
   // Go away all active sessions. May disable session's connectivity monitoring
@@ -749,7 +749,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
       const quic::QuicServerId& server_id,
       const std::unique_ptr<QuicServerInfo>& server_info);
 
-  void ProcessGoingAwaySession(QuicChromiumClientSession* session,
+  void ProcessGoingAwaySession(QuicCinaseekClientSession* session,
                                const quic::QuicServerId& server_id,
                                bool was_session_active);
 
@@ -757,14 +757,14 @@ class NET_EXPORT_PRIVATE QuicSessionPool
   // in the AliasSet for the given `session` in the map `session_aliases_`, and
   // add the given `dns_aliases` for `key.session_key()` in
   // `dns_aliases_by_session_key_`.
-  void ActivateAndMapSessionToAliasKey(QuicChromiumClientSession* session,
+  void ActivateAndMapSessionToAliasKey(QuicCinaseekClientSession* session,
                                        QuicSessionAliasKey key,
                                        std::set<std::string> dns_aliases);
 
   // For all alias keys for `session` in `session_aliases_`, erase the
   // corresponding DNS aliases in `dns_aliases_by_session_key_`. Then erase
   // `session` from `session_aliases_`.
-  void UnmapSessionFromSessionAliases(QuicChromiumClientSession* session);
+  void UnmapSessionFromSessionAliases(QuicCinaseekClientSession* session);
 
   // Creates a CreateCryptoConfigHandle for the specified
   // NetworkAnonymizationKey. If there's already a corresponding entry in
@@ -831,7 +831,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
       socket_performance_watcher_factory_;
 
   // The helper used for all connections.
-  std::unique_ptr<QuicChromiumConnectionHelper> helper_;
+  std::unique_ptr<QuicCinaseekConnectionHelper> helper_;
 
   // The alarm factory used for all connections.
   std::unique_ptr<quic::QuicAlarmFactory> alarm_factory_;
@@ -879,7 +879,7 @@ class NET_EXPORT_PRIVATE QuicSessionPool
 
   // If more than |yield_after_packets_| packets have been read or more than
   // |yield_after_duration_| time has passed, then
-  // QuicChromiumPacketReader::StartReading() yields by doing a PostTask().
+  // QuicCinaseekPacketReader::StartReading() yields by doing a PostTask().
   int yield_after_packets_;
   quic::QuicTime::Delta yield_after_duration_;
 

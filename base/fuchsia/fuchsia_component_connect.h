@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 
 // This namespace is designed to be consistent with the `component::Connect`
 // calls used within Fuchsia. Consistency keeps Fuchsia documentation more
-// relevant for developers working on Chromium as well as creating less mental
+// relevant for developers working on Cinaseek as well as creating less mental
 // overhead when working in both domains. See go/natural-component-context for
 // more details (Googlers only).
 namespace base::fuchsia_component {

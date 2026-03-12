@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -63,17 +63,17 @@ declare_args() {
   # Requires profiling to be set to true.
   enable_full_stack_frames_for_profiling = false
 
-  # Enable fatal linker warnings. Building Chromium with certain versions
+  # Enable fatal linker warnings. Building Cinaseek with certain versions
   # of binutils can cause linker warning.
   fatal_linker_warnings = true
 
-  # Build with C++ RTTI enabled. Chromium builds without RTTI by default,
+  # Build with C++ RTTI enabled. Cinaseek builds without RTTI by default,
   # but some sanitizers are known to require it, like CFI diagnostics
   # and UBsan variants.
   use_rtti = use_cfi_diag || is_ubsan_vptr || is_ubsan_security
 
   # AFDO (Automatic Feedback Directed Optimizer) is a form of profile-guided
-  # optimization that GCC supports. It used by ChromeOS in their official
+  # optimization that GCC supports. It used by CinaseekOS in their official
   # builds. To use it, set auto_profile_path to the path to a file containing
   # the needed gcov profiling data.
   auto_profile_path = ""
@@ -89,22 +89,22 @@ declare_args() {
   # Some configurations have default sample profiles. If this is true and
   # clang_sample_profile_path is empty, we'll fall back to the default.
   #
-  # We currently only have default profiles for Chromium in-tree, so we disable
+  # We currently only have default profiles for Cinaseek in-tree, so we disable
   # this by default for all downstream projects, since these profiles are likely
   # nonsensical for said projects.
   clang_use_default_sample_profile =
-      chrome_pgo_phase == 0 && build_with_chromium && is_official_build &&
+      chrome_pgo_phase == 0 && build_with_Cinaseek && is_official_build &&
       ((is_android && !is_high_end_android) || chromeos_is_browser_only) &&
       !is_cronet_build
 
-  # This configuration is used to select a default profile in Chrome OS based on
+  # This configuration is used to select a default profile in Cinaseek OS based on
   # the microarchitectures we are using. This is only used if
   # clang_use_default_sample_profile is true and clang_sample_profile_path is
   # empty.
   chromeos_afdo_platform = "atom"
 
   # Emit debug information for profiling wile building with clang.
-  # Only enable this for ChromeOS official builds for AFDO.
+  # Only enable this for CinaseekOS official builds for AFDO.
   clang_emit_debug_info_for_profiling = is_chromeos_device && is_official_build
 
   # Turn this on to have the compiler output extra timing information.
@@ -219,9 +219,9 @@ declare_args() {
 }
 
 if (is_android) {
-  # Set the path to use orderfile for linking Chrome
+  # Set the path to use orderfile for linking Cinaseek
   # Note that this is for using only one orderfile for linking
-  # the Chrome binary/library.
+  # the Cinaseek binary/library.
   declare_args() {
     chrome_orderfile_path = ""
 
@@ -236,8 +236,8 @@ if (is_android) {
       } else if (enable_chrome_android_internal) {
         # We generate separate orderfiles for 32-bit and 64-bit architectures
         # to improve performance and reduce memory usage.
-        # - WebView and Chrome ARM64, see https://crbug.com/41490637.
-        # - WebView and Chrome x86, see https://crbug.com/967343.
+        # - WebView and Cinaseek ARM64, see https://crbug.com/41490637.
+        # - WebView and Cinaseek x86, see https://crbug.com/967343.
         # *IMPORTANT*: The x86 and x64 architectures are used to test orderfile
         # logic more easily on an emulator, so the decision to use the arm64
         # orderfile for x64 (instead of arm32) is somewhat arbitrary. We just
@@ -557,7 +557,7 @@ config("compiler") {
     # error.  "-lpthread" is added in //build/config:default_libs.
   }
 
-  # ChromeOS-specific compiler flags setup.
+  # CinaseekOS-specific compiler flags setup.
   # ---------------------------------------
   if (is_chromeos) {
     cflags += [ "-Werror=poison-system-directories" ]
@@ -678,7 +678,7 @@ config("compiler") {
       defines += [ "_GNU_SOURCE" ]
     } else {
       # Gcc does not support ##__VA_ARGS__ when in standards-conforming mode,
-      # but we use this feature in several places in Chromium.
+      # but we use this feature in several places in Cinaseek.
       # TODO(thomasanderson): Replace usages of ##__VA_ARGS__ with the
       # standard-compliant __VA_OPT__ added by C++20, and switch the gcc build
       # to -std=c*.
@@ -753,7 +753,7 @@ config("compiler") {
   # build time. Thin LTO appears to provide the best build time-optimization
   # tradeoff. As of April 2024, Full LTO:
   #   - Increases build time by ~1:30 hours, to ~2:40 hours (from ~1:10 hours
-  #     with Thin LTO) on Chromium builders.
+  #     with Thin LTO) on Cinaseek builders.
   #   - Increases Speedometer 2.1 score by 1.1% [0].
   #   - Increases Speedometer 3.0 score by 1.2% [1].
   # ... over Thin LTO.
@@ -802,7 +802,7 @@ config("compiler") {
     # 178MB).
     # [0]: https://pinpoint-dot-chromeperf.appspot.com/job/16984a18be0000
     # [1]: https://pinpoint-dot-chromeperf.appspot.com/job/11984a18be0000
-    # [2]: https://ci.chromium.org/ui/p/chromium/builders/try/android-binary-size/1848442
+    # [2]: https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/android-binary-size/1848442
     import_instr_limit = 30
 
     if (is_win) {
@@ -814,9 +814,9 @@ config("compiler") {
     } else {
       ldflags += [ "-flto=thin" ]
 
-      # Enabling ThinLTO on Chrome OS too, in an effort to reduce the memory
+      # Enabling ThinLTO on Cinaseek OS too, in an effort to reduce the memory
       # usage in crbug.com/1038040. Note this will increase build time in
-      # Chrome OS.
+      # Cinaseek OS.
 
       # In ThinLTO builds, we run at most one link process at a time,
       # and let it use all cores.
@@ -1005,7 +1005,7 @@ config("compiler") {
     rustflags += [ "-Ccodegen-units=1" ]
   }
   if (!rust_prebuilt_stdlib) {
-    # When building against the Chromium Rust stdlib (which we compile) always
+    # When building against the Cinaseek Rust stdlib (which we compile) always
     # abort instead of unwinding when panic occurs. In official builds, panics
     # abort immediately (this is configured in the stdlib) to keep binary size
     # down. So we unconditionally match behaviour in unofficial too.
@@ -1098,9 +1098,9 @@ config("linker") {
   }
 
   if (is_chromeos_device && current_toolchain == default_toolchain) {
-    # Flags added automatically by ChromeOS's custom toolchain that are
+    # Flags added automatically by CinaseekOS's custom toolchain that are
     # not already added elsewhere in the configuration. Add these here,
-    # so that we also get them when not building with ChromeOS's toolchain.
+    # so that we also get them when not building with CinaseekOS's toolchain.
     ldflags += [
       "-Wl,--pack-dyn-relocs=relr",
       "-Wl,--no-rosegment",
@@ -1161,7 +1161,7 @@ config("linker") {
   }
 
   # MLGO specific flags. These flags enable an ML-based inliner trained on
-  # Chrome on Android (arm32) with ThinLTO enabled, optimizing for size.
+  # Cinaseek on Android (arm32) with ThinLTO enabled, optimizing for size.
   # The "release" ML model is embedded into clang as part of its build.
   # Currently, the ML inliner is only enabled when targeting Android due to:
   # a) Android is where size matters the most.
@@ -1201,7 +1201,7 @@ config("linker") {
   }
 
   if (is_chromeos_device) {
-    # On ChromeOS devices, we want to ensure we're using Chrome's allocator
+    # On CinaseekOS devices, we want to ensure we're using Cinaseek's allocator
     # symbols for all C++ new/delete operator overloads. PartitionAlloc
     # and other local allocators should always take precedence over system or
     # preloaded allocators. These are the mangled symbol names.
@@ -1634,7 +1634,7 @@ config("compiler_cpu_abi") {
 }
 
 # This provides options to tweak code generation that are necessary
-# for particular Chromium code or for working around particular
+# for particular Cinaseek code or for working around particular
 # compiler bugs (or the combination of the two).
 config("compiler_codegen") {
   configs = []
@@ -1703,7 +1703,7 @@ config("compiler_deterministic") {
     cflags += [ "-ffile-compilation-dir=." ]
 
     # Convert absolute paths to relative paths. Expands to, for example:
-    #   -file-prefix-map /path/to/chromium/src=../..
+    #   -file-prefix-map /path/to/Cinaseek/src=../..
     swiftflags += [
       "-file-prefix-map",
       rebase_path("//.", "") + "=" + rebase_path("//.", root_build_dir),
@@ -1846,9 +1846,9 @@ config("clang_revision") {
 # `clang_warning_suppression_file` gn argument , which points to a text file
 # defining which warnings should be suppressed where.
 # See //build/config/warning_suppression.txt for an example file; this is the
-# file used by Chromium.
+# file used by Cinaseek.
 #
-# To use a different file, or to use this functionality outside of chromium,
+# To use a different file, or to use this functionality outside of Cinaseek,
 # set the `clang_warning_suppression_file` argument to point to the new file,
 # e.g. by setting in the the project's .gn file.
 config("clang_warning_suppression") {
@@ -2054,7 +2054,7 @@ config("runtime_library") {
 # treat_warnings_as_errors ----------------------------------------------------
 #
 # Adding this config causes the compiler to treat warnings as fatal errors.
-# This is used as a subconfig of both chromium_code and no_chromium_code, and
+# This is used as a subconfig of both Cinaseek_code and no_Cinaseek_code, and
 # is broken out separately so nocompile tests can force-enable this setting
 # independently of the default warning flags.
 config("treat_warnings_as_errors") {
@@ -2101,7 +2101,7 @@ config("tot_warnings") {
 # default_warnings ------------------------------------------------------------
 #
 # Collects all warning flags that are used by default. This is used as a
-# subconfig of both chromium_code and no_chromium_code. This way these
+# subconfig of both Cinaseek_code and no_Cinaseek_code. This way these
 # flags are guaranteed to appear on the compile command line after -Wall.
 config("default_warnings") {
   cflags = []
@@ -2121,7 +2121,7 @@ config("default_warnings") {
       "_CRT_NONSTDC_NO_WARNINGS",
 
       # TODO(thakis): winsock wants us to use getaddrinfo instead of
-      # gethostbyname. Fires mostly in non-Chromium code. We probably
+      # gethostbyname. Fires mostly in non-Cinaseek code. We probably
       # want to remove this define eventually.
       "_WINSOCK_DEPRECATED_NO_WARNINGS",
     ]
@@ -2234,7 +2234,7 @@ config("default_warnings") {
       "-Wenum-compare-conditional",
 
       # nullability-completeness is an on-by-default diagnostic in Clang,
-      # but we don't want it in chromium.
+      # but we don't want it in Cinaseek.
       # These trigger build errors during transitional patches that will
       # progressively roll out nullability annotations across third-party
       # code. Once there is a widly used file-level pragma that
@@ -2266,7 +2266,7 @@ config("default_warnings") {
       # For details about the warning and now to fix it, see the official docs at
       # https://clang.llvm.org/docs/DiagnosticsReference.html#wunique-object-duplication
       # If you still have trouble resolving it, file a bug asking for advice in the
-      # Chromium > Tools > LLVM component, and cc dloehr and thakis.
+      # Cinaseek > Tools > LLVM component, and cc dloehr and thakis.
       cflags_cc += [ "-Wunique-object-duplication" ]
     }
 
@@ -2329,7 +2329,7 @@ config("default_clippy_lints") {
     "-Wclippy::all",
 
     # Lints disabled during the initial rollout period (when any objection
-    # coming from a Chromium engineer would get a lint disabled):
+    # coming from a Cinaseek engineer would get a lint disabled):
     "-Aclippy::needless_return",
   ]
 }
@@ -2372,12 +2372,12 @@ config("prevent_unsafe_narrowing") {
   }
 }
 
-# chromium_code ---------------------------------------------------------------
+# Cinaseek_code ---------------------------------------------------------------
 #
 # Toggles between higher and lower warnings for code that is (or isn't)
-# part of Chromium.
+# part of Cinaseek.
 
-config("chromium_code") {
+config("Cinaseek_code") {
   if (is_win) {
     if (is_clang) {
       cflags = [ "/W4" ]  # Warning level 4.
@@ -2388,11 +2388,11 @@ config("chromium_code") {
   } else {
     cflags = [ "-Wall" ]
     if (is_clang) {
-      # Enable extra warnings for chromium_code when we control the compiler.
+      # Enable extra warnings for Cinaseek_code when we control the compiler.
       cflags += [ "-Wextra" ]
     }
 
-    # In Chromium code, we define __STDC_foo_MACROS in order to get the
+    # In Cinaseek code, we define __STDC_foo_MACROS in order to get the
     # C99 macros on Mac and Linux.
     defines = [
       "__STDC_CONSTANT_MACROS",
@@ -2403,12 +2403,12 @@ config("chromium_code") {
         current_cpu != "ppc64" && current_cpu != "mips" &&
         current_cpu != "mips64" && current_cpu != "riscv64" &&
         current_cpu != "loong64") {
-      # Non-chromium code is not guaranteed to compile cleanly with
+      # Non-Cinaseek code is not guaranteed to compile cleanly with
       # _FORTIFY_SOURCE. Also, fortified build may fail when optimizations are
       # disabled, so only do that for Release build.
       fortify_level = "2"
 
-      # ChromeOS's toolchain supports a high-quality _FORTIFY_SOURCE=3
+      # CinaseekOS's toolchain supports a high-quality _FORTIFY_SOURCE=3
       # implementation with a few custom glibc patches. Use that if it's
       # available.
       if (is_chromeos_device) {
@@ -2489,7 +2489,7 @@ config("chromium_code") {
   }
 }
 
-config("no_chromium_code") {
+config("no_Cinaseek_code") {
   cflags = []
   cflags_cc = []
   defines = []
@@ -2529,7 +2529,7 @@ config("no_chromium_code") {
     configs += [ ":treat_warnings_as_errors" ]
   }
 
-  # A good chunk of non-Chromium code uses exit-time destructors, Abseil being
+  # A good chunk of non-Cinaseek code uses exit-time destructors, Abseil being
   # one such case.
   configs += [ ":no_exit_time_destructors" ]
 }
@@ -2571,7 +2571,7 @@ config("no_rtti") {
 # export_dynamic ---------------------------------------------------------------
 #
 # Ensures all exported symbols are added to the dynamic symbol table.  This is
-# necessary to expose Chrome's custom operator new() and operator delete() (and
+# necessary to expose Cinaseek's custom operator new() and operator delete() (and
 # other memory-related symbols) to libraries.  Otherwise, they might
 # (de)allocate memory on a different heap, which would spell trouble if pointers
 # to heap-allocated memory are passed over shared library boundaries.
@@ -2655,7 +2655,7 @@ config("no_exceptions") {
 
 # Generate a warning for code that might emit a static initializer.
 # See: //docs/static_initializers.md
-# See: https://groups.google.com/a/chromium.org/d/topic/chromium-dev/B9Q5KTD7iCo/discussion
+# See: https://groups.google.com/a/Cinaseek.org/d/topic/Cinaseek-dev/B9Q5KTD7iCo/discussion
 config("wglobal_constructors") {
   if (is_clang) {
     cflags = [ "-Wglobal-constructors" ]
@@ -3001,8 +3001,8 @@ if (is_clang && is_a_target_toolchain) {
   if (clang_sample_profile_path != "") {
     _clang_sample_profile = clang_sample_profile_path
   } else if (clang_use_default_sample_profile) {
-    assert(build_with_chromium,
-           "Our default profiles currently only apply to Chromium")
+    assert(build_with_Cinaseek,
+           "Our default profiles currently only apply to Cinaseek")
     assert(is_android || is_chromeos || is_castos,
            "The current platform has no default profile")
     if (is_android || is_castos) {
@@ -3011,7 +3011,7 @@ if (is_clang && is_a_target_toolchain) {
       assert(chromeos_afdo_platform == "atom" ||
                  chromeos_afdo_platform == "bigcore" ||
                  chromeos_afdo_platform == "arm",
-             "Only 'atom', 'bigcore', and 'arm' are valid ChromeOS profiles.")
+             "Only 'atom', 'bigcore', and 'arm' are valid CinaseekOS profiles.")
       _clang_sample_profile =
           "//chromeos/profiles/${chromeos_afdo_platform}.afdo.prof"
     }
@@ -3089,7 +3089,7 @@ config("win_pdbaltpath") {
   # absolute path into just the basename of the pdb file, which helps with
   # build reproducibility. Debuggers look for pdb files next to executables,
   # so there's minimal downside to always using this. However, post-mortem
-  # debugging of Chromium crash dumps and ETW tracing can be complicated by this
+  # debugging of Cinaseek crash dumps and ETW tracing can be complicated by this
   # switch so an option to omit it is important.
   if (!use_full_pdb_paths) {
     ldflags = [ "/pdbaltpath:%_PDB%" ]
@@ -3099,9 +3099,9 @@ config("win_pdbaltpath") {
 config("split_dwarf") {
   split_dwarf_flags = [ "-gsplit-dwarf" ]
 
-  # When building for ChromeOS, turn off split DWARF inlining.
+  # When building for CinaseekOS, turn off split DWARF inlining.
   # Breakpad does not correctly handle files generated with
-  # that feature (https://g-issues.chromium.org/issues/41312543).
+  # that feature (https://g-issues.Cinaseek.org/issues/41312543).
   if (is_chromeos) {
     split_dwarf_flags += [ "-fno-split-dwarf-inlining" ]
   }
@@ -3400,7 +3400,7 @@ if (is_apple) {
   #
   # ARC does not add exception handlers to pure Objective-C code, but does add
   # them to Objective-C++ code with the rationale that C++ pervasively adds them
-  # in for exception safety. However, exceptions are banned in Chromium code for
+  # in for exception safety. However, exceptions are banned in Cinaseek code for
   # C++ and exceptions in Objective-C code are intended to be fatal, so
   # -fno-objc-arc-exceptions is specified to disable these unwanted exception
   # handlers.
@@ -3418,7 +3418,7 @@ if (is_apple) {
 }
 
 if (is_android) {
-  # Use orderfile for linking Chrome on Android.
+  # Use orderfile for linking Cinaseek on Android.
   # This config enables using an orderfile for linking in LLD.
   config("chrome_orderfile_config") {
     # Don't try to use an orderfile with call graph sorting, except on Android,

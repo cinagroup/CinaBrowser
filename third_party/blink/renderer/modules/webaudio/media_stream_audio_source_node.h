@@ -78,7 +78,7 @@ class MediaStreamAudioSourceNode final
  private:
   MediaStreamAudioSourceHandler& GetMediaStreamAudioSourceHandler() const;
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const String& function_name, const String& message);
 
   Member<MediaStreamTrack> audio_track_;

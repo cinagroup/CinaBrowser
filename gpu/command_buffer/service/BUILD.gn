@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -152,8 +152,8 @@ target(link_target_type, "gles2_sources") {
     "gles2_cmd_clear_framebuffer.h",
     "gles2_cmd_copy_tex_image.cc",
     "gles2_cmd_copy_tex_image.h",
-    "gles2_cmd_copy_texture_chromium.cc",
-    "gles2_cmd_copy_texture_chromium.h",
+    "gles2_cmd_copy_texture_Cinaseek.cc",
+    "gles2_cmd_copy_texture_Cinaseek.h",
     "gles2_cmd_decoder.cc",
     "gles2_cmd_decoder.h",
     "gles2_cmd_decoder_autogen.h",

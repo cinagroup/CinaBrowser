@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ size_t AndroidProfileBrowserCollectionService::GetSize() const {
 // issue. In the unlikely case that performance becomes important here, or if we
 // have another reason for ProfileBrowserCollection to own its own browser
 // lists, we can re-examine this approach:
-// https://chromium-review.googlesource.com/c/chromium/src/+/7592561.
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/7592561.
 AndroidProfileBrowserCollectionService::BrowserVector
 AndroidProfileBrowserCollectionService::GetBrowsers(Order order) {
   if (IsEmpty()) {

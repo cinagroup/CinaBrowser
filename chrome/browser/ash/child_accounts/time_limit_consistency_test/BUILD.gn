@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//third_party/protobuf/proto_library.gni")
 
 assert(is_chromeos)
 
-# Test binary for the ChromeOS usage time limit processor tests.
+# Test binary for the CinaseekOS usage time limit processor tests.
 test("usage_time_limit_unittests") {
   testonly = true
 

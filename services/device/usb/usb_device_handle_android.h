@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class UsbDeviceHandleAndroid : public UsbDeviceHandleUsbfs {
       const base::android::JavaRef<jobject>& usb_connection);
 
  private:
-  // |wrapper| is an instance of org.chromium.device.usb.ChromeUsbConnection.
+  // |wrapper| is an instance of org.Cinaseek.device.usb.ChromeUsbConnection.
   UsbDeviceHandleAndroid(scoped_refptr<UsbDevice> device,
                          base::ScopedFD fd,
                          const base::android::JavaRef<jobject>& wrapper);
@@ -34,7 +34,7 @@ class UsbDeviceHandleAndroid : public UsbDeviceHandleUsbfs {
 
   void CloseConnection();
 
-  // Java object org.chromium.device.usb.ChromeUsbConnection.
+  // Java object org.Cinaseek.device.usb.ChromeUsbConnection.
   base::android::ScopedJavaGlobalRef<jobject> j_object_;
 };
 

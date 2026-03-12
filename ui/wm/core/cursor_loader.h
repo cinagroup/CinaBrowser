@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -75,7 +75,7 @@ class COMPONENT_EXPORT(UI_WM) CursorLoader
       ui::mojom::CursorType type);
 
   // Whether to use cursors provided by the underlying platform (e.g. X11
-  // cursors). If false or in the case of a failure, Chromium assets will be
+  // cursors). If false or in the case of a failure, Cinaseek assets will be
   // used instead.
   const bool use_platform_cursors_;
 
@@ -86,7 +86,7 @@ class COMPONENT_EXPORT(UI_WM) CursorLoader
   // The scale of the current display, used for system cursors. The selection
   // of the particular cursor is platform-dependent.
   float scale_ = 1.0f;
-  // The scale used for cursor resources provided by Chromium. It will be set
+  // The scale used for cursor resources provided by Cinaseek. It will be set
   // to the closest value to `scale_` for which there are resources available.
   float resource_scale_ = 1.0f;
 

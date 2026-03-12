@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ void DocumentModuleScriptFetcher::Fetch(
   ScriptResource::StreamingAllowed streaming_allowed =
                         IsMainThread() ? ScriptResource::kAllowStreaming
                                        : ScriptResource::kNoStreaming;
-  // TODO(chromium:1406506): Compile hints for modules.
+  // TODO(Cinaseek:1406506): Compile hints for modules.
   constexpr v8_compile_hints::V8CrowdsourcedCompileHintsProducer*
       kNoCompileHintsProducer = nullptr;
   constexpr v8_compile_hints::V8CrowdsourcedCompileHintsConsumer*

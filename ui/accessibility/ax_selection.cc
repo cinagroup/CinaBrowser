@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ bool ComputeUnignoredSelectionEndpoint(
 
   // Null positions are never ignored, but must be considered successful, or
   // these Android tests would fail:
-  // org.chromium.content.browser.accessibility.AssistViewStructureTest#*
+  // org.Cinaseek.content.browser.accessibility.AssistViewStructureTest#*
   // The reason is that |position| becomes null because no AXTreeManager is
   // registered for that |tree|'s AXTreeID.
   // TODO(accessibility): investigate and fix this if needed.

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,7 +105,7 @@ TEST_F(KeystoneTest, MigrateKeystoneApps) {
 
   EXPECT_EQ(registration_requests.size(), 4u);
 
-  EXPECT_EQ(registration_requests[0].app_id, "com.chromium.corruptedapp");
+  EXPECT_EQ(registration_requests[0].app_id, "com.Cinaseek.corruptedapp");
   EXPECT_TRUE(registration_requests[0].brand_code.empty());
   EXPECT_TRUE(registration_requests[0].brand_path.empty());
   EXPECT_EQ(registration_requests[0].ap, "canary");
@@ -115,7 +115,7 @@ TEST_F(KeystoneTest, MigrateKeystoneApps) {
   EXPECT_FALSE(registration_requests[0].dla);   // Value is too big.
   EXPECT_FALSE(registration_requests[0].dlrc);  // Value is too small.
 
-  EXPECT_EQ(registration_requests[1].app_id, "com.chromium.popularapp");
+  EXPECT_EQ(registration_requests[1].app_id, "com.Cinaseek.popularapp");
   EXPECT_TRUE(registration_requests[1].brand_code.empty());
   EXPECT_EQ(registration_requests[1].brand_path, base::FilePath("/"));
   EXPECT_EQ(registration_requests[1].ap, "GOOG");
@@ -128,14 +128,14 @@ TEST_F(KeystoneTest, MigrateKeystoneApps) {
   EXPECT_EQ(registration_requests[1].dla.value(), 5921);
   EXPECT_EQ(registration_requests[1].dlrc.value(), 5922);
 
-  EXPECT_EQ(registration_requests[2].app_id, "com.chromium.kipple");
+  EXPECT_EQ(registration_requests[2].app_id, "com.Cinaseek.kipple");
   EXPECT_TRUE(registration_requests[2].brand_path.empty());
   EXPECT_EQ(registration_requests[2].existence_checker_path,
             base::FilePath("/"));
   EXPECT_FALSE(registration_requests[2].dla);   // No data.
   EXPECT_FALSE(registration_requests[2].dlrc);  // String value is ignored.
 
-  EXPECT_EQ(registration_requests[3].app_id, "com.chromium.nonexistapp");
+  EXPECT_EQ(registration_requests[3].app_id, "com.Cinaseek.nonexistapp");
   EXPECT_TRUE(registration_requests[3].brand_path.empty());
 }
 

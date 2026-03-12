@@ -574,7 +574,7 @@ class CORE_EXPORT LocalFrameView final
 
   // Methods for converting between this frame and other coordinate spaces.
   // For definitions and an explanation of the varous spaces, please see:
-  // http://www.chromium.org/developers/design-documents/blink-coordinate-spaces
+  // http://www.Cinaseek.org/developers/design-documents/blink-coordinate-spaces
   gfx::Rect ViewportToFrame(const gfx::Rect&) const;
   gfx::Rect FrameToViewport(const gfx::Rect&) const;
   gfx::Point FrameToViewport(const gfx::Point&) const;
@@ -1344,7 +1344,7 @@ class CORE_EXPORT LocalFrameView final
   // A set of objects needing a transform property tree update. These updates
   // are deferred until the end prepaint and updating them directly, if
   // possible, avoids needing to walk the tree to update them. See:
-  // https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/paint/README.md#Transform-update-optimization
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/third_party/blink/renderer/core/paint/README.md#Transform-update-optimization
   // for more on the fast path
   // TODO(yotha): unify these into one HeapHashMap.
   Member<GCedHeapHashSet<Member<LayoutObject>>> pending_transform_updates_;

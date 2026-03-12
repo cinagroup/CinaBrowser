@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ TestService::TestService(const Options& options)
       exported_object_(nullptr),
       exported_object_manager_(nullptr) {
   if (service_name_.empty()) {
-    service_name_ = "org.chromium.TestService-" +
+    service_name_ = "org.Cinaseek.TestService-" +
                     base::Uuid::GenerateRandomV4().AsLowercaseString();
   }
 }
@@ -105,14 +105,14 @@ void TestService::SendTestSignalFromRoot(const std::string& message) {
 }
 
 void TestService::SendTestSignalInternal(const std::string& message) {
-  Signal signal("org.chromium.TestInterface", "Test");
+  Signal signal("org.Cinaseek.TestInterface", "Test");
   MessageWriter writer(&signal);
   writer.AppendString(message);
   exported_object_->SendSignal(&signal);
 }
 
 void TestService::SendTestSignalFromRootInternal(const std::string& message) {
-  Signal signal("org.chromium.TestInterface", "Test");
+  Signal signal("org.Cinaseek.TestInterface", "Test");
   MessageWriter writer(&signal);
   writer.AppendString(message);
 
@@ -197,35 +197,35 @@ void TestService::Run(base::RunLoop* run_loop) {
   bus_ = new Bus(std::move(bus_options));
 
   exported_object_ = bus_->GetExportedObject(
-      ObjectPath("/org/chromium/TestObject"));
+      ObjectPath("/org/Cinaseek/TestObject"));
 
   int num_methods = 0;
   exported_object_->ExportMethod(
-      "org.chromium.TestInterface", "Echo",
+      "org.Cinaseek.TestInterface", "Echo",
       base::BindRepeating(&TestService::Echo, base::Unretained(this)),
       base::BindOnce(&TestService::OnExported, base::Unretained(this)));
   ++num_methods;
 
   exported_object_->ExportMethod(
-      "org.chromium.TestInterface", "SlowEcho",
+      "org.Cinaseek.TestInterface", "SlowEcho",
       base::BindRepeating(&TestService::SlowEcho, base::Unretained(this)),
       base::BindOnce(&TestService::OnExported, base::Unretained(this)));
   ++num_methods;
 
   exported_object_->ExportMethod(
-      "org.chromium.TestInterface", "AsyncEcho",
+      "org.Cinaseek.TestInterface", "AsyncEcho",
       base::BindRepeating(&TestService::AsyncEcho, base::Unretained(this)),
       base::BindOnce(&TestService::OnExported, base::Unretained(this)));
   ++num_methods;
 
   exported_object_->ExportMethod(
-      "org.chromium.TestInterface", "BrokenMethod",
+      "org.Cinaseek.TestInterface", "BrokenMethod",
       base::BindRepeating(&TestService::BrokenMethod, base::Unretained(this)),
       base::BindOnce(&TestService::OnExported, base::Unretained(this)));
   ++num_methods;
 
   exported_object_->ExportMethod(
-      "org.chromium.TestInterface", "PerformAction",
+      "org.Cinaseek.TestInterface", "PerformAction",
       base::BindRepeating(&TestService::PerformAction, base::Unretained(this)),
       base::BindOnce(&TestService::OnExported, base::Unretained(this)));
   ++num_methods;
@@ -250,7 +250,7 @@ void TestService::Run(base::RunLoop* run_loop) {
   ++num_methods;
 
   exported_object_manager_ = bus_->GetExportedObject(
-      ObjectPath("/org/chromium/TestService"));
+      ObjectPath("/org/Cinaseek/TestService"));
 
   exported_object_manager_->ExportMethod(
       kObjectManagerInterface, kObjectManagerGetManagedObjects,
@@ -510,8 +510,8 @@ void TestService::GetManagedObjects(
   // Thus this looks something like:
   //
   // {
-  //   "/org/chromium/TestObject": {
-  //     "org.chromium.TestInterface": { /* Properties */ }
+  //   "/org/Cinaseek/TestObject": {
+  //     "org.Cinaseek.TestInterface": { /* Properties */ }
   //   }
   // }
 
@@ -524,11 +524,11 @@ void TestService::GetManagedObjects(
   writer.OpenArray("{oa{sa{sv}}}", &array_writer);
 
   array_writer.OpenDictEntry(&dict_entry_writer);
-  dict_entry_writer.AppendObjectPath(ObjectPath("/org/chromium/TestObject"));
+  dict_entry_writer.AppendObjectPath(ObjectPath("/org/Cinaseek/TestObject"));
   dict_entry_writer.OpenArray("{sa{sv}}", &object_array_writer);
 
   object_array_writer.OpenDictEntry(&object_dict_entry_writer);
-  object_dict_entry_writer.AppendString("org.chromium.TestInterface");
+  object_dict_entry_writer.AppendString("org.Cinaseek.TestInterface");
   AddPropertiesToWriter(&object_dict_entry_writer);
   object_array_writer.CloseContainer(&object_dict_entry_writer);
 
@@ -621,7 +621,7 @@ void TestService::AddObjectInternal(const ObjectPath& object_path) {
 
   writer.OpenArray("{sa{sv}}", &array_writer);
   array_writer.OpenDictEntry(&dict_entry_writer);
-  dict_entry_writer.AppendString("org.chromium.TestInterface");
+  dict_entry_writer.AppendString("org.Cinaseek.TestInterface");
   AddPropertiesToWriter(&dict_entry_writer);
   array_writer.CloseContainer(&dict_entry_writer);
   writer.CloseContainer(&array_writer);
@@ -642,7 +642,7 @@ void TestService::RemoveObjectInternal(const ObjectPath& object_path) {
   writer.AppendObjectPath(object_path);
 
   std::vector<std::string> interfaces;
-  interfaces.push_back("org.chromium.TestInterface");
+  interfaces.push_back("org.Cinaseek.TestInterface");
   writer.AppendArrayOfStrings(interfaces);
 
   exported_object_manager_->SendSignal(&signal);
@@ -657,7 +657,7 @@ void TestService::SendPropertyChangedSignal(const std::string& name) {
 void TestService::SendPropertyChangedSignalInternal(const std::string& name) {
   Signal signal(kPropertiesInterface, kPropertiesChanged);
   MessageWriter writer(&signal);
-  writer.AppendString("org.chromium.TestInterface");
+  writer.AppendString("org.Cinaseek.TestInterface");
 
   MessageWriter array_writer(nullptr);
   MessageWriter dict_entry_writer(nullptr);
@@ -687,7 +687,7 @@ void TestService::SendPropertyInvalidatedSignal() {
 void TestService::SendPropertyInvalidatedSignalInternal() {
   Signal signal(kPropertiesInterface, kPropertiesChanged);
   MessageWriter writer(&signal);
-  writer.AppendString("org.chromium.TestInterface");
+  writer.AppendString("org.Cinaseek.TestInterface");
 
   MessageWriter array_writer(nullptr);
   MessageWriter dict_entry_writer(nullptr);

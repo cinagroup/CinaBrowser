@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@
 #include "components/services/app_service/public/cpp/intent_util.h"
 
 namespace {
-constexpr char kGeneratedWebApkPackagePrefix[] = "org.chromium.webapk.";
+constexpr char kGeneratedWebApkPackagePrefix[] = "org.Cinaseek.webapk.";
 
 bool HasShareIntentFilter(const apps::AppUpdate& app) {
   auto intent = std::make_unique<apps::Intent>(apps_util::kIntentActionSend);

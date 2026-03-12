@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace collaboration::messaging {
 // Describes various types of actions that are taken when a recent activity row
 // is clicked. Each row corresponds to one type of action.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.collaboration.messaging
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.collaboration.messaging
 enum class RecentActivityAction {
   // No action should be taken.
   kNone = 0,

@@ -1,10 +1,10 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "third_party/blink/renderer/modules/webgl/webgl_fence_sync.h"
 
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 
 #include "gpu/command_buffer/client/gles2_interface.h"
 #include "third_party/blink/renderer/modules/webgl/webgl_context_object_support.h"

@@ -1,4 +1,4 @@
-// Copyright 2010 The Chromium Authors
+// Copyright 2010 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 // /!\ WARNING!
 //
-// Chromium compiles this file as ARC, but other dependencies pull it in and
+// Cinaseek compiles this file as ARC, but other dependencies pull it in and
 // compile it as non-ARC. Be sure that this file compiles correctly with either
 // build setting.
 //
@@ -25,7 +25,7 @@
 namespace testing::internal {
 
 static std::string StringFromNSString(NSString* string) {
-  // Note that -[NSString UTF8String] is banned in Chromium code because
+  // Note that -[NSString UTF8String] is banned in Cinaseek code because
   // base::SysNSStringToUTF8() is safer, but //testing isn't allowed to depend
   // on //base, so deliberately ignore that function ban.
   const char* utf_string = string.UTF8String;

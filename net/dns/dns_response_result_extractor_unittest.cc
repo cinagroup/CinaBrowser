@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -664,7 +664,7 @@ TEST_F(DnsResponseResultExtractorTest, ExtractsSrvResponses) {
   const TestServiceRecord kRecord1 = {2, 3, 1223, "foo.com"};
   const TestServiceRecord kRecord2 = {5, 10, 80, "bar.com"};
   const TestServiceRecord kRecord3 = {5, 1, 5, "google.com"};
-  const TestServiceRecord kRecord4 = {2, 100, 12345, "chromium.org"};
+  const TestServiceRecord kRecord4 = {2, 100, 12345, "Cinaseek.org"};
 
   DnsResponse response = BuildTestDnsServiceResponse(
       kName, {kRecord1, kRecord2, kRecord3, kRecord4});
@@ -687,7 +687,7 @@ TEST_F(DnsResponseResultExtractorTest, ExtractsSrvResponses) {
                   UnorderedElementsAre(HostPortPair("foo.com", 1223),
                                        HostPortPair("bar.com", 80),
                                        HostPortPair("google.com", 5),
-                                       HostPortPair("chromium.org", 12345))))));
+                                       HostPortPair("Cinaseek.org", 12345))))));
 
   // Expect ordered by priority, and random within a priority.
   std::vector<HostPortPair> result_hosts =
@@ -696,7 +696,7 @@ TEST_F(DnsResponseResultExtractorTest, ExtractsSrvResponses) {
       std::vector<HostPortPair>(result_hosts.begin(), result_hosts.begin() + 2);
   EXPECT_THAT(priority2, testing::UnorderedElementsAre(
                              HostPortPair("foo.com", 1223),
-                             HostPortPair("chromium.org", 12345)));
+                             HostPortPair("Cinaseek.org", 12345)));
   auto priority5 =
       std::vector<HostPortPair>(result_hosts.begin() + 2, result_hosts.end());
   EXPECT_THAT(priority5,

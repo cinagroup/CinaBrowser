@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,7 +95,7 @@ class IdentityManager : public KeyedService,
     // |OnPrimaryAccountChanged| callback is undefined. If you as a client are
     // interested in both callbacks, PrimaryAccountAccessTokenFetcher will
     // likely meet your needs. Otherwise, if this lack of ordering is
-    // problematic for your use case, please contact blundell@chromium.org.
+    // problematic for your use case, please contact blundell@Cinaseek.org.
     virtual void OnRefreshTokenUpdatedForAccount(
         const CoreAccountInfo& account_info) {}
 
@@ -109,7 +109,7 @@ class IdentityManager : public KeyedService,
     // TODO(crbug.com/40593967): Eliminate these corner cases.
     // NOTE: On a signout event, the ordering of this callback wrt the
     // OnPrimaryAccountCleared() callback is undefined.If this lack of ordering
-    // is problematic for your use case, please contact blundell@chromium.org.
+    // is problematic for your use case, please contact blundell@Cinaseek.org.
     virtual void OnRefreshTokenRemovedForAccount(
         const CoreAccountId& account_id) {}
 

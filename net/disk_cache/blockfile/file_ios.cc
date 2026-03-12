@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ void FileInFlightIO::OnOperationComplete(disk_cache::BackgroundIO* operation,
   // TODO(morlovich): It may be better to refactor this so that the callback is
   // just owned here; that would require splitting ChildDeleter to have rather
   // than be one. See
-  // https://chromium-review.googlesource.com/c/chromium/src/+/6426561/2..3/net/disk_cache/blockfile/file_ios.cc#b45
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6426561/2..3/net/disk_cache/blockfile/file_ios.cc#b45
   op->ReleaseCallback()->OnFileIOComplete(bytes);
 }
 

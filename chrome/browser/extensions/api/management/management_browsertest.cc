@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -589,7 +589,7 @@ namespace {
 const char kForceInstallNotEmptyHelp[] =
     "A policy may already be controlling the list of force-installed "
     "extensions. Please remove all policy settings from your computer "
-    "before running tests. E.g. from /etc/chromium/policies Linux or "
+    "before running tests. E.g. from /etc/Cinaseek/policies Linux or "
     "from the registry on Windows, etc.";
 
 }

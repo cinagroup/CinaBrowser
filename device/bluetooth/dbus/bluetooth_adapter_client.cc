@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -164,9 +164,9 @@ BluetoothAdapterClient::Error::Error(const std::string& name,
     : name(name), message(message) {}
 
 const char BluetoothAdapterClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 const char BluetoothAdapterClient::kUnknownAdapterError[] =
-    "org.chromium.Error.UnknownAdapter";
+    "org.Cinaseek.Error.UnknownAdapter";
 
 BluetoothAdapterClient::Properties::Properties(
     dbus::ObjectProxy* object_proxy,

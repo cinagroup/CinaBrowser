@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace ash {
 // Stores network policies for a shill profile.
 // Understands some ONC (OpenNetworkConfiguration) concepts such as
 // NetworkConfiguration and ONC variable expansion (
-// https://chromium.googlesource.com/chromium/src/+/main/components/onc/docs/onc_spec.md#String-Expansions
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/components/onc/docs/onc_spec.md#String-Expansions
 // ).
 // Variable expansions can be set on the ProfilePolicies level using
 // ProfilePolicies::SetProfileWideExpansions where they apply to all network

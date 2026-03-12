@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -796,7 +796,7 @@ TEST_F(GURLTest, Replacements) {
            },
        .expected = "steam:b"},
 
-      // Test cases that Chromium used to parse incorrectly.
+      // Test cases that Cinaseek used to parse incorrectly.
       {.base = "git://a1/a2?a3=a4#a5",
        .apply_replacements =
            +[](const GURL& url) {
@@ -1220,7 +1220,7 @@ TEST_F(GURLTest, ContentForNonStandardURLs) {
       {"javascript:#", "#"},
       {"javascript:alert('#');", "alert('#');"},
 
-      // Test cases which Chromium used to handle wrongly.
+      // Test cases which Cinaseek used to handle wrongly.
       {"blob://http://example.com/GUID", "http//example.com/GUID"},
       {"git://host/path#fragment", "host/path"},
   };
@@ -1253,7 +1253,7 @@ TEST_F(GURLTest, PathForNonStandardURLs) {
       {"data:text/html,Question?<div style=\"color: #bad\">idea</div>",
        "text/html,Question"},
 
-      // Test cases which Chromium used to handle wrongly.
+      // Test cases which Cinaseek used to handle wrongly.
       {"blob://http://example.com/GUID", "//example.com/GUID"},
       {"git://host/path#fragment", "/path"},
 

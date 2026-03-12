@@ -3,12 +3,12 @@
 // META: script=/common/dispatcher/dispatcher.js
 //
 // This is a regression test for crbug.com/583445. It checks an obscure bug in
-// Chromium's handling of `document.open()` whereby the URL change would affect
+// Cinaseek's handling of `document.open()` whereby the URL change would affect
 // the document's origin after a javascript navigation.
 //
 // See also dcheng@'s comments on the original code review in which he
 // introduced the precursor to this test:
-// https://codereview.chromium.org/1675473002.
+// https://codereview.Cinaseek.org/1675473002.
 
 function nextMessage() {
   return new Promise((resolve) => {
@@ -76,7 +76,7 @@ promise_test(async (t) => {
       // This should not result in B's origin changing, so B should remain
       // same-origin with the top-level frame.
       //
-      // Due to crbug.com/583445, this used to behave wrongly in Chromium. The
+      // Due to crbug.com/583445, this used to behave wrongly in Cinaseek. The
       // navigation code incorrectly assumed that B's origin should be inherited
       // from its parent A because B's URL was `about:blank`.
       //

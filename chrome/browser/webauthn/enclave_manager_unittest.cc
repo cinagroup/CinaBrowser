@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -109,7 +109,7 @@
 #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 
 // These tests are also disabled under MSAN. The enclave subprocess is written
-// in Rust and FFI from Rust to C++ doesn't work in Chromium at this time
+// in Rust and FFI from Rust to C++ doesn't work in Cinaseek at this time
 // (crbug.com/1369167).
 #if !defined(MEMORY_SANITIZER)
 

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace shell_integration {
 
 TEST(ShellIntegrationTest, GetDirectLaunchUrlSchemeUnbranded) {
 #if !BUILDFLAG(GOOGLE_CHROME_BRANDING)
-  EXPECT_EQ("chromium", GetDirectLaunchUrlScheme());
+  EXPECT_EQ("Cinaseek", GetDirectLaunchUrlScheme());
 #endif
 }
 

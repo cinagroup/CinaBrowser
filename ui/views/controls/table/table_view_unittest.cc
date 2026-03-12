@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -717,7 +717,7 @@ INSTANTIATE_TEST_SUITE_P(
 
 // Using one of the arrow keys (which normally change selection) with an empty
 // table must leave the selection state empty.
-// Regression test for https://issues.chromium.org/issues/342341277
+// Regression test for https://issues.Cinaseek.org/issues/342341277
 TEST_P(TableViewTest, SelectedIndexWithNoRows) {
   model_->Clear();
   table_->RequestFocus();

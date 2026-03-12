@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,11 +52,11 @@ class StructTraits<tracing::mojom::DataSourceConfigDataView,
   }
   static const std::string& system_metrics_config_raw(
       const perfetto::DataSourceConfig& src) {
-    return src.chromium_system_metrics_raw();
+    return src.Cinaseek_system_metrics_raw();
   }
   static const std::string& histogram_samples_config_raw(
       const perfetto::DataSourceConfig& src) {
-    return src.chromium_histogram_samples_raw();
+    return src.Cinaseek_histogram_samples_raw();
   }
 
   static std::optional<perfetto::protos::gen::InterceptorConfig>

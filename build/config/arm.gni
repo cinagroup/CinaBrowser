@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -78,7 +78,7 @@ if (current_cpu == "arm" || v8_current_cpu == "arm") {
 
     if ((is_android || is_linux) && target_cpu == "arm64") {
       # Enable PAC and BTI on AArch64 Linux/Android systems.
-      # target_cpu == "arm64" filters out some cases (e.g. the ChromeOS x64
+      # target_cpu == "arm64" filters out some cases (e.g. the CinaseekOS x64
       # MSAN build) where the target platform is x64, but V8 is configured to
       # use the arm64 simulator.
       arm_control_flow_integrity = "standard"

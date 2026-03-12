@@ -11,7 +11,7 @@ async function testFourColorsDecode(filename, mimeType, options = {}) {
   });
 }
 
-// Note: Requiring all data to do YUV decoding is a Chromium limitation, other
+// Note: Requiring all data to do YUV decoding is a Cinaseek limitation, other
 // implementations may support YUV decode with partial ReadableStream data.
 async function testFourColorsYuvDecode(filename, mimeType, options = {}) {
   return ImageDecoder.isTypeSupported(mimeType).then(support => {

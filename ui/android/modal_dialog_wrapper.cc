@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -322,11 +322,11 @@ void ModalDialogWrapper::BuildPropertyModel() {
 
     // Create the 2D Java array for callbacks.
     ScopedJavaLocalRef<jclass> jni_callback_class =
-        base::android::GetClass(env, "org/chromium/base/JniRepeatingCallback");
+        base::android::GetClass(env, "org/Cinaseek/base/JniRepeatingCallback");
 
     // To get the class for an array of JniRepeatingCallback, we can create a
     // dummy array and get its class. This is necessary because the standard
-    // "[Lorg/chromium/base/JniRepeatingCallback;" does not work.
+    // "[Lorg/Cinaseek/base/JniRepeatingCallback;" does not work.
     ScopedJavaLocalRef<jobjectArray> dummy_array =
         ScopedJavaLocalRef<jobjectArray>::Adopt(
             env, env->NewObjectArray(0, jni_callback_class.obj(), nullptr));

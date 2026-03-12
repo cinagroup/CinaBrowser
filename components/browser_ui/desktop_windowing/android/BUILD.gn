@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,9 +6,9 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/desktop_windowing/AppHeaderState.java",
-    "java/src/org/chromium/components/browser_ui/desktop_windowing/AppHeaderStateProvider.java",
-    "java/src/org/chromium/components/browser_ui/desktop_windowing/DesktopWindowStateManager.java",
+    "java/src/org/Cinaseek/components/browser_ui/desktop_windowing/AppHeaderState.java",
+    "java/src/org/Cinaseek/components/browser_ui/desktop_windowing/AppHeaderStateProvider.java",
+    "java/src/org/Cinaseek/components/browser_ui/desktop_windowing/DesktopWindowStateManager.java",
   ]
 
   deps = [
@@ -18,7 +18,7 @@ android_library("java") {
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/components/browser_ui/desktop_windowing/AppHeaderStateUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/desktop_windowing/AppHeaderStateUnitTest.java" ]
 
   deps = [
     ":java",

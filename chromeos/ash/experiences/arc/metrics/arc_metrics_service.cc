@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ constexpr int kUmaDataSizeInMBMin = 1;
 constexpr int kUmaDataSizeInMBMax = 1000000;  // 1 TB.
 
 constexpr base::TimeDelta kRequestProcessListPeriod = base::Minutes(5);
-constexpr char kArcProcessNamePrefix[] = "org.chromium.arc.";
+constexpr char kArcProcessNamePrefix[] = "org.Cinaseek.arc.";
 constexpr char kGmsProcessNamePrefix[] = "com.google.android.gms";
 constexpr char kBootProgressEnableScreen[] = "boot_progress_enable_screen";
 constexpr char kBootProgressArcUpgraded[] = "boot_progress_arc_upgraded";

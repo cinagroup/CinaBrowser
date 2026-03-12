@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace media {
 
 // TODO(crbug.com/469819307): These APIs are available in Android 17
-// but are not yet exposed in the NDK headers used by Chromium. We declare them
+// but are not yet exposed in the NDK headers used by Cinaseek. We declare them
 // manually here to use them via dlsym. Once the NDK is updated to support these
 // APIs, these forward declarations and typedefs should be removed in favor of
 // including <media/NdkMediaCodec.h>.

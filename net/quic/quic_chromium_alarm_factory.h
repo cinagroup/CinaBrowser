@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -22,16 +22,16 @@ class SequencedTaskRunner;
 
 namespace net {
 
-class NET_EXPORT_PRIVATE QuicChromiumAlarmFactory
+class NET_EXPORT_PRIVATE QuicCinaseekAlarmFactory
     : public quic::QuicAlarmFactory {
  public:
-  QuicChromiumAlarmFactory(base::SequencedTaskRunner* task_runner,
+  QuicCinaseekAlarmFactory(base::SequencedTaskRunner* task_runner,
                            const quic::QuicClock* clock);
 
-  QuicChromiumAlarmFactory(const QuicChromiumAlarmFactory&) = delete;
-  QuicChromiumAlarmFactory& operator=(const QuicChromiumAlarmFactory&) = delete;
+  QuicCinaseekAlarmFactory(const QuicCinaseekAlarmFactory&) = delete;
+  QuicCinaseekAlarmFactory& operator=(const QuicCinaseekAlarmFactory&) = delete;
 
-  ~QuicChromiumAlarmFactory() override;
+  ~QuicCinaseekAlarmFactory() override;
 
   // quic::QuicAlarmFactory
   quic::QuicAlarm* CreateAlarm(quic::QuicAlarm::Delegate* delegate) override;

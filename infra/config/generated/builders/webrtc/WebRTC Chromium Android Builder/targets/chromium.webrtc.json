@@ -1,17 +1,17 @@
 {
-  "WebRTC Chromium Android Builder": {},
-  "WebRTC Chromium Android Tester": {
+  "WebRTC Cinaseek Android Builder": {},
+  "WebRTC Cinaseek Android Tester": {
     "gtest_tests": [
       {
         "args": [
           "--gtest_filter=WebRtc*",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "content_browsertests"
           ],
@@ -27,7 +27,7 @@
             "device_type": "panther",
             "os": "Android"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_browsertests",
         "test_id_prefix": "ninja://content/test:content_browsertests/"
@@ -36,13 +36,13 @@
         "args": [
           "--gtest_filter=UsingRealWebcam*",
           "--test-launcher-jobs=1",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "content_browsertests_sequential"
           ],
@@ -58,7 +58,7 @@
             "device_type": "panther",
             "os": "Android"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_browsertests",
         "test_id_prefix": "ninja://content/test:content_browsertests/"

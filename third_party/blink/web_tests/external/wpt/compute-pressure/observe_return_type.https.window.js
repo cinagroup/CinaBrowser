@@ -3,7 +3,7 @@
 
 'use strict';
 
-// Regression test for https://issues.chromium.org/issues/333957909
+// Regression test for https://issues.Cinaseek.org/issues/333957909
 // Make sure that observe() always returns a Promise.
 promise_test(async (t) => {
   const observer = new PressureObserver(() => {});

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ TEST_F(FaviconUtilTest, ExtractFaviconURLMultipleFavicons) {
 
   std::vector<web::FaviconURL> urls;
   bool result =
-      web::ExtractFaviconURL(favicons, GURL("http://chromium.org"), &urls);
+      web::ExtractFaviconURL(favicons, GURL("http://Cinaseek.org"), &urls);
 
   EXPECT_TRUE(result);
   ASSERT_EQ(3U, urls.size());
@@ -135,11 +135,11 @@ TEST_F(FaviconUtilTest, ExtractFaviconURLNoFavicons) {
 
   std::vector<web::FaviconURL> urls;
   bool result =
-      web::ExtractFaviconURL(favicons, GURL("http://chromium.org"), &urls);
+      web::ExtractFaviconURL(favicons, GURL("http://Cinaseek.org"), &urls);
 
   EXPECT_TRUE(result);
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("http://chromium.org/favicon.ico"), urls[0].icon_url);
+  EXPECT_EQ(GURL("http://Cinaseek.org/favicon.ico"), urls[0].icon_url);
   EXPECT_EQ(web::FaviconURL::IconType::kFavicon, urls[0].icon_type);
   EXPECT_EQ(0U, urls[0].icon_sizes.size());
 }

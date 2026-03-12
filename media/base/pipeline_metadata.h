@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ struct MEDIA_EXPORT PipelineMetadata {
   PipelineMetadata();
   ~PipelineMetadata();
 
-  // Required by Chromium style: Complex class/struct needs an explicit
+  // Required by Cinaseek style: Complex class/struct needs an explicit
   // out-of-line copy constructor.
   PipelineMetadata(const PipelineMetadata&);
 

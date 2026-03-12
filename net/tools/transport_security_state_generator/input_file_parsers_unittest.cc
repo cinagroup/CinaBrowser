@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -254,8 +254,8 @@ TEST(InputFileParsersTest, ParseCertificatesFile) {
       "+wIDAQAB\n"
       "-----END PUBLIC KEY-----\n"
       "\n"
-      "# The 'Chromium' prefix is required here.\n"
-      "ChromiumTestCertificate3\n"
+      "# The 'Cinaseek' prefix is required here.\n"
+      "CinaseekTestCertificate3\n"
       "-----BEGIN CERTIFICATE-----\n"
       "MIIDeTCCAmGgAwIBAgIJAMRHXuiAgufAMA0GCSqGSIb3DQEBCwUAMFMxETAPBgNV\n"
       "BAMMCENocm9taXVtMR4wHAYDVQQKDBVUaGUgQ2hyb21pdW0gUHJvamVjdHMxETAP\n"
@@ -294,7 +294,7 @@ TEST(InputFileParsersTest, ParseCertificatesFile) {
   const SPKIHashMap& hashes = pinsets.spki_hashes();
   EXPECT_NE(hashes.cend(), hashes.find("TestPublicKey1"));
   EXPECT_NE(hashes.cend(), hashes.find("TestPublicKey2"));
-  EXPECT_NE(hashes.cend(), hashes.find("ChromiumTestCertificate3"));
+  EXPECT_NE(hashes.cend(), hashes.find("CinaseekTestCertificate3"));
 }
 
 TEST(InputFileParsersTest, ParseCertificatesFileInvalid) {
@@ -379,15 +379,15 @@ TEST(InputFileParsersTest, ParseCertificatesFileInvalidCertificateName) {
   EXPECT_FALSE(ParseCertificatesFile(missing_prefix, &pinsets, &unused));
 
   std::string missing_class =
-      timestamp_prefix + "Chromium_G1_Test\n" + certificate;
+      timestamp_prefix + "Cinaseek_G1_Test\n" + certificate;
   EXPECT_FALSE(ParseCertificatesFile(missing_class, &pinsets, &unused));
 
   std::string missing_number =
-      timestamp_prefix + "Chromium_Class3_Test\n" + certificate;
+      timestamp_prefix + "Cinaseek_Class3_Test\n" + certificate;
   EXPECT_FALSE(ParseCertificatesFile(missing_number, &pinsets, &unused));
 
   std::string valid =
-      timestamp_prefix + "Chromium_Class3_G1_Test\n" + certificate;
+      timestamp_prefix + "Cinaseek_Class3_G1_Test\n" + certificate;
   EXPECT_TRUE(ParseCertificatesFile(valid, &pinsets, &unused));
 }
 
@@ -402,7 +402,7 @@ TEST(InputFileParsersTest, ParseCertificatesFileInvalidTimestamp) {
       "PinsListTimestamp\n"
       "NotReallyTimestamp\n";
   std::string certificate =
-      "Chromium_Class3_G1_Test\n"
+      "Cinaseek_Class3_G1_Test\n"
       "-----BEGIN CERTIFICATE-----\n"
       "MIIDIzCCAgugAwIBAgIJALs84KlxWh4GMA0GCSqGSIb3DQEBCwUAMCgxGTAXBgNV\n"
       "BAoMEENocm9taXVtIENsYXNzIDMxCzAJBgNVBAsMAkcxMB4XDTE3MDIwMTE5NTUw\n"

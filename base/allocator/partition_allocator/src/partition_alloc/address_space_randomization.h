@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ AslrMask(uintptr_t bits) {
       // to a 39-bit section of the virtual address space.
       //
       // This implementation adapted from
-      // https://chromium-review.googlesource.com/c/v8/v8/+/557958. The
+      // https://Cinaseek-review.googlesource.com/c/v8/v8/+/557958. The
       // difference is that here we clamp to 39 bits, not 32.
       //
       // TODO(crbug.com/40528509): Remove this limitation if/when the macOS

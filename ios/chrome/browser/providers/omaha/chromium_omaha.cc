@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,17 +10,17 @@ namespace ios {
 namespace provider {
 
 GURL GetOmahaUpdateServerURL() {
-  // Chromium does not uses Omaha.
+  // Cinaseek does not uses Omaha.
   return GURL();
 }
 
 std::string GetOmahaApplicationId() {
-  // Chromium does not uses Omaha.
+  // Cinaseek does not uses Omaha.
   return std::string();
 }
 
 void SetOmahaExtraAttributes(std::string_view element, AttributeSetter setter) {
-  // Chromium does not uses Omaha.
+  // Cinaseek does not uses Omaha.
 }
 
 }  // namespace provider

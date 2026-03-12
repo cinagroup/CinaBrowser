@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,15 +14,15 @@
 namespace updater {
 
 std::string BrowserUpdaterClient::GetAppId() {
-  NOTREACHED() << "Chromium Updater does not manage the browser on Linux";
+  NOTREACHED() << "Cinaseek Updater does not manage the browser on Linux";
 }
 
 base::FilePath BrowserUpdaterClient::GetExpectedEcp() {
-  NOTREACHED() << "Chromium Updater does not manage the browser on Linux";
+  NOTREACHED() << "Cinaseek Updater does not manage the browser on Linux";
 }
 
 RegistrationRequest BrowserUpdaterClient::GetRegistrationRequest() {
-  NOTREACHED() << "Chromium Updater does not manage the browser on Linux";
+  NOTREACHED() << "Cinaseek Updater does not manage the browser on Linux";
 }
 
 bool BrowserUpdaterClient::AppMatches(const UpdateService::AppState& app) {

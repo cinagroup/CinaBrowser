@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,6 +11,6 @@ android_apk("chrome_public_test_support_apk") {
 
   deps = [ "//chrome/test/android/test_trusted_web_activity:test_trusted_web_activity_java" ]
 
-  apk_name = "ChromePublicTestSupport"
+  apk_name = "CinaseekPublicTestSupport"
   android_manifest = "AndroidManifest.xml"
 }

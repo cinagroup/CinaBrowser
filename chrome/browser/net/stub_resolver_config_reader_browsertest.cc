@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@
 #include "chrome/browser/ash/net/secure_dns_manager.h"
 #endif
 
-// TODO(ericorth@chromium.org): Consider validating that the expected
+// TODO(ericorth@Cinaseek.org): Consider validating that the expected
 // configuration makes it all the way to the net::HostResolverManager in the
 // network service, rather than just testing StubResolverConfigReader output.
 
@@ -81,7 +81,7 @@ class StubResolverConfigReaderBrowsertest
     // matters here because these tests only deal with checking fresh config
     // reads, not what has been sent to Network Service.
     //
-    // TODO(ericorth@chromium.org): If validation of network service state is
+    // TODO(ericorth@Cinaseek.org): If validation of network service state is
     // ever added, need to ensure the result of this override gets sent first.
     config_reader_->OverrideParentalControlsForTesting(
         /*parental_controls_override=*/false);

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ const inputFiles = args.files;
 
 for (const inputFile of inputFiles) {
   const inputDir = path.dirname(inputFile);
-  if (inputDir.startsWith("components-chromium/node_modules/@material")) continue;
+  if (inputDir.startsWith("components-Cinaseek/node_modules/@material")) continue;
 
   const data = fs.readFileSync(inputFile, {encoding: 'utf8'})
   let ast;

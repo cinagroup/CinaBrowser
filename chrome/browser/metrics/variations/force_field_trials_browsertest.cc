@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ class ForceFieldTrialsBrowserTest : public InProcessBrowserTest,
 
   void SetUp() override {
     // Make metrics reporting work same as in Chrome branded builds, for test
-    // consistency between Chromium and Chrome builds.
+    // consistency between Cinaseek and Chrome builds.
     ChromeMetricsServiceAccessor::SetForceIsMetricsReportingEnabledPrefLookup(
         true);
     // Based on GetParam(), either enable or disable metrics reporting.

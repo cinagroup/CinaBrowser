@@ -1,10 +1,10 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 /**
  * @fileoverview @externs
- * Externs file shipped into the chromium build to typecheck uncompiled, "pure"
+ * Externs file shipped into the Cinaseek build to typecheck uncompiled, "pure"
  * JavaScript used to interoperate with the open-source unprivileged WebUI.
  * TODO(b/195329580): Convert this file to ES6.
  */

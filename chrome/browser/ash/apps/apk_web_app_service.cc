@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ const char kSha256FingerprintKey[] = "sha256_fingerprint";
 
 constexpr char kLastAppId[] = "last_app_id";
 constexpr char kPinIndex[] = "pin_index";
-constexpr char kGeneratedWebApkPackagePrefix[] = "org.chromium.webapk.";
+constexpr char kGeneratedWebApkPackagePrefix[] = "org.Cinaseek.webapk.";
 
 // Default icon size in pixels to request from ARC for an icon.
 const int kDefaultIconSize = 192;

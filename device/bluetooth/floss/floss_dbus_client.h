@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,40 +36,40 @@ extern DEVICE_BLUETOOTH_EXPORT int kDBusTimeoutMs;
 extern DEVICE_BLUETOOTH_EXPORT int kAdapterEnabledTimeoutMs;
 
 // TODO(b/189499077) - Expose via floss package
-inline constexpr char kAdapterService[] = "org.chromium.bluetooth";
-inline constexpr char kManagerService[] = "org.chromium.bluetooth.Manager";
+inline constexpr char kAdapterService[] = "org.Cinaseek.bluetooth";
+inline constexpr char kManagerService[] = "org.Cinaseek.bluetooth.Manager";
 
 inline constexpr char kAdapterLoggingObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/logging";
+    "/org/Cinaseek/bluetooth/hci%d/logging";
 inline constexpr char kAdapterObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/adapter";
+    "/org/Cinaseek/bluetooth/hci%d/adapter";
 inline constexpr char kAdminObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/admin";
+    "/org/Cinaseek/bluetooth/hci%d/admin";
 inline constexpr char kBatteryManagerObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/battery_manager";
+    "/org/Cinaseek/bluetooth/hci%d/battery_manager";
 inline constexpr char kBluetoothTelephonyObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/telephony";
+    "/org/Cinaseek/bluetooth/hci%d/telephony";
 inline constexpr char kGattObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/gatt";
-inline constexpr char kManagerObject[] = "/org/chromium/bluetooth/Manager";
+    "/org/Cinaseek/bluetooth/hci%d/gatt";
+inline constexpr char kManagerObject[] = "/org/Cinaseek/bluetooth/Manager";
 inline constexpr char kMediaObjectFormat[] =
-    "/org/chromium/bluetooth/hci%d/media";
+    "/org/Cinaseek/bluetooth/hci%d/media";
 
-inline constexpr char kAdapterInterface[] = "org.chromium.bluetooth.Bluetooth";
+inline constexpr char kAdapterInterface[] = "org.Cinaseek.bluetooth.Bluetooth";
 inline constexpr char kAdapterLoggingInterface[] =
-    "org.chromium.bluetooth.Logging";
+    "org.Cinaseek.bluetooth.Logging";
 inline constexpr char kAdminInterface[] =
-    "org.chromium.bluetooth.BluetoothAdmin";
+    "org.Cinaseek.bluetooth.BluetoothAdmin";
 inline constexpr char kBatteryManagerInterface[] =
-    "org.chromium.bluetooth.BatteryManager";
+    "org.Cinaseek.bluetooth.BatteryManager";
 inline constexpr char kBluetoothTelephonyInterface[] =
-    "org.chromium.bluetooth.BluetoothTelephony";
+    "org.Cinaseek.bluetooth.BluetoothTelephony";
 inline constexpr char kExperimentalInterface[] =
-    "org.chromium.bluetooth.Experimental";
-inline constexpr char kGattInterface[] = "org.chromium.bluetooth.BluetoothGatt";
-inline constexpr char kManagerInterface[] = "org.chromium.bluetooth.Manager";
+    "org.Cinaseek.bluetooth.Experimental";
+inline constexpr char kGattInterface[] = "org.Cinaseek.bluetooth.BluetoothGatt";
+inline constexpr char kManagerInterface[] = "org.Cinaseek.bluetooth.Manager";
 inline constexpr char kSocketManagerInterface[] =
-    "org.chromium.bluetooth.SocketManager";
+    "org.Cinaseek.bluetooth.SocketManager";
 
 namespace adapter {
 inline constexpr char kGetAddress[] = "GetAddress";
@@ -124,9 +124,9 @@ inline constexpr char kGetSupportedRoles[] = "GetSupportedRoles";
 
 // TODO(abps) - Rename this to AdapterCallback in platform and here
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.BluetoothCallback";
+    "org.Cinaseek.bluetooth.BluetoothCallback";
 inline constexpr char kConnectionCallbackInterface[] =
-    "org.chromium.bluetooth.BluetoothConnectionCallback";
+    "org.Cinaseek.bluetooth.BluetoothConnectionCallback";
 
 inline constexpr char kOnAdapterPropertyChanged[] = "OnAdapterPropertyChanged";
 inline constexpr char kOnAddressChanged[] = "OnAddressChanged";
@@ -168,7 +168,7 @@ inline constexpr char kSetDesiredDefaultAdapter[] = "SetDesiredDefaultAdapter";
 inline constexpr char kGetFlossApiVersion[] = "GetFlossApiVersion";
 inline constexpr char kRegisterCallback[] = "RegisterCallback";
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.ManagerCallback";
+    "org.Cinaseek.bluetooth.ManagerCallback";
 inline constexpr char kOnHciDeviceChanged[] = "OnHciDeviceChanged";
 inline constexpr char kOnHciEnabledChanged[] = "OnHciEnabledChanged";
 inline constexpr char kOnDefaultAdapterChanged[] = "OnDefaultAdapterChanged";
@@ -202,7 +202,7 @@ inline constexpr char kCreateRfcommSocketToServiceRecord[] =
 inline constexpr char kAccept[] = "Accept";
 inline constexpr char kClose[] = "Close";
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.SocketManagerCallback";
+    "org.Cinaseek.bluetooth.SocketManagerCallback";
 
 inline constexpr char kOnIncomingSocketReady[] = "OnIncomingSocketReady";
 inline constexpr char kOnIncomingSocketClosed[] = "OnIncomingSocketClosed";
@@ -234,9 +234,9 @@ inline constexpr char kConfigureMtu[] = "ConfigureMtu";
 inline constexpr char kConnectionParameterUpdate[] =
     "ConnectionParameterUpdate";
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.BluetoothGattCallback";
+    "org.Cinaseek.bluetooth.BluetoothGattCallback";
 inline constexpr char kServerCallbackInterface[] =
-    "org.chromium.bluetooth.BluetoothGattServerCallback";
+    "org.Cinaseek.bluetooth.BluetoothGattServerCallback";
 
 inline constexpr char kOnClientRegistered[] = "OnClientRegistered";
 inline constexpr char kOnClientConnectionState[] = "OnClientConnectionState";
@@ -301,7 +301,7 @@ inline constexpr char kSetPeriodicAdvertisingEnable[] =
     "SetPeriodicAdvertisingEnable";
 
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.AdvertisingSetCallback";
+    "org.Cinaseek.bluetooth.AdvertisingSetCallback";
 inline constexpr char kOnAdvertisingSetStarted[] = "OnAdvertisingSetStarted";
 inline constexpr char kOnOwnAddressRead[] = "OnOwnAddressRead";
 inline constexpr char kOnAdvertisingSetStopped[] = "OnAdvertisingSetStopped";
@@ -320,7 +320,7 @@ inline constexpr char kOnPeriodicAdvertisingEnabled[] =
 
 namespace battery_manager {
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.BatteryManagerCallback";
+    "org.Cinaseek.bluetooth.BatteryManagerCallback";
 inline constexpr char kRegisterBatteryCallback[] = "RegisterBatteryCallback";
 inline constexpr char kUnregisterBatteryCallback[] =
     "UnregisterBatteryCallback";
@@ -337,7 +337,7 @@ namespace admin {
 inline constexpr char kRegisterCallback[] = "RegisterAdminPolicyCallback";
 inline constexpr char kUnregisterCallback[] = "UnregisterAdminPolicyCallback";
 inline constexpr char kCallbackInterface[] =
-    "org.chromium.bluetooth.AdminPolicyCallback";
+    "org.Cinaseek.bluetooth.AdminPolicyCallback";
 inline constexpr char kOnServiceAllowlistChanged[] =
     "OnServiceAllowlistChanged";
 inline constexpr char kOnDevicePolicyEffectChanged[] =

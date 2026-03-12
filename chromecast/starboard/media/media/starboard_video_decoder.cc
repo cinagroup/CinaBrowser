@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,7 +72,7 @@ static StarboardVideoSampleInfo ToVideoSampleInfo(const VideoConfig& config) {
   // the MIME string. See b/230915942 for more info.
   // Unfortunately, it doesn't look like MIME type is exposed to cast. Note that
   // in Cobalt, these fields are all currently hard-coded to zero (in
-  // third_party/chromium/media/base/starboard_utils.cc). I don't think they're
+  // third_party/Cinaseek/media/base/starboard_utils.cc). I don't think they're
   // necessary for cast either, since cast doesn't seem to populate this info
   // anywhere.
 

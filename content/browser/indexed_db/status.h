@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class Database;
 namespace content::indexed_db {
 
 // A backing store status code and optionally an error message. This status code
-// may have originated from the database engine or from the Chromium code. See
+// may have originated from the database engine or from the Cinaseek code. See
 // notes above `type_`.
 class CONTENT_EXPORT Status {
  public:
@@ -86,7 +86,7 @@ class CONTENT_EXPORT Status {
     kCorruption = 2,
 
     // Generally speaking, indicates a programming error or unexpected state in
-    // Chromium. For example, an invalid object store ID is sent as a parameter
+    // Cinaseek. For example, an invalid object store ID is sent as a parameter
     // over IPC.
     kInvalidArgument = 3,
 
@@ -118,7 +118,7 @@ class CONTENT_EXPORT Status {
   Type type_;
 
   // The LevelDB status and SQLite result code are mutually exclusive, and both
-  // may be null if the error originated in engine-agnostic Chromium code.
+  // may be null if the error originated in engine-agnostic Cinaseek code.
   std::optional<leveldb::Status> leveldb_status_;
   std::optional<sql::SqliteResultCode> sqlite_code_;
   std::string msg_;

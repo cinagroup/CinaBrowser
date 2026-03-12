@@ -1,8 +1,8 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/crypto_test_utils_chromium.h"
+#include "net/quic/crypto_test_utils_Cinaseek.h"
 
 #include <utility>
 
@@ -23,8 +23,8 @@
 #include "net/cert/x509_util.h"
 #include "net/http/transport_security_state.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/crypto/proof_source_chromium.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/ssl/ssl_config_service.h"
 #include "net/test/cert_test_util.h"
 #include "net/test/test_data_directory.h"
@@ -36,8 +36,8 @@ using std::string;
 
 namespace net::test {
 
-std::unique_ptr<quic::ProofSource> ProofSourceForTestingChromium() {
-  auto source = std::make_unique<net::ProofSourceChromium>();
+std::unique_ptr<quic::ProofSource> ProofSourceForTestingCinaseek() {
+  auto source = std::make_unique<net::ProofSourceCinaseek>();
   base::FilePath certs_dir = net::GetTestCertsDirectory();
   CHECK(source->Initialize(certs_dir.AppendASCII("quic-chain.pem"),
                            certs_dir.AppendASCII("quic-leaf-cert.key"),

@@ -126,14 +126,14 @@ static_library("test") {
   public_configs = [ "..:crashpad_config" ]
 
   configs += [
-    "../build:crashpad_is_in_chromium",
+    "../build:crashpad_is_in_Cinaseek",
     "../build:crashpad_is_in_fuchsia",
   ]
 
   data = [ "test_paths_test_data_root.txt" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../compat",
     "../third_party/googletest",
     "../util",
@@ -212,14 +212,14 @@ source_set("test_test") {
 
   deps = [
     ":test",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../compat",
     "../third_party/googletest",
     "../third_party/googletest:googlemock",
     "../util",
   ]
 
-  if (crashpad_is_in_chromium && !crashpad_is_ios) {
+  if (crashpad_is_in_Cinaseek && !crashpad_is_ios) {
     # TODO(crbug.com/1153544): Disabling MultiprocessExec.MultiprocessExec if
     # PartitionAlloc is used for malloc.
     deps += [ "//base/allocator:buildflags" ]
@@ -236,19 +236,19 @@ if (!crashpad_is_ios) {
   crashpad_executable("crashpad_test_test_multiprocess_exec_test_child") {
     sources = [ "multiprocess_exec_test_child.cc" ]
 
-    deps = [ "$mini_chromium_source_parent:base" ]
+    deps = [ "$mini_Cinaseek_source_parent:base" ]
   }
 }
 
 static_library("googlemock_main") {
   testonly = true
   sources = [ "gtest_main.cc" ]
-  configs += [ "../build:crashpad_is_in_chromium" ]
+  configs += [ "../build:crashpad_is_in_Cinaseek" ]
   defines = [ "CRASHPAD_TEST_LAUNCHER_GOOGLEMOCK" ]
   deps = [
     ":test",
-    "$mini_chromium_source_parent:base",
-    "$mini_chromium_source_parent:base_test_support",
+    "$mini_Cinaseek_source_parent:base",
+    "$mini_Cinaseek_source_parent:base_test_support",
     "../third_party/googletest",
     "../third_party/googletest:googlemock",
   ]
@@ -263,12 +263,12 @@ static_library("googlemock_main") {
 static_library("googletest_main") {
   testonly = true
   sources = [ "gtest_main.cc" ]
-  configs += [ "../build:crashpad_is_in_chromium" ]
+  configs += [ "../build:crashpad_is_in_Cinaseek" ]
   defines = [ "CRASHPAD_TEST_LAUNCHER_GOOGLETEST" ]
   deps = [
     ":test",
-    "$mini_chromium_source_parent:base",
-    "$mini_chromium_source_parent:base_test_support",
+    "$mini_Cinaseek_source_parent:base",
+    "$mini_Cinaseek_source_parent:base_test_support",
     "../third_party/googletest",
   ]
   if (crashpad_is_android) {

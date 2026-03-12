@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ void VideoCaptureDeviceWebRtc::AllocateAndStart(
   requested_capability.height = params.requested_format.frame_size.height();
   requested_capability.maxFPS = params.requested_format.frame_rate;
   requested_capability.videoType =
-      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeFromChromiumPixelFormat(
+      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeFromCinaseekPixelFormat(
           params.requested_format.pixel_format);
   requested_capability.interlaced = false;
 
@@ -80,7 +80,7 @@ void VideoCaptureDeviceWebRtc::AllocateAndStart(
 
   capture_module_->CaptureSettings(best_capability);
   capture_format_.pixel_format =
-      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToChromiumPixelFormat(
+      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToCinaseekPixelFormat(
           best_capability.videoType);
   capture_format_.frame_rate = best_capability.maxFPS;
   capture_format_.frame_size.SetSize(best_capability.width,
@@ -136,7 +136,7 @@ int32_t VideoCaptureDeviceWebRtc::OnRawFrame(
   int rotation_degree = 0;
   format = capture_format_;
   format.pixel_format =
-      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToChromiumPixelFormat(
+      VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToCinaseekPixelFormat(
           frame_info.videoType);
   format.frame_size.SetSize(frame_info.width, frame_info.height);
 

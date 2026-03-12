@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -897,7 +897,7 @@ class RuntimeGetContextsApiTest : public ExtensionApiTest {
 // Tests retrieving the background service worker context using
 // `chrome.runtime.getContexts()`.
 
-// TODO(crbug.com/40901108): failed on "chromium/ci/Mac12 Tests"
+// TODO(crbug.com/40901108): failed on "Cinaseek/ci/Mac12 Tests"
 #if BUILDFLAG(IS_MAC)
 #define MAYBE_GetServiceWorkerContext DISABLED_GetServiceWorkerContext
 #else

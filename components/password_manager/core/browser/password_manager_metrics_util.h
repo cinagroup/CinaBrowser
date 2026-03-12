@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -635,7 +635,7 @@ enum class PasswordDropdownDuplicateCredentialsType {
 // numeric values should never be reused.
 //
 // LINT.IfChange(BrowserAssistedLoginType)
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.password_manager
 enum class BrowserAssistedLoginType {
   kFedCmPassive = 0,
   kFedCmActive = 1,

@@ -40,7 +40,7 @@
     "lib": {
         "package": "headless/lib/browser/protocol",
         "output": "lib/browser/protocol",
-        "protocol_traits": "third_party/inspector_protocol/crdtp/chromium/protocol_traits.h",
+        "protocol_traits": "third_party/inspector_protocol/crdtp/Cinaseek/protocol_traits.h",
         "export_macro": "HEADLESS_EXPORT",
         "export_header": "headless/public/headless_export.h"
     },

@@ -1,9 +1,9 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include <chromium/cast/cpp/fidl.h>
-#include <fidl/chromium.cast/cpp/test_base.h>
+#include <Cinaseek/cast/cpp/fidl.h>
+#include <fidl/Cinaseek.cast/cpp/test_base.h>
 #include <fuchsia/web/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl_test_base.h>
 #include <lib/async/default.h>
@@ -40,12 +40,12 @@ class MockFrame final : public fuchsia::web::testing::Frame_TestBase {
 };
 
 class ApplicationControllerImplTest
-    : public fidl::testing::TestBase<chromium_cast::ApplicationContext>,
+    : public fidl::testing::TestBase<Cinaseek_cast::ApplicationContext>,
       public testing::Test {
  public:
   ApplicationControllerImplTest() {
     auto application_context_endpoints =
-        fidl::CreateEndpoints<chromium_cast::ApplicationContext>();
+        fidl::CreateEndpoints<Cinaseek_cast::ApplicationContext>();
     ZX_CHECK(application_context_endpoints.is_ok(),
              application_context_endpoints.status_value());
     application_context_binding_.emplace(
@@ -70,7 +70,7 @@ class ApplicationControllerImplTest
   void NotImplemented_(const std::string& name,
                        ::fidl::CompleterBase& completer) override {}
 
-  // chromium_cast::ApplicationContext implementation.
+  // Cinaseek_cast::ApplicationContext implementation.
   void GetMediaSessionId(GetMediaSessionIdCompleter::Sync& completer) override {
     NOTREACHED();
   }
@@ -88,12 +88,12 @@ class ApplicationControllerImplTest
       base::test::SingleThreadTaskEnvironment::MainThreadType::IO};
 
   MockFrame frame_;
-  std::optional<fidl::ServerBinding<chromium_cast::ApplicationContext>>
+  std::optional<fidl::ServerBinding<Cinaseek_cast::ApplicationContext>>
       application_context_binding_;
-  fidl::Client<chromium_cast::ApplicationContext> application_context_;
+  fidl::Client<Cinaseek_cast::ApplicationContext> application_context_;
   std::optional<ApplicationControllerImpl> application_;
 
-  fidl::Client<chromium_cast::ApplicationController> application_client_;
+  fidl::Client<Cinaseek_cast::ApplicationController> application_client_;
   base::OnceClosure wait_for_controller_callback_;
 };
 
@@ -124,14 +124,14 @@ TEST_F(ApplicationControllerImplTest, GetPrivateMemorySize) {
 
   EXPECT_CALL(frame_, GetPrivateMemorySize(testing::_))
       .WillOnce(
-          [](chromium::cast::ApplicationController::GetPrivateMemorySizeCallback
+          [](Cinaseek::cast::ApplicationController::GetPrivateMemorySizeCallback
                  callback) { callback(kMockSize); });
 
   base::RunLoop loop;
   application_client_->GetPrivateMemorySize().Then(
       [quit_closure = loop.QuitClosure(),
        kMockSize](fidl::Result<
-                  chromium_cast::ApplicationController::GetPrivateMemorySize>&
+                  Cinaseek_cast::ApplicationController::GetPrivateMemorySize>&
                       result) {
         ASSERT_TRUE(result.is_ok());
         EXPECT_EQ(result->size_bytes(), kMockSize);

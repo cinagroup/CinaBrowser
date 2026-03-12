@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ struct SurveyConfig {
     // An Incognito survey, shown only in incognito.
     kIncognito = 1,
   };
-  // LINT.ThenChange(//chrome/browser/ui/android/hats/java/src/org/chromium/chrome/browser/ui/hats/SurveyConfig.java:RequestedBrowserType)
+  // LINT.ThenChange(//chrome/browser/ui/android/hats/java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyConfig.java:RequestedBrowserType)
 
   // Enum to control the minimum profile age check before showing a survey.
   // The profile age is determined by the creation time of the profile

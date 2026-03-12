@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -187,7 +187,7 @@ bool ValidateAndGetActiveLayers(
   // This assumes the number of temporal layers are the same in all the spatial
   // layers. This will not be satisfied if we support a mix of hw/sw encoders.
   // See the discussion:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/5040171/2/media/base/video_bitrate_allocation.cc#200
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5040171/2/media/base/video_bitrate_allocation.cc#200
   for (int tid = VideoBitrateAllocation::kMaxTemporalLayers - 1; tid >= 0;
        --tid) {
     if (bitrate_allocation.GetBitrateBps(begin_active_spatial_layer, tid) !=

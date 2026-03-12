@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,11 +21,11 @@ class ShelfItemDelegate;
 class ShelfModelObserver;
 
 // An id for the AppList item, which is added in the ShelfModel constructor.
-// Generated as crx_file::id_util::GenerateId("org.chromium.applist")
+// Generated as crx_file::id_util::GenerateId("org.Cinaseek.applist")
 ASH_PUBLIC_EXPORT extern const char kAppListId[];
 
 // An id for the BackButton item, which is added in the ShelfModel constructor.
-// Generated as crx_file::id_util::GenerateId("org.chromium.backbutton")
+// Generated as crx_file::id_util::GenerateId("org.Cinaseek.backbutton")
 ASH_PUBLIC_EXPORT extern const char kBackButtonId[];
 
 // Model used for shelf items. Owns ShelfItemDelegates but does not create them.

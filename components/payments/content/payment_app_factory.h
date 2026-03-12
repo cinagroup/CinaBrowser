@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ namespace payments {
 // Known reasons why an app may fail to be created. Passed to a
 // PaymentAppFactory Delegate to allow it to better handle the lack of creation
 // of an app, if appropriate.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
 enum class AppCreationFailureReason {
   UNKNOWN,
   ICON_DOWNLOAD_FAILED,

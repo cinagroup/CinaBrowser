@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ std::unique_ptr<ash::DeskTemplate> GetFirstAdminTemplate() {
       .SetSource(ash::DeskTemplateSource::kPolicy)
       .AddAppWindow(
           SavedDeskBrowserBuilder()
-              .SetUrls({GURL("https://www.chromium.org/")})
+              .SetUrls({GURL("https://www.Cinaseek.org/")})
               .SetGenericBuilder(
                   SavedDeskGenericAppBuilder().SetWindowId(3000).SetEventFlag(
                       0))
@@ -65,7 +65,7 @@ std::unique_ptr<ash::DeskTemplate> GetFirstAdminTemplate() {
       .AddAppWindow(
           SavedDeskBrowserBuilder()
               .SetUrls({GURL("chrome://version/"),
-                        GURL("https://dev.chromium.org/")})
+                        GURL("https://dev.Cinaseek.org/")})
               .SetGenericBuilder(
                   SavedDeskGenericAppBuilder().SetWindowId(30001).SetEventFlag(
                       0))

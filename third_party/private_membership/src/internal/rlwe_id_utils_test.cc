@@ -193,9 +193,9 @@ TEST(RlweIdUtils, AllSensitiveIdHashTypesCovered) {
       ::private_join_and_compute::ECCommutativeCipher::CreateWithNewKey(
           kTestCurveId, ::private_join_and_compute::ECCommutativeCipher::HashType::SHA256));
 
-  // The EnumerateEnumValues method is unavailable in Chromium.
+  // The EnumerateEnumValues method is unavailable in Cinaseek.
   // Test uses a hardcoded vector of the enums in order to allow clean
-  // compilation and have this test coverage in Chromium.
+  // compilation and have this test coverage in Cinaseek.
   // LINT.IfChange(encrypted_bucket_hash_types)
   std::vector<EncryptedBucketHashType> encrypted_bucket_hash_types = {
       ENCRYPTED_BUCKET_HASH_TYPE_UNDEFINED, ENCRYPTED_BUCKET_TEST_HASH_TYPE,

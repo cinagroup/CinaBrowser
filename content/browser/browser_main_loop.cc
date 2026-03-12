@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -331,9 +331,9 @@ bool GetBuildDirectory(base::FilePath* result) {
 
 #if BUILDFLAG(IS_MAC)
   if (base::apple::AmIBundled()) {
-    // The bundled app executables (Chromium, TestShell, etc) live three
+    // The bundled app executables (Cinaseek, TestShell, etc) live three
     // levels down from the build directory, eg:
-    // Chromium.app/Contents/MacOS/Chromium
+    // Cinaseek.app/Contents/MacOS/Cinaseek
     *result = result->DirName().DirName().DirName();
   }
 #endif

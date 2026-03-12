@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -433,7 +433,7 @@ void CastContentBrowserClient::AppendExtraCommandLineSwitches(
     }
   } else if (process_type == switches::kGpuProcess) {
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-    // Necessary for accelerated 2d canvas.  By default on Linux, Chromium
+    // Necessary for accelerated 2d canvas.  By default on Linux, Cinaseek
     // assumes GLES2 contexts can be lost to a power-save mode, which breaks GPU
     // canvas apps.
     command_line->AppendSwitch(switches::kGpuNoContextLost);

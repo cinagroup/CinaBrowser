@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ class WebContents;
 // restrictive to least restrictive, to which capture may be restricted by
 // enterprise policy. It should not be used in Logs, so that it's order may be
 // changed as needed.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.media
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class AllowedScreenCaptureLevel {
   kDisallowed = 0,

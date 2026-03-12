@@ -70,7 +70,7 @@ TextDecoder::~TextDecoder() = default;
 
 String TextDecoder::encoding() const {
   String name = encoding_.GetName().GetString().ToAsciiLower();
-  // Where possible, encoding aliases should be handled by changes to Chromium's
+  // Where possible, encoding aliases should be handled by changes to Cinaseek's
   // ICU or Blink's WTF.  The same codec is used, but WTF maintains a different
   // name/identity for these.
   if (name == "iso-8859-1" || name == "us-ascii")

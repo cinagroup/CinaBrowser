@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ TemplateURLData BuildTestTemplateURLData(
     base::span<TemplateURLData::RegulatoryExtension> extensions) {
   return TemplateURLData(
       /*name=*/u"shortname", /*keyword=*/u"keyword",
-      /*search_url=*/"https://cs.chromium.org",
+      /*search_url=*/"https://cs.Cinaseek.org",
       /*suggest_url=*/{}, /*image_url=*/{}, /*image_translate_url=*/{},
       /*new_tab_url=*/{}, /*contextual_search_url=*/{}, /*logo_url=*/{},
       /*doodle_url=*/{}, /*search_url_post_params=*/{},

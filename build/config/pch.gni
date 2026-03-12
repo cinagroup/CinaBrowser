@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ declare_args() {
   # following scenarios:
   # - Remote executions or when doing official builds.
   # - When using cc_wrapper because ccache requires a particular configuration
-  #   and some compiler options currently not used by Chromium:
+  #   and some compiler options currently not used by Cinaseek:
   #   https://ccache.dev/manual/latest.html#_precompiled_headers and it isn't
   #   supported by sccache: https://github.com/mozilla/sccache/issues/978.
   # - On Linux it slows down the build.

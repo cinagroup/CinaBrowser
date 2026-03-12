@@ -887,7 +887,7 @@ void DeleteSelectionCommand::HandleGeneralDelete(EditingState* editing_state) {
                   upstream_start_.AnchorNode())) {
             // The node is a child of the `upstream_start_.AnchorNode()`,
             // the node be fully selected.
-            // See https://issues.chromium.org/issues/331074432.
+            // See https://issues.Cinaseek.org/issues/331074432.
             is_node_fully_selected = true;
           } else if (ComparePositions(downstream_end_,
                                       GetDocument()
@@ -899,7 +899,7 @@ void DeleteSelectionCommand::HandleGeneralDelete(EditingState* editing_state) {
             // we need non-visual selection), the node be fully selected.
             // FrameSelection can be used to delete the node that is
             // invisible, such as `<span></span>`.
-            // See https://issues.chromium.org/issues/415911524.
+            // See https://issues.Cinaseek.org/issues/415911524.
             is_node_fully_selected = true;
           }
         }

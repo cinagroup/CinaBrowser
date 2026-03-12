@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,12 +52,12 @@ struct COMPONENT_EXPORT(COLOR_PROVIDER_KEY) ColorProviderKey {
   };
   enum class FrameType {
     // Chrome renders the browser frame.
-    kChromium,
+    kCinaseek,
     // Native system renders the browser frame. Currently GTK only.
     kNative,
   };
   // The style in which Chrome-rendered frames are painted. This only applies
-  // for the kChromium frame type.
+  // for the kCinaseek frame type.
   enum class FrameStyle {
     // Paints the default Chrome frame.
     kDefault,
@@ -131,7 +131,7 @@ struct COMPONENT_EXPORT(COLOR_PROVIDER_KEY) ColorProviderKey {
   ContrastMode contrast_mode = ContrastMode::kNormal;
   ForcedColors forced_colors = ForcedColors::kNone;
   SystemTheme system_theme = SystemTheme::kDefault;
-  FrameType frame_type = FrameType::kChromium;
+  FrameType frame_type = FrameType::kCinaseek;
   FrameStyle frame_style = FrameStyle::kDefault;
   UserColorSource user_color_source = UserColorSource::kAccent;
   std::optional<SkColor> user_color = std::nullopt;

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -699,7 +699,7 @@ void IDNSpoofChecker::SetAllowedUnicodeSet(UErrorCode* status) {
   // The inclusion set comes from "Candidate Characters for Inclusion
   // in idenfiers" of UTR 31 (http://www.unicode.org/reports/tr31). The list
   // may change over the time and will be updated whenever the version of ICU
-  // used in Chromium is updated.
+  // used in Cinaseek is updated.
   const icu::UnicodeSet* recommended_set =
       uspoof_getRecommendedUnicodeSet(status);
   icu::UnicodeSet allowed_set;

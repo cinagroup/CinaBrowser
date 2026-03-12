@@ -1,10 +1,10 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//mojo/public/tools/bindings/mojom.gni")
 
-assert(is_chromeos, "Non-ChromeOS builds cannot depend on //ash")
+assert(is_chromeos, "Non-CinaseekOS builds cannot depend on //ash")
 
 mojom("mojom") {
   sources = [

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,8 +57,8 @@ using CaptureResultFuture =
 
 namespace {
 
-const std::string_view kMainFrameUrl = "https://www.chromium.org";
-const std::string_view kOtherOriginUrl = "https://chromium.org";
+const std::string_view kMainFrameUrl = "https://www.Cinaseek.org";
+const std::string_view kOtherOriginUrl = "https://Cinaseek.org";
 
 // Convert |params| to the mojo::PaintPreviewServiceParams format. NOTE: this
 // does not set the file parameter as the file is created in the client
@@ -451,7 +451,7 @@ TEST_P(PaintPreviewClientRenderViewHostResponseOrderingTest,
        CaptureMainFrameWithSubframe) {
   content::RenderFrameHost* rfh = main_rfh();
   content::RenderFrameHost* subframe =
-      AddChildRFH(rfh, "https://www.chromium.org");
+      AddChildRFH(rfh, "https://www.Cinaseek.org");
 
   GURL expected_url = rfh->GetLastCommittedURL();
 
@@ -541,7 +541,7 @@ TEST_P(PaintPreviewClientRenderViewHostResponseOrderingTest,
        CaptureMainFrameWithSubframe_RedactedIframe) {
   content::RenderFrameHost* rfh = main_rfh();
   content::RenderFrameHost* subframe =
-      AddChildRFH(rfh, "https://www.chromium.org");
+      AddChildRFH(rfh, "https://www.Cinaseek.org");
 
   GURL expected_url = rfh->GetLastCommittedURL();
 

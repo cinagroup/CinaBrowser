@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,20 +13,20 @@
 
 namespace update_client {
 
-class PatchChromiumFactory : public PatcherFactory {
+class PatchCinaseekFactory : public PatcherFactory {
  public:
   using Callback =
       base::RepeatingCallback<mojo::PendingRemote<patch::mojom::FilePatcher>()>;
 
-  explicit PatchChromiumFactory(Callback callback);
+  explicit PatchCinaseekFactory(Callback callback);
 
-  PatchChromiumFactory(const PatchChromiumFactory&) = delete;
-  PatchChromiumFactory& operator=(const PatchChromiumFactory&) = delete;
+  PatchCinaseekFactory(const PatchCinaseekFactory&) = delete;
+  PatchCinaseekFactory& operator=(const PatchCinaseekFactory&) = delete;
 
   scoped_refptr<Patcher> Create() const override;
 
  protected:
-  ~PatchChromiumFactory() override;
+  ~PatchCinaseekFactory() override;
 
  private:
   const Callback callback_;

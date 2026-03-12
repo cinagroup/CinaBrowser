@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ BASE_FEATURE(kWaylandXdgToplevelDrag, base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kPrettyPrintDrmModesetConfigLogs,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// If enabled, Chromium will try to use the smallest valid size for the cursor
+// If enabled, Cinaseek will try to use the smallest valid size for the cursor
 // plane that fits the cursor bitmap.
 BASE_FEATURE(kUseDynamicCursorSize, base::FEATURE_ENABLED_BY_DEFAULT);
 

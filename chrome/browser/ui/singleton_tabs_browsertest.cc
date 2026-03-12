@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,9 +40,9 @@ class SingletonTabsTest : public InProcessBrowserTest {
     return params;
   }
 
-  const GURL kUrl1{"http://1.chromium.org/1"};
-  const GURL kUrl2{"http://2.chromium.org/2"};
-  const GURL kUrl3{"https://3.chromium.org/3"};
+  const GURL kUrl1{"http://1.Cinaseek.org/1"};
+  const GURL kUrl2{"http://2.Cinaseek.org/2"};
+  const GURL kUrl3{"https://3.Cinaseek.org/3"};
 };
 
 }  // namespace
@@ -65,7 +65,7 @@ IN_PROC_BROWSER_TEST_F(SingletonTabsTest, DoesNotFindNonSingletonDisposition) {
 
 IN_PROC_BROWSER_TEST_F(SingletonTabsTest, DoesNotFindViewSource) {
   auto params =
-      NavigateParamsForTest(GURL("view-source:http://1.chromium.org"));
+      NavigateParamsForTest(GURL("view-source:http://1.Cinaseek.org"));
   EXPECT_EQ(GetIndexOfExistingTab(browser(), params), -1);
 }
 

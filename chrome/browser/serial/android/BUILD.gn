@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/serial/SerialBridge.java",
-    "java/src/org/chromium/chrome/browser/serial/SerialNotificationManager.java",
-    "java/src/org/chromium/chrome/browser/serial/SerialNotificationManagerDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/serial/SerialBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/serial/SerialNotificationManager.java",
+    "java/src/org/Cinaseek/chrome/browser/serial/SerialNotificationManagerDelegate.java",
   ]
   deps = [
     ":java_resources",
@@ -29,7 +29,7 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.serial"
+  resources_package = "org.Cinaseek.chrome.browser.serial"
 }
 
 android_resources("java_resources") {
@@ -40,11 +40,11 @@ android_resources("java_resources") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/serial/SerialBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/serial/SerialBridge.java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "junit/src/org/chromium/chrome/browser/serial/SerialNotificationManagerTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/serial/SerialNotificationManagerTest.java" ]
 
   deps = [
     ":java",

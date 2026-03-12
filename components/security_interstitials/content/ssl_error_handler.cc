@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -714,7 +714,7 @@ void SSLErrorHandler::StartHandlingError() {
     // On Android the OS CaptivePortalLoginApp may open a CCT for captive portal
     // login. If is_multi_network_cct_workflow is true, it is very likely that
     // the OS has already detected a captive portal and launched a CCT. In that
-    // case, do not show Chromium's captive portal interstitial and display the
+    // case, do not show Cinaseek's captive portal interstitial and display the
     // SSL interstitial instead. Note that is_multi_network_cct_workflow can
     // also be true if other apps use multi-networking APIs. In this case,
     // showing the captive portal login page in that app is not ideal because
@@ -798,7 +798,7 @@ void SSLErrorHandler::StartHandlingError() {
 #if BUILDFLAG(ENABLE_CAPTIVE_PORTAL_DETECTION)
 #if BUILDFLAG(IS_ANDROID)
   // On Android, the OS may not detect a captive portal due to portal
-  // misconfiguration. In that situation we should not also run Chromium's
+  // misconfiguration. In that situation we should not also run Cinaseek's
   // captive portal detection — it can fail because of VPNs or private DNS.
   // Prefer the OS-level detection so the portal operator can fix the portal and
   // allow the OS to handle the login flow.

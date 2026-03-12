@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2275,7 +2275,7 @@ TEST_F(IntegrationTest, XattrTagWriteRead) {
   ASSERT_TRUE(tag_me.Create());
   EXPECT_TRUE(tagging::WriteTagStringToApplicationInstanceXattr(
       tag_me.path(),
-      "brand=TEST&iid=TestInstallId&appguid=org.chromium.test&ap=example"));
+      "brand=TEST&iid=TestInstallId&appguid=org.Cinaseek.test&ap=example"));
 
   base::expected<tagging::TagArgs, tagging::ErrorCode> read_result =
       tagging::ReadTagFromApplicationInstanceXattr(tag_me.path());
@@ -2287,7 +2287,7 @@ TEST_F(IntegrationTest, XattrTagWriteRead) {
 
   ASSERT_EQ(read_result->apps.size(), 1u);
   const tagging::AppArgs& app_args = read_result->apps[0];
-  EXPECT_EQ(app_args.app_id, "org.chromium.test");
+  EXPECT_EQ(app_args.app_id, "org.Cinaseek.test");
   EXPECT_EQ(app_args.ap, "example");
 }
 
@@ -2326,7 +2326,7 @@ TEST_F(IntegrationTest, KSAdminXattrTagReadBrandSuccess) {
   ASSERT_TRUE(tag_me.Create());
   EXPECT_TRUE(tagging::WriteTagStringToApplicationInstanceXattr(
       tag_me.path(),
-      "brand=TEST&iid=TestInstallId&appguid=org.chromium.test&ap=example"));
+      "brand=TEST&iid=TestInstallId&appguid=org.Cinaseek.test&ap=example"));
   ExpectKSAdminXattrBrand(false, tag_me.path(), "TEST");
   ASSERT_NO_FATAL_FAILURE(Uninstall());
 }
@@ -2337,7 +2337,7 @@ TEST_F(IntegrationTest, KSAdminXattrTagReadNoBrandSuccess) {
   ASSERT_TRUE(tag_me_without_brand.Create());
   EXPECT_TRUE(tagging::WriteTagStringToApplicationInstanceXattr(
       tag_me_without_brand.path(),
-      "iid=TestInstallId&appguid=org.chromium.test&ap=example"));
+      "iid=TestInstallId&appguid=org.Cinaseek.test&ap=example"));
   ExpectKSAdminXattrBrand(false, tag_me_without_brand.path(), "");
   ASSERT_NO_FATAL_FAILURE(Uninstall());
 }
@@ -4113,9 +4113,9 @@ TEST_F(IntegrationTest, KSAdminUntaggedApp) {
 #else
   ASSERT_NO_FATAL_FAILURE(Install());
   ASSERT_TRUE(WaitForUpdaterExit());
-  ASSERT_NO_FATAL_FAILURE(InstallApp("org.chromium.testapp"));
-  ExpectKSAdminFetchTag(false, "org.chromium.testapp", {}, {}, "");
-  ASSERT_NO_FATAL_FAILURE(UninstallApp("org.chromium.testapp"));
+  ASSERT_NO_FATAL_FAILURE(InstallApp("org.Cinaseek.testapp"));
+  ExpectKSAdminFetchTag(false, "org.Cinaseek.testapp", {}, {}, "");
+  ASSERT_NO_FATAL_FAILURE(UninstallApp("org.Cinaseek.testapp"));
   ASSERT_NO_FATAL_FAILURE(Uninstall());
 #endif  // defined(ADDRESS_SANITIZER)
 }
@@ -4128,10 +4128,10 @@ TEST_F(IntegrationTest, KSAdminTaggedApp) {
 #else
   ASSERT_NO_FATAL_FAILURE(Install());
   ASSERT_TRUE(WaitForUpdaterExit());
-  ASSERT_NO_FATAL_FAILURE(InstallApp("org.chromium.testapp"));
-  ASSERT_NO_FATAL_FAILURE(SetAppTag("org.chromium.testapp", "some-tag"));
-  ExpectKSAdminFetchTag(false, "org.chromium.testapp", {}, {}, "some-tag");
-  ASSERT_NO_FATAL_FAILURE(UninstallApp("org.chromium.testapp"));
+  ASSERT_NO_FATAL_FAILURE(InstallApp("org.Cinaseek.testapp"));
+  ASSERT_NO_FATAL_FAILURE(SetAppTag("org.Cinaseek.testapp", "some-tag"));
+  ExpectKSAdminFetchTag(false, "org.Cinaseek.testapp", {}, {}, "some-tag");
+  ASSERT_NO_FATAL_FAILURE(UninstallApp("org.Cinaseek.testapp"));
   ASSERT_NO_FATAL_FAILURE(Uninstall());
 #endif  // defined(ADDRESS_SANITIZER)
 }
@@ -4175,9 +4175,9 @@ TEST_F(IntegrationTest, CRURegistrationRegister) {
   ASSERT_NO_FATAL_FAILURE(ExpectInstalled());
 
   ExpectInstallEvent(test_server,
-                     "org.chromium.CRURegistration.testing.RegisterMe");
+                     "org.Cinaseek.CRURegistration.testing.RegisterMe");
   ASSERT_NO_FATAL_FAILURE(ExpectRegistrationTestAppRegisterSuccess());
-  ExpectAppVersion("org.chromium.CRURegistration.testing.RegisterMe",
+  ExpectAppVersion("org.Cinaseek.CRURegistration.testing.RegisterMe",
                    base::Version({1, 0, 0, 0}));
 
   ExpectUninstallPing(test_server);
@@ -4191,10 +4191,10 @@ TEST_F(IntegrationTest, CRURegistrationInstallAndRegister) {
   ScopedServer test_server(test_commands_);
   ExpectInstallEvent(test_server, kUpdaterAppId);
   ExpectInstallEvent(test_server,
-                     "org.chromium.CRURegistration.testing.RegisterMe");
+                     "org.Cinaseek.CRURegistration.testing.RegisterMe");
   ASSERT_NO_FATAL_FAILURE(ExpectRegistrationTestAppInstallAndRegisterSuccess());
   ExpectInstalled();
-  ExpectAppVersion("org.chromium.CRURegistration.testing.RegisterMe",
+  ExpectAppVersion("org.Cinaseek.CRURegistration.testing.RegisterMe",
                    base::Version({2, 0, 0, 0}));
 
   ExpectUninstallPing(test_server);

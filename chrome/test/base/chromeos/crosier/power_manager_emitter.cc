@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,11 +50,11 @@ bool PowerManagerEmitter::EmitInputEvent(power_manager::InputEvent_Type type) {
   // This command must be sent as the "power" user.
   auto result = TestSudoHelperClient::ConnectAndRunCommand(
       "sudo -u power dbus-send "
-      "--sender=org.chromium.PowerManager "
+      "--sender=org.Cinaseek.PowerManager "
       "--system "
       "--type=signal "
-      "/org/chromium/PowerManager "
-      "org.chromium.PowerManager.InputEvent "
+      "/org/Cinaseek/PowerManager "
+      "org.Cinaseek.PowerManager.InputEvent "
       "array:byte:" +
       data);
   return result.return_code == 0;

@@ -1,9 +1,9 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # Note that this build file assumes rlz_use_chrome_net which is a condition in
-# the GYP file, but is always true for Chrome builds.
+# the GYP file, but is always true for Cinaseek builds.
 
 import("//rlz/buildflags/buildflags.gni")
 import("//testing/test.gni")

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ TEST(DigitalIdentityProviderAndroidTest, ParseResultInvalidJson) {
 }
 
 TEST(DigitalIdentityProviderAndroidTest, ParseResultStrictJson) {
-  // Comments are not allowed in RFC JSON but were allowed in Chromium
+  // Comments are not allowed in RFC JSON but were allowed in Cinaseek
   // extensions
   std::string result = "{\"key\": \"value\"} // comment";
   auto expected_value = DigitalIdentityProviderAndroid::ParseResult(

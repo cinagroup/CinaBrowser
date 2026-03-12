@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -124,7 +124,7 @@ source_set("impl") {
 }
 
 if (!is_android) {
-  # This is not applicable to ChromeOS, but to desktop platforms.
+  # This is not applicable to CinaseekOS, but to desktop platforms.
   if (!is_chromeos_device && !is_chromeos) {
     source_set("interactive_ui_tests") {
       testonly = true

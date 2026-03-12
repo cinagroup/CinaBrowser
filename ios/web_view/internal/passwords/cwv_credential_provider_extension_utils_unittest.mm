@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ TEST_F(CWVCredentialProviderExtensionUtilsTest, CannotOverridePassword) {
 TEST_F(CWVCredentialProviderExtensionUtilsTest, GenerateRandomPassword) {
   id mock = OCMClassMock([PasswordSpecFetcher class]);
   OCMStub([mock alloc]).andReturn(mock);
-  OCMStub([mock initWithHost:@"www.chromium.org" APIKey:@"apikey"])
+  OCMStub([mock initWithHost:@"www.Cinaseek.org" APIKey:@"apikey"])
       .andReturn(mock);
   OCMExpect([mock
       fetchSpecWithCompletion:[OCMArg checkWithBlock:^BOOL(void (
@@ -108,7 +108,7 @@ TEST_F(CWVCredentialProviderExtensionUtilsTest, GenerateRandomPassword) {
       }]]);
   __block bool completion_handler_called = false;
   [CWVCredentialProviderExtensionUtils
-      generateRandomPasswordForHost:@"www.chromium.org"
+      generateRandomPasswordForHost:@"www.Cinaseek.org"
                              APIKey:@"apikey"
                   completionHandler:^(NSString* generatedPassword) {
                     EXPECT_TRUE(generatedPassword != nil);

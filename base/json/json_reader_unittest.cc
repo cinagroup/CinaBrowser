@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1244,7 +1244,7 @@ TEST(JSONReaderTest, LineColumnCounting) {
   }
 }
 
-TEST(JSONReaderTest, ChromiumExtensions) {
+TEST(JSONReaderTest, CinaseekExtensions) {
   // All of these cases should parse with JSON_PARSE_CHROMIUM_EXTENSIONS but
   // fail with JSON_PARSE_RFC.
   struct Cases {

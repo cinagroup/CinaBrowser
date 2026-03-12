@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//build/config/arm.gni")
 import("//build/config/loongarch64.gni")
 import("//build/config/mips.gni")
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   import("//testing/libfuzzer/fuzzer_test.gni")
 }
 
@@ -101,8 +101,8 @@ source_set("libpng_sources") {
     ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   if (is_win) {
     # Unary minus applied to unsigned type.
@@ -138,7 +138,7 @@ group("libpng_for_testonly") {
   visibility = libpng_testonly_visibility
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   libpng_ossfuzz_seed_corpuses = [
     "//components/test/data/viz",
     "//third_party/blink/web_tests/images/png-suite/samples",

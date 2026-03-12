@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1198,7 +1198,7 @@ class WebInstallOriginTrialBrowserTest
   void SetUpCommandLine(base::CommandLine* command_line) override {
     WebInstallCurrentDocumentBrowserTest::SetUpCommandLine(command_line);
     // Add the public key following:
-    // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/origin_trials_integration.md#manual-testing.
+    // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/origin_trials_integration.md#manual-testing.
     command_line->AppendSwitchASCII(
         "origin-trial-public-key",
         "dRCs+TocuKkocNKa0AtZ4awrt9XKH2SQCI6o4FY6BNA=");

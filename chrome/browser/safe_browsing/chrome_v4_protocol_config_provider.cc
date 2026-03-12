@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ std::string GetProtocolConfigClientName() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   client_name = "googlechrome";
 #else
-  client_name = "chromium";
+  client_name = "Cinaseek";
 #endif
 
   // Mark client string to allow server to differentiate mobile.

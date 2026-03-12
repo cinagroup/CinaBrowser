@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,17 +8,17 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleBridge.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleCoordinator.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleMediator.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleProperties.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleUtils.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleView.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleViewBinder.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionTileBuilder.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionTileContainerView.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionTileView.java",
-    "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionUserData.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleView.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionTileBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionTileContainerView.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionTileView.java",
+    "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionUserData.java",
   ]
   deps = [
     ":java_resources",
@@ -47,11 +47,11 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.search_resumption"
+  resources_package = "org.Cinaseek.chrome.browser.search_resumption"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleBridge.java" ]
 }
 
 android_resources("java_resources") {
@@ -68,13 +68,13 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.search_resumption"
+  resources_package = "org.Cinaseek.chrome.browser.search_resumption"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleMediatorUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleUtilsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/search_resumption/SearchResumptionModuleViewUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/search_resumption/SearchResumptionTileBuilderUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleMediatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionModuleViewUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/search_resumption/SearchResumptionTileBuilderUnitTest.java",
   ]
 
   deps = [

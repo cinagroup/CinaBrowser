@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -428,10 +428,10 @@ TEST_F(UserAgentUtilsTest, CustomUserAgent) {
 
     // Verify low-entropy client hints aren't empty.
     const std::string major_version = version_info::GetMajorVersionNumber();
-    const blink::UserAgentBrandVersion chromium_brand_version = {"Chromium",
+    const blink::UserAgentBrandVersion Cinaseek_brand_version = {"Cinaseek",
                                                                  major_version};
     EXPECT_TRUE(ContainsBrandVersion(metadata.brand_version_list,
-                                     chromium_brand_version));
+                                     Cinaseek_brand_version));
     EXPECT_NE("", metadata.platform);
 
     // Verify high-entropy client hints are empty, take platform version as
@@ -604,28 +604,28 @@ TEST_F(UserAgentUtilsTest, UserAgentMetadata) {
   const std::string full_version(version_info::GetVersionNumber());
 
   // According to spec, Sec-CH-UA should contain what project the browser is
-  // based on (i.e. Chromium in this case) as well as the actual product.
-  // In CHROMIUM_BRANDING builds this will check chromium twice. That should be
+  // based on (i.e. Cinaseek in this case) as well as the actual product.
+  // In CHROMIUM_BRANDING builds this will check Cinaseek twice. That should be
   // ok though.
 
-  const blink::UserAgentBrandVersion chromium_brand_version = {"Chromium",
+  const blink::UserAgentBrandVersion Cinaseek_brand_version = {"Cinaseek",
                                                                major_version};
   const blink::UserAgentBrandVersion product_brand_version = {
       std::string(version_info::GetProductName()), major_version};
 
   EXPECT_TRUE(ContainsBrandVersion(metadata.brand_version_list,
-                                   chromium_brand_version));
+                                   Cinaseek_brand_version));
   EXPECT_TRUE(
       ContainsBrandVersion(metadata.brand_version_list, product_brand_version));
 
   // verify full version list
-  const blink::UserAgentBrandVersion chromium_brand_full_version = {
-      "Chromium", full_version};
+  const blink::UserAgentBrandVersion Cinaseek_brand_full_version = {
+      "Cinaseek", full_version};
   const blink::UserAgentBrandVersion product_brand_full_version = {
       std::string(version_info::GetProductName()), full_version};
 
   EXPECT_TRUE(ContainsBrandVersion(metadata.brand_full_version_list,
-                                   chromium_brand_full_version));
+                                   Cinaseek_brand_full_version));
   EXPECT_TRUE(ContainsBrandVersion(metadata.brand_full_version_list,
                                    product_brand_full_version));
   EXPECT_EQ(metadata.full_version, full_version);
@@ -675,7 +675,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMetadata) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   EXPECT_EQ(metadata.platform, "Chrome OS");
 #else
-  EXPECT_EQ(metadata.platform, "Chromium OS");
+  EXPECT_EQ(metadata.platform, "Cinaseek OS");
 #endif
 #elif BUILDFLAG(IS_ANDROID)
   EXPECT_EQ(metadata.platform, "Android");
@@ -703,7 +703,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMetadata) {
   // Verify only populate low-entropy client hints.
   metadata = GetUserAgentMetadata(true);
   EXPECT_TRUE(ContainsBrandVersion(metadata.brand_version_list,
-                                   chromium_brand_version));
+                                   Cinaseek_brand_version));
   EXPECT_TRUE(
       ContainsBrandVersion(metadata.brand_version_list, product_brand_version));
   // High entropy should be empty.
@@ -762,10 +762,10 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListUnbranded) {
                                blink::UserAgentBrandVersionType::kFullVersion);
   // 1. verify major version
   std::string brand_list = metadata.SerializeBrandMajorVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8", "Chromium";v="84")", brand_list);
+  EXPECT_EQ(R"("Not;A=Brand";v="8", "Cinaseek";v="84")", brand_list);
   // 2. verify full version
   std::string brand_list_w_fv = metadata.SerializeBrandFullVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Chromium";v="84.0.0.0")",
+  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Cinaseek";v="84.0.0.0")",
             brand_list_w_fv);
 }
 
@@ -787,11 +787,11 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListUnbrandedVerifySeedChanges) {
   // Make sure the lists are different for different seeds (84 vs 85).
   // 1. verify major version
   std::string brand_list_diff = metadata.SerializeBrandMajorVersionList();
-  EXPECT_EQ(R"("Chromium";v="85", "Not=A?Brand";v="99")", brand_list_diff);
+  EXPECT_EQ(R"("Cinaseek";v="85", "Not=A?Brand";v="99")", brand_list_diff);
   EXPECT_NE(brand_list, brand_list_diff);
   // 2.verify full version
   std::string brand_list_diff_w_fv = metadata.SerializeBrandFullVersionList();
-  EXPECT_EQ(R"("Chromium";v="85.0.0.0", "Not=A?Brand";v="99.0.0.0")",
+  EXPECT_EQ(R"("Cinaseek";v="85.0.0.0", "Not=A?Brand";v="99.0.0.0")",
             brand_list_diff_w_fv);
   EXPECT_NE(brand_list_w_fv, brand_list_diff_w_fv);
 }
@@ -814,10 +814,10 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListAdditionalBrandVersions) {
                                additional_brand_full_versions);
   // Verify major version and full version.
   EXPECT_EQ(base::StrCat({"\"Not;A=Brand\";v=\"8\", ",
-                          "\"Chromium\";v=\"84\", ", "\"Add Brand\";v=\"1\""}),
+                          "\"Cinaseek\";v=\"84\", ", "\"Add Brand\";v=\"1\""}),
             metadata.SerializeBrandMajorVersionList());
   EXPECT_EQ(base::StrCat({"\"Not;A=Brand\";v=\"8.0.0.0\", ",
-                          "\"Chromium\";v=\"84.0.0.0\", ",
+                          "\"Cinaseek\";v=\"84.0.0.0\", ",
                           "\"Add Brand\";v=\"1.0.0.0\""}),
             metadata.SerializeBrandFullVersionList());
 
@@ -832,10 +832,10 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListAdditionalBrandVersions) {
                                additional_brand_full_versions);
   // Verify major version and full version.
   EXPECT_EQ(
-      base::StrCat({"\"Chromium\";v=\"84\", ", "\"Product Brand\";v=\"84\", ",
+      base::StrCat({"\"Cinaseek\";v=\"84\", ", "\"Product Brand\";v=\"84\", ",
                     "\"Not;A=Brand\";v=\"8\", ", "\"Add Brand\";v=\"1\""}),
       metadata.SerializeBrandMajorVersionList());
-  EXPECT_EQ(base::StrCat({"\"Chromium\";v=\"84.0.0.0\", ",
+  EXPECT_EQ(base::StrCat({"\"Cinaseek\";v=\"84.0.0.0\", ",
                           "\"Product Brand\";v=\"84.0.0.0\", ",
                           "\"Not;A=Brand\";v=\"8.0.0.0\", ",
                           "\"Add Brand\";v=\"1.0.0.0\""}),
@@ -852,11 +852,11 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListAdditionalBrandVersions) {
                                additional_brand_full_versions);
   // Verify major version and full version.
   EXPECT_EQ(
-      base::StrCat({"\"Product Brand\";v=\"84\", ", "\"Chromium\";v=\"84\", ",
+      base::StrCat({"\"Product Brand\";v=\"84\", ", "\"Cinaseek\";v=\"84\", ",
                     "\"Not?A_Brand\";v=\"24\", ", "\"Add Brand\";v=\"1\""}),
       metadata.SerializeBrandMajorVersionList());
   EXPECT_EQ(base::StrCat({"\"Product Brand\";v=\"84.0.0.0\", ",
-                          "\"Chromium\";v=\"84.0.0.0\", ",
+                          "\"Cinaseek\";v=\"84.0.0.0\", ",
                           "\"Not?A_Brand\";v=\"24.0.0.0\", ",
                           "\"Add Brand\";v=\"1.0.0.0\""}),
             metadata.SerializeBrandFullVersionList());
@@ -892,12 +892,12 @@ TEST_F(UserAgentUtilsTest,
   // 1. verify major version
   std::string brand_list_and_version_grease_override =
       metadata.SerializeBrandMajorVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8", "Chromium";v="84")",
+  EXPECT_EQ(R"("Not;A=Brand";v="8", "Cinaseek";v="84")",
             brand_list_and_version_grease_override);
   // 2. verify full version
   std::string brand_list_and_version_grease_override_fv =
       metadata.SerializeBrandFullVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Chromium";v="84.0.0.0")",
+  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Cinaseek";v="84.0.0.0")",
             brand_list_and_version_grease_override_fv);
 }
 
@@ -912,12 +912,12 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListWithGreaseVersionOverride) {
   // 1. verify major version
   std::string brand_version_grease_override =
       metadata.SerializeBrandMajorVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8", "Chromium";v="84")",
+  EXPECT_EQ(R"("Not;A=Brand";v="8", "Cinaseek";v="84")",
             brand_version_grease_override);
   // 2. verify full version
   std::string brand_version_grease_override_fv =
       metadata.SerializeBrandFullVersionList();
-  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Chromium";v="84.0.0.0")",
+  EXPECT_EQ(R"("Not;A=Brand";v="8.0.0.0", "Cinaseek";v="84.0.0.0")",
             brand_version_grease_override_fv);
 }
 
@@ -932,12 +932,12 @@ TEST_F(UserAgentUtilsTest, GenerateBrandVersionListWithBrand) {
   // 1. verify major version
   std::string brand_list_w_brand = metadata.SerializeBrandMajorVersionList();
   EXPECT_EQ(
-      R"("Not;A=Brand";v="8", "Chromium";v="84", "Totally A Brand";v="84")",
+      R"("Not;A=Brand";v="8", "Cinaseek";v="84", "Totally A Brand";v="84")",
       brand_list_w_brand);
   // 2. verify full version
   std::string brand_list_w_brand_fv = metadata.SerializeBrandFullVersionList();
   EXPECT_EQ(base::StrCat({"\"Not;A=Brand\";v=\"8.0.0.0\", ",
-                          "\"Chromium\";v=\"84.0.0.0\", ",
+                          "\"Cinaseek\";v=\"84.0.0.0\", ",
                           "\"Totally A Brand\";v=\"84.0.0.0\""}),
             brand_list_w_brand_fv);
 }

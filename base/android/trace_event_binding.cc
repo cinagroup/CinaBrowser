@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -282,7 +282,7 @@ static void JNI_TraceEvent_WebViewStartupNotFirstInstance(JNIEnv* env,
                   TimeTicks() + Milliseconds(start_time_ms + duration_ms));
 }
 
-static void JNI_TraceEvent_WebViewStartupStartChromiumLocked(
+static void JNI_TraceEvent_WebViewStartupStartCinaseekLocked(
     JNIEnv* env,
     int64_t start_time_ms,
     int64_t duration_ms,
@@ -292,7 +292,7 @@ static void JNI_TraceEvent_WebViewStartupStartChromiumLocked(
   auto t = perfetto::ThreadTrack::Current();
   TRACE_EVENT_BEGIN(
       "android_webview.timeline",
-      "WebView.Startup.CreationTime.StartChromiumLocked", t,
+      "WebView.Startup.CreationTime.StartCinaseekLocked", t,
       TimeTicks() + Milliseconds(start_time_ms),
       [&](perfetto::EventContext ctx) {
         auto* webview_startup =

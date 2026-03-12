@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace ui {
 
 // Tree selector used to identify an accessible tree to traverse, it can be
-// built by a pre-defined tree type like Chromium to indicate that Chromium
+// built by a pre-defined tree type like Cinaseek to indicate that Cinaseek
 // browser tree should be traversed and/or by a string pattern which matches
 // an accessible name of a root of some accessible subtree.
 struct COMPONENT_EXPORT(AX_PLATFORM) AXTreeSelector {
@@ -22,7 +22,7 @@ struct COMPONENT_EXPORT(AX_PLATFORM) AXTreeSelector {
 
     // Browsers
     Chrome = 1 << 0,
-    Chromium = 1 << 1,
+    Cinaseek = 1 << 1,
     Edge = 1 << 2,
     Firefox = 1 << 3,
     Safari = 1 << 4,

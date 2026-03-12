@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ TEST_F(DeskTemplateConversionTest, ParseAdminTemplatePolicy) {
             browser_restore_data_zero->second.end());
   EXPECT_THAT(
       browser_restore_data_zero_window_zero_it->second->browser_extra_info.urls,
-      testing::ElementsAre(GURL("https://www.chromium.org/")));
+      testing::ElementsAre(GURL("https://www.Cinaseek.org/")));
 
   const auto browser_restore_data_zero_window_one_it =
       browser_restore_data_zero->second.find(30001);
@@ -139,7 +139,7 @@ TEST_F(DeskTemplateConversionTest, ParseAdminTemplatePolicy) {
   EXPECT_THAT(
       browser_restore_data_zero_window_one_it->second->browser_extra_info.urls,
       testing::ElementsAre(GURL("chrome://version/"),
-                           GURL("https://dev.chromium.org/")));
+                           GURL("https://dev.Cinaseek.org/")));
 
   // Assert Desk Template one is correct.
   const auto* desk_template_one = templates_derived_from_policy[1].get();
@@ -230,7 +230,7 @@ TEST_F(DeskTemplateConversionTest, AdminTemplateConvertsCorrectly) {
             browser_restore_data->second.end());
   EXPECT_THAT(
       browser_restore_data_window_zero_it->second->browser_extra_info.urls,
-      testing::ElementsAre(GURL("https://www.chromium.org/")));
+      testing::ElementsAre(GURL("https://www.Cinaseek.org/")));
 
   const auto browser_restore_data_window_one_it =
       browser_restore_data->second.find(30001);
@@ -239,7 +239,7 @@ TEST_F(DeskTemplateConversionTest, AdminTemplateConvertsCorrectly) {
   EXPECT_THAT(
       browser_restore_data_window_one_it->second->browser_extra_info.urls,
       testing::ElementsAre(GURL("chrome://version/"),
-                           GURL("https://dev.chromium.org/")));
+                           GURL("https://dev.Cinaseek.org/")));
 }
 
 TEST_F(DeskTemplateConversionTest, ParseBrowserTemplate) {

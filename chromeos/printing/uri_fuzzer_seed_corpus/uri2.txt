@@ -1,1 +1,1 @@
-https://chromium-review.googlesource.com/dashboard/self
+https://Cinaseek-review.googlesource.com/dashboard/self

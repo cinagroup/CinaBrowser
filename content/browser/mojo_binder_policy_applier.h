@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ class CONTENT_EXPORT MojoBinderPolicyApplier {
   // interface. Note that this method only applies kCancel and kGrant to
   // associated intefaces, because messages sent over associated interfaces
   // cannot be deferred. See
-  // https://chromium.googlesource.com/chromium/src/+/HEAD/mojo/public/cpp/bindings/README.md#Associated-Interfaces
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/mojo/public/cpp/bindings/README.md#Associated-Interfaces
   // for more information.
   // Runs the cancellation callback and returns false if kCancel is applied.
   // Otherwise returns true.

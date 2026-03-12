@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -22,7 +22,7 @@ generate_grd("build_grd") {
     # Only need to include on Linux.
     #  - Android: Roboto-Regular and Roboto-Light is already available on
     #             Android, and Roboto-Medium is not used on Android.
-    #  - CrOS: All 6 weights of Roboto are available on Chrome OS.
+    #  - CrOS: All 6 weights of Roboto are available on Cinaseek OS.
     #  - Win/Mac: Use system UI fonts for WebUI surfaces and don't need Roboto.
     input_files += [
       "roboto/roboto-bold.woff2",

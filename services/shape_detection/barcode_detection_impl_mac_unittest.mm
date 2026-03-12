@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ using BarcodeDetectorFactory =
     base::RepeatingCallback<std::unique_ptr<mojom::BarcodeDetection>(
         mojom::BarcodeDetectorOptionsPtr)>;
 
-const std::string kInfoString = "https://www.chromium.org";
+const std::string kInfoString = "https://www.Cinaseek.org";
 
 struct TestParams {
   bool allow_duplicates;

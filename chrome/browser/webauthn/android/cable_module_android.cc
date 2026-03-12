@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@
 #include "third_party/boringssl/src/include/openssl/obj.h"
 
 // These "headers" actually contains function definitions and thus can only be
-// included once across Chromium.
+// included once across Cinaseek.
 #include "chrome/browser/webauthn/android/jni_headers/CableAuthenticatorModuleProvider_jni.h"
 
 using device::cablev2::authenticator::Registration;

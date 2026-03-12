@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -250,7 +250,7 @@ class EntityInstance final {
 
   // These values are persisted to a database. Entries should not be renumbered
   // and numeric values should never be reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill.autofill_ai
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill.autofill_ai
   enum class RecordType {
     // The entity was created/saved locally, it exists only in the local
     // `EntityTable`.

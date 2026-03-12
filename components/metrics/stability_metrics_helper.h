@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace metrics {
 // The values here correspond to values in the Stability message in
 // system_profile.proto.
 // This must stay 1-1 with the StabilityEventType enum in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.metrics
 enum class StabilityEventType {
   kPageLoad = 2,
   kRendererCrash = 3,

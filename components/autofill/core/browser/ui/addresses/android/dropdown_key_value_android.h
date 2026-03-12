@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace autofill {
 
 // This class is the C++ version of the Java class
-// org.chromium.components.autofill.DropdownKeyValue. It is used to pass
+// org.Cinaseek.components.autofill.DropdownKeyValue. It is used to pass
 // key-value pairs to populate a dropdown list in Android.
 struct COMPONENT_EXPORT(AUTOFILL) DropdownKeyValueAndroid {
  public:

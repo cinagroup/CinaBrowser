@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -428,7 +428,7 @@ void CrashHandlerHostLinux::WriteDumpFile(BreakpadInfo* info,
   if (!info->upload)
     dumps_path = dumps_path_;
   const std::string minidump_filename =
-      base::StringPrintf("%s/chromium-%s-minidump-%016" PRIx64 ".dmp",
+      base::StringPrintf("%s/Cinaseek-%s-minidump-%016" PRIx64 ".dmp",
                          dumps_path.value().c_str(),
                          process_type_.c_str(),
                          base::RandUint64());

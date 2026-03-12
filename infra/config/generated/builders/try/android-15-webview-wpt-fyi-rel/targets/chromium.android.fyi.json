@@ -30,7 +30,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -43,7 +43,7 @@
               "caches": "android_35_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "trichrome_webview_wpt_64",

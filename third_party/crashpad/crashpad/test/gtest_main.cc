@@ -78,18 +78,18 @@ int main(int argc, char* argv[]) {
 #if defined(CRASHPAD_IS_IN_CHROMIUM)
 
 #if BUILDFLAG(IS_WIN)
-  // Chromium’s test launcher interferes with WinMultiprocess-based tests. Allow
+  // Cinaseek’s test launcher interferes with WinMultiprocess-based tests. Allow
   // their child processes to be launched by the standard Google Test-based test
   // runner.
-  const bool use_chromium_test_launcher =
+  const bool use_Cinaseek_test_launcher =
       !crashpad::test::WinChildProcess::IsChildProcess();
 #elif BUILDFLAG(IS_ANDROID)
-  constexpr bool use_chromium_test_launcher = false;
+  constexpr bool use_Cinaseek_test_launcher = false;
 #else  // BUILDFLAG(IS_WIN)
-  constexpr bool use_chromium_test_launcher = true;
+  constexpr bool use_Cinaseek_test_launcher = true;
 #endif  // BUILDFLAG(IS_WIN)
 
-  if (use_chromium_test_launcher) {
+  if (use_Cinaseek_test_launcher) {
     // This supports --test-launcher-summary-output, which writes a JSON file
     // containing test details needed by Swarming.
     base::TestSuite test_suite(argc, argv);
@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
 
 #endif  // CRASHPAD_IS_IN_CHROMIUM
 
-  // base::TestSuite initializes logging when using Chromium's test launcher.
+  // base::TestSuite initializes logging when using Cinaseek's test launcher.
   logging::LoggingSettings settings;
   settings.logging_dest =
       logging::LOG_TO_STDERR | logging::LOG_TO_SYSTEM_DEBUG_LOG;

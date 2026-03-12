@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,11 +24,11 @@ class ProxyInfo;
 
 namespace cronet {
 
-// Implements org.chromium.net.ProxyOptions by implementing a custom
+// Implements org.Cinaseek.net.ProxyOptions by implementing a custom
 // net::ProxyDelegate.
 class CronetProxyDelegate final : public net::ProxyDelegate {
  public:
-  // `proxy_config` represent the native view of org.chromium.net.ProxyOptions.
+  // `proxy_config` represent the native view of org.Cinaseek.net.ProxyOptions.
   // `network_tasks` is used to redirect callbacks to the `CronetContext` that
   // created this, it must outlive this class.
   CronetProxyDelegate(cronet::proto::ProxyOptions proxy_config,

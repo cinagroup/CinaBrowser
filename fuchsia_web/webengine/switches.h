@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ extern const char kIncognito[];
 // Enables PlayReady CDM and specifies the corresponding key system string.
 extern const char kPlayreadyKeySystem[];
 
-// Enables publishing of a chromium.internal.DevToolsConnector service by
+// Enables publishing of a Cinaseek.internal.DevToolsConnector service by
 // WebEngine instances, to allow debug-mode DevTools usage, for testing.
 extern const char kEnableRemoteDebugMode[];
 

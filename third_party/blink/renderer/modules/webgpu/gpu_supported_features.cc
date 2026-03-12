@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,9 +13,9 @@ std::optional<V8GPUFeatureName::Enum> GPUSupportedFeatures::ToV8FeatureNameEnum(
       return V8GPUFeatureName::Enum::kDepth32FloatStencil8;
     case wgpu::FeatureName::TimestampQuery:
       return V8GPUFeatureName::Enum::kTimestampQuery;
-    case wgpu::FeatureName::ChromiumExperimentalTimestampQueryInsidePasses:
+    case wgpu::FeatureName::CinaseekExperimentalTimestampQueryInsidePasses:
       return V8GPUFeatureName::Enum::
-          kChromiumExperimentalTimestampQueryInsidePasses;
+          kCinaseekExperimentalTimestampQueryInsidePasses;
     case wgpu::FeatureName::TextureCompressionBC:
       return V8GPUFeatureName::Enum::kTextureCompressionBc;
     case wgpu::FeatureName::TextureCompressionBCSliced3D:
@@ -51,9 +51,9 @@ std::optional<V8GPUFeatureName::Enum> GPUSupportedFeatures::ToV8FeatureNameEnum(
     case wgpu::FeatureName::ClipDistances:
       return V8GPUFeatureName::Enum::kClipDistances;
     case wgpu::FeatureName::MultiDrawIndirect:
-      return V8GPUFeatureName::Enum::kChromiumExperimentalMultiDrawIndirect;
-    case wgpu::FeatureName::ChromiumExperimentalSubgroupMatrix:
-      return V8GPUFeatureName::Enum::kChromiumExperimentalSubgroupMatrix;
+      return V8GPUFeatureName::Enum::kCinaseekExperimentalMultiDrawIndirect;
+    case wgpu::FeatureName::CinaseekExperimentalSubgroupMatrix:
+      return V8GPUFeatureName::Enum::kCinaseekExperimentalSubgroupMatrix;
     case wgpu::FeatureName::PrimitiveIndex:
       return V8GPUFeatureName::Enum::kPrimitiveIndex;
     case wgpu::FeatureName::TextureFormatsTier1:

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ constexpr char kValidPolicy[] = R"(
         ]
       }, {
         "devices": [{ }],
-        "urls": ["https://chromium.org,"]
+        "urls": ["https://Cinaseek.org,"]
       }
     ])";
 // An invalid entry invalidates the entire policy.
@@ -587,7 +587,7 @@ TEST_F(WebUsbAllowDevicesForUrlsPolicyHandlerTest, ApplyPolicySettings) {
 
   ASSERT_EQ(1ul, second_urls_list->size());
   ASSERT_TRUE((*second_urls_list)[0].is_string());
-  EXPECT_EQ("https://chromium.org,", (*second_urls_list)[0].GetString());
+  EXPECT_EQ("https://Cinaseek.org,", (*second_urls_list)[0].GetString());
 }
 
 TEST_F(WebUsbAllowDevicesForUrlsPolicyHandlerTest,

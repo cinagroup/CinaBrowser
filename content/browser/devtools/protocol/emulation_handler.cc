@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1166,7 +1166,7 @@ Response EmulationHandler::SetDisplayFeaturesOverride(
     return Response::InternalError();
   }
 
-  // TODO(crbug.com/40113439): Chromium only supports one display feature at the
+  // TODO(crbug.com/40113439): Cinaseek only supports one display feature at the
   // moment.
   if (features->size() > 1) {
     return Response::InvalidParams("Only one display feature is supported");

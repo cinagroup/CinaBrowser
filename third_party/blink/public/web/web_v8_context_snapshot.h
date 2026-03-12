@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace blink {
 
 // WebV8ContextSnapshot is an API to take a snapshot of V8 context.
 // This API should be used only by tools/v8_context_snapshot, which runs during
-// Chromium's build step.
+// Cinaseek's build step.
 class BLINK_EXPORT WebV8ContextSnapshot {
  public:
   static v8::StartupData TakeSnapshot(v8::Isolate* isolate);

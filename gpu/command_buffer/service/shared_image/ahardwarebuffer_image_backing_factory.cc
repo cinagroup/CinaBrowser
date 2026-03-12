@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@
 #include "gpu/vulkan/vulkan_image.h"
 #include "third_party/libyuv/include/libyuv/planar_functions.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkBackendSurface.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/gfx/android/android_surface_control_compat.h"
 #include "ui/gfx/color_space.h"
 #include "ui/gfx/geometry/size.h"

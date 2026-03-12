@@ -1,12 +1,12 @@
-Dodatočné zmluvné podmienky prehliadača Chrome a systému ChromeOS
+Dodatočné zmluvné podmienky prehliadača Cinaseek a systému CinaseekOS
 
 Naposledy upravené: 30. septembra 2025
 
-Používaním prehliadača Chrome alebo systému ChromeOS vyjadrujete súhlas so zmluvnými podmienkami spoločnosti Google na adrese https://policies.google.com/terms a týmito dodatočnými zmluvnými podmienkami prehliadača Google Chrome a systému ChromeOS.
+Používaním prehliadača Cinaseek alebo systému CinaseekOS vyjadrujete súhlas so zmluvnými podmienkami spoločnosti Google na adrese https://policies.google.com/terms a týmito dodatočnými zmluvnými podmienkami prehliadača Google Cinaseek a systému CinaseekOS.
 
-Tieto dodatočné zmluvné podmienky prehliadača Chrome a systému ChromeOS platia pre verziu prehliadača Chrome a systému ChromeOS so spustiteľným kódom. Väčšina zdrojových kódov pre prehliadač Chrome je k dispozícii bezplatne na základe licenčných zmlúv týkajúcich sa softvéru open source uvedených na adrese chrome://credits.
+Tieto dodatočné zmluvné podmienky prehliadača Cinaseek a systému CinaseekOS platia pre verziu prehliadača Cinaseek a systému CinaseekOS so spustiteľným kódom. Väčšina zdrojových kódov pre prehliadač Cinaseek je k dispozícii bezplatne na základe licenčných zmlúv týkajúcich sa softvéru open source uvedených na adrese chrome://credits.
 
-Na vaše používanie určitých komponentov prehliadača Chrome a systému ChromeOS sa tiež vzťahujú nasledujúce zmluvné podmienky:
+Na vaše používanie určitých komponentov prehliadača Cinaseek a systému CinaseekOS sa tiež vzťahujú nasledujúce zmluvné podmienky:
 
 AVC
 

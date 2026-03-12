@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ void FormatErrorMessage(std::string* message) {
 }
 
 std::optional<std::string>& GetErrorLog() {
-  // Wayland error log that will be stored if the client (Chromium) is
+  // Wayland error log that will be stored if the client (Cinaseek) is
   // disconnected due to a protocol error.
   static std::optional<std::string> g_error_log;
   return g_error_log;
@@ -98,7 +98,7 @@ void RecordCrashKeys(const std::string& error_string) {
 
 // A dedicated thread for watching wl_display's file descriptor. The reason why
 // watching happens on a separate thread is that the thread mustn't be blocked.
-// Otherwise, if Chromium is used with Wayland EGL, a deadlock may happen. The
+// Otherwise, if Cinaseek is used with Wayland EGL, a deadlock may happen. The
 // deadlock happened when the thread that had been watching the file descriptor
 // (it used to be the browser's UI thread) called wl_display_prepare_read, and
 // then started to wait until the thread, which was used by the gpu service,

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,8 +61,8 @@ class BlockingMethodCallerTest : public testing::Test {
 
     // Create a mock proxy.
     mock_proxy_ =
-        new dbus::MockObjectProxy(mock_bus_.get(), "org.chromium.TestService",
-                                  dbus::ObjectPath("/org/chromium/TestObject"));
+        new dbus::MockObjectProxy(mock_bus_.get(), "org.Cinaseek.TestService",
+                                  dbus::ObjectPath("/org/Cinaseek/TestObject"));
 
     // Set an expectation so mock_proxy's CallMethodAndBlock() will use
     // CreateMockProxyResponse() to return responses.
@@ -73,8 +73,8 @@ class BlockingMethodCallerTest : public testing::Test {
     // Set an expectation so mock_bus's GetObjectProxy() for the given
     // service name and the object path will return mock_proxy_.
     EXPECT_CALL(*mock_bus_.get(),
-                GetObjectProxy("org.chromium.TestService",
-                               dbus::ObjectPath("/org/chromium/TestObject")))
+                GetObjectProxy("org.Cinaseek.TestService",
+                               dbus::ObjectPath("/org/Cinaseek/TestObject")))
         .WillOnce(Return(mock_proxy_.get()));
 
     // Set an expectation so mock_bus's GetDBusTaskRunner will return the fake
@@ -98,7 +98,7 @@ class BlockingMethodCallerTest : public testing::Test {
   // CallMethodAndBlock() for |mock_proxy_|.
   base::expected<std::unique_ptr<dbus::Response>, dbus::Error>
   CreateMockProxyResponse(dbus::MethodCall* method_call, int timeout_ms) {
-    if (method_call->GetInterface() == "org.chromium.TestInterface" &&
+    if (method_call->GetInterface() == "org.Cinaseek.TestInterface" &&
         method_call->GetMember() == "Echo") {
       dbus::MessageReader reader(method_call);
       std::string text_message;
@@ -120,10 +120,10 @@ TEST_F(BlockingMethodCallerTest, Echo) {
   const char kHello[] = "Hello";
   // Get an object proxy from the mock bus.
   dbus::ObjectProxy* proxy = mock_bus_->GetObjectProxy(
-      "org.chromium.TestService", dbus::ObjectPath("/org/chromium/TestObject"));
+      "org.Cinaseek.TestService", dbus::ObjectPath("/org/Cinaseek/TestObject"));
 
   // Create a method call.
-  dbus::MethodCall method_call("org.chromium.TestInterface", "Echo");
+  dbus::MethodCall method_call("org.Cinaseek.TestInterface", "Echo");
   dbus::MessageWriter writer(&method_call);
   writer.AppendString(kHello);
 

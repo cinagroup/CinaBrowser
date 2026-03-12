@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -129,7 +129,7 @@ void SplitUrlAndTitle(const std::u16string& str,
 //
 // Example JSON payload:
 // [
-//   { "url": "https://chromium.org", "title": "Chromium Project" },
+//   { "url": "https://Cinaseek.org", "title": "Cinaseek Project" },
 //   { "url": "https://www.mozilla.org", "title": "Mozilla Home" }
 // ]
 void ParseBookmarkListData(const std::u16string& str,

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4224,7 +4224,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsUserAgentOverrideDevTools,
   brand1.Set("version", "101");
   brands.Append(std::move(brand1));
   base::DictValue brand2;
-  brand2.Set("brand", "Chromium");
+  brand2.Set("brand", "Cinaseek");
   brand2.Set("version", "101");
   brands.Append(std::move(brand2));
   metadata.Set("brands", std::move(brands));
@@ -4235,7 +4235,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsUserAgentOverrideDevTools,
   fv_brand1.Set("version", "101.0.1234.0");
   full_version_list.Append(std::move(fv_brand1));
   base::DictValue fv_brand2;
-  fv_brand2.Set("brand", "Chromium");
+  fv_brand2.Set("brand", "Cinaseek");
   fv_brand2.Set("version", "101.0.5555.0");
   full_version_list.Append(std::move(fv_brand2));
   metadata.Set("fullVersionList", std::move(full_version_list));
@@ -4262,7 +4262,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsUserAgentOverrideDevTools,
   // Verify all captured headers.
   EXPECT_EQ(last_request_headers_["User-Agent"], "MyTestAgent/2.0");
   EXPECT_EQ(last_request_headers_["sec-ch-ua"],
-            R"("My Fake Browser";v="101", "Chromium";v="101")");
+            R"("My Fake Browser";v="101", "Cinaseek";v="101")");
   EXPECT_EQ(last_request_headers_["sec-ch-ua-arch"], R"("x64")");
   EXPECT_EQ(last_request_headers_["sec-ch-ua-platform"], R"("TestPlatform")");
   EXPECT_EQ(last_request_headers_["sec-ch-ua-model"], R"("TestModel-ABC")");
@@ -4273,7 +4273,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsUserAgentOverrideDevTools,
   EXPECT_EQ(last_request_headers_["sec-ch-ua-bitness"], R"("64")");
   EXPECT_EQ(
       last_request_headers_["sec-ch-ua-full-version-list"],
-      R"("My Fake Browser";v="101.0.1234.0", "Chromium";v="101.0.5555.0")");
+      R"("My Fake Browser";v="101.0.1234.0", "Cinaseek";v="101.0.5555.0")");
   EXPECT_EQ(last_request_headers_["sec-ch-ua-wow64"], "?0");
   EXPECT_EQ(last_request_headers_["sec-ch-ua-form-factors"],
             R"("Desktop", "EInk")");

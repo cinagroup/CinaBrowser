@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -395,7 +395,7 @@ std::unique_ptr<WifiLanMedium> ImplementationPlatform::CreateWifiLanMedium() {
 }
 
 std::unique_ptr<Timer> ImplementationPlatform::CreateTimer() {
-  // This method is not currently used by Chromium. If it ever is, implement it.
+  // This method is not currently used by Cinaseek. If it ever is, implement it.
   NOTREACHED();
 }
 

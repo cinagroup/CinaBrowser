@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,9 +33,9 @@ using ::testing::StrEq;
 namespace dbus_utils {
 namespace {
 
-constexpr const char kTestServiceName[] = "org.chromium.TestService";
-constexpr const char kTestObjectPath[] = "/org/chromium/TestObject";
-constexpr const char kTestInterface[] = "org.chromium.TestInterface";
+constexpr const char kTestServiceName[] = "org.Cinaseek.TestService";
+constexpr const char kTestObjectPath[] = "/org/Cinaseek/TestObject";
+constexpr const char kTestInterface[] = "org.Cinaseek.TestInterface";
 constexpr const char kTestMethodSuccess[] = "MethodSuccess";
 constexpr const char kTestMethodSuccessMultiReturn[] =
     "MethodSuccessMultiReturn";

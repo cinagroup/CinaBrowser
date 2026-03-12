@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace syncer {
 
 class Nigori;
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 #if !BUILDFLAG(IS_CHROMEOS)

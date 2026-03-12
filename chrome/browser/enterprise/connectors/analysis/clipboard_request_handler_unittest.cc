@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -208,7 +208,7 @@ TEST_F(ClipboardRequestHandlerTest, Text) {
     *expected_event.add_triggered_rule_info() = triggered_rule;
 
     expected_event.set_profile_identifier(profile_->GetPath().AsUTF8Unsafe());
-    expected_event.set_profile_user_name("test-user@chromium.org");
+    expected_event.set_profile_user_name("test-user@Cinaseek.org");
 
     validator.ExpectSensitiveDataEvent(std::move(expected_event));
   } else {
@@ -231,7 +231,7 @@ TEST_F(ClipboardRequestHandlerTest, Text) {
         }(),
         /*size*/ kMaxSize,
         /*result*/ EventResultToString(EventResult::BLOCKED),
-        /*username*/ "test-user@chromium.org",
+        /*username*/ "test-user@Cinaseek.org",
         /*profile_identifier*/ profile_->GetPath().AsUTF8Unsafe(),
         /*scan_id*/ "",
         /*content_transfer_method*/ kMethod,
@@ -274,7 +274,7 @@ TEST_F(ClipboardRequestHandlerTest, Text) {
         chrome::cros::reporting::proto::CONTENT_TRANSFER_METHOD_FILE_PASTE);
 
     expected_event.set_profile_identifier(profile_->GetPath().AsUTF8Unsafe());
-    expected_event.set_profile_user_name("test-user@chromium.org");
+    expected_event.set_profile_user_name("test-user@Cinaseek.org");
 
     validator_bypass.ExpectSensitiveDataEvent(std::move(expected_event));
   } else {
@@ -296,7 +296,7 @@ TEST_F(ClipboardRequestHandlerTest, Text) {
         }(),
         /*size*/ kMaxSize,
         /*result*/ EventResultToString(EventResult::BYPASSED),
-        /*username*/ "test-user@chromium.org",
+        /*username*/ "test-user@Cinaseek.org",
         /*profile_identifier*/ profile_->GetPath().AsUTF8Unsafe(),
         /*scan_id*/ "",
         /*content_transfer_method*/ kMethod,
@@ -356,7 +356,7 @@ TEST_F(ClipboardRequestHandlerTest, Image) {
     *expected_event.add_triggered_rule_info() = triggered_rule;
 
     expected_event.set_profile_identifier(profile_->GetPath().AsUTF8Unsafe());
-    expected_event.set_profile_user_name("test-user@chromium.org");
+    expected_event.set_profile_user_name("test-user@Cinaseek.org");
 
     validator.ExpectSensitiveDataEvent(std::move(expected_event));
   } else {
@@ -379,7 +379,7 @@ TEST_F(ClipboardRequestHandlerTest, Image) {
         }(),
         /*size*/ kMaxSize,
         /*result*/ EventResultToString(EventResult::BLOCKED),
-        /*username*/ "test-user@chromium.org",
+        /*username*/ "test-user@Cinaseek.org",
         /*profile_identifier*/ profile_->GetPath().AsUTF8Unsafe(),
         /*scan_id*/ "",
         /*content_transfer_method*/ kMethod,
@@ -422,7 +422,7 @@ TEST_F(ClipboardRequestHandlerTest, Image) {
         chrome::cros::reporting::proto::CONTENT_TRANSFER_METHOD_FILE_PASTE);
 
     expected_event.set_profile_identifier(profile_->GetPath().AsUTF8Unsafe());
-    expected_event.set_profile_user_name("test-user@chromium.org");
+    expected_event.set_profile_user_name("test-user@Cinaseek.org");
 
     validator_bypass.ExpectSensitiveDataEvent(std::move(expected_event));
   } else {
@@ -444,7 +444,7 @@ TEST_F(ClipboardRequestHandlerTest, Image) {
         }(),
         /*size*/ kMaxSize,
         /*result*/ EventResultToString(EventResult::BYPASSED),
-        /*username*/ "test-user@chromium.org",
+        /*username*/ "test-user@Cinaseek.org",
         /*profile_identifier*/ profile_->GetPath().AsUTF8Unsafe(),
         /*scan_id*/ "",
         /*content_transfer_method*/ kMethod,

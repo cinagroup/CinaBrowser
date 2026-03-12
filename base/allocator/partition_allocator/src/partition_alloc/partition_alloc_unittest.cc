@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5703,7 +5703,7 @@ TEST_P(PartitionAllocDeathTest, CheckTriggered) {
 
 // Not on chromecast, since gtest considers extra output from itself as a test
 // failure:
-// https://ci.chromium.org/ui/p/chromium/builders/ci/Cast%20Audio%20Linux/98492/overview
+// https://ci.Cinaseek.org/ui/p/Cinaseek/builders/ci/Cast%20Audio%20Linux/98492/overview
 #if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && PA_USE_DEATH_TESTS() && \
     !PA_BUILDFLAG(IS_CASTOS)
 
@@ -5876,7 +5876,7 @@ TEST_P(PartitionAllocTest, ConfigurablePool) {
       EXPECT_NE(nullptr, allocations[i]);
       // We don't Untag allocations here because MTE is disabled for
       // configurable pools used by V8.
-      // https://bugs.chromium.org/p/v8/issues/detail?id=13117
+      // https://bugs.Cinaseek.org/p/v8/issues/detail?id=13117
       uintptr_t allocation_base = reinterpret_cast<uintptr_t>(allocations[i]);
       EXPECT_EQ(allocation_base, UntagPtr(allocations[i]));
       EXPECT_TRUE(allocation_base >= pool_base &&

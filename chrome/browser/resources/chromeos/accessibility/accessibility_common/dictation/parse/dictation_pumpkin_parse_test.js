@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -180,7 +180,7 @@ AX_TEST_F(
       assertEquals('goodbye', macro.endPhrase_);
     });
 
-// TODO(b/452364395): Test is flaky on ChromiumOS MSAN bots.
+// TODO(b/452364395): Test is flaky on CinaseekOS MSAN bots.
 AX_TEST_F(
     'DictationPumpkinParseTest', 'DISABLED_ChangeLocale', async function() {
       await this.waitForPumpkinParseStrategy_();

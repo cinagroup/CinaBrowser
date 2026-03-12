@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/android-desktop-x64-libfuzzer-asan/gn-args.json"
@@ -10,18 +10,18 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-desktop-x64-libfuzzer-asan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fuzz",
+              "builder_group": "Cinaseek.fuzz",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_clang",
+                "config": "Cinaseek_clang",
                 "target_bits": 64,
                 "target_platform": "android"
               },
@@ -29,7 +29,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -39,13 +39,13 @@
         {
           "bucket": "ci",
           "builder": "android-desktop-x64-libfuzzer-asan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-desktop-x64-libfuzzer-asan",
-          "group": "tryserver.chromium.fuzz"
+          "group": "tryserver.Cinaseek.fuzz"
         }
       ],
       "retry_failed_shards": true
@@ -59,7 +59,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -69,8 +69,8 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.fuzz",
-  "recipe": "chromium/fuzz",
-  "upload_bucket": "chromium-browser-libfuzzer",
+  "builder_group": "Cinaseek.fuzz",
+  "recipe": "Cinaseek/fuzz",
+  "upload_bucket": "Cinaseek-browser-libfuzzer",
   "upload_directory": "android-desktop-x64-asan"
 }

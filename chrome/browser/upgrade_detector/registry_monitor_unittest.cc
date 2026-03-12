@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ class RegistryMonitorTest : public ::testing::Test {
     ASSERT_NO_FATAL_FAILURE(
         registry_override_.OverrideRegistry(HKEY_CURRENT_USER));
     ASSERT_EQ(test_key_.Create(HKEY_CURRENT_USER,
-                               L"Software\\Chromium\\RegistryMonitorTest",
+                               L"Software\\Cinaseek\\RegistryMonitorTest",
                                KEY_SET_VALUE),
               ERROR_SUCCESS);
   }

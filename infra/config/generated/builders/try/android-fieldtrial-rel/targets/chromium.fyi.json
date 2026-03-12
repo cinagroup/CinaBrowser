@@ -5,7 +5,7 @@
         "args": [
           "--disable-field-trial-config",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "ci_only": true,
@@ -13,7 +13,7 @@
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "android_browsertests_no_fieldtrial"
           ],
@@ -30,7 +30,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -43,7 +43,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 6
         },
         "test": "android_browsertests",
@@ -54,14 +54,14 @@
           "--webview-command-line-arg=--disable-field-trial-config",
           "--webview-command-line-arg=--webview-verbose-logging",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "system_webview_shell_layout_test_apk Disable Field Trial Config"
           ],
@@ -78,7 +78,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -91,7 +91,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "system_webview_shell_layout_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/system_webview_shell:system_webview_shell_layout_test_apk/",
@@ -105,14 +105,14 @@
           "--webview-command-line-arg=--disable-field-trial-config",
           "--webview-command-line-arg=--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "system_webview_shell_layout_test_apk Single Group Per Study Prefer Existing Behavior Field Trial Config"
           ],
@@ -129,7 +129,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -142,7 +142,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "system_webview_shell_layout_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/system_webview_shell:system_webview_shell_layout_test_apk/",
@@ -156,14 +156,14 @@
           "--webview-command-line-arg=--disable-field-trial-config",
           "--webview-command-line-arg=--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "system_webview_shell_layout_test_apk Single Group Per Study Prefer New Behavior Field Trial Config"
           ],
@@ -180,7 +180,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -193,7 +193,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "system_webview_shell_layout_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/system_webview_shell:system_webview_shell_layout_test_apk/",
@@ -206,14 +206,14 @@
           "--disable-field-trial-config",
           "--webview-verbose-logging",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_cts_tests Disable Field Trial Config"
           ],
@@ -229,7 +229,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -237,7 +237,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -250,7 +250,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_cts_tests",
@@ -267,14 +267,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_cts_tests Single Group Per Study Prefer Existing Behavior Field Trial Config"
           ],
@@ -290,7 +290,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -298,7 +298,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -311,7 +311,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_cts_tests",
@@ -328,14 +328,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_cts_tests Single Group Per Study Prefer New Behavior Field Trial Config"
           ],
@@ -351,7 +351,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -359,7 +359,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -372,7 +372,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_cts_tests",
@@ -385,14 +385,14 @@
           "--disable-field-trial-config",
           "--webview-verbose-logging",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk Disable Field Trial Config"
           ],
@@ -409,7 +409,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -422,7 +422,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "webview_instrumentation_test_apk",
@@ -438,14 +438,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk Single Group Per Study Prefer Existing Behavior Field Trial Config"
           ],
@@ -462,7 +462,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -475,7 +475,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "webview_instrumentation_test_apk",
@@ -491,14 +491,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk Single Group Per Study Prefer New Behavior Field Trial Config"
           ],
@@ -515,7 +515,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -528,7 +528,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "webview_instrumentation_test_apk",
@@ -540,14 +540,14 @@
           "--disable-field-trial-config",
           "--webview-verbose-logging",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_ui_test_app_test_apk Disable Field Trial Config"
           ],
@@ -564,7 +564,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -577,7 +577,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webview_ui_test_app_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/automated_ui_tests:webview_ui_test_app_test_apk/",
@@ -591,14 +591,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_ui_test_app_test_apk Single Group Per Study Prefer Existing Behavior Field Trial Config"
           ],
@@ -615,7 +615,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -628,7 +628,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webview_ui_test_app_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/automated_ui_tests:webview_ui_test_app_test_apk/",
@@ -642,14 +642,14 @@
           "--disable-field-trial-config",
           "--fake-variations-channel=stable",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_ui_test_app_test_apk Single Group Per Study Prefer New Behavior Field Trial Config"
           ],
@@ -666,7 +666,7 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -679,7 +679,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webview_ui_test_app_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/automated_ui_tests:webview_ui_test_app_test_apk/",

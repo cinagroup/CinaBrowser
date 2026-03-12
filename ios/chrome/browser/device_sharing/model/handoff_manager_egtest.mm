@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ void AssertHandoffURL(const GURL& gurl) {
 - (void)testMultipleSwitchingTabs {
   const GURL tab1URL = self.testServer->GetURL("/destination.html");
   const GURL tab2URL = self.testServer->GetURL("/pony.html");
-  const GURL tab3URL = self.testServer->GetURL("/chromium_logo_page.html");
+  const GURL tab3URL = self.testServer->GetURL("/Cinaseek_logo_page.html");
 
   // Sets up the state for 3 tabs.
   [ChromeEarlGrey loadURL:tab1URL];
@@ -106,7 +106,7 @@ void AssertHandoffURL(const GURL& gurl) {
 - (void)testSwitchBetweenNormalAndIncognitoTabs {
   const GURL tab1URL = self.testServer->GetURL("/destination.html");
   const GURL tab2URL = self.testServer->GetURL("/pony.html");
-  const GURL tab3URL = self.testServer->GetURL("/chromium_logo_page.html");
+  const GURL tab3URL = self.testServer->GetURL("/Cinaseek_logo_page.html");
 
   // Loads one page.
   [ChromeEarlGrey loadURL:tab1URL];

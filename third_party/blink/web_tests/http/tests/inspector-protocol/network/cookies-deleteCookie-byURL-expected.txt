@@ -14,10 +14,10 @@ Setting cookie by URL with expires: {
     sessionId : <string>
 }
 All cookies before deletion: Num of cookies 2
-name: cookie1, value: .domain, domain: www.chromium.org, path: /, session
-name: cookie2, value: .domain, domain: www.chromium.org, path: /, expires
+name: cookie1, value: .domain, domain: www.Cinaseek.org, path: /, session
+name: cookie2, value: .domain, domain: www.Cinaseek.org, path: /, expires
 Delete cookies: {
 }
 All cookies after deletion: Num of cookies 1
-name: cookie2, value: .domain, domain: www.chromium.org, path: /, expires
+name: cookie2, value: .domain, domain: www.Cinaseek.org, path: /, expires
 

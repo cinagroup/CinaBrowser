@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/android-webview-code-coverage-native/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-webview-code-coverage-native",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.coverage",
+              "builder_group": "Cinaseek.coverage",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "download_xr_test_apks",
                   "mb"
@@ -34,7 +34,7 @@
                   "android",
                   "use_clang_coverage"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -44,7 +44,7 @@
         {
           "bucket": "ci",
           "builder": "android-webview-code-coverage-native",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/android-webview-code-coverage-native/targets"
@@ -65,7 +65,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -75,6 +75,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.coverage",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.coverage",
+  "recipe": "Cinaseek"
 }

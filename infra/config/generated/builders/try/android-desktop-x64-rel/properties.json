@@ -1,9 +1,9 @@
 {
-  "$build/chromium_orchestrator": {
+  "$build/Cinaseek_orchestrator": {
     "compilator": "android-desktop-x64-rel-compilator",
     "compilator_watcher_git_revision": "27c191f304c8d7329a393d8a69020fc14032c3c3"
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/android-desktop-x64-rel/gn-args.json"
@@ -14,15 +14,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-desktop-x64-compile-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android.desktop",
+              "builder_group": "Cinaseek.android.desktop",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -36,7 +36,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -44,15 +44,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-desktop-x64-rel-15-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android.desktop",
+              "builder_group": "Cinaseek.android.desktop",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -66,12 +66,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-desktop-x64-compile-rel",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -81,14 +81,14 @@
         {
           "bucket": "ci",
           "builder": "android-desktop-x64-compile-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "android-desktop-x64-rel-15-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/android-desktop-x64-rel/targets"
@@ -115,7 +115,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -125,7 +125,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.android",
+  "builder_group": "tryserver.Cinaseek.android",
   "cq": "required",
-  "recipe": "chromium/orchestrator"
+  "recipe": "Cinaseek/orchestrator"
 }

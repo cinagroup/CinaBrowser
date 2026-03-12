@@ -1,5 +1,5 @@
 {
-  "mac13-wpt-chromium-rel": {
+  "mac13-wpt-Cinaseek-rel": {
     "isolated_scripts": [
       {
         "args": [
@@ -33,7 +33,7 @@
             "cpu": "x86-64",
             "os": "Mac-13"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "headless_shell_wpt",

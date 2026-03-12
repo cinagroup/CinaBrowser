@@ -74,7 +74,7 @@ struct ContextMenuData {
   std::string frame_encoding;
 
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.blink_public.common
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.blink_public.common
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ContextMenuDataMediaFlags
   enum MediaFlags {
     kMediaNone = 0,

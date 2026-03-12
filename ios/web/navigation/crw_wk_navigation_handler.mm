@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1177,7 +1177,7 @@ void LogPresentingErrorPageFailedWithError(NSError* error) {
 - (void)webView:(WKWebView*)webView
      navigationAction:(WKNavigationAction*)navigationAction
     didBecomeDownload:(WKDownload*)WKDownload {
-  // As Chromium never return WKNavigationResponsePolicyDownload
+  // As Cinaseek never return WKNavigationResponsePolicyDownload
   // when deciding the policy for an action, WebKit should never
   // invoke this delegate method.
   NOTREACHED();
@@ -1402,7 +1402,7 @@ void LogPresentingErrorPageFailedWithError(NSError* error) {
 // Returns YES if the given `action` should be allowed to continue for app
 // specific URL. If this returns NO, the navigation should be cancelled.
 // App specific pages have elevated privileges and WKWebView uses the same
-// renderer process for all page frames. With that Chromium does not allow
+// renderer process for all page frames. With that Cinaseek does not allow
 // running App specific pages in the same process as a web site from the
 // internet. Allows navigation to app specific URL in the following cases:
 //   - last committed URL is app specific

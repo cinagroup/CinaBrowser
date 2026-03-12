@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
   payments::ErrorLogger log;
   log.DisableInTest();
   payments::PaymentManifestParser::ParsePaymentMethodManifestIntoVectors(
-      GURL("https://chromium.org/pmm.json"), std::move(*value), log,
+      GURL("https://Cinaseek.org/pmm.json"), std::move(*value), log,
       &web_app_manifest_urls, &supported_origins);
   return 0;
 }

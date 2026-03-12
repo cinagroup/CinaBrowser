@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ using AppListInteractiveUiTest = InteractiveAshTest;
 
 // Basic smoke test of the bubble launcher.
 // Contacts: chromeos-launcher@google.com, chromeos-sw-engprod@google.com
-// Ported from Tast by: jamescook@chromium.org
+// Ported from Tast by: jamescook@Cinaseek.org
 // BugComponent: b:1288350
 IN_PROC_BROWSER_TEST_F(AppListInteractiveUiTest, BubbleSmoke) {
   base::AddFeatureIdTagToTestResult(

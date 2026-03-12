@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ Microsoft::WRL::ComPtr<IDXGIOutput> DXGIOutputFromMonitor(
 
 // Create a new factory and find a DXGI output on the target monitor by
 // enumerating *all* adapters. The found adapter may be different than the
-// rendering adapter if Chromium chooses an adapter which is not connected to
+// rendering adapter if Cinaseek chooses an adapter which is not connected to
 // any display: ex --force_high_performance_gpu.
 Microsoft::WRL::ComPtr<IDXGIOutput> FindDXGIOutputForMonitor(HMONITOR monitor) {
   Microsoft::WRL::ComPtr<IDXGIFactory1> factory;

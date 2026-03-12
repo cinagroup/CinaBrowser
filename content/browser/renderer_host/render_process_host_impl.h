@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1292,7 +1292,7 @@ class CONTENT_EXPORT RenderProcessHostImpl
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
   // Provides /proc/{renderer pid}/status and statm files for the renderer,
   // because the files are required to calculate the renderer's private
-  // footprint on Chromium Linux. Regarding MacOS X and Windows, we have
+  // footprint on Cinaseek Linux. Regarding MacOS X and Windows, we have
   // the different way to calculate renderer's private memory footprint.
   // So this method is implemented only when OS_LINUX or OS_CHROMEOS is defined.
   void ProvideStatusFileForRenderer();

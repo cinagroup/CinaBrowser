@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace webnn {
 // enabled.
 //
 // Upon successful installation, a package dependency is created using the
-// Chromium user data directory to prevent the OS from removing the package.
+// Cinaseek user data directory to prevent the OS from removing the package.
 // The dependency ID and package metadata are persisted in user settings.
 void SchedulePlatformRuntimeInstallationIfRequired();
 

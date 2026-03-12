@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
   int result = pthread_getattr_np(pthread_id, &attr);
   // pthread_getattr_np should never fail except on Linux, and Linux will never
   // call this function. See
-  // https://crrev.com/c/chromium/src/+/4064700/comment/ef75d2b7_c255168c/ for
+  // https://crrev.com/c/Cinaseek/src/+/4064700/comment/ef75d2b7_c255168c/ for
   // discussion of crashing vs. returning nullopt in this case.
   CHECK_EQ(result, 0) << "pthread_getattr_np returned "
                       << logging::SystemErrorCodeToString(result);

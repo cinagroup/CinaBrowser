@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -223,10 +223,10 @@ int SandboxedFile::FileSize(sqlite3_int64* result_size) {
 //    PENDING -> EXCLUSIVE
 //
 // See original implementation:
-//    https://source.chromium.org/chromium/chromium/src/+/main:third_party/sqlite/src/src/os_win.c;l=3514;drc=4a0b7a332f3aeb27814cfa12dc0ebdbbd994a928
+//    https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/sqlite/src/src/os_win.c;l=3514;drc=4a0b7a332f3aeb27814cfa12dc0ebdbbd994a928
 //
 // Some issues related to file system locks:
-//    https://source.chromium.org/chromium/chromium/src/+/main:third_party/sqlite/src/src/os_unix.c;l=1077;drc=5d60f47001bf64b48abac68ed59621e528144ea4
+//    https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/sqlite/src/src/os_unix.c;l=1077;drc=5d60f47001bf64b48abac68ed59621e528144ea4
 //
 // The SQLite core uses two distinct strategies to acquire an EXCLUSIVE lock.
 // This VFS implementation must correctly handle lock requests from both paths.
@@ -249,7 +249,7 @@ int SandboxedFile::FileSize(sqlite3_int64* result_size) {
 //   complete.
 //
 //   see:
-//     https://source.chromium.org/chromium/chromium/src/+/main:third_party/sqlite/src/src/pager.c;l=5260;drc=65d0312c96cd23958372fac8940314c782a6b03c
+//     https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/sqlite/src/src/pager.c;l=5260;drc=65d0312c96cd23958372fac8940314c782a6b03c
 int SandboxedFile::Lock(int mode) {
   CHECK_EQ(file_type_, FileType::kMainDb);
   // Ensures valid lock states are used (see: sqlite3OsLock(...) assertions).

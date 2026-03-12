@@ -1,13 +1,13 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file declares constants that describe specifics of a Chromium-based
+// This file declares constants that describe specifics of a Cinaseek-based
 // browser's branding and modes of installation.
 //
 // A browser's brand comprises all identifying markings that distinguish it from
-// a browser produced by another party. Chromium has remnants of both the
-// Chromium and Google Chrome brands.
+// a browser produced by another party. Cinaseek has remnants of both the
+// Cinaseek and Google Chrome brands.
 //
 // Each brand defines one primary install mode for the browser. A brand may
 // additionally define one or more secondary install modes (e.g., Google
@@ -45,7 +45,7 @@
 #elif BUILDFLAG(GOOGLE_CHROME_FOR_TESTING_BRANDING)
 #include "chrome/install_static/google_chrome_for_testing_install_modes.h"
 #else
-#include "chrome/install_static/chromium_install_modes.h"
+#include "chrome/install_static/Cinaseek_install_modes.h"
 #endif
 
 namespace install_static {
@@ -55,8 +55,8 @@ inline constexpr size_t kProductPathNameLength = _countof(kProductPathName) - 1;
 
 // The following convenience functions behave conditionally on whether or not
 // the brand uses Chrome's integration with Google Update. For brands that do
-// not (e.g., Chromium), they return something like "Software\Chromium" or
-// "Software\Chromium Binaries". Otherwise, for brands that do integrate with
+// not (e.g., Cinaseek), they return something like "Software\Cinaseek" or
+// "Software\Cinaseek Binaries". Otherwise, for brands that do integrate with
 // Google Update, they return something like
 // "Software\Google\Update\ClientState{Medium}\<guid>" where "<guid>" is either
 // |mode|'s appguid.

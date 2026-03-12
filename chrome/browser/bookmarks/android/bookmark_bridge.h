@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@
 class BookmarkBridgeTest;
 
 // Values for a bitmask used to refer to a collection of bookmark nodes.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.bookmarks
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.bookmarks
 // GENERATED_JAVA_IS_FLAG: true
 enum BookmarkNodeMaskBit {
   NONE = 0,

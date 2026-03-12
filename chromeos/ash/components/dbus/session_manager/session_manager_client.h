@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@ class COMPONENT_EXPORT(SESSION_MANAGER) SessionManagerClient {
   enum class RestartJobReason : uint32_t {
     // Restart browser for Guest session.
     kGuest = 0,
-    // Restart browser without user session for headless Chromium.
+    // Restart browser without user session for headless Cinaseek.
     kUserless = 1,
   };
 
@@ -192,7 +192,7 @@ class COMPONENT_EXPORT(SESSION_MANAGER) SessionManagerClient {
   // request originates from belongs to the browser itself.
   // This method duplicates |socket_fd| so it's OK to close the FD without
   // waiting for the result.
-  // |reason| - restart job without user session (for headless chromium)
+  // |reason| - restart job without user session (for headless Cinaseek)
   // or with user session (for guest sessions only).
   virtual void RestartJob(int socket_fd,
                           const std::vector<std::string>& argv,

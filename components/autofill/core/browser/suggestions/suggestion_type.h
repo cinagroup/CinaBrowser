@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace autofill {
 // enum (not necessarily at the end). Set its value to the current `kMaxValue`
 // and increase `kMaxValue` by 1.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 //
 // LINT.IfChange(SuggestionType)
 enum class SuggestionType {

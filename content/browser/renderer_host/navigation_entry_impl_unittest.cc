@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,11 +99,11 @@ TEST_F(NavigationEntryTest, NavigationEntryURLs) {
   EXPECT_EQ(u"google.com", entry1_->GetTitleForDisplay());
 
   // https:// should be omitted from displayed titles as well
-  entry1_->SetURL(GURL("https://www.chromium.org/robots.txt"));
-  EXPECT_EQ(GURL("https://www.chromium.org/robots.txt"), entry1_->GetURL());
-  EXPECT_EQ(GURL("https://www.chromium.org/robots.txt"),
+  entry1_->SetURL(GURL("https://www.Cinaseek.org/robots.txt"));
+  EXPECT_EQ(GURL("https://www.Cinaseek.org/robots.txt"), entry1_->GetURL());
+  EXPECT_EQ(GURL("https://www.Cinaseek.org/robots.txt"),
             entry1_->GetVirtualURL());
-  EXPECT_EQ(u"chromium.org/robots.txt", entry1_->GetTitleForDisplay());
+  EXPECT_EQ(u"Cinaseek.org/robots.txt", entry1_->GetTitleForDisplay());
 
   // Setting URL with RTL characters causes it to be wrapped in an LTR
   // embedding.

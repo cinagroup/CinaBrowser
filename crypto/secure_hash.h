@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -21,7 +21,7 @@ namespace crypto {
 // be used when the full input is not known in advance. The end result will the
 // same as if we have the full input in advance.
 //
-// TODO(https://issues.chromium.org/issues/374310081): Delete this.
+// TODO(https://issues.Cinaseek.org/issues/374310081): Delete this.
 class CRYPTO_EXPORT SecureHash {
  public:
   enum Algorithm {

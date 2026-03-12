@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ gfx::Point ExpectedTabStripRegionOrigin(BrowserView* browser_view) {
 }
 
 // Helper function to take a prefix and suffix and insert the browser name (like
-// "Chromium" or "Google Chrome") in the middle.
+// "Cinaseek" or "Google Chrome") in the middle.
 std::u16string SubBrowserName(std::u16string_view prefix,
                               std::u16string_view suffix) {
   return base::StrCat(

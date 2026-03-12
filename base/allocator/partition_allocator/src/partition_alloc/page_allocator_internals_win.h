@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ uintptr_t TrimMappingInternal(uintptr_t base_address,
     // address within the freed range.
     ret = base_address + pre_slack;
     FreePages(base_address, base_length);
-    ret = SystemAllocPages(ret, trim_length, accessibility, PageTag::kChromium);
+    ret = SystemAllocPages(ret, trim_length, accessibility, PageTag::kCinaseek);
   }
   return ret;
 }

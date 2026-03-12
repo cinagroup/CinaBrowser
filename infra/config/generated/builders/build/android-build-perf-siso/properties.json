@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/build/android-build-perf-siso/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "build",
               "builder": "android-build-perf-siso",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build",
+              "builder_group": "Cinaseek.build",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -33,7 +33,7 @@
                   "android",
                   "siso_latest"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -43,7 +43,7 @@
         {
           "bucket": "build",
           "builder": "android-build-perf-siso",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -62,7 +62,7 @@
       "no-fallback"
     ],
     "profile_mode": "local",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": -1
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -72,6 +72,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.build",
+  "builder_group": "Cinaseek.build",
   "recipe": "chrome_build/build_perf_siso"
 }

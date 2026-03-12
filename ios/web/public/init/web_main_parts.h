@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ namespace web {
 //    owned by //ios. As such, this is still "single-threaded" initialization
 //    as far as //ios is concerned and the right place to initialize
 //    thread-compatible objects:
-//    https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks.md#threading-lexicon
+//    https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/threading_and_tasks.md#threading-lexicon
 //
 //  - PreMainMessageLoopRun: in doubt, put things here. At this stage all core
 //    APIs have been initialized. Services that must be initialized before the

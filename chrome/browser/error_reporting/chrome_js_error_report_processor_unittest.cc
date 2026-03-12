@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,7 +107,7 @@ constexpr char ChromeJsErrorReportProcessorTest::kSecondProduct[];
 
 TEST_F(ChromeJsErrorReportProcessorTest, Basic) {
   auto report = MakeErrorReport("Hello World");
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
 
   SendErrorReport(std::move(report));
   EXPECT_TRUE(finish_callback_was_called_);
@@ -122,9 +122,9 @@ TEST_F(ChromeJsErrorReportProcessorTest, Basic) {
   EXPECT_EQ(actual_report->GetQueryParam("renderer_process_uptime_ms"), "0");
   // TODO(iby) research why URL is repeated...
   EXPECT_EQ(actual_report->GetQueryParam("src"),
-            "https://www.chromium.org/Home");
+            "https://www.Cinaseek.org/Home");
   EXPECT_EQ(actual_report->GetQueryParam("full_url"),
-            "https://www.chromium.org/Home");
+            "https://www.Cinaseek.org/Home");
   EXPECT_EQ(actual_report->GetQueryParam("url"), "/Home");
   EXPECT_EQ(actual_report->GetQueryParam("browser"), "Chrome");
   EXPECT_EQ(actual_report->GetQueryParam("source_system"), std::nullopt);
@@ -150,12 +150,12 @@ TEST_F(ChromeJsErrorReportProcessorTest, Basic) {
 
 void ChromeJsErrorReportProcessorTest::TestAllFields() {
   auto report = MakeErrorReport("Hello World");
-  report.url = "https://www.chromium.org/Home/scripts.js";
+  report.url = "https://www.Cinaseek.org/Home/scripts.js";
   report.product = "Unit test";
   report.version = "6.2.3.4";
   report.line_number = 83;
   report.column_number = 14;
-  report.page_url = "https://www.chromium.org/Home.html";
+  report.page_url = "https://www.Cinaseek.org/Home.html";
   report.debug_id = "ABC:123";
   report.stack_trace = "bad_func(1, 2)\nonclick()\n";
   report.renderer_process_uptime_ms = 1234;
@@ -177,12 +177,12 @@ void ChromeJsErrorReportProcessorTest::TestAllFields() {
   EXPECT_EQ(actual_report->GetQueryParam("debug_id"), "ABC:123");
   // TODO(iby) research why URL is repeated...
   EXPECT_EQ(actual_report->GetQueryParam("src"),
-            "https://www.chromium.org/Home/scripts.js");
+            "https://www.Cinaseek.org/Home/scripts.js");
   EXPECT_EQ(actual_report->GetQueryParam("full_url"),
-            "https://www.chromium.org/Home/scripts.js");
+            "https://www.Cinaseek.org/Home/scripts.js");
   EXPECT_EQ(actual_report->GetQueryParam("url"), "/Home/scripts.js");
   EXPECT_EQ(actual_report->GetQueryParam("page_url"),
-            "https://www.chromium.org/Home.html");
+            "https://www.Cinaseek.org/Home.html");
   EXPECT_EQ(actual_report->GetQueryParam("browser"), "Chrome");
   // product is double-escaped. The first time, it transforms to Unit%20test,
   // then the % is turned into %25.
@@ -219,7 +219,7 @@ TEST_F(ChromeJsErrorReportProcessorTest, AllFields) {
 TEST_F(ChromeJsErrorReportProcessorTest, NoConsent) {
   endpoint_->set_consented(false);
   auto report = MakeErrorReport("Hello World");
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
 
   SendErrorReport(std::move(report));
   EXPECT_TRUE(finish_callback_was_called_);
@@ -230,7 +230,7 @@ TEST_F(ChromeJsErrorReportProcessorTest, NoConsent) {
 
 TEST_F(ChromeJsErrorReportProcessorTest, StackTraceWithErrorMessage) {
   auto report = MakeErrorReport("Hello World");
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
   report.stack_trace = "Hello World\nbad_func(1, 2)\nonclick()\n";
 
   SendErrorReport(std::move(report));
@@ -245,7 +245,7 @@ TEST_F(ChromeJsErrorReportProcessorTest, StackTraceWithErrorMessage) {
 
 TEST_F(ChromeJsErrorReportProcessorTest, RedactMessage) {
   auto report = MakeErrorReport("alpha@beta.org says hi to gamma@omega.co.uk");
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
   report.stack_trace =
       "alpha@beta.org says hi to gamma@omega.co.uk\n"
       "bad_func(1, 2)\nonclick()\n";
@@ -268,7 +268,7 @@ TEST_F(ChromeJsErrorReportProcessorTest, TruncateMessage) {
     base::StrAppend(&long_error_message, {base::NumberToString(i), "~"});
   }
   auto report = MakeErrorReport(long_error_message);
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
 
   SendErrorReport(std::move(report));
   EXPECT_TRUE(finish_callback_was_called_);
@@ -288,7 +288,7 @@ TEST_F(ChromeJsErrorReportProcessorTest, TruncateMessage) {
 TEST_F(ChromeJsErrorReportProcessorTest, TruncateMessageWithEscapes) {
   std::string long_error_message(2000, ' ');
   auto report = MakeErrorReport(long_error_message);
-  report.url = "https://www.chromium.org/Home";
+  report.url = "https://www.Cinaseek.org/Home";
 
   SendErrorReport(std::move(report));
   EXPECT_TRUE(finish_callback_was_called_);

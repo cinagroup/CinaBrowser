@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -973,7 +973,7 @@ void HandleCrashDump(const BreakpadInfo& info) {
   }
 
   static const char temp_file_template[] =
-      "/tmp/chromium-upload-XXXXXXXXXXXXXXXX";
+      "/tmp/Cinaseek-upload-XXXXXXXXXXXXXXXX";
   char temp_file[sizeof(temp_file_template)];
   int temp_file_fd = -1;
   if (keep_fd) {

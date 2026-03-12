@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ namespace ash {
 //
 // The following method is exported:
 //
-// Interface: org.chromium.NetworkProxyServiceInterface
+// Interface: org.Cinaseek.NetworkProxyServiceInterface
 //            (kNetworkProxyServiceInterface)
 // Method: ResolveProxy (kNetworkProxyServiceResolveProxyMethod)
 // Parameters: string:source_url
@@ -51,9 +51,9 @@ namespace ash {
 // This service can be manually tested using dbus-send:
 //
 //   % dbus-send --system --type=method_call --print-reply
-//       --dest=org.chromium.NetworkProxyService
-//       /org/chromium/NetworkProxyService
-//       org.chromium.NetworkProxyServiceInterface.ResolveProxy
+//       --dest=org.Cinaseek.NetworkProxyService
+//       /org/Cinaseek/NetworkProxyService
+//       org.Cinaseek.NetworkProxyServiceInterface.ResolveProxy
 //       string:https://www.google.com/
 //
 class ProxyResolutionServiceProvider

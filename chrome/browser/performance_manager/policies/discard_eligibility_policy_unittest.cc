@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -127,7 +127,7 @@ TEST_F(DiscardEligibilityPolicyTest, TestCanDiscardMultipleCurrentMainFrames) {
   // both marked "current", but due to a state tracking bug this sometimes
   // occurs. Until the bug is fixed, make sure CanDiscard works around it. (See
   // comment at
-  // https://source.chromium.org/chromium/chromium/src/+/main:components/performance_manager/graph/frame_node_impl.cc;l=272;drc=6d331b84c048659c6a9a89bd81e92dfdddd6bae7.)
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/performance_manager/graph/frame_node_impl.cc;l=272;drc=6d331b84c048659c6a9a89bd81e92dfdddd6bae7.)
   TestNodeWrapper<FrameNodeImpl> other_frame_node =
       CreateFrameNodeAutoId(process_node(), page_node());
 

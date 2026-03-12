@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -622,7 +622,7 @@ TEST_F(URLBlocklistManagerTest,
 
 TEST_F(URLBlocklistManagerTest, BlocklistBasicCoverage) {
   // Tests to cover the documentation from
-  // http://www.chromium.org/administrators/url-blocklist-filter-format
+  // http://www.Cinaseek.org/administrators/url-blocklist-filter-format
 
   // [scheme://][.]host[:port][/path][@query]
   // Scheme can be http, https, ftp, chrome, etc. This field is optional, and

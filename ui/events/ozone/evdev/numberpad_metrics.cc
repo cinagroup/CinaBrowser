@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -202,7 +202,7 @@ NumberpadMetricsRecorder::~NumberpadMetricsRecorder() = default;
 
 // Background: the dynamic numberpad lets us know when its state is changed
 // via a numlock keypress, however we cannot retrieve the current state. On
-// boot it is reasonable to assume it is off, however on chromium restart (for
+// boot it is reasonable to assume it is off, however on Cinaseek restart (for
 // crash or any other reason) we don't know.
 //
 // Using the assumption that a numberpad key can only come through when it

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace cronet {
 
 // Do not reorder, this is bundled in both Cronet Impl and API which
 // means that the versions might mismatch, Only add new entries.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum class ConnectionCloseSource {
   UNKNOWN = 0,
   PEER = 1,

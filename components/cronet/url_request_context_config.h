@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ namespace cronet {
 // should be kept more separate from applying the configuration.
 struct URLRequestContextConfig {
   // Type of HTTP cache.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.impl
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.impl
   enum HttpCacheType {
     // No HTTP cache.
     DISABLED,

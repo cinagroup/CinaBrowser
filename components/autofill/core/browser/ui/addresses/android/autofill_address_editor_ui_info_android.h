@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace autofill {
 
 // This class is the C++ version of the Java class
-// org.chromium.components.autofill.AutofillAddressEditorUIInfo. It is used to
+// org.Cinaseek.components.autofill.AutofillAddressEditorUIInfo. It is used to
 // pass the information about the list of fields to display in the Chrome
 // address editors.
 struct COMPONENT_EXPORT(AUTOFILL) AutofillAddressEditorUiInfoAndroid {

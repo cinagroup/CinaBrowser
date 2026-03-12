@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -112,7 +112,7 @@ copy("elevation_service_unittests_files") {
   sources = [
     "//components/test/data/crx_file/valid_no_publisher.crx3",
     "//components/test/data/crx_file/valid_publisher.crx3",
-    "//components/test/data/update_client/ChromeRecovery.crx3",
+    "//components/test/data/update_client/CinaseekRecovery.crx3",
   ]
   outputs = [ "$root_out_dir/elevated_recovery_unittest/{{source_file_part}}" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ void ControlledFrameEmbedderURLFetcher::Start() {
           sender: "Controlled Frame"
           description:
             "When a Controlled Frame is embedded within an embedder, it needs "
-            "to fetch the embedder's content scripts from Chromium's network "
+            "to fetch the embedder's content scripts from Cinaseek's network "
             "stack for its content scripts injection API."
           trigger: "The content script injection API is called."
           data: "URL of the script file to be downloaded."

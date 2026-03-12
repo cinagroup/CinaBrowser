@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,9 +13,9 @@
 #include "net/cert/cert_verifier.h"
 #include "net/cert/ct_log_verifier.h"
 #include "net/http/transport_security_state.h"
-#include "net/quic/crypto/proof_source_chromium.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
 #include "net/third_party/quiche/src/quiche/common/platform/api/quiche_command_line_flags.h"
 #include "net/third_party/quiche/src/quiche/quic/platform/api/quic_flags.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/simple_ticket_crypter.h"
@@ -37,7 +37,7 @@ DEFINE_QUICHE_COMMAND_LINE_FLAG(std::string,
                                 "Path to the pkcs8 private key.");
 
 using net::CertVerifier;
-using net::ProofVerifierChromium;
+using net::ProofVerifierCinaseek;
 
 namespace quiche {
 
@@ -52,18 +52,18 @@ std::set<std::string> UnknownRootAllowlistForHost(std::string host) {
 
 }  // namespace
 
-class ProofVerifierChromiumWithOwnership : public net::ProofVerifierChromium {
+class ProofVerifierCinaseekWithOwnership : public net::ProofVerifierCinaseek {
  public:
-  ProofVerifierChromiumWithOwnership(
+  ProofVerifierCinaseekWithOwnership(
       std::unique_ptr<net::CertVerifier> cert_verifier,
       std::string host)
-      : net::ProofVerifierChromium(
+      : net::ProofVerifierCinaseek(
             cert_verifier.get(),
             &transport_security_state_,
             /*sct_auditing_delegate=*/nullptr,
             UnknownRootAllowlistForHost(host),
             // Fine to use an empty NetworkAnonymizationKey
-            // here, since this isn't used in Chromium.
+            // here, since this isn't used in Cinaseek.
             net::NetworkAnonymizationKey()),
         cert_verifier_(std::move(cert_verifier)) {}
 
@@ -76,14 +76,14 @@ std::unique_ptr<quic::ProofVerifier> CreateDefaultProofVerifierImpl(
     const std::string& host) {
   std::unique_ptr<net::CertVerifier> cert_verifier =
       net::CertVerifier::CreateDefault(/*cert_net_fetcher=*/nullptr);
-  return std::make_unique<ProofVerifierChromiumWithOwnership>(
+  return std::make_unique<ProofVerifierCinaseekWithOwnership>(
       std::move(cert_verifier), host);
 }
 
 std::unique_ptr<quic::ProofSource> CreateDefaultProofSourceImpl() {
-  auto proof_source = std::make_unique<net::ProofSourceChromium>();
+  auto proof_source = std::make_unique<net::ProofSourceCinaseek>();
   proof_source->SetTicketCrypter(std::make_unique<quic::SimpleTicketCrypter>(
-      quic::QuicChromiumClock::GetInstance()));
+      quic::QuicCinaseekClock::GetInstance()));
   CHECK(proof_source->Initialize(
 #if BUILDFLAG(IS_WIN)
       base::FilePath(base::UTF8ToWide(GetQuicFlag(certificate_file))),

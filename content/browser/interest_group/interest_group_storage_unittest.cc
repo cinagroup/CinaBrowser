@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3376,7 +3376,7 @@ TEST_F(InterestGroupStorageTest, DumpAllIgFields) {
                  "/ %PATH%): "
               << dump_db_command;
     LOG(INFO) << "sqlite3 can be installed from a package from your OS, or "
-                 "built from the Chromium repo via the `sqlite_shell` GN "
+                 "built from the Cinaseek repo via the `sqlite_shell` GN "
                  "target -- just make sure to rename it to / have a symlink "
                  "called sqlite3 on the path.";
     if (base::CommandLine::ForCurrentProcess()->HasSwitch("dry-run")) {
@@ -5004,7 +5004,7 @@ TEST_F(InterestGroupStorageTest, MultiVersionUpgradeTest) {
       "--gtest_filter=\"*InterestGroupStorage*Test*DumpAllIgFields\" "
       "--dump-all-ig-fields\n\n"
       "after installing sqlite3 from your package manager -- you can also "
-      "build the Chromium `sqlite_shell` GN target and rename / symlink it on "
+      "build the Cinaseek `sqlite_shell` GN target and rename / symlink it on "
       "your path as sqlite3. \n\n"
       "***Make sure to add the generated file to source control***.\n\n";
   for (int i = kOldestAllFieldsVersion;

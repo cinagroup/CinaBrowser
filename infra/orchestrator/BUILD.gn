@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/chromeos/args.gni")
@@ -29,8 +29,8 @@ group("orchestrator_all") {
     # the root vpython spec files.
     "//.vpython3",
 
-    # Used if the orchestrator needs to run recipe_module.chromium.get_version()
-    # to get the Chrome milestone being tested.
+    # Used if the orchestrator needs to run recipe_module.Cinaseek.get_version()
+    # to get the Cinaseek milestone being tested.
     "//chrome/VERSION",
 
     # Test specs the Orchestrator needs to trigger swarming tests

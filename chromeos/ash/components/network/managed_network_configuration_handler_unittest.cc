@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ constexpr char kTestGuidUnmanagedWifi2[] = "wifi2";
 // for a Wifi service.
 constexpr char kTestGuidEthernetEap[] = "policy_ethernet_eap";
 
-constexpr char kTestEuiccPath[] = "/org/chromium/Hermes/Euicc/0";
+constexpr char kTestEuiccPath[] = "/org/Cinaseek/Hermes/Euicc/0";
 constexpr char kTestEid[] = "12345678901234567890123456789012";
 constexpr char kTestCellularServicePath[] = "cellular_service_path";
 constexpr char kTestCellularGuid[] = "cellular_guid";

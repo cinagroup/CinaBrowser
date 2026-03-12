@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ inline constexpr size_t kCounterSize = 16;
 // thereafter both plaintexts.
 //
 // Note: in theory it would be nicer to have a proper stateful API for this, but
-// in practive every client of raw CTR encryption in Chromium does single-shot
+// in practive every client of raw CTR encryption in Cinaseek does single-shot
 // operations and throws away the counter value afterwards, so such complexity
 // would be wasted.
 

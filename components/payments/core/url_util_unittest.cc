@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,11 +36,11 @@ TEST_F(UrlUtilTest, ValidUrlBasedPaymentMethodIdentifier) {
   const char* kInputs[] = {"http://allowed.insecure.origin.for.test",
                            "http://localhost:8080",
                            "http://localhost",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://chromium.org/",
-                           "https://chromium.org"};
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://Cinaseek.org/",
+                           "https://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_TRUE(UrlUtil::IsValidUrlBasedPaymentMethodIdentifier(GURL(input)))
         << input << " should be a valid payment method identifier.";
@@ -50,10 +50,10 @@ TEST_F(UrlUtilTest, ValidUrlBasedPaymentMethodIdentifier) {
 TEST_F(UrlUtilTest, InvalidUrlBasedPaymentMethodIdentifier) {
   const char* kInputs[] = {"about:blank",
                            "file:///home/user/test.html",
-                           "http://chromium.org",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "http://Cinaseek.org",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsValidUrlBasedPaymentMethodIdentifier(GURL(input)))
         << input << " should not be a valid payment method identifier.";
@@ -63,7 +63,7 @@ TEST_F(UrlUtilTest, InvalidUrlBasedPaymentMethodIdentifier) {
 TEST_F(UrlUtilTest, ValidSupportedOrigin) {
   const char* kInputs[] = {"http://allowed.insecure.origin.for.test",
                            "http://localhost:8080", "http://localhost",
-                           "https://chromium.org/", "https://chromium.org"};
+                           "https://Cinaseek.org/", "https://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_TRUE(UrlUtil::IsValidSupportedOrigin(GURL(input)))
         << input << " should be a valid supported origin.";
@@ -73,13 +73,13 @@ TEST_F(UrlUtilTest, ValidSupportedOrigin) {
 TEST_F(UrlUtilTest, InvalidSupportedOrigin) {
   const char* kInputs[] = {"about:blank",
                            "file:///home/user/test.html",
-                           "http://chromium.org",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "http://Cinaseek.org",
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsValidSupportedOrigin(GURL(input)))
         << input << " should not be a valid supported origin.";
@@ -90,14 +90,14 @@ TEST_F(UrlUtilTest, ValidManifestUrl) {
   const char* kInputs[] = {"http://allowed.insecure.origin.for.test",
                            "http://localhost:8080",
                            "http://localhost",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://chromium.org/",
-                           "https://chromium.org",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://Cinaseek.org/",
+                           "https://Cinaseek.org",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_TRUE(UrlUtil::IsValidManifestUrl(GURL(input)))
         << input << " should be a valid manifest URL.";
@@ -106,7 +106,7 @@ TEST_F(UrlUtilTest, ValidManifestUrl) {
 
 TEST_F(UrlUtilTest, InvalidManifestUrl) {
   const char* kInputs[] = {"about:blank", "file:///home/user/test.html",
-                           "http://chromium.org"};
+                           "http://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsValidManifestUrl(GURL(input)))
         << input << " should not be a valid manifest URL.";
@@ -118,14 +118,14 @@ TEST_F(UrlUtilTest, OriginAllowedToUseWebPaymentApis) {
                            "http://allowed.insecure.origin.for.test",
                            "http://localhost:8080",
                            "http://localhost",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://chromium.org/",
-                           "https://chromium.org",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://Cinaseek.org/",
+                           "https://Cinaseek.org",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_TRUE(UrlUtil::IsOriginAllowedToUseWebPaymentApis(GURL(input)))
         << input << " should be allowed to use web payment APIs.";
@@ -133,7 +133,7 @@ TEST_F(UrlUtilTest, OriginAllowedToUseWebPaymentApis) {
 }
 
 TEST_F(UrlUtilTest, OriginProhibitedFromUsingWebPaymentApis) {
-  const char* kInputs[] = {"about:blank", "http://chromium.org"};
+  const char* kInputs[] = {"about:blank", "http://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsOriginAllowedToUseWebPaymentApis(GURL(input)))
         << input << " should not be allowed to use web payment APIs.";
@@ -146,14 +146,14 @@ TEST_F(UrlUtilTest, ValidUrlInPaymentHandlerWindow) {
                            "http://allowed.insecure.origin.for.test",
                            "http://localhost:8080",
                            "http://localhost",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://chromium.org/",
-                           "https://chromium.org",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://Cinaseek.org/",
+                           "https://Cinaseek.org",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_TRUE(UrlUtil::IsValidUrlInPaymentHandlerWindow(GURL(input)))
         << input << " should be a valid URL in a payment handler window.";
@@ -161,7 +161,7 @@ TEST_F(UrlUtilTest, ValidUrlInPaymentHandlerWindow) {
 }
 
 TEST_F(UrlUtilTest, InvalidUrlInPaymentHandlerWindow) {
-  const char* kInputs[] = {"http://chromium.org"};
+  const char* kInputs[] = {"http://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsValidUrlInPaymentHandlerWindow(GURL(input)))
         << input << " should not be a valid URL in a payment handler window.";
@@ -180,15 +180,15 @@ TEST_F(UrlUtilTest, IsLocalDevelopmentUrl) {
 
 TEST_F(UrlUtilTest, IsNotLocalDevelopmentUrl) {
   const char* kInputs[] = {"about:blank",
-                           "http://chromium.org",
-                           "https://chromium.org/hello",
-                           "https://chromium.org/hello?world",
-                           "https://chromium.org/hello#world",
-                           "https://chromium.org/",
-                           "https://chromium.org",
-                           "https://username@chromium.org",
-                           "https://username:password@chromium.org",
-                           "wss://chromium.org"};
+                           "http://Cinaseek.org",
+                           "https://Cinaseek.org/hello",
+                           "https://Cinaseek.org/hello?world",
+                           "https://Cinaseek.org/hello#world",
+                           "https://Cinaseek.org/",
+                           "https://Cinaseek.org",
+                           "https://username@Cinaseek.org",
+                           "https://username:password@Cinaseek.org",
+                           "wss://Cinaseek.org"};
   for (const auto* input : kInputs) {
     EXPECT_FALSE(UrlUtil::IsLocalDevelopmentUrl(GURL(input)))
         << input << " should not be classified as a local development URL.";

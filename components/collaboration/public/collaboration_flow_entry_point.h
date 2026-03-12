@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace collaboration {
 // number values should never be reused.
 // LINT.IfChange(CollaborationServiceJoinEntryPoint)
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class CollaborationServiceJoinEntryPoint {
   kUnknown = 0,
   kLinkClick = 1,
@@ -31,7 +31,7 @@ enum class CollaborationServiceJoinEntryPoint {
 // number values should never be reused.
 // LINT.IfChange(CollaborationServiceShareOrManageEntryPoint)
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class CollaborationServiceShareOrManageEntryPoint {
   kUnknown = 0,
   kDialogToolbarButton = 10,
@@ -72,7 +72,7 @@ enum class CollaborationServiceShareOrManageEntryPoint {
 // number values should never be reused.
 // LINT.IfChange(CollaborationServiceLeaveOrDeleteEntryPoint)
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class CollaborationServiceLeaveOrDeleteEntryPoint {
   kUnknown = 0,
 

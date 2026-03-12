@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ extern const char kWebsiteSettingsActionHistogram[];
 
 // UMA statistics for PageInfo. Do not reorder or remove existing
 // fields. A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.page_info
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.page_info
 // LINT.IfChange(PageInfoAction)
 enum PageInfoAction {
   PAGE_INFO_OPENED = 0,

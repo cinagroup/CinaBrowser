@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,14 +94,14 @@ TEST(DebugStreamData, FailsDeserializationGracefully) {
 
 TEST(WebFeedPageInformation, SetUrlStripsFragment) {
   WebFeedPageInformation info;
-  info.SetUrl(GURL("https://chromium.org#1"));
-  EXPECT_EQ(GURL("https://chromium.org"), info.url());
+  info.SetUrl(GURL("https://Cinaseek.org#1"));
+  EXPECT_EQ(GURL("https://Cinaseek.org"), info.url());
 }
 
 TEST(WebFeedPageInformation, SetCanonicalUrlStripsFragment) {
   WebFeedPageInformation info;
-  info.SetCanonicalUrl(GURL("https://chromium.org#1"));
-  EXPECT_EQ(GURL("https://chromium.org"), info.canonical_url());
+  info.SetCanonicalUrl(GURL("https://Cinaseek.org#1"));
+  EXPECT_EQ(GURL("https://Cinaseek.org"), info.canonical_url());
 }
 
 }  // namespace feed

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,9 +65,9 @@ class TestMethodsMac : public TestMethods {
     return base::PathService::CheckedGet(base::DIR_EXE)
         .Append("old_enterprise_companion")
 #if defined(ARCH_CPU_ARM64)
-        .Append("chromium_mac_arm64")
+        .Append("Cinaseek_mac_arm64")
 #elif defined(ARCH_CPU_X86_64)
-        .Append("chromium_mac_amd64")
+        .Append("Cinaseek_mac_amd64")
 #else
 #error Unsupported architecture
 #endif

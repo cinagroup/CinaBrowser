@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -307,18 +307,18 @@ void SetDefaultEnabledFeatureFlags() {
 
 // Sets feature controlled V8 flags.
 void SetFeatureFlags() {
-  // Chromium features prefixed with "V8Flag_" are forwarded to V8 as V8 flags,
+  // Cinaseek features prefixed with "V8Flag_" are forwarded to V8 as V8 flags,
   // with the "V8Flag_" prefix stripped off. For example, an enabled feature
   // "V8Flag_foo_bar" will be passed to V8 as the flag `--foo_bar`. Similarly,
   // if that feature is explicitly disabled, it will be passed to V8 as
-  // `--no-foo_bar`. No Chromium-side declaration of a V8Flag_foo_bar feature
+  // `--no-foo_bar`. No Cinaseek-side declaration of a V8Flag_foo_bar feature
   // is necessary, the matching is done on strings.
   //
   // Parameters attached to features will also be passed through, with the same
   // name as the parameter and the value passed by string, to be decoded by V8's
   // flag parsing.
   //
-  // Thus, running Chromium with:
+  // Thus, running Cinaseek with:
   //
   //   --enable-features=V8Flag_foo,V8Flag_bar:bar_param/20
   //   --disable-features=V8Flag_baz
@@ -329,7 +329,7 @@ void SetFeatureFlags() {
   //
   // If an argument is needed for the main flag, a "V8FlagParam" param can be be
   // used as the first parameter. Additional parameters can still be passed. For
-  // example, running Chromium with:
+  // example, running Cinaseek with:
   //
   //   --enable-features=V8Flag_foo:V8FlagParam/bar/baz_param/20
   //
@@ -340,7 +340,7 @@ void SetFeatureFlags() {
   base::FeatureList::VisitFeaturesAndParams(feature_visitor,
                                             kV8FlagFeaturePrefix);
 
-  // Otherwise, feature flags explicitly defined in Chromium are translated
+  // Otherwise, feature flags explicitly defined in Cinaseek are translated
   // to V8 flags as follows. We ignore feature flag default values, instead
   // using the corresponding V8 flags default values if there is no explicit
   // feature override.

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ void PasswordExpiryNotification::Show(Profile* profile,
       NotificationCatalogName::kPasswordExpiry);
 
   // Leaving this empty means the notification is attributed to the system -
-  // ie "Chromium OS" or similar.
+  // ie "Cinaseek OS" or similar.
   static const base::NoDestructor<std::u16string> kEmptyDisplaySource;
 
   // No origin URL is needed since the notification comes from the system.

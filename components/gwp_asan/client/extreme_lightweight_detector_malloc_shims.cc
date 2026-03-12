@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -169,7 +169,7 @@ inline bool Quarantine(void* object) {
   // TODO(yukishiino): It may and may not be more performative to get the root
   // via `FromAddrInFirstSuperpage(internal::ObjectPtr2Addr(object))`.
   // See also:
-  // https://source.chromium.org/chromium/chromium/src/+/main:base/allocator/partition_allocator/src/partition_alloc/partition_root.h;l=1424-1434;drc=6b284da9be36f6edfdc0ddde4a031270c41096d8
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/allocator/partition_allocator/src/partition_alloc/partition_root.h;l=1424-1434;drc=6b284da9be36f6edfdc0ddde4a031270c41096d8
   // Although in this case `slot_span` will be touched by `GetSlotUsableSize`.
   partition_alloc::internal::SlotSpanMetadata* slot_span =
       partition_alloc::internal::SlotSpanMetadata::FromSlotStart(slot_start);

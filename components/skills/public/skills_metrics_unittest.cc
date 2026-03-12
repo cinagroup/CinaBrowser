@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ TEST_F(SkillsMetricsTest, CheckEntryPointVariantNames) {
   std::vector<std::string> missing_variants;
 
   {
-    // Reading XML from disk requires blocking permissions in Chromium tests.
+    // Reading XML from disk requires blocking permissions in Cinaseek tests.
     base::ScopedAllowBlockingForTesting allow_blocking;
     entry_points = base::ReadVariantsFromHistogramsXml(
         "SkillsDialogEntryPointAndState", "skills");

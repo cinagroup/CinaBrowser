@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #import "ios/chrome/browser/omnibox/ui/omnibox_text_input_delegate.h"
 #import "ios/chrome/browser/shared/model/paths/paths.h"
 #import "ios/chrome/browser/shared/ui/util/uikit_ui_util.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "ios/chrome/grit/ios_strings.h"
 #import "ios/web/common/uikit_ui_util.h"
 #import "testing/gtest_mac.h"

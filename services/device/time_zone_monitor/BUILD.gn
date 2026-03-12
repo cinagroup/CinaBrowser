@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -72,7 +72,7 @@ source_set("test_support") {
 if (is_android) {
   generate_jni("time_zone_monitor_jni_headers") {
     visibility = [ ":*" ]
-    sources = [ "android/java/src/org/chromium/device/time_zone_monitor/TimeZoneMonitor.java" ]
+    sources = [ "android/java/src/org/Cinaseek/device/time_zone_monitor/TimeZoneMonitor.java" ]
   }
 
   android_library("java") {
@@ -81,7 +81,7 @@ if (is_android) {
     # result of //services/device:java depending on it.
     visibility = [ "//services/device:*" ]
     srcjar_deps = [ ":time_zone_monitor_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/device/time_zone_monitor/TimeZoneMonitor.java" ]
+    sources = [ "android/java/src/org/Cinaseek/device/time_zone_monitor/TimeZoneMonitor.java" ]
     deps = [
       "//base:base_java",
       "//build/android:build_java",

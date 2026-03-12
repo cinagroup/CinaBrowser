@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,10 +6,10 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/uid/SettingsSecureBasedIdentificationGenerator.java",
-    "java/src/org/chromium/chrome/browser/uid/UniqueIdentificationGenerator.java",
-    "java/src/org/chromium/chrome/browser/uid/UniqueIdentificationGeneratorFactory.java",
-    "java/src/org/chromium/chrome/browser/uid/UuidBasedUniqueIdentificationGenerator.java",
+    "java/src/org/Cinaseek/chrome/browser/uid/SettingsSecureBasedIdentificationGenerator.java",
+    "java/src/org/Cinaseek/chrome/browser/uid/UniqueIdentificationGenerator.java",
+    "java/src/org/Cinaseek/chrome/browser/uid/UniqueIdentificationGeneratorFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/uid/UuidBasedUniqueIdentificationGenerator.java",
   ]
   deps = [
     "//base:base_java",
@@ -22,9 +22,9 @@ android_library("java") {
 robolectric_library("junit") {
   testonly = true
   sources = [
-    "junit/src/org/chromium/chrome/browser/uid/SettingsSecureBasedIdentificationGeneratorTest.java",
-    "junit/src/org/chromium/chrome/browser/uid/UniqueIdentificationGeneratorFactoryTest.java",
-    "junit/src/org/chromium/chrome/browser/uid/UuidBasedUniqueIdentificationGeneratorTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/uid/SettingsSecureBasedIdentificationGeneratorTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/uid/UniqueIdentificationGeneratorFactoryTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/uid/UuidBasedUniqueIdentificationGeneratorTest.java",
   ]
   deps = [
     ":java",

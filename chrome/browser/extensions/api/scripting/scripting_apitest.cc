@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ IN_PROC_BROWSER_TEST_F(ScriptingAPITest, MainFrameTests) {
   OpenURLInCurrentTab(embedded_test_server()->GetURL(
       "example.com", "/extensions/main_world_script_flag.html"));
   OpenURLInNewTab(
-      embedded_test_server()->GetURL("chromium.org", "/title2.html"));
+      embedded_test_server()->GetURL("Cinaseek.org", "/title2.html"));
 
   ASSERT_TRUE(RunExtensionTest("scripting/main_frame", {},
                                {.ignore_manifest_warnings = true}))
@@ -189,7 +189,7 @@ IN_PROC_BROWSER_TEST_F(ScriptingAPITest, CSSInjection) {
   OpenURLInCurrentTab(
       embedded_test_server()->GetURL("example.com", "/simple.html"));
   OpenURLInNewTab(
-      embedded_test_server()->GetURL("chromium.org", "/title2.html"));
+      embedded_test_server()->GetURL("Cinaseek.org", "/title2.html"));
   OpenURLInNewTab(embedded_test_server()->GetURL("subframes.example",
                                                  "/iframe_cross_site.html"));
   OpenURLInNewTab(embedded_test_server()->GetURL(

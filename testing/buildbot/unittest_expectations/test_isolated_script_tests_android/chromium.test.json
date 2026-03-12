@@ -5,12 +5,12 @@
     "isolated_scripts": [
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details"
+          "--gs-results-bucket=Cinaseek-result-details"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "foo_test"
           ],

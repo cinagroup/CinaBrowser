@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
-#include "components/update_client/net/network_chromium.h"
+#include "components/update_client/net/network_Cinaseek.h"
 #include "components/update_client/network.h"
 #include "services/network/public/mojom/url_response_head.mojom-forward.h"
 

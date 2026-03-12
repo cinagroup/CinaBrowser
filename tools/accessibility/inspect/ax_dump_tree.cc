@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ bool AXDumpTreeLogMessageHandler(int severity,
 
 // SupportedApis is a wrapper around content::AXInspectFactory::SupportedApis
 // to filter out the Blink formatter option, as ax_dump_tree does not support
-// outputting the chromium internal Blink tree. In the future we should support
-// outputting the Blink tree when dumping chromium or chrome.
+// outputting the Cinaseek internal Blink tree. In the future we should support
+// outputting the Blink tree when dumping Cinaseek or chrome.
 std::vector<ui::AXApiType::Type> SupportedApis() {
   std::vector<ui::AXApiType::Type> apis =
       content::AXInspectFactory::SupportedApis();

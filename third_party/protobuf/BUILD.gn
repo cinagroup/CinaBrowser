@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 if (is_android) {
@@ -70,8 +70,8 @@ target(_protobuf_lite_target_type, "protobuf_lite") {
   sources = protobuf_lite_sources
   public = protobuf_headers
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   configs += [ ":protobuf_config_internal" ]
 
@@ -107,9 +107,9 @@ target(_protobuf_lite_target_type, "protobuf_lite") {
 
 # This is the full, heavy protobuf lib that's needed for c++ .protos that don't
 # specify the LITE_RUNTIME option. The protocol compiler itself (protoc) falls
-# into that category. Do not use in Chrome code.
+# into that category. Do not use in Cinaseek code.
 static_library("protobuf_full") {
-  if (defined(build_with_chromium) && build_with_chromium) {
+  if (defined(build_with_Cinaseek) && build_with_Cinaseek) {
     # Prevent people from depending on this outside our file.
     visibility = [
       ":*",
@@ -120,7 +120,7 @@ static_library("protobuf_full") {
       # requires descriptors & reflection; testonly.
       "//third_party/libprotobuf-mutator:*",
 
-      # Chromecast requires descriptors and reflection.
+      # Cinaseekcast requires descriptors and reflection.
       "//chromecast/*",
 
       # libassistant requires descriptors and reflection for testing.
@@ -129,34 +129,34 @@ static_library("protobuf_full") {
       # Perfetto uses the full library for testing.
       "//third_party/perfetto/gn:protobuf_full",
 
-      # Some tests inside ChromeOS need reflection to parse golden files.
+      # Some tests inside CinaseekOS need reflection to parse golden files.
       # Not included in production code.
       "//chrome/browser/ash/child_accounts/time_limit_consistency_test:usage_time_limit_unittests",
 
       # The protobuf-based SQLite and GPU fuzzers need protobuf_full and are not
-      # included in Chrome.
+      # included in Cinaseek.
       "//gpu:gl_lpm_fuzzer_proto",
       "//gpu:gl_lpm_fuzzer_proto_gen",
       "//gpu:gl_lpm_shader_to_string_unittest",
       "//third_party/sqlite:sqlite3_lpm_corpus_gen",
 
       # The protobuf-based Mojo LPM fuzzer needs protobuf_full and is not included
-      # in Chrome.
+      # in Cinaseek.
       "//mojo/public/tools/fuzzers:mojolpm",
 
-      # The root store tool is not part of Chrome itself, and needs to parse
+      # The root store tool is not part of Cinaseek itself, and needs to parse
       # human-readable protobufs. Protobuf is stored in //net/cert however as
       # browser needs to be able to parse serialized protobuf (which is exposed
       # as a separate lite BUILD rule).
       "//net/cert:root_store_proto_full",
 
       # The spirv-fuzz fuzzer tool needs protobuf_full and is not included in
-      # Chrome.
+      # Cinaseek.
       "//third_party/spirv-tools/src:spirv-fuzz",
       "//third_party/spirv-tools/src:spvtools_fuzz",
       "//third_party/spirv-tools/src:spvtools_fuzz_proto",
 
-      # Some fuzzers for tint need protobuf_full and are not included in Chrome.
+      # Some fuzzers for tint need protobuf_full and are not included in Cinaseek.
       "//third_party/dawn/src/tint/*",
 
       # Dawn LPM Fuzzers
@@ -164,7 +164,7 @@ static_library("protobuf_full") {
       "//third_party/dawn/src/dawn/fuzzers:dawn_lpm_proto_gen",
 
       # The Cast Core gRPC generator tool.
-      "//third_party/cast_core/public/src/build/chromium:cast_core_grpc_generator",
+      "//third_party/cast_core/public/src/build/Cinaseek:cast_core_grpc_generator",
 
       # The proto_extras plugin generates code that some of the above fuzzers
       # use, and thus needs to know the full types.
@@ -201,8 +201,8 @@ static_library("protobuf_full") {
 
   public_deps = [ "${protobuf_abseil_dir}:absl" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   configs += [ ":protobuf_config_internal" ]
 
@@ -223,7 +223,7 @@ if (current_toolchain == host_toolchain) {
   # Code for compiling bindings for individual languages are pulled into
   # separate build targets for two reasons:
   # 1. To avoid naming collisions between files in the same source set.
-  # 2. Because Chromium doesn't need a lot of the languages.
+  # 2. Because Cinaseek doesn't need a lot of the languages.
 
   # Note we have to separate the 3 Java directories (java/, java/full/ and
   # java/lite/) into 3 different GN targets because they contain .cc files with
@@ -233,8 +233,8 @@ if (current_toolchain == host_toolchain) {
   # challenging for GN header dependency checks.
   source_set("protoc_java_all_headers") {
     sources = protoc_java_all_headers
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -242,8 +242,8 @@ if (current_toolchain == host_toolchain) {
   }
   source_set("protoc_java") {
     sources = protoc_java_sources
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -254,8 +254,8 @@ if (current_toolchain == host_toolchain) {
   }
   source_set("protoc_java_full") {
     sources = protoc_java_full_sources
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -266,8 +266,8 @@ if (current_toolchain == host_toolchain) {
   }
   source_set("protoc_java_lite") {
     sources = protoc_java_lite_sources
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -279,8 +279,8 @@ if (current_toolchain == host_toolchain) {
 
   source_set("protoc_cpp") {
     sources = protoc_cpp_sources + protoc_cpp_headers
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -289,8 +289,8 @@ if (current_toolchain == host_toolchain) {
 
   source_set("protoc_python") {
     sources = protoc_python_sources + protoc_python_headers
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     configs += [ ":protobuf_config_internal" ]
 
@@ -301,8 +301,8 @@ if (current_toolchain == host_toolchain) {
   static_library("protoc_lib") {
     sources = protoc_sources + protoc_headers
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":protobuf_config_internal" ]
 
     public_configs = [ ":protobuf_config" ]
@@ -329,8 +329,8 @@ if (current_toolchain == host_toolchain) {
   executable("protoc") {
     sources = [ "src/google/protobuf/compiler/main.cc" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":protobuf_config_internal" ]
 
     deps = [
@@ -354,21 +354,21 @@ source_set("utf8_range") {
     "third_party/utf8_range/utf8_validity.h",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":protobuf_config_internal" ]
 
   deps = [ "${protobuf_abseil_dir}:absl" ]
 }
 
 copy("copy_google_protobuf") {
-  # See README.chromium for how this file is generated.
+  # See README.Cinaseek for how this file is generated.
   sources = pyproto_sources + [ "python/google/protobuf/descriptor_pb2.py" ]
   outputs = [ "$proto_python_root/google/protobuf/{{source_file_part}}" ]
 }
 
 copy("copy_google_protobuf_internal") {
-  # See README.chromium for how this file is generated.
+  # See README.Cinaseek for how this file is generated.
   sources = pyproto_internal_sources +
             [ "python/google/protobuf/internal/python_edition_defaults.py" ]
   outputs =

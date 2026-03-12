@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1002,7 +1002,7 @@ int change_fdguard_np(int fd,
 //
 // Starting with 10.9, libdispatch began setting GUARD_DUP on a file descriptor.
 // Unfortunately, it is spun up as part of +[NSApplication initialize], which is
-// not really something that Chromium can avoid using on OSX.  See
+// not really something that Cinaseek can avoid using on OSX.  See
 // <http://crbug.com/338157>.  This function allows querying whether the file
 // descriptor is guarded before attempting to close it.
 bool CanGuardFd(int fd) {

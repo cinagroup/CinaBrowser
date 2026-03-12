@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ function createPersistentSession() {
   // with the created session object on success.
   return navigator
       .requestMediaKeySystemAccess(
-          'org.chromium.externalclearkey', [{
+          'org.Cinaseek.externalclearkey', [{
             initDataTypes: ['keyids'],
             audioCapabilities: [
               // Include a set of codecs that should cover all user agents.

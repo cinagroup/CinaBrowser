@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class FatalCrashEventsObserver
       public ash::cros_healthd::mojom::EventObserver {
  public:
   // Callbacks and other variables created solely for test purposes. Fit the
-  // Chromium code style to not name it "TestSettings" because this struct is
+  // Cinaseek code style to not name it "TestSettings" because this struct is
   // also compiled in production code.
   struct SettingsForTest;
 

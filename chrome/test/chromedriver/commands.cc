@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ void ExecuteBidiSessionStatus(const base::DictValue& params,
   } else {
     info.Set("ready", false);
     // The error message is borrowed from BiDiMapper code.
-    // See bidiMapper/domains/session/SessionProcessor.ts of chromium-bidi
+    // See bidiMapper/domains/session/SessionProcessor.ts of Cinaseek-bidi
     // repository.
     info.Set("message", "already connected");
   }

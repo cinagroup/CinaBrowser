@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -37,7 +37,7 @@ source_set("download") {
 
   if (!is_chromeos) {
     sources += [
-      # Download bubble UI is not used on ChromeOS.
+      # Download bubble UI is not used on CinaseekOS.
       "bubble/download_bubble_contents_view.cc",
       "bubble/download_bubble_contents_view.h",
       "bubble/download_bubble_navigation_handler.h",

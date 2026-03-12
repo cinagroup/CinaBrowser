@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -340,7 +340,7 @@ ColorProviderKey NativeTheme::GetColorProviderKey(
                           : ColorProviderKey::ContrastMode::kNormal;
   key.forced_colors = forced_colors();
   key.system_theme = system_theme();
-  key.frame_type = use_custom_frame ? ColorProviderKey::FrameType::kChromium
+  key.frame_type = use_custom_frame ? ColorProviderKey::FrameType::kCinaseek
                                     : ColorProviderKey::FrameType::kNative;
   key.user_color_source = preferred_color_source_;
   key.user_color = user_color();

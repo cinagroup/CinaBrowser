@@ -1,11 +1,11 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/rust/rust_static_library.gni")
 import("//testing/libfuzzer/fuzzer_test.gni")
 
-# The BLE scan parser is only used on ChromeOS.
+# The BLE scan parser is only used on CinaseekOS.
 assert(is_chromeos)
 
 rust_static_library("lib") {

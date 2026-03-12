@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -236,7 +236,7 @@ bool ParseCdpTunnelMessage(base::DictValue payload,
 
     type = internal::kCommandResponseMessageType;
     command_response.id = *cdp_id;
-    // As per Chromium issue 392577, DevTools does not necessarily return
+    // As per Cinaseek issue 392577, DevTools does not necessarily return
     // a "result" dictionary for every valid response. In particular,
     // Tracing.start and Tracing.end command responses do not contain one.
     // So, if neither "error" nor "result" keys are present, just provide
@@ -1342,7 +1342,7 @@ Status DevToolsClientImpl::HandleDialog(
   Status status = SendCommand("Page.handleJavaScriptDialog", params);
   if (status.IsError()) {
     // Retry once to work around
-    // https://bugs.chromium.org/p/chromedriver/issues/detail?id=1500
+    // https://bugs.Cinaseek.org/p/chromedriver/issues/detail?id=1500
     status = SendCommand("Page.handleJavaScriptDialog", params);
     if (status.IsError()) {
       return status;
@@ -1436,7 +1436,7 @@ bool ParseInspectorMessage(const std::string& message,
   } else if (id_value->is_int()) {
     type = kCommandResponseMessageType;
     command_response.id = id_value->GetInt();
-    // As per Chromium issue 392577, DevTools does not necessarily return a
+    // As per Cinaseek issue 392577, DevTools does not necessarily return a
     // "result" dictionary for every valid response. In particular,
     // Tracing.start and Tracing.end command responses do not contain one.
     // So, if neither "error" nor "result" keys are present, just provide

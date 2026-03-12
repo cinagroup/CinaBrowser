@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,9 +9,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClient.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyConfig.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyUiDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClient.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyConfig.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyUiDelegate.java",
   ]
   deps = [
     "//base:base_java",
@@ -33,12 +33,12 @@ android_library_factory("factory_java") {
 
   # This internal file will be replaced by a generated file so the resulting
   # android_library target does not actually depend on this internal file.
-  sources = [ "internal/java/src/org/chromium/chrome/browser/ui/hats/SurveyClientFactory.java" ]
+  sources = [ "internal/java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientFactory.java" ]
 }
 
 android_library("message_ui_delegate_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/MessageSurveyUiDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/MessageSurveyUiDelegate.java",
   ]
   public_deps = [ ":java" ]
   deps = [
@@ -53,12 +53,12 @@ android_library("message_ui_delegate_java") {
     "//ui/android:ui_no_recycler_view_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.hats"
+  resources_package = "org.Cinaseek.chrome.browser.ui.hats"
 }
 
 robolectric_library("junit") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/ui/hats/MessageSurveyUiDelegateUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/hats/MessageSurveyUiDelegateUnitTest.java" ]
   deps = [
     ":message_ui_delegate_java",
     "//base:base_java",
@@ -82,7 +82,7 @@ robolectric_library("junit") {
 android_library("unit_device_javatests") {
   testonly = true
   sources =
-      [ "java/src/org/chromium/chrome/browser/ui/hats/SurveyConfigTest.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyConfigTest.java" ]
   deps = [
     ":java",
     "//base:base_java",
@@ -97,7 +97,7 @@ android_library("unit_device_javatests") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/ui/hats/SurveyConfig.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyConfig.java" ]
 }
 
 source_set("hats") {

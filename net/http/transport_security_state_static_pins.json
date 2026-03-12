@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -361,12 +361,12 @@
       "pins": "google"
     },
     {
-      "name": "build.chromium.org",
+      "name": "build.Cinaseek.org",
       "include_subdomains": true,
       "pins": "google"
     },
     {
-      "name": "bugs.chromium.org",
+      "name": "bugs.Cinaseek.org",
       "include_subdomains": true,
       "pins": "google"
     },
@@ -391,7 +391,7 @@
       "pins": "google"
     },
     {
-      "name": "chromiumcodereview.appspot.com",
+      "name": "Cinaseekcodereview.appspot.com",
       "include_subdomains": true,
       "pins": "google"
     },
@@ -401,7 +401,7 @@
       "pins": "google"
     },
     {
-      "name": "codereview.chromium.org",
+      "name": "codereview.Cinaseek.org",
       "include_subdomains": true,
       "pins": "google"
     },
@@ -546,7 +546,7 @@
       "pins": "google"
     },
     {
-      "name": "chromiumbugs.appspot.com",
+      "name": "Cinaseekbugs.appspot.com",
       "include_subdomains": true,
       "pins": "google"
     },

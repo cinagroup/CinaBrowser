@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -609,7 +609,7 @@ TEST_F(LogoServiceImplTest, DownloadAndCacheEncodedLogoWithoutDarkImage) {
 }
 
 TEST_F(LogoServiceImplTest, ShouldReturnDisabledWhenDSEHasNoLogo) {
-  AddSearchEngine("cr", "Chromium", "https://www.chromium.org/?q={searchTerms}",
+  AddSearchEngine("cr", "Cinaseek", "https://www.Cinaseek.org/?q={searchTerms}",
                   GURL(/* logo disabled */), /*make_default=*/true);
 
   {
@@ -1043,8 +1043,8 @@ TEST_F(LogoServiceImplTest, DeleteCallbacksWhenLogoURLChanged) {
   logo_service_->GetLogo(std::move(first_callbacks), /*for_webui_ntp=*/false);
 
   // Change default search engine; new DSE has a doodle URL.
-  AddSearchEngine("cr", "Chromium", "https://www.chromium.org/?q={searchTerms}",
-                  GURL("https://chromium.org/logo.json"),
+  AddSearchEngine("cr", "Cinaseek", "https://www.Cinaseek.org/?q={searchTerms}",
+                  GURL("https://Cinaseek.org/logo.json"),
                   /*make_default=*/true);
 
   Logo logo = GetSampleLogo(DoodleURL(), test_clock_.Now());

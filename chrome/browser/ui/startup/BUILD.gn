@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import("//extensions/buildflags/buildflags.gni")
 import("//rlz/buildflags/buildflags.gni")
 
 # Allow browser tests that startup with --gcpw-signin flag only on
-# non-Google Chrome builds.
+# non-Google Cinaseek builds.
 can_test_gcpw_signin_startup = !is_chrome_branded
 
 buildflag_header("buildflags") {

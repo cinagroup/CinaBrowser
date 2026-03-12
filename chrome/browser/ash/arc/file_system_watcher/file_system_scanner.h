@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ struct RegularScanResult {
 // activated when FileSystemWatcher throws an error, e.g., the file system is
 // too large.
 // TODO(risan): Address all remaining feedbacks from next iterations of
-// https://chromium-review.googlesource.com/c/chromium/src/+/1946177 before
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1946177 before
 // enabling this.
 class FileSystemScanner {
  public:

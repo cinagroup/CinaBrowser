@@ -1,11 +1,11 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_PENDING_CAST_COMPONENT_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_PENDING_CAST_COMPONENT_H_
 
-#include <fidl/chromium.cast/cpp/fidl.h>
+#include <fidl/Cinaseek.cast/cpp/fidl.h>
 #include <fuchsia/component/runner/cpp/fidl.h>
 #include <lib/fidl/cpp/interface_request.h>
 
@@ -58,7 +58,7 @@ class PendingCastComponent {
 
   // Handlers for completing initialization of some |params_| fields.
   void OnApplicationConfigReceived(
-      chromium::cast::ApplicationConfig app_config);
+      Cinaseek::cast::ApplicationConfig app_config);
   void OnApiBindingsInitialized();
 
   // Passes |params_| to |delegate_| if they are complete, to use to launch the
@@ -80,10 +80,10 @@ class PendingCastComponent {
   CastComponent::Params params_;
 
   // Used to receive the media session Id and ApplicationConfig.
-  fidl::Client<chromium_cast::ApplicationContext> application_context_;
-  base::FidlErrorEventHandler<chromium_cast::ApplicationContext>
+  fidl::Client<Cinaseek_cast::ApplicationContext> application_context_;
+  base::FidlErrorEventHandler<Cinaseek_cast::ApplicationContext>
       application_context_error_handler_;
-  chromium::cast::ApplicationConfigManagerPtr application_config_manager_;
+  Cinaseek::cast::ApplicationConfigManagerPtr application_config_manager_;
 };
 
 #endif  // FUCHSIA_WEB_RUNNERS_CAST_PENDING_CAST_COMPONENT_H_

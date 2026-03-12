@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//third_party/fuchsia-gn-sdk/src/fidl_library.gni")
 visibility = [ ":*" ]
 
 fidl_library("fidl") {
-  library_name = "chromium.cast"
+  library_name = "Cinaseek.cast"
 
   sources = [
     "api_bindings.fidl",

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace updater {
 
 // Client that will create a connection between the browser and the privileged
-// helper for the Chromium updater. Helps with setting up the system-level
+// helper for the Cinaseek updater. Helps with setting up the system-level
 // updater during promotion.
 class BrowserUpdaterHelperClientMac
     : public base::RefCountedThreadSafe<BrowserUpdaterHelperClientMac> {

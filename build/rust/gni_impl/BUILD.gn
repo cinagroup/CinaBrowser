@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/rust/gni_impl/rustc_print_cfg.gni")
 
 # The `allow_all_warnings` is meant to be used for suppressing warnings in
 # third-party crates coming from crates.io (ones under `//third_party/rust`).
-# Note that Chromium still wants to deny most warnings in some notionally
+# Note that Cinaseek still wants to deny most warnings in some notionally
 # "third-party" code like `//third_party/skia` or `//third_party/crabbyavif`.
 config("allow_all_warnings") {
   rustflags = [ "-Awarnings" ]

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace content {
 // and/or telephones). New enum values can be added, but existing enums must
 // never be renumbered or deleted and reused. A Java counterpart will be
 // generated from this enum.
-// GENERATED_JAVA_ENUM_PACKAGE:org.chromium.content.browser.contacts
+// GENERATED_JAVA_ENUM_PACKAGE:org.Cinaseek.content.browser.contacts
 enum ContactsPickerProperties {
   PROPERTIES_NONE = 0,
   PROPERTIES_TELS = 1 << 0,

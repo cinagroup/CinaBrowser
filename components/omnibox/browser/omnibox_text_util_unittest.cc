@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,10 +122,10 @@ TEST_F(OmniboxTextUtilTest, SanitizeTextForPaste) {
       {u" \n\t", u" "},
 
       // Broken URL has newlines stripped.
-      {u"http://www.chromium.org/developers/testing/chromium-\n"
-       u"build-infrastructure/tour-of-the-chromium-buildbot",
-       u"http://www.chromium.org/developers/testing/"
-       u"chromium-build-infrastructure/tour-of-the-chromium-buildbot"},
+      {u"http://www.Cinaseek.org/developers/testing/Cinaseek-\n"
+       u"build-infrastructure/tour-of-the-Cinaseek-buildbot",
+       u"http://www.Cinaseek.org/developers/testing/"
+       u"Cinaseek-build-infrastructure/tour-of-the-Cinaseek-buildbot"},
 
       // Multi-line address is converted to a single-line address.
       {u"1600 Amphitheatre Parkway\nMountain View, CA",

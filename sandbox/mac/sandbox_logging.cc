@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ void SendOsLog(Level level, const char* message) {
   const class OSLog {
    public:
     explicit OSLog()
-        : os_log_(os_log_create("org.chromium.sandbox", "chromium_logging")) {}
+        : os_log_(os_log_create("org.Cinaseek.sandbox", "Cinaseek_logging")) {}
     OSLog(const OSLog&) = delete;
     OSLog& operator=(const OSLog&) = delete;
     ~OSLog() { os_release(os_log_); }

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -231,7 +231,7 @@ TEST_F(WebStateImplTest, ObserverTest) {
 
   // Test that FaviconUrlUpdated() is called.
   ASSERT_FALSE(observer->update_favicon_url_candidates_info());
-  web::FaviconURL favicon_url(GURL("https://chromium.test/"),
+  web::FaviconURL favicon_url(GURL("https://Cinaseek.test/"),
                               web::FaviconURL::IconType::kTouchIcon,
                               {gfx::Size(5, 6)});
   web_state->OnFaviconUrlUpdated({favicon_url});
@@ -347,7 +347,7 @@ TEST_F(WebStateImplTest, DelegateTest) {
   EXPECT_EQ(&web_state, delegate.last_close_web_state_request()->web_state);
 
   // Test that OpenURLFromWebState() is called without a virtual URL.
-  WebState::OpenURLParams params(GURL("https://chromium.test/"), Referrer(),
+  WebState::OpenURLParams params(GURL("https://Cinaseek.test/"), Referrer(),
                                  WindowOpenDisposition::CURRENT_TAB,
                                  ui::PAGE_TRANSITION_LINK, true);
   EXPECT_FALSE(delegate.last_open_url_request());
@@ -368,7 +368,7 @@ TEST_F(WebStateImplTest, DelegateTest) {
 
   // Test that OpenURLFromWebState() is called with a virtual URL.
   params = WebState::OpenURLParams(
-      GURL("https://chromium.test/"), GURL("https://virtual.chromium.test/"),
+      GURL("https://Cinaseek.test/"), GURL("https://virtual.Cinaseek.test/"),
       Referrer(), WindowOpenDisposition::CURRENT_TAB, ui::PAGE_TRANSITION_LINK,
       true);
   web_state.OpenURL(params);
@@ -772,7 +772,7 @@ TEST_F(WebStateImplTest, FaviconUpdateForSameDocumentNavigations) {
 
   // Callback is called when icons were fetched.
   observer = std::make_unique<FakeWebStateObserver>(&web_state);
-  web::FaviconURL favicon_url(GURL("https://chromium.test/"),
+  web::FaviconURL favicon_url(GURL("https://Cinaseek.test/"),
                               web::FaviconURL::IconType::kTouchIcon,
                               {gfx::Size(5, 6)});
   web_state.OnFaviconUrlUpdated({favicon_url});

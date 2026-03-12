@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -424,7 +424,7 @@ void PrintConsoleMessage(const InsecureDownloadData& data) {
             "Mixed Content: The site at '%s' was loaded over a secure "
             "connection, but the file at '%s' was %s an insecure "
             "connection. This file should be served over HTTPS. "
-            "See https://blog.chromium.org/2020/02/"
+            "See https://blog.Cinaseek.org/2020/02/"
             "protecting-users-from-insecure.html for more details.",
             data.initiator_->GetURL().spec().c_str(),
             data.item_->GetURL().spec().c_str(),

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ extern const base::TimeDelta kLongPressEscapeDuration;
 // (fullscreen, pointer lock).
 //
 // In some cases this is achieved by pressing and holding Escape, similar to
-// Chromium's Keyboard Lock feature
+// Cinaseek's Keyboard Lock feature
 // (see https://chromestatus.com/feature/5642959835889664). In other cases we
 // nudge the user to use Overview.
 class UILockController : public ui::EventHandler,

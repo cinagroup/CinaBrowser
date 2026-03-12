@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -164,7 +164,7 @@ TEST_F(BackgroundTracingManagerTest, SavedCountPreventsStart) {
         manual_trigger_name: "start_trigger"
       }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";

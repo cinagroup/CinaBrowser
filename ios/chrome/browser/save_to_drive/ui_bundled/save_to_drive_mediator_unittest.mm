@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ namespace {
 const FakeSystemIdentity* kPrimaryIdentity = [FakeSystemIdentity fakeIdentity1];
 
 // Constants for configuring a fake download task.
-const char kTestUrl[] = "https://chromium.test/download.txt";
+const char kTestUrl[] = "https://Cinaseek.test/download.txt";
 const char kTestMimeType[] = "text/html";
 
 }  // namespace

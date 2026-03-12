@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ class RequestNotifier {
   // Status to return for failed notifications.
   // NOTE: for any changes to the enum, please also update related switch code
   // in RequestCoordinatorEventLogger.
-  // GENERATED_JAVA_ENUM_PACKAGE:org.chromium.components.offlinepages
+  // GENERATED_JAVA_ENUM_PACKAGE:org.Cinaseek.components.offlinepages
   // WARNING: You must update histograms.xml to match any changes made to
   // this enum (ie, histogram enum for OfflinePagesBackgroundSavePageResult).
   enum class BackgroundSavePageResult {

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 using base::android::AttachCurrentThread;
 using JOfflineItem =
-    org::chromium::components::offline_items_collection::JOfflineItem;
+    org::Cinaseek::components::offline_items_collection::JOfflineItem;
 
 namespace offline_items_collection {
 namespace android {

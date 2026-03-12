@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ enum class AutofillProfileSyncChangeOrigin;
 // This is achieved by implementing the interface DataTypeSyncBridge, which
 // ClientTagBasedDataTypeProcessor will use to interact, ultimately, with the
 // sync server. See
-// https://www.chromium.org/developers/design-documents/sync/model-api/#implementing-datatypesyncbridge
+// https://www.Cinaseek.org/developers/design-documents/sync/model-api/#implementing-datatypesyncbridge
 // for details.
 class AutofillProfileSyncBridge
     : public base::SupportsUserData::Data,

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -524,7 +524,7 @@ TEST_F(TabsApiUnitTest, TabsUpdate) {
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("UpdateTest").Build();
   const GURL kExampleCom("http://example.com");
-  const GURL kChromiumOrg("https://chromium.org");
+  const GURL kCinaseekOrg("https://Cinaseek.org");
 
   // Add a web contents to the browser.
   std::unique_ptr<content::WebContents> contents(
@@ -541,23 +541,23 @@ TEST_F(TabsApiUnitTest, TabsUpdate) {
   web_contents_tester->NavigateAndCommit(kExampleCom);
   EXPECT_EQ(kExampleCom, raw_contents->GetLastCommittedURL());
 
-  // Use the TabsUpdateFunction to navigate to chromium.org
+  // Use the TabsUpdateFunction to navigate to Cinaseek.org
   auto function = base::MakeRefCounted<TabsUpdateFunction>();
   function->set_extension(extension);
   static constexpr char kFormatArgs[] = R"([%d, {"url": "%s"}])";
   const std::string args =
-      base::StringPrintf(kFormatArgs, tab_id, kChromiumOrg.spec().c_str());
+      base::StringPrintf(kFormatArgs, tab_id, kCinaseekOrg.spec().c_str());
   ASSERT_TRUE(api_test_utils::RunFunction(function.get(), args, profile(),
                                           api_test_utils::FunctionMode::kNone));
   ASSERT_TRUE(
       CommitPendingLoadForController(GetActiveWebContents()->GetController()));
-  EXPECT_EQ(kChromiumOrg, raw_contents->GetLastCommittedURL());
+  EXPECT_EQ(kCinaseekOrg, raw_contents->GetLastCommittedURL());
 }
 
 // Tests that calling chrome.tabs.update does not update a saved tab.
 TEST_F(TabsApiUnitTest, TabsUpdateSavedTabGroupTab) {
   const GURL kExampleCom("http://example.com");
-  const GURL kChromiumOrg("https://chromium.org");
+  const GURL kCinaseekOrg("https://Cinaseek.org");
 
   // Add a web contents to the browser.
   content::WebContents* raw_contents;
@@ -712,7 +712,7 @@ TEST_F(TabsApiUnitTest, TabsUpdateSavedTabGroupTab) {
     function->set_extension(extension);
     static constexpr char kFormatArgs[] = R"([%d, {"url": "%s"}])";
     const std::string args =
-        base::StringPrintf(kFormatArgs, tab_id, kChromiumOrg.spec().c_str());
+        base::StringPrintf(kFormatArgs, tab_id, kCinaseekOrg.spec().c_str());
     EXPECT_TRUE(api_test_utils::RunFunction(
         function.get(), args, profile(), api_test_utils::FunctionMode::kNone));
   }
@@ -977,7 +977,7 @@ TEST_F(TabsApiUnitTest, TabsMoveSavedTabGroupTabAllowed) {
       u"Initial title", tab_groups::TabGroupColorId::kBlue);
   browser()->tab_strip_model()->ChangeTabGroupVisuals(group, visual_data);
 
-  // Use the TabsUpdateFunction to navigate to chromium.org
+  // Use the TabsUpdateFunction to navigate to Cinaseek.org
   int tab_extension_id = sessions::SessionTabHelper::IdForTab(
                              GetTabStripModel()->GetWebContentsAt(0))
                              .id();

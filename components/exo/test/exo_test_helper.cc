@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 #include "components/exo/wm_helper.h"
 #include "components/exo/xdg_shell_surface.h"
 #include "components/viz/common/resources/shared_image_format.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/khronos/GLES2/gl2.h"
 #include "ui/aura/env.h"

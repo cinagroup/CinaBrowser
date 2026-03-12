@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -53,7 +53,7 @@ if (!is_android) {
     deps = []
     defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
 
-    # TODO(crbug.com/483366391): Enable this on ChromeOS once the
+    # TODO(crbug.com/483366391): Enable this on CinaseekOS once the
     # BaseWindow::Activate() behaviour is fixed.
     if (!is_chromeos) {
       # This is in the browser_tests target on Android

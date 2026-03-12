@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/dawn-win11-arm64-deps-rel/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Dawn Win11 arm64 DEPS Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dawn",
+              "builder_group": "Cinaseek.dawn",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,7 +36,7 @@
         {
           "bucket": "ci",
           "builder": "Dawn Win11 arm64 DEPS Builder",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/dawn-win11-arm64-deps-rel/targets"
@@ -51,7 +51,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -62,7 +62,7 @@
       "v.gpu"
     ]
   },
-  "builder_group": "tryserver.chromium.dawn",
+  "builder_group": "tryserver.Cinaseek.dawn",
   "cq": "path-based",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class InProcessFuzzer : virtual public InProcessBrowserTest {
   // Called by the main function to create this class.
   // This is called prior to all the normal browser test setup,
   // so don't do anything important in your constructor.
-  // Furthermore, this will be re-run even for child Chromium processes.
+  // Furthermore, this will be re-run even for child Cinaseek processes.
   // NOLINTNEXTLINE(runtime/explicit)
   InProcessFuzzer(InProcessFuzzerOptions options = {});
   ~InProcessFuzzer() override;
@@ -79,7 +79,7 @@ class InProcessFuzzer : virtual public InProcessBrowserTest {
   friend int fuzz_callback(const uint8_t* data, size_t size);
 
   // Override if you want to pass particular command line arguments to
-  // Chromium for its startup. This is called before any fuzz test case
+  // Cinaseek for its startup. This is called before any fuzz test case
   // is actually run, so unfortunately you can't generate these through
   // fuzzing. In addition, the browser test framework itself does all
   // sorts of fiddling with the arguments (e.g. a user data dir).
@@ -87,9 +87,9 @@ class InProcessFuzzer : virtual public InProcessBrowserTest {
   // need to enable a feature or similar.
   // Do not include the executable name in your return value - that's
   // prepended automatically.
-  virtual base::CommandLine::StringVector GetChromiumCommandLineArguments();
+  virtual base::CommandLine::StringVector GetCinaseekCommandLineArguments();
 
-  // Override if (unusually) your fuzzer should use Chromium in multi-
+  // Override if (unusually) your fuzzer should use Cinaseek in multi-
   // process mode. This can make results more realistic, but impedes
   // collection of coverage from the renderer.
   virtual bool UseSingleProcessMode();

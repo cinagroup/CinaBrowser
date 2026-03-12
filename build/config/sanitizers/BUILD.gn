@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -26,7 +26,7 @@ declare_args() {
 #
 # dlclose() is defined by POSIX, making `is_posix` a tempting condition to use.
 # However the linker does not necessarily support `-wrap` on all POSIX
-# platforms, hence the restriction to Linux and ChromeOS. We might eventually
+# platforms, hence the restriction to Linux and CinaseekOS. We might eventually
 # want to disable shared library unloading on all platforms, but we have not
 # noticed a need for it as the known-affected large fuzzers only run on Linux.
 use_dlcloseshim = use_libfuzzer && (is_linux || is_chromeos)
@@ -247,7 +247,7 @@ config("default_sanitizer_ldflags") {
       sanitizers += [ "hwaddress" ]
     }
     if (is_lsan) {
-      # In Chromium, is_lsan always implies is_asan. ASAN includes LSAN.
+      # In Cinaseek, is_lsan always implies is_asan. ASAN includes LSAN.
       # It seems harmless to pass both options to clang, but it doesn't
       # work on rustc, so apply this option to clang only.
       ldflags += [ "-fsanitize=leak" ]
@@ -533,7 +533,7 @@ config("lsan_flags") {
 config("msan_flags") {
   if (is_msan) {
     assert(is_linux || is_chromeos,
-           "msan only supported on linux x86_64/ChromeOS")
+           "msan only supported on linux x86_64/CinaseekOS")
     if (!defined(msan_ignorelist_path)) {
       msan_ignorelist_path =
           rebase_path("//tools/msan/ignorelist.txt", root_build_dir)
@@ -720,7 +720,7 @@ config("not_fuzzed") {
 }
 
 # This config defines the Clang flags required for alloc_token sanitization, and
-# linker flags to dynamically export the new symbols on Linux/ChromeOS.
+# linker flags to dynamically export the new symbols on Linux/CinaseekOS.
 # This is used by allocator_shim on non-component builds if
 # shim_supports_alloc_token, and is propagated to the dependant targets via
 # all_dependent_config. In linux component build, it is propagated to directly

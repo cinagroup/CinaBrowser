@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -109,7 +109,7 @@ clang_plugin("find_bad_constructs") {
 # file that controls where the warning is checked.
 #
 # See //build/config/unsafe_buffers_paths.txt for an example file, this it the
-# file used by Chromium.
+# file used by Cinaseek.
 #
 # This build configuration is not supported when `enable_precompiled_headers`
 # is on because the pragmas that enable and disable unsafe-buffers warnings are

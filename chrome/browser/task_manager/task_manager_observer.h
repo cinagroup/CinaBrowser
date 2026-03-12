@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ using TaskIdList = std::vector<TaskId>;
 
 // Defines a list of types of resources that an observer needs to be refreshed
 // on every task manager refresh cycle.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.task_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.task_manager
 // GENERATED_JAVA_PREFIX_TO_STRIP: REFRESH_TYPE_
 // GENERATED_JAVA_IS_FLAG: true
 enum RefreshType {

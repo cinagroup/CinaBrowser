@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -410,7 +410,7 @@ void FieldClassificationModelHandler::OnModelUpdated(
       state.metadata.input_token(), state.metadata.encoding_parameters());
   // Protobuf's `RepeatedPtrField::Clear()` only resets the size to 0
   // and does not free the underlying memory. See:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/protobuf/src/google/protobuf/repeated_ptr_field.h;l=715-728;drc=84e9f8cb8ba9621be941c81af04d33df743f7de4
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/protobuf/src/google/protobuf/repeated_ptr_field.h;l=715-728;drc=84e9f8cb8ba9621be941c81af04d33df743f7de4
   // Since `metadata` is kept in memory indefinitely, we forcefully free the
   // memory by swapping it with an empty array.
   state.metadata.clear_input_token();

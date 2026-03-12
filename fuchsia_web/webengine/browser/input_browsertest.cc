@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,7 +66,7 @@ KeyEvent CreateKeyEvent(Key key,
   }};
 
   if (options.repeat) {
-    // Chromium doesn't look at the value of this, it just check if the field is
+    // Cinaseek doesn't look at the value of this, it just check if the field is
     // present.
     key_event.repeat_sequence(1);
   }

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 // Enum for the TaskTraits types exposed to Java.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base.task
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base.task
 enum TaskTraits {
   THREAD_POOL_TRAITS_START = 0,
   // This task will only be scheduled when machine resources are available. Once

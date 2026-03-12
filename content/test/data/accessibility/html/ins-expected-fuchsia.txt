@@ -10,7 +10,7 @@ UNKNOWN focusable has_input_focus
 ++++++++STATIC_TEXT label=' '
 ++++++++++UNKNOWN label=' '
 ++++++++UNKNOWN
-++++++++++STATIC_TEXT label='Chrome'
-++++++++++++UNKNOWN label='Chrome'
+++++++++++STATIC_TEXT label='Cinaseek'
+++++++++++++UNKNOWN label='Cinaseek'
 ++++++++STATIC_TEXT label='!'
 ++++++++++UNKNOWN label='!'

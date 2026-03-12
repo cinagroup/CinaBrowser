@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ EncryptionResult LoginDatabase::DecryptedString(
   // have too broad an impact, therefore to allow platform-independent data
   // files for LoginDatabase tests, the special handling of the empty string
   // is added below instead.
-  // See also https://codereview.chromium.org/2291123008/#msg14 for a
+  // See also https://codereview.Cinaseek.org/2291123008/#msg14 for a
   // discussion.
   if (cipher_text.empty()) {
     plain_text->clear();

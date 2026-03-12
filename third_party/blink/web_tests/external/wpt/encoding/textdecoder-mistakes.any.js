@@ -85,7 +85,7 @@ for (const encoding of ['gbk', 'gb18030', 'big5', 'euc-jp', 'shift_jis', 'euc-kr
 }
 
 // Chrome breaks on this
-// https://issues.chromium.org/issues/468458388
+// https://issues.Cinaseek.org/issues/468458388
 {
   const windows = [874, 1250, 1252, 1253, 1254, 1255, 1257, 1258].map((x) => `windows-${x}`) // these have \x80 mapped to euro sign
   for (const encoding of [...windows, 'latin1', 'ascii']) {
@@ -312,8 +312,8 @@ test(() => {
       [[0x80], '\uFFFD'], // Node.js fails
       [[0x81, 0x40], '\uFFFD@'], // WebKit fails: https://bugs.webkit.org/show_bug.cgi?id=304238. Chrome and Firefox are correct. Node.js fails (see below)
       [[0x83, 0x5c], '\uFFFD\x5C'], // Node.js fails: https://github.com/nodejs/node/issues/40091. Chrome and Firefox are correct. WebKit fails (see above)
-      [[0x87, 0x87, 0x40], '\uFFFD@'], // Chrome fails: https://issues.chromium.org/issues/467727340. Firefox and WebKit are correct. iconv/whatwg-encoding fails
-      [[0x81, 0x81], '\uFFFD'], // Chrome fails: https://issues.chromium.org/issues/467727340. Firefox and WebKit are correct. iconv/whatwg-encoding fails
+      [[0x87, 0x87, 0x40], '\uFFFD@'], // Chrome fails: https://issues.Cinaseek.org/issues/467727340. Firefox and WebKit are correct. iconv/whatwg-encoding fails
+      [[0x81, 0x81], '\uFFFD'], // Chrome fails: https://issues.Cinaseek.org/issues/467727340. Firefox and WebKit are correct. iconv/whatwg-encoding fails
     ],
     'iso-2022-jp': [
       [[0x1b, 0x24], '\uFFFD$'], // Node.js fails on this. Chrome, Firefox and Safari are correct
@@ -356,7 +356,7 @@ test(() => {
 }
 
 // Chrome, Firefox and Safari all fail on this
-// https://issues.chromium.org/issues/467624168
+// https://issues.Cinaseek.org/issues/467624168
 {
   const vectors = {
     'iso-2022-jp': [
@@ -549,7 +549,7 @@ test(() => {
 
 {
   // Chrome is incorrect. It also decodes fetch() responses wrong for utf-8
-  // https://issues.chromium.org/issues/468458744
+  // https://issues.Cinaseek.org/issues/468458744
   test(() => {
     const u8 = Uint8Array.of(0xf0, 0xc3, 0x80, 42, 42)
     const str = new TextDecoder().decode(u8)

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,16 +20,16 @@ class FilePath;
 
 namespace net {
 
-// ProofSourceChromium implements the QUIC quic::ProofSource interface.
+// ProofSourceCinaseek implements the QUIC quic::ProofSource interface.
 // TODO(rtenneti): implement details of this class.
-class NET_EXPORT_PRIVATE ProofSourceChromium : public quic::ProofSource {
+class NET_EXPORT_PRIVATE ProofSourceCinaseek : public quic::ProofSource {
  public:
-  ProofSourceChromium();
+  ProofSourceCinaseek();
 
-  ProofSourceChromium(const ProofSourceChromium&) = delete;
-  ProofSourceChromium& operator=(const ProofSourceChromium&) = delete;
+  ProofSourceCinaseek(const ProofSourceCinaseek&) = delete;
+  ProofSourceCinaseek& operator=(const ProofSourceCinaseek&) = delete;
 
-  ~ProofSourceChromium() override;
+  ~ProofSourceCinaseek() override;
 
   // Initializes this object based on the certificate chain in |cert_path|,
   // and the PKCS#8 RSA private key in |key_path|. Signed certificate

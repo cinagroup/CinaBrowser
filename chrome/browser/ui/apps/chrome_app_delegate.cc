@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ constexpr int kAppWindowFirstShowTimeoutSeconds = 10;
 
 bool disable_external_open_for_testing_ = false;
 
-// Opens a URL with Chromium (not external browser) with the right profile.
+// Opens a URL with Cinaseek (not external browser) with the right profile.
 content::WebContents* OpenURLFromTabInternal(
     content::BrowserContext* context,
     const content::OpenURLParams& params,

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -519,7 +519,7 @@ ui::ColorProviderKey BrowserWidget::GetColorProviderKey() const {
   // frame_type.
   const bool use_custom_frame =
       browser_native_widget_ && browser_native_widget_->UseCustomFrame();
-  key.frame_type = use_custom_frame ? ui::ColorProviderKey::FrameType::kChromium
+  key.frame_type = use_custom_frame ? ui::ColorProviderKey::FrameType::kCinaseek
                                     : ui::ColorProviderKey::FrameType::kNative;
 #if BUILDFLAG(IS_WIN)
   if (theme_service && theme_service->UsingDeviceTheme() && use_custom_frame) {

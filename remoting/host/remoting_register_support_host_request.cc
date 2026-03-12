@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,12 +42,12 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
             "OS version."
           destination: GOOGLE_OWNED_SERVICE
           internal {
-            contacts { email: "garykac@chromium.org" }
-            contacts { email: "jamiewalch@chromium.org" }
-            contacts { email: "joedow@chromium.org" }
-            contacts { email: "lambroslambrou@chromium.org" }
-            contacts { email: "rkjnsn@chromium.org" }
-            contacts { email: "yuweih@chromium.org" }
+            contacts { email: "garykac@Cinaseek.org" }
+            contacts { email: "jamiewalch@Cinaseek.org" }
+            contacts { email: "joedow@Cinaseek.org" }
+            contacts { email: "lambroslambrou@Cinaseek.org" }
+            contacts { email: "rkjnsn@Cinaseek.org" }
+            contacts { email: "yuweih@Cinaseek.org" }
           }
           last_reviewed: "2023-07-07"
         }

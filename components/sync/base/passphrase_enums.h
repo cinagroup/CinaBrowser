@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace syncer {
 // the user should be prompted for a decryption passphrase.
 // Do not re-order or delete these entries; they are used in a UMA histogram.
 // Please edit SyncPassphraseType in enums.xml if a value is added.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
 // LINT.IfChange(SyncPassphraseType)
 enum class PassphraseType {
   // GAIA-based passphrase (deprecated).

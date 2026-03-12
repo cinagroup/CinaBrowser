@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,10 +20,10 @@ constexpr char FakeApplicationConfigManager::kFakeAgentUrl[] =
     "fuchsia-pkg://fuchsia.com/fake_agent#meta/fake_agent.cmx";
 
 // static
-chromium::cast::ApplicationConfig FakeApplicationConfigManager::CreateConfig(
+Cinaseek::cast::ApplicationConfig FakeApplicationConfigManager::CreateConfig(
     std::string_view id,
     const GURL& url) {
-  chromium::cast::ApplicationConfig app_config;
+  Cinaseek::cast::ApplicationConfig app_config;
   app_config.set_id(std::string(id));
   app_config.set_display_name("Dummy test app");
   app_config.set_web_url(url.spec());
@@ -42,7 +42,7 @@ FakeApplicationConfigManager::FakeApplicationConfigManager() = default;
 FakeApplicationConfigManager::~FakeApplicationConfigManager() = default;
 
 void FakeApplicationConfigManager::AddAppConfig(
-    chromium::cast::ApplicationConfig app_config) {
+    Cinaseek::cast::ApplicationConfig app_config) {
   id_to_config_[app_config.id()] = std::move(app_config);
 }
 
@@ -56,7 +56,7 @@ void FakeApplicationConfigManager::GetConfig(std::string id,
   auto it = id_to_config_.find(id);
   if (it == id_to_config_.end()) {
     LOG(ERROR) << "Unknown Cast App ID: " << id;
-    callback(chromium::cast::ApplicationConfig());
+    callback(Cinaseek::cast::ApplicationConfig());
     return;
   }
 
@@ -65,14 +65,14 @@ void FakeApplicationConfigManager::GetConfig(std::string id,
   // put them back.
   std::optional<std::vector<fuchsia::web::ContentDirectoryProvider>>
       content_directories;
-  chromium::cast::ApplicationConfig& config = it->second;
+  Cinaseek::cast::ApplicationConfig& config = it->second;
   if (config.has_content_directories_for_isolated_application()) {
     content_directories.emplace(std::move(
         *config.mutable_content_directories_for_isolated_application()));
   }
 
   // Now it should be safe to Clone() the configuration.
-  chromium::cast::ApplicationConfig result;
+  Cinaseek::cast::ApplicationConfig result;
   zx_status_t status = config.Clone(&result);
   ZX_CHECK(status == ZX_OK, status) << "Clone result";
 

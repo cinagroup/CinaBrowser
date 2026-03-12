@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,13 +19,13 @@ class MethodCall;
 
 namespace ash {
 
-// Provider for the org.chromium.CryptohomeKeyDelegateInterface service
+// Provider for the org.Cinaseek.CryptohomeKeyDelegateInterface service
 // implementation.
 //
 // This service is called by the cryptohomed daemon for operations related to
 // user protection keys. See the interface definition in the Chrome OS repo in
 // src/platform2/cryptohome/dbus_bindings/
-//   org.chromium.CryptohomeKeyDelegateInterface.xml .
+//   org.Cinaseek.CryptohomeKeyDelegateInterface.xml .
 class CryptohomeKeyDelegateServiceProvider final
     : public CrosDBusService::ServiceProviderInterface {
  public:

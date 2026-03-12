@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace optimization_guide {
 
 // An implementation of a ModelHandler that executes BERT models.
 //
-// Note that sentencepiece tokenizers are not supported by Chromium's copy of
+// Note that sentencepiece tokenizers are not supported by Cinaseek's copy of
 // the TFLite Support library.
 class BertModelHandler
     : public ModelHandler<std::vector<tflite::task::core::Category>,

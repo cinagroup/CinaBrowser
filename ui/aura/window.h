@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@
 #include "ui/gfx/native_ui_types.h"
 
 #if BUILDFLAG(IS_APPLE)
-#error "This file must not be included on macOS; Chromium Mac doesn't use Aura."
+#error "This file must not be included on macOS; Cinaseek Mac doesn't use Aura."
 #endif
 
 #if BUILDFLAG(IS_CHROMEOS)

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,9 +87,9 @@ std::vector<std::string> LoadFlagNeverExpireList() {
 bool IsValidLookingOwner(std::string_view owner) {
   // Never allow ',' or ' ' in owner names, regardless of all other constraints.
   // It is otherwise too easy to accidentally do this:
-  //   "owners": [ "foo@chromium.org,bar@chromium.org" ]
+  //   "owners": [ "foo@Cinaseek.org,bar@Cinaseek.org" ]
   // or this:
-  //   "owners": [ "foo@chromium.org bar@chromium.org" ]
+  //   "owners": [ "foo@Cinaseek.org bar@Cinaseek.org" ]
   // Apologies to those who have spaces in their email addresses or OWNERS file
   // path names :)
   if (owner.find_first_of(", ") != std::string::npos) {

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -547,7 +547,7 @@ const char kPrivateAggregationDeveloperMode[] =
 // consolidates same-site pages so that they share a single process.
 //
 // More details here:
-// - https://www.chromium.org/developers/design-documents/process-models
+// - https://www.Cinaseek.org/developers/design-documents/process-models
 // - The class comment in site_instance.h, listing the supported process models.
 //
 // IMPORTANT: This isn't to be confused with --site-per-process (which is about
@@ -594,7 +594,7 @@ const char kReduceAcceptLanguageHTTP[] = "reduce-accept-language-http";
 
 // Reduce the minor version number in the User-Agent string. This flag
 // implements phase 4 of User-Agent reduction:
-// https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html.
+// https://blog.Cinaseek.org/2021/09/user-agent-reduction-origin-trial-and-dates.html.
 const char kReduceUserAgentMinorVersion[] = "reduce-user-agent-minor-version";
 
 // Enables remote debug over stdio pipes [in=3, out=4] or over the remote pipes
@@ -671,8 +671,8 @@ const char kSingleProcess[]                 = "single-process";
 //  * <iframe>s are rendered out-of-process whenever the src= is cross-site.
 //
 // More details here:
-// - https://www.chromium.org/developers/design-documents/site-isolation
-// - https://www.chromium.org/developers/design-documents/process-models
+// - https://www.Cinaseek.org/developers/design-documents/site-isolation
+// - https://www.Cinaseek.org/developers/design-documents/process-models
 // - The class comment in site_instance.h, listing the supported process models.
 //
 // IMPORTANT: this isn't to be confused with --process-per-site (which is about

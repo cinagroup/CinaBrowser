@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1143,7 +1143,7 @@ RendererBlinkPlatformImpl::VideoFrameCompositorTaskRunner() {
   auto compositor_task_runner = CompositorThreadTaskRunner();
   if (::features::UseSurfaceLayerForVideo() || !compositor_task_runner) {
     if (!video_frame_compositor_thread_) {
-      // All of Chromium's GPU code must know which thread it's running on, and
+      // All of Cinaseek's GPU code must know which thread it's running on, and
       // be the same thread on which the rendering context was initialized. This
       // is why this must be a SingleThreadTaskRunner instead of a
       // SequencedTaskRunner.

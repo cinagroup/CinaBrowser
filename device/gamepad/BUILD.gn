@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -219,14 +219,14 @@ static_library("test_helpers") {
 if (is_android) {
   generate_jni("jni_headers") {
     sources =
-        [ "android/java/src/org/chromium/device/gamepad/GamepadList.java" ]
+        [ "android/java/src/org/Cinaseek/device/gamepad/GamepadList.java" ]
   }
 
   android_library("java") {
     sources = [
-      "android/java/src/org/chromium/device/gamepad/GamepadDevice.java",
-      "android/java/src/org/chromium/device/gamepad/GamepadList.java",
-      "android/java/src/org/chromium/device/gamepad/GamepadMappings.java",
+      "android/java/src/org/Cinaseek/device/gamepad/GamepadDevice.java",
+      "android/java/src/org/Cinaseek/device/gamepad/GamepadList.java",
+      "android/java/src/org/Cinaseek/device/gamepad/GamepadMappings.java",
     ]
     deps = [
       "//base:base_java",

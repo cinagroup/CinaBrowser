@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -152,7 +152,7 @@ void CaptivePortalService::DetectCaptivePortalInternal() {
           cookies_allowed: NO
           setting:
             "Users can enable/disable this feature by toggling 'Use a web "
-            "service to resolve network errors' in Chromium settings under "
+            "service to resolve network errors' in Cinaseek settings under "
             "Privacy. This feature is enabled by default."
           chrome_policy {
             AlternateErrorPagesEnabled {

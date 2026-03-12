@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/mac-osxbeta-rel/gn-args.json"
@@ -10,25 +10,25 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac-osxbeta-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fyi",
+              "builder_group": "Cinaseek.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
                 "apply_configs": [
-                  "chromium_with_telemetry_dependencies"
+                  "Cinaseek_with_telemetry_dependencies"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -38,13 +38,13 @@
         {
           "bucket": "ci",
           "builder": "mac-osxbeta-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "mac-osxbeta-rel",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/mac-osxbeta-rel/targets"
@@ -58,7 +58,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -68,6 +68,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.fyi",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.fyi",
+  "recipe": "Cinaseek"
 }

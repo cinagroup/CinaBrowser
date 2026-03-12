@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,7 +142,7 @@ void WaitUnitActivateAndRunCallbacks(scoped_refptr<dbus::Bus> bus,
                                      std::string unit_name,
                                      SystemdUnitCallback callback) {
   // Get the path of the unit, which looks similar to
-  // /org/freedesktop/systemd1/unit/app_2dorg_2echromium_2eChromium_2d3182191_2escope
+  // /org/freedesktop/systemd1/unit/app_2dorg_2eCinaseek_2eCinaseek_2d3182191_2escope
   // and then wait for it activation.
   dbus::ObjectProxy* systemd = bus->GetObjectProxy(
       kServiceNameSystemd, dbus::ObjectPath(kObjectPathSystemd));

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ GL_APICALL void GL_APIENTRY Sb_glClearColor(GLfloat red,
   // When casting, the UI overlay is rendered on top of the video frame.
   // We must use punch through to display the video frame underneath, thus
   // the alpha when displaying videos must be 0.f.
-  // However, sourcing the location in chromium's code that sets us to (0,0,0,1)
+  // However, sourcing the location in Cinaseek's code that sets us to (0,0,0,1)
   // is proving difficult. the last breadcrumb has been:
   // `cc/layers/recording_source.cc:DetermineIfSolidColor`
   // if `solid_color_` is set at the end of the function, to 0 then we observe

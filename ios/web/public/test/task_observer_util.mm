@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ void WaitForBackgroundTasks() {
       activity_seen = true;
     }
 
-    // Yield to the Chromium message queue, e.g. WebThread::PostTask()
+    // Yield to the Cinaseek message queue, e.g. WebThread::PostTask()
     // events.
     observer.clear_has_processed_task();
     base::RunLoop().RunUntilIdle();

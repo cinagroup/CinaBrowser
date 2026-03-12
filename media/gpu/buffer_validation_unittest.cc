@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ TEST(BufferValidationTest, VerifyGmbHandlePlanesCountMatches) {
 
   gfx::GpuMemoryBufferHandle gmb_handle(std::move(native_pixmap_handle));
   // PIXEL_FORMAT_UYVY has only 1 plane
-  // (https://source.chromium.org/chromium/chromium/src/+/main:media/base/video_frame_layout.cc;l=46;drc=eb5094ebb2c2a4128d36d27806b286d288965746)
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/base/video_frame_layout.cc;l=46;drc=eb5094ebb2c2a4128d36d27806b286d288965746)
   // The gmb handle will have only 3 planes by default.
   EXPECT_FALSE(VerifyGpuMemoryBufferHandle(
       PIXEL_FORMAT_UYVY, size, gmb_handle,

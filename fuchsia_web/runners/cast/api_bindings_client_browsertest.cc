@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,7 +87,7 @@ class ApiBindingsClientTest : public WebEngineBrowserTest {
   FrameForTest frame_;
   std::unique_ptr<NamedMessagePortConnectorFuchsia> connector_;
   FakeApiBindingsImpl api_service_;
-  fidl::Binding<chromium::cast::ApiBindings> api_service_binding_;
+  fidl::Binding<Cinaseek::cast::ApiBindings> api_service_binding_;
   std::unique_ptr<ApiBindingsClient> client_;
 };
 
@@ -96,8 +96,8 @@ class ApiBindingsClientTest : public WebEngineBrowserTest {
 // sender.
 IN_PROC_BROWSER_TEST_F(ApiBindingsClientTest, EndToEnd) {
   // Define the injected bindings.
-  std::vector<chromium::cast::ApiBinding> binding_list;
-  chromium::cast::ApiBinding echo_binding;
+  std::vector<Cinaseek::cast::ApiBinding> binding_list;
+  Cinaseek::cast::ApiBinding echo_binding;
   echo_binding.set_before_load_script(base::MemBufferFromString(
       "window.echo = cast.__platform__.PortConnector.bind('echoService');",
       "test"));

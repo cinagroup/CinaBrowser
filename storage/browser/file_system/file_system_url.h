@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ namespace storage {
 //    has no slashes but, in general, the relative path could be "a/b/c.dat".
 //
 // The C++ object (in 2012) was basically just those fields:
-// https://chromiumcodereview.appspot.com/10566002/diff/18001/webkit/fileapi/file_system_url.h
+// https://Cinaseekcodereview.appspot.com/10566002/diff/18001/webkit/fileapi/file_system_url.h
 //
 // Note that the "File System" and "File System Entry" JS APIs are different to
 // the similarly named but more recent "File System Access" JS API. Similarly,

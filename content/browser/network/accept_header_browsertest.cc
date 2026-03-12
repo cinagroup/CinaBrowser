@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -153,7 +153,7 @@ IN_PROC_BROWSER_TEST_F(AcceptHeaderTest, Check) {
   EXPECT_EQ("*/*", GetFor("/worker.js"));
 
 // Shared workers aren't implemented on Android.
-// https://bugs.chromium.org/p/chromium/issues/detail?id=154571
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=154571
 #if !BUILDFLAG(IS_ANDROID)
   // ResourceType::kSharedWorker
   EXPECT_EQ("*/*", GetFor("/shared_worker.js"));

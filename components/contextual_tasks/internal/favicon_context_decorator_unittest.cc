@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ class FaviconContextDecoratorTest : public testing::Test {
 TEST_F(FaviconContextDecoratorTest, DecorateContextWithFavicons) {
   const GURL kUrl1("https://www.google.com");
   const UrlResource url_resource1(base::Uuid::GenerateRandomV4(), kUrl1);
-  const GURL kUrl2("https://www.chromium.org");
+  const GURL kUrl2("https://www.Cinaseek.org");
   const UrlResource url_resource2(base::Uuid::GenerateRandomV4(), kUrl2);
   const GURL kIconUrl("https://www.google.com/favicon.ico");
   const gfx::Image kTestImage = gfx::test::CreateImage(16, 16);

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class FileSystemAccessObserverHost;
 //
 // TODO(crbug.com/341213353): Consider removing this class in favor of
 // giving the ObserverHost a FileSystemAccessObserver mojo::RemoteSet. See
-// https://chromium-review.googlesource.com/c/chromium/src/+/4809069/comment/8d90508d_74ae7891/.
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4809069/comment/8d90508d_74ae7891/.
 class FileSystemAccessObserverObservation
     : public WebContentsObserver,
       public FileSystemAccessPermissionGrant::Observer {

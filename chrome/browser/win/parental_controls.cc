@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ class WinParentalControlsValue {
   // Win10 where the APIs are not fully supported and may not always accurately
   // report such state.
   //
-  // TODO(ericorth@chromium.org): Detect |logging_required| configuration,
+  // TODO(ericorth@Cinaseek.org): Detect |logging_required| configuration,
   // rather than just web filtering.
   static void UpdateParentalControlsFromRegistry(
       WinParentalControls* controls) {

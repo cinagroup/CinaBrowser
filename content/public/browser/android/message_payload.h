@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,17 +15,17 @@
 namespace content::android {
 
 // Helper methods to convert between java
-// `org.chromium.content_public.browser.MessagePayload` and
+// `org.Cinaseek.content_public.browser.MessagePayload` and
 // `blink::WebMessagePayload`.
 
-// Construct Java `org.chromium.content_public.browser.MessagePayload` from
+// Construct Java `org.Cinaseek.content_public.browser.MessagePayload` from
 // `blink::WebMessagePayload`.
 CONTENT_EXPORT base::android::ScopedJavaLocalRef<jobject>
 ConvertWebMessagePayloadToJava(const blink::WebMessagePayload& payload);
 
 CONTENT_EXPORT blink::WebMessagePayload ConvertToWebMessagePayloadFromJava(
     const base::android::ScopedJavaLocalRef<
-        jobject>& /* org.chromium.content_public.browser.MessagePayload */);
+        jobject>& /* org.Cinaseek.content_public.browser.MessagePayload */);
 
 }  // namespace content::android
 

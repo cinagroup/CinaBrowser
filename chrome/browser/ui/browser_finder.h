@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ class ElementContext;
 // Functions in this file typically create non-local control flow. This is hard
 // to stub for tests, hard to debug, and hard to maintain due to imprecise API
 // surfaces. See
-// https://source.chromium.org/chromium/chromium/src/+/main:docs/chrome_browser_design_principles.md
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:docs/chrome_browser_design_principles.md
 // for details. See TabInterface and TabFeatures for a common structure that
 // avoids these functions.
 //

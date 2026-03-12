@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -619,7 +619,7 @@ template("ios_app_bundle") {
         if (!defined(data_deps)) {
           data_deps = []
         }
-        if (build_with_chromium) {
+        if (build_with_Cinaseek) {
           data_deps += [ "//testing/iossim" ]
         }
       }
@@ -1287,7 +1287,7 @@ set_defaults("ios_xctest_bundle") {
   configs = default_shared_library_configs
 }
 
-# For Chrome on iOS we want to run XCTests for all our build configurations
+# For Cinaseek on iOS we want to run XCTests for all our build configurations
 # (Debug, Release, ...). In addition, the symbols visibility is configured to
 # private by default. To simplify testing with those constraints, our tests are
 # compiled in the TEST_HOST target instead of the .xctest bundle.

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -286,14 +286,14 @@ TEST_F(IsolatedContextTest, CrackURLWithRelativePaths) {
                                         .Append(relatives[j].path);
 
       FileSystemURL cracked = isolated_context()->CreateCrackedFileSystemURL(
-          blink::StorageKey::CreateFromStringForTesting("http://chromium.org"),
+          blink::StorageKey::CreateFromStringForTesting("http://Cinaseek.org"),
           kFileSystemTypeIsolated, virtual_path);
 
       ASSERT_EQ(relatives[j].valid, cracked.is_valid());
 
       if (!relatives[j].valid)
         continue;
-      ASSERT_EQ("http://chromium.org", cracked.origin().Serialize());
+      ASSERT_EQ("http://Cinaseek.org", cracked.origin().Serialize());
       ASSERT_EQ(kTestPaths[i]
                     .Append(relatives[j].path)
                     .NormalizePathSeparators()
@@ -332,7 +332,7 @@ TEST_F(IsolatedContextTest, TestWithVirtualRoot) {
 }
 
 TEST_F(IsolatedContextTest, CanHandleURL) {
-  const GURL test_origin("http://chromium.org");
+  const GURL test_origin("http://Cinaseek.org");
   const base::FilePath test_path(FPL("/mount"));
 
   // Should handle isolated file system.

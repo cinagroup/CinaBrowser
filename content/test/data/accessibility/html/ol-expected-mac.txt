@@ -2,7 +2,7 @@ AXWebArea
 ++AXList AXSubrole=AXContentList
 ++++AXGroup
 ++++++AXListMarker AXValue='1. '
-++++++AXStaticText AXValue='Chrome'
+++++++AXStaticText AXValue='Cinaseek'
 ++++AXGroup
 ++++++AXListMarker AXValue='2. '
 ++++++AXStaticText AXValue='Safari'

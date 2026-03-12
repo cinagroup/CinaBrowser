@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,9 +23,9 @@ namespace ash {
 //
 // VmStarting:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.LockToSingleUserService
-//     /org/chromium/LockToSingleUserService
-//     org.chromium.LockToSingleUserServiceInterface.VmStarting
+//     --dest=org.Cinaseek.LockToSingleUserService
+//     /org/Cinaseek/LockToSingleUserService
+//     org.Cinaseek.LockToSingleUserServiceInterface.VmStarting
 //
 // The method checks if the DeviceRebootOnUserSignout requires a reboot after
 // sign-out and uses the TPM to ensure that other users can not log in.

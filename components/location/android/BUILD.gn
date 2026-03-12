@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,7 +18,7 @@ android_library("location_java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  sources = [ "java/src/org/chromium/components/location/LocationUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/components/location/LocationUtils.java" ]
   srcjar_deps = [ ":location_settings_dialog_enums_java" ]
 }
 
@@ -32,12 +32,12 @@ android_library("settings_java") {
   ]
   srcjar_deps = [ ":jni_headers" ]
   sources =
-      [ "java/src/org/chromium/components/location/LocationSettings.java" ]
+      [ "java/src/org/Cinaseek/components/location/LocationSettings.java" ]
 }
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/location/LocationSettings.java" ]
+      [ "java/src/org/Cinaseek/components/location/LocationSettings.java" ]
 }
 
 source_set("settings") {

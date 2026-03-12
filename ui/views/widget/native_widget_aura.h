@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@
 #include "ui/wm/public/activation_delegate.h"
 
 #if BUILDFLAG(IS_MAC)
-#error "This file must not be included on macOS; Chromium Mac doesn't use Aura."
+#error "This file must not be included on macOS; Cinaseek Mac doesn't use Aura."
 #endif
 
 namespace aura {

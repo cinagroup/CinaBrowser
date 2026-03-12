@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,14 +18,14 @@
 #include "base/types/expected.h"
 #include "dbus/test_service.h"
 #include "remoting/host/base/loggable.h"
-#include "remoting/host/linux/dbus_interfaces/org_chromium_TestInterface.h"
+#include "remoting/host/linux/dbus_interfaces/org_Cinaseek_TestInterface.h"
 #include "remoting/host/linux/dbus_interfaces/org_freedesktop_DBus_Properties.h"
 #include "remoting/host/linux/gvariant_ref.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace remoting {
 
-namespace test_interface = org_chromium_TestInterface;
+namespace test_interface = org_Cinaseek_TestInterface;
 
 class GDBusConnectionRefTest : public testing::Test {
  public:
@@ -45,7 +45,7 @@ class GDBusConnectionRefTest : public testing::Test {
 
  protected:
   static constexpr gvariant::ObjectPathCStr kObjectPath =
-      "/org/chromium/TestObject";
+      "/org/Cinaseek/TestObject";
 
   void PingBus() {
     base::test::TestFuture<base::expected<gvariant::Ignored, Loggable>>

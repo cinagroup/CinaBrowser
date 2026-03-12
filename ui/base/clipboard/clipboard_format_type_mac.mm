@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ ClipboardFormatType ClipboardFormatType::CustomPlatformType(
 // static
 const ClipboardFormatType& ClipboardFormatType::FilenamesType() {
   // This is an awkward mismatch between macOS which has a "multiple items on a
-  // pasteboard approach" and Chromium which has a "one item containing multiple
+  // pasteboard approach" and Cinaseek which has a "one item containing multiple
   // items" concept. This works well enough, though, as `NSPasteboard.types` is
   // a union of all types, and thus will find individual items of this type.
   static base::NoDestructor<ClipboardFormatType> type(NSPasteboardTypeFileURL);
@@ -157,7 +157,7 @@ const ClipboardFormatType& ClipboardFormatType::WebKitSmartPasteType() {
 // static
 const ClipboardFormatType& ClipboardFormatType::DataTransferCustomType() {
   static base::NoDestructor<ClipboardFormatType> type(
-      kUTTypeChromiumDataTransferCustomData);
+      kUTTypeCinaseekDataTransferCustomData);
   return *type;
 }
 

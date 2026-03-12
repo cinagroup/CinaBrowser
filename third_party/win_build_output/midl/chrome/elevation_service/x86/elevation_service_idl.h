@@ -67,11 +67,11 @@ typedef interface IElevator2 IElevator2;
 #endif 	/* __IElevator2_FWD_DEFINED__ */
 
 
-#ifndef __IElevatorChromium_FWD_DEFINED__
-#define __IElevatorChromium_FWD_DEFINED__
-typedef interface IElevatorChromium IElevatorChromium;
+#ifndef __IElevatorCinaseek_FWD_DEFINED__
+#define __IElevatorCinaseek_FWD_DEFINED__
+typedef interface IElevatorCinaseek IElevatorCinaseek;
 
-#endif 	/* __IElevatorChromium_FWD_DEFINED__ */
+#endif 	/* __IElevatorCinaseek_FWD_DEFINED__ */
 
 
 #ifndef __IElevatorChrome_FWD_DEFINED__
@@ -102,11 +102,11 @@ typedef interface IElevatorChromeCanary IElevatorChromeCanary;
 #endif 	/* __IElevatorChromeCanary_FWD_DEFINED__ */
 
 
-#ifndef __IElevator2Chromium_FWD_DEFINED__
-#define __IElevator2Chromium_FWD_DEFINED__
-typedef interface IElevator2Chromium IElevator2Chromium;
+#ifndef __IElevator2Cinaseek_FWD_DEFINED__
+#define __IElevator2Cinaseek_FWD_DEFINED__
+typedef interface IElevator2Cinaseek IElevator2Cinaseek;
 
-#endif 	/* __IElevator2Chromium_FWD_DEFINED__ */
+#endif 	/* __IElevator2Cinaseek_FWD_DEFINED__ */
 
 
 #ifndef __IElevator2Chrome_FWD_DEFINED__
@@ -144,11 +144,11 @@ typedef interface IElevator IElevator;
 #endif 	/* __IElevator_FWD_DEFINED__ */
 
 
-#ifndef __IElevatorChromium_FWD_DEFINED__
-#define __IElevatorChromium_FWD_DEFINED__
-typedef interface IElevatorChromium IElevatorChromium;
+#ifndef __IElevatorCinaseek_FWD_DEFINED__
+#define __IElevatorCinaseek_FWD_DEFINED__
+typedef interface IElevatorCinaseek IElevatorCinaseek;
 
-#endif 	/* __IElevatorChromium_FWD_DEFINED__ */
+#endif 	/* __IElevatorCinaseek_FWD_DEFINED__ */
 
 
 #ifndef __IElevatorChrome_FWD_DEFINED__
@@ -186,11 +186,11 @@ typedef interface IElevator2 IElevator2;
 #endif 	/* __IElevator2_FWD_DEFINED__ */
 
 
-#ifndef __IElevator2Chromium_FWD_DEFINED__
-#define __IElevator2Chromium_FWD_DEFINED__
-typedef interface IElevator2Chromium IElevator2Chromium;
+#ifndef __IElevator2Cinaseek_FWD_DEFINED__
+#define __IElevator2Cinaseek_FWD_DEFINED__
+typedef interface IElevator2Cinaseek IElevator2Cinaseek;
 
-#endif 	/* __IElevator2Chromium_FWD_DEFINED__ */
+#endif 	/* __IElevator2Cinaseek_FWD_DEFINED__ */
 
 
 #ifndef __IElevator2Chrome_FWD_DEFINED__
@@ -511,19 +511,19 @@ EXTERN_C const IID IID_IElevator2;
 #endif 	/* __IElevator2_INTERFACE_DEFINED__ */
 
 
-#ifndef __IElevatorChromium_INTERFACE_DEFINED__
-#define __IElevatorChromium_INTERFACE_DEFINED__
+#ifndef __IElevatorCinaseek_INTERFACE_DEFINED__
+#define __IElevatorCinaseek_INTERFACE_DEFINED__
 
-/* interface IElevatorChromium */
+/* interface IElevatorCinaseek */
 /* [unique][helpstring][uuid][oleautomation][object] */ 
 
 
-EXTERN_C const IID IID_IElevatorChromium;
+EXTERN_C const IID IID_IElevatorCinaseek;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
     MIDL_INTERFACE("B88C45B9-8825-4629-B83E-77CC67D9CEED")
-    IElevatorChromium : public IElevator
+    IElevatorCinaseek : public IElevator
     {
     public:
     };
@@ -531,28 +531,28 @@ EXTERN_C const IID IID_IElevatorChromium;
     
 #else 	/* C style interface */
 
-    typedef struct IElevatorChromiumVtbl
+    typedef struct IElevatorCinaseekVtbl
     {
         BEGIN_INTERFACE
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IElevatorChromium * This,
+            IElevatorCinaseek * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IElevatorChromium * This);
+            IElevatorCinaseek * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IElevatorChromium * This);
+            IElevatorCinaseek * This);
         
         DECLSPEC_XFGVIRT(IElevator, RunRecoveryCRXElevated)
         HRESULT ( STDMETHODCALLTYPE *RunRecoveryCRXElevated )( 
-            IElevatorChromium * This,
+            IElevatorCinaseek * This,
             /* [string][in] */ const WCHAR *crx_path,
             /* [string][in] */ const WCHAR *browser_appid,
             /* [string][in] */ const WCHAR *browser_version,
@@ -562,7 +562,7 @@ EXTERN_C const IID IID_IElevatorChromium;
         
         DECLSPEC_XFGVIRT(IElevator, EncryptData)
         HRESULT ( STDMETHODCALLTYPE *EncryptData )( 
-            IElevatorChromium * This,
+            IElevatorCinaseek * This,
             /* [in] */ ProtectionLevel protection_level,
             /* [in] */ const BSTR plaintext,
             /* [out] */ BSTR *ciphertext,
@@ -570,17 +570,17 @@ EXTERN_C const IID IID_IElevatorChromium;
         
         DECLSPEC_XFGVIRT(IElevator, DecryptData)
         HRESULT ( STDMETHODCALLTYPE *DecryptData )( 
-            IElevatorChromium * This,
+            IElevatorCinaseek * This,
             /* [in] */ const BSTR ciphertext,
             /* [out] */ BSTR *plaintext,
             /* [out] */ DWORD *last_error);
         
         END_INTERFACE
-    } IElevatorChromiumVtbl;
+    } IElevatorCinaseekVtbl;
 
-    interface IElevatorChromium
+    interface IElevatorCinaseek
     {
-        CONST_VTBL struct IElevatorChromiumVtbl *lpVtbl;
+        CONST_VTBL struct IElevatorCinaseekVtbl *lpVtbl;
     };
 
     
@@ -588,23 +588,23 @@ EXTERN_C const IID IID_IElevatorChromium;
 #ifdef COBJMACROS
 
 
-#define IElevatorChromium_QueryInterface(This,riid,ppvObject)	\
+#define IElevatorCinaseek_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define IElevatorChromium_AddRef(This)	\
+#define IElevatorCinaseek_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define IElevatorChromium_Release(This)	\
+#define IElevatorCinaseek_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define IElevatorChromium_RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle)	\
+#define IElevatorCinaseek_RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle)	\
     ( (This)->lpVtbl -> RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle) ) 
 
-#define IElevatorChromium_EncryptData(This,protection_level,plaintext,ciphertext,last_error)	\
+#define IElevatorCinaseek_EncryptData(This,protection_level,plaintext,ciphertext,last_error)	\
     ( (This)->lpVtbl -> EncryptData(This,protection_level,plaintext,ciphertext,last_error) ) 
 
-#define IElevatorChromium_DecryptData(This,ciphertext,plaintext,last_error)	\
+#define IElevatorCinaseek_DecryptData(This,ciphertext,plaintext,last_error)	\
     ( (This)->lpVtbl -> DecryptData(This,ciphertext,plaintext,last_error) ) 
 
 
@@ -616,7 +616,7 @@ EXTERN_C const IID IID_IElevatorChromium;
 
 
 
-#endif 	/* __IElevatorChromium_INTERFACE_DEFINED__ */
+#endif 	/* __IElevatorCinaseek_INTERFACE_DEFINED__ */
 
 
 #ifndef __IElevatorChrome_INTERFACE_DEFINED__
@@ -1051,19 +1051,19 @@ EXTERN_C const IID IID_IElevatorChromeCanary;
 #endif 	/* __IElevatorChromeCanary_INTERFACE_DEFINED__ */
 
 
-#ifndef __IElevator2Chromium_INTERFACE_DEFINED__
-#define __IElevator2Chromium_INTERFACE_DEFINED__
+#ifndef __IElevator2Cinaseek_INTERFACE_DEFINED__
+#define __IElevator2Cinaseek_INTERFACE_DEFINED__
 
-/* interface IElevator2Chromium */
+/* interface IElevator2Cinaseek */
 /* [unique][helpstring][uuid][oleautomation][object] */ 
 
 
-EXTERN_C const IID IID_IElevator2Chromium;
+EXTERN_C const IID IID_IElevator2Cinaseek;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
     MIDL_INTERFACE("BB19A0E5-00C6-4966-94B2-5AFEC6FED93A")
-    IElevator2Chromium : public IElevator2
+    IElevator2Cinaseek : public IElevator2
     {
     public:
     };
@@ -1071,28 +1071,28 @@ EXTERN_C const IID IID_IElevator2Chromium;
     
 #else 	/* C style interface */
 
-    typedef struct IElevator2ChromiumVtbl
+    typedef struct IElevator2CinaseekVtbl
     {
         BEGIN_INTERFACE
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IElevator2Chromium * This);
+            IElevator2Cinaseek * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IElevator2Chromium * This);
+            IElevator2Cinaseek * This);
         
         DECLSPEC_XFGVIRT(IElevator, RunRecoveryCRXElevated)
         HRESULT ( STDMETHODCALLTYPE *RunRecoveryCRXElevated )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [string][in] */ const WCHAR *crx_path,
             /* [string][in] */ const WCHAR *browser_appid,
             /* [string][in] */ const WCHAR *browser_version,
@@ -1102,7 +1102,7 @@ EXTERN_C const IID IID_IElevator2Chromium;
         
         DECLSPEC_XFGVIRT(IElevator, EncryptData)
         HRESULT ( STDMETHODCALLTYPE *EncryptData )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [in] */ ProtectionLevel protection_level,
             /* [in] */ const BSTR plaintext,
             /* [out] */ BSTR *ciphertext,
@@ -1110,14 +1110,14 @@ EXTERN_C const IID IID_IElevator2Chromium;
         
         DECLSPEC_XFGVIRT(IElevator, DecryptData)
         HRESULT ( STDMETHODCALLTYPE *DecryptData )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [in] */ const BSTR ciphertext,
             /* [out] */ BSTR *plaintext,
             /* [out] */ DWORD *last_error);
         
         DECLSPEC_XFGVIRT(IElevator2, RunIsolatedChrome)
         HRESULT ( STDMETHODCALLTYPE *RunIsolatedChrome )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [in] */ DWORD flags,
             /* [string][in] */ const WCHAR *command_line,
             /* [out] */ BSTR *log,
@@ -1126,15 +1126,15 @@ EXTERN_C const IID IID_IElevator2Chromium;
         
         DECLSPEC_XFGVIRT(IElevator2, AcceptInvitation)
         HRESULT ( STDMETHODCALLTYPE *AcceptInvitation )( 
-            IElevator2Chromium * This,
+            IElevator2Cinaseek * This,
             /* [string][in] */ const WCHAR *server_name);
         
         END_INTERFACE
-    } IElevator2ChromiumVtbl;
+    } IElevator2CinaseekVtbl;
 
-    interface IElevator2Chromium
+    interface IElevator2Cinaseek
     {
-        CONST_VTBL struct IElevator2ChromiumVtbl *lpVtbl;
+        CONST_VTBL struct IElevator2CinaseekVtbl *lpVtbl;
     };
 
     
@@ -1142,30 +1142,30 @@ EXTERN_C const IID IID_IElevator2Chromium;
 #ifdef COBJMACROS
 
 
-#define IElevator2Chromium_QueryInterface(This,riid,ppvObject)	\
+#define IElevator2Cinaseek_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define IElevator2Chromium_AddRef(This)	\
+#define IElevator2Cinaseek_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define IElevator2Chromium_Release(This)	\
+#define IElevator2Cinaseek_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define IElevator2Chromium_RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle)	\
+#define IElevator2Cinaseek_RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle)	\
     ( (This)->lpVtbl -> RunRecoveryCRXElevated(This,crx_path,browser_appid,browser_version,session_id,caller_proc_id,proc_handle) ) 
 
-#define IElevator2Chromium_EncryptData(This,protection_level,plaintext,ciphertext,last_error)	\
+#define IElevator2Cinaseek_EncryptData(This,protection_level,plaintext,ciphertext,last_error)	\
     ( (This)->lpVtbl -> EncryptData(This,protection_level,plaintext,ciphertext,last_error) ) 
 
-#define IElevator2Chromium_DecryptData(This,ciphertext,plaintext,last_error)	\
+#define IElevator2Cinaseek_DecryptData(This,ciphertext,plaintext,last_error)	\
     ( (This)->lpVtbl -> DecryptData(This,ciphertext,plaintext,last_error) ) 
 
 
-#define IElevator2Chromium_RunIsolatedChrome(This,flags,command_line,log,proc_handle,last_error)	\
+#define IElevator2Cinaseek_RunIsolatedChrome(This,flags,command_line,log,proc_handle,last_error)	\
     ( (This)->lpVtbl -> RunIsolatedChrome(This,flags,command_line,log,proc_handle,last_error) ) 
 
-#define IElevator2Chromium_AcceptInvitation(This,server_name)	\
+#define IElevator2Cinaseek_AcceptInvitation(This,server_name)	\
     ( (This)->lpVtbl -> AcceptInvitation(This,server_name) ) 
 
 
@@ -1177,7 +1177,7 @@ EXTERN_C const IID IID_IElevator2Chromium;
 
 
 
-#endif 	/* __IElevator2Chromium_INTERFACE_DEFINED__ */
+#endif 	/* __IElevator2Cinaseek_INTERFACE_DEFINED__ */
 
 
 #ifndef __IElevator2Chrome_INTERFACE_DEFINED__

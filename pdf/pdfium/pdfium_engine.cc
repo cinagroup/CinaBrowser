@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -972,7 +972,7 @@ void PDFiumEngine::OnPendingRequestComplete() {
 
     // Currently engine does not deal efficiently with some non-linearized
     // files.
-    // See http://code.google.com/p/chromium/issues/detail?id=59400
+    // See http://code.google.com/p/Cinaseek/issues/detail?id=59400
     // To improve user experience we download entire file for non-linearized
     // PDF.
     if (!IsLinearized()) {

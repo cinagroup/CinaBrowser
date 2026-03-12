@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,10 +36,10 @@
 #include "net/log/test_net_log_util.h"
 #include "net/quic/address_utils.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_crypto_client_config_handle.h"
 #include "net/quic/quic_http_utils.h"
@@ -180,7 +180,7 @@ class TestDelegateBase : public BidirectionalStreamImpl::Delegate {
 
   void Start(const BidirectionalStreamRequestInfo* request_info,
              const NetLogWithSource& net_log,
-             std::unique_ptr<QuicChromiumClientSession::Handle> session) {
+             std::unique_ptr<QuicCinaseekClientSession::Handle> session) {
     not_expect_callback_ = true;
     stream_ = std::make_unique<BidirectionalStreamQuicImpl>(std::move(session));
     stream_->Start(request_info, net_log, send_request_headers_automatically_,
@@ -509,14 +509,14 @@ class BidirectionalStreamQuicImplTest
                                                         NetLog::Get());
     socket->Connect(peer_addr_);
     runner_ = base::MakeRefCounted<TestTaskRunner>(&clock_);
-    helper_ = std::make_unique<QuicChromiumConnectionHelper>(
+    helper_ = std::make_unique<QuicCinaseekConnectionHelper>(
         &clock_, &random_generator_);
     alarm_factory_ =
-        std::make_unique<QuicChromiumAlarmFactory>(runner_.get(), &clock_);
+        std::make_unique<QuicCinaseekAlarmFactory>(runner_.get(), &clock_);
     connection_ = new quic::QuicConnection(
         connection_id_, quic::QuicSocketAddress(),
         ToQuicSocketAddress(peer_addr_), helper_.get(), alarm_factory_.get(),
-        new QuicChromiumPacketWriter(socket.get(), runner_.get()),
+        new QuicCinaseekPacketWriter(socket.get(), runner_.get()),
         true /* owns_writer */, quic::Perspective::IS_CLIENT,
         quic::test::SupportedVersions(version_), connection_id_generator_);
     if (connection_->version().IsIetfQuic()) {
@@ -528,7 +528,7 @@ class BidirectionalStreamQuicImplTest
     base::TimeTicks dns_end = base::TimeTicks::Now();
     base::TimeTicks dns_start = dns_end - base::Milliseconds(1);
 
-    session_ = std::make_unique<QuicChromiumClientSession>(
+    session_ = std::make_unique<QuicCinaseekClientSession>(
         connection_, std::move(socket),
         /*stream_factory=*/nullptr, &crypto_client_stream_factory_, &clock_,
         &transport_security_state_, &ssl_config_service_,
@@ -784,7 +784,7 @@ class BidirectionalStreamQuicImplTest
     return net_log_with_source_;
   }
 
-  QuicChromiumClientSession* session() const { return session_.get(); }
+  QuicCinaseekClientSession* session() const { return session_.get(); }
 
   quic::QuicStreamId GetNthClientInitiatedBidirectionalStreamId(int n) {
     return quic::test::GetNthClientInitiatedBidirectionalStreamId(
@@ -807,11 +807,11 @@ class BidirectionalStreamQuicImplTest
   std::vector<MockWrite> mock_writes_;
   quic::MockClock clock_;
   raw_ptr<quic::QuicConnection, DanglingUntriaged> connection_;
-  std::unique_ptr<QuicChromiumConnectionHelper> helper_;
-  std::unique_ptr<QuicChromiumAlarmFactory> alarm_factory_;
+  std::unique_ptr<QuicCinaseekConnectionHelper> helper_;
+  std::unique_ptr<QuicCinaseekAlarmFactory> alarm_factory_;
   TransportSecurityState transport_security_state_;
   SSLConfigServiceDefaults ssl_config_service_;
-  std::unique_ptr<QuicChromiumClientSession> session_;
+  std::unique_ptr<QuicCinaseekClientSession> session_;
   quic::QuicCryptoClientConfig crypto_config_;
   HttpRequestHeaders headers_;
   HttpResponseInfo response_;
@@ -2276,9 +2276,9 @@ TEST_P(BidirectionalStreamQuicImplTest, DeleteStreamDuringOnTrailersReceived) {
   EXPECT_EQ(0, delegate->on_data_sent_count());
 }
 
-// Tests that if QuicChromiumClientSession is closed after
+// Tests that if QuicCinaseekClientSession is closed after
 // BidirectionalStreamQuicImpl::OnStreamReady() but before
-// QuicChromiumClientSession::Handle::ReleaseStream() is called, there is no
+// QuicCinaseekClientSession::Handle::ReleaseStream() is called, there is no
 // crash. Regression test for crbug.com/754823.
 TEST_P(BidirectionalStreamQuicImplTest, ReleaseStreamFails) {
   SetRequest("GET", "/", DEFAULT_PRIORITY);
@@ -2296,7 +2296,7 @@ TEST_P(BidirectionalStreamQuicImplTest, ReleaseStreamFails) {
   auto delegate =
       std::make_unique<TestDelegateBase>(read_buffer.get(), kReadBufferSize);
   delegate->set_trailers_expected(true);
-  // QuicChromiumClientSession::Handle::RequestStream() returns OK synchronously
+  // QuicCinaseekClientSession::Handle::RequestStream() returns OK synchronously
   // because Initialize() has established a Session.
   delegate->Start(&request, net_log_with_source(),
                   session()->CreateHandle(destination_));

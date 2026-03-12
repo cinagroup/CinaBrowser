@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -171,7 +171,7 @@ class AppShimControllerBrowserTest : public InProcessBrowserTest {
                          "Window Created: NativeWidgetMacOverlayNSWindow"));
 
     // If the test failed, it can be hard to debug why without getting output
-    // from the Chromium process that was launched by the test. So gather that
+    // from the Cinaseek process that was launched by the test. So gather that
     // output from the system log, and include it here.
     if (testing::Test::HasFailure()) {
       base::TimeDelta log_time = base::TimeTicks::Now() - start_time;
@@ -179,7 +179,7 @@ class AppShimControllerBrowserTest : public InProcessBrowserTest {
           "log",
           "show",
           "--process",
-          "Chromium",
+          "Cinaseek",
           "--last",
           base::StringPrintf("%" PRId64 "s", log_time.InSeconds() + 1)};
       std::string log_output;

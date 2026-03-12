@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1341,7 +1341,7 @@ class CONTENT_EXPORT ContentBrowserClient {
   // Allows the embedder to override the LocationProvider implementation.
   // Return nullptr to indicate the default one for the platform should be
   // created. This is used by Qt, see
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=725057#c7
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=725057#c7
   virtual std::unique_ptr<device::LocationProvider>
   OverrideSystemLocationProvider();
 

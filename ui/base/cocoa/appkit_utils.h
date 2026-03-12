@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,8 +25,8 @@ COMPONENT_EXPORT(UI_BASE) bool IsActiveApplication();
 
 // Returns true if it is possible that accessing pasteboard contents
 // programmatically will block with a Pasteboard Privacy alert. Returns false if
-// it is known for sure that it will not, either because Chromium has been
-// granted an exception to Pasteboard Privacy, or because Chromium has been
+// it is known for sure that it will not, either because Cinaseek has been
+// granted an exception to Pasteboard Privacy, or because Cinaseek has been
 // locked down with regard to Pasteboard Privacy and it's certain that the
 // access would fail.
 //
@@ -41,7 +41,7 @@ COMPONENT_EXPORT(UI_BASE) bool PasteMightBlockWithPrivacyAlert();
 // rewrite obsolete types to modern types.
 //
 // TODO(https://crbug.com/395661472): When this FB is fixed at the minimum
-// requirement for Chromium, remove these utility functions.
+// requirement for Cinaseek, remove these utility functions.
 
 #ifdef __OBJC__
 // Converts a single string value of either a modern pasteboard type or an

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1072,7 +1072,7 @@ constexpr char kUsbPolicySetting[] = R"(
     [
       {
         "devices": [{ "vendor_id": 6353, "product_id": 5678 }],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }, {
         "devices": [{ "vendor_id": 6353 }],
         "urls": ["https://google.com,https://android.com"]
@@ -1098,7 +1098,7 @@ void ExpectDisplayNameEq(const base::Value& actual_exception_object,
 class SiteSettingsHelperChooserExceptionTest : public testing::Test {
  protected:
   const GURL kGoogleUrl{"https://google.com"};
-  const GURL kChromiumUrl{"https://chromium.org"};
+  const GURL kCinaseekUrl{"https://Cinaseek.org"};
   const GURL kAndroidUrl{"https://android.com"};
   const GURL kTestUrl{"https://test.com"};
 #if BUILDFLAG(IS_CHROMEOS)
@@ -1145,7 +1145,7 @@ class SiteSettingsHelperChooserExceptionTest : public testing::Test {
     base::RunLoop().RunUntilIdle();
 
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kTestOrigin = url::Origin::Create(kTestUrl);
 
     // Add the user granted permissions for testing. "Gizmo" is allowed on two
@@ -1153,7 +1153,7 @@ class SiteSettingsHelperChooserExceptionTest : public testing::Test {
     // allowed on one origin which is overlapping with the policy.
     chooser_context->GrantDevicePermission(kTestOrigin,
                                            *persistent_device_info);
-    chooser_context->GrantDevicePermission(kChromiumOrigin,
+    chooser_context->GrantDevicePermission(kCinaseekOrigin,
                                            *persistent_device_info);
     chooser_context->GrantDevicePermission(kAndroidOrigin,
                                            *ephemeral_device_info);
@@ -1317,11 +1317,11 @@ TEST_F(SiteSettingsHelperChooserExceptionTest,
 
   // This exception should describe the permissions for the "Gizmo" device.
   // The user granted permissions are the following:
-  // * "https://chromium.org"
+  // * "https://Cinaseek.org"
   // * "https://test.org"
   // The policy granted permission is the following:
-  // * "https://chromium.org"
-  // The chromium granted permission should be coalesced into the policy
+  // * "https://Cinaseek.org"
+  // The Cinaseek granted permission should be coalesced into the policy
   // permissions. The test one does not overlap with any policy permission so
   // it will be a separate preference-sourced exception.
   {
@@ -1332,8 +1332,8 @@ TEST_F(SiteSettingsHelperChooserExceptionTest,
     ASSERT_EQ(sites_list.size(), 2u);
     ExpectValidSiteExceptionObject(
         sites_list[0],
-        /*display_name=*/kChromiumUrl.DeprecatedGetOriginAsURL().spec(),
-        /*origin=*/kChromiumUrl,
+        /*display_name=*/kCinaseekUrl.DeprecatedGetOriginAsURL().spec(),
+        /*origin=*/kCinaseekUrl,
         /*source=*/kPolicySource,
         /*incognito=*/false);
     ExpectValidSiteExceptionObject(

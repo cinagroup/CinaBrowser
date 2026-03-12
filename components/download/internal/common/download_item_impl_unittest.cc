@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2176,7 +2176,7 @@ const int kEventCount = 4;
 // The following functions help us with currying the calls to
 // DownloadDestinationObserver. If std::bind was allowed along with
 // std::placeholders, it is possible to avoid these functions, but currently
-// Chromium doesn't allow using std::bind for good reasons.
+// Cinaseek doesn't allow using std::bind for good reasons.
 void DestinationUpdateInvoker(
     int64_t bytes_so_far,
     int64_t bytes_per_sec,

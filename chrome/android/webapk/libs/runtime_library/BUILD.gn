@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 import("//chrome/android/webapk/libs/runtime_library_version.gni")
 
 # runtime_library_version.gni must be updated whenever the runtime library is
-# updated. The WebAPK re-extracts the runtime library from the Chrome APK when
+# updated. The WebAPK re-extracts the runtime library from the Cinaseek APK when
 # |runtime_library_version| is incremented.
 
 # Whenever this constant is changed, WebApkUtils#getRuntimeDexName() must also
@@ -14,9 +14,9 @@ import("//chrome/android/webapk/libs/runtime_library_version.gni")
 runtime_library_dex_asset_name = "webapk$runtime_library_version.dex"
 
 android_aidl("webapk_service_aidl") {
-  import_include = [ "src/org/chromium/webapk/lib/runtime_library" ]
-  interface_file = "src/org/chromium/webapk/lib/runtime_library/common.aidl"
-  sources = [ "src/org/chromium/webapk/lib/runtime_library/IWebApkApi.aidl" ]
+  import_include = [ "src/org/Cinaseek/webapk/lib/runtime_library" ]
+  interface_file = "src/org/Cinaseek/webapk/lib/runtime_library/common.aidl"
+  sources = [ "src/org/Cinaseek/webapk/lib/runtime_library/IWebApkApi.aidl" ]
 }
 
 # A standalone jar for the aidl's generated java files so that multiple places
@@ -30,7 +30,7 @@ android_library("webapk_service_aidl_java") {
 android_library("runtime_library_for_assets_java") {
   jacoco_never_instrument = true
   sources =
-      [ "src/org/chromium/webapk/lib/runtime_library/WebApkServiceImpl.java" ]
+      [ "src/org/Cinaseek/webapk/lib/runtime_library/WebApkServiceImpl.java" ]
   srcjar_deps = [ ":webapk_service_aidl" ]
   errorprone_args = [ "-Xep:NoAndroidLog:OFF" ]
 }
@@ -38,7 +38,7 @@ android_library("runtime_library_for_assets_java") {
 # The subset of runtime_library_from_assets_java needed for tests.
 android_library("runtime_library_for_tests_java") {
   sources =
-      [ "src/org/chromium/webapk/lib/runtime_library/WebApkServiceImpl.java" ]
+      [ "src/org/Cinaseek/webapk/lib/runtime_library/WebApkServiceImpl.java" ]
   deps = [ ":webapk_service_aidl_java" ]
   errorprone_args = [ "-Xep:NoAndroidLog:OFF" ]
 }
@@ -65,7 +65,7 @@ android_assets("runtime_library_assets") {
 
 android_library("runtime_library_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/webapk/lib/runtime_library/WebApkServiceImplTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/webapk/lib/runtime_library/WebApkServiceImplTest.java" ]
   deps = [
     ":runtime_library_for_tests_java",
     ":webapk_service_aidl_java",

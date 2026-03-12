@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -27,17 +27,17 @@ class QuicRandom;
 
 namespace net {
 
-class NET_EXPORT_PRIVATE QuicChromiumConnectionHelper
+class NET_EXPORT_PRIVATE QuicCinaseekConnectionHelper
     : public quic::QuicConnectionHelperInterface {
  public:
-  QuicChromiumConnectionHelper(const quic::QuicClock* clock,
+  QuicCinaseekConnectionHelper(const quic::QuicClock* clock,
                                quic::QuicRandom* random_generator);
 
-  QuicChromiumConnectionHelper(const QuicChromiumConnectionHelper&) = delete;
-  QuicChromiumConnectionHelper& operator=(const QuicChromiumConnectionHelper&) =
+  QuicCinaseekConnectionHelper(const QuicCinaseekConnectionHelper&) = delete;
+  QuicCinaseekConnectionHelper& operator=(const QuicCinaseekConnectionHelper&) =
       delete;
 
-  ~QuicChromiumConnectionHelper() override;
+  ~QuicCinaseekConnectionHelper() override;
 
   // quic::QuicConnectionHelperInterface
   const quic::QuicClock* GetClock() const override;

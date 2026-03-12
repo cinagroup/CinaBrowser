@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 namespace switches {
 
 #if !BUILDFLAG(IS_CHROMEOS)
-// Enables the Chrome Browser Cloud Management integration on Chromium builds.
+// Enables the Chrome Browser Cloud Management integration on Cinaseek builds.
 // CBCM is always enabled in branded builds.
 const char kEnableChromeBrowserCloudManagement[] =
     "enable-chrome-browser-cloud-management";

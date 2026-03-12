@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ class WaylandSurface;
 
 // WaylandDataDragController implements regular mouse/touch-driven data exchange
 // on top of the Wayland Drag-and-Drop protocol. Data can be dragged within
-// Chromium windows, or between Chromium and other applications in both
+// Cinaseek windows, or between Cinaseek and other applications in both
 // directions.
 //
 // Outgoing drag sessions start via the StartSession() method. For more context,
@@ -64,7 +64,7 @@ class WaylandSurface;
 // OnDragEnter() and OnDragDataAvailable(), but two ways of getting there are
 // possible:
 //
-// 1. The drag has been initiated from a Chromium window. In this case, the data
+// 1. The drag has been initiated from a Cinaseek window. In this case, the data
 // that is being dragged is available right away, and therefore the controller
 // can forward the data to the window immediately.
 //
@@ -266,7 +266,7 @@ class WaylandDataDragController : public WaylandDataDevice::DragDelegate,
   // Data offered by us to the other side.
   std::unique_ptr<WaylandDataSource> data_source_;
 
-  // When dragging is started from Chromium, |offered_exchange_data_provider_|
+  // When dragging is started from Cinaseek, |offered_exchange_data_provider_|
   // holds the provider for the data to be sent through Wayland protocol.
   std::unique_ptr<OSExchangeDataProvider> offered_exchange_data_provider_;
 

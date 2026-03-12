@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9493,7 +9493,7 @@ TEST_F(HostResolverManagerDnsTest, SrvQuery) {
   const TestServiceRecord kRecord1 = {2, 3, 1223, "foo.com"};
   const TestServiceRecord kRecord2 = {5, 10, 80, "bar.com"};
   const TestServiceRecord kRecord3 = {5, 1, 5, "google.com"};
-  const TestServiceRecord kRecord4 = {2, 100, 12345, "chromium.org"};
+  const TestServiceRecord kRecord4 = {2, 100, 12345, "Cinaseek.org"};
   MockDnsClientRuleList rules;
   rules.emplace_back("host", dns_protocol::kTypeSRV, false /* secure */,
                      MockDnsClientRule::Result(BuildTestDnsServiceResponse(
@@ -9517,11 +9517,11 @@ TEST_F(HostResolverManagerDnsTest, SrvQuery) {
       results,
       testing::UnorderedElementsAre(
           HostPortPair("foo.com", 1223), HostPortPair("bar.com", 80),
-          HostPortPair("google.com", 5), HostPortPair("chromium.org", 12345)));
+          HostPortPair("google.com", 5), HostPortPair("Cinaseek.org", 12345)));
   auto priority2 = results.first(2u);
   EXPECT_THAT(priority2, testing::UnorderedElementsAre(
                              HostPortPair("foo.com", 1223),
-                             HostPortPair("chromium.org", 12345)));
+                             HostPortPair("Cinaseek.org", 12345)));
   auto priority5 = results.subspan(2u);
   EXPECT_THAT(priority5,
               testing::UnorderedElementsAre(HostPortPair("bar.com", 80),
@@ -9781,7 +9781,7 @@ TEST_F(HostResolverManagerDnsTest, SrvDnsQuery) {
   const TestServiceRecord kRecord1 = {2, 3, 1223, "foo.com"};
   const TestServiceRecord kRecord2 = {5, 10, 80, "bar.com"};
   const TestServiceRecord kRecord3 = {5, 1, 5, "google.com"};
-  const TestServiceRecord kRecord4 = {2, 100, 12345, "chromium.org"};
+  const TestServiceRecord kRecord4 = {2, 100, 12345, "Cinaseek.org"};
   MockDnsClientRuleList rules;
   rules.emplace_back("host", dns_protocol::kTypeSRV, false /* secure */,
                      MockDnsClientRule::Result(BuildTestDnsServiceResponse(
@@ -9806,11 +9806,11 @@ TEST_F(HostResolverManagerDnsTest, SrvDnsQuery) {
       results,
       testing::UnorderedElementsAre(
           HostPortPair("foo.com", 1223), HostPortPair("bar.com", 80),
-          HostPortPair("google.com", 5), HostPortPair("chromium.org", 12345)));
+          HostPortPair("google.com", 5), HostPortPair("Cinaseek.org", 12345)));
   auto priority2 = results.first(2u);
   EXPECT_THAT(priority2, testing::UnorderedElementsAre(
                              HostPortPair("foo.com", 1223),
-                             HostPortPair("chromium.org", 12345)));
+                             HostPortPair("Cinaseek.org", 12345)));
   auto priority5 = results.subspan(2u);
   EXPECT_THAT(priority5,
               testing::UnorderedElementsAre(HostPortPair("bar.com", 80),

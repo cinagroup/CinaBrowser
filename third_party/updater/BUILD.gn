@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,9 +24,9 @@ if (is_win || is_mac || is_linux) {
 
       if (is_win && !is_chrome_branded) {
         sources += [
-          "chromium_win_arm64" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
-          "chromium_win_x86" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
-          "chromium_win_x86_64" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
+          "Cinaseek_win_arm64" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
+          "Cinaseek_win_x86" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
+          "Cinaseek_win_x86_64" + arch_suffix + "/cipd/UpdaterSetup_test.exe",
         ]
       }
 
@@ -50,32 +50,32 @@ if (is_win || is_mac || is_linux) {
 
       if (is_mac && !is_chrome_branded) {
         sources += [
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Helpers/ksadmin",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Helpers/ksinstall",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Info.plist",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/MacOS/ChromiumSoftwareUpdate",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Resources/ChromiumSoftwareUpdateAgent.app/Contents/Info.plist",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Resources/ChromiumSoftwareUpdateAgent.app/Contents/MacOS/ChromiumSoftwareUpdateAgent",
-          "chromium_mac_amd64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/Helpers/launcher",
-          "chromium_mac_amd64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/Info.plist",
-          "chromium_mac_amd64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/MacOS/ChromiumUpdater_test",
-          "chromium_mac_amd64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/PkgInfo",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Helpers/ksadmin",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Helpers/ksinstall",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Info.plist",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/MacOS/ChromiumSoftwareUpdate",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Resources/ChromiumSoftwareUpdateAgent.app/Contents/Info.plist",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/Helpers/ChromiumSoftwareUpdate.bundle/Contents/Resources/ChromiumSoftwareUpdateAgent.app/Contents/MacOS/ChromiumSoftwareUpdateAgent",
-          "chromium_mac_arm64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/Helpers/launcher",
-          "chromium_mac_arm64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/Info.plist",
-          "chromium_mac_arm64" + arch_suffix + "/cipd/ChromiumUpdater_test.app/Contents/MacOS/ChromiumUpdater_test",
-          "chromium_mac_arm64" + arch_suffix +
-              "/cipd/ChromiumUpdater_test.app/Contents/PkgInfo",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Helpers/ksadmin",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Helpers/ksinstall",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Info.plist",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/MacOS/CinaseekSoftwareUpdate",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Resources/CinaseekSoftwareUpdateAgent.app/Contents/Info.plist",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Resources/CinaseekSoftwareUpdateAgent.app/Contents/MacOS/CinaseekSoftwareUpdateAgent",
+          "Cinaseek_mac_amd64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/Helpers/launcher",
+          "Cinaseek_mac_amd64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/Info.plist",
+          "Cinaseek_mac_amd64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/MacOS/CinaseekUpdater_test",
+          "Cinaseek_mac_amd64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/PkgInfo",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Helpers/ksadmin",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Helpers/ksinstall",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Info.plist",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/MacOS/CinaseekSoftwareUpdate",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Resources/CinaseekSoftwareUpdateAgent.app/Contents/Info.plist",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/Helpers/CinaseekSoftwareUpdate.bundle/Contents/Resources/CinaseekSoftwareUpdateAgent.app/Contents/MacOS/CinaseekSoftwareUpdateAgent",
+          "Cinaseek_mac_arm64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/Helpers/launcher",
+          "Cinaseek_mac_arm64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/Info.plist",
+          "Cinaseek_mac_arm64" + arch_suffix + "/cipd/CinaseekUpdater_test.app/Contents/MacOS/CinaseekUpdater_test",
+          "Cinaseek_mac_arm64" + arch_suffix +
+              "/cipd/CinaseekUpdater_test.app/Contents/PkgInfo",
         ]
       }
 
@@ -84,7 +84,7 @@ if (is_win || is_mac || is_linux) {
       }
 
       if (is_linux && !is_chrome_branded) {
-        sources += [ "chromium_linux64" + arch_suffix + "/cipd/updater_test" ]
+        sources += [ "Cinaseek_linux64" + arch_suffix + "/cipd/updater_test" ]
       }
     }
 

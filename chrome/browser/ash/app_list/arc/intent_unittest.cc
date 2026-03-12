@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ constexpr char kTestShelfGroupId[] = "some_shelf_group";
 constexpr char kIntentWithShelfGroupId[] =
     "#Intent;launchFlags=0x18001000;"
     "component=com.test.app/com.test.app.some.activity;"
-    "S.org.chromium.arc.shelf_group_id=some_shelf_group;end";
+    "S.org.Cinaseek.arc.shelf_group_id=some_shelf_group;end";
 
 std::string GetPlayStoreInitialLaunchIntent() {
   return GetLaunchIntent(kPlayStorePackage, kPlayStoreActivity,
@@ -58,7 +58,7 @@ TEST_F(ArcIntentTest, LaunchIntent) {
                                          Intent::FLAG_ACTIVITY_LAUNCH_ADJACENT);
   ASSERT_EQ(intent2->extra_params().size(), 1U);
   EXPECT_TRUE(intent2->HasExtraParam(
-      "S.org.chromium.arc.shelf_group_id=some_shelf_group"));
+      "S.org.Cinaseek.arc.shelf_group_id=some_shelf_group"));
 }
 
 TEST_F(ArcIntentTest, AppendLaunchIntent) {
@@ -92,9 +92,9 @@ TEST_F(ArcIntentTest, AppendLaunchIntent) {
 }
 
 TEST_F(ArcIntentTest, CreateIntentTicksExtraParam) {
-  EXPECT_EQ("S.org.chromium.arc.request.deferred.start=12345",
+  EXPECT_EQ("S.org.Cinaseek.arc.request.deferred.start=12345",
             CreateIntentTicksExtraParam(
-                "S.org.chromium.arc.request.deferred.start",
+                "S.org.Cinaseek.arc.request.deferred.start",
                 base::TimeTicks() + base::Milliseconds(12345)));
 }
 

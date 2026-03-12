@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ constexpr base::ByteSize kReadBufferSize =
     base::KiBU(64);  // Maximum size of a packet.
 constexpr uint16_t kDefaultMtu = 1280;
 
-// Maps PseudoTcp logical error states to Chromium net errors.
+// Maps PseudoTcp logical error states to Cinaseek net errors.
 // PseudoTcp is a simulated socket, not a real system socket, so we can't
 // use MapSystemError() which is designed for actual system error codes.
 int MapPseudoTcpError(int pseudo_tcp_error) {

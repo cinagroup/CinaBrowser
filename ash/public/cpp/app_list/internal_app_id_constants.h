@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,11 +9,11 @@ namespace ash {
 
 // App ids for internal apps, also used to identify the shelf item.
 // Generated as
-// crx_file::id_util::GenerateId("org.chromium.keyboardshortcuthelper").
+// crx_file::id_util::GenerateId("org.Cinaseek.keyboardshortcuthelper").
 constexpr char kInternalAppIdKeyboardShortcutViewer[] =
     "bhbpmkoclkgbgaefijcdgkfjghcmiijm";
 
-// Generated as crx_file::id_util::GenerateId("org.chromium.settings_ui").
+// Generated as crx_file::id_util::GenerateId("org.Cinaseek.settings_ui").
 constexpr char kInternalAppIdSettings[] = "dhnmfjegnohoakobpikffnelcemaplkm";
 
 }  // namespace ash

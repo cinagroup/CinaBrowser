@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -283,7 +283,7 @@ TEST_F(PowerBookmarkUtilsTest, GetBookmarksMatchingPropertiesTypeSearch) {
   SetNodePowerBookmarkMeta(model(), node2, std::move(meta2));
 
   const bookmarks::BookmarkNode* node3 = model()->AddURL(
-      model()->other_node(), 0, u"chromium", GURL("http://www.chromium.org"));
+      model()->other_node(), 0, u"Cinaseek", GURL("http://www.Cinaseek.org"));
   std::unique_ptr<PowerBookmarkMeta> meta3 =
       std::make_unique<PowerBookmarkMeta>();
   SetNodePowerBookmarkMeta(model(), node3, std::move(meta3));

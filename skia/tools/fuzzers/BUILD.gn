@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -45,7 +45,7 @@ if (is_win && use_fuzzing_engine) {
     check_includes = false  # Builds some private Skia files
   }
 
-  # TODO(metzman): Enable the other fuzzers that cannot yet build in Chromium.
+  # TODO(metzman): Enable the other fuzzers that cannot yet build in Cinaseek.
   fuzzer_test("skia_region_deserialize_fuzzer") {
     sources = [ "//third_party/skia/fuzz/oss_fuzz/FuzzRegionDeserialize.cpp" ]
     defines = [ "SK_BUILD_FOR_LIBFUZZER" ]

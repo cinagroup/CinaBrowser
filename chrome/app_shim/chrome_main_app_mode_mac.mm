@@ -1,8 +1,8 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // On Mac, one can't make shortcuts with command-line arguments. Instead, we
-// produce small app bundles which locate the Chromium framework and load it,
+// produce small app bundles which locate the Cinaseek framework and load it,
 // passing the appropriate data. This is the entry point into the framework for
 // those app bundles.
 
@@ -21,11 +21,11 @@
 
 extern "C" {
 // |ChromeAppModeStart()| is the point of entry into the framework from the
-// app mode loader. There are cases where the Chromium framework may have
+// app mode loader. There are cases where the Cinaseek framework may have
 // changed in a way that is incompatible with an older shim (e.g. change to
 // libc++ library linking). The function name is versioned to provide a way
 // to force shim upgrades if they are launched before an updated version of
-// Chromium can upgrade them; the old shim will not be able to dyload the
+// Cinaseek can upgrade them; the old shim will not be able to dyload the
 // new ChromeAppModeStart, so it will fall back to the upgrade path. See
 // https://crbug.com/561205.
 __attribute__((visibility("default"))) int APP_SHIM_ENTRY_POINT_NAME(

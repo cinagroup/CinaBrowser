@@ -48,7 +48,7 @@
       };
       sharedStorage.selectURL(
           "contribute-to-histogram",
-          [{url: "https://google.com/"}, {url: "https://chromium.org/"}],
+          [{url: "https://google.com/"}, {url: "https://Cinaseek.org/"}],
           {data, privateAggregationConfig: config});
   })()`);
 

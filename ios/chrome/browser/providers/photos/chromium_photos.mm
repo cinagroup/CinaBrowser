@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,10 +6,10 @@
 #import "ios/chrome/browser/photos/model/photos_service.h"
 #import "ios/public/provider/chrome/browser/photos/photos_api.h"
 
-class ChromiumPhotosService final : public PhotosService {
+class CinaseekPhotosService final : public PhotosService {
  public:
-  ChromiumPhotosService() = default;
-  ~ChromiumPhotosService() final = default;
+  CinaseekPhotosService() = default;
+  ~CinaseekPhotosService() final = default;
 
   bool IsSupported() const final { return false; }
   bool IsAvailable() const final { return false; }
@@ -31,7 +31,7 @@ namespace provider {
 std::unique_ptr<PhotosService> CreatePhotosService(
     PhotosServiceConfiguration* configuration) {
   // Save to Photos is not supported.
-  return std::make_unique<ChromiumPhotosService>();
+  return std::make_unique<CinaseekPhotosService>();
 }
 
 }  // namespace provider

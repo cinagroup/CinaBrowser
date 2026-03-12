@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@
 #include "components/viz/test/test_gles2_interface.h"
 #include "components/viz/test/test_surface_id_allocator.h"
 #include "components/viz/test/viz_test_suite.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/common/swap_buffers_complete_params.h"
 #include "gpu/command_buffer/service/scheduler.h"
 #include "gpu/command_buffer/service/shared_image/shared_image_manager.h"

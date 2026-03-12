@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -58,10 +58,10 @@ preprocess_if_expr("preprocess_generated") {
 common_path_mappings = [
   "chrome-extension://pmfjbimdmchhbnneeidfognadeopoehp/*|preprocessed/image_loader/*",
   "tslib|" + rebase_path(
-          "//third_party/material_web_components/components-chromium/node_modules/tslib/tslib.d.ts",
+          "//third_party/material_web_components/components-Cinaseek/node_modules/tslib/tslib.d.ts",
           target_gen_dir),
   "chrome://resources/mwc/*|" + rebase_path(
-          "//third_party/material_web_components/components-chromium/node_modules/*",
+          "//third_party/material_web_components/components-Cinaseek/node_modules/*",
           target_gen_dir),
   "chrome://resources/cr_components/color_change_listener/*|" + rebase_path(
           "$root_gen_dir/ui/webui/resources/tsc/cr_components/color_change_listener/*",

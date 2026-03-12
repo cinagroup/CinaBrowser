@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ class LoopbackMixinTest : public testing::Test {
 // --- Factory Function Tests ---
 
 TEST_F(LoopbackMixinTest, MaybeCreate_FailsWithWrongDeviceId) {
-  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddChromiumBack);
+  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddCinaseekBack);
   auto mixin = LoopbackMixin::MaybeCreateRestrictOwnAudioLoopbackMixin(
       &coordinator_, base::UnguessableToken::Create(), "some_other_device_id",
       params_, on_data_callback_.Get());
@@ -105,7 +105,7 @@ TEST_F(LoopbackMixinTest, MaybeCreate_FailsWithWrongDeviceId) {
 }
 
 TEST_F(LoopbackMixinTest, MaybeCreate_FailsWhenFeatureIsDisabled) {
-  feature_list_.InitAndDisableFeature(kRestrictOwnAudioAddChromiumBack);
+  feature_list_.InitAndDisableFeature(kRestrictOwnAudioAddCinaseekBack);
   auto mixin = LoopbackMixin::MaybeCreateRestrictOwnAudioLoopbackMixin(
       &coordinator_, base::UnguessableToken::Create(),
       media::AudioDeviceDescription::kLoopbackWithoutChromeId, params_,
@@ -116,7 +116,7 @@ TEST_F(LoopbackMixinTest, MaybeCreate_FailsWhenFeatureIsDisabled) {
 
 TEST_F(LoopbackMixinTest,
        MaybeCreate_SucceedsWithApplicationLoopbackIdAndFeature) {
-  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddChromiumBack);
+  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddCinaseekBack);
   auto mixin = LoopbackMixin::MaybeCreateRestrictOwnAudioLoopbackMixin(
       &coordinator_, base::UnguessableToken::Create(),
       media::AudioDeviceDescription::kLoopbackWithoutChromeId, params_,
@@ -132,7 +132,7 @@ TEST_F(LoopbackMixinTest,
 
 TEST_F(LoopbackMixinTest,
        MaybeCreate_SucceedsWithRestrictOwnAudioBrowserLoopbackIdAndFeature) {
-  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddChromiumBack);
+  feature_list_.InitAndEnableFeature(kRestrictOwnAudioAddCinaseekBack);
   auto mixin = LoopbackMixin::MaybeCreateRestrictOwnAudioLoopbackMixin(
       &coordinator_, base::UnguessableToken::Create(),
       media::CreateRestrictOwnAudioBrowserLoopbackDeviceId(), params_,

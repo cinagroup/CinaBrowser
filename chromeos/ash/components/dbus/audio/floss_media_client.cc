@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,8 +19,8 @@ namespace ash {
 
 namespace {
 
-const char kFlossServiceName[] = "org.chromium.bluetooth";
-const char kFlossMediaInterface[] = "org.chromium.bluetooth.BluetoothMedia";
+const char kFlossServiceName[] = "org.Cinaseek.bluetooth";
+const char kFlossMediaInterface[] = "org.Cinaseek.bluetooth.BluetoothMedia";
 
 FlossMediaClient* g_instance = nullptr;
 

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -33,8 +33,8 @@ config("shell_encryption_config") {
     # Just like the root shell-encryption directory is added to include path, the
     # corresponding directory tree with generated files needs to be added too.
     # Note: this path does not change depending on the current target, e.g.
-    # it is always "//gen/third_party/shell-encryption/src" when building with Chromium.
-    # See also: http://cs.chromium.org/?q=%5C"default_include_dirs
+    # it is always "//gen/third_party/shell-encryption/src" when building with Cinaseek.
+    # See also: http://cs.Cinaseek.org/?q=%5C"default_include_dirs
     # https://gn.googlesource.com/gn/+/master/docs/reference.md#target_gen_dir"
     target_gen_dir,
   ]
@@ -63,10 +63,10 @@ proto_library("coefficient_polynomial_proto") {
 if (is_chromeos || is_linux) {
   component("shell_encryption") {
     public_configs = [ ":shell_encryption_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":shell_encryption_internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
     public = [
       "base/shell_encryption_export.h",
@@ -116,10 +116,10 @@ if (is_chromeos || is_linux) {
   source_set("shell_encryption_test_library") {
     testonly = true
     public_configs = [ ":shell_encryption_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":shell_encryption_internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
     public = [
       "src/prng/integral_prng_testing_types.h",
@@ -143,10 +143,10 @@ if (is_chromeos || is_linux) {
 
   test("shell_encryption_unittests") {
     testonly = true
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":shell_encryption_internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
     sources = [
       "src/bits_util_test.cc",

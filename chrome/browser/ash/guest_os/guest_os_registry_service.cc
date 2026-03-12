@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ void Launch(vm_tools::apps::VmType vm_type,
       // to trigger a compiler warning if a newly-added enum case isn't handled.
       // However, this enum is generated, and the source proto lives in the CrOS
       // platform2 repo. If we attempted to exhaustively handle all cases,
-      // adding a new enum entry would unavoidably break Chromium's build (since
+      // adding a new enum entry would unavoidably break Cinaseek's build (since
       // warnings are treated as errors). So instead we have this default case,
       // and log unexpected values.
       LOG(ERROR) << "Unsupported VmType: " << static_cast<int>(VmType());

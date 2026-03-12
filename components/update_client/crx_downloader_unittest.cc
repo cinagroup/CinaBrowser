@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #include "base/test/task_environment.h"
 #include "build/build_config.h"
 #include "components/update_client/crx_downloader_factory.h"
-#include "components/update_client/net/network_chromium.h"
+#include "components/update_client/net/network_Cinaseek.h"
 #include "components/update_client/test_utils.h"
 #include "components/update_client/update_client_errors.h"
 #include "components/update_client/utils.h"
@@ -103,7 +103,7 @@ void CrxDownloaderTest::SetUp() {
   // Do not use the background downloader in these tests.
   crx_downloader_ =
       MakeCrxDownloaderFactory(
-          base::MakeRefCounted<NetworkFetcherChromiumFactory>(
+          base::MakeRefCounted<NetworkFetcherCinaseekFactory>(
               test_shared_url_loader_factory_,
               base::BindRepeating([](const GURL& url) { return false; })))
           ->MakeCrxDownloader("CrxDownloaderTest", false);

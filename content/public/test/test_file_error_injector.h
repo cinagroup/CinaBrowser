@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ class TestFileErrorInjector
   // The factory we created. May outlive this class.
   // This dangling raw_ptr occurred in:
   // browser_tests: DownloadTest.DownloadHistoryCheck
-  // https://ci.chromium.org/ui/p/chromium/builders/try/linux-chromeos-rel/1540091/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FDownloadTest.DownloadHistoryCheck+VHash%3A282db19e8ac0a6be
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/linux-chromeos-rel/1540091/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FDownloadTest.DownloadHistoryCheck+VHash%3A282db19e8ac0a6be
   raw_ptr<DownloadFileWithErrorFactory, FlakyDanglingUntriaged>
       created_factory_ = nullptr;
 

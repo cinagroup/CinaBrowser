@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -657,7 +657,7 @@ TEST_F(ProcessorEntityTest, LocalDeletionWithSpecifiedOrigin) {
             entity->metadata().deletion_origin().file_line_number());
   EXPECT_EQ(base::PersistentHash(location.file_name()),
             entity->metadata().deletion_origin().file_name_hash());
-  EXPECT_TRUE(entity->metadata().deletion_origin().has_chromium_version());
+  EXPECT_TRUE(entity->metadata().deletion_origin().has_Cinaseek_version());
 }
 
 // Test a local deletion followed by an undeletion (creation).

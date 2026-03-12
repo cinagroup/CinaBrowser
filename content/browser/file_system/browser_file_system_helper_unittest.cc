@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ TEST(BrowserFileSystemHelperTest,
 
 TEST(BrowserFileSystemHelperTest, PrepareDropDataForChildProcess_LocalFiles) {
   // Install a custom ContentBrowserClient that overrides IsHandledURL() to
-  // return `true` for file URLs, just like regular Chromium would.  This is
+  // return `true` for file URLs, just like regular Cinaseek would.  This is
   // necessary for ChildProcessSecurityPolicy::CanRequestURL() checks to work
   // more accurately, since it allows URLs not destined for the browser itself
   // (i.e., when IsHandledURL() returns false).

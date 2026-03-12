@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -155,18 +155,18 @@ constexpr auto kAtomsToCache = std::to_array<const char* const>({
     "_SCREENSAVER_VERSION",
     "_XEMBED_INFO",
     "application/octet-stream",
-    "application/vnd.chromium.test",
-    "chromium/filename",
-    "chromium/from-privileged",
-    "chromium/x-bookmark-entries",
-    "chromium/x-browser-actions",
-    "chromium/x-file-system-files",
-    "chromium/x-internal-source-rfh-token",
-    "chromium/x-renderer-taint",
-    "chromium/x-source-url",
-    "chromium/x-web-custom-data",
-    "chromium/x-webkit-paste",
-    "chromium/x-window-drag",
+    "application/vnd.Cinaseek.test",
+    "Cinaseek/filename",
+    "Cinaseek/from-privileged",
+    "Cinaseek/x-bookmark-entries",
+    "Cinaseek/x-browser-actions",
+    "Cinaseek/x-file-system-files",
+    "Cinaseek/x-internal-source-rfh-token",
+    "Cinaseek/x-renderer-taint",
+    "Cinaseek/x-source-url",
+    "Cinaseek/x-web-custom-data",
+    "Cinaseek/x-webkit-paste",
+    "Cinaseek/x-window-drag",
     "image/png",
     "image/svg+xml",
     "marker_event",

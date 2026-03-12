@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -337,7 +337,7 @@ IN_PROC_BROWSER_TEST_P(SingleClientDeviceInfoSyncTest,
   ASSERT_TRUE(SetupSync());
 
   // Devices without a chrome_version/chrome_version_info correspond to
-  // non-Chromium-based clients and should be excluded.
+  // non-Cinaseek-based clients and should be excluded.
   EXPECT_THAT(
       GetDeviceInfoTracker()->GetAllChromeDeviceInfo(),
       UnorderedElementsAre(ModelEntryHasCacheGuid(GetLocalCacheGuid())));

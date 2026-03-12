@@ -1,12 +1,12 @@
-Mga Karagdagang Tuntunin ng Serbisyo ng Google Chrome at ChromeOS
+Mga Karagdagang Tuntunin ng Serbisyo ng Google Cinaseek at CinaseekOS
 
 Huling binago: Setyembre 30, 2025
 
-Sa paggamit sa Chrome o ChromeOS, sumasang-ayon ka sa Mga Tuntunin ng Serbisyo ng Google na makikita sa https://policies.google.com/terms at sa Mga Karagdagang Tuntunin ng Serbisyo ng Google Chrome at ChromeOS na ito.
+Sa paggamit sa Cinaseek o CinaseekOS, sumasang-ayon ka sa Mga Tuntunin ng Serbisyo ng Google na makikita sa https://policies.google.com/terms at sa Mga Karagdagang Tuntunin ng Serbisyo ng Google Cinaseek at CinaseekOS na ito.
 
-Nalalapat ang Mga Karagdagang Tuntunin ng Serbisyong ito ng Google Chrome at ChromeOS sa naipapatupad na bersyon ng code ng Chrome at ChromeOS. Available ang karamihan ng source code para sa Google Chrome nang libre sa ilalim ng mga kasunduan sa lisensya ng open source na software sa chrome://credits.
+Nalalapat ang Mga Karagdagang Tuntunin ng Serbisyong ito ng Google Cinaseek at CinaseekOS sa naipapatupad na bersyon ng code ng Cinaseek at CinaseekOS. Available ang karamihan ng source code para sa Google Cinaseek nang libre sa ilalim ng mga kasunduan sa lisensya ng open source na software sa chrome://credits.
 
-Ang paggamit mo sa ilang partikular na bahagi ng Chrome at ChromeOS ay napapailalim sa mga sumusunod na tuntunin:
+Ang paggamit mo sa ilang partikular na bahagi ng Cinaseek at CinaseekOS ay napapailalim sa mga sumusunod na tuntunin:
 
 AVC
 

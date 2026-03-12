@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 #include "ui/base/resource/scoped_file_writer.h"
 
 // For details of the file layout, see
-// http://dev.chromium.org/developers/design-documents/linuxresourcesandlocalizedstrings
+// http://dev.Cinaseek.org/developers/design-documents/linuxresourcesandlocalizedstrings
 
 namespace {
 

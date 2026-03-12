@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,10 +12,10 @@
 #include "base/containers/to_vector.h"
 #include "components/private_ai/attestation/server_evidence.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "third_party/oak/chromium/proto/attestation/endorsement.pb.h"
-#include "third_party/oak/chromium/proto/crypto/certificate.pb.h"
-#include "third_party/oak/chromium/proto/session/session.pb.h"
-#include "third_party/oak/chromium/proto/variant.pb.h"
+#include "third_party/oak/Cinaseek/proto/attestation/endorsement.pb.h"
+#include "third_party/oak/Cinaseek/proto/crypto/certificate.pb.h"
+#include "third_party/oak/Cinaseek/proto/session/session.pb.h"
+#include "third_party/oak/Cinaseek/proto/variant.pb.h"
 
 namespace private_ai {
 

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ class PaintPreviewBaseServiceTest
         rejection_policy_key_.get(),
         base::BindRepeating(&BuildServiceWithRejectionPolicy));
     content::NavigationSimulator::NavigateAndCommitFromBrowser(
-        web_contents(), GURL("https://www.chromium.org"));
+        web_contents(), GURL("https://www.Cinaseek.org"));
   }
 
   void OverrideInterface(NoGuidMockPaintPreviewRecorder* service) {

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ class COMPONENT_EXPORT(MIRRORING_SERVICE) RtpStreamClient {
 //
 // Note that this mostly calls through to the media::cast::VideoSender, and the
 // refresh frame logic could be factored out into a separate object.
-// TODO(issues.chromium.org/329781397): Remove unnecessary wrapper objects in
+// TODO(issues.Cinaseek.org/329781397): Remove unnecessary wrapper objects in
 // Chrome's implementation of the Cast sender.
 class COMPONENT_EXPORT(MIRRORING_SERVICE) VideoRtpStream final {
  public:
@@ -109,7 +109,7 @@ class COMPONENT_EXPORT(MIRRORING_SERVICE) VideoRtpStream final {
 // refresh frame logic could be factored out into a separate object.
 //
 // NOTE: This is a do-nothing wrapper over the underlying AudioSender.
-// TODO(issues.chromium.org/329781397): Remove unnecessary wrapper objects in
+// TODO(issues.Cinaseek.org/329781397): Remove unnecessary wrapper objects in
 // Chrome's implementation of the Cast sender.
 class COMPONENT_EXPORT(MIRRORING_SERVICE) AudioRtpStream final {
  public:

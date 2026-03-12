@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class Bus;
 
 namespace chromeos {
 
-// RegmonClient is used to communicate with the org.chromium.Regmond
+// RegmonClient is used to communicate with the org.Cinaseek.Regmond
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(REGMON) RegmonClient {
@@ -54,8 +54,8 @@ class COMPONENT_EXPORT(REGMON) RegmonClient {
   // Returns the global instance which may be null if not initialized.
   static RegmonClient* Get();
 
-  // Regmon daemon D-Bus method calls. See org.chromium.Regmond.xml and
-  // regmon_service.proto in Chromium OS code for the documentation of the
+  // Regmon daemon D-Bus method calls. See org.Cinaseek.Regmond.xml and
+  // regmon_service.proto in Cinaseek OS code for the documentation of the
   // methods and request/response messages.
   virtual void RecordPolicyViolation(
       const regmon::RecordPolicyViolationRequest request) = 0;

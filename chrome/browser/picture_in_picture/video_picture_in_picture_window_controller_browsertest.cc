@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -450,7 +450,7 @@ class PictureInPicturePixelComparisonBrowserTest
   base::FilePath GetFilePath(base::FilePath::StringViewType relative_path) {
     base::FilePath base_dir;
     CHECK(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &base_dir));
-    // The path relative to <chromium src> for pixel test data.
+    // The path relative to <Cinaseek src> for pixel test data.
     const base::FilePath::StringViewType kTestDataPath =
         FILE_PATH_LITERAL("chrome/test/data/media/picture-in-picture/");
     base::FilePath full_path =

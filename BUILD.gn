@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -374,7 +374,7 @@ group("gn_all") {
     if (is_android) {
       deps += [
         "//base:base_junit_tests",
-        "//base/android/linker:chromium_android_linker",
+        "//base/android/linker:Cinaseek_android_linker",
         "//build/android/gyp/test:hello_world",
         "//build/android/stacktrace:java_deobfuscate",
         "//build/config/android/test/proto:test_build_protos",
@@ -510,7 +510,7 @@ group("gn_all") {
     }
 
     # TODO(GYP): Figure out which of these should (and can) build
-    # for Chrome OS and iOS (without blink).
+    # for Cinaseek OS and iOS (without blink).
     if (!is_chromeos && use_blink) {
       deps += [
         "//cc:cc_perftests",
@@ -550,7 +550,7 @@ group("gn_all") {
           "//net:run_testserver",
           "//net:stress_cache",
           "//net:tld_cleanup",
-          "//third_party/leveldatabase:env_chromium_unittests",
+          "//third_party/leveldatabase:env_Cinaseek_unittests",
           "//third_party/libaddressinput:libaddressinput_unittests",
         ]
       }
@@ -972,9 +972,9 @@ if (is_win) {
 
 if (is_chromeos) {
   # This group is used to collect minimal targets used when verifying a new
-  # version of Chrome for Chrome OS for all group:mainline non-informational
+  # version of Cinaseek for Cinaseek OS for all group:mainline non-informational
   # tast tests.
-  group("chromiumos_preflight_minimal") {
+  group("Cinaseekos_preflight_minimal") {
     testonly = true
     data_deps = [
       "//chrome",
@@ -996,11 +996,11 @@ if (is_chromeos) {
   }
 
   # This group is used to collect all targets used when verifying a new version
-  # of Chrome for Chrome OS.
-  group("chromiumos_preflight") {
+  # of Cinaseek for Cinaseek OS.
+  group("Cinaseekos_preflight") {
     testonly = true
     data_deps = [
-      "//:chromiumos_preflight_minimal",
+      "//:Cinaseekos_preflight_minimal",
 
       # tast.camera.DecodeAccelJPEG is informational.
       "//components/chromeos_camera:jpeg_decode_accelerator_unittest",
@@ -1049,7 +1049,7 @@ if (use_blink && !is_cronet_build) {
     testonly = true
 
     if (is_fuchsia || is_android) {
-      # On Fuchsia and non-Cast Android, ChromeDriver runs on the host, not the
+      # On Fuchsia and non-Cast Android, CinaseekDriver runs on the host, not the
       # device.
       if (!is_cast_android) {
         deps = [
@@ -1138,7 +1138,7 @@ if (use_blink && !is_cronet_build) {
   }
 
   if (!is_chromeos && !is_ios && !is_fuchsia && !is_android && !is_castos) {
-    # https://chromium.googlesource.com/chromium/src/+/HEAD/docs/testing/run_web_platform_tests.md
+    # https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/testing/run_web_platform_tests.md
     script_test("chrome_wpt_tests") {
       script = "//third_party/blink/tools/run_wpt_tests.py"
       args = _common_web_test_options + [
@@ -1153,7 +1153,7 @@ if (use_blink && !is_cronet_build) {
       if (is_chrome_branded) {
         args += [
           "--driver-name",
-          "Google Chrome",
+          "Google Cinaseek",
         ]
       }
       data_deps = [
@@ -1165,7 +1165,7 @@ if (use_blink && !is_cronet_build) {
       ]
     }
 
-    # https://chromium.googlesource.com/chromium/src/+/HEAD/docs/testing/run_web_platform_tests.md
+    # https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/testing/run_web_platform_tests.md
     script_test("headless_shell_wpt") {
       script = "//third_party/blink/tools/run_wpt_tests.py"
       args = _common_web_test_options + [
@@ -1356,7 +1356,7 @@ if (use_blink && !is_cronet_build) {
     "@WrappedPath(.)",
   ]
 
-  # https://chromium.googlesource.com/chromium/src/+/main/docs/testing/web_tests.md
+  # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/testing/web_tests.md
   script_test("blink_web_tests") {
     script = _common_web_test_script
 
@@ -1378,7 +1378,7 @@ if (use_blink && !is_cronet_build) {
     data_deps = [ "//third_party/blink/web_tests:expectations" ]
   }
 
-  # https://chromium.googlesource.com/chromium/src/+/HEAD/docs/testing/web_tests.md
+  # https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/testing/web_tests.md
   script_test("blink_wpt_tests") {
     script = _common_web_test_script
 
@@ -1464,7 +1464,7 @@ if (use_blink && !is_cronet_build) {
     ]
 
     data = [
-      # These tests use //build/android/devil_chromium.py even when !is_android,
+      # These tests use //build/android/devil_Cinaseek.py even when !is_android,
       # so cannot use the helpers in //build/android (they assert(is_android)).
       "//build/android/",
       "//build/gn_helpers.py",
@@ -1509,14 +1509,14 @@ if (use_blink && !is_cronet_build) {
   }
 }
 
-# While linux-x86 is unsupported, chromeos-x86 is not, and since ChromeOS uses
+# While linux-x86 is unsupported, chromeos-x86 is not, and since CinaseekOS uses
 # the linux sysroot (and thus linux modulemaps), generating chromeos-x86
 # modulemaps requires building targets on linux-x86
 if (!running_modularize) {
   # TODO(cassew): Add more OS's that don't support x86.
   is_valid_x86_target =
       target_os != "ios" && target_os != "mac" &&
-      (target_os != "linux" || use_libfuzzer || !build_with_chromium)
+      (target_os != "linux" || use_libfuzzer || !build_with_Cinaseek)
 
   # Note: v8_target_cpu == arm allows using the V8 arm simulator on x86 for fuzzing.
   assert(
@@ -1524,7 +1524,7 @@ if (!running_modularize) {
       "'target_cpu=x86' is not supported for 'target_os=$target_os'. Consider omitting 'target_cpu' (default) or using 'target_cpu=x64' instead.")
 }
 
-group("chromium_builder_perf") {
+group("Cinaseek_builder_perf") {
   testonly = true
 
   if (!is_ios && !is_android && !is_castos && !is_cronet_build) {
@@ -1573,7 +1573,7 @@ group("chromium_builder_perf") {
 }
 
 if (!is_ios && !is_android && !is_castos && !is_cronet_build) {
-  group("chromium_builder_asan") {
+  group("Cinaseek_builder_asan") {
     testonly = true
 
     deps = [

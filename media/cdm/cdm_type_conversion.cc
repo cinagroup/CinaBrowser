@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,8 +14,8 @@
 
 // Note: Unexpected values must be handled explicitly since some of these
 // functions may be used at either side of the CDM interface, and it's possible
-// invalid values are passed in. For example, Chromium loading an older CDM, or
-// the CDM is loaded by a non-Chromium browser.
+// invalid values are passed in. For example, Cinaseek loading an older CDM, or
+// the CDM is loaded by a non-Cinaseek browser.
 
 namespace media {
 
@@ -645,7 +645,7 @@ base::span<uint8_t> AsSpan(cdm::Buffer* buffer) {
 base::span<const uint8_t> AsSpan(const cdm::InputBuffer_2* input_buffer) {
   CHECK(input_buffer);
   // SAFETY: |input_buffer| is defined in the cdm interface submodule:
-  // https://chromium.googlesource.com/chromium/cdm
+  // https://Cinaseek.googlesource.com/Cinaseek/cdm
   return UNSAFE_BUFFERS(
       base::span(input_buffer->data, input_buffer->data_size));
 }
@@ -654,7 +654,7 @@ base::span<const cdm::SubsampleEntry> SubsamplesFrom(
     const cdm::InputBuffer_2* input_buffer) {
   CHECK(input_buffer);
   // SAFETY: |input_buffer| is defined in the cdm interface submodule:
-  // https://chromium.googlesource.com/chromium/cdm
+  // https://Cinaseek.googlesource.com/Cinaseek/cdm
   return UNSAFE_BUFFERS(
       base::span(input_buffer->subsamples, input_buffer->num_subsamples));
 }
@@ -662,7 +662,7 @@ base::span<const cdm::SubsampleEntry> SubsamplesFrom(
 base::span<const uint8_t> KeyIdFrom(const cdm::InputBuffer_2* input_buffer) {
   CHECK(input_buffer);
   // SAFETY: |input_buffer| is defined in the cdm interface submodule:
-  // https://chromium.googlesource.com/chromium/cdm
+  // https://Cinaseek.googlesource.com/Cinaseek/cdm
   return UNSAFE_BUFFERS(
       base::span(input_buffer->key_id, input_buffer->key_id_size));
 }

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -25,7 +25,7 @@ config("flatbuffers_config") {
   }
 }
 
-# The part of FlatBuffers that Chrome is interested in.
+# The part of FlatBuffers that Cinaseek is interested in.
 source_set("flatbuffers") {
   public = [
     "src/include/flatbuffers/base.h",
@@ -41,8 +41,8 @@ source_set("flatbuffers") {
     data_deps = [ "//build/win:runtime_libs" ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":flatbuffers_config" ]
 }
@@ -130,8 +130,8 @@ source_set("compiler_files") {
     "src/src/reflection.cpp",
     "src/src/util.cpp",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   visibility = [ ":*" ]
   deps = [ ":flatbuffers" ]
 }
@@ -195,8 +195,8 @@ source_set("flatbuffers_test_files") {
     "src/src/util.cpp",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [ ":flatbuffers" ]
 }
 
@@ -263,15 +263,15 @@ test("flatbuffers_unittests") {
   if (is_win) {
     defines += [ "DEBUG_NEW=new" ]
   }
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 if (is_android) {
   import("//build/config/android/rules.gni")
 
   android_library("flatbuffers_java") {
-    chromium_code = false
+    Cinaseek_code = false
     sources = [
       "src/java/src/main/java/com/google/flatbuffers/ArrayReadWriteBuf.java",
       "src/java/src/main/java/com/google/flatbuffers/BaseVector.java",

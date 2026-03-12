@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -668,7 +668,7 @@ TEST_F(ThreadControllerWithMessagePumpTest, NativeNestedMessageLoop) {
 
         thread_controller_.SetTaskExecutionAllowedInNativeNestedLoop(false);
 
-        // Simulate a subsequent PostTask by the chromium task after
+        // Simulate a subsequent PostTask by the Cinaseek task after
         // we've left the native loop. This should not ScheduleWork
         // on the pump because the ThreadController will do that
         // after this task finishes.

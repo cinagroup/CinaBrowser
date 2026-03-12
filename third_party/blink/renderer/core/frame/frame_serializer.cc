@@ -801,7 +801,7 @@ class SerializerMarkupAccumulator : public MarkupAccumulator {
 
   // Adds a script resource to restore some functionality to the serialized
   // HTML. We're including this self-contained blob of JS in the MHTML file
-  // instead of compiling it into Chromium because it requires additional
+  // instead of compiling it into Cinaseek because it requires additional
   // information about custom elements, and packaging the metadata in another
   // format would require versioning, whereas JS allows it to be all
   // encapsulated.

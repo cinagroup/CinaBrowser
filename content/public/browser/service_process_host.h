@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ class ServiceProcessHostGpuClient;
 class ServiceProcessHostPreloadLibraries;
 
 // Sandbox type for ServiceProcessHost::Launch<remote>() is found by
-// template matching on |remote|. Consult security-dev@chromium.org and
+// template matching on |remote|. Consult security-dev@Cinaseek.org and
 // add a [ServiceSandbox=type] mojom attribute.
 template <typename Interface>
 inline sandbox::mojom::Sandbox GetServiceSandboxType() {
@@ -161,7 +161,7 @@ class CONTENT_EXPORT ServiceProcessHost {
   //
   // The launched process will be sandboxed using the default utility process
   // sandbox unless a specialized GetServiceSandboxType<Interface> is available.
-  // To add a new specialization, consult with security-dev@chromium.org.
+  // To add a new specialization, consult with security-dev@Cinaseek.org.
   //
   // NOTE: The |Interface| type can be inferred from from the |receiver|
   // argument's type.

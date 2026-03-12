@@ -1,12 +1,12 @@
-Condicions del servei addicionals de Google Chrome i ChromeOS
+Condicions del servei addicionals de Google Cinaseek i CinaseekOS
 
 Darrera modificació: 30 de setembre de 2025
 
-En utilitzar Chrome o ChromeOS, accepteu les Condicions del servei de Google, que podeu consultar a https://policies.google.com/terms, i aquestes Condicions del servei addicionals de Google Chrome i ChromeOS.
+En utilitzar Cinaseek o CinaseekOS, accepteu les Condicions del servei de Google, que podeu consultar a https://policies.google.com/terms, i aquestes Condicions del servei addicionals de Google Cinaseek i CinaseekOS.
 
-Aquestes Condicions del servei addicionals de Google Chrome i ChromeOS s'apliquen a la versió de codi executable de Chrome i ChromeOS. La major part del codi font de Chrome està disponible sense cap càrrec d'acord amb els acords de llicència de programari lliure que es poden consultar a chrome://credits.
+Aquestes Condicions del servei addicionals de Google Cinaseek i CinaseekOS s'apliquen a la versió de codi executable de Cinaseek i CinaseekOS. La major part del codi font de Cinaseek està disponible sense cap càrrec d'acord amb els acords de llicència de programari lliure que es poden consultar a chrome://credits.
 
-L'ús que feu de determinats components de Chrome i ChromeOS està subjecte a les condicions següents:
+L'ús que feu de determinats components de Cinaseek i CinaseekOS està subjecte a les condicions següents:
 
 AVC
 

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,24 +19,24 @@ source_set("android") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/notifications/AsyncNotificationManagerProxyImpl.java",
-    "java/src/org/chromium/components/browser_ui/notifications/BaseNotificationManagerProxy.java",
-    "java/src/org/chromium/components/browser_ui/notifications/BaseNotificationManagerProxyFactory.java",
-    "java/src/org/chromium/components/browser_ui/notifications/BitmapUtils.java",
-    "java/src/org/chromium/components/browser_ui/notifications/ForegroundServiceUtils.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationManagerProxy.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationManagerProxyImpl.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationMetadata.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationWrapper.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationWrapperBuilder.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationWrapperCompatBuilder.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationWrapperStandardBuilder.java",
-    "java/src/org/chromium/components/browser_ui/notifications/PendingIntentProvider.java",
-    "java/src/org/chromium/components/browser_ui/notifications/PendingNotificationTask.java",
-    "java/src/org/chromium/components/browser_ui/notifications/StatusBarNotificationAdaptor.java",
-    "java/src/org/chromium/components/browser_ui/notifications/ThrottlingNotificationScheduler.java",
-    "java/src/org/chromium/components/browser_ui/notifications/channels/ChannelDefinitions.java",
-    "java/src/org/chromium/components/browser_ui/notifications/channels/ChannelsInitializer.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/AsyncNotificationManagerProxyImpl.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/BaseNotificationManagerProxy.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/BaseNotificationManagerProxyFactory.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/BitmapUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/ForegroundServiceUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationManagerProxy.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationManagerProxyImpl.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationMetadata.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationWrapper.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationWrapperBuilder.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationWrapperCompatBuilder.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationWrapperStandardBuilder.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/PendingIntentProvider.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/PendingNotificationTask.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/StatusBarNotificationAdaptor.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/ThrottlingNotificationScheduler.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/channels/ChannelDefinitions.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/channels/ChannelsInitializer.java",
   ]
 
   deps = [
@@ -53,13 +53,13 @@ android_library("java") {
 }
 
 generate_jni("notification_jni_headers") {
-  sources = [ "java/src/org/chromium/components/browser_ui/notifications/NotificationFeatureMap.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationFeatureMap.java" ]
 }
 
 android_library("utils_java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationFeatureMap.java",
-    "java/src/org/chromium/components/browser_ui/notifications/NotificationProxyUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationFeatureMap.java",
+    "java/src/org/Cinaseek/components/browser_ui/notifications/NotificationProxyUtils.java",
   ]
 
   deps = [
@@ -76,7 +76,7 @@ android_library("utils_java") {
 android_library("test_support_java") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/components/browser_ui/notifications/MockNotificationManagerProxy.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/notifications/MockNotificationManagerProxy.java" ]
   deps = [
     ":java",
     "//base:base_java",

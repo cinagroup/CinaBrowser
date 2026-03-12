@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1083,9 +1083,9 @@ Request::Request(ScriptState* script_state,
   headers_->SetGuard(Headers::kRequestGuard);
 
   // This is currently only meant to allow certain contexts to bypass request
-  // forbidden header setting in the renderer. For example in Chromium:
+  // forbidden header setting in the renderer. For example in Cinaseek:
   // extension
-  // (https://www.chromium.org/developers/design-documents/extensions/) script
+  // (https://www.Cinaseek.org/developers/design-documents/extensions/) script
   // contexts are an example of a context depending on their configuration.
   if (cors::IsBypassRequestForbiddenHeadersCheckEnabled()) {
     bool bypass_forbidden_fetch_request_headers =

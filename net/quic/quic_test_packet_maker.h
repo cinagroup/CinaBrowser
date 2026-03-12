@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -197,7 +197,7 @@ class QuicTestPacketMaker {
                                              const std::string& alt_svc) const;
 
   // Reset some of the state in the packet maker.
-  // TODO(https://issues.chromium.org/u/1/issues/335279177): reset all state.
+  // TODO(https://issues.Cinaseek.org/u/1/issues/335279177): reset all state.
   void Reset();
 
   quic::ParsedQuicVersion version() { return version_; }
@@ -376,7 +376,7 @@ class QuicTestPacketBuilder {
 
   // The `QuicTestPacketMaker` for which we are building this packet.Reset some
   // of the state in the packet maker.
-  // TODO(https://issues.chromium.org/u/1/issues/335279177): reset all state.
+  // TODO(https://issues.Cinaseek.org/u/1/issues/335279177): reset all state.
   raw_ptr<QuicTestPacketMaker> maker_;
 
   // The connection state. This is owned by `maker_` but borrowed for

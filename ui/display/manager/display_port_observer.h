@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 
 namespace display {
 // DisplayPortObserver keeps track of which USB-C ports are used for displays
-// and notifies Type C Daemon in ChromiumOS.
+// and notifies Type C Daemon in CinaseekOS.
 class DISPLAY_MANAGER_EXPORT DisplayPortObserver
     : public DisplayConfigurator::Observer {
  public:

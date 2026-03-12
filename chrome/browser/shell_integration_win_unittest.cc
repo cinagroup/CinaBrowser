@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ class ShellIntegrationWinMigrateShortcutTest : public testing::Test {
         GetAppUserModelIdForBrowser(
             non_default_user_data_dir_.Append(non_default_profile_));
 
-    extension_id_ = L"chromiumexampleappidforunittests";
+    extension_id_ = L"Cinaseekexampleappidforunittests";
     std::wstring app_name =
         base::UTF8ToWide(web_app::GenerateApplicationNameFromAppId(
             base::WideToUTF8(extension_id_)));
@@ -409,7 +409,7 @@ TEST(ShellIntegrationWinTest, GetDirectLaunchUrlScheme) {
 }
 #else  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 TEST(ShellIntegrationWinTest, GetDirectLaunchUrlSchemeUnbranded) {
-  EXPECT_EQ("chromium", GetDirectLaunchUrlScheme());
+  EXPECT_EQ("Cinaseek", GetDirectLaunchUrlScheme());
 }
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 

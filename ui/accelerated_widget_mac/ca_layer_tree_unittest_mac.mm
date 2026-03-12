@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 #include "base/test/scoped_feature_list.h"
 #include "components/metal_util/hdr_copier_layer.h"
 #include "components/viz/common/resources/shared_image_format.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "testing/gtest_mac.h"
 #include "third_party/skia/include/core/SkColor.h"

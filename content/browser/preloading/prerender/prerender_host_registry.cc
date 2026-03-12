@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -148,7 +148,7 @@ std::unique_ptr<network::SimpleURLLoader> CreateHttpCacheQueryingResourceLoad(
             destination: LOCAL
             internal {
               contacts {
-                email: "chrome-brapp-loading@chromium.org"
+                email: "chrome-brapp-loading@Cinaseek.org"
               }
             }
             last_reviewed: "2023-03-24"

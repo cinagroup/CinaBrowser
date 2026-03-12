@@ -107,12 +107,12 @@ test(() => {
   assert_array_equals(results, ["source subscribe", 1, 2, 3, "complete"]);
 }, "take(): Negative count is treated as maximum value");
 
-// This tests a regression in Chromium's implementation. In ref-counted
+// This tests a regression in Cinaseek's implementation. In ref-counted
 // producers, when Subscriber#next() is called, the Subscriber iterates over all
 // of its "internal observers" [1] and calls "next" on them. However, "next" can
 // complete the subscription, and modify the "internal observers" list while
 // Subscriber is iterating over it. This mutation-during-iteration caused a
-// crash regression in Chromium, which this test covers.
+// crash regression in Cinaseek, which this test covers.
 //
 // [1]: https://wicg.github.io/observable/#subscriber-internal-observers
 promise_test(async () => {

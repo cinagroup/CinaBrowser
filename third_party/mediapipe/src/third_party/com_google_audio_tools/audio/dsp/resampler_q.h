@@ -25,7 +25,7 @@
 //
 // QResampler is faster than most other available resampling libraries. For
 // example, for 48 to 16kHz resampling, QResampler is 5x faster than libresample
-// and Chromium's SincResampler. More generally, the speed up depends on the
+// and Cinaseek's SincResampler. More generally, the speed up depends on the
 // resampling factor. Benchmark times (ns) for resampling 1024 samples 48->16kHz
 // on SkyLake:
 //

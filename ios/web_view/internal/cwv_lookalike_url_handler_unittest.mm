@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ class CWVLookalikeURLHandlerTest : public PlatformTest {
 };
 
 TEST_F(CWVLookalikeURLHandlerTest, ValidSafeURL) {
-  GURL safe_url = GURL("https://www.chromium.org");
+  GURL safe_url = GURL("https://www.Cinaseek.org");
   GURL request_url = GURL("https://www.chr0mium.org");
   CWVLookalikeURLHandler* handler =
       GetHandler(safe_url, request_url, base::DoNothing());
@@ -92,7 +92,7 @@ TEST_F(CWVLookalikeURLHandlerTest, DisplayHTMLCallback) {
 }
 
 TEST_F(CWVLookalikeURLHandlerTest, ProceedToRequestURL) {
-  GURL safe_url = GURL("https://www.chromium.org");
+  GURL safe_url = GURL("https://www.Cinaseek.org");
   GURL request_url = GURL("https://www.chr0mium.org");
   CWVLookalikeURLHandler* handler =
       GetHandler(safe_url, request_url, base::DoNothing());
@@ -116,7 +116,7 @@ TEST_F(CWVLookalikeURLHandlerTest, ProceedToInvalidSafeURL) {
 }
 
 TEST_F(CWVLookalikeURLHandlerTest, ProceedToValidSafeURL) {
-  GURL safe_url = GURL("https://www.chromium.org");
+  GURL safe_url = GURL("https://www.Cinaseek.org");
   GURL request_url = GURL("https://www.chr0mium.org");
   CWVLookalikeURLHandler* handler =
       GetHandler(safe_url, request_url, base::DoNothing());
@@ -131,7 +131,7 @@ TEST_F(CWVLookalikeURLHandlerTest, GoBack) {
   GetNavigationManager()->AddItem(GURL("https://www.example2.com"),
                                   ui::PAGE_TRANSITION_TYPED);
 
-  GURL safe_url = GURL("https://www.chromium.org");
+  GURL safe_url = GURL("https://www.Cinaseek.org");
   GURL request_url = GURL("https://www.chr0mium.org");
   CWVLookalikeURLHandler* handler =
       GetHandler(safe_url, request_url, base::DoNothing());
@@ -145,7 +145,7 @@ TEST_F(CWVLookalikeURLHandlerTest, GoBack) {
 }
 
 TEST_F(CWVLookalikeURLHandlerTest, Close) {
-  GURL safe_url = GURL("https://www.chromium.org");
+  GURL safe_url = GURL("https://www.Cinaseek.org");
   GURL request_url = GURL("https://www.chr0mium.org");
   CWVLookalikeURLHandler* handler =
       GetHandler(safe_url, request_url, base::DoNothing());

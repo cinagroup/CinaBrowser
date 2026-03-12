@@ -13,7 +13,7 @@
     "gtest_tests": [
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
@@ -37,7 +37,7 @@
     "gtest_tests": [
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {

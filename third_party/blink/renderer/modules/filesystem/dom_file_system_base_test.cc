@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ class DOMFileSystemBaseTest : public testing::Test {
 
 TEST_F(DOMFileSystemBaseTest, externalFilesystemFilesAreUserVisible) {
   KURL root_url = DOMFileSystemBase::CreateFileSystemRootURL(
-      "http://chromium.org/", mojom::blink::FileSystemType::kExternal);
+      "http://Cinaseek.org/", mojom::blink::FileSystemType::kExternal);
 
   File* file = DOMFileSystemBase::CreateFile(
       context_, file_metadata_, root_url,
@@ -48,7 +48,7 @@ TEST_F(DOMFileSystemBaseTest, externalFilesystemFilesAreUserVisible) {
 
 TEST_F(DOMFileSystemBaseTest, temporaryFilesystemFilesAreNotUserVisible) {
   KURL root_url = DOMFileSystemBase::CreateFileSystemRootURL(
-      "http://chromium.org/", mojom::blink::FileSystemType::kTemporary);
+      "http://Cinaseek.org/", mojom::blink::FileSystemType::kTemporary);
 
   File* file = DOMFileSystemBase::CreateFile(
       context_, file_metadata_, root_url,
@@ -62,7 +62,7 @@ TEST_F(DOMFileSystemBaseTest, temporaryFilesystemFilesAreNotUserVisible) {
 
 TEST_F(DOMFileSystemBaseTest, persistentFilesystemFilesAreNotUserVisible) {
   KURL root_url = DOMFileSystemBase::CreateFileSystemRootURL(
-      "http://chromium.org/", mojom::blink::FileSystemType::kPersistent);
+      "http://Cinaseek.org/", mojom::blink::FileSystemType::kPersistent);
 
   File* file = DOMFileSystemBase::CreateFile(
       context_, file_metadata_, root_url,

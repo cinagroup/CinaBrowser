@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,8 +56,8 @@ struct GPU_GLES2_EXPORT DisallowedFeatures {
   DisallowedFeatures(const DisallowedFeatures&);
 
   void AllowExtensions() {
-    chromium_color_buffer_float_rgba = false;
-    chromium_color_buffer_float_rgb = false;
+    Cinaseek_color_buffer_float_rgba = false;
+    Cinaseek_color_buffer_float_rgb = false;
     ext_color_buffer_float = false;
     ext_color_buffer_half_float = false;
     ext_texture_filter_anisotropic = false;
@@ -73,8 +73,8 @@ struct GPU_GLES2_EXPORT DisallowedFeatures {
   }
 
   bool npot_support = false;
-  bool chromium_color_buffer_float_rgba = false;
-  bool chromium_color_buffer_float_rgb = false;
+  bool Cinaseek_color_buffer_float_rgba = false;
+  bool Cinaseek_color_buffer_float_rgb = false;
   bool ext_color_buffer_float = false;
   bool ext_color_buffer_half_float = false;
   bool ext_texture_filter_anisotropic = false;

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,12 +6,12 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/gcm_driver/instance_id/InstanceIDBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/gcm_driver/instance_id/InstanceIDBridge.java" ]
 }
 
 generate_jni("test_support_jni_headers") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/gcm_driver/instance_id/FakeInstanceIDWithSubtype.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/gcm_driver/instance_id/FakeInstanceIDWithSubtype.java" ]
 }
 
 android_library("instance_id_driver_java") {
@@ -30,8 +30,8 @@ android_library("instance_id_driver_java") {
   ]
 
   sources = [
-    "java/src/org/chromium/components/gcm_driver/instance_id/InstanceIDBridge.java",
-    "java/src/org/chromium/components/gcm_driver/instance_id/InstanceIDWithSubtype.java",
+    "java/src/org/Cinaseek/components/gcm_driver/instance_id/InstanceIDBridge.java",
+    "java/src/org/Cinaseek/components/gcm_driver/instance_id/InstanceIDWithSubtype.java",
   ]
 }
 
@@ -42,5 +42,5 @@ android_library("instance_id_driver_test_support_java") {
     "//third_party/jni_zero:jni_zero_java",
   ]
 
-  sources = [ "javatests/src/org/chromium/components/gcm_driver/instance_id/FakeInstanceIDWithSubtype.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/gcm_driver/instance_id/FakeInstanceIDWithSubtype.java" ]
 }

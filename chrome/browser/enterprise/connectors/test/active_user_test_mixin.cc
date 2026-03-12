@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ void ActiveUserTestMixin::SetFakeCookieValue() {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
       test_->browser(),
       test_server_->GetURL("accounts.google.com",
-                           "/oauth/multilogin/?source=ChromiumBrowser")));
+                           "/oauth/multilogin/?source=CinaseekBrowser")));
 
   run_loop.Run();
 }

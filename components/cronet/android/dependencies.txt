@@ -18,7 +18,7 @@
 //build/modules/linux
 //build/rust
 //build/rust/allocator
-//build/rust/chromium_prelude
+//build/rust/Cinaseek_prelude
 //build/rust/gni_impl
 //build/rust/std
 //build/rust/std/rules

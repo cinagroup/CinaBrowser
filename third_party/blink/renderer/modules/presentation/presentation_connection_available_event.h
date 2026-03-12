@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ class PresentationConnectionAvailableEventInit;
 
 // Presentation API event to be fired when a presentation has been triggered
 // by the embedder using the default presentation URL and id.
-// See https://code.google.com/p/chromium/issues/detail?id=459001 for details.
+// See https://code.google.com/p/Cinaseek/issues/detail?id=459001 for details.
 class PresentationConnectionAvailableEvent final : public Event {
   DEFINE_WRAPPERTYPEINFO();
 

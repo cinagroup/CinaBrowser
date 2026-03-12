@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,8 +19,8 @@ action("remoting_me2me_host_archive") {
     "ChromotingHost.pkgproj",
     "ChromotingHostService.pkgproj",
     "ChromotingHostUninstaller.pkgproj",
-    "LaunchAgents/org.chromium.chromoting.plist",
-    "LaunchDaemons/org.chromium.chromoting.broker.plist",
+    "LaunchAgents/org.Cinaseek.chromoting.plist",
+    "LaunchDaemons/org.Cinaseek.chromoting.broker.plist",
     "Scripts/keystone_install.sh",
     "Scripts/remoting_postflight.sh",
     "Scripts/remoting_preflight.sh",

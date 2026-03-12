@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/supervised_user/ContentFiltersObserverBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/supervised_user/ContentFiltersObserverBridge.java" ]
   visibility = [
     ":*",
     "//chrome/android:jni_headers",
@@ -19,7 +19,7 @@ generate_jni("jni_headers") {
 java_cpp_strings("constants_srcjar") {
   visibility = [ ":*" ]
   sources = [ "//components/supervised_user/core/common/supervised_user_shared_constants.cc" ]
-  class_name = "org.chromium.components.supervised_user.SupervisedUserConstants"
+  class_name = "org.Cinaseek.components.supervised_user.SupervisedUserConstants"
 }
 
 android_library("content_filters_observer_bridge_java") {
@@ -27,7 +27,7 @@ android_library("content_filters_observer_bridge_java") {
     ":constants_srcjar",
     ":jni_headers",
   ]
-  sources = [ "java/src/org/chromium/components/supervised_user/ContentFiltersObserverBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/supervised_user/ContentFiltersObserverBridge.java" ]
   deps = [
     "//base:base_java",
     "//base:tasks_java",

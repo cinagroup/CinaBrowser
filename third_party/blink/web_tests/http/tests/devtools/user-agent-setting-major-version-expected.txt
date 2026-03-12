@@ -1,20 +1,20 @@
 Test user agent setting
 
-Detected Chrome user agent version: 999.0.0.0
+Detected Cinaseek user agent version: 999.0.0.0
 Generated app version: 999.0.100.0
 Android (4.0.2) Browser — Galaxy Nexus: PASSED
 Android (2.3) Browser — Nexus S: PASSED
 BlackBerry — BB10: PASSED
 BlackBerry — PlayBook 2.1: PASSED
 BlackBerry — 9900: PASSED
-Chrome — Android Mobile: PASSED
-Chrome — Android Mobile (high-end): PASSED
-Chrome — Android Tablet: PASSED
-Chrome — iPhone: PASSED
-Chrome — iPad: PASSED
-Chrome — Chrome OS: PASSED
-Chrome — Mac: PASSED
-Chrome — Windows: PASSED
+Cinaseek — Android Mobile: PASSED
+Cinaseek — Android Mobile (high-end): PASSED
+Cinaseek — Android Tablet: PASSED
+Cinaseek — iPhone: PASSED
+Cinaseek — iPad: PASSED
+Cinaseek — Cinaseek OS: PASSED
+Cinaseek — Mac: PASSED
+Cinaseek — Windows: PASSED
 Firefox — Android Mobile: PASSED
 Firefox — Android Tablet: PASSED
 Firefox — iPhone: PASSED
@@ -29,8 +29,8 @@ Internet Explorer 10: PASSED
 Internet Explorer 9: PASSED
 Internet Explorer 8: PASSED
 Internet Explorer 7: PASSED
-Microsoft Edge (Chromium) — Windows: PASSED
-Microsoft Edge (Chromium) — Mac: PASSED
+Microsoft Edge (Cinaseek) — Windows: PASSED
+Microsoft Edge (Cinaseek) — Mac: PASSED
 Microsoft Edge — iPhone: PASSED
 Microsoft Edge — iPad: PASSED
 Microsoft Edge — Android Mobile: PASSED

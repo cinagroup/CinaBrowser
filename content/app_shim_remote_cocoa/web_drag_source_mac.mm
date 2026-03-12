@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,17 +84,17 @@
     (NSPasteboard*)pasteboard {
   NSMutableArray<NSPasteboardType>* writableTypes = [NSMutableArray array];
 
-  // Always add kUTTypeChromiumInitiatedDrag to mark this drag as something to
+  // Always add kUTTypeCinaseekInitiatedDrag to mark this drag as something to
   // accept.
-  [writableTypes addObject:ui::kUTTypeChromiumInitiatedDrag];
+  [writableTypes addObject:ui::kUTTypeCinaseekInitiatedDrag];
 
-  // Always add kUTTypeChromiumRendererInitiatedDrag as all drags initiated here
+  // Always add kUTTypeCinaseekRendererInitiatedDrag as all drags initiated here
   // are drags from the web.
-  [writableTypes addObject:ui::kUTTypeChromiumRendererInitiatedDrag];
+  [writableTypes addObject:ui::kUTTypeCinaseekRendererInitiatedDrag];
 
   // Tag the drag as coming from a privileged WebContents if needed.
   if (_privileged) {
-    [writableTypes addObject:ui::kUTTypeChromiumPrivilegedInitiatedDrag];
+    [writableTypes addObject:ui::kUTTypeCinaseekPrivilegedInitiatedDrag];
   }
 
   // URL (and title).
@@ -176,7 +176,7 @@
                       [_fileType conformsToType:UTTypeImage];
   if (hasHTMLData) {
     if (hasImageData) {
-      [writableTypes addObject:ui::kUTTypeChromiumImageAndHtml];
+      [writableTypes addObject:ui::kUTTypeCinaseekImageAndHtml];
     } else {
       [writableTypes addObject:NSPasteboardTypeHTML];
     }
@@ -188,7 +188,7 @@
   }
 
   if (!_dropData.custom_data.empty()) {
-    [writableTypes addObject:ui::kUTTypeChromiumDataTransferCustomData];
+    [writableTypes addObject:ui::kUTTypeCinaseekDataTransferCustomData];
   }
 
   return writableTypes;
@@ -197,7 +197,7 @@
 - (id)pasteboardPropertyListForType:(NSPasteboardType)type {
   // HTML.
   if ([type isEqualToString:NSPasteboardTypeHTML] ||
-      [type isEqualToString:ui::kUTTypeChromiumImageAndHtml]) {
+      [type isEqualToString:ui::kUTTypeCinaseekImageAndHtml]) {
     DCHECK(_dropData.html && !_dropData.html->empty());
 
     // NSPasteboardTypeHTML requires the character set to be declared.
@@ -254,7 +254,7 @@
     NSString* dropDestination =
         [pasteboard stringForType:@"com.apple.pastelocation"];
     if (!dropDestination || !_host) {
-      // Something has gone wrong, but understandably. Chromium leaves the data
+      // Something has gone wrong, but understandably. Cinaseek leaves the data
       // around on the pasteboard after the drag, and it's possible that some
       // app is rummaging around for what it can find. Silently fail in this
       // case.
@@ -280,22 +280,22 @@
   }
 
   // Custom MIME data.
-  if ([type isEqualToString:ui::kUTTypeChromiumDataTransferCustomData]) {
+  if ([type isEqualToString:ui::kUTTypeCinaseekDataTransferCustomData]) {
     base::Pickle pickle;
     ui::WriteCustomDataToPickle(_dropData.custom_data, &pickle);
     return [NSData dataWithBytes:pickle.data() length:pickle.size()];
   }
 
   // Source origin of the drop data.
-  if ([type isEqualToString:ui::kUTTypeChromiumRendererInitiatedDrag]) {
+  if ([type isEqualToString:ui::kUTTypeCinaseekRendererInitiatedDrag]) {
     return _sourceOrigin.opaque()
                ? [NSString string]
                : base::SysUTF8ToNSString(_sourceOrigin.Serialize());
   }
 
   // Flavors used to tag.
-  if ([type isEqualToString:ui::kUTTypeChromiumInitiatedDrag] ||
-      [type isEqualToString:ui::kUTTypeChromiumPrivilegedInitiatedDrag]) {
+  if ([type isEqualToString:ui::kUTTypeCinaseekInitiatedDrag] ||
+      [type isEqualToString:ui::kUTTypeCinaseekPrivilegedInitiatedDrag]) {
     // The type _was_ promised and someone decided to call the bluff.
     return [NSData data];
   }

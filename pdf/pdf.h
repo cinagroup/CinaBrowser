@@ -1,4 +1,4 @@
-// Copyright 2010 The Chromium Authors
+// Copyright 2010 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,11 +62,11 @@ enum PrintingMode {
   kPostScript2 = 2,
   kPostScript3 = 3,
   // Values 4 and 5 are similar to `kPostScript2` and `kPostScript3`, but are
-  // not intended for use in sandboxed environments like Chromium's.
+  // not intended for use in sandboxed environments like Cinaseek's.
   kEmfWithReducedRasterization = 6,
   kPostScript3WithType42Fonts = 7,
   // Value 8 is similar to `kPostScript3WithType42Fonts`, but is not intended
-  // for use in sandboxed environments like Chromium's.
+  // for use in sandboxed environments like Cinaseek's.
 };
 
 // `pdf_buffer` is the buffer that contains the entire PDF document to be

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -342,7 +342,7 @@ TEST_P(WaylandDataDragControllerTest, StartDragWithCustomFormats) {
   OSExchangeData data(OSExchangeDataProviderFactory::CreateProvider());
   ClipboardFormatType kCustomFormats[] = {
       ClipboardFormatType::DataTransferCustomType(),
-      ClipboardFormatType::CustomPlatformType("chromium/x-bookmark-entries"),
+      ClipboardFormatType::CustomPlatformType("Cinaseek/x-bookmark-entries"),
       ClipboardFormatType::CustomPlatformType("xyz/arbitrary-custom-type")};
   for (auto format : kCustomFormats) {
     data.SetPickledData(format, {});
@@ -394,7 +394,7 @@ TEST_P(WaylandDataDragControllerTest, StartDragWithEmptyMimeTypeList) {
       os_exchange_data, DragDropTypes::DRAG_MOVE, DragEventSource::kMouse);
   ASSERT_TRUE(started);
 
-  PostToServerAndWait([kExpectedMimeType = "chromium/x-empty-drag-data"](
+  PostToServerAndWait([kExpectedMimeType = "Cinaseek/x-empty-drag-data"](
                           wl::TestWaylandServerThread* server) {
     auto* server_data_source = server->data_device_manager()->data_source();
     ASSERT_TRUE(server_data_source);

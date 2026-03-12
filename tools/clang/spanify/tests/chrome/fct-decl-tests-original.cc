@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -110,12 +110,12 @@ void ManyDecls(S arg[3]);
 
 // Third-party code is not expected to be rewritten, hence this implementation
 // class is also not expected to be rewritten.
-class ChromiumImpl : public ThirdPartyInterface {
+class CinaseekImpl : public ThirdPartyInterface {
  public:
   void ToBeImplemented(int arg[3]) override;
 };
 
-void ChromiumImpl::ToBeImplemented(int arg[3]) {
+void CinaseekImpl::ToBeImplemented(int arg[3]) {
   arg[UnsafeIndex()] = 0;
 }
 
@@ -133,7 +133,7 @@ void fct() {
   S s[3];
   ManyDecls(s);
 
-  ChromiumImpl impl;
+  CinaseekImpl impl;
   // Expected rewrite:
   // std::array<int, 3> array = {1, 2, 3};
   int array[3]{1, 2, 3};

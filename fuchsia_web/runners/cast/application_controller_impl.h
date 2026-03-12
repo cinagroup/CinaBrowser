@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_APPLICATION_CONTROLLER_IMPL_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_APPLICATION_CONTROLLER_IMPL_H_
 
-#include <fidl/chromium.cast/cpp/fidl.h>
+#include <fidl/Cinaseek.cast/cpp/fidl.h>
 #include <fuchsia/media/sessions2/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl.h>
 #include <lib/fidl/cpp/binding.h>
@@ -16,13 +16,13 @@
 #include "base/memory/raw_ptr.h"
 
 class ApplicationControllerImpl final
-    : public fidl::Server<chromium_cast::ApplicationController> {
+    : public fidl::Server<Cinaseek_cast::ApplicationController> {
  public:
   // `trace_flow_id` is used by the controller to report media blocking trace
   // event as a part of the application flow.
   ApplicationControllerImpl(
       fuchsia::web::Frame* frame,
-      fidl::Client<chromium_cast::ApplicationContext>& context,
+      fidl::Client<Cinaseek_cast::ApplicationContext>& context,
       uint64_t trace_flow_id);
 
   ApplicationControllerImpl(const ApplicationControllerImpl&) = delete;
@@ -32,7 +32,7 @@ class ApplicationControllerImpl final
   ~ApplicationControllerImpl() override;
 
  protected:
-  // chromium_cast::ApplicationController implementation.
+  // Cinaseek_cast::ApplicationController implementation.
   void SetTouchInputEnabled(
       SetTouchInputEnabledRequest& request,
       SetTouchInputEnabledCompleter::Sync& completer) override;
@@ -45,7 +45,7 @@ class ApplicationControllerImpl final
       GetPrivateMemorySizeCompleter::Sync& completer) override;
 
  private:
-  std::optional<fidl::ServerBinding<chromium_cast::ApplicationController>>
+  std::optional<fidl::ServerBinding<Cinaseek_cast::ApplicationController>>
       binding_;
   const raw_ptr<fuchsia::web::Frame> frame_;
   const uint64_t trace_flow_id_;

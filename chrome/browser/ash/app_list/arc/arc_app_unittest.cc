@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2686,7 +2686,7 @@ TEST_P(ArcAppModelBuilderTest, IconLoaderForShelfGroup) {
       arc_app_test()->fake_shortcuts();
   shortcuts.resize(1);
   shortcuts[0].intent_uri +=
-      ";S.org.chromium.arc.shelf_group_id=arc_app_test_shelf_group;end";
+      ";S.org.Cinaseek.arc.shelf_group_id=arc_app_test_shelf_group;end";
   SendInstallShortcuts(shortcuts);
   const std::string shortcut_id = ArcAppTest::GetAppId(shortcuts[0]);
   content::RunAllTasksUntilIdle();
@@ -3249,7 +3249,7 @@ TEST_P(ArcAppModelBuilderTest, AppLauncher) {
 
   const std::string launch_intent2_str = arc::GetLaunchIntent(
       app2.package_name, app2.activity,
-      std::vector<std::string>{"S.org.chromium.arc.start_type=initialStart"});
+      std::vector<std::string>{"S.org.Cinaseek.arc.start_type=initialStart"});
   {
     auto launch_intent2 = apps_util::MakeIntentForActivity(
         app2.activity, arc::kInitialStartParam, arc::kCategoryLauncher);

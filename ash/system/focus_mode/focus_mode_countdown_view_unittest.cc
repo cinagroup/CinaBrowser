@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class FocusModeCountdownViewTest : public AshTestBase {
     AshTestBase::SetUp();
 
     // Prepare a TaskClient for FocusModeController.
-    AccountId account = AccountId::FromUserEmail("user@chromium.org");
+    AccountId account = AccountId::FromUserEmail("user@Cinaseek.org");
     CreateFakeTasksClient(account);
     SimulateUserLogin(account);
 

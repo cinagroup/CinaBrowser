@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ class GlicCookieSynchronizerTest : public testing::Test {
 
   GURL RequestURL() const {
     return GaiaUrls::GetInstance()->oauth_multilogin_url().Resolve(
-        base::StringPrintf("?source=%s&reuseCookies=0", "ChromiumGlic"));
+        base::StringPrintf("?source=%s&reuseCookies=0", "CinaseekGlic"));
   }
 
   void SetUp() override {

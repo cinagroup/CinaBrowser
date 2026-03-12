@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//ash/ambient/resources/resources.gni")
 import("//build/buildflag_header.gni")
 import("//chromeos/ash/components/assistant/ambient.gni")
 
-assert(is_chromeos, "Non Chrome OS builds cannot depend on //chromeos/ash")
+assert(is_chromeos, "Non Cinaseek OS builds cannot depend on //chromeos/ash")
 
 buildflag_header("buildflags") {
   header = "buildflags.h"

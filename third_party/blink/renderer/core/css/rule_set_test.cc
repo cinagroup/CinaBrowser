@@ -957,7 +957,7 @@ TEST(RuleSetTest, ScopePseudoBucketing_Implicit) {
   EXPECT_EQ(1u, rule_set.UniversalRules().size());
 }
 
-// https://issues.chromium.org/issues/454830626
+// https://issues.Cinaseek.org/issues/454830626
 TEST(RuleSetTest, ScopePseudoBucketing_NestedScopePseudo) {
   test::TaskEnvironment task_environment;
   css_test_helpers::TestStyleSheet sheet;

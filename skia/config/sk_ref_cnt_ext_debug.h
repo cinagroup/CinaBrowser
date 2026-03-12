@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace WTF {
   void requireAdoption(const SkRefCnt*);
 }
 
-// Alternate implementation of SkRefCnt for Chromium debug builds
+// Alternate implementation of SkRefCnt for Cinaseek debug builds
 class SK_API SkRefCnt : public SkRefCntBase {
 public:
   SkRefCnt();

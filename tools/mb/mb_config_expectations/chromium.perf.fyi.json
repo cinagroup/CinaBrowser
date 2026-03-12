@@ -89,7 +89,7 @@
       "use_remoteexec": true
     }
   },
-  "linux-chromium-builder-perf": {
+  "linux-Cinaseek-builder-perf": {
     "gn_args": {
       "chrome_pgo_phase": 0,
       "dcheck_always_on": false,

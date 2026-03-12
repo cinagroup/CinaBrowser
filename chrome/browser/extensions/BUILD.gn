@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -837,7 +837,7 @@ source_set("extensions") {
       ]
     }
 
-    # Chrome OS does not support Native Messaging policies.
+    # Cinaseek OS does not support Native Messaging policies.
     if (!is_chromeos) {
       sources += [
         "api/messaging/native_messaging_policy_handler.cc",
@@ -1690,7 +1690,7 @@ if (enable_extensions) {
   }
 }  # if (enable_extensions)
 
-# ChromeExtensionsBrowserClient.
+# CinaseekExtensionsBrowserClient.
 source_set("chrome_extensions_browser_client") {
   sources = [
     "chrome_extensions_browser_client.cc",

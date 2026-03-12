@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -139,7 +139,7 @@ VisualManager::XVisualData::XVisualData(Connection* connection,
     : depth(depth), info(info) {}
 
 // Do not free the colormap as this would uninstall the colormap even for
-// non-Chromium clients.
+// non-Cinaseek clients.
 VisualManager::XVisualData::~XVisualData() = default;
 
 ColorMap VisualManager::XVisualData::GetColormap(Connection* connection) {

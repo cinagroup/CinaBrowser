@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -611,7 +611,7 @@ gint GetNActions(AtkAction* atk_action) {
 
 const gchar* GetDescription(AtkAction*, gint) {
   // Not implemented. Right now Orca does not provide this and
-  // Chromium is not providing a string for the action description.
+  // Cinaseek is not providing a string for the action description.
   return nullptr;
 }
 

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,14 +6,14 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("gwp_asan_jni") {
-  sources = [ "org/chromium/components/gwp_asan/GwpAsanFeatureMap.java" ]
+  sources = [ "org/Cinaseek/components/gwp_asan/GwpAsanFeatureMap.java" ]
 }
 
 java_cpp_features("java_features_srcjar") {
   # External code should depend on `:gwp_asan_java` instead.
   visibility = [ ":*" ]
   sources = [ "//components/gwp_asan/client/gwp_asan_features.cc" ]
-  class_name = "org.chromium.components.gwp_asan.GwpAsanFeatures"
+  class_name = "org.Cinaseek.components.gwp_asan.GwpAsanFeatures"
 }
 
 android_library("gwp_asan_java") {
@@ -26,5 +26,5 @@ android_library("gwp_asan_java") {
     "//build/android:build_java",
     "//third_party/jni_zero:jni_zero_java",
   ]
-  sources = [ "org/chromium/components/gwp_asan/GwpAsanFeatureMap.java" ]
+  sources = [ "org/Cinaseek/components/gwp_asan/GwpAsanFeatureMap.java" ]
 }

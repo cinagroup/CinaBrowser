@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #include "components/version_info/version_info.h"
 
 // These values must match content/public/common/content_switches.cc so that
-// the values will be passed to child processes in projects that Chromium's
+// the values will be passed to child processes in projects that Cinaseek's
 // Content layer.
 constexpr char kEnableLogging[] = "enable-logging";
 constexpr char kLogFile[] = "log-file";

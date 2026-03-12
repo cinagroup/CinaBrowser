@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class GraphFeatures {
   }
 
   // Returns a configuration with the default set of graph features shipped
-  // with a full-featured Chromium browser.
+  // with a full-featured Cinaseek browser.
   static constexpr GraphFeatures WithDefault() {
     return GraphFeatures().EnableDefault();
   }

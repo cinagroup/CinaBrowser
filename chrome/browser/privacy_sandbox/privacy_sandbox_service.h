@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ class PrivacySandboxQueueManager;
 class PrivacySandboxService : public KeyedService {
  public:
   // Possible types of Privacy Sandbox prompts that may be shown to the user.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_sandbox
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_sandbox
   enum class PromptType {
     kNone = 0,
     kM1Consent = 1,
@@ -44,7 +44,7 @@ class PrivacySandboxService : public KeyedService {
   };
 
   // A list of the client surfaces we show consents / notices on.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_sandbox
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_sandbox
   enum class SurfaceType {
     kDesktop = 0,
     kBrApp = 1,
@@ -54,7 +54,7 @@ class PrivacySandboxService : public KeyedService {
 
   // An exhaustive list of actions related to showing & interacting with the
   // prompt. Includes actions which do not impact consent / notice state.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_sandbox
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_sandbox
   enum class PromptAction {
     // Notice Interactions:
     kNoticeShown = 0,

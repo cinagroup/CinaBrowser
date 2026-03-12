@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -314,7 +314,7 @@ class BASE_EXPORT Pickle {
   template <class T>
   T* headerT() {
     // This should ideally use std::is_pointer_interconvertible_base_of_v but it
-    // isn't currently supported in chromium.
+    // isn't currently supported in Cinaseek.
     static_assert(std::is_base_of_v<Header, T>,
                   "T must be a subclass of Header");
     // T must be a trivial type because Pickle manages memory as raw bytes and

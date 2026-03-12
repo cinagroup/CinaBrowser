@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,22 +7,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac ASan 64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_asan",
+                "config": "Cinaseek_asan",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -30,27 +30,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac ASan 64 Tests (1)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_asan",
+                "config": "Cinaseek_asan",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "Mac ASan 64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -60,13 +60,13 @@
         {
           "bucket": "ci",
           "builder": "Mac ASan 64 Tests (1)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
-          "builder": "mac_chromium_asan_rel_ng",
-          "group": "tryserver.chromium.mac"
+          "builder": "mac_Cinaseek_asan_rel_ng",
+          "group": "tryserver.Cinaseek.mac"
         }
       ],
       "retry_failed_shards": true,
@@ -81,12 +81,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.memory",
+  "builder_group": "Cinaseek.memory",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

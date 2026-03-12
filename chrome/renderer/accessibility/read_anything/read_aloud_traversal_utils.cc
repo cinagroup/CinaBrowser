@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -161,7 +161,7 @@ ui::AXNode* GetAnchorNode(
 }
 
 // TODO(crbug.com/40927698): See if we can use string util here.
-// https://source.chromium.org/chromium/chromium/src/+/main:base/strings/string_util.h;l=448?q=string_util%20punctuation&ss=chromium
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/strings/string_util.h;l=448?q=string_util%20punctuation&ss=Cinaseek
 bool IsOpeningPunctuation(char& c) {
   return (c == '(' || c == '{' || c == '[' || c == '<');
 }

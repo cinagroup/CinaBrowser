@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 class OverlayJavaScriptDialogPresenterTest : public PlatformTest {
  protected:
   OverlayJavaScriptDialogPresenterTest()
-      : origin_(url::Origin::Create(GURL("http://chromium.test"))) {
+      : origin_(url::Origin::Create(GURL("http://Cinaseek.test"))) {
     OverlayRequestQueue::CreateForWebState(&web_state_);
   }
 

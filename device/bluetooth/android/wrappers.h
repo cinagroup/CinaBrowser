@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 
 namespace device {
 
-// Bindings into Java methods in org.chromium.device.bluetooth.Wrappers classes:
+// Bindings into Java methods in org.Cinaseek.device.bluetooth.Wrappers classes:
 
 // Calls Java: BluetoothAdapterWrapper.createWithDefaultAdapter().
 DEVICE_BLUETOOTH_EXPORT base::android::ScopedJavaLocalRef<jobject>

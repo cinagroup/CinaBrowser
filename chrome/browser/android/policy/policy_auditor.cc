@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ static int JNI_PolicyAuditor_GetCertificateFailure(
   // This function is similar to
   // LocationBarModelImpl::GetSecurityLevelForWebContents, but has a custom
   // mapping for policy auditing.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.policy
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.policy
   // GENERATED_JAVA_PREFIX_TO_STRIP: CERTIFICATE_FAIL_
   enum CertificateFailure {
     NONE = 0,

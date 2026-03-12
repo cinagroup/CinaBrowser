@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ void ShouldNeverRun(T t) {
 // being a OnceCallback).
 //
 // See also
-// https://chromium.googlesource.com/chromium/src/+/HEAD/docs/callback.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/callback.md
 template <typename T,
           typename RawArg = std::remove_cvref_t<T>,
           typename DoneArg = std::vector<RawArg>,

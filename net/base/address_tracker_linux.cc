@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -215,7 +215,7 @@ void AddressTrackerLinux::Init() {
   // RTM_GETLINK stopped working in Android 11 (see
   // https://developer.android.com/preview/privacy/mac-address),
   // so AddressTrackerLinux should not be used in later versions
-  // of Android.  Chromium code doesn't need it past Android P.
+  // of Android.  Cinaseek code doesn't need it past Android P.
   DCHECK_LT(base::android::android_info::sdk_int(),
             base::android::android_info::SDK_VERSION_P);
 #endif

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -23,7 +23,7 @@ config("internal_config") {
 }
 
 grit_strings("strings") {
-  source = "chromium/address_input_strings.grd"
+  source = "Cinaseek/address_input_strings.grd"
 
   outputs = [
     "messages.h",
@@ -35,14 +35,14 @@ grit_strings("strings") {
 }
 
 config("libaddressinput_config") {
-  defines = [ "I18N_ADDRESS_VALIDATION_DATA_URL=\"https://chromium-i18n.appspot.com/ssl-aggregate-address/\"" ]
+  defines = [ "I18N_ADDRESS_VALIDATION_DATA_URL=\"https://Cinaseek-i18n.appspot.com/ssl-aggregate-address/\"" ]
   include_dirs = [ "src/cpp/include" ]
 }
 
 # This target provides basic functionality which is cooked into the build.
 static_library("util") {
   sources = [
-    "chromium/json.cc",
+    "Cinaseek/json.cc",
     "src/cpp/src/address_data.cc",
     "src/cpp/src/address_field.cc",
     "src/cpp/src/address_field_util.cc",
@@ -77,10 +77,10 @@ static_library("util") {
     "src/cpp/src/util/string_util.h",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":internal_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 
   public_configs = [ ":libaddressinput_config" ]
@@ -100,20 +100,20 @@ static_library("util") {
 # for validation rules.
 static_library("libaddressinput") {
   sources = [
-    "chromium/addressinput_util.cc",
-    "chromium/addressinput_util.h",
-    "chromium/chrome_address_validator.cc",
-    "chromium/chrome_address_validator.h",
-    "chromium/chrome_metadata_source.cc",
-    "chromium/chrome_metadata_source.h",
-    "chromium/chrome_storage_impl.cc",
-    "chromium/chrome_storage_impl.h",
-    "chromium/fallback_data_store.cc",
-    "chromium/fallback_data_store.h",
-    "chromium/storage_test_runner.h",
-    "chromium/string_compare.cc",
-    "chromium/trie.cc",
-    "chromium/trie.h",
+    "Cinaseek/addressinput_util.cc",
+    "Cinaseek/addressinput_util.h",
+    "Cinaseek/chrome_address_validator.cc",
+    "Cinaseek/chrome_address_validator.h",
+    "Cinaseek/chrome_metadata_source.cc",
+    "Cinaseek/chrome_metadata_source.h",
+    "Cinaseek/chrome_storage_impl.cc",
+    "Cinaseek/chrome_storage_impl.h",
+    "Cinaseek/fallback_data_store.cc",
+    "Cinaseek/fallback_data_store.h",
+    "Cinaseek/storage_test_runner.h",
+    "Cinaseek/string_compare.cc",
+    "Cinaseek/trie.cc",
+    "Cinaseek/trie.h",
     "src/cpp/src/address_input_helper.cc",
     "src/cpp/src/address_normalizer.cc",
     "src/cpp/src/address_problem.cc",
@@ -142,10 +142,10 @@ static_library("libaddressinput") {
     "src/cpp/test/testdata_source.h",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":internal_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 
   public_configs = [ ":libaddressinput_config" ]
@@ -181,10 +181,10 @@ source_set("test_support") {
     "src/cpp/test/testdata_source.cc",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":internal_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 
   defines = [ "TEST_DATA_DIR=\"src/third_party/libaddressinput/src/testdata\"" ]
@@ -201,15 +201,15 @@ source_set("test_support") {
 
 test("libaddressinput_unittests") {
   sources = [
-    "chromium/addressinput_util_unittest.cc",
-    "chromium/chrome_address_validator_unittest.cc",
-    "chromium/chrome_metadata_source_unittest.cc",
-    "chromium/chrome_storage_impl_unittest.cc",
-    "chromium/fallback_data_store_unittest.cc",
-    "chromium/storage_test_runner.cc",
-    "chromium/storage_test_runner.h",
-    "chromium/string_compare_unittest.cc",
-    "chromium/trie_unittest.cc",
+    "Cinaseek/addressinput_util_unittest.cc",
+    "Cinaseek/chrome_address_validator_unittest.cc",
+    "Cinaseek/chrome_metadata_source_unittest.cc",
+    "Cinaseek/chrome_storage_impl_unittest.cc",
+    "Cinaseek/fallback_data_store_unittest.cc",
+    "Cinaseek/storage_test_runner.cc",
+    "Cinaseek/storage_test_runner.h",
+    "Cinaseek/string_compare_unittest.cc",
+    "Cinaseek/trie_unittest.cc",
     "src/cpp/test/address_data_test.cc",
     "src/cpp/test/address_field_test.cc",
     "src/cpp/test/address_field_util_test.cc",
@@ -247,10 +247,10 @@ test("libaddressinput_unittests") {
     "src/cpp/test/validation_task_test.cc",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":internal_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 
   include_dirs = [ "src/cpp/src" ]

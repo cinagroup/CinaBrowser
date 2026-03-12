@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -561,7 +561,7 @@ class NET_EXPORT ConfiguredProxyResolutionService
 
    private:
     // Backoff cadence matches documented fetch failure policy; see docs:
-    // https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md
+    // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/net/docs/proxy.md
     // 8s -> 32s -> 2m -> 4h (then stay at 4h).
     base::TimeDelta CalculateRetryDelay() const {
       static constexpr std::array<base::TimeDelta, 4> kRetryIntervals{

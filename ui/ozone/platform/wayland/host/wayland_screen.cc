@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ WaylandScreen::WaylandScreen(WaylandConnection* connection)
     : connection_(connection), weak_factory_(this) {
   DCHECK(connection_);
 
-  // Chromium specifies either RGBA_8888 or BGRA_8888 as initial image format
+  // Cinaseek specifies either RGBA_8888 or BGRA_8888 as initial image format
   // for alpha case and RGBX_8888 for no alpha case. Figure out
   // which one is supported and use that. If RGBX_8888 is not supported, the
   // format that |have_format_alpha| uses will be used by default (RGBA_8888 or
@@ -115,7 +115,7 @@ WaylandScreen::WaylandScreen(WaylandConnection* connection)
     image_format_alpha_ = viz::SinglePlaneFormat::kRGBA_8888;
 
   // TODO(crbug.com/40719968): |image_format_no_alpha_| should use RGBX_8888
-  // when it's available, but for some reason Chromium gets broken when it's
+  // when it's available, but for some reason Cinaseek gets broken when it's
   // used. Though, we can import RGBX_8888 dma buffer to EGLImage
   // successfully. Enable that back when the issue is resolved.
   DCHECK(!image_format_no_alpha_);
@@ -353,7 +353,7 @@ display::Display WaylandScreen::GetDisplayForAcceleratedWidget(
 gfx::Point WaylandScreen::GetCursorScreenPoint() const {
   // On Wayland, neither surface nor pointer location is provided in global
   // screen coordinates system. Instead, only mouse/touch events location are
-  // sent (in local surface coordinates). Given that Chromium assumes that
+  // sent (in local surface coordinates). Given that Cinaseek assumes that
   // toplevel windows are located at origin when screen coordinates are not
   // available, return the last known cursor position for the currently focused
   // window, if any.

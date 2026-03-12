@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace password_manager {
 
 // TODO(crbug.com/40824450): Remove once GMS definition will be exposed.
 // Status codes redefinition for the GMS ChromeSync API.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.password_manager
 enum class ChromeSyncStatusCode {
   // We need user to retrieve their passphrase in order to decrypt the data.
   kPassphraseRequired = 11000,

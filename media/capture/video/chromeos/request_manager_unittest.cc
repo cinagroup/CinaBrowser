@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,10 +97,10 @@ class FakeCameraBufferFactory : public CameraBufferFactory {
     return shared_image;
   }
 
-  ChromiumPixelFormat ResolveStreamBufferFormat(
+  CinaseekPixelFormat ResolveStreamBufferFormat(
       cros::mojom::HalPixelFormat hal_format,
       gfx::BufferUsage usage) override {
-    return ChromiumPixelFormat{PIXEL_FORMAT_NV12, viz::MultiPlaneFormat::kNV12};
+    return CinaseekPixelFormat{PIXEL_FORMAT_NV12, viz::MultiPlaneFormat::kNV12};
   }
 
  private:

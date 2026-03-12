@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import {SourcesTestRunner} from 'sources_test_runner';
 
 (async function() {
   TestRunner.addResult(
-      `Tests that DOM debugger will not crash when editing DOM nodes from the Web Inspector. Chromium bug 249655\n`);
+      `Tests that DOM debugger will not crash when editing DOM nodes from the Web Inspector. Cinaseek bug 249655\n`);
   await TestRunner.showPanel('sources');
   await TestRunner.loadHTML(`
       <div id="rootElement" style="color: red">

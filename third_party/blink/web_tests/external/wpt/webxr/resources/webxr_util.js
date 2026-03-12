@@ -3,7 +3,7 @@
 // These tests rely on the User Agent providing an implementation of the
 // WebXR Testing API (https://github.com/immersive-web/webxr-test-api).
 //
-// In Chromium-based browsers, this implementation is provided by a JavaScript
+// In Cinaseek-based browsers, this implementation is provided by a JavaScript
 // shim in order to reduce the amount of test-only code shipped to users. To
 // enable these tests the browser must be run with these options:
 //
@@ -29,7 +29,7 @@ function xr_promise_test(name, func, properties, glContextType, glContextPropert
     // Only set up once.
     if (!navigator.xr.test) {
 
-      if (typeof isChromiumBased === 'undefined' || typeof isWebKitBased === 'undefined') {
+      if (typeof isCinaseekBased === 'undefined' || typeof isWebKitBased === 'undefined') {
         // Load test-only API helpers.
         const script = document.createElement('script');
         script.src = '/resources/test-only-api.js';
@@ -42,9 +42,9 @@ function xr_promise_test(name, func, properties, glContextType, glContextPropert
         await p;
       }
 
-      if (isChromiumBased) {
+      if (isCinaseekBased) {
         // Chrome setup
-        await loadChromiumResources();
+        await loadCinaseekResources();
       } else if (isWebKitBased) {
         // WebKit setup
         await setupWebKitWebXRTestAPI();
@@ -219,19 +219,19 @@ function forEachWebxrObject(callback) {
   callback(window.XRCoordinateSystemEvent, 'XRCoordinateSystemEvent');
 }
 
-// Code for loading test API in Chromium.
-async function loadChromiumResources() {
-  await loadScript('/resources/chromium/webxr-test-math-helper.js');
-  await import('/resources/chromium/webxr-test.js');
+// Code for loading test API in Cinaseek.
+async function loadCinaseekResources() {
+  await loadScript('/resources/Cinaseek/webxr-test-math-helper.js');
+  await import('/resources/Cinaseek/webxr-test.js');
   await loadScript('/resources/testdriver.js');
   await loadScript('/resources/testdriver-vendor.js');
 
-  // This infrastructure is also used by Chromium-specific internal tests that
+  // This infrastructure is also used by Cinaseek-specific internal tests that
   // may need additional resources (e.g. internal API extensions), this allows
   // those tests to rely on this infrastructure while ensuring that no tests
   // make it into public WPTs that rely on APIs outside of the webxr test API.
-  if (typeof(additionalChromiumResources) !== 'undefined') {
-    for (const path of additionalChromiumResources) {
+  if (typeof(additionalCinaseekResources) !== 'undefined') {
+    for (const path of additionalCinaseekResources) {
       await loadScript(path);
     }
   }

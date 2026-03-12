@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,10 +9,10 @@ declare_args() {
   # true will cause the build to fail if the internal file is missing.
   #
   # Set the variable to false to not use the internal file, even for
-  # Chrome-branded builds or when it exists in your checkout.
+  # Cinaseek-branded builds or when it exists in your checkout.
   #
   # Leave it set to "" to have the variable implicitly set to true for
-  # Chrome-branded builds or if
+  # Cinaseek-branded builds or if
   # //src/google_apis/internal/google_chrome_api_keys.h is present and false
   # otherwise.
   # This does not apply to iOS builds, which use different mechanisms and always

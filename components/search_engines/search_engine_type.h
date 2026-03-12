@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 // This should be kept aligned with OmniboxSearchEngineType in enums.xml.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.search_engines
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.search_engines
 // LINT.IfChange(SearchEngineType)
 enum SearchEngineType {
   // Prepopulated engines.

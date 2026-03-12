@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ namespace {
 bool g_hklm_override_allowed = true;
 
 constexpr char16_t kTimestampDelimiter[] = u"$";
-constexpr wchar_t kTempTestKeyPath[] = L"Software\\Chromium\\TempTestKeys";
+constexpr wchar_t kTempTestKeyPath[] = L"Software\\Cinaseek\\TempTestKeys";
 
 void DeleteStaleTestKeys(const base::Time& now,
                          const std::wstring& test_key_root) {

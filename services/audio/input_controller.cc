@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -554,7 +554,7 @@ void InputController::Record() {
                                              weak_this_, STREAM_ERROR)));
 
   if (loopback_mixin_) {
-    // Start receiving chromium playout loopback.
+    // Start receiving Cinaseek playout loopback.
     loopback_mixin_->Start();
   }
   stream_->Start(audio_callback_.get());

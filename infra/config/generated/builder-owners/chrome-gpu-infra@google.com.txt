@@ -8,7 +8,7 @@ ci/Android FYI Release (Samsung A13)
 ci/Android FYI Release (Samsung A23)
 ci/Android FYI Release (Samsung S23)
 ci/Android Release (Pixel 2)
-ci/ChromeOS FYI Release (amd64-generic)
+ci/CinaseekOS FYI Release (amd64-generic)
 ci/Dawn Android arm Builder
 ci/Dawn Android arm DEPS Builder
 ci/Dawn Android arm DEPS Release (Pixel 4)
@@ -20,7 +20,7 @@ ci/Dawn Android arm64 Experimental Release (Pixel 6)
 ci/Dawn Android arm64 Release (Pixel 10)
 ci/Dawn Android arm64 Release (Pixel 6)
 ci/Dawn Android arm64 Release (Samsung S24)
-ci/Dawn Chromium Presubmit
+ci/Dawn Cinaseek Presubmit
 ci/Dawn Linux x64 Builder
 ci/Dawn Linux x64 DEPS Builder
 ci/Dawn Linux x64 DEPS Release (Intel UHD 630)
@@ -148,13 +148,13 @@ ci/Win11 FYI x64 Experimental Release (Intel Arc 140V)
 ci/Win11 FYI x64 Experimental Release (NVIDIA RTX 4070 Super)
 ci/Win11 FYI x64 Release (AMD RX 7600)
 ci/Win11 FYI x64 Release (NVIDIA RTX 4070 Super)
-ci/linux-swangle-chromium-x64
-ci/linux-swangle-chromium-x64-exp
+ci/linux-swangle-Cinaseek-x64
+ci/linux-swangle-Cinaseek-x64-exp
 ci/linux-swangle-tot-swiftshader-x64
 ci/linux-swangle-x64
 ci/linux-swangle-x64-exp
-ci/mac-swangle-chromium-x64
-ci/win-swangle-chromium-x86
+ci/mac-swangle-Cinaseek-x64
+ci/win-swangle-Cinaseek-x86
 ci/win-swangle-tot-swiftshader-x64
 ci/win-swangle-tot-swiftshader-x86
 ci/win-swangle-x64
@@ -167,7 +167,7 @@ try/android-dawn-arm64-s24-rel
 try/android_optional_gpu_tests_rel
 try/dawn-android-arm-deps-rel
 try/dawn-android-arm64-deps-rel
-try/dawn-chromium-presubmit
+try/dawn-Cinaseek-presubmit
 try/dawn-linux-x64-deps-rel
 try/dawn-mac-arm64-deps-rel
 try/dawn-mac-x64-deps-rel

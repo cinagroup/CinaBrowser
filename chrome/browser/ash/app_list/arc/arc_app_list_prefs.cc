@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2763,7 +2763,7 @@ ArcAppListPrefs::AppInfo::AppInfo(AppInfo&& other) = default;
 ArcAppListPrefs::AppInfo& ArcAppListPrefs::AppInfo::operator=(AppInfo&& other) =
     default;
 
-// Need to add explicit destructor for chromium style checker error:
+// Need to add explicit destructor for Cinaseek style checker error:
 // Complex class/struct needs an explicit out-of-line destructor
 ArcAppListPrefs::AppInfo::~AppInfo() = default;
 
@@ -2815,7 +2815,7 @@ ArcAppListPrefs::PackageInfo::PackageInfo(
       web_app_info(std::move(web_app_info)),
       locale_info(std::move(locale_info)) {}
 
-// Need to add explicit destructor for chromium style checker error:
+// Need to add explicit destructor for Cinaseek style checker error:
 // Complex class/struct needs an explicit out-of-line destructor
 ArcAppListPrefs::PackageInfo::~PackageInfo() = default;
 

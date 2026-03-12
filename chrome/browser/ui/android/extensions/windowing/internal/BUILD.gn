@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -33,8 +33,8 @@ android_library("java") {
     "//chrome/browser/ui/android/extensions/windowing/test:native_unit_test_support_java",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeFactory.java",
-    "java/src/org/chromium/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeImpl.java",
   ]
   deps = [
     "//base:resetters_java",
@@ -52,7 +52,7 @@ android_library("java") {
 }
 
 generate_jni("jni") {
-  sources = [ "java/src/org/chromium/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeImpl.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeImpl.java" ]
 }
 
 java_cpp_enum("java_enum_srcjar") {
@@ -81,7 +81,7 @@ source_set("unit_tests") {
 
 android_library("javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeIntegrationTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeIntegrationTest.java" ]
   deps = [
     ":java",
     "//base:base_java_test_support",

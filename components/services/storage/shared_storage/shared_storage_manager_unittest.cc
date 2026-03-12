@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -916,14 +916,14 @@ TEST_F(SharedStorageManagerFromFileTest, CurrentVersion_LoadFromFile) {
   EXPECT_THAT(youtube_com_entries.entries,
               ElementsAre(Pair("visited", "1111111")));
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
-  EXPECT_EQ(GetSync(chromium_org, u"a").data, u"");
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
+  EXPECT_EQ(GetSync(Cinaseek_org, u"a").data, u"");
 
   TestSharedStorageEntriesListenerUtility listener_utility(
       task_environment_.GetMainThreadTaskRunner());
   size_t id1 = listener_utility.RegisterListener();
   EXPECT_EQ(OperationResult::kSuccess,
-            KeysSync(chromium_org,
+            KeysSync(Cinaseek_org,
                      listener_utility.BindNewPipeAndPassRemoteForId(id1)));
   listener_utility.FlushForId(id1);
   EXPECT_THAT(listener_utility.TakeKeysForId(id1),
@@ -933,7 +933,7 @@ TEST_F(SharedStorageManagerFromFileTest, CurrentVersion_LoadFromFile) {
 
   size_t id2 = listener_utility.RegisterListener();
   EXPECT_EQ(OperationResult::kSuccess,
-            EntriesSync(chromium_org,
+            EntriesSync(Cinaseek_org,
                         listener_utility.BindNewPipeAndPassRemoteForId(id2)));
   listener_utility.FlushForId(id2);
   EXPECT_THAT(listener_utility.TakeEntriesForId(id2),
@@ -942,10 +942,10 @@ TEST_F(SharedStorageManagerFromFileTest, CurrentVersion_LoadFromFile) {
   EXPECT_EQ(1U, listener_utility.BatchCountForId(id2));
   listener_utility.VerifyNoErrorForId(id2);
 
-  EntriesResult chromium_org_entries = GetEntriesForDevToolsSync(chromium_org);
-  EXPECT_EQ(OperationResult::kSuccess, chromium_org_entries.result);
+  EntriesResult Cinaseek_org_entries = GetEntriesForDevToolsSync(Cinaseek_org);
+  EXPECT_EQ(OperationResult::kSuccess, Cinaseek_org_entries.result);
   EXPECT_THAT(
-      chromium_org_entries.entries,
+      Cinaseek_org_entries.entries,
       ElementsAre(Pair("a", ""), Pair("b", "hello"), Pair("c", "goodbye")));
 
   url::Origin google_org = url::Origin::Create(GURL("http://google.org/"));
@@ -1025,7 +1025,7 @@ TEST_F(SharedStorageManagerFromFileTest, CurrentVersion_LoadFromFile) {
   for (const auto& info : infos)
     origins.push_back(info->storage_key.origin());
   EXPECT_THAT(origins,
-              ElementsAre(abc_xyz, chromium_org, google_com, google_org,
+              ElementsAre(abc_xyz, Cinaseek_org, google_com, google_org,
                           growwithgoogle_com,
                           url::Origin::Create(GURL("http://gv.com")),
                           url::Origin::Create(GURL("http://waymo.com")),
@@ -1051,14 +1051,14 @@ TEST_F(SharedStorageManagerFromFileV1NoBudgetTableTest,
   url::Origin youtube_com = url::Origin::Create(GURL("http://youtube.com/"));
   EXPECT_EQ(1L, LengthSync(youtube_com));
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
-  EXPECT_EQ(GetSync(chromium_org, u"a").data, u"");
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
+  EXPECT_EQ(GetSync(Cinaseek_org, u"a").data, u"");
 
   TestSharedStorageEntriesListenerUtility listener_utility(
       task_environment_.GetMainThreadTaskRunner());
   size_t id1 = listener_utility.RegisterListener();
   EXPECT_EQ(OperationResult::kSuccess,
-            KeysSync(chromium_org,
+            KeysSync(Cinaseek_org,
                      listener_utility.BindNewPipeAndPassRemoteForId(id1)));
   listener_utility.FlushForId(id1);
   EXPECT_THAT(listener_utility.TakeKeysForId(id1),
@@ -1068,7 +1068,7 @@ TEST_F(SharedStorageManagerFromFileV1NoBudgetTableTest,
 
   size_t id2 = listener_utility.RegisterListener();
   EXPECT_EQ(OperationResult::kSuccess,
-            EntriesSync(chromium_org,
+            EntriesSync(Cinaseek_org,
                         listener_utility.BindNewPipeAndPassRemoteForId(id2)));
   listener_utility.FlushForId(id2);
   EXPECT_THAT(listener_utility.TakeEntriesForId(id2),
@@ -1124,7 +1124,7 @@ TEST_F(SharedStorageManagerFromFileV1NoBudgetTableTest,
   EXPECT_THAT(
       origins,
       ElementsAre(
-          url::Origin::Create(GURL("http://abc.xyz")), chromium_org, google_com,
+          url::Origin::Create(GURL("http://abc.xyz")), Cinaseek_org, google_com,
           google_org, url::Origin::Create(GURL("http://growwithgoogle.com")),
           url::Origin::Create(GURL("http://gv.com")),
           url::Origin::Create(GURL("http://waymo.com")),
@@ -1132,7 +1132,7 @@ TEST_F(SharedStorageManagerFromFileV1NoBudgetTableTest,
 
   EXPECT_DOUBLE_EQ(
       kBitBudget,
-      GetRemainingBudgetSync(net::SchemefulSite(chromium_org)).bits);
+      GetRemainingBudgetSync(net::SchemefulSite(Cinaseek_org)).bits);
   EXPECT_DOUBLE_EQ(kBitBudget,
                    GetRemainingBudgetSync(net::SchemefulSite(google_com)).bits);
   EXPECT_DOUBLE_EQ(kBitBudget,

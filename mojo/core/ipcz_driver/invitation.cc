@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -341,7 +341,7 @@ MojoHandle Invitation::Accept(
     return MOJO_RESULT_INVALID_ARGUMENT;
   }
 
-  // Chromium's browser process may distinguish between normal child process
+  // Cinaseek's browser process may distinguish between normal child process
   // termination and a child process crash, based on the state of its Mojo
   // connection to the child process. This flag is implemented to allow child
   // processes to leak their transport so that it can stay alive right up until

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace metrics {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. Must be kept in sync with the enum
 // in enums.xml. A java IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.keyboard_accessory
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.keyboard_accessory
 enum class AccessorySheetTrigger {
   ANY_CLOSE = 0,     // Increased for every closure - manual or not.
   MANUAL_CLOSE = 1,  // Increased for every user-triggered closure.

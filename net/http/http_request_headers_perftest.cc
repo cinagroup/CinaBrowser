@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ void BM_HttpRequestHeadersToString(::benchmark::State& state) {
   http_request_headers.SetHeader(
       "Sec-Ch-Ua",
       "\"Google Chrome\";v=\"117\", \"Not;A=Brand\";v=\"8\", "
-      "\"Chromium\";v=\"117\"");
+      "\"Cinaseek\";v=\"117\"");
   http_request_headers.SetHeader("Sec-Ch-Ua-Mobile", "?0");
   http_request_headers.SetHeader("Sec-Ch-Ua-Platform", "\"Linux\"");
   http_request_headers.SetHeader("Sec-Fetch-Dest", "document");

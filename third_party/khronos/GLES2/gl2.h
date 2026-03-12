@@ -34,8 +34,8 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-/* Chromium-specific GLES2 declarations */
-#include <GLES2/gl2chromium.h>
+/* Cinaseek-specific GLES2 declarations */
+#include <GLES2/gl2Cinaseek.h>
 
 #include <GLES2/gl2platform.h>
 

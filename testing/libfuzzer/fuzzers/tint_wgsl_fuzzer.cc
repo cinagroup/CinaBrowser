@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ void CanConvertWgslToIRWithoutCrashing(std::string_view wgsl) {
 // matching - the expected data structure. Adding this domain will help finding
 // such bugs, but will also ensure we're covering every possible fuzzing test
 // cases.
-FUZZ_TEST(ChromiumTintWgslTest, CanParseProgramWithoutCrashing)
+FUZZ_TEST(CinaseekTintWgslTest, CanParseProgramWithoutCrashing)
     .WithDomains(fuzztest::OneOf(fuzztest::InWgslGrammar(),
                                  fuzztest::Arbitrary<std::string>().WithSeeds(
                                      []() -> std::vector<std::string> {
@@ -37,7 +37,7 @@ FUZZ_TEST(ChromiumTintWgslTest, CanParseProgramWithoutCrashing)
                                            std::mt19937_64())};
                                      })));
 
-FUZZ_TEST(ChromiumTintWgslTest, CanConvertWgslToIRWithoutCrashing)
+FUZZ_TEST(CinaseekTintWgslTest, CanConvertWgslToIRWithoutCrashing)
     .WithDomains(fuzztest::OneOf(fuzztest::InWgslGrammar(),
                                  fuzztest::Arbitrary<std::string>().WithSeeds(
                                      []() -> std::vector<std::string> {

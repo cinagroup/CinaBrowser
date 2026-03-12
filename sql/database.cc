@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -630,7 +630,7 @@ void Database::CloseInternal(bool forced) {
          "sql::Database";
 
   // TODO(shess): Calling "PRAGMA journal_mode = DELETE" at this point
-  // will delete the -journal file.  For ChromiumOS or other more
+  // will delete the -journal file.  For CinaseekOS or other more
   // embedded systems, this is probably not appropriate, whereas on
   // desktop it might make some sense.
 
@@ -2137,7 +2137,7 @@ bool Database::OpenInternal(const std::string& db_file_path) {
     // Windows, SQLite attempts to open the database in read-only mode if the
     // initial read/write attempt fails. See the winOpen SQLite function for
     // details:
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/sqlite/src/src/os_win.c;l=5266-5269;drc=9bf5bea60709d4afa37a085b86de3651b0ddd5c9
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/sqlite/src/src/os_win.c;l=5266-5269;drc=9bf5bea60709d4afa37a085b86de3651b0ddd5c9
     if (sqlite_result_code == SqliteResultCode::kOk && db) {
       const bool is_readonly =
           sqlite3_db_readonly(db, kSqliteMainDatabaseName) == 1;

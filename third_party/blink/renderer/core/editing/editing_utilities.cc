@@ -234,7 +234,7 @@ static bool HasEditableLevel(const Node& node, EditableLevel editable_level) {
     // If the `ancestor` is a child of the shadow host and does not have a slot
     // assigned, it should use the style of the shadow host and therefore be
     // skipped.
-    // See https://issues.chromium.org/issues/392725745 for more details.
+    // See https://issues.Cinaseek.org/issues/392725745 for more details.
     if (RuntimeEnabledFeatures::UseShadowHostStyleCheckEditableEnabled() &&
         ancestor.IsChildOfShadowHost() && !ancestor.AssignedSlot()) {
       continue;
@@ -257,7 +257,7 @@ static bool HasEditableLevel(const Node& node, EditableLevel editable_level) {
     // https://html.spec.whatwg.org/multipage/interaction.html#the-inert-attribute.
     // To prevent the invisible inert element being overlooked, the
     // inert attribute of the element is considered when style is not present.
-    // See https://issues.chromium.org/issues/41490809.
+    // See https://issues.Cinaseek.org/issues/41490809.
     if (RuntimeEnabledFeatures::InertElementNonEditableEnabled()) {
       const Element* element = DynamicTo<Element>(ancestor);
       if (element && element->IsInertRoot()) {
@@ -344,7 +344,7 @@ bool IsEditablePosition(const Position& position) {
   if (node->GetDocument().Lifecycle().GetState() >=
       DocumentLifecycle::kInStyleRecalc) {
     // TODO(yosin): Update the condition and DCHECK here given that
-    // https://codereview.chromium.org/2665823002/ avoided this function from
+    // https://codereview.Cinaseek.org/2665823002/ avoided this function from
     // being called during InStyleRecalc.
   } else {
     DCHECK(!NeedsLayoutTreeUpdate(position)) << position;

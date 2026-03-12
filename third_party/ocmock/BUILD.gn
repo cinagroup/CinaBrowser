@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -100,8 +100,8 @@ source_set("ocmock") {
 
   deps = [ "//testing/gtest" ]
   public_configs = [ ":ocmock_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   defines = [ "OCM_DISABLE_XCTEST_FEATURES" ]
 
   # Do not compile with ARC because OCMock code is not compatible with being

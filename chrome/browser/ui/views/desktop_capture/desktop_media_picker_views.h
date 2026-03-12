@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -213,7 +213,7 @@ class DesktopMediaPickerDialogView : public views::DialogDelegateView,
   // If set to true, audio is captured, but is no longer played out over the
   // user's local speakers. Effective only if audio shared.
   const bool suppress_local_audio_playback_;
-  // If set to true, audio produced by Chromium should be excluded from the
+  // If set to true, audio produced by Cinaseek should be excluded from the
   // captured audio track. Effective only if audio shared.
   const bool restrict_own_audio_;
   const content::GlobalRenderFrameHostId capturer_global_id_;

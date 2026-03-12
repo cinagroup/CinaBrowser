@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace bookmarks {
 // A Java counterpart will be generated for this enum.
 // New enum values should only be added to the end of the enum and no values
 // should be modified or reused, as this is reported via UMA.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.bookmarks
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.bookmarks
 enum BookmarkType {
   BOOKMARK_TYPE_NORMAL,
   BOOKMARK_TYPE_PARTNER,

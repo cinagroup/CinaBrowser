@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,8 +18,8 @@
 #include "base/test/gtest_util.h"
 #include "base/test/launcher/test_launcher.h"
 #include "base/test/launcher/test_result.h"
-#include "third_party/libxml/chromium/libxml_utils.h"
-#include "third_party/libxml/chromium/xml_reader.h"
+#include "third_party/libxml/Cinaseek/libxml_utils.h"
+#include "third_party/libxml/Cinaseek/xml_reader.h"
 
 namespace base {
 

@@ -1,4 +1,4 @@
-//// Copyright 2024 The Chromium Authors
+//// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace android_webview {
 // All these methods must always be called on the UI thread.
 //
 // This implementation allows read and write to all files, with a blocklist for
-// files that are internal to the chromium engine.
+// files that are internal to the Cinaseek engine.
 //
 // In WebView, all files are opened via WebChromeClient#onFileChooser() which
 // is where the hosting app can filter any files that they do not want to allow

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -361,7 +361,7 @@ AudioInputStream::OpenOutcome SCKAudioInputStream::Open() {
 
   // |queue_| is used internally by the API to store |config.queueDepth| number
   // of frames (default is 3).
-  queue_ = dispatch_queue_create("org.chromium.SCKAudioInputStream",
+  queue_ = dispatch_queue_create("org.Cinaseek.SCKAudioInputStream",
                                  DISPATCH_QUEUE_SERIAL);
 
   NSError* add_stream_output_error = nil;

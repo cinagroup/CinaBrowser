@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -123,7 +123,7 @@ class WindowsSystemProxyResolverImpl::Request {
 
  private:
   // On a successful call to WinHttpGetProxyForUrlEx(), this translates WinHttp
-  // results into Chromium-friendly structures and reports the result.
+  // results into Cinaseek-friendly structures and reports the result.
   void GetProxyResultForCallback();
 
   // Notifies `callback_` of the proxy result.

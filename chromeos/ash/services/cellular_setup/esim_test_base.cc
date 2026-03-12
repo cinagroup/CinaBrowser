@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@
 
 namespace ash::cellular_setup {
 
-const char* ESimTestBase::kTestEuiccPath = "/org/chromium/Hermes/Euicc/0";
+const char* ESimTestBase::kTestEuiccPath = "/org/Cinaseek/Hermes/Euicc/0";
 const char* ESimTestBase::kTestEid = "12345678901234567890123456789012";
 
 ESimTestBase::ESimTestBase()

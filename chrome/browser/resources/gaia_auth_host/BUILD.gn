@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -81,7 +81,7 @@ grit("resources") {
   output_dir = "$root_gen_dir/chrome"
 }
 
-# Limit closure targets to ChromeOS, since closure is deprecated on Desktop.
+# Limit closure targets to CinaseekOS, since closure is deprecated on Desktop.
 if (is_chromeos) {
   js_type_check("closure_compile") {
     deps = [

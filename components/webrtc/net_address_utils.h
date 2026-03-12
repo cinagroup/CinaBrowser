@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ class IPEndPoint;
 
 namespace webrtc {
 
-// Chromium and libjingle represent socket addresses differently. The
+// Cinaseek and libjingle represent socket addresses differently. The
 // following two functions are used to convert addresses from one
 // representation to another.
 bool IPEndPointToSocketAddress(const net::IPEndPoint& ip_endpoint,

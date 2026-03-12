@@ -1,4 +1,4 @@
-# Character composer sequences for ChromeOS.
+# Character composer sequences for CinaseekOS.
 
 Compose <space> <space> <no-break space>
 Compose <space> <'> <'>

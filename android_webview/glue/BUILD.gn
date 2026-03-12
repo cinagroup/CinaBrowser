@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//build/config/android/config.gni")
 import("//build/config/android/rules.gni")
 
 android_library("glue_java") {
-  resources_package = "org.chromium.android_webview"
+  resources_package = "org.Cinaseek.android_webview"
   deps = [
     "//android_webview:android_webview_product_config_java",
     "//android_webview:browser_java",
@@ -40,62 +40,62 @@ android_library("glue_java") {
       "//third_party/android_sdk:public_framework_system_java"
 
   sources = [
-    "java/src/com/android/webview/chromium/AndroidXProcessGlobalConfig.java",
-    "java/src/com/android/webview/chromium/ApiImplementationLogger.java",
-    "java/src/com/android/webview/chromium/CallbackConverter.java",
-    "java/src/com/android/webview/chromium/ContentSettingsAdapter.java",
-    "java/src/com/android/webview/chromium/CookieManagerAdapter.java",
-    "java/src/com/android/webview/chromium/DrawFunctor.java",
-    "java/src/com/android/webview/chromium/DrawGLFunctor.java",
-    "java/src/com/android/webview/chromium/GeolocationPermissionsAdapter.java",
-    "java/src/com/android/webview/chromium/GlueApiHelperForQ.java",
-    "java/src/com/android/webview/chromium/GlueApiHelperForR.java",
-    "java/src/com/android/webview/chromium/GraphicsUtils.java",
-    "java/src/com/android/webview/chromium/NoVarySearchData.java",
-    "java/src/com/android/webview/chromium/PacProcessorImpl.java",
-    "java/src/com/android/webview/chromium/PrefetchOperationCallback.java",
-    "java/src/com/android/webview/chromium/PrefetchOperationResult.java",
-    "java/src/com/android/webview/chromium/PrefetchOperationStatusCode.java",
-    "java/src/com/android/webview/chromium/PrefetchParams.java",
-    "java/src/com/android/webview/chromium/Profile.java",
-    "java/src/com/android/webview/chromium/ProfileStore.java",
-    "java/src/com/android/webview/chromium/ProfileWebViewPrefetchCallback.java",
-    "java/src/com/android/webview/chromium/SafeBrowsingResponseAdapter.java",
-    "java/src/com/android/webview/chromium/ServiceWorkerClientAdapter.java",
-    "java/src/com/android/webview/chromium/ServiceWorkerControllerAdapter.java",
-    "java/src/com/android/webview/chromium/ServiceWorkerSettingsAdapter.java",
-    "java/src/com/android/webview/chromium/SharedStatics.java",
-    "java/src/com/android/webview/chromium/SharedTracingControllerAdapter.java",
-    "java/src/com/android/webview/chromium/SharedWebViewChromium.java",
-    "java/src/com/android/webview/chromium/SharedWebViewContentsClientAdapter.java",
-    "java/src/com/android/webview/chromium/SharedWebViewRendererClientAdapter.java",
-    "java/src/com/android/webview/chromium/SpeculativeLoadingConfig.java",
-    "java/src/com/android/webview/chromium/TracingControllerAdapter.java",
-    "java/src/com/android/webview/chromium/WebBackForwardListChromium.java",
-    "java/src/com/android/webview/chromium/WebHistoryItemChromium.java",
-    "java/src/com/android/webview/chromium/WebIconDatabaseAdapter.java",
-    "java/src/com/android/webview/chromium/WebMessagePortAdapter.java",
-    "java/src/com/android/webview/chromium/WebResourceErrorAdapter.java",
-    "java/src/com/android/webview/chromium/WebResourceRequestAdapter.java",
-    "java/src/com/android/webview/chromium/WebStorageAdapter.java",
-    "java/src/com/android/webview/chromium/WebViewChromium.java",
-    "java/src/com/android/webview/chromium/WebViewChromiumAwInit.java",
-    "java/src/com/android/webview/chromium/WebViewChromiumFactoryProvider.java",
-    "java/src/com/android/webview/chromium/WebViewChromiumFactoryProviderForQ.java",
-    "java/src/com/android/webview/chromium/WebViewChromiumFactoryProviderForR.java",
-    "java/src/com/android/webview/chromium/WebViewChromiumFactoryProviderForS.java",
-    "java/src/com/android/webview/chromium/WebViewContentsClientAdapter.java",
-    "java/src/com/android/webview/chromium/WebViewDatabaseAdapter.java",
-    "java/src/com/android/webview/chromium/WebViewLibraryPreloader.java",
-    "java/src/com/android/webview/chromium/WebViewRenderProcessAdapter.java",
-    "java/src/com/android/webview/chromium/WebViewRenderProcessClientAdapter.java",
-    "java/src/com/android/webview/chromium/WebkitToSharedGlueConverter.java",
+    "java/src/com/android/webview/Cinaseek/AndroidXProcessGlobalConfig.java",
+    "java/src/com/android/webview/Cinaseek/ApiImplementationLogger.java",
+    "java/src/com/android/webview/Cinaseek/CallbackConverter.java",
+    "java/src/com/android/webview/Cinaseek/ContentSettingsAdapter.java",
+    "java/src/com/android/webview/Cinaseek/CookieManagerAdapter.java",
+    "java/src/com/android/webview/Cinaseek/DrawFunctor.java",
+    "java/src/com/android/webview/Cinaseek/DrawGLFunctor.java",
+    "java/src/com/android/webview/Cinaseek/GeolocationPermissionsAdapter.java",
+    "java/src/com/android/webview/Cinaseek/GlueApiHelperForQ.java",
+    "java/src/com/android/webview/Cinaseek/GlueApiHelperForR.java",
+    "java/src/com/android/webview/Cinaseek/GraphicsUtils.java",
+    "java/src/com/android/webview/Cinaseek/NoVarySearchData.java",
+    "java/src/com/android/webview/Cinaseek/PacProcessorImpl.java",
+    "java/src/com/android/webview/Cinaseek/PrefetchOperationCallback.java",
+    "java/src/com/android/webview/Cinaseek/PrefetchOperationResult.java",
+    "java/src/com/android/webview/Cinaseek/PrefetchOperationStatusCode.java",
+    "java/src/com/android/webview/Cinaseek/PrefetchParams.java",
+    "java/src/com/android/webview/Cinaseek/Profile.java",
+    "java/src/com/android/webview/Cinaseek/ProfileStore.java",
+    "java/src/com/android/webview/Cinaseek/ProfileWebViewPrefetchCallback.java",
+    "java/src/com/android/webview/Cinaseek/SafeBrowsingResponseAdapter.java",
+    "java/src/com/android/webview/Cinaseek/ServiceWorkerClientAdapter.java",
+    "java/src/com/android/webview/Cinaseek/ServiceWorkerControllerAdapter.java",
+    "java/src/com/android/webview/Cinaseek/ServiceWorkerSettingsAdapter.java",
+    "java/src/com/android/webview/Cinaseek/SharedStatics.java",
+    "java/src/com/android/webview/Cinaseek/SharedTracingControllerAdapter.java",
+    "java/src/com/android/webview/Cinaseek/SharedWebViewCinaseek.java",
+    "java/src/com/android/webview/Cinaseek/SharedWebViewContentsClientAdapter.java",
+    "java/src/com/android/webview/Cinaseek/SharedWebViewRendererClientAdapter.java",
+    "java/src/com/android/webview/Cinaseek/SpeculativeLoadingConfig.java",
+    "java/src/com/android/webview/Cinaseek/TracingControllerAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebBackForwardListCinaseek.java",
+    "java/src/com/android/webview/Cinaseek/WebHistoryItemCinaseek.java",
+    "java/src/com/android/webview/Cinaseek/WebIconDatabaseAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebMessagePortAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebResourceErrorAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebResourceRequestAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebStorageAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseek.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseekAwInit.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseekFactoryProvider.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseekFactoryProviderForQ.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseekFactoryProviderForR.java",
+    "java/src/com/android/webview/Cinaseek/WebViewCinaseekFactoryProviderForS.java",
+    "java/src/com/android/webview/Cinaseek/WebViewContentsClientAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebViewDatabaseAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebViewLibraryPreloader.java",
+    "java/src/com/android/webview/Cinaseek/WebViewRenderProcessAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebViewRenderProcessClientAdapter.java",
+    "java/src/com/android/webview/Cinaseek/WebkitToSharedGlueConverter.java",
   ]
 
   # If we are using a public version of the Android SDK, include the "empty"
   # upstream version of the entry point class. When using an unreleased Android
   # SDK snapshot, this class is instead provided by the downstream glue code.
   if (public_android_sdk) {
-    sources += [ "java/src/com/android/webview/chromium/WebViewChromiumFactoryProviderForT.java" ]
+    sources += [ "java/src/com/android/webview/Cinaseek/WebViewCinaseekFactoryProviderForT.java" ]
   }
 }

@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8.8)
-project(ChromeExtras)
+project(CinaseekExtras)
 enable_testing()
 
 list(APPEND CMAKE_MODULE_PATH "${LLVM_BUILD_DIR}/share/llvm/cmake")
 
-# These tools are built using LLVM's build system, not Chromium's.
+# These tools are built using LLVM's build system, not Cinaseek's.
 # The build script generates a shim CMakeLists.txt in the LLVM source tree,
 # which simply forwards to this file.
 

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,8 +18,8 @@ static_library("features") {
 generate_jni("jni_headers") {
   visibility = [ ":*" ]
   sources = [
-    "java/src/org/chromium/components/credential_management/PasswordCredentialResponse.java",
-    "java/src/org/chromium/components/credential_management/ThirdPartyCredentialManagerBridge.java",
+    "java/src/org/Cinaseek/components/credential_management/PasswordCredentialResponse.java",
+    "java/src/org/Cinaseek/components/credential_management/ThirdPartyCredentialManagerBridge.java",
   ]
 }
 
@@ -35,14 +35,14 @@ android_library("java") {
 
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/credential_management/CredentialManagerAndroidGetResult.java",
-    "java/src/org/chromium/components/credential_management/CredentialManagerStoreResult.java",
-    "java/src/org/chromium/components/credential_management/PasswordCredentialResponse.java",
-    "java/src/org/chromium/components/credential_management/ThirdPartyCredentialManagerBridge.java",
-    "java/src/org/chromium/components/credential_management/ThirdPartyCredentialManagerMetricsRecorder.java",
+    "java/src/org/Cinaseek/components/credential_management/CredentialManagerAndroidGetResult.java",
+    "java/src/org/Cinaseek/components/credential_management/CredentialManagerStoreResult.java",
+    "java/src/org/Cinaseek/components/credential_management/PasswordCredentialResponse.java",
+    "java/src/org/Cinaseek/components/credential_management/ThirdPartyCredentialManagerBridge.java",
+    "java/src/org/Cinaseek/components/credential_management/ThirdPartyCredentialManagerMetricsRecorder.java",
   ]
 
-  resources_package = "org.chromium.components.credential_management"
+  resources_package = "org.Cinaseek.components.credential_management"
 }
 
 static_library("browser_sources") {
@@ -91,8 +91,8 @@ source_set("unit_tests") {
 
 robolectric_library("junit_tests") {
   sources = [
-    "java/src/org/chromium/components/credential_management/ThirdPartyCredentialManagerBridgeTest.java",
-    "java/src/org/chromium/components/credential_management/ThirdPartyCredentialManagerMetricsRecorderTest.java",
+    "java/src/org/Cinaseek/components/credential_management/ThirdPartyCredentialManagerBridgeTest.java",
+    "java/src/org/Cinaseek/components/credential_management/ThirdPartyCredentialManagerMetricsRecorderTest.java",
   ]
 
   deps = [

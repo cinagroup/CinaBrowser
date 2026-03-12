@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ namespace forwarder2 {
 
 // Note that the two following functions are not signal-safe.
 
-// Chromium logging-aware implementation of libc's perror().
+// Cinaseek logging-aware implementation of libc's perror().
 void PError(const char* msg);
 
 // Closes the provided file descriptor and logs an error if it failed.

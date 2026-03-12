@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -275,7 +275,7 @@ class DecodeEncodePerfTest : public ::testing::TestWithParam<DecodePerfParam> {
 //  performance, but rather to hit as many code paths as possible.
 //  The decoder and encoder run on separate threads, but the frames are
 //  synchronized instead of using a buffer queue.
-//  TODO(crbug.com/chromium/325103518): introduce noise to the decoded frames.
+//  TODO(crbug.com/Cinaseek/325103518): introduce noise to the decoded frames.
 
 TEST_P(DecodeEncodePerfTest, PerfTest) {
   VP9M2MEncoder encoder(GetParamThreadCount());

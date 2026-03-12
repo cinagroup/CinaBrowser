@@ -643,7 +643,7 @@ class CORE_EXPORT LayoutBox : public LayoutBoxModelObject {
     wtf_size_t IndexOf(const PhysicalBoxFragment& fragment) const;
     bool Contains(const PhysicalBoxFragment& fragment) const;
 
-    // Note: We can't use std::views.  It's banned in Chromium.
+    // Note: We can't use std::views.  It's banned in Cinaseek.
     class CORE_EXPORT Iterator {
       STACK_ALLOCATED();
 

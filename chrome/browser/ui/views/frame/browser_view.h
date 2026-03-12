@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@
 #endif
 
 // NOTE: For more information about the objects and files in this directory,
-// view: http://dev.chromium.org/developers/design-documents/browser-window
+// view: http://dev.Cinaseek.org/developers/design-documents/browser-window
 
 class AccessibilityFocusHighlight;
 class BookmarkBarController;

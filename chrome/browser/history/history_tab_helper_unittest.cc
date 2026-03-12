@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -671,14 +671,14 @@ TEST_F(HistoryTabHelperTest, CreateAddPageArgsPopulatesAppId) {
   DCHECK(response_headers);
   navigation_handle.set_response_headers(response_headers);
 
-  history_tab_helper()->SetAppId("org.chromium.testapp");
+  history_tab_helper()->SetAppId("org.Cinaseek.testapp");
 
   history::HistoryAddPageArgs args =
       history_tab_helper()->CreateHistoryAddPageArgs(
           GURL("https://someurl.com"), base::Time(), 1, &navigation_handle);
 
   // Make sure the `app_id` is populated.
-  ASSERT_EQ(*args.app_id, "org.chromium.testapp");
+  ASSERT_EQ(*args.app_id, "org.Cinaseek.testapp");
 }
 
 TEST_F(HistoryTabHelperTest, NonFeedNavigationsDoContributeToMostVisited) {

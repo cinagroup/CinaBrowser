@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,11 +11,11 @@ android_library("java") {
   ]
 
   sources = [
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorFactory.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorImpl.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureContent.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureFactory.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureContent.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureImpl.java",
   ]
 
   deps = [
@@ -38,7 +38,7 @@ android_library("java") {
     "//ui/android:ui_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.side_panel_container"
+  resources_package = "org.Cinaseek.chrome.browser.ui.side_panel_container"
 }
 
 android_resources("java_resources") {
@@ -48,8 +48,8 @@ android_resources("java_resources") {
 android_library("javatests") {
   testonly = true
   sources = [
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorIntegrationTest.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureIntegrationTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorIntegrationTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureIntegrationTest.java",
   ]
   deps = [
     ":java",
@@ -65,11 +65,11 @@ android_library("javatests") {
     "//third_party/junit",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.side_panel_container"
+  resources_package = "org.Cinaseek.chrome.browser.ui.side_panel_container"
 }
 
 robolectric_library("junit") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorImplUnitTest.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorImplUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_junit_test_support",

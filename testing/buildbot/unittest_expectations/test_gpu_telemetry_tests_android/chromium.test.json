@@ -7,7 +7,7 @@
         "args": [
           "foo",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",

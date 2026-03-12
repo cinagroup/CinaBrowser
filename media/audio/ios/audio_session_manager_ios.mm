@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 namespace media {
 
 // The constant below is taken from:
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/sdk/objc/components/audio/RTCAudioSessionConfiguration.m
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/sdk/objc/components/audio/RTCAudioSessionConfiguration.m
 const int kRTCAudioSessionPreferredNumberOfChannels = 1;
 
 // static

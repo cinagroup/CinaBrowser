@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace blink {
 // PhysicalOffset is the position of a rect (typically a fragment) relative to
 // its parent rect in the physical coordinate system.
 // For more information about physical and logical coordinate systems, see:
-// https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
 template <typename ValueType>
 struct PLATFORM_EXPORT PhysicalFixedOffset {
   constexpr PhysicalFixedOffset() = default;

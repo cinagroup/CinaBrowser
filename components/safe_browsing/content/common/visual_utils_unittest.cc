@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/skia/include/core/SkColorSpace.h"
-#include "third_party/skia/include/private/chromium/SkPMColor.h"
+#include "third_party/skia/include/private/Cinaseek/SkPMColor.h"
 #include "ui/gfx/geometry/rect.h"
 
 namespace safe_browsing::visual_utils {

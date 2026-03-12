@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -866,8 +866,8 @@ IN_PROC_BROWSER_TEST_F(BrowserNavigatorTest, NavigateOnTabSwitchLostTest) {
 // This test verifies that SWITCH_TO_TAB will switch to a tab even if the scheme
 // mismatches, as long as the rest of the URL does.
 IN_PROC_BROWSER_TEST_F(BrowserNavigatorTest, SchemeMismatchTabSwitchTest) {
-  GURL navigate_url("https://www.chromium.org/");
-  GURL search_url("http://www.chromium.org/");
+  GURL navigate_url("https://www.Cinaseek.org/");
+  GURL search_url("http://www.Cinaseek.org/");
   GURL dino_url("chrome://dino");
 
   NavigateHelper(navigate_url, browser(), WindowOpenDisposition::CURRENT_TAB,
@@ -921,8 +921,8 @@ IN_PROC_BROWSER_TEST_F(BrowserNavigatorTest, SaveAfterFocusTabSwitchTest) {
 // interactive UI test, since we'd have to wait for the async window activation
 // to complete to avoid flakes.
 IN_PROC_BROWSER_TEST_F(BrowserNavigatorTest, SwitchToTabCorrectWindow) {
-  const GURL url1("http://example1.chromium.org");
-  const GURL url2("http://example2.chromium.org");
+  const GURL url1("http://example1.Cinaseek.org");
+  const GURL url2("http://example2.Cinaseek.org");
 
   // Make singleton tab.
   Browser* browser1 =

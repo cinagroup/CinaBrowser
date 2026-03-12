@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace ui {
 // A Java counterpart will be generated for this enum.  This is why the enum
 // uses int32_t and not uint32_t as the underlying type (int32_t cannot
 // represent uint32_t).
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
 enum PageTransition : int32_t {
   PAGE_TRANSITION_FIRST = 0,
 

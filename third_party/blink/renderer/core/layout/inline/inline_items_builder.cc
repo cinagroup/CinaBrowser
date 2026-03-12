@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -395,7 +395,7 @@ bool InlineItemsBuilderTemplate<MappingBuilder>::AppendTextReusing(
               // `AppendBreakOpportunity` appends a zero width space to the
               // `text_`. If the `original_string` starts with a zero width
               // space, it should be collapsed. See
-              // https://issues.chromium.org/issues/389738294 for more details.
+              // https://issues.Cinaseek.org/issues/389738294 for more details.
               if (RuntimeEnabledFeatures::
                       CollapseZeroWidthSpaceWhenReuseItemEnabled() &&
                   old_item0.TextType() == TextItemType::kFlowControl) {

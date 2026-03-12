@@ -676,7 +676,7 @@
     "codesearch": [
       "error"
     ], 
-    "codesearch_gen_chromium_android_bot": [
+    "codesearch_gen_Cinaseek_android_bot": [
       "goma", 
       "clang", 
       "shared", 
@@ -685,7 +685,7 @@
       "arm", 
       "android_without_codecs"
     ], 
-    "codesearch_gen_chromium_chromiumos_bot": [
+    "codesearch_gen_Cinaseek_Cinaseekos_bot": [
       "goma", 
       "clang", 
       "shared", 
@@ -694,7 +694,7 @@
       "x64", 
       "chromeos"
     ], 
-    "codesearch_gen_chromium_linux_bot": [
+    "codesearch_gen_Cinaseek_linux_bot": [
       "goma", 
       "clang", 
       "shared", 
@@ -872,7 +872,7 @@
     "ios": [
       "error"
     ], 
-    "linux_chromium_analysis": [
+    "linux_Cinaseek_analysis": [
       "analysis"
     ], 
     "mac_views_browser_release_bot": [
@@ -1161,13 +1161,13 @@
       "x86", 
       "win_analyze"
     ], 
-    "windows_chromium_analysis": [
+    "windows_Cinaseek_analysis": [
       "analysis"
     ]
   }, 
   "luci_tryservers": {
-    "chromium.try": [
-      "LUCI linux_chromium_rel_ng"
+    "Cinaseek.try": [
+      "LUCI linux_Cinaseek_rel_ng"
     ]
   }, 
   "masters": {
@@ -1176,14 +1176,14 @@
       "Linux ChromeOS Buildspec Tests": "chromeos_with_codecs_release_bot", 
       "chrome-tot-chromeos-amd64-generic": "cros_chrome_sdk"
     }, 
-    "chromium": {
+    "Cinaseek": {
       "Android": "android_without_codecs_release_bot_minimal_symbols", 
       "Linux x64": "release_bot", 
       "Mac": "release_bot_mac_strip", 
       "Win": "release_bot_x86_minimal_symbols", 
       "Win x64": "release_bot_minimal_symbols"
     }, 
-    "chromium.android": {
+    "Cinaseek.android": {
       "Android Cronet ARM64 Builder": "android_cronet_release_bot_minimal_symbols_arm64", 
       "Android Cronet ARM64 Builder (dbg)": "android_cronet_debug_static_bot_arm64", 
       "Android Cronet ARMv6 Builder": "android_cronet_release_bot_minimal_symbols_armv6", 
@@ -1205,7 +1205,7 @@
       "Android x64 Builder (dbg)": "android_debug_static_bot_x64", 
       "Android x86 Builder (dbg)": "android_debug_static_bot_x86"
     }, 
-    "chromium.android.fyi": {
+    "Cinaseek.android.fyi": {
       "Memory Infra Tester": "android_release_thumb_bot", 
       "NDK Next MIPS Builder": "android_ndk_next_release_bot_minimal_symbols_mipsel", 
       "NDK Next arm Builder": "android_ndk_next_release_bot_minimal_symbols", 
@@ -1216,27 +1216,27 @@
       "x86 Cloud Tester": "android_debug_static_bot_x86", 
       "x86 Emulator Tester": "android_debug_static_bot_x86"
     }, 
-    "chromium.chrome": {
+    "Cinaseek.chrome": {
       "Google Chrome ChromeOS": "official_goma_chromeos", 
       "Google Chrome Linux x64": "official_goma", 
       "Google Chrome Mac": "official_goma", 
       "Google Chrome Win": "official_goma_x86"
     }, 
-    "chromium.chromedriver": {
+    "Cinaseek.chromedriver": {
       "Linux": "release_bot", 
       "Linux32": "release_bot_x86", 
       "Mac 10.6": "release_bot", 
       "Win7": "release_bot_x86_minimal_symbols"
     }, 
-    "chromium.chromiumos": {
-      "ChromiumOS amd64-generic Compile": "cros_chrome_sdk", 
-      "ChromiumOS daisy Compile": "cros_chrome_sdk", 
-      "Linux ChromiumOS Builder": "chromeos_with_codecs_release_bot", 
-      "Linux ChromiumOS Builder (dbg)": "chromeos_with_codecs_debug_bot", 
-      "Linux ChromiumOS Full": "chromeos_with_codecs_release_bot", 
-      "Linux ChromiumOS Ozone Builder": "chromeos_with_codecs_release_bot"
+    "Cinaseek.Cinaseekos": {
+      "CinaseekOS amd64-generic Compile": "cros_chrome_sdk", 
+      "CinaseekOS daisy Compile": "cros_chrome_sdk", 
+      "Linux CinaseekOS Builder": "chromeos_with_codecs_release_bot", 
+      "Linux CinaseekOS Builder (dbg)": "chromeos_with_codecs_debug_bot", 
+      "Linux CinaseekOS Full": "chromeos_with_codecs_release_bot", 
+      "Linux CinaseekOS Ozone Builder": "chromeos_with_codecs_release_bot"
     }, 
-    "chromium.fyi": {
+    "Cinaseek.fyi": {
       "Afl Upload Linux ASan": "release_afl_asan", 
       "Android Builder (dbg)": "android_debug_static_bot_vrdata", 
       "Android Builder Goma Canary (dbg)": "android_debug_bot", 
@@ -1245,31 +1245,31 @@
       "Browser Side Navigation Linux": "release_bot", 
       "CFI Linux CF": "cfi_full_cfi_diag_recover_release_static", 
       "CFI Linux ToT": "clang_tot_cfi_full_cfi_diag_thin_lto_release_static_dcheck_always_on", 
-      "ChromeOS amd64 Chromium Goma Canary": "cros_chrome_sdk", 
-      "Chromium Linux Goma Canary": "release_bot", 
-      "Chromium Linux Goma Canary (clobber)": "release_bot", 
-      "Chromium Linux Goma Canary LocalOutputCache": "release_bot", 
-      "Chromium Linux Precise Goma LinkTest": "release_bot", 
-      "Chromium Linux32 Goma Canary (clobber)": "release_bot_x86", 
-      "Chromium Mac 10.10 MacViews": "mac_views_browser_release_bot", 
-      "Chromium Mac 10.11": "release_bot", 
-      "Chromium Mac 10.11 Force Mac Toolchain": "release_bot_mac_new_sdk", 
-      "Chromium Mac 10.13": "release_bot", 
-      "Chromium Mac 10.9 Goma Canary": "release_bot", 
-      "Chromium Mac 10.9 Goma Canary (clobber)": "release_bot", 
-      "Chromium Mac 10.9 Goma Canary (dbg)": "debug_bot", 
-      "Chromium Mac 10.9 Goma Canary (dbg)(clobber)": "debug_bot", 
-      "Chromium Mac Goma Canary LocalOutputCache": "release_bot", 
-      "Chromium Win 10 GCE Tests": "release_bot_minimal_symbols", 
-      "Chromium Win PGO Builder": {
+      "ChromeOS amd64 Cinaseek Goma Canary": "cros_chrome_sdk", 
+      "Cinaseek Linux Goma Canary": "release_bot", 
+      "Cinaseek Linux Goma Canary (clobber)": "release_bot", 
+      "Cinaseek Linux Goma Canary LocalOutputCache": "release_bot", 
+      "Cinaseek Linux Precise Goma LinkTest": "release_bot", 
+      "Cinaseek Linux32 Goma Canary (clobber)": "release_bot_x86", 
+      "Cinaseek Mac 10.10 MacViews": "mac_views_browser_release_bot", 
+      "Cinaseek Mac 10.11": "release_bot", 
+      "Cinaseek Mac 10.11 Force Mac Toolchain": "release_bot_mac_new_sdk", 
+      "Cinaseek Mac 10.13": "release_bot", 
+      "Cinaseek Mac 10.9 Goma Canary": "release_bot", 
+      "Cinaseek Mac 10.9 Goma Canary (clobber)": "release_bot", 
+      "Cinaseek Mac 10.9 Goma Canary (dbg)": "debug_bot", 
+      "Cinaseek Mac 10.9 Goma Canary (dbg)(clobber)": "debug_bot", 
+      "Cinaseek Mac Goma Canary LocalOutputCache": "release_bot", 
+      "Cinaseek Win 10 GCE Tests": "release_bot_minimal_symbols", 
+      "Cinaseek Win PGO Builder": {
         "1": "official_optimize_chrome_pgo_phase_1_x86", 
         "2": "official_optimize_chrome_pgo_phase_2_x86"
       }, 
-      "Chromium Win x64 PGO Builder": {
+      "Cinaseek Win x64 PGO Builder": {
         "1": "official_optimize_chrome_pgo_phase_1", 
         "2": "official_optimize_chrome_pgo_phase_2"
       }, 
-      "Chromium Windows Analyze": "windows_analyze", 
+      "Cinaseek Windows Analyze": "windows_analyze", 
       "ClangToTAndroid": "android_clang_tot_release", 
       "ClangToTAndroid (dbg)": "android_clang_tot_dbg", 
       "ClangToTAndroid x64": "android_clang_tot_x64", 
@@ -1328,7 +1328,7 @@
       "Linux ARM (dbg)": "debug_bot_arm", 
       "Linux ARM64": "release_bot_arm64", 
       "Linux ARM64 (dbg)": "debug_bot_arm64", 
-      "Linux Clang Analyzer": "linux_chromium_analysis", 
+      "Linux Clang Analyzer": "linux_Cinaseek_analysis", 
       "Linux deterministic": "release_bot", 
       "Linux deterministic (dbg)": "debug_bot", 
       "Linux remote_run Builder": "release_bot", 
@@ -1339,7 +1339,7 @@
       "MD Top Chrome Win material": "debug_bot_minimal_symbols", 
       "Mac deterministic": "release_bot_mac_strip", 
       "Mac deterministic (dbg)": "debug_bot", 
-      "Mojo ChromiumOS": "chromeos_with_codecs_release_trybot", 
+      "Mojo CinaseekOS": "chromeos_with_codecs_release_trybot", 
       "Mojo Linux": "release_trybot", 
       "Mojo Windows": "release_bot_x86_minimal_symbols", 
       "Out of Process Profiling Android": "release_bot_out_of_process_profiling", 
@@ -1356,19 +1356,19 @@
       "WebKit Mac - RandomOrder": "release_trybot", 
       "WebKit Win - RandomOrder": "release_bot_x86_minimal_symbols", 
       "Win 10 Fast Ring": "release_trybot", 
-      "Windows Clang Analyzer": "windows_chromium_analysis", 
+      "Windows Clang Analyzer": "windows_Cinaseek_analysis", 
       "Windows Clang deterministic": "clang_release_bot_minimal_symbols_x86", 
       "Windows deterministic": "release_bot_x86_minimal_symbols", 
       "ios-simulator": "ios"
     }, 
-    "chromium.goma": {
-      "Chromium Linux Goma GCE Staging": "release_bot", 
-      "Chromium Linux Goma Staging": "release_bot", 
-      "Chromium Mac Goma GCE Staging": "release_bot", 
-      "Chromium Mac Goma Staging": "release_bot", 
+    "Cinaseek.goma": {
+      "Cinaseek Linux Goma GCE Staging": "release_bot", 
+      "Cinaseek Linux Goma Staging": "release_bot", 
+      "Cinaseek Mac Goma GCE Staging": "release_bot", 
+      "Cinaseek Mac Goma Staging": "release_bot", 
       "CrWinGomaStaging": "release_bot_x86_minimal_symbols"
     }, 
-    "chromium.gpu": {
+    "Cinaseek.gpu": {
       "GPU Linux Builder": "gpu_tests_release_trybot", 
       "GPU Linux Builder (dbg)": "gpu_tests_debug_trybot", 
       "GPU Mac Builder": "gpu_tests_release_trybot", 
@@ -1376,7 +1376,7 @@
       "GPU Win Builder": "gpu_tests_release_trybot_x86_minimal_symbols", 
       "GPU Win Builder (dbg)": "gpu_tests_debug_trybot_x86_minimal_symbols"
     }, 
-    "chromium.gpu.fyi": {
+    "Cinaseek.gpu.fyi": {
       "Android Release (NVIDIA Shield TV)": "android_release_trybot_arm64", 
       "Android Release (Nexus 5)": "android_release_trybot", 
       "Android Release (Nexus 5X)": "gpu_tests_deqp_android_release_trybot_arm64", 
@@ -1392,24 +1392,24 @@
       "GPU Win Clang Builder (dbg)": "gpu_fyi_tests_win_clang_debug_bot", 
       "GPU Win x64 Builder": "gpu_tests_deqp_gles_release_trybot", 
       "GPU Win x64 Builder (dbg)": "gpu_tests_deqp_gles_debug_trybot", 
-      "Linux ChromiumOS Builder": "gpu_fyi_tests_chromeos_cros_release_trybot", 
-      "Linux ChromiumOS Ozone Builder": "gpu_fyi_tests_ozone_linux_system_gbm_libdrm_release_trybot", 
+      "Linux CinaseekOS Builder": "gpu_fyi_tests_chromeos_cros_release_trybot", 
+      "Linux CinaseekOS Ozone Builder": "gpu_fyi_tests_ozone_linux_system_gbm_libdrm_release_trybot", 
       "Linux GPU TSAN Release": "gpu_fyi_tests_release_trybot_tsan", 
       "Mac GPU ASAN Release": "gpu_fyi_tests_release_trybot_asan"
     }, 
-    "chromium.infra.codesearch": {
-      "codesearch-gen-chromium-android": {
-        "android": "codesearch_gen_chromium_android_bot"
+    "Cinaseek.infra.codesearch": {
+      "codesearch-gen-Cinaseek-android": {
+        "android": "codesearch_gen_Cinaseek_android_bot"
       }, 
-      "codesearch-gen-chromium-chromiumos": {
-        "chromeos": "codesearch_gen_chromium_chromiumos_bot", 
-        "linux": "codesearch_gen_chromium_linux_bot"
+      "codesearch-gen-Cinaseek-Cinaseekos": {
+        "chromeos": "codesearch_gen_Cinaseek_Cinaseekos_bot", 
+        "linux": "codesearch_gen_Cinaseek_linux_bot"
       }, 
-      "codesearch-gen-chromium-linux": {
-        "linux": "codesearch_gen_chromium_linux_bot"
+      "codesearch-gen-Cinaseek-linux": {
+        "linux": "codesearch_gen_Cinaseek_linux_bot"
       }
     }, 
-    "chromium.linux": {
+    "Cinaseek.linux": {
       "Android Arm64 Builder (dbg)": "android_debug_static_bot_arm64", 
       "Android Builder": "android_release_bot_minimal_symbols", 
       "Android Builder (dbg)": "android_debug_static_bot", 
@@ -1424,14 +1424,14 @@
       "Linux Builder (dbg)": "debug_bot", 
       "Linux Builder (dbg)(32)": "debug_bot_x86"
     }, 
-    "chromium.lkgr": {
+    "Cinaseek.lkgr": {
       "ASAN Debug": "asan_lsan_edge_debug_bot", 
       "ASAN Release": "asan_lsan_edge_fuzzer_v8_heap_release_bot", 
       "ASAN Release Media": "asan_lsan_edge_fuzzer_v8_heap_chromeos_codecs_release_bot", 
       "ASan Debug (32-bit x86 with V8-ARM)": "asan_edge_v8_heap_debug_bot_hybrid", 
       "ASan Release (32-bit x86 with V8-ARM)": "asan_edge_fuzzer_v8_heap_release_bot_hybrid", 
       "ASan Release Media (32-bit x86 with V8-ARM)": "asan_edge_fuzzer_v8_heap_chromeos_codecs_release_bot_hybrid", 
-      "ChromiumOS ASAN Release": "chromeos_asan_lsan_edge_fuzzer_v8_heap_release_bot", 
+      "CinaseekOS ASAN Release": "chromeos_asan_lsan_edge_fuzzer_v8_heap_release_bot", 
       "MSAN Release (chained origins)": "msan_edge_release_bot", 
       "MSAN Release (no origins)": "msan_no_origins_edge_release_bot", 
       "Mac ASAN Debug": "asan_disable_nacl_edge_fuzzer_v8_heap_debug_symbols_static_bot", 
@@ -1446,7 +1446,7 @@
       "Win ASan Release Media": "asan_fuzzer_v8_heap_chrome_with_codecs_release_bot_x86", 
       "Win SyzyASAN LKGR": "syzyasan_no_pch_release_x86"
     }, 
-    "chromium.mac": {
+    "Cinaseek.mac": {
       "Mac Builder": "gpu_tests_release_bot", 
       "Mac Builder (dbg)": "debug_bot", 
       "ios-device": "ios", 
@@ -1456,16 +1456,16 @@
       "ios-simulator-eg": "ios", 
       "ios-simulator-xcode-clang": "ios"
     }, 
-    "chromium.memory": {
+    "Cinaseek.memory": {
       "Linux ASan LSan Builder": "asan_lsan_release_trybot", 
       "Linux CFI": "cfi_full_cfi_diag_thin_lto_release_static_dcheck_always_on_goma", 
-      "Linux Chromium OS ASan LSan Builder": "asan_lsan_chromeos_release_trybot", 
-      "Linux ChromiumOS MSan Builder": "chromeos_msan_release_bot", 
+      "Linux Cinaseek OS ASan LSan Builder": "asan_lsan_chromeos_release_trybot", 
+      "Linux CinaseekOS MSan Builder": "chromeos_msan_release_bot", 
       "Linux MSan Builder": "msan_release_bot", 
       "Linux TSan Builder": "tsan_disable_nacl_release_bot", 
       "Mac ASan 64 Builder": "asan_full_symbols_disable_nacl_release_bot_dcheck_always_on"
     }, 
-    "chromium.perf": {
+    "Cinaseek.perf": {
       "Android Builder": "official_goma_minimal_symbols_android", 
       "Android Compile": "official_goma_minimal_symbols_android", 
       "Android arm64 Builder": "official_goma_minimal_symbols_android_arm64", 
@@ -1475,7 +1475,7 @@
       "Win Builder": "official_goma_x86", 
       "Win x64 Builder": "official_goma"
     }, 
-    "chromium.perf.fyi": {
+    "Cinaseek.perf.fyi": {
       "Android Builder FYI": "official_goma_minimal_symbols_android", 
       "Android arm64 Builder FYI": "official_goma_minimal_symbols_android_arm64", 
       "Battor Agent Linux": "official_goma_minimal_symbols_clang", 
@@ -1484,14 +1484,14 @@
       "Win Builder FYI": "official_goma", 
       "Win Clang Builder": "official_goma_minimal_symbols_clang"
     }, 
-    "chromium.swarm": {
+    "Cinaseek.swarm": {
       "Android N5 Swarm": "android_release_bot_minimal_symbols", 
       "Android N5X Swarm": "android_release_bot_minimal_symbols_arm64", 
       "Linux Swarm": "release_bot", 
       "Mac Swarm": "release_bot_mac_strip", 
       "Windows Swarm": "release_bot_x86_minimal_symbols"
     }, 
-    "chromium.webkit": {
+    "Cinaseek.webkit": {
       "Android Builder": "android_release_bot_minimal_symbols", 
       "WebKit Linux Trusty": "release_bot", 
       "WebKit Linux Trusty (dbg)": "debug_bot", 
@@ -1508,12 +1508,12 @@
       "WebKit Win x64 Builder": "release_bot_minimal_symbols", 
       "WebKit Win x64 Builder (dbg)": "debug_bot_minimal_symbols"
     }, 
-    "chromium.webrtc": {
+    "Cinaseek.webrtc": {
       "Linux Builder": "release_bot_chrome_with_codecs", 
       "Mac Builder": "release_bot_chrome_with_codecs", 
       "Win Builder": "release_bot_x86_minimal_symbols"
     }, 
-    "chromium.webrtc.fyi": {
+    "Cinaseek.webrtc.fyi": {
       "Android Builder": "android_release_bot_minimal_symbols", 
       "Android Builder (dbg)": "android_debug_static_bot", 
       "Android Builder ARM64 (dbg)": "android_debug_static_bot_arm64", 
@@ -1524,7 +1524,7 @@
       "Win Builder": "release_bot_x86_minimal_symbols", 
       "Win Builder (dbg)": "debug_bot_x86_minimal_symbols"
     }, 
-    "chromium.win": {
+    "Cinaseek.win": {
       "Win Builder": "release_bot_x86_minimal_symbols", 
       "Win Builder (dbg)": "debug_bot_x86_minimal_symbols", 
       "Win x64 Builder": "release_bot_minimal_symbols", 
@@ -1540,7 +1540,7 @@
       "windows-sdk-multi": "release_bot_x86_minimal_symbols", 
       "windows-sdk-multirel": "release_bot_x86_minimal_symbols"
     }, 
-    "client.v8.chromium": {
+    "client.v8.Cinaseek": {
       "Linux - Future": "v8_future_release_bot", 
       "Linux - Future (dbg)": "v8_future_debug_bot", 
       "Linux V8 API Stability": "release_bot"
@@ -1588,7 +1588,7 @@
       "win7_blink_dbg": "debug_trybot_x86_minimal_symbols", 
       "win7_blink_rel": "release_bot_x86_minimal_symbols"
     }, 
-    "tryserver.chromium.android": {
+    "tryserver.Cinaseek.android": {
       "android_archive_rel_ng": "android_release_trybot", 
       "android_arm64_dbg_recipe": "android_debug_trybot_arm64", 
       "android_blink_rel": "android_release_trybot", 
@@ -1610,7 +1610,7 @@
       "linux_android_dbg_ng": "android_debug_trybot", 
       "linux_android_rel_ng": "android_release_trybot"
     }, 
-    "tryserver.chromium.angle": {
+    "tryserver.Cinaseek.angle": {
       "android_angle_rel_ng": "gpu_tests_deqp_android_release_trybot_arm64", 
       "linux_angle_chromeos_rel_ng": "gpu_fyi_tests_chromeos_cros_release_trybot", 
       "linux_angle_dbg_ng": "gpu_fyi_tests_debug_trybot", 
@@ -1622,14 +1622,14 @@
       "win_angle_x64_dbg_ng": "gpu_tests_deqp_gles_debug_trybot", 
       "win_angle_x64_rel_ng": "gpu_tests_deqp_gles_release_trybot"
     }, 
-    "tryserver.chromium.linux": {
-      "Chromium Linux Codesearch Builder": "codesearch", 
-      "ChromiumOS Codesearch Builder": "codesearch", 
+    "tryserver.Cinaseek.linux": {
+      "Cinaseek Linux Codesearch Builder": "codesearch", 
+      "CinaseekOS Codesearch Builder": "codesearch", 
       "cast_shell_audio_linux": "cast_audio_release_trybot", 
       "cast_shell_linux": "cast_release_trybot", 
-      "chromeos_amd64-generic_chromium_compile_only_ng": "cros_chrome_sdk", 
-      "chromeos_daisy_chromium_compile_only_ng": "cros_chrome_sdk", 
-      "chromium_presubmit": "presubmit", 
+      "chromeos_amd64-generic_Cinaseek_compile_only_ng": "cros_chrome_sdk", 
+      "chromeos_daisy_Cinaseek_compile_only_ng": "cros_chrome_sdk", 
+      "Cinaseek_presubmit": "presubmit", 
       "closure_compilation": "closure_compilation", 
       "fuchsia": "release_trybot_fuchsia", 
       "fuchsia_compile": "release_trybot_fuchsia", 
@@ -1638,32 +1638,32 @@
       "linux_arm64_rel": "release_trybot_arm64", 
       "linux_arm_dbg": "debug_trybot_arm", 
       "linux_arm_rel": "release_trybot_arm", 
-      "linux_chromium_archive_rel_ng": "release_bot", 
-      "linux_chromium_asan_rel_ng": "asan_lsan_release_trybot", 
-      "linux_chromium_browser_side_navigation_rel": "release_trybot", 
-      "linux_chromium_cfi_rel_ng": "cfi_full_cfi_diag_thin_lto_release_static_dcheck_always_on_goma", 
-      "linux_chromium_chromeos_asan_rel_ng": "asan_lsan_chromeos_release_trybot", 
-      "linux_chromium_chromeos_compile_dbg_ng": "chromeos_with_codecs_debug_trybot", 
-      "linux_chromium_chromeos_compile_rel_ng": "chromeos_with_codecs_release_trybot", 
-      "linux_chromium_chromeos_dbg_ng": "chromeos_with_codecs_debug_trybot", 
-      "linux_chromium_chromeos_msan_rel_ng": "chromeos_msan_release_bot", 
-      "linux_chromium_chromeos_ozone_rel_ng": "chromeos_with_codecs_release_trybot", 
-      "linux_chromium_chromeos_rel_ng": "chromeos_with_codecs_release_trybot", 
-      "linux_chromium_clobber_deterministic": "release_trybot", 
-      "linux_chromium_clobber_rel_ng": "release_trybot", 
-      "linux_chromium_compile_dbg_32_ng": "debug_trybot_x86", 
-      "linux_chromium_compile_dbg_ng": "debug_trybot", 
-      "linux_chromium_compile_rel_ng": "release_trybot", 
-      "linux_chromium_dbg_32_ng": "debug_trybot_x86", 
-      "linux_chromium_dbg_ng": "debug_trybot", 
-      "linux_chromium_gn_upload": "gn_linux_upload", 
-      "linux_chromium_headless_rel": "headless_linux_release_trybot", 
-      "linux_chromium_msan_rel_ng": "msan_release_bot", 
-      "linux_chromium_ozone_compile_only_ng": "ozone_linux_release_trybot", 
-      "linux_chromium_ozone_ng": "ozone_linux_release_trybot", 
-      "linux_chromium_rel_ng": "gpu_tests_release_trybot", 
-      "linux_chromium_tsan_rel_ng": "tsan_disable_nacl_release_trybot", 
-      "linux_chromium_ubsan_rel_ng": "ubsan_vptr_release_trybot", 
+      "linux_Cinaseek_archive_rel_ng": "release_bot", 
+      "linux_Cinaseek_asan_rel_ng": "asan_lsan_release_trybot", 
+      "linux_Cinaseek_browser_side_navigation_rel": "release_trybot", 
+      "linux_Cinaseek_cfi_rel_ng": "cfi_full_cfi_diag_thin_lto_release_static_dcheck_always_on_goma", 
+      "linux_Cinaseek_chromeos_asan_rel_ng": "asan_lsan_chromeos_release_trybot", 
+      "linux_Cinaseek_chromeos_compile_dbg_ng": "chromeos_with_codecs_debug_trybot", 
+      "linux_Cinaseek_chromeos_compile_rel_ng": "chromeos_with_codecs_release_trybot", 
+      "linux_Cinaseek_chromeos_dbg_ng": "chromeos_with_codecs_debug_trybot", 
+      "linux_Cinaseek_chromeos_msan_rel_ng": "chromeos_msan_release_bot", 
+      "linux_Cinaseek_chromeos_ozone_rel_ng": "chromeos_with_codecs_release_trybot", 
+      "linux_Cinaseek_chromeos_rel_ng": "chromeos_with_codecs_release_trybot", 
+      "linux_Cinaseek_clobber_deterministic": "release_trybot", 
+      "linux_Cinaseek_clobber_rel_ng": "release_trybot", 
+      "linux_Cinaseek_compile_dbg_32_ng": "debug_trybot_x86", 
+      "linux_Cinaseek_compile_dbg_ng": "debug_trybot", 
+      "linux_Cinaseek_compile_rel_ng": "release_trybot", 
+      "linux_Cinaseek_dbg_32_ng": "debug_trybot_x86", 
+      "linux_Cinaseek_dbg_ng": "debug_trybot", 
+      "linux_Cinaseek_gn_upload": "gn_linux_upload", 
+      "linux_Cinaseek_headless_rel": "headless_linux_release_trybot", 
+      "linux_Cinaseek_msan_rel_ng": "msan_release_bot", 
+      "linux_Cinaseek_ozone_compile_only_ng": "ozone_linux_release_trybot", 
+      "linux_Cinaseek_ozone_ng": "ozone_linux_release_trybot", 
+      "linux_Cinaseek_rel_ng": "gpu_tests_release_trybot", 
+      "linux_Cinaseek_tsan_rel_ng": "tsan_disable_nacl_release_trybot", 
+      "linux_Cinaseek_ubsan_rel_ng": "ubsan_vptr_release_trybot", 
       "linux_layout_tests_layout_ng": "release_bot", 
       "linux_layout_tests_slimming_paint_v2": "release_trybot", 
       "linux_mojo": "release_trybot", 
@@ -1674,28 +1674,28 @@
       "linux_site_isolation": "release_trybot", 
       "linux_upload_clang": "release_bot"
     }, 
-    "tryserver.chromium.mac": {
+    "tryserver.Cinaseek.mac": {
       "ios-device": "ios", 
       "ios-device-xcode-clang": "ios", 
       "ios-simulator": "ios", 
       "ios-simulator-cronet": "ios", 
       "ios-simulator-eg": "ios", 
       "ios-simulator-xcode-clang": "ios", 
-      "mac_chromium_10.10_macviews": "mac_views_browser_release_trybot", 
-      "mac_chromium_10.12_rel_ng": "gpu_tests_release_trybot", 
-      "mac_chromium_archive_rel_ng": "release_bot_mac_strip", 
-      "mac_chromium_asan_rel_ng": "asan_dcheck_disable_nacl_release_bot", 
-      "mac_chromium_compile_dbg_ng": "debug_trybot", 
-      "mac_chromium_compile_rel_ng": "gpu_tests_release_trybot", 
-      "mac_chromium_dbg_ng": "debug_trybot", 
-      "mac_chromium_gn_upload": "release_bot", 
-      "mac_chromium_rel_ng": "gpu_tests_release_trybot", 
+      "mac_Cinaseek_10.10_macviews": "mac_views_browser_release_trybot", 
+      "mac_Cinaseek_10.12_rel_ng": "gpu_tests_release_trybot", 
+      "mac_Cinaseek_archive_rel_ng": "release_bot_mac_strip", 
+      "mac_Cinaseek_asan_rel_ng": "asan_dcheck_disable_nacl_release_bot", 
+      "mac_Cinaseek_compile_dbg_ng": "debug_trybot", 
+      "mac_Cinaseek_compile_rel_ng": "gpu_tests_release_trybot", 
+      "mac_Cinaseek_dbg_ng": "debug_trybot", 
+      "mac_Cinaseek_gn_upload": "release_bot", 
+      "mac_Cinaseek_rel_ng": "gpu_tests_release_trybot", 
       "mac_nacl_sdk": "release_bot", 
       "mac_nacl_sdk_build": "release_bot", 
       "mac_optional_gpu_tests_rel": "gpu_fyi_tests_release_trybot", 
       "mac_upload_clang": "release_bot"
     }, 
-    "tryserver.chromium.perf": {
+    "tryserver.Cinaseek.perf": {
       "Mac Builder": "official_goma", 
       "android_arm64_perf_bisect_builder": "official_goma_minimal_symbols_android_arm64", 
       "android_fyi_perf_bisect": "official_goma_minimal_symbols_android", 
@@ -1732,19 +1732,19 @@
       "winx64intel_perf_bisect": "official_goma", 
       "winx64nvidia_perf_bisect": "official_goma"
     }, 
-    "tryserver.chromium.win": {
-      "win10_chromium_x64_rel_ng": "release_trybot", 
-      "win10_chromium_x64_rel_ng_exp": "release_trybot", 
+    "tryserver.Cinaseek.win": {
+      "win10_Cinaseek_x64_rel_ng": "release_trybot", 
+      "win10_Cinaseek_x64_rel_ng_exp": "release_trybot", 
       "win10_gce_x64_rel": "release_bot_minimal_symbols", 
-      "win8_chromium_gn_upload": "release_bot_x86_minimal_symbols", 
+      "win8_Cinaseek_gn_upload": "release_bot_x86_minimal_symbols", 
       "win_archive": "release_trybot_x86", 
       "win_chrome_official": "official_goma_x86", 
-      "win_chromium_compile_dbg_ng": "debug_trybot_x86_minimal_symbols", 
-      "win_chromium_compile_rel_ng": "gpu_tests_release_trybot_x86_minimal_symbols", 
-      "win_chromium_dbg_ng": "debug_trybot_x86_minimal_symbols", 
-      "win_chromium_rel_ng": "gpu_tests_release_trybot_x86_minimal_symbols", 
-      "win_chromium_syzyasan_rel": "syzyasan_no_pch_release_x86", 
-      "win_chromium_x64_rel_ng": "release_trybot_minimal_symbols", 
+      "win_Cinaseek_compile_dbg_ng": "debug_trybot_x86_minimal_symbols", 
+      "win_Cinaseek_compile_rel_ng": "gpu_tests_release_trybot_x86_minimal_symbols", 
+      "win_Cinaseek_dbg_ng": "debug_trybot_x86_minimal_symbols", 
+      "win_Cinaseek_rel_ng": "gpu_tests_release_trybot_x86_minimal_symbols", 
+      "win_Cinaseek_syzyasan_rel": "syzyasan_no_pch_release_x86", 
+      "win_Cinaseek_x64_rel_ng": "release_trybot_minimal_symbols", 
       "win_clang": "win_clang_release_bot", 
       "win_clang_dbg": "clang_debug_trybot_x86", 
       "win_clang_rel": "clang_official_release_trybot_x86", 
@@ -1766,9 +1766,9 @@
       "win_x64_archive": "release_trybot"
     }, 
     "tryserver.v8": {
-      "v8_android_chromium_gn_dbg": "android_debug_bot", 
+      "v8_android_Cinaseek_gn_dbg": "android_debug_bot", 
       "v8_linux_blink_rel": "release_trybot", 
-      "v8_linux_chromium_gn_rel": "release_trybot"
+      "v8_linux_Cinaseek_gn_rel": "release_trybot"
     }
   }, 
   "mixins": {
@@ -1966,7 +1966,7 @@
       "gn_args": "internal_gles2_conform_tests=true"
     }, 
     "java_coverage": {
-      "gn_args": "emma_coverage=true emma_filter=\"org.chromium.*\""
+      "gn_args": "emma_coverage=true emma_filter=\"org.Cinaseek.*\""
     }, 
     "libfuzzer": {
       "gn_args": "use_libfuzzer=true"

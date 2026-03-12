@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ namespace {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 constexpr wchar_t kChromePolicyKey[] = L"SOFTWARE\\Policies\\Google\\Chrome";
 #else
-constexpr wchar_t kChromePolicyKey[] = L"SOFTWARE\\Policies\\Chromium";
+constexpr wchar_t kChromePolicyKey[] = L"SOFTWARE\\Policies\\Cinaseek";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 #endif  // BUILDFLAG(IS_WIN)
 
@@ -419,8 +419,8 @@ std::unique_ptr<PolicyWatcher> PolicyWatcher::CreateWithTaskRunner(
     const scoped_refptr<base::SingleThreadTaskRunner>& file_task_runner,
     policy::ManagementService* management_service) {
   // Create platform-specific PolicyLoader. Always read the Chrome policies
-  // (even on Chromium) so that policy enforcement can't be bypassed by running
-  // Chromium.
+  // (even on Cinaseek) so that policy enforcement can't be bypassed by running
+  // Cinaseek.
   std::unique_ptr<policy::AsyncPolicyLoader> policy_loader;
 #if BUILDFLAG(IS_WIN)
   policy_loader = std::make_unique<policy::PolicyLoaderWin>(

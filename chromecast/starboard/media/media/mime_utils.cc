@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ std::string GetH264MimeType(VideoProfile profile, int32_t level) {
 
   // The string format values come from
   // https://developers.google.com/cast/docs/media and
-  // https://source.chromium.org/chromium/chromium/src/+/main:content/test/data/media/canplaytype_test.js;l=1096;drc=1ec72b6410df5f90eaf4f24f33074f8682c7ffc5
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/test/data/media/canplaytype_test.js;l=1096;drc=1ec72b6410df5f90eaf4f24f33074f8682c7ffc5
   //
   // We're guessing the constraint_set_flags values (the third and fourth digits
   // after avc1).
@@ -135,8 +135,8 @@ std::string GetHEVCMimeType(VideoProfile profile, int32_t level) {
 // string if a MIME type cannot be determined.
 std::string GetVp9MimeType(VideoProfile profile, int32_t level) {
   // Level must be at most two digits.
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/base/video_codec_string_parsers.cc;l=103;drc=798b98d70313e6a55bcf9cc85bc7ca7d42ca6d23
-  // has a list of currently-supported levels in chromium code, but for
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/base/video_codec_string_parsers.cc;l=103;drc=798b98d70313e6a55bcf9cc85bc7ca7d42ca6d23
+  // has a list of currently-supported levels in Cinaseek code, but for
   // simplicity (and potential future compatibility) we just support two digits
   // here. Since that code runs first, the level here should be one of the
   // levels specified there.
@@ -147,8 +147,8 @@ std::string GetVp9MimeType(VideoProfile profile, int32_t level) {
 
   // Note that the bit depth is guessed as 10 here, since that value is not
   // provided to GetMimeType. This appears to be a limitation introduced by
-  // chromium code, not cast code:
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/base/mime_util_internal.cc;l=984;drc=798b98d70313e6a55bcf9cc85bc7ca7d42ca6d23
+  // Cinaseek code, not cast code:
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/base/mime_util_internal.cc;l=984;drc=798b98d70313e6a55bcf9cc85bc7ca7d42ca6d23
   std::string codec_str;
   switch (profile) {
     case kVP9Profile0:

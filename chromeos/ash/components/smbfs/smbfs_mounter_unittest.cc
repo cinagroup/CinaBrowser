@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -675,7 +675,7 @@ TEST_F(SmbFsMounterE2eTest, MountSuccess) {
         // Emulates cros-disks mount success.
         PostMountEvent(source_path, kMountPath, std::move(callback));
 
-        // Emulates smbfs connecting to the org.chromium.SmbFs D-Bus service and
+        // Emulates smbfs connecting to the org.Cinaseek.SmbFs D-Bus service and
         // providing a Mojo connection endpoint.
         const std::string token =
             source_path.substr(sizeof(kMountUrlPrefix) - 1);

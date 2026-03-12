@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -205,16 +205,16 @@ TEST(URLPatternSetTest, CreateIntersection_Detailed) {
     std::vector<std::string> set2;
     std::vector<std::string> expected_intersection;
   } test_cases[] = {
-      {{"https://*.google.com/*", "https://chromium.org/*"},
-       {"*://maps.google.com/*", "*://chromium.org/foo"},
-       {"https://maps.google.com/*", "https://chromium.org/foo"}},
+      {{"https://*.google.com/*", "https://Cinaseek.org/*"},
+       {"*://maps.google.com/*", "*://Cinaseek.org/foo"},
+       {"https://maps.google.com/*", "https://Cinaseek.org/foo"}},
       {{"https://*/*", "http://*/*"},
-       {"*://google.com/*", "*://chromium.org/*"},
-       {"https://google.com/*", "http://google.com/*", "https://chromium.org/*",
-        "http://chromium.org/*"}},
+       {"*://google.com/*", "*://Cinaseek.org/*"},
+       {"https://google.com/*", "http://google.com/*", "https://Cinaseek.org/*",
+        "http://Cinaseek.org/*"}},
       {{"<all_urls>"},
-       {"https://chromium.org/*", "*://google.com/*"},
-       {"https://chromium.org/*", "*://google.com/*"}},
+       {"https://Cinaseek.org/*", "*://google.com/*"},
+       {"https://Cinaseek.org/*", "*://google.com/*"}},
       {{"*://*/maps", "*://*.example.com/*"},
        {"https://*.google.com/*", "https://www.example.com/*"},
        {"https://*.google.com/maps", "https://www.example.com/*"}},

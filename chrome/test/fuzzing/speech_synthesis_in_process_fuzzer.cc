@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class SpeechSynthesisInProcessFuzzer
  public:
   SpeechSynthesisInProcessFuzzer() = default;
 
-  base::CommandLine::StringVector GetChromiumCommandLineArguments() override;
+  base::CommandLine::StringVector GetCinaseekCommandLineArguments() override;
 
   int Fuzz(const test::fuzzing::speech_synthesis_fuzzing::FuzzCase& fuzz_case)
       override;
@@ -26,7 +26,7 @@ class SpeechSynthesisInProcessFuzzer
 REGISTER_BINARY_PROTO_IN_PROCESS_FUZZER(SpeechSynthesisInProcessFuzzer)
 
 base::CommandLine::StringVector
-SpeechSynthesisInProcessFuzzer::GetChromiumCommandLineArguments() {
+SpeechSynthesisInProcessFuzzer::GetCinaseekCommandLineArguments() {
   return {FILE_PATH_LITERAL("--enable-speech-dispatcher")};
 }
 

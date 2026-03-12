@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ config("content_implementation") {
   configs = [ "//build/config/compiler:wexit_time_destructors" ]
 }
 
-assert(use_blink, "Chromium without blink shouldn't use anything in //content")
+assert(use_blink, "Cinaseek without blink shouldn't use anything in //content")
 
 # When targets depend on, e.g. //content/public/browser, what happens? To
 # facilitate the complexity here, the "public" targets are groups that forward

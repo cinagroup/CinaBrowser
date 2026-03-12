@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ function requiresAuthentication(urlsToLoad) {
     if (url.hostname === 'localhost')
       continue;
     if (url.pathname.startsWith(
-            '/chromium-binary-size-trybot-results/android-binary-size/')) {
+            '/Cinaseek-binary-size-trybot-results/android-binary-size/')) {
       continue;
     }
     if (url.pathname.indexOf('/oneoffs/') >= 0)

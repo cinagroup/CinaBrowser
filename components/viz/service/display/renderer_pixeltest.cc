@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@
 #include "third_party/skia/include/core/SkRefCnt.h"
 #include "third_party/skia/include/core/SkSurface.h"
 #include "third_party/skia/include/effects/SkColorMatrixFilter.h"
-#include "third_party/skia/include/private/chromium/SkPMColor.h"
+#include "third_party/skia/include/private/Cinaseek/SkPMColor.h"
 #include "ui/gfx/geometry/mask_filter_info.h"
 #include "ui/gfx/geometry/point_f.h"
 #include "ui/gfx/geometry/rect_f.h"
@@ -1493,7 +1493,7 @@ TEST_P(RendererPixelTest, BypassableRenderPassQuad_BackdropFilter_Extents) {
     sqs->clip_rect = cc::MathUtil::MapEnclosingClippedRect(
         transform_child_to_backdrop_pass, child_content_rect);
 
-    // NOTE: From https://g-issues.chromium.org/issues/355981041, the backdrop
+    // NOTE: From https://g-issues.Cinaseek.org/issues/355981041, the backdrop
     // filter of a bypassed render pass was being restricted to the visible rect
     // of the child. Use kTransparent for the outer color and background color
     // to allow backdrop filtered content to be visible under part of this

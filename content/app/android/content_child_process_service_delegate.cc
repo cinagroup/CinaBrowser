@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class ChildProcessSurfaceManager : public gpu::GpuSurfaceLookup,
   ~ChildProcessSurfaceManager() override = default;
 
   // |service_impl| is the instance of
-  // org.chromium.content.app.ChildProcessService.
+  // org.Cinaseek.content.app.ChildProcessService.
   void SetServiceImpl(const base::android::JavaRef<jobject>& service_impl) {
     service_impl_.Reset(service_impl);
   }
@@ -94,7 +94,7 @@ class ChildProcessSurfaceManager : public gpu::GpuSurfaceLookup,
   }
 
  private:
-  // The instance of org.chromium.content.app.ChildProcessService.
+  // The instance of org.Cinaseek.content.app.ChildProcessService.
   base::android::ScopedJavaGlobalRef<jobject> service_impl_;
 };
 

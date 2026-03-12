@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 namespace gfx {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.gfx
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.gfx
 // Describes transformation to be applied to the buffer before presenting
 // to screen. Rotations are expressed in clockwise degrees.
 enum OverlayTransform : uint8_t {

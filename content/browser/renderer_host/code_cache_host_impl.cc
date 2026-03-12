@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -612,7 +612,7 @@ class CodeCacheWithPersistentCacheHost : public CodeCacheHostImpl {
     //
     // The context key returned by this function needs to enfcorce the "jail"
     // and "citadel" concepts (see:
-    // https://chromium.googlesource.com/chromium/src/+/main/docs/process_model_and_site_isolation.md)
+    // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/process_model_and_site_isolation.md)
     //
     // 1) Locked processes are "jailed" since they cannot access shared context
     // with their non-empty context key which will never equal

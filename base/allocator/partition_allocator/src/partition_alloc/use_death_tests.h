@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #include "testing/gtest/include/gtest/gtest.h"
 
 // An informal CQ survey
-// (https://chromium-review.googlesource.com/c/chromium/src/+/5493422/1?tab=checks)
+// (https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5493422/1?tab=checks)
 // tells us that iOS doesn't define `GTEST_HAS_DEATH_TEST`.
 #if defined(GTEST_HAS_DEATH_TEST)
 #define PA_USE_DEATH_TESTS() 1

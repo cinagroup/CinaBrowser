@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class ExecutionContext;
 using RTCCertificateCallback =
     base::OnceCallback<void(webrtc::scoped_refptr<webrtc::RTCCertificate>)>;
 
-// Chromium's WebRTCCertificateGenerator implementation; uses the
+// Cinaseek's WebRTCCertificateGenerator implementation; uses the
 // PeerConnectionIdentityStore/SSLIdentity::Generate to generate the identity,
 // webrtc::RTCCertificate and blink::RTCCertificate.
 class MODULES_EXPORT RTCCertificateGenerator {

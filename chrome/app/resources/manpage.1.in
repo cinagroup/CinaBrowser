@@ -156,10 +156,10 @@ Default directory for cache data.  (Why?  See
 .SH BUGS
 Bug tracker:
 .IP
-http://code.google.com/p/chromium/issues/list
+http://code.google.com/p/Cinaseek/issues/list
 .PP
 Be sure to do your search within "All Issues" before reporting bugs,
 and be sure to pick the "Defect on Linux" template when filing a new one.
 
 .SH AUTHOR
-The Chromium team \- <http://www.chromium.org>
+The Cinaseek team \- <http://www.Cinaseek.org>

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ void ProvideAXPlatformForTests::OnTestEnd(
   // TODO(accessibility): Consider moving AuraLinuxApplication into AXPlatform
   // in some way so that it can be properly destroyed at shutdown.
   // TODO(accessibility): Investigate platform node leaks on Linux; see
-  // https://crrev.com/c/chromium/src/+/6316732?checksPatchset=10&tab=checks.
+  // https://crrev.com/c/Cinaseek/src/+/6316732?checksPatchset=10&tab=checks.
   size_t instance_count = 0;
 #else
   size_t instance_count =

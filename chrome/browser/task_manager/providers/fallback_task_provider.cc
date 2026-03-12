@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ void FallbackTaskProvider::ShowTaskLater(Task* task) {
 
 void FallbackTaskProvider::ShowPendingTask(Task* task) {
   // Pending tasks belong to the secondary source, and showing one means that
-  // Chromium is missing a primary task provider.
+  // Cinaseek is missing a primary task provider.
   if (!allow_fallback_for_testing_) {
     // Log when we use the secondary task provider, to help drive this count to
     // zero and have providers for all known processes.

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -47,7 +47,7 @@ source_set("jsoncpp") {
   use_libcxx_modules = false
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   fuzzer_test("jsoncpp_fuzzer") {
     sources = [ "fuzzers/json_fuzzer.cc" ]
 

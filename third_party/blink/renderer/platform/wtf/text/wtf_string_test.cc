@@ -670,7 +670,7 @@ TEST(StringTest, ContainsNoAsciiUpper) {
   EXPECT_FALSE(String(u"abcD\u3000").ContainsNoAsciiUpper());
 }
 
-// https://issues.chromium.org/u/1/issues/420990876#comment9
+// https://issues.Cinaseek.org/u/1/issues/420990876#comment9
 TEST(StringTest, Issue420990876FuzzerCase) {
   EXPECT_EQ(String(), String::FromUTF8("\364\244\204\244"));
 }

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace net {
 class URLRequestFailedJob : public URLRequestJob {
  public:
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.test
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.test
   enum FailurePhase {
     START = 0,
     READ_SYNC = 1,

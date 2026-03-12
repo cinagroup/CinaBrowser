@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -119,7 +119,7 @@ const char kAutoSelectScreenCaptureSource[] =
 // the media-picker should otherwise be displayed to the user. This switch
 // is very similar to kAutoSelectDesktopCaptureSource, but limits selection
 // to tabs. This solves the issue of kAutoSelectDesktopCaptureSource being
-// liable to accidentally capturing the Chromium window instead of the tab,
+// liable to accidentally capturing the Cinaseek window instead of the tab,
 // as both have the same title if the tab is focused.
 const char kAutoSelectTabCaptureSourceByTitle[] =
     "auto-select-tab-capture-source-by-title";
@@ -717,7 +717,7 @@ const char kUnsafelyDisableDevToolsSelfXssWarnings[] =
 // all of its state.
 const char kUserDataDir[] = "user-data-dir";
 
-// Uses WinHttp to resolve proxies instead of using Chromium's normal proxy
+// Uses WinHttp to resolve proxies instead of using Cinaseek's normal proxy
 // resolution logic. This is only supported in Windows.
 //
 // TODO(crbug.com/40111093): Only use WinHttp whenever Chrome is
@@ -768,7 +768,7 @@ const char kWindowSize[] = "window-size";
 const char kWindowWorkspace[] = "window-workspace";
 
 // Uses WinHTTP to fetch and evaluate PAC scripts. Otherwise the default is to
-// use Chromium's network stack to fetch, and V8 to evaluate.
+// use Cinaseek's network stack to fetch, and V8 to evaluate.
 const char kWinHttpProxyResolver[] = "winhttp-proxy-resolver";
 
 // Specifies which category option was clicked in the Windows Jumplist that

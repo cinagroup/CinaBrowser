@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -772,19 +772,19 @@ bool AiDataKeyedService::IsExtensionAllowlistedForData(
   }
 
   static const base::NoDestructor<std::vector<std::string>>
-      kHardcodedAllowlistedExtensions({// https://issues.chromium.org/373645534
+      kHardcodedAllowlistedExtensions({// https://issues.Cinaseek.org/373645534
                                        "hpkopmikdojpadgmioifjjodbmnjjjca",
-                                       // https://issues.chromium.org/377129777
+                                       // https://issues.Cinaseek.org/377129777
                                        "bgbpcgpcobgjpnpiginpidndjpggappi",
-                                       // https://issues.chromium.org/376699519
+                                       // https://issues.Cinaseek.org/376699519
                                        "eefninhhiifgcimjkmkongegpoaikmhm",
-                                       // https://issues.chromium.org/393435942
+                                       // https://issues.Cinaseek.org/393435942
                                        "fjhpgileahdpnmfmaggobehbipojhlce",
-                                       // https://issues.chromium.org/403366603
+                                       // https://issues.Cinaseek.org/403366603
                                        "abdciamfdmknaeggbnmafmbdfdmhfgfa",
-                                       // https://issues.chromium.org/414437025
+                                       // https://issues.Cinaseek.org/414437025
                                        "fiamdfnbelfkjlacoaeiclobkdmckaoa",
-                                       // https://issues.chromium.org/427296150
+                                       // https://issues.Cinaseek.org/427296150
                                        "mofldjifenhadohlkkngamgbifiofbnd"});
   if (std::ranges::contains(*kHardcodedAllowlistedExtensions, extension_id)) {
     return true;
@@ -839,7 +839,7 @@ bool AiDataKeyedService::IsExtensionAllowlistedForStable(
 
   // And the extension must be on this list.
   static const base::NoDestructor<std::vector<std::string>>
-      kStableChannelAllowlistedIds({// https://issues.chromium.org/427296150
+      kStableChannelAllowlistedIds({// https://issues.Cinaseek.org/427296150
                                     "mofldjifenhadohlkkngamgbifiofbnd"});
   return std::ranges::contains(*kStableChannelAllowlistedIds, extension_id);
 }

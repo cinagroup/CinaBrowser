@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -409,7 +409,7 @@ void RenderViewTest::SetUp() {
   // Subclasses can set render_thread_ with their own implementation before
   // calling RenderViewTest::SetUp().
   // The render thread needs to exist before blink::Initialize. It also mirrors
-  // the order on Chromium initialization.
+  // the order on Cinaseek initialization.
   if (!render_thread_)
     render_thread_ = std::make_unique<MockRenderThread>();
 

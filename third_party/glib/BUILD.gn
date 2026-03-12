@@ -180,8 +180,8 @@ shared_library("glib") {
     ":pcre2",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":glib_public_config" ]
 }
@@ -236,8 +236,8 @@ shared_library("gobject") {
     "//build/config/linux/libffi",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":gobject_public_config" ]
 
@@ -269,8 +269,8 @@ shared_library("gmodule") {
   ]
 
   configs += [ ":glib_common_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":gmodule_public_config" ]
 
@@ -563,8 +563,8 @@ shared_library("gio") {
     "//build/config/linux:libresolv",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   deps = [
     ":glib",

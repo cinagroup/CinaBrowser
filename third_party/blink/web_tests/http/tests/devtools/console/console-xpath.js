@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ import * as Console from 'devtools/panels/console/console.js';
   TestRunner.addResult(`Tests $x for iterator and non-iterator types.\n`);
   await TestRunner.showPanel('console');
   await TestRunner.loadHTML(`
-      <a href="http://chromium.org"></a>
+      <a href="http://Cinaseek.org"></a>
       <p id="test"></p>
   `);
 

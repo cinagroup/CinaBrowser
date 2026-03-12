@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/mac_optional_gpu_tests_rel/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "try",
               "builder": "mac_optional_gpu_tests_rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "tryserver.chromium.mac",
+              "builder_group": "tryserver.Cinaseek.mac",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "intel",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,7 +36,7 @@
         {
           "bucket": "try",
           "builder": "mac_optional_gpu_tests_rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/mac_optional_gpu_tests_rel/targets"
@@ -55,7 +55,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -64,7 +64,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.mac",
+  "builder_group": "tryserver.Cinaseek.mac",
   "cq": "path-based",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

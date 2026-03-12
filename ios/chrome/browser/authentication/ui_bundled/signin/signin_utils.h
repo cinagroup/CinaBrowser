@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ bool ShouldPresentWebSignin(ProfileIOS* profile);
 
 // This method should be called when sign-in starts from the fullscreen signin
 // promo. It records in user defaults:
-//   + the Chromium current version.
+//   + the Cinaseek current version.
 //   + increases the sign-in promo display count.
 //   + Gaia ids list.
 // Separated out into a discrete function to allow overriding when testing.

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -155,7 +155,7 @@ cc_component("paint") {
   if (skia_support_skottie) {
     # All source files that depend on the actual Skottie module within Skia
     # should go here. If a source file is Skottie-related but depends only on
-    # Chromium and/or "common" Skia dependencies, it is fine to include that
+    # Cinaseek and/or "common" Skia dependencies, it is fine to include that
     # in the main "sources" list. Note that ultimately, all dependencies on
     # the Skottie library should be contained in some way/shape/form within
     # skottie_wrapper_impl.cc

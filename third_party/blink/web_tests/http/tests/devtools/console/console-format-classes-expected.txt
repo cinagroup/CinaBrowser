@@ -1,6 +1,6 @@
 Tests that console produces instant previews for arrays and objects.
 
-console-format-classes.js:32 Error: custom error with link www.chromium.org
+console-format-classes.js:32 Error: custom error with link www.Cinaseek.org
     at console-format-classes.js:22:9 
   console-row-wrapper
     console-message
@@ -190,7 +190,7 @@ console-format-classes.js:32 HTMLAllCollection(4) [html, head, base, body]
             vbox flex-auto monospace stack-preview-container
               widget
                  stack-preview-container width-constrained 
-console-format-classes.js:36 (7) [Error: custom error with link www.chromium.org
+console-format-classes.js:36 (7) [Error: custom error with link www.Cinaseek.org
     at test://evaluations/0/console-format-classes.j…, Array(6), {…}, {…}, {…}, Proxy(Object), HTMLAllCollection(4)] 
   console-row-wrapper
     console-message

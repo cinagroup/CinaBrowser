@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -455,7 +455,7 @@ if (is_android) {
     # External code should depend on ":common_java" instead.
     visibility = [ ":*" ]
     sources = [ "//content/public/common/content_features.cc" ]
-    class_name = "org.chromium.content_public.common.ContentFeatures"
+    class_name = "org.Cinaseek.content_public.common.ContentFeatures"
   }
 
   android_library("common_java") {

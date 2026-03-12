@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -483,7 +483,7 @@ IN_PROC_BROWSER_TEST_F(InformedRestoreTest, PRE_TabInfoOutsideLimit) {
   const std::vector<GURL> urls{
       GURL("https://www.youtube.com/"), GURL("https://www.google.com/"),
       GURL("https://www.waymo.com/"),   GURL("https://x.company/"),
-      GURL("https://docs.google.com/"), GURL("https://www.chromium.org/")};
+      GURL("https://docs.google.com/"), GURL("https://www.Cinaseek.org/")};
   for (int i = 0; i < static_cast<int>(urls.size()); ++i) {
     content::TestNavigationObserver navigation_observer(urls[i]);
     navigation_observer.StartWatchingNewWebContents();
@@ -492,7 +492,7 @@ IN_PROC_BROWSER_TEST_F(InformedRestoreTest, PRE_TabInfoOutsideLimit) {
     navigation_observer.Wait();
   }
 
-  // Activate the sixth tab (chromium.org) so it becomes the most recent tab.
+  // Activate the sixth tab (Cinaseek.org) so it becomes the most recent tab.
   browser->tab_strip_model()->ActivateTabAt(5);
 
   // Immediate save to full restore file to bypass the 2.5 second throttle.
@@ -515,11 +515,11 @@ IN_PROC_BROWSER_TEST_F(InformedRestoreTest, TabInfoOutsideLimit) {
   ASSERT_EQ(1u, apps_infos.size());
   ASSERT_EQ(7u, apps_infos[0].tab_infos.size());
 
-  // As it was the most recently activated tab, chromium.org should appear
+  // As it was the most recently activated tab, Cinaseek.org should appear
   // first, with the first four tabs in the tab strip appearing afterwards in
   // order. Only the first five tabs will be displayed in the informed restore
   // dialog.
-  EXPECT_EQ(GURL("https://www.chromium.org/"), apps_infos[0].tab_infos[0].url);
+  EXPECT_EQ(GURL("https://www.Cinaseek.org/"), apps_infos[0].tab_infos[0].url);
   EXPECT_EQ(GURL("https://www.youtube.com/"), apps_infos[0].tab_infos[1].url);
   EXPECT_EQ(GURL("https://www.google.com/"), apps_infos[0].tab_infos[2].url);
   EXPECT_EQ(GURL("https://www.waymo.com/"), apps_infos[0].tab_infos[3].url);

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -540,7 +540,7 @@ IN_PROC_BROWSER_TEST_P(HelpAppIntegrationTest, HelpAppV2DirectNavigation) {
 
 // Test that the Help App can open the feedback dialog.
 //
-// Flaky on Linux Chromium OS ASan LSan Tests (1)
+// Flaky on Linux Cinaseek OS ASan LSan Tests (1)
 //
 // TODO(crbug.com/40940376): Reenable it.
 IN_PROC_BROWSER_TEST_P(HelpAppIntegrationTest,

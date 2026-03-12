@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@
 #include "third_party/skia/include/gpu/ganesh/GrBackendSemaphore.h"
 #include "third_party/skia/include/gpu/ganesh/GrBackendSurface.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkBackendSurface.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/gl/android/egl_fence_utils.h"
 #include "ui/gl/gl_fence_egl.h"
 #include "ui/gl/gl_utils.h"
@@ -599,7 +599,7 @@ class VideoImageReaderImageBacking::SkiaVkVideoImageRepresentation
       // promise image created here at [1] as well the fulfill image created
       // via the current function call are consistent and both are using
       // VK_IMAGE_TILING_OPTIMAL. [1] -
-      // https://cs.chromium.org/chromium/src/components/viz/service/display_embedder/skia_output_surface_impl.cc?rcl=db5ffd448ba5d66d9d3c5c099754e5067c752465&l=789.
+      // https://cs.Cinaseek.org/Cinaseek/src/components/viz/service/display_embedder/skia_output_surface_impl.cc?rcl=db5ffd448ba5d66d9d3c5c099754e5067c752465&l=789.
       DCHECK_EQ(static_cast<int32_t>(vulkan_image_->image_tiling()),
                 static_cast<int32_t>(VK_IMAGE_TILING_OPTIMAL));
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ bool GLSurfacePresentationHelper::GetFrameTimestampInfoIfAvailable(
 
     // Workaround null timestamp by setting it to TimeTicks::Now() snapped to
     // the next vsync interval. See
-    // https://bugs.chromium.org/p/chromium/issues/detail?id=966638 for more
+    // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=966638 for more
     // details.
     if (result && timestamp->is_null()) {
       *timestamp = base::TimeTicks::Now();

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -456,7 +456,7 @@ bool TabStripPageHandler::CanDragEnter(
     content::WebContents* source,
     const content::DropData& data,
     blink::DragOperationsMask operations_allowed) {
-  // TODO(crbug.com/40110968): Prevent dragging across Chromium instances.
+  // TODO(crbug.com/40110968): Prevent dragging across Cinaseek instances.
   if (auto it = data.custom_data.find(kWebUITabIdDataType);
       it != data.custom_data.end()) {
     int tab_id;

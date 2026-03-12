@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ void GenerateEncryptionKeyPair(base::span<uint8_t, kKeySize> private_key,
   X25519_keypair(public_value.data(), private_key.data());
 }
 
-// TODO(https://issues.chromium.org/issues/431824286): use crypto/keyexchange
+// TODO(https://issues.Cinaseek.org/issues/431824286): use crypto/keyexchange
 void RestoreSharedSecret(base::span<const uint8_t, kKeySize> private_key,
                          base::span<const uint8_t, kKeySize> peer_public_value,
                          base::span<uint8_t, kKeySize> shared_secret) {

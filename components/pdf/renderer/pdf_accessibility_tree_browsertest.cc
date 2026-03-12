@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ const chrome_pdf::AccessibilityTextRunInfo kFourthRunMultiLine = {
     chrome_pdf::AccessibilityTextDirection::kNone,
     chrome_pdf::AccessibilityTextStyleInfo()};
 
-const char kChromiumTestUrl[] = "www.cs.chromium.org";
+const char kCinaseekTestUrl[] = "www.cs.Cinaseek.org";
 
 using testing::Matches;
 using testing::PrintToString;
@@ -405,7 +405,7 @@ TEST_F(PdfAccessibilityTreeTest, TestPdfAccessibilityTreeCreation) {
   {
     chrome_pdf::AccessibilityLinkInfo link;
     link.bounds = gfx::RectF(1.0f, 1.0f, 5.0f, 6.0f);
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 0;
     link.text_range.count = 1;
     link.index_in_page = 0;
@@ -473,7 +473,7 @@ TEST_F(PdfAccessibilityTreeTest, TestPdfAccessibilityTreeCreation) {
 
   ui::AXNode* link_node = paragraph_node->GetChildAtIndex(0);
   ASSERT_TRUE(link_node);
-  EXPECT_EQ(kChromiumTestUrl,
+  EXPECT_EQ(kCinaseekTestUrl,
             link_node->GetStringAttribute(ax::mojom::StringAttribute::kUrl));
   EXPECT_EQ(ax::mojom::Role::kLink, link_node->GetRole());
   EXPECT_EQ(gfx::RectF(1.0f, 1.0f, 5.0f, 6.0f),
@@ -1211,7 +1211,7 @@ TEST_F(PdfAccessibilityTreeTest, TestOverlappingAnnots) {
   {
     chrome_pdf::AccessibilityLinkInfo link;
     link.bounds = gfx::RectF(1.0f, 1.0f, 5.0f, 6.0f);
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 0;
     link.text_range.count = 3;
     link.index_in_page = 0;
@@ -1221,7 +1221,7 @@ TEST_F(PdfAccessibilityTreeTest, TestOverlappingAnnots) {
   {
     chrome_pdf::AccessibilityLinkInfo link;
     link.bounds = gfx::RectF(1.0f, 2.0f, 5.0f, 6.0f);
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 1;
     link.text_range.count = 2;
     link.index_in_page = 1;
@@ -1272,7 +1272,7 @@ TEST_F(PdfAccessibilityTreeTest, TestOverlappingAnnots) {
 
   ui::AXNode* link_node = child_nodes[0];
   ASSERT_TRUE(link_node);
-  EXPECT_EQ(kChromiumTestUrl,
+  EXPECT_EQ(kCinaseekTestUrl,
             link_node->GetStringAttribute(ax::mojom::StringAttribute::kUrl));
   EXPECT_EQ(ax::mojom::Role::kLink, link_node->GetRole());
   EXPECT_EQ(gfx::RectF(1.0f, 1.0f, 5.0f, 6.0f),
@@ -1281,7 +1281,7 @@ TEST_F(PdfAccessibilityTreeTest, TestOverlappingAnnots) {
 
   link_node = child_nodes[1];
   ASSERT_TRUE(link_node);
-  EXPECT_EQ(kChromiumTestUrl,
+  EXPECT_EQ(kCinaseekTestUrl,
             link_node->GetStringAttribute(ax::mojom::StringAttribute::kUrl));
   EXPECT_EQ(ax::mojom::Role::kLink, link_node->GetRole());
   EXPECT_EQ(gfx::RectF(1.0f, 2.0f, 5.0f, 6.0f),
@@ -2179,7 +2179,7 @@ TEST_F(PdfAccessibilityTreeTest, TestPreviousNextOnLine) {
   {
     chrome_pdf::AccessibilityLinkInfo link;
     link.bounds = gfx::RectF(0.0f, 0.0f, 0.0f, 0.0f);
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 2;
     link.text_range.count = 2;
     link.index_in_page = 0;
@@ -2262,7 +2262,7 @@ TEST_F(PdfAccessibilityTreeTest, TestPreviousNextOnLine) {
 
   ui::AXNode* link_node = paragraph_node->GetChildAtIndex(1);
   ASSERT_TRUE(link_node);
-  EXPECT_EQ(kChromiumTestUrl,
+  EXPECT_EQ(kCinaseekTestUrl,
             link_node->GetStringAttribute(ax::mojom::StringAttribute::kUrl));
   EXPECT_EQ(ax::mojom::Role::kLink, link_node->GetRole());
   ASSERT_EQ(1u, link_node->GetChildCount());
@@ -2652,7 +2652,7 @@ TEST_F(PdfAccessibilityTreeTest, TestClickActionDataConversion) {
 
   {
     chrome_pdf::AccessibilityLinkInfo link;
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 0;
     link.text_range.count = 1;
     link.bounds = {{0, 0}, {10, 10}};
@@ -2662,7 +2662,7 @@ TEST_F(PdfAccessibilityTreeTest, TestClickActionDataConversion) {
 
   {
     chrome_pdf::AccessibilityLinkInfo link;
-    link.url = kChromiumTestUrl;
+    link.url = kCinaseekTestUrl;
     link.text_range.index = 1;
     link.text_range.count = 1;
     link.bounds = {{10, 10}, {10, 10}};

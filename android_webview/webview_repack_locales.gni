@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//tools/grit/repack.gni")
 import("webview_repack_locales_list.gni")
 
 # Wraps repack_locales(), setting the source_patterns and deps required for
-# Chrome.
+# Cinaseek.
 template("webview_repack_locales") {
   repack_locales(target_name) {
     forward_variables_from(invoker, "*")

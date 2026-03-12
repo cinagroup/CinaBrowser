@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class CONTENT_EXPORT BackForwardTransitionAnimationManager {
   enum class NavigationDirection { kForward, kBackward };
 
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.content_public.browser.back_forward_transition)
+  //   org.Cinaseek.content_public.browser.back_forward_transition)
   enum class AnimationStage {
     // Indicates no gesture is active or no animation is being done for a
     // gesture.

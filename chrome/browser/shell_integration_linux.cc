@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@
 #include "chrome/grit/branded_strings.h"
 #include "chrome/grit/chrome_unscaled_resources.h"
 #include "components/version_info/version_info.h"
-#include "third_party/libxml/chromium/xml_writer.h"
+#include "third_party/libxml/Cinaseek/xml_writer.h"
 #include "third_party/re2/src/re2/re2.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/resource/resource_bundle.h"
@@ -516,7 +516,7 @@ std::string GetIconName() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return "google-chrome";
 #else  // BUILDFLAG(CHROMIUM_BRANDING)
-  return "chromium-browser";
+  return "Cinaseek-browser";
 #endif
 }
 
@@ -924,7 +924,7 @@ std::string GetDirectLaunchUrlScheme() {
       return "google-chrome";
   }
 #else
-  return "chromium";
+  return "Cinaseek";
 #endif
 }
 

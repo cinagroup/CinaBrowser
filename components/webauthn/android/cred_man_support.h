@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace webauthn {
 
 // Enum for CredMan support levels.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 enum CredManSupport {
   // Indicates the the level of CredMan support hasn't been determined yet.
   // This must be zero because that's the default value of a `static int`.

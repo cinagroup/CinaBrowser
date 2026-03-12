@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Chromium Authors
+ * Copyright 2019 The Cinaseek Authors
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file.
  */
@@ -59,7 +59,7 @@ self.addEventListener('paymentrequest', (evt) => {
   }
 
   if (gpayData['emailRequired']) {
-    details['email'] = 'paymentrequest@chromium.org';
+    details['email'] = 'paymentrequest@Cinaseek.org';
   }
 
   if (apiVersion === 1) {

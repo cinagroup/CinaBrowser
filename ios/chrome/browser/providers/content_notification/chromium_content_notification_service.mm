@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,8 +10,8 @@ namespace ios {
 namespace provider {
 namespace {
 
-// Dummy ContentNotificationService implementation used for Chromium builds.
-class ChromiumContentNotificationService final
+// Dummy ContentNotificationService implementation used for Cinaseek builds.
+class CinaseekContentNotificationService final
     : public ContentNotificationService {
  public:
   // ContentNotificationService implementation:
@@ -30,7 +30,7 @@ class ChromiumContentNotificationService final
 
 std::unique_ptr<ContentNotificationService> CreateContentNotificationService(
     ContentNotificationConfiguration* config) {
-  return std::make_unique<ChromiumContentNotificationService>();
+  return std::make_unique<CinaseekContentNotificationService>();
 }
 
 }  // namespace provider

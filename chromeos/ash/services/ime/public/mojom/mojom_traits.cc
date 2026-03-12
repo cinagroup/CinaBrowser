@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ bool EnumTraits<SuggestionMode, AssistiveSuggestionMode>::FromMojom(
   switch (input) {
     case SuggestionMode::kUnknown:
       // The browser process should never receive an unknown suggestion mode.
-      // When adding a new SuggestionMode, the Chromium side should be updated
+      // When adding a new SuggestionMode, the Cinaseek side should be updated
       // first to handle it, before changing the other calling side to send the
       // new suggestion mode.
       return false;
@@ -84,7 +84,7 @@ bool EnumTraits<SuggestionType, AssistiveSuggestionType>::FromMojom(
   switch (input) {
     case SuggestionType::kUnknown:
       // The browser process should never receive an unknown suggestion type.
-      // When adding a new SuggestionType, the Chromium side should be updated
+      // When adding a new SuggestionType, the Cinaseek side should be updated
       // first to handle it, before changing the other calling side to send the
       // new suggestion type.
       return false;

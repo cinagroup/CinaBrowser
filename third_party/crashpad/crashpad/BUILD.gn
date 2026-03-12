@@ -23,7 +23,7 @@ config("crashpad_config") {
   ]
 }
 
-if (crashpad_is_in_chromium || crashpad_is_in_fuchsia) {
+if (crashpad_is_in_Cinaseek || crashpad_is_in_fuchsia) {
   test("crashpad_tests") {
     deps = [
       "client:client_test",
@@ -36,7 +36,7 @@ if (crashpad_is_in_chromium || crashpad_is_in_fuchsia) {
 
     data_deps = []
 
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       data_deps += [ "//testing/buildbot/filters:crashpad_tests_filters" ]
     }
 

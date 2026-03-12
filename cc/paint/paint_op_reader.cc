@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,8 +48,8 @@
 #include "third_party/skia/include/core/SkScalar.h"
 #include "third_party/skia/include/effects/SkHighContrastFilter.h"
 #include "third_party/skia/include/private/SkGainmapInfo.h"
-#include "third_party/skia/include/private/chromium/SkChromeRemoteGlyphCache.h"
-#include "third_party/skia/include/private/chromium/Slug.h"
+#include "third_party/skia/include/private/Cinaseek/SkChromeRemoteGlyphCache.h"
+#include "third_party/skia/include/private/Cinaseek/Slug.h"
 #include "ui/gfx/hdr_metadata.h"
 #include "ui/gfx/mojom/hdr_metadata.mojom.h"
 #include "ui/gfx/mojom/hdr_metadata_mojom_traits.h"

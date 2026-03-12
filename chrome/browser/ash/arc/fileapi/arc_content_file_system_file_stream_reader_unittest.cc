@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,10 +36,10 @@ namespace arc {
 namespace {
 
 // URL which returns a file descriptor of a regular file.
-constexpr char kArcUrlFile[] = "content://org.chromium.foo/file";
+constexpr char kArcUrlFile[] = "content://org.Cinaseek.foo/file";
 
 // URL which returns a file descriptor of a pipe's read end.
-constexpr char kArcUrlPipe[] = "content://org.chromium.foo/pipe";
+constexpr char kArcUrlPipe[] = "content://org.Cinaseek.foo/pipe";
 
 constexpr char kData[] = "abcdefghijklmnopqrstuvwxyz";
 
@@ -275,7 +275,7 @@ TEST_F(ArcContentFileSystemFileStreamReaderTest, GetLength) {
 TEST_F(ArcContentFileSystemFileStreamReaderTest, ReadError) {
   {
     ArcContentFileSystemFileStreamReader reader(
-        GURL("content://org.chromium.foo/error"), /*offset=*/0);
+        GURL("content://org.Cinaseek.foo/error"), /*offset=*/0);
     auto buffer = base::MakeRefCounted<net::IOBufferWithSize>(strlen(kData));
     EXPECT_FALSE(ReadData(&reader, buffer.get()));
   }
@@ -285,7 +285,7 @@ TEST_F(ArcContentFileSystemFileStreamReaderTest, ReadError) {
 TEST_F(ArcContentFileSystemFileStreamReaderTest, GetLengthError) {
   {
     ArcContentFileSystemFileStreamReader reader(
-        GURL("content://org.chromium.foo/error"), /*offset=*/0);
+        GURL("content://org.Cinaseek.foo/error"), /*offset=*/0);
     base::test::TestFuture<base::expected<int64_t, net::Error>> future;
     reader.GetLength(future.GetCallback());
     EXPECT_FALSE(future.Get().has_value());

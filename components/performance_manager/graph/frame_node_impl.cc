@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -113,7 +113,7 @@ void FrameNodeImpl::Bind(
   // - Navigation from the initial empty document to the first real document.
   // - Navigation rejected by RenderFrameHostImpl::ValidateDidCommitParams().
   // See discussion:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/1572459/6#message-bd31f3e73f96bd9f7721be81ba6ac0076d053147
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1572459/6#message-bd31f3e73f96bd9f7721be81ba6ac0076d053147
   receiver_.reset();
   receiver_.Bind(std::move(receiver));
 }
@@ -473,7 +473,7 @@ void FrameNodeImpl::UpdateCurrentFrame(FrameNodeImpl* previous_frame_node,
   // `frame_tree_node_id` can go out of date. Because of this,
   // RenderFrameHost::GetFrameTreeNodeId() is being deprecated. (See the
   // discussion at crbug.com/1179502 and in the comment thread at
-  // https://chromium-review.googlesource.com/c/chromium/src/+/2966195/comments/58550eac_5795f790
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2966195/comments/58550eac_5795f790
   // for more details.) We need to find another way to check this invariant
   // here. (altimin suggests simply relying on RFH::GetLifecycleState to
   // correctly track "active" frame nodes instead of using "current", and not

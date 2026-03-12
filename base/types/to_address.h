@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 // The standard does not require `std::to_address()` to be SFINAE-compatible
 // when code attempts instantiation with non-pointer-like types, and libstdc++'s
 // implementation hard errors. For the sake of templated code that wants simple,
-// unified handling, Chromium instead uses this wrapper, which provides that
+// unified handling, Cinaseek instead uses this wrapper, which provides that
 // guarantee. This allows code to use "`to_address()` would be valid here" as a
 // constraint to detect pointer-like types.
 namespace base {

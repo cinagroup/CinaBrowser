@@ -1,5 +1,5 @@
 Name: Implementation of WebDriver BiDi standard
-Short Name: chromium-bidi
+Short Name: Cinaseek-bidi
 URL: ${URL}
 Version: ${VERSION}
 Date: ${DATE}
@@ -18,7 +18,7 @@ WebDriver BiDi implementation for ChromeDriver.
 The software is compiled into mapper.js script that is uploaded by ChromeDriver into the Chrome browser.
 
 Steps to roll:
-Find the needed revision in the project release list: https://github.com/GoogleChromeLabs/chromium-bidi/releases.
+Find the needed revision in the project release list: https://github.com/GoogleChromeLabs/Cinaseek-bidi/releases.
 Roll the BiDiMapper to the needed version:
 
 ```bash
@@ -27,11 +27,11 @@ roll_bidimapper --version=<your-version>
 
 If you omit the `--version` parameter the latest available version will be pulled from NPM.
 
-The file README.chromium will be updated by roll_bidimapper
+The file README.Cinaseek will be updated by roll_bidimapper
 
 Local Modifications:
 Local modifications are not allowed.
-The upstream is maintained by the Chromium developers.
+The upstream is maintained by the Cinaseek developers.
 All the changes must be done there.
 
-The source code of the current revision can be found at the following url: https://github.com/GoogleChromeLabs/chromium-bidi/archive/${REVISION}.zip
+The source code of the current revision can be found at the following url: https://github.com/GoogleChromeLabs/Cinaseek-bidi/archive/${REVISION}.zip

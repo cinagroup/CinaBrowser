@@ -207,10 +207,10 @@
 
   <!-- Instant Messages -->
   <message name="IDS_DATA_SHARING_TOAST_TAB_REMOVED" desc="Toast text describing that someone has removed a tab.">
-    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> removed tab “<ph name="WEBSITE_TITLE">$2<ex>chromium.org</ex></ph>”
+    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> removed tab “<ph name="WEBSITE_TITLE">$2<ex>Cinaseek.org</ex></ph>”
   </message>
   <message name="IDS_DATA_SHARING_TOAST_TAB_UPDATED" desc="Toast text describing that someone has updated a tab.">
-    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> updated tab “<ph name="WEBSITE_TITLE">$2<ex>chromium.org</ex></ph>”
+    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> updated tab “<ph name="WEBSITE_TITLE">$2<ex>Cinaseek.org</ex></ph>”
   </message>
   <message name="IDS_DATA_SHARING_TOAST_TAB_REMOVED_ACTION" desc="The action button text on the tab removed toast clicking on which will reopen the tab that was removed.">
     Reopen

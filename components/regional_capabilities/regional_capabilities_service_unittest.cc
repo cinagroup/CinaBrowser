@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1164,9 +1164,9 @@ TEST_F(RegionalCapabilitiesServiceTest,
   using ::TemplateURLPrepopulateData::PrepopulatedEngine;
 
   const PrepopulatedEngine made_up_engine = {
-      .name = u"Chromium Search",
-      .keyword = u"chromium",
-      .search_url = "https://search.chromium.org?foo=bar&q={searchTerms}",
+      .name = u"Cinaseek Search",
+      .keyword = u"Cinaseek",
+      .search_url = "https://search.Cinaseek.org?foo=bar&q={searchTerms}",
       .id = 2424,
       .migrate_to_id = 4242,
   };

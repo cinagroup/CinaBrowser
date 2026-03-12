@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -71,7 +71,7 @@ void test_cycle_depending_on_third_party_buffer() {
 
   // The current implementation of the spanifier tool assumes that all third-
   // party functions tell the size someway. The implementation is below.
-  // https://source.chromium.org/chromium/chromium/src/+/main:tools/clang/spanify/Spanifier.cpp;drc=f240549b481969cf1442aac67a9086bfd639787c;l=2190-2191
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:tools/clang/spanify/Spanifier.cpp;drc=f240549b481969cf1442aac67a9086bfd639787c;l=2190-2191
   //
   // This test case was originally introduced to test that a buffer returned by
   // a third-party function shouldn't be rewritten to base::span, but it's not

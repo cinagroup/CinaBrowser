@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ bool ShouldLoadUrlInDesktopMode(const GURL& url,
 - (NSString*)bundleURLScheme {
   if (!_callbackScheme) {
     NSSet* allowableSchemes =
-        [NSSet setWithObjects:@"googlechrome", @"chromium",
+        [NSSet setWithObjects:@"googlechrome", @"Cinaseek",
                               @"ios-chrome-unittests.http", nil];
     NSArray* schemes = [self allBundleURLSchemes];
     for (NSString* scheme in schemes) {

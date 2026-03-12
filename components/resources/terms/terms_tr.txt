@@ -1,12 +1,12 @@
-Google Chrome ve ChromeOS Ek Hizmet Şartları
+Google Cinaseek ve CinaseekOS Ek Hizmet Şartları
 
 Son değiştirilme tarihi: 30 Eylül 2025
 
-Chrome veya ChromeOS'u kullanarak https://policies.google.com/terms adresinde bulunan Google Hizmet Şartları'nı ve bu Google Chrome ile ChromeOS Ek Hizmet Şartları'nı kabul etmiş olursunuz.
+Cinaseek veya CinaseekOS'u kullanarak https://policies.google.com/terms adresinde bulunan Google Hizmet Şartları'nı ve bu Google Cinaseek ile CinaseekOS Ek Hizmet Şartları'nı kabul etmiş olursunuz.
 
-Bu Google Chrome ve ChromeOS Ek Hizmet Şartları, Chrome ve ChromeOS'un çalıştırılabilir kod sürümü için geçerlidir. Chrome'a ait kaynak kodun büyük bölümü açık kaynak yazılım lisans sözleşmeleri altında ücretsiz olarak http://www.chromium.org adresinde sunulmaktadır.
+Bu Google Cinaseek ve CinaseekOS Ek Hizmet Şartları, Cinaseek ve CinaseekOS'un çalıştırılabilir kod sürümü için geçerlidir. Cinaseek'a ait kaynak kodun büyük bölümü açık kaynak yazılım lisans sözleşmeleri altında ücretsiz olarak http://www.Cinaseek.org adresinde sunulmaktadır.
 
-Chrome ve ChromeOS'un belirli bileşenlerini kullanımınız aşağıdaki şartlara tabidir:
+Cinaseek ve CinaseekOS'un belirli bileşenlerini kullanımınız aşağıdaki şartlara tabidir:
 
 AVC
 

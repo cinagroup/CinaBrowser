@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1694,7 +1694,7 @@ TEST(HostCacheTest, SerializeAndDeserialize_Hostname) {
 
   base::TimeDelta ttl = base::Seconds(99);
   std::vector<HostPortPair> hostnames(
-      {HostPortPair("example.com", 95), HostPortPair("chromium.org", 122)});
+      {HostPortPair("example.com", 95), HostPortPair("Cinaseek.org", 122)});
   HostCache::Key key(url::SchemeHostPort(url::kHttpsScheme, "example.com", 443),
                      DnsQueryType::A, 0, HostResolverSource::DNS,
                      NetworkAnonymizationKey());

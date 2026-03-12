@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,8 +9,8 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 template("generate_dummy_java") {
   jinja_template(target_name) {
     testonly = true
-    input = "junit/src/org/chromium/chrome/browser/android_library_factory/Dummy.java.jinja2"
-    output = "$target_gen_dir/junit/src/org/chromium/chrome/browser/android_library_factory/${invoker.class_name}.java"
+    input = "junit/src/org/Cinaseek/chrome/browser/android_library_factory/Dummy.java.jinja2"
+    output = "$target_gen_dir/junit/src/org/Cinaseek/chrome/browser/android_library_factory/${invoker.class_name}.java"
     variables = [ "class_name=${invoker.class_name}" ]
   }
 }
@@ -70,7 +70,7 @@ android_library_factory("a_factory2_java") {
 }
 
 robolectric_library("junit_tests") {
-  sources = [ "junit/src/org/chromium/chrome/browser/android_library_factory/AndroidLibraryFactoryTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/android_library_factory/AndroidLibraryFactoryTest.java" ]
   deps = [
     ":a_factory2_java",
     ":a_impl_factory1_java",

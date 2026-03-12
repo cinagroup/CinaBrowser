@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -191,7 +191,7 @@ class DeviceManagementServiceIntegrationTest
     em::CloudPolicySettings settings;
     settings.mutable_homepagelocation()->mutable_policy_options()->set_mode(
         em::PolicyOptions::MANDATORY);
-    settings.mutable_homepagelocation()->set_value("http://www.chromium.org");
+    settings.mutable_homepagelocation()->set_value("http://www.Cinaseek.org");
     PolicyStorage* policy_storage = test_server_->policy_storage();
     policy_storage->SetPolicyPayload(dm_protocol::GetChromeUserPolicyType(),
                                      settings.SerializeAsString());

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ TEST_F(PageCaptureApiUnitTest, PageNavigationDuringSaveAsMHTML) {
   api_test_utils::SendResponseHelper response_helper(function.get());
   function->RunWithValidation().Execute();
 
-  web_contents_tester->NavigateAndCommit(GURL("https://www.chromium.org"));
+  web_contents_tester->NavigateAndCommit(GURL("https://www.Cinaseek.org"));
   response_helper.WaitForResponse();
   const base::ListValue* results = function->GetResultListForTest();
   ASSERT_TRUE(results);

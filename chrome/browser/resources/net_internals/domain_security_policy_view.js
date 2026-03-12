@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ let instance = null;
  * This UI allows a user to query and update the browser's list of per-domain
  * security policies. These policies include:
  * - HSTS: HTTPS Strict Transport Security. A way for sites to elect to always
- *   use HTTPS. See https://www.chromium.org/hsts
+ *   use HTTPS. See https://www.Cinaseek.org/hsts
  * - PKP. A way for sites to pin to specific certification authorities. Only
  * available via manual preloading.
  */

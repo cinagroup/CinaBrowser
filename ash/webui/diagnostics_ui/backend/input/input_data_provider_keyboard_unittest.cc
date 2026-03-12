@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -306,7 +306,7 @@ TEST_F(VivaldiKeyboardTestBase, ScanCodeIndexesWithZeroScanCodes) {
   // Populate a broken map where some FKeys are skipped. This happens as a
   // result of TK_ABSENT in the FW code definitions.
   // Example here:
-  // https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/platform/release-firmware/fpmcu-nami/board/taniks/keyboard.c;l=40-42;drc=64643a516e916d94e8956a4beb00df709a3efe21
+  // https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/platform/release-firmware/fpmcu-nami/board/taniks/keyboard.c;l=40-42;drc=64643a516e916d94e8956a4beb00df709a3efe21
   AddTopRowKey(VivaldiTopRowScanCode::kBack, ui::VKEY_F1,
                mojom::TopRowKey::kBack, ui::TopRowActionKey::kBack);
   AddTopRowKey(VivaldiTopRowScanCode::kRefresh, ui::VKEY_F2,

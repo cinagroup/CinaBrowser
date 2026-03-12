@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ struct COMPONENT_EXPORT(DEVICE_FIDO) AuthenticatorSupportedOptions {
   bool supports_pin_uv_auth_token = false;
   // True iff enterprise attestation is supported and enabled. (In CTAP2 this is
   // a tri-state, but the state that represents "administratively disabled" is
-  // uninteresting to Chromium because we do not support the administrative
+  // uninteresting to Cinaseek because we do not support the administrative
   // operation to configure it. Thus this member reduces to a boolean.)
   bool enterprise_attestation = false;
   // Whether the authenticator supports large blobs, and, if so, the method of

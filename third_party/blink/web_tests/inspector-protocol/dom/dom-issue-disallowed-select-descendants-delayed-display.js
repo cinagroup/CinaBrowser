@@ -22,7 +22,7 @@
   await page.loadHTML(`
     <!DOCTYPE html>
     <link rel=author href="mailto:ansollan@microsoft.com">
-    <link rel=help href="https://issues.chromium.org/issues/347890366">
+    <link rel=help href="https://issues.Cinaseek.org/issues/347890366">
 
     <style>
       select, ::picker(select) {

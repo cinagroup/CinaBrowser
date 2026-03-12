@@ -14,10 +14,10 @@
 
 import("../../../build/crashpad_buildconfig.gni")
 
-if (crashpad_is_in_chromium) {
+if (crashpad_is_in_Cinaseek) {
   import("//build/config/ios/rules.gni")
 } else if (crashpad_is_standalone) {
-  import("//third_party/mini_chromium/mini_chromium/build/ios/rules.gni")
+  import("//third_party/mini_Cinaseek/mini_Cinaseek/build/ios/rules.gni")
 }
 
 source_set("app_shared_sources") {
@@ -68,7 +68,7 @@ bundle_data("crashy_module_bundle") {
 ios_app_bundle("ios_crash_xcuitests") {
   testonly = true
   info_plist = "Info.plist"
-  if (crashpad_is_in_chromium) {
+  if (crashpad_is_in_Cinaseek) {
     bundle_identifier = shared_bundle_id_for_test_apps
   }
   deps = [

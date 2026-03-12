@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -445,7 +445,7 @@ if (is_android) {
   android_library("java") {
     srcjar_deps = [ ":jni_headers" ]
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/contextual_tasks/ContextualTasksBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/contextual_tasks/ContextualTasksBridge.java" ]
 
     deps = [
       "//base:base_java",
@@ -456,7 +456,7 @@ if (is_android) {
   }
 
   generate_jni("jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/contextual_tasks/ContextualTasksBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/contextual_tasks/ContextualTasksBridge.java" ]
   }
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 namespace payments::facilitated {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.facilitated_payments
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.facilitated_payments
 // The result of invoking the purchase manager with an action token.
 enum class PurchaseActionResult : int {
   // Could not invoke the purchase manager.

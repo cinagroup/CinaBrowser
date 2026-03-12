@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ const char kInvalidPath[] = "/test/invalid/path";
 const char kTestActivationCode[] = "abc123";
 const char kTestActivationCodeWithSpacing[] = "   abc123   ";
 const char kTestConfirmationCode[] = "def456";
-const char kTestEuiccPath[] = "/org/chromium/hermes/Euicc/1";
-const char kTestCarrierProfilePath[] = "/org/chromium/hermes/Profile/1";
+const char kTestEuiccPath[] = "/org/Cinaseek/hermes/Euicc/1";
+const char kTestCarrierProfilePath[] = "/org/Cinaseek/hermes/Profile/1";
 const char kDbusNoResponse[] = "org.freedesktop.DBus.Error.NoReply";
 
 // Matches dbus::MethodCall for UninstallProfile call with given path.

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -273,7 +273,7 @@ class GeminiBrowserAgent : public BrowserUserData<GeminiBrowserAgent>,
   __strong id<BWGGatewayProtocol> bwg_gateway_ = nullptr;
 
   /// TODO(crbug.com/491093929): Rename the below classes to move away from the
-  /// `-Handler` naming scheme used by Chromium Objective-C command protocols.
+  /// `-Handler` naming scheme used by Cinaseek Objective-C command protocols.
   // Handler for opening links from BWG.
   __strong BWGLinkOpeningHandler* bwg_link_opening_handler_ = nullptr;
 

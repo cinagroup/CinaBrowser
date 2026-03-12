@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -245,7 +245,7 @@ void BrowserAccessibilityManagerMac::FireGeneratedEvent(
           // application be active. Use the announcement API to get around on
           // PWA. Announcement requires active window, so send the announcement
           // notification to the PWA related window. same work around like
-          // https://chromium-review.googlesource.com/c/chromium/src/+/3257815
+          // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3257815
           std::string live_status =
               node->GetStringAttribute(ax::mojom::StringAttribute::kLiveStatus);
           NSAccessibilityPriorityLevel priority_level =

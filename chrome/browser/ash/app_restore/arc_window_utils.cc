@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ bool IsArcGhostWindowEnabled() {
 std::optional<double> GetDisplayScaleFactor(int64_t display_id) {
   // The `kDefaultDisplayId` should not be a valid parameter. Here replace it to
   // primary display id to keep it as the same semantics with Android, since the
-  // ARC app window will not be shown on chromium default display (placeholder
+  // ARC app window will not be shown on Cinaseek default display (placeholder
   // display when no display connected).
   if (display_id == display::kDefaultDisplayId)
     display_id = display::Screen::Get()->GetPrimaryDisplay().id();
@@ -79,7 +79,7 @@ bool IsValidThemeColor(uint32_t theme_color) {
 }
 
 const std::string WrapSessionAppIdFromWindowId(int window_id) {
-  return std::string("org.chromium.arc.session.") +
+  return std::string("org.Cinaseek.arc.session.") +
          base::NumberToString(window_id);
 }
 

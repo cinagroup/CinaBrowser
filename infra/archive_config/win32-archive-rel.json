@@ -42,7 +42,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chrome-win"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/chrome-win.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP",
             "latest_upload": {
@@ -78,7 +78,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chrome-win32-syms"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/chrome-win32-syms.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -89,7 +89,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chromedriver_win32-syms"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/chromedriver_win32-syms.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -101,7 +101,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chromedriver_win32"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/chromedriver_win32.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -116,7 +116,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "content-shell"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/content-shell.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -125,7 +125,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "devtools-frontend"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/devtools-frontend.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -138,7 +138,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "gcapi"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/gcapi.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -151,7 +151,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "metrics-metadata"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/metrics-metadata.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -159,7 +159,7 @@
             "files": [
                 "mini_installer.exe"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -167,7 +167,7 @@
             "files": [
                 "remoting-me2me-host-win.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -175,7 +175,7 @@
             "files": [
                 "updater.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -184,7 +184,7 @@
                 "updater.exe.pdb",
                 "UpdaterSetup.exe.pdb"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}/updater-syms.zip",
             "archive_type":"ARCHIVE_TYPE_ZIP"
         },
@@ -192,7 +192,7 @@
             "files": [
                 "enterprise_companion.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -200,7 +200,7 @@
             "files": [
                 "enterprise_companion_test.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Win/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         }

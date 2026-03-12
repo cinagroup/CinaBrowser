@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 namespace net {
 
 // Chrome specific packet writer which uses a datagram Socket for writing data.
-class NET_EXPORT_PRIVATE QuicChromiumPacketWriter
+class NET_EXPORT_PRIVATE QuicCinaseekPacketWriter
     : public quic::QuicPacketWriter {
  public:
   // Define a specific IO buffer that can be allocated once, but be
@@ -67,13 +67,13 @@ class NET_EXPORT_PRIVATE QuicChromiumPacketWriter
   };
 
   // |socket| and |task_runner| must outlive writer.
-  QuicChromiumPacketWriter(DatagramClientSocket* socket,
+  QuicCinaseekPacketWriter(DatagramClientSocket* socket,
                            base::SequencedTaskRunner* task_runner);
 
-  QuicChromiumPacketWriter(const QuicChromiumPacketWriter&) = delete;
-  QuicChromiumPacketWriter& operator=(const QuicChromiumPacketWriter&) = delete;
+  QuicCinaseekPacketWriter(const QuicCinaseekPacketWriter&) = delete;
+  QuicCinaseekPacketWriter& operator=(const QuicCinaseekPacketWriter&) = delete;
 
-  ~QuicChromiumPacketWriter() override;
+  ~QuicCinaseekPacketWriter() override;
 
   // |delegate| must outlive writer.
   void set_delegate(Delegate* delegate) { delegate_ = delegate; }
@@ -156,7 +156,7 @@ class NET_EXPORT_PRIVATE QuicChromiumPacketWriter
   base::OneShotTimer retry_timer_;
 
   CompletionRepeatingCallback write_callback_;
-  base::WeakPtrFactory<QuicChromiumPacketWriter> weak_factory_{this};
+  base::WeakPtrFactory<QuicCinaseekPacketWriter> weak_factory_{this};
 };
 
 }  // namespace net

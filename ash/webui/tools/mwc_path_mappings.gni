@@ -1,9 +1,9 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 _node_modules_path =
-    "//third_party/material_web_components/components-chromium/node_modules"
+    "//third_party/material_web_components/components-Cinaseek/node_modules"
 
 # When tsc encounters an import from "lit" it won't know where to look to get
 # the packages type information unless we provide a mapping of import to

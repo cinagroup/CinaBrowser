@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,7 +102,7 @@ class ActorTask : public base::SupportsUserData {
   // rather than querying `state_` directly.
   //
   // LINT.IfChange(State)
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.actor
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.actor
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ActorTaskState
   // These enum values are persisted to logs. Do not renumber or reuse numeric
   // values.
@@ -121,7 +121,7 @@ class ActorTask : public base::SupportsUserData {
   // LINT.ThenChange(//tools/metrics/histograms/metadata/actor/histograms.xml:ActorTaskState)
 
   // LINT.IfChange(StoppedReason)
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.actor
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.actor
   // The reason a task was stopped.
   enum class StoppedReason {
     kStoppedByUser = 0,

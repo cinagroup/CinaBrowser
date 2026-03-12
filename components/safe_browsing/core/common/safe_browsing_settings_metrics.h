@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace safe_browsing {
 // "SafeBrowsing.Settings.UserAction" histogram.
 // A Java counterpart will be generated for this enum.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.chrome.browser.safe_browsing.metrics)
+//   org.Cinaseek.chrome.browser.safe_browsing.metrics)
 enum class SettingsAccessPoint : int {
   kDefault = 0,
   // From Settings > Privacy and security.
@@ -35,7 +35,7 @@ enum class SettingsAccessPoint : int {
 // must not be removed or reordered.
 // A Java counterpart will be generated for this enum.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.chrome.browser.safe_browsing.metrics)
+//   org.Cinaseek.chrome.browser.safe_browsing.metrics)
 enum class UserAction : int {
   // The page is shown to the user.
   kShowed = 0,

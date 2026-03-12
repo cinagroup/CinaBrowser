@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,7 +73,7 @@ class CORE_EXPORT NavigationApi final : public EventTarget {
   // "ongoing"; that is, ongoing_navigation_event_ and ongoing_navigation_ are
   // non-null. (The impact of this is that another navigation will cancel that
   // ongoing navigation, in a web-developer-visible way.) But from the
-  // perspective of other parts of Chromium which interface with the navigation
+  // perspective of other parts of Cinaseek which interface with the navigation
   // API, e.g. to deal with the loading spinner, dropped navigations are not
   // what they care about.
   bool HasNonDroppedOngoingNavigation() const;

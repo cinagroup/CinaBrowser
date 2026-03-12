@@ -20,7 +20,7 @@
             "text": "-enable-pretty-printing"
           },
           {
-            "description": "Load Chromium gdb configuration",
+            "description": "Load Cinaseek gdb configuration",
             "text": "-interpreter-exec console \"source -v ${workspaceFolder}/tools/gdb/gdbinit\""
           },
           {

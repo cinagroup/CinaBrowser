@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ float* InterleavedChannelMixer::Transform(const float* input, int num_frames) {
   }
 
   DCHECK_LE(num_frames, max_frames_);
-  // TODO(kmackay) Could use Eigen, but it's not available in public Chromium.
+  // TODO(kmackay) Could use Eigen, but it's not available in public Cinaseek.
   float* output = buffer_.data();
   for (int f = 0; f < num_frames; ++f) {
     // For each frame, multiply the row-major transform matrix by the column-

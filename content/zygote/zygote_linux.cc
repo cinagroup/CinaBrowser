@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@
 #include "third_party/icu/source/i18n/unicode/timezone.h"
 
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/zygote.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/zygote.md
 
 namespace content {
 
@@ -107,7 +107,7 @@ bool Zygote::ProcessRequests() {
   // browser on it.
   // A SOCK_DGRAM is installed in fd 5. This is the sandbox IPC channel.
   // See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md
 
   // We need to accept SIGCHLD, even though our handler is a no-op because
   // otherwise we cannot wait on children. (According to POSIX 2001.)

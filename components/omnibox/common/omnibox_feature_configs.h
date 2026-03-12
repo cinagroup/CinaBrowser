@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ struct AiMode : Config<AiMode> {
 
   AiMode();
 
-  // Chromium-side guard for AI matches from the search server. Enabling this
+  // Cinaseek-side guard for AI matches from the search server. Enabling this
   // won't guarantee AI mode matches are shown; that mostly depends on server
   // side. But disabling this will hide the server echo matches.
   bool allow_ai_mode_matches;

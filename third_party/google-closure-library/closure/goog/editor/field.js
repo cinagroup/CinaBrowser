@@ -701,7 +701,7 @@ if ((goog.userAgent.WINDOWS || goog.labs.userAgent.platform.isAndroid()) &&
   // The same phenomina happen on android devices - no KeyPress events are
   // emitted, and all KeyDown events have no useful charCode or other
   // identifying information (see
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=118639 for
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=118639 for
   // background, but it's considered WAI by various Input Method experts).
   goog.editor.Field.KEYS_CAUSING_CHANGES_[229] = true;  // from IME;
 }

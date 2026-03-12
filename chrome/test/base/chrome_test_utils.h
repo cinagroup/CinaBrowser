@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ GURL GetTestUrl(const base::FilePath& dir, const base::FilePath& file);
 // This class is inherited by unit test fixtures that leverage death tests with
 // a dependency on TestingBrowserProcess. It is necessary as currently death
 // tests will incompletely initialize the test environment, see bug below.
-// TODO(crbug.com/487292986): This should be eliminated once we update chromium
+// TODO(crbug.com/487292986): This should be eliminated once we update Cinaseek
 // unit tests to avoid using listeners for test setup, or all existing death
 // test clients are updated to allow for the existence of the g_browser_process,
 // at which point this can be merged up into `ChromeUnitTestSuiteInitializer`.

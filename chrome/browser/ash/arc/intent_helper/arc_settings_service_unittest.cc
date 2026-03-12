@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ namespace arc {
 namespace {
 
 constexpr char kActionLocaionEnabled[] =
-    "org.chromium.arc.intent_helper.SET_LOCATION_SERVICE_ENABLED";
+    "org.Cinaseek.arc.intent_helper.SET_LOCATION_SERVICE_ENABLED";
 
 bool IsSameCaptionColor(const arc::mojom::CaptionColor* l,
                         const arc::mojom::CaptionColor* r) {
@@ -291,7 +291,7 @@ TEST_F(ArcSettingsServiceTest, InitialSettingsNotAppliedNextSession) {
 
 TEST_F(ArcSettingsServiceTest, DisablesFontSize) {
   constexpr char kSetFontScale[] =
-      "org.chromium.arc.intent_helper.SET_FONT_SCALE";
+      "org.Cinaseek.arc.intent_helper.SET_FONT_SCALE";
 
   // Initial broadcast resets to 100%.
   arc_session_manager()->RequestEnable();
@@ -309,7 +309,7 @@ TEST_F(ArcSettingsServiceTest, DisablesFontSize) {
 
 TEST_F(ArcSettingsServiceTest, DisablesPageZoom) {
   constexpr char kSetPageZoom[] =
-      "org.chromium.arc.intent_helper.SET_PAGE_ZOOM";
+      "org.Cinaseek.arc.intent_helper.SET_PAGE_ZOOM";
 
   // Initial broadcast resets to 100%.
   arc_session_manager()->RequestEnable();

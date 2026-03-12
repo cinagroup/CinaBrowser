@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 
 namespace autofill {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.autofill.autofill_ai
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.autofill.autofill_ai
 enum class EntityAttributeUpdateType {
   // A new attribute has been added to the entity. For example, the vehicle
   // make attribute (`kVehicleMake`) has been added to the vehicle info entity.

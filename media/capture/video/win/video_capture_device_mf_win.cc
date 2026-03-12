@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -398,7 +398,7 @@ bool GetMediaFormatConfigurationFromMFSourceMediaSubtype(
       // This means that the sink must always be set to an uncompressed video
       // format.
 
-      // Since chromium uses I420 at the other end of the pipe, MF known video
+      // Since Cinaseek uses I420 at the other end of the pipe, MF known video
       // output formats are always set to I420.
       {false, MFVideoFormat_I420, MFVideoFormat_I420, PIXEL_FORMAT_I420},
       {false, MFVideoFormat_YUY2, MFVideoFormat_I420, PIXEL_FORMAT_I420},

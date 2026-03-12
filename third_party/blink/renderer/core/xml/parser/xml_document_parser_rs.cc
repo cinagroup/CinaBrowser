@@ -7,7 +7,7 @@
  * Copyright (C) 2008 Holger Hans Peter Freyther
  * Copyright (C) 2008 Torch Mobile Inc. All rights reserved.
  * (http://www.torchmobile.com/)
- * Copyright (C) 2025 The Chromium Authors
+ * Copyright (C) 2025 The Cinaseek Authors
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public

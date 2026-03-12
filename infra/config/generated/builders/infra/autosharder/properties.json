@@ -19,6 +19,6 @@
   "exclude_suites": [
     "chrome_all_tast_tests"
   ],
-  "recipe": "chromium/autosharder",
+  "recipe": "Cinaseek/autosharder",
   "target_runtime": 15
 }

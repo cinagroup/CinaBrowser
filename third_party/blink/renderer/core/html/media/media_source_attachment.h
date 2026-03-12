@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ class CORE_EXPORT MediaSourceAttachment
   virtual void Close(MediaSourceTracer* tracer) = 0;
 
   // 'Internal' in these methods doesn't mean private, it means that they are
-  // internal to chromium and are not exposed to JavaScript.
+  // internal to Cinaseek and are not exposed to JavaScript.
   virtual WebTimeRanges BufferedInternal(MediaSourceTracer* tracer) const = 0;
   virtual WebTimeRanges SeekableInternal(MediaSourceTracer* tracer) const = 0;
 

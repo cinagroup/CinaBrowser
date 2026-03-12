@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class ColorProvider;
                 ASWebAuthenticationSessionWebBrowserSessionHandling>
 
 // The app-wide singleton AppController. Guaranteed to be the delegate of NSApp
-// inside of Chromium (not inside of app shims; see AppShimDelegate). Guaranteed
+// inside of Cinaseek (not inside of app shims; see AppShimDelegate). Guaranteed
 // to not be nil.
 @property(readonly, nonatomic, class) AppController* sharedController;
 

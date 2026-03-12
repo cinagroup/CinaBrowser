@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ class BrowserFuzzTest : public T, public fuzztest::FuzzTestRunnerFixture {
   }
   void SetUp() override {
     // Overrides the default 60s run loop timeout set by `BrowserTestBase`. See
-    // https://source.chromium.org/chromium/chromium/src/+/main:content/public/test/browser_test_base.cc?q=ScopedRunLoopTimeout.
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/public/test/browser_test_base.cc?q=ScopedRunLoopTimeout.
     // All of the fuzzing engines that we use are having timeouts features, and
     // this timeout can vary depending on the number of tested testcases. We
     // must let the engines handle timeouts, and set the maximum here.

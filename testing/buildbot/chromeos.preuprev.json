@@ -3,11 +3,11 @@
   "AAAAA2 See generate_buildbot_json.py to make changes": {},
   "chromeos-betty-chrome-preuprev": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//base:base_unittests",
@@ -52,7 +52,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -71,11 +71,11 @@
   },
   "chromeos-brya-chrome-preuprev": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//base:base_unittests",
@@ -120,7 +120,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -139,11 +139,11 @@
   },
   "chromeos-jacuzzi-chrome-preuprev": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -186,7 +186,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -204,11 +204,11 @@
   },
   "chromeos-reven-chrome-preuprev": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "reven-vmtest",
         "dut_pool": "vmlab",
         "module_name": "//base:base_unittests",
@@ -256,7 +256,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.reven.chromeos_integration_tests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "reven-vmtest",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -275,11 +275,11 @@
   },
   "chromeos-volteer-chrome-preuprev": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -322,7 +322,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -941,9 +941,9 @@
         "merge": {
           "script": "//testing/merge_scripts/standard_gtest_merge.py"
         },
-        "module_name": "//third_party/leveldatabase:env_chromium_unittests",
+        "module_name": "//third_party/leveldatabase:env_Cinaseek_unittests",
         "module_scheme": "gtest",
-        "name": "env_chromium_unittests",
+        "name": "env_Cinaseek_unittests",
         "swarming": {
           "dimensions": {
             "os": "Ubuntu-22.04",
@@ -952,8 +952,8 @@
           },
           "service_account": "chrome-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
-        "test": "env_chromium_unittests",
-        "test_id_prefix": "ninja://third_party/leveldatabase:env_chromium_unittests/"
+        "test": "env_Cinaseek_unittests",
+        "test_id_prefix": "ninja://third_party/leveldatabase:env_Cinaseek_unittests/"
       },
       {
         "merge": {

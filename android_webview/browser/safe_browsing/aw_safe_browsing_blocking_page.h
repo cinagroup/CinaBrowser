@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class AwSafeBrowsingBlockingPage : public safe_browsing::BaseBlockingPage {
   // parameters they require.
   // Note: these values are persisted in UMA logs, so they should never be
   // renumbered or reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview
   enum class ErrorUiType { LOUD, QUIET_SMALL, QUIET_GIANT, COUNT };
 
   // Don't instantiate this class directly, use ShowBlockingPage instead.

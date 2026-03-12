@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ class CONTENT_EXPORT BluetoothScanningPrompt {
  public:
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.content_public.browser.bluetooth_scanning)
+  //   org.Cinaseek.content_public.browser.bluetooth_scanning)
   enum class Event {
     kAllow,
     kBlock,

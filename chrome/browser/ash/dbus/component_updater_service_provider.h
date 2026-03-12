@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,18 +26,18 @@ namespace ash {
 //
 // LoadComponent:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.ComponentUpdaterService
-//     /org/chromium/ComponentUpdaterService
-//     org.chromium.ComponentUpdaterService.LoadComponent
+//     --dest=org.Cinaseek.ComponentUpdaterService
+//     /org/Cinaseek/ComponentUpdaterService
+//     org.Cinaseek.ComponentUpdaterService.LoadComponent
 //     "string:|component name|" "boolean:|mount|"
 //
 // % string "/run/imageloader/|component name|/|version|"
 //
 // UnloadComponent:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.ComponentUpdaterService
-//     /org/chromium/ComponentUpdaterService
-//     org.chromium.ComponentUpdaterService.UnloadComponent
+//     --dest=org.Cinaseek.ComponentUpdaterService
+//     /org/Cinaseek/ComponentUpdaterService
+//     org.Cinaseek.ComponentUpdaterService.UnloadComponent
 //     "string:|component name|"
 //
 // % (returns empty response on success and error response on failure)

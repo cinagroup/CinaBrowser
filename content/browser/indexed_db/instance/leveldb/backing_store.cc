@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@
 #include "third_party/blink/public/common/storage_key/storage_key.h"
 #include "third_party/blink/public/mojom/blob/blob.mojom.h"
 #include "third_party/blink/public/mojom/indexeddb/indexeddb.mojom-shared.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/perfetto/include/perfetto/tracing/track.h"
 
@@ -180,9 +180,9 @@ leveldb_env::Options GetLevelDBOptions() {
       leveldb::NewBloomFilterPolicy(10);
   options.filter_policy = g_filter_policy;
 
-  // Thread-safe: static local construction, and `ChromiumEnv` implements
+  // Thread-safe: static local construction, and `CinaseekEnv` implements
   // internal synchronization.
-  static base::NoDestructor<leveldb_env::ChromiumEnv> g_leveldb_env;
+  static base::NoDestructor<leveldb_env::CinaseekEnv> g_leveldb_env;
   options.env = g_leveldb_env.get();
 
   return options;

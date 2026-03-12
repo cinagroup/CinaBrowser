@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #include "net/log/net_log.h"
 #include "net/log/test_net_log.h"
 #include "net/log/test_net_log_util.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/quic/quic_proxy_client_socket_test_base.h"
 #include "net/quic/test_quic_crypto_client_config_handle.h"
@@ -1211,7 +1211,7 @@ TEST_P(QuicProxyClientSocketTest, AsyncWriteAroundReads) {
   AssertSyncReadEquals(kMsg1);
 
   // Write should block until the next read completes.
-  // QuicChromiumClientStream::Handle::WriteStreamData() will only be
+  // QuicCinaseekClientStream::Handle::WriteStreamData() will only be
   // asynchronous starting with the second time it's called while the UDP socket
   // is write-blocked. Therefore, at least two writes need to be called on
   // |sock_| to get an asynchronous one.
@@ -1400,7 +1400,7 @@ TEST_P(QuicProxyClientSocketTest, WritePendingOnClose) {
 
   AssertConnectSucceeds();
 
-  // QuicChromiumClientStream::Handle::WriteStreamData() will only be
+  // QuicCinaseekClientStream::Handle::WriteStreamData() will only be
   // asynchronous starting with the second time it's called while the UDP socket
   // is write-blocked. Therefore, at least two writes need to be called on
   // |sock_| to get an asynchronous one.
@@ -1435,7 +1435,7 @@ TEST_P(QuicProxyClientSocketTest, DisconnectWithWritePending) {
 
   AssertConnectSucceeds();
 
-  // QuicChromiumClientStream::Handle::WriteStreamData() will only be
+  // QuicCinaseekClientStream::Handle::WriteStreamData() will only be
   // asynchronous starting with the second time it's called while the UDP socket
   // is write-blocked. Therefore, at least two writes need to be called on
   // |sock_| to get an asynchronous one.
@@ -1522,7 +1522,7 @@ TEST_P(QuicProxyClientSocketTest, RstWithReadAndWritePending) {
   AssertReadStarts(kMsg1);
 
   // Write should block until the next read completes.
-  // QuicChromiumClientStream::Handle::WriteStreamData() will only be
+  // QuicCinaseekClientStream::Handle::WriteStreamData() will only be
   // asynchronous starting with the second time it's called while the UDP socket
   // is write-blocked. Therefore, at least two writes need to be called on
   // |sock_| to get an asynchronous one.
@@ -1660,7 +1660,7 @@ TEST_P(QuicProxyClientSocketTest, RstWithReadAndWritePendingDelete) {
   ASSERT_EQ(ERR_IO_PENDING, sock_->Read(read_buf.get(), kMsg1.size(),
                                         read_callback.callback()));
 
-  // QuicChromiumClientStream::Handle::WriteStreamData() will only be
+  // QuicCinaseekClientStream::Handle::WriteStreamData() will only be
   // asynchronous starting with the second time it's called while the UDP socket
   // is write-blocked. Therefore, at least two writes need to be called on
   // |sock_| to get an asynchronous one.

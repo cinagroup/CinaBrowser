@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -152,7 +152,7 @@ class COMPONENT_EXPORT(NATIVE_THEME) NativeTheme {
     // Distinguishes between active (foreground) and inactive
     // (background) window frame styles.
     bool is_active = false;
-    // True when Chromium renders the titlebar.  False when the window
+    // True when Cinaseek renders the titlebar.  False when the window
     // manager renders the titlebar.
     bool use_custom_frame = false;
     // If the NativeTheme will paint a solid color, it should use
@@ -460,7 +460,7 @@ class COMPONENT_EXPORT(NATIVE_THEME) NativeTheme {
       std::optional<SkColor> accent_color = std::nullopt) const;
 
   // Returns the key corresponding to this native theme object.
-  // Use `use_custom_frame` == true when Chromium renders the titlebar.
+  // Use `use_custom_frame` == true when Cinaseek renders the titlebar.
   // False when the window manager renders the titlebar (currently GTK only).
   ColorProviderKey GetColorProviderKey(
       scoped_refptr<ColorProviderKey::ThemeInitializerSupplier> custom_theme,

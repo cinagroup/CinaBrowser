@@ -1472,7 +1472,7 @@ EGLAPI struct wl_buffer *EGLAPIENTRY eglCreateWaylandBufferFromImageWL (EGLDispl
 #endif
 #endif /* EGL_WL_create_wayland_buffer_from_image */
 
-/* Chromium-specific support for EGL_EXT_image_flush_external extension */
+/* Cinaseek-specific support for EGL_EXT_image_flush_external extension */
 #ifndef EGL_EXT_image_flush_external
 #define EGL_EXT_image_flush_external 1
 typedef EGLBoolean(EGLAPIENTRYP PFNGLEGLIMAGEFLUSHEXTERNALEXT)(
@@ -1487,7 +1487,7 @@ eglImageFlushExternalEXT(EGLDisplay dpy,
 #endif
 #endif /* EGL_EXT_image_flush_external */
 
-/* Chromium-specific support for EGL_ANGLE_stream_producer_d3d_texture */
+/* Cinaseek-specific support for EGL_ANGLE_stream_producer_d3d_texture */
 #ifndef EGL_ANGLE_stream_producer_d3d_texture
 #define EGL_ANGLE_stream_producer_d3d_texture 1
 #define EGL_D3D_TEXTURE_SUBRESOURCE_ID_ANGLE 0x33AB

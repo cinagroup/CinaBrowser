@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace media {
 // the next 5s will be ignored (though stats will be tracked internally).
 //
 // 5s was chosen to match the logic of CMA:
-// https://source.chromium.org/chromium/chromium/src/+/main:chromecast/media/cma/pipeline/media_pipeline_impl.cc;l=494;drc=3dd1b27a7cb34cc30ee4d8ddc2146972b5254201
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chromecast/media/cma/pipeline/media_pipeline_impl.cc;l=494;drc=3dd1b27a7cb34cc30ee4d8ddc2146972b5254201
 //
 // This class is not threadsafe, and must only be used on a single sequence.
 class ClientStatsTracker {

@@ -319,7 +319,7 @@ class CORE_EXPORT Node : public EventTarget {
   // The implementation differs a bit from the spec algorithm, notably in the
   // order that nodes are appended to their eventual destination. The spec
   // requires each Element's children to be cloned before they are appended to
-  // the Element, whereas the Chromium implementation first attaches a new
+  // the Element, whereas the Cinaseek implementation first attaches a new
   // clone to its parent, and then clones children. This avoids an O(log-n^2)
   // set of calls to Node::InsertedInto(). Fallback registry is used for
   // element cloning when the element's registry is not available.

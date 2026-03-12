@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@
 namespace {
 
 const char kCRSLearnMoreLink[] =
-    "https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/"
+    "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/net/data/ssl/"
     "chrome_root_store/faq.md";
 
 void AddCertificateManagerV2Strings(content::WebUIDataSource* html_source) {

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -214,7 +214,7 @@ PreloadingDecider::PreloadingDecider(RenderFrameHost* rfh)
   // - `SupportsUserData::ClearAllUserData()` (which is called from
   //   `DocumentAssociatedData::dtor()`) swaps user data with an empty map and
   //   then drops the swapped map at the end of scope, which calls each dtor.
-  //   https://source.chromium.org/chromium/chromium/src/+/main:base/supports_user_data.cc;l=142;drc=5f14562c01775211a40ebc3056d0a773c3569008
+  //   https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/supports_user_data.cc;l=142;drc=5f14562c01775211a40ebc3056d0a773c3569008
   //   So, `DevToolsPreloadStorage::GetForCurrentDocument()` returns non null
   //   pointer iff the call is before `DocumentAssociatedData::dtor()` call. We
   //   can branch by the condition.

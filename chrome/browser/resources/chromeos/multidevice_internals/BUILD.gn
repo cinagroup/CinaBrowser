@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -151,7 +151,7 @@ js_library("logging_tab") {
     ":types",
     "//ash/webui/common/resources:cr.m",
     "//ash/webui/common/resources:web_ui_listener_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -159,7 +159,7 @@ js_library("log_object") {
   deps = [
     ":multidevice_logs_browser_proxy",
     ":types",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -169,7 +169,7 @@ js_library("multidevice_internals") {
     ":logging_tab",
     ":phonehub_tab",
     "//ash/webui/common/resources:cr.m",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -25,7 +25,7 @@ if (toolchain_has_rust) {
   # we are using from the Android team. This is usually a version or two behind
   # nightly. Generally this matches the toolchain we build ourselves, but if
   # they differ, append or remove libraries based on the
-  # `use_chromium_rust_toolchain` GN variable.
+  # `use_Cinaseek_rust_toolchain` GN variable.
   #
   # If the build fails due to missing symbols, it would be because of a missing
   # library that needs to be added here in a newer stdlib.

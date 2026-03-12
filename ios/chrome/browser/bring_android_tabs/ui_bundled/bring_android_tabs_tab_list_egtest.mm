@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,12 +33,12 @@ id<GREYMatcher> PonyPageTitle() {
       grey_sufficientlyVisible(), nil);
 }
 
-// Returns the matcher for the entry of "/chromium_logo_page.html" in the recent
+// Returns the matcher for the entry of "/Cinaseek_logo_page.html" in the recent
 // tabs panel.
-id<GREYMatcher> ChromiumLogoPageTitle() {
+id<GREYMatcher> CinaseekLogoPageTitle() {
   return grey_allOf(
       grey_ancestor(TabListFromAndroidMatcher()),
-      chrome_test_util::StaticTextWithAccessibilityLabel(@"chromium logo"),
+      chrome_test_util::StaticTextWithAccessibilityLabel(@"Cinaseek logo"),
       grey_sufficientlyVisible(), nil);
 }
 
@@ -156,7 +156,7 @@ void TriggerTabList() {
   // Deselect all of the tabs in the list.
   [[EarlGrey selectElementWithMatcher:PonyPageTitle()]
       performAction:grey_tap()];
-  [[EarlGrey selectElementWithMatcher:ChromiumLogoPageTitle()]
+  [[EarlGrey selectElementWithMatcher:CinaseekLogoPageTitle()]
       performAction:grey_tap()];
   [[EarlGrey selectElementWithMatcher:OpenButtonMatcher()]
       assertWithMatcher:grey_allOf(grey_not(grey_enabled()),

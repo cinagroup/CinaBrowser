@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2696,7 +2696,7 @@ Observable* Observable::from(ScriptState* script_state,
   // iteration". This seems natural, but is inconsistent with what
   // `NativeValueTraits` does in some cases.
   // See:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/bindings/core/v8/native_value_traits_impl.h;l=1167-1174;drc=f4a00cc248dd2dc8ec8759fb51620d47b5114090.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/renderer/bindings/core/v8/native_value_traits_impl.h;l=1167-1174;drc=f4a00cc248dd2dc8ec8759fb51620d47b5114090.
   if (v8_value->IsObject()) {
     TryRethrowScope rethrow_scope(isolate, exception_state);
     v8::Local<v8::Object> v8_obj = v8_value.As<v8::Object>();

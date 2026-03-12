@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -297,7 +297,7 @@ webui_ts_library("build_ts") {
     "metrics:copy_files",
     "shortcut_input_ui:copy_mojo_files",
     "//ash/webui/common/resources:i18n_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 
   # TODO(b/314832310): Delete the path_mappings argument and change the imports
@@ -619,8 +619,8 @@ js_library("cr_policy_indicator_behavior") {
 
 js_library("cr_scrollable_behavior") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/iron-list",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/iron-list",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -651,7 +651,7 @@ js_library("focus_row_behavior") {
     ":assert",
     ":focus_row_js",
     ":focus_without_ink_js",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -674,14 +674,14 @@ js_library("keyboard_diagram") {
     ":keyboard_key",
     ":keyboard_layouts",
     "//ash/webui/common/resources:i18n_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
 js_library("keyboard_key") {
   deps = [
     "//ash/webui/common/resources:i18n_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -694,7 +694,7 @@ js_library("keyboard_shortcut_list_js") {
 
 js_library("list_property_update_behavior") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -703,20 +703,20 @@ js_library("load_time_data.m") {
 
 js_library("navigation_selector") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
 js_library("navigation_view_panel") {
   deps = [
     ":navigation_selector",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
 js_library("page_toolbar") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 

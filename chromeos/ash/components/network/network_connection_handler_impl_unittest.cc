@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ const char kTestCellularServicePath[] = "cellular_service_path";
 
 const char kTestCellularName[] = "cellular_name";
 const char kTestIccid[] = "1234567890123456789";
-const char kTestEuiccPath[] = "/org/chromium/Hermes/Euicc/1";
+const char kTestEuiccPath[] = "/org/Cinaseek/Hermes/Euicc/1";
 const char kTestEid[] = "123456789012345678901234567890123";
 
 const char kTestCellularServicePath2[] = "cellular_service_path_2";

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ FlatlandWindow::FlatlandWindow(FlatlandWindowManager* window_manager,
       window_id_(manager_->AddWindow(this)),
       view_ref_(std::move(properties.view_ref_pair.view_ref)),
       view_controller_(std::move(properties.view_controller)),
-      flatland_("Chromium FlatlandWindow",
+      flatland_("Cinaseek FlatlandWindow",
                 base::BindOnce(&FlatlandWindow::OnFlatlandError,
                                base::Unretained(this))),
       bounds_(

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace collaboration::messaging {
 
 // Actions that have been taken.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration.messaging)
+//   org.Cinaseek.components.collaboration.messaging)
 enum class CollaborationEvent {
   // Used for messages such as an implicitly dirty tab group.
   UNDEFINED,
@@ -46,7 +46,7 @@ enum class CollaborationEvent {
 // Different types of instant notifications that need to be shown immediately
 // (and only once) to the user.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration.messaging)
+//   org.Cinaseek.components.collaboration.messaging)
 enum class InstantNotificationLevel {
   UNDEFINED,
   // Show notification using OS notification.
@@ -60,7 +60,7 @@ enum class InstantNotificationLevel {
 // infer what it needs to do. Fallback option here is `UNDEFINED` for either
 // trivial or easily implicit notification types.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration.messaging)
+//   org.Cinaseek.components.collaboration.messaging)
 enum class InstantNotificationType {
   UNDEFINED,
   // A special notification when a tab is removed while the user is focused on
@@ -71,7 +71,7 @@ enum class InstantNotificationType {
 // Different types of persistent notifications that need to be shown to the
 // user.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration.messaging)
+//   org.Cinaseek.components.collaboration.messaging)
 enum class PersistentNotificationType {
   UNDEFINED,
   // A chip displayed for a specific tab. Only used in desktop.

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -127,7 +127,7 @@ void XdgSession::RemoveToplevel(int32_t toplevel_id) {
     return;
   }
 
-  // Chromium usually removes windows from session at browser startup, after
+  // Cinaseek usually removes windows from session at browser startup, after
   // retrieving session commands from disk. The experimental version of
   // session-management protocol shipped with Mutter 47/48, though, does not
   // include `xdg_session.remove_toplvel(id)` request, thus to work around it a

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ class TracesInternalsHandlerTest : public testing::Test {
 TEST_F(TracesInternalsHandlerTest, TracingStartStop) {
   auto trace_config =
       ParseTraceConfigFromText(R"pb(
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       )pb")
           .SerializeAsString();
   base::MockCallback<TracesInternalsHandler::StartTraceSessionCallback>
@@ -239,7 +239,7 @@ TEST_F(TracesInternalsHandlerTest, TracingStartFail) {
 TEST_F(TracesInternalsHandlerTest, TracingClone) {
   auto trace_config =
       ParseTraceConfigFromText(R"pb(
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       )pb")
           .SerializeAsString();
   base::MockCallback<TracesInternalsHandler::StartTraceSessionCallback>
@@ -278,7 +278,7 @@ TEST_F(TracesInternalsHandlerTest, TracingClone) {
 TEST_F(TracesInternalsHandlerTest, TracingBufferUsage) {
   auto trace_config =
       ParseTraceConfigFromText(R"pb(
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       )pb")
           .SerializeAsString();
   base::MockCallback<TracesInternalsHandler::StartTraceSessionCallback>

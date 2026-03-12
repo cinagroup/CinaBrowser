@@ -1,1 +1,1 @@
-div.accessibilityAttributeNames.has(ChromeAXNodeId)='yes'
+div.accessibilityAttributeNames.has(CinaseekAXNodeId)='yes'

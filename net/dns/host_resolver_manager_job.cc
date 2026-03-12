@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ const unsigned kMinimumTTLSeconds = kCacheEntryTTLSeconds;
 
 // ICANN uses this localhost address to indicate a name collision.
 //
-// The policy in Chromium is to fail host resolving if it resolves to
+// The policy in Cinaseek is to fail host resolving if it resolves to
 // this special address.
 //
 // Not however that IP literals are exempt from this policy, so it is still

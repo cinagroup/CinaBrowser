@@ -1,10 +1,10 @@
 ROLE_SYSTEM_DOCUMENT READONLY FOCUSABLE
 ++ROLE_SYSTEM_TABLE xml-roles:grid
-++++ROLE_SYSTEM_ROW name='Browser ChromeSafari' xml-roles:row
+++++ROLE_SYSTEM_ROW name='Browser CinaseekSafari' xml-roles:row
 ++++++ROLE_SYSTEM_ROWHEADER name='Browser' xml-roles:rowheader
 ++++++++ROLE_SYSTEM_STATICTEXT name='Browser'
-++++++ROLE_SYSTEM_CELL name='Chrome' xml-roles:gridcell
-++++++++ROLE_SYSTEM_STATICTEXT name='Chrome'
+++++++ROLE_SYSTEM_CELL name='Cinaseek' xml-roles:gridcell
+++++++++ROLE_SYSTEM_STATICTEXT name='Cinaseek'
 ++++++ROLE_SYSTEM_CELL name='Safari' xml-roles:gridcell
 ++++++++ROLE_SYSTEM_STATICTEXT name='Safari'
 ++++ROLE_SYSTEM_ROW name='Rendering Engine BlinkWebKit' xml-roles:row

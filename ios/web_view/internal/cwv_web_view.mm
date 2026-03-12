@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -598,7 +598,7 @@ class WebViewHolder : public web::WebStateUserData<WebViewHolder> {
       _webState->GetPageWorldWebFramesManager()->GetMainWebFrame();
   if (!mainFrame) {
     if (completion) {
-      completion(nil, [NSError errorWithDomain:@"org.chromium.chromewebview"
+      completion(nil, [NSError errorWithDomain:@"org.Cinaseek.chromewebview"
                                           code:0
                                       userInfo:nil]);
     }
@@ -1062,7 +1062,7 @@ class WebViewHolder : public web::WebStateUserData<WebViewHolder> {
     // e.g., triggered by JavaScript "window.open()" function. In that case, if
     // |self| is not created by the WKWebViewConfiguration provided by WebKit's
     // delegate method
-    // (https://cs.chromium.org/chromium/src/ios/web/web_state/ui/crw_wk_ui_handler.mm?q=crw_wk_ui_handler&sq=package:chromium&dr=C&l=61)
+    // (https://cs.Cinaseek.org/Cinaseek/src/ios/web/web_state/ui/crw_wk_ui_handler.mm?q=crw_wk_ui_handler&sq=package:Cinaseek&dr=C&l=61)
     // then calling |web::EnsureWebViewCreatedWithConfiguration()| here would
     // result in a crash (https://crbug.com/1054276). Now, we lazily create the
     // WKWebView inside |_webState| when |wkConfiguration| is not nil, and the

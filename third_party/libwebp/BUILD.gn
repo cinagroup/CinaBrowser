@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -82,8 +82,8 @@ static_library("libwebp_dec") {
   ]
 
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -104,8 +104,8 @@ static_library("libwebp_demux") {
   sources = [ "src/src/demux/demux.c" ]
   public_configs = [ ":libwebp_public_config" ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":libwebp_utils",
     ":libwebp_webp",
@@ -125,8 +125,8 @@ static_library("libwebp_mux") {
   ]
   public_configs = [ ":libwebp_public_config" ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":libwebp_dec",
     ":libwebp_utils",
@@ -192,8 +192,8 @@ static_library("libwebp_dsp") {
     "src/src/dsp/yuv_mips_dsp_r2.c",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -241,8 +241,8 @@ static_library("libwebp_dsp_avx2") {
     "src/src/dsp/lossless_enc_avx2.c",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -276,8 +276,8 @@ static_library("libwebp_dsp_sse41") {
     "src/src/dsp/yuv_sse41.c",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -314,8 +314,8 @@ static_library("libwebp_dsp_sse2") {
     "src/src/dsp/yuv_sse2.c",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -403,8 +403,8 @@ static_library("libwebp_enc") {
     "src/src/enc/webp_enc.c",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -455,8 +455,8 @@ static_library("libwebp_sharpyuv") {
     "src/sharpyuv/sharpyuv_gamma.h",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -485,8 +485,8 @@ static_library("libwebp_sharpyuv_dsp") {
     "src/sharpyuv/sharpyuv_dsp.h",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -534,8 +534,8 @@ static_library("libwebp_sharpyuv_sse2") {
 
   sources = [ "src/sharpyuv/sharpyuv_sse2.c" ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -589,8 +589,8 @@ static_library("libwebp_utils") {
     "src/src/utils/utils.h",
   ]
   configs += [ ":libwebp_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   if (set_opt_level) {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
@@ -628,8 +628,8 @@ if (current_toolchain == host_toolchain) {
       "src/examples/example_util.c",
       "src/examples/example_util.h",
     ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     if (set_opt_level) {
       configs -= [ "//build/config/compiler:default_optimization" ]
       configs += [ "//build/config/compiler:optimize_max" ]
@@ -651,8 +651,8 @@ if (current_toolchain == host_toolchain) {
       "src/imageio/imageio_util.c",
       "src/imageio/imageio_util.h",
     ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     if (set_opt_level) {
       configs -= [ "//build/config/compiler:default_optimization" ]
       configs += [ "//build/config/compiler:optimize_max" ]
@@ -687,8 +687,8 @@ if (current_toolchain == host_toolchain) {
     ]
     defines = [ "WEBP_HAVE_PNG" ]
     configs += [ ":libwebp_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     if (set_opt_level) {
       configs -= [ "//build/config/compiler:default_optimization" ]
       configs += [ "//build/config/compiler:optimize_max" ]
@@ -726,8 +726,8 @@ if (current_toolchain == host_toolchain) {
       "//build/win:default_exe_manifest",
     ]
     configs += [ ":libwebp_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     if (set_opt_level) {
       configs -= [ "//build/config/compiler:default_optimization" ]
       configs += [ "//build/config/compiler:optimize_max" ]

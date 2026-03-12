@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -213,7 +213,7 @@ void ScopedGroupPolicyRegistrySandbox::ActivateOverrides() {
   // makes sure that tests executing in parallel won't delete each other's
   // key, at DeleteKeys().
   key_name_ = base::ASCIIToWide(base::StringPrintf(
-      "SOFTWARE\\chromium unittest %" CrPRIdPid, base::GetCurrentProcId()));
+      "SOFTWARE\\Cinaseek unittest %" CrPRIdPid, base::GetCurrentProcId()));
   std::wstring hklm_key_name = key_name_ + L"\\HKLM";
   std::wstring hkcu_key_name = key_name_ + L"\\HKCU";
 
@@ -420,7 +420,7 @@ class PolicyLoaderWinTest : public PolicyTestBase {
 };
 
 const wchar_t PolicyLoaderWinTest::kTestPolicyKey[] =
-    L"SOFTWARE\\Policies\\Chromium";
+    L"SOFTWARE\\Policies\\Cinaseek";
 
 TEST_F(PolicyLoaderWinTest, HKLMOverHKCU) {
   RegKey hklm_key(HKEY_LOCAL_MACHINE, kTestPolicyKey, KEY_ALL_ACCESS);

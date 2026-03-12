@@ -1,12 +1,12 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This provides a way to access the application's current preferences.
 
-// Chromium settings and storage represent user-selected preferences and
+// Cinaseek settings and storage represent user-selected preferences and
 // information and MUST not be extracted, overwritten or modified except
-// through Chromium defined APIs.
+// through Cinaseek defined APIs.
 
 #ifndef COMPONENTS_PREFS_PREF_SERVICE_H_
 #define COMPONENTS_PREFS_PREF_SERVICE_H_

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1537,7 +1537,7 @@ IN_PROC_BROWSER_TEST_P(SitePerProcessSSLBrowserTest,
   EXPECT_TRUE(WaitForLoadStop(shell()->web_contents()));
 
   // Temporary extra expectations to investigate:
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=1215493
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1215493
   EXPECT_EQ(url, web_contents()->GetLastCommittedURL());
   EXPECT_EQ(
       2u, CollectAllRenderFrameHosts(web_contents()->GetPrimaryPage()).size());
@@ -1646,7 +1646,7 @@ IN_PROC_BROWSER_TEST_P(SitePerProcessSSLBrowserTest,
   EXPECT_TRUE(WaitForLoadStop(shell()->web_contents()));
 
   // Temporary extra expectations to investigate:
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=1215493
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1215493
   EXPECT_EQ(url, web_contents()->GetLastCommittedURL());
   EXPECT_EQ(
       3u, CollectAllRenderFrameHosts(web_contents()->GetPrimaryPage()).size());

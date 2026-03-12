@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #include "base/lazy_instance.h"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_crypto_client_stream.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
@@ -51,10 +51,10 @@ void MockCryptoClientStreamFactory::SetConfigForServerId(
 std::unique_ptr<quic::QuicCryptoClientStream>
 MockCryptoClientStreamFactory::CreateQuicCryptoClientStream(
     const quic::QuicServerId& server_id,
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     std::unique_ptr<quic::ProofVerifyContext> /*proof_verify_context*/,
     quic::QuicCryptoClientConfig* crypto_config) {
-  const ProofVerifyDetailsChromium* proof_verify_details = nullptr;
+  const ProofVerifyDetailsCinaseek* proof_verify_details = nullptr;
   if (!proof_verify_details_queue_.empty()) {
     proof_verify_details = proof_verify_details_queue_.front();
     proof_verify_details_queue_.pop();

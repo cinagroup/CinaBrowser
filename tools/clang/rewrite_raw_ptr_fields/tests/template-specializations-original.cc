@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ void foo() {
 
 }  // namespace self_pointer_test
 
-// Test against overlapping replacement that occurred in Chromium in places
+// Test against overlapping replacement that occurred in Cinaseek in places
 // like:
 // - //components/url_pattern_index/string_splitter.h
 //   |const StringSplitter* splitter_| in nested Iterator class

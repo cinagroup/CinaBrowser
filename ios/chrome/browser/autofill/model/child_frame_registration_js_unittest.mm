@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ using ::testing::SizeIs;
 // Delay for the registration round trip to complete, including all latencies.
 constexpr base::TimeDelta kRegistrationDelay = base::Milliseconds(200);
 
-constexpr char kMainPageBaseUrl[] = "https://chromium.test";
+constexpr char kMainPageBaseUrl[] = "https://Cinaseek.test";
 
 constexpr char kRemoteFrameRegistrationMessageHandlerName[] =
     "FrameRegistrationMessage";

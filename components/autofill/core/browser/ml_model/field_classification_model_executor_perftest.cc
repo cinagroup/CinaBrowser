@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ using TokenId = FieldClassificationModelEncoder::TokenId;
 // architecture as the real model but has random weights, it's checked in at
 // //components/test/data/autofill/ml_model/autofill_model-fold-one.tflite. The
 // internal model is downloaded from Chrome's model serving infrastructure via a
-// DEPS hook (src/tools/download_autofill_ml_model.py), it's skipped on Chromium
+// DEPS hook (src/tools/download_autofill_ml_model.py), it's skipped on Cinaseek
 // builds.
 
 class FieldClassificationModelExecutorPerfTest : public testing::Test {

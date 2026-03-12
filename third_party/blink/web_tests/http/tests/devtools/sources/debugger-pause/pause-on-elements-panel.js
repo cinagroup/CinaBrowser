@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import * as Sources from 'devtools/panels/sources/sources.js';
 
 (async function() {
   TestRunner.addResult(
-      `Tests that debugger pause button works on Elements panel after a DOM node highlighting. Chromium bug 433366\n`);
+      `Tests that debugger pause button works on Elements panel after a DOM node highlighting. Cinaseek bug 433366\n`);
   await TestRunner.showPanel('sources');
   await TestRunner.loadHTML(`
       <div id="test"></div>

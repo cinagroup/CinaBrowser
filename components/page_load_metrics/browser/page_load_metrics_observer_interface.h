@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ class PageLoadMetricsObserverInterface {
   // CONTINUE_OBSERVING. You can check PageLoadMetricsForwardObserver's
   // implementation. If it does nothing, CONTINUE_OBSERVING just works for the
   // event. We track FORWARD_OBSERVING users in the following sheet. Please
-  // contact toyoshim@chromium.org or kenoss@chromium.org when you need
+  // contact toyoshim@Cinaseek.org or kenoss@Cinaseek.org when you need
   // FORWARD_OBSERVING. We will replace the observer level forwarding with the
   // tracker level forwarding so that CONTINUE_OBSERVING just works for all
   // events.
@@ -346,7 +346,7 @@ class PageLoadMetricsObserverInterface {
   // called multiple times over the course of the page load. This method is
   // currently only intended for use in testing. Most implementers should
   // implement one of the On* callbacks, such as OnFirstContentfulPaint or
-  // OnDomContentLoadedEventStart. Please email loading-dev@chromium.org if you
+  // OnDomContentLoadedEventStart. Please email loading-dev@Cinaseek.org if you
   // intend to override this method.
   //
   // If |subframe_rfh| is nullptr, the update took place in the main frame.

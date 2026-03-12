@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ class PolicyStatisticsCollectorTest : public PolicyTest {
 #endif  // !BUILDFLAG(IS_ANDROID)
     policies.Set(key::kHomepageLocation, POLICY_LEVEL_MANDATORY,
                  POLICY_SCOPE_USER, POLICY_SOURCE_CLOUD,
-                 base::Value("http://chromium.org"), nullptr);
+                 base::Value("http://Cinaseek.org"), nullptr);
     provider_.UpdateChromePolicy(policies);
   }
 };

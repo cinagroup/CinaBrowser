@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@
 #include "components/viz/common/resources/transferable_resource.h"
 #include "components/viz/test/test_context_provider.h"
 #include "components/viz/test/test_context_support.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/common/capabilities.h"
 #include "gpu/command_buffer/common/shared_image_capabilities.h"
 #include "gpu/command_buffer/common/shared_image_usage.h"
@@ -3502,15 +3502,15 @@ TEST_P(CanvasRenderingContext2DTestAcceleratedMultipleDisables,
   EXPECT_FALSE(CanvasElement().IsAccelerated());
 }
 
-class CanvasRenderingContext2DTestImageChromium
+class CanvasRenderingContext2DTestImageCinaseek
     : public CanvasRenderingContext2DTestAccelerated {
  protected:
-  CanvasRenderingContext2DTestImageChromium()
+  CanvasRenderingContext2DTestImageCinaseek()
       : CanvasRenderingContext2DTestAccelerated() {
     // This test relies on overlays being supported and enabled for low latency
     // canvas.  The latter is true only on ChromeOS in production.
     feature_list_.InitAndEnableFeature(
-        features::kLowLatencyCanvas2dImageChromium);
+        features::kLowLatencyCanvas2dImageCinaseek);
   }
 
   void ConfigureContextProvider(
@@ -3528,9 +3528,9 @@ class CanvasRenderingContext2DTestImageChromium
   base::test::ScopedFeatureList feature_list_;
 };
 
-INSTANTIATE_PAINT_TEST_SUITE_P(CanvasRenderingContext2DTestImageChromium);
+INSTANTIATE_PAINT_TEST_SUITE_P(CanvasRenderingContext2DTestImageCinaseek);
 
-TEST_P(CanvasRenderingContext2DTestImageChromium, LowLatencyIsSingleBuffered) {
+TEST_P(CanvasRenderingContext2DTestImageCinaseek, LowLatencyIsSingleBuffered) {
   SharedGpuContext::SetLowLatencyUsageSupportedForCanvas2DForTesting(true);
 
   CreateContext(kNonOpaque, kLowLatency);

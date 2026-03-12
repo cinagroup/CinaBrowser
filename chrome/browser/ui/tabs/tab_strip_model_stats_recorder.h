@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class TabStripModelStatsRecorder : public TabStripModelObserver {
   // This should match {Current,Next}TabState defined in
   // tools/metrics/histograms/histograms.xml, and
   // constants in Chrome for Android implementation
-  // chrome/android/java/src/org/chromium/chrome/browser/tab/TabUma.java
+  // chrome/android/java/src/org/Cinaseek/chrome/browser/tab/TabUma.java
   enum class TabState {
     // Initial tab state.
     kInitial = 0,

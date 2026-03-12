@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/clamped_math.h"
 #include "net/base/network_handle.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 
 namespace net {
 
@@ -22,7 +22,7 @@ namespace net {
 // platform;
 // - via OnIPAddressChanged otherwise.
 class NET_EXPORT_PRIVATE QuicConnectivityMonitor
-    : public QuicChromiumClientSession::ConnectivityObserver {
+    : public QuicCinaseekClientSession::ConnectivityObserver {
  public:
   explicit QuicConnectivityMonitor(handles::NetworkHandle default_network);
 
@@ -58,29 +58,29 @@ class NET_EXPORT_PRIVATE QuicConnectivityMonitor
   void OnIPAddressChanged();
 
   // Called when |session| is marked as going away due to IP address change.
-  void OnSessionGoingAwayOnIPAddressChange(QuicChromiumClientSession* session);
+  void OnSessionGoingAwayOnIPAddressChange(QuicCinaseekClientSession* session);
 
-  // QuicChromiumClientSession::ConnectivityObserver implementation.
-  void OnSessionPathDegrading(QuicChromiumClientSession* session,
+  // QuicCinaseekClientSession::ConnectivityObserver implementation.
+  void OnSessionPathDegrading(QuicCinaseekClientSession* session,
                               handles::NetworkHandle network) override;
 
   void OnSessionResumedPostPathDegrading(
-      QuicChromiumClientSession* session,
+      QuicCinaseekClientSession* session,
       handles::NetworkHandle network) override;
 
-  void OnSessionEncounteringWriteError(QuicChromiumClientSession* session,
+  void OnSessionEncounteringWriteError(QuicCinaseekClientSession* session,
                                        handles::NetworkHandle network,
                                        int error_code) override;
 
-  void OnSessionClosedAfterHandshake(QuicChromiumClientSession* session,
+  void OnSessionClosedAfterHandshake(QuicCinaseekClientSession* session,
                                      handles::NetworkHandle network,
                                      quic::ConnectionCloseSource source,
                                      quic::QuicErrorCode error_code) override;
 
-  void OnSessionRegistered(QuicChromiumClientSession* session,
+  void OnSessionRegistered(QuicCinaseekClientSession* session,
                            handles::NetworkHandle network) override;
 
-  void OnSessionRemoved(QuicChromiumClientSession* session) override;
+  void OnSessionRemoved(QuicCinaseekClientSession* session) override;
 
  private:
   // Size chosen per net.QuicSession.WriteError histogram.
@@ -94,10 +94,10 @@ class NET_EXPORT_PRIVATE QuicConnectivityMonitor
   // handles::kInvalidNetworkHandle.
   handles::NetworkHandle default_network_;
   // Sessions that are currently degrading on the |default_network_|.
-  std::set<raw_ptr<QuicChromiumClientSession, SetExperimental>>
+  std::set<raw_ptr<QuicCinaseekClientSession, SetExperimental>>
       degrading_sessions_;
   // Sessions that are currently active on the |default_network_|.
-  std::set<raw_ptr<QuicChromiumClientSession, SetExperimental>>
+  std::set<raw_ptr<QuicCinaseekClientSession, SetExperimental>>
       active_sessions_;
 
   // Number of sessions that have been active or created during the period of

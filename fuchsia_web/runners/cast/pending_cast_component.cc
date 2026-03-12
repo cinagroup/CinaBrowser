@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ PendingCastComponent::PendingCastComponent(
 PendingCastComponent::~PendingCastComponent() = default;
 
 void PendingCastComponent::OnApplicationConfigReceived(
-    chromium::cast::ApplicationConfig application_config) {
+    Cinaseek::cast::ApplicationConfig application_config) {
   if (application_config.IsEmpty()) {
     DLOG(WARNING) << "No application config was found.";
     CancelComponent();
@@ -80,7 +80,7 @@ void PendingCastComponent::OnApplicationConfigReceived(
 
   // Request custom API bindings from the component's Agent.
   params_.api_bindings_client = std::make_unique<ApiBindingsClient>(
-      params_.startup_context->svc()->Connect<chromium::cast::ApiBindings>(),
+      params_.startup_context->svc()->Connect<Cinaseek::cast::ApiBindings>(),
       base::BindOnce(&PendingCastComponent::OnApiBindingsInitialized,
                      base::Unretained(this)));
 
@@ -115,7 +115,7 @@ void PendingCastComponent::OnApplicationConfigReceived(
       });
 
   auto application_context_client_end =
-      base::fuchsia_component::ConnectAt<chromium_cast::ApplicationContext>(
+      base::fuchsia_component::ConnectAt<Cinaseek_cast::ApplicationContext>(
           startup_context_svc_dir.borrow());
   if (application_context_client_end.is_error()) {
     LOG(ERROR) << base::FidlConnectionErrorMessage(
@@ -138,7 +138,7 @@ void PendingCastComponent::OnApplicationConfigReceived(
     // for that app. We need to fetch `session_id` in that case.
     application_context_->GetMediaSessionId().Then(
         [this](
-            fidl::Result<chromium_cast::ApplicationContext::GetMediaSessionId>&
+            fidl::Result<Cinaseek_cast::ApplicationContext::GetMediaSessionId>&
                 result) {
           {
             TRACE_DURATION("cast_runner", "GetMediaSessionId result");

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ constexpr NotificationType kNotificationType =
 constexpr NotificationHandler::Type kNotificationHandlerType =
     NotificationHandler::Type::TRANSIENT;
 
-// Chromium logo icon that will displayed on the notification.
+// Cinaseek logo icon that will displayed on the notification.
 const gfx::VectorIcon& kIcon = vector_icons::kProductIcon;
 
 constexpr SystemNotificationWarningLevel kWarningLevel =
@@ -215,7 +215,7 @@ void LocaleSwitchNotification::Show(
       NotificationCatalogName::kLocaleUpdate);
 
   // Leaving this empty means the notification is attributed to the system -
-  // ie "Chromium OS" or similar.
+  // ie "Cinaseek OS" or similar.
   static const base::NoDestructor<std::u16string> kEmptyDisplaySource;
 
   // No origin URL is needed since the notification comes from the system.

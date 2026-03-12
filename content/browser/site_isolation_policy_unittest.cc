@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace content {
 
 TEST(SiteIsolationPolicyTest, DisableSiteIsolationSwitch) {
   // Skip this test if the --site-per-process switch is present (e.g. on Site
-  // Isolation Android chromium.fyi bot).  The test is still valid if
+  // Isolation Android Cinaseek.fyi bot).  The test is still valid if
   // SitePerProcess is the default (e.g. via ContentBrowserClient's
   // ShouldEnableStrictSiteIsolation method) - don't skip the test in such case.
   if (base::CommandLine::ForCurrentProcess()->HasSwitch(
@@ -46,7 +46,7 @@ TEST(SiteIsolationPolicyTest, DisableSiteIsolationSwitch) {
 // only available/used on Android.
 TEST(SiteIsolationPolicyTest, DisableSiteIsolationForPolicySwitch) {
   // Skip this test if the --site-per-process switch is present (e.g. on Site
-  // Isolation Android chromium.fyi bot).  The test is still valid if
+  // Isolation Android Cinaseek.fyi bot).  The test is still valid if
   // SitePerProcess is the default (e.g. via ContentBrowserClient's
   // ShouldEnableStrictSiteIsolation method) - don't skip the test in such case.
   if (base::CommandLine::ForCurrentProcess()->HasSwitch(

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ std::vector<uint8_t> PassagesProtoToBlob(
     return {};
   }
 
-  // We use zlib here because it's used all over Chromium and has better
+  // We use zlib here because it's used all over Cinaseek and has better
   // compression ratios than snappy. We expect this to have a significant impact
   // on user disk space, so the higher compression ratio matters.
   std::string compressed_proto;

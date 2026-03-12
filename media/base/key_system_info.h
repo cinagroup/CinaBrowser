@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,13 +21,13 @@ class MEDIA_EXPORT KeySystemInfo {
  public:
   virtual ~KeySystemInfo() {}
 
-  // Gets the base key system name, e.g. "org.chromium.foo".
+  // Gets the base key system name, e.g. "org.Cinaseek.foo".
   virtual std::string GetBaseKeySystemName() const = 0;
 
   // Returns whether the `key_system` is supported. Only the base key system and
   // some of its sub key systems should be supported, e.g. for base key system
-  // name "org.chromium.foo", "org.chromium.foo" and "org.chromium.foo.bar"
-  // could be supported, but "org.chromium.baz" should NOT be supported.
+  // name "org.Cinaseek.foo", "org.Cinaseek.foo" and "org.Cinaseek.foo.bar"
+  // could be supported, but "org.Cinaseek.baz" should NOT be supported.
   virtual bool IsSupportedKeySystem(const std::string& key_system) const;
 
   // Whether the base key system should be used for all supported key systems

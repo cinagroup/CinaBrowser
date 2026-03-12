@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace {
 
 // The MIME type for the clipboard format for BrowserActionDragData.
-const char kClipboardFormatString[] = "chromium/x-browser-actions";
+const char kClipboardFormatString[] = "Cinaseek/x-browser-actions";
 
 }  // namespace
 

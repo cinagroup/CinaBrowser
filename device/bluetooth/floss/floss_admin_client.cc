@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/bluetooth/floss/floss_admin_client.h"
@@ -33,7 +33,7 @@ std::unique_ptr<FlossAdminClient> FlossAdminClient::Create() {
 }
 
 constexpr char FlossAdminClient::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/admin/callback";
+    "/org/Cinaseek/bluetooth/admin/callback";
 
 FlossAdminClient::FlossAdminClient() = default;
 FlossAdminClient::~FlossAdminClient() {

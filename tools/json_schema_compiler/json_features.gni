@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 # The following variables are required:
 #   sources: The features.json files to use.
 #   feature_type: The type of the features to generate, e.g. APIFeature.
-#   method_name: The name of the method to generate, e.g. AddChromeAPIFeatures.
+#   method_name: The name of the method to generate, e.g. AddCinaseekAPIFeatures.
 #   deps/public_deps/visibility: normal meaning
 template("json_features") {
   assert(defined(invoker.sources),

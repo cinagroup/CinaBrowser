@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,7 +101,7 @@ constexpr char kScreenShareResumedNotificationId[] =
 
 constexpr char kExampleUrl[] = "https://example.com";
 constexpr char kGoogleUrl[] = "https://google.com";
-constexpr char kChromeUrl[] = "https://chromium.org";
+constexpr char kChromeUrl[] = "https://Cinaseek.org";
 constexpr char kSrcPattern[] = "example.com";
 constexpr char kRuleName[] = "rule #1";
 constexpr char kRuleId[] = "testid1";

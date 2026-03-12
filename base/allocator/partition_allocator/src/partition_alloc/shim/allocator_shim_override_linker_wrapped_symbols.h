@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -164,7 +164,7 @@ SHIM_ALWAYS_EXPORT int __wrap_vasprintf(char** strp,
   // better without accessing internal libc functions, or reimplementing
   // *printf().
   //
-  // This is very lightly used in Chromium in practice, see crbug.com/116558 for
+  // This is very lightly used in Cinaseek in practice, see crbug.com/116558 for
   // details.
   if (actual_size >= kInitialSize) {
     int ret = PA_UNSAFE_TODO(vsnprintf(

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ void GatewayCanBePingedRoutine::PingGateways() {
 
 // Parses |status| and returns the IP and latency. For details about |status|,
 // please refer to:
-// https://gerrit.chromium.org/gerrit/#/c/30310/2/src/helpers/icmp.cc.
+// https://gerrit.Cinaseek.org/gerrit/#/c/30310/2/src/helpers/icmp.cc.
 bool GatewayCanBePingedRoutine::ParseICMPResult(const std::string& status,
                                                 std::string* ip,
                                                 base::TimeDelta* latency) {

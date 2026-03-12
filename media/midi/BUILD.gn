@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -43,19 +43,19 @@ if (is_android) {
 
     srcjar_deps = [ ":midi_jni_headers" ]
     sources = [
-      "java/src/org/chromium/midi/MidiDeviceAndroid.java",
-      "java/src/org/chromium/midi/MidiInputPortAndroid.java",
-      "java/src/org/chromium/midi/MidiManagerAndroid.java",
-      "java/src/org/chromium/midi/MidiOutputPortAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiDeviceAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiInputPortAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiManagerAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiOutputPortAndroid.java",
     ]
   }
 
   generate_jni("midi_jni_headers") {
     sources = [
-      "java/src/org/chromium/midi/MidiDeviceAndroid.java",
-      "java/src/org/chromium/midi/MidiInputPortAndroid.java",
-      "java/src/org/chromium/midi/MidiManagerAndroid.java",
-      "java/src/org/chromium/midi/MidiOutputPortAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiDeviceAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiInputPortAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiManagerAndroid.java",
+      "java/src/org/Cinaseek/midi/MidiOutputPortAndroid.java",
     ]
   }
 }

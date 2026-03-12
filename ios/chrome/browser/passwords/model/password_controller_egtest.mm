@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -914,7 +914,7 @@ void LoginOnUff() {
 }
 
 // Tests that a password breach event is reported to an enterprise connector.
-// TODO(crbug.com/429140546): flaky on chromium/ci/ios-simulator-noncq.
+// TODO(crbug.com/429140546): flaky on Cinaseek/ci/ios-simulator-noncq.
 - (void)FLAKY_testPasswordBreachEventReported {
   [self loadLoginPage];
 

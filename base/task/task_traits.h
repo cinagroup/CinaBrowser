@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace base {
 // continuous zero-based list from lowest to highest priority. Users of this API
 // shouldn't otherwise care about nor use the underlying values.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base.task
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base.task
 enum class TaskPriority : uint8_t {
   // This will always be equal to the lowest priority available.
   LOWEST = 0,
@@ -64,7 +64,7 @@ enum class TaskPriority : uint8_t {
   // This is the default TaskPriority in order for tasks to run in order by
   // default and avoid unintended consequences. The only way to get a task to
   // run at a higher priority than USER_BLOCKING is to coordinate with a
-  // higher-level scheduler (contact scheduler-dev@chromium.org for such use
+  // higher-level scheduler (contact scheduler-dev@Cinaseek.org for such use
   // cases).
   USER_BLOCKING,
 

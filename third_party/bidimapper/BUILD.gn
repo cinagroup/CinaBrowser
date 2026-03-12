@@ -1,10 +1,10 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# The target "bidimapper" is created just to be used as a dependency of ChromeDriver.
+# The target "bidimapper" is created just to be used as a dependency of CinaseekDriver.
 # This allows tools/licenses/licenses.py to discover it
-# and append its license notice to the LICENSE file of ChromeDriver.
+# and append its license notice to the LICENSE file of CinaseekDriver.
 copy("bidimapper") {
   sources = [ "mapper.js" ]
   outputs = [ "$target_gen_dir/mapper.js" ]

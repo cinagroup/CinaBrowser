@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ constexpr net::NetworkTrafficAnnotationTag kCardArtImageTrafficAnnotation =
       policy {
         cookies_allowed: NO
         setting:
-          "Users can enable or disable this feature in Chromium settings by "
+          "Users can enable or disable this feature in Cinaseek settings by "
           "toggling 'Payment methods, offers, and addresses using Google Pay', "
           "under 'Advanced sync settings...'."
         chrome_policy {

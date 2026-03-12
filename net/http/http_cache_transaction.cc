@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2455,7 +2455,7 @@ int HttpCache::Transaction::DoPartialNetworkReadCompleted(int result) {
 
   // Go to the next range if nothing returned or return the result.
   // TODO(shivanisha) Simplify this condition if possible. It was introduced
-  // in https://codereview.chromium.org/545101
+  // in https://codereview.Cinaseek.org/545101
   if (result != 0 || truncated_ ||
       !(partial_->IsLastRange() || mode_ == WRITE)) {
     partial_->OnNetworkReadCompleted(result);

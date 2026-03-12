@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -116,7 +116,7 @@ static_assert(BUILDFLAG(ENABLE_EXTENSIONS_CORE));
 // avd.py) be sure *not* to pass --enable-network to the emulator. The test bots
 // do not run with networking enabled. Some of these tests will fail locally
 // you enable networking in your emulator. See
-// https://chromium.googlesource.com/chromium/src/+/HEAD/docs/android_emulator.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/android_emulator.md
 ////////////////////////////////////////////////////////////////////////////////
 
 using content::BrowserContext;
@@ -2141,7 +2141,7 @@ IN_PROC_BROWSER_TEST_F(DownloadExtensionTest,
 }
 
 // Test that we disallow certain headers case-insensitively.
-// TODO(crbug.com/335421977): Flaky on "Linux ChromiumOS MSan Tests"
+// TODO(crbug.com/335421977): Flaky on "Linux CinaseekOS MSan Tests"
 // TODO(crbug.com/441086569): Flaky on "Linux Tests (dbg)"
 #if (BUILDFLAG(IS_CHROMEOS) && defined(MEMORY_SANITIZER)) || \
     (BUILDFLAG(IS_LINUX) && !defined(NDEBUG))

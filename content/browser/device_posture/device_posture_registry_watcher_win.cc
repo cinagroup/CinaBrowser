@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "content/browser/device_posture/device_posture_registry_watcher_win.h"
@@ -25,7 +25,7 @@ namespace {
 constexpr wchar_t kFoledRegKeyPath[] = L"Software\\Intel\\Foled";
 
 // On Windows the platform returns [left][fold][right] and so far we support
-// only one display feature in Chromium.
+// only one display feature in Cinaseek.
 constexpr int kFirstFoldInSegmentsArray = 1;
 
 }  // namespace

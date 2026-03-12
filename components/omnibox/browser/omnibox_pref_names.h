@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ inline constexpr char kAIModeSettings[] = "omnibox.ai_mode_settings";
 // Boolean for whether bottom omnibox was ever used.
 inline constexpr char kBottomOmniboxEverUsed[] =
     "omnibox.bottom_omnibox_ever_used";
-// LINT.ThenChange(//chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/ToolbarPositionController.java:TipsPrefNames)
+// LINT.ThenChange(//chrome/browser/ui/android/toolbar/java/src/org/Cinaseek/chrome/browser/toolbar/ToolbarPositionController.java:TipsPrefNames)
 
 // Booleans that specify whether various IPH suggestions have been dismissed.
 inline constexpr char kDismissedEnterpriseSearchAggregatorIphPrefName[] =

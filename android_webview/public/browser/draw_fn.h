@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ typedef struct ASurfaceControl ASurfaceControl;
 typedef struct ASurfaceTransaction ASurfaceTransaction;
 
 // In order to make small changes backwards compatible, all structs passed from
-// android to chromium are versioned.
+// android to Cinaseek are versioned.
 //
 // 1 is Android Q. This matches kAwDrawGLInfoVersion version 3.
 // 2 Adds transfer_function_* and color_space_toXYZD50 to AwDrawFn_DrawGLParams.

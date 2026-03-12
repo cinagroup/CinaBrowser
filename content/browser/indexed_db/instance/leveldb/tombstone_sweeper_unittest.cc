@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@
 #include "third_party/blink/public/common/indexeddb/indexeddb_key.h"
 #include "third_party/blink/public/common/indexeddb/indexeddb_key_path.h"
 #include "third_party/blink/public/common/indexeddb/indexeddb_metadata.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/db.h"
 #include "third_party/leveldatabase/src/include/leveldb/filter_policy.h"
@@ -71,7 +71,7 @@ leveldb_env::Options GetLevelDBOptions() {
   options.write_buffer_size = 4 * 1024 * 1024;
   options.paranoid_checks = true;
 
-  static base::NoDestructor<leveldb_env::ChromiumEnv> g_leveldb_env;
+  static base::NoDestructor<leveldb_env::CinaseekEnv> g_leveldb_env;
   options.env = g_leveldb_env.get();
 
   return options;

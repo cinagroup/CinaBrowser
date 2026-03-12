@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ std::vector<float> ParseRadiusPolynomial(const std::string& radius_string);
 // Returns either an empty string or a comma separated floating point numbers,
 // used in transforming touch_major/touch_minor radius. The parsed numbers are
 // used as described in:
-// https://source.chromium.org/chromium/chromium/src/+/HEAD:ui/events/ozone/evdev/touch_filter/neural_stylus_palm_detection_filter_model.h;l=63
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/HEAD:ui/events/ozone/evdev/touch_filter/neural_stylus_palm_detection_filter_model.h;l=63
 COMPONENT_EXPORT(EVDEV)
 std::string FetchNeuralPalmRadiusPolynomial(const EventDeviceInfo& devinfo,
                                             const std::string param_string);

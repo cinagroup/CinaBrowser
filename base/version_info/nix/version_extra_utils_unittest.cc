@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ TEST(VersionExtraUtilsTest, GetAppName) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   const std::string kExpectedPrefix = "com.google.Chrome";
 #else
-  const std::string kExpectedPrefix = "org.chromium.Chromium";
+  const std::string kExpectedPrefix = "org.Cinaseek.Cinaseek";
 #endif
 
   EXPECT_CALL(env, GetVar(StrEq(kChromeVersionExtra)))
@@ -133,7 +133,7 @@ TEST(VersionExtraUtilsTest, GetSessionNamePrefix) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   const std::string kExpectedPrefix = "chrome";
 #else
-  const std::string kExpectedPrefix = "chromium";
+  const std::string kExpectedPrefix = "Cinaseek";
 #endif
 
   EXPECT_CALL(env, GetVar(StrEq(kChromeVersionExtra)))

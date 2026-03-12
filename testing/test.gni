@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -448,14 +448,14 @@ template("test") {
     _use_default_launcher =
         !defined(invoker.use_default_launcher) || invoker.use_default_launcher
     if (!defined(invoker.use_raw_android_executable)) {
-      # Checkouts where build_with_chromium == false often have a custom GN
+      # Checkouts where build_with_Cinaseek == false often have a custom GN
       # template wrapper around test() which sets use_default_launcher == false.
       # Set the _use_raw_android_executable default so that test() targets which
       # do not use the custom wrapper
       # (1) Do not cause "gn gen" to fail
-      # (2) Do not need to be moved into if(build_with_chromium) block.
+      # (2) Do not need to be moved into if(build_with_Cinaseek) block.
       _use_raw_android_executable =
-          !build_with_chromium && _use_default_launcher
+          !build_with_Cinaseek && _use_default_launcher
     } else {
       not_needed([ "_use_default_launcher" ])
       _use_raw_android_executable = invoker.use_raw_android_executable
@@ -780,10 +780,10 @@ template("test") {
     _subpackages = []
 
     # Select the Fuchsia test realm in which to run the test.
-    if (defined(invoker.run_as_chromium_system_test) &&
-        invoker.run_as_chromium_system_test) {
+    if (defined(invoker.run_as_Cinaseek_system_test) &&
+        invoker.run_as_Cinaseek_system_test) {
       _manifest_fragments += [
-        "//build/config/fuchsia/test/chromium_system_test_facet.shard.test-cml",
+        "//build/config/fuchsia/test/Cinaseek_system_test_facet.shard.test-cml",
         "//build/config/fuchsia/test/system_test_minimum.shard.test-cml",
       ]
     } else {
@@ -792,7 +792,7 @@ template("test") {
         "//third_party/fuchsia-sdk/sdk/packages/intl_property_manager:intl_property_manager",
       ]
       _manifest_fragments += [
-        "//build/config/fuchsia/test/chromium_test_facet.shard.test-cml",
+        "//build/config/fuchsia/test/Cinaseek_test_facet.shard.test-cml",
         "//build/config/fuchsia/test/minimum.shard.test-cml",
       ]
     }
@@ -995,7 +995,7 @@ template("test") {
       }
       testonly = true
 
-      if (force_xctest && build_with_chromium) {
+      if (force_xctest && build_with_Cinaseek) {
         xctest_module_target = "//base/test:google_test_runner"
       }
 
@@ -1190,7 +1190,7 @@ template("test") {
 #   enable_android_wrapper: (optional) If true, the test will get wrapped in the
 #       logdog_wrapper on Android, which will stream logcats from the device.
 #   enable_cros_wrapper: (optional) If true, the test will get wrapped by the
-#       cros_test_wrapper on ChromeOS, which will prep the device for testing.
+#       cros_test_wrapper on CinaseekOS, which will prep the device for testing.
 template("script_test") {
   _enable_logdog_wrapper = defined(invoker.enable_android_wrapper) &&
                            invoker.enable_android_wrapper && is_android

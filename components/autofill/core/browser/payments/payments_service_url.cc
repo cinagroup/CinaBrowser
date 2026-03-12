@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ const char kManageLoyaltyCardsUrl[] =
 // LINT.IfChange
 const char kVirtualCardEnrollmentSupportUrl[] =
     "https://support.google.com/googlepay/answer/11234179";
-// LINT.ThenChange(//chrome/android/java/src/org/chromium/chrome/browser/ChromeStringConstants.java)
+// LINT.ThenChange(//chrome/android/java/src/org/Cinaseek/chrome/browser/ChromeStringConstants.java)
 
 // BNPL provider terms support URLs.
 // TODO(crbug.com/397446359): Change URL once terms redirect support pages are

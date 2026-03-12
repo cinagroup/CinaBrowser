@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,11 +17,11 @@ android_apk("spnego_authenticator_apk") {
   ]
 
   sources = [
-    "src/org/chromium/tools/spnegoauthenticator/AccountData.java",
-    "src/org/chromium/tools/spnegoauthenticator/Constants.java",
-    "src/org/chromium/tools/spnegoauthenticator/SpnegoAuthenticator.java",
-    "src/org/chromium/tools/spnegoauthenticator/SpnegoAuthenticatorActivity.java",
-    "src/org/chromium/tools/spnegoauthenticator/SpnegoAuthenticatorService.java",
+    "src/org/Cinaseek/tools/spnegoauthenticator/AccountData.java",
+    "src/org/Cinaseek/tools/spnegoauthenticator/Constants.java",
+    "src/org/Cinaseek/tools/spnegoauthenticator/SpnegoAuthenticator.java",
+    "src/org/Cinaseek/tools/spnegoauthenticator/SpnegoAuthenticatorActivity.java",
+    "src/org/Cinaseek/tools/spnegoauthenticator/SpnegoAuthenticatorService.java",
   ]
 }
 

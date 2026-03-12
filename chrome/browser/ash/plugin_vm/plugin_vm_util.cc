@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ const char kPitaDlc[] = "pita";
 const char kPluginVmShelfAppId[] = "lgjpclljbbmphhnalkeplcmnjpfmmaek";
 const char kPluginVmName[] = "PvmDefault";
 const char kChromeOSBaseDirectoryDisplayText[] = "Network \u203a ChromeOS";
-const char kPluginVmWindowId[] = "org.chromium.plugin_vm_ui";
+const char kPluginVmWindowId[] = "org.Cinaseek.plugin_vm_ui";
 
 namespace {
 
@@ -63,7 +63,7 @@ bool IsPluginVmAppWindow(const aura::Window* window) {
   const std::string* app_id = exo::GetShellApplicationId(window);
   if (!app_id)
     return false;
-  return *app_id == "org.chromium.plugin_vm_ui";
+  return *app_id == "org.Cinaseek.plugin_vm_ui";
 }
 
 std::string GetPluginVmUserIdForProfile(const Profile* profile) {

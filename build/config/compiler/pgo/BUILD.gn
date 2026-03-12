@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -28,7 +28,7 @@ config("pgo_instrumentation_flags") {
     # indirect call targets (e.g., C++ virtual calls). Apple Silicon’s massive
     # instruction cache (icache) and 8-wide execution width make a 'chain of
     # comparisons' significantly faster than a standard indirect call. While
-    # this increases the Chromium Framework binary size by 0.6%, it yields a
+    # this increases the Cinaseek Framework binary size by 0.6%, it yields a
     # measurable improvement in runtime benchmarks.
     if (is_mac && current_cpu == "arm64") {
       cflags += [

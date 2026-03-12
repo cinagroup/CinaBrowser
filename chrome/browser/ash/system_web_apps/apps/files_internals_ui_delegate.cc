@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -175,7 +175,7 @@ void ChromeFilesInternalsUIDelegate::GetFileTasks(
         out +=
             "</b></p>\n<p>Note that some Task icons and titles are separately "
             "<a "
-            "href=\"https://source.chromium.org/chromium/chromium/src/+/"
+            "href=\"https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/"
             "main:ui/file_manager/file_manager/foreground/js/"
             "file_tasks.ts;l=913;drc="
             "9c9022199a6b2e7411a3cafdc347efeb6f229785\">overriden in the Files "

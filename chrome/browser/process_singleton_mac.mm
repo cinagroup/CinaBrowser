@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 
 namespace {
 
-// Extracts the URL from |event| and forwards it to an already-running Chromium
+// Extracts the URL from |event| and forwards it to an already-running Cinaseek
 // process.
 OSErr HandleGURLEvent(const AppleEvent* event,
                       AppleEvent* reply,

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1107,7 +1107,7 @@ IN_PROC_BROWSER_TEST_F(
   // only difference is that the <link rel=prefetch> element has "as=document"
   // attribute which was introduced to support cross origin prefetch with
   // SplitCacheByNetworkIsolationKey feature. Note that even if
-  // SplitCacheByNetworkIsolationKey feature is enabled, current Chromium
+  // SplitCacheByNetworkIsolationKey feature is enabled, current Cinaseek
   // implementation doesn't require as=document for prefetching main resource
   // and subresource signed exchanges.
   RunPrefetchMainResourceSXGAndScriptSXGTest(

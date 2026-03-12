@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,16 +12,16 @@ config("compiler") {
   # Strip prefix paths from predefined preprocessor macros and __builtin_FILE()
   # so that log lines is easier to read. See crbug.com/405206784.
   # This makes source file paths relative to the src directory, instead of
-  # prefixing them with something like "../../../../../path/to/chromium/src".
+  # prefixing them with something like "../../../../../path/to/Cinaseek/src".
   src_prefix = rebase_path("//", root_build_dir)
   cflags += [ "-fmacro-prefix-map=${src_prefix}=" ]
 }
 
 config("compiler_cpu_abi") {
-  # These flags are added by the Chrome OS toolchain compiler wrapper,
+  # These flags are added by the Cinaseek OS toolchain compiler wrapper,
   # or are implicitly passed by Chome OS's toolchain's clang due to
   # the cmake flags that clang was built with. Passing them redundantly
-  # is harmless and prepares for using Chromium's toolchain.
+  # is harmless and prepares for using Cinaseek's toolchain.
   if (is_chromeos_device) {
     if (current_cpu == "x64") {
       asmflags = [ "--target=x86_64-cros-linux-gnu" ]
@@ -48,10 +48,10 @@ config("compiler_cpu_abi") {
 }
 
 config("runtime_library") {
-  # These flags are added by the Chrome OS toolchain compiler wrapper,
+  # These flags are added by the Cinaseek OS toolchain compiler wrapper,
   # or are implicitly passed by Chome OS's toolchain's clang due to
   # the cmake flags that clang was built with. Passing them redundantly
-  # is harmless and prepares for using Chromium's toolchain.
+  # is harmless and prepares for using Cinaseek's toolchain.
   if (is_chromeos_device) {
     ldflags = [
       "--rtlib=compiler-rt",

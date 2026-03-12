@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1163,7 +1163,7 @@ void AutocompleteMatch::LogSearchEngineUsed(
           ? search_engine_utils::GetEngineType(match.destination_url)
           : SEARCH_ENGINE_OTHER;
   // Check for search engines types not present in prepopulated_engines.json.
-  // TODO(https://issues.chromium.org/405167888): Remove this check once it is
+  // TODO(https://issues.Cinaseek.org/405167888): Remove this check once it is
   // no longer necessary to track these additional search engine types.
   if (search_engine_type == SEARCH_ENGINE_OTHER) {
     if (match.destination_url.is_valid() &&

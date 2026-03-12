@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 namespace signin {
 
 // The values are persisted to disk and must not be changed.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin
 enum class Tribool { kUnknown = -1, kFalse = 0, kTrue = 1 };
 
 // Returns `kTrue` if `b` is true and `kFalse` otherwise.

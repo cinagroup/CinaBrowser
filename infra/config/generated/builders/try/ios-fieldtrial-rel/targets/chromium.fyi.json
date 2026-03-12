@@ -36,7 +36,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -48,7 +48,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "ios_chrome_bookmarks_eg2tests_module",
@@ -90,7 +90,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -102,7 +102,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "ios_chrome_bookmarks_eg2tests_module",
@@ -146,7 +146,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -158,7 +158,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 9
         },
         "test": "ios_chrome_integration_eg2tests_module",
@@ -202,7 +202,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -214,7 +214,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 9
         },
         "test": "ios_chrome_integration_eg2tests_module",
@@ -258,7 +258,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -270,7 +270,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "ios_chrome_settings_eg2tests_module",
@@ -314,7 +314,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -326,7 +326,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "ios_chrome_settings_eg2tests_module",
@@ -368,7 +368,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -380,7 +380,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 6
         },
         "test": "ios_chrome_signin_eg2tests_module",
@@ -422,7 +422,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -434,7 +434,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 6
         },
         "test": "ios_chrome_signin_eg2tests_module",
@@ -476,7 +476,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -488,7 +488,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ios_chrome_smoke_eg2tests_module",
         "test_id_prefix": "ninja://ios/chrome/test/earl_grey2:ios_chrome_smoke_eg2tests_module/",
@@ -529,7 +529,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -541,7 +541,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ios_chrome_smoke_eg2tests_module",
         "test_id_prefix": "ninja://ios/chrome/test/earl_grey2:ios_chrome_smoke_eg2tests_module/",
@@ -584,7 +584,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -596,7 +596,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "ios_chrome_ui_eg2tests_module",
@@ -640,7 +640,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -652,7 +652,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "ios_chrome_ui_eg2tests_module",
@@ -694,7 +694,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -706,7 +706,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "ios_chrome_web_eg2tests_module",
@@ -748,7 +748,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -760,7 +760,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "ios_chrome_web_eg2tests_module",
@@ -802,7 +802,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -814,7 +814,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ios_web_shell_eg2tests_module",
         "test_id_prefix": "ninja://ios/web/shell/test:ios_web_shell_eg2tests_module/",
@@ -855,7 +855,7 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
           "named_caches": [
             {
@@ -867,7 +867,7 @@
               "path": "Xcode.app"
             }
           ],
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ios_web_shell_eg2tests_module",
         "test_id_prefix": "ninja://ios/web/shell/test:ios_web_shell_eg2tests_module/",

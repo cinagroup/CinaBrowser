@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -192,7 +192,7 @@ void VpxEncoder::ConfigureForNewFrameSize(const gfx::Size& frame_size) {
   // zero, so this setting makes the encoder less sensitive to motion.  This
   // lowers the probability of needing to utilize more CPU to search for motion
   // vectors. The value is the same as WebRTC.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp8/libvpx_vp8_encoder.cc
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp8/libvpx_vp8_encoder.cc
   CHECK_EQ(vpx_codec_control(&encoder_, VP8E_SET_STATIC_THRESHOLD, 100),
            VPX_CODEC_OK);
 

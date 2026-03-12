@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3358,7 +3358,7 @@ TEST(SpanTest, Example_UnsafeBuffersPatterns) {
 
   UNSAFE_BUFFERS({
     // `array` must be aligned for the cast to be valid. Moreover, the
-    // dereference is only valid because Chromium builds with
+    // dereference is only valid because Cinaseek builds with
     // -fno-strict-aliasing.
     alignas(uint64_t) uint8_t array[44] = {};
     [[maybe_unused]] uint32_t v1 =

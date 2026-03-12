@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ const base::FilePath::CharType kProductDirName[] =
     FILE_PATH_LITERAL("Google/Chrome");
 #else
 const base::FilePath::CharType kProductDirName[] =
-    FILE_PATH_LITERAL("Chromium");
+    FILE_PATH_LITERAL("Cinaseek");
 #endif
 
 bool GetDefaultUserDataDirectory(base::FilePath* result) {

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ class WebTextCheckClient {
  public:
   enum class ShouldForceRefreshTextCheckService { kNo, kYes };
 
-  // Returns the Chromium setting of whether spell-checking is enabled.
+  // Returns the Cinaseek setting of whether spell-checking is enabled.
   virtual bool IsSpellCheckingEnabled() const { return false; }
 
   // The client should perform spell-checking on the given text. If the

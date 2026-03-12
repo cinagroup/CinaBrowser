@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 # //chromecast. Args needed only in //chromecast should be declared in
 # //chromecast/chromecast.gni.
 declare_args() {
-  # Set this true for an audio-only Chromecast build.
+  # Set this true for an audio-only Cinaseekcast build.
   # TODO(crbug.com/41489655): Remove this arg as CastOS builds are no
   # longer supported.
   is_cast_audio_only = false
@@ -37,8 +37,8 @@ is_castos = is_castos && current_toolchain == default_toolchain
 is_cast_android = is_cast_android && current_toolchain == default_toolchain
 
 declare_args() {
-  # Set this true for a Chromecast build. Chromecast builds are supported on
-  # Linux, Android, ChromeOS, and Fuchsia.
+  # Set this true for a Cinaseekcast build. Cinaseekcast builds are supported on
+  # Linux, Android, CinaseekOS, and Fuchsia.
   enable_cast_receiver = false
 }
 
@@ -104,7 +104,7 @@ if (enable_cast_audio_renderer) {
   }
 }
 
-# Assert that Chromecast is being built for a supported platform.
+# Assert that Cinaseekcast is being built for a supported platform.
 assert(is_linux || is_chromeos || is_android || is_fuchsia ||
            !enable_cast_receiver,
        "Cast receiver builds are not supported on $current_os")

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -240,7 +240,7 @@ class EnterpriseSearchAggregatorProvider : public AutocompleteProvider {
       const std::u16string& owner,
       const std::u16string& content_type_description) const;
 
-  // Helper method to get user-readable (e.g. 'chromium is awesome
+  // Helper method to get user-readable (e.g. 'Cinaseek is awesome
   // document') fields that can be used to compare input similarity.
   // Non-user-readable fields (e.g. 'doc_id=123/locations/global') should be
   // excluded because the input matching that would be a coincidence and not

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,9 +18,9 @@ if (is_android) {
       "//chrome/browser/xsurface_provider:*",
     ]
     sources = [
-      "java/src/org/chromium/chrome/browser/privacy/secure_dns/SecureDnsBridge.java",
-      "java/src/org/chromium/chrome/browser/privacy/secure_dns/SecureDnsProviderPreference.java",
-      "java/src/org/chromium/chrome/browser/privacy/secure_dns/SecureDnsSettings.java",
+      "java/src/org/Cinaseek/chrome/browser/privacy/secure_dns/SecureDnsBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/privacy/secure_dns/SecureDnsProviderPreference.java",
+      "java/src/org/Cinaseek/chrome/browser/privacy/secure_dns/SecureDnsSettings.java",
     ]
     deps = [
       ":java_resources",
@@ -49,7 +49,7 @@ if (is_android) {
       "//net/dns/public:secure_dns_mode_generated_enum",
     ]
 
-    resources_package = "org.chromium.chrome.browser.privacy.secure_dns"
+    resources_package = "org.Cinaseek.chrome.browser.privacy.secure_dns"
   }
 
   android_library("privacy_preference_manager_java") {
@@ -64,7 +64,7 @@ if (is_android) {
       "//chrome/browser/ui/android/signin:*",
       "//chrome/browser/xsurface_provider:*",
     ]
-    sources = [ "settings/java/src/org/chromium/chrome/browser/privacy/settings/PrivacyPreferencesManager.java" ]
+    sources = [ "settings/java/src/org/Cinaseek/chrome/browser/privacy/settings/PrivacyPreferencesManager.java" ]
     deps = [
       "//base:base_java",
       "//components/minidump_uploader:minidump_uploader_java",
@@ -73,7 +73,7 @@ if (is_android) {
   }
 
   android_library("privacy_settings_java") {
-    sources = [ "settings/java/src/org/chromium/chrome/browser/privacy/settings/PrivacySettingsNavigation.java" ]
+    sources = [ "settings/java/src/org/Cinaseek/chrome/browser/privacy/settings/PrivacySettingsNavigation.java" ]
   }
 
   android_resources("java_resources") {
@@ -97,7 +97,7 @@ if (is_android) {
       "//chrome/android:jni_headers",
       "//chrome/browser",
     ]
-    sources = [ "java/src/org/chromium/chrome/browser/privacy/secure_dns/SecureDnsBridge.java" ]
+    sources = [ "java/src/org/Cinaseek/chrome/browser/privacy/secure_dns/SecureDnsBridge.java" ]
   }
 }
 

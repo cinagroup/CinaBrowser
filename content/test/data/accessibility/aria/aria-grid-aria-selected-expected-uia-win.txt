@@ -5,8 +5,8 @@ Document
 ++++++++Text Name='Browser' IsControlElement=false
 ++++++DataItem Name='Rendering Engine' GridItem.Column=1 GridItem.ColumnSpan=1 GridItem.Row=0 GridItem.RowSpan=1 GridItem.ContainingGrid='my_grid'
 ++++++++Text Name='Rendering Engine' IsControlElement=false
-++++DataItem Name='ChromeBlink'
-++++++DataItem Name='Chrome' GridItem.Column=0 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='my_grid' SelectionItem.IsSelected=true SelectionItem.SelectionContainer='my_grid'
-++++++++Text Name='Chrome' IsControlElement=false
+++++DataItem Name='CinaseekBlink'
+++++++DataItem Name='Cinaseek' GridItem.Column=0 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='my_grid' SelectionItem.IsSelected=true SelectionItem.SelectionContainer='my_grid'
+++++++++Text Name='Cinaseek' IsControlElement=false
 ++++++DataItem Name='Blink' GridItem.Column=1 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='my_grid' SelectionItem.IsSelected=false SelectionItem.SelectionContainer='my_grid'
 ++++++++Text Name='Blink' IsControlElement=false

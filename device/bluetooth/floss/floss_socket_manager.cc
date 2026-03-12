@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/bluetooth/floss/floss_socket_manager.h"
@@ -318,11 +318,11 @@ FlossSocketManager::FlossSocket::~FlossSocket() = default;
 
 // static
 const char FlossSocketManager::kErrorInvalidCallback[] =
-    "org.chromium.Error.InvalidCallbackId";
+    "org.Cinaseek.Error.InvalidCallbackId";
 
 // static
 const char FlossSocketManager::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/socket_manager/callback";
+    "/org/Cinaseek/bluetooth/socket_manager/callback";
 
 // static
 std::unique_ptr<FlossSocketManager> FlossSocketManager::Create() {

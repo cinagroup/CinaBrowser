@@ -9,8 +9,8 @@ ci/ToTAndroid x86
 ci/ToTAndroid64
 ci/ToTAndroidCoverage x86
 ci/ToTAndroidOfficial
-ci/ToTChromeOS
-ci/ToTChromeOS (dbg)
+ci/ToTCinaseekOS
+ci/ToTCinaseekOS (dbg)
 ci/ToTFuchsia x64
 ci/ToTFuchsiaOfficial arm64
 ci/ToTLinux

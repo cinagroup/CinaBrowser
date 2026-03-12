@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace media::cast {
 
 // This class is responsible for translating between
 // openscreen::cast::RpcMessage commands (used by the remoting protocol) and
-// chromium types that are more easily usable.
+// Cinaseek types that are more easily usable.
 class RpcInitializationCallMessageHandler {
  public:
   virtual ~RpcInitializationCallMessageHandler();

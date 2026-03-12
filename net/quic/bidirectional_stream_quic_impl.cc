@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ class ScopedBoolSaver {
 }  // namespace
 
 BidirectionalStreamQuicImpl::BidirectionalStreamQuicImpl(
-    std::unique_ptr<QuicChromiumClientSession::Handle> session)
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session)
     : session_(std::move(session)) {}
 
 BidirectionalStreamQuicImpl::~BidirectionalStreamQuicImpl() {

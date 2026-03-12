@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ void AddExtensionsActivityToMessage(
 
   const ExtensionsActivity::Records& records = *extensions_activity_buffer;
   for (const auto& [id, record] : records) {
-    sync_pb::ChromiumExtensionsActivity* activity_message =
+    sync_pb::CinaseekExtensionsActivity* activity_message =
         message->add_extensions_activity();
     activity_message->set_extension_id(record.extension_id);
     activity_message->set_bookmark_writes_since_last_commit(

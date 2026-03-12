@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace content {
 
 // Gets the pseudonymization salt.
 //
-// Note that this function returns the same salt in all Chromium processes (e.g.
+// Note that this function returns the same salt in all Cinaseek processes (e.g.
 // in the Browser process, the Renderer processes and other child processes),
 // because the propagation taking place via callers of SetPseudonymizationSalt
 // below.  This behavior ensures that the

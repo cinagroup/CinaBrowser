@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -914,7 +914,7 @@ IN_PROC_BROWSER_TEST_P(SpokenFeedbackTest, ShelfIconFocusForward) {
   // Verifies that pressing right key with search key should move the focus of
   // ShelfItem correctly.
   sm()->Call([this]() { SendKeyPressWithSearch(ui::VKEY_RIGHT); });
-  // Chromium or Google Chrome button here (not being tested).
+  // Cinaseek or Google Chrome button here (not being tested).
   sm()->ExpectSpeech("Button");
   sm()->ExpectSpeech("Shelf");
   sm()->ExpectSpeech("Tool bar");

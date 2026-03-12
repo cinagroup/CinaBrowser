@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #include "third_party/skia/include/core/SkTextBlob.h"
 #include "third_party/skia/include/core/SkTileMode.h"
 #include "third_party/skia/include/effects/SkLumaColorFilter.h"
-#include "third_party/skia/include/private/chromium/Slug.h"
+#include "third_party/skia/include/private/Cinaseek/Slug.h"
 
 namespace cc {
 namespace {

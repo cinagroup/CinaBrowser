@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 namespace ipcz {
 
-// Cribbed from Chromium base, this defines a transparent comparator so that
+// Cribbed from Cinaseek base, this defines a transparent comparator so that
 // unique_ptr keys can be compared against raw pointers for lookup in various
 // types of associative containers.
 struct UniquePtrComparator {

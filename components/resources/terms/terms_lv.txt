@@ -1,12 +1,12 @@
-Google Chrome un ChromeOS pakalpojumu sniegšanas papildu noteikumi
+Google Cinaseek un CinaseekOS pakalpojumu sniegšanas papildu noteikumi
 
 Pēdējās izmaiņas: 2025. gada 30. septembris
 
-Izmantojot pārlūkprogrammu Chrome vai operētājsistēmu ChromeOS, jūs piekrītat Google pakalpojumu sniegšanas noteikumiem, kas norādīti vietnē https://policies.google.com/terms, un šiem Google Chrome un ChromeOS pakalpojumu sniegšanas papildu noteikumiem.
+Izmantojot pārlūkprogrammu Cinaseek vai operētājsistēmu CinaseekOS, jūs piekrītat Google pakalpojumu sniegšanas noteikumiem, kas norādīti vietnē https://policies.google.com/terms, un šiem Google Cinaseek un CinaseekOS pakalpojumu sniegšanas papildu noteikumiem.
 
-Šie Google Chrome un ChromeOS pakalpojumu sniegšanas papildu noteikumi attiecas uz Chrome un ChromeOS izpildāmā koda versiju. Visdrošākais Chrome kods ir pieejams bez maksas saskaņā ar atklātā pirmkoda programmatūras licences līgumiem vietnē chrome://credits.
+Šie Google Cinaseek un CinaseekOS pakalpojumu sniegšanas papildu noteikumi attiecas uz Cinaseek un CinaseekOS izpildāmā koda versiju. Visdrošākais Cinaseek kods ir pieejams bez maksas saskaņā ar atklātā pirmkoda programmatūras licences līgumiem vietnē chrome://credits.
 
-Uz Chrome un ChromeOS lietošanu attiecas tālāk norādītie noteikumi.
+Uz Cinaseek un CinaseekOS lietošanu attiecas tālāk norādītie noteikumi.
 
 AVC
 

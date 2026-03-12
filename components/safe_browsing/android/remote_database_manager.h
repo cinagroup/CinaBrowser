@@ -1,9 +1,9 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
 // Implementation of the SafeBrowsingDatabaseManager that sends URLs
-// via IPC to a database that chromium doesn't manage locally.
+// via IPC to a database that Cinaseek doesn't manage locally.
 
 #ifndef COMPONENTS_SAFE_BROWSING_ANDROID_REMOTE_DATABASE_MANAGER_H_
 #define COMPONENTS_SAFE_BROWSING_ANDROID_REMOTE_DATABASE_MANAGER_H_
@@ -22,7 +22,7 @@ namespace safe_browsing {
 
 struct V4ProtocolConfig;
 
-// An implementation that proxies requests to a service outside of Chromium.
+// An implementation that proxies requests to a service outside of Cinaseek.
 // Does not manage a local database.
 class RemoteSafeBrowsingDatabaseManager : public SafeBrowsingDatabaseManager {
  public:

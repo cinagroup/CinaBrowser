@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 
 namespace {
 // Test URL.
-const char kTestUrl[] = "https://chromium.test/";
+const char kTestUrl[] = "https://Cinaseek.test/";
 }  // namespace
 
 class UrlLoadingObserverBridgeTest : public PlatformTest {

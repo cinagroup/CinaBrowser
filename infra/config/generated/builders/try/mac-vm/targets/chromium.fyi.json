@@ -15,9 +15,9 @@
           "dimensions": {
             "cpu": "Apple_(Virtual)",
             "os": "Mac",
-            "pool": "chromium.tests.macvm"
+            "pool": "Cinaseek.tests.macvm"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_unittests",
         "test_id_prefix": "ninja://base:base_unittests/"
@@ -33,9 +33,9 @@
           "dimensions": {
             "cpu": "Apple_(Virtual)",
             "os": "Mac",
-            "pool": "chromium.tests.macvm"
+            "pool": "Cinaseek.tests.macvm"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 7
         },
         "test": "interactive_ui_tests",

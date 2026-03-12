@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class WebContents;
 using PermissionUpdatedCallback = base::OnceCallback<void(bool)>;
 
 // The native-side counterpart to
-// org.chromium.chrome.browser.permissions.PermissionUpdateRequester to
+// org.Cinaseek.chrome.browser.permissions.PermissionUpdateRequester to
 // triggers the Android runtime permission prompt UI to request missing Chrome
 // app-level permission(s) after the user expressed interest in either
 // the permission update infobar/message.

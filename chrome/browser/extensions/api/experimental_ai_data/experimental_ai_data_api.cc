@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -116,7 +116,7 @@ ExperimentalAiDataGetAiDataWithSpecifierFunction::Run() {
   DCHECK(ai_data_service);
 
   // De-serailizing protos is safe per
-  // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/rule-of-2.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/security/rule-of-2.md
   optimization_guide::proto::ModelPrototypingCollectionSpecifier specifier;
   if (!specifier.ParseFromArray(params->ai_data_specifier.data(),
                                 params->ai_data_specifier.size())) {

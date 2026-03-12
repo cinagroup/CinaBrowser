@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -361,7 +361,7 @@ class InstallStaticUtilTest
     static constexpr wchar_t kPolicyKey[] =
         L"Software\\Policies\\Google\\Chrome";
 #else
-    static constexpr wchar_t kPolicyKey[] = L"Software\\Policies\\Chromium";
+    static constexpr wchar_t kPolicyKey[] = L"Software\\Policies\\Cinaseek";
 #endif
 
     ASSERT_EQ(ERROR_SUCCESS,
@@ -416,7 +416,7 @@ TEST_P(InstallStaticUtilTest, GetChromeInstallSubDirectory) {
   // The directory strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kInstallDirs[] = {
-      L"Chromium",
+      L"Cinaseek",
   };
 #endif
   static_assert(std::size(kInstallDirs) == NUM_INSTALL_MODES,
@@ -445,7 +445,7 @@ TEST_P(InstallStaticUtilTest, GetRegistryPath) {
   // The registry path strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kRegistryPaths[] = {
-      L"Software\\Chromium",
+      L"Software\\Cinaseek",
   };
 #endif
   static_assert(std::size(kRegistryPaths) == NUM_INSTALL_MODES,
@@ -478,7 +478,7 @@ TEST_P(InstallStaticUtilTest, GetUninstallRegistryPath) {
   // The registry path strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kUninstallRegistryPaths[] = {
-      L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Chromium",
+      L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Cinaseek",
   };
 #endif
   static_assert(std::size(kUninstallRegistryPaths) == NUM_INSTALL_MODES,
@@ -525,7 +525,7 @@ TEST_P(InstallStaticUtilTest, GetBaseAppId) {
 #else
   // The base app ids for the brand's install modes; parallel to kInstallModes.
   static constexpr const wchar_t* kBaseAppIds[] = {
-      L"Chromium",
+      L"Cinaseek",
   };
 #endif
   static_assert(std::size(kBaseAppIds) == NUM_INSTALL_MODES,
@@ -587,12 +587,12 @@ TEST_P(InstallStaticUtilTest, GetToastActivatorClsid) {
       {0x635EFA6F,
        0x08D6,
        0x4EC9,
-       {0xBD, 0x14, 0x8A, 0x0F, 0xDE, 0x97, 0x51, 0x59}}  // Chromium.
+       {0xBD, 0x14, 0x8A, 0x0F, 0xDE, 0x97, 0x51, 0x59}}  // Cinaseek.
   };
 
   // The string representation of the CLSIDs above.
   static constexpr const wchar_t* kToastActivatorClsidsString[] = {
-      L"{635EFA6F-08D6-4EC9-BD14-8A0FDE975159}"  // Chromium.
+      L"{635EFA6F-08D6-4EC9-BD14-8A0FDE975159}"  // Cinaseek.
   };
 #endif
   static_assert(std::size(kToastActivatorClsids) == NUM_INSTALL_MODES,
@@ -656,12 +656,12 @@ TEST_P(InstallStaticUtilTest, GetElevatorClsid) {
       {0xD133B120,
        0x6DB4,
        0x4D6B,
-       {0x8B, 0xFE, 0x83, 0xBF, 0x8C, 0xA1, 0xB1, 0xB0}},  // Chromium.
+       {0x8B, 0xFE, 0x83, 0xBF, 0x8C, 0xA1, 0xB1, 0xB0}},  // Cinaseek.
   };
 
   // The string representation of the CLSIDs above.
   static constexpr const wchar_t* kElevatorClsidsString[] = {
-      L"{D133B120-6DB4-4D6B-8BFE-83BF8CA1B1B0}",  // Chromium.
+      L"{D133B120-6DB4-4D6B-8BFE-83BF8CA1B1B0}",  // Cinaseek.
   };
 #endif
   static_assert(std::size(kElevatorClsids) == NUM_INSTALL_MODES,
@@ -738,12 +738,12 @@ TEST_P(InstallStaticUtilTest, GetElevatorIid) {
        0x4966,
        {0x94, 0xb2, 0x5a, 0xfe, 0xc6, 0xfe, 0xd9,
         0x3a}},  // IElevator IID and TypeLib
-                 // {BB19A0E5-00C6-4966-94B2-5AFEC6FED93A} for Chromium.
+                 // {BB19A0E5-00C6-4966-94B2-5AFEC6FED93A} for Cinaseek.
   };
 
   // The string representation of the IIDs above.
   static constexpr const wchar_t* kElevatorIidsString[] = {
-      L"{BB19A0E5-00C6-4966-94B2-5AFEC6FED93A}",  // Chromium.
+      L"{BB19A0E5-00C6-4966-94B2-5AFEC6FED93A}",  // Cinaseek.
   };
 #endif
   static_assert(std::size(kElevatorIids) == NUM_INSTALL_MODES,
@@ -840,7 +840,7 @@ TEST_P(InstallStaticUtilTest, GetSandboxSidPrefix) {
 #else
   static constexpr const wchar_t* kSandBoxSids[] = {
       L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-      L"924012148-",  // Chromium.
+      L"924012148-",  // Cinaseek.
   };
 #endif
   EXPECT_STREQ(GetSandboxSidPrefix(), kSandBoxSids[std::get<0>(GetParam())]);
@@ -875,8 +875,8 @@ INSTANTIATE_TEST_SUITE_P(
     testing::Combine(testing::Values(GOOGLE_CHROME_FOR_TESTING_INDEX),
                      testing::Values("user")));
 #else   // BUILDFLAG(GOOGLE_CHROME_BRANDING)
-// Chromium supports user and system levels.
-INSTANTIATE_TEST_SUITE_P(Chromium,
+// Cinaseek supports user and system levels.
+INSTANTIATE_TEST_SUITE_P(Cinaseek,
                          InstallStaticUtilTest,
                          testing::Combine(testing::Values(CHROMIUM_INDEX),
                                           testing::Values("user", "system")));

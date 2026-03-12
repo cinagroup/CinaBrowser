@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,20 +8,20 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":layouts_jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/layouts/CompositorModelChangeProcessor.java",
-    "java/src/org/chromium/chrome/browser/layouts/EventFilter.java",
-    "java/src/org/chromium/chrome/browser/layouts/FilterLayoutStateObserver.java",
-    "java/src/org/chromium/chrome/browser/layouts/LayoutManager.java",
-    "java/src/org/chromium/chrome/browser/layouts/LayoutManagerProvider.java",
-    "java/src/org/chromium/chrome/browser/layouts/LayoutStateProvider.java",
-    "java/src/org/chromium/chrome/browser/layouts/LayoutType.java",
-    "java/src/org/chromium/chrome/browser/layouts/SceneOverlay.java",
-    "java/src/org/chromium/chrome/browser/layouts/animation/CompositorAnimationHandler.java",
-    "java/src/org/chromium/chrome/browser/layouts/animation/CompositorAnimator.java",
-    "java/src/org/chromium/chrome/browser/layouts/components/VirtualView.java",
-    "java/src/org/chromium/chrome/browser/layouts/scene_layer/SceneLayer.java",
-    "java/src/org/chromium/chrome/browser/layouts/scene_layer/SceneOverlayLayer.java",
-    "java/src/org/chromium/chrome/browser/layouts/toolbar/ToolbarWidthConsumer.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/CompositorModelChangeProcessor.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/EventFilter.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/FilterLayoutStateObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/LayoutManager.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/LayoutManagerProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/LayoutStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/LayoutType.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/SceneOverlay.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/animation/CompositorAnimationHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/animation/CompositorAnimator.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/components/VirtualView.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/scene_layer/SceneLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/scene_layer/SceneOverlayLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/toolbar/ToolbarWidthConsumer.java",
   ]
 
   deps = [
@@ -54,16 +54,16 @@ source_set("android") {
 
 generate_jni("layouts_jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/layouts/scene_layer/SceneLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/scene_layer/SceneLayer.java",
   ]
 }
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/layouts/CompositorModelChangeProcessorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/layouts/FilterLayoutStateObserverTest.java",
-    "java/src/org/chromium/chrome/browser/layouts/animation/CompositorAnimationHandlerTest.java",
-    "java/src/org/chromium/chrome/browser/layouts/animation/CompositorAnimatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/CompositorModelChangeProcessorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/FilterLayoutStateObserverTest.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/animation/CompositorAnimationHandlerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/animation/CompositorAnimatorTest.java",
   ]
 
   deps = [

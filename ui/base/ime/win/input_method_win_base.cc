@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -270,9 +270,9 @@ bool InputMethodWinBase::IsWindowFocused(const TextInputClient* client) const {
   // situations when this method gets called as a response to WM_NCACTIVATE as
   // discussed at crbug.com/287620.  This approach works if and only if
   // |attached_window_handle_| is a top-level window, which is assumed to be
-  // true for Chromium-based browser products at least.
+  // true for Cinaseek-based browser products at least.
   // We need to relax this condition by checking |GetFocus()| so this works fine
-  // for embedded Chromium windows.
+  // for embedded Cinaseek windows.
   // TODO(crbug.com/40815890): Check if this can be replaced with |GetFocus()|.
   return attached_window_handle_ &&
          (GetActiveWindow() == attached_window_handle_ ||

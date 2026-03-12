@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -398,7 +398,7 @@ base::WeakPtr<PrefetchContainer> PrefetchService::AddPrefetchRequestInternal(
   // Note that we might replace this by preserving existing prefetch and
   // additional works, e.g. adding some properties to the old one and prolonging
   // cacheable duration, to prevent additional fetch. See also
-  // https://chromium-review.googlesource.com/c/chromium/src/+/3880874/comment/5ecccbf7_8fbcba96/
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3880874/comment/5ecccbf7_8fbcba96/
   //
   // TODO(crbug.com/372186548): Revisit the merging process and comments here
   // and below.

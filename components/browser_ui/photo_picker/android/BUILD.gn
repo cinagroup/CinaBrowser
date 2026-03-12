@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,23 +17,23 @@ source_set("android") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/photo_picker/BitmapScalerTask.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/BitmapUtils.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/DecodeVideoTask.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/DecoderServiceHost.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/FileEnumWorkerTask.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/ImageDecoder.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PhotoPickerDialog.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PhotoPickerToolbar.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerAdapter.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerBitmap.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerBitmapView.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerBitmapViewHolder.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerCategoryView.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerVideoPlayer.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/BitmapScalerTask.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/BitmapUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/DecodeVideoTask.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/DecoderServiceHost.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/FileEnumWorkerTask.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/ImageDecoder.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PhotoPickerDialog.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PhotoPickerToolbar.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerAdapter.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerBitmap.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerBitmapView.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerBitmapViewHolder.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerCategoryView.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerVideoPlayer.java",
   ]
 
-  resources_package = "org.chromium.components.browser_ui.photo_picker"
+  resources_package = "org.Cinaseek.components.browser_ui.photo_picker"
   deps = [
     ":java_resources",
     "//base:base_java",
@@ -59,14 +59,14 @@ android_library("java") {
 }
 
 generate_jni("photo_picker_jni_headers") {
-  sources = [ "java/src/org/chromium/components/browser_ui/photo_picker/ImageDecoder.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/photo_picker/ImageDecoder.java" ]
 }
 
 android_aidl("photo_picker_aidl") {
   import_include = [ "java/src/" ]
   sources = [
-    "java/src/org/chromium/components/browser_ui/photo_picker/IDecoderService.aidl",
-    "java/src/org/chromium/components/browser_ui/photo_picker/IDecoderServiceCallback.aidl",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/IDecoderService.aidl",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/IDecoderServiceCallback.aidl",
   ]
 }
 
@@ -103,10 +103,10 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.components.browser_ui.photo_picker"
+  resources_package = "org.Cinaseek.components.browser_ui.photo_picker"
   sources = [
-    "java/src/org/chromium/components/browser_ui/photo_picker/FileEnumWorkerTaskTest.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PickerBitmapViewTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/FileEnumWorkerTaskTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PickerBitmapViewTest.java",
   ]
   deps = [
     ":java",
@@ -126,7 +126,7 @@ robolectric_library("junit") {
 android_library("test_support_java") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/components/browser_ui/photo_picker/TestImageDecoderService.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/photo_picker/TestImageDecoderService.java" ]
   mergeable_android_manifests =
       [ "java/AndroidManifest_TestImageDecoderService.xml" ]
 
@@ -141,9 +141,9 @@ android_library("unit_device_javatests") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/components/browser_ui/photo_picker/DecoderServiceHostTest.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/ImageDecoderTest.java",
-    "java/src/org/chromium/components/browser_ui/photo_picker/PhotoPickerDialogTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/DecoderServiceHostTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/ImageDecoderTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/photo_picker/PhotoPickerDialogTest.java",
   ]
   deps = [
     ":java",
@@ -170,5 +170,5 @@ android_library("unit_device_javatests") {
     "//ui/android:ui_java",
     "//ui/android:ui_java_test_support",
   ]
-  resources_package = "org.chromium.components.browser_ui.photo_picker"
+  resources_package = "org.Cinaseek.components.browser_ui.photo_picker"
 }

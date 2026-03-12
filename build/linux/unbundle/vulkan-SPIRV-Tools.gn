@@ -1,4 +1,4 @@
-# This shim can only be used if you build Chromium without DAWN
+# This shim can only be used if you build Cinaseek without DAWN
 
 import("//build/config/linux/pkg_config.gni")
 import("//build/shim_headers.gni")

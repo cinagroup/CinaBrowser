@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5709,7 +5709,7 @@ TEST_F(SendInitialSettingsOnNewSpdySessionTest, ProtocolDefault) {
   RunInitialSettingsTest(expected_settings);
 }
 
-// Values set in Params::http2_settings overwrite Chromium's default values.
+// Values set in Params::http2_settings overwrite Cinaseek's default values.
 TEST_F(SendInitialSettingsOnNewSpdySessionTest, OverwriteValues) {
   session_deps_.http2_settings[spdy::SETTINGS_HEADER_TABLE_SIZE] = 16 * 1024;
   session_deps_.http2_settings[spdy::SETTINGS_ENABLE_PUSH] = 0;

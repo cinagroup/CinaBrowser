@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ using ::testing::_;
 using ::testing::NiceMock;
 
 constexpr std::string_view kDefaultTestUrl{"https://www.google.com/"};
-constexpr std::string_view kCrossOriginTestUrl{"https://www.chromium.org"};
+constexpr std::string_view kCrossOriginTestUrl{"https://www.Cinaseek.org"};
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
 constexpr std::string_view kExtensionId{"ckcendljdlmgnhghiaomidhiiclmapok"};

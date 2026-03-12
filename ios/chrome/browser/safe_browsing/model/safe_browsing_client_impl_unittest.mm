@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ TEST_F(SafeBrowsingClientImplTest, ShouldBlockUnsafeResourceIfPrerendered) {
 
 // Verifies prerendering is cancelled when the main frame load is cancelled.
 TEST_F(SafeBrowsingClientImplTest, ShouldCancelPrerenderInMainFrame) {
-  GURL url = GURL("https://www.chromium.org");
+  GURL url = GURL("https://www.Cinaseek.org");
   EnablePrerender();
   EXPECT_TRUE(PrerenderTabHelper::FromWebState(web_state()));
   EXPECT_FALSE(prerender_cancelled());

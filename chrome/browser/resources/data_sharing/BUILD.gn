@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -56,7 +56,7 @@ build_webui("build") {
     extra_grdp_files = [ "$target_gen_dir/data_sharing_sdk.grdp" ]
 
     # Use the mojo_files rules to copy the ts type file to the preprocess dir.
-    # This helps to make sure third_party code is in sync with Chrome.
+    # This helps to make sure third_party code is in sync with Cinaseek.
     mojo_files += [ "//third_party/data_sharing_sdk/data_sharing_sdk_types.ts" ]
   } else {
     static_files += [ "data_sharing_sdk.css" ]

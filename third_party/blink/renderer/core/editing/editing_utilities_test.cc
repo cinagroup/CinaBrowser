@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -158,7 +158,7 @@ TEST_F(EditingUtilitiesTest, IsEditablePositionWithSpan) {
   EXPECT_TRUE(IsEditablePosition(Position(target, 0)));
 }
 
-// https://issues.chromium.org/issues/41490809
+// https://issues.Cinaseek.org/issues/41490809
 TEST_F(EditingUtilitiesTest, IsEditablePositionWithVisibleInertElement) {
   SetBodyContent(
       R"(<div contenteditable><span inert id="target">abc</span></div>)");
@@ -167,7 +167,7 @@ TEST_F(EditingUtilitiesTest, IsEditablePositionWithVisibleInertElement) {
   EXPECT_FALSE(IsEditablePosition(Position(target.firstChild(), 0)));
 }
 
-// https://issues.chromium.org/issues/41490809
+// https://issues.Cinaseek.org/issues/41490809
 TEST_F(EditingUtilitiesTest, IsEditablePositionWithInVisibleInertElement) {
   SetBodyContent(
       R"(<div contenteditable>

@@ -1,5 +1,5 @@
 {
-    "chromium.android": {
+    "Cinaseek.android": {
         "android-10-x86-nofieldtrial-rel": {
             "webview_trichrome_cts_tests full_mode": {
                 "shards": 3,
@@ -45,7 +45,7 @@
             }
         }
     },
-    "chromium.android.desktop": {
+    "Cinaseek.android.desktop": {
         "android-desktop-x64-rel-15-tests": {
             "unit_tests": {
                 "shards": 3,
@@ -53,7 +53,7 @@
             }
         }
     },
-    "chromium.chromiumos": {
+    "Cinaseek.Cinaseekos": {
         "chromeos-amd64-generic-rel-gtest": {
             "net_unittests": {
                 "shards": 4,
@@ -95,7 +95,7 @@
             }
         }
     },
-    "chromium.fuchsia": {
+    "Cinaseek.fuchsia": {
         "fuchsia-x64-cast-receiver-rel": {
             "blink_unittests": {
                 "shards": 2,
@@ -115,7 +115,7 @@
             }
         }
     },
-    "chromium.gpu": {
+    "Cinaseek.gpu": {
         "Win10 x64 Release (NVIDIA)": {
             "trace_test": {
                 "shards": 2,
@@ -123,7 +123,7 @@
             }
         }
     },
-    "chromium.linux": {
+    "Cinaseek.linux": {
         "Linux Tests": {
             "blink_web_tests": {
                 "shards": 8,
@@ -167,61 +167,61 @@
             }
         }
     },
-    "chromium.memory": {
+    "Cinaseek.memory": {
         "Linux ASan LSan Tests (1)": {
             "components_unittests": {
                 "shards": 6,
-                "try_builder": "linux_chromium_asan_rel_ng"
+                "try_builder": "linux_Cinaseek_asan_rel_ng"
             },
             "content_browsertests": {
                 "shards": 72,
-                "try_builder": "linux_chromium_asan_rel_ng"
+                "try_builder": "linux_Cinaseek_asan_rel_ng"
             },
             "interactive_ui_tests": {
                 "shards": 102,
-                "try_builder": "linux_chromium_asan_rel_ng"
+                "try_builder": "linux_Cinaseek_asan_rel_ng"
             },
             "sync_integration_tests": {
                 "shards": 10,
-                "try_builder": "linux_chromium_asan_rel_ng"
+                "try_builder": "linux_Cinaseek_asan_rel_ng"
             },
             "unit_tests": {
                 "shards": 10,
-                "try_builder": "linux_chromium_asan_rel_ng"
+                "try_builder": "linux_Cinaseek_asan_rel_ng"
             }
         },
         "Linux TSan Tests": {
             "blink_unittests": {
                 "shards": 8,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "components_unittests": {
                 "shards": 6,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "content_browsertests": {
                 "shards": 63,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "content_unittests": {
                 "shards": 2,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "interactive_ui_tests": {
                 "shards": 49,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "sync_integration_tests": {
                 "shards": 7,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             },
             "unit_tests": {
                 "shards": 8,
-                "try_builder": "linux_chromium_tsan_rel_ng"
+                "try_builder": "linux_Cinaseek_tsan_rel_ng"
             }
         }
     },
-    "chromium.win": {
+    "Cinaseek.win": {
         "Win10 Tests x64": {
             "browser_tests": {
                 "shards": 76,

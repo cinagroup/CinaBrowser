@@ -4,7 +4,7 @@
 
 'use strict';
 
-// This test relies on Chromium specific behavior: when a page cannot expose
+// This test relies on Cinaseek specific behavior: when a page cannot expose
 // readings (like here, when it does not have focus), the platform sensor will
 // be suspended if there are no other users.
 promise_test(async t => {

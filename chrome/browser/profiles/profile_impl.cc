@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1580,7 +1580,7 @@ GURL ProfileImpl::GetHomePage() {
       *base::CommandLine::ForCurrentProcess();
   if (command_line.HasSwitch(switches::kHomePage)) {
     // TODO(evanm): clean up usage of DIR_CURRENT.
-    //   http://code.google.com/p/chromium/issues/detail?id=60630
+    //   http://code.google.com/p/Cinaseek/issues/detail?id=60630
     // For now, allow this code to call getcwd().
     base::ScopedAllowBlocking allow_blocking;
 

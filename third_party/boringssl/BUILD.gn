@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -42,7 +42,7 @@ config("no_asm_config") {
   defines = [ "OPENSSL_NO_ASM" ]
 }
 
-# TODO(crbug.com/42290535): Move Chromium's use of libpki to the public API and
+# TODO(crbug.com/42290535): Move Cinaseek's use of libpki to the public API and
 # unexport pki_internal_headers.
 all_sources = bcm_internal_headers + bcm_sources + crypto_internal_headers +
               crypto_sources + ssl_internal_headers + ssl_sources + pki_sources
@@ -152,8 +152,8 @@ component("boringssl") {
   public_configs = [ ":external_config" ]
   configs += [ ":component_config" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   if (!is_debug && !(is_fuchsia && optimize_for_size)) {
     configs -= [ "//build/config/compiler:default_optimization" ]
@@ -168,7 +168,7 @@ component("boringssl") {
   }
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   import("//testing/libfuzzer/fuzzer_test.gni")
 
   source_set("test_support") {
@@ -177,9 +177,9 @@ if (build_with_chromium) {
     public = rebase_path(test_support_internal_headers, ".", "src")
     testonly = true
 
-    # Test data in Chromium is complex. Swap out GetTestData with a
-    # Chromium-specific implementation.
-    sources += [ "test_data_chromium.cc" ]
+    # Test data in Cinaseek is complex. Swap out GetTestData with a
+    # Cinaseek-specific implementation.
+    sources += [ "test_data_Cinaseek.cc" ]
     defines = [ "BORINGSSL_CUSTOM_GET_TEST_DATA" ]
 
     deps = [
@@ -211,15 +211,15 @@ if (build_with_chromium) {
       "//testing/gtest",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
-    # Chromium infrastructure does not support GTest, only the //base wrapper.
+    # Cinaseek infrastructure does not support GTest, only the //base wrapper.
     sources -= [ "src/crypto/test/gtest_main.cc" ]
-    sources += [ "gtest_main_chromium.cc" ]
+    sources += [ "gtest_main_Cinaseek.cc" ]
     deps += [ "//base/test:test_support" ]
 
     if (is_fuchsia) {
@@ -236,15 +236,15 @@ if (build_with_chromium) {
       "//testing/gtest",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
-    # Chromium infrastructure does not support GTest, only the //base wrapper.
+    # Cinaseek infrastructure does not support GTest, only the //base wrapper.
     sources -= [ "src/crypto/test/gtest_main.cc" ]
-    sources += [ "gtest_main_chromium.cc" ]
+    sources += [ "gtest_main_Cinaseek.cc" ]
     deps += [ "//base/test:test_support" ]
   }
 
@@ -257,15 +257,15 @@ if (build_with_chromium) {
       "//testing/gtest",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":internal_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
-    # Chromium infrastructure does not support GTest, only the //base wrapper.
+    # Cinaseek infrastructure does not support GTest, only the //base wrapper.
     sources -= [ "src/crypto/test/gtest_main.cc" ]
-    sources += [ "gtest_main_chromium.cc" ]
+    sources += [ "gtest_main_Cinaseek.cc" ]
     deps += [ "//base/test:test_support" ]
   }
 

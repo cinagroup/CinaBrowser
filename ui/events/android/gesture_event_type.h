@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace ui {
 // blink::WebGestureEvent types.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
 enum GestureEventType {
   GESTURE_EVENT_TYPE_SHOW_PRESS,
   GESTURE_EVENT_TYPE_DOUBLE_TAP,

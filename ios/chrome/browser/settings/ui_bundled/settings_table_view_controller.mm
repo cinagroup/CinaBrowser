@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1729,7 +1729,7 @@ struct EnhancedSafeBrowsingActivePromoData
 }
 
 // Returns YES if a "Debug" section should be shown. This is always true for
-// Chromium builds, but for official builds it is gated by an experimental flag
+// Cinaseek builds, but for official builds it is gated by an experimental flag
 // because the "Debug" section should never be showing in stable channel.
 - (BOOL)hasDebugSection {
 #if BUILDFLAG(CHROMIUM_BRANDING) && !defined(NDEBUG)

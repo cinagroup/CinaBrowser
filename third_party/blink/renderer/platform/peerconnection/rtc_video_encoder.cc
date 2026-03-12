@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -265,7 +265,7 @@ bool ConvertKbpsToBps(uint32_t bitrate_kbps, uint32_t* bitrate_bps) {
 
 uint8_t GetDropFrameThreshold(const webrtc::VideoCodec& codec_settings) {
   // This drop frame threshold is same as WebRTC.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp9/libvpx_vp9_encoder.cc
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp9/libvpx_vp9_encoder.cc
   if (codec_settings.GetFrameDropEnabled() &&
       base::FeatureList::IsEnabled(
           media::kWebRTCHardwareVideoEncoderFrameDrop)) {
@@ -277,7 +277,7 @@ uint8_t GetDropFrameThreshold(const webrtc::VideoCodec& codec_settings) {
 webrtc::VideoBitrateAllocation AllocateBitrateForVEAConfig(
     const media::VideoEncodeAccelerator::Config& config) {
   // The same bitrate factors as the software encoder.
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/video/vpx_video_encoder.cc;l=131;drc=d383d0b3e4f76789a6de2a221c61d3531f4c59da
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/video/vpx_video_encoder.cc;l=131;drc=d383d0b3e4f76789a6de2a221c61d3531f4c59da
   constexpr auto kTemporalLayersBitrateScaleFactors =
       std::to_array<std::array<double, 3>>({
           {1.00, 0.00, 0.00},  // For one temporal layer.

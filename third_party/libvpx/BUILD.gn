@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,8 +21,8 @@ if (current_cpu == "x86") {
   }
 } else if (current_cpu == "arm") {
   if (is_chromeos) {
-    # ChromeOS gets highbd vp9 but other arm targets do not.
-    # TODO(thakis): ChromeOS no longer ships a 32-bit arm build, remove this.
+    # CinaseekOS gets highbd vp9 but other arm targets do not.
+    # TODO(thakis): CinaseekOS no longer ships a 32-bit arm build, remove this.
     cpu_arch_full = "arm-neon-highbd"
   } else {
     cpu_arch_full = "arm-neon"
@@ -115,8 +115,8 @@ source_set("libvpx_test_generic_headers") {
 }
 
 executable("decode_encode_profile_test") {
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   include_dirs = [ "source/libvpx/third_party/libwebm/" ]
 
   testonly = true
@@ -172,8 +172,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   # symbols.
 
   source_set("libvpx_intrinsics_mmx") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win) {
       cflags = [ "-mmmx" ]
@@ -188,8 +188,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_sse2") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win || is_clang) {
       cflags = [ "-msse2" ]
@@ -204,8 +204,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_ssse3") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win || is_clang) {
       cflags = [ "-mssse3" ]
@@ -220,8 +220,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_sse4_1") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win || is_clang) {
       cflags = [ "-msse4.1" ]
@@ -236,8 +236,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_avx") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (is_win) {
       cflags = [ "/arch:AVX" ]
@@ -254,8 +254,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_avx2") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (is_win) {
       cflags = [ "/arch:AVX2" ]
@@ -272,12 +272,12 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   }
 
   source_set("libvpx_intrinsics_avx512") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (is_win) {
       # clang-cl does not accept this flag.
-      # https://bugs.chromium.org/p/chromium/issues/detail?id=783370
+      # https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=783370
       cflags = [ "/arch:AVX512" ]
     } else {
       cflags = [
@@ -300,8 +300,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
 if (current_cpu == "loong64") {
   source_set("libvpx_loongarch_lsx") {
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     cflags = [ "-mlsx" ]
     sources = libvpx_srcs_loongarch_lsx
@@ -311,8 +311,8 @@ if (current_cpu == "loong64") {
 if (current_cpu == "arm" || current_cpu == "arm64" || current_cpu == "arm64e") {
   source_set("libvpx_intrinsics_neon") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (current_cpu == "arm") {
       configs -= [ "//build/config/compiler:compiler_arm_fpu" ]
@@ -322,7 +322,7 @@ if (current_cpu == "arm" || current_cpu == "arm64" || current_cpu == "arm64e") {
       sources = libvpx_srcs_arm_neon_neon
       deps = [ ":libvpx_arm_neon_headers" ]
     } else if (cpu_arch_full == "arm-neon-highbd") {
-      # TODO(thakis): ChromeOS no longer ships a 32-bit arm build, remove this.
+      # TODO(thakis): CinaseekOS no longer ships a 32-bit arm build, remove this.
       sources = libvpx_srcs_arm_neon_highbd_neon
       deps = [ ":libvpx_arm_neon_highbd_headers" ]
     } else if (cpu_arch_full == "arm64") {
@@ -338,8 +338,8 @@ if (current_cpu == "arm" || current_cpu == "arm64" || current_cpu == "arm64e") {
 if (current_cpu == "arm64" || current_cpu == "arm64e") {
   source_set("libvpx_intrinsics_neon_dotprod") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win || is_clang) {
       cflags = [ "-march=armv8.2-a+dotprod" ]
@@ -355,8 +355,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
   source_set("libvpx_intrinsics_neon_i8mm") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libvpx_config" ]
     if (!is_win || is_clang) {
       cflags = [ "-march=armv8.2-a+i8mm" ]
@@ -376,8 +376,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
   if (!is_win) {
     source_set("libvpx_intrinsics_sve") {
       check_includes = false
-      configs -= [ "//build/config/compiler:chromium_code" ]
-      configs += [ "//build/config/compiler:no_chromium_code" ]
+      configs -= [ "//build/config/compiler:Cinaseek_code" ]
+      configs += [ "//build/config/compiler:no_Cinaseek_code" ]
       configs += [ ":libvpx_config" ]
       cflags = [ "-march=armv8.2-a+dotprod+i8mm+sve" ]
       if (cpu_arch_full == "arm64") {
@@ -391,8 +391,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
     source_set("libvpx_intrinsics_sve2") {
       check_includes = false
-      configs -= [ "//build/config/compiler:chromium_code" ]
-      configs += [ "//build/config/compiler:no_chromium_code" ]
+      configs -= [ "//build/config/compiler:Cinaseek_code" ]
+      configs += [ "//build/config/compiler:no_Cinaseek_code" ]
       configs += [ ":libvpx_config" ]
       cflags = [ "-march=armv9-a+sve2" ]
       if (cpu_arch_full == "arm64") {
@@ -408,7 +408,7 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
 if (current_cpu == "arm") {
   if (cpu_arch_full == "arm-neon-highbd") {
-    # TODO(thakis): ChromeOS no longer ships a 32-bit arm build, remove this.
+    # TODO(thakis): CinaseekOS no longer ships a 32-bit arm build, remove this.
     arm_assembly_sources = libvpx_srcs_arm_neon_highbd_assembly
   } else {
     arm_assembly_sources = libvpx_srcs_arm_neon_assembly
@@ -519,7 +519,7 @@ static_library("libvpx") {
     public_deps = [ ":libvpx_mips_headers" ]
   } else if (current_cpu == "arm") {
     if (is_chromeos) {
-      # TODO(thakis): ChromeOS no longer ships a 32-bit arm build, remove this.
+      # TODO(thakis): CinaseekOS no longer ships a 32-bit arm build, remove this.
       sources = libvpx_srcs_arm_neon_highbd
       public_deps = [ ":libvpx_arm_neon_highbd_headers" ]
     } else {
@@ -545,8 +545,8 @@ static_library("libvpx") {
     public_deps = [ ":libvpx_loongarch_headers" ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":libvpx_config" ]
   deps = []
   if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
@@ -602,8 +602,8 @@ static_library("libvpxrc") {
     "//third_party/libvpx/source/libvpx/vpx/internal/vpx_ratectrl_rtc.h",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":libvpx_config" ]
   public_deps = [ ":libvpx" ]
 
@@ -661,7 +661,7 @@ test("test_libvpx") {
 
   if (is_android) {
     use_raw_android_executable = true
-    defines = [ "LIBVPX_TEST_DATA_PATH=/data/local/tmp/chromium_tests_root/third_party/libvpx/testdata" ]
+    defines = [ "LIBVPX_TEST_DATA_PATH=/data/local/tmp/Cinaseek_tests_root/third_party/libvpx/testdata" ]
     data = [ "testdata/" ]
   } else {
     defines = [ string_join("",
@@ -671,6 +671,6 @@ test("test_libvpx") {
                             ]) ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }

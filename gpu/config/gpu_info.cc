@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ GPUInfo::GPUDevice& GPUInfo::GPUDevice::operator=(
 bool GPUInfo::GPUDevice::IsSoftwareRenderer() const {
   switch (vendor_id) {
     case 0x0000:  // Info collection failed to identify a GPU
-    case 0xffff:  // Chromium internal flag for software rendering
+    case 0xffff:  // Cinaseek internal flag for software rendering
     case 0x15ad:  // VMware
       return true;
     case 0x1414:  // Microsoft software renderer

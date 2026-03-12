@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -40,20 +40,20 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/components/omnibox/OmniboxFeatureMap.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxFeatureMap.java",
     ]
   }
 
   java_cpp_features("java_features_srcjar") {
     visibility = [ ":*" ]
     sources = [ "//components/omnibox/common/omnibox_features.cc" ]
-    class_name = "org.chromium.components.omnibox.OmniboxFeatureList"
+    class_name = "org.Cinaseek.components.omnibox.OmniboxFeatureList"
   }
 
   android_library("features_java") {
     sources = [
-      "android/java/src/org/chromium/components/omnibox/OmniboxFeatureMap.java",
-      "android/java/src/org/chromium/components/omnibox/OmniboxFeatures.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxFeatureMap.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxFeatures.java",
     ]
     srcjar_deps = [
       ":java_features_srcjar",
@@ -72,7 +72,7 @@ if (is_android) {
   }
 
   robolectric_library("junit") {
-    sources = [ "android/java/src/org/chromium/components/omnibox/OmniboxFeaturesTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/omnibox/OmniboxFeaturesTest.java" ]
     deps = [
       "//base:base_java_test_support",
       "//base:base_junit_test_support",

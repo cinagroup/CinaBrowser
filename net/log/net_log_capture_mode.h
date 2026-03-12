@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace net {
 // Note the numeric values are used in a bitfield (NetLogCaptureModeSet) so must
 // be sequential starting from 0, and not exceed 31.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum class NetLogCaptureMode : uint8_t {
   // Logging level that only allows fields that are known to be safe from a
   // privacy perspective.

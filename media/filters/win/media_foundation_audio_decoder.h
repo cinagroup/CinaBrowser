@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace media {
 class AudioBufferMemoryPool;
 
 // MFAudioDecoder is based on Window's MediaFoundation API. The MediaFoundation
-// API is required to decode codecs that aren't supported by Chromium.
+// API is required to decode codecs that aren't supported by Cinaseek.
 class MEDIA_EXPORT MediaFoundationAudioDecoder : public AudioDecoder {
  public:
   // Creates a MediaFoundationAudioDecoder if MediaFoundation is supported,

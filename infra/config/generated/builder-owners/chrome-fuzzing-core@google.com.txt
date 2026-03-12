@@ -3,7 +3,7 @@ ci/Centipede High End Upload Linux ASan DCheck
 ci/Centipede Upload Linux ASan
 ci/Libfuzzer High End Upload Linux ASan
 ci/Libfuzzer High End Upload Linux ASan Debug
-ci/Libfuzzer Upload Chrome OS ASan
+ci/Libfuzzer Upload Cinaseek OS ASan
 ci/Libfuzzer Upload Linux ASan
 ci/Libfuzzer Upload Linux ASan Debug
 ci/Libfuzzer Upload Linux MSan

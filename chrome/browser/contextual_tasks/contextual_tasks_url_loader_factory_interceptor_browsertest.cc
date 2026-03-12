@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -378,7 +378,7 @@ IN_PROC_BROWSER_TEST_F(
   run_loop.Run();
 
   EXPECT_FALSE(captured_ua_header_.empty());
-  EXPECT_THAT(captured_ua_header_, testing::HasSubstr("Chromium"));
+  EXPECT_THAT(captured_ua_header_, testing::HasSubstr("Cinaseek"));
 }
 
 IN_PROC_BROWSER_TEST_F(ContextualTasksUrlLoaderFactoryInterceptorBrowserTest,

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ enum ServiceCreationType {
 };
 
 constexpr std::string_view kDefaultTestUrl{"https://www.google.com/"};
-constexpr std::string_view kCrossOriginTestUrl{"https://www.chromium.org"};
+constexpr std::string_view kCrossOriginTestUrl{"https://www.Cinaseek.org"};
 
 MATCHER_P(HasGuid, matcher, "") {
   return ExplainMatchResult(matcher, arg->guid, result_listener);

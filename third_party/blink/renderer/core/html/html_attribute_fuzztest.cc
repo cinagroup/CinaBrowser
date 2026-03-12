@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class BlinkAttributeFuzzTestFixture
 // HTML elements, and can index into the html_names::HTMLTag array.
 // This is not quite the optimal choice: ideally, we'd have a domain
 // which returns the string of the tag, such that test cases are stable
-// across Chromium versions when tags are added or removed. However, this
+// across Cinaseek versions when tags are added or removed. However, this
 // proves to be difficult because all the Blink string types require
 // garbage collection/allocation stuff to be initialized, and it isn't
 // at the time that this domain function is run. If this fuzzer proves

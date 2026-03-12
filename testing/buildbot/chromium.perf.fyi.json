@@ -5,7 +5,7 @@
     "additional_compile_targets": [
       "android_tools",
       "chrome_public_apk",
-      "chromium_builder_perf",
+      "Cinaseek_builder_perf",
       "push_apps_to_background_apk",
       "system_webview_apk",
       "system_webview_shell_apk"
@@ -15,7 +15,7 @@
     "additional_compile_targets": [
       "android_tools",
       "chrome_public_apk",
-      "chromium_builder_perf",
+      "Cinaseek_builder_perf",
       "push_apps_to_background_apk",
       "system_webview_apk",
       "system_webview_shell_apk"
@@ -23,7 +23,7 @@
   },
   "chromeos-kevin-builder-perf-fyi": {
     "additional_compile_targets": [
-      "chromium_builder_perf"
+      "Cinaseek_builder_perf"
     ]
   },
   "chromeos-kevin-perf-fyi": {
@@ -76,7 +76,7 @@
     "additional_compile_targets": [
       "web_engine_shell_pkg",
       "cast_runner_pkg",
-      "chromium_builder_perf",
+      "Cinaseek_builder_perf",
       "base_perftests"
     ]
   },

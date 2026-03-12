@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ class MetricsInternalsUIBrowserTestWithLog
  protected:
   void SetUp() override {
     // Make metrics reporting work the same as in Chrome branded builds, for
-    // test consistency between Chromium and Chrome builds.
+    // test consistency between Cinaseek and Chrome builds.
     ChromeMetricsServiceAccessor::SetForceIsMetricsReportingEnabledPrefLookup(
         true);
     ChromeMetricsServiceAccessor::SetMetricsAndCrashReportingForTesting(

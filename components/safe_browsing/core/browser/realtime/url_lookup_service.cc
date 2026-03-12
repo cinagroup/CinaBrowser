@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -193,9 +193,9 @@ RealTimeUrlLookupService::GetTrafficAnnotationTag() const {
           setting:
             "Users can disable Safe Browsing real time URL checks by "
             "unchecking 'Protect you and your device from dangerous sites' in "
-            "Chromium settings under Privacy, or by unchecking 'Make searches "
+            "Cinaseek settings under Privacy, or by unchecking 'Make searches "
             "and browsing better (Sends URLs of pages you visit to Google)' in "
-            "Chromium settings under Privacy."
+            "Cinaseek settings under Privacy."
           chrome_policy {
             UrlKeyedAnonymizedDataCollectionEnabled {
               policy_options {mode: MANDATORY}

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class Bus;
 namespace ash {
 
 // CryptohomePkcs11Client is used to communicate with the
-// org.chromium.CryptohomePkcs11 interface within org.chromium.UserDataAuth
+// org.Cinaseek.CryptohomePkcs11 interface within org.Cinaseek.UserDataAuth
 // service exposed by cryptohomed. All method should be called from the origin
 // thread (UI thread) which initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(USERDATAAUTH_CLIENT) CryptohomePkcs11Client {

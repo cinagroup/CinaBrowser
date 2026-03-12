@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -267,7 +267,7 @@ void CacheScreenshotSharedImageImpl(
 bool EnableNativePageScreenshotIntoHardwareBuffer() {
   // LINT.IfChange(min_supported_version)
   const auto min_supported_version = base::android::android_info::SDK_VERSION_S;
-  // LINT.ThenChange(//chrome/browser/gesturenav/android/java/src/org/chromium/chrome/browser/gesturenav/NativePageBitmapCapturer.java:minSupportedVersion)
+  // LINT.ThenChange(//chrome/browser/gesturenav/android/java/src/org/Cinaseek/chrome/browser/gesturenav/NativePageBitmapCapturer.java:minSupportedVersion)
   return base::android::android_info::sdk_int() >= min_supported_version &&
          base::FeatureList::IsEnabled(
              features::kBackForwardTransitionsNativePageSharedImage);

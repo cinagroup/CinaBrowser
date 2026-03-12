@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -247,7 +247,7 @@ void RecordTrustedVaultListSecurityDomainMembersPinStatus(
 //   <token key="LocalRecoveryFactorType" variants="LocalRecoveryFactorType"/>
 //
 // See
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/README.md#patterned-histograms
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/README.md#patterned-histograms
 std::string GetLocalRecoveryFactorNameForUma(
     LocalRecoveryFactorType local_recovery_factor_type);
 
@@ -263,7 +263,7 @@ std::string GetLocalRecoveryFactorNameForUma(
 //   <token key="SecurityDomainId" variants="SecurityDomainId"/>
 //
 // See
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/README.md#patterned-histograms
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/README.md#patterned-histograms
 std::string GetSecurityDomainNameForUma(SecurityDomainId domain);
 
 }  // namespace trusted_vault

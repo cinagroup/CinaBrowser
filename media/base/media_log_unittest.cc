@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,19 +52,19 @@ TEST_F(MediaLogTest, ClonedLogsInhertParentPlayerId) {
 TEST_F(MediaLogTest, DontTruncateShortUrlString) {
   CreateLog();
   EXPECT_CALL(*root_log_, DoAddLogRecordLogString(_)).Times(2);
-  const std::string short_url("chromium.org");
+  const std::string short_url("Cinaseek.org");
 
   // Verify that LoadEvent does not truncate the short URL.
   root_log_->AddEvent<MediaLogEvent::kLoad>(short_url);
   auto event = root_log_->take_most_recent_event();
   EXPECT_NE(event, nullptr);
-  EXPECT_EQ(*event->params.FindString("url"), "chromium.org");
+  EXPECT_EQ(*event->params.FindString("url"), "Cinaseek.org");
 
   // Verify that CreatedEvent does not truncate the short URL.
   root_log_->AddEvent<MediaLogEvent::kWebMediaPlayerCreated>(short_url);
   event = root_log_->take_most_recent_event();
   EXPECT_NE(event, nullptr);
-  EXPECT_EQ(*event->params.FindString("origin_url"), "chromium.org");
+  EXPECT_EQ(*event->params.FindString("origin_url"), "Cinaseek.org");
 }
 
 TEST_F(MediaLogTest, TruncateLongUrlStrings) {

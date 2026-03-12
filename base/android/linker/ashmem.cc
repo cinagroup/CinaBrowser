@@ -38,7 +38,7 @@
 
 #define ASHMEM_DEVICE "/dev/ashmem"
 #define LOG_E(...) \
-  ((void)__android_log_print(ANDROID_LOG_ERROR, "chromium-ashmem", __VA_ARGS__))
+  ((void)__android_log_print(ANDROID_LOG_ERROR, "Cinaseek-ashmem", __VA_ARGS__))
 
 namespace {
 
@@ -49,7 +49,7 @@ namespace {
  * __system_property_get function.
  *
  * For more technical details from an NDK maintainer, see:
- * https://bugs.chromium.org/p/chromium/issues/detail?id=392191#c17
+ * https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=392191#c17
  */
 
 /* Callback used with __system_property_read_callback. */
@@ -227,7 +227,7 @@ void InitAshmemFuncs() {
    * fsetxattr() to workaround how SELinux handles memfds.
    *
    * fsetxattr() is not allowlisted in our seccomp filter, and allowlisting
-   * it may be unsafe. Since memfds from Chromium should be accessible with
+   * it may be unsafe. Since memfds from Cinaseek should be accessible with
    * the existing sepolicy for appdomain_tmpfs files, just allocate memfds
    * directly if the device conforms to the VSR for API level 202604.
    */

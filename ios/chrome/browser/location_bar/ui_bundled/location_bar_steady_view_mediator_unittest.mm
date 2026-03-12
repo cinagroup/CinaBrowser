@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class LocationBarSteadyViewMediatorTest : public PlatformTest {
 // Tests that the share button is disabled while overlays are presented
 // over the web content area.
 TEST_F(LocationBarSteadyViewMediatorTest, DisableShareForOverlays) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   auto passed_web_state = std::make_unique<web::FakeWebState>();
   web::FakeWebState* web_state = passed_web_state.get();
   web_state->SetCurrentURL(kUrl);
@@ -113,7 +113,7 @@ TEST_F(LocationBarSteadyViewMediatorTest, EnableShareForExternalFiles) {
 // Tests that the location text and page icon are updated when an HTTP auth
 // dialog is displayed.
 TEST_F(LocationBarSteadyViewMediatorTest, HTTPAuthDialog) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   auto passed_web_state = std::make_unique<web::FakeWebState>();
   web::FakeWebState* web_state = passed_web_state.get();
   web_state->SetCurrentURL(kUrl);
@@ -140,7 +140,7 @@ TEST_F(LocationBarSteadyViewMediatorTest, HTTPAuthDialog) {
 // finishes its dismissal after the active WebState is set to null.
 TEST_F(LocationBarSteadyViewMediatorTest,
        HTTPAuthDialogDismissalWithNullWebState) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   auto passed_web_state = std::make_unique<web::FakeWebState>();
   web::FakeWebState* web_state = passed_web_state.get();
   web_state->SetCurrentURL(kUrl);

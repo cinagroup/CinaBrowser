@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 //   Objective-C types as normal.
 // - Do not use as a member variable in an Objective-C++ class where the header
 //   is included from C++ files. Use the pimpl idiom instead:
-//   https://chromium.googlesource.com/chromium/src/+/main/docs/mac/mixing_cpp_and_objc.md
+//   https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/mac/mixing_cpp_and_objc.md
 //
 // Use these wrappers only in the situation where C++ code is passing
 // Objective-C framework objects around, instead of using double-declaration.

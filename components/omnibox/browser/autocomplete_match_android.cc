@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ using base::android::ToJavaIntArray;
 
 // static
 jclass AutocompleteMatch::GetClazz(JNIEnv* env) {
-  return org_chromium_components_omnibox_AutocompleteMatch_clazz(env);
+  return org_Cinaseek_components_omnibox_AutocompleteMatch_clazz(env);
 }
 
 ScopedJavaLocalRef<jobject> AutocompleteMatch::GetOrCreateJavaObject(

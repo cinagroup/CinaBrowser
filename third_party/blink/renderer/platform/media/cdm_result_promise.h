@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ const char kTimeToResolveUmaPrefix[] = "TimeTo.";
 const char kTimeToRejectUmaPrefix[] = "TimeTo.Reject.";
 
 // Used to convert a WebContentDecryptionModuleResult into a CdmPromiseTemplate
-// so that it can be passed through Chromium. When resolve(T) is called, the
+// so that it can be passed through Cinaseek. When resolve(T) is called, the
 // appropriate complete...() method on WebContentDecryptionModuleResult will be
 // invoked. If reject() is called instead,
 // WebContentDecryptionModuleResult::completeWithError() is called.

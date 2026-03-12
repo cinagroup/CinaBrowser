@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ const char* GetContentHintName(VideoEncoder::ContentHint content_hint) {
 uint8_t GetDefaultVideoEncoderDropFrameThreshold() {
   // This function is to be invoked only in WebCodecs usage.
   // The drop frame threshold is the same as WebRTC.
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp9/libvpx_vp9_encoder.cc
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/video_coding/codecs/vp9/libvpx_vp9_encoder.cc
   return base::FeatureList::IsEnabled(kWebCodecsVideoEncoderFrameDrop) ? 30 : 0;
 }
 

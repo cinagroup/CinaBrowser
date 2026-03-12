@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -66,7 +66,7 @@ config("opus_private_config") {
       "OPUS_HAVE_RTCD",
       "CPU_INFO_BY_ASM",
 
-      # Chrome always targets SSE2+.
+      # Cinaseek always targets SSE2+.
       "OPUS_X86_MAY_HAVE_SSE",
       "OPUS_X86_MAY_HAVE_SSE2",
       "OPUS_X86_PRESUME_SSE",
@@ -147,8 +147,8 @@ if (use_opus_x86_optimization) {
       "src/silk/x86/VQ_WMat_EC_sse4_1.c",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [
       ":opus_private_config",
       ":opus_config",
@@ -371,9 +371,9 @@ static_library("opus") {
     "src/silk/float/wrappers_FLP.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_private_config",
   ]
   public_configs = [ ":opus_config" ]
@@ -437,9 +437,9 @@ static_library("opus") {
 executable("opus_compare") {
   sources = [ "src/src/opus_compare.c" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
   ]
 
@@ -452,9 +452,9 @@ executable("opus_compare") {
 executable("opus_demo") {
   sources = [ "src/src/opus_demo.c" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
   ]
 
@@ -467,9 +467,9 @@ executable("opus_demo") {
 test("test_opus_api") {
   sources = [ "src/tests/test_opus_api.c" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
     ":opus_test_no_nonnull_config",
   ]
@@ -483,9 +483,9 @@ test("test_opus_encode") {
     "src/tests/test_opus_encode.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
   ]
 
@@ -495,9 +495,9 @@ test("test_opus_encode") {
 test("test_opus_decode") {
   sources = [ "src/tests/test_opus_decode.c" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
     ":opus_test_no_nonnull_config",
   ]
@@ -508,9 +508,9 @@ test("test_opus_decode") {
 test("test_opus_padding") {
   sources = [ "src/tests/test_opus_padding.c" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":opus_test_config",
   ]
 
@@ -518,7 +518,7 @@ test("test_opus_padding") {
 }
 
 # Not all checkouts have a //base directory.
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   # Compilation fails on windows due to wstring/string mistmatch.
   # This is not worth looking at it since the benchmark is tailored for android.
   # It is ok to run it on linux though, for experimentation purpose.

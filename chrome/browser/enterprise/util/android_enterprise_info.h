@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 #include "build/build_config.h"
 
 // Class to connect native calls to
-// org.chromium.chrome.browser.enterprise.util.EnterpriseInfo. This class is
+// org.Cinaseek.chrome.browser.enterprise.util.EnterpriseInfo. This class is
 // only usable for Android and is only built for Android.
 
 // Only use from the UI Thread.
@@ -30,7 +30,7 @@ class AndroidEnterpriseInfo {
   static AndroidEnterpriseInfo* GetInstance();
 
   // Request the owned state from
-  // org.chromium.chrome.browser.enterprise.util.EnterpriseInfo and notify
+  // org.Cinaseek.chrome.browser.enterprise.util.EnterpriseInfo and notify
   // |callback| when the request is complete. |callback| is added to a list of
   // callbacks and they are notified in the order they were received. Use from
   // the UI thread.

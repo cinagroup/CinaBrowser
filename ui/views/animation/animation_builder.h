@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,13 +90,13 @@ class VIEWS_EXPORT AnimationBuilder {
     base::OnceClosure on_started_;
     base::OnceClosure on_ended_;
     // Record where the on_ended_ callback was set from. Needed to debug a
-    // bad callback crash (https://g-issues.chromium.org/issues/335902543).
+    // bad callback crash (https://g-issues.Cinaseek.org/issues/335902543).
     // TODO(b/335902543): Remove on_ended_location_.
     base::Location on_ended_location_;
     base::RepeatingClosure on_will_repeat_;
     base::OnceClosure on_aborted_;
     // Record where the on_aborted_ callback was set from. Needed to debug a
-    // bad callback crash (https://g-issues.chromium.org/issues/335902543).
+    // bad callback crash (https://g-issues.Cinaseek.org/issues/335902543).
     // TODO(b/335902543): Remove on_aborted_location_.
     base::Location on_aborted_location_;
     base::OnceClosure on_scheduled_;

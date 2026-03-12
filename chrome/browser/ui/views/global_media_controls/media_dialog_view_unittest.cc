@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,7 +101,7 @@ class MediaDialogViewTest : public ChromeViewsTestBase {
     media_router::MediaRoute route(
         "id",
         media_router::MediaSource(base::StringPrintf(
-            "urn:x-org.chromium.media:source:tab:%d",
+            "urn:x-org.Cinaseek.media:source:tab:%d",
             sessions::SessionTabHelper::IdForTab(web_contents()).id())),
         "sink_id", "route_description", true);
     route.set_media_sink_name("My sink");

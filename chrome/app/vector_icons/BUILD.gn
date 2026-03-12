@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -51,7 +51,7 @@ aggregate_vector_icons("chrome_vector_icons") {
     "check.icon",
     "chevron_right.icon",
     "chevron_right_chrome_refresh.icon",
-    "chromium_minimize.icon",
+    "Cinaseek_minimize.icon",
     "click_to_call_illustration.icon",
     "click_to_call_illustration_dark.icon",
     "close_chrome_refresh.icon",

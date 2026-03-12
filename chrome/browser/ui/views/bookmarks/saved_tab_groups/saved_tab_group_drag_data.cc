@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace tab_groups {
 namespace {
 
 // The MIME type for the clipboard format for SavedTabGroupDragData.
-const char kClipboardFormatString[] = "chromium/x-savedtabgroup-entries";
+const char kClipboardFormatString[] = "Cinaseek/x-savedtabgroup-entries";
 
 // Paint `button` to an image, then give that to `data` for its drag image.
 void AddButtonImageToOSExchangeData(SavedTabGroupButton* button,

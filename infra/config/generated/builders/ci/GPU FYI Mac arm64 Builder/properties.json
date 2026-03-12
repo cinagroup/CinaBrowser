@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/GPU FYI Mac arm64 Builder/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "GPU FYI Mac arm64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -34,28 +34,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac FYI Experimental Release (Apple M1)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Mac arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -64,28 +64,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac FYI Experimental Retina Release (Apple M2)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Mac arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -94,28 +94,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac FYI Release (Apple M1)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Mac arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -124,28 +124,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac FYI Retina Release (Apple M2)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Mac arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -154,28 +154,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Mac FYI Retina Release (Apple M3)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Mac arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -186,60 +186,60 @@
         {
           "bucket": "ci",
           "builder": "GPU FYI Mac arm64 Builder",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "Mac FYI Experimental Release (Apple M1)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Mac FYI Experimental Retina Release (Apple M2)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Mac FYI Release (Apple M1)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Mac FYI Retina Release (Apple M2)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Mac FYI Retina Release (Apple M3)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "gpu-fyi-cq-mac-arm64",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         },
         {
           "builder": "gpu-fyi-try-mac-arm64-apple-m1-exp",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         },
         {
           "builder": "gpu-fyi-try-mac-arm64-apple-m1-rel",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         },
         {
           "builder": "gpu-fyi-try-mac-arm64-apple-m2-exp",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         },
         {
           "builder": "gpu-fyi-try-mac-arm64-apple-m2-retina-rel",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         },
         {
           "builder": "gpu-fyi-try-mac-arm64-apple-m3-retina-rel",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/GPU FYI Mac arm64 Builder/targets"
@@ -253,7 +253,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -263,13 +263,13 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu.fyi",
+  "builder_group": "Cinaseek.gpu.fyi",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "perf_dashboard_machine_group": "ChromiumGPUFYI",
-  "recipe": "chromium",
+  "perf_dashboard_machine_group": "CinaseekGPUFYI",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

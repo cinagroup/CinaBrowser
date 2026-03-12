@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -1425,10 +1425,10 @@ if (is_android) {
 
   android_library("content_browsertests_java") {
     testonly = true
-    resources_package = "org.chromium.content_browsertests_apk"
+    resources_package = "org.Cinaseek.content_browsertests_apk"
     sources = [
-      "../shell/android/browsertests_apk/src/org/chromium/content_browsertests_apk/ContentBrowserTestsActivity.java",
-      "../shell/android/browsertests_apk/src/org/chromium/content_browsertests_apk/ContentBrowserTestsApplication.java",
+      "../shell/android/browsertests_apk/src/org/Cinaseek/content_browsertests_apk/ContentBrowserTestsActivity.java",
+      "../shell/android/browsertests_apk/src/org/Cinaseek/content_browsertests_apk/ContentBrowserTestsApplication.java",
     ]
     deps = [
       ":content_browsertests_resources",
@@ -2478,7 +2478,7 @@ test("content_browsertests") {
   }
 
   # KeyboardLock is currently not supported in Android, Fuchsia and
-  # Chromecast builds. TODO(crbug.com/40891949): Re-enable on Fuchsia
+  # Cinaseekcast builds. TODO(crbug.com/40891949): Re-enable on Fuchsia
   # once its platform support is available.
   if (is_android || is_fuchsia || is_castos) {
     sources -= [ "../browser/keyboard_lock_browsertest.cc" ]
@@ -3831,7 +3831,7 @@ group("test_buildbucket_api_gpu_use_cases") {
 }
 
 if (is_android) {
-  content_java_sources_needing_jni = [ "//content/public/android/javatests/src/org/chromium/content/browser/sms/SmsProviderFakes.java" ]
+  content_java_sources_needing_jni = [ "//content/public/android/javatests/src/org/Cinaseek/content/browser/sms/SmsProviderFakes.java" ]
 
   generate_jni("content_unittests_jni_headers") {
     testonly = true

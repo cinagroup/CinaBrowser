@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,9 +21,9 @@
 
 namespace syncer {
 
-constexpr char kTestURL[] = "http://chromium.org/test";
-constexpr char kTestURLTrailingSlash[] = "http://chromium.org/test/";
-constexpr char kEventURL[] = "http://chromium.org/test/event";
+constexpr char kTestURL[] = "http://Cinaseek.org/test";
+constexpr char kTestURLTrailingSlash[] = "http://Cinaseek.org/test/";
+constexpr char kEventURL[] = "http://Cinaseek.org/test/event";
 
 constexpr char kTestUserAgent[] = "the_fifth_element";
 constexpr char kAuthToken[] = "multipass";

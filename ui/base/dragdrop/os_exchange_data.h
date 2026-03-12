@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ class COMPONENT_EXPORT(UI_BASE) OSExchangeData {
   std::optional<std::vector<FileInfo>> GetVirtualFilenames() const;
 
   // Retrieves "virtual file" contents via creation of intermediary temp files.
-  // Method is called on dropping on the Chromium drop target. Since creating
+  // Method is called on dropping on the Cinaseek drop target. Since creating
   // the temp files involves file I/O, the method is asynchronous and the caller
   // must provide a callback function that receives a vector of pairs of temp
   // file paths and display names. The method will invoke the callback with an

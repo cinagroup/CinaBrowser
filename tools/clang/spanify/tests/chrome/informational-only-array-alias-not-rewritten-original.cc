@@ -1,9 +1,9 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This test is informational and documents a pattern not handled by
-// `spanify` which is thankfully rarely used in Chromium.
+// `spanify` which is thankfully rarely used in Cinaseek.
 
 // A well-meaning human author could rewrite this to a `std::array`...
 using EightIntegers = int[8];
@@ -24,9 +24,9 @@ unsigned UnsafeIndex();
 // tests.
 //
 // [1]
-// https://source.chromium.org/chromium/chromium/src/+/main:media/formats/mp4/box_reader.h;l=36;drc=e1cad868d343b4300d0ea75193190b3b24a94f07
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/formats/mp4/box_reader.h;l=36;drc=e1cad868d343b4300d0ea75193190b3b24a94f07
 // [2]
-// https://source.chromium.org/chromium/chromium/src/+/main:media/formats/mp4/box_reader.h;l=158;drc=e1cad868d343b4300d0ea75193190b3b24a94f07
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/formats/mp4/box_reader.h;l=158;drc=e1cad868d343b4300d0ea75193190b3b24a94f07
 void MutateIntegers(EightIntegers klaus) {
   klaus[UnsafeIndex()] = 0;
 }

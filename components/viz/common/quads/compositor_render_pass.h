@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -144,7 +144,7 @@ class VIZ_COMMON_EXPORT CompositorRenderPass : public RenderPassInternal {
 
  protected:
   // This is essentially "using RenderPassInternal::RenderPassInternal", but
-  // since that generates inline (complex) ctors, the chromium-style plug-in
+  // since that generates inline (complex) ctors, the Cinaseek-style plug-in
   // refuses to compile it.
   CompositorRenderPass();
   explicit CompositorRenderPass(size_t num_layers);

@@ -1,4 +1,4 @@
-// Copyright 2010 The Chromium Authors
+// Copyright 2010 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 // Defines ResolverThunk, the interface for classes that perform interceptions.
 // For more details see
-// http://dev.chromium.org/developers/design-documents/sandbox .
+// http://dev.Cinaseek.org/developers/design-documents/sandbox .
 
 #include <stddef.h>
 

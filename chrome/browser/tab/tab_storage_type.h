@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ enum class TabStorageType {
 };
 
 // Various statuses that can occur during storage loading.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tab
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tab
 enum class StorageLoadingStatus {
   kSuccess = 0,
   kParseError,

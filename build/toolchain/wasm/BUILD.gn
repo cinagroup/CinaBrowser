@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ declare_args() {
   emscripten_path = "//third_party/emsdk/upstream/emscripten/"
 }
 
-# This WASM toolchain is NOT to be used to build any Chromium code,
+# This WASM toolchain is NOT to be used to build any Cinaseek code,
 # i.e. tests and samples are currently fine.
 # Usage of this toolchain requires getting explicit approval from
 # build/OWNERS.

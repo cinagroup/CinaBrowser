@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -169,7 +169,7 @@ class ChunkedPolicyPrefsTest : public PolicyPrefsTest,
 // README SHERIFFs: This test encapsulates a whole suite of individual browser
 // tests for performance reasons and therefore has an increased chance of
 // failure/flakiness.
-// IMPORTANT: Please add hendrich@chromium.org on any related bugs when
+// IMPORTANT: Please add hendrich@Cinaseek.org on any related bugs when
 // disabling this test.
 IN_PROC_BROWSER_TEST_P(ChunkedPolicyPrefsTest, PolicyToPrefsMapping) {
   base::ScopedAllowBlockingForTesting allow_blocking;

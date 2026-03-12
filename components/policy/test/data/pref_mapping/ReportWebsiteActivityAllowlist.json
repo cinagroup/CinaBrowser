@@ -18,14 +18,14 @@
         "policies": {
           "ReportWebsiteActivityAllowlist": [
             "https://www.google.com",
-            "[*.]chromium.org"
+            "[*.]Cinaseek.org"
           ]
         },
         "prefs": {
           "reporting.report_website_activity_allowlist": {
             "value": [
               "https://www.google.com",
-              "[*.]chromium.org"
+              "[*.]Cinaseek.org"
             ]
           }
         }

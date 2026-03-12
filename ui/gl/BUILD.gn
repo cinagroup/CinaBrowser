@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -416,7 +416,7 @@ if (is_mac) {
   # We need to copy the ANGLE and SwiftShader libraries so that the
   # bundle_data dependencies have a "copy" target type. Otherwise for
   # "shared_library" target types it will try to link things into
-  # Chromium Framework when we want to keep the ANGLE and SwiftShader
+  # Cinaseek Framework when we want to keep the ANGLE and SwiftShader
   # libraries separate instead.
   if (!use_static_angle) {
     copy("angle_library_copy") {
@@ -597,7 +597,7 @@ test("gl_unittests") {
   configs += [ "//build/config/compiler:no_exit_time_destructors" ]
 }
 
-# We can't run this test on real Chrome OS hardware for Ozone, so new target.
+# We can't run this test on real Cinaseek OS hardware for Ozone, so new target.
 group("gl_unittests_ozone") {
   testonly = true
   data_deps = [ ":gl_unittests" ]
@@ -613,8 +613,8 @@ if (is_android) {
 
   generate_jni("gl_jni_headers") {
     sources = [
-      "../android/java/src/org/chromium/ui/gl/ChromeSurfaceTexture.java",
-      "../android/java/src/org/chromium/ui/gl/ScopedJavaSurfaceControl.java",
+      "../android/java/src/org/Cinaseek/ui/gl/CinaseekSurfaceTexture.java",
+      "../android/java/src/org/Cinaseek/ui/gl/ScopedJavaSurfaceControl.java",
     ]
     public_deps = [ ":surface_jni_headers" ]
   }

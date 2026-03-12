@@ -314,7 +314,7 @@
             <if expr="'zh-TW' == lang"> <include name="IDS_TERMS_HTML" file="resources/terms/terms_zh-TW.html" type="BINDATA" /></if>
           </then>
           <else>
-            <include name="IDS_TERMS_HTML" file="resources/terms/terms_chromium.html" type="BINDATA" />
+            <include name="IDS_TERMS_HTML" file="resources/terms/terms_Cinaseek.html" type="BINDATA" />
           </else>
         </if>
       </if>
@@ -376,7 +376,7 @@
             <if expr="'zh-TW' == lang"> <include name="IDS_TERMS_TXT" file="resources/terms/terms_zh-TW.txt" type="BINDATA" /></if>
           </then>
           <else>
-            <include name="IDS_TERMS_TXT" file="resources/terms/terms_chromium.txt" type="BINDATA" />
+            <include name="IDS_TERMS_TXT" file="resources/terms/terms_Cinaseek.txt" type="BINDATA" />
           </else>
         </if>
       </if>

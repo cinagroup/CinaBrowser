@@ -117,7 +117,7 @@ function loadInitiatorPage(rule_extras = {}) {
   });
 
   // We need to wait for the 'readyToActivate' message before navigation
-  // since the prerendering implementation in Chromium can only activate if the
+  // since the prerendering implementation in Cinaseek can only activate if the
   // response for the prerendering navigation has already been received and the
   // prerendering document was created.
   const readyToActivate = new Promise((resolve, reject) => {

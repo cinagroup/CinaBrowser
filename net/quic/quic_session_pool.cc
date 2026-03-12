@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,13 +55,13 @@
 #include "net/log/net_log_event_type.h"
 #include "net/log/net_log_source_type.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/properties_based_quic_server_info.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_crypto_client_stream_factory.h"
 #include "net/quic/quic_server_info.h"
@@ -210,7 +210,7 @@ void HistogramCreateSessionFailure(enum CreateSessionFailure error) {
 
 void LogFindMatchingIpSessionResult(const NetLogWithSource& net_log,
                                     FindMatchingIpSessionResult result,
-                                    QuicChromiumClientSession* session,
+                                    QuicCinaseekClientSession* session,
                                     const url::SchemeHostPort& destination) {
   NetLogEventType type =
       NetLogEventType::QUIC_SESSION_POOL_CANNOT_POOL_WITH_EXISTING_SESSIONS;
@@ -293,7 +293,7 @@ std::set<std::string> HostsFromSchemeHostPorts(
 }
 
 void LogUsingExistingSession(const NetLogWithSource& request_net_log,
-                             QuicChromiumClientSession* session,
+                             QuicCinaseekClientSession* session,
                              const url::SchemeHostPort& destination) {
   request_net_log.AddEvent(
       NetLogEventType::QUIC_SESSION_POOL_USE_EXISTING_SESSION, [&] {
@@ -522,7 +522,7 @@ void QuicSessionRequest::SetPriority(RequestPriority priority) {
   }
 }
 
-std::unique_ptr<QuicChromiumClientSession::Handle>
+std::unique_ptr<QuicCinaseekClientSession::Handle>
 QuicSessionRequest::ReleaseSessionHandle() {
   if (!session_ || !session_->IsConnected()) {
     return nullptr;
@@ -532,7 +532,7 @@ QuicSessionRequest::ReleaseSessionHandle() {
 }
 
 void QuicSessionRequest::SetSession(
-    std::unique_ptr<QuicChromiumClientSession::Handle> session) {
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session) {
   session_ = std::move(session);
 }
 
@@ -722,7 +722,7 @@ bool QuicSessionPool::CanUseExistingSessionForWebSocket(
     const QuicSessionKey& session_key,
     const url::SchemeHostPort& destination,
     quic::ParsedQuicVersion* quic_version) const {
-  QuicChromiumClientSession* session =
+  QuicCinaseekClientSession* session =
       FindExistingSession(session_key, destination);
   if (!session) {
     return false;
@@ -738,7 +738,7 @@ bool QuicSessionPool::CanUseExistingSessionForWebSocket(
   return true;
 }
 
-QuicChromiumClientSession* QuicSessionPool::FindExistingSession(
+QuicCinaseekClientSession* QuicSessionPool::FindExistingSession(
     const QuicSessionKey& session_key,
     const url::SchemeHostPort& destination) const {
   auto active_session_it = active_sessions_.find(session_key);
@@ -747,7 +747,7 @@ QuicChromiumClientSession* QuicSessionPool::FindExistingSession(
   }
 
   for (const auto& key_value : active_sessions_) {
-    QuicChromiumClientSession* session = key_value.second;
+    QuicCinaseekClientSession* session = key_value.second;
     if (CanWaiveIpMatching(destination, session) &&
         session->CanPool(session_key.host(), session_key)) {
       return session;
@@ -780,13 +780,13 @@ std::optional<QuicSessionKey> QuicSessionPool::GetActiveJobToServerId(
                                       : std::nullopt;
 }
 
-QuicChromiumClientSession*
+QuicCinaseekClientSession*
 QuicSessionPool::HasMatchingIpSessionForServiceEndpoint(
     const QuicSessionAliasKey& session_alias_key,
     const ServiceEndpoint& service_endpoint,
     const std::set<std::string>& dns_aliases,
     bool use_dns_aliases) {
-  if (QuicChromiumClientSession* session = HasMatchingIpSession(
+  if (QuicCinaseekClientSession* session = HasMatchingIpSession(
           session_alias_key, service_endpoint.ipv6_endpoints, dns_aliases,
           use_dns_aliases)) {
     return session;
@@ -838,7 +838,7 @@ int QuicSessionPool::RequestSession(
 
   // Use active session for `session_key` if such exists, or pool to active
   // session to `destination` if possible.
-  QuicChromiumClientSession* existing_session =
+  QuicCinaseekClientSession* existing_session =
       FindExistingSession(session_key, destination);
   if (existing_session) {
     LogUsingExistingSession(net_log, existing_session, destination);
@@ -910,7 +910,7 @@ int QuicSessionPool::RequestSession(
     if (it == active_sessions_.end()) {
       return ERR_QUIC_PROTOCOL_ERROR;
     }
-    QuicChromiumClientSession* session = it->second;
+    QuicCinaseekClientSession* session = it->second;
     request->SetSession(session->CreateHandle(std::move(destination)));
   }
   return rv;
@@ -940,7 +940,7 @@ std::unique_ptr<QuicSessionAttempt> QuicSessionPool::CreateSessionAttempt(
       session_creation_initiator, connection_management_config);
 }
 
-void QuicSessionPool::OnSessionGoingAway(QuicChromiumClientSession* session) {
+void QuicSessionPool::OnSessionGoingAway(QuicCinaseekClientSession* session) {
   const AliasSet& aliases = session_aliases_[session];
   for (const auto& alias : aliases) {
     const QuicSessionKey& session_key = alias.session_key();
@@ -969,7 +969,7 @@ void QuicSessionPool::OnSessionGoingAway(QuicChromiumClientSession* session) {
   UnmapSessionFromSessionAliases(session);
 }
 
-void QuicSessionPool::OnSessionClosed(QuicChromiumClientSession* session) {
+void QuicSessionPool::OnSessionClosed(QuicCinaseekClientSession* session) {
   DCHECK_EQ(0u, session->GetNumActiveStreams());
   OnSessionGoingAway(session);
   auto it = all_sessions_.find(session);
@@ -981,7 +981,7 @@ void QuicSessionPool::OnSessionClosed(QuicChromiumClientSession* session) {
 }
 
 void QuicSessionPool::OnBlackholeAfterHandshakeConfirmed(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   // Reduce PING timeout when connection blackholes after the handshake.
   if (ping_timeout_ > reduced_ping_timeout_) {
     ping_timeout_ = reduced_ping_timeout_;
@@ -1056,7 +1056,7 @@ base::Value QuicSessionPool::QuicSessionPoolInfoToValue() const {
 
   for (const auto& active_session : active_sessions_) {
     const quic::QuicServerId& server_id = active_session.first.server_id();
-    QuicChromiumClientSession* session = active_session.second;
+    QuicCinaseekClientSession* session = active_session.second;
     const AliasSet& aliases = session_aliases_.find(session)->second;
     // Only add a session to the list once.
     if (server_id == aliases.begin()->server_id()) {
@@ -1185,7 +1185,7 @@ void QuicSessionPool::FinishConnectAndConfigureSocket(
 
 bool QuicSessionPool::CanWaiveIpMatching(
     const url::SchemeHostPort& destination,
-    QuicChromiumClientSession* session) const {
+    QuicCinaseekClientSession* session) const {
   // Checks if `destination` matches the alias key of `session`.
   if (destination == session->session_alias_key().destination()) {
     return true;
@@ -1359,7 +1359,7 @@ void QuicSessionPool::OnNetworkConnected(handles::NetworkHandle network) {
   auto it = all_sessions_.begin();
   // Sessions may be deleted while iterating through the set.
   while (it != all_sessions_.end()) {
-    QuicChromiumClientSession* session = it->get();
+    QuicCinaseekClientSession* session = it->get();
     ++it;
     session->OnNetworkConnected(network);
   }
@@ -1382,7 +1382,7 @@ void QuicSessionPool::OnNetworkDisconnected(handles::NetworkHandle network) {
   auto it = all_sessions_.begin();
   // Sessions may be deleted while iterating through the set.
   while (it != all_sessions_.end()) {
-    QuicChromiumClientSession* session = it->get();
+    QuicCinaseekClientSession* session = it->get();
     ++it;
     session->OnNetworkDisconnectedV2(/*disconnected_network*/ network);
   }
@@ -1425,7 +1425,7 @@ void QuicSessionPool::OnNetworkMadeDefault(handles::NetworkHandle network) {
   auto it = all_sessions_.begin();
   // Sessions may be deleted while iterating through the set.
   while (it != all_sessions_.end()) {
-    QuicChromiumClientSession* session = it->get();
+    QuicCinaseekClientSession* session = it->get();
     ++it;
     session->OnNetworkMadeDefault(network);
   }
@@ -1521,15 +1521,15 @@ const std::set<std::string>& QuicSessionPool::GetDnsAliasesForSessionKey(
 }
 
 void QuicSessionPool::ActivateSessionForTesting(
-    std::unique_ptr<QuicChromiumClientSession> new_session) {
-  QuicChromiumClientSession* session = new_session.get();
+    std::unique_ptr<QuicCinaseekClientSession> new_session) {
+  QuicCinaseekClientSession* session = new_session.get();
   all_sessions_.insert(std::move(new_session));
   ActivateSession(session->session_alias_key(), session,
                   std::set<std::string>());
 }
 
 void QuicSessionPool::DeactivateSessionForTesting(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   OnSessionGoingAway(session);
   auto it = all_sessions_.find(session);
   CHECK(it != all_sessions_.end());
@@ -1583,7 +1583,7 @@ void QuicSessionPool::LogConnectionIpPooling(bool pooled) {
   base::UmaHistogramBoolean("Net.QuicSession.ConnectionIpPooled", pooled);
 }
 
-QuicChromiumClientSession* QuicSessionPool::HasMatchingIpSession(
+QuicCinaseekClientSession* QuicSessionPool::HasMatchingIpSession(
     const QuicSessionAliasKey& key,
     const std::vector<IPEndPoint>& ip_endpoints,
     const std::set<std::string>& aliases,
@@ -1607,7 +1607,7 @@ QuicChromiumClientSession* QuicSessionPool::HasMatchingIpSession(
     }
 
     const SessionSet& sessions = ip_aliases_[address];
-    for (QuicChromiumClientSession* session : sessions) {
+    for (QuicCinaseekClientSession* session : sessions) {
       if (!session->CanPool(server_id.host(), key.session_key())) {
         continue;
       }
@@ -1630,7 +1630,7 @@ QuicChromiumClientSession* QuicSessionPool::HasMatchingIpSession(
     if (loop_count >= kMaxLoopCount) {
       break;
     }
-    QuicChromiumClientSession* session = entry.second;
+    QuicCinaseekClientSession* session = entry.second;
     if (!session->CanPool(server_id.host(), key.session_key())) {
       continue;
     }
@@ -1690,7 +1690,7 @@ void QuicSessionPool::OnJobComplete(
 
     auto session_it = active_sessions_.find(job->key().session_key());
     CHECK(session_it != active_sessions_.end());
-    QuicChromiumClientSession* session = session_it->second;
+    QuicCinaseekClientSession* session = session_it->second;
     for (QuicSessionRequest* request : job->requests()) {
       // Do not notify |request| yet.
       request->SetSession(session->CreateHandle(job->key().destination()));
@@ -1751,7 +1751,7 @@ int QuicSessionPool::CreateSessionSync(
     base::TimeTicks dns_resolution_start_time,
     base::TimeTicks dns_resolution_end_time,
     const NetLogWithSource& net_log,
-    raw_ptr<QuicChromiumClientSession>* session,
+    raw_ptr<QuicCinaseekClientSession>* session,
     handles::NetworkHandle* network,
     MultiplexedSessionCreationInitiator session_creation_initiator,
     std::optional<ConnectionManagementConfig> connection_management_config) {
@@ -1827,7 +1827,7 @@ int QuicSessionPool::CreateSessionOnProxyStream(
     bool require_confirmation,
     IPEndPoint local_address,
     IPEndPoint proxy_peer_address,
-    std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream,
+    std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream,
     std::string user_agent,
     const NetLogWithSource& net_log,
     handles::NetworkHandle network) {
@@ -1963,12 +1963,12 @@ QuicSessionPool::CreateSessionHelper(
   }
 
   if (!helper_.get()) {
-    helper_ = std::make_unique<QuicChromiumConnectionHelper>(clock_,
+    helper_ = std::make_unique<QuicCinaseekConnectionHelper>(clock_,
                                                              random_generator_);
   }
 
   if (!alarm_factory_.get()) {
-    alarm_factory_ = std::make_unique<QuicChromiumAlarmFactory>(
+    alarm_factory_ = std::make_unique<QuicCinaseekAlarmFactory>(
         base::SingleThreadTaskRunner::GetCurrentDefault().get(), clock_);
   }
 
@@ -1985,8 +1985,8 @@ QuicSessionPool::CreateSessionHelper(
   InitializeCachedStateInCryptoConfig(*crypto_config_handle, server_id,
                                       server_info);
 
-  QuicChromiumPacketWriter* writer =
-      new QuicChromiumPacketWriter(socket.get(), task_runner_.get());
+  QuicCinaseekPacketWriter* writer =
+      new QuicCinaseekPacketWriter(socket.get(), task_runner_.get());
   quic::QuicConnection* connection = new quic::QuicConnection(
       connection_id, quic::QuicSocketAddress(),
       ToQuicSocketAddress(peer_address), helper_.get(), alarm_factory_.get(),
@@ -2044,7 +2044,7 @@ QuicSessionPool::CreateSessionHelper(
   connection->set_keep_alive_ping_timeout(keep_alive_timeout);
 
   // Use the factory to create a new socket performance watcher, and pass the
-  // ownership to QuicChromiumClientSession.
+  // ownership to QuicCinaseekClientSession.
   std::unique_ptr<SocketPerformanceWatcher> socket_performance_watcher;
   if (socket_performance_watcher_factory_) {
     socket_performance_watcher =
@@ -2059,7 +2059,7 @@ QuicSessionPool::CreateSessionHelper(
     require_confirmation = true;
   }
 
-  auto new_session = std::make_unique<QuicChromiumClientSession>(
+  auto new_session = std::make_unique<QuicCinaseekClientSession>(
       connection, std::move(socket), this, quic_crypto_client_stream_factory_,
       clock_, transport_security_state_, ssl_config_service_,
       std::move(server_info), std::move(key), require_confirmation,
@@ -2078,7 +2078,7 @@ QuicSessionPool::CreateSessionHelper(
       std::move(socket_performance_watcher), metadata,
       params_.enable_origin_frame, params_.allow_server_migration,
       session_creation_initiator, net_log);
-  QuicChromiumClientSession* session = new_session.get();
+  QuicCinaseekClientSession* session = new_session.get();
 
   all_sessions_.insert(std::move(new_session));
   writer->set_delegate(session);
@@ -2105,7 +2105,7 @@ QuicSessionPool::CreateSessionHelper(
 }
 
 void QuicSessionPool::ActivateSession(const QuicSessionAliasKey& key,
-                                      QuicChromiumClientSession* session,
+                                      QuicCinaseekClientSession* session,
                                       std::set<std::string> dns_aliases) {
   DCHECK(!HasActiveSession(key.session_key()));
   UMA_HISTOGRAM_COUNTS_1M("Net.QuicActiveSessions", active_sessions_.size());
@@ -2127,7 +2127,7 @@ void QuicSessionPool::MarkAllActiveSessionsGoingAway(
           AllActiveSessionsGoingAwayReasonToString(reason),
       active_sessions_.size());
   while (!active_sessions_.empty()) {
-    QuicChromiumClientSession* session = active_sessions_.begin()->second;
+    QuicCinaseekClientSession* session = active_sessions_.begin()->second;
     // If IP address change is detected, disable session's connectivity
     // monitoring by remove the Delegate.
     if (reason == kIPAddressChanged) {
@@ -2307,7 +2307,7 @@ void QuicSessionPool::InitializeCachedStateInCryptoConfig(
 }
 
 void QuicSessionPool::ProcessGoingAwaySession(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     const quic::QuicServerId& server_id,
     bool session_was_active) {
   if (!http_server_properties_) {
@@ -2366,7 +2366,7 @@ void QuicSessionPool::ProcessGoingAwaySession(
 }
 
 void QuicSessionPool::ActivateAndMapSessionToAliasKey(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     QuicSessionAliasKey key,
     std::set<std::string> dns_aliases) {
   active_sessions_[key.session_key()] = session;
@@ -2375,7 +2375,7 @@ void QuicSessionPool::ActivateAndMapSessionToAliasKey(
 }
 
 void QuicSessionPool::UnmapSessionFromSessionAliases(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   for (const auto& key : session_aliases_[session]) {
     dns_aliases_by_session_key_.erase(key.session_key());
   }
@@ -2425,7 +2425,7 @@ QuicSessionPool::CreateCryptoConfigHandle(QuicCryptoClientConfigKey key) {
   // |active_crypto_config_map_|.
   std::unique_ptr<QuicCryptoClientConfigOwner> crypto_config_owner =
       std::make_unique<QuicCryptoClientConfigOwner>(
-          std::make_unique<ProofVerifierChromium>(
+          std::make_unique<ProofVerifierCinaseek>(
               cert_verifier_, transport_security_state_, sct_auditing_delegate_,
               std::move(hostnames_to_allow_unknown_roots),
               key.network_anonymization_key),

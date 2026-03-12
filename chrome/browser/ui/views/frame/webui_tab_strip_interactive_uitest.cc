@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -243,7 +243,7 @@ INSTANTIATE_TEST_SUITE_P(/* no prefix */,
 //
 // There is already a proposed regression test for this bug using existing
 // technology; see:
-//   https://chromium-review.googlesource.com/c/chromium/src/+/3588859
+//   https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3588859
 //
 // This is a proof-of-concept for regression testing using InteractionSequence,
 // which demonstrates that:

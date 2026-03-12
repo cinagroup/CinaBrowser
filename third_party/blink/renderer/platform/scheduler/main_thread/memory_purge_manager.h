@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ class PLATFORM_EXPORT MemoryPurgeManager {
   // it's redundant with the purge that occurs on page freezing (unlike on
   // desktop, freezing is applied to most background pages on mobile Android). A
   // field trial confirmed that an additional purge is not necessary. See
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=1335069#c3.
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1335069#c3.
   //
   // TODO(thiabaud): Since freezing is disabled on desktop Android, maybe the
   // purge on backgrounding should be enabled?

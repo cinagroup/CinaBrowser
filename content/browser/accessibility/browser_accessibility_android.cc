@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -163,7 +163,7 @@ void PopulateStyleData(const content::BrowserAccessibilityAndroid& node,
     if (node.GetTextStyle() != 0) {
       // GetTextStyle returns a bit field shifted by ax::mojom::TextStyle enum
       // values, so we need to parse out the individual enum values. See:
-      // https://source.chromium.org/chromium/chromium/src/+/main:ui/accessibility/ax_node_data.cc?q=HasTextStyle
+      // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/accessibility/ax_node_data.cc?q=HasTextStyle
       for (int i = static_cast<int>(ax::mojom::TextStyle::kMinValue);
            i <= static_cast<int>(ax::mojom::TextStyle::kMaxValue); ++i) {
         ax::mojom::TextStyle style = static_cast<ax::mojom::TextStyle>(i);

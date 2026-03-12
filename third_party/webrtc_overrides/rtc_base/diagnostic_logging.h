@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ namespace webrtc {
 //  LS_WARNING: Something that may warrant investigation.
 //  LS_ERROR: Something that should not have occurred.
 //  LS_NONE: Set this as minimum severity to disable logging.
-// Note that LoggingSeverity is mapped over to chromiums verbosity levels where
+// Note that LoggingSeverity is mapped over to Cinaseeks verbosity levels where
 // anything lower than or equal to the current verbosity level is written to
 // file which is the opposite of logging severity in libjingle where higher
 // severity numbers than or equal to the current severity level are written to

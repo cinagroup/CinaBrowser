@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,18 +7,18 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "chromeos-amd64-generic-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.chromiumos",
+              "builder_group": "Cinaseek.Cinaseekos",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "shared_build_dir"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "cros_boards_with_qemu_images": [
                   "amd64-generic-vm"
                 ],
@@ -32,9 +32,9 @@
               "legacy_gclient_config": {
                 "apply_configs": [
                   "chromeos",
-                  "chromium_with_telemetry_dependencies"
+                  "Cinaseek_with_telemetry_dependencies"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -42,17 +42,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "chromeos-amd64-generic-rel-tast",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.chromiumos",
+              "builder_group": "Cinaseek.Cinaseekos",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "cros_boards_with_qemu_images": [
                   "amd64-generic-vm"
                 ],
@@ -67,12 +67,12 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "chromeos-amd64-generic-rel",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -82,13 +82,13 @@
         {
           "bucket": "ci",
           "builder": "chromeos-amd64-generic-rel-tast",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "chromeos-amd64-generic-rel-gtest-and-tast",
-          "group": "tryserver.chromium.chromiumos"
+          "group": "tryserver.Cinaseek.Cinaseekos"
         }
       ],
       "retry_failed_shards": true,
@@ -103,12 +103,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.chromiumos",
+  "builder_group": "Cinaseek.Cinaseekos",
   "gardener_rotations": [
-    "chromiumos"
+    "Cinaseekos"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromiumos"
+    "Cinaseekos"
   ]
 }

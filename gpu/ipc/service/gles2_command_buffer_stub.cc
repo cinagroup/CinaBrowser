@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -367,7 +367,7 @@ void GLES2CommandBufferStub::CreateGpuFenceFromHandle(
   if (!operation.is_context_current())
     return;
 
-  if (!context_group_->feature_info()->feature_flags().chromium_gpu_fence) {
+  if (!context_group_->feature_info()->feature_flags().Cinaseek_gpu_fence) {
     DLOG(ERROR) << "CHROMIUM_gpu_fence unavailable";
     command_buffer_->SetParseError(error::kLostContext);
     return;
@@ -390,7 +390,7 @@ void GLES2CommandBufferStub::GetGpuFenceHandle(
   if (!operation.is_context_current())
     return;
 
-  if (!context_group_->feature_info()->feature_flags().chromium_gpu_fence) {
+  if (!context_group_->feature_info()->feature_flags().Cinaseek_gpu_fence) {
     DLOG(ERROR) << "CHROMIUM_gpu_fence unavailable";
     command_buffer_->SetParseError(error::kLostContext);
     return;

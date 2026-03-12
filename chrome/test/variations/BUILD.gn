@@ -40,7 +40,7 @@ python_library("fixtures") {
     ]
 
     data_deps += [
-      "//build/android:devil_chromium_py",
+      "//build/android:devil_Cinaseek_py",
       "//build/android:test_runner_py",
       "//clank/bin:installer_scripts",
       "//third_party/catapult/devil",

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ using CWVIdentityTest = PlatformTest;
 
 // Tests CWVIdentity initialization.
 TEST_F(CWVIdentityTest, Initialization) {
-  NSString* email = @"john.doe@chromium.org";
+  NSString* email = @"john.doe@Cinaseek.org";
   NSString* full_name = @"John Doe";
   NSString* gaia_id_string = @"123456789";
 

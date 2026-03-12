@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 
 namespace media {
 
-// These chromium classes are the corresponding classes in webrtc project.
+// These Cinaseek classes are the corresponding classes in webrtc project.
 // See third_party/webrtc/api/video_codecs/video_encoder.h for the detail.
 
 struct MEDIA_EXPORT ResolutionRateLimit {

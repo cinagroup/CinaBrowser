@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -340,7 +340,7 @@ void AbortHandler(int signal) {
 std::string GetStackTraceMessage() {
   // When Google Test launches a "threadsafe" death test's child proc, it uses
   // `--gtest_filter` to convey the test to be run. It appendeds it to the end
-  // of the command line, so Chromium's `CommandLine` will preserve only the
+  // of the command line, so Cinaseek's `CommandLine` will preserve only the
   // value of interest.
   auto filter_switch =
       CommandLine::ForCurrentProcess()->GetSwitchValueNative("gtest_filter");
@@ -534,7 +534,7 @@ void TestSuite::Initialize() {
       !CommandLine::ForCurrentProcess()->HasSwitch(
           switches::kWithDeathTestStackTraces)) {
     // For death tests using the "threadsafe" style (which includes all such
-    // tests on Windows and Fuchsia, and is the default for all Chromium tests
+    // tests on Windows and Fuchsia, and is the default for all Cinaseek tests
     // on all platforms except Android; see `PreInitialize`),
     //
     // For more information, see

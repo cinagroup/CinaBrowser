@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -560,9 +560,9 @@ TEST_F(TemplateURLPrepopulateDataTest, GetEngineTypeForAlternateURLs) {
   };
 
   PrepopulatedEngine fake_engine = {
-      .name = u"Chromium Search",
-      .keyword = u"chromium",
-      .search_url = "https://search.chromium.org?foo=bar&q={searchTerms}",
+      .name = u"Cinaseek Search",
+      .keyword = u"Cinaseek",
+      .search_url = "https://search.Cinaseek.org?foo=bar&q={searchTerms}",
       .type = arbitrary_type,
       .id = 2424,
   };
@@ -787,9 +787,9 @@ class TemplateURLPrepopulateDataMigrationTest
   SearchEngineType new_type = SEARCH_ENGINE_STARTER_PACK_HISTORY;
 
   const PrepopulatedEngine fake_engine = {
-      .name = u"Chromium Search",
-      .keyword = u"chromium",
-      .search_url = "https://search.chromium.org?foo=bar&q={searchTerms}",
+      .name = u"Cinaseek Search",
+      .keyword = u"Cinaseek",
+      .search_url = "https://search.Cinaseek.org?foo=bar&q={searchTerms}",
       .type = legacy_type,
       .id = 2424,
   };
@@ -901,7 +901,7 @@ TEST_F(TemplateURLPrepopulateDataMigrationTest,
   TemplateURLData checked_engine_data;
   checked_engine_data.prepopulate_id = fake_engine.id;
   checked_engine_data.SetURL(
-      "https://issues.chromium.org?foo=baz&q={searchTerms}");
+      "https://issues.Cinaseek.org?foo=baz&q={searchTerms}");
 
   auto scoped_override =
       regional_capabilities::SetPrepopulatedEnginesOverrideForTesting(

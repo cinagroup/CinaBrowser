@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -144,7 +144,7 @@ constexpr net::NetworkTrafficAnnotationTag kFetchLaterTrafficAnnotationTag =
       destination: OTHER
       internal {
         contacts {
-          email: "pending-beacon-experiment@chromium.org"
+          email: "pending-beacon-experiment@Cinaseek.org"
         }
       }
       last_reviewed: "2023-10-25"

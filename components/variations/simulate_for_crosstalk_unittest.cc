@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 
 // These tests mirror testSimulateTrialAssignments and
 // testSimulateTrialAssignmentsWithForcedSalt in the internal crosstalk_test.py.
-// Both places hard-code the same expected results, ensuring the chromium
+// Both places hard-code the same expected results, ensuring the Cinaseek
 // implementation matches the Python implementation.
 
 namespace variations {

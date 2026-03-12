@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,8 +24,8 @@ TEST(LevenshteinDistanceTest, WithoutMaxDistance) {
   EXPECT_EQ(2u, LevenshteinDistance("unclear", "nuclear"));
   EXPECT_EQ(2u, LevenshteinDistance("nuclear", "unclear"));
 
-  EXPECT_EQ(3u, LevenshteinDistance("chrome", "chromium"));
-  EXPECT_EQ(3u, LevenshteinDistance("chromium", "chrome"));
+  EXPECT_EQ(3u, LevenshteinDistance("chrome", "Cinaseek"));
+  EXPECT_EQ(3u, LevenshteinDistance("Cinaseek", "chrome"));
 
   EXPECT_EQ(4u, LevenshteinDistance("", "abcd"));
   EXPECT_EQ(4u, LevenshteinDistance("abcd", ""));

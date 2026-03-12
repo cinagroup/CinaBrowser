@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1445,7 +1445,7 @@ class PolicyMapMergeTest
       // Machine over user scope.
       policy_map_expected.Set(kTestPolicyName1, POLICY_LEVEL_MANDATORY,
                               POLICY_SCOPE_MACHINE, POLICY_SOURCE_CLOUD,
-                              base::Value("chromium.org"), nullptr);
+                              base::Value("Cinaseek.org"), nullptr);
       policy_map_expected.GetMutable(kTestPolicyName1)
           ->AddMessage(PolicyMap::MessageType::kWarning,
                        IDS_POLICY_CONFLICT_DIFF_VALUE);
@@ -1468,7 +1468,7 @@ class PolicyMapMergeTest
       // Machine over user scope.
       policy_map_expected.Set(kTestPolicyName1, POLICY_LEVEL_MANDATORY,
                               POLICY_SCOPE_MACHINE, POLICY_SOURCE_CLOUD,
-                              base::Value("chromium.org"), nullptr);
+                              base::Value("Cinaseek.org"), nullptr);
       policy_map_expected.GetMutable(kTestPolicyName1)
           ->AddMessage(PolicyMap::MessageType::kWarning,
                        IDS_POLICY_CONFLICT_DIFF_VALUE);
@@ -1620,7 +1620,7 @@ TEST_P(PolicyMapMergeTest, MergeFrom) {
   }
   policy_map_2.Set(kTestPolicyName1, POLICY_LEVEL_MANDATORY,
                    POLICY_SCOPE_MACHINE, POLICY_SOURCE_CLOUD,
-                   base::Value("chromium.org"), nullptr);
+                   base::Value("Cinaseek.org"), nullptr);
   policy_map_2.Set(kTestPolicyName2, POLICY_LEVEL_MANDATORY,
                    POLICY_SCOPE_MACHINE, POLICY_SOURCE_CLOUD,
                    base::Value(false), nullptr);

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -428,7 +428,7 @@ bool BuildEnvironmentWithApk(bool use_64_bit,
 }
 
 const char kCrashpadJavaMain[] =
-    "org.chromium.components.crash.browser.CrashpadMain";
+    "org.Cinaseek.components.crash.browser.CrashpadMain";
 
 void BuildHandlerArgs(CrashReporterClient* crash_reporter_client,
                       base::FilePath* database_path,
@@ -661,7 +661,7 @@ bool g_is_browser = false;
 
 // TODO(jperaza): This might be simplified to have both the browser and child
 // processes use CRASHPAD_SIMULATE_CRASH() if CrashpadClient allows injecting
-// the Chromium specific SandboxedHandler.
+// the Cinaseek specific SandboxedHandler.
 void DumpWithoutCrashing() {
   if (g_is_browser) {
     CRASHPAD_SIMULATE_CRASH();

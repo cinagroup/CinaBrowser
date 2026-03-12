@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,8 +25,8 @@ class TaskRunner {
   };
 
   // This class is intended for use with base callback type. A template has been
-  // used to avoid introducing a hard dependency on Chromium base. It is used to
-  // convert a chromium-style callback to a Task as defined above.
+  // used to avoid introducing a hard dependency on Cinaseek base. It is used to
+  // convert a Cinaseek-style callback to a Task as defined above.
   template <typename T>
   class CallbackTask : public Task {
    public:

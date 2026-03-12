@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace media {
 
 // Audio content types for volume control. Each content type has a separate
 // volume and mute state.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chromecast.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chromecast.media
 enum class AudioContentType {
   kMedia,          // Normal audio playback; also used for system sound effects.
   kAlarm,          // Alarm sounds.

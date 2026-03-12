@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef COMPONENTS_LEVELDB_PROTO_INTERNAL_PROTO_LEVELDB_WRAPPER_H_
@@ -20,7 +20,7 @@
 #include "base/threading/thread_checker.h"
 #include "components/leveldb_proto/internal/proto_leveldb_wrapper_metrics.h"
 #include "components/leveldb_proto/public/proto_database.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 
 namespace base {
 class FilePath;

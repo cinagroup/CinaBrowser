@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -479,7 +479,7 @@ TYPED_TEST(BookmarkUIOperationsHelperTest, PasteBookmarkFromEmptyBookmarkNode) {
     clipboard_writer.WriteBookmark(u"foobar", url);
     clipboard_writer.WritePickledData(
         pickle, ui::ClipboardFormatType::CustomPlatformType(
-                    std::string("chromium/x-bookmark-entries")));
+                    std::string("Cinaseek/x-bookmark-entries")));
   }
 
   // Now we should be able to paste from the clipboard.

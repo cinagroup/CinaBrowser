@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,7 +105,7 @@ class SystemMediaControlsLinuxTest : public testing::Test,
 
     if (is_seek_to)
       writer.AppendObjectPath(
-          dbus::ObjectPath("/org/chromium/MediaPlayer2/TrackList/TrackFooId"));
+          dbus::ObjectPath("/org/Cinaseek/MediaPlayer2/TrackList/TrackFooId"));
 
     writer.AppendInt64(offset_or_position);
 
@@ -590,7 +590,7 @@ TEST_F(SystemMediaControlsLinuxTest, ChangingIdEmitsSignal) {
 
         dbus::ObjectPath value;
         ASSERT_TRUE(metadata_entry_reader.PopVariantOfObjectPath(&value));
-        EXPECT_EQ("/org/chromium/MediaPlayer2/TrackList/TrackFooId",
+        EXPECT_EQ("/org/Cinaseek/MediaPlayer2/TrackList/TrackFooId",
                   value.value());
 
         // Metadata should be the only changed property.

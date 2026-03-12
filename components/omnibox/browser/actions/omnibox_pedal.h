@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -135,7 +135,7 @@ class OmniboxPedal : public OmniboxAction {
     void AddSynonym(TokenSequence synonym);
 
     // When runtime data was preprocessed by pedal_processor,
-    // it avoided the need to sort at runtime in Chromium, but with
+    // it avoided the need to sort at runtime in Cinaseek, but with
     // the TC-based l10n technique, data loading needs to be robust
     // enough to handle various forms and orders in translation data.
     // Hence, a call to `SortSynonyms` is required after all calls

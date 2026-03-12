@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -990,7 +990,7 @@ class CONTENT_EXPORT RenderFrameImpl
   // that a load event should be dispatched, and nothing else.
   //
   // See also:
-  // - https://chromium-review.googlesource.com/c/chromium/src/+/804797
+  // - https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/804797
   // - https://github.com/whatwg/html/issues/3267
   void SynchronouslyCommitAboutBlankForBug778318(
       std::unique_ptr<blink::WebNavigationInfo> info);

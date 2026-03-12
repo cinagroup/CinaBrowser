@@ -1,4 +1,4 @@
-# JS Conformance rules for ChromeOS Essential Apps.
+# JS Conformance rules for CinaseekOS Essential Apps.
 # See https://github.com/google/closure-compiler/wiki/JS-Conformance-Framework
 
 requirement: {

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class DataSource {
  public:
   // The maximum number of different data types that will be read by
   // GetDataForPreferredMimeTypes (plain text, RTF, HTML, image, text/uri-list,
-  // application/octet-stream, chromium/x-web-custom-data).
+  // application/octet-stream, Cinaseek/x-web-custom-data).
   static constexpr int kMaxDataTypes = 7;
 
   explicit DataSource(DataSourceDelegate* delegate);
@@ -77,7 +77,7 @@ class DataSource {
 
   // Search the set of offered MIME types for the most preferred of each of the
   // following categories: text/plain*, text/rtf, text/html*, image/*,
-  // text/uri-list, chromium/x-web-custom-data. If any usable MIME types in a
+  // text/uri-list, Cinaseek/x-web-custom-data. If any usable MIME types in a
   // given category are available, the corresponding
   // |*_reader| input callback will be called with the best one and the
   // corresponding data. For any category that has no available MIME types,

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace password_manager {
 // NOTE: This needs to be manually kept in sync with
 // PasswordStoreAndroidBackendError in enums.xml!
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.password_manager
 enum class AndroidBackendErrorType {
   kUncategorized = 0,
   // API was called without a context.

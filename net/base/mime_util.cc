@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -920,7 +920,7 @@ NET_EXPORT std::string GenerateMimeMultipartBoundary() {
 
   // Note: this diverges from all the relevant specs. See
   // https://github.com/whatwg/html/issues/6424 for discussion and
-  // https://issues.chromium.org/issues/40451606 for historical context.
+  // https://issues.Cinaseek.org/issues/40451606 for historical context.
   //
   // RFC 2046 and later specs say the alphanumeric characters plus the
   // following characters are legal for boundaries:  '()+_,-./:=?

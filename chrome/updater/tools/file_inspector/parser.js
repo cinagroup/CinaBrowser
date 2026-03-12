@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ export class ByteSpan {
   }
 }
 
-// https://chromium.googlesource.com/chromium/src/+/main/components/zucchini/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/components/zucchini/README.md
 function parseZucchini(data) {
   let offset = 0;
 

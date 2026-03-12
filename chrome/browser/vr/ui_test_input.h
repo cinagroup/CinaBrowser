@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace vr {
 
 // These are used to map user-friendly names, e.g. URL_BAR, to the underlying
 // element names for interaction during testing.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.vr
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.vr
 enum class UserFriendlyElementName : int {
   kWebXrAudioIndicator,  // Toast in WebXR indicating the microphone permission
                          // is in use.

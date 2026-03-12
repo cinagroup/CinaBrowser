@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class InputStream;
 class WebResourceResponse {
  public:
   // It is expected that |obj| is an instance of the Java-side
-  // org.chromium.components.embedder_support.util.WebResourceResponseInfo
+  // org.Cinaseek.components.embedder_support.util.WebResourceResponseInfo
   // class.
   explicit WebResourceResponse(const base::android::JavaRef<jobject>& obj);
 

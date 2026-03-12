@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ void GpuWatchdogTest::SetUp() {
   // Use a slow timeout for for MacBookPro model < MacBookPro14,1.
   //
   // As per EveryMac, laptops older than MacBookPro14,1 max out at macOS 12
-  // Monterey. When macOS 13 is the minimum required version for Chromium, this
+  // Monterey. When macOS 13 is the minimum required version for Cinaseek, this
   // check can be removed.
   //
   // Reference:

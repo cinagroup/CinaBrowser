@@ -3,7 +3,7 @@ import {FaceDetectionProvider, FaceDetectionProviderReceiver} from '/gen/service
 
 self.FaceDetectionTest = (() => {
   // Class that mocks FaceDetectionProvider interface defined in
-  // https://cs.chromium.org/chromium/src/services/shape_detection/public/mojom/facedetection_provider.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/services/shape_detection/public/mojom/facedetection_provider.mojom
   class MockFaceDetectionProvider {
     constructor() {
       this.receiver_ = new FaceDetectionProviderReceiver(this);
@@ -39,7 +39,7 @@ self.FaceDetectionTest = (() => {
   }
 
   // Class that mocks FaceDetection interface defined in
-  // https://cs.chromium.org/chromium/src/services/shape_detection/public/mojom/facedetection.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/services/shape_detection/public/mojom/facedetection.mojom
   class MockFaceDetection {
     constructor(request, options) {
       this.maxDetectedFaces_ = options.maxDetectedFaces;
@@ -97,7 +97,7 @@ self.FaceDetectionTest = (() => {
     MockFaceDetectionProvider: null
   }
 
-  class FaceDetectionTestChromium {
+  class FaceDetectionTestCinaseek {
     constructor() {
       Object.freeze(this); // Make it immutable.
     }
@@ -126,5 +126,5 @@ self.FaceDetectionTest = (() => {
     }
   }
 
-  return FaceDetectionTestChromium;
+  return FaceDetectionTestCinaseek;
 })();

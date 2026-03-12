@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #include "third_party/skia/include/core/SkRefCnt.h"
 #include "third_party/skia/include/gpu/ganesh/GrDirectContext.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkTypes.h"
-#include "third_party/skia/include/private/chromium/GrVkSecondaryCBDrawContext.h"
+#include "third_party/skia/include/private/Cinaseek/GrVkSecondaryCBDrawContext.h"
 #include "ui/gfx/color_space.h"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().

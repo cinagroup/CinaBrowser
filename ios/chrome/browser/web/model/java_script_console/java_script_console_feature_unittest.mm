@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@
 namespace {
 
 const char kIframeHostName[] = "about:srcdoc";
-const char kTestHostName[] = "https://chromium.test/";
+const char kTestHostName[] = "https://Cinaseek.test/";
 
 class FakeJavaScriptConsoleFeatureDelegate
     : public JavaScriptConsoleFeatureDelegate {

@@ -8,14 +8,14 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "ci_only": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_implicit_device_sync_tests"
           ],
@@ -34,12 +34,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -51,13 +51,13 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_tests"
           ],
@@ -76,12 +76,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -93,7 +93,7 @@
         "args": [
           "webgpu_compat_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -119,13 +119,13 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -135,7 +135,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -162,13 +162,13 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -178,7 +178,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -205,13 +205,13 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -221,7 +221,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -247,13 +247,13 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -263,7 +263,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -290,13 +290,13 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -313,14 +313,14 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "ci_only": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_implicit_device_sync_tests"
           ],
@@ -339,12 +339,12 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -356,13 +356,13 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_tests"
           ],
@@ -381,12 +381,12 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -398,7 +398,7 @@
         "args": [
           "webgpu_compat_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -424,13 +424,13 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -440,7 +440,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -467,13 +467,13 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -483,7 +483,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -510,13 +510,13 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -526,7 +526,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -552,13 +552,13 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -568,7 +568,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -595,13 +595,13 @@
             "device_os_type": "userdebug",
             "device_type": "frankel",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -618,14 +618,14 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "ci_only": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_implicit_device_sync_tests"
           ],
@@ -644,11 +644,11 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -660,13 +660,13 @@
           "--exclusive-device-type-preference=discrete,integrated",
           "--test-launcher-retry-limit=0",
           "--test-launcher-batch-limit=512",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "dawn_end2end_tests"
           ],
@@ -685,11 +685,11 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "dawn_end2end_tests",
@@ -701,7 +701,7 @@
         "args": [
           "webgpu_compat_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -727,12 +727,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -742,7 +742,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -769,12 +769,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -784,7 +784,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -811,12 +811,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -826,7 +826,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -852,12 +852,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -867,7 +867,7 @@
         "args": [
           "webgpu_cts",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -894,12 +894,12 @@
             "device_os_type": "userdebug",
             "device_type": "oriole",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 36
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
@@ -913,7 +913,7 @@
         "args": [
           "noop_sleep",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -940,13 +940,13 @@
             "device_os_type": "user",
             "device_type": "s5e9945",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test_android_chrome/"

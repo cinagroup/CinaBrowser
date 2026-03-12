@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -653,20 +653,20 @@ TEST(MessageTest, GetAndSetHeaders) {
   EXPECT_EQ(0U, message->GetSerial());
   EXPECT_EQ(0U, message->GetReplySerial());
 
-  EXPECT_TRUE(message->SetDestination("org.chromium.destination"));
-  EXPECT_TRUE(message->SetPath(ObjectPath("/org/chromium/path")));
-  EXPECT_TRUE(message->SetInterface("org.chromium.interface"));
+  EXPECT_TRUE(message->SetDestination("org.Cinaseek.destination"));
+  EXPECT_TRUE(message->SetPath(ObjectPath("/org/Cinaseek/path")));
+  EXPECT_TRUE(message->SetInterface("org.Cinaseek.interface"));
   EXPECT_TRUE(message->SetMember("member"));
-  EXPECT_TRUE(message->SetErrorName("org.chromium.error"));
+  EXPECT_TRUE(message->SetErrorName("org.Cinaseek.error"));
   EXPECT_TRUE(message->SetSender(":1.2"));
   message->SetSerial(123);
   message->SetReplySerial(456);
 
-  EXPECT_EQ("org.chromium.destination", message->GetDestination());
-  EXPECT_EQ(ObjectPath("/org/chromium/path"), message->GetPath());
-  EXPECT_EQ("org.chromium.interface", message->GetInterface());
+  EXPECT_EQ("org.Cinaseek.destination", message->GetDestination());
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/path"), message->GetPath());
+  EXPECT_EQ("org.Cinaseek.interface", message->GetInterface());
   EXPECT_EQ("member", message->GetMember());
-  EXPECT_EQ("org.chromium.error", message->GetErrorName());
+  EXPECT_EQ("org.Cinaseek.error", message->GetErrorName());
   EXPECT_EQ(":1.2", message->GetSender());
   EXPECT_EQ(123U, message->GetSerial());
   EXPECT_EQ(456U, message->GetReplySerial());
@@ -682,15 +682,15 @@ TEST(MessageTest, SetInvalidHeaders) {
   EXPECT_EQ("", message->GetSender());
 
   // Empty element between periods.
-  EXPECT_FALSE(message->SetDestination("org..chromium"));
+  EXPECT_FALSE(message->SetDestination("org..Cinaseek"));
   // Trailing '/' is only allowed for the root path.
-  EXPECT_FALSE(message->SetPath(ObjectPath("/org/chromium/")));
+  EXPECT_FALSE(message->SetPath(ObjectPath("/org/Cinaseek/")));
   // Interface name cannot contain '/'.
-  EXPECT_FALSE(message->SetInterface("org/chromium/interface"));
+  EXPECT_FALSE(message->SetInterface("org/Cinaseek/interface"));
   // Member name cannot begin with a digit.
   EXPECT_FALSE(message->SetMember("1member"));
   // Error name cannot begin with a period.
-  EXPECT_FALSE(message->SetErrorName(".org.chromium.error"));
+  EXPECT_FALSE(message->SetErrorName(".org.Cinaseek.error"));
   // Disallowed characters.
   EXPECT_FALSE(message->SetSender("?!#*"));
 

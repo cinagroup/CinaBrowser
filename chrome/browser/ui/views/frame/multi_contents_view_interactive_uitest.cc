@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -500,7 +500,7 @@ IN_PROC_BROWSER_TEST_F(MultiContentsViewUiTest, ResizesToSnapPointWidth) {
           kMultiContentsViewLayoutSnapResizeObserver));
 }
 
-// TODO(crbug.com/399212996): Flaky on linux_chromium_asan_rel_ng, linux-rel
+// TODO(crbug.com/399212996): Flaky on linux_Cinaseek_asan_rel_ng, linux-rel
 // and linux-chromeos-rel.
 #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
 #define MAYBE_ResizesToMinWidthPercentage DISABLED_ResizesToMinWidthPercentage

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -121,7 +121,7 @@ const SkBitmap& CopyOutputResultSkiaRGBA::AsSkBitmap() const {
     const auto* data = result_->data(0);
     auto row_bytes = result_->rowBytes(0);
 
-    // TODO(https://bugs.chromium.org/p/skia/issues/detail?id=14389):
+    // TODO(https://bugs.Cinaseek.org/p/skia/issues/detail?id=14389):
     // BGRA is not supported on iOS, so explicitly request RGBA here. This
     // should not prevent readback, however, so once that is fixed, this code
     // could be removed.

@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,28 +7,28 @@
             "builder_id": {
               "bucket": "build",
               "builder": "Mac Builder Siso FYI",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build.fyi",
+              "builder_group": "Cinaseek.build.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "intel",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
                 "apply_configs": [
-                  "chromium_with_telemetry_dependencies",
+                  "Cinaseek_with_telemetry_dependencies",
                   "use_clang_coverage",
                   "siso_latest"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -36,27 +36,27 @@
             "builder_id": {
               "bucket": "build",
               "builder": "Mac Tests Siso FYI",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build.fyi",
+              "builder_group": "Cinaseek.build.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "build",
                 "builder": "Mac Builder Siso FYI",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -66,7 +66,7 @@
         {
           "bucket": "build",
           "builder": "Mac Tests Siso FYI",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/build/Mac Tests Siso FYI/targets"
@@ -79,6 +79,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.build.fyi",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.build.fyi",
+  "recipe": "Cinaseek"
 }

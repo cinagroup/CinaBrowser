@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 // used for partner builds), this code forks a separate process to run loggy for
 // logging.
 //
-// Also contains logic for parsing chromium args passed as JSON (used by some
+// Also contains logic for parsing Cinaseek args passed as JSON (used by some
 // partner platforms).
 
 #include <optional>

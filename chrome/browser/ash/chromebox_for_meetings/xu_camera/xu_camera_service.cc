@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -222,7 +222,7 @@ void XuCameraService::OnBindService(
     mojo::ScopedMessagePipeHandle receiver_pipe) {
   // The Render Frame Host Id is used to identify the peripheral's device path
   // given a hased device id. If the origin of the client is not from within a
-  // chromium renderer then the device paths would not be hashed.
+  // Cinaseek renderer then the device paths would not be hashed.
   // We give a default RFH ID here for these cases that will fail if mistakenly
   // passed a HMAC ID.
   BindServiceContext(

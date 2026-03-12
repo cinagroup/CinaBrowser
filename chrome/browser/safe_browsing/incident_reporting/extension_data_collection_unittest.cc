@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -262,7 +262,7 @@ TEST_F(ExtensionDataCollectionTest,
   base::Time install_time = base::Time::Now();
   std::string version = "1.4.2";
   std::string description = "Test Extension";
-  std::string update_url = "https://www.chromium.org";
+  std::string update_url = "https://www.Cinaseek.org";
 
   std::unique_ptr<ExtensionTestingProfile> profile =
       CreateProfile(SAFE_BROWSING_AND_EXTENDED_REPORTING);
@@ -298,7 +298,7 @@ TEST_F(ExtensionDataCollectionTest,
   std::string expected_manifest =
       "{\"description\":\"Test Extension\",\""
       "manifest_version\":2,\"name\":\"my_test_extension\",\"update_url\":\""
-      "https://www.chromium.org\",\"version\":\"1.4.2\"}";
+      "https://www.Cinaseek.org\",\"version\":\"1.4.2\"}";
   ASSERT_EQ(extension_info.manifest(), expected_manifest);
 }
 
@@ -451,7 +451,7 @@ TEST_F(ExtensionDataCollectionTest, CollectExtensionDataWithExtension) {
   base::Time install_time = base::Time::Now();
   std::string version = "1.4.2";
   std::string description = "Test Extension";
-  std::string update_url = "https://www.chromium.org";
+  std::string update_url = "https://www.Cinaseek.org";
 
   std::unique_ptr<ExtensionTestingProfile> profile =
       CreateProfile(ENHANCED_PROTECTION_ONLY);
@@ -487,7 +487,7 @@ TEST_F(ExtensionDataCollectionTest, CollectExtensionDataWithExtension) {
   std::string expected_manifest =
       "{\"description\":\"Test Extension\",\""
       "manifest_version\":2,\"name\":\"my_test_extension\",\"update_url\":\""
-      "https://www.chromium.org\",\"version\":\"1.4.2\"}";
+      "https://www.Cinaseek.org\",\"version\":\"1.4.2\"}";
   ASSERT_EQ(extension_info.manifest(), expected_manifest);
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,23 +13,23 @@ namespace quic {
 
 // Clock to efficiently retrieve an approximately accurate time from an
 // net::EpollServer.
-class NET_EXPORT_PRIVATE QuicChromiumClock : public QuicClock {
+class NET_EXPORT_PRIVATE QuicCinaseekClock : public QuicClock {
  public:
-  static QuicChromiumClock* GetInstance();
+  static QuicCinaseekClock* GetInstance();
 
-  QuicChromiumClock();
+  QuicCinaseekClock();
 
-  QuicChromiumClock(const QuicChromiumClock&) = delete;
-  QuicChromiumClock& operator=(const QuicChromiumClock&) = delete;
+  QuicCinaseekClock(const QuicCinaseekClock&) = delete;
+  QuicCinaseekClock& operator=(const QuicCinaseekClock&) = delete;
 
-  ~QuicChromiumClock() override;
+  ~QuicCinaseekClock() override;
 
   // QuicClock implementation:
   QuicTime ApproximateNow() const override;
   QuicTime Now() const override;
   QuicWallTime WallNow() const override;
 
-  // Converts a QuicTime returned by QuicChromiumClock to base::TimeTicks.
+  // Converts a QuicTime returned by QuicCinaseekClock to base::TimeTicks.
   // Helper functions to safely convert between QuicTime and TimeTicks.
   static base::TimeTicks QuicTimeToTimeTicks(QuicTime quic_time);
 };

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ ArcBridgeHostImpl::ArcBridgeHostImpl(ArcBridgeService* arc_bridge_service)
     return;
   }
   ash::mojo_service_manager::GetServiceManagerProxy()->Register(
-      chromeos::mojo_services::kChromiumArcBridgeHost,
+      chromeos::mojo_services::kCinaseekArcBridgeHost,
       provider_receiver_.BindNewPipeAndPassRemote());
 }
 

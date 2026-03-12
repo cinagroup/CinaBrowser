@@ -34,7 +34,7 @@ component("ec_commutative_cipher") {
     "crypto/elgamal.h",
   ]
   sources = [
-    "chromium_patch.h",
+    "Cinaseek_patch.h",
     "crypto/big_num.cc",
     "crypto/context.cc",
     "crypto/ec_commutative_cipher.cc",
@@ -56,7 +56,7 @@ component("ec_commutative_cipher") {
   public_deps = [ "//third_party/abseil-cpp:absl" ]
 
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":library_impl_config",
   ]
 

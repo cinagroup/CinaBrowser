@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file exists for systems for which Chromium does not support watching
+// This file exists for systems for which Cinaseek does not support watching
 // file paths. This includes Unix systems that don't have the inotify headers
 // and thus cannot build file_watcher_inotify.cc.
 

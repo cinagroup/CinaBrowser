@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ void PerfResultReporter::AddResult(const std::string& metric_suffix,
 
   // Decide what time unit to convert the TimeDelta into. Units are based on
   // the legacy units in
-  // https://cs.chromium.org/chromium/src/third_party/catapult/tracing/tracing/value/legacy_unit_info.py?q=legacy_unit_info
+  // https://cs.Cinaseek.org/Cinaseek/src/third_party/catapult/tracing/tracing/value/legacy_unit_info.py?q=legacy_unit_info
   double time = 0;
   if (info.units == "seconds") {
     time = value.InSecondsF();

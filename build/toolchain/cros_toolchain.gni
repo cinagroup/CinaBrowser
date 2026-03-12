@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 # Consequently, the CrOS build system defaults to a convenience
 # compilation mode where the compilation host is also the build target.
 #
-# Chrome can be compiled in this way with the gn variable:
+# Cinaseek can be compiled in this way with the gn variable:
 #
 # target_os = "chromeos"
 #
@@ -18,11 +18,11 @@
 # root (http://goo.gl/aFB4XH) for the board. Then configure GN to use it
 # by setting appropriate cross-compilation variables.
 #
-# For example, to compile a Chrome source tree in /g/src for an
+# For example, to compile a Cinaseek source tree in /g/src for an
 # auron_paine CrOS device with the system root cached in /g/.cros_cache,
 # the following GN arguments must be provided to configure
 # cross-compilation with RBE acceleration. (NB: additional variables
-# will be necessary to successfully compile a working CrOS Chrome.)
+# will be necessary to successfully compile a working CrOS Cinaseek.)
 #
 # target_sysroot= /g/.cros_cache/chrome-sdk/tarballs/auron_paine+7644.0.0+sysroot_chromeos-base_chromeos-chrome.tar.xz"
 # target_cpu = "x64"

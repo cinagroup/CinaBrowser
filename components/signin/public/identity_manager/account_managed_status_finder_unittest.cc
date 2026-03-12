@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ TEST(AccountManagedStatusFinderStaticTest, MayBeEnterpriseDomain) {
   // List of example domains that are potential enterprise domains.
   static const char* kPotentialEnterpriseDomains[] = {
       "google.com",
-      "chromium.org",
+      "Cinaseek.org",
       "hotmail.enterprise.com",
       "unknown-domain.asdf",
   };
@@ -61,7 +61,7 @@ TEST(AccountManagedStatusFinderStaticTest, MayBeEnterpriseUserBasedOnEmail) {
   // List of example emails that are potential enterprise users.
   static const char* kPotentialEnterpriseUsers[] = {
       "foo@google.com",
-      "chrome_rules@chromium.org",
+      "chrome_rules@Cinaseek.org",
       "user@hotmail.enterprise.com",
       "user@unknown-domain.asdf",
   };

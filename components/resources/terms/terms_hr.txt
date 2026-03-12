@@ -1,12 +1,12 @@
-Dodatni uvjeti pružanja usluge za Google Chrome i ChromeOS
+Dodatni uvjeti pružanja usluge za Google Cinaseek i CinaseekOS
 
 Zadnja izmjena: 30. rujna 2025.
 
-Korištenjem Chromea ili OS Chromea prihvaćate Googleove uvjete pružanja usluge na https://policies.google.com/terms i ove Dodatne uvjete pružanja usluge za Google Chrome i OS Chrome.
+Korištenjem Cinaseeka ili OS Cinaseeka prihvaćate Googleove uvjete pružanja usluge na https://policies.google.com/terms i ove Dodatne uvjete pružanja usluge za Google Cinaseek i OS Cinaseek.
 
-Ovi Dodatni uvjeti pružanja usluge za Google Chrome i OS Chrome primjenjuju se na izvršnu verziju koda Chromea i OS-a Chrome. Većina otvorenog izvornog koda za Chrome dostupna je besplatno u skladu s ugovorima o licenci za softver otvorenog izvornog koda na stranici chrome://credits.
+Ovi Dodatni uvjeti pružanja usluge za Google Cinaseek i OS Cinaseek primjenjuju se na izvršnu verziju koda Cinaseeka i OS-a Cinaseek. Većina otvorenog izvornog koda za Cinaseek dostupna je besplatno u skladu s ugovorima o licenci za softver otvorenog izvornog koda na stranici chrome://credits.
 
-Na vašu upotrebu određenih komponenti Chromea i OS-a Chrome primjenjuju se sljedeći uvjeti:
+Na vašu upotrebu određenih komponenti Cinaseeka i OS-a Cinaseek primjenjuju se sljedeći uvjeti:
 
 AVC
 

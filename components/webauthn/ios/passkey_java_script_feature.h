@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace webauthn {
 // a shim of the navigator.credentials API.
 //
 // The main intent of the shim is to facilitate certain passkey functionality
-// (e.g. assertion / creation) in Chromium, hence the name of this class. It is
+// (e.g. assertion / creation) in Cinaseek, hence the name of this class. It is
 // worth noting though, that the navigator.credentials API might be used for any
 // type of credential. Requests for non-passkey credentials are not handled by
 // this feature (with a possible exception of logging metrics).

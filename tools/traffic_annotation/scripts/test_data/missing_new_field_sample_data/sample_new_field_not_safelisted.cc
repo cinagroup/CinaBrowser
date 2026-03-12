@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ net::NetworkTrafficAnnotationTag traffic_annotation =
     destination: GOOGLE_OWNED_SERVICE
     internal {
       contacts {
-        email: "chromium-dev@google.com"
+        email: "Cinaseek-dev@google.com"
       }
     }
     user_data {

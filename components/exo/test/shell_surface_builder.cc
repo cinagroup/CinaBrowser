@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -404,7 +404,7 @@ ShellSurfaceBuilder::BuildClientControlledShellSurface() {
   // Set the properties specific to ClientControlledShellSurface.
   shell_surface->SetApplicationId(!application_id_.empty()
                                       ? application_id_.c_str()
-                                      : "org.chromium.arc.1");
+                                      : "org.Cinaseek.arc.1");
   // ARC's default min size is non-empty.
   if (!min_size_.has_value())
     shell_surface->SetMinimumSize(gfx::Size(1, 1));

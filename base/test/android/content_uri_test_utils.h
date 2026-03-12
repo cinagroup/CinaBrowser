@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ class FilePath;
 
 namespace test::android {
 
-// Returns a content-URI for FileProvider org.chromium.native_test.fileprovider
+// Returns a content-URI for FileProvider org.Cinaseek.native_test.fileprovider
 // representing `path` if it is a valid file or dir under the android app cache
 // dir such as a path created in a ScopedTempDir, else returns std::nullopt.
 std::optional<FilePath> GetContentUriFromCacheDirFilePath(const FilePath& path);

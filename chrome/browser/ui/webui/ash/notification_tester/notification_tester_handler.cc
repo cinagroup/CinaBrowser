@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -138,7 +138,7 @@ void NotificationTesterHandler::HandleGenerateNotificationForm(
 
 const ui::ImageModel NotificationTesterHandler::GetNotificationIconFromString(
     const std::string& icon_name) {
-  if (icon_name == "chromium_logo") {
+  if (icon_name == "Cinaseek_logo") {
     return ui::ImageModel::FromResourceId(IDR_PRODUCT_LOGO_32);
   } else if (icon_name == "google_logo") {
     return ui::ImageModel::FromResourceId(IDR_LOGO_GOOGLE_COLOR_90);
@@ -154,7 +154,7 @@ const gfx::Image NotificationTesterHandler::GetRichDataImageFromString(
   ui::ResourceBundle& rb = ui::ResourceBundle::GetSharedInstance();
   if (image_name == "google_logo_small_png") {
     return rb.GetImageNamed(IDR_LOGO_GOOGLE_COLOR_90);
-  } else if (image_name == "chromium_logo_large_png") {
+  } else if (image_name == "Cinaseek_logo_large_png") {
     return rb.GetImageNamed(IDR_CHROME_APP_ICON_192);
   }
 

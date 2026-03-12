@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 // which encapsulates a server response for Contextual Search.
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.contextualsearch
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.contextualsearch
 enum QuickActionCategory {
   QUICK_ACTION_CATEGORY_NONE,
   QUICK_ACTION_CATEGORY_ADDRESS,

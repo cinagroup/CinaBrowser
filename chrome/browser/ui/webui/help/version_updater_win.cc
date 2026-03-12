@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ class VersionUpdaterWin : public VersionUpdater, public UpdateCheckDelegate {
 
   // VersionUpdater:
   void CheckForUpdate(StatusCallback callback, PromoteCallback) override {
-    // There is no supported integration with Google Update for Chromium.
+    // There is no supported integration with Google Update for Cinaseek.
     callback_ = std::move(callback);
 
     callback_.Run(CHECKING, 0, false, false, std::string(), 0,

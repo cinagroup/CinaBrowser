@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace content::protocol {
 // Class that implements the BluetoothEmulation domain, to allow
 // configuring virtual Bluetooth devices to test the web-bluetooth API.
 // See
-// [device/bluetooth/test/README.md](https://chromium.googlesource.com/chromium/src/+/main/device/bluetooth/test/README.md)
+// [device/bluetooth/test/README.md](https://Cinaseek.googlesource.com/Cinaseek/src/+/main/device/bluetooth/test/README.md)
 class CONTENT_EXPORT BluetoothEmulationHandler
     : public DevToolsDomainHandler,
       public BluetoothEmulation::Backend,

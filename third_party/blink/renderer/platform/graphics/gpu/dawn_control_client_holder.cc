@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -188,7 +188,7 @@ std::vector<wgpu::WGSLLanguageFeatureName> GatherWGSLLanguageFeatures() {
       .enableUnsafe = base::CommandLine::ForCurrentProcess()->HasSwitch(
           switches::kEnableUnsafeWebGPU),
       // This can be changed to true for manual testing with the
-      // chromium_testing_* WGSL features.
+      // Cinaseek_testing_* WGSL features.
       .enableTesting = false,
   }};
   wgsl_control.enableExperimental =

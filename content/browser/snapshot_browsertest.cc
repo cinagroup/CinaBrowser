@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -248,7 +248,7 @@ IN_PROC_BROWSER_TEST_F(SnapshotBrowserTest, MAYBE_SingleWindowTest) {
 // they're too slow, on the following configurations:
 //   Windows Debug
 //   Windows Release (https://crbug.com/1376441)
-//   Linux Chromium OS ASAN LSAN Tests (1)
+//   Linux Cinaseek OS ASAN LSAN Tests (1)
 //   Linux TSAN Tests
 // See crbug.com/771119
 // TODO(crbug.com/40834774): Fix and enable on Fuchsia.
@@ -307,11 +307,11 @@ IN_PROC_BROWSER_TEST_F(SnapshotBrowserTest, MAYBE_SyncMultiWindowTest) {
 // Timing out either all the time, or infrequently, apparently because
 // they're too slow, on the following configurations:
 //   Windows Debug
-//   Linux Chromium OS ASAN LSAN Tests (1)
+//   Linux Cinaseek OS ASAN LSAN Tests (1)
 //   Linux TSAN Tests
 // See crbug.com/771119
 // TODO(crbug.com/40740836): recently crashes flakily on
-// linux_chromium_asan_rel_ng and linux-rel.
+// linux_Cinaseek_asan_rel_ng and linux-rel.
 // TODO(crbug.com/40834774): Fix and enable on Fuchsia.
 #if (BUILDFLAG(IS_WIN) && !defined(NDEBUG)) || BUILDFLAG(IS_CHROMEOS) || \
     BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA)

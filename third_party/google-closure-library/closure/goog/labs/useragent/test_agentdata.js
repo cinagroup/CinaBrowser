@@ -103,7 +103,7 @@ exports.CHROME_USERAGENT_DATA_MOBILE = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '99'},
     {brand: 'Google Chrome', version: '101'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
   ])),
   mobile: true,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -115,7 +115,7 @@ exports.CHROME_USERAGENT_DATA_LINUX = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '101'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -127,7 +127,7 @@ exports.CHROME_USERAGENT_DATA_MACOS = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '101'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -139,7 +139,7 @@ exports.CHROME_USERAGENT_DATA_WINDOWS = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '101'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -151,7 +151,7 @@ exports.CHROME_USERAGENT_DATA_CROS = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '94'},
-    {brand: 'Chromium', version: '94'},
+    {brand: 'Cinaseek', version: '94'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -163,7 +163,7 @@ exports.CHROME_USERAGENT_DATA_UNKNOWN = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '101'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -175,7 +175,7 @@ exports.CHROME_USERAGENT_DATA_NO_PLATFORM = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '92'},
-    {brand: 'Chromium', version: '92'},
+    {brand: 'Cinaseek', version: '92'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,
@@ -187,7 +187,7 @@ exports.CHROME_NO_FULLVERSIONLIST_USERAGENT_DATA = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not; A Brand', version: '0'},
     {brand: 'Google Chrome', version: '91'},
-    {brand: 'Chromium', version: '91'},
+    {brand: 'Cinaseek', version: '91'},
   ])),
   mobile: false,
   getHighEntropyValues: async (fields) => {
@@ -206,7 +206,7 @@ exports.CHROME_NO_FULLVERSIONLIST_USERAGENT_DATA = Object.freeze({
 exports.OPERACHROMIUM_USERAGENT_DATA = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Opera', version: '87'},
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
     {brand: ';Not A Brand', version: '99'},
   ])),
   mobile: false,
@@ -217,7 +217,7 @@ exports.OPERACHROMIUM_USERAGENT_DATA = Object.freeze({
 /** @const {!NavigatorUAData} */
 exports.EDGECHROMIUM_USERAGENT_DATA = Object.freeze({
   brands: deepFreeze(shuffle([
-    {brand: 'Chromium', version: '101'},
+    {brand: 'Cinaseek', version: '101'},
     {brand: 'Microsoft Edge', version: '101'},
     {brand: 'GREASE', version: '99'},
   ])),
@@ -230,7 +230,7 @@ exports.EDGECHROMIUM_USERAGENT_DATA = Object.freeze({
 exports.SILK_USERAGENT_DATA = Object.freeze({
   brands: deepFreeze(shuffle([
     {brand: 'Not;A Brand', version: '99'},
-    {brand: 'Chromium', version: '93'},
+    {brand: 'Cinaseek', version: '93'},
   ])),
   mobile: false,
   getHighEntropyValues: getHighEntropyValuesMock,

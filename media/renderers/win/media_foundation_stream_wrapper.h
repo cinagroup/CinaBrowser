@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -144,16 +144,16 @@ class MEDIA_EXPORT MediaFoundationStreamWrapper
   std::unique_ptr<MediaLog> media_log_;
 
   // Need exclusive access to some members between calls from MF threadpool
-  // thread and calling thread from Chromium media stack.
+  // thread and calling thread from Cinaseek media stack.
   base::Lock lock_;
 
   // Indicates whether the stream is selected in the MF pipeline.
   bool selected_ GUARDED_BY(lock_) = false;
 
-  // Indicates whether the stream is enabled in the Chromium media pipeline.
+  // Indicates whether the stream is enabled in the Cinaseek media pipeline.
   bool enabled_ GUARDED_BY(lock_) = true;
 
-  // Indicates whether the Chromium pipeline has flushed the renderer and we're
+  // Indicates whether the Cinaseek pipeline has flushed the renderer and we're
   // buffering post-flush samples (prior to a seek). Since Flush() can be
   // invoked by media stack thread or MF threadpool thread,
   // |buffering_post_flush_samples_| and |post_flush_buffers_| are protected by
@@ -177,7 +177,7 @@ class MEDIA_EXPORT MediaFoundationStreamWrapper
   std::queue<Microsoft::WRL::ComPtr<IUnknown>> pending_sample_request_tokens_
       GUARDED_BY(lock_);
 
-  // If true, there is a pending a read completion from Chromium media stack.
+  // If true, there is a pending a read completion from Cinaseek media stack.
   bool pending_stream_read_ = false;
 
   // Maintain the buffer obtained by batch read. We push buffer into

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ struct TabGroupActionContext {
 
 // Whether the update was originated by a change in the local or remote
 // client.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_group_sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_group_sync
 enum class TriggerSource {
   // The source is unknown. Typically the source is always known, but it might
   // get lost during plumbing down the line in certain situations.
@@ -86,7 +86,7 @@ enum class SyncBridgeUpdateType {
 
 // LINT.IfChange(OpeningSource)
 // Specifies the source of an action that opened a tab group.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_group_sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_group_sync
 enum class OpeningSource {
   kUnknown = 0,
   // Triggered by opening a tab group from the revisit UI surface.
@@ -126,7 +126,7 @@ enum class OpeningSource {
 
 // LINT.IfChange(ClosingSource)
 // Specifies the source of an action that closed a tab group.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_group_sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_group_sync
 enum class ClosingSource {
   kUnknown = 0,
   // Android / iOS only. Group was closed by user.
@@ -162,7 +162,7 @@ enum class ClosingSource {
 // Various types of mutation events associated with tab groups and tabs.
 // Used for metrics only. These values are persisted to logs. Entries should not
 // be renumbered and numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_group_sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_group_sync
 enum class TabGroupEvent {
   kTabGroupCreated = 0,
   kTabGroupRemoved = 1,

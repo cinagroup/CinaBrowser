@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1337,7 +1337,7 @@ TEST_F(KerberosCredentialsManagerTest,
 //   KerberosCredentialsManager, UpdateAccountsFromPref is called.
 //
 // See also
-//   https://analysis.chromium.org/p/chromium/coverage/dir?host=chromium.googlesource.com&project=chromium/src&ref=refs/heads/main&path=//chrome/browser/ash/kerberos/&platform=linux-chromeos
+//   https://analysis.Cinaseek.org/p/Cinaseek/coverage/dir?host=Cinaseek.googlesource.com&project=Cinaseek/src&ref=refs/heads/main&path=//chrome/browser/ash/kerberos/&platform=linux-chromeos
 // for code coverage (try to get as high as possible!).
 
 }  // namespace ash

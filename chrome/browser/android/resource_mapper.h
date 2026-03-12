@@ -1,19 +1,19 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef CHROME_BROWSER_ANDROID_RESOURCE_MAPPER_H_
 #define CHROME_BROWSER_ANDROID_RESOURCE_MAPPER_H_
 
-// Enumerates IDs of resources used in the Android port of Chromium.  This is
+// Enumerates IDs of resources used in the Android port of Cinaseek.  This is
 // needed so that Android knows which Drawable is needed in the Java UI.
 class ResourceMapper {
  public:
   // ID indicating that the map failed to find a Drawable corresponding to the
-  // Chromium resource.
+  // Cinaseek resource.
   static const int kMissingId;
 
-  // Converts the given chromium |resource_id| (e.g. IDR_INFOBAR_TRANSLATE) to
+  // Converts the given Cinaseek |resource_id| (e.g. IDR_INFOBAR_TRANSLATE) to
   // an Android drawable resource ID. Returns |kMissingId| if a mapping wasn't
   // found.
   static int MapToJavaDrawableId(int resource_id);

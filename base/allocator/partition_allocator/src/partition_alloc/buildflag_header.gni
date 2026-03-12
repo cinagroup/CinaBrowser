@@ -1,9 +1,9 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# This was copied from chromium's and adapted to partition_alloc.
-# Please refer to chromium's //build/buildflag_header.gni
+# This was copied from Cinaseek's and adapted to partition_alloc.
+# Please refer to Cinaseek's //build/buildflag_header.gni
 
 # Generates a header with preprocessor defines specified by the build file.
 #

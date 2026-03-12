@@ -2112,7 +2112,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
 
   /**
    * Tries to detect whether the current browser is Edge, based on the user
-   * agent. This matches only pre-Chromium Edge.
+   * agent. This matches only pre-Cinaseek Edge.
    * @see https://docs.microsoft.com/en-us/microsoft-edge/web-platform/user-agent-string
    * @return {boolean} True if the current browser is Edge.
    * @private
@@ -3271,7 +3271,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
     var isInternetExplorerOrEdge = goog.inHtmlDocument_() &&
         ('ActiveXObject' in goog.global || goog.isEdge_());
 
-    // Don't delay in any version of IE or pre-Chromium Edge. There's a bug
+    // Don't delay in any version of IE or pre-Cinaseek Edge. There's a bug
     // around this that will cause out of order script execution. This means
     // that on older IE ES6 modules will load too early (while the document is
     // still loading + the dom is not available). The other option is to load

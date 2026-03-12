@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -117,7 +117,7 @@ void GPUComputePassEncoder::writeTimestamp(
     uint32_t queryIndex,
     ExceptionState& exception_state) {
   V8GPUFeatureName::Enum requiredFeatureEnum =
-      V8GPUFeatureName::Enum::kChromiumExperimentalTimestampQueryInsidePasses;
+      V8GPUFeatureName::Enum::kCinaseekExperimentalTimestampQueryInsidePasses;
   if (!device_->features()->Has(requiredFeatureEnum)) {
     exception_state.ThrowTypeError(UNSAFE_TODO(String::Format(
         "Use of the writeTimestamp() method on compute pass requires the '%s' "

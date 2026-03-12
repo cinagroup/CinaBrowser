@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ namespace {
 // databases, or an empty path in case of error. `directory_name` is the name of
 // the directory within C:\Windows\SystemTemp that will be created to house a
 // "Crashpad" directory. Each process should provide a distinct value (e.g.,
-// "ChromiumTracing" for the elevated tracing service in a Chromium build).
+// "CinaseekTracing" for the elevated tracing service in a Cinaseek build).
 base::FilePath GetCrashpadDir(base::FilePath::StringViewType directory_name) {
   base::FilePath system_temp;
   if (!base::PathService::Get(base::DIR_SYSTEM_TEMP, &system_temp)) {
@@ -125,7 +125,7 @@ void CrashClient::GetProductNameAndVersion(const std::wstring& exe_path,
 
 bool CrashClient::GetShouldDumpLargerDumps() {
   // Capture larger dumps for Google Chrome beta, dev, and canary channels, and
-  // Chromium builds. The Google Chrome stable channel uses smaller dumps.
+  // Cinaseek builds. The Google Chrome stable channel uses smaller dumps.
   return install_static::GetChromeChannel() != version_info::Channel::STABLE;
 }
 

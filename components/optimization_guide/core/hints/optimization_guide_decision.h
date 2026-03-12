@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace optimization_guide {
 
 // Represents the decision made by the optimization guide.
 // Keep in sync with OptimizationGuideOptimizationGuideDecision in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.optimization_guide
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.optimization_guide
 enum class OptimizationGuideDecision {
   // The necessary information to make the decision is not yet available.
   kUnknown,

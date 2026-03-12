@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -146,7 +146,7 @@ gfx::Point ViewAXPlatformNodeDelegateWin::ScreenToDIPPoint(
   // platforms. We need to go through the ScreenWin::ScreenToDIPPoint helper
   // function to perform the right set of offset transformations needed.
   //
-  // This is because Chromium transforms the screen physical coordinates it
+  // This is because Cinaseek transforms the screen physical coordinates it
   // receives from Windows into an internal representation of screen physical
   // coordinates adjusted for multiple displays of different resolutions.
   return ToRoundedPoint(display::win::GetScreenWin()->ScreenToDIPPoint(

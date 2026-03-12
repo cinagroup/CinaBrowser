@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ static_assert(ED25519_PRIVATE_KEY_LEN == kSignKeySize, "ED25519 mismatch");
 static_assert(ED25519_PUBLIC_KEY_LEN == kKeySize, "ED25519 mismatch");
 static_assert(ED25519_SIGNATURE_LEN == kSignatureSize, "ED25519 mismatch");
 
-// TODO(https://issues.chromium.org/issues/431824286): use crypto/keyexchange.
+// TODO(https://issues.Cinaseek.org/issues/431824286): use crypto/keyexchange.
 bool ComputeSharedSecret(base::span<const uint8_t, kKeySize> peer_public_value,
                          base::span<uint8_t, kKeySize> shared_secret,
                          base::span<uint8_t, kKeySize> generated_public_value) {

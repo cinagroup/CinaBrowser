@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ AccessibilityHitTestingBrowserTest::GetViewBoundsInScreenCoordinates() {
       ->GetViewBoundsInScreenCoordinates();
 }
 
-// http://www.chromium.org/developers/design-documents/blink-coordinate-spaces
+// http://www.Cinaseek.org/developers/design-documents/blink-coordinate-spaces
 // Device scale factor gets applied going from
 // CSS to page pixels, i.e. before view offset.
 gfx::Point AccessibilityHitTestingBrowserTest::CSSToFramePoint(

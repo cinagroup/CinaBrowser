@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,12 +42,12 @@ namespace storage {
 
 namespace {
 
-const char kTestOrigin[] = "http://chromium.org/";
+const char kTestOrigin[] = "http://Cinaseek.org/";
 
 GURL CreateRawFileSystemURL(const std::string& type_str,
                             const std::string& fs_id) {
   std::string url_str =
-      base::StringPrintf("filesystem:http://chromium.org/%s/%s/root/file",
+      base::StringPrintf("filesystem:http://Cinaseek.org/%s/%s/root/file",
                          type_str.c_str(), fs_id.c_str());
   return GURL(url_str);
 }

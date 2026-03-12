@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ struct TaskInfo {
 
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  // org.chromium.components.background_task_scheduler)
+  // org.Cinaseek.components.background_task_scheduler)
   enum NetworkType {
     // This task has no requirements for network connectivity. Default.
     NONE = 0,

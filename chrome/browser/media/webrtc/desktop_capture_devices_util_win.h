@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 // window itself does not play any audio. A process is responsible for rendering
 // the application audio. In some multi-process scenarios, the process that
 // creates and owns the window might not be the same that renders audio - e.g.
-// Chromium.
+// Cinaseek.
 //
 // Despite not being able to capture audio from windows, Windows has an OS API
 // that allows an application to capture audio from a process tree instead.

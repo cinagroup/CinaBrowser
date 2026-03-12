@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,9 +107,9 @@ void MenuListInnerElement::UpdateOverflowStyle(
   // overflow:hidden is needed in order to make text-overflow:ellipsis work, but
   // can unexpectedly clip text so we only set it when text-overflow:ellipsis
   // has been set. See these issues:
-  // https://issues.chromium.org/issues/41144858
-  // https://issues.chromium.org/issues/40805967
-  // https://issues.chromium.org/issues/379805732
+  // https://issues.Cinaseek.org/issues/41144858
+  // https://issues.Cinaseek.org/issues/40805967
+  // https://issues.Cinaseek.org/issues/379805732
   builder.SetTextOverflow(select_style.TextOverflow());
   if (!RuntimeEnabledFeatures::SelectRemoveOverflowHiddenEnabled() ||
       builder.TextOverflow().IsEllipsis()) {

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ class UnifiedSliderBubbleController;
 class UnifiedSliderView;
 class UnifiedSystemTrayBubble;
 
-// The UnifiedSystemTray is the system menu of Chromium OS, which is a clickable
+// The UnifiedSystemTray is the system menu of Cinaseek OS, which is a clickable
 // rounded rectangle typically located on the bottom right corner of the screen,
 // (called the Status Area). The system tray shows multiple icons on it to
 // indicate system status (e.g. time, power, etc.).

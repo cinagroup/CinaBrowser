@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -505,7 +505,7 @@ class CONTENT_EXPORT NavigationURLLoaderImpl
     // NOTE: This looks like coupled with
     // `LoaderHolder::response_loader_receiver_` but actually isn't, because
     // `response_url_loader_` is never touched during
-    // `MaybeCreateLoaderForResponse()` (at least within Chromium codesearch).
+    // `MaybeCreateLoaderForResponse()` (at least within Cinaseek codesearch).
     // For now this is kept here as-is but probably can be removed.
     mojo::PendingRemote<network::mojom::URLLoader> response_url_loader_;
 

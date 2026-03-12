@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -151,7 +151,7 @@ class Zygote {
   std::vector<ZygoteProcessInfo> to_reap_;
 
   // Sandbox IPC channel for renderers to invoke services from the browser. See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md
   base::GlobalDescriptors::Descriptor ipc_backchannel_;
 };
 

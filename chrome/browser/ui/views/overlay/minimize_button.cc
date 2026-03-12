@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ OverlayWindowMinimizeButton::OverlayWindowMinimizeButton(
   SetSize(gfx::Size(kMinimizeButtonSize, kMinimizeButtonSize));
 
   SetImageModel(views::Button::STATE_NORMAL,
-                ui::ImageModel::FromVectorIcon(kChromiumMinimizeIcon,
+                ui::ImageModel::FromVectorIcon(kCinaseekMinimizeIcon,
                                                kColorPipWindowForeground,
                                                kMinimizeButtonIconSize));
 

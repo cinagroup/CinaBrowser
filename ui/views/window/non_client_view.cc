@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -153,7 +153,7 @@ void NonClientView::Layout(PassKey) {
   // |overlay_view_|, and eliminate CalculatePreferredSize()/GetMinimumSize()/
   // GetMaximumSize()/Layout().  The frame view and client view were originally
   // siblings because "many Views make the assumption they are only inserted
-  // into a View hierarchy once" ( http://codereview.chromium.org/27317 ), but
+  // into a View hierarchy once" ( http://codereview.Cinaseek.org/27317 ), but
   // where that is still the case it should simply be fixed.
   frame_view_->SetBoundsRect(GetLocalBounds());
 

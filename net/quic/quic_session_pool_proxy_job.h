@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,8 +69,8 @@ class QuicSessionPool::ProxyJob : public QuicSessionPool::Job {
   IoState io_state_ = STATE_CREATE_PROXY_SESSION;
 
   std::unique_ptr<QuicSessionRequest> proxy_session_request_;
-  std::unique_ptr<QuicChromiumClientSession::Handle> proxy_session_;
-  std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> proxy_session_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream_;
   NetErrorDetails net_error_details_;
 
   // The QUIC version for the tunneled session created by this job.

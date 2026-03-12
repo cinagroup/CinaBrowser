@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -607,7 +607,7 @@ BASE_FEATURE(kSymphoniaMp3Decoding, base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
 
 // Forces D3D11VideoDecoder to use one decoder texture per picture buffer.
-// Owner: media-gpu-team@chromium.org
+// Owner: media-gpu-team@Cinaseek.org
 // Expiry: When no longer needed for decode texture selection experiments.
 BASE_FEATURE(kD3D11VideoDecoderForceSingleTexture,
              base::FEATURE_DISABLED_BY_DEFAULT);
@@ -727,7 +727,7 @@ BASE_FEATURE(kAcceleratedVideoEncodeLinux,
 BASE_FEATURE(kVaapiIgnoreDriverChecks, base::FEATURE_DISABLED_BY_DEFAULT);
 #endif  // BUILDFLAG(IS_LINUX)
 
-// NVIDIA VA-API drivers do not support Chromium and can sometimes cause
+// NVIDIA VA-API drivers do not support Cinaseek and can sometimes cause
 // crashes, disable VA-API on NVIDIA GPUs by default. See crbug.com/1492880.
 BASE_FEATURE(kVaapiOnNvidiaGPUs, base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -825,7 +825,7 @@ BASE_FEATURE(kLogSodaLoadFailures,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
 // When getDisplayMedia() is invoked, the user sees and interacts with
-// a Chromium prompt through which they choose which tab/window/screen
+// a Cinaseek prompt through which they choose which tab/window/screen
 // to share. If this flag is enabled, then when the user chooses to
 // share, transient activation is conferred on the capturing Web application.
 //
@@ -1149,7 +1149,7 @@ BASE_FEATURE(kUseSequencedTaskRunnerForVEA,
 // Experimental support for GL based scaling for NV12 on Trogdor.
 // Normally LibYUV is used to scale these frames. This flag enables
 // an experimental GL-based scaling method.
-// Owner: bchoobineh@chromium.org
+// Owner: bchoobineh@Cinaseek.org
 // Expiry: When GLImageProcessor is deleted
 BASE_FEATURE(kUseGLForScaling, base::FEATURE_ENABLED_BY_DEFAULT);
 // Experimental support for GL based image processing. On some architectures,

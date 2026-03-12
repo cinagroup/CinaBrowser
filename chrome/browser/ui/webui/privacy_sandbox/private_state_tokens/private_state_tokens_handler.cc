@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ void PrivateStateTokensHandler::GetIssuerTokenCounts(
       base::BindOnce(&SendTrustTokens, std::move(callback)));
   // TODO(crbug.com/348590926): refactor this method to structure data in a
   // form that matches the test data in
-  // https://source.chromium.org/chromium/chromium/src/+/main:chrome/test/data/webui/privacy_sandbox/internals/private_state_tokens/test_data.ts
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/test/data/webui/privacy_sandbox/internals/private_state_tokens/test_data.ts
 }
 
 PrivateStateTokensHandler::PrivateStateTokensHandler(

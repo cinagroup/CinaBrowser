@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1367,7 +1367,7 @@ bool SchedulerStateMachine::ShouldTriggerBeginImplFrameDeadlineImmediately()
 
   // TODO(XXX): This condition should not need to be there. There was an attempt
   // to remove it, which was reverted due to regressions (see
-  // https://chromium-review.googlesource.com/c/chromium/src/+/1211664).
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1211664).
   // Investigate why this is the case.
   if (!needs_redraw_)
     return false;

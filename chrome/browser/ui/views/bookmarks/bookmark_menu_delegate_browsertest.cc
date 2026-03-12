@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -498,7 +498,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropAfterNode) {
   gfx::Point menu_loc;
   views::View::ConvertPointToScreen(root_item, &menu_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(menu_loc),
                                    gfx::PointF(menu_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -537,7 +537,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropOnNode) {
   gfx::Point menu_loc;
   views::View::ConvertPointToScreen(root_item, &menu_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(menu_loc),
                                    gfx::PointF(menu_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -577,7 +577,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropBeforeNode) {
   gfx::Point menu_loc;
   views::View::ConvertPointToScreen(root_item, &menu_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(menu_loc),
                                    gfx::PointF(menu_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -616,7 +616,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DropCallbackModelChanged) {
   gfx::Point menu_loc;
   views::View::ConvertPointToScreen(root_item, &menu_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(menu_loc),
                                    gfx::PointF(menu_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -642,7 +642,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropInvalid) {
   LoadAllMenus(root_item);
 
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(), gfx::PointF(),
                                    ui::DragDropTypes::DRAG_COPY);
 
@@ -721,7 +721,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropAfterManagedNode) {
   ASSERT_EQ(managed_folder_menu->title(), managed_node()->GetTitle());
 
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(), gfx::PointF(),
                                    ui::DragDropTypes::DRAG_LINK);
   // Calling `CanDrop()` is required as it sets `drop_data_`.
@@ -773,7 +773,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkMenuDelegateTest, DragAndDropBeforeOtherNode) {
             model()->account_other_node()->GetTitle());
 
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(), gfx::PointF(),
                                    ui::DragDropTypes::DRAG_LINK);
   // Calling `CanDrop()` is required as it sets `drop_data_`.

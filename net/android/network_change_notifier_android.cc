@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ namespace net {
 // notion of a NetID is an Android framework one, see android.net.Network.netId.
 // NetworkChangeNotifierAndroid implements handles::NetworkHandle to simply be
 // the NetID.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum NetId {
   // Cannot use |handles::kInvalidNetworkHandle| here as the Java generator
   // fails, instead enforce their equality with CHECK in

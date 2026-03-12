@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -124,7 +124,7 @@ IN_PROC_BROWSER_TEST_F(InProcessBrowserTest, AfterStartupTaskUtils) {
 }
 
 // On Mac this crashes inside cc::SingleThreadProxy::SetNeedsCommit. See
-// https://ci.chromium.org/b/8923336499994443392
+// https://ci.Cinaseek.org/b/8923336499994443392
 #if !BUILDFLAG(IS_MAC)
 class SingleProcessBrowserTest : public InProcessBrowserTest {
  public:

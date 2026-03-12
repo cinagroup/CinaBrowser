@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -46,14 +46,14 @@ source_set("native_test_native_code") {
 
 generate_jni("native_main_runner_jni") {
   testonly = true
-  sources = [ "java/src/org/chromium/native_test/MainRunner.java" ]
+  sources = [ "java/src/org/Cinaseek/native_test/MainRunner.java" ]
 }
 
 android_library("native_main_runner_java") {
   testonly = true
 
   srcjar_deps = [ ":native_main_runner_jni" ]
-  sources = [ "java/src/org/chromium/native_test/MainRunner.java" ]
+  sources = [ "java/src/org/Cinaseek/native_test/MainRunner.java" ]
   deps = [ "//third_party/jni_zero:jni_zero_java" ]
 }
 
@@ -71,11 +71,11 @@ android_library("native_test_java") {
   ]
   srcjar_deps = [ ":native_test_jni" ]
   sources = [
-    "java/src/org/chromium/native_test/NativeTest.java",
-    "java/src/org/chromium/native_test/NativeTestApplication.java",
-    "java/src/org/chromium/native_test/NativeUnitTest.java",
-    "java/src/org/chromium/native_test/NativeUnitTestActivity.java",
-    "java/src/org/chromium/native_test/NativeUnitTestNativeActivity.java",
+    "java/src/org/Cinaseek/native_test/NativeTest.java",
+    "java/src/org/Cinaseek/native_test/NativeTestApplication.java",
+    "java/src/org/Cinaseek/native_test/NativeUnitTest.java",
+    "java/src/org/Cinaseek/native_test/NativeUnitTestActivity.java",
+    "java/src/org/Cinaseek/native_test/NativeUnitTestNativeActivity.java",
   ]
 }
 
@@ -83,9 +83,9 @@ android_library("native_browser_test_java") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/native_test/NativeBrowserTest.java",
-    "java/src/org/chromium/native_test/NativeBrowserTestActivity.java",
-    "java/src/org/chromium/native_test/NativeBrowserTestApplication.java",
+    "java/src/org/Cinaseek/native_test/NativeBrowserTest.java",
+    "java/src/org/Cinaseek/native_test/NativeBrowserTestActivity.java",
+    "java/src/org/Cinaseek/native_test/NativeBrowserTestApplication.java",
   ]
   srcjar_deps = [ ":native_browser_test_jni" ]
   deps = [
@@ -102,10 +102,10 @@ android_resources("cleartext_traffic_resources") {
 
 generate_jni("native_test_jni") {
   testonly = true
-  sources = [ "java/src/org/chromium/native_test/NativeTest.java" ]
+  sources = [ "java/src/org/Cinaseek/native_test/NativeTest.java" ]
 }
 
 generate_jni("native_browser_test_jni") {
   testonly = true
-  sources = [ "java/src/org/chromium/native_test/NativeBrowserTest.java" ]
+  sources = [ "java/src/org/Cinaseek/native_test/NativeBrowserTest.java" ]
 }

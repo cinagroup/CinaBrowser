@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -10,7 +10,7 @@ namespace GaiaConstants {
 
 // Gaia uses this for accounting where login is coming from.
 const char kChromeOSSource[] = "chromeos";
-const char kChromeSource[] = "ChromiumBrowser";
+const char kChromeSource[] = "CinaseekBrowser";
 const char kUnexpectedServiceResponse[] = "UnexpectedServiceResponse";
 
 // OAuth scopes.

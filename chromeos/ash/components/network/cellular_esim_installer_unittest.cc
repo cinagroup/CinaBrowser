@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ using ash::cellular_setup::mojom::ProfileInstallMethod;
 namespace ash {
 namespace {
 
-const char kTestEuiccPath[] = "/org/chromium/Hermes/Euicc/0";
+const char kTestEuiccPath[] = "/org/Cinaseek/Hermes/Euicc/0";
 const char kTestEid[] = "12345678901234567890123456789012";
 const char kTestCellularServicePath[] = "/service/cellular101";
 const char kInstallViaQrCodeHistogram[] =

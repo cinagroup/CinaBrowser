@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/protobuf/proto_library.gni")
 
 config("federated_compute_include") {
   include_dirs = [
-    "chromium",
+    "Cinaseek",
     "src",
   ]
 }
@@ -27,7 +27,7 @@ proto_library("confidential_compute_proto") {
   ]
 
   import_dirs = [
-    "//third_party/oak/chromium",
+    "//third_party/oak/Cinaseek",
     "//third_party/protobuf/src",
   ]
 
@@ -46,15 +46,15 @@ source_set("confidential_compute") {
   ]
 
   sources = [
-    "chromium/fcp/confidentialcompute/cose.cc",
+    "Cinaseek/fcp/confidentialcompute/cose.cc",
     "src/fcp/base/base_name.cc",
     "src/fcp/base/digest.cc",
     "src/fcp/base/monitoring.cc",
     "src/fcp/confidentialcompute/crypto.cc",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":federated_compute_include" ]
 
@@ -73,10 +73,10 @@ source_set("confidential_compute") {
 
 source_set("confidential_compute_crypto_test_util") {
   public = [ "src/fcp/confidentialcompute/crypto_test_util.h" ]
-  sources = [ "chromium/fcp/confidentialcompute/crypto_test_util.cc" ]
+  sources = [ "Cinaseek/fcp/confidentialcompute/crypto_test_util.cc" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":federated_compute_include" ]
 
@@ -90,11 +90,11 @@ source_set("confidential_compute_crypto_test_util") {
 if (!is_win && !is_android && !is_ios && !is_fuchsia) {
   test("federated_compute_tests") {
     testonly = true
-    public = [ "chromium/fcp/testing/testing.h" ]
+    public = [ "Cinaseek/fcp/testing/testing.h" ]
 
     sources = [
-      "chromium/fcp/confidentialcompute/cose_test.cc",
-      "chromium/fcp/testing/testing.cc",
+      "Cinaseek/fcp/confidentialcompute/cose_test.cc",
+      "Cinaseek/fcp/testing/testing.cc",
     ]
 
     deps = [

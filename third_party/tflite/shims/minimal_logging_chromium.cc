@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace logging_internal {
 
 namespace {
 
-int GetChromiumLogSeverity(LogSeverity severity) {
+int GetCinaseekLogSeverity(LogSeverity severity) {
   switch (severity) {
     case TFLITE_LOG_VERBOSE:
       return ::logging::LOGGING_VERBOSE;
@@ -44,10 +44,10 @@ LogSeverity MinimalLogger::minimum_log_severity_ = TFLITE_LOG_INFO;
 void MinimalLogger::LogFormatted(LogSeverity severity,
                                  const char* format,
                                  va_list args) {
-  const int chromium_log_severity = GetChromiumLogSeverity(severity);
-  if (chromium_log_severity >= ::logging::GetMinLogLevel()) {
+  const int Cinaseek_log_severity = GetCinaseekLogSeverity(severity);
+  if (Cinaseek_log_severity >= ::logging::GetMinLogLevel()) {
     auto formatted_message = ::base::StringPrintV(format, args);
-    ::logging::RawLog(chromium_log_severity, formatted_message.c_str());
+    ::logging::RawLog(Cinaseek_log_severity, formatted_message.c_str());
   }
 }
 

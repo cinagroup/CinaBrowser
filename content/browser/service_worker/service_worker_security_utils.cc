@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,7 +72,7 @@ void CheckOnUpdateUrls(const GURL& url, const blink::StorageKey& key) {
   //
   // Consider adding a DHCECK here once the last of those conditions is
   // resolved. See
-  // https://chromium-review.googlesource.com/c/chromium/src/+/4378900/4.
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4378900/4.
 #endif
 }
 

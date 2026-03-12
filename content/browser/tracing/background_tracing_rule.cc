@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "content/browser/tracing/background_tracing_rule.h"
@@ -124,7 +124,7 @@ void BackgroundTracingRule::Setup(
     rule_name_ = config.name();
   } else {
     rule_name_ = base::StrCat(
-        {"org.chromium.background_tracing.", GetDefaultRuleName()});
+        {"org.Cinaseek.background_tracing.", GetDefaultRuleName()});
   }
 }
 

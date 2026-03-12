@@ -9,8 +9,8 @@ Document
 ++++++DataItem Name='Engine' GridItem.Column=1 GridItem.ColumnSpan=1 GridItem.Row=0 GridItem.RowSpan=1 GridItem.ContainingGrid='Browser and Engine'
 ++++++++Text Name='Engine' IsControlElement=false
 ++++DataItem IsControlElement=false
-++++++DataItem Name='Chrome' GridItem.Column=0 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='Browser and Engine'
-++++++++Text Name='Chrome' IsControlElement=false
+++++++DataItem Name='Cinaseek' GridItem.Column=0 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='Browser and Engine'
+++++++++Text Name='Cinaseek' IsControlElement=false
 ++++++DataItem Name='Blink' GridItem.Column=1 GridItem.ColumnSpan=1 GridItem.Row=1 GridItem.RowSpan=1 GridItem.ContainingGrid='Browser and Engine'
 ++++++++Text Name='Blink' IsControlElement=false
 ++++DataItem IsControlElement=false

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ constexpr std::pair<uint32_t, uint32_t> kMinRandrVersion{1, 5};
 
 }  // namespace
 
-// This class uses Chromium X11 utilities which create global singletons, so
+// This class uses Cinaseek X11 utilities which create global singletons, so
 // this code needs to run on the UI thread.
 class ActiveDisplayMonitorX11::Core : public x11::EventObserver {
  public:

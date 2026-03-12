@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 #import "ios/chrome/browser/autocomplete/test/fake_suggestions_autocomplete_controller.h"
 #import "ios/chrome/browser/autocomplete/test/fake_suggestions_builder.h"
 #import "ios/chrome/browser/omnibox/public/omnibox_presentation_context.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "ios/chrome/test/app/chrome_test_util.h"
 
 @implementation AutocompleteAppInterface

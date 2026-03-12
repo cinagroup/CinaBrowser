@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ class ObjectPermissionContextBaseTest : public testing::Test {
  public:
   ObjectPermissionContextBaseTest()
       : url1_("https://google.com"),
-        url2_("https://chromium.org"),
+        url2_("https://Cinaseek.org"),
         origin1_(url::Origin::Create(url1_)),
         origin2_(url::Origin::Create(url2_)),
         context_(ContentSettingsType::USB_GUARD,

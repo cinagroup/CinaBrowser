@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -338,7 +338,7 @@ source_set("tests") {
     ]
   }
 
-  # USB does not compile on Chromium without blink.
+  # USB does not compile on Cinaseek without blink.
   if (use_blink) {
     sources += [
       "public/cpp/usb/usb_utils_unittest.cc",
@@ -462,7 +462,7 @@ source_set("test_support") {
 if (is_android) {
   generate_jni("device_service_jni_headers") {
     sources = [
-      "android/java/src/org/chromium/services/device/InterfaceRegistrar.java",
+      "android/java/src/org/Cinaseek/services/device/InterfaceRegistrar.java",
     ]
   }
 
@@ -479,7 +479,7 @@ if (is_android) {
       "//services:*",
     ]
     sources = [
-      "android/java/src/org/chromium/services/device/InterfaceRegistrar.java",
+      "android/java/src/org/Cinaseek/services/device/InterfaceRegistrar.java",
     ]
     srcjar_deps = [ ":device_service_jni_headers" ]
     deps = [

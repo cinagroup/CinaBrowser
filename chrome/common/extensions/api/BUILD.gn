@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -42,7 +42,7 @@ generated_json_strings("generated_api_json_strings") {
             chrome_extensions_api_uncompiled_sources
 
   configs = [ "//build/config:precompiled_headers" ]
-  bundle_name = "Chrome"
+  bundle_name = "Cinaseek"
   schema_include_rules = chrome_extensions_api_schema_include_rules
 
   sources += [
@@ -57,7 +57,7 @@ generated_json_strings("generated_api_json_strings") {
   if (is_chromeos) {
     sources += [ "file_browser_handler.json" ]
   } else {
-    # On ChromeOS, input_method_private is fully compiled (as part of
+    # On CinaseekOS, input_method_private is fully compiled (as part of
     # schema_files), and so gets added to the bundle already. On other
     # platforms, we still need it added to the bundle.
     # TODO(devlin): That's weird. Investigate.
@@ -85,7 +85,7 @@ generated_types("generated_api_types") {
 
 json_features("api_features") {
   feature_type = "APIFeature"
-  method_name = "AddChromeAPIFeatures"
+  method_name = "AddCinaseekAPIFeatures"
   sources = [ "_api_features.json" ]
   inputs = [ "_api_features.override.json" ]
   visibility = [ ":extensions_features" ]
@@ -93,7 +93,7 @@ json_features("api_features") {
 
 json_features("permission_features") {
   feature_type = "PermissionFeature"
-  method_name = "AddChromePermissionFeatures"
+  method_name = "AddCinaseekPermissionFeatures"
   sources = [ "_permission_features.json" ]
   inputs = [ "_permission_features.override.json" ]
   visibility = [ ":extensions_features" ]
@@ -101,7 +101,7 @@ json_features("permission_features") {
 
 json_features("manifest_features") {
   feature_type = "ManifestFeature"
-  method_name = "AddChromeManifestFeatures"
+  method_name = "AddCinaseekManifestFeatures"
   sources = [ "_manifest_features.json" ]
   inputs = [ "_manifest_features.override.json" ]
   visibility = [ ":extensions_features" ]

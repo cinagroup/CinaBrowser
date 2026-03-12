@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,9 +40,9 @@ FakeApiBindingsImpl::RunAndReturnConnectedPort(std::string_view name) {
 }
 
 void FakeApiBindingsImpl::GetAll(GetAllCallback callback) {
-  std::vector<chromium::cast::ApiBinding> bindings_clone;
+  std::vector<Cinaseek::cast::ApiBinding> bindings_clone;
   for (auto& binding : bindings_) {
-    chromium::cast::ApiBinding binding_clone;
+    Cinaseek::cast::ApiBinding binding_clone;
     zx_status_t status = binding.Clone(&binding_clone);
     ZX_CHECK(status == ZX_OK, status);
     bindings_clone.push_back(std::move(binding_clone));

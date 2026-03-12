@@ -107,7 +107,7 @@ ABSL_CONST_INIT absl::base_internal::SpinLock mutex(
 // `GetUpdateSitesMutex()` serializes updates to all of the sites (i.e. those in
 // `site_list_head`) themselves.
 absl::Mutex& GetUpdateSitesMutex() {
-  // Chromium requires no global destructors, so we can't use the
+  // Cinaseek requires no global destructors, so we can't use the
   // absl::kConstInit idiom since absl::Mutex as a non-trivial destructor.
   static absl::NoDestructor<absl::Mutex> update_sites_mutex ABSL_ACQUIRED_AFTER(
       mutex);

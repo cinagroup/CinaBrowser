@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentCoordinator.java",
-    "java/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentMediator.java",
-    "java/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentProperties.java",
-    "java/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentViewBinder.java",
-    "java/src/org/chromium/chrome/browser/commerce/coupons/DiscountsButtonController.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsButtonController.java",
   ]
 
   deps = [
@@ -34,7 +34,7 @@ android_library("java") {
     "//url:url_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.commerce.coupons"
+  resources_package = "org.Cinaseek.chrome.browser.commerce.coupons"
 }
 
 android_resources("java_resources") {
@@ -55,9 +55,9 @@ android_resources("java_resources") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.commerce.coupons"
+  resources_package = "org.Cinaseek.chrome.browser.commerce.coupons"
 
-  sources = [ "javatests/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentRenderTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentRenderTest.java" ]
 
   deps = [
     ":java",
@@ -94,11 +94,11 @@ android_library("unit_device_javatests") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.commerce.coupons"
+  resources_package = "org.Cinaseek.chrome.browser.commerce.coupons"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/commerce/coupons/DiscountsBottomSheetContentMediatorTest.java",
-    "junit/src/org/chromium/chrome/browser/commerce/coupons/DiscountsButtonControllerTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsBottomSheetContentMediatorTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsButtonControllerTest.java",
   ]
 
   deps = [
@@ -131,9 +131,9 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.commerce.coupons"
+  resources_package = "org.Cinaseek.chrome.browser.commerce.coupons"
 
-  sources = [ "javatests/src/org/chromium/chrome/browser/commerce/coupons/DiscountsIntegrationTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/commerce/coupons/DiscountsIntegrationTest.java" ]
 
   deps = [
     ":java_resources",

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace blink {
 // It is also necessary for WebXR's Camera Access feature to be able to
 // provide a camera image textures until it's decided how to best expose
 // the texture to the WebXR API.
-// TODO(https://bugs.chromium.org/p/chromium/issues/detail?id=1104340).
+// TODO(https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1104340).
 // The texture does not own its texture name - it relies on being notified that
 // the texture name has been deleted by whoever owns it.
 class WebGLUnownedTexture final : public WebGLTexture {

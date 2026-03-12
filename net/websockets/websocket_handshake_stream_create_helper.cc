@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ WebSocketHandshakeStreamCreateHelper::CreateHttp2Stream(
 
 std::unique_ptr<WebSocketHandshakeStreamBase>
 WebSocketHandshakeStreamCreateHelper::CreateHttp3Stream(
-    std::unique_ptr<QuicChromiumClientSession::Handle> session,
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session,
     std::set<std::string> dns_aliases) {
   std::vector<std::string> extensions(
       1, "permessage-deflate; client_max_window_bits");

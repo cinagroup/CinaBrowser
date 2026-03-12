@@ -1,15 +1,15 @@
-# GRPC Chromium GN build file
+# GRPC Cinaseek GN build file
 
 # This file has been automatically generated from a template file.
 # Please look at the templates directory instead.
-# See //third_party/grpc/README.chromium for more information.
+# See //third_party/grpc/README.Cinaseek for more information.
 
 declare_args() {
   # TODO(169395837): Somehow gRPC symbols cannot be found on Android.
   # Keep using static linking for now.
   # In windows, mac and iOS use static linking.
-  # Use static linking on Chrome OS as a workaround for the symbol lookup
-  # error(crbug/1241330) due to a gRPC version mismatch between what Chrome
+  # Use static linking on Cinaseek OS as a workaround for the symbol lookup
+  # error(crbug/1241330) due to a gRPC version mismatch between what Cinaseek
   # uses and what CrOS provides.
   grpc_use_static_linking =
       is_android || is_win || is_chromeos || is_mac || is_ios

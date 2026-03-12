@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/Libfuzzer Upload Linux ASan/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Libfuzzer Upload Linux ASan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fuzz",
+              "builder_group": "Cinaseek.fuzz",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_clang",
+                "config": "Cinaseek_clang",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,13 +36,13 @@
         {
           "bucket": "ci",
           "builder": "Libfuzzer Upload Linux ASan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "linux-libfuzzer-asan-rel",
-          "group": "tryserver.chromium.linux"
+          "group": "tryserver.Cinaseek.linux"
         }
       ],
       "retry_failed_shards": true
@@ -56,7 +56,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -66,14 +66,14 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.fuzz",
+  "builder_group": "Cinaseek.fuzz",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium/fuzz",
+  "recipe": "Cinaseek/fuzz",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "upload_bucket": "chromium-browser-libfuzzer",
+  "upload_bucket": "Cinaseek-browser-libfuzzer",
   "upload_directory": "asan"
 }

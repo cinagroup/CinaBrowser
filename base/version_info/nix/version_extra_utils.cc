@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ std::string GetAppName(base::Environment& env) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr std::string_view kAppName = "com.google.Chrome";
 #else
-  static constexpr std::string_view kAppName = "org.chromium.Chromium";
+  static constexpr std::string_view kAppName = "org.Cinaseek.Cinaseek";
 #endif
 
   std::string_view suffix;
@@ -64,7 +64,7 @@ std::string GetSessionNamePrefix(base::Environment& env) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr std::string_view kSessionNamePrefix = "chrome";
 #else
-  static constexpr std::string_view kSessionNamePrefix = "chromium";
+  static constexpr std::string_view kSessionNamePrefix = "Cinaseek";
 #endif
 
   std::string_view suffix;

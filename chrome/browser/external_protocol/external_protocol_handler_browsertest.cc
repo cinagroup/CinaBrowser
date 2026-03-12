@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -187,7 +187,7 @@ IN_PROC_BROWSER_TEST_F(ExternalProtocolHandlerBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(ExternalProtocolHandlerBrowserTest,
                        ProtocolFailureEmitsConsoleLog) {
-// Only on Mac and Windows is there a way for Chromium to know whether a
+// Only on Mac and Windows is there a way for Cinaseek to know whether a
 // protocol handler is registered ahead of time.
 #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
   content::WebContentsConsoleObserver observer(web_content());

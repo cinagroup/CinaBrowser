@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -243,7 +243,7 @@ class AbstractOriginTest : public testing::Test {
     // TODO(lukasza): Consider preserving the hostname when serializing file:
     // URLs.  Dropping the hostname seems incompatible with section 6 of
     // rfc6454.  Even though section 4 says that "the implementation MAY
-    // return an implementation-defined value", it seems that Chromium
+    // return an implementation-defined value", it seems that Cinaseek
     // implementation *does* include the hostname in the origin SchemeHostPort
     // tuple.
     if (expected_tuple.scheme() != kFileScheme || expected_tuple.host() == "") {

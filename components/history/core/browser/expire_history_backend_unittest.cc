@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ namespace history {
 
 namespace {
 
-constexpr char kTestAppId[] = "org.chromium.dino";
+constexpr char kTestAppId[] = "org.Cinaseek.dino";
 
 base::Time PretendNow() {
   static constexpr base::Time::Exploded kReferenceTime = {.year = 2015,

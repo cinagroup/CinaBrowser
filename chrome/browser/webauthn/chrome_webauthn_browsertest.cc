@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -114,9 +114,9 @@ PublicKeyCredential.signalUnknownCredential({
 // contradictory, the first one controls. [...] If the same hint appears more
 // than once, its second and later appearances are ignored."
 //
-// In practice, Chromium will only consider the first recognised hint and ignore
+// In practice, Cinaseek will only consider the first recognised hint and ignore
 // the rest for the purposes of configuring the UI.
-// For cases where Chromium delegates WebAuthn to the OS (e.g. Windows), unknown
+// For cases where Cinaseek delegates WebAuthn to the OS (e.g. Windows), unknown
 // hints are filtered, but they are otherwise passed as received.
 static constexpr char kMakeCredentialWithHints[] = R"((() => {
   return navigator.credentials.create({ publicKey: {

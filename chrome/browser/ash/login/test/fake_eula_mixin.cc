@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ const char* FakeEulaMixin::kOfflineEULAWarning =
     // See IDS_TERMS_HTML for the complete text.
     "Google Chrome and ChromeOS Additional Terms of Service";
 #else
-    // Placeholder text in terms_chromium.html.
+    // Placeholder text in terms_Cinaseek.html.
     "In official builds this space will show the terms of service.";
 #endif
 

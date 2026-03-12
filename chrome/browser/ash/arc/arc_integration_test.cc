@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,8 +45,8 @@ IN_PROC_BROWSER_TEST_F(ArcIntegrationTest, CreateWindow) {
       "/usr/local/libexec/tast/apks/local/cros/ArcKeyCharacterMapTest.apk");
   ASSERT_TRUE(arc_mixin().InstallApk(kTestApk));
 
-  constexpr char kActivity[] = "org.chromium.arc.testapp.kcm.MainActivity";
-  constexpr char kPackage[] = "org.chromium.arc.testapp.kcm";
+  constexpr char kActivity[] = "org.Cinaseek.arc.testapp.kcm.MainActivity";
+  constexpr char kPackage[] = "org.Cinaseek.arc.testapp.kcm";
 
   aura::Window* window =
       arc_mixin().LaunchAndWaitForWindow(kPackage, kActivity);

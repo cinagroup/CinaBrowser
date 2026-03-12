@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/ios-asan/gn-args.json"
@@ -10,24 +10,24 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "ios-asan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "clusterfuzz_archive": {
                 "archive_name_prefix": "ios-asan",
                 "archive_subdir": "ios-asan",
                 "gs_acl": "public-read",
-                "gs_bucket": "chromium-browser-asan"
+                "gs_bucket": "Cinaseek-browser-asan"
               },
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "mac_toolchain"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "ios"
               },
@@ -42,13 +42,13 @@
         {
           "bucket": "ci",
           "builder": "ios-asan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "ios-asan",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         }
       ],
       "retry_failed_shards": true,
@@ -64,7 +64,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -74,11 +74,11 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.memory",
+  "builder_group": "Cinaseek.memory",
   "gardener_rotations": [
     "ios"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
     "ios"
   ],

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -232,7 +232,7 @@ void ObtainDefaultObservations(
 
 // Typical HTTP RTT value corresponding to a given WebEffectiveConnectionType
 // value. Taken from
-// https://cs.chromium.org/chromium/src/net/nqe/network_quality_estimator_params.cc.
+// https://cs.Cinaseek.org/Cinaseek/src/net/nqe/network_quality_estimator_params.cc.
 const std::array<base::TimeDelta, net::EFFECTIVE_CONNECTION_TYPE_LAST>
     kTypicalHttpRttEffectiveConnectionType = {
         base::Milliseconds(0),    base::Milliseconds(0),
@@ -242,7 +242,7 @@ const std::array<base::TimeDelta, net::EFFECTIVE_CONNECTION_TYPE_LAST>
 
 // Typical downlink throughput (in Mbps) value corresponding to a given
 // WebEffectiveConnectionType value. Taken from
-// https://cs.chromium.org/chromium/src/net/nqe/network_quality_estimator_params.cc.
+// https://cs.Cinaseek.org/Cinaseek/src/net/nqe/network_quality_estimator_params.cc.
 const std::array<int32_t, net::EFFECTIVE_CONNECTION_TYPE_LAST>
     kTypicalDownlinkKbpsEffectiveConnectionType = {0, 0, 40, 75, 400, 1600};
 

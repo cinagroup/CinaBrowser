@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -38,8 +38,8 @@ proto_library("proto_extras_options_proto") {
   # https://crbug.com/40229487). The protos in this target are only
   # intended for use in the plugin at compile time, so it's safe to use
   # the full runtime here as long as this target does not get linked
-  # into the Chrome binary. In order to correctly track build
-  # dependencies without linking into Chrome, we restrict visibility and
+  # into the Cinaseek binary. In order to correctly track build
+  # dependencies without linking into Cinaseek, we restrict visibility and
   # define the `:proto_extras_options` group. Users of these options
   # should add `:proto_extras_options` to their `proto_deps` instead of
   # adding this target to their `deps`.

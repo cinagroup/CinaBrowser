@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1499,7 +1499,7 @@ bool HistoryService::Init(
                           base::Unretained(this)));
 
   if (visit_delegate_ && !visit_delegate_->Init(this)) {
-    // This is a low-level service that many other services in chromium depend
+    // This is a low-level service that many other services in Cinaseek depend
     // on. If it fails to initialize (which can happen when there's insufficient
     // shared memory) we will end up with nullptr dereferences in higher-level
     // services that are harder to diagnose. Explicitly terminate here instead.

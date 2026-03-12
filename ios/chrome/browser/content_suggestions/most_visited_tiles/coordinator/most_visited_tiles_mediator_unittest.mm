@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -194,7 +194,7 @@ class MostVisitedTilesMediatorTest : public PlatformTest {
 
 // Tests that the command is sent to the loader when opening a most visited.
 TEST_F(MostVisitedTilesMediatorTest, TestOpenMostVisited) {
-  GURL url = GURL("http://chromium.org");
+  GURL url = GURL("http://Cinaseek.org");
   MostVisitedItem* item = [[MostVisitedItem alloc] init];
   item.URL = url;
   MostVisitedTileView* view =
@@ -223,7 +223,7 @@ TEST_F(MostVisitedTilesMediatorTest, TestPinSiteInProductHelpCondition) {
       .WillRepeatedly(testing::Return(true));
 
   // Setup the URL and history service.
-  GURL kUrl("https://www.chromium.org/");
+  GURL kUrl("https://www.Cinaseek.org/");
   history::HistoryService* history_service =
       ios::HistoryServiceFactory::GetForProfile(
           profile_.get(), ServiceAccessType::EXPLICIT_ACCESS);
@@ -240,7 +240,7 @@ TEST_F(MostVisitedTilesMediatorTest, TestPinSiteInProductHelpCondition) {
 
   // Create a section with the NTPTile with source TOP_SITES.
   ntp_tiles::NTPTile tile;
-  tile.title = u"Chromium";
+  tile.title = u"Cinaseek";
   tile.url = kUrl;
   tile.source = ntp_tiles::TileSource::TOP_SITES;
   ntp_tiles::NTPTilesVector tiles_vector;

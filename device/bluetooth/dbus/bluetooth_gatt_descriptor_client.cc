@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,10 +30,10 @@ const char kValueProperty[] = "Value";
 
 // static
 const char BluetoothGattDescriptorClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 // static
 const char BluetoothGattDescriptorClient::kUnknownDescriptorError[] =
-    "org.chromium.Error.UnknownDescriptor";
+    "org.Cinaseek.Error.UnknownDescriptor";
 
 BluetoothGattDescriptorClient::Properties::Properties(
     dbus::ObjectProxy* object_proxy,

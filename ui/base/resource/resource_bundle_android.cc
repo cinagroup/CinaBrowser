@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ bool LoadLocaleResourcesForLocaleAndGender(
     ResourceBundle::FdAndRegion* webview_locale_pack,
     ResourceBundle::FdAndRegion* non_webview_locale_pack,
     std::vector<std::unique_ptr<ResourceHandle>>* locale_resources_data) {
-  // Some Chromium apps have two sets of .pak files for their UI strings, i.e.:
+  // Some Cinaseek apps have two sets of .pak files for their UI strings, i.e.:
   //
   // a) WebView strings, which are always stored uncompressed under
   //    assets/stored-locales/ inside the APK or App Bundle.

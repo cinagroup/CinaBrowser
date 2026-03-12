@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ class AXPlatformTreeManagerDelegate;
 namespace content {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.browser.accessibility
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.browser.accessibility
 enum ScrollDirection { FORWARD, BACKWARD, UP, DOWN, LEFT, RIGHT };
 
 // From android.view.accessibility.AccessibilityNodeInfo in Java:

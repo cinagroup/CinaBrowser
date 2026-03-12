@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace signin {
 // numeric values should never be reused.
 //
 // This enum is also used in Java.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.identitymanager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.identitymanager
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AccountManagedStatusFinderOutcome
 //
 // LINT.IfChange(AccountManagedStatusFinderOutcome)

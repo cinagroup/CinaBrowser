@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ NSString* const kCollaborationSigninHeaderBackground =
   self.headerImage = MakeSymbolMulticolor(
       CustomSymbolWithPointSize(kMulticolorChromeballSymbol, kHeaderImageSize));
 #else
-  self.bannerName = kChromiumSigninBannerImage;
+  self.bannerName = kCinaseekSigninBannerImage;
 #endif
 
   // Set `self.titleText` and `self.subtitleText`.

@@ -17,11 +17,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_unittests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_unittests/",
@@ -47,11 +47,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "gl_tests",
@@ -81,11 +81,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gl_unittests",
         "test_id_prefix": "ninja://ui/gl:gl_unittests/"
@@ -105,11 +105,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gpu_unittests",
         "test_id_prefix": "ninja://gpu:gpu_unittests/"
@@ -133,11 +133,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "services_unittests",
         "test_id_prefix": "ninja://services:services_unittests/"
@@ -163,11 +163,11 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "browser_tests",
         "test_id_prefix": "ninja://chrome/test:browser_tests/"
@@ -204,12 +204,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -253,12 +253,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -302,12 +302,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -343,12 +343,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -383,12 +383,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -425,12 +425,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 20
         },
         "test": "telemetry_gpu_integration_test",
@@ -467,12 +467,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test",
@@ -509,12 +509,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -549,12 +549,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -589,12 +589,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -629,12 +629,12 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"

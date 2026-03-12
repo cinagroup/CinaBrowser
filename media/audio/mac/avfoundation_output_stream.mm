@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -118,7 +118,7 @@ bool AVFoundationOutputStream::Open() {
   }
 
   objc_storage_->queue = dispatch_queue_create(
-      "com.chromium.media.AVFoundationOutputStream",
+      "com.Cinaseek.media.AVFoundationOutputStream",
       dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL,
                                               QOS_CLASS_USER_INTERACTIVE, 0));
   if (!objc_storage_->queue) {

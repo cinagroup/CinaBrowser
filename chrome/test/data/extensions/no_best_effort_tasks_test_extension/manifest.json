@@ -8,6 +8,6 @@
     "service_worker": "background.js"
   },
   "externally_connectable": {
-    "matches": ["*://*.chromium.org/*"]
+    "matches": ["*://*.Cinaseek.org/*"]
   }
 }

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ struct COMPONENT_EXPORT(GFX) NativePixmapHandle {
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
   // The modifier is retrieved from GBM library and passed to EGL driver.
   // Generally it's platform specific, and we don't need to modify it in
-  // Chromium code. Also one per plane per entry.
+  // Cinaseek code. Also one per plane per entry.
   uint64_t modifier = kNoModifier;
 
   // WebGPU can directly import the handle to create texture from it.

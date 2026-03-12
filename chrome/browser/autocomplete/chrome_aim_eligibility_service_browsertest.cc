@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1389,7 +1389,7 @@ IN_PROC_BROWSER_TEST_F(ChromeAimEligibilityServiceOAuthBrowserTest,
 
 // This test is not supported on ChromeOS since there isn't a way to clear the
 // primary account. See:
-// https://crsrc.org/c/components/signin/public/identity_manager/identity_test_utils.cc;?q=signin::ClearPrimaryAccount&ss=chromium
+// https://crsrc.org/c/components/signin/public/identity_manager/identity_test_utils.cc;?q=signin::ClearPrimaryAccount&ss=Cinaseek
 #if !BUILDFLAG(IS_CHROMEOS)
 IN_PROC_BROWSER_TEST_F(ChromeAimEligibilityServiceOAuthBrowserTest,
                        PrimaryAccountTracking) {
@@ -1529,7 +1529,7 @@ IN_PROC_BROWSER_TEST_F(ChromeAimEligibilityServiceOAuthBrowserTest,
 
 // This test is not supported on ChromeOS since there isn't a way to clear the
 // primary account. See:
-// https://crsrc.org/c/components/signin/public/identity_manager/identity_test_utils.cc;?q=signin::ClearPrimaryAccount&ss=chromium
+// https://crsrc.org/c/components/signin/public/identity_manager/identity_test_utils.cc;?q=signin::ClearPrimaryAccount&ss=Cinaseek
 #if !BUILDFLAG(IS_CHROMEOS)
 IN_PROC_BROWSER_TEST_F(ChromeAimEligibilityServiceOAuthBrowserTest,
                        AccountTracking) {

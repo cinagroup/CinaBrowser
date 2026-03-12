@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 namespace storage {
 
 // A database status code and optionally an error message. This status code
-// may have originated from the database engine or from the Chromium code. See
+// may have originated from the database engine or from the Cinaseek code. See
 // notes above `type_`.
 class DbStatus {
  public:
@@ -65,7 +65,7 @@ class DbStatus {
     kNotSupported = 3,
 
     // Generally speaking, indicates a programming error or unexpected state in
-    // Chromium. For example, an invalid object store ID is sent as a parameter
+    // Cinaseek. For example, an invalid object store ID is sent as a parameter
     // over IPC.
     kInvalidArgument = 4,
 

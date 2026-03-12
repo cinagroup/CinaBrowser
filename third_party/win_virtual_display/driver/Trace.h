@@ -40,6 +40,6 @@
 //
 
 #define MYDRIVER_TRACING_ID \
-  L"Microsoft\\UMDF2.25\\ChromiumVirtualDisplayDriver v1.0"
+  L"Microsoft\\UMDF2.25\\CinaseekVirtualDisplayDriver v1.0"
 
 #endif  // THIRD_PARTY_WIN_VIRTUAL_DISPLAY_DRIVER_TRACE_H_

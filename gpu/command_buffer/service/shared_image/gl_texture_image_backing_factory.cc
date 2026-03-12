@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -160,7 +160,7 @@ bool GLTextureImageBackingFactory::IsSupported(
 #if BUILDFLAG(USE_WEBGPU_ON_VULKAN_VIA_GL_INTEROP)
     if (enable_webgpu_on_vk_via_gl_interop_) {
       // WebGPU usages will be handled by ExternalVkImageBackingFactory when
-      // running in webgpu vk on chromium gl.
+      // running in webgpu vk on Cinaseek gl.
       return false;
     }
 #endif

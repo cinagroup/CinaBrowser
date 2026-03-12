@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.permissions
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.permissions
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: LocationAccuracy
 enum class GeolocationAccuracy {
   kPrecise = 0,

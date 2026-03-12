@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,14 +26,14 @@
 
 namespace media {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 enum class CodecType {
   kAny,
   kSecure,    // Note that all secure codecs are HW codecs.
   kSoftware,  // In some cases hardware codecs could hang the GPU process.
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 // GENERATED_JAVA_PREFIX_TO_STRIP: MEDIA_CODEC_
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.

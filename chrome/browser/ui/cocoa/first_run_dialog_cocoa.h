@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 // Class that acts as a controller for the modal first run dialog.
 // The dialog asks the user's explicit permission for reporting stats to help
-// us improve Chromium.
+// us improve Cinaseek.
 @interface FirstRunDialogController : NSWindowController
 
 - (BOOL)isStatsReportingEnabled;

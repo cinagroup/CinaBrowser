@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -280,8 +280,8 @@ template("cargo_crate") {
         output_name = _output_name
       }
 
-      # Don't import the `chromium` crate into third-party code.
-      no_chromium_prelude = true
+      # Don't import the `Cinaseek` crate into third-party code.
+      no_Cinaseek_prelude = true
 
       # Disable generating `..._clippy` targets for third-party code.
       no_clippy = true
@@ -318,9 +318,9 @@ template("cargo_crate") {
       # When the `invoker` doesn't specify `allow_unsafe`, then fall back to
       # allowing `unsafe`.  This avoids creating additional friction when a new
       # team experiments with Rust.  OTOH we enforce that when crates actually
-      # land in Chromium, then they need to explicitly declare their
+      # land in Cinaseek, then they need to explicitly declare their
       # `allow_unsafe` needs - this enforcement is done via presubmits under
-      # `third_party/rust/chromium_crates_io` (see
+      # `third_party/rust/Cinaseek_crates_io` (see
       # `CheckExplicitAllowUnsafeForAllCrates` in a `.py` module over there).
       allow_unsafe = true
       if (defined(invoker.allow_unsafe)) {
@@ -525,7 +525,7 @@ template("cargo_crate") {
     if (toolchain_for_rust_host_build_tools) {
       # The build script is only available to be built on the host, and we use
       # the rust_macro_toolchain for it to unblock building them while the
-      # Chromium stdlib is still being compiled.
+      # Cinaseek stdlib is still being compiled.
       rust_executable(_build_script_name) {
         crate_name = _build_script_name
         sources = invoker.build_sources
@@ -541,8 +541,8 @@ template("cargo_crate") {
           inputs = invoker.build_script_inputs
         }
 
-        # Don't import the `chromium` crate into third-party code.
-        no_chromium_prelude = true
+        # Don't import the `Cinaseek` crate into third-party code.
+        no_Cinaseek_prelude = true
 
         # Disable generating `..._clippy` targets for third-party code.
         no_clippy = true
@@ -566,7 +566,7 @@ template("cargo_crate") {
                                  "rustflags",
                                ])
         configs -= [
-          "//build/config/compiler:chromium_code",
+          "//build/config/compiler:Cinaseek_code",
 
           # Avoid generating profiling data for build scripts.
           #
@@ -580,7 +580,7 @@ template("cargo_crate") {
           # the same signal as an actual test.
           "//build/config/coverage:default_coverage",
         ]
-        configs += [ "//build/config/compiler:no_chromium_code" ]
+        configs += [ "//build/config/compiler:no_Cinaseek_code" ]
       }
     } else {
       not_needed(invoker,

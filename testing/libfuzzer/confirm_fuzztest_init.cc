@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,9 +29,9 @@ static void RealInitFunction(int argc, char const* const* argv) {
   static std::vector<char*> fuzztest_argv_data;
   static int fuzztest_argc;
   static char** fuzztest_argv;
-  // Fuzztest might refer to the command line later, by which time Chromium
+  // Fuzztest might refer to the command line later, by which time Cinaseek
   // may have altered it. Keep our own copy so that the data
-  // we pass into fuzztest remains valid, no matter what Chromium code
+  // we pass into fuzztest remains valid, no matter what Cinaseek code
   // does to the original.
   fuzztest_argv_strings.reserve(argc);
   fuzztest_argv_data.reserve(argc);

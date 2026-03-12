@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -233,7 +233,7 @@ BASE_FEATURE(kResizeCompat,
 // Controls ARCVM real time vcpu feature on a device with 3+ logical cores
 // online.
 // When you change the default, you also need to modify the chromeExtraAgas
-// in tast-tests/src/chromiumos/tast/local/bundles/cros/arc/cpu_set.go to
+// in tast-tests/src/Cinaseekos/tast/local/bundles/cros/arc/cpu_set.go to
 // add ArcRtVcpuQuadCore there. Otherwise, the test will start failing.
 BASE_FEATURE(kRtVcpuQuadCore,
              "ArcRtVcpuQuadCore",

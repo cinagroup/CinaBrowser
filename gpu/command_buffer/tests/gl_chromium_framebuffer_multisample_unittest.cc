@@ -1,10 +1,10 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 #include <stdint.h>
 
 #include "gpu/command_buffer/tests/gl_manager.h"
@@ -14,7 +14,7 @@
 
 namespace gpu {
 
-class GLChromiumFramebufferMultisampleTest : public testing::Test {
+class GLCinaseekFramebufferMultisampleTest : public testing::Test {
  protected:
   void SetUp() override { gl_.Initialize(GLManager::Options()); }
 
@@ -24,7 +24,7 @@ class GLChromiumFramebufferMultisampleTest : public testing::Test {
 };
 
 // Test that GL is at least minimally working.
-TEST_F(GLChromiumFramebufferMultisampleTest, CachedBindingsTest) {
+TEST_F(GLCinaseekFramebufferMultisampleTest, CachedBindingsTest) {
   if (!GLTestHelper::HasExtension("GL_CHROMIUM_framebuffer_multisample")) {
     return;
   }
@@ -44,7 +44,7 @@ TEST_F(GLChromiumFramebufferMultisampleTest, CachedBindingsTest) {
   GLTestHelper::CheckGLError("no errors", __LINE__);
 }
 
-TEST_F(GLChromiumFramebufferMultisampleTest, DrawAndResolve) {
+TEST_F(GLCinaseekFramebufferMultisampleTest, DrawAndResolve) {
   if (!(GLTestHelper::HasExtension("GL_CHROMIUM_framebuffer_multisample") &&
         GLTestHelper::HasExtension("GL_OES_rgb8_rgba8"))) {
     return;

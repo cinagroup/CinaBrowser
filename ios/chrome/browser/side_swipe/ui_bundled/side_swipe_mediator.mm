@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -134,7 +134,7 @@ constexpr base::TimeDelta kUpdateSnapshotTimeout = base::Milliseconds(100);
   }
 
   // The Reader Mode web state does not have a navigation stack, so instead
-  // use the custom Chromium native swipe to support back/forwards navigations.
+  // use the custom Cinaseek native swipe to support back/forwards navigations.
   ReaderModeTabHelper* readerModeTabHelper =
       ReaderModeTabHelper::FromWebState(webState);
   if (readerModeTabHelper &&

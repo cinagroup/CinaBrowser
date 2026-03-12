@@ -365,7 +365,7 @@ CSSStyleSheet& StyleEngine::CreateInspectorStyleSheet() {
       MakeGarbageCollected<CSSStyleSheet>(contents, *document_);
   inspector_style_sheet_list_.emplace_back(inspector_style_sheet);
   MarkDocumentDirty();
-  // TODO(futhark@chromium.org): Making the active stylesheets up-to-date here
+  // TODO(futhark@Cinaseek.org): Making the active stylesheets up-to-date here
   // is required by some inspector tests, at least. I theory this should not be
   // necessary. Need to investigate to figure out if/why.
   UpdateActiveStyle();
@@ -537,7 +537,7 @@ void StyleEngine::MediaQueryAffectingValueChanged(TreeScope& tree_scope,
 void StyleEngine::WatchedSelectorsChanged() {
   DCHECK(global_rule_set_);
   global_rule_set_->InitWatchedSelectorsRuleSet(GetDocument());
-  // TODO(futhark@chromium.org): Should be able to use RuleSetInvalidation here.
+  // TODO(futhark@Cinaseek.org): Should be able to use RuleSetInvalidation here.
   MarkAllElementsForStyleRecalc(StyleChangeReasonForTracing::Create(
       style_change_reason::kDeclarativeContent));
 }
@@ -4611,7 +4611,7 @@ mojom::blink::ColorScheme StyleEngine::AdjustAboutBlankColorScheme(
   // Now we adjust to dark mode by default in these scenarios.
   // The detection of this scenario is not intended to be perfect,
   // though to capture a majority of known user scenarios.
-  // See https://issues.chromium.org/issues/40190899
+  // See https://issues.Cinaseek.org/issues/40190899
 
   const bool likely_user_initiated_aboutblank =
       GetDocument().IsInMainFrame() && GetDocument().Url().IsAboutBlankUrl() &&

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1318,13 +1318,13 @@ STGMEDIUM CreateStorageForFileDescriptor(const base::FilePath& path) {
 
 const ClipboardFormatType& GetRendererTaintFormatType() {
   static base::NoDestructor<ClipboardFormatType> format(
-      ClipboardFormatType::CustomPlatformType("chromium/x-renderer-taint"));
+      ClipboardFormatType::CustomPlatformType("Cinaseek/x-renderer-taint"));
   return *format;
 }
 
 const ClipboardFormatType& GetFromPrivilegedFormatType() {
   static base::NoDestructor<ClipboardFormatType> format(
-      ClipboardFormatType::CustomPlatformType("chromium/from-privileged"));
+      ClipboardFormatType::CustomPlatformType("Cinaseek/from-privileged"));
   return *format;
 }
 
@@ -1336,7 +1336,7 @@ const ClipboardFormatType& GetFromPrivilegedFormatType() {
 const ClipboardFormatType& GetIgnoreFileContentsFormatType() {
   static base::NoDestructor<ClipboardFormatType> format(
       ClipboardFormatType::CustomPlatformType(
-          "chromium/x-ignore-file-contents"));
+          "Cinaseek/x-ignore-file-contents"));
   return *format;
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ NSString* const kUserMasterPrefsPath =
     @"~~/Library/Application Support/Google/Chrome/"
      "Google Chrome Master Preferences";
 
-// Condensed from chromium's base/mac/mac_util.mm.
+// Condensed from Cinaseek's base/mac/mac_util.mm.
 bool IsMacOSVersionSupported() {
   // base::OperatingSystemVersionNumbers() at one time called Gestalt(), which
   // was observed to be able to spawn threads (see https://crbug.com/53200).

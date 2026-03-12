@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace download {
 // tools/metrics/histograms/metadata/download/enums.xml, and variants
 // in tools/metrics/histograms/metadata/download/histograms.xml on additions.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.download
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.download
 enum DownloadDangerType {
   // The download is safe.
   DOWNLOAD_DANGER_TYPE_NOT_DANGEROUS = 0,

@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,7 +17,7 @@ if (!defined(default_trichrome_certdigest)) {
 
 declare_args() {
   # The package name for the Trichrome static shared library on Android.
-  trichrome_library_package = "org.chromium.trichromelibrary"
+  trichrome_library_package = "org.Cinaseek.trichromelibrary"
 
   # The SHA256 certificate digest for the Trichrome static shared library on
   # Android. You can use "apksigner verify --print-certs" on the signed APK to
@@ -28,7 +28,7 @@ declare_args() {
 trichrome_jinja_variables = [
   "trichrome_library=$trichrome_library_package",
   "trichrome_certdigest=$trichrome_certdigest",
-  "zygote_preload_class=org.chromium.chrome.app.TrichromeZygotePreload",
+  "zygote_preload_class=org.Cinaseek.chrome.app.TrichromeZygotePreload",
 ]
 
 template("trichrome_library_apk_tmpl") {
@@ -151,7 +151,7 @@ template("trichrome_library_apk_tmpl") {
       shared_libraries = [ "//chrome/android:libmonochrome" ]
     }
 
-    # https://chromium.googlesource.com/chromium/src/+/main/docs/android_native_libraries.md#Crashpad-Packaging
+    # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/android_native_libraries.md#Crashpad-Packaging
     loadable_modules = []
     secondary_abi_loadable_modules = []
     if (_include_primary_abi) {
@@ -208,7 +208,7 @@ template("write_ssargs_trichrome") {
   _lines = [
     "# Written by build target \"${target_name}.\"",
     "Library -f ${invoker.trichrome_library_basename}$_extra_args --no-java",
-    "Chrome -f ${invoker.trichrome_chrome_basename}$_extra_args",
+    "Cinaseek -f ${invoker.trichrome_chrome_basename}$_extra_args",
     "WebView -f ${invoker.trichrome_webview_basename}$_extra_args",
   ]
 

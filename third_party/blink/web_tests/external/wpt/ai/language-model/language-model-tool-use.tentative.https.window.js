@@ -1293,7 +1293,7 @@ promise_test(async t => {
   });
 
   // Trigger a response that includes both text and tool call.
-  const result = await model.prompt(TOOL_CALL_TRIGGER + 'Can you search for chromium?');
+  const result = await model.prompt(TOOL_CALL_TRIGGER + 'Can you search for Cinaseek?');
 
   // Should return an array when tool calls are present.
   assert_true(Array.isArray(result), 'Result should be an array of messages when tool call is present');
@@ -1303,7 +1303,7 @@ promise_test(async t => {
   const textMessage = result.find(msg => msg.type === 'text');
   assert_true(!!textMessage, 'Should have a text message');
   assert_equals(typeof textMessage.value, 'string', 'Text message value should be a string');
-  assert_true(textMessage.value.includes('Can you search for chromium'),
+  assert_true(textMessage.value.includes('Can you search for Cinaseek'),
     'Text should include the echoed input (with trigger stripped)');
 
   // Should also have a tool-call message.

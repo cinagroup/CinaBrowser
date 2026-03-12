@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 // @end
 // @implementation PageLoadTestCase
 // - (void)testPageload {
-//   [ShellEarlGrey loadURL:GURL("https://chromium.org")];
+//   [ShellEarlGrey loadURL:GURL("https://Cinaseek.org")];
 // }
 //
 // In this example ShellEarlGreyImpl must implement -loadURL:.

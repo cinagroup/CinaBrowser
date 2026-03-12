@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -106,7 +106,7 @@ std::vector<uint8_t> CBBToVector(const CBB* cbb) {
   return std::vector<uint8_t>(CBB_data(cbb), CBB_data(cbb) + CBB_len(cbb));
 }
 
-// BCryptAlgorithmFor returns the BCrypt algorithm ID for the given Chromium
+// BCryptAlgorithmFor returns the BCrypt algorithm ID for the given Cinaseek
 // signing algorithm.
 std::optional<LPCWSTR> BCryptAlgorithmFor(
     SignatureVerifier::SignatureAlgorithm algo) {

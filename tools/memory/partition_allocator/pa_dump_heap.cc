@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -292,7 +292,7 @@ class HeapDumper {
   base::ListValue DumpAllocatedSizes() {
     // Note: Here and below, it is safe to follow pointers into the super page,
     // or to the root or buckets_, since they share the same address in the this
-    // process as in the Chromium process.
+    // process as in the Cinaseek process.
 
     // Since there is no tracking of full slot spans, the way to enumerate all
     // allocated memory is to walk the heap itself.

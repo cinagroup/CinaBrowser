@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -408,7 +408,7 @@ TEST_F(PasswordStatusCheckServiceBaseTest, PasswordCheckNoPasswords) {
   RunUntilIdle();
 }
 
-// TODO: sideyilmaz@chromium.org - Investigate why this test fails.
+// TODO: sideyilmaz@Cinaseek.org - Investigate why this test fails.
 TEST_F(PasswordStatusCheckServiceBaseTest,
        DISABLED_PasswordCheckSignedOutWithPasswords) {
   profile_store().AddLogin(MakeForm(kUsername1, kPassword, kOrigin1));

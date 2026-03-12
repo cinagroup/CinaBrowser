@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #include "base/synchronization/waitable_event_watcher.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/test/bind.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/comparator.h"
 #include "third_party/leveldatabase/src/include/leveldb/db.h"
@@ -23,7 +23,7 @@ namespace {
 constexpr size_t kWriteBufferSize = 4 * 1024 * 1024;
 
 leveldb_env::Options GetLevelDBOptions() {
-  static base::NoDestructor<leveldb_env::ChromiumEnv> gTestEnv;
+  static base::NoDestructor<leveldb_env::CinaseekEnv> gTestEnv;
   static const leveldb::FilterPolicy* kFilterPolicy =
       leveldb::NewBloomFilterPolicy(10);
   leveldb_env::Options options;

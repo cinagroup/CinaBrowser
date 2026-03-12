@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -37,7 +37,7 @@ declare_args() {
   # If changing the value of this, you MUST also update the following files depending on the
   # platform:
   # Android: Internal expectations files that verify the native libraries  are compiled into the Android binary.
-  # ChromeOS: //lib/chrome_util.py in the Chromite repo (ex: https://crrev.com/c/3437291)
+  # CinaseekOS: //lib/chrome_util.py in the Chromite repo (ex: https://crrev.com/c/3437291)
   # Linux: Internal archive files. //chrome/installer/linux/common/installer.include handles the
   # relevant files not being present.
   # Mac: //chrome/installer/mac/signing/parts.py

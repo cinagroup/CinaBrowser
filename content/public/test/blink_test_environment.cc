@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,7 +95,7 @@ void BlinkTestEnvironmentWithIsolate::TearDown() {
   // BlinkTestEnvironment, this is needed here because kRealScheduler is used
   // for TestBlinkWebUnitTestSupport, which instantiates a
   // MainThreadSchedulerImpl and doesn't automatically flushes tasks.
-  // http://code.google.com/p/chromium/issues/detail?id=9500
+  // http://code.google.com/p/Cinaseek/issues/detail?id=9500
   base::RunLoop().RunUntilIdle();
 
   BlinkTestEnvironment::TearDown();

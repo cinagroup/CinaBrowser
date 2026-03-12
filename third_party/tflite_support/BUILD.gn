@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -158,15 +158,15 @@ static_library("tflite_support") {
   ]
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:no_rtti",
   ]
 
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/compiler:rtti",
 
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":tflite_support_flags",
   ]
 

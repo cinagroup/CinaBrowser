@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class PendingConnectionManagerTest;
 //
 // To use this class:
 // 1. Create and export a D-Bus service in Chrome containing a single method
-//    which is passed a string and FD. (eg. org.chromium.DriveFileStream).
+//    which is passed a string and FD. (eg. org.Cinaseek.DriveFileStream).
 //    This method simply calls PendingConnectionManager::OpenIpcChannel().
 // 2. Create an UnguessableToken and pass the string serialisation to the system
 //    service. Use PendingConnectionManager::ExpectOpenIpcChannel() to wait for
@@ -80,7 +80,7 @@ class PendingConnectionManagerTest;
 // // implementation.
 // mojom::MyServiceRequest MyService::BootstrapMojo() {
 //   mojo::edk::PlatformChannelPair channel;
-//   org::chromium::MyChromeServiceProxy dbus_proxy(bus_, kServiceName);
+//   org::Cinaseek::MyChromeServiceProxy dbus_proxy(bus_, kServiceName);
 //   brillo::ErrorPtr error;
 //   CHECK(dbus_proxy.MyExportedDbusConnectMethod(
 //       token_, channel.PassClientHandle().get().handle, &error));

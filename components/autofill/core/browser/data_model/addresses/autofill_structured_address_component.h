@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ struct SortedTokenComparisonResult;
 // Represents the validation status of value stored in the AutofillProfile.
 // The associated integer values used to store the verification code in SQL and
 // should not be modified.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class VerificationStatus {
   // No verification status assigned.
   kNoStatus = 0,

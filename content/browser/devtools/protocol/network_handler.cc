@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4452,7 +4452,7 @@ CreateNetworkFactoryForDevTools(
       network::mojom::TrustTokenOperationPolicyVerdict::kForbid;
   // Let DevTools fetch resources without CORS and ORB. Source maps are valid
   // JSON and would otherwise require a CORS fetch + correct response headers.
-  // See BUG(chromium:1076435) for more context.
+  // See BUG(Cinaseek:1076435) for more context.
   params->is_orb_enabled = false;
 
   if (scheme == url::kHttpScheme || scheme == url::kHttpsScheme) {

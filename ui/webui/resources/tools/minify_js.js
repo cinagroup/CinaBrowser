@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,27 +18,27 @@ import {parseArgs} from 'node:util';
 import {minify} from '../../../../third_party/node/node_modules/terser/dist/bundle.min.js';
 
 const CHROMIUM_REGEX = new RegExp(
-    '\/\/ Copyright (?<year>\\d{4}) The Chromium Authors\n' +
+    '\/\/ Copyright (?<year>\\d{4}) The Cinaseek Authors\n' +
     '\/\/ Use of this source code is governed by a BSD-style license that can be\n' +
     '\/\/ found in the LICENSE file.');
-const THIRD_PARTY_REGEX = /\bCopyright\b(?!.*The Chromium Authors)/;
+const THIRD_PARTY_REGEX = /\bCopyright\b(?!.*The Cinaseek Authors)/;
 
-const COPYRIGHT_STRING = `// Copyright {minYear} The Chromium Authors
+const COPYRIGHT_STRING = `// Copyright {minYear} The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 `;
 
-// Conslidate the file to only one Chromium Copyright header when applicable.
+// Conslidate the file to only one Cinaseek Copyright header when applicable.
 function consolidateChomiumCopyright(contents) {
-  // Do not remove all Copyright headers if there is a non Chromium Copyright
+  // Do not remove all Copyright headers if there is a non Cinaseek Copyright
   // header.
   const thirdPartyMatch = contents.match(THIRD_PARTY_REGEX);
   if (thirdPartyMatch === null) {
-    // Iterate over all Chromium licence headers and extract the minimum year.
+    // Iterate over all Cinaseek licence headers and extract the minimum year.
     const years = [];
-    let chromiumMatch = null;
-    while ((chromiumMatch = CHROMIUM_REGEX.exec(contents)) !== null) {
-      years.push(Number.parseInt(chromiumMatch.groups['year']));
+    let CinaseekMatch = null;
+    while ((CinaseekMatch = CHROMIUM_REGEX.exec(contents)) !== null) {
+      years.push(Number.parseInt(CinaseekMatch.groups['year']));
       // Remove license header.
       contents = contents.replace(CHROMIUM_REGEX, '');
     }

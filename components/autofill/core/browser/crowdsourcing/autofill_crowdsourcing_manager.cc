@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -208,8 +208,8 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
         semantics {
           sender: "Autofill"
           description:
-            "Chromium can automatically fill in web forms. If the feature is "
-            "enabled, Chromium will send a non-identifying description of the "
+            "Cinaseek can automatically fill in web forms. If the feature is "
+            "enabled, Cinaseek will send a non-identifying description of the "
             "form to Google's servers, which will respond with the type of "
             "data required by each of the form's fields, if known. I.e., if a "
             "field expects to receive a name, phone number, street address, "
@@ -233,7 +233,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
           cookies_allowed: NO
           setting:
             "You can enable or disable this feature via 'Enable autofill to "
-            "fill out web forms in a single click.' in Chromium's settings "
+            "fill out web forms in a single click.' in Cinaseek's settings "
             "under 'Passwords and forms'. The feature is enabled by default."
           chrome_policy {
             AutofillCreditCardEnabled {
@@ -259,12 +259,12 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
       semantics {
         sender: "Autofill"
         description:
-          "Chromium relies on crowd-sourced field type classifications to "
+          "Cinaseek relies on crowd-sourced field type classifications to "
           "help it automatically fill in web forms. If the feature is "
-          "enabled, Chromium will send a non-identifying description of the "
-          "form to Google's servers along with the type of data Chromium "
+          "enabled, Cinaseek will send a non-identifying description of the "
+          "form to Google's servers along with the type of data Cinaseek "
           "observed being given to the form. I.e., if you entered your first "
-          "name into a form field, Chromium will 'vote' for that form field "
+          "name into a form field, Cinaseek will 'vote' for that form field "
           "being a first name field."
         trigger: "User submits a web form."
         data:
@@ -286,7 +286,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
         cookies_allowed: NO
         setting:
           "You can enable or disable this feature via 'Enable autofill to "
-          "fill out web forms in a single click.' in Chromium's settings "
+          "fill out web forms in a single click.' in Cinaseek's settings "
           "under 'Passwords and forms'. The feature is enabled by default."
         chrome_policy {
           AutofillCreditCardEnabled {

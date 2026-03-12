@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2066,25 +2066,25 @@ namespace {
 constexpr char kAttestationFailedTemplate[] =
     "Attestation check for Shared Storage on %s failed.\nReturned status %d; "
     "see `PrivacySandboxSettingsImpl::Status` at "
-    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/"
+    "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/"
     "components/privacy_sandbox/privacy_sandbox_settings_impl.h.";
 
 constexpr char kSiteSettingsTemplate[] =
     "Site access settings returned status %d for accessing origin "
     "%s and top-frame origin %s; see `PrivacySandboxSettingsImpl::Status` at "
-    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/"
+    "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/"
     "components/privacy_sandbox/privacy_sandbox_settings_impl.h.";
 
 constexpr char kSandboxRestrictedTemplate[] =
     "Privacy Sandbox settings returned status %d; see "
     "`PrivacySandboxSettingsImpl::Status` at "
-    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/"
+    "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/"
     "components/privacy_sandbox/privacy_sandbox_settings_impl.h.";
 
 constexpr char kSelectUrlTemplate[] =
     "M1 measurement settings returned status %d for accessing origin "
     "%s and top-frame origin %s; see `PrivacySandboxSettingsImpl::Status` at "
-    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/"
+    "https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/"
     "components/privacy_sandbox/privacy_sandbox_settings_impl.h.";
 
 class PrivacySandboxSettingsSharedStorageDebugTest

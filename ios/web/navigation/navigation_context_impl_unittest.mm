@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ const char kRawResponseHeaders[] = "HTTP/1.1 200 OK\0"
 class NavigationContextImplTest : public PlatformTest {
  protected:
   NavigationContextImplTest()
-      : url_("https://chromium.test"),
+      : url_("https://Cinaseek.test"),
         response_headers_(new net::HttpResponseHeaders(
             std::string(kRawResponseHeaders, sizeof(kRawResponseHeaders)))) {}
 

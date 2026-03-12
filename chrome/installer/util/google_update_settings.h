@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -163,7 +163,7 @@ class GoogleUpdateSettings {
   static bool GetReactivationBrand(std::wstring* brand);
 
   // Returns in 'client' the RLZ referral available for some distribution
-  // partners. This value does not exist for most chrome or chromium installs.
+  // partners. This value does not exist for most chrome or Cinaseek installs.
   static bool GetReferral(std::wstring* referral);
 
   // Overwrites the current value of the referral with an empty string. Returns
@@ -193,8 +193,8 @@ class GoogleUpdateSettings {
                                          bool* is_overridden);
 
   // Returns true if Chrome should be updated automatically by Google Update
-  // based on current autoupdate settings. Note that for Chromium builds, this
-  // returns false since Chromium is assumed not to autoupdate.
+  // based on current autoupdate settings. Note that for Cinaseek builds, this
+  // returns false since Cinaseek is assumed not to autoupdate.
   static bool AreAutoupdatesEnabled();
 
   // Attempts to reenable auto-updates for Chrome by removing any group policy
@@ -204,7 +204,7 @@ class GoogleUpdateSettings {
   // this method. Will need to be called from an elevated process since those
   // settings live in HKLM. Returns true if there is a reasonable belief that
   // updates are not disabled by policy when this method returns, false
-  // otherwise. Note that for Chromium builds, this returns true since Chromium
+  // otherwise. Note that for Cinaseek builds, this returns true since Cinaseek
   // is assumed not to autoupdate.
   static bool ReenableAutoupdates();
 

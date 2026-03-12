@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -75,16 +75,16 @@ template("ts_definitions") {
       "//resources/*|" +
           rebase_path("$root_gen_dir/ui/webui/resources/tsc/*", target_gen_dir),
       "chrome://resources/polymer/v3_0/*|" +
-          rebase_path("//third_party/polymer/v3_0/components-chromium/*",
+          rebase_path("//third_party/polymer/v3_0/components-Cinaseek/*",
                       target_gen_dir),
       "//resources/polymer/v3_0/*|" +
-          rebase_path("//third_party/polymer/v3_0/components-chromium/*",
+          rebase_path("//third_party/polymer/v3_0/components-Cinaseek/*",
                       target_gen_dir),
       "chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js|" + rebase_path(
-              "//third_party/polymer/v3_0/components-chromium/polymer/polymer-element.d.ts",
+              "//third_party/polymer/v3_0/components-Cinaseek/polymer/polymer-element.d.ts",
               target_gen_dir),
       "//resources/polymer/v3_0/polymer/polymer_bundled.min.js|" + rebase_path(
-              "//third_party/polymer/v3_0/components-chromium/polymer/polymer-element.d.ts",
+              "//third_party/polymer/v3_0/components-Cinaseek/polymer/polymer-element.d.ts",
               target_gen_dir),
       "chrome://resources/cros_components/*|" + rebase_path(
               "$root_gen_dir/ui/webui/resources/tsc/cros_components/to_be_rewritten/*",

@@ -6,5 +6,5 @@
       "v.test_suite"
     ]
   },
-  "recipe": "chromium/autosharder_test"
+  "recipe": "Cinaseek/autosharder_test"
 }

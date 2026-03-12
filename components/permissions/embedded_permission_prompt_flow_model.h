@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class EmbeddedPermissionPromptFlowModel {
   // The values represent the priority of each variant, higher number means
   // higher priority.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.permissions
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.permissions
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: EmbeddedPromptVariant
   enum class Variant {
     // Default when conditions are not met to show any of the permission views.

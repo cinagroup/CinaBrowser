@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace cronet {
 // happen in the context of some native tests that end up indirectly calling
 // this under a base::test::ScopedFeatureList.)
 void ApplyBaseFeatureOverrides(
-    const ::org::chromium::net::httpflags::BaseFeatureOverrides& overrides);
+    const ::org::Cinaseek::net::httpflags::BaseFeatureOverrides& overrides);
 
 }  // namespace cronet
 

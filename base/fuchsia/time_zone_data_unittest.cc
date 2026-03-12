@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,9 +63,9 @@ TEST_F(TimeZoneDataTest, CompareSystemRevisionWithExpected) {
 
 // Verifies that the current version of the ICU library in use can load ICU
 // data in a specific version format (in this case 44).  Designed to fail if
-// the ICU library version used in Chromium drifts from version 44 so much that
+// the ICU library version used in Cinaseek drifts from version 44 so much that
 // the library is no longer able to load the old tzdata.  If the test fails,
-// this could be a sign that all platforms Chromium runs on need to upgrade the
+// this could be a sign that all platforms Cinaseek runs on need to upgrade the
 // ICU library versions.
 TEST_F(TimeZoneDataTest, TestLoadingTimeZoneDataFromKnownConfigs) {
   ASSERT_TRUE(base::DirectoryExists(base::FilePath(kTestTzDataDirPath)));

@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -255,7 +255,7 @@ source_set("login_ui_service_impl") {
   ]
 }
 
-# "inline_login_*" code is only available on Windows and ChromeOS, since the
+# "inline_login_*" code is only available on Windows and CinaseekOS, since the
 # "chrome-signin" webui dialog is only used there.
 if (is_win || is_chromeos) {
   source_set("inline_login") {

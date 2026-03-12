@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# When building in Chromium, these configs is used to set #defines that indicate
-# whether code is being built standalone, or in Chromium, or potentially in some
+# When building in Cinaseek, these configs is used to set #defines that indicate
+# whether code is being built standalone, or in Cinaseek, or potentially in some
 # other configutation.
 
 import("crashpad_buildconfig.gni")
 
-config("crashpad_is_in_chromium") {
-  if (crashpad_is_in_chromium) {
+config("crashpad_is_in_Cinaseek") {
+  if (crashpad_is_in_Cinaseek) {
     defines = [ "CRASHPAD_IS_IN_CHROMIUM" ]
   }
 }
@@ -36,7 +36,7 @@ config("flock_always_supported_defines") {
 }
 
 group("default_exe_manifest_win") {
-  if (crashpad_is_in_chromium) {
+  if (crashpad_is_in_Cinaseek) {
     deps = [ "//build/win:default_exe_manifest" ]
   }
 }
@@ -53,27 +53,27 @@ config("crashpad_fuzzer_flags") {
 
 if (crashpad_is_apple) {
   group("apple_enable_arc") {
-    # If `crashpad_is_in_chromium`, then because Chromium enables ARC
+    # If `crashpad_is_in_Cinaseek`, then because Cinaseek enables ARC
     # compilation by default, no special configuration is needed.
 
     if (crashpad_is_standalone) {
-      public_configs = [ "//third_party/mini_chromium/mini_chromium/build/config:apple_enable_arc" ]
+      public_configs = [ "//third_party/mini_Cinaseek/mini_Cinaseek/build/config:apple_enable_arc" ]
     }
   }
 }
 
 if (crashpad_is_ios) {
   group("ios_xctest") {
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       public_configs = [ "//build/config/ios:xctest_config" ]
     } else if (crashpad_is_standalone) {
       public_configs = [
-        "//third_party/mini_chromium/mini_chromium/build/ios:xctest_config",
+        "//third_party/mini_Cinaseek/mini_Cinaseek/build/ios:xctest_config",
       ]
     }
   }
 
-  if (crashpad_is_in_chromium) {
+  if (crashpad_is_in_Cinaseek) {
     import("//build/config/ios/ios_sdk.gni")
     crashpad_is_ios_app_extension = ios_is_app_extension
   } else {

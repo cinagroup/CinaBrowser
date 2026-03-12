@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -92,7 +92,7 @@ template("bundle_js") {
     #      incorrect.
 
     polymer_path =
-        rebase_path("//third_party/polymer/v3_0/components-chromium/",
+        rebase_path("//third_party/polymer/v3_0/components-Cinaseek/",
                     root_build_dir)
     resources_path =
         rebase_path("$root_gen_dir/ui/webui/resources/tsc/", root_build_dir)

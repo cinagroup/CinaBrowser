@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//testing/libfuzzer/fuzzer_test.gni")
 
 declare_args() {
   # Controls the product part of the user agent calculated in sync_util.cc.
-  sync_user_agent_product = "Chrome"
+  sync_user_agent_product = "Cinaseek"
 }
 
 source_set("features") {

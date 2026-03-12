@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -589,7 +589,7 @@ TEST_F(ClipboardWinTest, ReadDataTransferCustomDataAsyncEmptyClipboard) {
 TEST_F(ClipboardWinTest, ReadDataAsyncReturnsWrittenData) {
   auto* clipboard = Clipboard::GetForCurrentThread();
   const auto format =
-      ClipboardFormatType::CustomPlatformType("chromium-raw-test");
+      ClipboardFormatType::CustomPlatformType("Cinaseek-raw-test");
   {
     ScopedClipboardWriter writer(ClipboardBuffer::kCopyPaste);
     std::vector<uint8_t> data = {'d', 'a', 't', 'a'};

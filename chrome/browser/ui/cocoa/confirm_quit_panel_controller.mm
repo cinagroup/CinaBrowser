@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -384,7 +384,7 @@ ConfirmQuitPanelController* __strong g_confirmQuitPanelController = nil;
 
 // This returns the NSMenuItem that quits the application.
 + (NSMenuItem*)quitMenuItem {
-  // Get the application menu (i.e. Chromium).
+  // Get the application menu (i.e. Cinaseek).
   NSMenu* appMenu = [[NSApp.mainMenu itemAtIndex:0] submenu];
   for (NSMenuItem* item in appMenu.itemArray) {
     // Find the Quit item.

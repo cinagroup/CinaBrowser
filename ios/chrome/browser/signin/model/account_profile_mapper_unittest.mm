@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,8 +91,8 @@ FakeSystemIdentity* gmail_identity2 =
     [FakeSystemIdentity identityWithEmail:@"foo2@gmail.com"];
 FakeSystemIdentity* google_identity =
     [FakeSystemIdentity identityWithEmail:@"foo3@google.com"];
-FakeSystemIdentity* chromium_identity =
-    [FakeSystemIdentity identityWithEmail:@"foo4@chromium.com"];
+FakeSystemIdentity* Cinaseek_identity =
+    [FakeSystemIdentity identityWithEmail:@"foo4@Cinaseek.com"];
 
 // Helper for implementing FindCreatedProfileName(...). Stops iteration and
 // store the profile name to `profile_name` when finding a profile that is
@@ -638,7 +638,7 @@ TEST_F(AccountProfileMapperAccountsInSeparateProfilesTest,
   EXPECT_CALL(mock_observer_personal, OnIdentitiesInProfileChanged()).Times(0);
   EXPECT_CALL(mock_observer_personal, OnIdentitiesOnDeviceChanged());
   EXPECT_CALL(mock_observer_managed1, OnIdentitiesOnDeviceChanged());
-  system_identity_manager_->AddIdentity(chromium_identity);
+  system_identity_manager_->AddIdentity(Cinaseek_identity);
   // A new enterprise profile should've been registered.
   EXPECT_EQ(profile_attributes_storage()->GetNumberOfProfiles(), 3u);
 
@@ -659,7 +659,7 @@ TEST_F(AccountProfileMapperAccountsInSeparateProfilesTest,
   NSArray* expected_identities_managed1 = @[ google_identity ];
   EXPECT_NSEQ(expected_identities_managed1,
               GetIdentitiesForProfile(managed_profile_name1));
-  NSArray* expected_identities_managed2 = @[ chromium_identity ];
+  NSArray* expected_identities_managed2 = @[ Cinaseek_identity ];
   EXPECT_NSEQ(expected_identities_managed2,
               GetIdentitiesForProfile(managed_profile_name2));
 

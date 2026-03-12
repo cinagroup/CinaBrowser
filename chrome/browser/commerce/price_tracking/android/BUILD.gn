@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingNotificationBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingNotificationBridge.java" ]
 }
 
 android_resources("java_resources") {
@@ -25,9 +25,9 @@ android_resources("java_resources") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceDropNotificationManager.java",
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingFeatures.java",
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingUtilities.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceDropNotificationManager.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingFeatures.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingUtilities.java",
   ]
 
   deps = [
@@ -47,13 +47,13 @@ android_library("java") {
 
 android_library("price_tracking_bottom_sheet_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentCoordinator.java",
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentMediator.java",
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentProperties.java",
-    "java/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentViewBinder.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.price_tracking"
+  resources_package = "org.Cinaseek.chrome.browser.price_tracking"
 
   deps = [
     ":java_resources",
@@ -78,7 +78,7 @@ android_library("price_tracking_bottom_sheet_java") {
 }
 
 robolectric_library("junit") {
-  sources = [ "javatests/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentMediatorTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentMediatorTest.java" ]
 
   deps = [
     ":java_resources",
@@ -115,9 +115,9 @@ robolectric_library("junit") {
 android_library("javatests") {
   testonly = true
 
-  sources = [ "javatests/src/org/chromium/chrome/browser/price_tracking/PriceTrackingBottomSheetContentRenderTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingBottomSheetContentRenderTest.java" ]
 
-  resources_package = "org.chromium.chrome.browser.price_tracking"
+  resources_package = "org.Cinaseek.chrome.browser.price_tracking"
 
   deps = [
     ":java_resources",

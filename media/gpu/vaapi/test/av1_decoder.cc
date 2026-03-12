@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -730,7 +730,7 @@ VideoDecoder::Result Av1Decoder::DecodeNextFrame() {
   // show to the user, which comes from the width and height hints provided in
   // |current_frame_header|.
   // Also see
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/gpu/av1_decoder.cc;l=454;drc=9c1d4b495c1ebadeda004c9b741e11a6f035b9e7
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/gpu/av1_decoder.cc;l=454;drc=9c1d4b495c1ebadeda004c9b741e11a6f035b9e7
   const gfx::Size visible_size(
       base::strict_cast<int>(current_frame->frame_width()),
       base::strict_cast<int>(current_frame->frame_height()));
@@ -768,7 +768,7 @@ VideoDecoder::Result Av1Decoder::DecodeNextFrame() {
     default:
       // The OBU Parser can only produce bit depths of 8, 10, and 12; we should
       // not hit any other cases. See
-      // https://source.chromium.org/chromium/chromium/src/+/main:third_party/libgav1/src/src/obu_parser.cc;l=144-150;drc=7880d0cc1d1976012dbec8a1bb982191ac49b7f4
+      // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/libgav1/src/src/obu_parser.cc;l=144-150;drc=7880d0cc1d1976012dbec8a1bb982191ac49b7f4
       NOTREACHED() << "Invalid color bit depth: "
                    << current_sequence_header_->color_config.bitdepth;
   }

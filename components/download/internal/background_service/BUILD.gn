@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -78,7 +78,7 @@ if (use_blink) {
 
 if (is_android) {
   android_library("internal_java") {
-    sources = [ "android/java/src/org/chromium/components/download/internal/BatteryStatusListenerAndroid.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/download/internal/BatteryStatusListenerAndroid.java" ]
 
     deps = [
       "//base:base_java",
@@ -89,7 +89,7 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     visibility = [ ":*" ]
-    sources = [ "android/java/src/org/chromium/components/download/internal/BatteryStatusListenerAndroid.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/download/internal/BatteryStatusListenerAndroid.java" ]
   }
 }
 

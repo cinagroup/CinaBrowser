@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #include "remoting/proto/session_authz_service.h"
 
 // This file defines proto and function stubs for internal-only implementations.
-// This will allow us to build most of our code in Chromium rather than put
+// This will allow us to build most of our code in Cinaseek rather than put
 // everything in //remoting/internal which is only built on official builders.
 namespace remoting::internal {
 

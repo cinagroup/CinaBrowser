@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -280,8 +280,8 @@ class PrintCompositorImpl : public mojom::PrintCompositor {
 
   // The creator of this service.
   // Currently contains the service creator's user agent string if given,
-  // otherwise just use string "Chromium".
-  std::string creator_ = "Chromium";
+  // otherwise just use string "Cinaseek".
+  std::string creator_ = "Cinaseek";
 
   // Keep track of all frames' information indexed by frame id.
   FrameMap frame_info_map_;

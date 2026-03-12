@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #include "net/base/ip_address.h"
 #include "net/base/ip_endpoint.h"
 #include "net/base/port_util.h"
-#include "net/quic/crypto/proof_source_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
 #include "net/test/test_data_directory.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_dispatcher.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/quic_memory_cache_backend.h"
@@ -167,7 +167,7 @@ void StartQuicServerOnServerThread(const base::FilePath& test_files_root,
   // Set up server certs.
   base::FilePath directory;
   directory = test_files_root;
-  auto proof_source = std::make_unique<ProofSourceChromium>();
+  auto proof_source = std::make_unique<ProofSourceCinaseek>();
   CHECK(proof_source->Initialize(directory.AppendASCII("quic-chain.pem"),
                                  directory.AppendASCII("quic-leaf-cert.key"),
                                  base::FilePath()));

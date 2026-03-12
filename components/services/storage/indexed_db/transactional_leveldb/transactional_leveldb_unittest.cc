@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@
 #include "components/services/storage/indexed_db/transactional_leveldb/transactional_leveldb_database.h"
 #include "components/services/storage/indexed_db/transactional_leveldb/transactional_leveldb_factory.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/comparator.h"
 
@@ -142,7 +142,7 @@ TEST_F(TransactionalLevelDBDatabaseTest, CorruptionTest) {
 }
 
 TEST(LevelDB, Locking) {
-  static base::NoDestructor<leveldb_env::ChromiumEnv> gTestEnv;
+  static base::NoDestructor<leveldb_env::CinaseekEnv> gTestEnv;
   base::ScopedTempDir temp_directory;
   ASSERT_TRUE(temp_directory.CreateUniqueTempDir());
 

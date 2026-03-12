@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@ std::string GetChromeKeyString() {
   return chrome_key;
 }
 std::string GetUserAgent() {
-  std::string chromium_user_agent = GetChromiumUserAgent();
-  return base::StrCat({chromium_user_agent, " ", GetChromeKeyString(), " ",
+  std::string Cinaseek_user_agent = GetCinaseekUserAgent();
+  return base::StrCat({Cinaseek_user_agent, " ", GetChromeKeyString(), " ",
                        GetDeviceUserAgentSuffix()});
 }
 

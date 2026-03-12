@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class PaymentRequestStateTest : public testing::Test,
                                 public PaymentRequestState::Observer,
                                 public PaymentRequestState::Delegate {
  protected:
-  static constexpr char kMethodName[] = "https://www.chromium.org";
+  static constexpr char kMethodName[] = "https://www.Cinaseek.org";
 
   PaymentRequestStateTest()
       : num_on_selected_information_changed_called_(0),

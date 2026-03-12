@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -392,7 +392,7 @@ TEST_F(FindBufferTest, FindMatchInRange) {
   EXPECT_EQ(foo1, match);
 }
 
-// https://issues.chromium.org/issues/327017912
+// https://issues.Cinaseek.org/issues/327017912
 TEST_F(FindBufferTest, FindMatchInRangeIgnoreNonSearchable) {
   SetBodyContent(R"(
     <div inert>Do not find me!</div>

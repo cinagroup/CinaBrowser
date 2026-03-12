@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -951,7 +951,7 @@ bool ui::IsNSRange(id value) {
   }
 
   // A nil parent on web content means we're the root.
-  // Hook back up to RenderWidgetHostViewCocoa to get the parent Chromium view.
+  // Hook back up to RenderWidgetHostViewCocoa to get the parent Cinaseek view.
   BrowserAccessibilityManagerMac* manager =
       _owner->manager()
           ->GetManagerForRootFrame()

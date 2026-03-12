@@ -1,10 +1,10 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "fuchsia_web/runners/cast/test/cast_runner_launcher.h"
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/buildinfo/cpp/fidl.h>
 #include <fuchsia/camera3/cpp/fidl.h>
 #include <fuchsia/component/decl/cpp/fidl.h>
@@ -116,7 +116,7 @@ CastRunnerLauncher::CastRunnerLauncher(CastRunnerFeatures runner_features) {
   realm_builder.AddRoute(Route{
       .capabilities =
           {
-              // The chromium test realm offers the system-wide config-data dir
+              // The Cinaseek test realm offers the system-wide config-data dir
               // to test components. Route the cast_runner sub-directory of this
               // to the launched cast_runner component.
               Directory{.name = "config-data", .subdir = "cast_runner"},
@@ -165,8 +165,8 @@ CastRunnerLauncher::CastRunnerLauncher(CastRunnerFeatures runner_features) {
   realm_builder.AddRoute(
       Route{.capabilities =
                 {
-                    Protocol{chromium::cast::ApplicationConfigManager::Name_},
-                    Protocol{chromium::cast::CorsExemptHeaderProvider::Name_},
+                    Protocol{Cinaseek::cast::ApplicationConfigManager::Name_},
+                    Protocol{Cinaseek::cast::CorsExemptHeaderProvider::Name_},
                     Protocol{fuchsia::camera3::DeviceWatcher::Name_},
                     Protocol{fuchsia::legacymetrics::MetricsRecorder::Name_},
                     Protocol{fuchsia::media::Audio::Name_},
@@ -211,7 +211,7 @@ CastRunnerLauncher::CastRunnerLauncher(CastRunnerFeatures runner_features) {
 
   // Route capabilities from the cast_runner back up to the test.
   realm_builder.AddRoute(
-      Route{.capabilities = {Protocol{chromium::cast::DataReset::Name_},
+      Route{.capabilities = {Protocol{Cinaseek::cast::DataReset::Name_},
                              Protocol{fuchsia::web::FrameHost::Name_},
                              Protocol{fuchsia::web::Debug::Name_}},
             .source = ChildRef{kCastRunnerComponentName},

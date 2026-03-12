@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ std::optional<PathAndStructure> GetFrameworkDylibPathAndStructure(
     NSString* bundle_path,
     NSString* version) {
   // NEW STYLE:
-  // Chromium.app/Contents/Frameworks/Chromium Framework.framework/
-  //   Versions/<version>/Chromium Framework
+  // Cinaseek.app/Contents/Frameworks/Cinaseek Framework.framework/
+  //   Versions/<version>/Cinaseek Framework
   NSString* path = [NSString pathWithComponents:@[
     bundle_path, @"Contents", @"Frameworks", @(chrome::kFrameworkName),
     @"Versions", version, @(chrome::kFrameworkExecutableName)
@@ -43,8 +43,8 @@ std::optional<PathAndStructure> GetFrameworkDylibPathAndStructure(
   }
 
   // OLD STYLE:
-  // Chromium.app/Contents/Versions/<version>/Chromium Framework.framework/
-  //   Versions/A/Chromium Framework
+  // Cinaseek.app/Contents/Versions/<version>/Cinaseek Framework.framework/
+  //   Versions/A/Cinaseek Framework
   path = [NSString pathWithComponents:@[
     bundle_path, @"Contents", @"Versions", version, @(chrome::kFrameworkName),
     @"Versions", @"A", @(chrome::kFrameworkExecutableName)
@@ -161,10 +161,10 @@ bool GetChromeBundleInfo(const base::FilePath& chrome_bundle,
   // with the old bundle structure.)
   //
   // Note that the scenario where a specific version was requested but is not
-  // present is a "should not happen" scenario. Chromium, while it is running,
+  // present is a "should not happen" scenario. Cinaseek, while it is running,
   // maintains a link to the currently running version, and this function's
-  // caller checked to see if the Chromium was still running. However, even in
-  // this bizarre case, it's best to find _some_ Chromium.
+  // caller checked to see if the Cinaseek was still running. However, even in
+  // this bizarre case, it's best to find _some_ Cinaseek.
   if (!framework_path_and_structure) {
     framework_path_and_structure =
         GetFrameworkDylibPathAndStructure(cr_bundle_path, @"Current");

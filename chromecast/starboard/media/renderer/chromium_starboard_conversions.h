@@ -1,8 +1,8 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// Contains functions for converting chromium structs to equivalent starboard
+// Contains functions for converting Cinaseek structs to equivalent starboard
 // structs.
 
 #ifndef CHROMECAST_STARBOARD_MEDIA_RENDERER_CHROMIUM_STARBOARD_CONVERSIONS_H_

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ inline constexpr double kDisabledAvatarOpacity = 0.38;
 
 // This enum is used for histograms. Do not remove or modify existing values,
 // but you may add new values at the end.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.android.webid
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.android.webid
 // LINT.IfChange(SheetType)
 
 enum class SheetType {
@@ -59,7 +59,7 @@ enum class SheetType {
 // This enum describes the outcome of the account chooser and is used for
 // histograms. Do not remove or modify existing values, but you may add new
 // values at the end.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.android.webid
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.android.webid
 // LINT.IfChange(AccountChooserResult)
 
 enum class AccountChooserResult {
@@ -82,7 +82,7 @@ enum class AccountChooserResult {
 // histograms. Do not remove or modify existing values, but you may add new
 // values at the end. This enum should be kept in sync with
 // FedCmLoadingDialogResult in tools/metrics/histograms/enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.android.webid
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.android.webid
 // LINT.IfChange(LoadingDialogResult)
 
 enum class LoadingDialogResult {
@@ -104,7 +104,7 @@ enum class LoadingDialogResult {
 // This enum describes the outcome of the disclosure dialog and is used for
 // histograms. Do not remove or modify existing values, but you may add new
 // values at the end.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.android.webid
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.android.webid
 // LINT.IfChange(DisclosureDialogResult)
 
 enum class DisclosureDialogResult {

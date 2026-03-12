@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 
 #include <atomic>
 #include <iterator>
@@ -43,7 +43,7 @@
 #include "build/build_config.h"
 #include "build/chromeos_buildflags.h"
 #include "components/services/storage/public/cpp/filesystem/filesystem_proxy.h"
-#include "third_party/leveldatabase/chromium_logger.h"
+#include "third_party/leveldatabase/Cinaseek_logger.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/options.h"
 #include "third_party/re2/src/re2/re2.h"
@@ -84,13 +84,13 @@ DBFactoryMethod& GetDBFactoryOverride() {
   return *instance;
 }
 
-class ChromiumFileLock : public FileLock {
+class CinaseekFileLock : public FileLock {
  public:
-  ChromiumFileLock(std::unique_ptr<storage::FilesystemProxy::FileLock> lock,
+  CinaseekFileLock(std::unique_ptr<storage::FilesystemProxy::FileLock> lock,
                    const std::string& name)
       : lock(std::move(lock)), name(name) {}
-  ChromiumFileLock(const ChromiumFileLock&) = delete;
-  ChromiumFileLock& operator=(const ChromiumFileLock&) = delete;
+  CinaseekFileLock(const CinaseekFileLock&) = delete;
+  CinaseekFileLock& operator=(const CinaseekFileLock&) = delete;
 
   const std::unique_ptr<storage::FilesystemProxy::FileLock> lock;
   const std::string name;
@@ -128,15 +128,15 @@ class Retrier {
   base::TimeDelta time_to_sleep_;
 };
 
-class ChromiumSequentialFile : public leveldb::SequentialFile {
+class CinaseekSequentialFile : public leveldb::SequentialFile {
  public:
-  ChromiumSequentialFile(const std::string& fname, base::File f)
+  CinaseekSequentialFile(const std::string& fname, base::File f)
       : filename_(fname), file_(std::move(f)) {}
 
-  ChromiumSequentialFile(const ChromiumSequentialFile&) = delete;
-  ChromiumSequentialFile& operator=(const ChromiumSequentialFile&) = delete;
+  CinaseekSequentialFile(const CinaseekSequentialFile&) = delete;
+  CinaseekSequentialFile& operator=(const CinaseekSequentialFile&) = delete;
 
-  ~ChromiumSequentialFile() override = default;
+  ~CinaseekSequentialFile() override = default;
 
   // Note: This method is relatively hot during leveldb database
   // compaction. Please avoid making them slower.
@@ -197,11 +197,11 @@ Status ReadFromFileToScratch(uint64_t offset,
 // ensures that pointer location re-use won't re-use an entry in the cache as
 // the entry at |this| will always have been deleted.
 // Files are always cleaned up with |RemoveFile|, which will be called when the
-// ChromiumEvictableRandomAccessFile is deleted, the cache is deleted, or the
+// CinaseekEvictableRandomAccessFile is deleted, the cache is deleted, or the
 // file is evicted.
-class ChromiumEvictableRandomAccessFile : public leveldb::RandomAccessFile {
+class CinaseekEvictableRandomAccessFile : public leveldb::RandomAccessFile {
  public:
-  ChromiumEvictableRandomAccessFile(base::FilePath file_path,
+  CinaseekEvictableRandomAccessFile(base::FilePath file_path,
                                     base::File file,
                                     storage::FilesystemProxy* filesystem,
                                     leveldb::Cache* file_cache)
@@ -220,12 +220,12 @@ class ChromiumEvictableRandomAccessFile : public leveldb::RandomAccessFile {
                                              1 /* charge */, &RemoveFile));
   }
 
-  ChromiumEvictableRandomAccessFile(const ChromiumEvictableRandomAccessFile&) =
+  CinaseekEvictableRandomAccessFile(const CinaseekEvictableRandomAccessFile&) =
       delete;
-  ChromiumEvictableRandomAccessFile& operator=(
-      const ChromiumEvictableRandomAccessFile&) = delete;
+  CinaseekEvictableRandomAccessFile& operator=(
+      const CinaseekEvictableRandomAccessFile&) = delete;
 
-  virtual ~ChromiumEvictableRandomAccessFile() {
+  virtual ~CinaseekEvictableRandomAccessFile() {
     file_cache_->Erase(cache_key_);
   }
 
@@ -257,19 +257,19 @@ class ChromiumEvictableRandomAccessFile : public leveldb::RandomAccessFile {
   const base::FilePath filepath_;
   storage::FilesystemProxy* const filesystem_;
   mutable leveldb::Cache* file_cache_;
-  const ChromiumEvictableRandomAccessFile* cache_key_data_;
+  const CinaseekEvictableRandomAccessFile* cache_key_data_;
   leveldb::Slice cache_key_;
 };
 
-class ChromiumRandomAccessFile : public leveldb::RandomAccessFile {
+class CinaseekRandomAccessFile : public leveldb::RandomAccessFile {
  public:
-  ChromiumRandomAccessFile(base::FilePath file_path, base::File file)
+  CinaseekRandomAccessFile(base::FilePath file_path, base::File file)
       : filepath_(std::move(file_path)), file_(std::move(file)) {}
 
-  ChromiumRandomAccessFile(const ChromiumRandomAccessFile&) = delete;
-  ChromiumRandomAccessFile& operator=(const ChromiumRandomAccessFile&) = delete;
+  CinaseekRandomAccessFile(const CinaseekRandomAccessFile&) = delete;
+  CinaseekRandomAccessFile& operator=(const CinaseekRandomAccessFile&) = delete;
 
-  virtual ~ChromiumRandomAccessFile() {}
+  virtual ~CinaseekRandomAccessFile() {}
 
   // Note: This method is relatively hot during leveldb database
   // compaction. Please avoid making them slower.
@@ -285,16 +285,16 @@ class ChromiumRandomAccessFile : public leveldb::RandomAccessFile {
   mutable base::File file_;
 };
 
-class ChromiumWritableFile : public leveldb::WritableFile {
+class CinaseekWritableFile : public leveldb::WritableFile {
  public:
-  ChromiumWritableFile(const std::string& fname,
+  CinaseekWritableFile(const std::string& fname,
                        base::File f,
                        storage::FilesystemProxy* filesystem);
 
-  ChromiumWritableFile(const ChromiumWritableFile&) = delete;
-  ChromiumWritableFile& operator=(const ChromiumWritableFile&) = delete;
+  CinaseekWritableFile(const CinaseekWritableFile&) = delete;
+  CinaseekWritableFile& operator=(const CinaseekWritableFile&) = delete;
 
-  ~ChromiumWritableFile() override = default;
+  ~CinaseekWritableFile() override = default;
   leveldb::Status Append(const leveldb::Slice& data) override;
   leveldb::Status Close() override;
   leveldb::Status Flush() override;
@@ -313,7 +313,7 @@ class ChromiumWritableFile : public leveldb::WritableFile {
   std::string parent_dir_;
 };
 
-ChromiumWritableFile::ChromiumWritableFile(const std::string& fname,
+CinaseekWritableFile::CinaseekWritableFile(const std::string& fname,
                                            base::File f,
                                            storage::FilesystemProxy* filesystem)
     : filename_(fname),
@@ -332,7 +332,7 @@ ChromiumWritableFile::ChromiumWritableFile(const std::string& fname,
   parent_dir_ = FilePath::FromUTF8Unsafe(fname).DirName().AsUTF8Unsafe();
 }
 
-Status ChromiumWritableFile::SyncParent() {
+Status CinaseekWritableFile::SyncParent() {
   TRACE_EVENT0("leveldb", "SyncParent");
 #if defined(OS_POSIX) || defined(OS_FUCHSIA)
   FilePath path = FilePath::FromUTF8Unsafe(parent_dir_);
@@ -351,7 +351,7 @@ Status ChromiumWritableFile::SyncParent() {
   return Status::OK();
 }
 
-Status ChromiumWritableFile::Append(const Slice& data) {
+Status CinaseekWritableFile::Append(const Slice& data) {
   DCHECK(file_.IsValid());
   if (!file_.WriteAtCurrentPosAndCheck(base::as_byte_span(data))) {
     base::File::Error error = base::File::GetLastFileError();
@@ -361,18 +361,18 @@ Status ChromiumWritableFile::Append(const Slice& data) {
   return Status::OK();
 }
 
-Status ChromiumWritableFile::Close() {
+Status CinaseekWritableFile::Close() {
   file_.Close();
   return Status::OK();
 }
 
-Status ChromiumWritableFile::Flush() {
+Status CinaseekWritableFile::Flush() {
   // base::File doesn't do buffered I/O (i.e. POSIX FILE streams) so nothing to
   // flush.
   return Status::OK();
 }
 
-Status ChromiumWritableFile::Sync() {
+Status CinaseekWritableFile::Sync() {
   TRACE_EVENT0("leveldb", "WritableFile::Sync");
 
   base::File::Error error = base::File::FILE_OK;
@@ -709,12 +709,12 @@ size_t WriteBufferSize(int64_t disk_size) {
           (kDiskMaxBuffSize - kDiskMinBuffSize));
 }
 
-ChromiumEnv::ChromiumEnv()
-    : ChromiumEnv(std::make_unique<storage::FilesystemProxy>(
+CinaseekEnv::CinaseekEnv()
+    : CinaseekEnv(std::make_unique<storage::FilesystemProxy>(
           storage::FilesystemProxy::UNRESTRICTED,
           base::FilePath())) {}
 
-ChromiumEnv::ChromiumEnv(std::unique_ptr<storage::FilesystemProxy> filesystem)
+CinaseekEnv::CinaseekEnv(std::unique_ptr<storage::FilesystemProxy> filesystem)
     : filesystem_(std::move(filesystem)) {
   DCHECK(filesystem_);
 
@@ -725,17 +725,17 @@ ChromiumEnv::ChromiumEnv(std::unique_ptr<storage::FilesystemProxy> filesystem)
   }
 }
 
-ChromiumEnv::~ChromiumEnv() {
-  // In chromium, ChromiumEnv is leaked. It'd be nice to add NOTREACHED here to
+CinaseekEnv::~CinaseekEnv() {
+  // In Cinaseek, CinaseekEnv is leaked. It'd be nice to add NOTREACHED here to
   // ensure that behavior isn't accidentally changed, but there's an instance in
   // a unit test that is deleted.
 }
 
-bool ChromiumEnv::FileExists(const std::string& fname) {
+bool CinaseekEnv::FileExists(const std::string& fname) {
   return filesystem_->PathExists(FilePath::FromUTF8Unsafe(fname));
 }
 
-const char* ChromiumEnv::FileErrorString(base::File::Error error) {
+const char* CinaseekEnv::FileErrorString(base::File::Error error) {
   switch (error) {
     case base::File::FILE_ERROR_FAILED:
       return "No further details.";
@@ -781,7 +781,7 @@ const char* ChromiumEnv::FileErrorString(base::File::Error error) {
 // Delete unused table backup files - a feature no longer supported.
 // TODO(cmumford): Delete this function once found backup files drop below some
 //                 very small (TBD) number.
-void ChromiumEnv::RemoveBackupFiles(const FilePath& dir) {
+void CinaseekEnv::RemoveBackupFiles(const FilePath& dir) {
   base::HistogramBase* histogram = base::BooleanHistogram::FactoryGet(
       "LevelDBEnv.DeleteTableBackupFile",
       base::Histogram::kUmaTargetedHistogramFlag);
@@ -799,12 +799,12 @@ void ChromiumEnv::RemoveBackupFiles(const FilePath& dir) {
 }
 
 // Test must call this *before* opening any random-access files.
-void ChromiumEnv::SetReadOnlyFileLimitForTesting(int max_open_files) {
+void CinaseekEnv::SetReadOnlyFileLimitForTesting(int max_open_files) {
   DCHECK(!file_cache_ || file_cache_->TotalCharge() == 0);
   file_cache_.reset(leveldb::NewLRUCache(max_open_files));
 }
 
-Status ChromiumEnv::GetChildren(const std::string& dir,
+Status CinaseekEnv::GetChildren(const std::string& dir,
                                 std::vector<std::string>* result) {
   FilePath dir_path = FilePath::FromUTF8Unsafe(dir);
   RemoveBackupFiles(dir_path);
@@ -824,7 +824,7 @@ Status ChromiumEnv::GetChildren(const std::string& dir,
   return Status::OK();
 }
 
-Status ChromiumEnv::RemoveFile(const std::string& fname) {
+Status CinaseekEnv::RemoveFile(const std::string& fname) {
   Status result;
   FilePath fname_filepath = FilePath::FromUTF8Unsafe(fname);
   if (!filesystem_->DeleteFile(fname_filepath)) {
@@ -833,7 +833,7 @@ Status ChromiumEnv::RemoveFile(const std::string& fname) {
   return result;
 }
 
-Status ChromiumEnv::CreateDir(const std::string& name) {
+Status CinaseekEnv::CreateDir(const std::string& name) {
   Status result;
   base::File::Error error = base::File::FILE_OK;
   Retrier retrier;
@@ -845,7 +845,7 @@ Status ChromiumEnv::CreateDir(const std::string& name) {
   return MakeIOError(name, "Could not create directory.", kCreateDir, error);
 }
 
-Status ChromiumEnv::RemoveDir(const std::string& name) {
+Status CinaseekEnv::RemoveDir(const std::string& name) {
   Status result;
   if (!filesystem_->DeleteFile(FilePath::FromUTF8Unsafe(name))) {
     result = MakeIOError(name, "Could not delete directory.", kRemoveDir);
@@ -853,7 +853,7 @@ Status ChromiumEnv::RemoveDir(const std::string& name) {
   return result;
 }
 
-Status ChromiumEnv::GetFileSize(const std::string& fname, uint64_t* size) {
+Status CinaseekEnv::GetFileSize(const std::string& fname, uint64_t* size) {
   Status s;
   std::optional<base::File::Info> info =
       filesystem_->GetFileInfo(base::FilePath::FromUTF8Unsafe(fname));
@@ -866,7 +866,7 @@ Status ChromiumEnv::GetFileSize(const std::string& fname, uint64_t* size) {
   return s;
 }
 
-Status ChromiumEnv::RenameFile(const std::string& src, const std::string& dst) {
+Status CinaseekEnv::RenameFile(const std::string& src, const std::string& dst) {
   Status result;
   FilePath src_file_path = FilePath::FromUTF8Unsafe(src);
   if (!filesystem_->PathExists(src_file_path))
@@ -890,7 +890,7 @@ Status ChromiumEnv::RenameFile(const std::string& src, const std::string& dst) {
   return MakeIOError(src, buf, kRenameFile, error);
 }
 
-Status ChromiumEnv::LockFile(const std::string& fname, FileLock** lock) {
+Status CinaseekEnv::LockFile(const std::string& fname, FileLock** lock) {
   *lock = nullptr;
   Status result;
   const base::FilePath path = base::FilePath::FromUTF8Unsafe(fname);
@@ -907,13 +907,13 @@ Status ChromiumEnv::LockFile(const std::string& fname, FileLock** lock) {
                        lock_result.error());
   }
 
-  *lock = new ChromiumFileLock(std::move(lock_result.value()), fname);
+  *lock = new CinaseekFileLock(std::move(lock_result.value()), fname);
   return result;
 }
 
-Status ChromiumEnv::UnlockFile(FileLock* lock) {
-  std::unique_ptr<ChromiumFileLock> my_lock(
-      reinterpret_cast<ChromiumFileLock*>(lock));
+Status CinaseekEnv::UnlockFile(FileLock* lock) {
+  std::unique_ptr<CinaseekFileLock> my_lock(
+      reinterpret_cast<CinaseekFileLock*>(lock));
   Status result = Status::OK();
 
   base::File::Error error_code = my_lock->lock->Release();
@@ -924,7 +924,7 @@ Status ChromiumEnv::UnlockFile(FileLock* lock) {
   return result;
 }
 
-Status ChromiumEnv::GetTestDirectory(std::string* path) {
+Status CinaseekEnv::GetTestDirectory(std::string* path) {
   mu_.Acquire();
   if (test_directory_.empty()) {
     if (!base::CreateNewTempDirectory(kLevelDBTestDirectoryPrefix,
@@ -939,7 +939,7 @@ Status ChromiumEnv::GetTestDirectory(std::string* path) {
   return Status::OK();
 }
 
-Status ChromiumEnv::NewLogger(const std::string& fname,
+Status CinaseekEnv::NewLogger(const std::string& fname,
                               leveldb::Logger** result) {
   *result = nullptr;
   FilePath path = FilePath::FromUTF8Unsafe(fname);
@@ -947,11 +947,11 @@ Status ChromiumEnv::NewLogger(const std::string& fname,
                    filesystem_->OpenFile(path, base::File::FLAG_CREATE_ALWAYS |
                                                    base::File::FLAG_WRITE),
                    MakeIOError, fname, "Unable to create log file", kNewLogger);
-  *result = new leveldb::ChromiumLogger(std::move(open_result));
+  *result = new leveldb::CinaseekLogger(std::move(open_result));
   return Status::OK();
 }
 
-Status ChromiumEnv::NewSequentialFile(const std::string& fname,
+Status CinaseekEnv::NewSequentialFile(const std::string& fname,
                                       leveldb::SequentialFile** result) {
   *result = nullptr;
   FilePath path = FilePath::FromUTF8Unsafe(fname);
@@ -960,11 +960,11 @@ Status ChromiumEnv::NewSequentialFile(const std::string& fname,
                        path, base::File::FLAG_OPEN | base::File::FLAG_READ),
                    MakeIOError, fname, "Unable to create sequential file",
                    kNewSequentialFile);
-  *result = new ChromiumSequentialFile(fname, std::move(open_result));
+  *result = new CinaseekSequentialFile(fname, std::move(open_result));
   return Status::OK();
 }
 
-Status ChromiumEnv::NewRandomAccessFile(const std::string& fname,
+Status CinaseekEnv::NewRandomAccessFile(const std::string& fname,
                                         leveldb::RandomAccessFile** result) {
   *result = nullptr;
   base::FilePath file_path = FilePath::FromUTF8Unsafe(fname);
@@ -976,17 +976,17 @@ Status ChromiumEnv::NewRandomAccessFile(const std::string& fname,
                                         kNewRandomAccessFile, error);
                    });
   if (file_cache_) {
-    *result = new ChromiumEvictableRandomAccessFile(
+    *result = new CinaseekEvictableRandomAccessFile(
         std::move(file_path), std::move(file), filesystem_.get(),
         file_cache_.get());
   } else {
     *result =
-        new ChromiumRandomAccessFile(std::move(file_path), std::move(file));
+        new CinaseekRandomAccessFile(std::move(file_path), std::move(file));
   }
   return Status::OK();
 }
 
-Status ChromiumEnv::NewWritableFile(const std::string& fname,
+Status CinaseekEnv::NewWritableFile(const std::string& fname,
                                     leveldb::WritableFile** result) {
   FilePath path = FilePath::FromUTF8Unsafe(fname);
   FileErrorOr<base::File> open_result = filesystem_->OpenFile(
@@ -996,12 +996,12 @@ Status ChromiumEnv::NewWritableFile(const std::string& fname,
     return MakeIOError(fname, "Unable to create writable file",
                        kNewWritableFile, open_result.error());
   }
-  *result = new ChromiumWritableFile(fname, std::move(open_result.value()),
+  *result = new CinaseekWritableFile(fname, std::move(open_result.value()),
                                      filesystem_.get());
   return Status::OK();
 }
 
-Status ChromiumEnv::NewAppendableFile(const std::string& fname,
+Status CinaseekEnv::NewAppendableFile(const std::string& fname,
                                       leveldb::WritableFile** result) {
   *result = nullptr;
   FilePath path = FilePath::FromUTF8Unsafe(fname);
@@ -1010,16 +1010,16 @@ Status ChromiumEnv::NewAppendableFile(const std::string& fname,
                                                    base::File::FLAG_APPEND),
                    MakeIOError, fname, "Unable to create appendable file",
                    kNewAppendableFile);
-  *result = new ChromiumWritableFile(fname, std::move(open_result),
+  *result = new CinaseekWritableFile(fname, std::move(open_result),
                                      filesystem_.get());
   return Status::OK();
 }
 
-uint64_t ChromiumEnv::NowMicros() {
+uint64_t CinaseekEnv::NowMicros() {
   return base::TimeTicks::Now().ToInternalValue();
 }
 
-void ChromiumEnv::SleepForMicroseconds(int micros) {
+void CinaseekEnv::SleepForMicroseconds(int micros) {
   // Round up to the next millisecond.
   base::PlatformThread::Sleep(base::Microseconds(micros));
 }
@@ -1047,7 +1047,7 @@ class Thread : public base::PlatformThread::Delegate {
   void* arg_;
 };
 
-void ChromiumEnv::Schedule(ScheduleFunc* function, void* arg) {
+void CinaseekEnv::Schedule(ScheduleFunc* function, void* arg) {
   // The BLOCK_SHUTDOWN is required to avoid shutdown hangs. The scheduled
   // tasks may be blocking foreground threads waiting for their completions.
   // see: https://crbug.com/1086185.
@@ -1057,7 +1057,7 @@ void ChromiumEnv::Schedule(ScheduleFunc* function, void* arg) {
                              base::BindOnce(function, arg));
 }
 
-void ChromiumEnv::StartThread(void (*function)(void* arg), void* arg) {
+void CinaseekEnv::StartThread(void (*function)(void* arg), void* arg) {
   new Thread(function, arg);  // Will self-delete.
 }
 
@@ -1424,7 +1424,7 @@ leveldb::Status RewriteDB(const leveldb_env::Options& options,
   if (leveldb_chrome::IsMemEnv(options.env))
     return Status::OK();
   DCHECK(options.create_if_missing);
-  TRACE_EVENT1("leveldb", "ChromiumEnv::RewriteDB", "name", name);
+  TRACE_EVENT1("leveldb", "CinaseekEnv::RewriteDB", "name", name);
   leveldb::Status s;
   std::string tmp_name = DatabaseNameForRewriteDB(name);
   if (options.env->FileExists(tmp_name)) {
@@ -1479,7 +1479,7 @@ leveldb::Slice MakeSlice(base::span<const uint8_t> s) {
 namespace leveldb {
 
 Env* Env::Default() {
-  static base::NoDestructor<leveldb_env::ChromiumEnv> default_env;
+  static base::NoDestructor<leveldb_env::CinaseekEnv> default_env;
   return default_env.get();
 }
 

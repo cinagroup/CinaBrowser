@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,8 +92,8 @@ class MockContainerAppKiller : public arc::ContainerAppKiller {
 };
 
 TEST_F(ContainerAppKillerTest, IsRecentlyKilled) {
-  constexpr char kProcessName1[] = "org.chromium.arc.test1";
-  constexpr char kProcessName2[] = "org.chromium.arc.test2";
+  constexpr char kProcessName1[] = "org.Cinaseek.arc.test1";
+  constexpr char kProcessName2[] = "org.Cinaseek.arc.test2";
 
   // Instantiate the mock instance.
   MockContainerAppKiller app_killer;

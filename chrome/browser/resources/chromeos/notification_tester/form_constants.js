@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ export const FormSelectOptions = {
   ],
   ICON_OPTIONS: [
     {displayText: 'No Image', value: 'none'},
-    {displayText: 'Chromium Logo (PNG)', value: 'chromium_logo'},
+    {displayText: 'Cinaseek Logo (PNG)', value: 'Cinaseek_logo'},
     {displayText: 'Google Logo (PNG)', value: 'google_logo'},
     {displayText: 'Warning Symbol (PNG)', value: 'warning'},
   ],
@@ -136,8 +136,8 @@ export const FormSelectOptions = {
       value: 'google_logo_small_png',
     },
     {
-      displayText: 'Chromium Logo (PNG, 192 x 192)',
-      value: 'chromium_logo_large_png',
+      displayText: 'Cinaseek Logo (PNG, 192 x 192)',
+      value: 'Cinaseek_logo_large_png',
     },
   ],
   URL_OPTIONS: [
@@ -279,7 +279,7 @@ const TEXT_AND_BIG_PICTURE_NOTIFICATION = {
   notificationType: NotificationType.NOTIFICATION_TYPE_SIMPLE,
   notifierType: NotifierType.SYSTEM_COMPONENT,
   warningLevel: SystemNotificationWarningLevel.NORMAL,
-  richDataImage: 'chromium_logo_large_png',
+  richDataImage: 'Cinaseek_logo_large_png',
   richDataSmallImage: 'none',
   richDataNeverTimeout: false,
   richDataPriority: NotificationPriority.DEFAULT_PRIORITY,
@@ -327,7 +327,7 @@ const TEXT_AND_AVATAR_NOTIFICATION = {
   id: 'random',
   title: 'Text + Avatar',
   message: 'This is a text + avatar notification.',
-  icon: 'chromium_logo',
+  icon: 'Cinaseek_logo',
   displaySource: 'Display Source',
   originURL: '',
   notificationType: NotificationType.NOTIFICATION_TYPE_SIMPLE,
@@ -354,7 +354,7 @@ const TEXT_GROUP_NOTIFICATION_A = {
   id: 'random',
   title: 'Group - 1',
   message: 'This is the first notification.',
-  icon: 'chromium_logo',
+  icon: 'Cinaseek_logo',
   displaySource: '',
   originURL: 'https://testurl.xyz',
   notificationType: NotificationType.NOTIFICATION_TYPE_SIMPLE,

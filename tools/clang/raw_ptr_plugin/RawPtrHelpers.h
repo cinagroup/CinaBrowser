@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -490,7 +490,7 @@ clang::ast_matchers::internal::Matcher<clang::Type> const_char_pointer_type(
 // - located in Extern C context, in generated code or annotated with
 // RAW_PTR_EXCLUSION
 // - located under third_party/ except under third_party/blink as Blink
-// is part of chromium git repo.
+// is part of Cinaseek git repo.
 //
 // Additionally, if |options.should_exclude_stack_allocated_records|,
 // - Pointer pointing to a STACK_ALLOCATED() object.

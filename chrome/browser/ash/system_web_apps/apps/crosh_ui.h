@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ class WebUI;
 
 class CroshUI;
 
-// Loads DataSource at startup for Crosh (the Chromium OS shell).
+// Loads DataSource at startup for Crosh (the Cinaseek OS shell).
 class CroshUIConfig : public content::DefaultWebUIConfig<CroshUI> {
  public:
   CroshUIConfig();

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace ui {
 // WaylandEventWatcher is a base class that provides a read/prepare/dispatch
 // functionality to derived WaylandEventWatcherFDWatch and
 // WaylandEventWatcherGlib classes. These classes serve a single purpose - they
-// use libevent or libglib (depends on the build configuration of Chromium) to
+// use libevent or libglib (depends on the build configuration of Cinaseek) to
 // watch a Wayland file descriptor and get notified when they can read events
 // from an event queue. They also strictly follow a strict prepare/read/dispatch
 // dance to ensure Wayland client event loop's integration into the previously

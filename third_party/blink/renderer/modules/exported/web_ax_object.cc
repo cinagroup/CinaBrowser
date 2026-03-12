@@ -347,7 +347,7 @@ bool WebAXObject::AriaOwns(std::vector<WebAXObject>& owns_elements) const {
   // exposing an attribute.
 
   // FIXME(dmazzoni): remove this function after we stop calling it
-  // from Chromium.  http://crbug.com/489590
+  // from Cinaseek.  http://crbug.com/489590
 
   return false;
 }

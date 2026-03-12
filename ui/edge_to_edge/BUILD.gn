@@ -1,24 +1,24 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/config/android/rules.gni")
 
 android_library("java") {
-  resources_package = "org.chromium.ui.edge_to_edge"
+  resources_package = "org.Cinaseek.ui.edge_to_edge"
   sources = [
-    "android/java/src/org/chromium/ui/edge_to_edge/BaseSystemBarColorHelper.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgeFieldTrial.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgeManager.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgePadAdjuster.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgeStateProvider.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgeSupplier.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/EdgeToEdgeSystemBarColorHelper.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/SystemBarColorHelper.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/TabbedSystemBarColorHelper.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/WindowSystemBarColorHelper.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/layout/EdgeToEdgeBaseLayout.java",
-    "android/java/src/org/chromium/ui/edge_to_edge/layout/EdgeToEdgeLayoutCoordinator.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/BaseSystemBarColorHelper.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeFieldTrial.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeManager.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgePadAdjuster.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeStateProvider.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeSupplier.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeSystemBarColorHelper.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/SystemBarColorHelper.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/TabbedSystemBarColorHelper.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/WindowSystemBarColorHelper.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/layout/EdgeToEdgeBaseLayout.java",
+    "android/java/src/org/Cinaseek/ui/edge_to_edge/layout/EdgeToEdgeLayoutCoordinator.java",
   ]
   deps = [
     ":java_resources",
@@ -38,12 +38,12 @@ android_resources("java_resources") {
 robolectric_library("junit") {
   testonly = true
   sources = [
-    "android/junit/src/org/chromium/ui/edge_to_edge/EdgeToEdgeManagerUnitTest.java",
-    "android/junit/src/org/chromium/ui/edge_to_edge/EdgeToEdgeStateProviderUnitTest.java",
-    "android/junit/src/org/chromium/ui/edge_to_edge/EdgeToEdgeSystemBarColorHelperUnitTest.java",
-    "android/junit/src/org/chromium/ui/edge_to_edge/TabbedSystemBarColorHelperUnitTest.java",
-    "android/junit/src/org/chromium/ui/edge_to_edge/WindowSystemBarColorHelperUnitTest.java",
-    "android/junit/src/org/chromium/ui/edge_to_edge/layout/EdgeToEdgeLayoutUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeManagerUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeStateProviderUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/EdgeToEdgeSystemBarColorHelperUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/TabbedSystemBarColorHelperUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/WindowSystemBarColorHelperUnitTest.java",
+    "android/junit/src/org/Cinaseek/ui/edge_to_edge/layout/EdgeToEdgeLayoutUnitTest.java",
   ]
   deps = [
     ":java",
@@ -63,8 +63,8 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.ui.edge_to_edge"
-  sources = [ "android/javatests/src/org/chromium/ui/edge_to_edge/layout/EdgeToEdgeLayoutViewTest.java" ]
+  resources_package = "org.Cinaseek.ui.edge_to_edge"
+  sources = [ "android/javatests/src/org/Cinaseek/ui/edge_to_edge/layout/EdgeToEdgeLayoutViewTest.java" ]
 
   deps = [
     ":java",

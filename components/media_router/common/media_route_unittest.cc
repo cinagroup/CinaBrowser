@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,13 +10,13 @@
 
 namespace {
 constexpr char kRouteId1[] =
-    "urn:x-org.chromium:media:route:1/cast-sink1/http://foo.com";
+    "urn:x-org.Cinaseek:media:route:1/cast-sink1/http://foo.com";
 constexpr char kRouteId2[] =
-    "urn:x-org.chromium:media:route:2/cast-sink2/http://foo.com";
+    "urn:x-org.Cinaseek:media:route:2/cast-sink2/http://foo.com";
 constexpr char kPresentationUrl[] = "http://www.example.com/presentation.html";
 constexpr char kDescription[] = "Description";
 constexpr char kSource[] = "not-a-mirroring_source";
-constexpr char kTabSource[] = "urn:x-org.chromium.media:source:tab:1";
+constexpr char kTabSource[] = "urn:x-org.Cinaseek.media:source:tab:1";
 constexpr char kSinkId[] = "sinkId";
 }  // namespace
 
@@ -60,15 +60,15 @@ TEST(MediaRouteTest, TestParsingMediaRouteId) {
   EXPECT_EQ(MediaRoute::GetPresentationIdFromMediaRouteId("InvalidRouteId"),
             "");
   EXPECT_EQ(MediaRoute::GetPresentationIdFromMediaRouteId(
-                "urn:x-org.chromium:media:route:1/cast-sink1"),
+                "urn:x-org.Cinaseek:media:route:1/cast-sink1"),
             "");
   EXPECT_EQ(MediaRoute::GetSinkIdFromMediaRouteId("InvalidRouteId"), "");
   EXPECT_EQ(MediaRoute::GetSinkIdFromMediaRouteId(
-                "urn:x-org.chromium:media:route:1/cast-sink1"),
+                "urn:x-org.Cinaseek:media:route:1/cast-sink1"),
             "");
   EXPECT_EQ(MediaRoute::GetMediaSourceIdFromMediaRouteId("InvalidRouteId"), "");
   EXPECT_EQ(MediaRoute::GetMediaSourceIdFromMediaRouteId(
-                "urn:x-org.chromium:media:route:1/cast-sink1"),
+                "urn:x-org.Cinaseek:media:route:1/cast-sink1"),
             "");
 }
 

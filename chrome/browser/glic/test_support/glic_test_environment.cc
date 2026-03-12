@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,11 +77,11 @@ void AddTestAccountToFakeAccountManagerFacade(const std::string& email,
   // 5. Get AccountManagerFacadeProvider class and getInstance method
   base::android::ScopedJavaLocalRef<jclass> provider_class =
       base::android::GetClass(
-          env, "org/chromium/components/signin/AccountManagerFacadeProvider");
+          env, "org/Cinaseek/components/signin/AccountManagerFacadeProvider");
   jmethodID get_instance_method =
       base::android::MethodID::Get<base::android::MethodID::TYPE_STATIC>(
           env, provider_class.obj(), "getInstance",
-          "()Lorg/chromium/components/signin/AccountManagerFacade;");
+          "()Lorg/Cinaseek/components/signin/AccountManagerFacade;");
 
   // 6. Get AccountManagerFacade instance
   base::android::ScopedJavaLocalRef<jobject> facade_obj =
@@ -96,7 +96,7 @@ void AddTestAccountToFakeAccountManagerFacade(const std::string& email,
   jmethodID add_account_method =
       base::android::MethodID::Get<base::android::MethodID::TYPE_INSTANCE>(
           env, facade_class.obj(), "addAccount",
-          "(Lorg/chromium/components/signin/base/AccountInfo;)V");
+          "(Lorg/Cinaseek/components/signin/base/AccountInfo;)V");
 
   // 8. Call addAccount
   env->CallVoidMethod(facade_obj.obj(), add_account_method,

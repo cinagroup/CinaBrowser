@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 #include <array>
 
 // Array listing regular expressions of paths that should be ignored when
-// running the rewrite_raw_ptr_fields tool on Chromium sources.
+// running the rewrite_raw_ptr_fields tool on Cinaseek sources.
 //
 // If a source file path contains any of the lines in the filter file below,
 // then such source file will not be rewritten.
@@ -43,7 +43,7 @@ inline constexpr std::array kSpanifyManualPathsToIgnoreChrome = {
     "base/containers/span_unittest.cc",
 
     // The comment atop this test suite explains that it "contains intentional
-    // memory errors" to verify Chromium tooling.
+    // memory errors" to verify Cinaseek tooling.
     "base/tools_sanity_unittest.cc",
 
     // Can't depend on //base, pointers/references under this directory can't be
@@ -114,7 +114,7 @@ inline constexpr std::array kSpanifyManualPathsToIgnoreChrome = {
 
     // Exclude auto generated files. These are files that contain the string
     // "This file is auto-generated from".
-    "gpu/GLES2/gl2chromium_autogen.h",
+    "gpu/GLES2/gl2Cinaseek_autogen.h",
     "gpu/command_buffer/client/gles2_implementation_impl_autogen.h",
     "gpu/command_buffer/client/gles2_implementation_unittest_autogen.h",
     "gpu/command_buffer/client/raster_implementation_impl_autogen.h",

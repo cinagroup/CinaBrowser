@@ -5,9 +5,9 @@
 ++++++++[static] name='Browser'
 ++++++[column header] name='Rendering Engine' (row=0, col=1, row_span=1, col_span=1, n_row_headers=0, n_col_headers=0)
 ++++++++[static] name='Rendering Engine'
-++++[table row] name='ChromeBlink'
-++++++[table cell] name='Chrome' (row=1, col=0, row_span=1, col_span=1, n_row_headers=0, n_col_headers=1)
-++++++++[static] name='Chrome'
+++++[table row] name='CinaseekBlink'
+++++++[table cell] name='Cinaseek' (row=1, col=0, row_span=1, col_span=1, n_row_headers=0, n_col_headers=1)
+++++++++[static] name='Cinaseek'
 ++++++[table cell] name='Blink' (row=1, col=1, row_span=1, col_span=1, n_row_headers=0, n_col_headers=1)
 ++++++++[static] name='Blink'
 ++++[table row] name='SafariWebKit'

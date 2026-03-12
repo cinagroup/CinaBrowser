@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef DEVICE_BLUETOOTH_FLOSS_FLOSS_LESCAN_CLIENT_H_
@@ -27,9 +27,9 @@ class ObjectPath;
 namespace floss {
 
 const char kScannerCallbackPath[] =
-    "/org/chromium/bluetooth/scanner/callback";
+    "/org/Cinaseek/bluetooth/scanner/callback";
 const char kScannerCallbackInterfaceName[] =
-    "org.chromium.bluetooth.ScannerCallback";
+    "org.Cinaseek.bluetooth.ScannerCallback";
 const char kEmptyUuidStr[] = "00000000-0000-0000-0000-000000000000";
 
 // Represents type of a scan.

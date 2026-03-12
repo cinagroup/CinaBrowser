@@ -1,4 +1,4 @@
-// This test reproduces Chromium issue https://crbug.com/1292387. If it doesn't
+// This test reproduces Cinaseek issue https://crbug.com/1292387. If it doesn't
 // crash then the test passed.
 
 test(() => {

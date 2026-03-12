@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class PluginVmAvailabilitySubscription;
 extern const char kPitaDlc[];
 
 // This is used by both the Plugin VM app and its installer.
-// Generated as crx_file::id_util::GenerateId("org.chromium.plugin_vm");
+// Generated as crx_file::id_util::GenerateId("org.Cinaseek.plugin_vm");
 extern const char kPluginVmShelfAppId[];
 
 // Name of the Plugin VM.

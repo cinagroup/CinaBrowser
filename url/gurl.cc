@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -362,7 +362,7 @@ bool GURL::SchemeIsCryptographic(std::string_view lower_ascii_scheme) {
 }
 
 bool GURL::SchemeIsLocal() const {
-  // The `filesystem:` scheme is not in the Fetch spec, but Chromium still
+  // The `filesystem:` scheme is not in the Fetch spec, but Cinaseek still
   // supports it in large part. It should be treated as a local scheme too.
   return SchemeIs(url::kAboutScheme) || SchemeIs(url::kBlobScheme) ||
          SchemeIs(url::kDataScheme) || SchemeIs(url::kFileSystemScheme);

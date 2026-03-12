@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ chrome.test.getConfig(function(config) {
     // (verified in C++).
     function() {
       testLink.target = '_blank';
-      testLink.href = 'http://chromium.org';
+      testLink.href = 'http://Cinaseek.org';
       clickTestLink();
     },
     // If we manage to execute this test case, then we haven't navigated away.

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -120,7 +120,7 @@ class ServiceTest : public testing::Test {
       GTEST_SKIP() << "Test requires admin rights";
     }
     service_environment_ = new ServiceEnvironment(
-        L"Chromium Test Service", FILE_PATH_LITERAL("test_service.exe"),
+        L"Cinaseek Test Service", FILE_PATH_LITERAL("test_service.exe"),
         /*testing_switch=*/{}, __uuidof(TestService), __uuidof(ITestService));
     ASSERT_TRUE(service_environment_->is_valid());
   }

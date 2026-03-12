@@ -25,9 +25,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "android_browsertests",
         "test_id_prefix": "ninja://chrome/test:android_browsertests/"
@@ -58,9 +58,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 20
         },
         "test": "chrome_public_test_apk",
@@ -92,9 +92,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "chrome_public_unit_test_apk",
         "test_id_prefix": "ninja://chrome/android:chrome_public_unit_test_apk/"
@@ -119,9 +119,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "components_browsertests",
         "test_id_prefix": "ninja://components:components_browsertests/"
@@ -146,9 +146,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "components_unittests",
@@ -175,9 +175,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "content_browsertests",
@@ -203,9 +203,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 3
         },
         "test": "content_shell_test_apk",
@@ -231,9 +231,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_unittests",
         "test_id_prefix": "ninja://content/test:content_unittests/"
@@ -258,9 +258,9 @@
             "device_os_flavor": "google",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "unit_tests",

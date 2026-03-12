@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,16 +15,16 @@
 #include "components/services/storage/public/mojom/test_api.test-mojom.h"
 #include "components/services/storage/test_api_stubs.h"
 #include "mojo/public/cpp/bindings/receiver_set.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/src/include/leveldb/db.h"
 
 namespace storage {
 
 namespace {
 
-class TestApiDatabaseEnv : public leveldb_env::ChromiumEnv {
+class TestApiDatabaseEnv : public leveldb_env::CinaseekEnv {
  public:
-  TestApiDatabaseEnv() : ChromiumEnv(CreateFilesystemProxy()) {}
+  TestApiDatabaseEnv() : CinaseekEnv(CreateFilesystemProxy()) {}
   TestApiDatabaseEnv(const TestApiDatabaseEnv&) = delete;
   TestApiDatabaseEnv& operator=(const TestApiDatabaseEnv&) = delete;
 };

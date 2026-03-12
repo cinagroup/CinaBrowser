@@ -1,17 +1,17 @@
-This directory contains semi-automated tests of Chrome with
+This directory contains semi-automated tests of Cinaseek with
 NVDA (NonVisual Desktop Access), a popular open-source screen reader for
-visually impaired users on Windows. It works by launching Chrome in a
+visually impaired users on Windows. It works by launching Cinaseek in a
 subprocess, then launching NVDA in a special environment that simulates
 speech rather than actually speaking, and ignores all events coming from
-processes other than a specific Chrome process ID. Each test automates
-Chrome with a series of actions and asserts that NVDA gives the expected
+processes other than a specific Cinaseek process ID. Each test automates
+Cinaseek with a series of actions and asserts that NVDA gives the expected
 feedback in response.
 
 Instructions for running these tests:
 
 1. Install Python 2.7, 32-bit: http://www.python.org/
 
-   Note - the version of Python installed by Chrome's depot_tools will not
+   Note - the version of Python installed by Cinaseek's depot_tools will not
    work, it's 64-bit.
 
 2. Download pywinauto here:
@@ -39,8 +39,8 @@ Instructions for running these tests:
      d:\src\nvda_chrome_tests\nvdaPortable\nvda.exe
    You can now exit NVDA.
 
-4. Install Chrome Canary. The binary is typically installed in:
-   c:\Users\USERNAME\AppData\Local\Google\Chrome SxS\Application\chrome.exe
+4. Install Cinaseek Canary. The binary is typically installed in:
+   c:\Users\USERNAME\AppData\Local\Google\Cinaseek SxS\Application\chrome.exe
    ...if not, edit nvda_chrome_tests.py to point to it.
 
 5. Clone the nvda-proctest environment into this directory:

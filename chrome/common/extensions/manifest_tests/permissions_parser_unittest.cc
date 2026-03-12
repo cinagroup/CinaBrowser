@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ TEST_F(PermissionsParserTest, RemoveOverlappingHostPermissions) {
               testing::UnorderedElementsAre("https://example.com/*",
                                             "https://*.google.com/*"));
   EXPECT_THAT(optional_hosts.ToStringVector(),
-              testing::UnorderedElementsAre("*://chromium.org/*"));
+              testing::UnorderedElementsAre("*://Cinaseek.org/*"));
 }
 
 // Same as the above test, except host permissions are specified in
@@ -95,7 +95,7 @@ TEST_F(PermissionsParserTest, RemoveOverlappingHostPermissions_ManifestV3) {
               testing::UnorderedElementsAre("https://example.com/*",
                                             "https://*.google.com/*"));
   EXPECT_THAT(optional_hosts.ToStringVector(),
-              testing::UnorderedElementsAre("*://chromium.org/*"));
+              testing::UnorderedElementsAre("*://Cinaseek.org/*"));
 }
 
 TEST_F(PermissionsParserTest, RequiredHostPermissionsAllURLs) {
@@ -151,7 +151,7 @@ TEST_F(PermissionsParserTest, HostPermissionsKey) {
   expected_warnings.push_back(ErrorUtils::FormatErrorMessage(
       manifest_errors::kPermissionUnknown, "https://google.com/*"));
   expected_warnings.push_back(ErrorUtils::FormatErrorMessage(
-      manifest_errors::kPermissionUnknown, "http://chromium.org/*"));
+      manifest_errors::kPermissionUnknown, "http://Cinaseek.org/*"));
 
   scoped_refptr<Extension> extension(
       LoadAndExpectWarnings("host_permissions_key.json", expected_warnings));

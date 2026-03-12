@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class PaymentInstrument;
 // CreditCard etc.
 class PaymentInstrument final {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill.payments
   // A payment rail can loosely represent the different ways in which Chrome can
   // intercept a user's payment journey and assist in completing it. For
   // example: Pix, UPI, Card number, IBAN etc.

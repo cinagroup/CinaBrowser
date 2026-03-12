@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ namespace arc {
 
 namespace {
 
-constexpr char kArcUrl[] = "content://org.chromium.foo/bar";
+constexpr char kArcUrl[] = "content://org.Cinaseek.foo/bar";
 constexpr char kData[] = "abcdef";
 constexpr char kMimeType[] = "application/octet-stream";
 

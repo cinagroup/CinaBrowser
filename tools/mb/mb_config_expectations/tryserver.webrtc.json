@@ -1,5 +1,5 @@
 {
-  "android_chromium_compile": {
+  "android_Cinaseek_compile": {
     "gn_args": {
       "android_static_analysis": "off",
       "dcheck_always_on": true,
@@ -16,7 +16,7 @@
       "use_siso": true
     }
   },
-  "linux_chromium_compile": {
+  "linux_Cinaseek_compile": {
     "gn_args": {
       "dcheck_always_on": true,
       "is_component_build": false,
@@ -27,7 +27,7 @@
       "use_siso": true
     }
   },
-  "linux_chromium_compile_dbg": {
+  "linux_Cinaseek_compile_dbg": {
     "gn_args": {
       "is_component_build": true,
       "is_debug": true,
@@ -37,7 +37,7 @@
       "use_siso": true
     }
   },
-  "mac_chromium_compile": {
+  "mac_Cinaseek_compile": {
     "gn_args": {
       "dcheck_always_on": true,
       "ffmpeg_branding": "Chrome",
@@ -50,7 +50,7 @@
       "use_siso": true
     }
   },
-  "webrtc_linux_chromium": {
+  "webrtc_linux_Cinaseek": {
     "gn_args": {
       "dcheck_always_on": true,
       "ffmpeg_branding": "Chrome",
@@ -63,7 +63,7 @@
       "use_siso": true
     }
   },
-  "win_chromium_compile": {
+  "win_Cinaseek_compile": {
     "gn_args": {
       "dcheck_always_on": true,
       "enable_resource_allowlist_generation": true,
@@ -77,7 +77,7 @@
       "use_siso": true
     }
   },
-  "win_chromium_compile_dbg": {
+  "win_Cinaseek_compile_dbg": {
     "gn_args": {
       "ffmpeg_branding": "Chrome",
       "is_component_build": true,

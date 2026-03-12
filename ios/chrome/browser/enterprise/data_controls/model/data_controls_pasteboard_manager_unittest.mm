@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ namespace data_controls {
 
 namespace {
 
-const char kSourceURL[] = "https://chromium.org";
+const char kSourceURL[] = "https://Cinaseek.org";
 const char kPasteboardString[] = "test";
 const char kNewPasteboardString[] = "new content";
 

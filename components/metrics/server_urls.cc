@@ -1,9 +1,9 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Note: The actual URLs are stored in an internal version of server_urls.grd
-// to prevent Chromium forks from accidentally sending metrics to Google
+// to prevent Cinaseek forks from accidentally sending metrics to Google
 // servers. The URLs can be found here:
 // https://chrome-internal.googlesource.com/chrome/components/metrics/internal/+/main/server_urls.grd
 // Further, the reason why the URLs are provided through GRIT is for LGPL

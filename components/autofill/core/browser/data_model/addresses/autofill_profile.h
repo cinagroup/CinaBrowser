@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class AutofillProfile : public FormGroup {
  public:
   // Each profile has exactly one `RecordType`, describing what kind of profile
   // it is.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
   enum class RecordType {
@@ -475,7 +475,7 @@ class AutofillProfile : public FormGroup {
   // Only relevant for `record_type_ == kAccount` profiles, since
   // `kLocalOrSyncable` profiles are only used within Autofill. The integer
   // values represent a server-side enum `BillableService`, which is not
-  // duplicated in Chromium. For Autofill, the exact application that
+  // duplicated in Cinaseek. For Autofill, the exact application that
   // created the profile is thus opaque. However, Autofill is
   // represented by the value `kInitialCreatorChrome`.
   int initial_creator_id_ = 0;

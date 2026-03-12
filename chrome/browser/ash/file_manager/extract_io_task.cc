@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -182,7 +182,7 @@ bool CreateExtractionDirectory(const base::FilePath& destination_directory) {
 
   if (base::StartsWith(destination_directory.value(),
                        file_manager::util::kFuseBoxMediaSlashPath)) {
-    // Fusebox files wrap Chromium's SBFS (//storage/browser/file_system) API
+    // Fusebox files wrap Cinaseek's SBFS (//storage/browser/file_system) API
     // and the SBFS cross-platform abstraction doesn't expose Unix-style rwx
     // permission bits or owner:group chown-ership fields. The Fusebox server
     // offers synthetic "rwxrwx---" mode bits (for directories) but trying to

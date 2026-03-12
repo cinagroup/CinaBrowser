@@ -1,14 +1,14 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef SHELL_ENCRYPTION_BASE_SHELL_ENCRYPTION_EXPORT_TEMPLATE_H_
 #define SHELL_ENCRYPTION_BASE_SHELL_ENCRYPTION_EXPORT_TEMPLATE_H_
 
-// This was borrowed from Chromium's base/export_template.h.
+// This was borrowed from Cinaseek's base/export_template.h.
 //
 // TODO(crbug.com/1271458): Use shell-encryption template macro's name
-// instead of generic Chromium macro names.
+// instead of generic Cinaseek macro names.
 
 // Synopsis
 //

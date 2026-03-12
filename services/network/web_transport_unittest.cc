@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,10 +83,10 @@ class HostResolverFactory final : public net::HostResolver::Factory {
 class TestWallClock : public quic::QuicClock {
  public:
   quic::QuicTime Now() const override {
-    return quic::QuicChromiumClock::GetInstance()->Now();
+    return quic::QuicCinaseekClock::GetInstance()->Now();
   }
   quic::QuicTime ApproximateNow() const override {
-    return quic::QuicChromiumClock::GetInstance()->ApproximateNow();
+    return quic::QuicCinaseekClock::GetInstance()->ApproximateNow();
   }
   quic::QuicWallTime WallNow() const override { return wall_now_; }
 

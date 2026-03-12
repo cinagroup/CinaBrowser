@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -138,7 +138,7 @@ bool VulkanInstance::CreateInstance(
 
   VkApplicationInfo app_info = {};
   app_info.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-  app_info.pApplicationName = "Chromium";
+  app_info.pApplicationName = "Cinaseek";
   app_info.apiVersion = vulkan_info_.used_api_version;
 
   vulkan_info_.enabled_instance_extensions = required_extensions;

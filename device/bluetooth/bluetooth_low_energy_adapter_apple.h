@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,7 +142,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothLowEnergyAdapterApple
 
   // The Initialize() method intentionally does not initialize
   // |low_energy_central_manager_| or |low_energy_peripheral_manager_| because
-  // Chromium might not have permission to access the Bluetooth adapter.
+  // Cinaseek might not have permission to access the Bluetooth adapter.
   // Methods which require these to be initialized must call LazyInitialize()
   // first.
   bool lazy_initialized_ = false;
@@ -181,7 +181,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothLowEnergyAdapterApple
       scoped_refptr<BluetoothLowEnergyDeviceWatcherMac> watcher);
 
   // Returns the list of devices that are connected by other applications than
-  // Chromium, based on a service UUID. If no uuid is given, generic access
+  // Cinaseek, based on a service UUID. If no uuid is given, generic access
   // service (1800) is used (since CoreBluetooth requires to use a service).
   std::vector<BluetoothDevice*> RetrieveGattConnectedDevicesWithService(
       const BluetoothUUID* uuid);

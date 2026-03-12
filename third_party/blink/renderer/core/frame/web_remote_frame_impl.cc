@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -240,7 +240,7 @@ WebLocalFrame* WebRemoteFrameImpl::CreateLocalChild(
 
   // TODO(https://crbug.com/1355751): Plumb the StorageKey from a value provided
   // by the browser process. This was attempted in patchset 6 of:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/3851381/6
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3851381/6
   // A remote frame being asked to create a child only happens in some cases to
   // recover from a crash.
   StorageKey storage_key;

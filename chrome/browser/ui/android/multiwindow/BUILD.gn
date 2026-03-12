@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,22 +6,22 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/multiwindow/CloseConfirmationDialogView.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/DialogListItemDecoration.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceInfo.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherActionsDelegate.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherCoordinator.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherItemProperties.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherItemViewBinder.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiInstanceIphController.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiInstanceManager.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiInstanceState.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiWindowMetricsUtils.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/RenameWindowDialogView.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/TargetSelectorCoordinator.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/TargetSelectorItemProperties.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/TargetSelectorItemViewBinder.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/UiUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/CloseConfirmationDialogView.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/DialogListItemDecoration.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceInfo.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherActionsDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherItemProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherItemViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiInstanceIphController.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiInstanceManager.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiInstanceState.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiWindowMetricsUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/RenameWindowDialogView.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/TargetSelectorCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/TargetSelectorItemProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/TargetSelectorItemViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/UiUtils.java",
   ]
   deps = [
     ":java_resources",
@@ -56,7 +56,7 @@ android_library("java") {
     "//ui/android:ui_utils_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.multiwindow"
+  resources_package = "org.Cinaseek.chrome.browser.multiwindow"
 }
 
 android_resources("java_resources") {
@@ -87,12 +87,12 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.multiwindow"
+  resources_package = "org.Cinaseek.chrome.browser.multiwindow"
   sources = [
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiInstanceStateUnitTest.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/MultiWindowMetricsUtilsUnitTest.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/UiUtilsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiInstanceStateUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/MultiWindowMetricsUtilsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/UiUtilsUnitTest.java",
   ]
 
   deps = [
@@ -121,11 +121,11 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.multiwindow"
+  resources_package = "org.Cinaseek.chrome.browser.multiwindow"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/multiwindow/InstanceSwitcherCoordinatorTest.java",
-    "java/src/org/chromium/chrome/browser/multiwindow/TargetSelectorCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/InstanceSwitcherCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/multiwindow/TargetSelectorCoordinatorTest.java",
   ]
 
   deps = [

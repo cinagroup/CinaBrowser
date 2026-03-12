@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ class LzwPixelColorIndicesWriter {
     // This map doesn't need to be sorted, and contains generally small number
     // of entries. Therefore, a flat hash data structure achieved better results
     // in the benchmarks done in http://b/308218563. However,
-    // `absl::flat_hash_map` is still not allowed in the Chromium codebase, so
+    // `absl::flat_hash_map` is still not allowed in the Cinaseek codebase, so
     // we'll keep this as a `base::flat_map` for now.
     base::flat_map<ColorIndex, LzwCode> next_index_to_code;
   };

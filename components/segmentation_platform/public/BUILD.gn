@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -111,15 +111,15 @@ source_set("test_support") {
 if (is_android) {
   android_library("public_java") {
     sources = [
-      "android/java/src/org/chromium/components/segmentation_platform/ClassificationResult.java",
-      "android/java/src/org/chromium/components/segmentation_platform/Constants.java",
-      "android/java/src/org/chromium/components/segmentation_platform/InputContext.java",
-      "android/java/src/org/chromium/components/segmentation_platform/PredictionOptions.java",
-      "android/java/src/org/chromium/components/segmentation_platform/ProcessedValue.java",
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentSelectionResult.java",
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentationPlatformConversionBridge.java",
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentationPlatformService.java",
-      "android/java/src/org/chromium/components/segmentation_platform/TrainingLabels.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/ClassificationResult.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/Constants.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/InputContext.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/PredictionOptions.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/ProcessedValue.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentSelectionResult.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentationPlatformConversionBridge.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentationPlatformService.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/TrainingLabels.java",
     ]
 
     deps = [
@@ -142,9 +142,9 @@ if (is_android) {
 
   robolectric_library("junit") {
     sources = [
-      "android/java/src/org/chromium/components/segmentation_platform/InputContextTest.java",
-      "android/java/src/org/chromium/components/segmentation_platform/PredictionOptionsTest.java",
-      "android/java/src/org/chromium/components/segmentation_platform/ProcessedValueTest.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/InputContextTest.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/PredictionOptionsTest.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/ProcessedValueTest.java",
     ]
 
     deps = [
@@ -167,10 +167,10 @@ if (is_android) {
     visibility = [ ":*" ]
 
     sources = [
-      "android/java/src/org/chromium/components/segmentation_platform/InputContext.java",
-      "android/java/src/org/chromium/components/segmentation_platform/PredictionOptions.java",
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentationPlatformConversionBridge.java",
-      "android/java/src/org/chromium/components/segmentation_platform/TrainingLabels.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/InputContext.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/PredictionOptions.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentationPlatformConversionBridge.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/TrainingLabels.java",
     ]
   }
 

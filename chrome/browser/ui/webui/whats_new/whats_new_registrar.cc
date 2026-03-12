@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ void RegisterWhatsNewModules(whats_new::WhatsNewRegistry* registry) {
   // M144
 #if BUILDFLAG(ENABLE_PDF)
   registry->RegisterModule(
-      WhatsNewModule(chrome_pdf::features::kPdfInk2, "andyphan@chromium.org"));
+      WhatsNewModule(chrome_pdf::features::kPdfInk2, "andyphan@Cinaseek.org"));
 #endif  // BUILDFLAG(ENABLE_PDF)
 
   // M147
@@ -55,7 +55,7 @@ void RegisterWhatsNewModules(whats_new::WhatsNewRegistry* registry) {
 void RegisterWhatsNewEditions(whats_new::WhatsNewRegistry* registry) {
   // Register editions here.
   registry->RegisterEdition(WhatsNewEdition(
-      ::features::kGlicRollout, "tommasin@chromium.org",
+      ::features::kGlicRollout, "tommasin@Cinaseek.org",
       std::vector<BrowserCommand>{BrowserCommand::kOpenGlic,
                                   BrowserCommand::kOpenGlicSettings,
                                   BrowserCommand::kPrewarmGlicFre}));

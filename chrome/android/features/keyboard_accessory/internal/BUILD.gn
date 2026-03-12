@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,8 +9,8 @@ import("//tools/grit/grit_rule.gni")
 
 generate_jni("jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/AutofillKeyboardAccessoryViewBridge.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingComponentBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/AutofillKeyboardAccessoryViewBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingComponentBridge.java",
   ]
 }
 
@@ -70,34 +70,34 @@ android_library("internal_java") {
   ]
   srcjar_deps = [ ":jni" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/AutofillKeyboardAccessoryViewBridge.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingComponentBridge.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingState.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingStateCache.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabItemsModel.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessoryInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessorySheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessorySheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessoryInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessorySheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessorySheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/DynamicInfoViewBottomSpacer.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/IbanAccessoryInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/LoyaltyCardInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessoryInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PlusAddressInfoView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_tabs/PromoCodeAccessoryInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/AutofillKeyboardAccessoryViewBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingComponentBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingState.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingStateCache.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabItemsModel.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AccessorySheetTabViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessoryInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessorySheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/AddressAccessorySheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessoryInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessorySheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/CreditCardAccessorySheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/DynamicInfoViewBottomSpacer.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/IbanAccessoryInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/LoyaltyCardInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessoryInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PasswordAccessorySheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PlusAddressInfoView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_tabs/PromoCodeAccessoryInfoView.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.keyboard_accessory"
+  resources_package = "org.Cinaseek.chrome.browser.keyboard_accessory"
 }

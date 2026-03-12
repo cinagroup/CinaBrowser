@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace paint_preview {
 // entry for TabbedPaintPreviewCompositorFailureReason in enums.xml.
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.paintpreview.player)
+//   org.Cinaseek.components.paintpreview.player)
 enum class CompositorStatus : int {
   OK,
   URL_MISMATCH,

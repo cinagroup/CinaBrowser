@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ class MEDIA_EXPORT MediaDrmBridge : public ContentDecryptionModule,
   // MediaDrm. As they are reported as system codes, the numbers must be
   // different than those reported by other CDMs and CdmPromise::SystemCode.
   // These are reported to UMA server. Do not renumber or reuse values.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum class MediaDrmSystemCode {
     MIN_VALUE = 1100000,  // To avoid conflict with other reported system codes.
     SET_SERVER_CERTIFICATE_FAILED = MIN_VALUE,
@@ -85,7 +85,7 @@ class MEDIA_EXPORT MediaDrmBridge : public ContentDecryptionModule,
   };
 
   // Errors that can occur when creating a MediaDrmBridge Java object.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum class MediaDrmCreateError {
     MIN_VALUE = 0,
     SUCCESS = MIN_VALUE,
@@ -102,7 +102,7 @@ class MEDIA_EXPORT MediaDrmBridge : public ContentDecryptionModule,
   };
 
   // Reasons for CDM session closed unique to MediaDrm.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum class MediaDrmCdmSessionClosedReason {
     CLOSE = 0,
     SESSION_RECLAIMED = 1,

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ namespace {
 using mojom::DragEventSource;
 
 // Custom mime type used for window dragging DND sessions.
-constexpr char kMimeTypeChromiumWindow[] = "chromium/x-window";
+constexpr char kMimeTypeCinaseekWindow[] = "Cinaseek/x-window";
 
 // DND action used in window dragging DND sessions.
 constexpr uint32_t kDndActionWindowDrag =
@@ -201,7 +201,7 @@ bool WaylandWindowDragController::StartDragSession(
 
   CHECK(!data_source_);
   data_source_ = data_device_manager_->CreateSource(this);
-  data_source_->Offer({kMimeTypeChromiumWindow});
+  data_source_->Offer({kMimeTypeCinaseekWindow});
   data_source_->SetDndActions(kDndActionWindowDrag);
 
   if (connection_->toplevel_drag_manager_v1()) {
@@ -347,14 +347,14 @@ void WaylandWindowDragController::OnDragEnter(WaylandWindow* window,
   // case, |data_offer_| will hold an empty mime_types list and, at this point,
   // it's safe just to skip the offer checks and requests here.
   if (!std::ranges::contains(data_offer_->mime_types(),
-                             kMimeTypeChromiumWindow)) {
+                             kMimeTypeCinaseekWindow)) {
     DVLOG(1) << "OnEnter. No valid mime type found.";
     return;
   }
 
   // Accept the offer and set the dnd action.
   data_offer_->SetDndActions(kDndActionWindowDrag);
-  data_offer_->Accept(serial, kMimeTypeChromiumWindow);
+  data_offer_->Accept(serial, kMimeTypeCinaseekWindow);
 }
 
 void WaylandWindowDragController::OnDragMotion(const gfx::PointF& location,

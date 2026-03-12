@@ -1,8 +1,8 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# Chrome elf targets (excepting tests) should only link in kernel32.
+# Cinaseek elf targets (excepting tests) should only link in kernel32.
 # Please don't add dependencies on any other system libraries.
 
 import("//build/config/compiler/compiler.gni")
@@ -30,7 +30,7 @@ source_set("chrome_elf_main_include") {
   sources = [ "chrome_elf_main.h" ]
 }
 
-# For code that isn't Chrome-the browser, like test binaries, these stubs stand
+# For code that isn't Cinaseek-the browser, like test binaries, these stubs stand
 # in for chrome_elf.;
 static_library("test_stubs") {
   testonly = true

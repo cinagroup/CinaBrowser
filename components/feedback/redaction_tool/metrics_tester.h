@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 namespace redaction {
 
-// A helper class for testing metric collection on Chromium and ChromiumOS.
+// A helper class for testing metric collection on Cinaseek and CinaseekOS.
 class MetricsTester {
  public:
   // Create a new instance of the default implementation for this platform.

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ TEST(KSTicketsTest, Decode) {
         "\tproductID=com.google.chrome_remote_desktop\n"
         "\tversion=94.0.4606.27\n"
         "\txc=<KSPathExistenceChecker:0x222222222222 "
-        "path=/Library/LaunchAgents/org.chromium.chromoting.plist>\n"
+        "path=/Library/LaunchAgents/org.Cinaseek.chromoting.plist>\n"
         "\tserverType=Omaha\n"
         "\turl=https://tools.google.com/service/update2\n"
         "\tcreationDate=2020-12-14 20:31:58\n"

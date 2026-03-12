@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ import("//third_party/grpc-java/grpc_java_library.gni")
 # Classes that live inside the apk split.
 android_library("impl_java") {
   sources = [
-    "java/src/org/chromium/chrome/modules/on_demand/OnDemandModuleEntryPointsImpl.java",
-    "java/src/org/chromium/chrome/modules/on_demand/OnDemandModuleInternalEntryPoints.java",
+    "java/src/org/Cinaseek/chrome/modules/on_demand/OnDemandModuleEntryPointsImpl.java",
+    "java/src/org/Cinaseek/chrome/modules/on_demand/OnDemandModuleInternalEntryPoints.java",
   ]
   deps = [
     ":data_importer_service_impl_java",
@@ -20,7 +20,7 @@ android_library("impl_java") {
 
 # Classes that live in the base module.
 android_library("provider_java") {
-  sources = [ "java/src/org/chromium/chrome/modules/on_demand/OnDemandModuleEntryPoints.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/modules/on_demand/OnDemandModuleEntryPoints.java" ]
   deps = [
     "//components/module_installer/android:module_installer_java",
     "//components/module_installer/android:module_interface_java",
@@ -30,20 +30,20 @@ android_library("provider_java") {
 }
 
 proto_java_library("os_migration_target_service_proto_java") {
-  proto_path = "java/src/org/chromium/chrome/browser/data_import"
+  proto_path = "java/src/org/Cinaseek/chrome/browser/data_import"
   sources = [ "$proto_path/os_migration_target_service.proto" ]
 }
 
 grpc_java_library("os_migration_target_service_grpc_java") {
-  proto_path = "java/src/org/chromium/chrome/browser/data_import"
+  proto_path = "java/src/org/Cinaseek/chrome/browser/data_import"
   sources = [ "$proto_path/os_migration_target_service.proto" ]
   deps = [ ":os_migration_target_service_proto_java" ]
 }
 
 android_library("data_importer_service_impl_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/data_import/DataImporterServiceImpl.java",
-    "java/src/org/chromium/chrome/browser/data_import/TargetService.java",
+    "java/src/org/Cinaseek/chrome/browser/data_import/DataImporterServiceImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/data_import/TargetService.java",
   ]
   deps = [
     ":os_migration_target_service_grpc_java",
@@ -70,12 +70,12 @@ android_library("data_importer_service_impl_java") {
 
 android_library("data_importer_service_impl_java_test") {
   testonly = true
-  resources_package = "org.chromium.chrome.test"
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "javatests/src/org/chromium/chrome/browser/data_import/DataImporterServiceImplTest.java",
-    "javatests/src/org/chromium/chrome/browser/data_import/TargetServiceGrpcTest.java",
-    "javatests/src/org/chromium/chrome/browser/data_import/TargetServiceTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/data_import/DataImporterServiceImplTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/data_import/TargetServiceGrpcTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/data_import/TargetServiceTest.java",
   ]
   deps = [
     ":data_importer_service_impl_java",

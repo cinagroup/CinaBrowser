@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -384,7 +384,7 @@ mojom("mojom_platform") {
     ]
   }
 
-  # Chromium without blink doesn't use and must not depend on //media
+  # Cinaseek without blink doesn't use and must not depend on //media
   if (use_blink) {
     public_deps += [
       "//media/capture/mojom:video_capture",
@@ -920,7 +920,7 @@ mojom("mojom_platform") {
     },
     {
       # Note: This Locale typemap is intentionally duplicated in both
-      # cpp_typemaps (for Chromium code) and blink_cpp_typemaps (for Blink
+      # cpp_typemaps (for Cinaseek code) and blink_cpp_typemaps (for Blink
       # renderer code). The Blink variant includes icu_locale_hash_traits.h
       # to enable using icu::Locale as a WTF::HashMap key.
       types = [
@@ -1775,7 +1775,7 @@ mojom("web_bluetooth_mojo_bindings") {
 
   cpp_typemaps = shared_cpp_typemaps
 
-  # The chromium variant must be linked with content and use the same export
+  # The Cinaseek variant must be linked with content and use the same export
   # settings in component build because of the WebBluetoothDeviceId typemap
   # inside content.
   export_class_attribute = "BLINK_COMMON_EXPORT"
@@ -1814,7 +1814,7 @@ mojom_component("script_type_mojo_bindings") {
 }
 
 # The web_feature_mojo_bindings is separated from the rest of the mojom files
-# because the chromium typemap for blink mojo_bindings has private content
+# because the Cinaseek typemap for blink mojo_bindings has private content
 # dependencies.
 mojom_component("web_feature_mojo_bindings") {
   generate_java = true
@@ -1829,7 +1829,7 @@ mojom_component("web_feature_mojo_bindings") {
 }
 
 # The embedded_frame_sink_mojo_bindings is separated from the rest of mojom
-# files because its deps contain too many files in Chromium that would pollute
+# files because its deps contain too many files in Cinaseek that would pollute
 # the include paths in generated mojom-blink files for other services.
 mojom("embedded_frame_sink_mojo_bindings") {
   visibility = [ "//content/*" ]
@@ -1839,7 +1839,7 @@ mojom("embedded_frame_sink_mojo_bindings") {
 
   component_output_prefix = "blink_embedded_frame_sink_mojo_bindings"
 
-  # The chromium variant must be linked with content and use the same export
+  # The Cinaseek variant must be linked with content and use the same export
   # settings in component build.
   export_class_attribute = "CONTENT_EXPORT"
   export_define = "CONTENT_IMPLEMENTATION=1"

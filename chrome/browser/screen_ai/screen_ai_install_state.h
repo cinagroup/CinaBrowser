@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class ScreenAIInstallState {
   static std::unique_ptr<ScreenAIInstallState> Create();
   static ScreenAIInstallState* CreateForTesting();
 
-  // Verifies that the library version is compatible with current Chromium
+  // Verifies that the library version is compatible with current Cinaseek
   // version. Will be used to avoid accepting the library if a newer version is
   // expected.
   static bool VerifyLibraryVersion(const base::Version& version);

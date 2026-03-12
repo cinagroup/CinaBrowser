@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,14 +26,14 @@ class CertVerifier;
 class SCTAuditingDelegate;
 class TransportSecurityState;
 
-// ProofVerifyDetailsChromium is the implementation-specific information that a
-// ProofVerifierChromium returns about a certificate verification.
-class NET_EXPORT_PRIVATE ProofVerifyDetailsChromium
+// ProofVerifyDetailsCinaseek is the implementation-specific information that a
+// ProofVerifierCinaseek returns about a certificate verification.
+class NET_EXPORT_PRIVATE ProofVerifyDetailsCinaseek
     : public quic::ProofVerifyDetails {
  public:
-  ProofVerifyDetailsChromium();
-  ProofVerifyDetailsChromium(const ProofVerifyDetailsChromium&);
-  ~ProofVerifyDetailsChromium() override;
+  ProofVerifyDetailsCinaseek();
+  ProofVerifyDetailsCinaseek(const ProofVerifyDetailsCinaseek&);
+  ~ProofVerifyDetailsCinaseek() override;
 
   // quic::ProofVerifyDetails implementation
   quic::ProofVerifyDetails* Clone() const override;
@@ -52,11 +52,11 @@ class NET_EXPORT_PRIVATE ProofVerifyDetailsChromium
   int cert_verify_net_error_for_metrics_only = 0;
 };
 
-// ProofVerifyContextChromium is the implementation-specific information that a
-// ProofVerifierChromium needs in order to log correctly.
-struct ProofVerifyContextChromium : public quic::ProofVerifyContext {
+// ProofVerifyContextCinaseek is the implementation-specific information that a
+// ProofVerifierCinaseek needs in order to log correctly.
+struct ProofVerifyContextCinaseek : public quic::ProofVerifyContext {
  public:
-  ProofVerifyContextChromium(int cert_verify_flags,
+  ProofVerifyContextCinaseek(int cert_verify_flags,
                              const NetLogWithSource& net_log)
       : cert_verify_flags(cert_verify_flags), net_log(net_log) {}
 
@@ -64,21 +64,21 @@ struct ProofVerifyContextChromium : public quic::ProofVerifyContext {
   NetLogWithSource net_log;
 };
 
-// ProofVerifierChromium implements the QUIC quic::ProofVerifier interface.  It
+// ProofVerifierCinaseek implements the QUIC quic::ProofVerifier interface.  It
 // is capable of handling multiple simultaneous requests.
-class NET_EXPORT_PRIVATE ProofVerifierChromium : public quic::ProofVerifier {
+class NET_EXPORT_PRIVATE ProofVerifierCinaseek : public quic::ProofVerifier {
  public:
-  ProofVerifierChromium(
+  ProofVerifierCinaseek(
       CertVerifier* cert_verifier,
       TransportSecurityState* transport_security_state,
       SCTAuditingDelegate* sct_auditing_delegate,
       std::set<std::string> hostnames_to_allow_unknown_roots,
       const NetworkAnonymizationKey& network_anonymization_key);
 
-  ProofVerifierChromium(const ProofVerifierChromium&) = delete;
-  ProofVerifierChromium& operator=(const ProofVerifierChromium&) = delete;
+  ProofVerifierCinaseek(const ProofVerifierCinaseek&) = delete;
+  ProofVerifierCinaseek& operator=(const ProofVerifierCinaseek&) = delete;
 
-  ~ProofVerifierChromium() override;
+  ~ProofVerifierCinaseek() override;
 
   // quic::ProofVerifier interface
   quic::QuicAsyncStatus VerifyProof(

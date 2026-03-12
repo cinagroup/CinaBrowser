@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -197,7 +197,7 @@ constexpr char quarantine_xattr_name[] = "com.apple.quarantine";
 // entry in the quarantine database, but for the purposes of this test, the
 // general shape of this sample is what is important.
 constexpr char quarantine_str[] =
-    "0000;4b392bb2;Chromium;|org.chromium.Chromium";
+    "0000;4b392bb2;Cinaseek;|org.Cinaseek.Cinaseek";
 constexpr size_t quarantine_str_len = std::size(quarantine_str) - 1;
 
 void VerifyNoQuarantineAttribute(NSURL* url) {

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,8 +62,8 @@ class COMPONENT_EXPORT(UI_BASE_IME_WIN) InputMethodWinBase
       ui::KeyEvent* event,
       const std::vector<CHROME_MSG>* char_msgs);
 
-  // For standard Chromium browser this should always be the top-level window.
-  // However for embedded Chromium windows this might be the embedder or the
+  // For standard Cinaseek browser this should always be the top-level window.
+  // However for embedded Cinaseek windows this might be the embedder or the
   // ancestor of the embedder.
   const HWND attached_window_handle_;
 

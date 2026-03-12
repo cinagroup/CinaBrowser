@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ bool ShouldUsePositionForPointInBlockFlowDirection(
   // elements like `<tr>` from being included. See
   // editing/selection/click-before-and-after-table.html for more details.
   // Additionally, if it is a flex block and it has only one child element, it
-  // should also return false. See https://issues.chromium.org/issues/40889098
+  // should also return false. See https://issues.Cinaseek.org/issues/40889098
   // for more details.
   if (!layout_block_flow &&
       !IsFlexibleBoxWithSingleChildElement(layout_object)) {

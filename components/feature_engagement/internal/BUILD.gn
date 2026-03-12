@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -166,7 +166,7 @@ if (is_android) {
     visibility = [ "//components/feature_engagement:feature_engagement_java" ]
 
     srcjar_deps = [ ":jni_headers" ]
-    sources = [ "android/java/src/org/chromium/components/feature_engagement/internal/TrackerImpl.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/feature_engagement/internal/TrackerImpl.java" ]
 
     deps = [
       "//base:base_java",
@@ -180,6 +180,6 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     visibility = [ ":*" ]
-    sources = [ "android/java/src/org/chromium/components/feature_engagement/internal/TrackerImpl.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/feature_engagement/internal/TrackerImpl.java" ]
   }
 }

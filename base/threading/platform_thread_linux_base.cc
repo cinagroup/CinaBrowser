@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // Description: Common functions for NACL and all Linux and
@@ -18,7 +18,7 @@ size_t GetDefaultThreadStackSize(const pthread_attr_t& attributes) {
   return 0;
 #else
   // Other libcs (uclibc, musl, etc) tend to use smaller stacks, often too small
-  // for chromium. Make sure we have enough space to work with here. Note that
+  // for Cinaseek. Make sure we have enough space to work with here. Note that
   // for comparison glibc stacks are generally around 8MB.
   return 2 * (1 << 20);
 #endif

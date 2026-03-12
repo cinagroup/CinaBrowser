@@ -2,7 +2,7 @@
 ++[list]
 ++++[list item]
 ++++++[static] name='1. '
-++++++[static] name='Chrome'
+++++++[static] name='Cinaseek'
 ++++[list item]
 ++++++[static] name='2. '
 ++++++[static] name='Safari'

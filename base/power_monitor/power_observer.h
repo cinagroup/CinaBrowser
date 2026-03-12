@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class BASE_EXPORT PowerSuspendObserver {
 
 class BASE_EXPORT PowerStateObserver {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base.power_monitor
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base.power_monitor
   // GENERATED_JAVA_PREFIX_TO_STRIP: k
   enum class BatteryPowerStatus {
     kUnknown = 0,

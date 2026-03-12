@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ const char kOriginTrialPublicKey[] = "origin-trial-public-key";
 // Sets the Reporting API delay to under a second to allow much quicker reports.
 const char kShortReportingDelay[] = "short-reporting-delay";
 
-// Set when Chromium should use a mobile user agent.
+// Set when Cinaseek should use a mobile user agent.
 const char kUseMobileUserAgent[] = "use-mobile-user-agent";
 
 // A string used to override the default user agent with a custom one.

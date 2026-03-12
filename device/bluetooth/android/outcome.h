@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 
 namespace device {
 
-// Bindings into org.chromium.device.bluetooth.Outcome.
+// Bindings into org.Cinaseek.device.bluetooth.Outcome.
 class Outcome final {
  public:
   explicit Outcome(base::android::ScopedJavaLocalRef<jobject> j_outcome);

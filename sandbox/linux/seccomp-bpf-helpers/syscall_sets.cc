@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -876,7 +876,7 @@ bool SyscallSets::IsDlopen(int sysno) {
   switch (sysno) {
     // Chrome OS needs fstatfs for supporting a local glibc patch
     // which hooks into dlopen(), LD_PRELOAD, and --preload.
-    // https://chromium-review.googlesource.com/c/chromiumos/overlays/chromiumos-overlay/+/2910526
+    // https://Cinaseek-review.googlesource.com/c/Cinaseekos/overlays/Cinaseekos-overlay/+/2910526
     case __NR_fstatfs:
 #if defined(__i386__) || defined(__arm__) || \
     (defined(ARCH_CPU_MIPS_FAMILY) && defined(ARCH_CPU_32_BITS))

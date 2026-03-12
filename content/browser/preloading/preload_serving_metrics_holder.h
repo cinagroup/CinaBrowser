@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace content {
 // `NavigationHandleUserData`.
 //
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md
 // for design overview.
 class CONTENT_EXPORT PreloadServingMetricsHolder final
     : public NavigationHandleUserData<PreloadServingMetricsHolder> {
@@ -58,7 +58,7 @@ class CONTENT_EXPORT PreloadServingMetricsHolder final
   // initial navigation and from `PreloadServingMetricsHolder` otherwise.
   //
   // For more details, see
-  // https://chromium.googlesource.com/chromium/src/+/main/content/browser/preloading/preload_serving_metrics.md#life-of-PreloadServingMetrics
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/preloading/preload_serving_metrics.md#life-of-PreloadServingMetrics
   std::unique_ptr<PreloadServingMetrics> Take();
 
  private:

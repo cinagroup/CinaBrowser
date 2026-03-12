@@ -47,7 +47,7 @@ enum class FileErrorCode;
 // data. For a more convenient way to read blobs that matches the different
 // FileReadType's, see FileReaderAccumulator below.
 // For more information on how to read Blobs in your specific situation, see:
-// https://chromium.googlesource.com/chromium/src/+/HEAD/storage/browser/blob/README.md#how-to-use-blobs-blink-accessing-reading
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/storage/browser/blob/README.md#how-to-use-blobs-blink-accessing-reading
 class CORE_EXPORT FileReaderClient : public GarbageCollectedMixin {
  public:
   virtual ~FileReaderClient() = default;

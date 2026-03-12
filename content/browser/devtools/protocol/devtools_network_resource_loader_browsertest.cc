@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@ class DevtoolsNetworkResourceLoaderTest : public ContentBrowserTest {
         "DevtoolsNetworkResourceLoaderTest");
     // Let DevTools fetch resources without CORS and ORB. Source maps are valid
     // JSON and would otherwise require a CORS fetch + correct response headers.
-    // See BUG(chromium:1076435) for more context.
+    // See BUG(Cinaseek:1076435) for more context.
     params->is_orb_enabled = false;
     return mojo::Remote<network::mojom::URLLoaderFactory>(
         url_loader_factory::CreatePendingRemote(

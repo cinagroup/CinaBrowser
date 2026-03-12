@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1518,7 +1518,7 @@ TEST_F(HostResolverTest, HostResults) {
   rules.emplace_back(
       "example.com", net::dns_protocol::kTypePTR, false /*secure */,
       net::MockDnsClientRule::Result(net::BuildTestDnsPointerResponse(
-          "example.com", {"google.com", "chromium.org"})),
+          "example.com", {"google.com", "Cinaseek.org"})),
       false /* delay */);
   auto dns_client = std::make_unique<net::MockDnsClient>(CreateValidDnsConfig(),
                                                          std::move(rules));
@@ -1554,7 +1554,7 @@ TEST_F(HostResolverTest, HostResults) {
   EXPECT_THAT(response_client.result_hosts(),
               testing::Optional(testing::UnorderedElementsAre(
                   net::HostPortPair("google.com", 160),
-                  net::HostPortPair("chromium.org", 160))));
+                  net::HostPortPair("Cinaseek.org", 160))));
   EXPECT_EQ(0u, resolver.GetNumOutstandingRequestsForTesting());
 }
 

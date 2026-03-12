@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ import("//build/config/gclient_args.gni")
 import("//build/config/python.gni")
 import("//build_overrides/build.gni")
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   import("//base/allocator/partition_allocator/partition_alloc.gni")
 }
 
@@ -41,28 +41,28 @@ if (enable_java_templates) {
       ":placeholder_build_config_srcjar",
     ]
     sources = [
-      "java/src/org/chromium/build/NullUtil.java",
-      "java/src/org/chromium/build/annotations/AlwaysInline.java",
-      "java/src/org/chromium/build/annotations/CheckDiscard.java",
-      "java/src/org/chromium/build/annotations/Contract.java",
-      "java/src/org/chromium/build/annotations/DoNotClassMerge.java",
-      "java/src/org/chromium/build/annotations/DoNotInline.java",
-      "java/src/org/chromium/build/annotations/DoNotStripLogs.java",
-      "java/src/org/chromium/build/annotations/EnsuresNonNull.java",
-      "java/src/org/chromium/build/annotations/EnsuresNonNullIf.java",
-      "java/src/org/chromium/build/annotations/IdentifierNameString.java",
-      "java/src/org/chromium/build/annotations/Initializer.java",
-      "java/src/org/chromium/build/annotations/MockedInTests.java",
-      "java/src/org/chromium/build/annotations/MonotonicNonNull.java",
-      "java/src/org/chromium/build/annotations/NonNull.java",
-      "java/src/org/chromium/build/annotations/NullMarked.java",
-      "java/src/org/chromium/build/annotations/NullUnmarked.java",
-      "java/src/org/chromium/build/annotations/Nullable.java",
-      "java/src/org/chromium/build/annotations/OptimizeAsNonNull.java",
-      "java/src/org/chromium/build/annotations/RequiresNonNull.java",
-      "java/src/org/chromium/build/annotations/ServiceImpl.java",
-      "java/src/org/chromium/build/annotations/UsedByReflection.java",
-      "java/src/org/chromium/build/annotations/UsedReflectively.java",
+      "java/src/org/Cinaseek/build/NullUtil.java",
+      "java/src/org/Cinaseek/build/annotations/AlwaysInline.java",
+      "java/src/org/Cinaseek/build/annotations/CheckDiscard.java",
+      "java/src/org/Cinaseek/build/annotations/Contract.java",
+      "java/src/org/Cinaseek/build/annotations/DoNotClassMerge.java",
+      "java/src/org/Cinaseek/build/annotations/DoNotInline.java",
+      "java/src/org/Cinaseek/build/annotations/DoNotStripLogs.java",
+      "java/src/org/Cinaseek/build/annotations/EnsuresNonNull.java",
+      "java/src/org/Cinaseek/build/annotations/EnsuresNonNullIf.java",
+      "java/src/org/Cinaseek/build/annotations/IdentifierNameString.java",
+      "java/src/org/Cinaseek/build/annotations/Initializer.java",
+      "java/src/org/Cinaseek/build/annotations/MockedInTests.java",
+      "java/src/org/Cinaseek/build/annotations/MonotonicNonNull.java",
+      "java/src/org/Cinaseek/build/annotations/NonNull.java",
+      "java/src/org/Cinaseek/build/annotations/NullMarked.java",
+      "java/src/org/Cinaseek/build/annotations/NullUnmarked.java",
+      "java/src/org/Cinaseek/build/annotations/Nullable.java",
+      "java/src/org/Cinaseek/build/annotations/OptimizeAsNonNull.java",
+      "java/src/org/Cinaseek/build/annotations/RequiresNonNull.java",
+      "java/src/org/Cinaseek/build/annotations/ServiceImpl.java",
+      "java/src/org/Cinaseek/build/annotations/UsedByReflection.java",
+      "java/src/org/Cinaseek/build/annotations/UsedReflectively.java",
     ]
 
     jar_excluded_patterns = [ "*/build/BuildConfig.class" ]
@@ -71,16 +71,16 @@ if (enable_java_templates) {
     # be created when creating an apk.
     jar_excluded_patterns += [ "*/NativeLibraries.class" ]
 
-    proguard_configs = [ "chromium_annotations.flags" ]
+    proguard_configs = [ "Cinaseek_annotations.flags" ]
   }
 
   # Not all //build embedders pull in junit_binary deps that live in //third_party.
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     android_assets("junit_test_assets") {
       testonly = true
 
       # We just need any file here, so use the test itself.
-      sources = [ "junit/src/org/chromium/build/AndroidAssetsTest.java" ]
+      sources = [ "junit/src/org/Cinaseek/build/AndroidAssetsTest.java" ]
     }
     android_resources("junit_test_resources") {
       testonly = true
@@ -89,10 +89,10 @@ if (enable_java_templates) {
     }
     robolectric_binary("build_junit_tests") {
       # Test has no JNI, so skip JNI Generator step.
-      resources_package = "org.chromium.build"
+      resources_package = "org.Cinaseek.build"
       sources = [
-        "junit/src/org/chromium/build/AndroidAssetsTest.java",
-        "junit/src/org/chromium/build/IncrementalJavacTest.java",
+        "junit/src/org/Cinaseek/build/AndroidAssetsTest.java",
+        "junit/src/org/Cinaseek/build/IncrementalJavacTest.java",
       ]
       deps = [
         ":junit_test_assets",
@@ -140,15 +140,15 @@ python_library("test_result_presentations_py") {
   ]
 }
 
-python_library("devil_chromium_py") {
-  pydeps_file = "devil_chromium.pydeps"
+python_library("devil_Cinaseek_py") {
+  pydeps_file = "devil_Cinaseek.pydeps"
   data = [
-    "devil_chromium.py",
-    "devil_chromium.json",
+    "devil_Cinaseek.py",
+    "devil_Cinaseek.json",
     "//third_party/catapult/third_party/gsutil/",
     "//third_party/catapult/devil/devil/devil_dependencies.json",
 
-    # Read by gn_helpers.BuildWithChromium()
+    # Read by gn_helpers.BuildWithCinaseek()
     "//build/config/gclient_args.gni",
   ]
 }
@@ -157,7 +157,7 @@ python_library("devil_chromium_py") {
 # E.g. from test_runner.py or from apk_operations.py.
 group("apk_installer_data") {
   # Other //build users let devil library fetch these from Google Storage.
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     if (!is_component_build) {
       data_deps = [ "//tools/android/devil_util" ]
     }
@@ -202,7 +202,7 @@ python_library("test_runner_core_py") {
 group("test_runner_device_support") {
   testonly = true
 
-  # We hardcode using these tools from the public sdk in devil_chromium.json and
+  # We hardcode using these tools from the public sdk in devil_Cinaseek.json and
   # in pylib's constants.
   data = [
     "${public_android_sdk_build_tools}/aapt",
@@ -214,12 +214,12 @@ group("test_runner_device_support") {
   ]
   data_deps = [
     ":apk_installer_data",
-    ":devil_chromium_py",
+    ":devil_Cinaseek_py",
     ":stack_tools",
   ]
 
   # Other //build users let devil library fetch these from Google Storage.
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     if (!is_component_build) {
       data_deps += [ "//tools/android/forwarder2" ]
     }
@@ -245,7 +245,7 @@ python_library("logdog_wrapper_py") {
 python_library("resource_sizes_py") {
   pydeps_file = "resource_sizes.pydeps"
   data_deps = [
-    ":devil_chromium_py",
+    ":devil_Cinaseek_py",
     "//third_party/catapult/tracing:convert_chart_json",
   ]
 
@@ -257,12 +257,12 @@ python_library("resource_sizes_py") {
 
 # Tools necessary for symbolizing tombstones or stack traces that are output to
 # logcat.
-# Hidden behind build_with_chromium because some third party repos that use
+# Hidden behind build_with_Cinaseek because some third party repos that use
 # //build don't pull in //third_party/android_platform.
 # TODO(crbug.com/40145789): Move stack script into //build/third_party
 #     and enable unconditionally.
 group("stack_tools") {
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     data = [
       "tombstones.py",
       "pylib/symbols/",
@@ -281,7 +281,7 @@ assert(current_toolchain == default_toolchain)
 # NOTE: If other platforms would benefit from exporting variables, we should
 # move this to a more top-level place.
 # It is currently here (instead of //BUILD.gn) to ensure that the file is
-# written even for non-chromium embedders of //build.
+# written even for non-Cinaseek embedders of //build.
 _build_vars_json = {
   # Underscore prefix so that it appears at the top.
   _HEADER = "Generated during 'gn gen' by //build/android/BUILD.gn."

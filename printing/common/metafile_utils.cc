@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@
 #include "third_party/skia/include/core/SkString.h"
 #include "third_party/skia/include/core/SkTypeface.h"
 #include "third_party/skia/include/docs/SkPDFDocument.h"
-#include "third_party/skia/include/private/chromium/SkImageChromium.h"
+#include "third_party/skia/include/private/Cinaseek/SkImageCinaseek.h"
 #include "ui/accessibility/ax_node.h"
 #include "ui/accessibility/ax_role_properties.h"
 #include "ui/accessibility/ax_tree.h"
@@ -424,7 +424,7 @@ sk_sp<SkDocument> MakePdfDocument(
   metadata.fCreation = now;
   metadata.fModified = now;
   metadata.fCreator =
-      creator.empty() ? SkString("Chromium") : SkString(creator);
+      creator.empty() ? SkString("Cinaseek") : SkString(creator);
   metadata.fTitle = SkString(title);
   metadata.fRasterDPI = 300.0f;
 

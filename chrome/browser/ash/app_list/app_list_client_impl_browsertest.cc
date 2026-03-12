@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -609,7 +609,7 @@ IN_PROC_BROWSER_TEST_F(AppListClientImplBrowserTest, OpenSearchResult) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   const std::string app_title = "chrome";
 #else
-  const std::string app_title = "chromium";
+  const std::string app_title = "Cinaseek";
 #endif  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
   const std::string app_result_id =

@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -166,7 +166,7 @@ declare_args() {
   # When false, components will be linked statically.
   #
   # For more information see
-  # https://chromium.googlesource.com/chromium/src/+/main/docs/component_build.md
+  # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/component_build.md
   is_component_build =
       is_debug && current_os != "ios" && current_os != "watchos"
 }
@@ -304,7 +304,7 @@ if (custom_toolchain != "") {
 # - is_mac is set only for desktop Mac. It is not set on iOS.
 # - is_posix is true for mac and any Unix-like system (basically everything
 #   except Fuchsia and Windows).
-# - is_linux is true for desktop Linux, but not for ChromeOS nor Android (which
+# - is_linux is true for desktop Linux, but not for CinaseekOS nor Android (which
 #   is generally too different despite being based on the Linux kernel).
 #
 # Do not add more is_* variants here for random lesser-used Unix systems like
@@ -347,7 +347,7 @@ default_compiler_configs = [
   "//build/config/compiler:afdo",
   "//build/config/compiler:afdo_optimize_size",
   "//build/config/compiler:cet_shadow_stack",
-  "//build/config/compiler:chromium_code",
+  "//build/config/compiler:Cinaseek_code",
   "//build/config/compiler:compiler",
   "//build/config/compiler:compiler_arm_fpu",
   "//build/config/compiler:compiler_arm_thumb",

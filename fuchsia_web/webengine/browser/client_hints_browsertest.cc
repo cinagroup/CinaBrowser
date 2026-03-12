@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -163,7 +163,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsTest, InvalidClientHint) {
 IN_PROC_BROWSER_TEST_F(ClientHintsTest, LowEntropyClientHintsAreSentByDefault) {
   GetAndVerifyClientHint(
       kUserAgentCH, base::BindRepeating([](std::string& str) {
-        EXPECT_TRUE(str.contains("Chromium"));
+        EXPECT_TRUE(str.contains("Cinaseek"));
         EXPECT_TRUE(str.contains(version_info::GetMajorVersionNumber()));
       }));
 }
@@ -173,7 +173,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsTest,
   SetClientHintsForTestServerToRequest(kUserAgentCH);
   GetAndVerifyClientHint(
       kUserAgentCH, base::BindRepeating([](std::string& str) {
-        EXPECT_TRUE(str.contains("Chromium"));
+        EXPECT_TRUE(str.contains("Cinaseek"));
         EXPECT_TRUE(str.contains(version_info::GetMajorVersionNumber()));
       }));
 }
@@ -191,7 +191,7 @@ IN_PROC_BROWSER_TEST_F(ClientHintsTest,
   SetClientHintsForTestServerToRequest(kFullVersionListCH);
   GetAndVerifyClientHint(
       kFullVersionListCH, base::BindRepeating([](std::string& str) {
-        EXPECT_TRUE(str.contains("Chromium"));
+        EXPECT_TRUE(str.contains("Cinaseek"));
         EXPECT_TRUE(str.contains(version_info::GetVersionNumber()));
       }));
 }

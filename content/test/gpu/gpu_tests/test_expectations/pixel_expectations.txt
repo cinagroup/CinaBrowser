@@ -20,7 +20,7 @@
 # tags: [ desktop
 #         mobile ]
 # Browser
-# tags: [ android-chromium
+# tags: [ android-Cinaseek
 #         android-webview-instrumentation
 #         debug debug-x64
 #         release release-x64
@@ -101,7 +101,7 @@
 # This is for things like tests that will never be supported on a particular
 # platform/configuration.
 
-# Software compositing is not supported on Android/ChromeOS/Fuchsia: we skip the
+# Software compositing is not supported on Android/CinaseekOS/Fuchsia: we skip the
 # tests that disable GPU compositing (--disable-gpu-compositing).
 [ android ] Pixel_OffscreenCanvasUnaccelerated2D [ Skip ]
 [ android ] Pixel_OffscreenCanvasUnaccelerated2DWorker [ Skip ]
@@ -201,8 +201,8 @@ crbug.com/1448964 [ mac angle-metal ] Pixel_WebGLHighToLowPower [ Skip ]
 crbug.com/1448964 [ mac angle-metal ] Pixel_OffscreenCanvasIBRCWebGLHighPerfMain [ Skip ]
 crbug.com/1448964 [ mac angle-metal ] Pixel_OffscreenCanvasIBRCWebGLHighPerfWorker [ Skip ]
 
-# Cannot use file in Chromium checkout for fake video capture device on Android,
-# ChromeOS, or Fuchsia.
+# Cannot use file in Cinaseek checkout for fake video capture device on Android,
+# CinaseekOS, or Fuchsia.
 crbug.com/1129879 [ android ] Pixel_Video_Media_Stream_Incompatible_Stride [ Skip ]
 crbug.com/1129879 [ chromeos ] Pixel_Video_Media_Stream_Incompatible_Stride [ Skip ]
 crbug.com/1129879 [ fuchsia ] Pixel_Video_Media_Stream_Incompatible_Stride [ Skip ]
@@ -236,7 +236,7 @@ crbug.com/1441056 [ fuchsia ] Pixel_SVGHuge [ Skip ]
 # WebGPU is not shipped on MacOS < 13.
 crbug.com/1426664 [ monterey ] Pixel_WebGPU* [ Skip ]
 
-# Linux, macOS < 11, and ChromeOS generic don't support HEVC decoding.
+# Linux, macOS < 11, and CinaseekOS generic don't support HEVC decoding.
 [ linux ] Pixel_Video_HEVC [ Skip ]
 [ highsierra ] Pixel_Video_HEVC [ Skip ]
 [ mojave ] Pixel_Video_HEVC [ Skip ]
@@ -244,7 +244,7 @@ crbug.com/1426664 [ monterey ] Pixel_WebGPU* [ Skip ]
 [ chromeos ] Pixel_Video_HEVC [ Skip ]
 
 # This test relies on a screenshot taken with OS' tools. So far verified only
-# on ChromeOS.
+# on CinaseekOS.
 [ linux ] Pixel_RenderPasses [ Skip ]
 [ android ] Pixel_RenderPasses [ Skip ]
 [ mac ] Pixel_RenderPasses [ Skip ]
@@ -252,7 +252,7 @@ crbug.com/1426664 [ monterey ] Pixel_WebGPU* [ Skip ]
 [ fuchsia ] Pixel_RenderPasses [ Skip ]
 
 # This test ensures correctness of a delegated compositing implementation.
-# So far verified only on ChromeOS and MacOS.
+# So far verified only on CinaseekOS and MacOS.
 [ linux ] Pixel_PerspectiveTest [ Skip ]
 [ android ] Pixel_PerspectiveTest [ Skip ]
 [ win ] Pixel_PerspectiveTest [ Skip ]
@@ -301,7 +301,7 @@ crbug.com/1213657 [ linux renderer-skia-vulkan ] Pixel_WebGPU* [ Skip ]
 crbug.com/1345767 [ mac asan ] Pixel_WebGPUCanvasOneCopyCapture [ Skip ]
 crbug.com/1345767 [ mac asan ] Pixel_WebGPUCanvasDisableOneCopyCapture* [ Skip ]
 
-# Accelerated canvas capture is currently only supported on Win, Mac, ChromeOS.
+# Accelerated canvas capture is currently only supported on Win, Mac, CinaseekOS.
 crbug.com/1345777 [ android ] Pixel_VideoStreamFromWebGLCanvas_OneCopy [ Skip ]
 crbug.com/1345777 [ android ] Pixel_VideoStreamFromWebGLCanvas_TwoCopy_Accelerated [ Skip ]
 crbug.com/1201009 [ linux ] Pixel_VideoStreamFromWebGLCanvas_OneCopy [ Skip ]
@@ -309,7 +309,7 @@ crbug.com/1201009 [ linux ] Pixel_VideoStreamFromWebGLCanvas_TwoCopy_Accelerated
 crbug.com/1201009 [ fuchsia ] Pixel_VideoStreamFromWebGLCanvas_OneCopy [ Skip ]
 crbug.com/1201009 [ fuchsia ] Pixel_VideoStreamFromWebGLCanvas_TwoCopy_Accelerated [ Skip ]
 
-# 5 minute timeout on ChromeOS FYI Release amd64-generic
+# 5 minute timeout on CinaseekOS FYI Release amd64-generic
 crbug.com/1353952 [ chromeos cros-chrome chromeos-board-amd64-generic ] Pixel_WebGLContextRestored [ Skip ]
 
 # These two tests causes a crash on Swarming. Skipping so that we have a signal for other tests.
@@ -408,7 +408,7 @@ crbug.com/403252788 [ mac angle-metal asan graphite-enabled intel-0x3e9b passthr
 
 # Flakily hits heartbeat timeout, context restoration likely just slow on these
 # devices
-crbug.com/349132647 [ android android-sm-s911u1 android-chromium ] Pixel_WebGLContextRestored [ Slow ]
+crbug.com/349132647 [ android android-sm-s911u1 android-Cinaseek ] Pixel_WebGLContextRestored [ Slow ]
 
 # Meet effects tests currently take a while to actually start, which can cause
 # the initial heartbeat message to be delayed significantly. Additionally, these
@@ -435,9 +435,9 @@ crbug.com/624256 [ android ] Pixel_SolidColorBackground [ Failure ]
 crbug.com/1176918 [ android android-pixel-4 android-webview-instrumentation renderer-skia-gl ] Pixel_Video_Context_Loss_VP9 [ Failure ]
 
 # WebGL drawingBufferStorage does not work on Android devices yet.
-crbug.com/1230619 [ android-chromium android android-pixel-2 angle-disabled no-passthrough qualcomm renderer-skia-gl ] Pixel_WebGLFloat [ Failure ]
-crbug.com/1230619 [ android-chromium android-pixel-6 angle-disabled arm no-clang-coverage no-passthrough target-cpu-64 ] Pixel_WebGLFloat [ Failure ]
-crbug.com/1230619 [ android-chromium android-pixel-4 android-r angle-disabled no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_WebGLFloat [ Failure ]
+crbug.com/1230619 [ android-Cinaseek android android-pixel-2 angle-disabled no-passthrough qualcomm renderer-skia-gl ] Pixel_WebGLFloat [ Failure ]
+crbug.com/1230619 [ android-Cinaseek android-pixel-6 angle-disabled arm no-clang-coverage no-passthrough target-cpu-64 ] Pixel_WebGLFloat [ Failure ]
+crbug.com/1230619 [ android-Cinaseek android-pixel-4 android-r angle-disabled no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_WebGLFloat [ Failure ]
 
 crbug.com/1290953 [ android android-pixel-4 android-webview-instrumentation ] Pixel_CanvasLowLatency2D [ Failure ]
 crbug.com/1290953 [ android android-pixel-4 android-webview-instrumentation ] Pixel_CanvasLowLatency2DDrawImage [ Failure ]
@@ -457,10 +457,10 @@ crbug.com/1372149 [ android android-sm-a236b no-passthrough ] Pixel_WebGLFloat [
 crbug.com/40241618 [ android android-sm-s911u1 no-passthrough ] Pixel_WebGLFloat [ Failure ]
 
 
-# ChromeOS failures
+# CinaseekOS failures
 crbug.com/345146895 [ chromeos cros-chrome chromeos-board-amd64-generic renderer-skia-gl ] Pixel_RenderPasses [ Failure ]
 
-# Times out on ChromeOS devices even when marked as Slow.
+# Times out on CinaseekOS devices even when marked as Slow.
 crbug.com/286989320 [ chromeos ] Pixel_MeetEffects* [ Failure ]
 
 # Failures on fuchsia
@@ -524,7 +524,7 @@ crbug.com/370694819 [ angle-opengl asan graphite-disabled mac ] Pixel_WebGPUDest
 # crbug.com/419469465 [ win intel-0x9bc5 ] Pixel_MeetEffects* [ RetryOnFailure ]
 
 # Video tests flakily cause Android Pixel 6 Ganesh to crash.
-crbug.com/421412516 [ android-chromium android-pixel-6 android-14 angle-vulkan graphite-disabled passthrough ] Pixel_Video_Context_Loss_VP9 [ RetryOnFailure ]
+crbug.com/421412516 [ android-Cinaseek android-pixel-6 android-14 angle-vulkan graphite-disabled passthrough ] Pixel_Video_Context_Loss_VP9 [ RetryOnFailure ]
 
 
 # Flaky on Mac Intel
@@ -560,11 +560,11 @@ crbug.com/475181552 [ sequoia angle-metal graphite-enabled intel-0x3e9b ] Pixel_
 crbug.com/425739516 [ mac arch-arm64 angle-metal graphite-enabled ] Pixel_ReflectedDiv [ Slow ]
 
 # Tests either fail consistently or flakily on Android in TreesInViz mode.
-crbug.com/415830130 [ android-16 android-chromium android-pixel-10 angle-opengles graphite-enabled imagination-technologies mobile no-clang-coverage passthrough renderer-skia-gl target-cpu-64 ] Pixel_Video_MP4_TreesInViz [ Failure ]
-crbug.com/415830130 [ android-chromium android-pixel-2 android-q angle-disabled graphite-disabled mobile no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_Video_MP4_TreesInViz [ Failure ]
+crbug.com/415830130 [ android-16 android-Cinaseek android-pixel-10 angle-opengles graphite-enabled imagination-technologies mobile no-clang-coverage passthrough renderer-skia-gl target-cpu-64 ] Pixel_Video_MP4_TreesInViz [ Failure ]
+crbug.com/415830130 [ android-Cinaseek android-pixel-2 android-q angle-disabled graphite-disabled mobile no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_Video_MP4_TreesInViz [ Failure ]
 crbug.com/415830130 [ fuchsia ] Pixel_Video_MP4_TreesInViz [ Failure ]
-crbug.com/415830130 [ android-chromium android-pixel-2 android-q angle-disabled graphite-disabled mobile no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_ViewTransitionsCapture_TreesInViz [ RetryOnFailure ]
-crbug.com/415830130 [ android android-chromium ] Pixel_SolidColorBackground_TreesInViz [ Failure ]
+crbug.com/415830130 [ android-Cinaseek android-pixel-2 android-q angle-disabled graphite-disabled mobile no-clang-coverage no-passthrough qualcomm renderer-skia-gl target-cpu-32 ] Pixel_ViewTransitionsCapture_TreesInViz [ RetryOnFailure ]
+crbug.com/415830130 [ android android-Cinaseek ] Pixel_SolidColorBackground_TreesInViz [ Failure ]
 crbug.com/415830130 [ angle-swiftshader fuchsia fuchsia-board-qemu-x64 google-0xc0de ] Pixel_SolidColorBackground_TreesInViz [ Failure ]
 crbug.com/415830130 [ angle-vulkan arm fuchsia fuchsia-board-sherlock no-asan no-clang-coverage ] Pixel_SolidColorBackground_TreesInViz [ Failure ]
 # TODO(crbug.com/431824747): Re-add when the test is re-enabled.
@@ -572,7 +572,7 @@ crbug.com/415830130 [ angle-vulkan arm fuchsia fuchsia-board-sherlock no-asan no
 # crbug.com/415830130 [ linux ] Pixel_RenderPasses_TreesInViz [ Failure ]
 # crbug.com/415830130 [ chromeos chromeos-board-amd64-generic ] Pixel_RenderPasses_TreesInViz [ Failure ]
 # crbug.com/431824747 [ win ] Pixel_RenderPasses_TreesInViz [ Failure ]
-# crbug.com/431824747 [ android android-chromium no-clang-coverage ] Pixel_RenderPasses_TreesInViz [ Failure ]
+# crbug.com/431824747 [ android android-Cinaseek no-clang-coverage ] Pixel_RenderPasses_TreesInViz [ Failure ]
 
 
 
@@ -589,18 +589,18 @@ crbug.com/446181110 [ android android-pixel-10 android-webview-instrumentation ]
 crbug.com/446181110 [ android android-pixel-10 android-webview-instrumentation ] Pixel_CanvasLowLatency2DDrawImage [ Failure ]
 crbug.com/446181110 [ android android-pixel-10 android-webview-instrumentation ] Pixel_CanvasLowLatency2DImageData [ Failure ]
 crbug.com/446861923 [ android android-pixel-10 ] Pixel_Video_Context_Loss_VP9 [ Failure ]
-crbug.com/446861923 [ android android-chromium android-pixel-10 graphite-enabled passthrough ] Pixel_Video_HEVC [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_OffscreenCanvasAccelerated2D [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_OffscreenCanvasAccelerated2DWorker [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_AV1 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_BackdropFilter [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4_FourColors_Aspect_4x3 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4_FourColors_Rot_180 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4_FourColors_Rot_270 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4_FourColors_Rot_90 [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_MP4_Rounded_Corner [ Failure ]
-crbug.com/446861923 [ android android-pixel-10 android-chromium ] Pixel_Video_VP9 [ Failure ]
+crbug.com/446861923 [ android android-Cinaseek android-pixel-10 graphite-enabled passthrough ] Pixel_Video_HEVC [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_OffscreenCanvasAccelerated2D [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_OffscreenCanvasAccelerated2DWorker [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_AV1 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_BackdropFilter [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4_FourColors_Aspect_4x3 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4_FourColors_Rot_180 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4_FourColors_Rot_270 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4_FourColors_Rot_90 [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_MP4_Rounded_Corner [ Failure ]
+crbug.com/446861923 [ android android-pixel-10 android-Cinaseek ] Pixel_Video_VP9 [ Failure ]
 
 
 

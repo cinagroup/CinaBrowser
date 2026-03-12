@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1793,7 +1793,7 @@ bool TemplateURL::IsBetterThanConflictingEngine(
 std::u16string TemplateURL::GenerateKeyword(const GURL& url) {
   DCHECK(url.is_valid());
   // Strip "www." off the front of the keyword; otherwise the keyword won't work
-  // properly.  See http://code.google.com/p/chromium/issues/detail?id=6984 .
+  // properly.  See http://code.google.com/p/Cinaseek/issues/detail?id=6984 .
   // |url|'s hostname may be IDN-encoded. Before generating |keyword| from it,
   // convert to Unicode, so it won't look like a confusing punycode string.
   std::u16string keyword =

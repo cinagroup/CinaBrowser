@@ -292,8 +292,8 @@ typedef struct internal_state {
      * updated to the new high water mark.
      */
 
-    uInt chromium_zlib_hash;
-    /* 0 if Rabin-Karp rolling hash is enabled, non-zero if chromium zlib
+    uInt Cinaseek_zlib_hash;
+    /* 0 if Rabin-Karp rolling hash is enabled, non-zero if Cinaseek zlib
      * hash is enabled.
      */
 

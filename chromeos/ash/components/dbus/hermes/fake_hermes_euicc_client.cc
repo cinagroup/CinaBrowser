@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ namespace {
 const char* kDefaultMccMnc = "310999";
 const char* kFakeActivationCodePrefix = "LPA:1$SMDP.GSMA.COM$";
 const char* kActivationCodeToTriggerDBusError = "no_memory";
-const char* kFakeProfilePathPrefix = "/org/chromium/Hermes/Profile/";
+const char* kFakeProfilePathPrefix = "/org/Cinaseek/Hermes/Profile/";
 const char* kFakeIccidPrefix = "10000000000000000";
 const char* kFakeProfileNamePrefix = "FakeCellularNetwork_";
 const char* kFakeProfileNicknamePrefix = "FakeCellularNetworkNickname_";

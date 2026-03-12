@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 // base::GlobalDescriptors object (see base/posix/global_descriptors.h)
 enum {
   kCrashDumpSignal,
-  kSandboxIPCChannel,  // https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md
+  kSandboxIPCChannel,  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md
   kMojoIPCChannel,
   kFieldTrialDescriptor,
 

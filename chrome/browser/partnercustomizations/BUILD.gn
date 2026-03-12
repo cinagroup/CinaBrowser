@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,8 +7,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("delegate_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/partnercustomizations/CustomizationProviderDelegate.java",
-    "java/src/org/chromium/chrome/browser/partnercustomizations/CustomizationProviderDelegateUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/partnercustomizations/CustomizationProviderDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/partnercustomizations/CustomizationProviderDelegateUpstreamImpl.java",
   ]
 
   deps = [
@@ -21,11 +21,11 @@ android_library("delegate_java") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerBrowserCustomizations.java" ]
 }
 
 android_library("uma_java") {
-  sources = [ "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerCustomizationsUma.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerCustomizationsUma.java" ]
   deps = [
     ":helper_java",
     "//base:base_java",
@@ -37,7 +37,7 @@ android_library("uma_java") {
 }
 
 android_library("helper_java") {
-  sources = [ "java/src/org/chromium/chrome/browser/partnercustomizations/HomepageCharacterizationHelper.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/partnercustomizations/HomepageCharacterizationHelper.java" ]
   deps = [
     "//base:base_java",
     "//third_party/androidx:androidx_annotation_annotation_java",
@@ -45,7 +45,7 @@ android_library("helper_java") {
 }
 
 android_library("java") {
-  sources = [ "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerBrowserCustomizations.java" ]
   deps = [
     ":delegate_java",
     ":helper_java",
@@ -67,7 +67,7 @@ android_library("java") {
 
 android_library("test_support_java") {
   testonly = true
-  sources = [ "junit/src/org/chromium/chrome/browser/partnercustomizations/BasePartnerBrowserCustomizationUnitTestRule.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/partnercustomizations/BasePartnerBrowserCustomizationUnitTestRule.java" ]
   deps = [
     ":delegate_java",
     ":java",
@@ -83,9 +83,9 @@ android_library("test_support_java") {
 android_library("unit_device_javatests") {
   testonly = true
   sources = [
-    "junit/src/org/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizationsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/partnercustomizations/PartnerDisableBookmarksEditingUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/partnercustomizations/PartnerDisableIncognitoModeUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerBrowserCustomizationsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerDisableBookmarksEditingUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerDisableIncognitoModeUnitTest.java",
   ]
   deps = [
     ":delegate_java",
@@ -107,8 +107,8 @@ android_library("unit_device_javatests") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizationsRoboUnitTest.java",
-    "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerCustomizationsUmaUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerBrowserCustomizationsRoboUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerCustomizationsUmaUnitTest.java",
   ]
 
   deps = [
@@ -137,7 +137,7 @@ robolectric_library("junit") {
 
 android_library("junit_test_utils_java") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/partnercustomizations/PartnerCustomizationsTestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerCustomizationsTestUtils.java" ]
   deps = [
     ":helper_java",
     "//chrome/browser/url_constants/android:java",

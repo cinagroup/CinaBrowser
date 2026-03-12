@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace audio {
 class LoopbackCoordinator;
 class LoopbackSignalProviderInterface;
 
-BASE_DECLARE_FEATURE(kRestrictOwnAudioAddChromiumBack);
+BASE_DECLARE_FEATURE(kRestrictOwnAudioAddCinaseekBack);
 
 // Mixes the loopback audio with audio from a primary source and forwards the
 // result to a pre-configured callback. It can also be configured not to include

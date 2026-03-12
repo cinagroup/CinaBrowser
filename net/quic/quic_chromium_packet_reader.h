@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -22,12 +22,12 @@ class QuicClock;
 namespace net {
 
 // If more than this many packets have been read or more than that many
-// milliseconds have passed, QuicChromiumPacketReader::StartReading() yields by
-// doing a QuicChromiumPacketReader::PostTask().
+// milliseconds have passed, QuicCinaseekPacketReader::StartReading() yields by
+// doing a QuicCinaseekPacketReader::PostTask().
 const int kQuicYieldAfterPacketsRead = 32;
 const int kQuicYieldAfterDurationMilliseconds = 2;
 
-class NET_EXPORT_PRIVATE QuicChromiumPacketReader {
+class NET_EXPORT_PRIVATE QuicCinaseekPacketReader {
   // TODO(crbug.com/422045782): Remove this macro once we identified the cause
   // of the bug.
   ADVANCED_MEMORY_SAFETY_CHECKS();
@@ -45,17 +45,17 @@ class NET_EXPORT_PRIVATE QuicChromiumPacketReader {
                           const quic::QuicSocketAddress& peer_address) = 0;
   };
 
-  QuicChromiumPacketReader(std::unique_ptr<DatagramClientSocket> socket,
+  QuicCinaseekPacketReader(std::unique_ptr<DatagramClientSocket> socket,
                            const quic::QuicClock* clock,
                            Visitor* visitor,
                            int yield_after_packets,
                            quic::QuicTime::Delta yield_after_duration,
                            const NetLogWithSource& net_log);
 
-  QuicChromiumPacketReader(const QuicChromiumPacketReader&) = delete;
-  QuicChromiumPacketReader& operator=(const QuicChromiumPacketReader&) = delete;
+  QuicCinaseekPacketReader(const QuicCinaseekPacketReader&) = delete;
+  QuicCinaseekPacketReader& operator=(const QuicCinaseekPacketReader&) = delete;
 
-  virtual ~QuicChromiumPacketReader();
+  virtual ~QuicCinaseekPacketReader();
 
   // Causes the QuicConnectionHelper to start reading from the socket
   // and passing the data along to the quic::QuicConnection.
@@ -83,7 +83,7 @@ class NET_EXPORT_PRIVATE QuicChromiumPacketReader {
   scoped_refptr<IOBufferWithSize> read_buffer_;
   NetLogWithSource net_log_;
 
-  base::WeakPtrFactory<QuicChromiumPacketReader> weak_factory_{this};
+  base::WeakPtrFactory<QuicCinaseekPacketReader> weak_factory_{this};
 };
 
 }  // namespace net

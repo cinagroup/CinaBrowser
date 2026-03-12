@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 
 namespace net {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 // The SecureDnsMode specifies what types of lookups (secure/insecure) should
 // be performed and in what order when resolving a specific query. The int
 // values should not be changed as they are logged.

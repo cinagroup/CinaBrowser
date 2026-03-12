@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -217,10 +217,10 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsBMOSyncTest,
 
   // Install web app to both profiles.
   webapps::AppId app_id = test::InstallDummyWebApp(
-      GetProfile(0), "Test name", GURL("http://www.chromium.org/path"));
+      GetProfile(0), "Test name", GURL("http://www.Cinaseek.org/path"));
   // The web app has a different title on the second profile.
   webapps::AppId app_id2 = test::InstallDummyWebApp(
-      GetProfile(1), "Test name 2", GURL("http://www.chromium.org/path"));
+      GetProfile(1), "Test name 2", GURL("http://www.Cinaseek.org/path"));
 
   EXPECT_EQ(app_id, app_id2);
 
@@ -252,7 +252,7 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsBMOSyncTest,
               ElementsAreArray(GetAllAppIdsForProfile(GetProfile(1))));
 
   auto info = WebAppInstallInfo::CreateWithStartUrlForTesting(
-      GURL("http://www.chromium.org/path"));
+      GURL("http://www.Cinaseek.org/path"));
   info->title = u"Test name";
   info->user_display_mode = mojom::UserDisplayMode::kStandalone;
 

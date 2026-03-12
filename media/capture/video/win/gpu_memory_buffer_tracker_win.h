@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ class CAPTURE_EXPORT GpuMemoryBufferTrackerWin final
   // hold the IMFBuffer and correctly reuse external texture.
   Microsoft::WRL::ComPtr<IMFMediaBuffer> imf_buffer_;
   // If |is_external_dxgi_handle_| is true, the handle originally isn't created
-  // by chromium. Currently it indicates the producer of handle is
+  // by Cinaseek. Currently it indicates the producer of handle is
   // MFVideoCaptureEngine.
   bool is_external_dxgi_handle_ = false;
 };

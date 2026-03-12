@@ -18,10 +18,10 @@
             "cpu": "x86-64",
             "integrity": "high",
             "os": "Windows-10-19045",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "hard_timeout": 7200,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "updater_tests",
@@ -39,10 +39,10 @@
             "cpu": "x86-64",
             "integrity": "high",
             "os": "Windows-10-19045",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "hard_timeout": 7200,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "updater_tests_system",
@@ -64,10 +64,10 @@
             "cpu": "x86-64",
             "integrity": "high",
             "os": "Windows-10",
-            "pool": "chromium.win.uac"
+            "pool": "Cinaseek.win.uac"
           },
           "hard_timeout": 7200,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "updater_tests_system",
@@ -84,9 +84,9 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Windows-10",
-            "pool": "chromium.win.uac"
+            "pool": "Cinaseek.win.uac"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "updater_tests_win_uac",
         "test_id_prefix": "ninja://chrome/updater:updater_tests_win_uac/"
@@ -107,10 +107,10 @@
             "cpu": "x86-64",
             "integrity": "high",
             "os": "Windows-11",
-            "pool": "chromium.win.uac"
+            "pool": "Cinaseek.win.uac"
           },
           "hard_timeout": 7200,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "updater_tests_system",
@@ -127,9 +127,9 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Windows-11",
-            "pool": "chromium.win.uac"
+            "pool": "Cinaseek.win.uac"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "updater_tests_win_uac",
         "test_id_prefix": "ninja://chrome/updater:updater_tests_win_uac/"

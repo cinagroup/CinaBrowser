@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@ android_apk("dex_optimizer_apk") {
 
   android_manifest = "AndroidManifest.xml"
   apk_name = "DexOptimizer"
-  chromium_code = false
+  Cinaseek_code = false
   sources = []
   deps = [
     "//chrome/android/webapk/shell_apk/javatests/canary_lib:canary_dex2_assets",

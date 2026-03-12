@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -69,5 +69,5 @@ android_library("public_java") {
     "//ui/android:ui_java",
   ]
 
-  sources = [ "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodComponent.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodComponent.java" ]
 }

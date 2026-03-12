@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,11 +8,11 @@
 
 namespace {
 
-// Chromium implementation of the ShareKitService. Does nothing.
-class ChromiumShareKitService final : public ShareKitService {
+// Cinaseek implementation of the ShareKitService. Does nothing.
+class CinaseekShareKitService final : public ShareKitService {
  public:
-  ChromiumShareKitService() = default;
-  ~ChromiumShareKitService() final = default;
+  CinaseekShareKitService() = default;
+  ~CinaseekShareKitService() final = default;
 
   // ShareKitService.
   bool IsSupported() const override { return false; }
@@ -47,7 +47,7 @@ namespace ios::provider {
 
 std::unique_ptr<ShareKitService> CreateShareKitService(
     std::unique_ptr<ShareKitServiceConfiguration> configuration) {
-  return std::make_unique<ChromiumShareKitService>();
+  return std::make_unique<CinaseekShareKitService>();
 }
 
 }  // namespace ios::provider

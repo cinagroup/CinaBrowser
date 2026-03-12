@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1442,7 +1442,7 @@ void GpuDataManagerImplPrivate::AddLogMessage(int level,
                                               const std::string& message) {
   // Some clients emit many log messages. This has been observed to consume GBs
   // of memory in the wild
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=798012. Use a limit
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=798012. Use a limit
   // of 1000 messages to prevent excess memory usage.
   const int kLogMessageLimit = 1000;
 

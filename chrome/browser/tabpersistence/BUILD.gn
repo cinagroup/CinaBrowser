@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/tabpersistence/FlatBufferTabStateSerializer.java",
-    "android/java/src/org/chromium/chrome/browser/tabpersistence/TabMetadataFileManager.java",
-    "android/java/src/org/chromium/chrome/browser/tabpersistence/TabStateDirectory.java",
-    "android/java/src/org/chromium/chrome/browser/tabpersistence/TabStateFileManager.java",
-    "android/java/src/org/chromium/chrome/browser/tabpersistence/TabStateSerializer.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/FlatBufferTabStateSerializer.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/TabMetadataFileManager.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/TabStateDirectory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/TabStateFileManager.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/TabStateSerializer.java",
   ]
   deps = [
     ":flatbuffer_java",
@@ -29,7 +29,7 @@ android_library("java") {
 
 flatbuffer_java_library("flatbuffer_java") {
   root_dir =
-      "android/java/src/org/chromium/chrome/browser/tabpersistence/flatbuffer"
+      "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/flatbuffer"
   sources = [
     "$root_dir/tab_state_common.fbs",
     "$root_dir/tab_state_v1.fbs",
@@ -37,7 +37,7 @@ flatbuffer_java_library("flatbuffer_java") {
 }
 
 robolectric_library("junit") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/tabpersistence/TabStateFileManagerUnitTest.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/tabpersistence/TabStateFileManagerUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

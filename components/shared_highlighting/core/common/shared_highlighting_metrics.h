@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,12 +14,12 @@ namespace shared_highlighting {
 
 // Used to indicate whether link generation complited successfully.
 // Java counterpart will be auto-generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.share.link_to_text
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.share.link_to_text
 enum class LinkGenerationStatus { kSuccess = 0, kFailure = 1 };
 
 // Used to indicate whether generated link was ready at the time of the request.
 // Java counterpart will be auto-generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.share.link_to_text
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.share.link_to_text
 enum class LinkGenerationReadyStatus {
   kRequestedBeforeReady = 0,
   kRequestedAfterReady = 1
@@ -40,7 +40,7 @@ enum class LinkGenerationCopiedLinkType {
 // The type of errors that can happen during link generation.
 // Update corresponding |LinkGenerationError| in enums.xml.
 // Java counterpart will be auto-generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.share.link_to_text
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.share.link_to_text
 enum class LinkGenerationError {
   kNone = -1,
 
@@ -93,7 +93,7 @@ enum class TextFragmentLinkOpenSource {
 // These values are persisted in histograms. Entries should not be renumbered
 // and numeric values should never be reused. The status of link to text reshare
 // attempt. Update corresponding |LinkToTextReshareStatus| in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.share.link_to_text
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.share.link_to_text
 enum class LinkToTextReshareStatus {
   kSuccess = 0,
   kNoRemoteConnection = 1,

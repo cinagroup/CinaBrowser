@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ using security_interstitials::UnsafeResource;
 class PendingUnsafeResourceStorageTest : public PlatformTest {
  protected:
   PendingUnsafeResourceStorageTest()
-      : url_("http://www.chromium.test"),
+      : url_("http://www.Cinaseek.test"),
         threat_type_(safe_browsing::SBThreatType::SB_THREAT_TYPE_URL_PHISHING) {
     // Create a resource and add it as a pending decision.
     UnsafeResource resource;

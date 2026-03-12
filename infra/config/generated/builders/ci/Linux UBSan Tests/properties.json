@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,22 +7,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Linux UBSan Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_msan",
+                "config": "Cinaseek_msan",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -30,27 +30,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Linux UBSan Tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "Linux UBSan Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -60,13 +60,13 @@
         {
           "bucket": "ci",
           "builder": "Linux UBSan Tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
-          "builder": "linux_chromium_ubsan_rel_ng",
-          "group": "tryserver.chromium.linux"
+          "builder": "linux_Cinaseek_ubsan_rel_ng",
+          "group": "tryserver.Cinaseek.linux"
         }
       ],
       "retry_failed_shards": true,
@@ -82,7 +82,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 80
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -92,12 +92,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.memory",
+  "builder_group": "Cinaseek.memory",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

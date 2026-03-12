@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace container_names {
 // sync with the enum definition "MediaContainers" in
 // tools/metrics/histograms/histograms.xml.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 // GENERATED_JAVA_PREFIX_TO_STRIP: CONTAINER_
 enum class MediaContainerName {
   kContainerUnknown,       // Unknown

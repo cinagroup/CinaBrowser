@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -150,15 +150,15 @@ DEVICE_BLUETOOTH_EXPORT const DBusTypeInfo& GetDBusTypeInfo(
 FlossDBusClient::FlossDBusClient() = default;
 FlossDBusClient::~FlossDBusClient() = default;
 
-const char FlossDBusClient::kErrorDBus[] = "org.chromium.Error.DBus";
+const char FlossDBusClient::kErrorDBus[] = "org.Cinaseek.Error.DBus";
 const char FlossDBusClient::kErrorNoResponse[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 const char FlossDBusClient::kErrorInvalidParameters[] =
-    "org.chromium.Error.InvalidParameters";
+    "org.Cinaseek.Error.InvalidParameters";
 const char FlossDBusClient::kErrorInvalidReturn[] =
-    "org.chromium.Error.InvalidReturn";
+    "org.Cinaseek.Error.InvalidReturn";
 const char FlossDBusClient::kErrorDoesNotExist[] =
-    "org.chromium.Error.DoesNotExist";
+    "org.Cinaseek.Error.DoesNotExist";
 const char FlossDBusClient::kOptionalValueKey[] = "optional_value";
 
 // static

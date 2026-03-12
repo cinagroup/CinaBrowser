@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class CONTENT_EXPORT DocumentRef {
   base::SafeRef<RenderFrameHost> safe_document_;
 };
 
-// [chromium-style] requires these be out of line, but they are small enough to
+// [Cinaseek-style] requires these be out of line, but they are small enough to
 // inline the defaults.
 inline DocumentRef::DocumentRef(DocumentRef&&) = default;
 inline DocumentRef& DocumentRef::operator=(DocumentRef&&) = default;

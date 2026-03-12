@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -177,7 +177,7 @@ IN_PROC_BROWSER_TEST_F(AutocompleteBrowserTest, MAYBE_Autocomplete) {
 
 IN_PROC_BROWSER_TEST_F(AutocompleteBrowserTest, TabAwayRevertSelect) {
   WaitForTemplateURLServiceToLoad();
-  // http://code.google.com/p/chromium/issues/detail?id=38385
+  // http://code.google.com/p/Cinaseek/issues/detail?id=38385
   // Make sure that tabbing away from an empty omnibox causes a revert
   // and select all.
   LocationBar* location_bar = GetLocationBar();

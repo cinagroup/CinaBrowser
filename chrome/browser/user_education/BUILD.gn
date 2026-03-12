@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,9 +10,9 @@ if (is_android) {
 
   android_library("java") {
     sources = [
-      "java/src/org/chromium/chrome/browser/user_education/IphCommand.java",
-      "java/src/org/chromium/chrome/browser/user_education/IphCommandBuilder.java",
-      "java/src/org/chromium/chrome/browser/user_education/UserEducationHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/IphCommand.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/IphCommandBuilder.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/UserEducationHelper.java",
     ]
 
     deps = [
@@ -29,7 +29,7 @@ if (is_android) {
       "//third_party/androidx:androidx_core_core_java",
       "//ui/android:ui_full_java",
     ]
-    resources_package = "org.chromium.chrome.browser.user_education"
+    resources_package = "org.Cinaseek.chrome.browser.user_education"
   }
 
   android_resources("java_resources") {
@@ -38,9 +38,9 @@ if (is_android) {
 
   robolectric_library("junit") {
     sources = [
-      "java/src/org/chromium/chrome/browser/user_education/IphCommandBuilderUnitTest.java",
-      "java/src/org/chromium/chrome/browser/user_education/IphCommandUnitTest.java",
-      "java/src/org/chromium/chrome/browser/user_education/UserEducationHelperUnitTest.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/IphCommandBuilderUnitTest.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/IphCommandUnitTest.java",
+      "java/src/org/Cinaseek/chrome/browser/user_education/UserEducationHelperUnitTest.java",
     ]
     deps = [
       ":java",
@@ -59,7 +59,7 @@ if (is_android) {
       "//third_party/mockito:mockito_java",
       "//ui/android:ui_java_test_support",
     ]
-    resources_package = "org.chromium.chrome.browser.user_education.test"
+    resources_package = "org.Cinaseek.chrome.browser.user_education.test"
   }
 } else {  # !is_android
   source_set("user_education") {

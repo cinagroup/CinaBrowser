@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,9 +9,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_aidl("autofill_aidl") {
   import_include = [ "java/src" ]
   sources = [
-    "java/src/org/chromium/components/autofill_public/IAutofillHintsService.aidl",
-    "java/src/org/chromium/components/autofill_public/IViewTypeCallback.aidl",
-    "java/src/org/chromium/components/autofill_public/ViewType.aidl",
+    "java/src/org/Cinaseek/components/autofill_public/IAutofillHintsService.aidl",
+    "java/src/org/Cinaseek/components/autofill_public/IViewTypeCallback.aidl",
+    "java/src/org/Cinaseek/components/autofill_public/ViewType.aidl",
   ]
 }
 
@@ -35,33 +35,33 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/components/autofill/AutofillHintsService.java",
-    "java/src/org/chromium/components/autofill/AutofillManagerWrapper.java",
-    "java/src/org/chromium/components/autofill/AutofillProvider.java",
-    "java/src/org/chromium/components/autofill/AutofillProviderUMA.java",
-    "java/src/org/chromium/components/autofill/AutofillRequest.java",
-    "java/src/org/chromium/components/autofill/AutofillSelectionActionMenuDelegate.java",
-    "java/src/org/chromium/components/autofill/AutofillSelectionMenuItemHelper.java",
-    "java/src/org/chromium/components/autofill/FormData.java",
-    "java/src/org/chromium/components/autofill/FormFieldData.java",
-    "java/src/org/chromium/components/autofill/PrefillRequest.java",
-    "java/src/org/chromium/components/autofill/SparseArrayWithWorkaround.java",
-    "java/src/org/chromium/components/autofill_public/ViewType.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillHintsService.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillManagerWrapper.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProvider.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProviderUMA.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillRequest.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillSelectionActionMenuDelegate.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillSelectionMenuItemHelper.java",
+    "java/src/org/Cinaseek/components/autofill/FormData.java",
+    "java/src/org/Cinaseek/components/autofill/FormFieldData.java",
+    "java/src/org/Cinaseek/components/autofill/PrefillRequest.java",
+    "java/src/org/Cinaseek/components/autofill/SparseArrayWithWorkaround.java",
+    "java/src/org/Cinaseek/components/autofill_public/ViewType.java",
   ]
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/autofill/AutofillProvider.java",
-    "java/src/org/chromium/components/autofill/FormData.java",
-    "java/src/org/chromium/components/autofill/FormFieldData.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProvider.java",
+    "java/src/org/Cinaseek/components/autofill/FormData.java",
+    "java/src/org/Cinaseek/components/autofill/FormFieldData.java",
   ]
 }
 
 android_library("features_java") {
   srcjar_deps = [ ":jni_headers_features" ]
   sources = [
-    "java/src/org/chromium/components/autofill/AndroidAutofillFeatures.java",
+    "java/src/org/Cinaseek/components/autofill/AndroidAutofillFeatures.java",
   ]
 
   deps = [
@@ -85,7 +85,7 @@ static_library("features") {
 
 generate_jni("jni_headers_features") {
   sources = [
-    "java/src/org/chromium/components/autofill/AndroidAutofillFeatures.java",
+    "java/src/org/Cinaseek/components/autofill/AndroidAutofillFeatures.java",
   ]
 }
 

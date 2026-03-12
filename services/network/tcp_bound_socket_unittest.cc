@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -504,7 +504,7 @@ TEST_F(TCPBoundSocketTest, UpgradeToTLS) {
   EXPECT_EQ(kPath, response.substr(response.length() - strlen(kPath)));
 }
 
-// During a TLS upgrade, Chromium's SSL handling code on Windows triggers a
+// During a TLS upgrade, Cinaseek's SSL handling code on Windows triggers a
 // DCHECK in net::TCPClientSocket::ReadCommon due to an expectation that
 // the read_callback_ is empty. In the SSL upgrade case, the StreamSocket
 // (TCPClientSocket) is reused across SocketBIOAdapter instances, which

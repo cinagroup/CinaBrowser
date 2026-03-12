@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ void SetAsDefaultClientForSchemeUsingSystemSettings(
 // opened. Windows desktop shortcuts have an app model property, and this should
 // match the open window's AUMI. Windows groups open windows with the same AUMI
 // to a taskbar icon. The two methods below are used  to create AUMI's for
-// shortcuts and open windows. There are two kinds of windows, Chromium windows,
+// shortcuts and open windows. There are two kinds of windows, Cinaseek windows,
 // i.e., browser windows, and app windows, which include web apps,
 // extensions, i.e., windows opened via --app-id or --app.
 
@@ -53,7 +53,7 @@ void SetAsDefaultClientForSchemeUsingSystemSettings(
 std::wstring GetAppUserModelIdForApp(const std::wstring& app_name,
                                      const base::FilePath& profile_path);
 
-// Generates an application user model ID (AppUserModelId) for Chromium by
+// Generates an application user model ID (AppUserModelId) for Cinaseek by
 // calling GetAppUserModelIdImpl() with ShellUtil::GetBrowserModelId() as
 // the app_name. The returned app id format is
 // "<install_static::GetBaseAppId()>[browser_suffix][.profile_id]"

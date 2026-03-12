@@ -6,13 +6,13 @@
           "--annotation=Restriction=Tablet,Restriction=TabletOrDesktop,ImportantFormFactors=Tablet,ImportantFormFactors=TabletOrDesktop",
           "--git-revision=${got_revision}",
           "--avd-config=../../tools/android/avd/proto/android_32_google_apis_x64_foldable.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "chrome_public_test_apk_tablet"
           ],
@@ -38,7 +38,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -51,7 +51,7 @@
               "caches": "android_32_google_apis_x64_foldable"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "chrome_public_test_apk",

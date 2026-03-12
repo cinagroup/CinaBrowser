@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ blink::UserAgentBrandList GenerateBrandVersionList(
 // Return UserAgentBrandList with full versions based on the additional brand
 // version list if provided. It generates a pseudo-random permutation of the
 // following brand/full_version pairs:
-//   1. The base project (i.e. Chromium)
+//   1. The base project (i.e. Cinaseek)
 //   2. The browser brand, if available
 //   3. A randomized string containing GREASE characters to ensure proper
 //      header parsing, along with an arbitrarily low version to ensure proper
@@ -72,7 +72,7 @@ const blink::UserAgentBrandList GetUserAgentBrandFullVersionList(
 // Return UserAgentBrandList with major versions based on the additional brand
 // version list if provided. It generates a pseudo-random permutation of the
 // following brand/major_version pairs:
-//   1. The base project (i.e. Chromium)
+//   1. The base project (i.e. Cinaseek)
 //   2. The browser brand, if available
 //   3. A randomized string containing GREASE characters to ensure proper
 //      header parsing, along with an arbitrarily low version to ensure proper

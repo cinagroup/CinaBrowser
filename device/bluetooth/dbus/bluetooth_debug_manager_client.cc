@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace bluez {
 
 // TODO(apusaka): move these consts to system_api/service_constants.h
 namespace {
-const char kBluetoothDebugObjectPath[] = "/org/chromium/Bluetooth";
+const char kBluetoothDebugObjectPath[] = "/org/Cinaseek/Bluetooth";
 const uint8_t kMinBluezLevel = 0;
 const uint8_t kMinKernelLevel = 0;
 const uint8_t kMaxBluezLevel = 2;
@@ -26,9 +26,9 @@ const uint8_t kMaxKernelLevel = 1;
 }  // namespace
 
 const char BluetoothDebugManagerClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 const char BluetoothDebugManagerClient::kInvalidArgumentError[] =
-    "org.chromium.Error.InvalidArgument";
+    "org.Cinaseek.Error.InvalidArgument";
 
 // The BluetoothDebugManagerClient implementation used in production.
 class BluetoothDebugManagerClientImpl : public BluetoothDebugManagerClient,

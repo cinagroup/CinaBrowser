@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/rust/rust_unit_tests_group.gni")
 
 # Defines a Rust unit test.
 #
-# This generates an executable + a script that can be run on Chromium bots.
+# This generates an executable + a script that can be run on Cinaseek bots.
 # Future iterations of this template may do something smarter with the test
 # code in order to automatically contribute it to test steps on the bots.
 #
@@ -130,9 +130,9 @@ template("rust_unit_test") {
     if (!defined(deps)) {
       deps = []
     }
-    if (!defined(invoker.no_chromium_prelude) || !invoker.no_chromium_prelude) {
-      if (enable_chromium_prelude) {
-        deps += [ "//build/rust/chromium_prelude" ]
+    if (!defined(invoker.no_Cinaseek_prelude) || !invoker.no_Cinaseek_prelude) {
+      if (enable_Cinaseek_prelude) {
+        deps += [ "//build/rust/Cinaseek_prelude" ]
       }
     }
   }

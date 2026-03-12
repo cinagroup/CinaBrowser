@@ -1,10 +1,10 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This is the Android-specific Chromium dynamic linker (loader of dynamic
+// This is the Android-specific Cinaseek dynamic linker (loader of dynamic
 // libraries), a tiny shared library implementing a custom dynamic linker that
-// can be used to load the real Chromium libraries.
+// can be used to load the real Cinaseek libraries.
 //
 // The purpose of this custom linker is to be able to share the RELRO section of
 // libcontentshell.so (or equivalent) between the browser process and all other
@@ -29,7 +29,7 @@
 // in base/ which hasn't been loaded yet.
 #define DEBUG 0
 
-#define TAG "cr_ChromiumAndroidLinker"
+#define TAG "cr_CinaseekAndroidLinker"
 
 #if DEBUG
 #define LOG_INFO(FORMAT, ...)                                             \
@@ -72,7 +72,7 @@
     eintr_wrapper_result;                                   \
   })
 
-namespace chromium_android_linker {
+namespace Cinaseek_android_linker {
 
 // Larger than the largest library we might attempt to load.
 static const size_t kAddressSpaceReservationSize = 192 * 1024 * 1024;
@@ -137,7 +137,7 @@ bool InitStaticFieldId(JNIEnv* env,
                        const char* field_sig,
                        jfieldID* field_id);
 
-// A class used to model the field IDs of the org.chromium.base.Linker
+// A class used to model the field IDs of the org.Cinaseek.base.Linker
 // LibInfo inner class, used to communicate data with the Java side
 // of the linker.
 struct LibInfo_class {
@@ -151,7 +151,7 @@ struct LibInfo_class {
   bool Init(JNIEnv* env) {
     jclass clazz;
     if (!InitClassReference(
-            env, "org/chromium/base/library_loader/Linker$LibInfo", &clazz)) {
+            env, "org/Cinaseek/base/library_loader/Linker$LibInfo", &clazz)) {
       return false;
     }
 
@@ -226,7 +226,7 @@ struct LibInfo_class {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. Must be kept in sync with the enum
 // in enums.xml. A java @IntDef is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base.library_loader
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base.library_loader
 enum class RelroSharingStatus {
   NOT_ATTEMPTED = 0,
   SHARED = 1,
@@ -370,6 +370,6 @@ class NativeLibInfo {
 // On success, returns true.
 bool LinkerJNIInit(JavaVM* vm, JNIEnv* env);
 
-}  // namespace chromium_android_linker
+}  // namespace Cinaseek_android_linker
 
 #endif  // BASE_ANDROID_LINKER_LINKER_JNI_H_

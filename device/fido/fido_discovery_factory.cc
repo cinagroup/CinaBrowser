@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,13 +59,13 @@ std::vector<std::unique_ptr<FidoDiscoveryBase>> FidoDiscoveryFactory::Create(
         // results in the system killing with process with SIGABRT once
         // Bluetooth calls are made.
         //
-        // However, unless Chromium is started from the Finder, or with special
+        // However, unless Cinaseek is started from the Finder, or with special
         // posix_spawn flags, then the responsible process—the one that needs
         // to have the right Info.plist—is one of the parent processes, often
-        // the terminal emulator. This can lead to Chromium getting killed when
+        // the terminal emulator. This can lead to Cinaseek getting killed when
         // trying to do WebAuthn. This also affects layout tests.
         //
-        // Thus, if the responsible process is not Chromium itself, then we
+        // Thus, if the responsible process is not Cinaseek itself, then we
         // disable caBLE (and thus avoid Bluetooth calls).
         FIDO_LOG(ERROR) << "Cannot use Bluetooth because the responsible app "
                            "for the process does not have Bluetooth metadata "

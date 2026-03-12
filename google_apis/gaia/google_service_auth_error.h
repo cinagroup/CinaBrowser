@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ class COMPONENT_EXPORT(GOOGLE_APIS) GoogleServiceAuthError {
   // These enumerations are referenced by integer value in HTML login code and
   // in UMA histograms. Do not change the numeric values.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.google_apis.gaia
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.google_apis.gaia
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: GoogleServiceAuthErrorState
   enum State {
     // The user is authenticated.

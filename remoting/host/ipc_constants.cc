@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ constexpr char kChromotingHostServicesIpcName[] =
 constexpr char kAgentProcessBrokerIpcName[] =
     "chromoting.agent_process_broker_debug_mojo_ipc";
 #else
-// Must match the `MachServices` key in org.chromium.chromoting.broker.plist.
+// Must match the `MachServices` key in org.Cinaseek.chromoting.broker.plist.
 constexpr char kAgentProcessBrokerIpcName[] =
     "chromoting.agent_process_broker_mojo_ipc";
 #endif

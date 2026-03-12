@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #ifndef THIRD_PARTY_PRIVATE_JOIN_AND_COMPUTE_CHROMIUM_PATCH_H_
 #define THIRD_PARTY_PRIVATE_JOIN_AND_COMPUTE_CHROMIUM_PATCH_H_
 
-namespace chromium_patch {
+namespace Cinaseek_patch {
 
 // Replacement for glog macro.
 template <typename T>
@@ -20,9 +20,9 @@ inline T CheckNotNull(const char* names, T&& t) {
   return std::forward<T>(t);
 }
 
-}  // namespace chromium_patch
+}  // namespace Cinaseek_patch
 
 #define CHECK_NOTNULL(val) \
-  ::chromium_patch::CheckNotNull("'" #val "' Must be non nullptr", (val))
+  ::Cinaseek_patch::CheckNotNull("'" #val "' Must be non nullptr", (val))
 
 #endif  // THIRD_PARTY_PRIVATE_JOIN_AND_COMPUTE_CHROMIUM_PATCH_H_

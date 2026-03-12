@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@
 #include "net/http/http_stream_pool.h"
 #include "net/http/url_security_manager.h"
 #include "net/proxy_resolution/proxy_resolution_service.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
 #include "net/quic/quic_crypto_client_stream_factory.h"
 #include "net/quic/quic_session_pool.h"
 #include "net/socket/client_socket_factory.h"

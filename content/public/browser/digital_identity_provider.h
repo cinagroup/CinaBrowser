@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ class CONTENT_EXPORT DigitalIdentityProvider {
   // Do not reorder or change the values because the enum values are being
   // recorded in metrics.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser.webid
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser.webid
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: DigitalIdentityRequestStatusForMetrics
   enum class RequestStatusForMetrics {
     kSuccess = 0,

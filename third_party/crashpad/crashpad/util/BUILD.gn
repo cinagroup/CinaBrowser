@@ -15,15 +15,15 @@
 import("../build/crashpad_buildconfig.gni")
 import("net/tls.gni")
 
-if (crashpad_is_in_chromium) {
+if (crashpad_is_in_Cinaseek) {
   import("//build/config/sanitizers/sanitizers.gni")
 }
 
 if (crashpad_is_apple && !crashpad_is_tvos) {
-  if (crashpad_is_in_chromium || crashpad_is_in_fuchsia) {
+  if (crashpad_is_in_Cinaseek || crashpad_is_in_fuchsia) {
     import("//build/config/sysroot.gni")
   } else {
-    import("$mini_chromium_import_root/build/sysroot.gni")
+    import("$mini_Cinaseek_import_root/build/sysroot.gni")
   }
 
   action_foreach("mig") {
@@ -56,7 +56,7 @@ if (crashpad_is_apple && !crashpad_is_tvos) {
     ]
 
     args = [ "{{source}}" ]
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       if (!use_system_xcode) {
         import("//build/config/clang/clang.gni")
         import("//build/config/mac/mac_sdk.gni")
@@ -87,8 +87,8 @@ if (crashpad_is_apple && !crashpad_is_tvos) {
       }
     }
     if (sysroot != "") {
-      if (crashpad_is_in_chromium) {
-        # Chromium often brings along its own SDK and wants to keep paths
+      if (crashpad_is_in_Cinaseek) {
+        # Cinaseek often brings along its own SDK and wants to keep paths
         # relative…
         args += [
           "--sdk",
@@ -160,10 +160,10 @@ if (crashpad_is_apple && !crashpad_is_tvos) {
   static_library("mig_output") {
     deps = [ ":mig" ]
     sources = get_target_outputs(":mig")
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       # mig output contains unreachable code, which irks -Wunreachable-code.
-      configs -= [ "//build/config/compiler:chromium_code" ]
-      configs += [ "//build/config/compiler:no_chromium_code" ]
+      configs -= [ "//build/config/compiler:Cinaseek_code" ]
+      configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     }
     public_configs = [ "..:crashpad_config" ]
   }
@@ -177,7 +177,7 @@ if (crashpad_is_win) {
       "win/address_types.h",
       "win/registration_protocol_win_structs.h",
     ]
-    public_deps = [ "../third_party/mini_chromium:build" ]
+    public_deps = [ "../third_party/mini_Cinaseek:build" ]
     public_configs = [ "..:crashpad_config" ]
   }
 }
@@ -598,7 +598,7 @@ crashpad_static_library("util") {
     "../third_party/zlib",
   ]
 
-  deps = [ "$mini_chromium_source_parent:base" ]
+  deps = [ "$mini_Cinaseek_source_parent:base" ]
 
   configs = [ "../build:flock_always_supported_defines" ]
 
@@ -670,7 +670,7 @@ crashpad_static_library("net") {
 
   deps = [
     ":util",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
   ]
 
   if (crashpad_is_apple) {
@@ -694,7 +694,7 @@ crashpad_static_library("net") {
     if (crashpad_use_boringssl_for_http_transport_socket) {
       defines = [ "CRASHPAD_USE_BORINGSSL" ]
 
-      if (crashpad_is_in_chromium || crashpad_is_in_fuchsia) {
+      if (crashpad_is_in_Cinaseek || crashpad_is_in_fuchsia) {
         deps += [ "//third_party/boringssl" ]
       } else {
         libs = [
@@ -716,17 +716,17 @@ if (!crashpad_is_android && !crashpad_is_ios) {
     deps = [
       ":net",
       ":util",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../third_party/cpp-httplib",
       "../third_party/zlib",
       "../tools:tool_support",
     ]
 
-    # TODO(b/189353575): make these relocatable using $mini_chromium_ variables
+    # TODO(b/189353575): make these relocatable using $mini_Cinaseek_ variables
     if (crashpad_is_standalone) {
-      remove_configs = [ "//third_party/mini_chromium/mini_chromium/build/config:Wexit_time_destructors" ]
+      remove_configs = [ "//third_party/mini_Cinaseek/mini_Cinaseek/build/config:Wexit_time_destructors" ]
     } else if (crashpad_is_external) {
-      remove_configs = [ "//../../mini_chromium/mini_chromium/build/config:Wexit_time_destructors" ]
+      remove_configs = [ "//../../mini_Cinaseek/mini_Cinaseek/build/config:Wexit_time_destructors" ]
     }
 
     if (crashpad_is_win) {
@@ -736,7 +736,7 @@ if (!crashpad_is_android && !crashpad_is_ios) {
     if (crashpad_use_boringssl_for_http_transport_socket) {
       defines = [ "CRASHPAD_USE_BORINGSSL" ]
 
-      if (crashpad_is_in_chromium || crashpad_is_in_fuchsia) {
+      if (crashpad_is_in_Cinaseek || crashpad_is_in_fuchsia) {
         deps += [ "//third_party/boringssl" ]
       } else {
         libs = [
@@ -754,8 +754,8 @@ source_set("no_cfi_icall") {
   sources = [ "misc/no_cfi_icall.h" ]
   public_configs = [ "..:crashpad_config" ]
   public_deps = [
-    "$mini_chromium_source_parent:base",
-    "$mini_chromium_source_parent:build",
+    "$mini_Cinaseek_source_parent:base",
+    "$mini_Cinaseek_source_parent:build",
   ]
 }
 
@@ -922,7 +922,7 @@ source_set("util_test") {
       "win/session_end_watcher_test.cc",
     ]
 
-    if (crashpad_is_in_chromium && is_asan && is_component_build) {
+    if (crashpad_is_in_Cinaseek && is_asan && is_component_build) {
       # TODO(crbug.com/856174): Re-enable these once Windows ASan is fixed.
       sources -= [ "stdlib/string_number_conversion_test.cc" ]
     }
@@ -938,7 +938,7 @@ source_set("util_test") {
   deps = [
     ":net",
     ":util",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../client",
     "../compat",
     "../test",
@@ -971,7 +971,7 @@ source_set("util_test") {
     deps += [ "../third_party/lss" ]
   }
 
-  if (crashpad_is_in_chromium && (crashpad_is_linux || crashpad_is_android)) {
+  if (crashpad_is_in_Cinaseek && (crashpad_is_linux || crashpad_is_android)) {
     # TODO(crbug.com/1163794): Disabling MemoryMap tests if PartitionAlloc is
     # used for malloc.
     deps += [ "//base/allocator:buildflags" ]

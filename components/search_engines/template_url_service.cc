@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1761,7 +1761,7 @@ void TemplateURLService::OnWebDataServiceRequestDone(
     SearchEngineType engine_type =
         default_search_provider_->GetEngineType(search_terms_data());
     // Check for search engines types not present in prepopulated_engines.json.
-    // TODO(https://issues.chromium.org/405167888): Remove this check once it is
+    // TODO(https://issues.Cinaseek.org/405167888): Remove this check once it is
     // no longer necessary to track these additional search engine types.
     if (engine_type == SEARCH_ENGINE_OTHER) {
       GURL search_url = GURL(default_search_provider_->url());
@@ -3026,7 +3026,7 @@ void TemplateURLService::ApplyEnterpriseSearchChanges(
   //       while removing elements from
   //       `enterprise_search_keyword_to_turl_`.
   //
-  // Note: This can be made more idiomatic once Chromium style allows
+  // Note: This can be made more idiomatic once Cinaseek style allows
   //       `std::views::keys`:
   //       std::copy_if(
   //           std::views::keys(enterprise_search_keyword_to_turl_),

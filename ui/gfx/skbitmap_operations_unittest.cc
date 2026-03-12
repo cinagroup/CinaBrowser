@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 #include "third_party/skia/include/core/SkRect.h"
 #include "third_party/skia/include/core/SkRegion.h"
 #include "third_party/skia/include/core/SkUnPreMultiply.h"
-#include "third_party/skia/include/private/chromium/SkPMColor.h"
+#include "third_party/skia/include/private/Cinaseek/SkPMColor.h"
 
 namespace {
 

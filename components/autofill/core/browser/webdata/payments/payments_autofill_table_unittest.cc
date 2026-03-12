@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ class PaymentsAutofillTableTest : public testing::Test {
   // Opens the database file and initializes `db_` and `table_`.
   // If `use_new_encryption_key` is true, encrypted values in the database
   // cannot be decrypted. This simulates, for example, the user switching
-  // between Chrome and Chromium.
+  // between Chrome and Cinaseek.
   void InitDatabase(bool use_new_encryption_key) {
     if (!encryptor_ || use_new_encryption_key) {
       encryptor_ = os_crypt_async::GetTestEncryptorForTesting();

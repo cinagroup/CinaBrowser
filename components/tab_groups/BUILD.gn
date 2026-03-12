@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -37,8 +37,8 @@ if (is_android) {
   }
 
   android_library("tab_groups_java") {
-    resources_package = "org.chromium.components.tab_groups"
-    sources = [ "android/java/src/org/chromium/components/tab_groups/TabGroupColorPickerUtils.java" ]
+    resources_package = "org.Cinaseek.components.tab_groups"
+    sources = [ "android/java/src/org/Cinaseek/components/tab_groups/TabGroupColorPickerUtils.java" ]
     deps = [
       ":java_resources",
       "//components/browser_ui/styles/android:java",

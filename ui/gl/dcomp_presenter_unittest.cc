@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -914,7 +914,7 @@ TEST_P(DCompPresenterTest, DelegatedInkVisualAddedWithRootSurfaceVisualNull) {
 // Please ensure this test is not broken. Re-attaching swapchains between
 // subsequent frames may cause flickering under certain conditions that include
 // specific Intel drivers, custom present duration etc.
-// See https://bugs.chromium.org/p/chromium/issues/detail?id=1421175.
+// See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1421175.
 TEST_P(DCompPresenterTest, VisualsReused) {
   constexpr gfx::Size window_size(100, 100);
   EXPECT_TRUE(presenter_->Resize(window_size, 1.0, gfx::ColorSpace(), true));

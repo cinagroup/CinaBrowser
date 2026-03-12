@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace arc {
 class ArcBridgeService;
 
 // This class encapsulates the detail of IME related IPC between
-// Chromium and the ARC container.
+// Cinaseek and the ARC container.
 class ArcImeBridgeImpl : public ArcImeBridge, public mojom::ImeHost {
  public:
   ArcImeBridgeImpl(Delegate* delegate, ArcBridgeService* bridge_service);

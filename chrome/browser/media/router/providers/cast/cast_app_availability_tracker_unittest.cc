@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ TEST_F(CastAppAvailabilityTrackerTest, RegisterSource) {
 
 TEST_F(CastAppAvailabilityTrackerTest, RegisterSourceReturnsMultipleAppIds) {
   auto source1 = CastMediaSource::FromMediaSourceId(
-      "urn:x-org.chromium.media:source:tab:1");
+      "urn:x-org.Cinaseek.media:source:tab:1");
   ASSERT_TRUE(source1);
 
   // Mirorring app ids.
@@ -107,7 +107,7 @@ TEST_F(CastAppAvailabilityTrackerTest, MultipleAppIdsAlreadyTrackingOne) {
   EXPECT_EQ(registered_app_ids, tracker_.GetRegisteredApps());
 
   auto source2 = CastMediaSource::FromMediaSourceId(
-      "urn:x-org.chromium.media:source:tab:1");
+      "urn:x-org.Cinaseek.media:source:tab:1");
   ASSERT_TRUE(source2);
 
   new_app_ids = {"85CDB22F"};

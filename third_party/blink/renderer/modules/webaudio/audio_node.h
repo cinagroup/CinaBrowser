@@ -139,7 +139,7 @@ class MODULES_EXPORT AudioNode : public EventTarget,
   // connection.
   virtual void ConnectToDestinationReady() {}
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const String& function_name, const String& message);
 
   Member<BaseAudioContext> context_;

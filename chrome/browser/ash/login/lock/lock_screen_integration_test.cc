@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ using LockScreen = AshIntegrationTest;
 //     (ChromeOS > Software > Commercial (Enterprise) > Identity > LURS)
 // Contacts:
 //     cros-lurs@google.com
-//     antrim@chromium.org
+//     antrim@Cinaseek.org
 //     chromeos-sw-engprod@google.com
 //     cros-exp-wg+testresults@google.com (for fieldtrial_testing_config)
 IN_PROC_BROWSER_TEST_F(LockScreen, CloseLidDbusIntegration) {

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -146,28 +146,28 @@ repack("repack_unscaled_resources") {
   }
 }
 
-bundle_data_xcassets("chromium_icons_legacy") {
-  catalog = "ChromiumIconsLegacy.xcassets"
+bundle_data_xcassets("Cinaseek_icons_legacy") {
+  catalog = "CinaseekIconsLegacy.xcassets"
   sources = [
-    "ChromiumIconsLegacy.xcassets/AppIcon.appiconset/Contents.json",
-    "ChromiumIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024.png",
-    "ChromiumIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024Dark.png",
-    "ChromiumIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024Tinted.png",
+    "CinaseekIconsLegacy.xcassets/AppIcon.appiconset/Contents.json",
+    "CinaseekIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024.png",
+    "CinaseekIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024Dark.png",
+    "CinaseekIconsLegacy.xcassets/AppIcon.appiconset/Icon-1024Tinted.png",
   ]
 }
 
-bundle_data_xcassets("chromium_icons") {
-  catalog = "ChromiumIcons.xcassets"
+bundle_data_xcassets("Cinaseek_icons") {
+  catalog = "CinaseekIcons.xcassets"
   sources = [
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/2.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/3.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/5.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/blue.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/cr.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/donut.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/pill.svg",
-    "ChromiumIcons.xcassets/AppIcon.icon/Assets/ring.png",
-    "ChromiumIcons.xcassets/AppIcon.icon/icon.json",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/2.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/3.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/5.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/blue.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/cr.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/donut.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/pill.svg",
+    "CinaseekIcons.xcassets/AppIcon.icon/Assets/ring.png",
+    "CinaseekIcons.xcassets/AppIcon.icon/icon.json",
   ]
 }
 

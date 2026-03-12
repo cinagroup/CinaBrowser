@@ -5,7 +5,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.chromium.CRURegistration.testing.RegisterMe</string>
+	<string>org.Cinaseek.CRURegistration.testing.RegisterMe</string>
 	<key>CFBundleDisplayName</key>
 	<string>CRURegistrationRegisterMe</string>
 	<key>CFBundleExecutable</key>

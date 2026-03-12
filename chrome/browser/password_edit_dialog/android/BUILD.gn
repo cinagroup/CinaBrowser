@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,13 +24,13 @@ source_set("android") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/NoFilterArrayAdapter.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogBridge.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogCoordinator.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogMediator.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogProperties.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogView.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/NoFilterArrayAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogView.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogViewBinder.java",
   ]
 
   deps = [
@@ -48,11 +48,11 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.password_edit_dialog"
+  resources_package = "org.Cinaseek.chrome.browser.password_edit_dialog"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogBridge.java" ]
 }
 
 android_resources("java_resources") {
@@ -70,8 +70,8 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.password_edit_dialog"
-  sources = [ "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogControllerTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.password_edit_dialog"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogControllerTest.java" ]
 
   deps = [
     ":java",
@@ -92,12 +92,12 @@ robolectric_library("junit") {
 }
 
 android_library("unit_device_javatests") {
-  resources_package = "org.chromium.chrome.browser.password_edit_dialog"
+  resources_package = "org.Cinaseek.chrome.browser.password_edit_dialog"
   testonly = true
 
   sources = [
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogRenderTest.java",
-    "java/src/org/chromium/chrome/browser/password_edit_dialog/PasswordEditDialogViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogRenderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/password_edit_dialog/PasswordEditDialogViewTest.java",
   ]
 
   deps = [

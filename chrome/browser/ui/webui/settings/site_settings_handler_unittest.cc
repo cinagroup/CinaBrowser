@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -388,7 +388,7 @@ class SiteSettingsHandlerBaseTest : public testing::Test {
     handler_ = std::make_unique<SiteSettingsHandler>(profile());
     handler()->set_web_ui(web_ui());
     handler()->AllowJavascript();
-    // AllowJavascript() adds a callback to create leveldb_env::ChromiumEnv
+    // AllowJavascript() adds a callback to create leveldb_env::CinaseekEnv
     // which reads the FeatureList. Wait for the callback to be finished so that
     // we won't destruct |feature_list_| before the callback is executed.
     base::RunLoop().RunUntilIdle();
@@ -4313,7 +4313,7 @@ class SiteSettingsHandlerChooserExceptionTest
     : public SiteSettingsHandlerBaseTest {
  protected:
   const GURL kAndroidUrl{"https://android.com"};
-  const GURL kChromiumUrl{"https://chromium.org"};
+  const GURL kCinaseekUrl{"https://Cinaseek.org"};
   const GURL kGoogleUrl{"https://google.com"};
   const GURL kWebUIUrl{"chrome://test"};
 
@@ -4432,7 +4432,7 @@ class SiteSettingsHandlerChooserExceptionTest
                                                  /*expected_total_calls=*/1u);
 
     // There are 9 granted permissions:
-    // 1. Persistent permission for persistent-device on kChromiumOrigin
+    // 1. Persistent permission for persistent-device on kCinaseekOrigin
     // 2. Persistent permission for persistent-device on kGoogleOrigin
     // 3. Persistent permission for persistent-device on kWebUIOrigin
     // 4. Persistent permission for user-granted-device on kAndroidOrigin
@@ -4440,7 +4440,7 @@ class SiteSettingsHandlerChooserExceptionTest
     // 6. Policy-granted permission for any device on kGoogleOrigin
     // 7. Policy-granted permission for vendor 18D1 on kAndroidOrigin
     // 8. Policy-granted permission for vendor 18D2 on kAndroidOrigin
-    // 9. Policy-granted permission for device 18D1:162E on kChromiumOrigin
+    // 9. Policy-granted permission for device 18D1:162E on kCinaseekOrigin
     //
     // Permission 3 is ignored by GetChooserExceptionListFromProfile because its
     // origin has a WebUI scheme (chrome://).
@@ -4463,7 +4463,7 @@ class SiteSettingsHandlerChooserExceptionTest
       case ContentSettingsType::BLUETOOTH_CHOOSER_DATA:
         // BluetoothChooserContext creates a different permission object for
         // each (device,origin) pair, so persistent-device shows up for each of
-        // kChromiumOrigin and kGoogleOrigin.
+        // kCinaseekOrigin and kGoogleOrigin.
         //
         // TODO(crbug.com/40667219): No policy-granted exceptions are
         // included because Web Bluetooth does not support granting device
@@ -4612,12 +4612,12 @@ class SiteSettingsHandlerChooserExceptionTest
     const std::string group_name(
         site_settings::ContentSettingsTypeToGroupName(content_type()));
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kGoogleOrigin = url::Origin::Create(kGoogleUrl);
     const std::string kAndroidOriginStr =
         kAndroidUrl.DeprecatedGetOriginAsURL().spec();
-    const std::string kChromiumOriginStr =
-        kChromiumUrl.DeprecatedGetOriginAsURL().spec();
+    const std::string kCinaseekOriginStr =
+        kCinaseekUrl.DeprecatedGetOriginAsURL().spec();
     const std::string kGoogleOriginStr =
         kGoogleUrl.DeprecatedGetOriginAsURL().spec();
 
@@ -4718,7 +4718,7 @@ class SiteSettingsHandlerChooserExceptionTest
       // policy exception is present under "persistent-device".
       if (content_type() != ContentSettingsType::BLUETOOTH_CHOOSER_DATA) {
         EXPECT_TRUE(ChooserExceptionContainsSiteException(
-            exceptions, "persistent-device", kChromiumOriginStr));
+            exceptions, "persistent-device", kCinaseekOriginStr));
       }
     }
 
@@ -4726,12 +4726,12 @@ class SiteSettingsHandlerChooserExceptionTest
     // also a policy-granted permission for the same device.
     args.clear();
     args.Append(group_name);
-    args.Append(kChromiumOriginStr);
-    args.Append(GetPersistentDeviceValueForOrigin(kChromiumOrigin));
+    args.Append(kCinaseekOriginStr);
+    args.Append(GetPersistentDeviceValueForOrigin(kCinaseekOrigin));
 
     EXPECT_CALL(observer_,
                 OnObjectPermissionChanged({guard_type()}, content_type()));
-    EXPECT_CALL(observer_, OnPermissionRevoked(kChromiumOrigin));
+    EXPECT_CALL(observer_, OnPermissionRevoked(kCinaseekOrigin));
     handler()->HandleResetChooserExceptionForSite(args);
     GetChooserContext(profile())->FlushScheduledSaveSettingsCalls();
 
@@ -4779,7 +4779,7 @@ class SiteSettingsHandlerChooserExceptionTest
       // constructed name.
       if (content_type() != ContentSettingsType::BLUETOOTH_CHOOSER_DATA) {
         EXPECT_TRUE(ChooserExceptionContainsSiteException(
-            exceptions, GetUnknownProductDisplayName(), kChromiumOriginStr));
+            exceptions, GetUnknownProductDisplayName(), kCinaseekOriginStr));
         EXPECT_FALSE(ChooserExceptionContainsSiteException(
             exceptions, "persistent-device", kGoogleOriginStr));
       }
@@ -5136,7 +5136,7 @@ class SiteSettingsHandlerBluetoothTest
 
   void SetUpUserGrantedPermissions() override {
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kGoogleOrigin = url::Origin::Create(kGoogleUrl);
     const auto kWebUIOrigin = url::Origin::Create(kWebUIUrl);
 
@@ -5153,7 +5153,7 @@ class SiteSettingsHandlerBluetoothTest
           .Times(5)
           .WillRepeatedly(RunClosure(barrier_closure));
       bluetooth_chooser_context->GrantServiceAccessPermission(
-          kChromiumOrigin, persistent_device_.get(), options.get());
+          kCinaseekOrigin, persistent_device_.get(), options.get());
       bluetooth_chooser_context->GrantServiceAccessPermission(
           kGoogleOrigin, persistent_device_.get(), options.get());
       bluetooth_chooser_context->GrantServiceAccessPermission(
@@ -5173,7 +5173,7 @@ class SiteSettingsHandlerBluetoothTest
           .WillOnce(RunClosure(loop.QuitClosure()));
       BluetoothChooserContextFactory::GetForProfile(incognito_profile())
           ->GrantServiceAccessPermission(
-              kChromiumOrigin, off_the_record_device_.get(), options.get());
+              kCinaseekOrigin, off_the_record_device_.get(), options.get());
       loop.Run();
     }
   }
@@ -5273,7 +5273,7 @@ class SiteSettingsHandlerHidTest
         [
           {
             "devices": [{ "vendor_id": 6353, "product_id": 5678 }],
-            "urls": ["https://chromium.org"]
+            "urls": ["https://Cinaseek.org"]
           }, {
             "devices": [{ "vendor_id": 6353 }],
             "urls": ["https://android.com"]
@@ -5329,7 +5329,7 @@ class SiteSettingsHandlerHidTest
 
   void SetUpUserGrantedPermissions() override {
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kGoogleOrigin = url::Origin::Create(kGoogleUrl);
     const auto kWebUIOrigin = url::Origin::Create(kWebUIUrl);
 
@@ -5347,7 +5347,7 @@ class SiteSettingsHandlerHidTest
           .WillRepeatedly(RunClosure(barrier_closure));
       auto* hid_chooser_context =
           HidChooserContextFactory::GetForProfile(profile());
-      hid_chooser_context->GrantDevicePermission(kChromiumOrigin,
+      hid_chooser_context->GrantDevicePermission(kCinaseekOrigin,
                                                  *persistent_device_);
       hid_chooser_context->GrantDevicePermission(kGoogleOrigin,
                                                  *persistent_device_);
@@ -5367,7 +5367,7 @@ class SiteSettingsHandlerHidTest
                                  ContentSettingsType::HID_CHOOSER_DATA))
           .WillOnce(RunClosure(loop.QuitClosure()));
       HidChooserContextFactory::GetForProfile(incognito_profile())
-          ->GrantDevicePermission(kChromiumOrigin, *off_the_record_device_);
+          ->GrantDevicePermission(kCinaseekOrigin, *off_the_record_device_);
       loop.Run();
     }
   }
@@ -5472,7 +5472,7 @@ class SiteSettingsHandlerSerialTest
         [
           {
             "devices": [{ "vendor_id": 6353, "product_id": 5678 }],
-            "urls": ["https://chromium.org"]
+            "urls": ["https://Cinaseek.org"]
           }, {
             "devices": [{ "vendor_id": 6353 }],
             "urls": ["https://android.com"]
@@ -5575,7 +5575,7 @@ class SiteSettingsHandlerSerialTest
 
   void SetUpUserGrantedPermissions() override {
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kGoogleOrigin = url::Origin::Create(kGoogleUrl);
     const auto kWebUIOrigin = url::Origin::Create(kWebUIUrl);
 
@@ -5593,7 +5593,7 @@ class SiteSettingsHandlerSerialTest
           .WillRepeatedly(RunClosure(barrier_closure));
       auto* serial_chooser_context =
           SerialChooserContextFactory::GetForProfile(profile());
-      serial_chooser_context->GrantPortPermission(kChromiumOrigin,
+      serial_chooser_context->GrantPortPermission(kCinaseekOrigin,
                                                   *persistent_port_);
       serial_chooser_context->GrantPortPermission(kGoogleOrigin,
                                                   *persistent_port_);
@@ -5613,7 +5613,7 @@ class SiteSettingsHandlerSerialTest
                                  ContentSettingsType::SERIAL_CHOOSER_DATA))
           .WillOnce(RunClosure(loop.QuitClosure()));
       SerialChooserContextFactory::GetForProfile(incognito_profile())
-          ->GrantPortPermission(kChromiumOrigin, *off_the_record_port_);
+          ->GrantPortPermission(kCinaseekOrigin, *off_the_record_port_);
       loop.Run();
     }
   }
@@ -5718,7 +5718,7 @@ class SiteSettingsHandlerUsbTest
         [
           {
             "devices": [{ "vendor_id": 6353, "product_id": 5678 }],
-            "urls": ["https://chromium.org"]
+            "urls": ["https://Cinaseek.org"]
           }, {
             "devices": [{ "vendor_id": 6353 }],
             "urls": ["https://google.com,https://android.com"]
@@ -5778,7 +5778,7 @@ class SiteSettingsHandlerUsbTest
 
   void SetUpUserGrantedPermissions() override {
     const auto kAndroidOrigin = url::Origin::Create(kAndroidUrl);
-    const auto kChromiumOrigin = url::Origin::Create(kChromiumUrl);
+    const auto kCinaseekOrigin = url::Origin::Create(kCinaseekUrl);
     const auto kGoogleOrigin = url::Origin::Create(kGoogleUrl);
     const auto kWebUIOrigin = url::Origin::Create(kWebUIUrl);
 
@@ -5796,7 +5796,7 @@ class SiteSettingsHandlerUsbTest
           .WillRepeatedly(RunClosure(barrier_closure));
       auto* usb_chooser_context =
           UsbChooserContextFactory::GetForProfile(profile());
-      usb_chooser_context->GrantDevicePermission(kChromiumOrigin,
+      usb_chooser_context->GrantDevicePermission(kCinaseekOrigin,
                                                  *persistent_device_);
       usb_chooser_context->GrantDevicePermission(kGoogleOrigin,
                                                  *persistent_device_);
@@ -5816,7 +5816,7 @@ class SiteSettingsHandlerUsbTest
                                  ContentSettingsType::USB_CHOOSER_DATA))
           .WillOnce(RunClosure(loop.QuitClosure()));
       UsbChooserContextFactory::GetForProfile(incognito_profile())
-          ->GrantDevicePermission(kChromiumOrigin, *off_the_record_device_);
+          ->GrantDevicePermission(kCinaseekOrigin, *off_the_record_device_);
       loop.Run();
     }
   }

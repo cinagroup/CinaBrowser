@@ -1,7 +1,7 @@
 {
     "images": [
         {
-          "filename" : "chromium_notifications_opt_in_banner_landscape@2x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_landscape@2x.png",
           "idiom" : "ipad",
           "scale" : "2x"
         },
@@ -12,7 +12,7 @@
               "value" : "dark"
             }
           ],
-          "filename" : "chromium_notifications_opt_in_banner_landscape_dark@2x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_landscape_dark@2x.png",
           "idiom" : "ipad",
           "scale" : "2x"
         }

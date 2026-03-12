@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ class DemoIntegrationTest : public MixinBasedInProcessBrowserTest {
     host_resolver()->AllowDirectLookup("*.gstatic.com");
     host_resolver()->AllowDirectLookup("*.googleapis.com");
     host_resolver()->AllowDirectLookup("accounts.google.*");
-    host_resolver()->AllowDirectLookup("*.chromium.org");
+    host_resolver()->AllowDirectLookup("*.Cinaseek.org");
 
     InProcessBrowserTest::SetUpInProcessBrowserTestFixture();
   }
@@ -67,8 +67,8 @@ Manually:
   1 Launch Chrome
   2 Go to chrome://version
   3 Make sure the page can open successfully.)");
-  info.add_contacts("svenzheng@chromium.org");
-  info.add_contacts("jamescook@chromium.org");
+  info.add_contacts("svenzheng@Cinaseek.org");
+  info.add_contacts("jamescook@Cinaseek.org");
   info.set_team_email("crosier-team@google.com");
   info.set_buganizer("1394295");
   crosier_util::AddTestInfo(info);

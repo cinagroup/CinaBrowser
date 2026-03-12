@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 #include "components/viz/test/fake_output_surface.h"
 #include "components/viz/test/test_raster_interface.h"
 #include "components/viz/test/test_shared_image_interface_provider.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/common/mailbox.h"
 #include "media/base/media_switches.h"
 #include "media/base/video_frame.h"

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ class StatusCollector {
 
   // Methods used to determine if privacy notes should be displayed in
   // management UI.
-  // https://cs.chromium.org/search/?q=AddDeviceReportingInfo
+  // https://cs.Cinaseek.org/search/?q=AddDeviceReportingInfo
   virtual bool IsReportingActivityTimes() const = 0;
   virtual bool IsReportingNetworkData() const = 0;
   virtual bool IsReportingHardwareData() const = 0;

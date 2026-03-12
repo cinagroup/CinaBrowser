@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 namespace cronet {
 namespace {
 
-using ::org::chromium::net::httpflags::BaseFeatureOverrides;
+using ::org::Cinaseek::net::httpflags::BaseFeatureOverrides;
 using ::testing::IsEmpty;
 using ::testing::Pair;
 using ::testing::UnorderedElementsAre;

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace media {
 
 // Enumerates the various representations of the ordering of audio channels.
 // Logged to UMA, so never reuse a value, always add new/greater ones!
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 // GENERATED_JAVA_PREFIX_TO_STRIP: CHANNEL_
 enum ChannelLayout {
   CHANNEL_LAYOUT_NONE = 0,
@@ -115,7 +115,7 @@ enum ChannelLayout {
   CHANNEL_LAYOUT_4_1_QUAD_SIDE = 31,
 
   // Actual channel layout is specified in the bitstream and the actual channel
-  // count is unknown at Chromium media pipeline level (useful for audio
+  // count is unknown at Cinaseek media pipeline level (useful for audio
   // pass-through mode).
   CHANNEL_LAYOUT_BITSTREAM = 32,
 

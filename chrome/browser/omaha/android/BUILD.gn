@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,18 +6,18 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/omaha/ExponentialBackoffScheduler.java",
-    "java/src/org/chromium/chrome/browser/omaha/MarketURLGetter.java",
-    "java/src/org/chromium/chrome/browser/omaha/OmahaPrefUtils.java",
-    "java/src/org/chromium/chrome/browser/omaha/RequestFailureException.java",
-    "java/src/org/chromium/chrome/browser/omaha/StringSanitizer.java",
-    "java/src/org/chromium/chrome/browser/omaha/UpdateConfigs.java",
-    "java/src/org/chromium/chrome/browser/omaha/UpdateStatusProvider.java",
-    "java/src/org/chromium/chrome/browser/omaha/VersionNumber.java",
-    "java/src/org/chromium/chrome/browser/omaha/VersionNumberGetter.java",
-    "java/src/org/chromium/chrome/browser/omaha/XMLParser.java",
-    "java/src/org/chromium/chrome/browser/omaha/metrics/TrackingProvider.java",
-    "java/src/org/chromium/chrome/browser/omaha/metrics/UpdateSuccessMetrics.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/ExponentialBackoffScheduler.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/MarketURLGetter.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/OmahaPrefUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/RequestFailureException.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/StringSanitizer.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/UpdateConfigs.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/UpdateStatusProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/VersionNumber.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/VersionNumberGetter.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/XMLParser.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/metrics/TrackingProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/omaha/metrics/UpdateSuccessMetrics.java",
   ]
   deps = [
     ":update_proto_java",
@@ -38,6 +38,6 @@ android_library("java") {
 }
 
 proto_java_library("update_proto_java") {
-  proto_path = "java/src/org/chromium/chrome/browser/omaha/metrics"
+  proto_path = "java/src/org/Cinaseek/chrome/browser/omaha/metrics"
   sources = [ "$proto_path/update_success_tracking.proto" ]
 }

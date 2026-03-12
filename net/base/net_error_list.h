@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -950,7 +950,7 @@ NET_ERROR(TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST, -507)
 // This is a placeholder value that should never be used within //net.
 //
 // When Cronet APIs are being backed by HttpEngine (i.e., HttpEngineProvider is
-// being used), org.chromium.net.NetworkException#getCronetInternalErrorCode is
+// being used), org.Cinaseek.net.NetworkException#getCronetInternalErrorCode is
 // not supported (android.net.http.NetworkException#getCronetInternalErrorCode
 // does not exist). In this scenario, getCronetInternalErrorCode will always
 // return this error. This is a first step towards the deprecation of
@@ -964,7 +964,7 @@ NET_ERROR(TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST, -507)
 // LINT.IfChange(HTTPENGINE_PROVIDER_IN_USE)
 NET_ERROR(HTTPENGINE_PROVIDER_IN_USE, -508)
 // LINT.ThenChange(
-//      //components/cronet/android/java/src/org/chromium/net/impl/AndroidNetworkExceptionWrapper.java:HTTPENGINE_PROVIDER_IN_USE,
+//      //components/cronet/android/java/src/org/Cinaseek/net/impl/AndroidNetworkExceptionWrapper.java:HTTPENGINE_PROVIDER_IN_USE,
 //      //tools/metrics/histograms/enums.xml:HTTPResponseAndNetErrorCodes,
 //      //tools/metrics/histograms/enums.xml:NetErrorCodes,
 // )

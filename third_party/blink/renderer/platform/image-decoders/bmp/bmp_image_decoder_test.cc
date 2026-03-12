@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ class BMPSuiteEntry {
   // `revision` is a Skia Gold revision number, which needs to be increased
   // every time test expectations change - see also documentation of
   // `PositiveIfOnlyImageAlgorithm` used by `BMPImageDecoderTest`:
-  // https://source.chromium.org/chromium/chromium/src/+/main:ui/base/test/skia_gold_matching_algorithm.h;l=97-133;drc=31a129ff9b513950f7f96f7fba885e8341f52158
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/base/test/skia_gold_matching_algorithm.h;l=97-133;drc=31a129ff9b513950f7f96f7fba885e8341f52158
   BMPSuiteEntry(std::string entry_dir,
                 std::string entry_bmp,
                 std::string revision = "rev0")

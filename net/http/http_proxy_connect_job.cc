@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -800,7 +800,7 @@ int HttpProxyConnectJob::DoQuicProxyCreateStreamComplete(int result) {
   }
 
   next_state_ = STATE_HTTP_PROXY_CONNECT_COMPLETE;
-  std::unique_ptr<QuicChromiumClientStream::Handle> quic_stream =
+  std::unique_ptr<QuicCinaseekClientStream::Handle> quic_stream =
       quic_session_->ReleaseStream();
 
   uint8_t urgency = ConvertRequestPriorityToQuicPriority(kH2QuicTunnelPriority);

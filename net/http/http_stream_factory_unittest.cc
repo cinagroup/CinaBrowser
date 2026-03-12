@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -404,7 +404,7 @@ class WebSocketStreamCreateHelper
     NOTREACHED();
   }
   std::unique_ptr<WebSocketHandshakeStreamBase> CreateHttp3Stream(
-      std::unique_ptr<QuicChromiumClientSession::Handle> session,
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session,
       std::set<std::string> dns_aliases) override {
     NOTREACHED();
   }
@@ -2387,7 +2387,7 @@ class HttpStreamFactoryQuicTest
   raw_ptr<quic::QuicRandom> random_generator_;
   MockTaggingClientSocketFactory socket_factory_;
   std::unique_ptr<HttpNetworkSession> session_;
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
 };
 
 INSTANTIATE_TEST_SUITE_P(All,
@@ -2746,7 +2746,7 @@ class HttpStreamFactoryBidirectionalQuicTest
   MockTaggingClientSocketFactory socket_factory_;
   std::unique_ptr<HttpNetworkSession> session_;
   MockCertVerifier cert_verifier_;
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   MockCryptoClientStreamFactory crypto_client_stream_factory_;
   HttpServerProperties http_server_properties_;
   TransportSecurityState transport_security_state_;

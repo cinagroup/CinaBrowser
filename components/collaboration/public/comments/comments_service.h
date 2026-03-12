@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace collaboration::comments {
 using CollaborationId = data_sharing::GroupId;
 using CommentId = base::Uuid;
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.collaboration.comments
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.collaboration.comments
 enum class AttributionLevel {
   kUrl,
   kContent,
@@ -85,7 +85,7 @@ struct OrderKey {
   uint64_t local_sequence;
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.collaboration.comments
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.collaboration.comments
 enum class CommentType {
   kComment,
 };

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -205,7 +205,7 @@ IN_PROC_BROWSER_TEST_F(ScreenOrientationBrowserTest,
 
 // LockSmoke test seems to have become flaky on all non-ChromeOS platforms.
 // The cause is unfortunately unknown. See https://crbug.com/448876
-// Chromium Android does not support fullscreen
+// Cinaseek Android does not support fullscreen
 IN_PROC_BROWSER_TEST_F(ScreenOrientationBrowserTest, DISABLED_LockSmoke) {
   GURL test_url = GetTestUrl("screen_orientation",
                              "screen_orientation_lock_smoke.html");

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,8 +16,8 @@ android_apk("audio_focus_grabber_apk") {
   ]
 
   sources = [
-    "java/src/org/chromium/tools/audio_focus_grabber/AudioFocusGrabberActivity.java",
-    "java/src/org/chromium/tools/audio_focus_grabber/AudioFocusGrabberListenerService.java",
+    "java/src/org/Cinaseek/tools/audio_focus_grabber/AudioFocusGrabberActivity.java",
+    "java/src/org/Cinaseek/tools/audio_focus_grabber/AudioFocusGrabberListenerService.java",
   ]
 }
 

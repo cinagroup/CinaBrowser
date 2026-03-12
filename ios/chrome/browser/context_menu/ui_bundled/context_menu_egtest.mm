@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,14 +56,14 @@ namespace {
 // Directory containing the `kLogoPagePath` and `kLogoPageImageSourcePath`
 // resources.
 // const char kServerFilesDir[] = "ios/testing/data/http_server_files/";
-// Path to a page containing the chromium logo and the text `kLogoPageText`.
-const char kLogoPagePath[] = "/chromium_logo_page.html";
-// Path to the chromium logo.
-const char kLogoPageImageSourcePath[] = "/chromium_logo.png";
-// The DOM element ID of the chromium image on the logo page.
-const char kLogoPageChromiumImageId[] = "chromium_image";
+// Path to a page containing the Cinaseek logo and the text `kLogoPageText`.
+const char kLogoPagePath[] = "/Cinaseek_logo_page.html";
+// Path to the Cinaseek logo.
+const char kLogoPageImageSourcePath[] = "/Cinaseek_logo.png";
+// The DOM element ID of the Cinaseek image on the logo page.
+const char kLogoPageCinaseekImageId[] = "Cinaseek_image";
 // The text of the message on the logo page.
-const char kLogoPageText[] = "Page with some text and the chromium logo image.";
+const char kLogoPageText[] = "Page with some text and the Cinaseek logo image.";
 
 // URL to a page with a static message.
 const char kDestinationPageUrl[] = "/destination";
@@ -98,9 +98,9 @@ const char kInitialPageDestinationLongLinkID[] = "LongLink";
 // The text of the long link to the destination page.
 const char kInitialPageDestinationLongLinkText[] = "LongLink";
 
-// Returns an ElementSelector for the chromium image on the logo page.
-ElementSelector* LogoPageChromiumImageIdSelector() {
-  return [ElementSelector selectorWithElementID:kLogoPageChromiumImageId];
+// Returns an ElementSelector for the Cinaseek image on the logo page.
+ElementSelector* LogoPageCinaseekImageIdSelector() {
+  return [ElementSelector selectorWithElementID:kLogoPageCinaseekImageId];
 }
 
 // Returns an ElementSelector for the link to the destination page on the
@@ -146,7 +146,7 @@ NSString* const kTruncationTestPageTemplateHtml =
      "initial-scale=1.0, maximum-scale=1.0, user-scalable=no' "
      "/></head><body><p style='margin-bottom:50px'>Short title test.</p>"
      "<p><a style='margin-left:150px' href='%@' id='%s'>LINK</a></p>"
-     "<img src='chromium_logo.png' title='%@' id='%s'/>"
+     "<img src='Cinaseek_logo.png' title='%@' id='%s'/>"
      "</body></html>";
 
 const char kShortTruncationPageUrl[] = "/shortTruncation";
@@ -157,7 +157,7 @@ const char kLongLinkPageURL[] = "/longLink";
 
 NSString* const kShortLinkHref = @"/destination";
 
-NSString* const kShortImgTitle = @"Chromium logo with a short title";
+NSString* const kShortImgTitle = @"Cinaseek logo with a short title";
 
 const char kLinkImagePageUrl[] = "/imageLink";
 
@@ -174,7 +174,7 @@ NSString* const kLinkImageHtml =
      "/></head><body><p style='margin-bottom:50px'>Image that is also a "
      "link.</p>"
      "<p><a style='margin-left:150px' href='%@' id='%s'><img "
-     "src='chromium_logo.png' title='%@' id='%s'/></a></p>"
+     "src='Cinaseek_logo.png' title='%@' id='%s'/></a></p>"
      "</body></html>";
 
 // Long titles should be > 100 chars to test truncation.
@@ -186,7 +186,7 @@ NSString* const kLongLinkHref =
      "%81%99%E3%80&padding=qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbn";
 
 NSString* const kLongImgTitle =
-    @"Chromium logo with a long title, well in excess of one hundred "
+    @"Cinaseek logo with a long title, well in excess of one hundred "
      "characters, so formulated as to test the very limits of the context "
      "menu layout system, and to ensure that all users can enjoy the full "
      "majesty of image titles, however sesquipedalian they may be!";
@@ -279,13 +279,13 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
     NSString* content = [NSString
         stringWithFormat:kTruncationTestPageTemplateHtml, kShortLinkHref,
                          kInitialPageDestinationLinkId, kShortImgTitle,
-                         kLogoPageChromiumImageId];
+                         kLogoPageCinaseekImageId];
     http_response->set_content(base::SysNSStringToUTF8(content));
   } else if (request.relative_url == kLongTruncationPageUrl) {
     NSString* content =
         [NSString stringWithFormat:kTruncationTestPageTemplateHtml,
                                    kLongLinkHref, kInitialPageDestinationLinkId,
-                                   kLongImgTitle, kLogoPageChromiumImageId];
+                                   kLongImgTitle, kLogoPageCinaseekImageId];
     http_response->set_content(base::SysNSStringToUTF8(content));
   } else if (request.relative_url == kJavaScriptPageUrl) {
     http_response->set_content(kJavaScriptPageHtml);
@@ -295,7 +295,7 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
     NSString* content =
         [NSString stringWithFormat:kLinkImageHtml, kShortLinkHref,
                                    kInitialPageDestinationLinkId,
-                                   kShortImgTitle, kLogoPageChromiumImageId];
+                                   kShortImgTitle, kLogoPageCinaseekImageId];
     http_response->set_content(base::SysNSStringToUTF8(content));
   } else if (request.relative_url == kLongLinkPageURL) {
     NSString* content =
@@ -387,7 +387,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(CopyImageButton());
   GREYCondition* copyCondition =
@@ -429,7 +429,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(CopyImageButton());
 
@@ -471,7 +471,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(CopyImageButton());
 
@@ -502,7 +502,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(CopyImageButton());
 
@@ -674,7 +674,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(OpenImageButton());
   [ChromeEarlGrey waitForPageToFinishLoading];
@@ -692,7 +692,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(OpenImageInNewTabButton());
 
@@ -770,7 +770,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateZoomScale:1.0];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   [[EarlGrey selectElementWithMatcher:grey_text(kShortImgTitle)]
       assertWithMatcher:grey_notNil()];
@@ -791,7 +791,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateZoomScale:1.0];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   [[EarlGrey selectElementWithMatcher:grey_text(kLongImgTitle)]
       assertWithMatcher:grey_notNil()];
@@ -814,7 +814,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   TapOnContextMenuButton(OpenImageButton());
   [ChromeEarlGrey waitForPageToFinishLoading];
@@ -1191,7 +1191,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   // Check that the "Share" button is not visible.
   [[EarlGrey selectElementWithMatcher:ShareButton()]
@@ -1245,7 +1245,7 @@ void RelaunchApp() {
   [ChromeEarlGrey waitForWebStateZoomScale:1.0];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
 
   [ChromeEarlGrey waitForForegroundWindowCount:1];
   [[EarlGrey selectElementWithMatcher:grey_text(kShortImgTitle)]
@@ -1254,10 +1254,10 @@ void RelaunchApp() {
                       grey_accessibilityID(
                           kContextMenuImagePreviewAccessibilityIdentifier)];
 
-  // On iOS 26, the name of the image (chromium_logo.png in this case) is used
+  // On iOS 26, the name of the image (Cinaseek_logo.png in this case) is used
   // as a page title instead of "Image".
   NSString* pageTitle =
-      base::ios::IsRunningOnIOS26OrLater() ? @"chromium_logo" : @"Image";
+      base::ios::IsRunningOnIOS26OrLater() ? @"Cinaseek_logo" : @"Image";
   [ChromeEarlGrey verifyShareActionWithURL:shortTitleURL pageTitle:pageTitle];
   // Ensure that UMA was logged correctly.
   NSError* error = [MetricsAppInterface

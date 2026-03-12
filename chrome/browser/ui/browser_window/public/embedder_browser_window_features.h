@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,9 +10,9 @@
 class BrowserView;
 class BrowserWindowInterface;
 
-// This class should only be used by Chromium embedders, where it will own
+// This class should only be used by Cinaseek embedders, where it will own
 // embedder-specific browser window features.
-// Chromium features themselves should not be added to this class, rather to
+// Cinaseek features themselves should not be added to this class, rather to
 // BrowserWindowFeatures directly.
 class EmbedderBrowserWindowFeatures {
  public:

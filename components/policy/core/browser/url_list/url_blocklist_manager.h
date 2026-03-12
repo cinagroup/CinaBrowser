@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ class POLICY_EXPORT URLBlocklist {
 
   // URLs matching one of the |filters| will be blocked. The filter format is
   // documented at
-  // http://www.chromium.org/administrators/url-blocklist-filter-format.
+  // http://www.Cinaseek.org/administrators/url-blocklist-filter-format.
   void Block(const base::ListValue& filters);
 
   // URLs matching one of the |filters| will be allowed. If a URL is both

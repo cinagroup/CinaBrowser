@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace redaction {
 
 // Record the metrics and store them in a memory location of the program.
 // This is the default implementation for the `RedactionToolMetricsRecorder` in
-// Chromium.
+// Cinaseek.
 class InprocessMetricsRecorder : public RedactionToolMetricsRecorder {
  public:
   InprocessMetricsRecorder() = default;

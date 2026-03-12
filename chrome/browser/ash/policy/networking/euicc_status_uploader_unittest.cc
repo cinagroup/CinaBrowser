@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -170,10 +170,10 @@ const char kCellularServicePath0[] = "/service/cellular0";
 const char kCellularServicePath1[] = "/service/cellular1";
 const char kCellularServicePath2[] = "/service/cellular2";
 const char kCellularServicePath3[] = "/service/cellular3";
-const char kCellularProfilePath0[] = "/org/chromium/Hermes/Profile/0";
-const char kCellularProfilePath1[] = "/org/chromium/Hermes/Profile/1";
-const char kCellularProfilePath2[] = "/org/chromium/Hermes/Profile/2";
-const char kCellularProfilePath3[] = "/org/chromium/Hermes/Profile/3";
+const char kCellularProfilePath0[] = "/org/Cinaseek/Hermes/Profile/0";
+const char kCellularProfilePath1[] = "/org/Cinaseek/Hermes/Profile/1";
+const char kCellularProfilePath2[] = "/org/Cinaseek/Hermes/Profile/2";
+const char kCellularProfilePath3[] = "/org/Cinaseek/Hermes/Profile/3";
 
 struct FakeESimProfile {
   std::string profile_path;

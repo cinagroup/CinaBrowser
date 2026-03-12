@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/rust/rust_macro.gni")
 import("//build/rust/rust_static_library.gni")
 import("//testing/test.gni")
 
-# //testing is used outside of the chromium tree in other projects, and they
+# //testing is used outside of the Cinaseek tree in other projects, and they
 # may not support the use of Rust and set `enable_rust = false`.
 if (enable_rust) {
   group("rust_gtest_interop") {

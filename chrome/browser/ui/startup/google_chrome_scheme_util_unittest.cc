@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 const char* kScheme = "google-chrome";
 #else
-const char* kScheme = "chromium";
+const char* kScheme = "Cinaseek";
 #endif
 }  // namespace
 
@@ -221,7 +221,7 @@ TEST(GoogleChromeSchemeUtilTest, ExtractGoogleChromeSchemeInnerUrl) {
   {
     std::string other_scheme;
     if (std::string(kScheme) == "google-chrome") {
-      other_scheme = "chromium";
+      other_scheme = "Cinaseek";
     } else {
       other_scheme = "google-chrome";
     }

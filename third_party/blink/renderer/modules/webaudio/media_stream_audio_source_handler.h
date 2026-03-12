@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class MediaStreamAudioSourceHandler final : public AudioHandler {
   // AudioHandler: MediaStreamAudioSourceNode never propagates silence.
   bool PropagatesSilence() const override { return false; }
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const String& function_name, const String& message);
 
   std::unique_ptr<AudioSourceProvider> audio_source_provider_;

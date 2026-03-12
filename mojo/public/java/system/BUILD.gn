@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,9 +16,9 @@ group("system") {
 
 generate_jni("system_impl_java_jni_headers") {
   sources = [
-    "src/org/chromium/mojo/system/impl/BaseRunLoop.java",
-    "src/org/chromium/mojo/system/impl/CoreImpl.java",
-    "src/org/chromium/mojo/system/impl/WatcherImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/BaseRunLoop.java",
+    "src/org/Cinaseek/mojo/system/impl/CoreImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/WatcherImpl.java",
   ]
 }
 
@@ -39,15 +39,15 @@ source_set("native_support") {
 
 android_library("system_impl_java") {
   sources = [
-    "src/org/chromium/mojo/system/impl/BaseRunLoop.java",
-    "src/org/chromium/mojo/system/impl/CoreImpl.java",
-    "src/org/chromium/mojo/system/impl/DataPipeConsumerHandleImpl.java",
-    "src/org/chromium/mojo/system/impl/DataPipeProducerHandleImpl.java",
-    "src/org/chromium/mojo/system/impl/HandleBase.java",
-    "src/org/chromium/mojo/system/impl/MessagePipeHandleImpl.java",
-    "src/org/chromium/mojo/system/impl/SharedBufferHandleImpl.java",
-    "src/org/chromium/mojo/system/impl/UntypedHandleImpl.java",
-    "src/org/chromium/mojo/system/impl/WatcherImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/BaseRunLoop.java",
+    "src/org/Cinaseek/mojo/system/impl/CoreImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/DataPipeConsumerHandleImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/DataPipeProducerHandleImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/HandleBase.java",
+    "src/org/Cinaseek/mojo/system/impl/MessagePipeHandleImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/SharedBufferHandleImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/UntypedHandleImpl.java",
+    "src/org/Cinaseek/mojo/system/impl/WatcherImpl.java",
   ]
   srcjar_deps = [ ":system_impl_java_jni_headers" ]
 
@@ -61,13 +61,13 @@ android_library("system_impl_java") {
 
 generate_jni("test_support_jni") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/mojo/MojoTestRule.java" ]
+  sources = [ "javatests/src/org/Cinaseek/mojo/MojoTestRule.java" ]
 }
 
 # Targets should also depend on :test_support for the native side.
 android_library("test_support_java") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/mojo/MojoTestRule.java" ]
+  sources = [ "javatests/src/org/Cinaseek/mojo/MojoTestRule.java" ]
   srcjar_deps = [ ":test_support_jni" ]
   deps = [
     "//base:base_java",
@@ -92,38 +92,38 @@ source_set("test_support") {
 generate_jni("mojo_javatests_jni") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/mojo/bindings/NullableValueTypesTestUtil.java",
-    "javatests/src/org/chromium/mojo/bindings/ValidationTestUtil.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/NullableValueTypesTestUtil.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ValidationTestUtil.java",
   ]
 }
 
 android_library("mojo_javatests") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/mojo/HandleMock.java",
-    "javatests/src/org/chromium/mojo/TestUtils.java",
-    "javatests/src/org/chromium/mojo/bindings/BindingsHelperTest.java",
-    "javatests/src/org/chromium/mojo/bindings/BindingsTest.java",
-    "javatests/src/org/chromium/mojo/bindings/BindingsTestUtils.java",
-    "javatests/src/org/chromium/mojo/bindings/BindingsVersioningTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ConnectorTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ExecutorFactoryTest.java",
-    "javatests/src/org/chromium/mojo/bindings/InterfacesTest.java",
-    "javatests/src/org/chromium/mojo/bindings/MessageHeaderTest.java",
-    "javatests/src/org/chromium/mojo/bindings/NameGeneratorTest.java",
-    "javatests/src/org/chromium/mojo/bindings/NullableValueTypesTest.java",
-    "javatests/src/org/chromium/mojo/bindings/NullableValueTypesTestUtil.java",
-    "javatests/src/org/chromium/mojo/bindings/ReadAndDispatchMessageTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ResultBindingsTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ResultTest.java",
-    "javatests/src/org/chromium/mojo/bindings/RouterTest.java",
-    "javatests/src/org/chromium/mojo/bindings/SerializationTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ValidationTest.java",
-    "javatests/src/org/chromium/mojo/bindings/ValidationTestUtil.java",
-    "javatests/src/org/chromium/mojo/bindings/ValidationTestUtilTest.java",
-    "javatests/src/org/chromium/mojo/bindings/test/mojom/mojo/IntegrationTestInterfaceTestHelper.java",
-    "javatests/src/org/chromium/mojo/system/impl/CoreImplTest.java",
-    "javatests/src/org/chromium/mojo/system/impl/WatcherImplTest.java",
+    "javatests/src/org/Cinaseek/mojo/HandleMock.java",
+    "javatests/src/org/Cinaseek/mojo/TestUtils.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/BindingsHelperTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/BindingsTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/BindingsTestUtils.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/BindingsVersioningTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ConnectorTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ExecutorFactoryTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/InterfacesTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/MessageHeaderTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/NameGeneratorTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/NullableValueTypesTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/NullableValueTypesTestUtil.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ReadAndDispatchMessageTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ResultBindingsTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ResultTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/RouterTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/SerializationTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ValidationTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ValidationTestUtil.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/ValidationTestUtilTest.java",
+    "javatests/src/org/Cinaseek/mojo/bindings/test/mojom/mojo/IntegrationTestInterfaceTestHelper.java",
+    "javatests/src/org/Cinaseek/mojo/system/impl/CoreImplTest.java",
+    "javatests/src/org/Cinaseek/mojo/system/impl/WatcherImplTest.java",
   ]
   srcjar_deps = [ ":mojo_javatests_jni" ]
 

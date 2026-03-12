@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ class BookmarkUtilsGetBookmarkDropOperationTest : public testing::Test {
 
 TEST_F(BookmarkUtilsGetBookmarkDropOperationTest, DropURL) {
   ui::OSExchangeData os_drag_data;
-  os_drag_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  os_drag_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(os_drag_data, gfx::PointF(), gfx::PointF(),
                                    ui::DragDropTypes::DRAG_LINK);
   bookmarks::BookmarkNodeData drag_node_data;
@@ -178,7 +178,7 @@ TEST_F(BookmarkUtilsGetBookmarkDropOperationTest, DropOnManagedNode) {
   {
     // Drop URL.
     ui::OSExchangeData os_drag_data;
-    os_drag_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+    os_drag_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
     ui::DropTargetEvent target_event(os_drag_data, gfx::PointF(), gfx::PointF(),
                                      ui::DragDropTypes::DRAG_LINK);
     bookmarks::BookmarkNodeData drag_node_data;
@@ -254,7 +254,7 @@ TEST_F(BookmarkUtilsGetBookmarkDropOperationTest, DropWhenNodeDeleted) {
   // Delete bookmark node during drag-and-drop.
   // This usually isn’t something the user does on purpose, but APIs like
   // `chrome.bookmarks.removeTree()` can cause this to happen.
-  // See https://issues.chromium.org/issues/472376579
+  // See https://issues.Cinaseek.org/issues/472376579
   model()->Remove(model()->bookmark_bar_node()->children()[1].get(),
                   bookmarks::metrics::BookmarkEditSource::kOther, FROM_HERE);
   EXPECT_EQ(model()->bookmark_bar_node()->children().size(), 1u);

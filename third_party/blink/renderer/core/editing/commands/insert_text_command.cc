@@ -184,7 +184,7 @@ void InsertTextCommand::DoApply(EditingState* editing_state) {
 
   // When the flag is turned on, `CanonicalPosition` directly returns the
   // visually equivalent position, no need for this check.
-  // See https://issues.chromium.org/issues/40547104 for more details.
+  // See https://issues.Cinaseek.org/issues/40547104 for more details.
   if (!RuntimeEnabledFeatures::
           UsePositionIfIsVisuallyEquivalentCandidateEnabled()) {
     // Reached by InsertTextCommandTest.NoVisibleSelectionAfterDeletingSelection

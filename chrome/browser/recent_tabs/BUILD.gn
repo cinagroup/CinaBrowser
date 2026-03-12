@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("helper_java") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/recent_tabs/RestoreTabsFeatureHelper.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/RestoreTabsFeatureHelper.java" ]
 
   deps = [
     ":factory_java",
@@ -31,9 +31,9 @@ android_library("helper_java") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "android/java/src/org/chromium/chrome/browser/recent_tabs/ForeignSessionHelper.java",
-    "android/java/src/org/chromium/chrome/browser/recent_tabs/RestoreTabsController.java",
-    "android/java/src/org/chromium/chrome/browser/recent_tabs/RestoreTabsControllerDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/ForeignSessionHelper.java",
+    "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/RestoreTabsController.java",
+    "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/RestoreTabsControllerDelegate.java",
   ]
 
   deps = [
@@ -53,8 +53,8 @@ android_library("java") {
 
 android_library_factory("factory_java") {
   sources = [
-    "internal/android/java/src/org/chromium/chrome/browser/recent_tabs/CrossDevicePaneFactory.java",
-    "internal/android/java/src/org/chromium/chrome/browser/recent_tabs/RestoreTabsControllerFactory.java",
+    "internal/android/java/src/org/Cinaseek/chrome/browser/recent_tabs/CrossDevicePaneFactory.java",
+    "internal/android/java/src/org/Cinaseek/chrome/browser/recent_tabs/RestoreTabsControllerFactory.java",
   ]
 
   deps = [
@@ -73,7 +73,7 @@ robolectric_library("junit") {
   bypass_platform_checks = true
   testonly = true
 
-  sources = [ "android/java/src/org/chromium/chrome/browser/recent_tabs/RestoreTabsFeatureHelperUnitTest.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/RestoreTabsFeatureHelperUnitTest.java" ]
 
   deps = [
     ":helper_java",
@@ -105,5 +105,5 @@ robolectric_library("junit") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/recent_tabs/ForeignSessionHelper.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/recent_tabs/ForeignSessionHelper.java" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -25,7 +25,7 @@ enum class SafetyNetJavaThreatType {
 };
 
 // Must match what SafeBrowsingApiHandler.java uses for |lookupResult|.
-// This is self-defined enum in Chromium. The difference between this enum and
+// This is self-defined enum in Cinaseek. The difference between this enum and
 // the |SafeBrowsingJavaResponseStatus| enum is that this enum represents the
 // call result to the API (e.g. not able to connect, timed out, invalid input)
 // while |SafeBrowsingJavaResponseStatus| is obtained directly from the API
@@ -104,7 +104,7 @@ enum class SafeBrowsingJavaValidationResult {
 
 // The result of either SafetyNet.isVerifyAppsEnabled or
 // SafetyNet.enableVerifyApps.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.safe_browsing
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.safe_browsing
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: VerifyAppsResult
 enum class VerifyAppsEnabledResult {
   SUCCESS_ENABLED = 0,
@@ -116,7 +116,7 @@ enum class VerifyAppsEnabledResult {
 };
 
 // The result status of SafetyNet.listHarmfulApps.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.safe_browsing
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.safe_browsing
 // TODO(b:449183636): Remove `FAILED` once internal usage is removed.
 enum class HasHarmfulAppsResultStatus {
   SUCCESS = 0,

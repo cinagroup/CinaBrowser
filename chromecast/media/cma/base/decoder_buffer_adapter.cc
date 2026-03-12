@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace media {
 
 namespace {
 
-// Converts a chromium EncryptionScheme to a cast one.
+// Converts a Cinaseek EncryptionScheme to a cast one.
 EncryptionScheme ToEncryptionScheme(::media::EncryptionScheme scheme) {
   switch (scheme) {
     case ::media::EncryptionScheme::kUnencrypted:

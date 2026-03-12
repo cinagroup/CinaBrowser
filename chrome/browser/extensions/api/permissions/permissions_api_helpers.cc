@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,7 +90,7 @@ bool UnpackAPIPermissions(const std::vector<std::string>& permissions_input,
     // This is a compromise: we currently can't switch to a blend of
     // objects/strings all the way through the API. Until then, put this
     // processing here.
-    // http://code.google.com/p/chromium/issues/detail?id=162042
+    // http://code.google.com/p/Cinaseek/issues/detail?id=162042
     size_t delimiter = permission_str.find(kDelimiter);
     if (delimiter != std::string::npos) {
       std::string_view permission_piece(permission_str);

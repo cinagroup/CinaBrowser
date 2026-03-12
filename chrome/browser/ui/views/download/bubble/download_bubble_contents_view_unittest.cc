@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,14 +112,14 @@ class DownloadBubbleContentsViewTest
       EXPECT_CALL(*item, GetGuid())
           .WillRepeatedly(ReturnRefOfCopy(base::NumberToString(i)));
       EXPECT_CALL(*item, GetURL())
-          .WillRepeatedly(ReturnRefOfCopy(GURL("https://chromium.org")));
+          .WillRepeatedly(ReturnRefOfCopy(GURL("https://Cinaseek.org")));
       // Make the download dangerous so that showing the security view is valid.
       EXPECT_CALL(*item, GetDangerType())
           .WillRepeatedly(Return(download::DownloadDangerType::
                                      DOWNLOAD_DANGER_TYPE_DANGEROUS_FILE));
       EXPECT_CALL(*item, IsDangerous()).WillRepeatedly(Return(true));
       EXPECT_CALL(*item, GetReferrerUrl())
-          .WillRepeatedly(ReturnRefOfCopy(GURL("https://chromium.org")));
+          .WillRepeatedly(ReturnRefOfCopy(GURL("https://Cinaseek.org")));
       EXPECT_CALL(*item, GetTargetFilePath())
           .WillRepeatedly(ReturnRefOfCopy(base::FilePath()));
       content::DownloadItemUtils::AttachInfoForTesting(item.get(), profile_,

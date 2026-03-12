@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -306,7 +306,7 @@ void VideoCaptureDeviceFactoryV4L2::GetSupportedFormatsForV4L2BufferType(
   for (; DoIoctl(fd, VIDIOC_ENUM_FMT, &v4l2_format) == 0; ++v4l2_format.index) {
     VideoCaptureFormat supported_format;
     supported_format.pixel_format =
-        VideoCaptureDeviceLinux::V4l2FourCcToChromiumPixelFormat(
+        VideoCaptureDeviceLinux::V4l2FourCcToCinaseekPixelFormat(
             v4l2_format.pixelformat);
 
     if (supported_format.pixel_format == PIXEL_FORMAT_UNKNOWN) {

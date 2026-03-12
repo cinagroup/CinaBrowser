@@ -75,7 +75,7 @@ source_set("string_view") {
 }
 
 source_set("has_ostream_operator") {
-  # Dummy — unavailable with abseil 202308 and chromium 122 does not use it
+  # Dummy — unavailable with abseil 202308 and Cinaseek 122 does not use it
 }
 
 source_set("ascii_test") {

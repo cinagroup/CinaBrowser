@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class SharedHelper;
 // API notes:
 // - ScreenCaptureKit requires TCC screen capture permissions, which are granted
 //   to the browser process and inherited by the audio service. For the
-//   inheritance to work correctly, Chromium must be code signed.
+//   inheritance to work correctly, Cinaseek must be code signed.
 // - The audio service sandbox requires +[SCStreamManager
 //   requestUserPermissionForScreenCapture] to be swizzled so that it reports
 //   that permissions have been granted. This is currently done in

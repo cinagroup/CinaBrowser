@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ AutofillSaveCardUiInfo AutofillSaveCardUiInfoForUploadSaveForTest(
 TEST(AutofillSaveCardUiInfoTestForLocalSave, VerifyCommonAttributes) {
   const Year next_year = SetUpNextYear();
   CreditCard card = test::GetCreditCard();
-  test::SetCreditCardInfo(&card, "Chromium Dev", "4111111111111111", "3",
+  test::SetCreditCardInfo(&card, "Cinaseek Dev", "4111111111111111", "3",
                           next_year.string.c_str(), "");
   card.SetNickname(u"My Card");
   auto ui_info =
@@ -80,7 +80,7 @@ TEST(AutofillSaveCardUiInfoTestForLocalSave, VerifyCommonAttributes) {
               testing::AllOf(testing::HasSubstr(next_year.last2_string),
                              testing::HasSubstr("03")));
   EXPECT_EQ(ui_info.card_last_four_digits, u"1111");
-  EXPECT_EQ(ui_info.cardholder_name, u"Chromium Dev");
+  EXPECT_EQ(ui_info.cardholder_name, u"Cinaseek Dev");
   EXPECT_EQ(ui_info.expiration_date_month, u"03");
   EXPECT_EQ(ui_info.expiration_date_year, next_year.u16string);
   EXPECT_EQ(ui_info.card_description,
@@ -338,7 +338,7 @@ TEST_P(AutofillSaveCardUiInfoTestForUploadSave, VerifyCommonAttributes) {
   const Year next_year = SetUpNextYear();
   CreditCard card = test::GetMaskedServerCard();
   card.SetNetworkForMaskedCard(kVisaCard);
-  test::SetCreditCardInfo(&card, "Chromium Dev", "4111111111111111", "3",
+  test::SetCreditCardInfo(&card, "Cinaseek Dev", "4111111111111111", "3",
                           next_year.string.c_str(), "");
   card.SetNickname(u"My Card");
   LegalMessageLines legal_message_lines(
@@ -358,7 +358,7 @@ TEST_P(AutofillSaveCardUiInfoTestForUploadSave, VerifyCommonAttributes) {
               testing::AllOf(testing::HasSubstr(next_year.last2_string),
                              testing::HasSubstr("03")));
   EXPECT_EQ(ui_info.card_last_four_digits, u"1111");
-  EXPECT_EQ(ui_info.cardholder_name, u"Chromium Dev");
+  EXPECT_EQ(ui_info.cardholder_name, u"Cinaseek Dev");
   EXPECT_EQ(ui_info.expiration_date_month, u"03");
   EXPECT_EQ(ui_info.expiration_date_year, next_year.u16string);
   EXPECT_EQ(ui_info.card_description,

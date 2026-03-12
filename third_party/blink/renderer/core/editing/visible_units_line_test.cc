@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1041,7 +1041,7 @@ TEST_F(VisibleUnitsLineTest, InSameLineWithZeroWidthSpace) {
   EXPECT_TRUE(InSameLine(before_zws_up, before_zws_down));
 }
 
-// https://issues.chromium.org/issues/41497469
+// https://issues.Cinaseek.org/issues/41497469
 TEST_F(VisibleUnitsLineTest, InSameLineWithInlineBlock) {
   SetBodyContent(
       "<span id=one>start</span>"

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -545,7 +545,7 @@ void QtUi::AddNativeColorMixer(ui::ColorProvider* provider,
   }
 
   const bool use_custom_frame =
-      key.frame_type == ui::ColorProviderKey::FrameType::kChromium;
+      key.frame_type == ui::ColorProviderKey::FrameType::kCinaseek;
   mixer[ui::kColorFrameActive] = {
       shim_->GetFrameColor(ColorState::kNormal, use_custom_frame)};
   mixer[ui::kColorFrameInactive] = {

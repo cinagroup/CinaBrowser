@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,7 +66,7 @@ class Configurator : public base::RefCountedThreadSafe<Configurator> {
 
   // The ProdId is used as a prefix in some of the version strings which appear
   // in the protocol requests. Possible values include "chrome", "chromecrx",
-  // "chromiumcrx", and "unknown".
+  // "Cinaseekcrx", and "unknown".
   virtual std::string GetProdId() const = 0;
 
   // Version of the application. Used to compare the component manifests.

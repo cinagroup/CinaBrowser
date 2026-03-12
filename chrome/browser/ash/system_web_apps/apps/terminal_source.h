@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 class Profile;
 
 // Provides the web (html / js / css) content for crostini Terminal and crosh.
-// This content is provided by chromiumos in the rootfs at
+// This content is provided by Cinaseekos in the rootfs at
 // /usr/share/chromeos-assets/crosh_builtin.
 class TerminalSource : public content::URLDataSource {
  public:

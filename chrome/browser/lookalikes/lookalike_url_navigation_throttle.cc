@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -234,7 +234,7 @@ ThrottleCheckResult LookalikeUrlNavigationThrottle::WillProcessResponse() {
                            interstitial_params.redirect_chain)) {
     CHECK(interstitial_params.url.SchemeIsHTTPOrHTTPS());
     // See
-    // https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/plIZV3Rkzok
+    // https://groups.google.com/a/Cinaseek.org/forum/#!topic/Cinaseek-dev/plIZV3Rkzok
     // for why this is OK. Assume interstitial reloads are always browser
     // initiated.
     handle->GetWebContents()->OpenURL(

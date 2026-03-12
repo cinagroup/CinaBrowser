@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ TEST_F(ScriptErrorMessageHandlerJavaScriptFeatureTest,
   EXPECT_EQ(1, error_details_->line_number);
   EXPECT_NSEQ(@"ReferenceError: Can't find variable: nonexistentFunction",
               base::SysUTF8ToNSString(error_details_->message));
-  EXPECT_EQ("https://chromium.test/", error_details_->url.spec());
+  EXPECT_EQ("https://Cinaseek.test/", error_details_->url.spec());
   EXPECT_TRUE(error_details_->is_main_frame);
 }
 
@@ -83,7 +83,7 @@ TEST_F(ScriptErrorMessageHandlerJavaScriptFeatureTest,
   EXPECT_EQ(1, error_details_->line_number);
   EXPECT_NSEQ(@"ReferenceError: Can't find variable: nonexistentFunction",
               base::SysUTF8ToNSString(error_details_->message));
-  EXPECT_EQ("https://chromium.test/", error_details_->url.spec());
+  EXPECT_EQ("https://Cinaseek.test/", error_details_->url.spec());
   EXPECT_TRUE(error_details_->is_main_frame);
 }
 
@@ -154,7 +154,7 @@ TEST_F(ScriptErrorMessageHandlerJavaScriptFeatureTest,
   EXPECT_EQ(1, error_details_->line_number);
   EXPECT_NSEQ(@"ReferenceError: Can't find variable: nonexistentFunction",
               base::SysUTF8ToNSString(error_details_->message));
-  EXPECT_EQ("https://chromium.test/", error_details_->url.spec());
+  EXPECT_EQ("https://Cinaseek.test/", error_details_->url.spec());
   EXPECT_TRUE(error_details_->is_main_frame);
 }
 

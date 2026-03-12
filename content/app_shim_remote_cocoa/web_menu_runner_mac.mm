@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ static const char kMenuWasRunCallbackKey = 0;
   NSString* title = base::SysUTF8ToNSString(label);
   // https://crbug.com/40726719: SysUTF8ToNSString will return nil if the bits
   // that it is passed cannot be turned into a CFString. If this nil value is
-  // passed to -[NSMenuItem addItemWithTitle:action:keyEquivalent:], Chromium
+  // passed to -[NSMenuItem addItemWithTitle:action:keyEquivalent:], Cinaseek
   // will crash. Therefore, for debugging, if the result is nil, substitute in
   // the raw bytes, encoded for safety in base64, to allow for investigation.
   if (!title) {
@@ -181,7 +181,7 @@ static const char kMenuWasRunCallbackKey = 0;
     // checked, but selectItemAtIndex lets us open the picker with no options
     // checked. Not calling anything here would also leave the first item
     // checked, we have to explicitly uncheck them by calling selectItemAtIndex
-    // with -1. https://issues.chromium.org/issues/391648151
+    // with -1. https://issues.Cinaseek.org/issues/391648151
     [cell selectItemAtIndex:-1];
   }
 

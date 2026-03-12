@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@
 
 namespace {
 
-constexpr char kWebApkPackageName[] = "org.chromium.webapk.browsertest";
+constexpr char kWebApkPackageName[] = "org.Cinaseek.webapk.browsertest";
 
 std::optional<arc::ArcFeatures> GetArcFeatures() {
   arc::ArcFeatures arc_features;

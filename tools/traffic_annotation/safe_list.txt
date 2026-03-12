@@ -3,19 +3,19 @@
 
 # Low-level networking code is deliberately excluded from the analysis.
 all,tools/*,*test*,*fuzzer*,*mock*,*fake*
-all,net/android/java/src/org/chromium/net/NetworkTrafficAnnotationTag.java
+all,net/android/java/src/org/Cinaseek/net/NetworkTrafficAnnotationTag.java
 missing,remoting/host/token_validator_factory_impl.cc
 missing,components/cronet/cronet_url_request.cc
 missing,net/url_request/url_request_context.cc
 mutable_tag,components/download/internal/background_service/proto_conversions.cc
 mutable_tag,net/traffic_annotation/network_traffic_annotation.h
 test_annotation,components/safe_search_api/stub_url_checker.cc
-test_annotation,net/quic/quic_chromium_client_session_peer.cc
+test_annotation,net/quic/quic_Cinaseek_client_session_peer.cc
 all,ash/ambient/backdrop/ambient_backend_controller_impl.cc
-all,chromeos/ash/services/libassistant/chromium_http_connection.cc
+all,chromeos/ash/services/libassistant/Cinaseek_http_connection.cc
 all,services/network/cors/cors_url_loader_factory.cc
 
-# ChromeOS-specific annotations.
+# CinaseekOS-specific annotations.
 all,chromeos/ash/components/geolocation/simple_geolocation_request.cc
 all,chrome/browser/ash/policy/uploading/system_log_uploader.cc
 all,chromeos/geolocation/simple_geolocation_request.cc
@@ -34,15 +34,15 @@ missing,components/manta/walrus_provider.cc
 # Android-specific annotations.
 # TODO(crbug.com/40641204): Complete these.
 missing,android_webview/browser/network_service/aw_proxy_config_monitor.cc
-missing,chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/suggestions/TabSuggestionsServerFetcher.java
-missing,chrome/android/java/src/org/chromium/chrome/browser/download/OMADownloadHandler.java
-missing,chrome/android/java/src/org/chromium/chrome/browser/feedback/ConnectivityChecker.java
-missing,chrome/android/java/src/org/chromium/chrome/browser/net/connectivitydetector/ConnectivityDetector.java
-missing,chrome/android/java/src/org/chromium/chrome/browser/offlinepages/measurements/OfflineMeasurementsBackgroundTask.java
+missing,chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/suggestions/TabSuggestionsServerFetcher.java
+missing,chrome/android/java/src/org/Cinaseek/chrome/browser/download/OMADownloadHandler.java
+missing,chrome/android/java/src/org/Cinaseek/chrome/browser/feedback/ConnectivityChecker.java
+missing,chrome/android/java/src/org/Cinaseek/chrome/browser/net/connectivitydetector/ConnectivityDetector.java
+missing,chrome/android/java/src/org/Cinaseek/chrome/browser/offlinepages/measurements/OfflineMeasurementsBackgroundTask.java
 missing,chrome/browser/android/compositor/scene_layer/contextual_search_scene_layer.cc
 missing,chrome/browser/android/feedback/connectivity_checker.cc
-missing,chrome/browser/commerce/subscriptions/android/java/src/org/chromium/chrome/browser/subscriptions/CommerceSubscriptionsServiceProxy.java
-missing,chrome/browser/tab/java/src/org/chromium/chrome/browser/tab/state/StorePersistedTabData.java
+missing,chrome/browser/commerce/subscriptions/android/java/src/org/Cinaseek/chrome/browser/subscriptions/CommerceSubscriptionsServiceProxy.java
+missing,chrome/browser/tab/java/src/org/Cinaseek/chrome/browser/tab/state/StorePersistedTabData.java
 missing,net/proxy_resolution/proxy_config_service_android.cc
 
 # Desktop platform specific annotations.
@@ -54,8 +54,8 @@ missing,chrome/browser/indigo/indigo_script_loader.cc
 
 # Android annotations missing fields internal::contact:email, user_data::type, last_reviewed
 missing_new_fields,missing,android_webview/browser/network_service/aw_proxy_config_monitor.cc
-missing_new_fields,missing,chrome/android/java/src/org/chromium/chrome/browser/download/OMADownloadHandler.java
-missing_new_fields,chrome/android/java/src/org/chromium/chrome/browser/omaha/OmahaBase.java
+missing_new_fields,missing,chrome/android/java/src/org/Cinaseek/chrome/browser/download/OMADownloadHandler.java
+missing_new_fields,chrome/android/java/src/org/Cinaseek/chrome/browser/omaha/OmahaBase.java
 missing_new_fields,chrome/browser/android/bookmarks/partner_bookmarks_reader.cc
 missing_new_fields,chrome/browser/android/compositor/scene_layer/contextual_search_scene_layer.cc
 missing_new_fields,chrome/browser/android/customtabs/detached_resource_request.cc
@@ -67,12 +67,12 @@ missing_new_fields,chrome/browser/download/android/download_manager_service.cc
 missing_new_fields,chrome/browser/share/bitmap_download_request.cc
 missing_new_fields,chrome/browser/supervised_user/android/favicon_fetcher.cc
 missing_new_fields,chrome/browser/supervised_user/kids_chrome_management/kids_chrome_management_client.cc
-missing_new_fields,chrome/browser/tab/java/src/org/chromium/chrome/browser/tab/state/CouponPersistedTabData.java
+missing_new_fields,chrome/browser/tab/java/src/org/Cinaseek/chrome/browser/tab/state/CouponPersistedTabData.java
 missing_new_fields,components/content_creation/notes/core/server/notes_server_saver.cc
 missing_new_fields,components/content_creation/notes/core/templates/template_fetcher.cc
 missing_new_fields,components/image_fetcher/image_fetcher_bridge.cc
-missing_new_fields,components/minidump_uploader/android/java/src/org/chromium/components/minidump_uploader/util/HttpURLConnectionFactoryImpl.java
-missing_new_fields,components/variations/android/java/src/org/chromium/components/variations/firstrun/VariationsSeedFetcher.java
+missing_new_fields,components/minidump_uploader/android/java/src/org/Cinaseek/components/minidump_uploader/util/HttpURLConnectionFactoryImpl.java
+missing_new_fields,components/variations/android/java/src/org/Cinaseek/components/variations/firstrun/VariationsSeedFetcher.java
 
 # Annotations missing fields internal::contacts:email, user_data::type, last_reviewed
 missing_new_fields,ash/ambient/ambient_photo_cache.cc
@@ -298,8 +298,8 @@ missing_new_fields,net/cert_net/cert_net_fetcher_url_request.cc
 missing_new_fields,net/http/bidirectional_stream.cc
 missing_new_fields,net/proxy_resolution/proxy_config_service.cc
 missing_new_fields,net/proxy_resolution/proxy_config_with_annotation.cc
-missing_new_fields,net/quic/quic_chromium_client_session.cc
-missing_new_fields,net/quic/quic_chromium_packet_writer.cc
+missing_new_fields,net/quic/quic_Cinaseek_client_session.cc
+missing_new_fields,net/quic/quic_Cinaseek_packet_writer.cc
 missing_new_fields,net/reporting/reporting_uploader.cc
 missing_new_fields,net/server/http_server.cc
 missing_new_fields,net/socket/socket_bio_adapter.cc
@@ -320,7 +320,7 @@ missing_new_fields,services/image_annotation/annotator.cc
 missing_new_fields,services/network/network_context.cc
 missing_new_fields,third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc
 missing_new_fields,third_party/blink/renderer/platform/loader/fetch/fetch_utils.cc
-missing_new_fields,third_party/libaddressinput/chromium/chrome_metadata_source.cc
+missing_new_fields,third_party/libaddressinput/Cinaseek/chrome_metadata_source.cc
 missing_new_fields,ash/quick_pair/repository/fast_pair/footprints_fetcher_impl.cc
 missing_new_fields,chrome/browser/ash/printing/oauth2/authorization_server_data.cc
 missing_new_fields,chrome/browser/ash/printing/oauth2/authorization_server_session.cc

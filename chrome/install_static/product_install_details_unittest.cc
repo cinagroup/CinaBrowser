@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -207,13 +207,13 @@ constexpr TestData kTestData[] = {
 #else   // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 constexpr TestData kTestData[] = {
     {
-        L"C:\\Program Files (x86)\\Chromium\\Application\\chrome.exe",
+        L"C:\\Program Files (x86)\\Cinaseek\\Application\\chrome.exe",
         CHROMIUM_INDEX,
         true,
         L"",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\Chromium\\Application\\chrome.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Cinaseek\\Application\\chrome.exe",
         CHROMIUM_INDEX,
         false,
         L"",

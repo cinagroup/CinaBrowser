@@ -17,11 +17,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_unittests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_unittests/",
@@ -46,11 +46,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "gl_tests",
@@ -79,11 +79,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gl_unittests",
         "test_id_prefix": "ninja://ui/gl:gl_unittests/"
@@ -107,11 +107,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gpu_unittests",
         "test_id_prefix": "ninja://gpu:gpu_unittests/"
@@ -136,11 +136,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "browser_tests",
         "test_id_prefix": "ninja://chrome/test:browser_tests/"
@@ -162,11 +162,11 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "vulkan_tests",
         "test_id_prefix": "ninja://gpu/vulkan:vulkan_tests/"
@@ -201,12 +201,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -248,12 +248,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -286,12 +286,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -324,12 +324,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -366,12 +366,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -413,12 +413,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -452,12 +452,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -490,12 +490,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -528,12 +528,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"
@@ -568,12 +568,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "telemetry_gpu_integration_test",
@@ -608,12 +608,12 @@
             "display_attached": "1",
             "gpu": "1002:7340-23.2.1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test",

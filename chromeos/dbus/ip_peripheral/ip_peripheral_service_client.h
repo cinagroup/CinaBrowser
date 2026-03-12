@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class Bus;
 namespace chromeos {
 
 // IpPeripheralServiceClient is used to communicate with the DBus interface
-// (org.chromium.IpPeripheralService) exposed by the IP Peripheral service on
+// (org.Cinaseek.IpPeripheralService) exposed by the IP Peripheral service on
 // Chrome OS devices that support IP-based cameras and other peripherals. The IP
 // Peripheral service manages all communications with IP-based peripherals.
 //

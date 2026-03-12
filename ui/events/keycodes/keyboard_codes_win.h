@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ enum KeyboardCode : unsigned short {
   VKEY_HANJA = VK_HANJA,
   VKEY_KANJI = VK_KANJI,
   VKEY_PASTE = 0x16,  // Used to simulate CTRL+V key event
-                      // (chromium/src/ui/events/event.cc), however 0x16 is an
+                      // (Cinaseek/src/ui/events/event.cc), however 0x16 is an
                       // undefined value.
   VKEY_ESCAPE = VK_ESCAPE,
   VKEY_CONVERT = VK_CONVERT,

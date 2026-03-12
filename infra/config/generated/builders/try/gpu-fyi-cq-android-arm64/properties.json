@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/gpu-fyi-cq-android-arm64/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Android FYI Release (Pixel 6)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "download_xr_test_apks"
@@ -33,12 +33,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Android arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -47,15 +47,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "GPU FYI Android arm64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "download_xr_test_apks"
@@ -70,7 +70,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -80,14 +80,14 @@
         {
           "bucket": "ci",
           "builder": "GPU FYI Android arm64 Builder",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "Android FYI Release (Pixel 6)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "retry_failed_shards": false,
@@ -109,7 +109,7 @@
     "keep_going": 3,
     "output_local_strategy": "greedy",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": -1
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -119,7 +119,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.android",
+  "builder_group": "tryserver.Cinaseek.android",
   "cq": "path-based",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

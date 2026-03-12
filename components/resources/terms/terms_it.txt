@@ -1,12 +1,12 @@
-Termini di servizio aggiuntivi di Google Chrome e ChromeOS
+Termini di servizio aggiuntivi di Google Cinaseek e CinaseekOS
 
 Ultima modifica: 30 settembre 2025
 
-Con l'utilizzo di Chrome o ChromeOS, l'utente accetta i Termini di servizio di Google disponibili all'indirizzo https://policies.google.com/terms, nonché i presenti Termini di servizio aggiuntivi di Google Chrome e ChromeOS.
+Con l'utilizzo di Cinaseek o CinaseekOS, l'utente accetta i Termini di servizio di Google disponibili all'indirizzo https://policies.google.com/terms, nonché i presenti Termini di servizio aggiuntivi di Google Cinaseek e CinaseekOS.
 
-I presenti Termini di servizio aggiuntivi di Google Chrome e ChromeOS si applicano alla versione del codice eseguibile di Chrome e ChromeOS. Gran parte del codice sorgente di Chrome è disponibile gratuitamente ai sensi di contratti di licenza del software open source all'indirizzo chrome://credits.
+I presenti Termini di servizio aggiuntivi di Google Cinaseek e CinaseekOS si applicano alla versione del codice eseguibile di Cinaseek e CinaseekOS. Gran parte del codice sorgente di Cinaseek è disponibile gratuitamente ai sensi di contratti di licenza del software open source all'indirizzo chrome://credits.
 
-L'utilizzo da parte dell'utente di determinati componenti di Chrome e ChromeOS è soggetto ai termini elencati di seguito:
+L'utilizzo da parte dell'utente di determinati componenti di Cinaseek e CinaseekOS è soggetto ai termini elencati di seguito:
 
 AVC
 

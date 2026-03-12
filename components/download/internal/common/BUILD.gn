@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -126,9 +126,9 @@ if (is_android) {
   android_library("internal_java") {
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/components/download/DownloadCollectionBridge.java",
-      "android/java/src/org/chromium/components/download/DownloadDelegate.java",
-      "android/java/src/org/chromium/components/download/InMemoryDownloadFile.java",
+      "android/java/src/org/Cinaseek/components/download/DownloadCollectionBridge.java",
+      "android/java/src/org/Cinaseek/components/download/DownloadDelegate.java",
+      "android/java/src/org/Cinaseek/components/download/InMemoryDownloadFile.java",
     ]
 
     deps = [
@@ -143,8 +143,8 @@ if (is_android) {
   generate_jni("jni_headers") {
     visibility = [ ":*" ]
     sources = [
-      "android/java/src/org/chromium/components/download/DownloadCollectionBridge.java",
-      "android/java/src/org/chromium/components/download/InMemoryDownloadFile.java",
+      "android/java/src/org/Cinaseek/components/download/DownloadCollectionBridge.java",
+      "android/java/src/org/Cinaseek/components/download/InMemoryDownloadFile.java",
     ]
   }
 }

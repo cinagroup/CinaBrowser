@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ namespace {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 inline constexpr std::string_view kClientName = "googlechrome";
 #else
-inline constexpr std::string_view kClientName = "chromium";
+inline constexpr std::string_view kClientName = "Cinaseek";
 #endif
 
 }  // namespace

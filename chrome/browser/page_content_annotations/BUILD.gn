@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -99,7 +99,7 @@ if (is_android) {
       "//chrome/android:chrome_java",
     ]
     srcjar_deps = [ ":service_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/page_content_annotations/PageContentExtractionService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/page_content_annotations/PageContentExtractionService.java" ]
     deps = [
       "//base:base_java",
       "//third_party/jni_zero:jni_zero_java",
@@ -112,12 +112,12 @@ if (is_android) {
       "//chrome/browser",
     ]
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/page_content_annotations/PageContentExtractionService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/page_content_annotations/PageContentExtractionService.java" ]
   }
 
   android_library("factory_java") {
     srcjar_deps = [ ":factory_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/page_content_annotations/PageContentExtractionServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/page_content_annotations/PageContentExtractionServiceFactory.java" ]
     deps = [
       ":java",
       "//base:base_java",
@@ -131,6 +131,6 @@ if (is_android) {
       ":*",
       "//chrome/browser",
     ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/page_content_annotations/PageContentExtractionServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/page_content_annotations/PageContentExtractionServiceFactory.java" ]
   }
 }

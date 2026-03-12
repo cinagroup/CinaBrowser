@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -841,7 +841,7 @@ class AsyncFailDhcpFetcher final : public DhcpPacFileFetcher {
 
 TEST(PacFileDeciderTest, DhcpCancelledByDestructor) {
   // This regression test would crash before
-  // http://codereview.chromium.org/7044058/
+  // http://codereview.Cinaseek.org/7044058/
   // Thus, we don't care much about actual results (hence no EXPECT or ASSERT
   // macros below), just that it doesn't crash.
   base::test::TaskEnvironment task_environment;

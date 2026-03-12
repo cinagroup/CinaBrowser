@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "net/base/net_export.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/websockets/websocket_handshake_stream_base.h"
 #include "net/websockets/websocket_stream.h"
 
@@ -61,7 +61,7 @@ class NET_EXPORT_PRIVATE WebSocketHandshakeStreamCreateHelper
       std::set<std::string> dns_aliases) override;
 
   std::unique_ptr<WebSocketHandshakeStreamBase> CreateHttp3Stream(
-      std::unique_ptr<QuicChromiumClientSession::Handle> session,
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session,
       std::set<std::string> dns_aliases) override;
 
  private:

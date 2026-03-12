@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ class DeviceInfo {
 
   //
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync_device_info
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync_device_info
   //
   enum class OsType {
     kUnknown = 0,
@@ -119,7 +119,7 @@ class DeviceInfo {
 
   //
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync_device_info
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync_device_info
   //
   enum class FormFactor {
     kUnknown = 0,

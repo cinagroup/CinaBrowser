@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ class GraphiteSharedContextTest : public testing::TestWithParam<bool> {
     backend_context.fDevice = device;
     backend_context.fQueue = device.GetQueue();
 
-    // Use the default Graphite context options that Chromium uses e.g. disallow
+    // Use the default Graphite context options that Cinaseek uses e.g. disallow
     // things like out of order recordings.
     gpu::GpuDriverBugWorkarounds workarounds;
     auto context_options = GetDefaultGraphiteContextOptions(workarounds);

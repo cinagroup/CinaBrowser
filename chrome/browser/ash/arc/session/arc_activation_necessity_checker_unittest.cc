@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ class ArcActivationNecessityCheckerTest : public testing::Test {
 
     // Pre-installed apps shouldn't cause ARC activation.
     auto package_info = mojom::ArcPackageInfo::New();
-    package_info->package_name = "org.chromium.preinstalled";
+    package_info->package_name = "org.Cinaseek.preinstalled";
     package_info->preinstalled = true;
     app_instance_->SendPackageAdded(std::move(package_info));
   }

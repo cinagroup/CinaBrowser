@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ NetworkHealthService::NetworkHealthService() {
                              &NetworkHealthService::UpdateTrackedGuids);
   if (mojo_service_manager::IsServiceManagerBound()) {
     mojo_service_manager::GetServiceManagerProxy()->Register(
-        chromeos::mojo_services::kChromiumNetworkHealth,
+        chromeos::mojo_services::kCinaseekNetworkHealth,
         provider_receiver_.BindNewPipeAndPassRemote());
   }
 }

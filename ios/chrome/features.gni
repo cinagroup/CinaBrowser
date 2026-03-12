@@ -1,9 +1,9 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 declare_args() {
-  # Controls whether Chrome links with Lottie.framework or gets the
+  # Controls whether Cinaseek links with Lottie.framework or gets the
   # implementation from its downstream provider. Ignored if Lottie is
   # not build as a framework.
   ios_chrome_links_with_lottie_framework = true

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@ void QuicConnectivityMonitor::SetInitialDefaultNetwork(
 }
 
 void QuicConnectivityMonitor::OnSessionPathDegrading(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     handles::NetworkHandle network) {
   if (network != default_network_)
     return;
@@ -135,7 +135,7 @@ void QuicConnectivityMonitor::OnSessionPathDegrading(
 }
 
 void QuicConnectivityMonitor::OnSessionResumedPostPathDegrading(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     handles::NetworkHandle network) {
   if (network != default_network_)
     return;
@@ -153,7 +153,7 @@ void QuicConnectivityMonitor::OnSessionResumedPostPathDegrading(
 }
 
 void QuicConnectivityMonitor::OnSessionEncounteringWriteError(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     handles::NetworkHandle network,
     int error_code) {
   if (network != default_network_)
@@ -181,7 +181,7 @@ void QuicConnectivityMonitor::OnSessionEncounteringWriteError(
 }
 
 void QuicConnectivityMonitor::OnSessionClosedAfterHandshake(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     handles::NetworkHandle network,
     quic::ConnectionCloseSource source,
     quic::QuicErrorCode error_code) {
@@ -205,7 +205,7 @@ void QuicConnectivityMonitor::OnSessionClosedAfterHandshake(
 }
 
 void QuicConnectivityMonitor::OnSessionRegistered(
-    QuicChromiumClientSession* session,
+    QuicCinaseekClientSession* session,
     handles::NetworkHandle network) {
   if (network != default_network_)
     return;
@@ -218,7 +218,7 @@ void QuicConnectivityMonitor::OnSessionRegistered(
 }
 
 void QuicConnectivityMonitor::OnSessionRemoved(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   degrading_sessions_.erase(session);
   active_sessions_.erase(session);
 }
@@ -246,7 +246,7 @@ void QuicConnectivityMonitor::OnIPAddressChanged() {
 }
 
 void QuicConnectivityMonitor::OnSessionGoingAwayOnIPAddressChange(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   // This should only be called after ConnectivityMonitor gets notified via
   // OnIPAddressChanged().
   DCHECK(degrading_sessions_.empty());

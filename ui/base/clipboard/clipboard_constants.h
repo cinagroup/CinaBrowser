@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ inline constexpr char16_t kMimeTypePng16[] = u"image/png";
 // Used for image drag & drop on X11 and Wayland.
 inline constexpr char kMimeTypeOctetStream[] = "application/octet-stream";
 // Used for window dragging on some platforms.
-inline constexpr char kMimeTypeWindowDrag[] = "chromium/x-window-drag";
+inline constexpr char kMimeTypeWindowDrag[] = "Cinaseek/x-window-drag";
 
 // ----- LINUX & CHROMEOS & FUCHSIA MIME TYPES -----
 
@@ -58,7 +58,7 @@ inline constexpr char kMimeTypePortalFiles[] = "application/vnd.portal.files";
 
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \
     BUILDFLAG(IS_ANDROID)
-inline constexpr char kMimeTypeSourceUrl[] = "chromium/x-source-url";
+inline constexpr char kMimeTypeSourceUrl[] = "Cinaseek/x-source-url";
 #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||
         // BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_ANDROID)
 
@@ -69,11 +69,11 @@ inline constexpr char kMimeTypeSourceUrl[] = "chromium/x-source-url";
 // TODO(dcheng): This name is temporary. See https://crbug.com/40123727.
 // LINT.IfChange(kMimeTypeDataTransferCustomData)
 inline constexpr char kMimeTypeDataTransferCustomData[] =
-    "chromium/x-web-custom-data";
-// LINT.ThenChange(/ui/android/java/src/org/chromium/ui/base/ClipboardImpl.java)
+    "Cinaseek/x-web-custom-data";
+// LINT.ThenChange(/ui/android/java/src/org/Cinaseek/ui/base/ClipboardImpl.java)
 inline constexpr char16_t kMimeTypeDataTransferCustomData16[] =
-    u"chromium/x-web-custom-data";
-inline constexpr char kMimeTypeWebkitSmartPaste[] = "chromium/x-webkit-paste";
+    u"Cinaseek/x-web-custom-data";
+inline constexpr char kMimeTypeWebkitSmartPaste[] = "Cinaseek/x-webkit-paste";
 
 #else
 
@@ -87,20 +87,20 @@ inline constexpr char kMimeTypeWebkitSmartPaste[] = "chromium/x-webkit-paste";
 // rather put it on as this Chrome-only type. External apps won't see HTML but
 // Chrome will know enough to read it as HTML.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumImageAndHtml;
+extern NSString* const kUTTypeCinaseekImageAndHtml;
 
 // Data type always placed on dragging pasteboards. There is never any data
-// associated with this type; it's only used to ensure that Chromium supports
-// any drag initiated inside of Chromium, whether or not data has been
+// associated with this type; it's only used to ensure that Cinaseek supports
+// any drag initiated inside of Cinaseek, whether or not data has been
 // associated with it.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumInitiatedDrag;
+extern NSString* const kUTTypeCinaseekInitiatedDrag;
 
 // Data type placed on dragging pasteboards when the drag is initiated from a
 // renderer that is privileged. There is never any data associated with this
 // type.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumPrivilegedInitiatedDrag;
+extern NSString* const kUTTypeCinaseekPrivilegedInitiatedDrag;
 
 // Data type placed on dragging pasteboards when the drag is initiated from a
 // renderer. If the initiator has a tuple origin (e.g. https://example.com),
@@ -113,11 +113,11 @@ extern NSString* const kUTTypeChromiumPrivilegedInitiatedDrag;
 // When newer versions of Chrome attempt to interpret this data as an origin,
 // they will safely treat it as a unique opaque origin.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumRendererInitiatedDrag;
+extern NSString* const kUTTypeCinaseekRendererInitiatedDrag;
 
 // A type specifying DataTransfer custom data. The data is pickled.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumDataTransferCustomData;
+extern NSString* const kUTTypeCinaseekDataTransferCustomData;
 
 // It is the common convention on the Mac and on iOS that password managers tag
 // confidential data with this type. There's no data associated with this
@@ -140,7 +140,7 @@ extern NSString* const kUTTypeWebKitWebUrlsWithTitles;
 
 // A type used to track the source URL of data put in the clipboard.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES)
-extern NSString* const kUTTypeChromiumSourceUrl;
+extern NSString* const kUTTypeCinaseekSourceUrl;
 
 #endif  //  __OBJC__
 

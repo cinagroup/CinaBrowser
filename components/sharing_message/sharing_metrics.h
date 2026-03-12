@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ enum class SharingDeviceRegistrationResult;
 // These values are logged to UMA. Entries should not be renumbered and numeric
 // values should never be reused. Please keep in sync with
 // "SharingDialogType" in src/tools/metrics/histograms/enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.sharing
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.sharing
 enum class SharingDialogType {
   kDialogWithDevicesMaybeApps = 0,
   kDialogWithoutDevicesWithApp = 1,

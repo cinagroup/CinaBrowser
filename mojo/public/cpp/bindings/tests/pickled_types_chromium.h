@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,22 +22,22 @@ namespace mojo {
 namespace test {
 
 // Implementation of types with IPC::ParamTraits for consumers in the greater
-// Chromium tree.
+// Cinaseek tree.
 
-enum class PickledEnumChromium { VALUE_0, VALUE_1, VALUE_2 };
+enum class PickledEnumCinaseek { VALUE_0, VALUE_1, VALUE_2 };
 
-class PickledStructChromium {
+class PickledStructCinaseek {
  public:
-  PickledStructChromium();
-  PickledStructChromium(int foo, int bar);
-  PickledStructChromium(PickledStructChromium&& other) = default;
+  PickledStructCinaseek();
+  PickledStructCinaseek(int foo, int bar);
+  PickledStructCinaseek(PickledStructCinaseek&& other) = default;
 
-  PickledStructChromium(const PickledStructChromium&) = delete;
-  PickledStructChromium& operator=(const PickledStructChromium&) = delete;
+  PickledStructCinaseek(const PickledStructCinaseek&) = delete;
+  PickledStructCinaseek& operator=(const PickledStructCinaseek&) = delete;
 
-  ~PickledStructChromium();
+  ~PickledStructCinaseek();
 
-  PickledStructChromium& operator=(PickledStructChromium&& other) = default;
+  PickledStructCinaseek& operator=(PickledStructCinaseek&& other) = default;
 
   int foo() const { return foo_; }
   void set_foo(int foo) { foo_ = foo; }
@@ -55,7 +55,7 @@ class PickledStructChromium {
   int baz_ = 0;
 };
 
-bool operator==(const PickledStructChromium& a, const PickledStructChromium& b);
+bool operator==(const PickledStructCinaseek& a, const PickledStructCinaseek& b);
 
 }  // namespace test
 }  // namespace mojo
@@ -63,8 +63,8 @@ bool operator==(const PickledStructChromium& a, const PickledStructChromium& b);
 namespace IPC {
 
 template <>
-struct ParamTraits<mojo::test::PickledStructChromium> {
-  using param_type = mojo::test::PickledStructChromium;
+struct ParamTraits<mojo::test::PickledStructCinaseek> {
+  using param_type = mojo::test::PickledStructCinaseek;
 
   static void Write(base::Pickle* m, const param_type& p);
   static bool Read(const base::Pickle* m,
@@ -79,7 +79,7 @@ struct ParamTraits<mojo::test::PickledStructChromium> {
 #undef IPC_MESSAGE_EXPORT
 #define IPC_MESSAGE_EXPORT
 
-IPC_ENUM_TRAITS_MAX_VALUE(mojo::test::PickledEnumChromium,
-                          mojo::test::PickledEnumChromium::VALUE_2)
+IPC_ENUM_TRAITS_MAX_VALUE(mojo::test::PickledEnumCinaseek,
+                          mojo::test::PickledEnumCinaseek::VALUE_2)
 
 #endif  // MOJO_PUBLIC_CPP_BINDINGS_TESTS_PICKLED_TYPES_CHROMIUM_H_

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ std::string GetDomainFromEmail(const std::string& email) {
   if (email.empty() || email_separator_pos == std::string::npos ||
       email_separator_pos == email.size() - 1) {
     // An empty email means no logged-in user, or incognito user in case of
-    // ChromiumOS. Also, some tests use nonsense email addresses (e.g. "test").
+    // CinaseekOS. Also, some tests use nonsense email addresses (e.g. "test").
     return std::string();
   }
   return gaia::ExtractDomainName(email);
@@ -57,8 +57,8 @@ bool AccountManagedStatusFinder::MayBeEnterpriseDomain(
     const std::string& email_domain) {
   // List of consumer-only domains from the server side logic. See
   // `KNOWN_INVALID_DOMAINS` from GetAgencySignupStateProducerModule.java.
-  // Sharing this in open source Chromium code was green-lighted according to
-  // https://chromium-review.googlesource.com/c/chromium/src/+/2945029/comment/d8731200_4064534e/
+  // Sharing this in open source Cinaseek code was green-lighted according to
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2945029/comment/d8731200_4064534e/
   static constexpr auto kKnownConsumerDomains =
       base::MakeFixedFlatSet<std::string_view>({"123mail.org",
                                                 "150mail.com",

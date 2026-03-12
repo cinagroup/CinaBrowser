@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -126,9 +126,9 @@ static_library("shared") {
 
   deps = [ "//third_party/wayland:wayland_client_lib" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 
@@ -148,9 +148,9 @@ static_library("cairo_shared") {
     "//third_party/libpng",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 
@@ -239,9 +239,9 @@ static_library("libweston") {
     "//third_party/wayland-protocols:xdg_shell_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
     ":xkbcommon",
   ]
@@ -325,9 +325,9 @@ shared_library("gl_renderer") {
     "//third_party/wayland-protocols:linux_dmabuf_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
     ":xkbcommon",
   ]
@@ -346,9 +346,9 @@ static_library("gl_borders") {
     ":libweston",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }
@@ -381,11 +381,11 @@ shared_library("wayland_backend") {
     "//third_party/wayland-protocols:xdg_shell_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":wayland_cursor",
     ":wayland_egl",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
     ":xkbcommon",
   ]
@@ -415,9 +415,9 @@ shared_library("headless_backend") {
     "//third_party/wayland-protocols:presentation_time_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }
@@ -441,9 +441,9 @@ shared_library("compositor") {
     "//third_party/wayland-protocols:text_input_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":libevdev",
     ":libinput",
     ":weston_config",
@@ -468,10 +468,10 @@ static_library("toytoolkit") {
     "//third_party/wayland-protocols:xdg_shell_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":wayland_cursor",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
     ":xkbcommon",
   ]
@@ -489,9 +489,9 @@ shared_library("ui_controls") {
     "//third_party/wayland-protocols:ui_controls_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 
@@ -512,9 +512,9 @@ shared_library("weston_systemd_notify") {
     "//third_party/wayland:wayland_server_lib",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 
@@ -543,9 +543,9 @@ executable("weston_keyboard") {
     "//third_party/wayland-protocols:text_input_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }
@@ -569,9 +569,9 @@ executable("weston_screenshooter") {
     "//third_party/wayland:wayland_client_lib",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }
@@ -592,9 +592,9 @@ executable("weston_desktop_shell") {
     "//third_party/wayland-protocols:tablet_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }
@@ -621,9 +621,9 @@ shared_library("desktop_shell") {
     "//third_party/wayland-protocols:input_method_protocol",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":weston_config",
   ]
 }

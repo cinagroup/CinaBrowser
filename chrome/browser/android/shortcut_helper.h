@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace webapps {
 struct ShortcutInfo;
 }
 
-// ShortcutHelper is the C++ counterpart of org.chromium.chrome.browser's
+// ShortcutHelper is the C++ counterpart of org.Cinaseek.chrome.browser's
 // ShortcutHelper in Java.
 class ShortcutHelper {
  public:

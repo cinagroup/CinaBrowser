@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -212,7 +212,7 @@ void QueuedRequestDispatcher::SetUpAndDispatch(
     // This must occur before the call to RequestOSMemoryDump, as
     // ClientProcessImpl will [for macOS], delay the calculations for the
     // OSMemoryDump until the Chrome memory dump is finished. See
-    // https://bugs.chromium.org/p/chromium/issues/detail?id=812346#c16 for more
+    // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=812346#c16 for more
     // details.
     if (!request->args.memory_footprint_only) {
       request->pending_responses.insert(

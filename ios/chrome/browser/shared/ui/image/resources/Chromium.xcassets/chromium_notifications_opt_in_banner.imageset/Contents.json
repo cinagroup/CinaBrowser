@@ -3,11 +3,11 @@
         {
             "idiom": "universal",
             "scale": "2x",
-            "filename": "chromium_notifications_opt_in_banner@2x.png"
+            "filename": "Cinaseek_notifications_opt_in_banner@2x.png"
         },
         {
           "idiom" : "universal",
-          "filename" : "chromium_notifications_opt_in_banner_dark@2x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_dark@2x.png",
           "appearances" : [
             {
               "appearance" : "luminosity",
@@ -19,11 +19,11 @@
         {
             "idiom": "universal",
             "scale": "3x",
-            "filename": "chromium_notifications_opt_in_banner@3x.png"
+            "filename": "Cinaseek_notifications_opt_in_banner@3x.png"
         },
         {
           "idiom" : "universal",
-          "filename" : "chromium_notifications_opt_in_banner_dark@3x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_dark@3x.png",
           "appearances" : [
             {
               "appearance" : "luminosity",
@@ -33,7 +33,7 @@
           "scale" : "3x"
         },
         {
-          "filename" : "chromium_notifications_opt_in_banner_ipad@2x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_ipad@2x.png",
           "idiom" : "ipad",
           "scale" : "2x"
         },
@@ -44,7 +44,7 @@
               "value" : "dark"
             }
           ],
-          "filename" : "chromium_notifications_opt_in_banner_dark_ipad@2x.png",
+          "filename" : "Cinaseek_notifications_opt_in_banner_dark_ipad@2x.png",
           "idiom" : "ipad",
           "scale" : "2x"
         }

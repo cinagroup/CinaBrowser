@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@
 #include "remoting/base/constants.h"
 #include "remoting/protocol/authenticator.h"
 #include "remoting/protocol/channel_authenticator.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
 #include "remoting/protocol/connection_tester.h"
 #include "remoting/protocol/errors.h"
 #include "remoting/protocol/fake_authenticator.h"

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -17,8 +17,8 @@
 #include "net/base/ip_endpoint.h"
 #include "net/http/http_response_headers.h"
 #include "net/log/net_log.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
-#include "net/quic/quic_chromium_packet_reader.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/quic_spdy_stream.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_config.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/quic_spdy_client_base.h"
@@ -26,8 +26,8 @@
 
 namespace net {
 
-class QuicChromiumAlarmFactory;
-class QuicChromiumConnectionHelper;
+class QuicCinaseekAlarmFactory;
+class QuicCinaseekConnectionHelper;
 
 namespace test {
 class QuicClientPeer;
@@ -54,11 +54,11 @@ class QuicSimpleClient : public quic::QuicSpdyClientBase {
  private:
   friend class net::test::QuicClientPeer;
 
-  QuicChromiumAlarmFactory* CreateQuicAlarmFactory();
-  QuicChromiumConnectionHelper* CreateQuicConnectionHelper();
+  QuicCinaseekAlarmFactory* CreateQuicAlarmFactory();
+  QuicCinaseekConnectionHelper* CreateQuicConnectionHelper();
 
   //  Used by |helper_| to time alarms.
-  quic::QuicChromiumClock clock_;
+  quic::QuicCinaseekClock clock_;
 
   // Tracks if the client is initialized to connect.
   bool initialized_ = false;

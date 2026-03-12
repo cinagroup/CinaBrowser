@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,8 +48,8 @@ Platform kChromeOSPlatform{
     false,
 };
 
-Platform kChromiumOSPlatform{
-    "Chromium OS",
+Platform kCinaseekOSPlatform{
+    "Cinaseek OS",
     kChromeOSUnifiedPlatformName,
     false,
 };
@@ -79,7 +79,7 @@ Platform kLinuxPlatform{
 };
 
 const Platform* kPlatformsWithReducedUserAgentSupport[] = {
-    &kAndroidPlatform, &kChromeOSPlatform, &kChromiumOSPlatform,
+    &kAndroidPlatform, &kChromeOSPlatform, &kCinaseekOSPlatform,
     &kMacOSPlatform,   &kWindowsPlatform,  &kFuchsiaPlatform,
     &kLinuxPlatform,
 };

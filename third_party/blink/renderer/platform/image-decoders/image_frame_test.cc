@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 
 #include "base/compiler_specific.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "third_party/skia/include/private/chromium/SkPMColor.h"
+#include "third_party/skia/include/private/Cinaseek/SkPMColor.h"
 #include "third_party/skia/modules/skcms/skcms.h"
 
 namespace blink {

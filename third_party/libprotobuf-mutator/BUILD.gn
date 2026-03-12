@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -38,7 +38,7 @@ source_set("libprotobuf-mutator") {
   public_deps = [ "//third_party/protobuf:protobuf_full" ]
 
   # Let ClusterFuzz builders know to not build targets that depend on
-  # libprotobuf-mutator for AFL or Chrome OS.
+  # libprotobuf-mutator for AFL or Cinaseek OS.
   if (use_afl || current_toolchain == "//build/toolchain/cros:target") {
     all_dependent_configs = [ "//testing/libfuzzer:no_clusterfuzz" ]
   }
@@ -74,7 +74,7 @@ fuzzable_proto_library("lpm_test_fuzzer_proto") {
 
 # Avoid CQ complaints on platforms we don't care about (ie: iOS).
 # Also prevent people from using this to include protobuf_full into a production
-# build of Chrome.
+# build of Cinaseek.
 if (use_fuzzing_engine_with_lpm) {
   # Component that can provide protobuf_full to non-testonly targets
   static_library("protobuf_full") {

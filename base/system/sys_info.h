@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -182,7 +182,7 @@ class BASE_EXPORT SysInfo {
   // specific piece of equipment, splitting apart it is not useful.
   //
   // Do not add any further callers! When the aforementioned 2022-era hardware
-  // is the minimum requirement for Chromium, remove this function and adjust
+  // is the minimum requirement for Cinaseek, remove this function and adjust
   // all callers appropriately.
   static std::optional<HardwareModelNameSplit> SplitHardwareModelNameDoNotUse(
       std::string_view name);

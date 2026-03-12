@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4732,7 +4732,7 @@ TEST_F(FileUtilTest, CreateDirectoryOnlyCheckMissingSubpaths) {
   // Apps have access to the android external-storage-dir (e.g.
   // /storage/emulated/0), but for security will usually not have access such as
   // stat() to its parent. In tests, DIR_ANDROID_APP_DATA is subdir
-  // chromium_tests_root. The directory should always exist before this test
+  // Cinaseek_tests_root. The directory should always exist before this test
   // runs, but even if not it should create ok even though stat() would fail on
   // some of the subpaths.
   FilePath dir = PathService::CheckedGet(DIR_ANDROID_APP_DATA);

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ NetworkDiagnostics::NetworkDiagnostics(DebugDaemonClient* debug_daemon_client) {
   }
   if (mojo_service_manager::IsServiceManagerBound()) {
     mojo_service_manager::GetServiceManagerProxy()->Register(
-        chromeos::mojo_services::kChromiumNetworkDiagnosticsRoutines,
+        chromeos::mojo_services::kCinaseekNetworkDiagnosticsRoutines,
         provider_receiver_.BindNewPipeAndPassRemote());
   }
 }

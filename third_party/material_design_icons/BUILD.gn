@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -105,7 +105,7 @@ template("material_icon") {
   }
 }
 
-# List all resources used by Chrome on iOS (including those used by the private
+# List all resources used by Cinaseek on iOS (including those used by the private
 # downstream repository).  Not all resources are listed as there are thousands
 # of resources in material_design_icons repository.
 #

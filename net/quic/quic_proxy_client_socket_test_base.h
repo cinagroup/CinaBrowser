@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,13 +24,13 @@
 #include "net/log/test_net_log.h"
 #include "net/log/test_net_log_util.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/quic/quic_proxy_client_socket.h"
 #include "net/quic/quic_server_info.h"
@@ -242,16 +242,16 @@ class QuicProxyClientSocketTestBase
   // order of destruction of these members matter
   quic::MockClock clock_;
   test::MockQuicData mock_quic_data_;
-  std::unique_ptr<QuicChromiumConnectionHelper> helper_;
-  std::unique_ptr<QuicChromiumClientSession> session_;
-  std::unique_ptr<QuicChromiumClientSession::Handle> session_handle_;
-  std::unique_ptr<QuicChromiumClientStream::Handle> stream_handle_;
+  std::unique_ptr<QuicCinaseekConnectionHelper> helper_;
+  std::unique_ptr<QuicCinaseekClientSession> session_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session_handle_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> stream_handle_;
   std::unique_ptr<TestProxyDelegate> proxy_delegate_;
 
   raw_ptr<quic::test::MockSendAlgorithm> send_algorithm_;
   scoped_refptr<test::TestTaskRunner> runner_;
 
-  std::unique_ptr<QuicChromiumAlarmFactory> alarm_factory_;
+  std::unique_ptr<QuicCinaseekAlarmFactory> alarm_factory_;
   testing::StrictMock<quic::test::MockQuicConnectionVisitor> visitor_;
   TransportSecurityState transport_security_state_;
   SSLConfigServiceDefaults ssl_config_service_;
@@ -263,7 +263,7 @@ class QuicProxyClientSocketTestBase
   IPEndPoint peer_addr_;
   IPEndPoint local_addr_;
   quic::test::MockRandom random_generator_{0};
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   MockCryptoClientStreamFactory crypto_client_stream_factory_;
   quic::test::MockConnectionIdGenerator connection_id_generator_;
 

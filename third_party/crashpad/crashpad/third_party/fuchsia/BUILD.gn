@@ -21,7 +21,7 @@ if (crashpad_is_in_fuchsia) {
       "//zircon/system/ulib/zx",
     ]
   }
-} else if (crashpad_is_in_chromium) {
+} else if (crashpad_is_in_Cinaseek) {
   group("fuchsia") {
     public_deps = [
       "//third_party/fuchsia-sdk/sdk/pkg/fdio",

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace content {
 CONTENT_EXPORT bool IsBackgroundMediaSuspendEnabled();
 
 // Default value for is_background_suspend_enabled is determined statically in
-// Chromium, but some content embedders (e.g. Cast) may need to change it at
+// Cinaseek, but some content embedders (e.g. Cast) may need to change it at
 // runtime. Additionally, Android large form factors will disable this at
 // runtime.
 struct RenderFrameMediaPlaybackOptions {

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ class BASE_EXPORT Uuid {
 };
 
 // For runtime usage only. Do not store the result of this hash, as it may
-// change in future Chromium revisions.
+// change in future Cinaseek revisions.
 struct BASE_EXPORT UuidHash {
   size_t operator()(const Uuid& uuid) const;
 };

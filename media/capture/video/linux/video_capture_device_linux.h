@@ -1,10 +1,10 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Linux specific implementation of VideoCaptureDevice.
 // V4L2 is used for capturing. V4L2 does not provide its own thread for
-// capturing so this implementation uses a Chromium thread for fetching frames
+// capturing so this implementation uses a Cinaseek thread for fetching frames
 // from V4L2.
 
 #ifndef MEDIA_CAPTURE_VIDEO_LINUX_VIDEO_CAPTURE_DEVICE_LINUX_H_
@@ -31,7 +31,7 @@ class V4L2CaptureDelegate;
 // Linux V4L2 implementation of VideoCaptureDevice.
 class CAPTURE_EXPORT VideoCaptureDeviceLinux : public VideoCaptureDevice {
  public:
-  static VideoPixelFormat V4l2FourCcToChromiumPixelFormat(uint32_t v4l2_fourcc);
+  static VideoPixelFormat V4l2FourCcToCinaseekPixelFormat(uint32_t v4l2_fourcc);
   static std::vector<uint32_t> GetListOfUsableFourCCs(bool favour_mjpeg);
 
   VideoCaptureDeviceLinux() = delete;

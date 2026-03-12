@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,13 +42,13 @@
 #include "net/log/net_log.h"
 #include "net/log/net_log_with_source.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/quic/quic_server_info.h"
@@ -408,7 +408,7 @@ class WebSocketHandshakeStreamCreateHelperTest
         quic::test::MockConnectionIdGenerator connection_id_generator;
 
         testing::StrictMock<quic::test::MockQuicConnectionVisitor> visitor;
-        ProofVerifyDetailsChromium verify_details;
+        ProofVerifyDetailsCinaseek verify_details;
         MockCryptoClientStreamFactory crypto_client_stream_factory;
         TransportSecurityState transport_security_state;
         SSLConfigServiceDefaults ssl_config_service;
@@ -461,12 +461,12 @@ class WebSocketHandshakeStreamCreateHelperTest
 
         scoped_refptr<test::TestTaskRunner> runner =
             base::MakeRefCounted<test::TestTaskRunner>(&clock_);
-        auto helper = std::make_unique<QuicChromiumConnectionHelper>(
+        auto helper = std::make_unique<QuicCinaseekConnectionHelper>(
             &clock_, &random_generator);
         auto alarm_factory =
-            std::make_unique<QuicChromiumAlarmFactory>(runner.get(), &clock_);
+            std::make_unique<QuicCinaseekAlarmFactory>(runner.get(), &clock_);
         // Ownership of 'writer' is passed to 'QuicConnection'.
-        QuicChromiumPacketWriter* writer = new QuicChromiumPacketWriter(
+        QuicCinaseekPacketWriter* writer = new QuicCinaseekPacketWriter(
             socket.get(),
             base::SingleThreadTaskRunner::GetCurrentDefault().get());
         quic::QuicConnection* connection = new quic::QuicConnection(
@@ -490,7 +490,7 @@ class WebSocketHandshakeStreamCreateHelperTest
         base::TimeTicks dns_end = base::TimeTicks::Now();
         base::TimeTicks dns_start = dns_end - base::Milliseconds(1);
 
-        session_ = std::make_unique<QuicChromiumClientSession>(
+        session_ = std::make_unique<QuicCinaseekClientSession>(
             connection, std::move(socket),
             /*stream_factory=*/nullptr, &crypto_client_stream_factory, &clock_,
             &transport_security_state, &ssl_config_service,
@@ -541,7 +541,7 @@ class WebSocketHandshakeStreamCreateHelperTest
         TestCompletionCallback callback;
         EXPECT_THAT(session_->CryptoConnect(callback.callback()), IsOk());
         EXPECT_TRUE(session_->OneRttKeysAvailable());
-        std::unique_ptr<QuicChromiumClientSession::Handle> session_handle =
+        std::unique_ptr<QuicCinaseekClientSession::Handle> session_handle =
             session_->CreateHandle(
                 url::SchemeHostPort(url::kHttpsScheme, "mail.example.org", 80));
 
@@ -591,7 +591,7 @@ class WebSocketHandshakeStreamCreateHelperTest
   // For HTTP3_HANDSHAKE_STREAM
   quic::ParsedQuicVersion quic_version_;
   quic::MockClock clock_;
-  std::unique_ptr<QuicChromiumClientSession> session_;
+  std::unique_ptr<QuicCinaseekClientSession> session_;
   test::MockQuicData mock_quic_data_;
   quic::test::NoopQpackStreamSenderDelegate noop_qpack_stream_sender_delegate_;
 };

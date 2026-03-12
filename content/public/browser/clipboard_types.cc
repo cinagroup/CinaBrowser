@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -106,11 +106,11 @@ WebContents* ClipboardEndpoint::web_contents() const {
 
 const ui::ClipboardFormatType& SourceRFHTokenType() {
 #if BUILDFLAG(IS_APPLE)
-  constexpr char kTypeName[] = "org.chromium.internal.source-rfh-token";
+  constexpr char kTypeName[] = "org.Cinaseek.internal.source-rfh-token";
 #elif BUILDFLAG(IS_WIN)
-  constexpr char kTypeName[] = "Chromium internal source RFH token";
+  constexpr char kTypeName[] = "Cinaseek internal source RFH token";
 #else
-  constexpr char kTypeName[] = "chromium/x-internal-source-rfh-token";
+  constexpr char kTypeName[] = "Cinaseek/x-internal-source-rfh-token";
 #endif
   static base::NoDestructor<ui::ClipboardFormatType> type(
       ui::ClipboardFormatType::CustomPlatformType(kTypeName));

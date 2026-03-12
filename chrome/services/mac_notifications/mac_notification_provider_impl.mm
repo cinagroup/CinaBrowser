@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ void MacNotificationProviderImpl::BindNotificationService(
     return;
   }
 
-// MacNotificationServiceNS implements the Chromium interface to the
+// MacNotificationServiceNS implements the Cinaseek interface to the
 // NSUserNotificationCenter deprecated API. It is in the process of being
 // replaced by UNNotification, above, and warnings about its deprecation are not
 // helpful. https://crbug.com/1127306

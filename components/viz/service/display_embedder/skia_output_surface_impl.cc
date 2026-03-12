@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,8 +77,8 @@
 #include "third_party/skia/include/gpu/graphite/Image.h"
 #include "third_party/skia/include/gpu/graphite/Recorder.h"
 #include "third_party/skia/include/gpu/graphite/YUVABackendTextures.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
-#include "third_party/skia/include/private/chromium/SkImageChromium.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/SkImageCinaseek.h"
 #include "ui/base/ui_base_features.h"
 #include "ui/gfx/color_space.h"
 #include "ui/gfx/geometry/skia_conversions.h"

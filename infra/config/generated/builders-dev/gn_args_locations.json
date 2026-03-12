@@ -1,5 +1,5 @@
 {
-  "chromium.dev": {
+  "Cinaseek.dev": {
     "android-arm64-rel-dev": "ci/android-arm64-rel-dev/gn-args.json",
     "linux-local-ssd-rel-dev": "ci/linux-local-ssd-rel-dev/gn-args.json",
     "linux-rel-jammy-dev": "ci/linux-rel-jammy-dev/gn-args.json",

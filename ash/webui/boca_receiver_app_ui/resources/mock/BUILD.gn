@@ -1,10 +1,10 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
 import("//tools/typescript/ts_library.gni")
 
-assert(is_chromeos, "Boca Receiver App is ChromeOS only")
+assert(is_chromeos, "Boca Receiver App is CinaseekOS only")
 
 ts_library("build_ts") {
   in_files = [ "app_bin.ts" ]

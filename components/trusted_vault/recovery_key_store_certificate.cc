@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@
 #include "third_party/boringssl/src/pki/path_builder.h"
 #include "third_party/boringssl/src/pki/simple_path_builder_delegate.h"
 #include "third_party/boringssl/src/pki/trust_store_in_memory.h"
-#include "third_party/libxml/chromium/xml_reader.h"
+#include "third_party/libxml/Cinaseek/xml_reader.h"
 
 namespace trusted_vault {
 

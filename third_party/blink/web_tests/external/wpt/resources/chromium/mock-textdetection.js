@@ -2,7 +2,7 @@ import {TextDetection, TextDetectionReceiver} from '/gen/services/shape_detectio
 
 self.TextDetectionTest = (() => {
   // Class that mocks TextDetection interface defined in
-  // https://cs.chromium.org/chromium/src/services/shape_detection/public/mojom/textdetection.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/services/shape_detection/public/mojom/textdetection.mojom
   class MockTextDetection {
     constructor() {
       this.receiver_ = new TextDetectionReceiver(this);
@@ -58,7 +58,7 @@ self.TextDetectionTest = (() => {
     MockTextDetection: null
   }
 
-  class TextDetectionTestChromium {
+  class TextDetectionTestCinaseek {
     constructor() {
       Object.freeze(this); // Make it immutable.
     }
@@ -87,6 +87,6 @@ self.TextDetectionTest = (() => {
     }
   }
 
-  return TextDetectionTestChromium;
+  return TextDetectionTestCinaseek;
 
 })();

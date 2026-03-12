@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace tools {
 // Prints help for options and the help footer.
 void PrintHelpShared();
 
-// Prints help for tree selectors like --pattern, --chromium etc.
+// Prints help for tree selectors like --pattern, --Cinaseek etc.
 void PrintHelpTreeSelectors();
 
 // Prints help for filters.

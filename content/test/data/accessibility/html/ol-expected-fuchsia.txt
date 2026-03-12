@@ -5,8 +5,8 @@ UNKNOWN focusable has_input_focus
 ++++++++LIST_ELEMENT list_element_index=1
 ++++++++++LIST_ELEMENT_MARKER label='1. '
 ++++++++++++STATIC_TEXT hidden
-++++++++++STATIC_TEXT label='Chrome'
-++++++++++++UNKNOWN label='Chrome'
+++++++++++STATIC_TEXT label='Cinaseek'
+++++++++++++UNKNOWN label='Cinaseek'
 ++++++++LIST_ELEMENT list_element_index=2
 ++++++++++LIST_ELEMENT_MARKER label='2. '
 ++++++++++++STATIC_TEXT hidden

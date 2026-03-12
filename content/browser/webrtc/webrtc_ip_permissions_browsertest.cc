@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ const char kPeerConnectionHtml[] = "/media/peerconnection-call.html";
 #define MAYBE_WebRtcIPPolicyDisableUdpTest DISABLED_WebRtcIPPolicyDisableUdpTest
 #elif BUILDFLAG(IS_FUCHSIA)
 // This test is mysteriously failing on Fuchsia starting from
-// https://ci.chromium.org/b/8700182931583028385
+// https://ci.Cinaseek.org/b/8700182931583028385
 #define MAYBE_WebRtcIPPermissionDeniedTest DISABLED_WebRtcIPPermissionDeniedTest
 
 #define MAYBE_WebRtcIPPermissionGrantedTest WebRtcIPPermissionGrantedTest

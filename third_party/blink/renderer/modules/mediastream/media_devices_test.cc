@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1137,7 +1137,7 @@ TEST_F(MediaDevicesTest, SetCaptureHandleConfigCaptureWithPermittedOrigins) {
   CaptureHandleConfig* input_config =
       MakeGarbageCollected<CaptureHandleConfig>();
   input_config->setPermittedOrigins(
-      {"https://chromium.org", "ftp://chromium.org:1234"});
+      {"https://Cinaseek.org", "ftp://Cinaseek.org:1234"});
 
   // Expected output.
   auto expected_config = mojom::blink::CaptureHandleConfig::New();
@@ -1145,8 +1145,8 @@ TEST_F(MediaDevicesTest, SetCaptureHandleConfigCaptureWithPermittedOrigins) {
   expected_config->capture_handle = "";
   expected_config->all_origins_permitted = false;
   expected_config->permitted_origins = {
-      SecurityOrigin::CreateFromString("https://chromium.org"),
-      SecurityOrigin::CreateFromString("ftp://chromium.org:1234")};
+      SecurityOrigin::CreateFromString("https://Cinaseek.org"),
+      SecurityOrigin::CreateFromString("ftp://Cinaseek.org:1234")};
   dispatcher_host().ExpectSetCaptureHandleConfig(std::move(expected_config));
 
   media_devices->setCaptureHandleConfig(scope.GetScriptState(), input_config,
@@ -1164,7 +1164,7 @@ TEST_F(MediaDevicesTest,
 
   CaptureHandleConfig* input_config =
       MakeGarbageCollected<CaptureHandleConfig>();
-  input_config->setPermittedOrigins({"*", "https://chromium.org"});
+  input_config->setPermittedOrigins({"*", "https://Cinaseek.org"});
 
   // Note: dispatcher_host().ExpectSetCaptureHandleConfig() not called.
 
@@ -1186,7 +1186,7 @@ TEST_F(MediaDevicesTest,
   CaptureHandleConfig* input_config =
       MakeGarbageCollected<CaptureHandleConfig>();
   input_config->setPermittedOrigins(
-      {"https://chromium.org:99999"});  // Invalid.
+      {"https://Cinaseek.org:99999"});  // Invalid.
 
   // Note: dispatcher_host().ExpectSetCaptureHandleConfig() not called.
 

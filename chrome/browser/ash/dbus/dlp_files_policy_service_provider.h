@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,11 +37,11 @@ class DlpFilesPolicyServiceProvider
                   const std::string& method_name,
                   bool success);
 
-  // org.chromium.DlpFilesPolicyService.IsDlpPolicyMatched implementation.
+  // org.Cinaseek.DlpFilesPolicyService.IsDlpPolicyMatched implementation.
   void IsDlpPolicyMatched(dbus::MethodCall* method_call,
                           dbus::ExportedObject::ResponseSender response_sender);
 
-  // org.chromium.DlpFilesPolicyService.IsFilesTransferRestricted
+  // org.Cinaseek.DlpFilesPolicyService.IsFilesTransferRestricted
   // implementation.
   void IsFilesTransferRestricted(
       dbus::MethodCall* method_call,

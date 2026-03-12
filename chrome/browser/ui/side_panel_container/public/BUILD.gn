@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 # Public Java interfaces
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContent.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeature.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContent.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeature.java",
   ]
   deps = [ "//build/android:build_java" ]
 }
@@ -25,7 +25,7 @@ android_library_factory("factory_java") {
     "//ui/android:ui_java",
   ]
   sources = [
-    "//chrome/browser/ui/side_panel_container/internal/android/java/src/org/chromium/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorFactory.java",
-    "//chrome/browser/ui/side_panel_container/internal/android/java/src/org/chromium/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureFactory.java",
+    "//chrome/browser/ui/side_panel_container/internal/android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/SidePanelContainerCoordinatorFactory.java",
+    "//chrome/browser/ui/side_panel_container/internal/android/java/src/org/Cinaseek/chrome/browser/ui/side_panel_container/dev/SidePanelDevFeatureFactory.java",
   ]
 }

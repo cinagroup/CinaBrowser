@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,15 +27,15 @@
 //
 // For best practices on deciding when to emit to a histogram and what form
 // the histogram should take, see
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/README.md
 //
 // For deciding whether to use the function or macro APIs, see
-// https://chromium.googlesource.com/chromium/src/+/HEAD/tools/metrics/histograms/README.md#coding-emitting-to-histograms"
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/tools/metrics/histograms/README.md#coding-emitting-to-histograms"
 //
 // Every function is duplicated to also support both std::string and char* for
 // the name for improved binary size. These declarations are moved to a separate
 // header for readability, see
-// https://chromium.googlesource.com/chromium/src/+/HEAD/base/metrics/histogram_functions_internal_overloads.h.
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/base/metrics/histogram_functions_internal_overloads.h.
 namespace base {
 
 // For numeric measurements where you want exact integer values up to

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,16 +18,16 @@ namespace remoting::protocol {
 
 class SessionOptionsProvider;
 
-class ChromiumPacketSocketFactory : public webrtc::PacketSocketFactory {
+class CinaseekPacketSocketFactory : public webrtc::PacketSocketFactory {
  public:
-  explicit ChromiumPacketSocketFactory(
+  explicit CinaseekPacketSocketFactory(
       base::WeakPtr<SessionOptionsProvider> session_options_provider);
 
-  ChromiumPacketSocketFactory(const ChromiumPacketSocketFactory&) = delete;
-  ChromiumPacketSocketFactory& operator=(const ChromiumPacketSocketFactory&) =
+  CinaseekPacketSocketFactory(const CinaseekPacketSocketFactory&) = delete;
+  CinaseekPacketSocketFactory& operator=(const CinaseekPacketSocketFactory&) =
       delete;
 
-  ~ChromiumPacketSocketFactory() override;
+  ~CinaseekPacketSocketFactory() override;
 
   // webrtc::PacketSocketFactory implementation.
   std::unique_ptr<webrtc::AsyncPacketSocket> CreateUdpSocket(

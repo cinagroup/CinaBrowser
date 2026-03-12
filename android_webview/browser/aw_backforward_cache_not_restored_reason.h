@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 
 namespace android_webview {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.metrics
 enum BackForwardCacheNotRestoredReason {
   CACHE_FLUSHED = 21,
   WEBVIEW_SETTINGS_CHANGED = 64,

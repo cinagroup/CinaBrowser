@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,26 +104,26 @@ void SetCurrentThreadTypeImpl(ThreadType thread_type,
                               MessagePumpType pump_type_hint) {
   switch (thread_type) {
     case ThreadType::kDefault:
-      SetThreadRole("chromium.base.threading.default");
+      SetThreadRole("Cinaseek.base.threading.default");
 
       break;
 
     case ThreadType::kBackground:
-      SetThreadRole("chromium.base.threading.background");
+      SetThreadRole("Cinaseek.base.threading.background");
       break;
 
     case ThreadType::kUtility:
-      SetThreadRole("chromium.base.threading.utility");
+      SetThreadRole("Cinaseek.base.threading.utility");
       break;
 
     case ThreadType::kPresentation:
     case ThreadType::kAudioProcessing:
-      SetThreadRole("chromium.base.threading.display", kDisplaySchedulingPeriod,
+      SetThreadRole("Cinaseek.base.threading.display", kDisplaySchedulingPeriod,
                     kDisplaySchedulingCapacity);
       break;
 
     case ThreadType::kRealtimeAudio:
-      SetThreadRole("chromium.base.threading.realtime-audio",
+      SetThreadRole("Cinaseek.base.threading.realtime-audio",
                     kAudioSchedulingPeriod, kAudioSchedulingCapacity);
       break;
   }

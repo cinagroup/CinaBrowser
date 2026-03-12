@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "src/org/chromium/components/webapk/lib/client/ChromeWebApkHostSignature.java",
-    "src/org/chromium/components/webapk/lib/client/WebApkValidator.java",
-    "src/org/chromium/components/webapk/lib/client/WebApkVerifySignature.java",
+    "src/org/Cinaseek/components/webapk/lib/client/CinaseekWebApkHostSignature.java",
+    "src/org/Cinaseek/components/webapk/lib/client/WebApkValidator.java",
+    "src/org/Cinaseek/components/webapk/lib/client/WebApkVerifySignature.java",
   ]
-  resources_package = "org.chromium.components.webapk.lib.client"
+  resources_package = "org.Cinaseek.components.webapk.lib.client"
   deps = [
     "//base:base_java",
     "//components/browser_ui/strings/android:browser_ui_strings_grd",
@@ -22,8 +22,8 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "src/org/chromium/components/webapk/lib/client/WebApkValidatorTest.java",
-    "src/org/chromium/components/webapk/lib/client/WebApkVerifySignatureTest.java",
+    "src/org/Cinaseek/components/webapk/lib/client/WebApkValidatorTest.java",
+    "src/org/Cinaseek/components/webapk/lib/client/WebApkVerifySignatureTest.java",
   ]
   data = [ "//chrome/test/data/webapks/" ]
   deps = [

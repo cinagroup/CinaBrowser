@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,12 +16,12 @@ if (enable_enterprise_companion) {
     #       The architecture directory's suffix. One of "amd64" or "arm64".
     #
     template("old_enterprise_companion_bundle") {
-      _src_dir = "chromium_mac_${invoker.arch}/cipd/ChromiumEnterpriseCompanion_test.app/"
-      _dest_dir = "${root_out_dir}/old_enterprise_companion/chromium_mac_${invoker.arch}/cipd/ChromiumEnterpriseCompanion.app/"
+      _src_dir = "Cinaseek_mac_${invoker.arch}/cipd/CinaseekEnterpriseCompanion_test.app/"
+      _dest_dir = "${root_out_dir}/old_enterprise_companion/Cinaseek_mac_${invoker.arch}/cipd/CinaseekEnterpriseCompanion.app/"
       copy("${target_name}__copy_exe") {
         sources =
-            [ _src_dir + "Contents/MacOS/ChromiumEnterpriseCompanion_test" ]
-        outputs = [ _dest_dir + "Contents/MacOS/ChromiumEnterpriseCompanion" ]
+            [ _src_dir + "Contents/MacOS/CinaseekEnterpriseCompanion_test" ]
+        outputs = [ _dest_dir + "Contents/MacOS/CinaseekEnterpriseCompanion" ]
       }
 
       copy("${target_name}__copy_pkginfo") {
@@ -54,7 +54,7 @@ if (enable_enterprise_companion) {
     group("old_enterprise_companion") {
       assert(
           !is_chrome_branded,
-          "Old enterprise companion versions are only available for Chromium-branded builds.")
+          "Old enterprise companion versions are only available for Cinaseek-branded builds.")
       data_deps = [
         ":old_enterprise_companion_amd64",
         ":old_enterprise_companion_arm64",
@@ -64,7 +64,7 @@ if (enable_enterprise_companion) {
     copy("old_enterprise_companion") {
       assert(
           !is_chrome_branded,
-          "Old enterprise companion versions are only available for Chromium-branded builds.")
+          "Old enterprise companion versions are only available for Cinaseek-branded builds.")
       testonly = true
       outputs = [
         "$root_build_dir/old_enterprise_companion/{{source_target_relative}}",
@@ -72,11 +72,11 @@ if (enable_enterprise_companion) {
       sources = []
 
       if (is_linux) {
-        sources += [ "chromium_linux64/cipd/enterprise_companion_test" ]
+        sources += [ "Cinaseek_linux64/cipd/enterprise_companion_test" ]
       } else if (is_win) {
         sources += [
-          "chromium_win_x86/cipd/enterprise_companion_test.exe",
-          "chromium_win_x86_64/cipd/enterprise_companion_test.exe",
+          "Cinaseek_win_x86/cipd/enterprise_companion_test.exe",
+          "Cinaseek_win_x86_64/cipd/enterprise_companion_test.exe",
         ]
       }
     }

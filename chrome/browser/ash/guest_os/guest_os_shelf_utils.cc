@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace {
 constexpr std::string_view kCrostiniShelfIdPrefix = "crostini:";
 
 // Prefix of the WindowAppId set on exo windows for GuestOS X apps.
-constexpr std::string_view kGuestOsWindowAppIdPrefix = "org.chromium.guest_os.";
+constexpr std::string_view kGuestOsWindowAppIdPrefix = "org.Cinaseek.guest_os.";
 // This comes after kGuestOsWindowAppIdPrefix+token for GuestOS Wayland apps.
 constexpr std::string_view kWaylandPrefix = "wayland.";
 // This comes after kGuestOsWindowAppIdPrefix+token.
@@ -131,7 +131,7 @@ FindAppIdResult FindAppId(const base::DictValue& prefs,
 }
 
 // For GuestOS |window_app_id|s which match the prefix of
-// org.chromium.guest_os.<token>.*, return the guest token.
+// org.Cinaseek.guest_os.<token>.*, return the guest token.
 // The token should be one of the following:
 // - For Crostini app windows: it is the container_token
 // - For Bruschetta app windows: it is the container_token
@@ -169,12 +169,12 @@ std::string GetUnregisteredAppIdPrefix(const std::string& token) {
 // The code follows these steps to identify apps and returns the first match:
 // 1) If the |window_startup_id| is set, look for a matching desktop file id.
 // 2) Ignore windows if the |window_app_id| is not set.
-// 3) The |window_app_id| is prefixed by org.chromium.guest_os.<token>., so we
+// 3) The |window_app_id| is prefixed by org.Cinaseek.guest_os.<token>., so we
 //    should be able to obtain a guest token from it. This will be used to find
 //    a guest_id to which the app window belongs to. In the following steps, the
 //    container_name and vm_name from the guest_id will be used to find a unique
 //    match if available.
-// 4) Remove the org.chromium.guest_os.<token>. prefix and use the remaining
+// 4) Remove the org.Cinaseek.guest_os.<token>. prefix and use the remaining
 //    string (the suffix) for the next steps.
 // 5) If the suffix is prefixed by wayland., it's a native Wayland app. Look for
 //    a matching desktop file id.
@@ -228,7 +228,7 @@ std::string GetGuestOsShelfAppId(Profile* profile,
     return GetUnregisteredAppIdPrefix(token) + *window_app_id;
   }
 
-  // Get the suffix by stripping "org.chromium.guest_os.<token>.".
+  // Get the suffix by stripping "org.Cinaseek.guest_os.<token>.".
   // token.length() + 1 is used since the '.' separator was not included in the
   // token.
   std::string_view suffix =

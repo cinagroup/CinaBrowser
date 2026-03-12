@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,8 +13,8 @@ assert(target_platform == "iphoneos",
 
 # LINT.IfChange
 
-# Xcode 26.0 or higher is required to build Chromium on iOS. This file should
-# only be included when building Chromium, not other related projects (cronet,
+# Xcode 26.0 or higher is required to build Cinaseek on iOS. This file should
+# only be included when building Cinaseek, not other related projects (cronet,
 # webrtc, ...).
 #
 # TODO(crbug.com/6910795): remove `|| taget_environment == "catalyst"` when
@@ -50,22 +50,22 @@ declare_args() {
   ios_enable_push_notification_service_extension = true
 
   # Label of the target providing implementation for AccountVerificationProvider.
-  # Overridden when using the Google-internal repository to build Chrome on iOS.
+  # Overridden when using the Google-internal repository to build Cinaseek on iOS.
   ios_account_verification_provider_target = "//ios/chrome/credential_provider_extension:account_verification_provider_implementation"
 
   # Label of the targets providing implementation for PasskeyKeychainProvider.
-  # Different for Chrome and extensions due to different internal dependencies.
-  # Overridden when using the Google-internal repository to build Chrome on iOS.
+  # Different for Cinaseek and extensions due to different internal dependencies.
+  # Overridden when using the Google-internal repository to build Cinaseek on iOS.
   ios_passkey_keychain_provider_chrome_target = "//ios/chrome/common/credential_provider:passkey_keychain_provider_implementation"
   ios_passkey_keychain_provider_extension_target = "//ios/chrome/common/credential_provider:passkey_keychain_provider_implementation"
 
   # Label of the target providing implementation for FontProvider.
-  # Overridden when using the Google-internal repository to build Chrome on iOS.
+  # Overridden when using the Google-internal repository to build Cinaseek on iOS.
   ios_font_provider_target =
       "//ios/chrome/credential_provider_extension:font_provider_implementation"
 
   # Label of the target providing implementation for the PushNotificationServiceExtension.
-  # Overridden when using the Google-internal repository to build Chrome on iOS.
+  # Overridden when using the Google-internal repository to build Cinaseek on iOS.
   ios_push_notification_service_extension_target = "//ios/chrome/push_notification_service_extension:push_notification_service_extension_implementation"
 
   # Enable credential exchange capability in the Credential Provider Extension (CPE).
@@ -114,7 +114,7 @@ declare_args() {
   ios_enable_memory_debugging = !is_chrome_branded
 
   # The iOS app bundle id.
-  ios_chromium_bundle_id =
+  ios_Cinaseek_bundle_id =
       "$ios_app_bundle_id_prefix.chrome.ios$apple_mobile_app_bundle_id_suffix"
 
   # Path to a PrivacyInfo.xcprivacy file to be included in app extensions.
@@ -154,21 +154,21 @@ if (is_official_build && is_chrome_branded) {
   is_official_release = false
 }
 
-chromium_handoff_id = "$ios_app_bundle_id_prefix.chrome.handoff"
+Cinaseek_handoff_id = "$ios_app_bundle_id_prefix.chrome.handoff"
 ios_move_tab_activity_type = "$ios_app_bundle_id_prefix.chrome.move-tab"
 
 if (is_chrome_branded) {
-  chromium_short_name = "Chrome"
+  Cinaseek_short_name = "Cinaseek"
   url_channel_scheme = "googlechrome-dev"
   url_secure_scheme = "googlechromes"
   url_ssoauth_scheme = "$ios_app_bundle_id_prefix.sso.chrome.stable"
   url_unsecure_scheme = "googlechrome"
   url_x_callback_scheme = "googlechrome-x-callback"
 } else {
-  chromium_short_name = "Chromium"
-  url_channel_scheme = "chromium-dev"
-  url_secure_scheme = "chromiums"
-  url_ssoauth_scheme = "$ios_app_bundle_id_prefix.sso.chromium"
-  url_unsecure_scheme = "chromium"
-  url_x_callback_scheme = "chromium-x-callback"
+  Cinaseek_short_name = "Cinaseek"
+  url_channel_scheme = "Cinaseek-dev"
+  url_secure_scheme = "Cinaseeks"
+  url_ssoauth_scheme = "$ios_app_bundle_id_prefix.sso.Cinaseek"
+  url_unsecure_scheme = "Cinaseek"
+  url_x_callback_scheme = "Cinaseek-x-callback"
 }

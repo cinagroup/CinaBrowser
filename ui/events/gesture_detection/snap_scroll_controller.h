@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 
 namespace ui {
 
-// Port of SnapScrollController.java from Chromium
+// Port of SnapScrollController.java from Cinaseek
 // Controls the scroll snapping behavior based on scroll updates.
 class GESTURE_DETECTION_EXPORT SnapScrollController {
  public:

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,19 +8,19 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/messages/MessageAutodismissDurationProvider.java",
-    "java/src/org/chromium/components/messages/MessageBannerProperties.java",
-    "java/src/org/chromium/components/messages/MessageContainer.java",
-    "java/src/org/chromium/components/messages/MessageDispatcher.java",
-    "java/src/org/chromium/components/messages/MessageDispatcherBridge.java",
-    "java/src/org/chromium/components/messages/MessageDispatcherProvider.java",
-    "java/src/org/chromium/components/messages/MessageFeatureList.java",
-    "java/src/org/chromium/components/messages/MessageFeatureMap.java",
-    "java/src/org/chromium/components/messages/MessageSecondaryMenuItems.java",
-    "java/src/org/chromium/components/messages/MessageWrapper.java",
-    "java/src/org/chromium/components/messages/MessagesMetrics.java",
+    "java/src/org/Cinaseek/components/messages/MessageAutodismissDurationProvider.java",
+    "java/src/org/Cinaseek/components/messages/MessageBannerProperties.java",
+    "java/src/org/Cinaseek/components/messages/MessageContainer.java",
+    "java/src/org/Cinaseek/components/messages/MessageDispatcher.java",
+    "java/src/org/Cinaseek/components/messages/MessageDispatcherBridge.java",
+    "java/src/org/Cinaseek/components/messages/MessageDispatcherProvider.java",
+    "java/src/org/Cinaseek/components/messages/MessageFeatureList.java",
+    "java/src/org/Cinaseek/components/messages/MessageFeatureMap.java",
+    "java/src/org/Cinaseek/components/messages/MessageSecondaryMenuItems.java",
+    "java/src/org/Cinaseek/components/messages/MessageWrapper.java",
+    "java/src/org/Cinaseek/components/messages/MessagesMetrics.java",
   ]
-  resources_package = "org.chromium.components.messages"
+  resources_package = "org.Cinaseek.components.messages"
 
   deps = [
     ":feature_flags_jni_headers_java",
@@ -44,7 +44,7 @@ android_library("java") {
 android_library("unit_device_javatests") {
   testonly = true
   sources =
-      [ "java/src/org/chromium/components/messages/MessageContainerTest.java" ]
+      [ "java/src/org/Cinaseek/components/messages/MessageContainerTest.java" ]
   deps = [
     ":java",
     ":java_resources",
@@ -70,14 +70,14 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/messages/MessageDispatcherBridge.java",
-    "java/src/org/chromium/components/messages/MessageWrapper.java",
+    "java/src/org/Cinaseek/components/messages/MessageDispatcherBridge.java",
+    "java/src/org/Cinaseek/components/messages/MessageWrapper.java",
   ]
 }
 
 generate_jni("feature_flags_jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/messages/MessageFeatureMap.java" ]
+      [ "java/src/org/Cinaseek/components/messages/MessageFeatureMap.java" ]
 }
 
 static_library("android") {
@@ -132,15 +132,15 @@ java_cpp_enum("message_enums_java") {
 # MessageDispatcher.
 android_library("manager_java") {
   sources = [
-    "java/src/org/chromium/components/messages/ManagedMessageDispatcher.java",
-    "java/src/org/chromium/components/messages/MessageQueueDelegate.java",
+    "java/src/org/Cinaseek/components/messages/ManagedMessageDispatcher.java",
+    "java/src/org/Cinaseek/components/messages/MessageQueueDelegate.java",
   ]
   deps = [ ":java" ]
 }
 
 android_library_factory("factory_java") {
   sources = [
-    "internal/java/src/org/chromium/components/messages/MessagesFactory.java",
+    "internal/java/src/org/Cinaseek/components/messages/MessagesFactory.java",
   ]
 
   deps = [
@@ -164,7 +164,7 @@ static_library("feature_flags") {
 
 robolectric_library("junit") {
   sources =
-      [ "java/src/org/chromium/components/messages/MessageWrapperTest.java" ]
+      [ "java/src/org/Cinaseek/components/messages/MessageWrapperTest.java" ]
   deps = [
     ":java",
     ":jni_headers_java",

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -539,11 +539,11 @@ class AutofillMetrics {
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
   enum class PaymentsSigninState {
-    // The user is not signed in to Chromium.
+    // The user is not signed in to Cinaseek.
     kSignedOut = 0,
-    // The user is signed in to Chromium.
+    // The user is signed in to Cinaseek.
     kSignedIn = 1,
-    // The user is signed in to Chromium and sync transport is active for Wallet
+    // The user is signed in to Cinaseek and sync transport is active for Wallet
     // data.
     kSignedInAndWalletSyncTransportEnabled = 2,
     // The user is signed in, has enabled the sync feature and has not disabled

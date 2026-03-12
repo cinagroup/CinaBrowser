@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -161,7 +161,7 @@ TEST_F(IMEFeaturePodControllerTest, ButtonVisibilityPolicy) {
   EXPECT_TRUE(IsButtonVisible());
 }
 
-// TODO(crbug.com/40893381): Test is failing on "Linux ChromiumOS MSan Tests".
+// TODO(crbug.com/40893381): Test is failing on "Linux CinaseekOS MSan Tests".
 #if defined(MEMORY_SANITIZER)
 #define MAYBE_IconUMATracking DISABLED_IconUMATracking
 #else

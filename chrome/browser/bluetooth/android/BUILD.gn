@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/bluetooth/BluetoothBridge.java",
-    "java/src/org/chromium/chrome/browser/bluetooth/BluetoothNotificationManager.java",
-    "java/src/org/chromium/chrome/browser/bluetooth/BluetoothNotificationManagerDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/bluetooth/BluetoothBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/bluetooth/BluetoothNotificationManager.java",
+    "java/src/org/Cinaseek/chrome/browser/bluetooth/BluetoothNotificationManagerDelegate.java",
   ]
   deps = [
     ":java_resources",
@@ -30,7 +30,7 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.bluetooth"
+  resources_package = "org.Cinaseek.chrome.browser.bluetooth"
 }
 
 android_resources("java_resources") {
@@ -42,11 +42,11 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/bluetooth/BluetoothBridge.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/bluetooth/BluetoothBridge.java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "junit/src/org/chromium/chrome/browser/bluetooth/BluetoothNotificationManagerTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/bluetooth/BluetoothNotificationManagerTest.java" ]
 
   deps = [
     ":java",

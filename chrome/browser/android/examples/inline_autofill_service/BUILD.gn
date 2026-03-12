@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -47,20 +47,20 @@ android_resources("inline_autofill_service_example_apk_resources") {
 
 android_apk("inline_autofill_service_example_apk") {
   sources = [
-    "src/java/org/chromium/example/autofill_service/MainActivity.java",
-    "src/java/org/chromium/example/autofill_service/SettingsActivity.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/InlineFillService.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/helpers/AttributionDialogActivity.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/helpers/CredentialStorage.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/helpers/InlineRequestHelper.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/helpers/ResponseHelper.java",
-    "src/java/org/chromium/example/autofill_service/fill_service/helpers/ViewStructureParser.java",
-    "src/java/org/chromium/example/autofill_service/fragments/BrowserCommunicationFragment.java",
-    "src/java/org/chromium/example/autofill_service/fragments/InstructionsFragment.java",
+    "src/java/org/Cinaseek/example/autofill_service/MainActivity.java",
+    "src/java/org/Cinaseek/example/autofill_service/SettingsActivity.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/InlineFillService.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/helpers/AttributionDialogActivity.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/helpers/CredentialStorage.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/helpers/InlineRequestHelper.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/helpers/ResponseHelper.java",
+    "src/java/org/Cinaseek/example/autofill_service/fill_service/helpers/ViewStructureParser.java",
+    "src/java/org/Cinaseek/example/autofill_service/fragments/BrowserCommunicationFragment.java",
+    "src/java/org/Cinaseek/example/autofill_service/fragments/InstructionsFragment.java",
   ]
 
   android_manifest = "src/AndroidManifest.xml"
-  apk_name = "ChromiumExampleAutofillService"
+  apk_name = "CinaseekExampleAutofillService"
 
   deps = [
     ":inline_autofill_service_example_apk_resources",
@@ -80,7 +80,7 @@ android_apk("inline_autofill_service_example_apk") {
     # implementation libs.navigation.fragment
     # implementation libs.navigation.ui
   ]
-  chromium_code = false
+  Cinaseek_code = false
   never_incremental = true
 
   #min_sdk_version = 33

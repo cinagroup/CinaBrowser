@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ class PageAgentViewsTest : public views::ViewsTestBase {
   bool HasSource(protocol::Array<protocol::Page::FrameResource>* resources,
                  std::string source) {
     for (const auto& resource : *resources) {
-      if (resource->getUrl() == kChromiumCodeSearchSrcURL + source)
+      if (resource->getUrl() == kCinaseekCodeSearchSrcURL + source)
         return true;
     }
     return false;
@@ -95,14 +95,14 @@ TEST_F(PageAgentViewsTest, GetResourceTree) {
 
   protocol::Page::Frame* frame_object = resource_tree->getFrame();
   EXPECT_EQ(frame_object->getId(), "1");
-  EXPECT_EQ(frame_object->getUrl(), kChromiumCodeSearchURL);
+  EXPECT_EQ(frame_object->getUrl(), kCinaseekCodeSearchURL);
 
   EXPECT_TRUE(VerifyResources(resource_tree->getResources()));
 }
 
 TEST_F(PageAgentViewsTest, GetResourceContent) {
   auto result = GetResourceContent(
-      "chromium/src/components/test/data/ui_devtools/test_file.cc?l=0");
+      "Cinaseek/src/components/test/data/ui_devtools/test_file.cc?l=0");
 
   EXPECT_TRUE(result.first);
   EXPECT_NE(result.second, "");
@@ -118,13 +118,13 @@ TEST_F(PageAgentViewsTest, GetResourceContentFailsOnBadURL) {
 
   // Test if URL doesn't have line number.
   result = GetResourceContent(
-      "chromium/src/components/test/data/ui_devtools/test_file.cc");
+      "Cinaseek/src/components/test/data/ui_devtools/test_file.cc");
 
   EXPECT_FALSE(result.first);
   EXPECT_EQ(result.second, "");
 
   // Test if URL isn't a real file.
-  result = GetResourceContent("chromium/src/not/a/real/file.cc?l=0");
+  result = GetResourceContent("Cinaseek/src/not/a/real/file.cc?l=0");
 
   EXPECT_FALSE(result.first);
   EXPECT_EQ(result.second, "");

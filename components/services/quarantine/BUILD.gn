@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -112,7 +112,7 @@ source_set("unit_tests") {
     "quarantine_service_unittest.cc",
   ]
 
-  # Chromecasts do not have extended attributes enabled; even if it were
+  # Cinaseekcasts do not have extended attributes enabled; even if it were
   # enabled, the devices use tmpfs which restricts the extended attributes that
   # can be set such that quarantining still would not work. (The platform
   # specific tests include a runtime guard to skip tests that need xattr.)

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,11 +18,11 @@ namespace blink {
 class WebString;
 
 // WebCodeCacheGenerator is an API to generate serialized code cache data for a
-// given JS module for distribution in Chromium's resource bundle.
-// Generated code cache assumes UTF-8 script encoding, which is true of Chromium
+// given JS module for distribution in Cinaseek's resource bundle.
+// Generated code cache assumes UTF-8 script encoding, which is true of Cinaseek
 // bundled JS scripts.
 // This API should be used only by tools/code_cache_generator, which runs during
-// Chromium's build step.
+// Cinaseek's build step.
 class BLINK_EXPORT WebBundledCodeCacheGenerator {
  public:
   using SerializedCodeCacheData = std::vector<uint8_t>;

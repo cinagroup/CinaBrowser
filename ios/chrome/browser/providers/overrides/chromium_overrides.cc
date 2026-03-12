@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@ namespace ios {
 namespace provider {
 
 void InstallOverrides() {
-  // No overrides in Chromium.
+  // No overrides in Cinaseek.
 }
 
 }  // namespace provider

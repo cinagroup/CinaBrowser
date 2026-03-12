@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -321,7 +321,7 @@ TEST_F(MetricsStateManagerTest,
 #if !BUILDFLAG(IS_WIN)
 TEST_F(MetricsStateManagerTest, ProvisionalClientId_PromotedToClientId) {
   // Force enable the creation of a provisional client ID on first run for
-  // consistency between Chromium and Chrome builds.
+  // consistency between Cinaseek and Chrome builds.
   MetricsStateManager::enable_provisional_client_id_for_testing_ = true;
 
   std::unique_ptr<MetricsStateManager> state_manager(CreateStateManager());
@@ -360,7 +360,7 @@ TEST_F(MetricsStateManagerTest, ProvisionalClientId_PromotedToClientId) {
 
 TEST_F(MetricsStateManagerTest, ProvisionalClientId_PersistedAcrossFirstRuns) {
   // Force enable the creation of a provisional client ID on first run for
-  // consistency between Chromium and Chrome builds.
+  // consistency between Cinaseek and Chrome builds.
   MetricsStateManager::enable_provisional_client_id_for_testing_ = true;
 
   std::string provisional_client_id;
@@ -654,7 +654,7 @@ TEST_F(MetricsStateManagerTest, CheckProviderResetIds) {
   base::HistogramTester histogram_tester;
   ChromeUserMetricsExtension uma_proto;
   // The system_profile in the |uma_proto| is provided in
-  // https://source.chromium.org/chromium/chromium/src/+/main:components/metrics/metrics_service.cc;drc=4b86ff6c58f5651a4e2f44abb22d93c3593155cb;l=759
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/metrics/metrics_service.cc;drc=4b86ff6c58f5651a4e2f44abb22d93c3593155cb;l=759
   // and it's hard to be tested here. For logs from the previous session:
   // 1. if the previous session is the detection session, the
   // |uma_proto.system_profile| won't contain the latest cloned_install_info

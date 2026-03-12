@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -118,7 +118,7 @@ namespace autofill {
 // filling!
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 //
 // LINT.IfChange
 // This enum set must be kept in sync with IDL enum used by JS code.

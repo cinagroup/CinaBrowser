@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,19 +37,19 @@ constexpr struct TestParams {
      {{{"A6.2831853B", 24, 24, 448, 95}}}},
     {FILE_PATH_LITERAL("code_39.png"), 1u, {{{"CHROMIUM", 20, 20, 318, 75}}}},
     {FILE_PATH_LITERAL("code_93.png"), 1u, {{{"CHROMIUM", 20, 20, 216, 75}}}},
-    {FILE_PATH_LITERAL("code_128.png"), 1u, {{{"Chromium", 20, 20, 246, 75}}}},
+    {FILE_PATH_LITERAL("code_128.png"), 1u, {{{"Cinaseek", 20, 20, 246, 75}}}},
     {FILE_PATH_LITERAL("data_matrix.png"),
      1u,
-     {{{"Chromium", 11, 11, 53, 53}}}},
+     {{{"Cinaseek", 11, 11, 53, 53}}}},
     {FILE_PATH_LITERAL("ean_8.png"), 1u, {{{"62831857", 14, 10, 134, 75}}}},
     {FILE_PATH_LITERAL("ean_13.png"),
      1u,
      {{{"6283185307179", 27, 10, 190, 75}}}},
     {FILE_PATH_LITERAL("itf.png"), 1u, {{{"62831853071795", 10, 10, 135, 39}}}},
-    {FILE_PATH_LITERAL("pdf417.png"), 1u, {{{"Chromium", 20, 20, 240, 44}}}},
+    {FILE_PATH_LITERAL("pdf417.png"), 1u, {{{"Cinaseek", 20, 20, 240, 44}}}},
     {FILE_PATH_LITERAL("qr_code.png"),
      1u,
-     {{{"https://chromium.org", 40, 40, 250, 250}}}},
+     {{{"https://Cinaseek.org", 40, 40, 250, 250}}}},
     {FILE_PATH_LITERAL("upc_a.png"), 1u, {{{"628318530714", 23, 10, 190, 75}}}},
     {FILE_PATH_LITERAL("upc_e.png"), 1u, {{{"06283186", 23, 10, 102, 75}}}},
     {FILE_PATH_LITERAL("two_upc_a.png"),

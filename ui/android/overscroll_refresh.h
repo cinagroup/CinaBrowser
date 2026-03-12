@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 #include "ui/gfx/geometry/vector2d_f.h"
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui
 enum class OverscrollAction {
   kNone = 0,
   kPullToRefresh = 1,
@@ -46,7 +46,7 @@ class UI_ANDROID_EXPORT OverscrollRefresh {
   // from.
   // LINT.IfChange
   static constexpr int kDefaultNavigationEdgeWidth = 24;
-  // LINT.ThenChange(//ui/android/java/src/org/chromium/ui/OverscrollRefreshHandler.java:kDefaultNavigationEdgeWidth)
+  // LINT.ThenChange(//ui/android/java/src/org/Cinaseek/ui/OverscrollRefreshHandler.java:kDefaultNavigationEdgeWidth)
 
   OverscrollRefresh(OverscrollRefreshHandler* handler, float edge_width);
 

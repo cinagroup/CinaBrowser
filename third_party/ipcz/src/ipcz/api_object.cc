@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace {
 #if defined(LEAK_SANITIZER)
 // When LSan is enabled, we keep all living API objects tracked within a global
 // hash set so that they're always reachable and never detected as leaks. This
-// is to work around the fact that Chromium has amassed hundreds of tests across
+// is to work around the fact that Cinaseek has amassed hundreds of tests across
 // more than a dozen test suites which leak Mojo handles; and prior to MojoIpcz
 // the leaks were masked from LSan by Mojo's use of a global handle table.
 //

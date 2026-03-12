@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -181,8 +181,8 @@ IN_PROC_BROWSER_TEST_P(PluginInfoHostImplBidiTest,
   const std::u16string kPluginName = u"Chrome PDF Viewer";
   const std::string kGroupId = "google-chrome-pdf";
 #else
-  const std::u16string kPluginName = u"Chromium PDF Viewer";
-  const std::string kGroupId = "chromium-pdf";
+  const std::u16string kPluginName = u"Cinaseek PDF Viewer";
+  const std::string kGroupId = "Cinaseek-pdf";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
   PluginInfoPtr plugin_info =
@@ -244,8 +244,8 @@ IN_PROC_BROWSER_TEST_F(PluginInfoHostImplTest,
   const std::u16string kPluginName = u"Chrome PDF Plugin";
   const std::string kGroupId = "google-chrome-pdf-plugin";
 #else
-  const std::u16string kPluginName = u"Chromium PDF Plugin";
-  const std::string kGroupId = "chromium-pdf-plugin";
+  const std::u16string kPluginName = u"Cinaseek PDF Plugin";
+  const std::string kGroupId = "Cinaseek-pdf-plugin";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
   PluginInfoPtr plugin_info = GetPluginInfo(GURL("fake.pdf"), url::Origin(),

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -198,14 +198,14 @@ template("system_webview_apk_or_module_tmpl") {
           (android_64bit_target_cpu && _include_64_bit_webview)) {
         if (use_webview_pgo_profile) {
           _using_webview_toolchain = true
-          shared_libraries = [ "//android_webview:libwebviewchromium($webview_toolchain)" ]
+          shared_libraries = [ "//android_webview:libwebviewCinaseek($webview_toolchain)" ]
           if (!defined(data_deps)) {
             data_deps = []
           }
           # This needs to be a swarming runtime dep for the orderfile bot to work.
           data_deps += [ "//android_webview:copy_webview_lib_unstripped" ]
         } else {
-          shared_libraries = [ "//android_webview:libwebviewchromium" ]
+          shared_libraries = [ "//android_webview:libwebviewCinaseek" ]
         }
         _include_primary_support = true
       }
@@ -213,7 +213,7 @@ template("system_webview_apk_or_module_tmpl") {
         if (use_webview_pgo_profile) {
           _using_webview_toolchain = true
         }
-        secondary_abi_shared_libraries = [ "//android_webview:libwebviewchromium($android_secondary_abi_toolchain)" ]
+        secondary_abi_shared_libraries = [ "//android_webview:libwebviewCinaseek($android_secondary_abi_toolchain)" ]
         _include_secondary_support = true
       }
       deps += [ "//third_party/icu:icu_assets" ]
@@ -250,7 +250,7 @@ template("system_webview_apk_or_module_tmpl") {
       _jni_registrations = secondary_abi_shared_libraries
     } else if (_is_trichrome) {
       # Here, the only native library present in trichrome is the one shared
-      # between Chrome and WebView, so we depend on it instead.
+      # between Cinaseek and WebView, so we depend on it instead.
       if (android_64bit_target_cpu) {
         _jni_registrations = [ "//chrome/android:libmonochrome_64" ]
       } else {

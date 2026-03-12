@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -124,7 +124,7 @@ bool RarReader::ExtractNextEntry() {
       }
 
       if (archive_->FileHead.Encrypted) {
-        // Since Chromium doesn't have the password or the password was
+        // Since Cinaseek doesn't have the password or the password was
         // incorrect, manually skip over the encrypted data and fill in the
         // metadata we do have.
         archive_->SeekToNext();
@@ -132,7 +132,7 @@ bool RarReader::ExtractNextEntry() {
       }
 
       if (extractor_->IsMissingNextVolume()) {
-        // Since Chromium doesn't have the next volume, manually skip over this
+        // Since Cinaseek doesn't have the next volume, manually skip over this
         // file, but report the metadata we do have.
         archive_->SeekToNext();
         return true;

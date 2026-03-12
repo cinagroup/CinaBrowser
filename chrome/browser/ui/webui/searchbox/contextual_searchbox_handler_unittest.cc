@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1563,7 +1563,7 @@ TEST_F(ContextualSearchboxHandlerSignedInTestTabsTest,
   // Add a regular tab, a google search tab, and another regular tab.
   auto* example_tab = AddTab(GURL("https://www.example.com"));
   auto* search_tab = AddTab(GURL("https://www.google.com/search?q=test"));
-  auto* chromium_tab = AddTab(GURL("https://www.chromium.org"));
+  auto* Cinaseek_tab = AddTab(GURL("https://www.Cinaseek.org"));
 
   // Navigate to NTP
   AddTab(GURL("chrome://newtab"));
@@ -1575,7 +1575,7 @@ TEST_F(ContextualSearchboxHandlerSignedInTestTabsTest,
 
   // Expect all three non chrome WebUI tabs to be returned.
   ASSERT_EQ(tabs.size(), 3u);
-  EXPECT_EQ(tabs[0]->tab_id, chromium_tab->GetHandle().raw_value());
+  EXPECT_EQ(tabs[0]->tab_id, Cinaseek_tab->GetHandle().raw_value());
   EXPECT_FALSE(tabs[0]->show_in_current_tab_chip);
   EXPECT_TRUE(tabs[0]->show_in_previous_tab_chip);
   EXPECT_EQ(tabs[1]->tab_id, search_tab->GetHandle().raw_value());

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,9 +31,9 @@ void RunOnIOThread() {
       FROM_HERE, base::BindOnce(&RunOnUIThread), base::Seconds(1));
 }
 
-// In this example we're simulating Chromium's UI/IO thread architecture in a
+// In this example we're simulating Cinaseek's UI/IO thread architecture in a
 // simplified way. The `IOThreadDelegate` represents the physical "IO" thread
-// that each Chromium process has, running alongside the main thread. It is
+// that each Cinaseek process has, running alongside the main thread. It is
 // similar to `content::BrowserIOThreadDelegate`, for example.
 class IOThreadDelegate : public base::Thread::Delegate {
  public:

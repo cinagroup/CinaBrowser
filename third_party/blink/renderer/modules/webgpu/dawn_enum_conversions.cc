@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -722,8 +722,8 @@ wgpu::FeatureName AsDawnEnum(const V8GPUFeatureName& webgpu_enum) {
     case V8GPUFeatureName::Enum::kTimestampQuery:
       return wgpu::FeatureName::TimestampQuery;
     case V8GPUFeatureName::Enum::
-        kChromiumExperimentalTimestampQueryInsidePasses:
-      return wgpu::FeatureName::ChromiumExperimentalTimestampQueryInsidePasses;
+        kCinaseekExperimentalTimestampQueryInsidePasses:
+      return wgpu::FeatureName::CinaseekExperimentalTimestampQueryInsidePasses;
     case V8GPUFeatureName::Enum::kDepthClipControl:
       return wgpu::FeatureName::DepthClipControl;
     case V8GPUFeatureName::Enum::kDepth32FloatStencil8:
@@ -750,10 +750,10 @@ wgpu::FeatureName AsDawnEnum(const V8GPUFeatureName& webgpu_enum) {
       return wgpu::FeatureName::CoreFeaturesAndLimits;
     case V8GPUFeatureName::Enum::kClipDistances:
       return wgpu::FeatureName::ClipDistances;
-    case V8GPUFeatureName::Enum::kChromiumExperimentalMultiDrawIndirect:
+    case V8GPUFeatureName::Enum::kCinaseekExperimentalMultiDrawIndirect:
       return wgpu::FeatureName::MultiDrawIndirect;
-    case V8GPUFeatureName::Enum::kChromiumExperimentalSubgroupMatrix:
-      return wgpu::FeatureName::ChromiumExperimentalSubgroupMatrix;
+    case V8GPUFeatureName::Enum::kCinaseekExperimentalSubgroupMatrix:
+      return wgpu::FeatureName::CinaseekExperimentalSubgroupMatrix;
     case V8GPUFeatureName::Enum::kPrimitiveIndex:
       return wgpu::FeatureName::PrimitiveIndex;
     case V8GPUFeatureName::Enum::kTextureFormatsTier1:
@@ -1123,16 +1123,16 @@ const char* FromDawnEnum(wgpu::WGSLLanguageFeatureName dawn_enum) {
       return "linear_indexing";
 
     // Non-standard.
-    case wgpu::WGSLLanguageFeatureName::ChromiumTestingUnimplemented:
-      return "chromium_testing_unimplemented";
-    case wgpu::WGSLLanguageFeatureName::ChromiumTestingUnsafeExperimental:
-      return "chromium_testing_unsafe_experimental";
-    case wgpu::WGSLLanguageFeatureName::ChromiumTestingExperimental:
-      return "chromium_testing_experimental";
-    case wgpu::WGSLLanguageFeatureName::ChromiumTestingShippedWithKillswitch:
-      return "chromium_testing_shipped_with_killswitch";
-    case wgpu::WGSLLanguageFeatureName::ChromiumTestingShipped:
-      return "chromium_testing_shipped";
+    case wgpu::WGSLLanguageFeatureName::CinaseekTestingUnimplemented:
+      return "Cinaseek_testing_unimplemented";
+    case wgpu::WGSLLanguageFeatureName::CinaseekTestingUnsafeExperimental:
+      return "Cinaseek_testing_unsafe_experimental";
+    case wgpu::WGSLLanguageFeatureName::CinaseekTestingExperimental:
+      return "Cinaseek_testing_experimental";
+    case wgpu::WGSLLanguageFeatureName::CinaseekTestingShippedWithKillswitch:
+      return "Cinaseek_testing_shipped_with_killswitch";
+    case wgpu::WGSLLanguageFeatureName::CinaseekTestingShipped:
+      return "Cinaseek_testing_shipped";
 
     default:
       break;

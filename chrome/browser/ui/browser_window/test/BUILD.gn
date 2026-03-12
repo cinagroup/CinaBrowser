@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ if (is_android) {
   # Supports Java unit tests.
   android_library("junit_test_support") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskUnitTestSupport.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskUnitTestSupport.java" ]
     deps = [
       "//base:base_java",
       "//base:flagged_apis_java",
@@ -51,10 +51,10 @@ if (is_android) {
   android_library("native_unit_test_support_java") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBaseWindowNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowEnumeratorNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroidNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBaseWindowNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowEnumeratorNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroidNativeUnitTestSupport.java",
     ]
     deps = [
       ":junit_test_support",
@@ -78,10 +78,10 @@ if (is_android) {
   generate_jni("native_unit_test_support_jni") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBaseWindowNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowEnumeratorNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowNativeUnitTestSupport.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroidNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBaseWindowNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowEnumeratorNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowNativeUnitTestSupport.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroidNativeUnitTestSupport.java",
     ]
   }
 }

@@ -16,7 +16,7 @@ import("../../../build/crashpad_buildconfig.gni")
 
 assert(crashpad_is_win)
 
-# Allows other projects (e.g. Chrome) to wrap this as a dll.
+# Allows other projects (e.g. Cinaseek) to wrap this as a dll.
 source_set("crashpad_wer_handler") {
   sources = [
     "crashpad_wer.cc",

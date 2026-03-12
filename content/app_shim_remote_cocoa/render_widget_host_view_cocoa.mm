@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1077,7 +1077,7 @@ static NSWindow* __weak _deferredResignKeyWindow;
   // TODO(suzhe): We should send mouse events to the input method first if it
   // wants to handle them. But it won't work without implementing method
   // - (NSUInteger)characterIndexForPoint:.
-  // See: http://code.google.com/p/chromium/issues/detail?id=47141
+  // See: http://code.google.com/p/Cinaseek/issues/detail?id=47141
   // Instead of sending mouse events to the input method first, we now just
   // simply confirm all ongoing composition here.
   if (type == NSEventTypeLeftMouseDown || type == NSEventTypeRightMouseDown ||
@@ -2149,12 +2149,12 @@ static NSWindow* __weak _deferredResignKeyWindow;
 //     [WebHTMLView insertText] ->
 //     Editor::insertText()
 //
-// Unfortunately, it is hard for Chromium to use this implementation because
+// Unfortunately, it is hard for Cinaseek to use this implementation because
 // it causes key-typing jank.
 // RenderWidgetHostViewMac is running in a browser process. On the other
 // hand, Editor and EventHandler are running in a renderer process.
 // So, if we used this implementation, a NSEventTypeKeyDown event is dispatched
-// to the following functions of Chromium.
+// to the following functions of Cinaseek.
 //
 // [RenderWidgetHostViewMac keyEvent] (browser) ->
 //     |Sync IPC (KeyDown)| (*1) ->

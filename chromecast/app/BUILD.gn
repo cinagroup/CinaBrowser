@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -158,7 +158,7 @@ grit_strings("chromecast_settings") {
   deps = [ ":verify_cast_locales" ]
 }
 
-# This target ensures that Chromecast developers are notified when locales
+# This target ensures that Cinaseekcast developers are notified when locales
 # change. If this target is breaking the build, the CAST_LOCALES list in
 # //chromecast/app/verify_cast_locales.py must be updated to match
 # |cast_locales|. Please see that file for more details. This action will be

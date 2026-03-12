@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,11 +17,11 @@ if (is_win) {
 configs_to_add = [
   "//buildtools/third_party/libc++:extra_flags",
   "//buildtools/third_party/libc++:stdver",
-  "//build/config/compiler:no_chromium_code",
+  "//build/config/compiler:no_Cinaseek_code",
 ]
 
 configs_to_remove = [
-  "//build/config/compiler:chromium_code",
+  "//build/config/compiler:Cinaseek_code",
   "//build/config/coverage:default_coverage",
 ]
 
@@ -80,15 +80,15 @@ if (use_clang_modules) {
         ]
       }
 
-      # Header files in modules need to be built with chromium_code config as
-      # some warnings are not triggered if we use no_chromium_code config for
+      # Header files in modules need to be built with Cinaseek_code config as
+      # some warnings are not triggered if we use no_Cinaseek_code config for
       # modules compiles.
-      configs -= configs_to_remove - [ "//build/config/compiler:chromium_code" ]
+      configs -= configs_to_remove - [ "//build/config/compiler:Cinaseek_code" ]
 
       # The module needs to use the same version of -std that is used by the
       # libraries depending on it. Otherwise we get a module config mismatch.
       configs += configs_to_add - [
-                   "//build/config/compiler:no_chromium_code",
+                   "//build/config/compiler:no_Cinaseek_code",
                    "//buildtools/third_party/libc++:stdver",
                  ]
 

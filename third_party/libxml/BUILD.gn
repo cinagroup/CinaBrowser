@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -91,8 +91,8 @@ static_library("xml_reader") {
     visibility += [ "//components/wifi" ]
   }
   sources = [
-    "chromium/xml_reader.cc",
-    "chromium/xml_reader.h",
+    "Cinaseek/xml_reader.cc",
+    "Cinaseek/xml_reader.h",
   ]
   deps = [
     ":libxml",
@@ -106,8 +106,8 @@ static_library("xml_writer") {
   # The XmlWriter is considered safe to use from any target.
   visibility = [ "*" ]
   sources = [
-    "chromium/xml_writer.cc",
-    "chromium/xml_writer.h",
+    "Cinaseek/xml_writer.cc",
+    "Cinaseek/xml_writer.h",
   ]
   deps = [
     ":libxml",
@@ -128,8 +128,8 @@ static_library("libxml_utils") {
     "//services/data_decoder:xml_parser_fuzzer_deps",
   ]
   sources = [
-    "chromium/libxml_utils.cc",
-    "chromium/libxml_utils.h",
+    "Cinaseek/libxml_utils.cc",
+    "Cinaseek/libxml_utils.h",
   ]
   deps = [ ":libxml" ]
   public_deps = [ "//third_party/icu:icuuc" ]
@@ -262,11 +262,11 @@ static_library("libxml") {
     #"src/xzlib.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
 
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":libxml_warnings",
   ]
 
@@ -294,7 +294,7 @@ static_library("libxml") {
     configs -= [ "//build/config/win:lean_and_mean" ]
   }
 
-  sources += [ "chromium/disabled_libxml_features.cc" ]
+  sources += [ "Cinaseek/disabled_libxml_features.cc" ]
 
   public_configs = [ ":libxml_config" ]
   public_deps = [ "//third_party/icu:icuuc" ]

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,8 +32,8 @@ TEST_F(QRCodeGeneratorBubbleTest, SuggestedDownloadURLNoIP) {
             u"qrcode_chrome.png");
 
   EXPECT_EQ(QRCodeGeneratorBubble::GetQRCodeFilenameForURL(
-                GURL("https://chromium.org")),
-            u"qrcode_chromium.org.png");
+                GURL("https://Cinaseek.org")),
+            u"qrcode_Cinaseek.org.png");
 
   EXPECT_EQ(
       QRCodeGeneratorBubble::GetQRCodeFilenameForURL(GURL("text, not url")),
@@ -74,7 +74,7 @@ class QRCodeGeneratorBubbleUITest : public ChromeViewsTestBase {
     CHECK(anchor_view_);
     auto bubble = std::make_unique<QRCodeGeneratorBubble>(
         anchor_view_, web_contents_->GetWeakPtr(), base::DoNothing(),
-        base::DoNothing(), GURL("https://www.chromium.org/a"));
+        base::DoNothing(), GURL("https://www.Cinaseek.org/a"));
 
     bubble_ = bubble.get();
     // TODO(crbug.com/40232479) - We can probably clean this up and
@@ -152,7 +152,7 @@ TEST_F(QRCodeGeneratorBubbleUITest, ImageShowsAfterErrorState) {
   {
     VisibilityChangedWaiter waiter(image());
     bubble()->SetQRCodeErrorForTesting(qr_code_generator::Error::kUnknownError);
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
     EXPECT_FALSE(ImageShowing());
   }
@@ -162,7 +162,7 @@ TEST_F(QRCodeGeneratorBubbleUITest, ImageShowsAfterErrorState) {
   {
     VisibilityChangedWaiter waiter(image());
     bubble()->SetQRCodeErrorForTesting(std::nullopt);
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
     EXPECT_TRUE(ImageShowing());
   }
@@ -180,7 +180,7 @@ TEST_F(QRCodeGeneratorBubbleUITest,
   {
     VisibilityChangedWaiter waiter(image());
     bubble()->SetQRCodeErrorForTesting(qr_code_generator::Error::kUnknownError);
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
 
     EXPECT_FALSE(ImageShowing());
@@ -192,7 +192,7 @@ TEST_F(QRCodeGeneratorBubbleUITest,
     bubble()->SetQRCodeErrorForTesting(std::nullopt);
     // The UI regenerates the QR code when the user types new text, so
     // synthesize that.
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
 
     EXPECT_TRUE(ImageShowing());
@@ -220,7 +220,7 @@ TEST_F(QRCodeGeneratorBubbleUITest, LabelHidesAfterErrorState) {
   {
     VisibilityChangedWaiter waiter(image());
     bubble()->SetQRCodeErrorForTesting(qr_code_generator::Error::kUnknownError);
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
 
     EXPECT_FALSE(ImageShowing());
@@ -230,7 +230,7 @@ TEST_F(QRCodeGeneratorBubbleUITest, LabelHidesAfterErrorState) {
   {
     VisibilityChangedWaiter waiter(image());
     bubble()->SetQRCodeErrorForTesting(qr_code_generator::Error::kInputTooLong);
-    textfield()->InsertOrReplaceText(u"https://www.chromium.org/b");
+    textfield()->InsertOrReplaceText(u"https://www.Cinaseek.org/b");
     waiter.Wait();
     EXPECT_TRUE(ImageShowing());
     EXPECT_TRUE(ImagePlaceholderShowing());

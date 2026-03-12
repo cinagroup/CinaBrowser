@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // this enum will be persisted to server logs and should not be deleted, changed
 // or reused.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.chrome.browser.download)
+//   org.Cinaseek.chrome.browser.download)
 enum class DownloadOpenSource {
   // The action source is unknown.
   kUnknown = 0,

@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/logging.gni")
 
 config("symbolize_config") {
   defines = [
-    # Only built for Linux and ChromeOS so no special export magic needed.
+    # Only built for Linux and CinaseekOS so no special export magic needed.
     "GLOG_EXPORT=",
   ]
 }
@@ -33,11 +33,11 @@ static_library("symbolize") {
 
   # Symbolization is quite slow when not built in optimized, so always optimize it.
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:default_optimization",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/compiler:optimize_max",
   ]
 

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -975,7 +975,7 @@ void FileUploadDelegate::InitializeOnce() {
           destination: GOOGLE_OWNED_SERVICE
           internal {
             contacts {
-              email: "lbaraz@chromium.org"
+              email: "lbaraz@Cinaseek.org"
             }
             contacts {
               email: "cros-reporting-team@google.com"

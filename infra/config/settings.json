@@ -1,6 +1,6 @@
 {
-    "project": "chromium",
-    "project_title": "Chromium",
+    "project": "Cinaseek",
+    "project_title": "Cinaseek",
     "ref": "refs/heads/main",
     "chrome_project": "chrome",
     "dawn_ref": "refs/heads/main",

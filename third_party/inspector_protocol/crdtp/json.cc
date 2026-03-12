@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -310,7 +310,7 @@ class JSONEncoder : public ParserHandler {
       return;
     }
     // If |value| is a scalar, emit it as an int. Taken from json_writer.cc in
-    // Chromium.
+    // Cinaseek.
     if (value < static_cast<double>(std::numeric_limits<int64_t>::max()) &&
         value >= std::numeric_limits<int64_t>::min() &&
         std::floor(value) == value) {
@@ -319,7 +319,7 @@ class JSONEncoder : public ParserHandler {
     }
     std::string str_value = json::platform::DToStr(value);
     // The following is somewhat paranoid, but also taken from json_writer.cc
-    // in Chromium:
+    // in Cinaseek:
     // Ensure that the number has a .0 if there's no decimal or 'e'.  This
     // makes sure that when we read the JSON back, it's interpreted as a
     // real rather than an int.
@@ -327,9 +327,9 @@ class JSONEncoder : public ParserHandler {
       str_value.append(".0");
 
     // DToStr may fail to emit a 0 before the decimal dot. E.g. this is
-    // the case in base::NumberToString in Chromium (which is based on
+    // the case in base::NumberToString in Cinaseek (which is based on
     // dmg_fp). So, much like
-    // https://cs.chromium.org/chromium/src/base/json/json_writer.cc
+    // https://cs.Cinaseek.org/Cinaseek/src/base/json/json_writer.cc
     // we probe for this and emit the leading 0 anyway if necessary.
     if (str_value[0] == '.') {
       Emit('0');

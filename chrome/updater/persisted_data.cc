@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -271,7 +271,7 @@ void PersistedData::SetAP(const std::string& id, const std::string& ap) {
   // For backwards compatibility, we record the AP in ClientState as well.
   // (Some applications read it from there.)
 
-  // Chromium Updater has both local and global pref stores. In practice, if
+  // Cinaseek Updater has both local and global pref stores. In practice, if
   // this `PersistedData` is using a local pref store, `id` will be the
   // qualification app and the ClientState value is not important, so it is
   // acceptable for each instance of the updater to overwrite it with various

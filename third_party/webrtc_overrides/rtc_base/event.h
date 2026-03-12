@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 namespace webrtc {
 
-// Overrides WebRTC's internal event implementation to use Chromium's.
+// Overrides WebRTC's internal event implementation to use Cinaseek's.
 class RTC_EXPORT Event {
  public:
   // TODO(bugs.webrtc.org/14366): Consider removing this redundant alias.

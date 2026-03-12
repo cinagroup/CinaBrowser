@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,15 +7,15 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("browser_binding_jni") {
   sources = [
-    "java/src/org/chromium/components/enterprise/client_certificates/BrowserKey.java",
-    "java/src/org/chromium/components/enterprise/client_certificates/BrowserKeyStore.java",
+    "java/src/org/Cinaseek/components/enterprise/client_certificates/BrowserKey.java",
+    "java/src/org/Cinaseek/components/enterprise/client_certificates/BrowserKeyStore.java",
   ]
 }
 
 android_library("browser_binding_java") {
   sources = [
-    "java/src/org/chromium/components/enterprise/client_certificates/BrowserKey.java",
-    "java/src/org/chromium/components/enterprise/client_certificates/BrowserKeyStore.java",
+    "java/src/org/Cinaseek/components/enterprise/client_certificates/BrowserKey.java",
+    "java/src/org/Cinaseek/components/enterprise/client_certificates/BrowserKeyStore.java",
   ]
   deps = [
     "//base:base_java",
@@ -28,7 +28,7 @@ android_library("browser_binding_java") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/enterprise/client_certificates/BrowserKeyStoreTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/enterprise/client_certificates/BrowserKeyStoreTest.java" ]
   deps = [
     ":browser_binding_java",
     "//base:base_java_test_support",

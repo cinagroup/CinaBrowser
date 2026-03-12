@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@
 
 namespace remoting {
 
-// A wrapper around a GDBusConnection providing Chromium-style async callbacks
+// A wrapper around a GDBusConnection providing Cinaseek-style async callbacks
 // using GVariantRef for type-safe GVariant handling.
 //
 // Like with GDBusConnection, calls can be made from any thread. The reply

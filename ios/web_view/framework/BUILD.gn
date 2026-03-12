@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -15,7 +15,7 @@ import("//ios/web_view/framework/sources.gni")
 # from `//partition_alloc` even when `use_partition_alloc = false`.
 #
 # See https://crbug.com/448107419 for example of failures for this
-# configuration. Since ChromeWebView is not shipped when building with
+# configuration. Since CinaseekWebView is not shipped when building with
 # `use_blink = true`, do not build it as app extension safe in that
 # case.
 _framework_as_app_ext_safe = !use_blink

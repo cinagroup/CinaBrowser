@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -125,12 +125,12 @@ component("url") {
 
 if (is_android || is_robolectric) {
   generate_jni("url_jni_headers") {
-    sources = [ "android/java/src/org/chromium/url/IDNStringUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/url/IDNStringUtil.java" ]
     if (!is_cronet_build) {
       sources += [
-        "android/java/src/org/chromium/url/GURL.java",
-        "android/java/src/org/chromium/url/Origin.java",
-        "android/java/src/org/chromium/url/Parsed.java",
+        "android/java/src/org/Cinaseek/url/GURL.java",
+        "android/java/src/org/Cinaseek/url/Origin.java",
+        "android/java/src/org/Cinaseek/url/Parsed.java",
       ]
     }
   }
@@ -142,15 +142,15 @@ if (is_android && current_toolchain == default_toolchain) {
   }
 
   android_library("url_java") {
-    sources = [ "android/java/src/org/chromium/url/IDNStringUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/url/IDNStringUtil.java" ]
     srcjar_deps = [ ":url_jni_headers" ]
     deps = [ "//third_party/jni_zero:jni_zero_java" ]
     if (!is_cronet_build) {
       sources += [
-        "android/java/src/org/chromium/url/GURL.java",
-        "android/java/src/org/chromium/url/Origin.java",
-        "android/java/src/org/chromium/url/Parsed.java",
-        "android/java/src/org/chromium/url/URI.java",
+        "android/java/src/org/Cinaseek/url/GURL.java",
+        "android/java/src/org/Cinaseek/url/Origin.java",
+        "android/java/src/org/Cinaseek/url/Parsed.java",
+        "android/java/src/org/Cinaseek/url/URI.java",
       ]
       deps += [
         "//base:base_java",
@@ -306,8 +306,8 @@ if (is_android && !is_cronet_build) {
 
       srcjar_deps = [ ":j_test_jni_headers" ]
       sources = [
-        "android/javatests/src/org/chromium/url/GURLJavaTestHelper.java",
-        "android/javatests/src/org/chromium/url/OriginJavaTestHelper.java",
+        "android/javatests/src/org/Cinaseek/url/GURLJavaTestHelper.java",
+        "android/javatests/src/org/Cinaseek/url/OriginJavaTestHelper.java",
       ]
       deps = [
         ":url_java",
@@ -320,15 +320,15 @@ if (is_android && !is_cronet_build) {
     # checks.
     android_library("gurl_junit_test_support") {
       testonly = true
-      sources = [ "android/test/java/src/org/chromium/url/JUnitTestGURLs.java" ]
+      sources = [ "android/test/java/src/org/Cinaseek/url/JUnitTestGURLs.java" ]
       deps = [ ":url_java" ]
     }
 
     android_library("url_java_unit_tests") {
       testonly = true
       sources = [
-        "android/javatests/src/org/chromium/url/GURLJavaTest.java",
-        "android/javatests/src/org/chromium/url/OriginJavaTest.java",
+        "android/javatests/src/org/Cinaseek/url/GURLJavaTest.java",
+        "android/javatests/src/org/Cinaseek/url/OriginJavaTest.java",
       ]
       deps = [
         ":android_test_helper_java",
@@ -349,13 +349,13 @@ if (is_android && !is_cronet_build) {
       ]
     }
 
-    # See https://bugs.chromium.org/p/chromium/issues/detail?id=908819 for why we
+    # See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=908819 for why we
     # can't put 'java' in the name here.
     generate_jni("j_test_jni_headers") {
       testonly = true
       sources = [
-        "android/javatests/src/org/chromium/url/GURLJavaTestHelper.java",
-        "android/javatests/src/org/chromium/url/OriginJavaTestHelper.java",
+        "android/javatests/src/org/Cinaseek/url/GURLJavaTestHelper.java",
+        "android/javatests/src/org/Cinaseek/url/OriginJavaTestHelper.java",
       ]
     }
   }

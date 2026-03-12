@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -65,12 +65,12 @@ if (is_android) {
   android_library("java") {
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/chrome/browser/share/ChromeShareExtras.java",
-      "android/java/src/org/chromium/chrome/browser/share/ShareDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/share/ShareDelegateSupplier.java",
-      "android/java/src/org/chromium/chrome/browser/share/ShareHistoryBridge.java",
-      "android/java/src/org/chromium/chrome/browser/share/ShareRankingBridge.java",
-      "android/java/src/org/chromium/chrome/browser/share/share_sheet/ChromeOptionShareCallback.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/CinaseekShareExtras.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareDelegateSupplier.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareHistoryBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareRankingBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/share_sheet/CinaseekOptionShareCallback.java",
     ]
 
     deps = [
@@ -91,8 +91,8 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/share/ShareHistoryBridge.java",
-      "android/java/src/org/chromium/chrome/browser/share/ShareRankingBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareHistoryBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/share/ShareRankingBridge.java",
     ]
   }
 }

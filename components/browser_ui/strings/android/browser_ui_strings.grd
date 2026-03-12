@@ -283,7 +283,7 @@
       <message name="IDS_SEARCH" desc="The label for a search button.">
         Search
       </message>
-      <message name="IDS_SETTINGS" desc="Title for Chrome's Settings.">
+      <message name="IDS_SETTINGS" desc="Title for Cinaseek's Settings.">
         Settings
       </message>
       <message name="IDS_SHOW_INFO" desc="The label for a info button to show info.">
@@ -418,7 +418,7 @@
       <message name="IDS_MENU_HELP" desc="Menu item for opening the help page. [CHAR_LIMIT=27]">
         Help &amp; feedback
       </message>
-      <message name="IDS_AUTOMATICALLY_BLOCKED" desc="Description displayed next to an origin when it was placed under embargo by Chrome. This indicates to the user that the origin is blocked automatically instead of being the result of the user's decision.">
+      <message name="IDS_AUTOMATICALLY_BLOCKED" desc="Description displayed next to an origin when it was placed under embargo by Cinaseek. This indicates to the user that the origin is blocked automatically instead of being the result of the user's decision.">
         Automatically blocked
       </message>
 
@@ -577,15 +577,15 @@
         Cookies and other site data are used to remember you, for example to sign you in or to personalize ads. To manage cookies for all sites, see <ph name="BEGIN_LINK">&lt;link&gt;</ph>Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_PAGE_INFO_COOKIES_BLOCKING_RESTART_TODAY_TITLE" desc="Subtitle shown on the Page Info UI when cookies are allowed temporarily, indicating how long until they are no longer allowed. Used for the Today's variation.">
-        Chrome will block cookies again today
+        Cinaseek will block cookies again today
       </message>
       <message name="IDS_PAGE_INFO_COOKIES_BLOCKING_RESTART_TRACKING_PROTECTION_TITLE" desc="Subtitle shown on the Page Info UI when cookies are allowed temporarily, indicating how long until they are no longer allowed.">
         {DAYS, plural,
-          =1 {Chrome will block cookies again tomorrow}
+          =1 {Cinaseek will block cookies again tomorrow}
           other {# days until cookies are blocked again}}
       </message>
       <message name="IDS_PAGE_INFO_COOKIES_SEND_FEEDBACK_DESCRIPTION" desc="Text asking the user for feedback on why they allowed third-party cookies for this particular site.">
-        Help us improve Chrome by telling us why you allowed third-party cookies. <ph name="BEGIN_LINK">&lt;link&gt;</ph>Send feedback<ph name="END_LINK">&lt;/link&gt;</ph>
+        Help us improve Cinaseek by telling us why you allowed third-party cookies. <ph name="BEGIN_LINK">&lt;link&gt;</ph>Send feedback<ph name="END_LINK">&lt;/link&gt;</ph>
       </message>
       <message name="IDS_PAGE_INFO_COOKIES_PERMANENT_ALLOWED_TITLE" desc="A subtitle in the Page Info UI if cookies were allowed by the user and they won't be automatically blocked again the future.">
         You allowed third-party cookies on this site
@@ -638,14 +638,14 @@
       <message name="IDS_PAGE_INFO_AD_PRIVACY_HEADER" desc="A label that represents the new ad-related settings. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button.">
         Ad privacy
       </message>
-      <message name="IDS_PAGE_INFO_AD_PRIVACY_TOPICS_DESCRIPTION" desc="1 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses the Ad topics setting. What's the Ad topics setting? When on, Chrome will estimate the user's topics of interest based on their recent browsing history and then show up to 3 of those topics with a site so that the site can better personalize ads (a privacy-preserving way to replicate some of the functionality of third-party cookies). In this case, we're informing the user that this site uses the Ad topics API and we're showing the user the ad topics Chrome has shared with the site. A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics.">
-        This site gets your ad topics from Chrome to show you more relevant ads
+      <message name="IDS_PAGE_INFO_AD_PRIVACY_TOPICS_DESCRIPTION" desc="1 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses the Ad topics setting. What's the Ad topics setting? When on, Cinaseek will estimate the user's topics of interest based on their recent browsing history and then show up to 3 of those topics with a site so that the site can better personalize ads (a privacy-preserving way to replicate some of the functionality of third-party cookies). In this case, we're informing the user that this site uses the Ad topics API and we're showing the user the ad topics Cinaseek has shared with the site. A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics.">
+        This site gets your ad topics from Cinaseek to show you more relevant ads
       </message>
-      <message name="IDS_PAGE_INFO_AD_PRIVACY_FLEDGE_DESCRIPTION" desc="2 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses the Site-suggested ads setting. What's the Site-suggested ads setting? When on, a site can determine a user's interests, save info with Chrome relative to those interests. Later, as a user continues browsing, a site can ask Chrome for a user's interests and the first site can (through Chrome) suggest ads the user might like. In this case, we're informing the user that this site uses the Site-suggested ads API. A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics.">
+      <message name="IDS_PAGE_INFO_AD_PRIVACY_FLEDGE_DESCRIPTION" desc="2 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses the Site-suggested ads setting. What's the Site-suggested ads setting? When on, a site can determine a user's interests, save info with Cinaseek relative to those interests. Later, as a user continues browsing, a site can ask Cinaseek for a user's interests and the first site can (through Cinaseek) suggest ads the user might like. In this case, we're informing the user that this site uses the Site-suggested ads API. A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics.">
         This site determines things you like and then suggests ads to other sites
       </message>
-      <message name="IDS_PAGE_INFO_AD_PRIVACY_TOPICS_AND_FLEDGE_DESCRIPTION" desc="3 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses both the Ad topics and Site-suggested ads settings. AD TOPICS: When on, Chrome will estimate the user's topics of interest based on their recent browsing history and then show up to 3 of those topics with a site so that the site can better personalize ads (a privacy-preserving way to replicate some of the functionality of third-party cookies). SITE-SUGGESTED ADS: When on, a site can determine a user's interests, save info with Chrome relative to those interests. Later, as a user continues browsing, a site can ask Chrome for a user's interests and the first site can (through Chrome) suggest ads the user might like. In this case, we're informing the user that this site 1) has asked Chrome for the user's interests (the Ad topics setting), and 2) uses the Site-suggested ads API (this site determines the user's interests and then can suggest ads to other sites as the user continues browsing). A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics or sites.">
-        This site determines things you like and then suggests ads to other sites. This site also gets your ad topics from Chrome to show you more relevant ads.
+      <message name="IDS_PAGE_INFO_AD_PRIVACY_TOPICS_AND_FLEDGE_DESCRIPTION" desc="3 of 3 possible descriptions a user might see when they choose 'Ad privacy' from page info for a specific site. 1) Navigate to any site. 2) Click the icon (often a lock) to the left of the URL in the address bar. Information about the page you're viewing appears. The 'Ad privacy' label will appear above the 'Site settings' button. 3) Click on Ad privacy. This string describes the case that the site being viewed uses both the Ad topics and Site-suggested ads settings. AD TOPICS: When on, Cinaseek will estimate the user's topics of interest based on their recent browsing history and then show up to 3 of those topics with a site so that the site can better personalize ads (a privacy-preserving way to replicate some of the functionality of third-party cookies). SITE-SUGGESTED ADS: When on, a site can determine a user's interests, save info with Cinaseek relative to those interests. Later, as a user continues browsing, a site can ask Cinaseek for a user's interests and the first site can (through Cinaseek) suggest ads the user might like. In this case, we're informing the user that this site 1) has asked Cinaseek for the user's interests (the Ad topics setting), and 2) uses the Site-suggested ads API (this site determines the user's interests and then can suggest ads to other sites as the user continues browsing). A button 'Manage ad privacy' allows the user to turn 'Ad privacy' settings on/off or to block specific ad topics or sites.">
+        This site determines things you like and then suggests ads to other sites. This site also gets your ad topics from Cinaseek to show you more relevant ads.
       </message>
       <message name="IDS_PAGE_INFO_AD_PRIVACY_SUBPAGE_MANAGE_BUTTON" desc="A button label that opens the Ad privacy page, allowing a user to turn on / off the ad privacy settings and to manage the topics and sites that influence ad personalization.">
         Manage ad privacy
@@ -1051,11 +1051,11 @@
       <message name="IDS_ACCESSIBILITY_CAPTIONS_TITLE" desc="Title of the preference that allows the user to update caption settings.">
         Captions
       </message>
-      <message name="IDS_JUMP_START_OMNIBOX_TITLE" desc="When this preference is enabled, Chrome start-up time is reduced, and the user is taken directly to an active Omnibox">
+      <message name="IDS_JUMP_START_OMNIBOX_TITLE" desc="When this preference is enabled, Cinaseek start-up time is reduced, and the user is taken directly to an active Omnibox">
         Jump-start Omnibox
       </message>
-      <message name="IDS_JUMP_START_OMNIBOX_SUMMARY" desc="When this preference is enabled, Chrome start-up time is reduced, and the user is taken directly to an active Omnibox">
-        Launch Chrome with the Omnibox focused, reducing start-up time on low-end devices.
+      <message name="IDS_JUMP_START_OMNIBOX_SUMMARY" desc="When this preference is enabled, Cinaseek start-up time is reduced, and the user is taken directly to an active Omnibox">
+        Launch Cinaseek with the Omnibox focused, reducing start-up time on low-end devices.
       </message>
       <message name="IDS_TOUCHPAD_OVERSCROLL_HISTORY_NAVIGATION_TITLE" desc="Title of the preference to enable swipe-to-navigate by touchpad horizontal overscroll">
         Swipe between pages using a touchpad
@@ -1117,7 +1117,7 @@
         Match Android font size
       </message>
       <message name="IDS_PAGE_ZOOM_INCLUDE_OS_ADJUSTMENT_SUMMARY" translateable="false" desc="Summary of the preference that allows the user to control if page zoom adjusts for OS level setting">
-        When enabled, Chrome will adjust web content size to match your Android setting
+        When enabled, Cinaseek will adjust web content size to match your Android setting
       </message>
       <message name="IDS_PAGE_ZOOM_ALWAYS_SHOW_PREFERENCE_TITLE" desc="Title of the preference that allows the user to always show the menu item for zoom">
         Show zoom option in main menu
@@ -1221,16 +1221,16 @@
         Hide View tabs in your app list
       </message>
       <message name="IDS_AUXILIARY_SEARCH_MODULE_CONTENT" desc="Content of the auxiliary search module on NTP for a device with this feature enabled by default..">
-        Chrome now shares your recent tabs with your device. You’ll see them in your device’s app list and search results. You can turn this off anytime in Chrome settings.
+        Cinaseek now shares your recent tabs with your device. You’ll see them in your device’s app list and search results. You can turn this off anytime in Cinaseek settings.
       </message>
       <message name="IDS_AUXILIARY_SEARCH_MODULE_CONTENT_SHORT" desc="Content of the auxiliary search module on NTP for a device with this feature enabled by default..">
-        Chrome now shows your recent tabs in your device's app list and search results. You can turn this off anytime in Chrome settings.
+        Cinaseek now shows your recent tabs in your device's app list and search results. You can turn this off anytime in Cinaseek settings.
       </message>
       <message name="IDS_AUXILIARY_SEARCH_MODULE_CONTENT_DEFAULT_OFF" desc="Content of the auxiliary search module on NTP for a device with this feature disabled by default.">
-        Let Chrome share your recent tabs with your device to see them in your device's app list and search results. You can turn this on or off in Chrome settings.
+        Let Cinaseek share your recent tabs with your device to see them in your device's app list and search results. You can turn this on or off in Cinaseek settings.
       </message>
       <message name="IDS_AUXILIARY_SEARCH_MODULE_CONTENT_DEFAULT_OFF_SHORT" desc="Content of the auxiliary search module on NTP for a device with this feature disabled by default.">
-        Let Chrome show your recent tabs in your device’s app list and search results. You can turn this off anytime in Chrome settings.
+        Let Cinaseek show your recent tabs in your device’s app list and search results. You can turn this off anytime in Cinaseek settings.
       </message>
       <message name="IDS_AUXILIARY_SEARCH_MODULE_BUTTON_GO_TO_SETTINGS" desc="The text shown on the Go to settings button on the auxiliary search module on NTP.">
         Go to settings
@@ -1247,13 +1247,13 @@
 
       <!-- Educational tip module strings -->
       <message name="IDS_EDUCATIONAL_TIP_MODULE_TITLE" desc="Title of the educational tip module on NTP.">
-        Chrome Tips
+        Cinaseek Tips
       </message>
       <message name="IDS_EDUCATIONAL_TIP_MODULE_NAME" desc="The string that is shown in settings to customize whether the educational tip card should be enabled.">
-        Chrome tips
+        Cinaseek tips
       </message>
       <message name="IDS_EDUCATIONAL_TIP_MODULE_CONTEXT_MENU_HIDE" desc="The string that is going to be part of the context menu item string to hide the educational tip card.">
-        Hide Chrome tips card
+        Hide Cinaseek tips card
       </message>
       <message name="IDS_EDUCATIONAL_TIP_MODULE_BUTTON" desc="Name of the clickable button in the educational tip module on NTP.">
         Show me how
@@ -1264,13 +1264,13 @@
       <message name="IDS_ACCESSIBILITY_EDUCATIONAL_TIP_SETUP_LIST_SEE_MORE" is_accessibility_with_no_ui="true" desc="Accessibility label of the see more button of the setup list module.">
         See more setup list
       </message>
-      <message name="IDS_USE_CHROME_BY_DEFAULT" desc="Generic title prompting the user to set Chrome as their default browser.">
-        Use Chrome by default
+      <message name="IDS_USE_CHROME_BY_DEFAULT" desc="Generic title prompting the user to set Cinaseek as their default browser.">
+        Use Cinaseek by default
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_DESCRIPTION" desc="Description of the default browser section in the educational tip module on NTP.">
-        You can use Chrome any time you tap links in messages, documents and other apps
+        You can use Cinaseek any time you tap links in messages, documents and other apps
       </message>
-      <message name="IDS_SETUP_LIST_DEFAULT_BROWSER_PROMO_BUTTON" desc="Text on the clickable button for the default browser promo in the setup list that invites users to set Chrome as their default browser.">
+      <message name="IDS_SETUP_LIST_DEFAULT_BROWSER_PROMO_BUTTON" desc="Text on the clickable button for the default browser promo in the setup list that invites users to set Cinaseek as their default browser.">
         Set default
       </message>
       <message name="IDS_EDUCATIONAL_TIP_TAB_GROUP_TITLE" desc="Title of the tab group promo in the educational tip module on NTP.">
@@ -1292,7 +1292,7 @@
         You can delete some or all of your history, cookies, site data and more
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_BOTTOM_SHEET_DESCRIPTION" desc="Description of the default browser section's bottom sheet in the educational tip module on NTP.">
-        You can now use Chrome anytime you browse or tap links in messages, documents, and other apps.
+        You can now use Cinaseek anytime you browse or tap links in messages, documents, and other apps.
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_BOTTOM_SHEET_FIRST_STEP" desc="The first step in the bottom sheet of the default browser section within the educational tip module on the NTP.">
         On your phone, open Settings
@@ -1304,10 +1304,10 @@
         Tap Apps then tap Default apps
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_BOTTOM_SHEET_THIRD_STEP" desc="The third step in the bottom sheet of the default browser section within the educational tip module on the NTP.">
-        Tap Browser app > Chrome
+        Tap Browser app > Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_BOTTOM_SHEET_THIRD_STEP_ACCESSIBILITY" desc="Accessibility string that describes the third step in the bottom sheet of the default browser section within the educational tip module on the NTP.">
-        Tap Browser app then tap Chrome
+        Tap Browser app then tap Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_DEFAULT_BROWSER_BOTTOM_SHEET_BUTTON" desc="The name of the button in the bottom sheet of the default browser section within the educational tip module on the NTP">
         Settings
@@ -1331,10 +1331,10 @@
         Let’s go
       </message>
       <message name="IDS_EDUCATIONAL_TIP_TIPS_NOTIFICATIONS_TITLE" desc="Title of the tips notifications promo that invites users to turn on tips notifications in the educational tip module on NTP.">
-        Get Chrome tips notifications
+        Get Cinaseek tips notifications
       </message>
       <message name="IDS_EDUCATIONAL_TIP_TIPS_NOTIFICATIONS_DESCRIPTION" desc="Description of the tips notifications promo that invites users to turn on tips notifications in the educational tip module on NTP.">
-        Turn on notifications for useful tips to help you get the best of Chrome
+        Turn on notifications for useful tips to help you get the best of Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_TIPS_NOTIFICATIONS_BUTTON" desc="Text on the clickable button on the tips notifications promo that invites users to turn on tips notifications in the educational tip module on NTP.">
         Notify me
@@ -1343,13 +1343,13 @@
       <!-- Setup List strings -->
 
       <!-- Setup list Sign in promo strings -->
-      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_TITLE" desc="Title of the sign in promo that invites users to sign in to Chrome in the educational tip module on NTP.">
-        Make Chrome your own
+      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_TITLE" desc="Title of the sign in promo that invites users to sign in to Cinaseek in the educational tip module on NTP.">
+        Make Cinaseek your own
       </message>
-      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_DESCRIPTION" desc="Description of the sign in promo that invites users to sign in to Chrome in the educational tip module on NTP.">
+      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_DESCRIPTION" desc="Description of the sign in promo that invites users to sign in to Cinaseek in the educational tip module on NTP.">
         Sign in to easily continue on all your devices
       </message>
-      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_BUTTON" desc="Text on the clickable button on the sign in promo that invites users to sign in to Chrome in the educational tip module on NTP.">
+      <message name="IDS_EDUCATIONAL_TIP_SIGN_IN_PROMO_BUTTON" desc="Text on the clickable button on the sign in promo that invites users to sign in to Cinaseek in the educational tip module on NTP.">
         Sign in to start
       </message>
 
@@ -1358,12 +1358,12 @@
         Enhance your security
       </message>
       <message name="IDS_EDUCATIONAL_TIP_ENHANCED_SAFE_BROWSING_DESCRIPTION" desc="Description of the enhanced safe browsing promo that invites users to turn on enhanced safe browsing in the educational tip module on NTP.">
-        Get Chrome’s strongest protection against online threats
+        Get Cinaseek’s strongest protection against online threats
       </message>
 
       <!-- Setup list Save Passwords promo strings -->
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_TITLE" desc="Title of the Save Passwords promo that invites users to turn on the save passwords feature in the educational tip module on NTP.">
-        Save passwords in Chrome
+        Save passwords in Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_DESCRIPTION" desc="Description of the Save Passwords promo that invites users to turn on the save passwords feature in the educational tip module on NTP.">
         Sign in quickly and easily into sites and apps
@@ -1377,7 +1377,7 @@
         Sign in to any website
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_BOTTOM_SHEET_SECOND_STEP" desc="The second step in the bottom sheet of the save passwords section within the educational tip module on the NTP.">
-        Chrome will offer to save your password
+        Cinaseek will offer to save your password
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_BOTTOM_SHEET_THIRD_STEP" desc="The third step in the bottom sheet of the save passwords section within the educational tip module on the NTP.">
         Tap Yes to easily use this password the next time you sign in
@@ -1386,7 +1386,7 @@
         Save passwords instructional bottom sheet has closed
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_BOTTOM_SHEET_CONTENT_DESCRIPTION" desc="Accessibility string that describes the save passwords bottom sheet.">
-        Instructional bottom sheet for saving passwords in Chrome
+        Instructional bottom sheet for saving passwords in Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SAVE_PASSWORDS_BOTTOM_SHEET_ACCESSIBILITY_OPENED_FULL" desc="Accessibility string that describes that the save passwords bottom sheet has fully opened.">
         Save passwords instructional bottom sheet has fully opened
@@ -1416,7 +1416,7 @@
         You’re all set!
       </message>
       <message name="IDS_SETUP_LIST_CELEBRATORY_PROMO_DESCRIPTION" desc="Description for the celebratory promo shown when all setup tasks are completed.">
-        You’ll now get the most out of Chrome on your device.
+        You’ll now get the most out of Cinaseek on your device.
       </message>
 
       <message name="IDS_EDUCATIONAL_TIP_BUTTON_GO_TO_SETTINGS" desc="Text on the clickable button for promos that invites users to adjust settings in the educational tip module on NTP.">
@@ -1429,10 +1429,10 @@
 
       <!-- Setup List "See More" bottom sheet strings -->
       <message name="IDS_EDUCATIONAL_TIP_SEE_MORE_BOTTOM_SHEET_TITLE" desc="Title for the setup list bottom sheet when set up tasks are still remaining.">
-        Get the most out of Chrome
+        Get the most out of Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SEE_MORE_BOTTOM_SHEET_DESCRIPTION" desc="Description text for the setup list bottom sheet when set up tasks are still remaining.">
-        Complete these suggested actions below to get the most out of Chrome
+        Complete these suggested actions below to get the most out of Cinaseek
       </message>
       <message name="IDS_EDUCATIONAL_TIP_SEE_MORE_BOTTOM_SHEET_ACCESSIBILITY_CLOSED" desc="Accessibility string that describes that the setup list bottom sheet has closed.">
         Setup sheet closed
@@ -1530,10 +1530,10 @@
         New tab page appearance bottom sheet opened at half height
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_BOTTOM_SHEET_OPENED_FULL" desc="Accessibility string that describes the new tab page appearance bottom sheet is fully opened.">
-        Chrome colors bottom sheet opened at full height
+        Cinaseek colors bottom sheet opened at full height
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_BOTTOM_SHEET_OPENED_HALF" desc="Accessibility string that describes the new tab page appearance bottom sheet is fully opened.">
-        Chrome colors bottom sheet opened at half height
+        Cinaseek colors bottom sheet opened at half height
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_MAIN_BOTTOM_SHEET_CLOSED" desc="Accessibility string that describes a new tab page customization bottom sheet is closed">
         Customize your new tab page bottom sheet closed
@@ -1572,13 +1572,13 @@
         New tab page appearance bottom sheet
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_THEME_BOTTOM_SHEET_DEFAULT_OPTION" desc="Title of the default option in the new tab page customization theme bottom sheet">
-        Chrome Default
+        Cinaseek Default
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_THEME_BOTTOM_SHEET_UPLOAD_IMAGE_OPTION" desc="Title of the upload image option in the new tab page customization theme bottom sheet">
         Upload an image
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_THEME_BOTTOM_SHEET_CHROME_COLORS_OPTION" desc="Title of the chrome colors option in the new tab page customization theme bottom sheet">
-        Chrome Colors
+        Cinaseek Colors
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_THEME_BOTTOM_SHEET_THEME_COLLECTIONS_OPTION" desc="Title of the theme collections option in the new tab page customization theme bottom sheet">
         Theme Collections
@@ -1598,11 +1598,11 @@
       <message name="IDS_NTP_CUSTOMIZATION_THEME_COLLECTIONS_DAILY_UPDATE" desc="Title of the toggle switch for updating theme collection background daily">
         Refresh daily
       </message>
-      <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_TITLE" desc="Title for the Chrome Colors bottom sheet in NTP customization.">
-        Chrome Colors
+      <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_TITLE" desc="Title for the Cinaseek Colors bottom sheet in NTP customization.">
+        Cinaseek Colors
       </message>
-      <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_BOTTOM_SHEET" desc="Accessibility string to announce the currently displaying bottom sheet is the Chrome Colors bottom sheet." is_accessibility_with_no_ui="true">
-        Chrome Colors bottom sheet
+      <message name="IDS_NTP_CUSTOMIZATION_CHROME_COLORS_BOTTOM_SHEET" desc="Accessibility string to announce the currently displaying bottom sheet is the Cinaseek Colors bottom sheet." is_accessibility_with_no_ui="true">
+        Cinaseek Colors bottom sheet
       </message>
       <message name="IDS_NTP_CUSTOMIZATION_THEME_IMAGE_PREVIEW_PINCH_TO_RESIZE" desc="Text explaining the image could be resized by pinching it.">
         Pinch to resize
@@ -1619,31 +1619,31 @@
       <message name="IDS_NTP_CUSTOMIZATION_HINT_TO_TYPE_COLOR_HEX" desc="Hint in the edit box to ask users to type a color hex.">
         Type hex here
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_BLUE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_BLUE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Blue theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_AQUA_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_AQUA_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Aqua theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_GREEN_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_GREEN_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Green theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_VIRIDIAN_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_VIRIDIAN_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Viridian theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_CITRON_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_CITRON_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Citron theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_ORANGE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_ORANGE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Orange theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_ROSE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_ROSE_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Rose theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_FUCHSIA_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_FUCHSIA_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Fuchsia theme
       </message>
-      <message name="IDS_ACCESSIBILITY_NTP_VIOLET_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Chrome Colors bottom sheet.">
+      <message name="IDS_ACCESSIBILITY_NTP_VIOLET_COLOR_THEME" is_accessibility_with_no_ui="true" desc="Name of the color theme shown on the Cinaseek Colors bottom sheet.">
         Violet theme
       </message>
 
@@ -1676,13 +1676,13 @@
         What&apos;s New
       </message>
       <message name="IDS_WHATS_NEW_PAGE_DESCRIPTION" translateable="false" desc="Description of the what's new page.">
-        What&apos;s New in Chrome
+        What&apos;s New in Cinaseek
       </message>
 
       <!-- Android Advanced Protection -->
       <message name="IDS_ADVANCED_PROTECTION_MESSAGE_ENABLED_TITLE" desc="Title of message to notify user that the Android-OS Advanced-Protection mode has been enabled">
         Advanced Protection is on                                                                  </message>
-      <message name="IDS_ADVANCED_PROTECTION_MESSAGE_DESCRIPTION" desc="Description of message to notify user that Android-OS Advanced-Protection mode has changed. Informs user that the Android OS setting affects some Chrome settings.">                                                   Some Chrome settings changed
+      <message name="IDS_ADVANCED_PROTECTION_MESSAGE_DESCRIPTION" desc="Description of message to notify user that Android-OS Advanced-Protection mode has changed. Informs user that the Android OS setting affects some Cinaseek settings.">                                                   Some Cinaseek settings changed
       </message>                                                                                   <message name="IDS_ADVANCED_PROTECTION_MESSAGE_PRIMARY_BUTTON" desc="Label of button. Tapping the button sends user to page with information about which settings have changed as a result of the Android-OS Advanced-Protection mode change.">
         Details                                                                                    </message>
       <message name="IDS_HTTPS_FIRST_MODE_ENFORCED_BY_ADVANCED_PROTECTION_WARNING" desc="Message displayed on https-first-settings page notifying the user that the setting is uneditable because the setting is controlled by the Android-OS-advanced-protection setting's 'on' state">                                                                                                    This setting remains on as long as you have Advanced Protection turned on in Android Settings.

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,13 +13,13 @@ import("//ios/features.gni")
 
 declare_args() {
   # When true, modifies the chrome_app template to additionally build
-  # a framework with a single ChromeMain() entry point. This framework
+  # a framework with a single CinaseekMain() entry point. This framework
   # is not used or linked against, but can be uploaded as a build
   # artifact.
   ios_force_build_chrome_framework = false
 }
 
-# Template used to create a Chrome-like app bundle that depends on
+# Template used to create a Cinaseek-like app bundle that depends on
 # EarlyMallocZoneRegistration.
 #
 template("chrome_app") {
@@ -131,17 +131,17 @@ template("chrome_app") {
 
     browserkit_extension("gpu_process") {
       forward_variables_from(invoker, TESTONLY_AND_VISIBILITY)
-      bundle_identifier = "$ios_chromium_bundle_id.GPUProcessExtension"
+      bundle_identifier = "$ios_Cinaseek_bundle_id.GPUProcessExtension"
     }
 
     browserkit_extension("network_process") {
       forward_variables_from(invoker, TESTONLY_AND_VISIBILITY)
-      bundle_identifier = "$ios_chromium_bundle_id.NetworkProcessExtension"
+      bundle_identifier = "$ios_Cinaseek_bundle_id.NetworkProcessExtension"
     }
 
     browserkit_extension("content_process") {
       forward_variables_from(invoker, TESTONLY_AND_VISIBILITY)
-      bundle_identifier = "$ios_chromium_bundle_id.ContentProcessExtension"
+      bundle_identifier = "$ios_Cinaseek_bundle_id.ContentProcessExtension"
     }
 
     ios_app_bundle(_target_name) {

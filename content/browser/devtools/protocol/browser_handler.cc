@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/expected_macros.h"
 #include "build/build_config.h"
-#include "build/util/chromium_git_revision.h"
+#include "build/util/Cinaseek_git_revision.h"
 #include "components/download/public/common/download_item.h"
 #include "content/browser/devtools/browser_devtools_agent_host.h"
 #include "content/browser/devtools/devtools_agent_host_impl.h"

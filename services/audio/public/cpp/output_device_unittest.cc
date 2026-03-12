@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -204,7 +204,7 @@ TEST_F(AudioServiceOutputDeviceTest, CreatePlayPause) {
   task_env_.RunUntilIdle();
 }
 
-// Flaky on Linux Chromium OS ASan LSan (https://crbug.com/889845)
+// Flaky on Linux Cinaseek OS ASan LSan (https://crbug.com/889845)
 // Disabled on Android (crbug.com/395710100).
 #if BUILDFLAG(IS_CHROMEOS) && defined(ADDRESS_SANITIZER) || BUILDFLAG(IS_ANDROID)
 #define MAYBE_VerifyDataFlow DISABLED_VerifyDataFlow

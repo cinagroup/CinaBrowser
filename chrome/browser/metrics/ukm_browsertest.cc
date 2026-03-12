@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -815,7 +815,7 @@ IN_PROC_BROWSER_TEST_F(UkmBrowserTest, MAYBE_ConsentAddedButNoSyncCheck) {
 
   ClosePlatformBrowser(browser);
 }
-// LINT.ThenChange(/chrome/android/javatests/src/org/chromium/chrome/browser/sync/UkmTest.java:ConsentAddedButNoSyncCheck)
+// LINT.ThenChange(/chrome/android/javatests/src/org/Cinaseek/chrome/browser/sync/UkmTest.java:ConsentAddedButNoSyncCheck)
 // ThenChange(/ios/chrome/browser/metrics/model/ukm_egtest.mm:ConsentAddedButNoSyncCheck)
 
 // Make sure that extension URLs are disabled when an open sync window
@@ -1054,7 +1054,7 @@ IN_PROC_BROWSER_TEST_F(UkmBrowserTest, SingleSyncSignoutCheck) {
   ClosePlatformBrowser(browser);
 }
 #endif  // !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_ANDROID)
-// LINT.ThenChange(/chrome/android/javatests/src/org/chromium/chrome/browser/sync/UkmTest.java:SingleSyncSignoutCheck)
+// LINT.ThenChange(/chrome/android/javatests/src/org/Cinaseek/chrome/browser/sync/UkmTest.java:SingleSyncSignoutCheck)
 // ThenChange(/ios/chrome/browser/metrics/model/ukm_egtest.mm:SingleSyncSignoutCheck)
 
 // ChromeOS doesn't have the concept of sign-out so this test doesn't make sense
@@ -1170,7 +1170,7 @@ IN_PROC_BROWSER_TEST_F(UkmBrowserTest, MAYBE_HistoryDeleteCheck) {
 
   ClosePlatformBrowser(browser);
 }
-// LINT.ThenChange(/chrome/android/javatests/src/org/chromium/chrome/browser/metrics/UkmTest.java:HistoryDeleteCheck)
+// LINT.ThenChange(/chrome/android/javatests/src/org/Cinaseek/chrome/browser/metrics/UkmTest.java:HistoryDeleteCheck)
 // ThenChange(/ios/chrome/browser/metrics/model/ukm_egtest.mm:HistoryDeleteCheck)
 
 // On ChromeOS, the test profile starts with a primary account already set, so

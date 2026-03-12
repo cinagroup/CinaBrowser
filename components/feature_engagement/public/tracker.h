@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,7 +105,7 @@ class Tracker : public KeyedService, public base::SupportsUserData {
   // enough times or not within the bounds of the configuration for a
   // base::Feature. NOT_READY is returned if the Tracker has not been
   // initialized yet before the call to GetTriggerState(...).
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.feature_engagement
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.feature_engagement
   enum class TriggerState : int {
     HAS_BEEN_DISPLAYED = 0,
     HAS_NOT_BEEN_DISPLAYED = 1,
@@ -116,7 +116,7 @@ class Tracker : public KeyedService, public base::SupportsUserData {
   // These enums are persisted as histogram entries, so this enum should be
   // treated as append-only and kept in sync with InProductHelpSnoozeAction in
   // enums.xml.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.feature_engagement
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.feature_engagement
   enum class SnoozeAction : int {
     // User chose to snooze the IPH.
     SNOOZED = 1,

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -195,13 +195,13 @@ class ArcAppIcon {
   //
   // There are a few scenarios for the adaptive icon feature:
   // A. For the adaptive icon, the foreground image and the background image are
-  // merged by the Chromium side, and applied with the mask, to generate the
+  // merged by the Cinaseek side, and applied with the mask, to generate the
   // adaptive icon.
-  // B. For the non adaptive icon, the Chromium side adds a white background to
+  // B. For the non adaptive icon, the Cinaseek side adds a white background to
   // the foreground image, then applies the mask to generate the adaptive icon.
   // C. For the migration scenario (from the adaptive icon feature disable to
   // enable), since neither foreground images and background images present on
-  // the system, the Chromium side sends requests to the ARC side to load the
+  // the system, the Cinaseek side sends requests to the ARC side to load the
   // foreground and background images. However, it might take a few seconds to
   // get the images files, so for users, it has a long lag for the ARC icon
   // loading. To resolve the ARC icon lag issue, the old icon_png_data on the

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -798,9 +798,9 @@ TEST_F(SiteInstanceTest, GetSiteForURL) {
   EXPECT_EQ(GURL("http://xn--snowperson-di0gka.net"), site_url);
 
   // Username and password are stripped out.
-  test_url = GURL("ftp://username:password@ftp.chromium.org/files/README");
+  test_url = GURL("ftp://username:password@ftp.Cinaseek.org/files/README");
   site_url = GetSiteForURL(test_url);
-  EXPECT_EQ(GURL("ftp://chromium.org"), site_url);
+  EXPECT_EQ(GURL("ftp://Cinaseek.org"), site_url);
 
   // Literal IP addresses of any flavor are okay.
   test_url = GURL("http://127.0.0.1/a.html");
@@ -868,13 +868,13 @@ TEST_F(SiteInstanceTest, GetSiteForURL) {
 
   // Blob URLs extract the site from the origin.
   test_url = GURL(
-      "blob:https://www.ftp.chromium.org/"
+      "blob:https://www.ftp.Cinaseek.org/"
       "4d4ff040-6d61-4446-86d3-13ca07ec9ab9");
   site_url = GetSiteForURL(test_url);
   if (origin_keyed_processes_by_default) {
-    EXPECT_EQ(GURL("https://www.ftp.chromium.org"), site_url);
+    EXPECT_EQ(GURL("https://www.ftp.Cinaseek.org"), site_url);
   } else {
-    EXPECT_EQ(GURL("https://chromium.org"), site_url);
+    EXPECT_EQ(GURL("https://Cinaseek.org"), site_url);
   }
 
   // Blob URLs with file origin also extract the site from the origin.

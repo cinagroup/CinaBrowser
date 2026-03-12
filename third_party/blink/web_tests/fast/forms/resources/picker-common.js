@@ -7,7 +7,7 @@ function waitUntilOpen(popupWindow) {
     if (!popupWindow)
       reject('popupWindow is null');
     function tick() {
-      // didOpenPicker gets set by pickerCommon.js: https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/html/forms/resources/pickerCommon.js;l=213;drc=f2f1e770d7def6c722b0092d77b2d3395c46a477
+      // didOpenPicker gets set by pickerCommon.js: https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/renderer/core/html/forms/resources/pickerCommon.js;l=213;drc=f2f1e770d7def6c722b0092d77b2d3395c46a477
       if (popupWindow.didOpenPicker)
         resolve();
       else

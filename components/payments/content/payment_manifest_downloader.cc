@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -390,7 +390,7 @@ void PaymentManifestDownloader::InitiateDownload(
         semantics {
           sender: "Web Payments"
           description:
-            "Chromium downloads manifest files for web payments API to help "
+            "Cinaseek downloads manifest files for web payments API to help "
             "users make secure and convenient payments on the web."
           trigger:
             "A user that has a payment app visits a website that uses the web "
@@ -402,7 +402,7 @@ void PaymentManifestDownloader::InitiateDownload(
               email: "chrome-payments-eng@google.com"
             }
             contacts {
-              email: "darwinyang@chromium.org"
+              email: "darwinyang@Cinaseek.org"
             }
           }
           user_data: {

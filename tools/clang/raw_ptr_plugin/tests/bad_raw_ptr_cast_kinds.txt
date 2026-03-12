@@ -23,57 +23,57 @@ bad_raw_ptr_cast_kinds.cpp:61:9: error: reinterpret_cast from 'RawPtrWrapper' to
 bad_raw_ptr_cast_kinds.cpp:62:9: error: reinterpret_cast from 'RawPtrWrapper' to 'int *' is not allowed
   (void)reinterpret_cast<int*>(wrapped);
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bad_raw_ptr_cast_kinds.cpp:21:50: error: [chromium-style] casting 'void *' to 'RawPtrWrapper * is not allowed.
+bad_raw_ptr_cast_kinds.cpp:21:50: error: [Cinaseek-style] casting 'void *' to 'RawPtrWrapper * is not allowed.
   (void)reinterpret_cast<RawPtrWrapper*>(void_ptr);
                                                  ^
-bad_raw_ptr_cast_kinds.cpp:21:50: note: [chromium-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:21:50: note: [Cinaseek-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:25:50: error: [chromium-style] casting 'void *' to 'RawPtrWrapper is not allowed.
+bad_raw_ptr_cast_kinds.cpp:25:50: error: [Cinaseek-style] casting 'void *' to 'RawPtrWrapper is not allowed.
   ref = reinterpret_cast<RawPtrWrapper&>(void_ptr);
                                                  ^
-bad_raw_ptr_cast_kinds.cpp:25:50: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:25:50: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:28:37: error: [chromium-style] casting 'raw_ptr<int>' to 'int * is not allowed.
+bad_raw_ptr_cast_kinds.cpp:28:37: error: [Cinaseek-style] casting 'raw_ptr<int>' to 'int * is not allowed.
   (void)__builtin_bit_cast(int*, ptr);
                                     ^
-bad_raw_ptr_cast_kinds.cpp:28:37: note: [chromium-style] 'raw_ptr<int>' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:29:49: error: [chromium-style] casting 'RawPtrWrapper' to 'raw_ptr<int> is not allowed.
+bad_raw_ptr_cast_kinds.cpp:28:37: note: [Cinaseek-style] 'raw_ptr<int>' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:29:49: error: [Cinaseek-style] casting 'RawPtrWrapper' to 'raw_ptr<int> is not allowed.
   (void)__builtin_bit_cast(raw_ptr<int>, wrapped);
                                                 ^
-bad_raw_ptr_cast_kinds.cpp:29:49: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:29:49: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:30:41: error: [chromium-style] casting 'RawPtrWrapper' to 'int * is not allowed.
+bad_raw_ptr_cast_kinds.cpp:30:41: error: [Cinaseek-style] casting 'RawPtrWrapper' to 'int * is not allowed.
   (void)__builtin_bit_cast(int*, wrapped);
                                         ^
-bad_raw_ptr_cast_kinds.cpp:30:41: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:30:41: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:33:53: error: [chromium-style] casting 'RawPtrWrapper *' to 'uintptr_t is not allowed.
+bad_raw_ptr_cast_kinds.cpp:33:53: error: [Cinaseek-style] casting 'RawPtrWrapper *' to 'uintptr_t is not allowed.
   uintptr_t i = reinterpret_cast<uintptr_t>(&wrapped);
                                                     ^
-bad_raw_ptr_cast_kinds.cpp:33:53: note: [chromium-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:33:53: note: [Cinaseek-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:36:48: error: [chromium-style] casting 'uintptr_t' to 'RawPtrWrapper * is not allowed.
+bad_raw_ptr_cast_kinds.cpp:36:48: error: [Cinaseek-style] casting 'uintptr_t' to 'RawPtrWrapper * is not allowed.
   wrapped = *reinterpret_cast<RawPtrWrapper*>(i);
                                                ^
-bad_raw_ptr_cast_kinds.cpp:36:48: note: [chromium-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:36:48: note: [Cinaseek-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
-bad_raw_ptr_cast_kinds.cpp:44:14: error: [chromium-style] casting 'RawPtrWrapper *' to 'void * is not allowed.
+bad_raw_ptr_cast_kinds.cpp:44:14: error: [Cinaseek-style] casting 'RawPtrWrapper *' to 'void * is not allowed.
   void_ptr = arr;
              ^
-bad_raw_ptr_cast_kinds.cpp:44:14: note: [chromium-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
-bad_raw_ptr_cast_kinds.cpp:10:3: note: [chromium-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
+bad_raw_ptr_cast_kinds.cpp:44:14: note: [Cinaseek-style] 'RawPtrWrapper *' manages BackupRefPtr refcounts; bypassing its C++ interface or treating it as a POD will lead to memory safety errors.
+bad_raw_ptr_cast_kinds.cpp:10:3: note: [Cinaseek-style] 'RawPtrWrapper' manages BackupRefPtr or its container here.
   raw_ptr<int> ptr;
   ^
 14 errors generated.

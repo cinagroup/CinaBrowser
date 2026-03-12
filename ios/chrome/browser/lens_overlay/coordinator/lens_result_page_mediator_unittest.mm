@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -262,14 +262,14 @@ TEST_F(LensResultPageMediatorTest, ShouldAllowLensGoogleNavigation) {
 // Tests that other navigation is not allowed but opens a new tab.
 TEST_F(LensResultPageMediatorTest, ShouldOpenOtherNavigationInNewTab) {
   EXPECT_FALSE(fake_delegate_.openInNewTabRequested);
-  EXPECT_FALSE(TestShouldAllowRequest(@"https://www.chromium.com",
+  EXPECT_FALSE(TestShouldAllowRequest(@"https://www.Cinaseek.com",
                                       /*target_frame_is_main=*/true));
   EXPECT_TRUE(fake_delegate_.openInNewTabRequested);
 }
 
 // Tests that any navigation that's not on main frame is allowed.
 TEST_F(LensResultPageMediatorTest, ShouldAllowAnyNavigationNotInMainFrame) {
-  EXPECT_TRUE(TestShouldAllowRequest(@"https://www.chromium.com",
+  EXPECT_TRUE(TestShouldAllowRequest(@"https://www.Cinaseek.com",
                                      /*target_frame_is_main=*/false));
   EXPECT_TRUE(TestShouldAllowRequest(@"https://www.google.com",
                                      /*target_frame_is_main=*/false));

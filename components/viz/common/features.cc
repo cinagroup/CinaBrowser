@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -108,7 +108,7 @@ const base::FeatureParam<DelegatedCompositingMode>
 // all surfaces synchronize with dcomp commit
 BASE_FEATURE(kDCompSurfacesForDelegatedInk, base::FEATURE_ENABLED_BY_DEFAULT);
 
-// If enabled, Chromium will utilize DXGI SwapChains and DComp visuals as the
+// If enabled, Cinaseek will utilize DXGI SwapChains and DComp visuals as the
 // software output device rather than GDI bit block transfer to the redirection
 // bitmap. Additionally, the redirection bitmap will be removed and replaced
 // with the native acrylic background effect on Win11. Since the browser window

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,8 +6,8 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 _jni_sources = [
-  "java/src/org/chromium/components/crash/CrashKeys.java",
-  "java/src/org/chromium/components/crash/PureJavaExceptionHandler.java",
+  "java/src/org/Cinaseek/components/crash/CrashKeys.java",
+  "java/src/org/Cinaseek/components/crash/PureJavaExceptionHandler.java",
 ]
 
 generate_jni("jni_headers") {
@@ -16,7 +16,7 @@ generate_jni("jni_headers") {
 
 generate_jni("package_paths_jni") {
   sources =
-      [ "java/src/org/chromium/components/crash/browser/PackagePaths.java" ]
+      [ "java/src/org/Cinaseek/components/crash/browser/PackagePaths.java" ]
 }
 
 java_cpp_enum("java_enums_srcjar") {
@@ -38,23 +38,23 @@ android_library("java") {
 
   srcjar_deps = [ ":java_enums_srcjar" ]
   sources = [
-    "java/src/org/chromium/components/crash/CustomAssertionHandler.java",
-    "java/src/org/chromium/components/crash/LogcatCrashExtractor.java",
-    "java/src/org/chromium/components/crash/MinidumpLogcatPrepender.java",
-    "java/src/org/chromium/components/crash/NativeAndJavaSmartExceptionReporter.java",
-    "java/src/org/chromium/components/crash/PureJavaExceptionReporter.java",
-    "java/src/org/chromium/components/crash/browser/ChildProcessCrashObserver.java",
-    "java/src/org/chromium/components/crash/browser/PackagePaths.java",
-    "java/src/org/chromium/components/crash/browser/ProcessExitReasonFromSystem.java",
+    "java/src/org/Cinaseek/components/crash/CustomAssertionHandler.java",
+    "java/src/org/Cinaseek/components/crash/LogcatCrashExtractor.java",
+    "java/src/org/Cinaseek/components/crash/MinidumpLogcatPrepender.java",
+    "java/src/org/Cinaseek/components/crash/NativeAndJavaSmartExceptionReporter.java",
+    "java/src/org/Cinaseek/components/crash/PureJavaExceptionReporter.java",
+    "java/src/org/Cinaseek/components/crash/browser/ChildProcessCrashObserver.java",
+    "java/src/org/Cinaseek/components/crash/browser/PackagePaths.java",
+    "java/src/org/Cinaseek/components/crash/browser/ProcessExitReasonFromSystem.java",
   ]
   sources += _jni_sources
 }
 
 robolectric_library("junit") {
   sources = [
-    "junit/src/org/chromium/components/crash/LogcatCrashExtractorTest.java",
-    "junit/src/org/chromium/components/crash/PureJavaExceptionReporterTest.java",
-    "junit/src/org/chromium/components/crash/anr/AnrCollectorTest.java",
+    "junit/src/org/Cinaseek/components/crash/LogcatCrashExtractorTest.java",
+    "junit/src/org/Cinaseek/components/crash/PureJavaExceptionReporterTest.java",
+    "junit/src/org/Cinaseek/components/crash/anr/AnrCollectorTest.java",
   ]
   deps = [
     ":anr_collector_java",
@@ -104,7 +104,7 @@ source_set("unit_tests") {
 }
 
 _java_handler_jni_sources =
-    [ "java/src/org/chromium/components/crash/browser/CrashpadMain.java" ]
+    [ "java/src/org/Cinaseek/components/crash/browser/CrashpadMain.java" ]
 
 generate_jni("java_handler_jni_headers") {
   sources = _java_handler_jni_sources
@@ -144,7 +144,7 @@ proto_java_library("anr_data_proto_java") {
 }
 
 _anr_collector_jni_sources =
-    [ "java/src/org/chromium/components/crash/anr/AnrCollector.java" ]
+    [ "java/src/org/Cinaseek/components/crash/anr/AnrCollector.java" ]
 
 generate_jni("anr_collector_jni_headers") {
   sources = _anr_collector_jni_sources

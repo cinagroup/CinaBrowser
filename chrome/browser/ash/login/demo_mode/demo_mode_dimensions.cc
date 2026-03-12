@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ base::Version ResourcesVersion() {
 std::string GetChromeOSVersionString() {
   DCHECK(AreDemoDimensionsAccessible());
   // 1. Get Chrome Browser Milestone from version_info. We use the version from
-  // the browser since some dev devices may have a locally built Chromium
+  // the browser since some dev devices may have a locally built Cinaseek
   // deployed.
   std::string chrome_version = version_info::GetMajorVersionNumber();
 

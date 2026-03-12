@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ std::pair<base::Process, uint16_t> StartWebAuthnEnclave(base::FilePath cwd) {
     }
     LOG(INFO) << "Port " << port << " not allowed. Trying again.";
 
-    // The kernel randomly picked a port that Chromium will refuse to connect
+    // The kernel randomly picked a port that Cinaseek will refuse to connect
     // to. Try again.
     enclave_process->Terminate(/*exit_code=*/1, /*wait=*/false);
   }

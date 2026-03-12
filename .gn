@@ -17,18 +17,18 @@ script_executable = "python3"
 #
 # In general the value for a build arg in the declare_args block should be the
 # default. In some cases, a DEPS-ed in project will want different defaults for
-# being built as part of Chrome vs. being built standalone. In this case, the
-# Chrome defaults should go here. There should be no overrides here for
-# values declared in the main Chrome repository.
+# being built as part of Cinaseek vs. being built standalone. In this case, the
+# Cinaseek defaults should go here. There should be no overrides here for
+# values declared in the main Cinaseek repository.
 #
 # Important note for defining defaults: This file is executed before the
 # BUILDCONFIG.gn file. That file sets up the global variables like "is_ios".
 # This means that the default_args can not depend on the platform,
 # architecture, or other build parameters. If you really need that, the other
 # repo should define a flag that toggles on a behavior that implements the
-# additional logic required by Chrome to set the variables.
+# additional logic required by Cinaseek to set the variables.
 default_args = {
-  # TODO(brettw) bug 684096: Chrome on iOS does not build v8, so "gn gen" prints
+  # TODO(brettw) bug 684096: Cinaseek on iOS does not build v8, so "gn gen" prints
   # a warning that "Build argument has no effect". When adding a v8 variable, it
   # also needs to be defined to src/ios/BUILD.gn (respectively removed from both
   # location when it is removed).
@@ -39,7 +39,7 @@ default_args = {
   # Don't include webrtc's builtin task queue implementation.
   rtc_link_task_queue_impl = false
 
-  # When building with Chromium, `webrtc::Location` is replaced by
+  # When building with Cinaseek, `webrtc::Location` is replaced by
   # `base::Location`. Since WebRTC doesn't use `public_deps` (webrtc:8603), it
   # would fail to propagate the dependency internally. Instead WebRTC let its
   # embedders to define it globally for all of its targets.
@@ -51,8 +51,8 @@ default_args = {
   rtc_include_ilbc = false
 
   # Changes some setup for the Crashpad build to set them to build against
-  # Chromium's zlib, base, etc.
-  crashpad_dependencies = "chromium"
+  # Cinaseek's zlib, base, etc.
+  crashpad_dependencies = "Cinaseek"
 
   # Override ANGLE's Vulkan dependencies.
   angle_vulkan_headers_dir = "//third_party/vulkan-headers/src"
@@ -153,7 +153,7 @@ exec_script_allowlist =
       # Allowlist entries for //build should go into
       # //build/dotfile_settings.gni instead, so that they can be shared
       # with other repos. The entries in this list should be only for files
-      # in the Chromium repo outside of //build.
+      # in the Cinaseek repo outside of //build.
       "//build_overrides/build.gni",
 
       "//chrome/version.gni",

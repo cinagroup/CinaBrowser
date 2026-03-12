@@ -77,7 +77,7 @@
         <include name="IDR_CHROME_APP_MANIFEST" file="resources\chrome_app\manifest.json" type="BINDATA" />
         <include name="IDR_URL_MOJOM_LITE_JS" file="${root_gen_dir}\url\mojom\url.mojom-lite.js" use_base_dir="false" type="BINDATA" />
 
-        <!-- ChromeOS Account Manager resources -->
+        <!-- CinaseekOS Account Manager resources -->
         <include name="IDR_ACCOUNT_MANAGER_COMPONENTS_ERROR_SCREEN_JS" file="resources\chromeos\account_manager\components\error_screen.js" type ="BINDATA"/>
         <include name="IDR_ACCOUNT_MANAGER_COMPONENTS_ERROR_SCREEN_HTML_JS" file="${root_gen_dir}\chrome\browser\resources\chromeos\account_manager\components\error_screen.html.js" use_base_dir="false" type ="BINDATA"/>
         <include name="IDR_ACCOUNT_MANAGER_SHARED_CSS_JS" file="${root_gen_dir}\chrome\browser\resources\chromeos\account_manager\account_manager_shared.css.js" use_base_dir="false" type ="BINDATA" />
@@ -200,12 +200,12 @@
       </if>
 
       <if expr="enable_hangout_services_extension">
-        <!-- Hangout Services extension, included in Google Chrome builds only. -->
+        <!-- Hangout Services extension, included in Google Cinaseek builds only. -->
         <include name="IDR_HANGOUT_SERVICES_MANIFEST_V2" file="resources\hangout_services\manifest_v2.json" type="BINDATA" />
         <include name="IDR_HANGOUT_SERVICES_MANIFEST_V3" file="resources\hangout_services\manifest_v3.json" type="BINDATA" />
       </if>
 
-      <!-- Desk API extension, enabled on managed ChromeOS devices -->
+      <!-- Desk API extension, enabled on managed CinaseekOS devices -->
       <if expr="is_chromeos">
         <include name="IDR_DESK_API_MANIFEST" file="resources\chromeos\desk_api\manifest.json" type="BINDATA" />
       </if>
@@ -219,7 +219,7 @@
       </if>
       <include name="IDR_WEBSTORE_MANIFEST" file="resources\webstore_app\manifest.json" type="BINDATA" />
       <if expr="is_chromeos">
-        <!-- Contact Center Insights extension, enabled on managed ChromeOS devices -->
+        <!-- Contact Center Insights extension, enabled on managed CinaseekOS devices -->
         <include name="IDR_CONTACT_CENTER_INSIGHTS_MANIFEST" file="resources\chromeos\contact_center_insights\manifest.json" type="BINDATA" />
 
         <include name="IDR_CHROME_URLS_DISABLED_PAGE_HTML" file="resources\chromeos\chrome_urls_disabled_page\app.html" type="BINDATA" />

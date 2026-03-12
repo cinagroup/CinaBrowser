@@ -1,4 +1,4 @@
-This tests that following code works in Chrome:
+This tests that following code works in Cinaseek:
 var w = window.open(...);
 w.opener = null;
 

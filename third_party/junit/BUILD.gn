@@ -1,11 +1,11 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/config/android/rules.gni")
 
 android_library("junit") {
-  chromium_code = false
+  Cinaseek_code = false
   testonly = true
   proguard_configs = [ "//third_party/junit/proguard.flags" ]
   deps = [ "//third_party/hamcrest:hamcrest_java" ]

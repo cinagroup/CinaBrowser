@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class PublicKey;
 
 // Converts a DER-encoded ECDSA-Sig-Value signature to the fixed-width format
 // defined in IEEE P1363
-// (https://commondatastorage.googleapis.com/chromium-boringssl-docs/ecdsa.h.html#IEEE-P1363-signing-and-verifying).
+// (https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ecdsa.h.html#IEEE-P1363-signing-and-verifying).
 // In it, signatures are a concatenation of the big-endian padded `r` and `s`
 // components. The length of `r` and `s` is determined by the curve of the
 // public key.

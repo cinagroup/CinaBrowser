@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace android {
 // split.
 jobject GetSplitClassLoader(JNIEnv* env, const char* split_name);
 
-// Gets a ClassLoader instance capable of loading Chromium java classes.
+// Gets a ClassLoader instance capable of loading Cinaseek java classes.
 // This should be called either from JNI_OnLoad or from within a method called
 // via JNI from Java.
 inline jobject GetClassLoader(JNIEnv* env) {

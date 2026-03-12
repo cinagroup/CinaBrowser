@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ std::unique_ptr<HostWindow> HostWindow::CreateContinueWindow() {
     shade.backgroundColor = NSColor.blackColor;
     // Raise the window shade above just about everything else.
     // Leave the dock and menu bar exposed so the user has some basic level
-    // of control (like they can quit Chromium).
+    // of control (like they can quit Cinaseek).
     shade.level = NSModalPanelWindowLevel - 1;
     [shade orderFront:nil];
     [_shades addObject:shade];

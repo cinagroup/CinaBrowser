@@ -1322,7 +1322,7 @@ void HTMLSelectElement::ChildrenChanged(const ChildrenChange& change) {
       if (RuntimeEnabledFeatures::SelectChildrenRemovedFixEnabled()) {
         // OptionRemoved is normally called in HTMLOptionElement::RemovedFrom,
         // but as a direct child we call OptionRemoved here in order to avoid
-        // https://issues.chromium.org/issues/444330901
+        // https://issues.Cinaseek.org/issues/444330901
         OptionRemoved(*option);
       }
     }
@@ -1461,7 +1461,7 @@ bool HTMLSelectElement::IsInteractiveContent() const {
 
 FocusgroupFlags HTMLSelectElement::NativeArrowKeyAxes() const {
   // Select elements use arrow keys for option navigation (up/down and
-  // left/right both cycle through options in Chromium).
+  // left/right both cycle through options in Cinaseek).
   return FocusgroupFlags::kInline | FocusgroupFlags::kBlock;
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ void OnGetDictionaryError(
     chromeos::DBusMethodCallback<base::DictValue> callback,
     const std::string& error_name,
     const std::string& error_message) {
-  const std::string log_string = "Failed to call org.chromium.shill.Service." +
+  const std::string log_string = "Failed to call org.Cinaseek.shill.Service." +
                                  method_name + " for: " + service_path.value() +
                                  ": " + error_name + ": " + error_message;
 

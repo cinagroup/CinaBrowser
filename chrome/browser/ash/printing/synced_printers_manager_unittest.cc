@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ using ::chromeos::Printer;
 
 constexpr char kTestPrinterId[] = "UUID-UUID-UUID-PRINTER";
 constexpr char kTestPrinterId2[] = "UUID-UUID-UUID-PRINTR2";
-constexpr char kTestUri[] = "ipps://printer.chromium.org/ipp/print";
+constexpr char kTestUri[] = "ipps://printer.Cinaseek.org/ipp/print";
 
 // Helper class to record observed events.
 class LoggingObserver : public SyncedPrintersManager::Observer {

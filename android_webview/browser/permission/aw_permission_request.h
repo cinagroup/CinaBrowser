@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class AwPermissionRequestDelegate;
 // Lifetime: Temporary
 class AwPermissionRequest {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.permission
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.permission
   enum Resource {
     Geolocation = 1 << 0,
     VideoCapture = 1 << 1,

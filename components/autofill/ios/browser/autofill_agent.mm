@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -613,7 +613,7 @@ bool HasGuid(const Suggestion::Payload& payload) {
   // Convert the suggestions into an NSArray for the keyboard.
   NSMutableArray<FormSuggestion*>* suggestions = [[NSMutableArray alloc] init];
   for (auto popup_suggestion : popup_suggestions) {
-    // In the Chromium implementation the identifiers represent rows on the
+    // In the Cinaseek implementation the identifiers represent rows on the
     // drop down of options. These include elements that aren't relevant to us
     // such as separators ... see blink::WebAutofillClient::MenuItemIDSeparator
     // for example. We can't include that enum because it's from WebKit, but

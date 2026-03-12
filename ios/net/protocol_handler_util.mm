@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ NSString* const kContentType = @"Content-Type";
 
 namespace net {
 
-NSString* const kNSErrorDomain = @"org.chromium.net.ErrorDomain";
+NSString* const kNSErrorDomain = @"org.Cinaseek.net.ErrorDomain";
 
 NSURLResponse* GetNSURLResponseForRequest(URLRequest* request) {
   NSURL* url = NSURLWithGURL(request->url());

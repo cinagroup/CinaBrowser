@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class NotificationHandler {
  public:
   // Type of notifications that a handler can be responsible for.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.notifications
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.notifications
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: NotificationType
   enum class Type {
     WEB_PERSISTENT = 0,

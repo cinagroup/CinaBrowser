@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//chrome/android/webapk/shell_apk/request_update_for_version.gni")
 
 android_library("client_java") {
   sources = [
-    "src/org/chromium/webapk/lib/client/WebApkIdentityServiceClient.java",
-    "src/org/chromium/webapk/lib/client/WebApkNavigationClient.java",
-    "src/org/chromium/webapk/lib/client/WebApkServiceConnectionManager.java",
+    "src/org/Cinaseek/webapk/lib/client/WebApkIdentityServiceClient.java",
+    "src/org/Cinaseek/webapk/lib/client/WebApkNavigationClient.java",
+    "src/org/Cinaseek/webapk/lib/client/WebApkServiceConnectionManager.java",
   ]
   deps = [
     "//base:base_java",
@@ -22,10 +22,10 @@ android_library("client_java") {
 }
 
 robolectric_binary("webapk_client_junit_tests") {
-  package_name = "org.chromium.test"
+  package_name = "org.Cinaseek.test"
   sources = [
-    "junit/src/org/chromium/webapk/lib/client/WebApkIdentityServiceClientTest.java",
-    "junit/src/org/chromium/webapk/lib/client/WebApkServiceConnectionManagerTest.java",
+    "junit/src/org/Cinaseek/webapk/lib/client/WebApkIdentityServiceClientTest.java",
+    "junit/src/org/Cinaseek/webapk/lib/client/WebApkServiceConnectionManagerTest.java",
   ]
   data = [ "//chrome/test/data/webapks/" ]
   deps = [

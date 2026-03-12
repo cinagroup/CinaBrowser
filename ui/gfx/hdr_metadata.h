@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -180,7 +180,7 @@ struct COLOR_SPACE_EXPORT HDRMetadata {
 
   std::string ToString() const;
 
-  // Accessors for AGTM metadata. These do not match the Chromium style guide
+  // Accessors for AGTM metadata. These do not match the Cinaseek style guide
   // because this structure will be replaced by skhdr::Metadata once all of
   // the members are made private.
   // https://crbug.com/395659818

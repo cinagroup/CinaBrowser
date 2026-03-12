@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ bool SeccompStarterAndroid::StartSandbox() {
       sdk_int_ < base::android::android_info::SDK_VERSION_OREO) {
     // On Android O and later, the zygote applies a seccomp filter to all
     // apps. It has its own SIGSYS handler that must be un-hooked so that
-    // the Chromium one can be used instead. If pre-O devices have a SIGSYS
+    // the Cinaseek one can be used instead. If pre-O devices have a SIGSYS
     // handler, then warn about that.
     DLOG(WARNING) << "Un-hooking existing SIGSYS handler before starting "
                   << "Seccomp sandbox";

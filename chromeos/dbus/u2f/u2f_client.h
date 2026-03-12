@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ class Bus;
 
 namespace chromeos {
 
-// U2FClient is used to communicate with the org.chromium.U2F service. The
+// U2FClient is used to communicate with the org.Cinaseek.U2F service. The
 // browser uses the U2F service to interface with the ChromeOS WebAuthn platform
 // authenticator.
 //

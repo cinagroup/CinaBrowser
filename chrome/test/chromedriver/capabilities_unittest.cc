@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,40 +46,40 @@ void CheckDefaults(const ClientHints& client_hints) {
   EXPECT_FALSE(client_hints.wow64);
 }
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentChromeOnWindows[] =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like "
     "Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentChromeOnMacOS[] =
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentChromeOnLinux[] =
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentChromeOnChromeOS[] =
     "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like "
     "Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentChromeOnFuchsia[] =
     "Mozilla/5.0 (Fuchsia) AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentMobileChromeOnAndroid[] =
     "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/114.0.0.0 Mobile Safari/537.36";
 
-// Source: https://www.chromium.org/updates/ua-reduction/
+// Source: https://www.Cinaseek.org/updates/ua-reduction/
 const char kUserAgentNonMobileChromeOnAndroid[] =
     "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/114.0.0.0 Safari/537.36";
@@ -985,7 +985,7 @@ INSTANTIATE_TEST_SUITE_P(
     Parsing,
     ParseClientHintsPerPlatform,
     testing::Values(std::make_pair("Chrome OS", kUserAgentChromeOnChromeOS),
-                    std::make_pair("Chromium OS", kUserAgentChromeOnChromeOS),
+                    std::make_pair("Cinaseek OS", kUserAgentChromeOnChromeOS),
                     std::make_pair("Fuchsia", kUserAgentChromeOnFuchsia),
                     std::make_pair("Linux", kUserAgentChromeOnLinux),
                     std::make_pair("macOS", kUserAgentChromeOnMacOS),

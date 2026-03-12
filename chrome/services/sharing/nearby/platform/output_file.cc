@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ Exception OutputFile::Write(const ByteArray& data) {
 }
 
 void OutputFile::SetLastModifiedTime(absl::Time last_modified_time) {
-  // Intentionally left not implemented. Not supported in Chromium Nearby.
+  // Intentionally left not implemented. Not supported in Cinaseek Nearby.
   NOTIMPLEMENTED();
 }
 

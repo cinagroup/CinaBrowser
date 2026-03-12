@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,7 +94,7 @@ enum class MandatoryReauthOptInConfirmationBubbleMetric {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class MandatoryReauthAuthenticationFlowEvent {
   kUnknown = 0,
   // User authentication flow started.

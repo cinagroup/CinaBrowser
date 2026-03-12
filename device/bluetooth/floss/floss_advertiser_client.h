@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef DEVICE_BLUETOOTH_FLOSS_FLOSS_ADVERTISER_CLIENT_H_
@@ -17,7 +17,7 @@
 namespace floss {
 
 constexpr char kAdvertisingSetCallbackPath[] =
-    "/org/chromium/bluetooth/advertising_set/callback";
+    "/org/Cinaseek/bluetooth/advertising_set/callback";
 
 // Represents type of address to advertise.
 enum class OwnAddressType {

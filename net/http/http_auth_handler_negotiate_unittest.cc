@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ class HttpAuthHandlerNegotiateTest : public PlatformTest,
 #if BUILDFLAG(IS_ANDROID)
     auth_library_for_android_ = std::move(auth_library);
     http_auth_preferences_->set_auth_android_negotiate_account_type(
-        "org.chromium.test.DummySpnegoAuthenticator");
+        "org.Cinaseek.test.DummySpnegoAuthenticator");
     MockAuthLibrary::EnsureTestAccountExists();
 #else
     factory_->set_library(std::move(auth_library));

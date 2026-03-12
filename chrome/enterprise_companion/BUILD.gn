@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -581,7 +581,7 @@ artifact_zip("prod_zip") {
 }
 
 # Test builds of the application to support version-skewed integration tests.
-# Currently, this is only archived for Chromium-branded builds.
+# Currently, this is only archived for Cinaseek-branded builds.
 artifact_zip("test_zip") {
   output = "$root_build_dir/enterprise_companion_test.zip"
 

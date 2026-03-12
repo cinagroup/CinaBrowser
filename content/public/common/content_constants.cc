@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ const size_t kMaxURLDisplayChars = 32 * 1024;
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 const char kStatsFilename[] = "ChromeStats2";
 #else
-const char kStatsFilename[] = "ChromiumStats2";
+const char kStatsFilename[] = "CinaseekStats2";
 #endif
 
 const int kStatsMaxThreads = 32;

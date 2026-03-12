@@ -870,7 +870,7 @@ class MODULES_EXPORT AXObjectCacheImpl : public AXObjectCacheBase {
   // UpdateChildrenIfNecessary on each AXObject for which NeedsUpdate is true.
   // This method is part of a11y-during-render, and in particular transitioning
   // to an eager (as opposed to lazy) AX tree update pattern. See
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=1342801#c12 for more
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1342801#c12 for more
   // details.
   void FinalizeTree();
 

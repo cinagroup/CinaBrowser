@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8188,7 +8188,7 @@ TEST_F(URLRequestTestHTTP, BasicAuthLoadTiming) {
 // In this test, we do a POST which the server will 302 redirect.
 // The subsequent transaction should use GET, and should not send the
 // Content-Type header.
-// http://code.google.com/p/chromium/issues/detail?id=843
+// http://code.google.com/p/Cinaseek/issues/detail?id=843
 TEST_F(URLRequestTestHTTP, Post302RedirectGet) {
   ASSERT_TRUE(http_test_server()->Start());
 
@@ -10545,11 +10545,11 @@ static bool SystemSupportsHardFailRevocationChecking() {
   return UsingBuiltinCertVerifier();
 }
 
-// SystemUsesChromiumEVMetadata returns true iff the current operating system
-// uses Chromium's EV metadata (i.e. EVRootCAMetadata). If it does not, then
+// SystemUsesCinaseekEVMetadata returns true iff the current operating system
+// uses Cinaseek's EV metadata (i.e. EVRootCAMetadata). If it does not, then
 // several tests are effected because our testing EV certificate won't be
 // recognised as EV.
-static bool SystemUsesChromiumEVMetadata() {
+static bool SystemUsesCinaseekEVMetadata() {
 #if defined(PLATFORM_USES_CHROMIUM_EV_METADATA)
   return true;
 #else
@@ -10587,7 +10587,7 @@ static bool SystemSupportsCRLSets() {
 }
 
 TEST_F(HTTPSEVTest, EVCheckNoOCSP) {
-  if (!SystemUsesChromiumEVMetadata()) {
+  if (!SystemUsesCinaseekEVMetadata()) {
     LOG(WARNING) << "Skipping test because system doesn't support EV";
     return;
   }
@@ -10599,7 +10599,7 @@ TEST_F(HTTPSEVTest, EVCheckNoOCSP) {
 
   EXPECT_EQ(0u, cert_status & CERT_STATUS_ALL_ERRORS);
 
-  EXPECT_EQ(SystemUsesChromiumEVMetadata(),
+  EXPECT_EQ(SystemUsesCinaseekEVMetadata(),
             static_cast<bool>(cert_status & CERT_STATUS_IS_EV));
 
   EXPECT_FALSE(cert_status & CERT_STATUS_REV_CHECKING_ENABLED);

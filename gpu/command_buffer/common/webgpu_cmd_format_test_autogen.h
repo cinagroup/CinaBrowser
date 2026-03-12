@@ -1,11 +1,11 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file is auto-generated from
 // gpu/command_buffer/build_webgpu_cmd_buffer.py
-// It's formatted by clang-format using chromium coding style:
-//    clang-format -i -style=chromium filename
+// It's formatted by clang-format using Cinaseek coding style:
+//    clang-format -i -style=Cinaseek filename
 // DO NOT EDIT!
 
 // This file contains unit tests for webgpu commands

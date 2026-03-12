@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -117,7 +117,7 @@ source_set("test_support") {
   if (is_win) {
     # Disable warnings about deprecated declarations in Windows SDK headers.
     # FakeConnectionProfile implements the WinRT interface IConnectionProfile,
-    # which contains a few deprecated functions that are not used by Chromium.
+    # which contains a few deprecated functions that are not used by Cinaseek.
     cflags += [ "-Wno-deprecated-declarations" ]
 
     sources += [

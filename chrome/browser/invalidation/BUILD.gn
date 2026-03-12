@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -40,7 +40,7 @@ source_set("impl") {
     ]
   }
 
-  # Standard for impl targets; on ChromeOS also provides access to browser
+  # Standard for impl targets; on CinaseekOS also provides access to browser
   # headers (e.g. browser_process_platform_part_ash.h) via
   # allow_circular_includes_from set in chrome/browser/BUILD.gn.
   public_deps = [ "//chrome/browser:browser_public_dependencies" ]

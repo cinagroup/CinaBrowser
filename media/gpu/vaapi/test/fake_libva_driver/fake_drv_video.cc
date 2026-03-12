@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -992,7 +992,7 @@ extern "C" VAStatus DLL_EXPORT __vaDriverInit_1_0(VADriverContextP ctx) {
 
   ctx->version_major = VA_MAJOR_VERSION;
   ctx->version_minor = VA_MINOR_VERSION;
-  ctx->str_vendor = "Chromium fake libva driver";
+  ctx->str_vendor = "Cinaseek fake libva driver";
   CHECK(ctx->drm_state);
 
   ctx->pDriverData = new media::internal::FakeDriver(

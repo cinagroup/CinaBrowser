@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -424,7 +424,7 @@ class CrxInstaller : public SandboxedUnpackerClient {
   // The directory extensions are installed to.
   const base::FilePath install_directory_;
 
-  // The location the installation came from (bundled with Chromium, registry,
+  // The location the installation came from (bundled with Cinaseek, registry,
   // manual install, etc). This metadata is saved with the installation if
   // successful. Defaults to INTERNAL.
   mojom::ManifestLocation install_source_;

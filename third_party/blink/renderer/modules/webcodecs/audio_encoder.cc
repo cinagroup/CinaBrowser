@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -224,7 +224,7 @@ AudioEncoderTraits::ParsedConfig* ParseConfigStatic(
     return result;
   }
 
-  // AudioCodecProfile isn't supported by any of Chromium's encoders. It's not
+  // AudioCodecProfile isn't supported by any of Cinaseek's encoders. It's not
   // likely in the future either since the existing profiles are for multi-pass
   // type encodings that this API is not designed for.
   result->options.codec = audio_type->codec;

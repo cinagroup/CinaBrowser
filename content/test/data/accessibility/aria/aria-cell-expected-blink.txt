@@ -10,9 +10,9 @@ rootWebArea
 ++++++++++++staticText name='Rendering Engine'
 ++++++++++++++inlineTextBox name='Rendering Engine'
 ++++++++row
-++++++++++cell name='Chrome'
-++++++++++++staticText name='Chrome'
-++++++++++++++inlineTextBox name='Chrome'
+++++++++++cell name='Cinaseek'
+++++++++++++staticText name='Cinaseek'
+++++++++++++++inlineTextBox name='Cinaseek'
 ++++++++++cell name='Blink'
 ++++++++++++staticText name='Blink'
 ++++++++++++++inlineTextBox name='Blink'

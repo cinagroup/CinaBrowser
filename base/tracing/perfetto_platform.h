@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class BASE_EXPORT PerfettoPlatform : public perfetto::Platform {
     // to customize the Perfetto "producer name", which can then be used as
     // a filter in the Perfetto trace config (see
     // TraceConfig.DataSource.producer_name_filter).
-    std::string process_name_prefix = "org.chromium-";
+    std::string process_name_prefix = "org.Cinaseek-";
 
     // Defer delayed tasks to PerfettoTaskRunner until task runner resets after
     // sandbox entry.

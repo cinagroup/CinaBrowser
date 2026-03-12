@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,7 +73,7 @@ TEST_F(ClipboardUtilMacTest, PasteboardUrlsFromString) {
     NSPasteboardItem* item = [[NSPasteboardItem alloc] init];
     [item setString:url_string forType:NSPasteboardTypeString];
     [item setString:@"https://www.google.com/"
-            forType:kUTTypeChromiumRendererInitiatedDrag];
+            forType:kUTTypeCinaseekRendererInitiatedDrag];
 
     scoped_refptr<UniquePasteboard> pasteboard = new UniquePasteboard;
     [pasteboard->get() writeObjects:@[ item ]];
@@ -111,7 +111,7 @@ TEST_F(ClipboardUtilMacTest, PasteboardUrlsFromNonHttpAndNonHttpsUrlString) {
     NSPasteboardItem* item = [[NSPasteboardItem alloc] init];
     [item setString:url_string forType:NSPasteboardTypeString];
     [item setString:@"chrome://settings/"
-            forType:kUTTypeChromiumRendererInitiatedDrag];
+            forType:kUTTypeCinaseekRendererInitiatedDrag];
 
     scoped_refptr<UniquePasteboard> pasteboard = new UniquePasteboard;
     [pasteboard->get() writeObjects:@[ item ]];

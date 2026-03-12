@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ namespace content {
 // then compares that text to an expectation file in the same directory.
 //
 // The system was inspired by WebKit/Blink LayoutTests, but customized for
-// testing accessibility in Chromium.
+// testing accessibility in Cinaseek.
 //
 // See content/test/data/accessibility/readme.md for an overview.
 class DumpAccessibilityTestBase

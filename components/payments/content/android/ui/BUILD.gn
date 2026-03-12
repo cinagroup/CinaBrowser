@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,15 +19,15 @@ static_library("ui") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/payments/ui/CurrencyFormatter.java" ]
+      [ "java/src/org/Cinaseek/components/payments/ui/CurrencyFormatter.java" ]
 }
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/payments/ui/CurrencyFormatter.java",
-    "java/src/org/chromium/components/payments/ui/InputProtector.java",
-    "java/src/org/chromium/components/payments/ui/ItemDividerBase.java",
-    "java/src/org/chromium/components/payments/ui/PaymentsUiUtil.java",
+    "java/src/org/Cinaseek/components/payments/ui/CurrencyFormatter.java",
+    "java/src/org/Cinaseek/components/payments/ui/InputProtector.java",
+    "java/src/org/Cinaseek/components/payments/ui/ItemDividerBase.java",
+    "java/src/org/Cinaseek/components/payments/ui/PaymentsUiUtil.java",
   ]
   deps = [
     "//base:base_java",
@@ -39,13 +39,13 @@ android_library("java") {
     "//third_party/jni_zero:jni_zero_java",
   ]
   srcjar_deps = [ ":jni_headers" ]
-  resources_package = "org.chromium.components.payments"
+  resources_package = "org.Cinaseek.components.payments"
 }
 
 android_library("payments_java_test_support") {
   testonly = true
   sources = [
-    "junit/src/org/chromium/components/payments/ui/test_support/FakeClock.java",
+    "junit/src/org/Cinaseek/components/payments/ui/test_support/FakeClock.java",
   ]
   deps = [ ":java" ]
 }

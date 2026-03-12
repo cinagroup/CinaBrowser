@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -569,18 +569,18 @@ if (is_android) {
 
   generate_jni("scheme_classifier_jni") {
     sources = [
-      "android/java/src/org/chromium/components/omnibox/AutocompleteSchemeClassifier.java",
-      "android/java/src/org/chromium/components/omnibox/OmniboxUrlEmphasizer.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteSchemeClassifier.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxUrlEmphasizer.java",
     ]
   }
 
   android_library("scheme_classifier_java") {
-    resources_package = "org.chromium.components.omnibox"
+    resources_package = "org.Cinaseek.components.omnibox"
     srcjar_deps = [ ":scheme_classifier_jni" ]
     sources = [
-      "android/java/src/org/chromium/components/omnibox/AutocompleteSchemeClassifier.java",
-      "android/java/src/org/chromium/components/omnibox/OmniboxUrlEmphasizer.java",
-      "android/java/src/org/chromium/components/omnibox/SecurityStatusIcon.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteSchemeClassifier.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxUrlEmphasizer.java",
+      "android/java/src/org/Cinaseek/components/omnibox/SecurityStatusIcon.java",
     ]
     deps = [
       ":java_resources",
@@ -594,18 +594,18 @@ if (is_android) {
 
   android_library("browser_java") {
     sources = [
-      "android/java/src/org/chromium/components/omnibox/AutocompleteInput.java",
-      "android/java/src/org/chromium/components/omnibox/AutocompleteMatch.java",
-      "android/java/src/org/chromium/components/omnibox/AutocompleteRequestType.java",
-      "android/java/src/org/chromium/components/omnibox/AutocompleteResult.java",
-      "android/java/src/org/chromium/components/omnibox/OmniboxFocusReason.java",
-      "android/java/src/org/chromium/components/omnibox/action/OmniboxAction.java",
-      "android/java/src/org/chromium/components/omnibox/action/OmniboxActionDelegate.java",
-      "android/java/src/org/chromium/components/omnibox/action/OmniboxActionFactory.java",
-      "android/java/src/org/chromium/components/omnibox/suggestions/OmniboxSuggestionUiType.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteInput.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteMatch.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteRequestType.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteResult.java",
+      "android/java/src/org/Cinaseek/components/omnibox/OmniboxFocusReason.java",
+      "android/java/src/org/Cinaseek/components/omnibox/action/OmniboxAction.java",
+      "android/java/src/org/Cinaseek/components/omnibox/action/OmniboxActionDelegate.java",
+      "android/java/src/org/Cinaseek/components/omnibox/action/OmniboxActionFactory.java",
+      "android/java/src/org/Cinaseek/components/omnibox/suggestions/OmniboxSuggestionUiType.java",
     ]
 
-    resources_package = "org.chromium.components.omnibox"
+    resources_package = "org.Cinaseek.components.omnibox"
     deps = [
       ":autocomplete_proto_java",
       ":java_resources",
@@ -642,11 +642,11 @@ if (is_android) {
   }
 
   robolectric_library("junit") {
-    resources_package = "org.chromium.components.omnibox"
+    resources_package = "org.Cinaseek.components.omnibox"
     sources = [
-      "android/java/src/org/chromium/components/omnibox/AutocompleteInputUnitTest.java",
-      "android/java/src/org/chromium/components/omnibox/AutocompleteResultUnitTest.java",
-      "android/java/src/org/chromium/components/omnibox/SecurityStatusIconUnitTest.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteInputUnitTest.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteResultUnitTest.java",
+      "android/java/src/org/Cinaseek/components/omnibox/SecurityStatusIconUnitTest.java",
     ]
     deps = [
       ":browser_java",
@@ -670,11 +670,11 @@ if (is_android) {
   }
 
   android_library("junit_test_support") {
-    resources_package = "org.chromium.components.omnibox"
+    resources_package = "org.Cinaseek.components.omnibox"
     testonly = true
     sources = [
-      "//components/omnibox/browser/android/java/src/org/chromium/components/omnibox/AutocompleteMatchBuilder.java",
-      "//components/omnibox/browser/android/java/src/org/chromium/components/omnibox/GroupConfigTestSupport.java",
+      "//components/omnibox/browser/android/java/src/org/Cinaseek/components/omnibox/AutocompleteMatchBuilder.java",
+      "//components/omnibox/browser/android/java/src/org/Cinaseek/components/omnibox/GroupConfigTestSupport.java",
     ]
     deps = [
       "//components/omnibox/browser:browser_java",
@@ -700,10 +700,10 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/components/omnibox/AutocompleteMatch.java",
-      "android/java/src/org/chromium/components/omnibox/AutocompleteResult.java",
-      "android/java/src/org/chromium/components/omnibox/action/OmniboxAction.java",
-      "android/java/src/org/chromium/components/omnibox/action/OmniboxActionFactory.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteMatch.java",
+      "android/java/src/org/Cinaseek/components/omnibox/AutocompleteResult.java",
+      "android/java/src/org/Cinaseek/components/omnibox/action/OmniboxAction.java",
+      "android/java/src/org/Cinaseek/components/omnibox/action/OmniboxActionFactory.java",
     ]
   }
 }

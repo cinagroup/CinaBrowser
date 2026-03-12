@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -578,7 +578,7 @@ void WaylandWindow::SetTitle(const std::u16string& title) {}
 void WaylandWindow::SetCapture() {
   // Wayland doesn't allow explicit grabs. Instead, it sends events to "entered"
   // windows. That is, if user enters their mouse pointer to a window, that
-  // window starts to receive events. However, Chromium may want to reroute
+  // window starts to receive events. However, Cinaseek may want to reroute
   // these events to another window. In this case, tell the window manager that
   // this specific window has grabbed the events, and they will be rerouted in
   // WaylandWindow::DispatchEvent method.
@@ -856,7 +856,7 @@ void WaylandWindow::OnDragEnter(const gfx::PointF& point, int operations) {
     return;
   }
   // Wayland sends locations in DIP and drag handler also expects DIP locations,
-  // though the Wayland compositor is not aware of chromium's internal UI scale,
+  // though the Wayland compositor is not aware of Cinaseek's internal UI scale,
   // hence the translation below.
   const gfx::PointF scaled_point_dip =
       gfx::ScalePoint(point, 1.0f / applied_state().ui_scale);
@@ -877,7 +877,7 @@ int WaylandWindow::OnDragMotion(const gfx::PointF& point, int operations) {
     return 0;
   }
   // Wayland sends locations in DIP and drag handler also expects DIP locations,
-  // though the Wayland compositor is not aware of chromium's internal UI scale,
+  // though the Wayland compositor is not aware of Cinaseek's internal UI scale,
   // hence the translation below.
   const gfx::PointF scaled_point_dip =
       gfx::ScalePoint(point, 1.0f / applied_state().ui_scale);
@@ -1387,7 +1387,7 @@ void WaylandWindow::RequestState(PlatformWindowDelegate::State state,
   // bounds are arbitrary `x,y w x h` in DIP, //cc translates its origin (x,y)
   // and size (w x h) to pixels independently from each other. Translating the
   // whole rect from DIPs to pixels might generate a 1px difference that cause
-  // render artifacts - see https://issues.chromium.org/40876438 for details.
+  // render artifacts - see https://issues.Cinaseek.org/40876438 for details.
   state.size_px = gfx::ScaleToEnclosingRectIgnoringError(
                       gfx::Rect(state.bounds_dip.size()), scale)
                       .size();

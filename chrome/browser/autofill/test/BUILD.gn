@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,11 +7,11 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("test_java") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.autofill"
+  resources_package = "org.Cinaseek.chrome.browser.autofill"
 
   sources = [
-    "android/java/src/org/chromium/chrome/browser/autofill/PersonalDataManagerTest.java",
-    "android/java/src/org/chromium/chrome/browser/autofill/SubKeyRequesterIntegrationTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/autofill/PersonalDataManagerTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/autofill/SubKeyRequesterIntegrationTest.java",
   ]
 
   deps = [
@@ -35,9 +35,9 @@ android_library("test_java") {
 
 android_library("test_support_java") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.autofill"
+  resources_package = "org.Cinaseek.chrome.browser.autofill"
 
-  sources = [ "android/java/src/org/chromium/chrome/browser/autofill/AutofillTestHelper.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/autofill/AutofillTestHelper.java" ]
 
   deps = [
     "//base:tasks_java",
@@ -62,7 +62,7 @@ android_library("test_support_java") {
 generate_jni("jni_headers") {
   testonly = true
   visibility = [ ":*" ]
-  sources = [ "android/java/src/org/chromium/chrome/browser/autofill/AutofillTestHelper.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/autofill/AutofillTestHelper.java" ]
 }
 
 static_library("test_support") {

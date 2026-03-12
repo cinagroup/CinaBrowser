@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ NSString* CreateLocalBlockingJsonRuleList() {
 
   NSDictionary* allow_crbug = @{
     @"trigger" : @{
-      @"url-filter" : @"https://bugs\\.chromium\\.org/.*",
+      @"url-filter" : @"https://bugs\\.Cinaseek\\.org/.*",
       @"if-top-url" : @[ @"chrome://.*" ],
       @"resource-type" : @[
         // Allow opening crbug from chrome:// urls

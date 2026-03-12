@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,12 +14,12 @@ android_library("java") {
     "//chrome/browser/ui/android/hats/test:test_support_java",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientBridge.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientFactory.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientImpl.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyMetadata.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyThrottler.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyUiDelegateBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyMetadata.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyThrottler.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyUiDelegateBridge.java",
   ]
   deps = [
     ":controller_java",
@@ -44,16 +44,16 @@ android_library("java") {
     "//third_party/jni_zero:jni_zero_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.hats"
+  resources_package = "org.Cinaseek.chrome.browser.ui.hats"
 }
 
 robolectric_library("junit") {
   testonly = true
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientBridgeUnitTest.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientUnitTest.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyThrottlerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyUiDelegateBridgeUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientBridgeUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyThrottlerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyUiDelegateBridgeUnitTest.java",
   ]
   deps = [
     ":controller_java",
@@ -88,8 +88,8 @@ robolectric_library("junit") {
 
 android_library("controller_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyController.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyControllerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyController.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyControllerFactory.java",
   ]
 
   deps = [
@@ -107,7 +107,7 @@ android_library("controller_java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyClientBridge.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/SurveyUiDelegateBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyClientBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/SurveyUiDelegateBridge.java",
   ]
 }

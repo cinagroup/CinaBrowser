@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,11 +62,11 @@ bool DeletionOrigin::is_specified() const {
 }
 
 sync_pb::DeletionOrigin DeletionOrigin::ToProto(
-    std::string_view chromium_version) const {
+    std::string_view Cinaseek_version) const {
   CHECK(is_specified());
 
   sync_pb::DeletionOrigin proto;
-  proto.set_chromium_version(std::string(chromium_version));
+  proto.set_Cinaseek_version(std::string(Cinaseek_version));
   proto.set_file_name_hash(base::PersistentHash((location_->file_name())));
   proto.set_file_line_number(location_->line_number());
   if (base::IsStringASCII(location_->file_name())) {

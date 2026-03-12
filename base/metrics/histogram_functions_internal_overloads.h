@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@
 //
 // These overloads are in a separate header for readability. See the main header
 // for documentation:
-// https://chromium.googlesource.com/chromium/src/+/HEAD/base/metrics/histogram_functions.h.
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/base/metrics/histogram_functions.h.
 
 namespace base {
 

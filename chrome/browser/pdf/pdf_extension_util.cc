@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -308,7 +308,7 @@ std::string GetManifest() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr char kExtensionName[] = "Chrome PDF Viewer";
 #else
-  static constexpr char kExtensionName[] = "Chromium PDF Viewer";
+  static constexpr char kExtensionName[] = "Cinaseek PDF Viewer";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
   std::string manifest_contents(

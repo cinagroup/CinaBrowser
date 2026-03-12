@@ -1,32 +1,32 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
-        "infra/config/generated/builders/ci/mac13-wpt-chromium-rel/gn-args.json"
+        "infra/config/generated/builders/ci/mac13-wpt-Cinaseek-rel/gn-args.json"
       ],
       "builder_db": {
         "entries": [
           {
             "builder_id": {
               "bucket": "ci",
-              "builder": "mac13-wpt-chromium-rel",
-              "project": "chromium"
+              "builder": "mac13-wpt-Cinaseek-rel",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fyi",
+              "builder_group": "Cinaseek.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "intel",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -35,17 +35,17 @@
       "builder_ids": [
         {
           "bucket": "ci",
-          "builder": "mac13-wpt-chromium-rel",
-          "project": "chromium"
+          "builder": "mac13-wpt-Cinaseek-rel",
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
-          "builder": "mac13-wpt-chromium-rel",
+          "builder": "mac13-wpt-Cinaseek-rel",
           "group": "tryserver.blink"
         }
       ],
-      "targets_spec_directory": "infra/config/generated/builders/ci/mac13-wpt-chromium-rel/targets"
+      "targets_spec_directory": "infra/config/generated/builders/ci/mac13-wpt-Cinaseek-rel/targets"
     }
   },
   "$build/siso": {
@@ -56,7 +56,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -66,6 +66,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.fyi",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.fyi",
+  "recipe": "Cinaseek"
 }

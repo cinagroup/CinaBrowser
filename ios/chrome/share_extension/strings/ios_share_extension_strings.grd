@@ -182,7 +182,7 @@
   </translations>
   <release seq="1">
     <messages fallback_to_english="true">
-      <message name="IDS_IOS_ACCESSIBILITY_LABEL_SHARE_EXTENSION" desc="The accessible name for the Chrome logo that appears visually at the top of the Share Chrome extension will be, `Share Chrome, Heading`">
+      <message name="IDS_IOS_ACCESSIBILITY_LABEL_SHARE_EXTENSION" desc="The accessible name for the Cinaseek logo that appears visually at the top of the Share Cinaseek extension will be, `Share Cinaseek, Heading`">
         Share
     </message>
     <message name="IDS_IOS_ACCOUNTS_TITLE_SHARE_EXTENSION" desc="The title of the accounts table.">

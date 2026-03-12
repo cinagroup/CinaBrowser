@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ void ChromeCrashReporterClient::GetProductInfo(ProductInfo* product_info) {
 
 bool ChromeCrashReporterClient::GetShouldDumpLargerDumps() {
   // Capture larger dumps for Google Chrome beta, dev, and canary channels, and
-  // Chromium builds. The Google Chrome stable channel uses smaller dumps.
+  // Cinaseek builds. The Google Chrome stable channel uses smaller dumps.
   return install_static::GetChromeChannel() != version_info::Channel::STABLE;
 }
 

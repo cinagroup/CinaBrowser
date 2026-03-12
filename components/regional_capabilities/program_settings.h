@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace regional_capabilities {
 
 // These values are persisted to prefs. Entries should not be renumbered and
 // numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.regional_capabilities
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.regional_capabilities
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: RegionalProgram
 enum class Program : int {
   kDefault = 1,

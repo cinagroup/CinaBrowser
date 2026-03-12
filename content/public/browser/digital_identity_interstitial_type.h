@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace content {
 
 // The type of digital identity interstitial.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser.webid
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser.webid
 enum class DigitalIdentityInterstitialType {
   kLowRisk,
   kHighRisk,

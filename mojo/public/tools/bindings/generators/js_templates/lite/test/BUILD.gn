@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ mojom("mojo_bindings") {
 }
 
 # Lite style bindings, and closure compilation, are both only used for Mojo
-# WebUIs on ChromeOS.
+# WebUIs on CinaseekOS.
 if (is_chromeos) {
   js_type_check("closure_compile") {
     deps = [ ":test" ]

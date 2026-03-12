@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,14 +64,14 @@ TEST_F(BorealisWindowManagerTest, NonBorealisWindowHasNoId) {
 TEST_F(BorealisWindowManagerTest, BorealisWindowHasAnId) {
   BorealisWindowManager window_manager(profile());
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.foobarbaz");
+      MakeWindow("org.Cinaseek.guest_os.borealis.foobarbaz");
   EXPECT_NE(window_manager.GetShelfAppId(window.get()), "");
 }
 
 TEST_F(BorealisWindowManagerTest, BorealisWindowHasCorrectId) {
   BorealisWindowManager window_manager(profile());
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.xprop.456789");
+      MakeWindow("org.Cinaseek.guest_os.borealis.xprop.456789");
   CreateFakeApp(profile(), "some_app", "steam://rungameid/456789");
   EXPECT_EQ(window_manager.GetShelfAppId(window.get()), FakeAppId("some_app"));
 }
@@ -79,7 +79,7 @@ TEST_F(BorealisWindowManagerTest, BorealisWindowHasCorrectId) {
 TEST_F(BorealisWindowManagerTest, MismatchedWindowHasDifferentId) {
   BorealisWindowManager window_manager(profile());
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.xprop.2468");
+      MakeWindow("org.Cinaseek.guest_os.borealis.xprop.2468");
   CreateFakeApp(profile(), "some_app", "steam://rungameid/456789");
   EXPECT_NE(window_manager.GetShelfAppId(window.get()), FakeAppId("some_app"));
 }
@@ -93,7 +93,7 @@ TEST_F(BorealisWindowManagerTest, IdDetectionDoesNotImplyTracking) {
   window_manager.AddObserver(&life_observer);
 
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.foobarbaz");
+      MakeWindow("org.Cinaseek.guest_os.borealis.foobarbaz");
   window_manager.GetShelfAppId(window.get());
 
   window_manager.RemoveObserver(&anon_observer);
@@ -126,7 +126,7 @@ TEST_F(BorealisWindowManagerTest, ObserverCalledForAnonymousApp) {
   BorealisWindowManager window_manager(profile());
   window_manager.AddObserver(&observer);
   std::unique_ptr<ScopedTestWindow> window = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.anonymous_app", &window_manager);
+      "org.Cinaseek.guest_os.borealis.anonymous_app", &window_manager);
 
   EXPECT_CALL(observer,
               OnAnonymousAppRemoved(testing::ContainsRegex("anonymous_app")));
@@ -149,18 +149,18 @@ TEST_F(BorealisWindowManagerTest, LifetimeObserverTracksWindows) {
   EXPECT_CALL(observer, OnAppStarted(_));
   EXPECT_CALL(observer, OnWindowStarted(_, _));
   std::unique_ptr<ScopedTestWindow> first_foo =
-      MakeAndTrackWindow("org.chromium.guest_os.borealis.foo", &window_manager);
+      MakeAndTrackWindow("org.Cinaseek.guest_os.borealis.foo", &window_manager);
 
   // A window for the same app only starts that window.
   EXPECT_CALL(observer, OnWindowStarted(_, _));
   std::unique_ptr<ScopedTestWindow> second_foo =
-      MakeAndTrackWindow("org.chromium.guest_os.borealis.foo", &window_manager);
+      MakeAndTrackWindow("org.Cinaseek.guest_os.borealis.foo", &window_manager);
 
   // Whereas a new app starts both the app and the window.
   EXPECT_CALL(observer, OnAppStarted(_));
   EXPECT_CALL(observer, OnWindowStarted(_, _));
   std::unique_ptr<ScopedTestWindow> only_bar =
-      MakeAndTrackWindow("org.chromium.guest_os.borealis.bar", &window_manager);
+      MakeAndTrackWindow("org.Cinaseek.guest_os.borealis.bar", &window_manager);
 
   // Deleting an app window while one still exists does not end the app.
   EXPECT_CALL(observer, OnWindowFinished(_, _));
@@ -191,9 +191,9 @@ TEST_F(BorealisWindowManagerTest, HandlesMultipleAnonymousWindows) {
   EXPECT_CALL(observer, OnAnonymousAppAdded(_, _)).Times(1);
 
   std::unique_ptr<ScopedTestWindow> window1 = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.anonymous_app", &window_manager);
+      "org.Cinaseek.guest_os.borealis.anonymous_app", &window_manager);
   std::unique_ptr<ScopedTestWindow> window2 = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.anonymous_app", &window_manager);
+      "org.Cinaseek.guest_os.borealis.anonymous_app", &window_manager);
 
   // We only expect to see the app removed after the last window closes.
   window1.reset();
@@ -221,7 +221,7 @@ TEST_F(BorealisWindowManagerTest, AnonymousObserverNotCalledForKnownApp) {
   BorealisWindowManager window_manager(profile());
   window_manager.AddObserver(&observer);
   std::unique_ptr<ScopedTestWindow> window = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.wmclass.foo", &window_manager);
+      "org.Cinaseek.guest_os.borealis.wmclass.foo", &window_manager);
 
   window_manager.RemoveObserver(&observer);
 }
@@ -236,7 +236,7 @@ TEST_F(BorealisWindowManagerTest, SteamClientIsNonGameBorealisWindow) {
 
 TEST_F(BorealisWindowManagerTest, NewSteamClientIsNonGameBorealisWindow) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.xprop.769");
+      MakeWindow("org.Cinaseek.guest_os.borealis.xprop.769");
 
   EXPECT_TRUE(ash::borealis::IsBorealisWindow(window.get()));
   EXPECT_FALSE(
@@ -245,7 +245,7 @@ TEST_F(BorealisWindowManagerTest, NewSteamClientIsNonGameBorealisWindow) {
 
 TEST_F(BorealisWindowManagerTest, ArbitraryBorealisWindowsAreNotGames) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.foo");
+      MakeWindow("org.Cinaseek.guest_os.borealis.foo");
 
   EXPECT_TRUE(ash::borealis::IsBorealisWindow(window.get()));
   EXPECT_FALSE(
@@ -253,7 +253,7 @@ TEST_F(BorealisWindowManagerTest, ArbitraryBorealisWindowsAreNotGames) {
 }
 TEST_F(BorealisWindowManagerTest, CanIdentifySteamGames) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.borealis.xprop.123");
+      MakeWindow("org.Cinaseek.guest_os.borealis.xprop.123");
 
   EXPECT_TRUE(ash::borealis::IsBorealisWindow(window.get()));
   EXPECT_TRUE(
@@ -262,7 +262,7 @@ TEST_F(BorealisWindowManagerTest, CanIdentifySteamGames) {
 
 TEST_F(BorealisWindowManagerTest, TerminaWindowsAreNotBorealisWindowsOrGames) {
   std::unique_ptr<aura::Window> window =
-      MakeWindow("org.chromium.guest_os.termina.xprop.123");
+      MakeWindow("org.Cinaseek.guest_os.termina.xprop.123");
 
   EXPECT_FALSE(ash::borealis::IsBorealisWindow(window.get()));
   EXPECT_FALSE(

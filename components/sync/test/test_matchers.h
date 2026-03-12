@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,9 +96,9 @@ MATCHER(HasNotInitialSyncDone, "") {
 
 MATCHER_P2(MatchesDeletionOrigin, expected_version, expected_location, "") {
   const sync_pb::DeletionOrigin& actual_origin = arg;
-  if (actual_origin.chromium_version() != expected_version) {
+  if (actual_origin.Cinaseek_version() != expected_version) {
     *result_listener << "Expected version " << expected_version << " but got "
-                     << actual_origin.chromium_version();
+                     << actual_origin.Cinaseek_version();
     return false;
   }
   if (actual_origin.file_name_hash() !=

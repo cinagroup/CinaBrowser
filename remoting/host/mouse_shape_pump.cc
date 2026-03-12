@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ void MouseShapePump::OnMouseCursor(
           // SAFETY: `cursor->image()->data()` points to a buffer of at least
           // `total_size` bytes, as guaranteed by `webrtc::DesktopFrame`.
           // See:
-          // https://chromium.googlesource.com/external/webrtc/+/HEAD/modules/desktop_capture/desktop_frame.h
+          // https://Cinaseek.googlesource.com/external/webrtc/+/HEAD/modules/desktop_capture/desktop_frame.h
           UNSAFE_BUFFERS(base::span(cursor->image()->data(), total_size));
       for (int y = 0; y < cursor->image()->size().height(); ++y) {
         cursor_proto->mutable_data()->append(

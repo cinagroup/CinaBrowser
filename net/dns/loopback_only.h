@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ namespace net {
 // connectivity and are not used for network connections. IPv4 link-local
 // addresses are part of APIPA, can be used for network connections, and are not
 // typically configured automatically for network interfaces. See
-// https://codereview.chromium.org/3331024 when this behavior was originally
+// https://codereview.Cinaseek.org/3331024 when this behavior was originally
 // added, and the linked bug https://crbug.com/55041 for an example. Otherwise,
 // if IPv6 link-local addresses are not considered loopback, then
 // host_resolver_system_task.cc will always use AI_ADDRCONFIG for getaddrinfo()

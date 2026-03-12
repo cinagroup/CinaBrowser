@@ -43,8 +43,8 @@ promise_setup(async () => {
   ENCODER_CONFIG = config;
 });
 
-// The code is inspired from https://source.chromium.org/chromium/chromium/src/+/main:media/formats/mp4/avc.cc;l=190;drc=a6567f4fac823a8a319652bdb5070b5b72a60f30
-// and https://source.chromium.org/chromium/chromium/src/+/main:media/formats/mp4/hevc.cc;l=425;drc=a6567f4fac823a8a319652bdb5070b5b72a60f30?
+// The code is inspired from https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/formats/mp4/avc.cc;l=190;drc=a6567f4fac823a8a319652bdb5070b5b72a60f30
+// and https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/formats/mp4/hevc.cc;l=425;drc=a6567f4fac823a8a319652bdb5070b5b72a60f30?
 
 function checkNaluSyntax(test, chunk) {
   test.step(() => {

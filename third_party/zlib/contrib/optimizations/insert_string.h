@@ -1,8 +1,8 @@
 /* insert_string.h
  *
- * Copyright 2019 The Chromium Authors
+ * Copyright 2019 The Cinaseek Authors
  * Use of this source code is governed by a BSD-style license that can be
- * found in the Chromium source repository LICENSE file.
+ * found in the Cinaseek source repository LICENSE file.
  */
 
 #ifndef INSERT_STRING_H

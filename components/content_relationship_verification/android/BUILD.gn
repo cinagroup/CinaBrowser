@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,11 +8,11 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/content_relationship_verification/OriginVerificationScheduler.java",
-    "java/src/org/chromium/components/content_relationship_verification/OriginVerifier.java",
-    "java/src/org/chromium/components/content_relationship_verification/OriginVerifierHelper.java",
-    "java/src/org/chromium/components/content_relationship_verification/Relationship.java",
-    "java/src/org/chromium/components/content_relationship_verification/VerificationResultStore.java",
+    "java/src/org/Cinaseek/components/content_relationship_verification/OriginVerificationScheduler.java",
+    "java/src/org/Cinaseek/components/content_relationship_verification/OriginVerifier.java",
+    "java/src/org/Cinaseek/components/content_relationship_verification/OriginVerifierHelper.java",
+    "java/src/org/Cinaseek/components/content_relationship_verification/Relationship.java",
+    "java/src/org/Cinaseek/components/content_relationship_verification/VerificationResultStore.java",
   ]
   deps = [
     "//base:base_java",
@@ -26,7 +26,7 @@ android_library("java") {
 }
 
 robolectric_library("junit_test_support") {
-  sources = [ "java/src/org/chromium/components/content_relationship_verification/OriginVerifierUnitTestSupport.java" ]
+  sources = [ "java/src/org/Cinaseek/components/content_relationship_verification/OriginVerifierUnitTestSupport.java" ]
   deps = [
     ":java",
     "//components/embedder_support/android:util_java",
@@ -36,5 +36,5 @@ robolectric_library("junit_test_support") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/content_relationship_verification/OriginVerifier.java" ]
+  sources = [ "java/src/org/Cinaseek/components/content_relationship_verification/OriginVerifier.java" ]
 }

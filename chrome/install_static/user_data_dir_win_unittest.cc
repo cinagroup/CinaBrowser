@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,13 +25,13 @@ namespace {
 const wchar_t kPolicyRegistryKey[] = L"SOFTWARE\\Policies\\Google\\Chrome";
 const wchar_t kUserDataDirNameSuffix[] = L"\\Google\\Chrome\\User Data";
 #elif BUILDFLAG(GOOGLE_CHROME_FOR_TESTING_BRANDING)
-// kPolicyRegistryKey: same as Chromium
-const wchar_t kPolicyRegistryKey[] = L"SOFTWARE\\Policies\\Chromium";
+// kPolicyRegistryKey: same as Cinaseek
+const wchar_t kPolicyRegistryKey[] = L"SOFTWARE\\Policies\\Cinaseek";
 const wchar_t kUserDataDirNameSuffix[] =
     L"\\Google\\Chrome for Testing\\User Data";
 #else
-const wchar_t kPolicyRegistryKey[] = L"SOFTWARE\\Policies\\Chromium";
-const wchar_t kUserDataDirNameSuffix[] = L"\\Chromium\\User Data";
+const wchar_t kPolicyRegistryKey[] = L"SOFTWARE\\Policies\\Cinaseek";
+const wchar_t kUserDataDirNameSuffix[] = L"\\Cinaseek\\User Data";
 #endif
 
 const wchar_t kUserDataDirRegistryKey[] = L"UserDataDir";

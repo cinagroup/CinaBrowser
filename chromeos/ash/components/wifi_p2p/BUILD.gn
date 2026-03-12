@@ -1,8 +1,8 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-assert(is_chromeos, "Non Chrome OS builds cannot depend on //chromeos/ash")
+assert(is_chromeos, "Non Cinaseek OS builds cannot depend on //chromeos/ash")
 
 component("wifi_p2p") {
   defines = [ "IS_CHROMEOS_ASH_COMPONENTS_WIFI_P2P_IMPL" ]

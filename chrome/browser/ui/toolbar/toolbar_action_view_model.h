@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ class ToolbarActionViewModel {
  public:
   // The source for the action invocation. Used in UMA; do not reorder or delete
   // entries.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.toolbar
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.toolbar
   enum class InvocationSource {
     // The action was invoked from a command (keyboard shortcut).
     kCommand = 0,

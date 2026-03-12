@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ class KcerFactoryAsh : public ProfileKeyedServiceFactory {
   // Stores the mapping between Chaps tokens and KcerToken-s. The map is created
   // on the UI thread, only used on the UI thread and is never destroyed (as a
   // part of NoDestructor<> factory).
-  // Only one token map is used for each Chromium launch, which is controlled by
+  // Only one token map is used for each Cinaseek launch, which is controlled by
   // an experiment.
   KcerTokenMapWithoutNss chaps_tokens_ui_;
 };

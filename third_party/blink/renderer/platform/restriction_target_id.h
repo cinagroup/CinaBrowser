@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace blink {
 // RestrictionTarget is a JS-exposed object defined in:
 // https://screen-share.github.io/element-capture/#dom-restrictiontarget
 // The RestrictionTargetId is the type that's backing the JS-exposed object
-// in Chromium's implementation.
+// in Cinaseek's implementation.
 using RestrictionTargetId =
     base::StrongAlias<class RestrictionTargetIdTag, base::Token>;
 

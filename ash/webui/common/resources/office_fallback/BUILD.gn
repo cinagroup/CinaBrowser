@@ -1,11 +1,11 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//ui/webui/resources/tools/build_webui.gni")
 
 build_webui("build") {
-  assert(is_chromeos, "The office fallback dialog is ChromeOS only")
+  assert(is_chromeos, "The office fallback dialog is CinaseekOS only")
   grd_prefix = "office_fallback"
 
   static_files = [ "main.html" ]

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/linux/pkg_config.gni")
 
 declare_args() {
   # Controls whether the build should use the version of libffi library shipped
-  # with the system. By default, we only use the system version on Chrome OS:
+  # with the system. By default, we only use the system version on Cinaseek OS:
   # on Linux, libffi must be statically linked to prevent a situation where the
   # runtime version of libffi is different from the build-time version from the
   # sysroot.

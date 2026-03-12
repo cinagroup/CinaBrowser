@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ BLINK_COMMON_EXPORT extern const char kEnablePreferCompositingToLCDText[];
 BLINK_COMMON_EXPORT extern const char kEnableRasterSideDarkModeForImages[];
 BLINK_COMMON_EXPORT extern const char kEnableRGBA4444Textures[];
 #if BUILDFLAG(IS_CHROMEOS)
-BLINK_COMMON_EXPORT extern const char kEnableWebGLImageChromium[];
+BLINK_COMMON_EXPORT extern const char kEnableWebGLImageCinaseek[];
 #endif
 BLINK_COMMON_EXPORT extern const char kEnableZeroCopy[];
 BLINK_COMMON_EXPORT extern const char

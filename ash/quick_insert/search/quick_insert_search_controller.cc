@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ constexpr int kMaxSymbolResults = 2;
 constexpr int kMaxEmoticonResults = 2;
 
 // These are taken from manifest files in:
-// https://source.chromium.org/chromium/chromium/src/+/2be4329930cac782779c5083389b83e09a8bcb47:chrome/browser/resources/chromeos/input_method/
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/2be4329930cac782779c5083389b83e09a8bcb47:chrome/browser/resources/chromeos/input_method/
 constexpr auto kImeToLangCode =
     base::MakeFixedFlatMap<std::string_view, std::string_view>(
         {{"xkb:us::eng", "en"},           {"xkb:us:intl:eng", "en"},

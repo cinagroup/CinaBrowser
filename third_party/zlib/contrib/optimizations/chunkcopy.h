@@ -1,8 +1,8 @@
 /* chunkcopy.h -- fast chunk copy and set operations
  * Copyright (C) 2017 ARM, Inc.
- * Copyright 2017 The Chromium Authors
+ * Copyright 2017 The Cinaseek Authors
  * Use of this source code is governed by a BSD-style license that can be
- * found in the Chromium source repository LICENSE file.
+ * found in the Cinaseek source repository LICENSE file.
  */
 
 #ifndef CHUNKCOPY_H

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ int main(int argc, char* const argv[]) {
                                IDS_LOCAL_NETWORK_ACCESS_PERMISSION_DESC,
                                "IDS_LOCAL_NETWORK_ACCESS_PERMISSION_DESC");
 
-    std::string chromium_shortcut_description = LoadStringFromDataPack(
+    std::string Cinaseek_shortcut_description = LoadStringFromDataPack(
         branded_data_pack.get(), cur_lang, IDS_CHROMIUM_SHORCUT_DESCRIPTION,
         "IDS_CHROMIUM_SHORCUT_DESCRIPTION");
 
@@ -197,7 +197,7 @@ int main(int argc, char* const argv[]) {
         {"NSMicrophoneUsageDescription", permission_reason},
         {"NSWebBrowserPublicKeyCredentialUsageDescription", permission_reason},
 
-        {"\"Chromium Shortcut\"", chromium_shortcut_description},
+        {"\"Cinaseek Shortcut\"", Cinaseek_shortcut_description},
     };
     std::string strings_file_contents_string;
     for (const auto& kv : infoplist_strings) {

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ class POLICY_EXPORT IncognitoModePolicyHandler
                                   const PolicyMap& policies,
                                   PolicyErrorMap* errors);
   // Validates that policy follows official pattern
-  // https://www.chromium.org/administrators/url-blocklist-filter-format
+  // https://www.Cinaseek.org/administrators/url-blocklist-filter-format
   bool ValidatePolicy(const std::string& url_pattern);
   // Returns the filtered URL list policy value. Invalid entries are
   // filtered out and list gets truncated to maximum size.

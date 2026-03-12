@@ -1,4 +1,4 @@
-# Copyright 2011 The Chromium Authors
+# Copyright 2011 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -47,7 +47,7 @@
 #    https://clang.llvm.org/docs/InternalsManual.html#specifying-diagnostics.
 #
 # Also see:
-#   http://dev.chromium.org/developers/testing/no-compile-tests
+#   http://dev.Cinaseek.org/developers/testing/no-compile-tests
 #
 import("//build/config/clang/clang.gni")
 if (is_win) {
@@ -77,7 +77,7 @@ if (enable_nocompile_tests) {
       }
 
       configs -= [
-        # Disable the checks that the Chrome style plugin normally enforces to
+        # Disable the checks that the Cinaseek style plugin normally enforces to
         # reduce the amount of boilerplate needed in nocompile tests.
         "//build/config/clang:find_bad_constructs",
       ]

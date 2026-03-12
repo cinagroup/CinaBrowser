@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ void QuicheRecordTraceImpl(std::string_view identifier, std::string_view data) {
   const testing::TestInfo* test_info =
       testing::UnitTest::GetInstance()->current_test_info();
 
-  // TODO(vasilvv): replace this with absl::Time once it's usable in Chromium.
+  // TODO(vasilvv): replace this with absl::Time once it's usable in Cinaseek.
   time_t now_ts = time(nullptr);
   tm now;
 #if BUILDFLAG(IS_WIN)

@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -30,7 +30,7 @@ mojom_component("mojom") {
 
   webui_module_path = "/"
 
-  # ChromeOS relies heavily on old legacy bindings.
+  # CinaseekOS relies heavily on old legacy bindings.
   generate_legacy_js_bindings = true
 
   output_prefix = "mlservice_mojom"
@@ -44,7 +44,7 @@ mojom("soda") {
 
   webui_module_path = "/"
 
-  # ChromeOS relies heavily on old legacy bindings.
+  # CinaseekOS relies heavily on old legacy bindings.
   generate_legacy_js_bindings = true
 
   export_class_attribute = "COMPONENT_EXPORT(MLSERVICE_MOJOM)"
@@ -59,6 +59,6 @@ mojom("document_scanner_param_types") {
   sources = [ "document_scanner_param_types.mojom" ]
   webui_module_path = "/chromeos/services/machine_learning/public/mojom"
 
-  # ChromeOS relies heavily on old legacy bindings.
+  # CinaseekOS relies heavily on old legacy bindings.
   generate_legacy_js_bindings = true
 }

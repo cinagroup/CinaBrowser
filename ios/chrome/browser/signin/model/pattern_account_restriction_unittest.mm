@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 namespace {
 const std::string email1 = "foo@gmail.com";
 const std::string email2 = "foo2@google.com";
-const std::string email3 = "foo3@chromium.com";
+const std::string email3 = "foo3@Cinaseek.com";
 }  // namespace
 
 class PatternAccountRestrictionTest : public PlatformTest {};

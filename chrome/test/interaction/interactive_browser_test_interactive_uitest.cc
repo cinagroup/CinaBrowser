@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -304,7 +304,7 @@ IN_PROC_BROWSER_TEST_F(InteractiveBrowserTestUiTest,
       }));
 }
 
-// TODO(crbug.com/330095872): Flaky on linux-chromeos-rel and Linux ChromiumOS
+// TODO(crbug.com/330095872): Flaky on linux-chromeos-rel and Linux CinaseekOS
 // MSan.
 #if BUILDFLAG(IS_CHROMEOS)
 #define MAYBE_WatchForNonTabWebContentsActivation \
@@ -321,7 +321,7 @@ IN_PROC_BROWSER_TEST_F(InteractiveBrowserTestUiTest,
 // see a flake, first, note that these are edge case tests for new test
 // infrastructure and do not directly affect Chrome stability. Next, please:
 //  - Reopen or add to the attached bug.
-//  - Make sure it is assigned to dfried@chromium.org or another
+//  - Make sure it is assigned to dfried@Cinaseek.org or another
 //    chrome/test/interaction owner.
 //  - [Selectively] disable the test on the offending platforms.
 //

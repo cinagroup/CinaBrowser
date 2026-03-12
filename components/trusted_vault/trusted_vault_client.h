@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace trusted_vault {
 // values are persisted to logs. Entries should not be renumbered and numeric
 // values should never be reused. Keep in sync w/ TrustedVaultUserActionTrigger
 // in tools/metrics/histograms/metadata/sync/enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.trusted_vault
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.trusted_vault
 // LINT.IfChange(TrustedVaultUserActionTrigger)
 enum class TrustedVaultUserActionTriggerForUMA {
   // Settings pages, used on all platforms except ChromeOS.

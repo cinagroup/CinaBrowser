@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ const int kAliveTabsCountAtRendererTermination = 2;
 const int kExpiredTimesAddedCount = 2;
 
 // URL constants used by TabUsageRecorderBrowserAgentTest.
-const char kURL[] = "http://www.chromium.org";
+const char kURL[] = "http://www.Cinaseek.org";
 const char kNativeURL[] = "chrome://version";
 
 // Option to InsertFakeWebState() to create the WebState for a tab that is in

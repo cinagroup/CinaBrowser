@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ TEST_F(TestComponentContextForProcessTest, PublishTestInterface) {
 TEST_F(TestComponentContextForProcessTest, ProvideSystemService) {
   // Expose fuchsia.buildinfo.Provider through the
   // TestComponentContextForProcess. This service was chosen because it is one
-  // of the ambient services in Fuchsia's hermetic environment for Chromium
+  // of the ambient services in Fuchsia's hermetic environment for Cinaseek
   // tests.
   const std::string_view kServiceNames[] = {
       ::fuchsia::buildinfo::Provider::Name_};
@@ -126,7 +126,7 @@ TEST_F(TestComponentContextForProcessTest, ProvideSystemService) {
 TEST_F(TestComponentContextForProcessTest, ProvideSystemServiceNatural) {
   // Expose fuchsia.buildinfo.Provider through the
   // TestComponentContextForProcess. This service was chosen because it is one
-  // of the ambient services in Fuchsia's hermetic environment for Chromium
+  // of the ambient services in Fuchsia's hermetic environment for Cinaseek
   // tests.
   const std::string_view kServiceNames[] = {
       fidl::DiscoverableProtocolName<fuchsia_buildinfo::Provider>};

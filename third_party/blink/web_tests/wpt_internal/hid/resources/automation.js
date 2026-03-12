@@ -7,8 +7,8 @@ function hid_test(func, name, properties) {
     assert_implements(navigator.hid, 'missing navigator.hid');
     if (fakeHidService === undefined) {
       // Try loading a polyfill for the fake hid service.
-      if (isChromiumBased) {
-        const fakes = await import('/resources/chromium/fake-hid.js');
+      if (isCinaseekBased) {
+        const fakes = await import('/resources/Cinaseek/fake-hid.js');
         fakeHidService = fakes.fakeHidService;
       }
     }

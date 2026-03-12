@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class DummyService final : public RefcountedKeyedService {
 
  private:
   // Destructor needs to be explicitly declared and private to please the
-  // Chromium style checker as this class is ref-counted.
+  // Cinaseek style checker as this class is ref-counted.
   ~DummyService() final = default;
 };
 

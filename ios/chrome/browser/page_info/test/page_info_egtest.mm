@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -259,7 +259,7 @@ void AddEntryToHistoryService(GURL url, base::Time timestamp) {
       assertWithMatcher:grey_nil()];
 }
 
-// Tests that opening the page info on a Chromium page displays the correct
+// Tests that opening the page info on a Cinaseek page displays the correct
 // information.
 - (void)testShowPageInfoChromePage {
   [ChromeEarlGrey loadURL:GURL("chrome://version")];

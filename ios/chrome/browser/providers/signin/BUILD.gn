@@ -1,9 +1,9 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_choice") {
-  sources = [ "chromium_choice.mm" ]
+source_set("Cinaseek_choice") {
+  sources = [ "Cinaseek_choice.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/signin:choice_api",
@@ -11,8 +11,8 @@ source_set("chromium_choice") {
   frameworks = [ "UIKit.framework" ]
 }
 
-source_set("chromium_signin_error") {
-  sources = [ "chromium_signin_error.mm" ]
+source_set("Cinaseek_signin_error") {
+  sources = [ "Cinaseek_signin_error.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/signin:signin_error_api",
@@ -20,8 +20,8 @@ source_set("chromium_signin_error") {
   frameworks = [ "Foundation.framework" ]
 }
 
-source_set("chromium_signin_identity") {
-  sources = [ "chromium_signin_identity.mm" ]
+source_set("Cinaseek_signin_identity") {
+  sources = [ "Cinaseek_signin_identity.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/signin:signin_identity_api",
@@ -29,8 +29,8 @@ source_set("chromium_signin_identity") {
   frameworks = [ "Foundation.framework" ]
 }
 
-source_set("chromium_signin_resources") {
-  sources = [ "chromium_signin_resources.mm" ]
+source_set("Cinaseek_signin_resources") {
+  sources = [ "Cinaseek_signin_resources.mm" ]
   deps = [
     "//ios/chrome/browser/shared/ui/util",
     "//ios/public/provider/chrome/browser/signin:signin_resources_api",
@@ -38,14 +38,14 @@ source_set("chromium_signin_resources") {
   frameworks = [ "UIKit.framework" ]
 }
 
-source_set("chromium_signin_sso") {
-  sources = [ "chromium_signin_sso.mm" ]
+source_set("Cinaseek_signin_sso") {
+  sources = [ "Cinaseek_signin_sso.mm" ]
   deps = [ "//ios/public/provider/chrome/browser/signin:signin_sso_api" ]
   frameworks = [ "Foundation.framework" ]
 }
 
-source_set("chromium_trusted_vault") {
-  sources = [ "chromium_trusted_vault.mm" ]
+source_set("Cinaseek_trusted_vault") {
+  sources = [ "Cinaseek_trusted_vault.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/signin:trusted_vault_api",

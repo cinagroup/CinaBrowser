@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -124,7 +124,7 @@ BASE_FEATURE(kVariationsRestrictDogfood, base::FEATURE_DISABLED_BY_DEFAULT);
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   const char* label = "com.google.chrome.first_run_variations_seed_manager";
 #else
-  const char* label = "org.chromium.first_run_variations_seed_manager";
+  const char* label = "org.Cinaseek.first_run_variations_seed_manager";
 #endif
   dispatch_once(&onceToken, ^{
     queue = dispatch_queue_create(label, DISPATCH_QUEUE_SERIAL);

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class Bus;
 
 namespace chromeos {
 
-// DlpClient is used to communicate with the org.chromium.Dlp
+// DlpClient is used to communicate with the org.Cinaseek.Dlp
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(DLP) DlpClient {
@@ -120,8 +120,8 @@ class COMPONENT_EXPORT(DLP) DlpClient {
   // Returns the global instance which may be null if not initialized.
   static DlpClient* Get();
 
-  // Dlp daemon D-Bus method calls. See org.chromium.Dlp.xml and
-  // dlp_service.proto in Chromium OS code for the documentation of the
+  // Dlp daemon D-Bus method calls. See org.Cinaseek.Dlp.xml and
+  // dlp_service.proto in Cinaseek OS code for the documentation of the
   // methods and request/response messages.
   virtual void SetDlpFilesPolicy(const dlp::SetDlpFilesPolicyRequest request,
                                  SetDlpFilesPolicyCallback callback) = 0;

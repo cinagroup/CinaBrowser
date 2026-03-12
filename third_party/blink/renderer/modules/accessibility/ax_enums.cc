@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 
 #include "third_party/blink/renderer/modules/accessibility/ax_enums.h"
 

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ using testing::StrictMock;
 
 namespace {
 
-const std::wstring kTestKeyPath = L"SOFTWARE\\Chromium\\DeviceTrust\\Test";
+const std::wstring kTestKeyPath = L"SOFTWARE\\Cinaseek\\DeviceTrust\\Test";
 
 // We will use this to test when registry stores QWORDS.
 const int64_t kLargeNumberQword = 12147483647;

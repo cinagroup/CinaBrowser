@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -264,7 +264,7 @@ TEST_F(PaymentManagerTest, SetAndGetPaymentInstrument) {
   PaymentHandlerStatus write_status = PaymentHandlerStatus::NOT_FOUND;
   PaymentInstrumentPtr write_details = PaymentInstrument::New();
   write_details->name = "ChromePay: chrome@chromepay.test";
-  write_details->method = "https://www.chromium.org";
+  write_details->method = "https://www.Cinaseek.org";
   SetPaymentInstrument("test_key", std::move(write_details), &write_status);
   // Write the first instrument of a web payment app will return
   // FETCH_PAYMENT_APP_INFO_FAILED since the web app's manifest is not
@@ -277,7 +277,7 @@ TEST_F(PaymentManagerTest, SetAndGetPaymentInstrument) {
   GetPaymentInstrument("test_key", &read_details, &read_status);
   ASSERT_EQ(PaymentHandlerStatus::SUCCESS, read_status);
   EXPECT_EQ("ChromePay: chrome@chromepay.test", read_details->name);
-  EXPECT_EQ("https://www.chromium.org", read_details->method);
+  EXPECT_EQ("https://www.Cinaseek.org", read_details->method);
 }
 
 TEST_F(PaymentManagerTest, UninitializedPaymentManager) {

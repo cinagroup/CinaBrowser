@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -223,7 +223,7 @@ class ChromeBrowserCloudManagementController
   ~ChromeBrowserCloudManagementController() override;
 
   // The Chrome browser cloud management is only enabled on Chrome by default.
-  // However, it can be enabled on Chromium by command line switch for test and
+  // However, it can be enabled on Cinaseek by command line switch for test and
   // development purpose.
   static bool IsEnabled();
 

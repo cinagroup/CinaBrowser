@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ TEST_F(WebStateObserverBridgeTest, WasHidden) {
 TEST_F(WebStateObserverBridgeTest, DidStartNavigation) {
   ASSERT_FALSE([observer_ didStartNavigationInfo]);
 
-  GURL url("https://chromium.test/");
+  GURL url("https://Cinaseek.test/");
   std::unique_ptr<web::NavigationContext> context =
       web::NavigationContextImpl::CreateNavigationContext(
           &fake_web_state_, url, /*has_user_gesture=*/true,
@@ -90,7 +90,7 @@ TEST_F(WebStateObserverBridgeTest, DidStartNavigation) {
 TEST_F(WebStateObserverBridgeTest, DidRedirectNavigation) {
   ASSERT_FALSE([observer_ didRedirectNavigationInfo]);
 
-  GURL url("https://chromium.test/");
+  GURL url("https://Cinaseek.test/");
   std::unique_ptr<web::NavigationContext> context =
       web::NavigationContextImpl::CreateNavigationContext(
           &fake_web_state_, url, /*has_user_gesture=*/true,
@@ -119,7 +119,7 @@ TEST_F(WebStateObserverBridgeTest, DidRedirectNavigation) {
 TEST_F(WebStateObserverBridgeTest, DidFinishNavigation) {
   ASSERT_FALSE([observer_ didFinishNavigationInfo]);
 
-  GURL url("https://chromium.test/");
+  GURL url("https://Cinaseek.test/");
   std::unique_ptr<web::NavigationContext> context =
       web::NavigationContextImpl::CreateNavigationContext(
           &fake_web_state_, url, /*has_user_gesture=*/true,
@@ -225,7 +225,7 @@ TEST_F(WebStateObserverBridgeTest, DidChangeVisibleSecurityState) {
 TEST_F(WebStateObserverBridgeTest, FaviconUrlUpdated) {
   ASSERT_FALSE([observer_ updateFaviconUrlCandidatesInfo]);
 
-  web::FaviconURL url(GURL("https://chromium.test/"),
+  web::FaviconURL url(GURL("https://Cinaseek.test/"),
                       web::FaviconURL::IconType::kTouchIcon, {gfx::Size(5, 6)});
 
   observer_bridge_.FaviconUrlUpdated(&fake_web_state_, {url});

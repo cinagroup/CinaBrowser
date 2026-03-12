@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1049,7 +1049,7 @@ TEST(BrowsingDataFilterBuilderImplTest, OriginDeleteList) {
 
       // Different host is a different origin.
       {"https://www.youtube.com", false},
-      {"https://www.chromium.org", false},
+      {"https://www.Cinaseek.org", false},
   });
 
   for (size_t i = 0; i < std::size(test_cases); i++) {

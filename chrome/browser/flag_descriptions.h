@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #include "third_party/blink/public/common/buildflags.h"
 
 // This file declares strings used in chrome://flags. These messages are not
-// translated, because instead of end-users they target Chromium developers and
+// translated, because instead of end-users they target Cinaseek developers and
 // testers. See https://crbug.com/40457200 and https://crbug.com/41308302 for
 // more details.
 //

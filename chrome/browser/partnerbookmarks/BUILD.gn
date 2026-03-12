@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -43,16 +43,16 @@ source_set("android_impl") {
 }
 
 android_library("delegate_java") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/partnerbookmarks/Placeholder.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/Placeholder.java" ]
 }
 
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmark.java",
-    "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksFaviconThrottle.java",
-    "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksProviderIterator.java",
-    "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksReader.java",
-    "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksShim.java",
+    "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmark.java",
+    "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksFaviconThrottle.java",
+    "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksProviderIterator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksReader.java",
+    "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksShim.java",
   ]
   deps = [
     "//base:base_java",
@@ -69,7 +69,7 @@ android_library("java") {
     ":java_enums",
     ":jni_headers",
   ]
-  resources_package = "org.chromium.chrome.browser.partnerbookmarks"
+  resources_package = "org.Cinaseek.chrome.browser.partnerbookmarks"
 }
 
 java_cpp_enum("java_enums") {
@@ -77,16 +77,16 @@ java_cpp_enum("java_enums") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksReader.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksReader.java" ]
 }
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.partnerbookmarks"
+  resources_package = "org.Cinaseek.chrome.browser.partnerbookmarks"
 
   sources = [
-    "android/junit/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksFaviconThrottleTest.java",
-    "android/junit/src/org/chromium/chrome/browser/partnerbookmarks/PartnerBookmarksReaderTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksFaviconThrottleTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/partnerbookmarks/PartnerBookmarksReaderTest.java",
   ]
 
   deps = [

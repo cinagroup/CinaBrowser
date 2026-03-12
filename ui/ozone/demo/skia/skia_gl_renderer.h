@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #include "base/threading/simple_thread.h"
 #include "third_party/skia/include/core/SkSurface.h"
 #include "third_party/skia/include/gpu/ganesh/GrDirectContext.h"
-#include "third_party/skia/include/private/chromium/GrDeferredDisplayListRecorder.h"
+#include "third_party/skia/include/private/Cinaseek/GrDeferredDisplayListRecorder.h"
 #include "ui/gfx/swap_result.h"
 #include "ui/ozone/demo/renderer_base.h"
 

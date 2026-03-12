@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//ui/webui/resources/tools/generate_grd.gni")
 import("//ui/webui/webui_features.gni")
 import("./os_settings.gni")
 
-assert(is_chromeos, "ChromeOS Settings is ChromeOS only")
+assert(is_chromeos, "CinaseekOS Settings is CinaseekOS only")
 
 nearby_share_tsc_dir =
     "$root_gen_dir/chrome/browser/resources/chromeos/nearby_share/shared/tsc"

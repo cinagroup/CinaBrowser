@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@
 namespace cc {
 namespace {
 // These constants were chosen empirically for their visually pleasant behavior.
-// Contact tedchoc@chromium.org for questions about changing these values.
+// Contact tedchoc@Cinaseek.org for questions about changing these values.
 const int64_t kShowHideMaxDurationMs = 200;
 // TODO(sinansahin): Temporary value, pending UX guidance probably.
 const int64_t kHeightChangeDurationMs = 200;

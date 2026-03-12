@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -123,7 +123,7 @@ void CrashUploadListAndroid::LoadUnsuccessfulUploadList(
       file = file.RemoveExtension();
 
     // ID is the last part of the file name. e.g.
-    // chromium-renderer-minidump-f297dbcba7a2d0bb.
+    // Cinaseek-renderer-minidump-f297dbcba7a2d0bb.
     std::string id = file.value();
     std::size_t pos = id.find_last_of("-");
     if (pos == std::string::npos) {

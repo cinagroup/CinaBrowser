@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 #include "net/quic/address_utils.h"
 #include "net/quic/mock_decrypter.h"
 #include "net/quic/mock_encrypter.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/quic_decrypter.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/quic_encrypter.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/quic_spdy_client_session_base.h"
@@ -63,7 +63,7 @@ MockCryptoClientStream::MockCryptoClientStream(
     const QuicConfig& config,
     QuicCryptoClientConfig* crypto_config,
     HandshakeMode handshake_mode,
-    const net::ProofVerifyDetailsChromium* proof_verify_details,
+    const net::ProofVerifyDetailsCinaseek* proof_verify_details,
     bool use_mock_crypter)
     : QuicCryptoClientStream(server_id,
                              session,
@@ -94,13 +94,13 @@ void MockCryptoClientStream::OnHandshakeMessage(
 bool MockCryptoClientStream::CryptoConnect() {
   DCHECK(session()->version().IsIetfQuic());
   IPEndPoint local_ip;
-  static_cast<QuicChromiumClientSession*>(session())
+  static_cast<QuicCinaseekClientSession*>(session())
       ->GetDefaultSocket()
       ->GetLocalAddress(&local_ip);
   session()->connection()->SetSelfAddress(ToQuicSocketAddress(local_ip));
 
   IPEndPoint peer_ip;
-  static_cast<QuicChromiumClientSession*>(session())
+  static_cast<QuicCinaseekClientSession*>(session())
       ->GetDefaultSocket()
       ->GetPeerAddress(&peer_ip);
   quic::test::QuicConnectionPeer::SetEffectivePeerAddress(

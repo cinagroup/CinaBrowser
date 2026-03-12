@@ -1,11 +1,11 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_CAST_RUNNER_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_CAST_RUNNER_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/component/runner/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl.h>
 
@@ -26,7 +26,7 @@ class WebInstanceHost;
 
 // ComponentRunner that runs Cast activities specified via cast/casts URIs.
 class CastRunner final : public fuchsia::component::runner::ComponentRunner,
-                         public chromium::cast::DataReset,
+                         public Cinaseek::cast::DataReset,
                          public PendingCastComponent::Delegate {
  public:
   struct Options {
@@ -59,7 +59,7 @@ class CastRunner final : public fuchsia::component::runner::ComponentRunner,
   void handle_unknown_method(uint64_t ordinal,
                              bool method_has_response) override;
 
-  // chromium::cast::DataReset implementation.
+  // Cinaseek::cast::DataReset implementation.
   void DeletePersistentData(DeletePersistentDataCallback callback) override;
 
   // Returns a connection request handler for the fuchsia.web.FrameHost
@@ -92,7 +92,7 @@ class CastRunner final : public fuchsia::component::runner::ComponentRunner,
   // no need to create an isolated context.
   std::optional<WebContentRunner::WebInstanceConfig>
   GetWebInstanceConfigForAppConfig(
-      chromium::cast::ApplicationConfig* app_config);
+      Cinaseek::cast::ApplicationConfig* app_config);
 
   // Launches an isolated Context with the given `config` and returns the newly
   // created WebContentRunner.
@@ -153,7 +153,7 @@ class CastRunner final : public fuchsia::component::runner::ComponentRunner,
   // Used to fetch & cache the list of CORS exempt HTTP headers to configure
   // each web.Context with.
   std::optional<std::vector<std::vector<uint8_t>>> cors_exempt_headers_;
-  chromium::cast::CorsExemptHeaderProviderPtr cors_exempt_headers_provider_;
+  Cinaseek::cast::CorsExemptHeaderProviderPtr cors_exempt_headers_provider_;
   std::vector<base::OnceClosure> on_have_cors_exempt_headers_;
 
   // True if Contexts should be created without VULKAN set.

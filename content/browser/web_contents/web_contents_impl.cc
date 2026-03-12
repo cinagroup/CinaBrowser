@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5731,7 +5731,7 @@ void WebContentsImpl::ShowCreatedWidget(int process_id,
           blink::features::kBlockSelectPopupUnfocusedWindow) &&
       !rwh->is_active()) {
     // If the OS window isn't focused, then don't open select element popups for
-    // it: https://issues.chromium.org/issues/365089001
+    // it: https://issues.Cinaseek.org/issues/365089001
     widget_host_view->host()->ShutdownAndDestroyWidget(true);
     return;
   }

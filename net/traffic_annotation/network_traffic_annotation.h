@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -135,7 +135,7 @@ struct PartialNetworkTrafficAnnotationTag {
 // and annotated by Chrome.
 //
 // |unique_id| should be a string that uniquely identifies this annotation
-// across all of Chromium source code. |unique_id| should be kept unchanged
+// across all of Cinaseek source code. |unique_id| should be kept unchanged
 // as long as possible as its hashed value will be used for differnt logging,
 // debugging, or auditing tasks. Unique ids should include only alphanumeric
 // characters and underline.

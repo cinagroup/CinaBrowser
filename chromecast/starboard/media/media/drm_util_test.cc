@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ using ::testing::Pointee;
 constexpr auto kDefaultBufferData =
     std::to_array<uint8_t>({1, 2, 3, 4, 5, 6, 7});
 
-// Creates a chromium buffer from the given decrypt config and data.
-scoped_refptr<::media::DecoderBuffer> CreateChromiumBuffer(
+// Creates a Cinaseek buffer from the given decrypt config and data.
+scoped_refptr<::media::DecoderBuffer> CreateCinaseekBuffer(
     std::unique_ptr<::media::DecryptConfig> decrypt_config,
     base::span<const uint8_t> data = kDefaultBufferData) {
   scoped_refptr<::media::DecoderBuffer> buffer =
@@ -43,16 +43,16 @@ scoped_refptr<::media::DecoderBuffer> CreateChromiumBuffer(
 }
 
 TEST(DrmUtilTest, UnencryptedBufferHasNullDrmSampleInfo) {
-  scoped_refptr<::media::DecoderBuffer> chromium_buffer =
-      CreateChromiumBuffer(/*decrypt_config=*/nullptr);
-  CHECK(chromium_buffer);
+  scoped_refptr<::media::DecoderBuffer> Cinaseek_buffer =
+      CreateCinaseekBuffer(/*decrypt_config=*/nullptr);
+  CHECK(Cinaseek_buffer);
 
-  EXPECT_THAT(DrmInfoWrapper::Create(*chromium_buffer).GetDrmSampleInfo(),
+  EXPECT_THAT(DrmInfoWrapper::Create(*Cinaseek_buffer).GetDrmSampleInfo(),
               IsNull());
 
   // Check the version that uses CastDecoderBuffer.
   auto cast_buffer =
-      base::MakeRefCounted<DecoderBufferAdapter>(chromium_buffer);
+      base::MakeRefCounted<DecoderBufferAdapter>(Cinaseek_buffer);
   CHECK(cast_buffer);
   EXPECT_THAT(DrmInfoWrapper::Create(*cast_buffer).GetDrmSampleInfo(),
               IsNull());
@@ -73,11 +73,11 @@ TEST(DrmUtilTest, CreatesCencDrmInfo) {
                                                std::string(kIv), {subsample});
   CHECK(decrypt_config);
 
-  scoped_refptr<::media::DecoderBuffer> chromium_buffer =
-      CreateChromiumBuffer(std::move(decrypt_config));
-  CHECK(chromium_buffer);
+  scoped_refptr<::media::DecoderBuffer> Cinaseek_buffer =
+      CreateCinaseekBuffer(std::move(decrypt_config));
+  CHECK(Cinaseek_buffer);
 
-  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*chromium_buffer);
+  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*Cinaseek_buffer);
 
   StarboardDrmSampleInfo expected_drm_info;
   expected_drm_info.encryption_scheme =
@@ -93,12 +93,12 @@ TEST(DrmUtilTest, CreatesCencDrmInfo) {
   expected_drm_info.identifier_size = kId.size();
   expected_drm_info.subsample_mapping = base::span_from_ref(sb_subsample);
 
-  EXPECT_THAT(DrmInfoWrapper::Create(*chromium_buffer).GetDrmSampleInfo(),
+  EXPECT_THAT(DrmInfoWrapper::Create(*Cinaseek_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));
 
   // Check the version that uses CastDecoderBuffer.
   auto cast_buffer =
-      base::MakeRefCounted<DecoderBufferAdapter>(chromium_buffer);
+      base::MakeRefCounted<DecoderBufferAdapter>(Cinaseek_buffer);
   CHECK(cast_buffer);
   EXPECT_THAT(DrmInfoWrapper::Create(*cast_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));
@@ -120,11 +120,11 @@ TEST(DrmUtilTest, CreatesCbcsDrmInfo) {
           std::string(kId), std::string(kIv), {subsample}, encryption_pattern);
   CHECK(decrypt_config);
 
-  scoped_refptr<::media::DecoderBuffer> chromium_buffer =
-      CreateChromiumBuffer(std::move(decrypt_config));
-  CHECK(chromium_buffer);
+  scoped_refptr<::media::DecoderBuffer> Cinaseek_buffer =
+      CreateCinaseekBuffer(std::move(decrypt_config));
+  CHECK(Cinaseek_buffer);
 
-  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*chromium_buffer);
+  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*Cinaseek_buffer);
 
   StarboardDrmSampleInfo expected_drm_info;
   expected_drm_info.encryption_scheme =
@@ -142,19 +142,19 @@ TEST(DrmUtilTest, CreatesCbcsDrmInfo) {
   expected_drm_info.identifier_size = kId.size();
   expected_drm_info.subsample_mapping = base::span_from_ref(sb_subsample);
 
-  EXPECT_THAT(DrmInfoWrapper::Create(*chromium_buffer).GetDrmSampleInfo(),
+  EXPECT_THAT(DrmInfoWrapper::Create(*Cinaseek_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));
 
   // Check the version that uses CastDecoderBuffer.
   auto cast_buffer =
-      base::MakeRefCounted<DecoderBufferAdapter>(chromium_buffer);
+      base::MakeRefCounted<DecoderBufferAdapter>(Cinaseek_buffer);
   CHECK(cast_buffer);
   EXPECT_THAT(DrmInfoWrapper::Create(*cast_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));
 }
 
 TEST(DrmUtilTest, HandlesEmptySubsampleMappings) {
-  // Chromium buffers might not specify a subsample mapping. We should assume
+  // Cinaseek buffers might not specify a subsample mapping. We should assume
   // that the entire buffer is encrypted, in that case.
   constexpr auto kBufferData = std::to_array<uint8_t>({7, 8, 9});
   constexpr std::string_view kId = "drm_id";
@@ -167,11 +167,11 @@ TEST(DrmUtilTest, HandlesEmptySubsampleMappings) {
           std::string(kId), std::string(kIv), /*subsamples=*/{});
   CHECK(decrypt_config);
 
-  scoped_refptr<::media::DecoderBuffer> chromium_buffer =
-      CreateChromiumBuffer(std::move(decrypt_config), /*data=*/kBufferData);
-  CHECK(chromium_buffer);
+  scoped_refptr<::media::DecoderBuffer> Cinaseek_buffer =
+      CreateCinaseekBuffer(std::move(decrypt_config), /*data=*/kBufferData);
+  CHECK(Cinaseek_buffer);
 
-  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*chromium_buffer);
+  DrmInfoWrapper wrapper = DrmInfoWrapper::Create(*Cinaseek_buffer);
 
   StarboardDrmSampleInfo expected_drm_info;
   expected_drm_info.encryption_scheme =
@@ -193,14 +193,14 @@ TEST(DrmUtilTest, HandlesEmptySubsampleMappings) {
   sb_subsample.encrypted_byte_count = kBufferData.size();
   expected_drm_info.subsample_mapping = base::span_from_ref(sb_subsample);
 
-  EXPECT_THAT(DrmInfoWrapper::Create(*chromium_buffer).GetDrmSampleInfo(),
+  EXPECT_THAT(DrmInfoWrapper::Create(*Cinaseek_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));
 
   // Check the version that uses CastDecoderBuffer. The cast code that converts
-  // from chromium structs -> cast structs should have performed the same logic
+  // from Cinaseek structs -> cast structs should have performed the same logic
   // of creating a single subsample mapping.
   auto cast_buffer =
-      base::MakeRefCounted<DecoderBufferAdapter>(chromium_buffer);
+      base::MakeRefCounted<DecoderBufferAdapter>(Cinaseek_buffer);
   CHECK(cast_buffer);
   EXPECT_THAT(DrmInfoWrapper::Create(*cast_buffer).GetDrmSampleInfo(),
               Pointee(MatchesDrmInfo(expected_drm_info)));

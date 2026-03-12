@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ class CONTENT_EXPORT AppWebMessagePort : public mojo::MessageReceiver {
   static std::vector<blink::MessagePortDescriptor> Release(
       JNIEnv* env,
       const base::android::JavaRef<jobjectArray>&
-          jports /* org.chromium.content.browser.AppWebMessagePort */);
+          jports /* org.Cinaseek.content.browser.AppWebMessagePort */);
 
   // When clean up native, we notify Java instance to release native handle.
   ~AppWebMessagePort() override;

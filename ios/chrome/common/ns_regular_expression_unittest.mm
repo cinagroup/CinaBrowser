@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 #import "testing/gtest_mac.h"
 #import "testing/platform_test.h"
 
-// Chromium code relies on NSRegularExpression class to match regular
+// Cinaseek code relies on NSRegularExpression class to match regular
 // expressions.  Any subtle changes in behavior can lead to hard to diagnose
 // problems.  This files tests how NSRegularExpression handles various regular
 // expression features.

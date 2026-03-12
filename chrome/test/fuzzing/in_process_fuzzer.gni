@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//testing/libfuzzer/fuzzer_test.gni")
 import("//third_party/protobuf/proto_library.gni")
 
 # This template allows creation of a fuzzer which has access to all the
-# functionality of a browser_test, including a full GUI instance of Chromium.
+# functionality of a browser_test, including a full GUI instance of Cinaseek.
 # See in_process_fuzzer.h.
 #
 # It accepts all the same arguments as //testing/libfuzzer/fuzzer_test.gni's

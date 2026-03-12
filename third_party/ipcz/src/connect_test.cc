@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -189,7 +189,7 @@ MULTINODE_TEST_NODE(ConnectTestNode, NonBrokerToNonBrokerClient) {
 
 MULTINODE_TEST(ConnectTest, NonBrokerToNonBroker) {
 #if BUILDFLAG(IS_ANDROID)
-  // Client nodes launching other client nodes doesn't work for Chromium's
+  // Client nodes launching other client nodes doesn't work for Cinaseek's
   // custom test driver on Android. Limit this test to the reference test
   // drivers there.
   if (&GetDriver() != &reference_drivers::kSyncReferenceDriver &&
@@ -283,7 +283,7 @@ MULTINODE_TEST_NODE(ConnectTestNode, FailedNonBrokerReferralClient) {
 
 MULTINODE_TEST(ConnectTest, FailedNonBrokerReferral) {
 #if BUILDFLAG(IS_ANDROID)
-  // Client nodes launching other client nodes doesn't work for Chromium's
+  // Client nodes launching other client nodes doesn't work for Cinaseek's
   // custom test driver on Android. Limit this test to the reference test
   // drivers there.
   if (&GetDriver() != &reference_drivers::kSyncReferenceDriver &&
@@ -349,7 +349,7 @@ MULTINODE_TEST_BROKER_NODE(ConnectTestNode, BrokerWithClientNode) {
 MULTINODE_TEST(ConnectTest, MultiBrokerIntroductions) {
 #if BUILDFLAG(IS_ANDROID)
   // Client nodes launching other client nodes doesn't work reliably for
-  // Chromium's multiprocess test driver on Android. Limit this test to a few
+  // Cinaseek's multiprocess test driver on Android. Limit this test to a few
   // reference drivers there.
   if (&GetDriver() != &reference_drivers::kSyncReferenceDriver &&
       &GetDriver() != &reference_drivers::kAsyncReferenceDriver) {

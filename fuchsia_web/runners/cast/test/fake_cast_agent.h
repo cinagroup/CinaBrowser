@@ -1,11 +1,11 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_TEST_FAKE_CAST_AGENT_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_TEST_FAKE_CAST_AGENT_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/legacymetrics/cpp/fidl.h>
 #include <lib/fidl/cpp/binding_set.h>
 #include <lib/sys/component/cpp/testing/realm_builder.h>
@@ -22,7 +22,7 @@ namespace test {
 // LocalComponentImpl implementation that offers some fake services that the
 // runner normally expects to have provided by the Cast "agent".
 class FakeCastAgent final : public ::component_testing::LocalComponentImpl,
-                            public chromium::cast::CorsExemptHeaderProvider {
+                            public Cinaseek::cast::CorsExemptHeaderProvider {
  public:
   FakeCastAgent();
   ~FakeCastAgent() override;
@@ -49,7 +49,7 @@ class FakeCastAgent final : public ::component_testing::LocalComponentImpl,
   }
 
  private:
-  // chromium::cast::CorsExemptHeaderProvider implementation.
+  // Cinaseek::cast::CorsExemptHeaderProvider implementation.
   void GetCorsExemptHeaderNames(
       GetCorsExemptHeaderNamesCallback callback) override;
 
@@ -62,7 +62,7 @@ class FakeCastAgent final : public ::component_testing::LocalComponentImpl,
   bool is_started_ = false;
 
   // Used to publish a stub CorsExemptHeaderProvider to the Cast runtime.
-  fidl::BindingSet<chromium::cast::CorsExemptHeaderProvider>
+  fidl::BindingSet<Cinaseek::cast::CorsExemptHeaderProvider>
       cors_exempt_header_provider_bindings_;
 
   // Used to configure the `ApplicationConfig`s reported to the Cast runtime.

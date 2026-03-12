@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace {
 // would only make the policy change a little bit earlier or later.
 //
 // [1]:
-// https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/platform2/resourced/src/memory.rs;drc=a76ccbdab134a54a6b3314a6b78722b9b3fab6d1;l=506
+// https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/platform2/resourced/src/memory.rs;drc=a76ccbdab134a54a6b3314a6b78722b9b3fab6d1;l=506
 constexpr base::TimeDelta kReportProcessesMinimalInterval = base::Seconds(3);
 
 void ReportPageProcessesOnUIThread(

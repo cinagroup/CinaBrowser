@@ -737,7 +737,7 @@ DocumentFragment* CreateFragmentForInnerOuterHTML(
 #if DCHECK_IS_ON()
       // As a sanity check for the fast-path, create another fragment using
       // the full parser and compare the results.
-      // See https://bugs.chromium.org/p/chromium/issues/detail?id=1407201
+      // See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1407201
       // for details.
       DocumentFragment* fragment2 = DocumentFragment::Create(document);
       fragment2->ParseHTML(markup, context_element, registry,

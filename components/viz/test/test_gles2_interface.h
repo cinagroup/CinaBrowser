@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@
 #include "base/functional/callback.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/gles2_interface_stub.h"
 #include "gpu/command_buffer/common/capabilities.h"
 #include "gpu/command_buffer/common/sync_token.h"
@@ -132,8 +132,8 @@ class TestGLES2Interface : public gpu::gles2::GLES2InterfaceStub {
   void set_supports_texture_rg(bool support);
 
   // When set, MapBufferCHROMIUM will return NULL after this many times.
-  void set_times_map_buffer_chromium_succeeds(int times) {
-    times_map_buffer_chromium_succeeds_ = times;
+  void set_times_map_buffer_Cinaseek_succeeds(int times) {
+    times_map_buffer_Cinaseek_succeeds_ = times;
   }
 
   virtual GLuint NextTextureId();
@@ -179,7 +179,7 @@ class TestGLES2Interface : public gpu::gles2::GLES2InterfaceStub {
   gpu::GLCapabilities test_gl_capabilities_;
   int times_end_query_succeeds_ = -1;
   bool context_lost_ = false;
-  int times_map_buffer_chromium_succeeds_ = -1;
+  int times_map_buffer_Cinaseek_succeeds_ = -1;
   base::OnceClosure context_lost_callback_;
   std::unordered_set<unsigned> used_textures_;
   unsigned next_program_id_ = 1000;

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace {
 
 const char kTestText[] = "Some test text";
-const char kTestURL[] = "https://www.chromium.org/";
+const char kTestURL[] = "https://www.Cinaseek.org/";
 
 class PasteboardUtilTest : public PlatformTest {
  public:

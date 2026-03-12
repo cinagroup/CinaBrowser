@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ void WebTestStorageAccessManager::SetStorageAccess(
   }
 
   // Note: we're intentionally ignoring the `origin` and `embedding_origin`
-  // patterns here, aside from checking that they are valid patterns. Chromium's
+  // patterns here, aside from checking that they are valid patterns. Cinaseek's
   // Storage Access API implementation intentionally does not override
   // site-specific cookie settings exceptions, so it is incorrect (or at best,
   // unhelpful) to use the patterns to set a site-specific setting.

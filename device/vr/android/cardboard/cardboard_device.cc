@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -174,12 +174,12 @@ void CardboardDevice::OnXrSessionButtonTouched() {
   // - In case the scan is skipped, the current device parameter are left
   //   untouched.
   // - The activity finishes. See
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/cardboard/src/sdk/qrcode/android/java/com/google/cardboard/sdk/QrCodeCaptureActivity.java;l=270
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/cardboard/src/sdk/qrcode/android/java/com/google/cardboard/sdk/QrCodeCaptureActivity.java;l=270
   //
   // Next, the activity that invoked the QR code scanner is resumed and, as
   // part the resume process it will have to obtain the newly saved device
   // parameter and recreate the distortion meshes. See
-  // https://source.chromium.org/chromium/chromium/src/+/main:device/vr/android/cardboard/cardboard_image_transport.cc;l=64
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:device/vr/android/cardboard/cardboard_image_transport.cc;l=64
   cardboard_sdk_->ScanQrCodeAndSaveDeviceParams();
 }
 

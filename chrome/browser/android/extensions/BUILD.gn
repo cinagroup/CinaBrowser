@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -38,15 +38,15 @@ source_set("android") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManager.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManager.java" ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
-  resources_package = "org.chromium.chrome.browser.extensions"
+  resources_package = "org.Cinaseek.chrome.browser.extensions"
   sources = [
-    "java/src/org/chromium/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManager.java",
-    "java/src/org/chromium/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManagerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManager.java",
+    "java/src/org/Cinaseek/chrome/browser/extensions/ExtensionsUrlOverrideRegistryManagerFactory.java",
   ]
 
   deps = [

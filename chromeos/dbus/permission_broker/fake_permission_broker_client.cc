@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ constexpr char kWatchLifelineFdFailedError[] = "watch_lifeline_fd_failed";
 
 FakePermissionBrokerClient* g_instance = nullptr;
 
-// So that real devices can be accessed by tests and "Chromium OS on Linux" this
+// So that real devices can be accessed by tests and "Cinaseek OS on Linux" this
 // function implements a simplified version of the method implemented by the
 // permission broker by opening the path specified and returning the resulting
 // file descriptor.

@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -91,8 +91,8 @@ template("rust_cxx") {
     output_cc = "{{source_gen_dir}}/{{source_file_part}}.cc"
 
     # Below we use $rust_macro_toolchain rather than $host_toolchain since we
-    # are building a standalone Rust target that is not part of the Chromium
-    # production build, and this unblocks it from building while the Chromium
+    # are building a standalone Rust target that is not part of the Cinaseek
+    # production build, and this unblocks it from building while the Cinaseek
     # stdlib is still compiling, further freeing up other Rust proc-macro
     # targets (if they used cxxbridge for some reason).
     cxxbridge_target =
@@ -108,7 +108,7 @@ template("rust_cxx") {
       cxxbridge_executable = "${cxxbridge_executable}.exe"
     }
 
-    script = "//third_party/rust/cxx/chromium_integration/run_cxxbridge.py"
+    script = "//third_party/rust/cxx/Cinaseek_integration/run_cxxbridge.py"
     inputs = [
       cxxbridge_executable,
       script,

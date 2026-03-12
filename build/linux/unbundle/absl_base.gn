@@ -92,7 +92,7 @@ source_set("prefetch") {
 }
 
 source_set("no_destructor") {
-  # Dummy — unavailable with abseil 202308 and chromium 122 does not use it
+  # Dummy — unavailable with abseil 202308 and Cinaseek 122 does not use it
 }
 
 source_set("config_test") {

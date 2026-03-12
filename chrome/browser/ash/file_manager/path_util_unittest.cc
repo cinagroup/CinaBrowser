@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -306,7 +306,7 @@ TEST_F(FileManagerPathUtilTest, MultiProfileDownloadsFolderMigration) {
   // /home/chronos/u-${HASH}/MyFiles/
   const FilePath kMyFilesFolder = GetMyFilesFolderForProfile(profile_.get());
   // In the device: /home/chronos/user
-  // In browser tests: /tmp/.org.chromium.Chromium.F0Ejp5
+  // In browser tests: /tmp/.org.Cinaseek.Cinaseek.F0Ejp5
   const FilePath old_base = DownloadPrefs::GetDefaultDownloadDirectory();
 
   FilePath path;
@@ -848,7 +848,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_Archive) {
                                ".File.txt"),
       &url, &requires_sharing));
   EXPECT_EQ(
-      GURL("content://org.chromium.arc.volumeprovider/archive/"
+      GURL("content://org.Cinaseek.arc.volumeprovider/archive/"
            "Smile%20%F0%9F%99%82.zip/"
            "Folder%20(%7B%5B%3C!@%23$%25%5E&*_-+=%60~;%3A'%22%3F%3E%5C%5D%7D)/"
            ".File.txt"),
@@ -862,7 +862,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_Removable) {
   EXPECT_TRUE(
       ConvertPathToArcUrl(FilePath::FromUTF8Unsafe("/media/removable/a/b/c"),
                           &url, &requires_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/0123-abcd/b/c"),
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/0123-abcd/b/c"),
             url);
   EXPECT_FALSE(requires_sharing);
 }
@@ -874,7 +874,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_MyFiles) {
   const FilePath myfiles = GetMyFilesFolderForProfile(primary_profile_);
   EXPECT_TRUE(ConvertPathToArcUrl(myfiles.AppendASCII("a/b/c"), &url,
                                   &requires_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "0000000000000000000000000000CAFEF00D2019/"
                  "a/b/c"),
             url);
@@ -908,7 +908,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest,
   bool requires_sharing = false;
   EXPECT_TRUE(ConvertPathToArcUrl(crostini_mount_point_.AppendASCII("a/b/c"),
                                   &url, &requires_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.chromecontentprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.chromecontentprovider/"
                  "externalfile%3A"
                  "crostini_user%40gmail.com-hash_termina_penguin%2Fa%2Fb%2Fc"),
             url);
@@ -924,7 +924,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_CrostiniOnArcVm) {
   bool requires_sharing = false;
   EXPECT_TRUE(ConvertPathToArcUrl(crostini_mount_point_.AppendASCII("a/b/c"),
                                   &url, &requires_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/crostini/a/b/c"),
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/crostini/a/b/c"),
             url);
   EXPECT_TRUE(requires_sharing);
 }
@@ -938,7 +938,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_MyDriveLegacy) {
   // - creating drive mount point name for user
   // - creating externalfile: URL from the path
   // - encoding the URL to Chrome content provider URL
-  EXPECT_EQ(GURL("content://org.chromium.arc.chromecontentprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.chromecontentprovider/"
                  "externalfile%3Adrivefs-b1f44746e7144c3caafeacaa8bb5c569%2Fa"
                  "%2Fb%2Fc"),
             url);
@@ -953,7 +953,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_MyDriveArcvm) {
   bool requires_sharing = false;
   EXPECT_TRUE(ConvertPathToArcUrl(drive_mount_point_.AppendASCII("a/b/c"), &url,
                                   &requires_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "MyDrive/a/b/c"),
             url);
   EXPECT_TRUE(requires_sharing);
@@ -966,7 +966,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_ShareCache) {
       util::GetShareCacheFilePath(ProfileManager::GetPrimaryUserProfile())
           .AppendASCII("a/b/c"),
       &url, &requires_seneschal_sharing));
-  EXPECT_EQ(GURL("content://org.chromium.arc.chromecontentprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.chromecontentprovider/"
                  "externalfile%3AShareCache%2Fa%2Fb%2Fc"),
             url);
   // ShareCache files do not need to be shared to ARC through Seneschal.
@@ -989,7 +989,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest,
       base::FilePath::FromUTF8Unsafe(util::kFuseBoxMediaPath)
           .AppendASCII("subdir/a/b/c"),
       &url, &requires_seneschal_sharing));
-  EXPECT_EQ(url, GURL("content://org.chromium.arc.chromecontentprovider/"
+  EXPECT_EQ(url, GURL("content://org.Cinaseek.arc.chromecontentprovider/"
                       "externalfile%3Afubomona%253Asubdir%2Fa%2Fb%2Fc"));
   EXPECT_FALSE(requires_seneschal_sharing);
 }
@@ -1015,7 +1015,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertPathToArcUrl_FuseboxOnArcVm) {
       &url, &requires_seneschal_sharing));
   EXPECT_EQ(
       url,
-      GURL("content://org.chromium.arc.volumeprovider/fusebox/subdir/a/b/c"));
+      GURL("content://org.Cinaseek.arc.volumeprovider/fusebox/subdir/a/b/c"));
   EXPECT_TRUE(requires_seneschal_sharing);
 }
 
@@ -1095,7 +1095,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_Removable) {
                        future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/0123-abcd/b/c"),
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/0123-abcd/b/c"),
             urls[0]);
 }
 
@@ -1109,7 +1109,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_MyFiles) {
                        future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "0000000000000000000000000000CAFEF00D2019/a/b/c"),
             urls[0]);
 }
@@ -1136,7 +1136,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_Downloads) {
                        future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/download/a/b/c"),
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/download/a/b/c"),
             urls[0]);
 }
 
@@ -1161,7 +1161,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_Special) {
                        future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.chromecontentprovider/externalfile"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.chromecontentprovider/externalfile"
                  "%3Adrivefs-b1f44746e7144c3caafeacaa8bb5c569%2Fa%2Fb%2Fc"),
             urls[0]);
 }
@@ -1220,7 +1220,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_AndroidFiles) {
       future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "external_files/Pictures/a/b.jpg"),
             urls[0]);
 }
@@ -1251,7 +1251,7 @@ TEST_F(FileManagerPathUtilConvertUrlTest,
       future.GetCallback());
   const auto& urls = future.Get<0>();
   ASSERT_EQ(1U, urls.size());
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "external_files/Pictures/a/b.jpg"),
             urls[0]);
 }
@@ -1286,12 +1286,12 @@ TEST_F(FileManagerPathUtilConvertUrlTest, ConvertToContentUrls_MultipleUrls) {
   const auto& urls = future.Get<0>();
   ASSERT_EQ(4U, urls.size());
   EXPECT_EQ(GURL(), urls[0]);  // Invalid URL.
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/0123-abcd/b/c"),
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/0123-abcd/b/c"),
             urls[1]);
-  EXPECT_EQ(GURL("content://org.chromium.arc.chromecontentprovider/externalfile"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.chromecontentprovider/externalfile"
                  "%3Adrivefs-b1f44746e7144c3caafeacaa8bb5c569%2Fa%2Fb%2Fc"),
             urls[2]);
-  EXPECT_EQ(GURL("content://org.chromium.arc.volumeprovider/"
+  EXPECT_EQ(GURL("content://org.Cinaseek.arc.volumeprovider/"
                  "external_files/a/b/c"),
             urls[3]);
 }

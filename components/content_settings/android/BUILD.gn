@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,17 +7,17 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("content_settings_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/content_settings/ContentSettingsObserver.java",
-    "java/src/org/chromium/components/content_settings/CookieControlsBridge.java",
+    "java/src/org/Cinaseek/components/content_settings/ContentSettingsObserver.java",
+    "java/src/org/Cinaseek/components/content_settings/CookieControlsBridge.java",
   ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":content_settings_jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/content_settings/ContentSettingsObserver.java",
-    "java/src/org/chromium/components/content_settings/CookieControlsBridge.java",
-    "java/src/org/chromium/components/content_settings/CookieControlsObserver.java",
+    "java/src/org/Cinaseek/components/content_settings/ContentSettingsObserver.java",
+    "java/src/org/Cinaseek/components/content_settings/CookieControlsBridge.java",
+    "java/src/org/Cinaseek/components/content_settings/CookieControlsObserver.java",
   ]
   deps = [
     ":content_settings_enums_java",
@@ -49,7 +49,7 @@ source_set("android") {
 }
 
 android_library("content_settings_enums_java") {
-  sources = [ "java/src/org/chromium/components/content_settings/ContentSettingsTypeSet.java" ]
+  sources = [ "java/src/org/Cinaseek/components/content_settings/ContentSettingsTypeSet.java" ]
   srcjar_deps = [ ":content_settings_enums_javagen" ]
   deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
   public_deps = [
@@ -70,5 +70,5 @@ java_cpp_enum("content_settings_enums_javagen") {
 
 java_cpp_strings("java_pref_names_srcjar") {
   sources = [ "//components/content_settings/core/common/pref_names.h" ]
-  class_name = "org.chromium.components.content_settings.PrefNames"
+  class_name = "org.Cinaseek.components.content_settings.PrefNames"
 }

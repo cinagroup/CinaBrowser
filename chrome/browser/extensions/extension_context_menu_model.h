@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ class ExtensionContextMenuModel : public ui::SimpleMenuModel,
   };
 
   // Location where the context menu is open from.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.extensions
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.extensions
   enum class ContextMenuSource { kToolbarAction = 0, kMenuItem = 1 };
 
   // Delegate to handle showing an ExtensionAction popup.

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,8 +84,8 @@ using device::UMABluetoothDiscoverySessionOutcome;
 namespace {
 
 // The agent path is relatively meaningless since BlueZ only permits one to
-// exist per D-Bus connection, it just has to be unique within Chromium.
-const char kAgentPath[] = "/org/chromium/bluetooth_agent";
+// exist per D-Bus connection, it just has to be unique within Cinaseek.
+const char kAgentPath[] = "/org/Cinaseek/bluetooth_agent";
 const char kGattApplicationObjectPath[] = "/gatt_application";
 
 const char kDeviceNameArcTouch[] = "Arc Touch BT Mouse";
@@ -94,7 +94,7 @@ const char kDeviceNameArcTouch[] = "Arc Touch BT Mouse";
 // This root path identifies the application registering low energy scanners
 // through D-Bus.
 constexpr char kAdvertisementMonitorApplicationObjectPath[] =
-    "/org/chromium/bluetooth_advertisement_monitor";
+    "/org/Cinaseek/bluetooth_advertisement_monitor";
 #endif  // BUILDFLAG(IS_CHROMEOS)
 
 void OnUnregisterAgentError(const std::string& error_name,

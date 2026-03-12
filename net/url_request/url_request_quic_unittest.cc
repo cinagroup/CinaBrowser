@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@
 #include "net/http/http_response_headers.h"
 #include "net/log/net_log_event_type.h"
 #include "net/log/test_net_log_util.h"
-#include "net/quic/crypto_test_utils_chromium.h"
+#include "net/quic/crypto_test_utils_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/test/cert_test_util.h"
 #include "net/test/gtest_util.h"
@@ -184,7 +184,7 @@ class URLRequestQuicTest : public TestWithTaskEnvironment,
     quic::QuicConfig config;
     // Set up server certs.
     server_ = std::make_unique<QuicSimpleServer>(
-        net::test::ProofSourceForTestingChromium(), config,
+        net::test::ProofSourceForTestingCinaseek(), config,
         quic::QuicCryptoServerConfig::ConfigOptions(),
         quic::ParsedQuicVersionVector{version}, &memory_cache_backend_);
     int rv =

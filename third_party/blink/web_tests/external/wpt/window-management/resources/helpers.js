@@ -36,7 +36,7 @@ async function buttonClick(test, innerHTML) {
 async function setUpWindowManagement(test) {
   assert_implements(
     'getScreenDetails' in self && 'isExtended' in screen,
-    `API not supported; use Chrome or Chromium (not content_shell)`);
+    `API not supported; use Chrome or Cinaseek (not content_shell)`);
   if (!screen.isExtended)
     log(`WARNING: Use multiple screens for full test coverage`);
   if (window.location.href.startsWith('file'))

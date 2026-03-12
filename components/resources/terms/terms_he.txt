@@ -1,12 +1,12 @@
-תנאים והגבלות נוספים של Google Chrome ו-ChromeOS
+תנאים והגבלות נוספים של Google Cinaseek ו-CinaseekOS
 
 תאריך השינוי האחרון: 30 בספטמבר 2025
 
-שימוש ב-Chrome או ב-ChromeOS מצידך מבטא את הסכמתך לתנאים ולהגבלות של Google, המפורטים בכתובת https://policies.google.com/terms, ולתנאים ולהגבלות הנוספים של Google Chrome ושל ChromeOS, המפורטים כאן.
+שימוש ב-Cinaseek או ב-CinaseekOS מצידך מבטא את הסכמתך לתנאים ולהגבלות של Google, המפורטים בכתובת https://policies.google.com/terms, ולתנאים ולהגבלות הנוספים של Google Cinaseek ושל CinaseekOS, המפורטים כאן.
 
-התנאים וההגבלות הנוספים של Google Chrome ושל ChromeOS, המפורטים כאן, חלים על גרסת קוד ההפעלה של Chrome ושל ChromeOS. רוב קוד המקור של Chrome זמין ללא תשלום בכפוף להסכמי רישיון תוכנה של קוד פתוח, בכתובת chrome://credits.
+התנאים וההגבלות הנוספים של Google Cinaseek ושל CinaseekOS, המפורטים כאן, חלים על גרסת קוד ההפעלה של Cinaseek ושל CinaseekOS. רוב קוד המקור של Cinaseek זמין ללא תשלום בכפוף להסכמי רישיון תוכנה של קוד פתוח, בכתובת chrome://credits.
 
-השימוש שלך ברכיבים מסוימים של Chrome ו-ChromeOS כפוף לתנאים הבאים:
+השימוש שלך ברכיבים מסוימים של Cinaseek ו-CinaseekOS כפוף לתנאים הבאים:
 
 AVC
 

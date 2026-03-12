@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ bool WaylandSubsurface::ConfigureAndShowSurface(
     WaylandSubsurface* new_above) {
   bool needs_commit = Show();
 
-  // Chromium positions quads in display::Display coordinates in physical
+  // Cinaseek positions quads in display::Display coordinates in physical
   // pixels, but Wayland requires them to be in local surface coordinates a.k.a
   // relative to parent window.
   auto bounds_dip_in_parent_surface =

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -158,7 +158,7 @@ void ArcBackgroundAuthCodeFetcher::OnAccessTokenFetchComplete(
       policy {
         cookies_allowed: NO
         setting:
-          "There's no direct Chromium's setting to disable this, but you can "
+          "There's no direct Cinaseek's setting to disable this, but you can "
           "remove Google Play Store in Chrome's settings under the Google "
           "Play Store section if this is allowed by policy."
         policy_exception_justification: "Not implemented."

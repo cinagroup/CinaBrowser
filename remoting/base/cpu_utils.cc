@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace remoting {
 
 namespace {
 
-// Supporting SSE3 is a requirement for Chromium on x86/x64 so that is our base
+// Supporting SSE3 is a requirement for Cinaseek on x86/x64 so that is our base
 // alignment. Both SSE3 (x86) and NEON (ARM) benefit from 16 byte alignment in
 // libyuv so make that the default. If the CPU supports AVX2, then we will use
 // that alignment instead. In the cases where AVX512 is used in libyuv, the
@@ -28,7 +28,7 @@ constexpr int kAvx2AlignmentBytes = 32;
 
 bool IsCpuSupported() {
 #if defined(ARCH_CPU_X86_FAMILY)
-  // x86 Chromium builds target SSE3.
+  // x86 Cinaseek builds target SSE3.
   // See crbug.com/1251642 for more info.
   if (!base::CPU().has_sse3()) {
     return false;

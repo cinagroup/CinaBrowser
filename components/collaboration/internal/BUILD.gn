@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -309,7 +309,7 @@ if (is_android) {
   android_library("core_java") {
     visibility = [ ":*" ]
     srcjar_deps = [ ":core_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/components/collaboration/CollaborationServiceImpl.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/CollaborationServiceImpl.java" ]
 
     deps = [
       "//base:base_java",
@@ -325,7 +325,7 @@ if (is_android) {
   android_library("comments_java") {
     visibility = [ ":*" ]
     srcjar_deps = [ ":comments_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/components/collaboration/comments/CommentsServiceBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/comments/CommentsServiceBridge.java" ]
 
     deps = [
       "//base:base_java",
@@ -341,8 +341,8 @@ if (is_android) {
     visibility = [ ":*" ]
     srcjar_deps = [ ":messaging_jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/components/collaboration/messaging/MessagingBackendServiceBridge.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/bridge/ConversionUtils.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/MessagingBackendServiceBridge.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/bridge/ConversionUtils.java",
     ]
 
     deps = [
@@ -359,7 +359,7 @@ if (is_android) {
 
   android_library("comments_native_java_unittests_java") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/collaboration/comments/CommentsServiceBridgeUnitTestCompanion.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/comments/CommentsServiceBridgeUnitTestCompanion.java" ]
     deps = [
       ":comments_java",
       "//base:base_java",
@@ -376,12 +376,12 @@ if (is_android) {
 
   generate_jni("comments_native_j_unittests_jni_headers") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/collaboration/comments/CommentsServiceBridgeUnitTestCompanion.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/comments/CommentsServiceBridgeUnitTestCompanion.java" ]
   }
 
   android_library("messaging_native_java_unittests_java") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/collaboration/messaging/MessagingBackendServiceBridgeUnitTestCompanion.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/messaging/MessagingBackendServiceBridgeUnitTestCompanion.java" ]
     deps = [
       "//base:base_java",
       "//base:base_java_test_support",
@@ -404,7 +404,7 @@ if (is_android) {
 
   generate_jni("messaging_native_j_unittests_jni_headers") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/collaboration/messaging/MessagingBackendServiceBridgeUnitTestCompanion.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/messaging/MessagingBackendServiceBridgeUnitTestCompanion.java" ]
   }
 
   generate_jni("core_jni_headers") {
@@ -413,21 +413,21 @@ if (is_android) {
       "//chrome/browser",
     ]
 
-    sources = [ "android/java/src/org/chromium/components/collaboration/CollaborationServiceImpl.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/CollaborationServiceImpl.java" ]
   }
 
   generate_jni("comments_jni_headers") {
     visibility = [ ":*" ]
 
-    sources = [ "android/java/src/org/chromium/components/collaboration/comments/CommentsServiceBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/comments/CommentsServiceBridge.java" ]
   }
 
   generate_jni("messaging_jni_headers") {
     visibility = [ ":*" ]
 
     sources = [
-      "android/java/src/org/chromium/components/collaboration/messaging/MessagingBackendServiceBridge.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/bridge/ConversionUtils.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/MessagingBackendServiceBridge.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/bridge/ConversionUtils.java",
     ]
   }
 }

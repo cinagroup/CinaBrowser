@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ INSTANTIATE_TEST_SUITE_P(
          /*expected_number_of_errors=*/0u},
         {/*policy_values=*/{
              // Invalid values:
-             "https://www.chromium.org", "an invalid value",
+             "https://www.Cinaseek.org", "an invalid value",
              "isolated-app://anincompletehash",
              "isolated-app://"
              "pt2jysa7yu326m2cbu5mce4rrajvguagronrsqwn5dhbaris6eaaaaid",

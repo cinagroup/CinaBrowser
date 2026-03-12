@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,12 +19,12 @@ source_set("android") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/modaldialog/AppModalPresenter.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogFeatureList.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogFeatureMap.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogView.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogViewBinder.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/TabModalPresenter.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/AppModalPresenter.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogFeatureList.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogFeatureMap.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogView.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogViewBinder.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/TabModalPresenter.java",
   ]
 
   deps = [
@@ -48,11 +48,11 @@ android_library("java") {
 
   srcjar_deps = [ ":modaldialog_jni_headers" ]
 
-  resources_package = "org.chromium.components.browser_ui.modaldialog"
+  resources_package = "org.Cinaseek.components.browser_ui.modaldialog"
 }
 
 generate_jni("modaldialog_jni_headers") {
-  sources = [ "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogFeatureMap.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogFeatureMap.java" ]
 }
 
 android_resources("java_resources") {
@@ -82,7 +82,7 @@ android_resources("java_resources") {
 android_library("test_support_java") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogTestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogTestUtils.java" ]
 
   deps = [
     ":java",
@@ -98,16 +98,16 @@ android_library("test_support_java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.components.browser_ui.modaldialog.test"
+  resources_package = "org.Cinaseek.components.browser_ui.modaldialog.test"
 }
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.components.browser_ui.modaldialog.test"
+  resources_package = "org.Cinaseek.components.browser_ui.modaldialog.test"
 
   sources = [
-    "java/src/org/chromium/components/browser_ui/modaldialog/AppModalPresenterTest.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogViewTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/AppModalPresenterTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogViewTest.java",
   ]
 
   deps = [
@@ -137,10 +137,10 @@ android_library("unit_device_javatests") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.components.browser_ui.modaldialog.test"
+  resources_package = "org.Cinaseek.components.browser_ui.modaldialog.test"
   sources = [
-    "java/src/org/chromium/components/browser_ui/modaldialog/AppModalPresenterUnitTest.java",
-    "java/src/org/chromium/components/browser_ui/modaldialog/ModalDialogViewUnitTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/AppModalPresenterUnitTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/modaldialog/ModalDialogViewUnitTest.java",
   ]
   deps = [
     ":java",

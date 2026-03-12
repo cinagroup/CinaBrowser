@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@
 // E.g., "*/foo/bar/*=2" would change the logging level for all code
 // in source files under a "foo/bar" directory.
 //
-// Note that for a Chromium binary built in release mode (is_debug = false) you
+// Note that for a Cinaseek binary built in release mode (is_debug = false) you
 // must pass "--enable-logging=stderr" in order to see the output of VLOG
 // statements.
 //
@@ -172,7 +172,7 @@
 // SetLogItems()
 //
 // Additional logging-related information can be found here:
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/debugging.md#Logging
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/debugging.md#Logging
 
 namespace logging {
 

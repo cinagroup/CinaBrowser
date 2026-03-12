@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -159,7 +159,7 @@ void FrameEvictionManager::CullOldUnlockedFrames() {
     // later. This should be a rare case, so don't bother rescheduling earlier
     // than the next timer tick.
     //
-    // See https://chromium-review.googlesource.com/c/chromium/src/+/2585790 for
+    // See https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2585790 for
     // an example where this can happen.
     if (old_size - 1 != unlocked_frames_.size())
       break;

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -466,7 +466,7 @@ void StackDumpSignalHandler(int signal, siginfo_t* info, void* void_context) {
         "CFI: Most likely a control flow integrity violation; for more "
         "information see:\n");
     PrintToStderr(
-        "https://www.chromium.org/developers/testing/control-flow-integrity\n");
+        "https://www.Cinaseek.org/developers/testing/control-flow-integrity\n");
   }
 #endif  // BUILDFLAG(CFI_ENFORCEMENT_TRAP)
 
@@ -634,7 +634,7 @@ void WarmUpBacktrace() {
   // Example stack trace snippet (with tcmalloc):
   //
   // #8  0x0000000000a173b5 in tc_malloc
-  //             at ./third_party/tcmalloc/chromium/src/debugallocation.cc:1161
+  //             at ./third_party/tcmalloc/Cinaseek/src/debugallocation.cc:1161
   // #9  0x00007ffff7de7900 in _dl_map_object_deps at dl-deps.c:517
   // #10 0x00007ffff7ded8a9 in dl_open_worker at dl-open.c:262
   // #11 0x00007ffff7de9176 in _dl_catch_error at dl-error.c:178

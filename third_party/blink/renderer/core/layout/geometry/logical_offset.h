@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ struct PhysicalSize;
 // LogicalOffset is the position of a rect (typically a fragment) relative to
 // its parent rect in the logical coordinate system.
 // For more information about physical and logical coordinate systems, see:
-// https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
 struct CORE_EXPORT LogicalOffset {
   constexpr LogicalOffset() = default;
   constexpr LogicalOffset(LayoutUnit inline_offset, LayoutUnit block_offset)

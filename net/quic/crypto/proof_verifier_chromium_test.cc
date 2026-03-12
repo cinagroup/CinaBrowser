@@ -1,8 +1,8 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 
 #include <algorithm>
 #include <memory>
@@ -31,7 +31,7 @@
 #include "net/cert/x509_util.h"
 #include "net/http/transport_security_state.h"
 #include "net/http/transport_security_state_test_util.h"
-#include "net/quic/crypto/proof_source_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/test/cert_test_util.h"
 #include "net/test/test_data_directory.h"
@@ -133,10 +133,10 @@ const quic::QuicTransportVersion kTestTransportVersion =
 
 }  // namespace
 
-class ProofVerifierChromiumTest : public ::testing::Test {
+class ProofVerifierCinaseekTest : public ::testing::Test {
  public:
-  ProofVerifierChromiumTest()
-      : verify_context_(std::make_unique<ProofVerifyContextChromium>(
+  ProofVerifierCinaseekTest()
+      : verify_context_(std::make_unique<ProofVerifyContextCinaseek>(
             0 /*cert_verify_flags*/,
             NetLogWithSource())) {}
 
@@ -155,7 +155,7 @@ class ProofVerifierChromiumTest : public ::testing::Test {
   }
 
   std::string GetTestSignature() {
-    ProofSourceChromium source;
+    ProofSourceCinaseek source;
     source.Initialize(GetTestCertsDirectory().AppendASCII("quic-chain.pem"),
                       GetTestCertsDirectory().AppendASCII("quic-leaf-cert.key"),
                       base::FilePath());
@@ -181,11 +181,11 @@ class ProofVerifierChromiumTest : public ::testing::Test {
   scoped_refptr<X509Certificate> test_cert_;
 };
 
-TEST_F(ProofVerifierChromiumTest, VerifyProof) {
+TEST_F(ProofVerifierCinaseekTest, VerifyProof) {
   MockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result_, OK);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -197,8 +197,8 @@ TEST_F(ProofVerifierChromiumTest, VerifyProof) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 
@@ -210,16 +210,16 @@ TEST_F(ProofVerifierChromiumTest, VerifyProof) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 }
 
 // Tests that the quic::ProofVerifier fails verification if certificate
 // verification fails.
-TEST_F(ProofVerifierChromiumTest, FailsIfCertFails) {
+TEST_F(ProofVerifierCinaseekTest, FailsIfCertFails) {
   MockCertVerifier dummy_verifier;
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -240,7 +240,7 @@ TEST_F(ProofVerifierChromiumTest, FailsIfCertFails) {
 
 // Confirms that the parameters get passed through to the
 // CertVerifier::RequestParams as expected.
-TEST_F(ProofVerifierChromiumTest, PassesCertVerifierRequestParams) {
+TEST_F(ProofVerifierCinaseekTest, PassesCertVerifierRequestParams) {
   CertVerifyResult dummy_result;
   dummy_result.verified_cert = test_cert_;
   dummy_result.is_issued_by_known_root = true;
@@ -248,7 +248,7 @@ TEST_F(ProofVerifierChromiumTest, PassesCertVerifierRequestParams) {
   ParamRecordingMockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result, OK);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -271,9 +271,9 @@ TEST_F(ProofVerifierChromiumTest, PassesCertVerifierRequestParams) {
 
 // Tests that the quic::ProofVerifier doesn't verify certificates if the config
 // signature fails.
-TEST_F(ProofVerifierChromiumTest, FailsIfSignatureFails) {
+TEST_F(ProofVerifierCinaseekTest, FailsIfSignatureFails) {
   FailsTestCertVerifier cert_verifier;
-  ProofVerifierChromium proof_verifier(&cert_verifier,
+  ProofVerifierCinaseek proof_verifier(&cert_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -293,14 +293,14 @@ std::vector<SHA256HashValue> MakeHashValueVector(uint8_t tag) {
   return hashes;
 }
 
-TEST_F(ProofVerifierChromiumTest, IsFatalErrorNotSetForNonFatalError) {
+TEST_F(ProofVerifierCinaseekTest, IsFatalErrorNotSetForNonFatalError) {
   dummy_result_.cert_status = CERT_STATUS_DATE_INVALID;
 
   MockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result_,
                                   ERR_CERT_DATE_INVALID);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -311,8 +311,8 @@ TEST_F(ProofVerifierChromiumTest, IsFatalErrorNotSetForNonFatalError) {
       verify_context_.get(), &error_details_, &details_, std::move(callback));
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_FALSE(verify_details->is_fatal_cert_error);
 
   callback = std::make_unique<DummyProofVerifierCallback>();
@@ -322,11 +322,11 @@ TEST_F(ProofVerifierChromiumTest, IsFatalErrorNotSetForNonFatalError) {
       std::move(callback));
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_FALSE(verify_details->is_fatal_cert_error);
 }
 
-TEST_F(ProofVerifierChromiumTest, IsFatalErrorSetForFatalError) {
+TEST_F(ProofVerifierCinaseekTest, IsFatalErrorSetForFatalError) {
   dummy_result_.cert_status = CERT_STATUS_DATE_INVALID;
 
   MockCertVerifier dummy_verifier;
@@ -336,7 +336,7 @@ TEST_F(ProofVerifierChromiumTest, IsFatalErrorSetForFatalError) {
   const base::Time expiry = base::Time::Now() + base::Seconds(1000);
   transport_security_state_.AddHSTS(kTestHostname, expiry, true);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -346,8 +346,8 @@ TEST_F(ProofVerifierChromiumTest, IsFatalErrorSetForFatalError) {
       kTestChloHash, certs_, kTestEmptySCT, GetTestSignature(),
       verify_context_.get(), &error_details_, &details_, std::move(callback));
   ASSERT_EQ(quic::QUIC_FAILURE, status);
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->is_fatal_cert_error);
 
   callback = std::make_unique<DummyProofVerifierCallback>();
@@ -356,12 +356,12 @@ TEST_F(ProofVerifierChromiumTest, IsFatalErrorSetForFatalError) {
       verify_context_.get(), &error_details_, &details_, &tls_alert_,
       std::move(callback));
   ASSERT_EQ(quic::QUIC_FAILURE, status);
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->is_fatal_cert_error);
 }
 
 // Test that PKP is enforced for certificates that chain up to known roots.
-TEST_F(ProofVerifierChromiumTest, PKPEnforced) {
+TEST_F(ProofVerifierCinaseekTest, PKPEnforced) {
   base::test::ScopedFeatureList scoped_feature_list_;
   scoped_feature_list_.InitAndEnableFeature(
       net::features::kStaticKeyPinningEnforcement);
@@ -375,7 +375,7 @@ TEST_F(ProofVerifierChromiumTest, PKPEnforced) {
   transport_security_state_.SetPinningListAlwaysTimelyForTesting(true);
   ScopedTransportSecurityStateSource scoped_security_state_source;
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -387,8 +387,8 @@ TEST_F(ProofVerifierChromiumTest, PKPEnforced) {
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
               CERT_STATUS_PINNED_KEY_MISSING);
   EXPECT_FALSE(verify_details->pkp_bypassed);
@@ -401,7 +401,7 @@ TEST_F(ProofVerifierChromiumTest, PKPEnforced) {
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
               CERT_STATUS_PINNED_KEY_MISSING);
   EXPECT_FALSE(verify_details->pkp_bypassed);
@@ -409,7 +409,7 @@ TEST_F(ProofVerifierChromiumTest, PKPEnforced) {
 
 // Test |pkp_bypassed| is set when PKP is bypassed due to a local
 // trust anchor
-TEST_F(ProofVerifierChromiumTest, PKPBypassFlagSet) {
+TEST_F(ProofVerifierCinaseekTest, PKPBypassFlagSet) {
   base::test::ScopedFeatureList scoped_feature_list_;
   scoped_feature_list_.InitAndEnableFeature(
       net::features::kStaticKeyPinningEnforcement);
@@ -423,7 +423,7 @@ TEST_F(ProofVerifierChromiumTest, PKPBypassFlagSet) {
   transport_security_state_.SetPinningListAlwaysTimelyForTesting(true);
   ScopedTransportSecurityStateSource scoped_security_state_source;
 
-  ProofVerifierChromium proof_verifier(
+  ProofVerifierCinaseek proof_verifier(
       &dummy_verifier, &transport_security_state_, nullptr, {kCTAndPKPHost},
       NetworkAnonymizationKey());
 
@@ -435,8 +435,8 @@ TEST_F(ProofVerifierChromiumTest, PKPBypassFlagSet) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->pkp_bypassed);
 
   callback = std::make_unique<DummyProofVerifierCallback>();
@@ -447,12 +447,12 @@ TEST_F(ProofVerifierChromiumTest, PKPBypassFlagSet) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->pkp_bypassed);
 }
 
 // Test that PKP is considered even when CT fails.
-TEST_F(ProofVerifierChromiumTest, PKPAndCTBothTested) {
+TEST_F(ProofVerifierCinaseekTest, PKPAndCTBothTested) {
   base::test::ScopedFeatureList scoped_feature_list_;
   scoped_feature_list_.InitAndEnableFeature(
       net::features::kStaticKeyPinningEnforcement);
@@ -471,7 +471,7 @@ TEST_F(ProofVerifierChromiumTest, PKPAndCTBothTested) {
   transport_security_state_.SetPinningListAlwaysTimelyForTesting(true);
   ScopedTransportSecurityStateSource scoped_security_state_source;
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -483,8 +483,8 @@ TEST_F(ProofVerifierChromiumTest, PKPAndCTBothTested) {
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
               CERT_STATUS_PINNED_KEY_MISSING);
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
@@ -498,20 +498,20 @@ TEST_F(ProofVerifierChromiumTest, PKPAndCTBothTested) {
   ASSERT_EQ(quic::QUIC_FAILURE, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
               CERT_STATUS_PINNED_KEY_MISSING);
   EXPECT_TRUE(verify_details->cert_verify_result.cert_status &
               CERT_STATUS_CERTIFICATE_TRANSPARENCY_REQUIRED);
 }
 
-TEST_F(ProofVerifierChromiumTest, UnknownRootRejected) {
+TEST_F(ProofVerifierCinaseekTest, UnknownRootRejected) {
   dummy_result_.is_issued_by_known_root = false;
 
   MockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result_, OK);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 
@@ -536,13 +536,13 @@ TEST_F(ProofVerifierChromiumTest, UnknownRootRejected) {
       error_details_);
 }
 
-TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithOverride) {
+TEST_F(ProofVerifierCinaseekTest, UnknownRootAcceptedWithOverride) {
   dummy_result_.is_issued_by_known_root = false;
 
   MockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result_, OK);
 
-  ProofVerifierChromium proof_verifier(
+  ProofVerifierCinaseek proof_verifier(
       &dummy_verifier, &transport_security_state_, nullptr, {kTestHostname},
       NetworkAnonymizationKey());
 
@@ -554,8 +554,8 @@ TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithOverride) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 
@@ -567,18 +567,18 @@ TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithOverride) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 }
 
-TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithWildcardOverride) {
+TEST_F(ProofVerifierCinaseekTest, UnknownRootAcceptedWithWildcardOverride) {
   dummy_result_.is_issued_by_known_root = false;
 
   MockCertVerifier dummy_verifier;
   dummy_verifier.AddResultForCert(test_cert_.get(), dummy_result_, OK);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr,
                                        {""}, NetworkAnonymizationKey());
 
@@ -590,8 +590,8 @@ TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithWildcardOverride) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  ProofVerifyDetailsChromium* verify_details =
-      static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  ProofVerifyDetailsCinaseek* verify_details =
+      static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 
@@ -603,14 +603,14 @@ TEST_F(ProofVerifierChromiumTest, UnknownRootAcceptedWithWildcardOverride) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 
   ASSERT_TRUE(details_.get());
-  verify_details = static_cast<ProofVerifyDetailsChromium*>(details_.get());
+  verify_details = static_cast<ProofVerifyDetailsCinaseek*>(details_.get());
   EXPECT_EQ(dummy_result_.cert_status,
             verify_details->cert_verify_result.cert_status);
 }
 
 // Tests that the SCTAuditingDelegate is called to enqueue SCT reports when
 // verifying a good proof and cert.
-TEST_F(ProofVerifierChromiumTest, SCTAuditingReportCollected) {
+TEST_F(ProofVerifierCinaseekTest, SCTAuditingReportCollected) {
   dummy_result_.policy_compliance =
       ct::CTPolicyCompliance::CT_POLICY_COMPLIES_VIA_SCTS;
   MockCertVerifier cert_verifier;
@@ -625,7 +625,7 @@ TEST_F(ProofVerifierChromiumTest, SCTAuditingReportCollected) {
   EXPECT_CALL(sct_auditing_delegate, MaybeEnqueueReport(host_port_pair, _, _))
       .Times(2);
 
-  ProofVerifierChromium proof_verifier(
+  ProofVerifierCinaseek proof_verifier(
       &cert_verifier, &transport_security_state_, &sct_auditing_delegate, {},
       NetworkAnonymizationKey());
 
@@ -644,15 +644,15 @@ TEST_F(ProofVerifierChromiumTest, SCTAuditingReportCollected) {
   ASSERT_EQ(quic::QUIC_SUCCESS, status);
 }
 
-// Make sure that destroying ProofVerifierChromium while there's a pending
+// Make sure that destroying ProofVerifierCinaseek while there's a pending
 // request doesn't result in any raw pointer warnings or other crashes.
-TEST_F(ProofVerifierChromiumTest, DestroyWithPendingRequest) {
+TEST_F(ProofVerifierCinaseekTest, DestroyWithPendingRequest) {
   MockCertVerifier dummy_verifier;
   // In async mode, the MockCertVerifier's Request will hang onto a raw_ptr to
   // the CertVerifyResult, just like a real Request.
   dummy_verifier.set_async(true);
 
-  ProofVerifierChromium proof_verifier(&dummy_verifier,
+  ProofVerifierCinaseek proof_verifier(&dummy_verifier,
                                        &transport_security_state_, nullptr, {},
                                        NetworkAnonymizationKey());
 

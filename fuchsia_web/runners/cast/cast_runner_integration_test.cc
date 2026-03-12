@@ -1,8 +1,8 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/camera3/cpp/fidl.h>
 #include <fuchsia/legacymetrics/cpp/fidl.h>
 #include <fuchsia/media/cpp/fidl.h>
@@ -61,7 +61,7 @@ constexpr char kSecondTestAppId[] = "FFFFFFFF";
 constexpr char kBlankAppUrl[] = "/defaultresponse";
 constexpr char kEchoHeaderPath[] = "/echoheader?Test";
 
-chromium::cast::ApplicationConfig CreateAppConfigWithTestData(
+Cinaseek::cast::ApplicationConfig CreateAppConfigWithTestData(
     std::string_view app_id,
     GURL url) {
   fuchsia::web::ContentDirectoryProvider provider;
@@ -82,7 +82,7 @@ chromium::cast::ApplicationConfig CreateAppConfigWithTestData(
 }
 
 class FakeUrlRequestRewriteRulesProvider final
-    : public chromium::cast::UrlRequestRewriteRulesProvider {
+    : public Cinaseek::cast::UrlRequestRewriteRulesProvider {
  public:
   FakeUrlRequestRewriteRulesProvider() = default;
   ~FakeUrlRequestRewriteRulesProvider() override = default;
@@ -113,7 +113,7 @@ class FakeUrlRequestRewriteRulesProvider final
   bool rules_sent_ = false;
 };
 
-class FakeApplicationContext final : public chromium::cast::ApplicationContext {
+class FakeApplicationContext final : public Cinaseek::cast::ApplicationContext {
  public:
   FakeApplicationContext() = default;
   ~FakeApplicationContext() override = default;
@@ -121,7 +121,7 @@ class FakeApplicationContext final : public chromium::cast::ApplicationContext {
   FakeApplicationContext(const FakeApplicationContext&) = delete;
   FakeApplicationContext& operator=(const FakeApplicationContext&) = delete;
 
-  chromium::cast::ApplicationController* application_controller() {
+  Cinaseek::cast::ApplicationController* application_controller() {
     if (!application_controller_) {
       return nullptr;
     }
@@ -149,12 +149,12 @@ class FakeApplicationContext final : public chromium::cast::ApplicationContext {
   }
 
  private:
-  // chromium::cast::ApplicationContext implementation.
+  // Cinaseek::cast::ApplicationContext implementation.
   void GetMediaSessionId(GetMediaSessionIdCallback callback) override {
     callback(1);
   }
   void SetApplicationController(
-      fidl::InterfaceHandle<chromium::cast::ApplicationController>
+      fidl::InterfaceHandle<Cinaseek::cast::ApplicationController>
           application_controller) override {
     application_controller_ = application_controller.Bind();
     if (on_set_application_controller_) {
@@ -168,7 +168,7 @@ class FakeApplicationContext final : public chromium::cast::ApplicationContext {
     }
   }
 
-  chromium::cast::ApplicationControllerPtr application_controller_;
+  Cinaseek::cast::ApplicationControllerPtr application_controller_;
   base::OnceClosure on_set_application_controller_;
 
   std::optional<int64_t> application_exit_code_;
@@ -332,23 +332,23 @@ class TestCastComponent {
     vfs::PseudoDir services;
 
     FakeApiBindingsImpl api_bindings;
-    base::ScopedServiceBinding<chromium::cast::ApiBindings>
+    base::ScopedServiceBinding<Cinaseek::cast::ApiBindings>
         api_bindings_binding;
 
     FakeUrlRequestRewriteRulesProvider url_request_rewrite_rules_provider;
-    base::ScopedServiceBinding<chromium::cast::UrlRequestRewriteRulesProvider>
+    base::ScopedServiceBinding<Cinaseek::cast::UrlRequestRewriteRulesProvider>
         url_request_rewrite_rules_provider_binding;
 
     FakeApplicationContext application_context;
-    base::ScopedServiceBinding<chromium::cast::ApplicationContext>
+    base::ScopedServiceBinding<Cinaseek::cast::ApplicationContext>
         context_binding;
   };
 
   void InjectQueryApi() {
     // Inject an API which can be used to evaluate arbitrary Javascript and
     // return the results over a MessagePort.
-    std::vector<chromium::cast::ApiBinding> binding_list;
-    chromium::cast::ApiBinding eval_js_binding;
+    std::vector<Cinaseek::cast::ApiBinding> binding_list;
+    Cinaseek::cast::ApiBinding eval_js_binding;
     eval_js_binding.set_before_load_script(base::MemBufferFromString(
         "function valueOrUndefinedString(value) {"
         "    return (typeof(value) == 'undefined') ? 'undefined' : value;"
@@ -465,7 +465,7 @@ class CastRunnerIntegrationTest : public testing::Test {
 }  // namespace
 
 // A basic integration test ensuring a basic cast request launches the right
-// URL in the Chromium service.
+// URL in the Cinaseek service.
 TEST_F(CastRunnerIntegrationTest, BasicRequest) {
   TestCastComponent component(test_realm_services());
 
@@ -778,7 +778,7 @@ class HeadlessCastRunnerIntegrationTest : public CastRunnerIntegrationTest {
 };
 
 // A basic integration test ensuring a basic cast request launches the right
-// URL in the Chromium service.
+// URL in the Cinaseek service.
 TEST_F(HeadlessCastRunnerIntegrationTest, Headless) {
   TestCastComponent component(test_realm_services());
 
@@ -956,9 +956,9 @@ TEST_F(CastRunnerIntegrationTest,
 // fetched.
 TEST_F(CastRunnerIntegrationTest, MissingCorsExemptHeaderProvider) {
   // Prevent the FakeCastAgent from publishing the
-  // chromium.cast.CorsExemptHeaderProvider service.
+  // Cinaseek.cast.CorsExemptHeaderProvider service.
   cast_runner_launcher().fake_cast_agent().RegisterOnConnectClosure(
-      chromium::cast::CorsExemptHeaderProvider::Name_, base::DoNothing());
+      Cinaseek::cast::CorsExemptHeaderProvider::Name_, base::DoNothing());
 
   // Start the Cast component, and wait for it to be destroyed.
   TestCastComponent component(test_realm_services());
@@ -970,7 +970,7 @@ TEST_F(CastRunnerIntegrationTest, MissingCorsExemptHeaderProvider) {
   component.WaitForComponentDestroyed();
 }
 
-// Verifies that CastRunner offers a chromium.cast.DataReset service.
+// Verifies that CastRunner offers a Cinaseek.cast.DataReset service.
 // Verifies that after the DeletePersistentData() API is invoked, no further
 // component-start requests are honoured.
 // TODO(crbug.com/40730094): Expand the test to verify that the persisted data
@@ -978,7 +978,7 @@ TEST_F(CastRunnerIntegrationTest, MissingCorsExemptHeaderProvider) {
 // data).
 TEST_F(CastRunnerIntegrationTest, DataReset_Service) {
   base::RunLoop loop;
-  auto data_reset = test_realm_services().Connect<chromium::cast::DataReset>();
+  auto data_reset = test_realm_services().Connect<Cinaseek::cast::DataReset>();
   data_reset.set_error_handler([quit_loop = loop.QuitClosure()](zx_status_t) {
     quit_loop.Run();
     ADD_FAILURE();

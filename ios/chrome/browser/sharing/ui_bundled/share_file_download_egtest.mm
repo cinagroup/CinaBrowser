@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 #import "ios/testing/earl_grey/earl_grey_test.h"
 #import "net/test/embedded_test_server/embedded_test_server.h"
 
-NSString* const kPNGFilename = @"chromium_logo";
+NSString* const kPNGFilename = @"Cinaseek_logo";
 
 namespace {
 
@@ -20,7 +20,7 @@ namespace {
 const char kPDFPath[] = "/testpage.pdf";
 
 // Path which leads to a PNG file.
-const char kPNGPath[] = "/chromium_logo.png";
+const char kPNGPath[] = "/Cinaseek_logo.png";
 
 // Path which leads to a MOV file.
 const char kMOVPath[] = "/video_sample.mov";

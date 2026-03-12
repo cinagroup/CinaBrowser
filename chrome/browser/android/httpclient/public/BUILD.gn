@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,10 +6,10 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "src/org/chromium/chrome/browser/android/httpclient/ChromeHttpClient.java",
-    "src/org/chromium/chrome/browser/android/httpclient/HttpResponseCallback.java",
+    "src/org/Cinaseek/chrome/browser/android/httpclient/CinaseekHttpClient.java",
+    "src/org/Cinaseek/chrome/browser/android/httpclient/HttpResponseCallback.java",
   ]
 
-  # These files are shipped out of the chromium repo, no chromium deps allowed.
+  # These files are shipped out of the Cinaseek repo, no Cinaseek deps allowed.
   deps = []
 }

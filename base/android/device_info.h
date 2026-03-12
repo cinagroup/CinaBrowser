@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,10 +10,10 @@
 #include "base/base_export.h"
 
 #if __ANDROID_API__ >= 29
-namespace aidl::org::chromium::base {
+namespace aidl::org::Cinaseek::base {
 class IDeviceInfo;
-}  // namespace aidl::org::chromium::base
-using ::aidl::org::chromium::base::IDeviceInfo;
+}  // namespace aidl::org::Cinaseek::base
+using ::aidl::org::Cinaseek::base::IDeviceInfo;
 #else
 struct IDeviceInfo;
 #endif

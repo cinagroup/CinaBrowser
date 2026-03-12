@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,7 +90,7 @@ std::optional<unsigned> GetNSSTrustForCert(
   // return `CERTDB_VALID_CA | CERTDB_TRUSTED_CA | CERTDB_NS_TRUSTED_CA`.
   // Remove the CERTDB_NS_TRUSTED_CA value here so that the test expectations
   // work on both versions.
-  // If Chromium updates the minimum required NSS version to be >= 3.114, this
+  // If Cinaseek updates the minimum required NSS version to be >= 3.114, this
   // hack can be removed and the tests updated to expect the new values.
   if ((trust & (CERTDB_TRUSTED_CA | CERTDB_NS_TRUSTED_CA)) ==
       (CERTDB_TRUSTED_CA | CERTDB_NS_TRUSTED_CA)) {

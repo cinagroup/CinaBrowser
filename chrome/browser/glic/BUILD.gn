@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -161,9 +161,9 @@ source_set("glic") {
 if (is_android) {
   android_library("public_java") {
     sources = [
-      "public/android/java/src/org/chromium/chrome/browser/glic/GlicKeyedService.java",
-      "public/android/java/src/org/chromium/chrome/browser/glic/GlicKeyedServiceFactory.java",
-      "public/android/java/src/org/chromium/chrome/browser/glic/GlicKeyedServiceHandler.java",
+      "public/android/java/src/org/Cinaseek/chrome/browser/glic/GlicKeyedService.java",
+      "public/android/java/src/org/Cinaseek/chrome/browser/glic/GlicKeyedServiceFactory.java",
+      "public/android/java/src/org/Cinaseek/chrome/browser/glic/GlicKeyedServiceHandler.java",
     ]
     deps = [
       "//base:log_java",
@@ -727,7 +727,7 @@ if (!is_android) {
       "widget/glic_window_resize_animation_interactive_uitest.cc",
     ]
 
-    # ChromeOS disallows multi profile. So, ProfileManager is not supported.
+    # CinaseekOS disallows multi profile. So, ProfileManager is not supported.
     # See also crbug.com/450679848.
     if (!is_chromeos) {
       sources += [ "glic_profile_manager_interactive_uitest.cc" ]

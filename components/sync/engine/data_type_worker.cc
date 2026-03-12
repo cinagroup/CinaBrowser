@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -168,7 +168,7 @@ void MaybeAdaptClientTagIfMissing(DataType data_type,
 
 void AdaptWebAuthnClientTagHash(syncer::EntityData& data) {
   // Google Play Services may create entities where the client_tag_hash doesn't
-  // conform to the form expected by Chromium. These values are the hex-encoded,
+  // conform to the form expected by Cinaseek. These values are the hex-encoded,
   // 16-byte random `sync_id` value, and will therefore always be 32 bytes long.
   // Valid ClientTagHash values are Base64(SHA1(protobuf_prefix + client_tag))
   // and therefore always 28 bytes.

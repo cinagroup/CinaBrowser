@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_client_stream.h"
+#include "net/quic/quic_Cinaseek_client_stream.h"
 
 #include <string_view>
 #include <utility>
@@ -22,7 +22,7 @@
 #include "net/base/url_util.h"
 #include "net/http/http_status_code.h"
 #include "net/log/net_log_event_type.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/spdy/spdy_log_util.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/quic_spdy_session.h"
@@ -48,12 +48,12 @@ class ScopedBoolSaver {
 };
 }  // namespace
 
-QuicChromiumClientStream::Handle::Handle(QuicChromiumClientStream* stream)
+QuicCinaseekClientStream::Handle::Handle(QuicCinaseekClientStream* stream)
     : stream_(stream), net_log_(stream->net_log()) {
   SaveState();
 }
 
-QuicChromiumClientStream::Handle::~Handle() {
+QuicCinaseekClientStream::Handle::~Handle() {
   if (stream_) {
     stream_->ClearHandle();
     // TODO(rch): If stream_ is still valid, it should probably be Reset()
@@ -62,7 +62,7 @@ QuicChromiumClientStream::Handle::~Handle() {
   }
 }
 
-void QuicChromiumClientStream::Handle::OnEarlyHintsAvailable() {
+void QuicCinaseekClientStream::Handle::OnEarlyHintsAvailable() {
   if (first_early_hints_time_.is_null())
     first_early_hints_time_ = base::TimeTicks::Now();
 
@@ -76,7 +76,7 @@ void QuicChromiumClientStream::Handle::OnEarlyHintsAvailable() {
   ResetAndRun(std::move(read_headers_callback_), rv);
 }
 
-void QuicChromiumClientStream::Handle::OnInitialHeadersAvailable() {
+void QuicCinaseekClientStream::Handle::OnInitialHeadersAvailable() {
   if (headers_received_start_time_.is_null())
     headers_received_start_time_ = base::TimeTicks::Now();
 
@@ -89,7 +89,7 @@ void QuicChromiumClientStream::Handle::OnInitialHeadersAvailable() {
   ResetAndRun(std::move(read_headers_callback_), rv);
 }
 
-void QuicChromiumClientStream::Handle::OnTrailingHeadersAvailable() {
+void QuicCinaseekClientStream::Handle::OnTrailingHeadersAvailable() {
   if (!read_headers_callback_)
     return;  // Wait for ReadInitialHeaders to be called.
 
@@ -98,11 +98,11 @@ void QuicChromiumClientStream::Handle::OnTrailingHeadersAvailable() {
     rv = ERR_QUIC_PROTOCOL_ERROR;
 
   base::UmaHistogramBoolean(
-      "Net.QuicChromiumClientStream.TrailingHeadersProcessSuccess", rv >= 0);
+      "Net.QuicCinaseekClientStream.TrailingHeadersProcessSuccess", rv >= 0);
   ResetAndRun(std::move(read_headers_callback_), rv);
 }
 
-void QuicChromiumClientStream::Handle::OnDataAvailable() {
+void QuicCinaseekClientStream::Handle::OnDataAvailable() {
   if (!read_body_callback_)
     return;  // Wait for ReadBody to be called.
 
@@ -118,14 +118,14 @@ void QuicChromiumClientStream::Handle::OnDataAvailable() {
   ResetAndRun(std::move(read_body_callback_), rv);
 }
 
-void QuicChromiumClientStream::Handle::OnCanWrite() {
+void QuicCinaseekClientStream::Handle::OnCanWrite() {
   if (!write_callback_)
     return;
 
   ResetAndRun(std::move(write_callback_), OK);
 }
 
-void QuicChromiumClientStream::Handle::OnClose() {
+void QuicCinaseekClientStream::Handle::OnClose() {
   if (net_error_ == ERR_UNEXPECTED) {
     if (stream_error() == quic::QUIC_STREAM_NO_ERROR &&
         connection_error() == quic::QUIC_NO_ERROR && fin_sent() &&
@@ -135,17 +135,17 @@ void QuicChromiumClientStream::Handle::OnClose() {
       net_error_ = ERR_QUIC_PROTOCOL_ERROR;
     }
   }
-  base::UmaHistogramSparse("Net.QuicChromiumClientStream.HandleOnCloseNetError",
+  base::UmaHistogramSparse("Net.QuicCinaseekClientStream.HandleOnCloseNetError",
                            -net_error_);
   base::UmaHistogramSparse(
-      "Net.QuicChromiumClientStream.HandleOnCloseStreamError", stream_error());
+      "Net.QuicCinaseekClientStream.HandleOnCloseStreamError", stream_error());
   base::UmaHistogramSparse(
-      "Net.QuicChromiumClientStream.HandleOnCloseConnectionError",
+      "Net.QuicCinaseekClientStream.HandleOnCloseConnectionError",
       connection_error());
   OnError(net_error_);
 }
 
-void QuicChromiumClientStream::Handle::OnError(int error) {
+void QuicCinaseekClientStream::Handle::OnError(int error) {
   net_error_ = error;
   if (stream_)
     SaveState();
@@ -156,11 +156,11 @@ void QuicChromiumClientStream::Handle::OnError(int error) {
   // the call stack of the owner of the handle.
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE,
-      base::BindOnce(&QuicChromiumClientStream::Handle::InvokeCallbacksOnClose,
+      base::BindOnce(&QuicCinaseekClientStream::Handle::InvokeCallbacksOnClose,
                      weak_factory_.GetWeakPtr(), error));
 }
 
-void QuicChromiumClientStream::Handle::InvokeCallbacksOnClose(int error) {
+void QuicCinaseekClientStream::Handle::InvokeCallbacksOnClose(int error) {
   // Invoking a callback may cause |this| to be deleted. If this happens, no
   // more callbacks should be invoked. Guard against this by holding a WeakPtr
   // to |this| and ensuring it's still valid.
@@ -180,7 +180,7 @@ void QuicChromiumClientStream::Handle::InvokeCallbacksOnClose(int error) {
   }
 }
 
-int QuicChromiumClientStream::Handle::ReadInitialHeaders(
+int QuicCinaseekClientStream::Handle::ReadInitialHeaders(
     quiche::HttpHeaderBlock* header_block,
     CompletionOnceCallback callback) {
   ScopedBoolSaver saver(&may_invoke_callbacks_, false);
@@ -204,7 +204,7 @@ int QuicChromiumClientStream::Handle::ReadInitialHeaders(
   return ERR_IO_PENDING;
 }
 
-int QuicChromiumClientStream::Handle::ReadBody(
+int QuicCinaseekClientStream::Handle::ReadBody(
     IOBuffer* buffer,
     int buffer_len,
     CompletionOnceCallback callback) {
@@ -232,7 +232,7 @@ int QuicChromiumClientStream::Handle::ReadBody(
   return ERR_IO_PENDING;
 }
 
-int QuicChromiumClientStream::Handle::ReadTrailingHeaders(
+int QuicCinaseekClientStream::Handle::ReadTrailingHeaders(
     quiche::HttpHeaderBlock* header_block,
     CompletionOnceCallback callback) {
   ScopedBoolSaver saver(&may_invoke_callbacks_, false);
@@ -248,7 +248,7 @@ int QuicChromiumClientStream::Handle::ReadTrailingHeaders(
   return ERR_IO_PENDING;
 }
 
-int QuicChromiumClientStream::Handle::WriteHeaders(
+int QuicCinaseekClientStream::Handle::WriteHeaders(
     quiche::HttpHeaderBlock header_block,
     bool fin,
     quiche::QuicheReferenceCountedPointer<quic::QuicAckListenerInterface>
@@ -259,7 +259,7 @@ int QuicChromiumClientStream::Handle::WriteHeaders(
                                                 ack_notifier_delegate));
 }
 
-int QuicChromiumClientStream::Handle::WriteStreamData(
+int QuicCinaseekClientStream::Handle::WriteStreamData(
     std::string_view data,
     bool fin,
     CompletionOnceCallback callback) {
@@ -275,7 +275,7 @@ int QuicChromiumClientStream::Handle::WriteStreamData(
   return ERR_IO_PENDING;
 }
 
-int QuicChromiumClientStream::Handle::WritevStreamData(
+int QuicCinaseekClientStream::Handle::WritevStreamData(
     const std::vector<scoped_refptr<IOBuffer>>& buffers,
     const std::vector<int>& lengths,
     bool fin,
@@ -291,7 +291,7 @@ int QuicChromiumClientStream::Handle::WritevStreamData(
   return ERR_IO_PENDING;
 }
 
-int QuicChromiumClientStream::Handle::WriteConnectUdpPayload(
+int QuicCinaseekClientStream::Handle::WriteConnectUdpPayload(
     std::string_view packet) {
   ScopedBoolSaver saver(&may_invoke_callbacks_, false);
   if (!stream_) {
@@ -336,70 +336,70 @@ int QuicChromiumClientStream::Handle::WriteConnectUdpPayload(
   }
 }
 
-int QuicChromiumClientStream::Handle::Read(IOBuffer* buf, int buf_len) {
+int QuicCinaseekClientStream::Handle::Read(IOBuffer* buf, int buf_len) {
   if (!stream_)
     return net_error_;
   return stream_->Read(buf, buf_len);
 }
 
-void QuicChromiumClientStream::Handle::OnFinRead() {
+void QuicCinaseekClientStream::Handle::OnFinRead() {
   read_headers_callback_.Reset();
   if (stream_)
     stream_->OnFinRead();
 }
 
-void QuicChromiumClientStream::Handle::
+void QuicCinaseekClientStream::Handle::
     DisableConnectionMigrationToCellularNetwork() {
   if (stream_)
     stream_->DisableConnectionMigrationToCellularNetwork();
 }
 
-void QuicChromiumClientStream::Handle::SetPriority(
+void QuicCinaseekClientStream::Handle::SetPriority(
     const quic::QuicStreamPriority& priority) {
   if (stream_) {
     stream_->SetPriority(priority);
   }
 }
 
-void QuicChromiumClientStream::Handle::Reset(
+void QuicCinaseekClientStream::Handle::Reset(
     quic::QuicRstStreamErrorCode error_code) {
   if (stream_)
     stream_->Reset(error_code);
 }
 
-void QuicChromiumClientStream::Handle::RegisterHttp3DatagramVisitor(
+void QuicCinaseekClientStream::Handle::RegisterHttp3DatagramVisitor(
     Http3DatagramVisitor* visitor) {
   if (stream_) {
     stream_->RegisterHttp3DatagramVisitor(visitor);
   }
 }
 
-void QuicChromiumClientStream::Handle::UnregisterHttp3DatagramVisitor() {
+void QuicCinaseekClientStream::Handle::UnregisterHttp3DatagramVisitor() {
   if (stream_) {
     stream_->UnregisterHttp3DatagramVisitor();
   }
 }
 
-quic::QuicStreamId QuicChromiumClientStream::Handle::id() const {
+quic::QuicStreamId QuicCinaseekClientStream::Handle::id() const {
   if (!stream_)
     return id_;
   return stream_->id();
 }
 
-quic::QuicErrorCode QuicChromiumClientStream::Handle::connection_error() const {
+quic::QuicErrorCode QuicCinaseekClientStream::Handle::connection_error() const {
   if (!stream_)
     return connection_error_;
   return stream_->connection_error();
 }
 
-quic::QuicRstStreamErrorCode QuicChromiumClientStream::Handle::stream_error()
+quic::QuicRstStreamErrorCode QuicCinaseekClientStream::Handle::stream_error()
     const {
   if (!stream_)
     return stream_error_;
   return stream_->stream_error();
 }
 
-uint64_t QuicChromiumClientStream::Handle::connection_wire_error() const {
+uint64_t QuicCinaseekClientStream::Handle::connection_wire_error() const {
   if (!stream_) {
     return connection_wire_error_;
   }
@@ -409,72 +409,72 @@ uint64_t QuicChromiumClientStream::Handle::connection_wire_error() const {
   return stream_->session()->wire_error();
 }
 
-uint64_t QuicChromiumClientStream::Handle::ietf_application_error() const {
+uint64_t QuicCinaseekClientStream::Handle::ietf_application_error() const {
   if (!stream_) {
     return ietf_application_error_;
   }
   return stream_->ietf_application_error();
 }
 
-bool QuicChromiumClientStream::Handle::fin_sent() const {
+bool QuicCinaseekClientStream::Handle::fin_sent() const {
   if (!stream_)
     return fin_sent_;
   return stream_->fin_sent();
 }
 
-bool QuicChromiumClientStream::Handle::fin_received() const {
+bool QuicCinaseekClientStream::Handle::fin_received() const {
   if (!stream_)
     return fin_received_;
   return stream_->fin_received();
 }
 
-uint64_t QuicChromiumClientStream::Handle::stream_bytes_read() const {
+uint64_t QuicCinaseekClientStream::Handle::stream_bytes_read() const {
   if (!stream_)
     return stream_bytes_read_;
   return stream_->stream_bytes_read();
 }
 
-uint64_t QuicChromiumClientStream::Handle::stream_bytes_written() const {
+uint64_t QuicCinaseekClientStream::Handle::stream_bytes_written() const {
   if (!stream_)
     return stream_bytes_written_;
   return stream_->stream_bytes_written();
 }
 
-size_t QuicChromiumClientStream::Handle::NumBytesConsumed() const {
+size_t QuicCinaseekClientStream::Handle::NumBytesConsumed() const {
   if (!stream_)
     return num_bytes_consumed_;
   return stream_->sequencer()->NumBytesConsumed();
 }
 
-bool QuicChromiumClientStream::Handle::HasBytesToRead() const {
+bool QuicCinaseekClientStream::Handle::HasBytesToRead() const {
   if (!stream_)
     return false;
   return stream_->HasBytesToRead();
 }
 
-bool QuicChromiumClientStream::Handle::IsDoneReading() const {
+bool QuicCinaseekClientStream::Handle::IsDoneReading() const {
   if (!stream_)
     return is_done_reading_;
   return stream_->IsDoneReading();
 }
 
-bool QuicChromiumClientStream::Handle::IsFirstStream() const {
+bool QuicCinaseekClientStream::Handle::IsFirstStream() const {
   if (!stream_)
     return is_first_stream_;
   return stream_->IsFirstStream();
 }
 
-bool QuicChromiumClientStream::Handle::can_migrate_to_cellular_network() {
+bool QuicCinaseekClientStream::Handle::can_migrate_to_cellular_network() {
   if (!stream_)
     return false;
   return stream_->can_migrate_to_cellular_network();
 }
 
-const NetLogWithSource& QuicChromiumClientStream::Handle::net_log() const {
+const NetLogWithSource& QuicCinaseekClientStream::Handle::net_log() const {
   return net_log_;
 }
 
-void QuicChromiumClientStream::Handle::SaveState() {
+void QuicCinaseekClientStream::Handle::SaveState() {
   DCHECK(stream_);
   fin_sent_ = stream_->fin_sent();
   fin_received_ = stream_->fin_received();
@@ -493,7 +493,7 @@ void QuicChromiumClientStream::Handle::SaveState() {
   stream_bytes_written_ = stream_->stream_bytes_written();
 }
 
-void QuicChromiumClientStream::Handle::SetCallback(
+void QuicCinaseekClientStream::Handle::SetCallback(
     CompletionOnceCallback new_callback,
     CompletionOnceCallback* callback) {
   // TODO(rch): Convert this to a DCHECK once we ensure the API is stable and
@@ -502,7 +502,7 @@ void QuicChromiumClientStream::Handle::SetCallback(
   *callback = std::move(new_callback);
 }
 
-void QuicChromiumClientStream::Handle::ResetAndRun(
+void QuicCinaseekClientStream::Handle::ResetAndRun(
     CompletionOnceCallback callback,
     int rv) {
   // TODO(rch): Convert this to a DCHECK once we ensure the API is stable and
@@ -511,7 +511,7 @@ void QuicChromiumClientStream::Handle::ResetAndRun(
   std::move(callback).Run(rv);
 }
 
-int QuicChromiumClientStream::Handle::HandleIOComplete(int rv) {
+int QuicCinaseekClientStream::Handle::HandleIOComplete(int rv) {
   // If |stream_| is still valid the stream has not been closed. If the stream
   // has not been closed, then just return |rv|.
   if (rv < 0 || stream_)
@@ -525,24 +525,24 @@ int QuicChromiumClientStream::Handle::HandleIOComplete(int rv) {
   return net_error_;
 }
 
-void QuicChromiumClientStream::Handle::SetRequestIdempotency(
+void QuicCinaseekClientStream::Handle::SetRequestIdempotency(
     Idempotency idempotency) {
   idempotency_ = idempotency;
 }
 
-Idempotency QuicChromiumClientStream::Handle::GetRequestIdempotency() const {
+Idempotency QuicCinaseekClientStream::Handle::GetRequestIdempotency() const {
   return idempotency_;
 }
 
 quic::QuicPacketLength
-QuicChromiumClientStream::Handle::GetGuaranteedLargestMessagePayload() const {
+QuicCinaseekClientStream::Handle::GetGuaranteedLargestMessagePayload() const {
   if (!stream_) {
     return 0;
   }
   return stream_->GetGuaranteedLargestMessagePayload();
 }
 
-QuicChromiumClientStream::QuicChromiumClientStream(
+QuicCinaseekClientStream::QuicCinaseekClientStream(
     quic::QuicStreamId id,
     quic::QuicSpdyClientSessionBase* session,
     quic::QuicServerId server_id,
@@ -555,7 +555,7 @@ QuicChromiumClientStream::QuicChromiumClientStream(
       server_id_(std::move(server_id)),
       quic_version_(session->connection()->transport_version()) {}
 
-QuicChromiumClientStream::QuicChromiumClientStream(
+QuicCinaseekClientStream::QuicCinaseekClientStream(
     quic::PendingStream* pending,
     quic::QuicSpdyClientSessionBase* session,
     quic::QuicServerId server_id,
@@ -567,12 +567,12 @@ QuicChromiumClientStream::QuicChromiumClientStream(
       server_id_(std::move(server_id)),
       quic_version_(session->connection()->transport_version()) {}
 
-QuicChromiumClientStream::~QuicChromiumClientStream() {
+QuicCinaseekClientStream::~QuicCinaseekClientStream() {
   if (handle_)
     handle_->OnClose();
 }
 
-void QuicChromiumClientStream::OnInitialHeadersComplete(
+void QuicCinaseekClientStream::OnInitialHeadersComplete(
     bool fin,
     size_t frame_len,
     const quic::QuicHeaderList& header_list) {
@@ -582,11 +582,11 @@ void QuicChromiumClientStream::OnInitialHeadersComplete(
   if (header_decoding_delay().has_value()) {
     const int64_t delay_in_milliseconds =
         header_decoding_delay()->ToMilliseconds();
-    base::UmaHistogramTimes("Net.QuicChromiumClientStream.HeaderDecodingDelay",
+    base::UmaHistogramTimes("Net.QuicCinaseekClientStream.HeaderDecodingDelay",
                             base::Milliseconds(delay_in_milliseconds));
     if (IsGoogleHost(server_id_.host())) {
       base::UmaHistogramTimes(
-          "Net.QuicChromiumClientStream.HeaderDecodingDelayGoogle",
+          "Net.QuicCinaseekClientStream.HeaderDecodingDelayGoogle",
           base::Milliseconds(delay_in_milliseconds));
     }
   }
@@ -646,7 +646,7 @@ void QuicChromiumClientStream::OnInitialHeadersComplete(
   }
 }
 
-void QuicChromiumClientStream::OnTrailingHeadersComplete(
+void QuicCinaseekClientStream::OnTrailingHeadersComplete(
     bool fin,
     size_t frame_len,
     const quic::QuicHeaderList& header_list) {
@@ -658,7 +658,7 @@ void QuicChromiumClientStream::OnTrailingHeadersComplete(
   }
 }
 
-void QuicChromiumClientStream::OnBodyAvailable() {
+void QuicCinaseekClientStream::OnBodyAvailable() {
   if (!FinishedReadingHeaders() || !headers_delivered_) {
     // Buffer the data in the sequencer until the headers have been read.
     return;
@@ -676,7 +676,7 @@ void QuicChromiumClientStream::OnBodyAvailable() {
     NotifyHandleOfDataAvailableLater();
 }
 
-void QuicChromiumClientStream::OnClose() {
+void QuicCinaseekClientStream::OnClose() {
   if (handle_) {
     handle_->OnClose();
     handle_ = nullptr;
@@ -684,14 +684,14 @@ void QuicChromiumClientStream::OnClose() {
   quic::QuicStream::OnClose();
 }
 
-void QuicChromiumClientStream::OnCanWrite() {
+void QuicCinaseekClientStream::OnCanWrite() {
   quic::QuicStream::OnCanWrite();
 
   if (!HasBufferedData() && handle_)
     handle_->OnCanWrite();
 }
 
-size_t QuicChromiumClientStream::WriteHeaders(
+size_t QuicCinaseekClientStream::WriteHeaders(
     quiche::HttpHeaderBlock header_block,
     bool fin,
     quiche::QuicheReferenceCountedPointer<quic::QuicAckListenerInterface>
@@ -715,14 +715,14 @@ size_t QuicChromiumClientStream::WriteHeaders(
   return len;
 }
 
-bool QuicChromiumClientStream::WriteStreamData(std::string_view data,
+bool QuicCinaseekClientStream::WriteStreamData(std::string_view data,
                                                bool fin) {
   // Writes the data, or buffers it.
   WriteOrBufferBody(data, fin);
   return !HasBufferedData();  // Was all data written?
 }
 
-bool QuicChromiumClientStream::WritevStreamData(
+bool QuicCinaseekClientStream::WritevStreamData(
     const std::vector<scoped_refptr<IOBuffer>>& buffers,
     const std::vector<int>& lengths,
     bool fin) {
@@ -735,10 +735,10 @@ bool QuicChromiumClientStream::WritevStreamData(
   return !HasBufferedData();  // Was all data written?
 }
 
-std::unique_ptr<QuicChromiumClientStream::Handle>
-QuicChromiumClientStream::CreateHandle() {
+std::unique_ptr<QuicCinaseekClientStream::Handle>
+QuicCinaseekClientStream::CreateHandle() {
   DCHECK(!handle_);
-  auto handle = base::WrapUnique(new QuicChromiumClientStream::Handle(this));
+  auto handle = base::WrapUnique(new QuicCinaseekClientStream::Handle(this));
   handle_ = handle.get();
 
   // Should this perhaps be via PostTask to make reasoning simpler?
@@ -749,23 +749,23 @@ QuicChromiumClientStream::CreateHandle() {
   return handle;
 }
 
-void QuicChromiumClientStream::ClearHandle() {
+void QuicCinaseekClientStream::ClearHandle() {
   handle_ = nullptr;
 }
 
-void QuicChromiumClientStream::OnError(int error) {
+void QuicCinaseekClientStream::OnError(int error) {
   if (handle_) {
-    QuicChromiumClientStream::Handle* handle = handle_;
+    QuicCinaseekClientStream::Handle* handle = handle_;
     handle_ = nullptr;
     handle->OnError(error);
   }
 }
 
-bool QuicChromiumClientStream::SupportsH3Datagram() const {
+bool QuicCinaseekClientStream::SupportsH3Datagram() const {
   return session_->SupportsH3Datagram();
 }
 
-int QuicChromiumClientStream::Read(IOBuffer* buf, int buf_len) {
+int QuicCinaseekClientStream::Read(IOBuffer* buf, int buf_len) {
   DCHECK_GT(buf_len, 0);
   DCHECK(buf->data());
 
@@ -784,16 +784,16 @@ int QuicChromiumClientStream::Read(IOBuffer* buf, int buf_len) {
   return bytes_read;
 }
 
-void QuicChromiumClientStream::NotifyHandleOfInitialHeadersAvailableLater() {
+void QuicCinaseekClientStream::NotifyHandleOfInitialHeadersAvailableLater() {
   DCHECK(handle_);
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE,
       base::BindOnce(
-          &QuicChromiumClientStream::NotifyHandleOfInitialHeadersAvailable,
+          &QuicCinaseekClientStream::NotifyHandleOfInitialHeadersAvailable,
           weak_factory_.GetWeakPtr()));
 }
 
-void QuicChromiumClientStream::NotifyHandleOfInitialHeadersAvailable() {
+void QuicCinaseekClientStream::NotifyHandleOfInitialHeadersAvailable() {
   if (!handle_)
     return;
 
@@ -801,16 +801,16 @@ void QuicChromiumClientStream::NotifyHandleOfInitialHeadersAvailable() {
     handle_->OnInitialHeadersAvailable();
 }
 
-void QuicChromiumClientStream::NotifyHandleOfTrailingHeadersAvailableLater() {
+void QuicCinaseekClientStream::NotifyHandleOfTrailingHeadersAvailableLater() {
   DCHECK(handle_);
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE,
       base::BindOnce(
-          &QuicChromiumClientStream::NotifyHandleOfTrailingHeadersAvailable,
+          &QuicCinaseekClientStream::NotifyHandleOfTrailingHeadersAvailable,
           weak_factory_.GetWeakPtr()));
 }
 
-void QuicChromiumClientStream::NotifyHandleOfTrailingHeadersAvailable() {
+void QuicCinaseekClientStream::NotifyHandleOfTrailingHeadersAvailable() {
   if (!handle_)
     return;
 
@@ -830,7 +830,7 @@ void QuicChromiumClientStream::NotifyHandleOfTrailingHeadersAvailable() {
   handle_->OnTrailingHeadersAvailable();
 }
 
-int QuicChromiumClientStream::DeliverEarlyHints(
+int QuicCinaseekClientStream::DeliverEarlyHints(
     quiche::HttpHeaderBlock* headers) {
   if (early_hints_.empty()) {
     return ERR_IO_PENDING;
@@ -854,7 +854,7 @@ int QuicChromiumClientStream::DeliverEarlyHints(
   return frame_len;
 }
 
-int QuicChromiumClientStream::DeliverInitialHeaders(
+int QuicCinaseekClientStream::DeliverInitialHeaders(
     quiche::HttpHeaderBlock* headers) {
   if (!initial_headers_arrived_) {
     return ERR_IO_PENDING;
@@ -877,7 +877,7 @@ int QuicChromiumClientStream::DeliverInitialHeaders(
   return initial_headers_frame_len_;
 }
 
-bool QuicChromiumClientStream::DeliverTrailingHeaders(
+bool QuicCinaseekClientStream::DeliverTrailingHeaders(
     quiche::HttpHeaderBlock* headers,
     int* frame_len) {
   if (trailing_headers_frame_len_ == 0) {
@@ -898,32 +898,32 @@ bool QuicChromiumClientStream::DeliverTrailingHeaders(
   return true;
 }
 
-void QuicChromiumClientStream::NotifyHandleOfDataAvailableLater() {
+void QuicCinaseekClientStream::NotifyHandleOfDataAvailableLater() {
   DCHECK(handle_);
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE,
-      base::BindOnce(&QuicChromiumClientStream::NotifyHandleOfDataAvailable,
+      base::BindOnce(&QuicCinaseekClientStream::NotifyHandleOfDataAvailable,
                      weak_factory_.GetWeakPtr()));
 }
 
-void QuicChromiumClientStream::NotifyHandleOfDataAvailable() {
+void QuicCinaseekClientStream::NotifyHandleOfDataAvailable() {
   if (handle_)
     handle_->OnDataAvailable();
 }
 
-void QuicChromiumClientStream::DisableConnectionMigrationToCellularNetwork() {
+void QuicCinaseekClientStream::DisableConnectionMigrationToCellularNetwork() {
   can_migrate_to_cellular_network_ = false;
 }
 
 quic::QuicPacketLength
-QuicChromiumClientStream::GetGuaranteedLargestMessagePayload() const {
+QuicCinaseekClientStream::GetGuaranteedLargestMessagePayload() const {
   if (!session()) {
     return 0;
   }
   return session()->GetGuaranteedLargestDatagramPayload();
 }
 
-bool QuicChromiumClientStream::IsFirstStream() {
+bool QuicCinaseekClientStream::IsFirstStream() {
   return id() == quic::QuicUtils::GetFirstBidirectionalStreamId(
                      quic_version_, quic::Perspective::IS_CLIENT);
 }

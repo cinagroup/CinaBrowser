@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ const net::NetworkTrafficAnnotationTag
         semantics {
           sender: "Optimization Guide"
           description:
-            "Chromium interacts with Optimization Guide Service to download "
+            "Cinaseek interacts with Optimization Guide Service to download "
             "non-personalized models used to improve browser behavior around "
             "page load performance and features such as Translate."
           trigger:

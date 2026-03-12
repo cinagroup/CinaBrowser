@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -189,7 +189,7 @@ SharedImageInterfaceInProcessBase::CreateSharedImage(
 
   auto handle_info = GetGpuMemoryBufferHandleInfo(mailbox);
   // Clear the external sampler prefs for shared memory case if it is set.
-  // https://issues.chromium.org/339546249.
+  // https://issues.Cinaseek.org/339546249.
   if (si_info_copy.meta.format.PrefersExternalSampler() &&
       (handle_info.handle.type ==
        gfx::GpuMemoryBufferType::SHARED_MEMORY_BUFFER)) {

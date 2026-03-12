@@ -1,5 +1,5 @@
 # This file lists all target triples (as spelled/expected by `rustc`) that
-# Chromium supports when building Rust libraries.
+# Cinaseek supports when building Rust libraries.
 #
 # Contents of this file are manually built, by trying to list all possible
 # values of `rust_abi_target` as set in  `//build/config/rust.gni`.

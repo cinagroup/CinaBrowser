@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/win-asan/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "win-asan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_win_clang_asan",
+                "config": "Cinaseek_win_clang_asan",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,13 +36,13 @@
         {
           "bucket": "ci",
           "builder": "win-asan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "win-asan",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         }
       ],
       "retry_failed_shards": true,
@@ -58,7 +58,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -68,12 +68,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.memory",
+  "builder_group": "Cinaseek.memory",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

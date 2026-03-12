@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,11 +79,11 @@ bool IsFormatSupported(viz::SharedImageFormat format,
 
   // BGRA_1010102 is always supported on Apple but RGBA_1010102 is not.
   if (format == viz::SinglePlaneFormat::kBGRA_1010102) {
-    return flags.chromium_image_ar30;
+    return flags.Cinaseek_image_ar30;
   }
 
   if (format == viz::SinglePlaneFormat::kRGBA_1010102) {
-    return flags.chromium_image_ab30;
+    return flags.Cinaseek_image_ab30;
   }
 
   if (format == viz::SinglePlaneFormat::kR_8 ||

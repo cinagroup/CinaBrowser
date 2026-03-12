@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -116,20 +116,20 @@ if (is_android) {
 
   generate_jni("media_jni_headers") {
     sources = [
-      "java/src/org/chromium/media/AudioManagerAndroid.java",
-      "java/src/org/chromium/media/CodecProfileLevelList.java",
-      "java/src/org/chromium/media/HdrMetadata.java",
-      "java/src/org/chromium/media/MediaCodecBridge.java",
-      "java/src/org/chromium/media/MediaCodecBridgeBuilder.java",
-      "java/src/org/chromium/media/MediaCodecUtil.java",
-      "java/src/org/chromium/media/MediaDrmBridge.java",
-      "java/src/org/chromium/media/MediaDrmStorageBridge.java",
-      "java/src/org/chromium/media/MediaServerCrashListener.java",
-      "java/src/org/chromium/media/VideoAcceleratorUtil.java",
+      "java/src/org/Cinaseek/media/AudioManagerAndroid.java",
+      "java/src/org/Cinaseek/media/CodecProfileLevelList.java",
+      "java/src/org/Cinaseek/media/HdrMetadata.java",
+      "java/src/org/Cinaseek/media/MediaCodecBridge.java",
+      "java/src/org/Cinaseek/media/MediaCodecBridgeBuilder.java",
+      "java/src/org/Cinaseek/media/MediaCodecUtil.java",
+      "java/src/org/Cinaseek/media/MediaDrmBridge.java",
+      "java/src/org/Cinaseek/media/MediaDrmStorageBridge.java",
+      "java/src/org/Cinaseek/media/MediaServerCrashListener.java",
+      "java/src/org/Cinaseek/media/VideoAcceleratorUtil.java",
     ]
 
     if (enable_passthrough_audio_codecs) {
-      sources += [ "java/src/org/chromium/media/AudioTrackOutputStream.java" ]
+      sources += [ "java/src/org/Cinaseek/media/AudioTrackOutputStream.java" ]
     }
   }
 
@@ -148,7 +148,7 @@ if (is_android) {
 
   java_cpp_features("java_features") {
     sources = [ "//media/base/media_switches.cc" ]
-    class_name = "org.chromium.media.MediaFeatures"
+    class_name = "org.Cinaseek.media.MediaFeatures"
   }
 
   android_resources("media_java_resources") {
@@ -174,50 +174,50 @@ if (is_android) {
       ":media_jni_headers",
       "//media/base:java_enums",
     ]
-    resources_package = "org.chromium.media"
+    resources_package = "org.Cinaseek.media"
     sources = [
-      "java/src/org/chromium/media/AudioDeviceListener.java",
-      "java/src/org/chromium/media/AudioManagerAndroid.java",
-      "java/src/org/chromium/media/CodecProfileLevelList.java",
-      "java/src/org/chromium/media/CommunicationDeviceListener.java",
-      "java/src/org/chromium/media/CommunicationDeviceSelector.java",
-      "java/src/org/chromium/media/CommunicationDeviceSelectorPostS.java",
-      "java/src/org/chromium/media/CommunicationDeviceSelectorPreS.java",
-      "java/src/org/chromium/media/HdrMetadata.java",
-      "java/src/org/chromium/media/MaxAnticipatedResolutionEstimator.java",
-      "java/src/org/chromium/media/MediaCodecBridge.java",
-      "java/src/org/chromium/media/MediaCodecBridgeBuilder.java",
-      "java/src/org/chromium/media/MediaCodecUtil.java",
-      "java/src/org/chromium/media/MediaDrmBridge.java",
-      "java/src/org/chromium/media/MediaDrmSessionManager.java",
-      "java/src/org/chromium/media/MediaDrmStorageBridge.java",
-      "java/src/org/chromium/media/MediaFormatBuilder.java",
-      "java/src/org/chromium/media/MediaServerCrashListener.java",
-      "java/src/org/chromium/media/ScoStateListener.java",
-      "java/src/org/chromium/media/ScreenResolutionUtil.java",
-      "java/src/org/chromium/media/VideoAcceleratorUtil.java",
+      "java/src/org/Cinaseek/media/AudioDeviceListener.java",
+      "java/src/org/Cinaseek/media/AudioManagerAndroid.java",
+      "java/src/org/Cinaseek/media/CodecProfileLevelList.java",
+      "java/src/org/Cinaseek/media/CommunicationDeviceListener.java",
+      "java/src/org/Cinaseek/media/CommunicationDeviceSelector.java",
+      "java/src/org/Cinaseek/media/CommunicationDeviceSelectorPostS.java",
+      "java/src/org/Cinaseek/media/CommunicationDeviceSelectorPreS.java",
+      "java/src/org/Cinaseek/media/HdrMetadata.java",
+      "java/src/org/Cinaseek/media/MaxAnticipatedResolutionEstimator.java",
+      "java/src/org/Cinaseek/media/MediaCodecBridge.java",
+      "java/src/org/Cinaseek/media/MediaCodecBridgeBuilder.java",
+      "java/src/org/Cinaseek/media/MediaCodecUtil.java",
+      "java/src/org/Cinaseek/media/MediaDrmBridge.java",
+      "java/src/org/Cinaseek/media/MediaDrmSessionManager.java",
+      "java/src/org/Cinaseek/media/MediaDrmStorageBridge.java",
+      "java/src/org/Cinaseek/media/MediaFormatBuilder.java",
+      "java/src/org/Cinaseek/media/MediaServerCrashListener.java",
+      "java/src/org/Cinaseek/media/ScoStateListener.java",
+      "java/src/org/Cinaseek/media/ScreenResolutionUtil.java",
+      "java/src/org/Cinaseek/media/VideoAcceleratorUtil.java",
     ]
 
     if (enable_passthrough_audio_codecs) {
-      sources += [ "java/src/org/chromium/media/AudioTrackOutputStream.java" ]
+      sources += [ "java/src/org/Cinaseek/media/AudioTrackOutputStream.java" ]
     }
   }
 
   # TODO (b/146418831): Replace with androidx version
   android_library("display_java") {
-    sources = [ "java/src/org/chromium/media/DisplayCompat.java" ]
+    sources = [ "java/src/org/Cinaseek/media/DisplayCompat.java" ]
 
     deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
   }
 
   robolectric_binary("media_base_junit_tests") {
     sources = [
-      "java/src/test/org/chromium/media/CommunicationDeviceListenerTest.java",
-      "java/src/test/org/chromium/media/MediaFormatBuilderTest.java",
+      "java/src/test/org/Cinaseek/media/CommunicationDeviceListenerTest.java",
+      "java/src/test/org/Cinaseek/media/MediaFormatBuilderTest.java",
     ]
     if (enable_passthrough_audio_codecs) {
       sources +=
-          [ "java/src/test/org/chromium/media/AudioTrackOutputStreamTest.java" ]
+          [ "java/src/test/org/Cinaseek/media/AudioTrackOutputStreamTest.java" ]
     }
     deps = [
       ":media_java",

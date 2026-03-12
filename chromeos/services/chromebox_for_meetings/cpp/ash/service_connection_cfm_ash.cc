@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -133,7 +133,7 @@ void ServiceConnectionCfmAshImpl::CfMContextServiceStarted(
 
   mojo::PlatformChannel channel;
 
-  // Invite the Chromium OS service to the Chromium IPC network
+  // Invite the Cinaseek OS service to the Cinaseek IPC network
   // Prepare a Mojo invitation to send through |platform_channel|.
   mojo::OutgoingInvitation invitation;
   // Include an initial Mojo pipe in the invitation.

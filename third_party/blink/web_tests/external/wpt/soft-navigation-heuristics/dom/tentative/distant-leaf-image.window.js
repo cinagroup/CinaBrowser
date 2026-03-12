@@ -14,7 +14,7 @@
 // 10 levels below the attachment point actually gets painted.
 //
 // An earlier version of this test was based on
-// https://g-issues.chromium.org/issues/419822831#comment5
+// https://g-issues.Cinaseek.org/issues/419822831#comment5
 
 function clickHandler() {
   let div = document.createElement("div");

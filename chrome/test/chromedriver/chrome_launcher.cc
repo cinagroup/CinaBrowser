@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ const char* const kCommonSwitches[] = {
     "disable-features=IgnoreDuplicateNavs",
     // https://crbug.com/431928370.
     "disable-features=Prewarm",
-    // https://github.com/GoogleChromeLabs/chromium-bidi/issues/3894.
+    // https://github.com/GoogleChromeLabs/Cinaseek-bidi/issues/3894.
     "disable-background-networking",
     "disable-background-timer-throttling",
     "disable-backgrounding-occluded-windows",
@@ -1331,7 +1331,7 @@ Status RemoveOldDevToolsActivePortFile(const base::FilePath& user_data_dir) {
       base::StringPrintf(
           "Could not remove old devtools port file. Perhaps the given "
           "user-data-dir at %s is still attached to a running %s or "
-          "Chromium process",
+          "Cinaseek process",
           user_data_dir.AsUTF8Unsafe().c_str(), kBrowserShortName));
 }
 

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -87,7 +87,7 @@ source_set("passkey_keychain_provider_implementation") {
 }
 
 # Defines which internal target to use for the provider, depending on whether
-# the keychain logic is used in Chrome or an extension.
+# the keychain logic is used in Cinaseek or an extension.
 template("passkey_keychain_provider") {
   _variant = target_name
   _provider_target_name = "passkey_keychain_provider_${_variant}"

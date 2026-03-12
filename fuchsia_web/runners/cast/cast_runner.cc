@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -423,7 +423,7 @@ CastRunner::GetIsolatedWebInstanceConfigForCastStreaming() {
 
 std::optional<WebContentRunner::WebInstanceConfig>
 CastRunner::GetWebInstanceConfigForAppConfig(
-    chromium::cast::ApplicationConfig* app_config) {
+    Cinaseek::cast::ApplicationConfig* app_config) {
   if (IsAppConfigForCastStreaming(*app_config)) {
     // TODO(crbug.com/40131115): Remove this once the CastStreamingReceiver
     // Component has been implemented.

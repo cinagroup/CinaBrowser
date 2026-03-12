@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -135,11 +135,11 @@ TEST(JingleMessageTest, SessionInitiate) {
   // clang-format off
   const char* kTestSessionInitiateMessage =
       "<iq to='user@gmail.com/chromoting016DBB07' type='set' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-initiate' sid='2227053353' "
-                "initiator='user@gmail.com/chromiumsy5C6A652D'>"
+                "initiator='user@gmail.com/Cinaseeksy5C6A652D'>"
           "<content name='chromoting' creator='initiator'>"
             "<description xmlns='google:remoting'>"
               "<standard-ice/>"
@@ -169,11 +169,11 @@ TEST(JingleMessageTest, SessionInitiateWebrtc) {
   // clang-format off
   const char* kTestSessionInitiateMessage =
       "<iq to='user@gmail.com/chromoting016DBB07' type='set' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-initiate' sid='2227053353' "
-                "initiator='user@gmail.com/chromiumsy5C6A652D'>"
+                "initiator='user@gmail.com/Cinaseeksy5C6A652D'>"
           "<content name='chromoting' creator='initiator'>"
             "<description xmlns='google:remoting'>"
               "<authentication>"
@@ -200,11 +200,11 @@ TEST(JingleMessageTest, SessionInitiateHybrid) {
   // clang-format off
   const char* kTestSessionInitiateMessage =
       "<iq to='user@gmail.com/chromoting016DBB07' type='set' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-initiate' sid='2227053353' "
-                "initiator='user@gmail.com/chromiumsy5C6A652D'>"
+                "initiator='user@gmail.com/Cinaseeksy5C6A652D'>"
           "<content name='chromoting' creator='initiator'>"
             "<description xmlns='google:remoting'>"
               "<standard-ice/>"
@@ -236,11 +236,11 @@ TEST(JingleMessageTest, SessionInitiateNoIce) {
   // clang-format off
   const char* kTestSessionInitiateMessage =
       "<iq to='user@gmail.com/chromoting016DBB07' type='set' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-initiate' sid='2227053353' "
-                "initiator='user@gmail.com/chromiumsy5C6A652D'>"
+                "initiator='user@gmail.com/Cinaseeksy5C6A652D'>"
           "<content name='chromoting' creator='initiator'>"
             "<description xmlns='google:remoting'>"
               "<control transport='stream' version='2'/>"
@@ -268,7 +268,7 @@ TEST(JingleMessageTest, SessionAccept) {
   // clang-format off
   const char* kTestSessionAcceptMessage =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-accept' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -303,7 +303,7 @@ TEST(JingleMessageTest, SessionAcceptWebrtc) {
   // clang-format off
   const char* kTestSessionAcceptMessage =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-accept' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -335,7 +335,7 @@ TEST(JingleMessageTest, SessionAcceptNoIce) {
   // clang-format off
   const char* kTestSessionAcceptMessage =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-accept' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -405,7 +405,7 @@ TEST(JingleMessageTest, SessionTerminate) {
   // clang-format off
   const char* kTestSessionTerminateMessage =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-terminate' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -423,7 +423,7 @@ TEST(JingleMessageTest, SessionInfo) {
   // clang-format off
   const char* kTestSessionInfoMessage =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-info' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -448,7 +448,7 @@ TEST(JingleMessageTest, MessageId) {
   // clang-format off
   const char* kTestMessageWithMessageId =
       "<iq to='user@gmail.com/chromoting016DBB07' id='test_id' type='set' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-info' sid='2227053353'>"
@@ -467,7 +467,7 @@ TEST(JingleMessageReplyTest, ToXml) {
   // clang-format off
   const char* kTestIncomingMessage1 =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' id='4' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-terminate' "
                 "sid='2227053353' xmlns='urn:xmpp:jingle:1'>"
@@ -616,11 +616,11 @@ TEST(JingleMessageTest, ErrorMessage) {
   // clang-format off
   const char* kTestSessionInitiateErrorMessage =
       "<iq to='user@gmail.com/chromoting016DBB07' type='error' "
-          "from='user@gmail.com/chromiumsy5C6A652D' "
+          "from='user@gmail.com/Cinaseeksy5C6A652D' "
           "xmlns='jabber:client'>"
         "<jingle xmlns='urn:xmpp:jingle:1' "
                 "action='session-initiate' sid='2227053353' "
-                "initiator='user@gmail.com/chromiumsy5C6A652D'>"
+                "initiator='user@gmail.com/Cinaseeksy5C6A652D'>"
           "<content name='chromoting' creator='initiator'>"
             "<description xmlns='google:remoting'>"
               "<control transport='stream' version='2'/>"
@@ -655,7 +655,7 @@ TEST(JingleMessageTest, RemotingErrorCode) {
   // clang-format off
   const char* kTestSessionTerminateMessageBegin =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-terminate' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -691,7 +691,7 @@ TEST(JingleMessageTest, ErrorDetails) {
   // clang-format off
   static constexpr char kTestSessionTerminateMessage[] =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-terminate' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -713,7 +713,7 @@ TEST(JingleMessageTest, ErrorLocation) {
   // clang-format off
   static constexpr char kTestSessionTerminateMessage[] =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='session-terminate' sid='2227053353' "
                 "xmlns='urn:xmpp:jingle:1'>"
@@ -780,7 +780,7 @@ TEST(JingleMessageTest, AttachmentsMessage) {
   // clang-format off
   static constexpr char kMessageWithPluginTag[] =
       "<cli:iq from='user@gmail.com/chromoting016DBB07' "
-              "to='user@gmail.com/chromiumsy5C6A652D' type='set' "
+              "to='user@gmail.com/Cinaseeksy5C6A652D' type='set' "
               "xmlns:cli='jabber:client'>"
         "<jingle action='$1' sid='2227053353' xmlns='urn:xmpp:jingle:1'>"
           "<gr:attachments xmlns:gr='google:remoting'>"

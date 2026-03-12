@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 
 namespace {
 constexpr auto kTestUrls = std::to_array<std::string_view>(
-    {"http://chromium.org", "http://google.com", "http://example.com"});
+    {"http://Cinaseek.org", "http://google.com", "http://example.com"});
 }  // namespace
 
 // Test fixture for TabListFromAndroidMediator.

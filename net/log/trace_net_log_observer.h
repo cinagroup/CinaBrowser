@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ class NET_EXPORT TraceNetLogObserver
     bool use_sensitive_category = false;
 
     // The name of the root track netlog tracks will be nested under.
-    perfetto::StaticString root_track_name = "Chromium NetLog";
+    perfetto::StaticString root_track_name = "Cinaseek NetLog";
 
     // When true, record trace events verbosely:
     // - Use separate tracks for each NetLogSource.

@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,22 +7,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac-enterprise-companion-builder-asan-dbg",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.enterprise_companion",
+              "builder_group": "Cinaseek.enterprise_companion",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -30,27 +30,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac12-x64-enterprise-companion-tester-asan-dbg",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.enterprise_companion",
+              "builder_group": "Cinaseek.enterprise_companion",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "mac-enterprise-companion-builder-asan-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -60,7 +60,7 @@
         {
           "bucket": "ci",
           "builder": "mac12-x64-enterprise-companion-tester-asan-dbg",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/mac12-x64-enterprise-companion-tester-asan-dbg/targets"
@@ -73,6 +73,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.enterprise_companion",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.enterprise_companion",
+  "recipe": "Cinaseek"
 }

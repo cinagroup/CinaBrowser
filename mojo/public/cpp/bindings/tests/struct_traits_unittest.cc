@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #include "mojo/public/cpp/bindings/receiver_set.h"
 #include "mojo/public/cpp/bindings/remote.h"
 #include "mojo/public/cpp/bindings/tests/rect_blink.h"
-#include "mojo/public/cpp/bindings/tests/rect_chromium.h"
+#include "mojo/public/cpp/bindings/tests/rect_Cinaseek.h"
 #include "mojo/public/cpp/bindings/tests/struct_with_traits_impl.h"
 #include "mojo/public/cpp/bindings/tests/struct_with_traits_impl_traits.h"
 #include "mojo/public/cpp/bindings/tests/variant_test_util.h"
@@ -57,13 +57,13 @@ void ExpectError(Remote<T>* proxy, base::OnceClosure callback) {
   proxy->set_disconnect_handler(std::move(callback));
 }
 
-// This implements the generated Chromium variant of RectService.
-class ChromiumRectServiceImpl : public RectService {
+// This implements the generated Cinaseek variant of RectService.
+class CinaseekRectServiceImpl : public RectService {
  public:
-  ChromiumRectServiceImpl() {}
+  CinaseekRectServiceImpl() {}
 
   // mojo::test::RectService:
-  void AddRect(const RectChromium& r) override {
+  void AddRect(const RectCinaseek& r) override {
     if (r.GetArea() > largest_rect_.GetArea()) {
       largest_rect_ = r;
     }
@@ -79,7 +79,7 @@ class ChromiumRectServiceImpl : public RectService {
   }
 
  private:
-  RectChromium largest_rect_;
+  RectCinaseek largest_rect_;
 };
 
 // This implements the generated Blink variant of RectService.
@@ -110,18 +110,18 @@ class BlinkRectServiceImpl : public blink::RectService {
   RectBlink largest_rect_;
 };
 
-// A test which runs both Chromium and Blink implementations of a RectService.
+// A test which runs both Cinaseek and Blink implementations of a RectService.
 class StructTraitsTest : public testing::Test, public TraitsTestService {
  public:
   StructTraitsTest() = default;
 
  protected:
-  void BindToChromiumService(PendingReceiver<RectService> receiver) {
-    chromium_receivers_.Add(&chromium_service_, std::move(receiver));
+  void BindToCinaseekService(PendingReceiver<RectService> receiver) {
+    Cinaseek_receivers_.Add(&Cinaseek_service_, std::move(receiver));
   }
-  void BindToChromiumService(PendingReceiver<blink::RectService> receiver) {
-    chromium_receivers_.Add(
-        &chromium_service_,
+  void BindToCinaseekService(PendingReceiver<blink::RectService> receiver) {
+    Cinaseek_receivers_.Add(
+        &Cinaseek_service_,
         ConvertPendingReceiver<RectService>(std::move(receiver)));
   }
 
@@ -189,8 +189,8 @@ class StructTraitsTest : public testing::Test, public TraitsTestService {
 
   base::test::SingleThreadTaskEnvironment task_environment_;
 
-  ChromiumRectServiceImpl chromium_service_;
-  ReceiverSet<RectService> chromium_receivers_;
+  CinaseekRectServiceImpl Cinaseek_service_;
+  ReceiverSet<RectService> Cinaseek_receivers_;
 
   BlinkRectServiceImpl blink_service_;
   ReceiverSet<blink::RectService> blink_receivers_;
@@ -200,40 +200,40 @@ class StructTraitsTest : public testing::Test, public TraitsTestService {
 
 }  // namespace
 
-TEST_F(StructTraitsTest, ChromiumProxyToChromiumService) {
-  Remote<RectService> chromium_proxy;
-  BindToChromiumService(chromium_proxy.BindNewPipeAndPassReceiver());
+TEST_F(StructTraitsTest, CinaseekProxyToCinaseekService) {
+  Remote<RectService> Cinaseek_proxy;
+  BindToCinaseekService(Cinaseek_proxy.BindNewPipeAndPassReceiver());
   {
     base::RunLoop loop;
-    chromium_proxy->AddRect(RectChromium(1, 1, 4, 5));
-    chromium_proxy->AddRect(RectChromium(-1, -1, 2, 2));
-    chromium_proxy->GetLargestRect(
-        ExpectResult(RectChromium(1, 1, 4, 5), loop.QuitClosure()));
+    Cinaseek_proxy->AddRect(RectCinaseek(1, 1, 4, 5));
+    Cinaseek_proxy->AddRect(RectCinaseek(-1, -1, 2, 2));
+    Cinaseek_proxy->GetLargestRect(
+        ExpectResult(RectCinaseek(1, 1, 4, 5), loop.QuitClosure()));
     loop.Run();
   }
   {
     base::RunLoop loop;
-    chromium_proxy->PassSharedRect(
+    Cinaseek_proxy->PassSharedRect(
         {1, 2, 3, 4},
         ExpectResult(SharedRect({1, 2, 3, 4}), loop.QuitClosure()));
     loop.Run();
   }
 }
 
-TEST_F(StructTraitsTest, ChromiumToBlinkService) {
-  Remote<RectService> chromium_proxy;
-  BindToBlinkService(chromium_proxy.BindNewPipeAndPassReceiver());
+TEST_F(StructTraitsTest, CinaseekToBlinkService) {
+  Remote<RectService> Cinaseek_proxy;
+  BindToBlinkService(Cinaseek_proxy.BindNewPipeAndPassReceiver());
   {
     base::RunLoop loop;
-    chromium_proxy->AddRect(RectChromium(1, 1, 4, 5));
-    chromium_proxy->AddRect(RectChromium(2, 2, 5, 5));
-    chromium_proxy->GetLargestRect(
-        ExpectResult(RectChromium(2, 2, 5, 5), loop.QuitClosure()));
+    Cinaseek_proxy->AddRect(RectCinaseek(1, 1, 4, 5));
+    Cinaseek_proxy->AddRect(RectCinaseek(2, 2, 5, 5));
+    Cinaseek_proxy->GetLargestRect(
+        ExpectResult(RectCinaseek(2, 2, 5, 5), loop.QuitClosure()));
     loop.Run();
   }
   {
     base::RunLoop loop;
-    chromium_proxy->PassSharedRect(
+    Cinaseek_proxy->PassSharedRect(
         {1, 2, 3, 4},
         ExpectResult(SharedRect({1, 2, 3, 4}), loop.QuitClosure()));
     loop.Run();
@@ -242,10 +242,10 @@ TEST_F(StructTraitsTest, ChromiumToBlinkService) {
   // deserializer rejects negative origins.
   {
     base::RunLoop loop;
-    ExpectError(&chromium_proxy, loop.QuitClosure());
-    chromium_proxy->AddRect(RectChromium(-1, -1, 2, 2));
-    chromium_proxy->GetLargestRect(
-        Fail<RectChromium>("The pipe should have been closed."));
+    ExpectError(&Cinaseek_proxy, loop.QuitClosure());
+    Cinaseek_proxy->AddRect(RectCinaseek(-1, -1, 2, 2));
+    Cinaseek_proxy->GetLargestRect(
+        Fail<RectCinaseek>("The pipe should have been closed."));
     loop.Run();
   }
 }
@@ -270,9 +270,9 @@ TEST_F(StructTraitsTest, BlinkProxyToBlinkService) {
   }
 }
 
-TEST_F(StructTraitsTest, BlinkProxyToChromiumService) {
+TEST_F(StructTraitsTest, BlinkProxyToCinaseekService) {
   Remote<blink::RectService> blink_proxy;
-  BindToChromiumService(blink_proxy.BindNewPipeAndPassReceiver());
+  BindToCinaseekService(blink_proxy.BindNewPipeAndPassReceiver());
   {
     base::RunLoop loop;
     blink_proxy->AddRect(RectBlink(1, 1, 4, 5));

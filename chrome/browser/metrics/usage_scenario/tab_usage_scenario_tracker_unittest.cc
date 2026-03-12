@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -310,7 +310,7 @@ TEST_F(TabUsageScenarioTrackerTest,
 
   // Remove the 2nd display without dispatching a notification yet, to mimic
   // `XDisplayManager`'s delayed notification
-  // (https://source.chromium.org/chromium/chromium/src/+/main:ui/base/x/x11_display_manager.cc;l=130-135;drc=90cac1911508d3d682a67c97aa62483eb712f69a).
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/base/x/x11_display_manager.cc;l=130-135;drc=90cac1911508d3d682a67c97aa62483eb712f69a).
   tab_usage_scenario_tracker_->SetNumDisplaysWithoutNotification(1);
   task_environment()->FastForwardBy(kInterval);
 

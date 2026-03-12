@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class EnrollmentStatus;
 class ServerBackedStateKeysBroker;
 class SigningService;
 
-// Implements the logic that establishes enterprise enrollment for Chromium OS
+// Implements the logic that establishes enterprise enrollment for Cinaseek OS
 // devices. The process is as follows:
 //   1. Given an auth token, register with the policy service.
 //   2. Download the initial policy blob from the service.

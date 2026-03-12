@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ void WaitOnceForEvents(int device_fd,
 
 // Lifted from the similarly named method in platform/drm-tests [1].
 // ITU-T H.264 7.4.1.2.4 implementation. Assumes non-interlaced.
-// [1] https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/platform/drm-tests/bitstreams/bitstream_helper_h264.c;l=72-104;drc=a094a84679084106598763d0a551ef33a9ad422b
+// [1] https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/platform/drm-tests/bitstreams/bitstream_helper_h264.c;l=72-104;drc=a094a84679084106598763d0a551ef33a9ad422b
 bool IsNewH264Frame(const media::H264SPS* sps,
                     const media::H264PPS* pps,
                     const media::H264SliceHeader* prev_slice_header,
@@ -1215,8 +1215,8 @@ int V4L2StatefulVideoDecoder::GetMaxNumDecoderInstances() {
   // times simultaneously, however legacy code limits this to 10 [1] . All other
   // drivers used to limit this to 32 [2] but in practice I could only open up
   // to 15 with e.g. Qualcomm SC7180.
-  // [1] https://source.chromium.org/chromium/chromium/src/+/main:media/gpu/v4l2/legacy/v4l2_video_decode_accelerator.h;l=449-454;drc=83195d4d1e1a4e54f148ddc80d0edcf5daa755ff
-  // [2] https://source.chromium.org/chromium/chromium/src/+/main:media/gpu/v4l2/v4l2_video_decoder.h;l=183-189;drc=90fa47c897b589bc4857fb7ccafab46a4be2e2ae
+  // [1] https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/gpu/v4l2/legacy/v4l2_video_decode_accelerator.h;l=449-454;drc=83195d4d1e1a4e54f148ddc80d0edcf5daa755ff
+  // [2] https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/gpu/v4l2/v4l2_video_decoder.h;l=183-189;drc=90fa47c897b589bc4857fb7ccafab46a4be2e2ae
   return is_mtk8173 ? 10 : 15;
 }
 

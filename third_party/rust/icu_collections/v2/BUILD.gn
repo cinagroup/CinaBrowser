@@ -1,8 +1,8 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# @generated from third_party/rust/chromium_crates_io/BUILD.gn.hbs by
+# @generated from third_party/rust/Cinaseek_crates_io/BUILD.gn.hbs by
 # tools/crates/gnrt.
 # Do not edit!
 
@@ -12,25 +12,25 @@ cargo_crate("lib") {
   crate_name = "icu_collections"
   epoch = "2"
   crate_type = "rlib"
-  crate_root = "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/lib.rs"
+  crate_root = "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/lib.rs"
   sources = [
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/char16trie/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/char16trie/trie.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvlist/builder.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvlist/conversions.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvlist/cpinvlist.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvlist/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvlist/utils.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointinvliststringlist/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/cptrie.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/error.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/impl_const.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/mod.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/planes.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/serde.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/codepointtrie/toml.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/iterator_utils.rs",
-    "//third_party/rust/chromium_crates_io/vendor/icu_collections-v2/src/lib.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/char16trie/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/char16trie/trie.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvlist/builder.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvlist/conversions.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvlist/cpinvlist.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvlist/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvlist/utils.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointinvliststringlist/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/cptrie.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/error.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/impl_const.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/mod.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/planes.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/serde.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/codepointtrie/toml.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/iterator_utils.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/icu_collections-v2/src/lib.rs",
   ]
   inputs = []
 
@@ -54,7 +54,7 @@ cargo_crate("lib") {
   features = [ "alloc" ]
 
   # Only for usage from third-party crates. Add the crate to
-  # //third_party/rust/chromium_crates_io/Cargo.toml to use
+  # //third_party/rust/Cinaseek_crates_io/Cargo.toml to use
   # it from first-party code.
   visibility = [ "//third_party/rust/*" ]
 
@@ -63,14 +63,14 @@ cargo_crate("lib") {
 
   # Config changes that apply to all `//third_party/rust` crates.
   _configs_to_remove = [
-    # We don't need code coverage data for any `chromium_crates_io` crates.
+    # We don't need code coverage data for any `Cinaseek_crates_io` crates.
     "//build/config/coverage:default_coverage",
 
-    # This is third-party code, so remove `chromium_code` config.  We are not
-    # at the same time adding `//build/config/compiler:no_chromium_code`,
+    # This is third-party code, so remove `Cinaseek_code` config.  We are not
+    # at the same time adding `//build/config/compiler:no_Cinaseek_code`,
     # because 1) we don't want to pull how warnings are handled by that config
     # and 2) that config doesn't have any non-warnings-related stuff.
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   _configs_to_add = []
 

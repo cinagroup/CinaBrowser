@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -567,7 +567,7 @@ void WebstoreInstaller::StartDownload(
           data:
             "The id of the extension to be installed and information about the "
             "user's installation, including version, language, distribution "
-            "(Chrome vs Chromium), NaCl architecture, installation source (as "
+            "(Chrome vs Cinaseek), NaCl architecture, installation source (as "
             "an enum), and accepted crx formats."
           destination: GOOGLE_OWNED_SERVICE
         }

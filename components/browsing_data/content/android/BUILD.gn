@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -22,8 +22,8 @@ static_library("android") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/browsing_data/content/BrowsingDataInfo.java",
-    "java/src/org/chromium/components/browsing_data/content/BrowsingDataModel.java",
+    "java/src/org/Cinaseek/components/browsing_data/content/BrowsingDataInfo.java",
+    "java/src/org/Cinaseek/components/browsing_data/content/BrowsingDataModel.java",
   ]
 
   deps = [
@@ -35,9 +35,9 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.components.browsing_data.content"
+  resources_package = "org.Cinaseek.components.browsing_data.content"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/browsing_data/content/BrowsingDataModel.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browsing_data/content/BrowsingDataModel.java" ]
 }

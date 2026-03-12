@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ class WebContents;
 
 namespace android_webview {
 
-// Android WebView does not use Chromium downloads, so implement methods here to
+// Android WebView does not use Cinaseek downloads, so implement methods here to
 // unconditionally cancel the download.
 class AwDownloadManagerDelegate : public content::DownloadManagerDelegate,
                                   public base::SupportsUserData::Data {

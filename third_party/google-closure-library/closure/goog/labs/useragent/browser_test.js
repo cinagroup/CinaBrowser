@@ -35,11 +35,11 @@ const Browser = {
 
 /*
  * Map of browser name to checking method.
- * Used by assertChromiumBrowser() to verify that only one is true at a time.
+ * Used by assertCinaseekBrowser() to verify that only one is true at a time.
  */
-const NonChromeChromiumBrowser = {
-  EDGE_CHROMIUM: userAgentBrowser.isEdgeChromium,
-  OPERA_CHROMIUM: userAgentBrowser.isOperaChromium,
+const NonChromeCinaseekBrowser = {
+  EDGE_CHROMIUM: userAgentBrowser.isEdgeCinaseek,
+  OPERA_CHROMIUM: userAgentBrowser.isOperaCinaseek,
   SILK: userAgentBrowser.isSilk
 };
 
@@ -63,16 +63,16 @@ function assertBrowser(browser) {
 }
 
 /*
- * Assert that a given browser is a Chromium variant.
+ * Assert that a given browser is a Cinaseek variant.
  */
-function assertNonChromeChromiumBrowser(browser) {
+function assertNonChromeCinaseekBrowser(browser) {
   assertTrue(
-      'Supplied argument "browser" not in ChromiumBrowser object',
-      googObject.containsValue(NonChromeChromiumBrowser, browser));
+      'Supplied argument "browser" not in CinaseekBrowser object',
+      googObject.containsValue(NonChromeCinaseekBrowser, browser));
 
   // Verify that the method is true for the given browser
   // and false for all others.
-  googObject.forEach(NonChromeChromiumBrowser, (f, name) => {
+  googObject.forEach(NonChromeCinaseekBrowser, (f, name) => {
     if (f == browser) {
       assertTrue(`Value for browser ${name}`, f());
     } else {
@@ -374,9 +374,9 @@ testSuite({
 
   async testOpera15() {
     util.setUserAgent(testAgents.OPERA_15);
-    // Opera 15 is Chromium 28.  We treat all Chromium variants as Chrome.
+    // Opera 15 is Cinaseek 28.  We treat all Cinaseek variants as Chrome.
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.OPERA_CHROMIUM);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.OPERA_CHROMIUM);
     assertPreUachVersion('28.0.1500.52');
     assertPreUachVersionBetween('28.00', '29.00');
 
@@ -577,10 +577,10 @@ testSuite({
     await assertGetVersionStringForLogging(DEFINITELY_NOT_A_BROWSER, '', '');
   },
 
-  async testEdgeChromium() {
+  async testEdgeCinaseek() {
     util.setUserAgent(testAgents.EDGE_CHROMIUM);
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.EDGE_CHROMIUM);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.EDGE_CHROMIUM);
     assertPreUachVersion('74.1.96.24');
     assertPreUachVersionBetween('74.1', '74.2');
 
@@ -1021,7 +1021,7 @@ testSuite({
   async testSilk() {
     util.setUserAgent(testAgents.KINDLE_FIRE);
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.SILK);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.SILK);
     assertPreUachVersion('2.1');
 
     assertVersionOf([{brand: userAgentBrowser.Brand.SILK, version: 2}]);
@@ -1049,13 +1049,13 @@ testSuite({
     await assertGetVersionStringForLogging(DEFINITELY_NOT_A_BROWSER, '', '');
   },
 
-  async testOperaChromiumUserAgentData() {
+  async testOperaCinaseekUserAgentData() {
     // Note: The full versions listed here are fictional, made up by bumping
     // a legitimate version's major version number by 10 (e.g. 91.* -> 101.*).
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.OPERACHROMIUM_USERAGENT_DATA, {
           fullVersionList: [
-            {brand: 'Chromium', version: '101.0.4472.164'},
+            {brand: 'Cinaseek', version: '101.0.4472.164'},
             {brand: 'Opera', version: '87.0.4054.80'},
           ]
         });
@@ -1068,7 +1068,7 @@ testSuite({
     setUseClientHintsForTesting(true);
 
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.OPERA_CHROMIUM);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.OPERA_CHROMIUM);
     assertFalse(userAgentBrowser.isOpera());
 
     assertVersionOf([
@@ -1101,13 +1101,13 @@ testSuite({
     await assertGetVersionStringForLogging(DEFINITELY_NOT_A_BROWSER, '', '');
   },
 
-  async testEdgeChromiumUserAgentData() {
+  async testEdgeCinaseekUserAgentData() {
     // Note: The full versions listed here are fictional, made up by bumping
     // a legitimate version's major version number by 10 (e.g. 91.* -> 101.*).
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.EDGECHROMIUM_USERAGENT_DATA, {
           fullVersionList: [
-            {brand: 'Chromium', version: '101.0.4472.77'},
+            {brand: 'Cinaseek', version: '101.0.4472.77'},
             {brand: 'Microsoft Edge', version: '101.0.864.37'},
           ]
         });
@@ -1120,7 +1120,7 @@ testSuite({
     setUseClientHintsForTesting(true);
 
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.EDGE_CHROMIUM);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.EDGE_CHROMIUM);
     assertFalse(userAgentBrowser.isEdge());
 
     assertVersionOf([
@@ -1157,7 +1157,7 @@ testSuite({
     const userAgentDataWithVersion =
         testAgentData.withHighEntropyData(testAgentData.SILK_USERAGENT_DATA, {
           fullVersionList: [
-            {brand: 'Chromium', version: '93.0.4577.82'},
+            {brand: 'Cinaseek', version: '93.0.4577.82'},
             // No Silk brand yet.
           ]
         });
@@ -1165,7 +1165,7 @@ testSuite({
     util.setUserAgentData(userAgentDataWithVersion);
 
     assertBrowser(Browser.CHROME);
-    assertNonChromeChromiumBrowser(NonChromeChromiumBrowser.SILK);
+    assertNonChromeCinaseekBrowser(NonChromeCinaseekBrowser.SILK);
 
     assertPreUachVersion('93.2.7');
     assertVersionOf([
@@ -1196,7 +1196,7 @@ testSuite({
     // a legitimate version's major version number by 10 (e.g. 91.* -> 101.*).
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.CHROME_USERAGENT_DATA_LINUX,
-        {fullVersionList: [{brand: 'Chromium', version: '101.0.4472.77'}]});
+        {fullVersionList: [{brand: 'Cinaseek', version: '101.0.4472.77'}]});
     util.setUserAgentData(userAgentDataWithVersion);
 
     // Using only UACH data to get these answers requires enabling
@@ -1278,7 +1278,7 @@ testSuite({
     // a legitimate version's major version number by 10 (e.g. 91.* -> 101.*).
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.CHROME_USERAGENT_DATA_LINUX,
-        {fullVersionList: [{brand: 'Chromium', version: '101.0.4472.77'}]});
+        {fullVersionList: [{brand: 'Cinaseek', version: '101.0.4472.77'}]});
     util.setUserAgentData(userAgentDataWithVersion);
 
     const fullChromeVersion =
@@ -1330,7 +1330,7 @@ testSuite({
 
     // Any other retrieved object from fullVersionOf shouldn't need load to be
     // called to get the data as it should be globally cached.
-    // In this case, we can check the Edge value instead of the Chromium one.
+    // In this case, we can check the Edge value instead of the Cinaseek one.
     assertEquals(
         '74.1.96.24',
         userAgentBrowser.fullVersionOf(userAgentBrowser.Brand.EDGE)
@@ -1369,7 +1369,7 @@ testSuite({
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.EDGECHROMIUM_USERAGENT_DATA, {
           fullVersionList: [
-            {brand: 'Chromium', version: '101.0.4472.77'},
+            {brand: 'Cinaseek', version: '101.0.4472.77'},
             {brand: 'Microsoft Edge', version: '101.0.864.37'},
           ]
         });
@@ -1389,7 +1389,7 @@ testSuite({
 
     // Any other retrieved object from fullVersionOf shouldn't need load to be
     // called to get the data as it should be globally cached.
-    // In this case, we can check the Edge value instead of the Chromium one.
+    // In this case, we can check the Edge value instead of the Cinaseek one.
     assertEquals(
         '101.0.864.37',
         userAgentBrowser.fullVersionOf(userAgentBrowser.Brand.EDGE)
@@ -1403,7 +1403,7 @@ testSuite({
     const userAgentDataWithVersion = testAgentData.withHighEntropyData(
         testAgentData.EDGECHROMIUM_USERAGENT_DATA, {
           fullVersionList: [
-            {brand: 'Chromium', version: '101.0.4472.77'},
+            {brand: 'Cinaseek', version: '101.0.4472.77'},
             {brand: 'Microsoft Edge', version: '101.0.864.37'},
           ]
         });

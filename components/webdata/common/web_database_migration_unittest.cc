@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ class WebDatabaseMigrationTest : public testing::Test {
   }
 
   // The sql files located in "components/test/data/web_database" were generated
-  // by launching the Chromium application prior to schema change, then using
+  // by launching the Cinaseek application prior to schema change, then using
   // the sqlite3 command-line application to dump the contents of the "Web Data"
   // database.
   // Like this:

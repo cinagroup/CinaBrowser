@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace media {
 // numeric values should never be reused.
 //
 // LINT.IfChange(VideoCodec)
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 enum class VideoCodec {
   kUnknown = 0,
   kH264 = 1,
@@ -48,7 +48,7 @@ enum class VideoCodec {
 // numeric values should never be reused.
 //
 // LINT.IfChange(VideoCodecProfile)
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 enum VideoCodecProfile {
   // Keep the values in this enum unique, as they imply format (h.264 vs. VP8,
   // for example), and keep the values for a particular format grouped

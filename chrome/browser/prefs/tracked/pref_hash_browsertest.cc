@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -93,7 +93,7 @@ std::wstring GetRegistryPathForTestProfile() {
   // redundant but harmless to have multiple callers hit this on the same
   // machine. TODO(gab): remove this mid-june 2017.
   base::win::RegKey key;
-  if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\Chromium\\PrefHashBrowserTest",
+  if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\Cinaseek\\PrefHashBrowserTest",
                KEY_SET_VALUE | KEY_WOW64_32KEY) == ERROR_SUCCESS) {
     LONG result = key.DeleteKey(L"");
     EXPECT_TRUE(result == ERROR_SUCCESS || result == ERROR_FILE_NOT_FOUND);

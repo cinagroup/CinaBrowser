@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -203,7 +203,7 @@ class DataProtectionNavigationObserverTest
         profile())
         ->SetBrowserCloudPolicyClientForTesting(client_.get());
     identity_test_environment_.MakePrimaryAccountAvailable(
-        "test-user@chromium.org", signin::ConsentLevel::kSignin);
+        "test-user@Cinaseek.org", signin::ConsentLevel::kSignin);
     enterprise_connectors::RealtimeReportingClientFactory::GetForProfile(
         profile())
         ->SetIdentityManagerForTesting(
@@ -283,7 +283,7 @@ TEST_F(DataProtectionNavigationObserverTest, MatchedAuditRuleHasEvent) {
   expected_event.set_url("https://example.com/");
   expected_event.set_event_result(
       chrome::cros::reporting::proto::EVENT_RESULT_ALLOWED);
-  expected_event.set_profile_user_name("test-user@chromium.org");
+  expected_event.set_profile_user_name("test-user@Cinaseek.org");
   expected_event.set_profile_identifier(profile()->GetPath().AsUTF8Unsafe());
   *expected_event.add_triggered_rule_info() =
       MakeTriggeredRuleInfo(/*has_watermark=*/false);
@@ -972,7 +972,7 @@ TEST_P(OrderedDataProtectionNavigationObserverTest, TestWatermarkTextUpdated) {
   expected_event.set_url("https://test/");
   expected_event.set_event_result(
       chrome::cros::reporting::proto::EVENT_RESULT_ALLOWED);
-  expected_event.set_profile_user_name("test-user@chromium.org");
+  expected_event.set_profile_user_name("test-user@Cinaseek.org");
   expected_event.set_profile_identifier(profile()->GetPath().AsUTF8Unsafe());
   *expected_event.add_triggered_rule_info() =
       MakeTriggeredRuleInfo(/*has_watermark=*/true);

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,7 +21,7 @@ mojom("cros_camera_common") {
   ]
   webui_module_path = "/media/capture/video/chromeos/mojom"
 
-  # ChromeOS is still heavily reliant on legacy bindings.
+  # CinaseekOS is still heavily reliant on legacy bindings.
   generate_legacy_js_bindings = true
 }
 

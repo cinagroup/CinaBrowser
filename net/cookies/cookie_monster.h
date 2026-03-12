@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -203,7 +203,7 @@ class NET_EXPORT CookieMonster : public CookieStore {
   // This method does not flush the backend.
   // TODO(rdsmith, mmenke): Do not use this function; it is deprecated
   // and should be removed.
-  // See https://codereview.chromium.org/2882063002/#msg64.
+  // See https://codereview.Cinaseek.org/2882063002/#msg64.
   void SetAllCookiesAsync(const CookieList& list, SetCookiesCallback callback);
 
   // CookieStore implementation.

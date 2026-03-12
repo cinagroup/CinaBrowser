@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -146,7 +146,7 @@ MEDIA_EXPORT uint32_t ComputeAudioOutputBufferSize(int channels, int frames);
 
 class MEDIA_EXPORT AudioParameters {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AudioEncodingFormat
   // GENERATED_JAVA_PREFIX_TO_STRIP: AUDIO_
   enum Format {

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 namespace {
 
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/docs/origin_trials_integration.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/origin_trials_integration.md
 const char kTestTokenPublicKey[] =
     "dRCs+TocuKkocNKa0AtZ4awrt9XKH2SQCI6o4FY6BNA=";
 

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1 inWindowWithNumber:0];
   [ChromeEarlGrey loadURL:destinationUrl2 inWindowWithNumber:0];
   ReloadFromOmnibox();
@@ -156,7 +156,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1 inWindowWithNumber:0];
   [ChromeEarlGrey openNewTab];
   [ChromeEarlGrey loadURL:destinationUrl2 inWindowWithNumber:0];
@@ -268,7 +268,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];
   [[EarlGrey selectElementWithMatcher:BackButton()] performAction:grey_tap()];
@@ -304,7 +304,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1 inWindowWithNumber:0];
   [ChromeEarlGrey loadURL:destinationUrl2 inWindowWithNumber:0];
   ReloadFromOmnibox();
@@ -334,7 +334,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];
 
@@ -369,7 +369,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];
   [[EarlGrey selectElementWithMatcher:BackButton()] performAction:grey_tap()];
@@ -393,7 +393,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];
   [[EarlGrey selectElementWithMatcher:BackButton()] performAction:grey_tap()];
@@ -415,7 +415,7 @@ void ReloadFromOmnibox() {
   GREYAssertTrue(self.testServer->Start(), @"Server did not start.");
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];
   [ChromeEarlGrey purgeCachedWebViewPages];
@@ -476,7 +476,7 @@ void ReloadFromOmnibox() {
   // Make sure two tabs are created.
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey openNewTab];
   [ChromeEarlGrey loadURL:destinationUrl2];
@@ -513,7 +513,7 @@ void ReloadFromOmnibox() {
   // Make sure two tabs are created.
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey openNewTab];
   [ChromeEarlGrey loadURL:destinationUrl2];
@@ -601,7 +601,7 @@ void ReloadFromOmnibox() {
   const GURL destinationUrl1 = self.testServer->GetURL("/pony.html");
   const GURL destinationUrl2 = self.testServer->GetURL("/destination.html");
   const GURL destinationUrl3 =
-      self.testServer->GetURL("/chromium_logo_page.html");
+      self.testServer->GetURL("/Cinaseek_logo_page.html");
   // Load two pages so that the user can tap back button.
   [ChromeEarlGrey loadURL:destinationUrl1];
   [ChromeEarlGrey loadURL:destinationUrl2];

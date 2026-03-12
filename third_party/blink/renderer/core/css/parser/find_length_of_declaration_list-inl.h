@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ ALWAYS_INLINE static size_t FindLengthOfDeclarationList(
     // technique based on group theory that could be used to reliably
     // deal with this case; see:
     //
-    //   https://chromium-review.googlesource.com/c/chromium/src/+/5592448
+    //   https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5592448
     //
     // However, it is notably slower, and this computation is definitely
     // on the critical path, so we settle for just detection.

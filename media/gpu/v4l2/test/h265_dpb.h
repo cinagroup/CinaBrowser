@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class H265Picture : public base::RefCountedThreadSafe<H265Picture> {
 
   // Values calculated per H.265 specification or taken from slice header.
   // See spec for more details on each (some names have been converted from
-  // CamelCase in spec to Chromium-style names).
+  // CamelCase in spec to Cinaseek-style names).
   // TODO(b/261127809): Revisit to make const variables if relevant after
   // |state_ == kEnsurePicture| part of code in H265Decoder::Decode() is
   // implemented with creating H265Picture with parsed SPS, PPS

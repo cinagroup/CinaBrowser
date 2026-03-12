@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -577,7 +577,7 @@ TEST_F(ArcAppPerformanceTracingTest, NoTracingForArcGhostWindow) {
   ASSERT_TRUE(ghost_window);
 
   // Associate ghost window with real app.
-  ghost_window->SetApplicationId("org.chromium.arc.session.1");
+  ghost_window->SetApplicationId("org.Cinaseek.arc.session.1");
 
   // This creates window.
   ghost_window->SetSystemUiVisibility(false /* autohide */);
@@ -602,7 +602,7 @@ TEST_F(ArcAppPerformanceTracingTest, GhostWindowTurnsIntoTaskWindow) {
   // TODO(b/312215591): Use ghost window utilities to simulate the
   // transformation of a ghost window into a task window?
   constexpr int kTaskId = 9486;
-  constexpr char kAppId[] = "org.chromium.arc.9486";
+  constexpr char kAppId[] = "org.Cinaseek.arc.9486";
 
   // By default it is inactive.
   EXPECT_FALSE(tracing_helper().GetTracingSession());
@@ -614,7 +614,7 @@ TEST_F(ArcAppPerformanceTracingTest, GhostWindowTurnsIntoTaskWindow) {
                                     .SetShellRootSurface(ghost_surface.get())
                                     .BuildOwnedByNativeWidget();
   exo::SetShellApplicationId(widget->GetNativeWindow(),
-                             "org.chromium.arc.session.1");
+                             "org.Cinaseek.arc.session.1");
   tracing_helper().GetTracing()->OnTaskCreated(
       kTaskId, kFocusAppPackage, kFocusAppActivity, std::string() /* intent */,
       0 /* session_id */);

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,7 +72,7 @@ class MODULES_EXPORT MediaStreamAudioDestinationHandler final
   // Must be called on the WebAudio rendering thread.
   void ConsumeAudio(const AudioBus* const bus, int number_of_frames);
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const String& function_name, const String& message);
 
   base::Lock consumer_lock_;

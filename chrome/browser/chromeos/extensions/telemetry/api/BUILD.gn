@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,7 +13,7 @@ function_registration("api_registration") {
   sources = chromeos_system_extensions_api_schema_sources
   impl_dir = "//chrome/browser/chromeos/extensions/telemetry/api"
   configs = [ "//build/config:precompiled_headers" ]
-  bundle_name = "ChromeOS"
+  bundle_name = "CinaseekOS"
   root_namespace = chromeos_system_extensions_api_root_namespace
   schema_include_rules = chromeos_system_extensions_api_schema_include_rules
 

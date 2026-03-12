@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -882,7 +882,7 @@ if (is_mac && build_with_internal_optimization_guide) {
   # We need to copy the optimization guide shared library so that the
   # bundle_data dependencies have a "copy" target type.Otherwise for
   # "shared_library" target types it will try to link things into
-  # Chromium Framework when we want to keep it separate instead.
+  # Cinaseek Framework when we want to keep it separate instead.
   copy("optimization_guide_internal_library_copy") {
     sources = [ "$root_out_dir/liboptimization_guide_internal.dylib" ]
     outputs = [ "$root_out_dir/og_intermediates/{{source_file_part}}" ]

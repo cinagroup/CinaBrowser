@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -401,7 +401,7 @@ bool MediaFoundationStreamWrapper::ServicePostFlushSampleRequest() {
   if (buffering_post_flush_samples_ && state_ == State::kStarted &&
       last_start_time_ != kInvalidTime) {
     // Video may freeze during consecutive backward seek since MF does not
-    // cancel previous pending seek, while Chromium's source starts new seek
+    // cancel previous pending seek, while Cinaseek's source starts new seek
     // immediately. MF's seek finishes when a sample's timestamp is equal to
     // or greater than seek time. Thus it would cause video to freeze until
     // source send samples with timestamps matching the previous pending seek.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1009,7 +1009,7 @@ IN_PROC_BROWSER_TEST_F(SavePageBrowserTest, SaveURLQuarantine) {
 #endif
 
 // Test suite that allows testing --site-per-process against cross-site frames.
-// See http://dev.chromium.org/developers/design-documents/site-isolation.
+// See http://dev.Cinaseek.org/developers/design-documents/site-isolation.
 class SavePageSitePerProcessBrowserTest : public SavePageBrowserTest {
  public:
   SavePageSitePerProcessBrowserTest() = default;

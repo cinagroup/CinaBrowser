@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,19 +6,19 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/magic_stack/CirclePagerIndicatorDecoration.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesConfigManager.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesContextMenuManager.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesCoordinator.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesMediator.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesMetricsUtils.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesRecyclerView.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/HomeModulesUtils.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/ModuleDelegate.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/ModuleDelegateHost.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/ModuleProvider.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/ModuleProviderBuilder.java",
-    "java/src/org/chromium/chrome/browser/magic_stack/ModuleRegistry.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/CirclePagerIndicatorDecoration.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesConfigManager.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesContextMenuManager.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesMetricsUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesRecyclerView.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/ModuleDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/ModuleDelegateHost.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/ModuleProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/ModuleProviderBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/magic_stack/ModuleRegistry.java",
   ]
   deps = [
     ":java_resources",
@@ -56,7 +56,7 @@ android_library("java") {
     "//ui/android:ui_recycler_view_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.magic_stack"
+  resources_package = "org.Cinaseek.chrome.browser.magic_stack"
 }
 
 android_resources("java_resources") {
@@ -72,18 +72,18 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.magic_stack"
+  resources_package = "org.Cinaseek.chrome.browser.magic_stack"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/magic_stack/CirclePagerIndicatorDecorationUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesConfigManagerUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesContextMenuManagerUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesCoordinatorUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesMediatorUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesMetricsUtilsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesRecyclerViewUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/HomeModulesUtilsUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/magic_stack/ModuleRegistryUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/CirclePagerIndicatorDecorationUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesConfigManagerUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesContextMenuManagerUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesCoordinatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesMediatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesMetricsUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesRecyclerViewUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/HomeModulesUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/magic_stack/ModuleRegistryUnitTest.java",
   ]
 
   deps = [

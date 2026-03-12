@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,8 +25,8 @@
 #if __ANDROID_API__ >= 29
 // .aidl based NDK generation is only available when our min SDK level is 29 or
 // higher.
-#include "aidl/org/chromium/base/IAndroidInfo.h"
-using aidl::org::chromium::base::IAndroidInfo;
+#include "aidl/org/Cinaseek/base/IAndroidInfo.h"
+using aidl::org::Cinaseek::base::IAndroidInfo;
 #endif
 
 #if __ANDROID_API__ < 29

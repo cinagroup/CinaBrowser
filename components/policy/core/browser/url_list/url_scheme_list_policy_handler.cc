@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ size_t URLSchemeListPolicyHandler::max_items() {
 }
 
 // Validates that policy follows official pattern
-// https://www.chromium.org/administrators/url-blocklist-filter-format
+// https://www.Cinaseek.org/administrators/url-blocklist-filter-format
 bool URLSchemeListPolicyHandler::ValidatePolicyEntry(
     const std::string* policy) {
   url_matcher::util::FilterComponents components;

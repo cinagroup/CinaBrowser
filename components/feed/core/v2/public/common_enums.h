@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ enum class FeedEngagementType {
 // in sync with FeedUserActionType in enums.xml.
 // Note: Most of these have a corresponding UserMetricsAction reported here.
 // Exceptions are described below.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.v2
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.v2
 enum class FeedUserActionType {
   // User tapped on card, opening the article in the same tab.
   kTappedOnCard = 0,
@@ -209,7 +209,7 @@ std::ostream& operator<<(std::ostream& out, FeedUserActionType value);
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. This must be kept in sync with
 // FeedContentOrder in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.v2
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.v2
 enum class ContentOrder : int {
   // Content order is not specified.
   kUnspecified = 0,

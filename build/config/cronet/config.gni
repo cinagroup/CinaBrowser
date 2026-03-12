@@ -1,9 +1,9 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # Cronet can be built within:
-# 1) Chromium. By setting `is_cronet_build` to true and using GN directly.
+# 1) Cinaseek. By setting `is_cronet_build` to true and using GN directly.
 # 2) Android. By bypassing GN and instead running
 #    //components/cronet/gn2bp/run_gn2bp.py.
 #

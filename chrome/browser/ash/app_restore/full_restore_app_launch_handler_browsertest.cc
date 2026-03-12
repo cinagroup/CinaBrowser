@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1394,7 +1394,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window for app1. The task id needs to match the |window_app_id|
   // arg of CreateExoWindow.
   int32_t kTaskId1 = 100;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   VerifyObserver(window, /*launch_count=*/0, /*init_count=*/0);
@@ -1418,7 +1418,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
 
   // Create the window to simulate launching the ARC app.
   int32_t kTaskId2 = 200;
-  auto* widget1 = CreateExoWindow("org.chromium.arc.200");
+  auto* widget1 = CreateExoWindow("org.Cinaseek.arc.200");
   auto* window1 = widget1->GetNativeWindow();
 
   // The task is not ready, so the window is currently in a hidden container.
@@ -1445,7 +1445,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id, kTaskId3, session_id3);
 
   // Create the window to simulate launching the ARC app.
-  auto* widget2 = CreateExoWindow("org.chromium.arc.300");
+  auto* widget2 = CreateExoWindow("org.Cinaseek.arc.300");
   auto* window2 = widget2->GetNativeWindow();
 
   VerifyObserver(window2, /*launch_count=*/0, /*init_count=*/0);
@@ -1482,7 +1482,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window for app1. The task id needs to match the |window_app_id|
   // arg of CreateExoWindow.
   int32_t kTaskId1 = 100;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   VerifyObserver(window, /*launch_count=*/0, /*init_count=*/0);
@@ -1520,7 +1520,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window to simulate the restoration for the app. The task id
   // needs to match the |window_app_id| arg of CreateExoWindow.
   int32_t kTaskId2 = 200;
-  widget = CreateExoWindow("org.chromium.arc.200");
+  widget = CreateExoWindow("org.Cinaseek.arc.200");
   window = widget->GetNativeWindow();
 
   // The task is not ready, so the window is currently in a hidden container.
@@ -1577,7 +1577,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window for app1. The task id needs to match the |window_app_id|
   // arg of CreateExoWindow.
   int32_t kTaskId1 = 100;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   VerifyObserver(window, /*launch_count=*/0, /*init_count=*/0);
@@ -1604,7 +1604,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window with the ghost window session to simulate the ghost
   // window restoration for the app.
   widget = CreateExoWindow(
-      base::StringPrintf("org.chromium.arc.session.%d", session_id2), app_id);
+      base::StringPrintf("org.Cinaseek.arc.session.%d", session_id2), app_id);
   window = widget->GetNativeWindow();
 
   SaveAppLaunchInfo(app_id, session_id2);
@@ -1659,7 +1659,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window for app1. The task id needs to match the |window_app_id|
   // arg of CreateExoWindow.
   int32_t kTaskId1 = 100;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   VerifyObserver(window, /*launch_count=*/0, /*init_count=*/0);
@@ -1687,7 +1687,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window with the ghost window session to simulate the ghost
   // window restoration for the app.
   widget = CreateExoWindow(
-      base::StringPrintf("org.chromium.arc.session.%d", session_id2), app_id);
+      base::StringPrintf("org.Cinaseek.arc.session.%d", session_id2), app_id);
   window = widget->GetNativeWindow();
 
   SaveAppLaunchInfo(app_id, session_id2);
@@ -1713,7 +1713,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window with the ghost window session to simulate the ghost
   // window restoration for the app.
   widget = CreateExoWindow(
-      base::StringPrintf("org.chromium.arc.session.%d", session_id3), app_id);
+      base::StringPrintf("org.Cinaseek.arc.session.%d", session_id3), app_id);
   window = widget->GetNativeWindow();
 
   SaveAppLaunchInfo(app_id, session_id3);
@@ -1770,14 +1770,14 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1 and store its bounds.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
   gfx::Rect pre_restore_bounds_1 = window1->GetBoundsInScreen();
 
   // Create the window for the app2 and store its bounds. The task id needs to
   // match the |window_app_id| arg of CreateExoWindow.
   int32_t kTaskId2 = 101;
-  views::Widget* widget2 = CreateExoWindow("org.chromium.arc.101");
+  views::Widget* widget2 = CreateExoWindow("org.Cinaseek.arc.101");
   aura::Window* window2 = widget2->GetNativeWindow();
   gfx::Rect pre_restore_bounds_2 = window2->GetBoundsInScreen();
 
@@ -1820,7 +1820,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window to simulate the restoration for the app1. The task id
   // needs to match the |window_app_id| arg of CreateExoWindow.
   int32_t kTaskId3 = 201;
-  widget1 = CreateExoWindow("org.chromium.arc.201");
+  widget1 = CreateExoWindow("org.Cinaseek.arc.201");
   window1 = widget1->GetNativeWindow();
 
   VerifyWindowProperty(window1, kTaskId3,
@@ -1835,7 +1835,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id2, kTaskId4, session_id4);
 
   // Create the window to simulate the restoration for the app2.
-  widget2 = CreateExoWindow("org.chromium.arc.202");
+  widget2 = CreateExoWindow("org.Cinaseek.arc.202");
   window2 = widget2->GetNativeWindow();
   EXPECT_EQ(pre_restore_bounds_2, window2->GetBoundsInScreen());
 
@@ -1883,12 +1883,12 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1 and store its bounds.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   // Create the window for the app2 and store its bounds.
   int32_t kTaskId2 = 101;
-  views::Widget* widget2 = CreateExoWindow("org.chromium.arc.101");
+  views::Widget* widget2 = CreateExoWindow("org.Cinaseek.arc.101");
   aura::Window* window2 = widget2->GetNativeWindow();
 
   // Simulate creating kTaskId2.
@@ -1963,7 +1963,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   int32_t kTaskId = 100;
   uint32_t kPrimaryColor = 0xFFFFFFFF;
   uint32_t kStatusBarColor = 0xFF000000;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   VerifyObserver(window, /*launch_count=*/0, /*init_count=*/0);
@@ -2009,7 +2009,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window for app1. The task id needs to match the `window_app_id`
   // arg of CreateExoWindow.
   int32_t kTaskId1 = 100;
-  views::Widget* widget = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window = widget->GetNativeWindow();
 
   // Simulate creating the task.
@@ -2039,7 +2039,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
   // Create the window to simulate the restoration for the app. The task id
   // needs to match the |window_app_id| arg of CreateExoWindow.
   int32_t kTaskId2 = 200;
-  widget = CreateExoWindow("org.chromium.arc.200");
+  widget = CreateExoWindow("org.Cinaseek.arc.200");
   window = widget->GetNativeWindow();
 
   // The task is not ready, so the window is currently in a hidden container.
@@ -2085,7 +2085,7 @@ IN_PROC_BROWSER_TEST_F(FullRestoreAppLaunchHandlerArcAppBrowserTest,
 
   arc_helper_.CreateTask(app_id, kTaskId3, session_id3);
 
-  widget = CreateExoWindow("org.chromium.arc.300");
+  widget = CreateExoWindow("org.Cinaseek.arc.300");
   window = widget->GetNativeWindow();
 
   content::RunAllTasksUntilIdle();
@@ -2199,7 +2199,7 @@ IN_PROC_BROWSER_TEST_F(ArcAppQueueRestoreHandlerArcAppBrowserTest, RemoveApps) {
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   // Simulate creating kTaskId2 for the app2.
@@ -2278,7 +2278,7 @@ IN_PROC_BROWSER_TEST_F(ArcAppQueueRestoreHandlerArcAppBrowserTest, UpdateApps) {
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   // Simulate creating kTaskId2 for the app2.
@@ -2351,7 +2351,7 @@ IN_PROC_BROWSER_TEST_F(ArcAppQueueRestoreHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   AppLaunchInfoSaveWaiter::Wait();
@@ -2406,7 +2406,7 @@ IN_PROC_BROWSER_TEST_F(ArcAppQueueRestoreHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   // Simulate creating kTaskId2 for the app2.
@@ -2477,7 +2477,7 @@ IN_PROC_BROWSER_TEST_F(ArcAppQueueRestoreHandlerArcAppBrowserTest,
   arc_helper_.CreateTask(app_id1, kTaskId1, session_id1);
 
   // Create the window for the app1.
-  views::Widget* widget1 = CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget1 = CreateExoWindow("org.Cinaseek.arc.100");
   aura::Window* window1 = widget1->GetNativeWindow();
 
   // Simulate creating kTaskId2 for the app2.

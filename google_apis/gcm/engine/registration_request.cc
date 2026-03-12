@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -174,11 +174,11 @@ void RegistrationRequest::Start() {
         semantics {
           sender: "GCM Driver"
           description:
-            "Chromium interacts with Google Cloud Messaging to receive push "
+            "Cinaseek interacts with Google Cloud Messaging to receive push "
             "messages for various browser features, as well as on behalf of "
             "websites and extensions. This requests Google Cloud Messaging to "
             "create a new subscription through which messages can be sent to "
-            "the registering entity, through Chromium."
+            "the registering entity, through Cinaseek."
           trigger:
             "Immediately after a feature, website or extension creates a new "
             "registration with the GCM Driver. Repeated registration requests "

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@
 #include "build/build_config.h"
 #include "components/viz/common/resources/shared_image_format.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
 #include "gpu/command_buffer/client/shared_image_interface.h"
 #include "gpu/command_buffer/common/shared_image_capabilities.h"
@@ -1239,7 +1239,7 @@ MappableSharedImageVideoFramePool::PoolImpl::GetOrCreateFrameResource(
     // This needs to be called before creating the MappableSI
     // here. |si_format| could be modified internally later based on the
     // type of buffer (shared memory or native gpu buffer) backing the
-    // shared image. https://issues.chromium.org/339546249.
+    // shared image. https://issues.Cinaseek.org/339546249.
     SetPrefersExternalSampler(si_format);
 
     gpu::SharedImageUsageSet si_usage = gpu::SHARED_IMAGE_USAGE_GLES2_READ |

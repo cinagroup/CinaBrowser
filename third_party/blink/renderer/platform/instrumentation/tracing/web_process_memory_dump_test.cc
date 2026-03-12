@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ using testing::Eq;
 using testing::ByRef;
 using base::trace_event::MemoryAllocatorDump;
 
-// Tests that the Chromium<>Blink plumbing that exposes the MemoryInfra classes
+// Tests that the Cinaseek<>Blink plumbing that exposes the MemoryInfra classes
 // behaves correctly, performs the right transfers of memory ownerships and
 // doesn't leak objects.
 TEST(WebProcessMemoryDumpTest, IntegrationTest) {

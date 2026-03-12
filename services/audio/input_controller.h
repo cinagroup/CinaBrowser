@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -381,7 +381,7 @@ class InputController final {
   bool is_muted_ = false;
   base::RepeatingTimer check_muted_state_timer_;
 
-  // If configured, used to add chromium playout to the captured audio signal.
+  // If configured, used to add Cinaseek playout to the captured audio signal.
   std::unique_ptr<LoopbackMixin> loopback_mixin_;
 
   // Holds a pointer to the callback object that receives audio data from

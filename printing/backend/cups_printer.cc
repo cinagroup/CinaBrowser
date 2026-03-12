@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class CupsPrinterImpl : public CupsPrinter {
                                             destination_.get()->options);
 
     // crbug.com/1418564: Every printer *should* have a "printer-uri-supported"
-    // attribute, but make sure Chromium doesn't crash if one doesn't for
+    // attribute, but make sure Cinaseek doesn't crash if one doesn't for
     // whatever reason. The printer in question won't actually work, but
     // that's a better outcome than crashing here.
     // TODO(crbug.com/40894807): filter such printers out before reaching this

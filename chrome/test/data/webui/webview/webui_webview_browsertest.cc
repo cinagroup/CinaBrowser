@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@
 
 
 // Turn these tests off on Mac while we collect data on windows server crashes
-// on mac chromium builders.
+// on mac Cinaseek builders.
 // http://crbug.com/41279287
 #if !BUILDFLAG(IS_MAC)
 
@@ -309,7 +309,7 @@ IN_PROC_BROWSER_TEST_F(WebUIWebViewBrowserTest, AddAndRemoveContentScripts) {
                           (!defined(NDEBUG) || defined(ADDRESS_SANITIZER)))
 // TODO(crbug.com/40583245) Fails on CrOS dbg with --enable-features=Mash.
 // TODO(crbug.com/41419648) Flaky on CrOS ASan LSan
-// TODO(crbug.com/454729976): Fails on chromium/ci/win11-arm64-rel-tests.
+// TODO(crbug.com/454729976): Fails on Cinaseek/ci/win11-arm64-rel-tests.
 #define MAYBE_AddContentScriptsWithNewWindowAPI \
   DISABLED_AddContentScriptsWithNewWindowAPI
 #else

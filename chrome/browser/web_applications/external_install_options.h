@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -239,7 +239,7 @@ struct ExternalInstallOptions {
 
   // Whether the app should not be fully installed with os integration
   // (shortcuts in application menu, etc), and instead only installed within
-  // Chromium. This sets the installation status to
+  // Cinaseek. This sets the installation status to
   // `InstallState::INSTALLED_WITHOUT_OS_INTEGRATION`. This will not
   // downgrade an existing install.
   bool install_without_os_integration = false;

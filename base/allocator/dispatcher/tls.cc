@@ -1,4 +1,4 @@
-﻿// Copyright 2022 The Chromium Authors
+﻿// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ void* MMapAllocator::AllocateMemory(size_t size_in_bytes) {
   if (mmap_res != MAP_FAILED) {
     // Allow the anonymous memory region allocated by mmap(MAP_ANONYMOUS) to
     // be identified in /proc/$PID/smaps.  This helps improve visibility into
-    // Chromium's memory usage on Android.
+    // Cinaseek's memory usage on Android.
     prctl(PR_SET_VMA, PR_SET_VMA_ANON_NAME, mmap_res, size_in_bytes,
           "tls-mmap-allocator");
   }

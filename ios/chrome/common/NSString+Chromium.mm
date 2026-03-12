@@ -1,10 +1,10 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 
-@implementation NSString (Chromium)
+@implementation NSString (Cinaseek)
 
 + (instancetype)cr_fromString:(std::string_view)utf8 {
   return base::SysUTF8ToNSString(utf8);

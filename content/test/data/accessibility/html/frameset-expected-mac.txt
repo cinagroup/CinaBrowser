@@ -7,7 +7,7 @@ AXWebArea
 ++++++++++AXStaticText AXValue='ABC'
 ++++++++AXStaticText AXValue=' '
 ++++++++AXGroup AXSubrole=AXInsertStyleGroup
-++++++++++AXStaticText AXValue='Chrome'
+++++++++++AXStaticText AXValue='Cinaseek'
 ++++++++AXStaticText AXValue='!'
 ++AXGroup
 ++++AXWebArea

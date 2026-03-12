@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ CrNSProgressUserData* CreateOrGetNSProgress(download::DownloadItem* download) {
   progress.fileURL = destination_url;
 
   // Don't publish a pause/resume handler. The only users of `NSProgress` are
-  // outside of Chromium, and none currently implement pausing published
+  // outside of Cinaseek, and none currently implement pausing published
   // progresses. Because there is no way to test pausing, do not implement or
   // ship it.
   progress.pausable = NO;

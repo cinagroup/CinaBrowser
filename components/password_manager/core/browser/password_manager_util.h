@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ namespace password_manager_util {
 // For credentials returned from PasswordStore::GetLogins, the enum specifies
 // the type of the match for the requested page. Higher value always means
 // weaker match.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.password_manager
 enum class GetLoginMatchType {
   // Exact origin or Android credentials.
   kExact,

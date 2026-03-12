@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ IN_PROC_BROWSER_TEST_F(CrashClientUploadInfoTest, GetClientProductInfo) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   constexpr char kProductName[] = "Chrome";
 #else
-  constexpr char kProductName[] = "Chromium";
+  constexpr char kProductName[] = "Cinaseek";
 #endif
 #endif
 

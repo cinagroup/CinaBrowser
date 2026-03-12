@@ -1,10 +1,10 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Defines InterceptionManager, the class in charge of setting up interceptions
 // for the sandboxed process. For more details see
-// http://dev.chromium.org/developers/design-documents/sandbox .
+// http://dev.Cinaseek.org/developers/design-documents/sandbox .
 
 #ifndef SANDBOX_WIN_SRC_INTERCEPTION_H_
 #define SANDBOX_WIN_SRC_INTERCEPTION_H_

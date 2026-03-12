@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 namespace viz {
 
 // An implementation of ExternalBeginFrameSource which is driven by VSync
-// signals coming from org.chromium.ui.VSyncMonitor.
+// signals coming from org.Cinaseek.ui.VSyncMonitor.
 class VIZ_SERVICE_EXPORT ExternalBeginFrameSourceAndroid
     : public ExternalBeginFrameSource,
       public ExternalBeginFrameSourceClient {

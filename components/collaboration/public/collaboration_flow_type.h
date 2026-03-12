@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace collaboration {
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.collaboration)
+//   org.Cinaseek.components.collaboration)
 enum class FlowType {
   kJoin = 0,
   kShareOrManage = 1,

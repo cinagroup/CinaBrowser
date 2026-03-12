@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ void BackgroundFetchServiceImpl::CreateForFrame(
     // request and mark it as bad if it didn't happen for some reason.
     // TODO(crbug.com/40205566) Follow-up on this line depending on the
     // conclusion at
-    // https://groups.google.com/a/chromium.org/g/navigation-dev/c/BZLlGsL2-64
+    // https://groups.google.com/a/Cinaseek.org/g/navigation-dev/c/BZLlGsL2-64
     bad_message::ReceivedBadMessage(
         render_frame_host->GetProcess(),
         bad_message::BFSI_CREATE_FOR_FRAME_FENCED_FRAME);

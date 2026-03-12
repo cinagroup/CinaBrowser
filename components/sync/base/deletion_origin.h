@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ class DeletionOrigin {
 
   // Converts to a serializable protocol buffer. Must only be called if
   // `is_specified()` is true.
-  sync_pb::DeletionOrigin ToProto(std::string_view chromium_version) const;
+  sync_pb::DeletionOrigin ToProto(std::string_view Cinaseek_version) const;
 
   // Test-only API to allow comparing with a base::Location.
   const std::optional<base::Location>& GetLocationForTesting() const {

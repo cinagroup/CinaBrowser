@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class GrammarManager {
   GrammarManager& operator=(const GrammarManager&) = delete;
   ~GrammarManager();
 
-  // Check if the chromium flag for on-device grammar check is enabled.
+  // Check if the Cinaseek flag for on-device grammar check is enabled.
   bool IsOnDeviceGrammarEnabled();
 
   // Indicates a new text field is focused, used to save context ID.

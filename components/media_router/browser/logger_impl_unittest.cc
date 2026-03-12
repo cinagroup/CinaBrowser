@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ TEST_F(LoggerImplTest, TruncateSessionId) {
 
 TEST_F(LoggerImplTest, HandleMirroringMediaSource) {
   // A mirroring source should get logged as-is.
-  const std::string source = "urn:x-org.chromium.media:source:tab:*";
+  const std::string source = "urn:x-org.Cinaseek.media:source:tab:*";
   LogErrorWithSource(source);
   const std::string logs = logger_.GetLogsAsJson();
   EXPECT_EQ(GetMediaSource(logs), source);

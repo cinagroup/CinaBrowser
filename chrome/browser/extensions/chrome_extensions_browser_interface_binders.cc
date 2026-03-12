@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -194,7 +194,7 @@ void PopulateChromeFrameBindersForExtension(
 // `ash::cfm::features::kMojoServices` feature flag requires
 // Chrome to restart before updates are applied. Meet Devices have
 // a variable uptime ranging from a week or more and set by the
-// admin. Additionally its kiosked process is not tied to a chromium
+// admin. Additionally its kiosked process is not tied to a Cinaseek
 // release and can be dynamically updated during Chrome runtime.
 // Unfortunately this makes it difficult to fully predict when the
 // flag will be applied to all devices across the fleet.

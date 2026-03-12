@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/MSAN Release (no origins)/gn-args.json"
@@ -10,29 +10,29 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "MSAN Release (no origins)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fuzz",
+              "builder_group": "Cinaseek.fuzz",
               "clusterfuzz_archive": {
                 "archive_name_prefix": "msan-no-origins",
                 "gs_acl": "public-read",
-                "gs_bucket": "chromium-browser-msan"
+                "gs_bucket": "Cinaseek-browser-msan"
               },
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb",
                   "msan"
                 ],
                 "build_config": "Release",
-                "config": "chromium_clang",
+                "config": "Cinaseek_clang",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -42,13 +42,13 @@
         {
           "bucket": "ci",
           "builder": "MSAN Release (no origins)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "linux-msan-no-origins-rel",
-          "group": "tryserver.chromium.fuzz"
+          "group": "tryserver.Cinaseek.fuzz"
         }
       ],
       "retry_failed_shards": true,
@@ -63,7 +63,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -73,12 +73,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.fuzz",
+  "builder_group": "Cinaseek.fuzz",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

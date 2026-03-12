@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace content {
 // because ChildProcessImportance is compared numerically in
 // ChildProcessRanking.java.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser
 enum class ChildProcessImportance {
   // NORMAL is the default value.
   NORMAL = 0,

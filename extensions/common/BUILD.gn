@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -627,7 +627,7 @@ source_set("core_api_provider") {
 if (is_android) {
   java_cpp_features("java_features_srcjar") {
     sources = [ "extension_features.cc" ]
-    class_name = "org.chromium.extensions.common.ExtensionFeatures"
+    class_name = "org.Cinaseek.extensions.common.ExtensionFeatures"
   }
 }
 

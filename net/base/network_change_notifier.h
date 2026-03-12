@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class NET_EXPORT NetworkChangeNotifier {
   // http://w3c.github.io/netinfo/.
   //
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
   //
   // New enum values should only be added to the end of the enum and no values
   // should be modified or reused, as this is reported via UMA.
@@ -81,7 +81,7 @@ class NET_EXPORT NetworkChangeNotifier {
   // http://w3c.github.io/netinfo/.
   //
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
   //
   // TODO(crbug.com/40148439): Introduce subtypes for 5G networks once they can
   // be detected.
@@ -123,7 +123,7 @@ class NET_EXPORT NetworkChangeNotifier {
   };
 
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
   //
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.

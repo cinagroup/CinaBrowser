@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -111,7 +111,7 @@
 #include "remoting/host/usage_stats_consent.h"
 #include "remoting/host/zombie_host_detector.h"
 #include "remoting/protocol/authenticator.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
 #include "remoting/protocol/host_authentication_config.h"
 #include "remoting/protocol/ice_config_fetcher_cloud.h"
 #include "remoting/protocol/ice_config_fetcher_default.h"
@@ -1965,7 +1965,7 @@ void HostProcess::StartHost() {
 
   scoped_refptr<protocol::TransportContext> transport_context =
       new protocol::TransportContext(
-          std::make_unique<protocol::ChromiumPortAllocatorFactory>(),
+          std::make_unique<protocol::CinaseekPortAllocatorFactory>(),
           webrtc::ThreadWrapper::current()->SocketServer(),
           std::move(ice_config_fetcher), protocol::TransportRole::SERVER);
   std::unique_ptr<protocol::SessionManager> session_manager(
@@ -2220,7 +2220,7 @@ int HostProcessMain(bool multi_process) {
   // done by the desktop process.
   if (!multi_process) {
 #if defined(REMOTING_USE_X11)
-    // Initialize Xlib for multi-threaded use, allowing non-Chromium code to
+    // Initialize Xlib for multi-threaded use, allowing non-Cinaseek code to
     // use X11 safely (such as the WebRTC capturer, GTK ...)
     x11::InitXlib();
 #endif  // defined(REMOTING_USE_X11)

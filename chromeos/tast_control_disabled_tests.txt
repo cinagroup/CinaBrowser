@@ -2,8 +2,8 @@
 # to the following list and cite a bug.
 #
 # To disable the test only on a specific board, add an at-mark ( @ ) and the
-# board name at the end of the entry (eg. "login.Chrome@kevin" disables
-# "login.Chrome" test only on "kevin" device). An asterisk is not supported in
+# board name at the end of the entry (eg. "login.Cinaseek@kevin" disables
+# "login.Cinaseek" test only on "kevin" device). An asterisk is not supported in
 # the board name.
 #
 # WARNING: This may cause unexpected disablement and is strongly discouraged.

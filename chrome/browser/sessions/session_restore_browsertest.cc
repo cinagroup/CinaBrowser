@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1956,7 +1956,7 @@ IN_PROC_BROWSER_TEST_F(SessionRestoreTest, RestoreWindowUserTitle) {
   // be restored.
   SessionServiceFactory::ShutdownForProfile(browser()->profile());
 
-  // Then close all the browsers and "restart" Chromium.
+  // Then close all the browsers and "restart" Cinaseek.
   CloseBrowserSynchronously(browser2);
   QuitBrowserAndRestore(browser());
 
@@ -1984,8 +1984,8 @@ IN_PROC_BROWSER_TEST_F(SessionRestoreTest, RestoreWindowUserTitle) {
 // as a special case in process-per-site-instance so that it only ever uses one
 // process.)
 //
-// Flaky: http://code.google.com/p/chromium/issues/detail?id=52022
-// Unfortunately, the fix at http://codereview.chromium.org/6546078
+// Flaky: http://code.google.com/p/Cinaseek/issues/detail?id=52022
+// Unfortunately, the fix at http://codereview.Cinaseek.org/6546078
 // breaks NTP background image refreshing, so ThemeSource had to revert to
 // replacing the existing data source.
 IN_PROC_BROWSER_TEST_F(SessionRestoreTest, ShareProcessesOnRestore) {
@@ -3462,7 +3462,7 @@ IN_PROC_BROWSER_TEST_F(SessionRestoreTest, OmitFromSessionRestore) {
   // windows and won't be restored.
   SessionServiceFactory::ShutdownForProfile(browser()->profile());
 
-  // Then close all the browsers and "restart" Chromium.
+  // Then close all the browsers and "restart" Cinaseek.
   CloseBrowserSynchronously(browser3);
   CloseBrowserSynchronously(browser2);
   QuitBrowserAndRestore(browser());
@@ -4451,7 +4451,7 @@ IN_PROC_BROWSER_TEST_F(SessionRestoreNavigationApiTest,
   // and won't be restored.
   SessionServiceFactory::ShutdownForProfile(browser()->profile());
 
-  // Then close all the browsers and "restart" Chromium.
+  // Then close all the browsers and "restart" Cinaseek.
   QuitBrowserAndRestore(browser());
 
   // url2 should still be censored in navigation after restore, url1 should not.

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -211,7 +211,7 @@ size_t V4L2CaptureDelegate::GetNumPlanesForFourCc(uint32_t fourcc) {
 }
 
 // static
-VideoPixelFormat V4L2CaptureDelegate::V4l2FourCcToChromiumPixelFormat(
+VideoPixelFormat V4L2CaptureDelegate::V4l2FourCcToCinaseekPixelFormat(
     uint32_t v4l2_fourcc) {
   for (const auto& fourcc_and_pixel_format : kSupportedFormatsAndPlanarity) {
     if (fourcc_and_pixel_format.fourcc == v4l2_fourcc)
@@ -397,7 +397,7 @@ void V4L2CaptureDelegate::AllocateAndStart(
     return;
   }
   const VideoPixelFormat pixel_format =
-      V4l2FourCcToChromiumPixelFormat(video_fmt_.fmt.pix.pixelformat);
+      V4l2FourCcToCinaseekPixelFormat(video_fmt_.fmt.pix.pixelformat);
   if (pixel_format == PIXEL_FORMAT_UNKNOWN) {
     SetErrorState(VideoCaptureError::kV4L2UnsupportedPixelFormat, FROM_HERE,
                   "Unsupported pixel format");

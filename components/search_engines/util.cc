@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -333,7 +333,7 @@ std::u16string GetDefaultSearchEngineName(TemplateURLService* service) {
   if (!default_provider) {
     // TODO(cpu): bug 1187517. It is possible to have no default provider.
     // returning an empty string is a stopgap measure for the crash
-    // http://code.google.com/p/chromium/issues/detail?id=2573
+    // http://code.google.com/p/Cinaseek/issues/detail?id=2573
     return std::u16string();
   }
   return default_provider->short_name();

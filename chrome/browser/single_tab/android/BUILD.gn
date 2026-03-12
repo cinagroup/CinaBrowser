@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,12 +8,12 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   # srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabModuleBuilder.java",
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabSwitcherCoordinator.java",
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabSwitcherOnNtpMediator.java",
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabView.java",
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabViewBinder.java",
-    "java/src/org/chromium/chrome/browser/single_tab/SingleTabViewProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabModuleBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabSwitcherCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabSwitcherOnNtpMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabView.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/single_tab/SingleTabViewProperties.java",
   ]
   deps = [
     ":java_resources",
@@ -36,7 +36,7 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.single_tab"
+  resources_package = "org.Cinaseek.chrome.browser.single_tab"
 }
 
 android_resources("java_resources") {
@@ -52,11 +52,11 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.single_tab"
+  resources_package = "org.Cinaseek.chrome.browser.single_tab"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/single_tab/SingleTabModuleViewBinderUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/single_tab/SingleTabSwitcherOnNtpMediatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/single_tab/SingleTabModuleViewBinderUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/single_tab/SingleTabSwitcherOnNtpMediatorUnitTest.java",
   ]
 
   deps = [

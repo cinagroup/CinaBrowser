@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ using OnMetricsReportingCallbackType = base::OnceCallback<void(bool)>;
 // metrics reporting is enabled from a settings page, histogram data that was
 // collected while metrics reporting was disabled should be cleared (marked as
 // reported) so as to not include them in the next log.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.metrics
 enum class ChangeMetricsReportingStateCalledFrom {
   kUiSettings,
 

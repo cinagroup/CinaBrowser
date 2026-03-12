@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,13 +7,13 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/battery/BatterySaverOSSetting.java",
+    "java/src/org/Cinaseek/chrome/browser/battery/BatterySaverOSSetting.java",
   ]
 }
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/battery/BatterySaverOSSetting.java",
+    "java/src/org/Cinaseek/chrome/browser/battery/BatterySaverOSSetting.java",
   ]
   deps = [
     "//base:tasks_java",

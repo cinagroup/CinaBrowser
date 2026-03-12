@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,9 +48,9 @@ std::unique_ptr<UpdaterState::StateReader> UpdaterState::StateReader::Create(
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-  if (std::unique_ptr<StateReader> state_reader_chromium_updater =
+  if (std::unique_ptr<StateReader> state_reader_Cinaseek_updater =
           [is_machine]() -> std::unique_ptr<StateReader> {
-        // Create a `StateReaderChromiumUpdater` instance only if a prefs.json
+        // Create a `StateReaderCinaseekUpdater` instance only if a prefs.json
         // file for the updater can be found and parsed successfully.
         const std::optional<base::FilePath> global_prefs_dir =
             updater::GetInstallDirectory(is_machine
@@ -68,11 +68,11 @@ std::unique_ptr<UpdaterState::StateReader> UpdaterState::StateReader::Create(
         }
         std::optional<base::DictValue> parsed_json = base::JSONReader::ReadDict(
             contents, base::JSON_PARSE_CHROMIUM_EXTENSIONS);
-        return parsed_json ? std::make_unique<StateReaderChromiumUpdater>(
+        return parsed_json ? std::make_unique<StateReaderCinaseekUpdater>(
                                  std::move(*parsed_json))
                            : nullptr;
       }()) {
-    return state_reader_chromium_updater;
+    return state_reader_Cinaseek_updater;
   }
 #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 
@@ -89,46 +89,46 @@ std::unique_ptr<UpdaterState::StateReader> UpdaterState::StateReader::Create(
 #endif  // GOOGLE_CHROME_BRANDING
 }
 
-UpdaterState::StateReaderChromiumUpdater::StateReaderChromiumUpdater(
+UpdaterState::StateReaderCinaseekUpdater::StateReaderCinaseekUpdater(
     base::DictValue parsed_json)
     : parsed_json_(std::move(parsed_json)) {}
 
-base::Time UpdaterState::StateReaderChromiumUpdater::FindTimeKey(
+base::Time UpdaterState::StateReaderCinaseekUpdater::FindTimeKey(
     std::string_view key) const {
   return base::ValueToTime(parsed_json_.Find(key)).value_or(base::Time());
 }
 
-std::string UpdaterState::StateReaderChromiumUpdater::GetUpdaterName() const {
-  return "ChromiumUpdater";
+std::string UpdaterState::StateReaderCinaseekUpdater::GetUpdaterName() const {
+  return "CinaseekUpdater";
 }
 
-base::Version UpdaterState::StateReaderChromiumUpdater::GetUpdaterVersion(
+base::Version UpdaterState::StateReaderCinaseekUpdater::GetUpdaterVersion(
     bool /*is_machine*/) const {
   const std::string* val = parsed_json_.FindString(kUpdaterPrefsActiveVersion);
   return val ? base::Version(*val) : base::Version();
 }
 
-bool UpdaterState::StateReaderChromiumUpdater::IsAutoupdateCheckEnabled()
+bool UpdaterState::StateReaderCinaseekUpdater::IsAutoupdateCheckEnabled()
     const {
   return UpdaterState::IsAutoupdateCheckEnabled();
 }
 
-base::Time UpdaterState::StateReaderChromiumUpdater::GetUpdaterLastStartedAU(
+base::Time UpdaterState::StateReaderCinaseekUpdater::GetUpdaterLastStartedAU(
     bool /*is_machine*/) const {
   return FindTimeKey(kUpdaterPrefsLastStarted);
 }
 
-base::Time UpdaterState::StateReaderChromiumUpdater::GetUpdaterLastChecked(
+base::Time UpdaterState::StateReaderCinaseekUpdater::GetUpdaterLastChecked(
     bool /*is_machine*/) const {
   return FindTimeKey(kUpdaterPrefsLastChecked);
 }
 
-int UpdaterState::StateReaderChromiumUpdater::GetUpdatePolicy() const {
+int UpdaterState::StateReaderCinaseekUpdater::GetUpdatePolicy() const {
   return UpdaterState::GetUpdatePolicy();
 }
 
 update_client::CategorizedError
-UpdaterState::StateReaderChromiumUpdater::GetLastUpdateCheckError() const {
+UpdaterState::StateReaderCinaseekUpdater::GetLastUpdateCheckError() const {
   return {
       .category = static_cast<update_client::ErrorCategory>(
           parsed_json_

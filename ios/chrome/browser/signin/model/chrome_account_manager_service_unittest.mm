@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,10 +25,10 @@ FakeSystemIdentity* gmail_identity =
     [FakeSystemIdentity identityWithEmail:@"foo1@gmail.com"];
 FakeSystemIdentity* google_identity =
     [FakeSystemIdentity identityWithEmail:@"foo2@google.com"];
-FakeSystemIdentity* chromium_identity1 =
-    [FakeSystemIdentity identityWithEmail:@"foo3@chromium.com"];
-FakeSystemIdentity* chromium_identity2 =
-    [FakeSystemIdentity identityWithEmail:@"foo4@chromium.com"];
+FakeSystemIdentity* Cinaseek_identity1 =
+    [FakeSystemIdentity identityWithEmail:@"foo3@Cinaseek.com"];
+FakeSystemIdentity* Cinaseek_identity2 =
+    [FakeSystemIdentity identityWithEmail:@"foo4@Cinaseek.com"];
 
 class ChromeAccountManagerServiceObserver
     : public ChromeAccountManagerService::Observer {
@@ -69,8 +69,8 @@ class ChromeAccountManagerServiceTest : public PlatformTest {
             GetApplicationContext()->GetSystemIdentityManager());
     system_identity_manager->AddIdentity(gmail_identity);
     system_identity_manager->AddIdentity(google_identity);
-    system_identity_manager->AddIdentity(chromium_identity1);
-    system_identity_manager->AddIdentity(chromium_identity2);
+    system_identity_manager->AddIdentity(Cinaseek_identity1);
+    system_identity_manager->AddIdentity(Cinaseek_identity2);
   }
 
   // Sets a restricted pattern.
@@ -107,9 +107,9 @@ TEST_F(ChromeAccountManagerServiceTest,
   SetPattern("*gmail.com");
   EXPECT_EQ(account_manager_->IsValidIdentity(gmail_identity.gaiaId), true);
   EXPECT_EQ(account_manager_->IsValidIdentity(google_identity.gaiaId), false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity1.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity1.gaiaId),
             false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity2.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity2.gaiaId),
             false);
   EXPECT_EQ(account_manager_->HasIdentities(), true);
   EXPECT_EQ((int)[account_manager_->GetAllIdentities() count], 1);
@@ -117,9 +117,9 @@ TEST_F(ChromeAccountManagerServiceTest,
   SetPattern("foo2@google.com");
   EXPECT_EQ(account_manager_->IsValidIdentity(gmail_identity.gaiaId), false);
   EXPECT_EQ(account_manager_->IsValidIdentity(google_identity.gaiaId), true);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity1.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity1.gaiaId),
             false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity2.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity2.gaiaId),
             false);
   EXPECT_EQ(account_manager_->HasIdentities(), true);
   EXPECT_EQ((int)[account_manager_->GetAllIdentities() count], 1);
@@ -132,11 +132,11 @@ TEST_F(ChromeAccountManagerServiceTest,
   AddIdentities();
   EXPECT_EQ(account_manager_->HasIdentities(), true);
 
-  SetPattern("*chromium.com");
+  SetPattern("*Cinaseek.com");
   EXPECT_EQ(account_manager_->IsValidIdentity(gmail_identity.gaiaId), false);
   EXPECT_EQ(account_manager_->IsValidIdentity(google_identity.gaiaId), false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity1.gaiaId), true);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity2.gaiaId), true);
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity1.gaiaId), true);
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity2.gaiaId), true);
   EXPECT_EQ(account_manager_->HasIdentities(), true);
   EXPECT_EQ((int)[account_manager_->GetAllIdentities() count], 2);
 }
@@ -150,9 +150,9 @@ TEST_F(ChromeAccountManagerServiceTest,
   SetPattern("*none.com");
   EXPECT_EQ(account_manager_->IsValidIdentity(gmail_identity.gaiaId), false);
   EXPECT_EQ(account_manager_->IsValidIdentity(google_identity.gaiaId), false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity1.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity1.gaiaId),
             false);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity2.gaiaId),
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity2.gaiaId),
             false);
   EXPECT_EQ(account_manager_->HasIdentities(), false);
   EXPECT_EQ((int)[account_manager_->GetAllIdentities() count], 0);
@@ -167,8 +167,8 @@ TEST_F(ChromeAccountManagerServiceTest,
   SetPattern("*");
   EXPECT_EQ(account_manager_->IsValidIdentity(gmail_identity.gaiaId), true);
   EXPECT_EQ(account_manager_->IsValidIdentity(google_identity.gaiaId), true);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity1.gaiaId), true);
-  EXPECT_EQ(account_manager_->IsValidIdentity(chromium_identity2.gaiaId), true);
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity1.gaiaId), true);
+  EXPECT_EQ(account_manager_->IsValidIdentity(Cinaseek_identity2.gaiaId), true);
   EXPECT_EQ(account_manager_->HasIdentities(), true);
   EXPECT_EQ((int)[account_manager_->GetAllIdentities() count], 4);
 }
@@ -176,8 +176,8 @@ TEST_F(ChromeAccountManagerServiceTest,
 // Tests that `OnIdentityUpdated()` and `OnIdentityAccessTokenRefreshFailed()`
 // don't send notification for identities that are filtered out.
 TEST_F(ChromeAccountManagerServiceTest, TestFilterIdentityUpdate) {
-  // Keep only chromium identities.
-  SetPattern("*chromium.com");
+  // Keep only Cinaseek identities.
+  SetPattern("*Cinaseek.com");
   ChromeAccountManagerServiceObserver observer;
   account_manager_->AddObserver(&observer);
   AddIdentities();
@@ -188,8 +188,8 @@ TEST_F(ChromeAccountManagerServiceTest, TestFilterIdentityUpdate) {
   account_manager_->OnIdentityInProfileUpdated(google_identity);
   EXPECT_EQ(observer.on_identity_in_profile_updated_called_count, 0);
   EXPECT_EQ(observer.on_access_token_refresh_failed_called_count, 0);
-  // Chromium identity is not filtered out, an update calls the observer.
-  account_manager_->OnIdentityInProfileUpdated(chromium_identity1);
+  // Cinaseek identity is not filtered out, an update calls the observer.
+  account_manager_->OnIdentityInProfileUpdated(Cinaseek_identity1);
   EXPECT_EQ(observer.on_identity_in_profile_updated_called_count, 1);
   EXPECT_EQ(observer.on_access_token_refresh_failed_called_count, 0);
 
@@ -198,8 +198,8 @@ TEST_F(ChromeAccountManagerServiceTest, TestFilterIdentityUpdate) {
                                                        std::set<std::string>());
   EXPECT_EQ(observer.on_identity_in_profile_updated_called_count, 1);
   EXPECT_EQ(observer.on_access_token_refresh_failed_called_count, 0);
-  // Chromium identity is not filtered out, an update calls the observer.
-  account_manager_->OnIdentityAccessTokenRefreshFailed(chromium_identity1, nil,
+  // Cinaseek identity is not filtered out, an update calls the observer.
+  account_manager_->OnIdentityAccessTokenRefreshFailed(Cinaseek_identity1, nil,
                                                        std::set<std::string>());
   EXPECT_EQ(observer.on_identity_in_profile_updated_called_count, 1);
   EXPECT_EQ(observer.on_access_token_refresh_failed_called_count, 1);

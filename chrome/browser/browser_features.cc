@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -171,7 +171,7 @@ BASE_FEATURE(kRestartNetworkServiceUnsandboxedForFailedLaunch,
 // malvertising.
 //
 // Implementation bug: https://crbug.com/1253379
-// I2S: https://groups.google.com/a/chromium.org/g/blink-dev/c/-t-f7I6VvOI
+// I2S: https://groups.google.com/a/Cinaseek.org/g/blink-dev/c/-t-f7I6VvOI
 //
 // Enabled in M103. Flag to be removed in M106
 BASE_FEATURE(kSandboxExternalProtocolBlocked, base::FEATURE_ENABLED_BY_DEFAULT);

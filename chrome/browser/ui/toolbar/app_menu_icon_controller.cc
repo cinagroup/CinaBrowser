@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,9 +80,9 @@ AppMenuIconController::Severity SeverityFromError(GlobalError* error) {
 
 // Return true if the browser is updating on the dev or canary channels.
 bool IsUnstableChannel() {
-  // Unbranded (Chromium) builds are on the UNKNOWN channel, so check explicitly
+  // Unbranded (Cinaseek) builds are on the UNKNOWN channel, so check explicitly
   // for the Google Chrome channels that are considered "unstable". This ensures
-  // that Chromium builds get the default behavior.
+  // that Cinaseek builds get the default behavior.
   const version_info::Channel channel = chrome::GetChannel();
   return channel == version_info::Channel::DEV ||
          channel == version_info::Channel::CANARY;

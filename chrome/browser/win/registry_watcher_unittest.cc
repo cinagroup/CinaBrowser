@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,9 +16,9 @@
 namespace {
 
 const std::wstring kTestKeyPath1 =
-    L"Software\\ChromiumTests\\RegistryWatcherTest1";
+    L"Software\\CinaseekTests\\RegistryWatcherTest1";
 const std::wstring kTestKeyPath2 =
-    L"Software\\ChromiumTests\\RegistryWatcherTest2";
+    L"Software\\CinaseekTests\\RegistryWatcherTest2";
 
 void CreateRegistryKey(std::wstring_view path) {
   base::win::RegKey key(HKEY_CURRENT_USER, path.data(),

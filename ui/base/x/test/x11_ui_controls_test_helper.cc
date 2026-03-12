@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ X11UIControlsTestHelper::X11UIControlsTestHelper()
     : connection_(*x11::Connection::Get()),
       x_root_window_(ui::GetX11RootWindow()),
       x_window_(connection_->CreateDummyWindow(
-          "Chromium X11UIControlsTestHelper Window")) {}
+          "Cinaseek X11UIControlsTestHelper Window")) {}
 
 X11UIControlsTestHelper::~X11UIControlsTestHelper() {
   connection_->DestroyWindow({x_window_});

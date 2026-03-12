@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@ TEST(DnsConfigServiceWinTest, ParseSearchList) {
     const wchar_t* input;
     std::vector<std::string> expected;
   } cases[] = {
-      {L"chromium.org", {"chromium.org"}},
-      {L"chromium.org,org", {"chromium.org", "org"}},
+      {L"Cinaseek.org", {"Cinaseek.org"}},
+      {L"Cinaseek.org,org", {"Cinaseek.org", "org"}},
       // Empty suffixes terminate the list
       {L"crbug.com,com,,org", {"crbug.com", "com"}},
       // IDN are converted to punycode
@@ -60,20 +60,20 @@ TEST(DnsConfigServiceWinTest, ConvertAdapterAddresses) {
           { "2.0.0.2" } },
         { IF_TYPE_FASTETHER, IfOperStatusDormant, L"example.com",
           { "1.0.0.1" } },
-        { IF_TYPE_USB, IfOperStatusUp, L"chromium.org",
+        { IF_TYPE_USB, IfOperStatusUp, L"Cinaseek.org",
           { "10.0.0.10", "2001:FFFF::1111" } },
       },
       { "10.0.0.10", "2001:FFFF::1111" },
-      "chromium.org",
+      "Cinaseek.org",
     },
     {  // Respect configured ports.
       {
-        { IF_TYPE_USB, IfOperStatusUp, L"chromium.org",
+        { IF_TYPE_USB, IfOperStatusUp, L"Cinaseek.org",
         { "10.0.0.10", "2001:FFFF::1111" }, { 1024, 24 } },
         { 0 },
       },
       { "10.0.0.10", "2001:FFFF::1111" },
-      "chromium.org",
+      "Cinaseek.org",
       { 1024, 24 },
     },
     {  // Use the preferred adapter (first in binding order) and filter
@@ -83,7 +83,7 @@ TEST(DnsConfigServiceWinTest, ConvertAdapterAddresses) {
           { "2.0.0.2" } },
         { IF_TYPE_FASTETHER, IfOperStatusUp, L"example.com",
           { "1.0.0.1", "fec0:0:0:ffff::2", "8.8.8.8" } },
-        { IF_TYPE_USB, IfOperStatusUp, L"chromium.org",
+        { IF_TYPE_USB, IfOperStatusUp, L"Cinaseek.org",
           { "10.0.0.10", "2001:FFFF::1111" } },
       },
       { "1.0.0.1", "8.8.8.8" },
@@ -95,7 +95,7 @@ TEST(DnsConfigServiceWinTest, ConvertAdapterAddresses) {
           { "2.0.0.2" } },
         { IF_TYPE_FASTETHER, IfOperStatusDormant, L"example.com",
           { "1.0.0.1" } },
-        { IF_TYPE_USB, IfOperStatusUp, L"chromium.org" },
+        { IF_TYPE_USB, IfOperStatusUp, L"Cinaseek.org" },
       },
     },
   };
@@ -437,7 +437,7 @@ TEST(DnsConfigServiceWinTest, AdapterSpecificNameservers) {
        {"1.0.0.1", "fec0:0:0:ffff::2", "8.8.8.8"}},
       {IF_TYPE_USB,
        IfOperStatusUp,
-       L"chromium.org",
+       L"Cinaseek.org",
        {"10.0.0.10", "2001:FFFF::1111"}},
   };
 
@@ -460,7 +460,7 @@ TEST(DnsConfigServiceWinTest, AdapterSpecificNameserversForNo) {
        {"1.0.0.1", "fec0:0:0:ffff::2", "8.8.8.8"}},
       {IF_TYPE_USB,
        IfOperStatusDown,
-       L"chromium.org",
+       L"Cinaseek.org",
        {"10.0.0.10", "2001:FFFF::1111"}},
   };
 

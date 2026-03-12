@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,9 +29,9 @@ double GetAxisValue(libinput_event_pointer* const event,
     return 0.0;
   }
 
-  // Libinput's scroll axes are reversed compared to Chromium. For
+  // Libinput's scroll axes are reversed compared to Cinaseek. For
   // example, libinput produces positive deltas when scrolling down
-  // (with natural scrolling off), but Chromium's event system
+  // (with natural scrolling off), but Cinaseek's event system
   // produces negative deltas. Simple fix: negate the axis value.
   return -libinput_event_pointer_get_axis_value(event, axis);
 }

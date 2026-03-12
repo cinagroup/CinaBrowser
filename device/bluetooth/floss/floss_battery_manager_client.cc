@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ BatterySet::BatterySet(const BatterySet&) = default;
 BatterySet::~BatterySet() = default;
 
 const char FlossBatteryManagerClient::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/battery_manager/callback";
+    "/org/Cinaseek/bluetooth/battery_manager/callback";
 
 void FlossBatteryManagerClient::AddObserver(
     FlossBatteryManagerClient::FlossBatteryManagerClientObserver* observer) {

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -272,7 +272,7 @@ class CONTENT_EXPORT ServiceWorkerClientOwner final {
 
 // This class manages data associated with service workers.
 // The class is single threaded and should only be used on the UI thread.
-// In chromium, there is one instance per storagepartition. This class
+// In Cinaseek, there is one instance per storagepartition. This class
 // is the root of the containment hierarchy for service worker data
 // associated with a particular partition.
 class CONTENT_EXPORT ServiceWorkerContextCore

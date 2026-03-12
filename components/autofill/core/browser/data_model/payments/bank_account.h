@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace autofill {
 // Details for a user's bank account. This data is synced from Google payments.
 class BankAccount {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill.payments
   // The type of bank account owned by the user. This is used for display
   // purposes only.
   enum class AccountType {

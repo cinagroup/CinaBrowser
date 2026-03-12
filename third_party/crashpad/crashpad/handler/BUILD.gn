@@ -33,7 +33,7 @@ static_library("common") {
   }
   public_configs = [ "..:crashpad_config" ]
   public_deps = [
-    "../third_party/mini_chromium:base",
+    "../third_party/mini_Cinaseek:base",
     "../util",
   ]
   deps = [
@@ -84,7 +84,7 @@ if (!crashpad_is_ios) {
       ]
 
       # TODO(https://crbug.com/1420445): Remove this config when M115 branches.
-      configs += [ "../build:crashpad_is_in_chromium" ]
+      configs += [ "../build:crashpad_is_in_Cinaseek" ]
     }
 
     if (crashpad_is_win) {
@@ -99,7 +99,7 @@ if (!crashpad_is_ios) {
     public_deps = [
       ":common",
       "../client",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
       "../util",
     ]
 
@@ -149,7 +149,7 @@ if (!crashpad_is_ios) {
       "../snapshot:test_support",
       "../test",
       "../third_party/googletest",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
       "../util",
     ]
 
@@ -173,25 +173,25 @@ if (!crashpad_is_ios) {
       ":handler",
       "../build:default_exe_manifest_win",
       "../compat",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
       "../tools:tool_support",
     ]
 
     if (crashpad_is_win) {
-      if (crashpad_is_in_chromium || crashpad_is_in_dart) {
+      if (crashpad_is_in_Cinaseek || crashpad_is_in_dart) {
         remove_configs = [ "//build/config/win:console" ]
         configs = [ "//build/config/win:windowed" ]
       } else if (crashpad_is_external) {
         remove_configs =
-            [ "//../../mini_chromium/mini_chromium/build/config:win_console" ]
+            [ "//../../mini_Cinaseek/mini_Cinaseek/build/config:win_console" ]
         configs =
-            [ "//../../mini_chromium/mini_chromium/build/config:win_windowed" ]
+            [ "//../../mini_Cinaseek/mini_Cinaseek/build/config:win_windowed" ]
       } else {
         remove_configs = [
-          "//third_party/mini_chromium/mini_chromium/build/config:win_console",
+          "//third_party/mini_Cinaseek/mini_Cinaseek/build/config:win_console",
         ]
         configs = [
-          "//third_party/mini_chromium/mini_chromium/build/config:win_windowed",
+          "//third_party/mini_Cinaseek/mini_Cinaseek/build/config:win_windowed",
         ]
       }
     }
@@ -224,9 +224,9 @@ if (crashpad_is_android) {
 
     libs = [ "log" ]
 
-    if (crashpad_is_in_chromium) {
-      # Chromium's sanitizer runtime libraries do not include an unwinder,
-      # so add Chromium's standard dependencies to link against the in-tree
+    if (crashpad_is_in_Cinaseek) {
+      # Cinaseek's sanitizer runtime libraries do not include an unwinder,
+      # so add Cinaseek's standard dependencies to link against the in-tree
       # libunwind. The coverage wrapper similarly requires an unwinder, as
       # well as a few other bits from libc++abi. There are some issues with pgo
       # as well.
@@ -252,7 +252,7 @@ if (!crashpad_is_ios) {
       "../build:default_exe_manifest_win",
       "../compat",
       "../minidump:test_support",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
       "../tools:tool_support",
     ]
   }
@@ -271,7 +271,7 @@ if (crashpad_is_win) {
       ":handler",
       "../build:default_exe_manifest_win",
       "../compat",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
       "../tools:tool_support",
     ]
   }
@@ -291,7 +291,7 @@ if (crashpad_is_win) {
       "../client",
       "../test",
       "../third_party/googletest",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -302,7 +302,7 @@ if (crashpad_is_win) {
 
     deps = [
       "../client",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -315,7 +315,7 @@ if (crashpad_is_win) {
 
     deps = [
       "../client",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -332,7 +332,7 @@ if (crashpad_is_win) {
 
     deps = [
       "../client",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -351,7 +351,7 @@ if (crashpad_is_win) {
       "../client",
       "../compat",
       "../snapshot",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -364,7 +364,7 @@ if (crashpad_is_win) {
       "../client",
       "../compat",
       "../snapshot",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 
@@ -378,7 +378,7 @@ if (crashpad_is_win) {
       deps = [
         "../client",
         "../test",
-        "../third_party/mini_chromium:base",
+        "../third_party/mini_Cinaseek:base",
       ]
     }
   }
@@ -395,7 +395,7 @@ if (crashpad_is_win) {
 
     deps = [
       "../client",
-      "../third_party/mini_chromium:base",
+      "../third_party/mini_Cinaseek:base",
     ]
   }
 }

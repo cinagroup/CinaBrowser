@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ struct BlinkGCPluginOptions {
   //
   // This check is disabled by default since there are currently non-ignored
   // violations of this rule in the code base, leading to compilation failures.
-  // TODO(chromium:1283867): Enable this checks once all violations are handled.
+  // TODO(Cinaseek:1283867): Enable this checks once all violations are handled.
   bool enable_persistent_in_unique_ptr_check = false;
 
   // On stack references to garbage collected objects should use raw pointers.
@@ -34,7 +34,7 @@ struct BlinkGCPluginOptions {
   //
   // This check is disabled by default since there currently are violations
   // of this rule in the code base, leading to compilation failures.
-  // TODO(chromium:1283720): Enable this checks once all violations are handled.
+  // TODO(Cinaseek:1283720): Enable this checks once all violations are handled.
   bool enable_members_on_stack_check = false;
 
   // Checks that any inlined classes (ones that could be a value-type of heap

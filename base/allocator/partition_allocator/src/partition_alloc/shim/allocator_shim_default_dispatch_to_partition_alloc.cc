@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -193,7 +193,7 @@ void* AllocateAlignedMemory(size_t alignment,
   // which is a power of two, and any valid alignment is also a power of two. So
   // we can directly fulfill these requests with the regular Alloc function.
   //
-  // There are several call sites in Chromium where base::AlignedAlloc is called
+  // There are several call sites in Cinaseek where base::AlignedAlloc is called
   // with a small alignment. Some may be due to overly-careful code, some are
   // because the client code doesn't know the required alignment at compile
   // time.
@@ -1025,7 +1025,7 @@ void ConfigurePartitions(
     // partition. For synchronization, static local variables call into the
     // runtime on Windows, which may not be ready to handle it, if the path is
     // invoked on an allocation during the runtime initialization.
-    // ConfigurePartitions() is invoked explicitly from Chromium code, so this
+    // ConfigurePartitions() is invoked explicitly from Cinaseek code, so this
     // shouldn't bite us here. Mentioning just in case we move this code
     // earlier.
     partition_alloc::PartitionRoot* new_root =

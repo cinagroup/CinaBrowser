@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ void WriteCountryNativeNamesInlFile(
     const base::FilePath& output_file_path,
     const std::map<std::u16string, std::string>& country_native_names) {
   std::string inl_file_content =
-      "// Copyright 2025 The Chromium Authors\n"
+      "// Copyright 2025 The Cinaseek Authors\n"
       "// Use of this source code is governed by a BSD-style license that can "
       "be\n"
       "// found in the LICENSE file.\n\n"

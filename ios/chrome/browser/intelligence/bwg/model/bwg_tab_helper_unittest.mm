@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -230,7 +230,7 @@ TEST_F(BwgTabHelperTest, TestContextualChipCommandSent) {
   feature_list_.InitWithFeatures(
       /*enabled_features=*/{kPageActionMenu, kAskGeminiChip},
       /*disabled_features=*/{});
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   // Check if LocationBarBadge command was sent as a response to receiving a
@@ -276,7 +276,7 @@ TEST_F(BwgTabHelperTest, TestPrepareBwgFreBackgrounding) {
 TEST_F(BwgTabHelperTest, TestIsLastInteractionUrlDifferent_SameURL) {
   feature_list_.InitWithFeatures(
       /*enabled_features=*/{kPageActionMenu}, /*disabled_features=*/{});
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   web_state_->SetCurrentURL(url);
   tab_helper_->CreateOrUpdateBwgSessionInStorage("server_id");
   ASSERT_FALSE(tab_helper_->IsLastInteractionUrlDifferent());
@@ -285,7 +285,7 @@ TEST_F(BwgTabHelperTest, TestIsLastInteractionUrlDifferent_SameURL) {
 TEST_F(BwgTabHelperTest, TestIsLastInteractionUrlDifferent_DifferentURL) {
   feature_list_.InitWithFeatures(
       /*enabled_features=*/{kPageActionMenu}, /*disabled_features=*/{});
-  GURL url1("https://www.chromium.org");
+  GURL url1("https://www.Cinaseek.org");
   web_state_->SetCurrentURL(url1);
   tab_helper_->CreateOrUpdateBwgSessionInStorage("server_id");
 
@@ -299,7 +299,7 @@ TEST_F(BwgTabHelperTest,
   feature_list_.InitWithFeatures(
       /*enabled_features=*/{kPageActionMenu},
       /*disabled_features=*/{});
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   web_state_->SetCurrentURL(url);
   tab_helper_->CreateOrUpdateBwgSessionInStorage("server_id");
   ASSERT_FALSE(tab_helper_->IsLastInteractionUrlDifferent());
@@ -310,7 +310,7 @@ TEST_F(BwgTabHelperTest,
   feature_list_.InitWithFeatures(
       /*enabled_features=*/{kPageActionMenu},
       /*disabled_features=*/{});
-  GURL url1("https://www.chromium.org");
+  GURL url1("https://www.Cinaseek.org");
   web_state_->SetCurrentURL(url1);
   tab_helper_->CreateOrUpdateBwgSessionInStorage("server_id");
 
@@ -402,7 +402,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_ShowsImageRemixIPH) {
   tab_helper_->SetLocationBarBadgeCommandsHandler(
       mock_location_bar_badge_handler_);
   tab_helper_->SetHelpCommandsHandler(mock_help_handler_);
-  web_state_->SetCurrentURL(GURL("https://www.chromium.org"));
+  web_state_->SetCurrentURL(GURL("https://www.Cinaseek.org"));
   web_state_->SetContentsMimeType("text/html");
 
   feature_engagement::Tracker* tracker = InitializeTracker();
@@ -434,7 +434,7 @@ TEST_F(BwgTabHelperTest,
   tab_helper_->SetLocationBarBadgeCommandsHandler(
       mock_location_bar_badge_handler_);
   tab_helper_->SetHelpCommandsHandler(mock_help_handler_);
-  web_state_->SetCurrentURL(GURL("https://www.chromium.org"));
+  web_state_->SetCurrentURL(GURL("https://www.Cinaseek.org"));
 
   feature_engagement::Tracker* tracker = InitializeTracker();
   SimulateFirstRunRecency(tracker, 2);
@@ -462,7 +462,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_ShowsPromo) {
 
   SimulateFirstRunRecency(tracker, 2);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -486,7 +486,7 @@ TEST_F(BwgTabHelperTest,
   // Send signal that the user has already given his consent to the feature.
   tracker->NotifyEvent(feature_engagement::events::kIOSGeminiConsentGiven);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -506,7 +506,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_DoesNotShowPromoForNewUser) {
 
   SimulateFirstRunRecency(tracker, 0);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -531,7 +531,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_DoesNotShowPromoIfBWGStarted) {
   tracker->NotifyEvent(
       feature_engagement::events::kIOSGeminiFlowStartedNonPromo);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -560,7 +560,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_ShowsPromoPrefs) {
   // Make first run not recent.
   SimulateFirstRunRecency(tracker, 2);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -587,7 +587,7 @@ TEST_F(BwgTabHelperTest, TestDidStartNavigation_DoesNotShowPromoPrefs) {
   // Make first run not recent.
   SimulateFirstRunRecency(tracker, 2);
 
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   AddOptimizationGuideHint(url);
 
   auto navigation_context = std::make_unique<web::FakeNavigationContext>();
@@ -702,7 +702,7 @@ TEST_F(BwgTabHelperTest,
   tab_helper_->SetLocationBarBadgeCommandsHandler(
       mock_location_bar_badge_handler_);
   tab_helper_->SetHelpCommandsHandler(mock_help_handler_);
-  web_state_->SetCurrentURL(GURL("https://www.chromium.org"));
+  web_state_->SetCurrentURL(GURL("https://www.Cinaseek.org"));
   web_state_->SetContentsMimeType("text/html");
 
   // Disable Gemini by policy to simulate BWG not being available.

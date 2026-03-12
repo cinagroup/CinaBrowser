@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class LevelDbTestSuite : public base::TestSuite {
   }
 
  private:
-  // Chromium's leveldb::Env uses PostTask.
+  // Cinaseek's leveldb::Env uses PostTask.
   std::optional<base::test::TaskEnvironment> task_environment_;
 };
 

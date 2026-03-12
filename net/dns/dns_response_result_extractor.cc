@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -285,7 +285,7 @@ RecordsOrError ExtractResponseRecords(
   // and in RFC8020, section 2, the cached error is specific to the final chain
   // name, not the query name.
   //
-  // TODO(ericorth@chromium.org): Differentiate nxdomain errors by making it
+  // TODO(ericorth@Cinaseek.org): Differentiate nxdomain errors by making it
   // cacheable across any query type (per RFC2308, Section 5).
   bool is_cachable_error = data_records.empty() &&
                            (response.rcode() == dns_protocol::kRcodeNXDOMAIN ||

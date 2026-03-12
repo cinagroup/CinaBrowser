@@ -1,11 +1,11 @@
 {
 	"archive_datas": [
         {
-            "dirs": ["Chromium.app"],
+            "dirs": ["Cinaseek.app"],
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chrome-mac"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}/chrome-mac.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP",
             "latest_upload": {
@@ -24,7 +24,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chromedriver_mac64"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}/chromedriver_mac64.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -40,7 +40,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "content-shell"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}/content-shell.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -49,7 +49,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "devtools-frontend"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}/devtools-frontend.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -57,7 +57,7 @@
             "files": [
                 "remoting-me2me-host-mac.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -65,7 +65,7 @@
             "files": [
                 "updater.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -73,7 +73,7 @@
             "files": [
                 "enterprise_companion.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -81,7 +81,7 @@
             "files": [
                 "enterprise_companion_test.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Mac/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         }

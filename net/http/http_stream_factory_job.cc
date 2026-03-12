@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1063,7 +1063,7 @@ int HttpStreamFactory::Job::DoInitConnectionComplete(int result) {
     // Extended CONNECT.
     if (is_websocket_) {
       CHECK_EQ(job_type_, WS_OVER_H3);
-      std::unique_ptr<QuicChromiumClientSession::Handle> session =
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session =
           quic_request_.ReleaseSessionHandle();
       if (!session) {
         // QUIC session closed before stream could be created.
@@ -1081,7 +1081,7 @@ int HttpStreamFactory::Job::DoInitConnectionComplete(int result) {
     }
 
     if (stream_type_ == HttpStreamRequest::BIDIRECTIONAL_STREAM) {
-      std::unique_ptr<QuicChromiumClientSession::Handle> session =
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session =
           quic_request_.ReleaseSessionHandle();
       if (!session) {
         // Quic session is closed before stream can be created.
@@ -1090,7 +1090,7 @@ int HttpStreamFactory::Job::DoInitConnectionComplete(int result) {
       bidirectional_stream_impl_ =
           std::make_unique<BidirectionalStreamQuicImpl>(std::move(session));
     } else {
-      std::unique_ptr<QuicChromiumClientSession::Handle> session =
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session =
           quic_request_.ReleaseSessionHandle();
       if (!session) {
         // Quic session is closed before stream can be created.

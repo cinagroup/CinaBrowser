@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,22 +8,22 @@ import("//build/config/android/rules.gni")
 
 robolectric_library("junit_test_support") {
   sources = [
-    "java/src/org/chromium/testing/local/Allowlist.java",
-    "java/src/org/chromium/testing/local/ChromiumAndroidConfigurer.java",
-    "java/src/org/chromium/testing/local/ConfigFilter.java",
-    "java/src/org/chromium/testing/local/CustomShadowApplicationPackageManager.java",
-    "java/src/org/chromium/testing/local/GtestComputer.java",
-    "java/src/org/chromium/testing/local/GtestFilter.java",
-    "java/src/org/chromium/testing/local/GtestListener.java",
-    "java/src/org/chromium/testing/local/GtestLogger.java",
-    "java/src/org/chromium/testing/local/JsonListener.java",
-    "java/src/org/chromium/testing/local/JsonLogger.java",
-    "java/src/org/chromium/testing/local/JunitTestArgParser.java",
-    "java/src/org/chromium/testing/local/JunitTestMain.java",
-    "java/src/org/chromium/testing/local/PackageFilter.java",
-    "java/src/org/chromium/testing/local/RunnerFilter.java",
-    "java/src/org/chromium/testing/local/TestDir.java",
-    "java/src/org/chromium/testing/local/TestListComputer.java",
+    "java/src/org/Cinaseek/testing/local/Allowlist.java",
+    "java/src/org/Cinaseek/testing/local/CinaseekAndroidConfigurer.java",
+    "java/src/org/Cinaseek/testing/local/ConfigFilter.java",
+    "java/src/org/Cinaseek/testing/local/CustomShadowApplicationPackageManager.java",
+    "java/src/org/Cinaseek/testing/local/GtestComputer.java",
+    "java/src/org/Cinaseek/testing/local/GtestFilter.java",
+    "java/src/org/Cinaseek/testing/local/GtestListener.java",
+    "java/src/org/Cinaseek/testing/local/GtestLogger.java",
+    "java/src/org/Cinaseek/testing/local/JsonListener.java",
+    "java/src/org/Cinaseek/testing/local/JsonLogger.java",
+    "java/src/org/Cinaseek/testing/local/JunitTestArgParser.java",
+    "java/src/org/Cinaseek/testing/local/JunitTestMain.java",
+    "java/src/org/Cinaseek/testing/local/PackageFilter.java",
+    "java/src/org/Cinaseek/testing/local/RunnerFilter.java",
+    "java/src/org/Cinaseek/testing/local/TestDir.java",
+    "java/src/org/Cinaseek/testing/local/TestListComputer.java",
   ]
   deps = [
     "//build/android:build_java",
@@ -36,10 +36,10 @@ robolectric_library("junit_test_support") {
 robolectric_binary("junit_unit_tests") {
   enable_android_resources = false
   sources = [
-    "javatests/src/org/chromium/testing/local/GtestFilterTest.java",
-    "javatests/src/org/chromium/testing/local/GtestLoggerTest.java",
-    "javatests/src/org/chromium/testing/local/PackageFilterTest.java",
-    "javatests/src/org/chromium/testing/local/RunnerFilterTest.java",
-    "javatests/src/org/chromium/testing/local/TestListComputerTest.java",
+    "javatests/src/org/Cinaseek/testing/local/GtestFilterTest.java",
+    "javatests/src/org/Cinaseek/testing/local/GtestLoggerTest.java",
+    "javatests/src/org/Cinaseek/testing/local/PackageFilterTest.java",
+    "javatests/src/org/Cinaseek/testing/local/RunnerFilterTest.java",
+    "javatests/src/org/Cinaseek/testing/local/TestListComputerTest.java",
   ]
 }

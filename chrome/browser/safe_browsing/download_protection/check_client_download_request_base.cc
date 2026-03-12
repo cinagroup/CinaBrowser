@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -480,7 +480,7 @@ void CheckClientDownloadRequestBase::SendRequest() {
             cookies_store: "Safe Browsing cookies store"
             setting:
               "Users can enable or disable the entire Safe Browsing service in "
-              "Chromium's settings by toggling 'Protect you and your device "
+              "Cinaseek's settings by toggling 'Protect you and your device "
               "from dangerous sites' under Privacy. This feature is enabled by "
               "default."
             chrome_policy {

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,7 +21,7 @@ mojom("mojom") {
     "//ui/gfx/geometry/mojom",
   ]
 
-  # On branded ChromeOS and Linux, shape detection is hosted in a utility
+  # On branded CinaseekOS and Linux, shape detection is hosted in a utility
   # process. Other platforms host it in the GPU process.
   if ((is_linux || is_chromeos) && is_chrome_branded) {
     enabled_features = [ "has_shape_detection_utility" ]

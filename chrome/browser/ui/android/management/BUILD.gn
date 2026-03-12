@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,12 +6,12 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/management/ManagementCoordinator.java",
-    "java/src/org/chromium/chrome/browser/management/ManagementMediator.java",
-    "java/src/org/chromium/chrome/browser/management/ManagementPage.java",
-    "java/src/org/chromium/chrome/browser/management/ManagementProperties.java",
-    "java/src/org/chromium/chrome/browser/management/ManagementView.java",
-    "java/src/org/chromium/chrome/browser/management/ManagementViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementPage.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementView.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementViewBinder.java",
   ]
   deps = [
     ":java_resources",
@@ -32,7 +32,7 @@ android_library("java") {
     "//third_party/androidx:androidx_core_core_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.chrome.browser.management"
+  resources_package = "org.Cinaseek.chrome.browser.management"
 }
 
 android_resources("java_resources") {
@@ -53,9 +53,9 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.management"
+  resources_package = "org.Cinaseek.chrome.browser.management"
   sources = [
-    "java/src/org/chromium/chrome/browser/management/ManagementViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/management/ManagementViewTest.java",
   ]
 
   deps = [

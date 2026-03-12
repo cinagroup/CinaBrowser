@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@
 
 // IsDangerousFilename() and IsDangerousMimeType() should be kept in sync with
 // //third_party/blink/renderer/modules/webshare/FILE_TYPES.md
-// //components/browser_ui/webshare/android/java/src/org/chromium/components/browser_ui/webshare/ShareServiceImpl.java
+// //components/browser_ui/webshare/android/java/src/org/Cinaseek/components/browser_ui/webshare/ShareServiceImpl.java
 
 ShareServiceImpl::ShareServiceImpl(
     content::RenderFrameHost& render_frame_host,

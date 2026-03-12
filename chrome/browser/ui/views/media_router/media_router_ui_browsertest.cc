@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ class MediaRouterUIBrowserTest : public InProcessBrowserTest {
         MediaRouterUIService::Get(browser()->profile())->action_controller();
 
     routes_ = {MediaRoute("routeId1",
-                          MediaSource("urn:x-org.chromium.media:source:tab:*"),
+                          MediaSource("urn:x-org.Cinaseek.media:source:tab:*"),
                           "sinkId1", "description", true)};
 
     auto* pinned_toolbar_actions_container =

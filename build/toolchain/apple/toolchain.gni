@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -45,10 +45,10 @@ declare_args() {
   swift_toolchain_path = -1
 }
 
-# TODO(crbug.com/40869822): Remove this and replace with `build_with_chromium`
+# TODO(crbug.com/40869822): Remove this and replace with `build_with_Cinaseek`
 # once the support for catalyst is available in the hermetic swift compiler.
 _can_use_hermetic_swift =
-    build_with_chromium && is_ios && target_environment != "catalyst"
+    build_with_Cinaseek && is_ios && target_environment != "catalyst"
 
 if (swift_toolchain_path == -1) {
   # TODO(crbug.com/40915887) The custom swift toolchain not does currently work
@@ -802,7 +802,7 @@ template("single_apple_toolchain") {
         # The Swift compiler assumes that the generated header will be used by
         # Objective-C code compiled with module support enabled (-fmodules).
         #
-        # As Chromium code is compiled without support for modules (i.e. the
+        # As Cinaseek code is compiled without support for modules (i.e. the
         # code is compiled without `-fmodules`), the dependent modules are not
         # imported from the generated header, which causes compilation failure
         # if the client code does not first import the required modules (see
@@ -888,7 +888,7 @@ template("apple_rust_host_build_tools_toolchain") {
       forward_variables_from(invoker.toolchain_args, "*")
       toolchain_for_rust_host_build_tools = true
 
-      # The host build tools are static release builds to make the Chromium
+      # The host build tools are static release builds to make the Cinaseek
       # build faster. They do not need PGO etc, so no official builds.
       is_debug = false
       is_component_build = false
@@ -904,7 +904,7 @@ template("apple_rust_host_build_tools_toolchain") {
 # If PartitionAlloc is part of the build (even as a transitive dependency), then
 # it replaces the system allocator. If this toolchain is used, that will be
 # overridden and the system allocator will be used regardless. This is important
-# in some third-party binaries outside of Chrome.
+# in some third-party binaries outside of Cinaseek.
 template("apple_system_allocator_toolchain") {
   single_apple_toolchain(target_name) {
     assert(defined(invoker.toolchain_args),

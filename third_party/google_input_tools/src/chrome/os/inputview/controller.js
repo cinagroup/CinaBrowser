@@ -2344,7 +2344,7 @@ Controller.prototype.initialize = function(keyset, languageCode, passwordLayout,
     title) {
   this.perfTracker_.restart();
   this.adapter_.getCurrentInputMethod(function(currentInputMethod) {
-    // TODO: remove this hack as soon as the manifest is fixed in chromium.
+    // TODO: remove this hack as soon as the manifest is fixed in Cinaseek.
     if (languageCode == 'ko') {
       if (currentInputMethod.indexOf('hangul_2set') > 0) {
         keyset = 'm17n:ko_2set';

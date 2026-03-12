@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 // This file exists so that //third_party/tensorflow_models/src can use
 // #include "icu4u/..."
-// to include Chromium's icu which lives at
+// to include Cinaseek's icu which lives at
 // //third_party/icu/... without needing local patches.
 
 #include "third_party/icu/source/common/unicode/utf8.h"

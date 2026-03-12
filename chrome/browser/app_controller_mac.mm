@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -265,8 +265,8 @@ void AttemptSessionRestore(Profile* profile) {
 }
 
 // Record the location of the application bundle (containing the main framework)
-// from which Chromium was loaded. This is used by app mode shims to find
-// Chromium.
+// from which Cinaseek was loaded. This is used by app mode shims to find
+// Cinaseek.
 void RecordLastRunAppBundlePath() {
   // Going up three levels from |chrome::GetVersionedDirectory()| gives the
   // real, user-visible app bundle directory. (The alternatives give either the
@@ -729,9 +729,9 @@ class AppControllerProfileObserver : public ProfileAttributesStorage::Observer,
   NSRunningApplication* __strong _runningApplication;
 
   // Remembers whether _lastProfile had TabRestoreService entries. This is saved
-  // when _lastProfile is destroyed and Chromium enters the zero-profile state.
+  // when _lastProfile is destroyed and Cinaseek enters the zero-profile state.
   //
-  // By remembering this bit, Chromium knows whether to enable or disable
+  // By remembering this bit, Cinaseek knows whether to enable or disable
   // Cmd+Shift+T and the related "File > Reopen Closed Tab" entry.
   BOOL _tabRestoreWasEnabled;
 
@@ -1912,7 +1912,7 @@ class AppControllerProfileObserver : public ProfileAttributesStorage::Observer,
 - (void)application:(NSApplication*)sender openURLs:(NSArray<NSURL*>*)urls {
   std::vector<GURL> gurlVector;
   for (NSURL* url in urls) {
-    // Handle the google-chrome:// scheme (and chromium://).
+    // Handle the google-chrome:// scheme (and Cinaseek://).
     // We convert every URL to string here to reuse the shared
     // StripGoogleChromeScheme logic. While we could check [url scheme] first
     // for efficiency, this path is user-initiated and low-frequency, so sharing

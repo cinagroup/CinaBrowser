@@ -407,7 +407,7 @@ testSuite({
 
     // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
-    // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
+    // https://code.google.com/p/Cinaseek/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {
       assertRoundedEquals(
           'Left edge of popup should line up with left edge ' +
@@ -430,7 +430,7 @@ testSuite({
 
     // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
-    // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
+    // https://code.google.com/p/Cinaseek/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {
       assertRoundedEquals(
           'Right edge of popup should line up with right edge ' +

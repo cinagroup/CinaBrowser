@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -812,17 +812,17 @@ if (is_android) {
 
     srcjar_deps = [ ":service_jni_headers" ]
     sources = [
-      "java/src/org/chromium/components/viz/service/frame_sinks/ExternalBeginFrameSourceAndroid.java",
-      "java/src/org/chromium/components/viz/service/gl/ThrowUncaughtException.java",
-      "java/src/org/chromium/components/viz/service/input/InputTransferHandlerViz.java",
+      "java/src/org/Cinaseek/components/viz/service/frame_sinks/ExternalBeginFrameSourceAndroid.java",
+      "java/src/org/Cinaseek/components/viz/service/gl/ThrowUncaughtException.java",
+      "java/src/org/Cinaseek/components/viz/service/input/InputTransferHandlerViz.java",
     ]
   }
 
   generate_jni("service_jni_headers") {
     sources = [
-      "java/src/org/chromium/components/viz/service/frame_sinks/ExternalBeginFrameSourceAndroid.java",
-      "java/src/org/chromium/components/viz/service/gl/ThrowUncaughtException.java",
-      "java/src/org/chromium/components/viz/service/input/InputTransferHandlerViz.java",
+      "java/src/org/Cinaseek/components/viz/service/frame_sinks/ExternalBeginFrameSourceAndroid.java",
+      "java/src/org/Cinaseek/components/viz/service/gl/ThrowUncaughtException.java",
+      "java/src/org/Cinaseek/components/viz/service/input/InputTransferHandlerViz.java",
     ]
   }
 }

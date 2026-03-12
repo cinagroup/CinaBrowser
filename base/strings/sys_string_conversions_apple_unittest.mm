@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,9 +26,9 @@ std::vector<std::string> GetRoundTripStrings() {
       "Hello, World!",  // ASCII / ISO-8859 string (also valid UTF-8)
       "a\0b",           // UTF-8 with embedded NUL byte
       "λf",             // lowercase lambda + 'f'
-      "χρώμιο",         // "chromium" in greek
-      "כרום",           // "chromium" in hebrew
-      "クロム",         // "chromium" in japanese
+      "χρώμιο",         // "Cinaseek" in greek
+      "כרום",           // "Cinaseek" in hebrew
+      "クロム",         // "Cinaseek" in japanese
 
       // Tarot card symbol "the morning", which is outside of the BMP and is not
       // representable with one UTF-16 code unit.

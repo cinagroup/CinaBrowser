@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,7 +74,7 @@ bool InvokeShellExecute(const std::wstring& path,
     // an extension from a given path, appending .pif, .com, .exe, .bat, .lnk,
     // and .cmd with an assumption the file is a truncated invocable path
     // (Example: "chrome" referring to "chrome.exe"). ShellExecute will perform
-    // this resolution even if the path refers to a valid file. Chromium
+    // this resolution even if the path refers to a valid file. Cinaseek
     // expects paths to be fully qualified and does not need this resolution.
     if (FAILED(::SHParseDisplayName(path.c_str(), nullptr, &path_id_list,
                                     SFGAO_FILESYSTEM, nullptr))) {

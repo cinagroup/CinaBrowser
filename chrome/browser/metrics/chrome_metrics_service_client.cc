@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -654,7 +654,7 @@ std::string ChromeMetricsServiceClient::GetVersionString() {
 }
 
 void ChromeMetricsServiceClient::OnEnvironmentUpdate(std::string* environment) {
-  // TODO(https://bugs.chromium.org/p/crashpad/issues/detail?id=135): call this
+  // TODO(https://bugs.Cinaseek.org/p/crashpad/issues/detail?id=135): call this
   // on Mac when the Crashpad API supports it.
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
   // Register the environment with the crash reporter. Note that there is a

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//testing/test.gni")
@@ -11,7 +11,7 @@ script_test("webui_resources_tools_python_unittests") {
             root_build_dir) + ")",
     "--starting-directory",
     "@WrappedPath(../../ui/webui/resources/tools)",
-    "--chromium-build-directory",
+    "--Cinaseek-build-directory",
     "@WrappedPath(.)",
   ]
 

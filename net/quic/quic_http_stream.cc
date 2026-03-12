@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@
 namespace net {
 
 QuicHttpStream::QuicHttpStream(
-    std::unique_ptr<QuicChromiumClientSession::Handle> session,
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session,
     std::set<std::string> dns_aliases)
     : MultiplexedHttpStream(std::move(session)),
       dns_aliases_(std::move(dns_aliases)) {}

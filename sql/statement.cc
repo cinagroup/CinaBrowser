@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ int64_t Statement::TimeToSqlValue(base::Time time) {
 std::string GetSqlStatementStringForTracing(sqlite3_stmt* stmt) {
   // See https://www.sqlite.org/c3ref/expanded_sql.html
   // The SQLITE_OMIT_TRACE compile-time option causes sqlite3_expanded_sql() to
-  // always return NULL. Chromium is typically built with SQLITE_OMIT_TRACE
+  // always return NULL. Cinaseek is typically built with SQLITE_OMIT_TRACE
   // defined, but conditionally expanding the statement allows us to make
   // one-off builds that produce traces with visible expanded statements.
 #if defined(SQLITE_OMIT_TRACE)

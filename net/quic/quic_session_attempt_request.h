@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttemptRequest {
 
   // Returns the session of the request. Can be nullptr if the request is
   // failed. Only valid to call after the request is completed.
-  raw_ptr<QuicChromiumClientSession> session() const {
+  raw_ptr<QuicCinaseekClientSession> session() const {
     CHECK(completed_);
     return session_;
   }
@@ -71,7 +71,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttemptRequest {
                                      QuicSessionAliasKey key);
 
   void Complete(int rv,
-                QuicChromiumClientSession* session,
+                QuicCinaseekClientSession* session,
                 NetErrorDetails error_details);
 
   raw_ptr<QuicSessionAttemptManager> manager_;
@@ -81,7 +81,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttemptRequest {
   CompletionOnceCallback callback_;
 
   NetErrorDetails error_details_;
-  raw_ptr<QuicChromiumClientSession> session_;
+  raw_ptr<QuicCinaseekClientSession> session_;
 };
 
 }  // namespace net

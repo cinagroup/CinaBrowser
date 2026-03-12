@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ inline constexpr char kTabletFormFactor[] = "Tablet";
 inline constexpr char kXRFormFactor[] = "XR";
 inline constexpr char kEInkFormFactor[] = "EInk";
 inline constexpr char kWatchFormFactor[] = "Watch";
-// LINT.ThenChange(/android_webview/java/src/org/chromium/android_webview/client_hints/AwUserAgentMetadata.java,/third_party/blink/common/user_agent/user_agent_metadata.cc)
+// LINT.ThenChange(/android_webview/java/src/org/Cinaseek/android_webview/client_hints/AwUserAgentMetadata.java,/third_party/blink/common/user_agent/user_agent_metadata.cc)
 
 struct BLINK_COMMON_EXPORT UserAgentBrandVersion {
   UserAgentBrandVersion() = default;

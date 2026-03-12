@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,14 +86,14 @@ enum class PageAccessibilityDisposition {
 // memory regions, to help in debugging. On Android, these tags are used to name
 // anonymous mappings.
 //
-// kChromium is the default value, used to distinguish general
-// Chromium-originated allocations from other ones (e.g. from platform
+// kCinaseek is the default value, used to distinguish general
+// Cinaseek-originated allocations from other ones (e.g. from platform
 // libraries).
 enum class PageTag {
   kSimulation = 251,      // Memory simulator tool.
   kBlinkGC = 252,         // Blink GC pages.
   kPartitionAlloc = 253,  // PartitionAlloc, no matter the partition.
-  kChromium = 254,        // Chromium page.
+  kCinaseek = 254,        // Cinaseek page.
   kV8 = 255,              // V8 heap pages.
 
   kFirst = kSimulation,  // Minimum tag value.
@@ -142,20 +142,20 @@ PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 uintptr_t AllocPages(size_t length,
                      size_t align,
                      PageAccessibilityConfiguration accessibility,
-                     PageTag page_tag = PageTag::kChromium,
+                     PageTag page_tag = PageTag::kCinaseek,
                      int file_descriptor_for_shared_alloc = -1);
 PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 uintptr_t AllocPages(uintptr_t address,
                      size_t length,
                      size_t align,
                      PageAccessibilityConfiguration accessibility,
-                     PageTag page_tag = PageTag::kChromium);
+                     PageTag page_tag = PageTag::kCinaseek);
 PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 void* AllocPages(void* address,
                  size_t length,
                  size_t align,
                  PageAccessibilityConfiguration accessibility,
-                 PageTag page_tag = PageTag::kChromium);
+                 PageTag page_tag = PageTag::kCinaseek);
 PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 uintptr_t AllocPagesWithAlignOffset(
     uintptr_t address,
@@ -163,7 +163,7 @@ uintptr_t AllocPagesWithAlignOffset(
     size_t align,
     size_t align_offset,
     PageAccessibilityConfiguration page_accessibility,
-    PageTag page_tag = PageTag::kChromium,
+    PageTag page_tag = PageTag::kCinaseek,
     int file_descriptor_for_shared_alloc = -1);
 
 // Frees one or more pages starting at |address| and continuing for |length|
@@ -269,11 +269,11 @@ void DecommitSystemPages(
 PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 bool DecommitAndZeroSystemPages(uintptr_t address,
                                 size_t length,
-                                PageTag page_tag = PageTag::kChromium);
+                                PageTag page_tag = PageTag::kCinaseek);
 PA_COMPONENT_EXPORT(PARTITION_ALLOC)
 bool DecommitAndZeroSystemPages(void* address,
                                 size_t length,
-                                PageTag page_tag = PageTag::kChromium);
+                                PageTag page_tag = PageTag::kCinaseek);
 
 // Whether decommitted memory is guaranteed to be zeroed when it is
 // recommitted. Do not assume that this will not change over time.
@@ -344,7 +344,7 @@ void RecommitSystemPages(
 //
 // WARNING: Do not discard a large amount of pages, for a potentially long
 // duration. Discarded pages are *not* decommitted on Windows, where total
-// system-wide committed memory is limited. As most Chromium OOM crashes are
+// system-wide committed memory is limited. As most Cinaseek OOM crashes are
 // commit limit related, this will both impact Private Memory Footprint (which
 // reports committed memory) and stability (since we will bump into the limit
 // more often).

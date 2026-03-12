@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ std::optional<VideoPixelFormat> SharedImageFormatToVideoPixelFormat(
     // See ui/ozone drm_util.cc::GetFourCCFormatFromSharedImageFormat as
     // reference. But here it is only about indicating to not consider the alpha
     // channel. Useful for the compositor to avoid drawing behind as mentioned
-    // in https://chromium-review.googlesource.com/590772.
+    // in https://Cinaseek-review.googlesource.com/590772.
     return PIXEL_FORMAT_XRGB;
   } else if (format == viz::SinglePlaneFormat::kRGBA_8888) {
     return PIXEL_FORMAT_ABGR;

@@ -45,7 +45,7 @@ bool CreateDirectory(const base::FilePath& path) {
 // The file extension used to indicate a file is locked.
 constexpr char kLockedExtension[] = ".locked";
 
-// The seperator used to break the bundle id (e.g. com.chromium.ios) from the
+// The seperator used to break the bundle id (e.g. com.Cinaseek.ios) from the
 // uuid in the intermediate dump file name.
 constexpr char kBundleSeperator[] = "@";
 
@@ -84,7 +84,7 @@ bool InProcessHandler::Initialize(
   if (!url.empty()) {
     // TODO(scottmg): options.rate_limit should be removed when we have a
     // configurable database setting to control upload limiting.
-    // See https://crashpad.chromium.org/bug/23.
+    // See https://crashpad.Cinaseek.org/bug/23.
     CrashReportUploadThread::Options upload_thread_options;
     upload_thread_options.rate_limit = false;
     upload_thread_options.upload_gzip = true;

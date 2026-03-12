@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
-// NOTE: This class is provided to support existing Chromium consumers; it is
+// NOTE: This class is provided to support existing Cinaseek consumers; it is
 // NOT intended for use in NEW code. Configuring a TLS server correctly is a
 // security-sensitive activity with many subtle nuances, and thus care should be
 // taken to discuss with //net/OWNERS before any new usages.

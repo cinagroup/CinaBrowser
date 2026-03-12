@@ -1,8 +1,8 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/libaddressinput/chromium/chrome_metadata_source.h"
+#include "third_party/libaddressinput/Cinaseek/chrome_metadata_source.h"
 
 #include <memory>
 #include <utility>
@@ -73,7 +73,7 @@ void ChromeMetadataSource::Download(const std::string& key,
             "Address format metadata assists in handling postal addresses from "
             "all over the world."
           trigger:
-            "User edits an address in Chromium settings, or shipping address "
+            "User edits an address in Cinaseek settings, or shipping address "
             "in Android's 'web payments'."
           data:
             "The country code for the address being edited. No user identifier "
@@ -85,8 +85,8 @@ void ChromeMetadataSource::Download(const std::string& key,
           setting:
             "This feature cannot be disabled in settings. It can only be "
             "prevented if user does not edit the address in Android 'Web "
-            "Payments' settings, Android's Chromium settings ('Autofill and "
-            "payments' -> 'Addresses'), and Chromium settings on desktop ("
+            "Payments' settings, Android's Cinaseek settings ('Autofill and "
+            "payments' -> 'Addresses'), and Cinaseek settings on desktop ("
             "'Manage Autofill Settings' -> 'Addresses')."
           policy_exception_justification: "Not implemented."
         })");

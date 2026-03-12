@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -147,7 +147,7 @@ class MediaRouterIntegrationBrowserTest : public InProcessBrowserTest {
 
   // Get the full path of the resource file.
   // |relative_path|: The relative path to
-  //                  <chromium src>/out/<build config>/media_router/
+  //                  <Cinaseek src>/out/<build config>/media_router/
   //                  browser_test_resources/
   base::FilePath GetResourceFile(
       base::FilePath::StringViewType relative_path) const;

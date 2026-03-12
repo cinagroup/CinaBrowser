@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,8 +16,8 @@ namespace net::transport_security_state {
 
 namespace {
 
-// Certficate with the subject CN set to "Chromium", the subject organisation
-// set to "The Chromium Projects", and the subject organizational unit set to
+// Certficate with the subject CN set to "Cinaseek", the subject organisation
+// set to "The Cinaseek Projects", and the subject organizational unit set to
 // "Security."
 static const char kSelfSignedWithCommonNamePEM[] =
     "-----BEGIN CERTIFICATE-----\n"
@@ -43,7 +43,7 @@ static const char kSelfSignedWithCommonNamePEM[] =
     "-----END CERTIFICATE-----\n";
 
 // Certificate without a subject CN. The subject organisation is set to
-// "The Chromium Projects" and the subject origanisational unit is set to
+// "The Cinaseek Projects" and the subject origanisational unit is set to
 // "Security".
 static const char kSelfSignedWithoutCommonNamePEM[] =
     "-----BEGIN CERTIFICATE-----\n"
@@ -213,7 +213,7 @@ TEST(CertUtilTest, ExtractSubjectNameFromCertificate) {
 
   // For certficates with the subject common name field set, we should get the
   // value of the subject common name.
-  EXPECT_EQ("Chromium", name1);
+  EXPECT_EQ("Cinaseek", name1);
 
   std::string name2;
   bssl::UniquePtr<X509> cert2 =
@@ -222,7 +222,7 @@ TEST(CertUtilTest, ExtractSubjectNameFromCertificate) {
 
   // For certificates without a subject common name field, we should get
   // the subject organization + " " + organizational unit instead.
-  EXPECT_EQ("The Chromium Projects Security", name2);
+  EXPECT_EQ("The Cinaseek Projects Security", name2);
 
   std::string name3;
   bssl::UniquePtr<X509> cert3 =

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 #include "url/gurl.h"
 
 // The renderer-side implementation of the embeddedSearch API (see
-// https://www.chromium.org/embeddedsearch).
+// https://www.Cinaseek.org/embeddedsearch).
 class SearchBox : public content::RenderFrameObserver,
                   public content::RenderFrameObserverTracker<SearchBox>,
                   public search::mojom::EmbeddedSearchClient {

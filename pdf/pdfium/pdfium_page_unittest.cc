@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -416,7 +416,7 @@ TEST_P(PDFiumPageLinkTest, AnnotLinkGeneration) {
       {253,
        18,
        {{242, 455, 1, 18}, {242, 472, 1, 15}},
-       "https://cs.chromium.org"},
+       "https://cs.Cinaseek.org"},
       {-1, 0, {{58, 926, 28, 27}}, "https://www.google.com"},
   });
   if (UsingTestFonts()) {

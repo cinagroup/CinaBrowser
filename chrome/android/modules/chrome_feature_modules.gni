@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ import("//chrome/android/modules/test_dummy/test_dummy_module.gni")
 import("//chrome/android/modules/xr/xr_module.gni")
 import("//device/vr/buildflags/buildflags.gni")
 
-# List of feature module descs for each Chrome flavor. These lists are used to
+# List of feature module descs for each Cinaseek flavor. These lists are used to
 # autogenerate the relevant module targets and bundles. A feature module desc
 # is a GN scope with the following fields:
 #   name: Name of feature module.

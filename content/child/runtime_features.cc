@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,36 +105,36 @@ enum RuntimeFeatureEnableOptions {
   // trial or command line. Otherwise no change. Its difference from kDefault is
   // that the Blink feature isn't affected by the default state of the
   // base::Feature. This is useful for Blink origin trial features especially
-  // those implemented in both Chromium and Blink. As origin trial only controls
+  // those implemented in both Cinaseek and Blink. As origin trial only controls
   // the Blink features, for now we require the base::Feature to be enabled by
   // default, but we don't want the default enabled status affect the Blink
   // feature. See also https://crbug.com/1048656#c10.
-  // This can also be used for features that are enabled by default in Chromium
+  // This can also be used for features that are enabled by default in Cinaseek
   // but not in Blink on all platforms and we want to use the Blink status.
-  // However, we would prefer consistent Chromium and Blink status to this.
+  // However, we would prefer consistent Cinaseek and Blink status to this.
   kSetOnlyIfOverridden,
 };
 
 template <typename T>
 // Helper class that describes the desired actions for the runtime feature
-// depending on a check for chromium base::Feature.
-struct RuntimeFeatureToChromiumFeatureMap {
+// depending on a check for Cinaseek base::Feature.
+struct RuntimeFeatureToCinaseekFeatureMap {
   // This can be either an enabler function defined in web_runtime_features.cc
   // or the string name of the feature in runtime_enabled_features.json5.
   T feature_enabler;
-  // The chromium base::Feature to check.
-  const raw_ref<const base::Feature> chromium_feature;
+  // The Cinaseek base::Feature to check.
+  const raw_ref<const base::Feature> Cinaseek_feature;
   const RuntimeFeatureEnableOptions option = kDefault;
 };
 
 template <typename Enabler>
-void SetRuntimeFeatureFromChromiumFeature(const base::Feature& chromium_feature,
+void SetRuntimeFeatureFromCinaseekFeature(const base::Feature& Cinaseek_feature,
                                           RuntimeFeatureEnableOptions option,
                                           const Enabler& enabler) {
   using FeatureList = base::FeatureList;
-  const bool feature_enabled = FeatureList::IsEnabled(chromium_feature);
+  const bool feature_enabled = FeatureList::IsEnabled(Cinaseek_feature);
   const bool is_overridden =
-      FeatureList::GetStateIfOverridden(chromium_feature).has_value();
+      FeatureList::GetStateIfOverridden(Cinaseek_feature).has_value();
   switch (option) {
     case kSetOnlyIfOverridden:
       if (is_overridden) {
@@ -152,15 +152,15 @@ void SetRuntimeFeatureFromChromiumFeature(const base::Feature& chromium_feature,
 }
 
 // Sets blink runtime features that are either directly
-// controlled by Chromium base::Feature or are overridden
+// controlled by Cinaseek base::Feature or are overridden
 // by base::Feature states.
-void SetRuntimeFeaturesFromChromiumFeatures() {
+void SetRuntimeFeaturesFromCinaseekFeatures() {
   using wf = WebRuntimeFeatures;
   // To add a runtime feature control, add a new
-  // RuntimeFeatureToChromiumFeatureMap entry here if there is a custom
+  // RuntimeFeatureToCinaseekFeatureMap entry here if there is a custom
   // enabler function defined. Otherwise add the entry with string name
   // in the next list.
-  const RuntimeFeatureToChromiumFeatureMap<void (*)(bool)>
+  const RuntimeFeatureToCinaseekFeatureMap<void (*)(bool)>
       blinkFeatureToBaseFeatureMapping[] = {
           {wf::EnableAccessibilityAriaVirtualContent,
            raw_ref(features::kEnableAccessibilityAriaVirtualContent)},
@@ -296,8 +296,8 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
            kSetOnlyIfOverridden},
       };
   for (const auto& mapping : blinkFeatureToBaseFeatureMapping) {
-    SetRuntimeFeatureFromChromiumFeature(
-        *mapping.chromium_feature, mapping.option, mapping.feature_enabler);
+    SetRuntimeFeatureFromCinaseekFeature(
+        *mapping.Cinaseek_feature, mapping.option, mapping.feature_enabler);
   }
 
   if (features::IsPushSubscriptionChangeEventEnabled()) {
@@ -307,8 +307,8 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
   // TODO(crbug.com/40571563): Cleanup the inconsistency between custom WRF
   // enabler function and using feature string name with
   // EnableFeatureFromString.
-  const RuntimeFeatureToChromiumFeatureMap<const char*>
-      runtimeFeatureNameToChromiumFeatureMapping[] = {
+  const RuntimeFeatureToCinaseekFeatureMap<const char*>
+      runtimeFeatureNameToCinaseekFeatureMapping[] = {
           {"AllowContentInitiatedDataUrlNavigations",
            raw_ref(features::kAllowContentInitiatedDataUrlNavigations)},
           {"AllowSameSiteNoneCookiesInSandbox",
@@ -392,9 +392,9 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
           {"LocalNetworkAccessSplitPermissions",
            raw_ref(
                network::features::kLocalNetworkAccessChecksSplitPermissions)}};
-  for (const auto& mapping : runtimeFeatureNameToChromiumFeatureMapping) {
-    SetRuntimeFeatureFromChromiumFeature(
-        *mapping.chromium_feature, mapping.option, [&mapping](bool enabled) {
+  for (const auto& mapping : runtimeFeatureNameToCinaseekFeatureMapping) {
+    SetRuntimeFeatureFromCinaseekFeature(
+        *mapping.Cinaseek_feature, mapping.option, [&mapping](bool enabled) {
           wf::EnableFeatureFromString(mapping.feature_enabler, enabled);
         });
   }
@@ -420,7 +420,7 @@ void SetRuntimeFeaturesFromCommandLine(const base::CommandLine& command_line) {
   // SwitchToFeatureMap entry to the initializer list below.
   // Note: command line switches are now discouraged, please consider
   // using base::Feature instead.
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/configuration.md#switches
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/configuration.md#switches
   using wrf = WebRuntimeFeatures;
   const SwitchToFeatureMap switchToFeatureMapping[] = {
       // Stable Features
@@ -661,7 +661,7 @@ void SetRuntimeFeaturesDefaultsAndUpdateFromArgs(
   // TODO(rodneyding): add doc explaining ways to add new runtime features
   // controls in the following functions.
 
-  SetRuntimeFeaturesFromChromiumFeatures();
+  SetRuntimeFeaturesFromCinaseekFeatures();
 
   SetRuntimeFeaturesFromCommandLine(command_line);
 

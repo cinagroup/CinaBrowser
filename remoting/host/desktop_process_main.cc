@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -53,7 +53,7 @@ int DesktopProcessMain() {
       base::CommandLine::ForCurrentProcess();
 
 #if BUILDFLAG(IS_LINUX) && defined(REMOTING_USE_X11)
-  // Initialize Xlib for multi-threaded use, allowing non-Chromium code to
+  // Initialize Xlib for multi-threaded use, allowing non-Cinaseek code to
   // use X11 safely (such as the WebRTC capturer, GTK ...)
   x11::InitXlib();
 

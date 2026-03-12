@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ std::string HashWallpaperFilesIdStr(std::string_view files_id_unhashed) {
   }
 
   std::vector<uint8_t> data = *salt;
-  // Note: The original code in https://codereview.chromium.org/1886653002/
+  // Note: The original code in https://codereview.Cinaseek.org/1886653002/
   // presumably meant to lowercase the input string before hashing, but it did
   // not.
   base::Extend(data, base::as_byte_span(files_id_unhashed));

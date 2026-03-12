@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ namespace metrics::structured {
 // An implementation of an EventBuffer that stored events in an
 // ArenaPersistentProto.
 //
-// Since getting the in-memory size of the proto is not available in Chromium,
+// Since getting the in-memory size of the proto is not available in Cinaseek,
 // an estimation is used. Events are serialized by copying the events into a
 // RepeatedPtrField. This is necessary because the events are stored in an arena
 // and the returned RepeatedPtrField isn't allocated from the same arena.

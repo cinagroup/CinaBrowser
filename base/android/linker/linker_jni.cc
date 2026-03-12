@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@
 // Must come after all headers that specialize FromJniType() / ToJniType().
 #include "base/android/linker/linker_jni.h"
 
-namespace chromium_android_linker {
+namespace Cinaseek_android_linker {
 
 namespace {
 
@@ -256,7 +256,7 @@ String::String(JNIEnv* env, jstring str) {
   //
   // GetStringUTFChars() suffices because the only strings used here are
   // paths to APK files or names of shared libraries, all of which are
-  // plain ASCII, defined and hard-coded by the Chromium Android build.
+  // plain ASCII, defined and hard-coded by the Cinaseek Android build.
   //
   // For more: see
   //   https://crbug.com/508876
@@ -459,7 +459,7 @@ bool NativeLibInfo::LoadWithDlopenExt(const String& path, void** handle) {
     return false;
   }
 
-  // Histogram ChromiumAndroidLinker.ModernLinkerDlopenExtTime that measured the
+  // Histogram CinaseekAndroidLinker.ModernLinkerDlopenExtTime that measured the
   // amount of time the ModernLinker spends to run android_dlopen_ext() was
   // removed in July 2023.
 
@@ -471,7 +471,7 @@ bool NativeLibInfo::LoadWithDlopenExt(const String& path, void** handle) {
     abort();
   }
 
-  // Histogram ChromiumAndroidLinker.ModernLinkerIteratePhdrTime that measured
+  // Histogram CinaseekAndroidLinker.ModernLinkerIteratePhdrTime that measured
   // the amount of time the ModernLinker spends to find the RELRO region using
   // dl_iterate_phdr() was removed in July 2023.
 
@@ -688,7 +688,7 @@ bool NativeLibInfo::CreateSharedRelroFdForTesting() {
 }
 
 JNI_ZERO_BOUNDARY_EXPORT void
-Java_org_chromium_base_library_1loader_LinkerJni_nativeFindMemoryRegionAtRandomAddress(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeFindMemoryRegionAtRandomAddress(
     JNIEnv* env,
     jclass clazz,
     jobject lib_info_obj) {
@@ -700,7 +700,7 @@ Java_org_chromium_base_library_1loader_LinkerJni_nativeFindMemoryRegionAtRandomA
 }
 
 JNI_ZERO_BOUNDARY_EXPORT void
-Java_org_chromium_base_library_1loader_LinkerJni_nativeReserveMemoryForLibrary(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeReserveMemoryForLibrary(
     JNIEnv* env,
     jclass clazz,
     jobject lib_info_obj) {
@@ -713,7 +713,7 @@ Java_org_chromium_base_library_1loader_LinkerJni_nativeReserveMemoryForLibrary(
 }
 
 JNI_ZERO_BOUNDARY_EXPORT bool
-Java_org_chromium_base_library_1loader_LinkerJni_nativeFindRegionReservedByWebViewZygote(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeFindRegionReservedByWebViewZygote(
     JNIEnv* env,
     jclass clazz,
     jobject lib_info_obj) {
@@ -728,7 +728,7 @@ Java_org_chromium_base_library_1loader_LinkerJni_nativeFindRegionReservedByWebVi
 }
 
 JNI_ZERO_BOUNDARY_EXPORT bool
-Java_org_chromium_base_library_1loader_LinkerJni_nativeLoadLibrary(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeLoadLibrary(
     JNIEnv* env,
     jclass clazz,
     jstring jdlopen_ext_path,
@@ -750,7 +750,7 @@ Java_org_chromium_base_library_1loader_LinkerJni_nativeLoadLibrary(
 }
 
 JNI_ZERO_BOUNDARY_EXPORT bool
-Java_org_chromium_base_library_1loader_LinkerJni_nativeUseRelros(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeUseRelros(
     JNIEnv* env,
     jclass clazz,
     int64_t local_load_address,
@@ -776,7 +776,7 @@ Java_org_chromium_base_library_1loader_LinkerJni_nativeUseRelros(
 }
 
 JNI_ZERO_BOUNDARY_EXPORT int32_t
-Java_org_chromium_base_library_1loader_LinkerJni_nativeGetRelroSharingResult(
+Java_org_Cinaseek_base_library_1loader_LinkerJni_nativeGetRelroSharingResult(
     JNIEnv* env,
     jclass clazz) {
   return static_cast<int32_t>(s_relro_sharing_status);
@@ -792,4 +792,4 @@ bool LinkerJNIInit(JavaVM* vm, JNIEnv* env) {
   return true;
 }
 
-}  // namespace chromium_android_linker
+}  // namespace Cinaseek_android_linker

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,8 +46,8 @@ void AwJavaScriptDialogManager::RunJavaScriptDialog(
   // origin would be desirable.
   //
   // References:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/2944834/27..46/android_webview/browser/aw_permission_manager.cc#b599
-  // https://chromium-review.googlesource.com/c/chromium/src/+/3107569/5/android_webview/browser/aw_javascript_dialog_manager.cc#41
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2944834/27..46/android_webview/browser/aw_permission_manager.cc#b599
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3107569/5/android_webview/browser/aw_javascript_dialog_manager.cc#41
   bridge->RunJavaScriptDialog(
       dialog_type, render_frame_host->GetLastCommittedURL(), message_text,
       default_prompt_text, std::move(callback));

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -506,7 +506,7 @@ TEST_P(MisspelledPolicyTest, WarningLogged) {
 
 #if BUILDFLAG(IS_WIN)
   // The PolicyWatcher on Windows tries to open a handle to the Chrome policy
-  // registry key on Windows which fails on the Chromium bots. The warning that
+  // registry key on Windows which fails on the Cinaseek bots. The warning that
   // gets logged cases the subsequent log assertion to fail so this check was
   // added so the test runs locally and in the bot environment.
   EXPECT_CALL(mock_log, Log(logging::LOGGING_WARNING, _, _, _, _))

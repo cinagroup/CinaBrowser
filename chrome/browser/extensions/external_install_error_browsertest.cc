@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -194,7 +194,7 @@ IN_PROC_BROWSER_TEST_F(ExternalInstallErrorTest,
   // Expect the provider-aware initial-install title.
   const std::string title_regex_pattern =
       "Extension Partner has added an extension that may change the way "
-      "(Chromium|Chrome) works.\\n\\nTest extension that updates from webstore";
+      "(Cinaseek|Chrome) works.\\n\\nTest extension that updates from webstore";
   EXPECT_TRUE(re2::RE2::FullMatch(
       base::UTF16ToUTF8(alert_prompt->GetDialogTitle()), title_regex_pattern));
 }
@@ -235,7 +235,7 @@ IN_PROC_BROWSER_TEST_F(ExternalInstallErrorTest,
 
   const std::string title_regex_pattern =
       "Another program on your computer added an extension that may change "
-      "the way (Chromium|Chrome) works.\n\nMy extension 1";
+      "the way (Cinaseek|Chrome) works.\n\nMy extension 1";
   EXPECT_TRUE(re2::RE2::FullMatch(
       base::UTF16ToUTF8(alert_prompt->GetDialogTitle()), title_regex_pattern));
 }

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,11 +7,11 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.picture_in_picture"
+  resources_package = "org.Cinaseek.chrome.browser.picture_in_picture"
 
   sources = [
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTest.java",
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTest.java",
   ]
 
   deps = [
@@ -35,11 +35,11 @@ android_library("javatests") {
 
 android_library("test_support_java") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.picture_in_picture"
+  resources_package = "org.Cinaseek.chrome.browser.picture_in_picture"
 
   sources = [
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTestUtils.java",
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTestUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTestUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTestUtils.java",
   ]
 
   deps = [
@@ -63,8 +63,8 @@ generate_jni("jni_headers") {
   testonly = true
   visibility = [ ":*" ]
   sources = [
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTestUtils.java",
-    "android/java/src/org/chromium/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTestUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPiPTabModelObserverHelperTestUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/picture_in_picture/AutoPictureInPictureTabHelperTestUtils.java",
   ]
 }
 

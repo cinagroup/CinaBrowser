@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ struct TemplateURLData;
 
 namespace template_url_starter_pack_data {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.search_engines
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.search_engines
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class StarterPackId {
   kNone = 0,

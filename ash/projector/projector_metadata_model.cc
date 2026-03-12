@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ constexpr std::string_view kMetadataVersionNumber = "version";
 constexpr std::string_view kGroupIdKey = "groupId";
 
 // Source of common English abbreviations: icu's sentence break exception list
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/icu/source/data/brkitr/en.txt.
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/icu/source/data/brkitr/en.txt.
 constexpr auto kEnglishAbbreviationsInLowerCase =
     base::MakeFixedFlatSet<std::string>(
         {"l.p.",    "alt.", "approx.", "e.g.",     "o.",    "maj.",   "misc.",

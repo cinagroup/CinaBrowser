@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ void SSLClientAuthCache::Clear() {
 }
 
 base::flat_set<HostPortPair> SSLClientAuthCache::GetCachedServers() const {
-  // TODO(mattm): If views become permitted by Chromium style maybe we could
+  // TODO(mattm): If views become permitted by Cinaseek style maybe we could
   // avoid the intermediate vector by using:
   // auto keys = std::views::keys(m);
   // base::flat_set<HostPortPair>(base::sorted_unique, keys.begin(),

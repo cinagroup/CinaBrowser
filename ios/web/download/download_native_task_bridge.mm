@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ enum class DownloadNativeTaskState {
   // the download request and ask for the path for the file.
   kResumed,
 
-  // WebKit is ready to start the download. It is waiting for Chromium to
+  // WebKit is ready to start the download. It is waiting for Cinaseek to
   // provide the path where the data should be written to disk.
   kPendingStart,
 
@@ -236,7 +236,7 @@ enum class DownloadNativeTaskState {
 
     // Under certain circumstances, it was found that this method may be called
     // multiple times for the same object by WebKit. This may be due to a bug
-    // in WebKit or in Chromium. Investigation is still pending.
+    // in WebKit or in Cinaseek. Investigation is still pending.
     //
     // When this happen, the download cannot make progress if we call either of
     // the `handler` block passed, and if the UI is notified, the code will try

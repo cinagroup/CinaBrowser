@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ void ConvertJavaStringToUTF8(JNIEnv* env, jstring str, std::string* result) {
   }
   // JNI's GetStringUTFChars() and GetStringUTFRegion returns strings in Java
   // "modified" UTF8, so instead get the String in UTF16 and convert using
-  // chromium's conversion function that yields plain (non Java-modified) UTF8.
+  // Cinaseek's conversion function that yields plain (non Java-modified) UTF8.
   if (length <= BUFFER_SIZE) {
     // fast path, allocate temporary buffer on the stack and use GetStringRegion
     // to copy the utf-16 characters into it with no heap allocation.

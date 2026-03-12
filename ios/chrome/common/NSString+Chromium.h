@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,10 +9,10 @@
 
 #import "base/strings/sys_string_conversions.h"
 
-/// NSString extension for converting strings to and from Chromium strings used
+/// NSString extension for converting strings to and from Cinaseek strings used
 /// elsewhere. Equivalent to sys_string_conversions, but the syntax is
 /// Swift-compatible and more ObjC-friendly.
-@interface NSString (Chromium)
+@interface NSString (Cinaseek)
 
 /// Use to convert std::string and string_view to NSString.
 + (instancetype)cr_fromString:(std::string_view)utf8;

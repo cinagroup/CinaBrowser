@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -366,7 +366,7 @@ BASE_FEATURE_PARAM(std::string,
 // Temporarily disabled due to issues:
 // - PDF blank previews
 // - Canvas corruption on ARM64 macOS
-// See https://g-issues.chromium.org/issues/328755781
+// See https://g-issues.Cinaseek.org/issues/328755781
 BASE_FEATURE(kCanvas2DHibernation,
              base::FeatureState::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -1569,8 +1569,8 @@ BASE_FEATURE(kLogUnexpectedIPCPostedToBackForwardCachedDocuments,
 
 // Allow low latency canvas 2D to be in overlay (generally meaning scanned out
 // directly to display), even if regular canvas are not in overlay
-// (Canvas2DImageChromium is disabled).
-BASE_FEATURE(kLowLatencyCanvas2dImageChromium,
+// (Canvas2DImageCinaseek is disabled).
+BASE_FEATURE(kLowLatencyCanvas2dImageCinaseek,
 #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
              base::FEATURE_ENABLED_BY_DEFAULT
 #else
@@ -1580,8 +1580,8 @@ BASE_FEATURE(kLowLatencyCanvas2dImageChromium,
 
 // Allow low latency WebGL to be in overlay (generally meaning scanned out
 // directly to display), even if regular canvas are not in overlay
-// (WebGLImageChromium is disabled).
-BASE_FEATURE(kLowLatencyWebGLImageChromium,
+// (WebGLImageCinaseek is disabled).
+BASE_FEATURE(kLowLatencyWebGLImageCinaseek,
 #if BUILDFLAG(IS_ANDROID)
              base::FEATURE_ENABLED_BY_DEFAULT
 #else

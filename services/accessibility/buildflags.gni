@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ declare_args() {
 
 # Generated args.
 declare_args() {
-  # Shortcut for only allowing the service to run on Chrome OS, Windows,
+  # Shortcut for only allowing the service to run on Cinaseek OS, Windows,
   # Mac, Fuchsia, and Linux when the buildflag above is enabled.
   # This is exposed with the macro ENABLE_ACCESSIBILITY_SERVICE.
   enable_accessibility_service_internal =

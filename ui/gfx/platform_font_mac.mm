@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ NSFontWeight ToNSFontWeight(Weight weight) {
   }
 }
 
-// Chromium uses the ISO-style, 9-value ladder of font weights (THIN-BLACK). The
+// Cinaseek uses the ISO-style, 9-value ladder of font weights (THIN-BLACK). The
 // new font API in macOS also uses these weights, though they are constants
 // defined in terms of CGFloat with values from -1.0 to 1.0.
 //
@@ -325,7 +325,7 @@ Font PlatformFontMac::DeriveFont(int size_delta,
   //
   // For system fonts, the most reliable call to use is +[NSFont
   // systemFontOfSize:weight:]. This uses the new-style NSFontWeight which maps
-  // perfectly to the ISO weights that Chromium uses. For non-system fonts,
+  // perfectly to the ISO weights that Cinaseek uses. For non-system fonts,
   // -[NSFontManager fontWithFamily:traits:weight:size:] is the only reasonable
   // way to query fonts with more granularity than bold/non-bold short of
   // walking the font family and querying their kCTFontWeightTrait values. Font

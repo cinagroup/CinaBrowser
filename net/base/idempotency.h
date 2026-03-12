@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace net {
 // multiple times. It is only safe to enable the 0-RTT if it is known that
 // the request is idempotent.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: Idempotency
 enum Idempotency {
   DEFAULT_IDEMPOTENCY = 0,

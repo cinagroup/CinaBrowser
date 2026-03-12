@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace redaction {
 
 // A class used for testing to retrieve bucket values for histograms.
-// This is the default implementation for the `MetricsTester` in Chromium.
+// This is the default implementation for the `MetricsTester` in Cinaseek.
 class InprocessMetricsTester : public MetricsTester {
  public:
   InprocessMetricsTester() = default;

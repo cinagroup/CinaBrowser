@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,11 +39,11 @@ namespace arc::input_overlay {
 namespace {
 // Package names for testing.
 constexpr char kRandomPackageName[] =
-    "org.chromium.arc.testapp.inputoverlay_no_data";
+    "org.Cinaseek.arc.testapp.inputoverlay_no_data";
 constexpr char kRandomGamePackageName[] =
-    "org.chromium.arc.testapp.inputoverlay_game";
+    "org.Cinaseek.arc.testapp.inputoverlay_game";
 constexpr char kGameControlsOptOutPackageName[] =
-    "org.chromium.arc.testapp.inputoverlay_opt_out";
+    "org.Cinaseek.arc.testapp.inputoverlay_opt_out";
 
 constexpr const float kTolerance = 0.999f;
 
@@ -289,7 +289,7 @@ TEST_F(ArcInputOverlayManagerTest, TestWindowFocusChange) {
   auto* injector = GetTouchInjector(arc_window->GetNativeWindow());
   EXPECT_TRUE(injector);
   // The action number should be adjusted with the data in the
-  // org.chromium.arc.testapp.inputoverlay.json.
+  // org.Cinaseek.arc.testapp.inputoverlay.json.
   EXPECT_EQ(3u, injector->actions().size());
 
   EXPECT_TRUE(!GetRegisteredWindow() && !GetDisplayOverlayController());

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ struct GroupSuggestions {
 
 // The action taken by the user in response to the suggestion.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-// org.chromium.components.visited_url_ranking.url_grouping)
+// org.Cinaseek.components.visited_url_ranking.url_grouping)
 enum class UserResponse {
   kUnknown = 0,
   kNotShown = 1,

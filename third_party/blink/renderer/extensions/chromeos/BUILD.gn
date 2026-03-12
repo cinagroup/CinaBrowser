@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -84,7 +84,7 @@ action_with_pydeps("chromeos_event_interfaces") {
     "--export-macro",
     "EXTENSIONS_CHROMEOS_EXPORT",
     "--suffix",
-    "ChromeOS",
+    "CinaseekOS",
     "--output",
     rebase_path(outputs[0], root_build_dir),
   ]

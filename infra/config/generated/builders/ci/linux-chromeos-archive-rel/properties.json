@@ -4,10 +4,10 @@
       "src",
       "infra",
       "archive_config",
-      "linux-chromiumos-full.json"
+      "linux-Cinaseekos-full.json"
     ]
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/linux-chromeos-archive-rel/gn-args.json"
@@ -18,18 +18,18 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-chromeos-archive-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium",
+              "builder_group": "Cinaseek",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "chromeos"
               },
@@ -37,7 +37,7 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -47,7 +47,7 @@
         {
           "bucket": "ci",
           "builder": "linux-chromeos-archive-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/linux-chromeos-archive-rel/targets"
@@ -64,7 +64,7 @@
     "experiments": [],
     "output_local_strategy": "greedy",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -74,12 +74,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium",
+  "builder_group": "Cinaseek",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

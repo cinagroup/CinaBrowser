@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace device {
 
 // BluetoothRemoteGattDescriptorAndroid along with its owned Java class
-// org.chromium.device.bluetooth.ChromeBluetoothRemoteGattDescriptor
+// org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattDescriptor
 // implement BluetootGattDescriptor.
 class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattDescriptorAndroid
     : public BluetoothRemoteGattDescriptor {
@@ -69,7 +69,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattDescriptorAndroid
   BluetoothRemoteGattDescriptorAndroid(const std::string& instanceId);
 
   // Java object
-  // org.chromium.device.bluetooth.ChromeBluetoothRemoteGattDescriptor.
+  // org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattDescriptor.
   base::android::ScopedJavaGlobalRef<jobject> j_descriptor_;
 
   // Adapter unique instance ID.

@@ -9,7 +9,7 @@ AXWebArea
 ++++++++AXStaticText AXValue='Engine'
 ++++AXRow
 ++++++AXCell
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell
 ++++++++AXStaticText AXValue='Blink'
 ++++AXRow
@@ -21,7 +21,7 @@ AXWebArea
 ++++++AXCell
 ++++++++AXStaticText AXValue='Browser'
 ++++++AXCell
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell
 ++++++++AXStaticText AXValue='Safari'
 ++++AXColumn

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace net {
 
 namespace {
 
-// The default NamedGroups supported by Chromium.
+// The default NamedGroups supported by Cinaseek.
 // This default list matches the result of prepending our preferred post-quantum
 // group (X25519MLKEM768) to BoringSSL's kDefaultSupportedGroupIds and
 // evaluating BoringSSL's default logic for selecting key shares.

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ class NearbyShareSessionImplTest : public testing::Test {
     window_ = aura::test::CreateTestWindow(
         {.bounds = {100, 100}, .window_id = kTaskId});
     exo::SetShellApplicationId(
-        window_.get(), "org.chromium.arc." + base::NumberToString(kTaskId));
+        window_.get(), "org.Cinaseek.arc." + base::NumberToString(kTaskId));
     window_->SetProperty(chromeos::kAppTypeKey, chromeos::AppType::ARC_APP);
     session_->OnExoWindowCreated(window_.get());
   }

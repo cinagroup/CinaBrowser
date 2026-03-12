@@ -183,7 +183,7 @@
   <release seq="1">
     <messages fallback_to_english="true">
       <message name="IDS_IOS_ABOUT_PRODUCT_NAME" desc="The menu item to access information about the application.">
-        About Google Chrome
+        About Google Cinaseek
       </message>
       <message name="IDS_IOS_ABOUT_VERSION_COMPANY_NAME" desc="Company name on the about pages">
         Google LLC
@@ -192,80 +192,80 @@
         Copyright <ph name="YEAR">$1</ph> Google LLC. All rights reserved.
       </message>
       <message name="IDS_IOS_ACCOUNT_TABLE_ERROR_ENTER_PASSPHRASE_MESSAGE" desc="The error message to show in the account table when there is a passphrase error. [iOS only]">
-        To use and save Chrome data in your Google Account, enter your passphrase.
+        To use and save Cinaseek data in your Google Account, enter your passphrase.
       </message>
       <message name="IDS_IOS_ACCOUNT_TABLE_ERROR_HAS_TRUSTED_VAULT_RECOVERABILITY_DEGRADED_FOR_EVERYTHING_MESSAGE" desc="The error message to show in the account table when there is an error related to trusted vault recoverability degraded for everything. [iOS only]">
-        To use and save Chrome data in your Google Account, verify it's you.
+        To use and save Cinaseek data in your Google Account, verify it's you.
       </message>
       <message name="IDS_IOS_ACCOUNT_TABLE_ERROR_NEEDS_TRUSTED_VAULT_KEY_FOR_EVERYTHING_MESSAGE" desc="The error message to show in the account table when there is an error related to trusted vault key for everything. [iOS only]">
-        To use and save Chrome data in your Google Account, verify it's you.
+        To use and save Cinaseek data in your Google Account, verify it's you.
       </message>
       <message name="IDS_IOS_ACCOUNT_TABLE_ERROR_VERIFY_ITS_YOU_MESSAGE" desc="The error message to show in the account table when there is an authentication error. [iOS only]">
-        To use and save Chrome data in your Google Account, verify it's you.
+        To use and save Cinaseek data in your Google Account, verify it's you.
       </message>
-      <message name="IDS_IOS_APPLICATION_SHORTCUT_SET_DEFAULT_BROWSER" desc="The title of the spotlight item to set Chrome as a default browser. [Length: unlimited] [iOS only]." meaning="Spotlight item title for setting default browser.">
-        Set Chrome as default browser
+      <message name="IDS_IOS_APPLICATION_SHORTCUT_SET_DEFAULT_BROWSER" desc="The title of the spotlight item to set Cinaseek as a default browser. [Length: unlimited] [iOS only]." meaning="Spotlight item title for setting default browser.">
+        Set Cinaseek as default browser
       </message>
       <message name="IDS_IOS_AUTOFILL_ADDRESS_MIGRATE_IN_ACCOUNT_FOOTER" desc="Footer text shown in the address migration prompt to account. [iOS only]">
-          This address is currently saved to Chrome. To use it across Google products, save it in your Google Account, <ph name="USER_EMAIL">$1<ex>janedoe@google.com</ex></ph>.
+          This address is currently saved to Cinaseek. To use it across Google products, save it in your Google Account, <ph name="USER_EMAIL">$1<ex>janedoe@google.com</ex></ph>.
       </message>
       <message name="IDS_IOS_BANDWIDTH_MANAGEMENT_DESCRIPTION_LEARN_MORE" desc="Description text bandwidth management panel in settings with explicit Learn More link [iOS only]">
-        Chrome has features that help you manage your internet data and how quickly you're able to load webpages.
+        Cinaseek has features that help you manage your internet data and how quickly you're able to load webpages.
 <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
       </message>
       <message name="IDS_IOS_BEST_FEATURES_LOCKED_INCOGNITO_FIRST_STEP" desc="The first step to setting up Locked Incognito tabs">
-        Open Chrome Settings
+        Open Cinaseek Settings
       </message>
-      <message name="IDS_IOS_BEST_FEATURES_LOCKED_INCOGNITO_SUBTITLE" desc="Subtitle for the Locked Incognito tabs Chrome iOS Best Features Promo">
-        Keep your browsing private with device authentication when you close Chrome
+      <message name="IDS_IOS_BEST_FEATURES_LOCKED_INCOGNITO_SUBTITLE" desc="Subtitle for the Locked Incognito tabs Cinaseek iOS Best Features Promo">
+        Keep your browsing private with device authentication when you close Cinaseek
       </message>
       <message name="IDS_IOS_BEST_FEATURES_LOCKED_INCOGNITO_THIRD_STEP" desc="The third step to setting up Locked Incognito tabs">
-        Turn on "Lock Incognito tabs when you close Chrome"
+        Turn on "Lock Incognito tabs when you close Cinaseek"
       </message>
-      <message name="IDS_IOS_BEST_FEATURES_NEVER_FORGET_PASSWORDS_CAPTION" desc="Caption for the Never Forget Passwords button on the Chrome iOS Best Features Promo">
-        Save and autofill passwords in Chrome
+      <message name="IDS_IOS_BEST_FEATURES_NEVER_FORGET_PASSWORDS_CAPTION" desc="Caption for the Never Forget Passwords button on the Cinaseek iOS Best Features Promo">
+        Save and autofill passwords in Cinaseek
       </message>
       <message name="IDS_IOS_BEST_FEATURES_NEVER_FORGET_PASSWORDS_SECOND_STEP" desc="The second step to set up save and autofill passwords">
-        Chrome will offer to save your password
+        Cinaseek will offer to save your password
       </message>
       <message name="IDS_IOS_BEST_FEATURES_PASSWORDS_IN_OTHER_APPS_STEP_4_SELECT" desc="The fourth step to enable Passwords in other apps. OS must be below iOS 18.">
-        Select Chrome
+        Select Cinaseek
       </message>
       <message name="IDS_IOS_BEST_FEATURES_PASSWORDS_IN_OTHER_APPS_STEP_4_TOGGLE" desc="The fourth step to enable Passwords in other apps. OS must be iOS 18 or later.">
-        Toggle Chrome
+        Toggle Cinaseek
       </message>
-      <message name="IDS_IOS_BEST_FEATURES_PASSWORDS_IN_OTHER_APPS_SUBTITLE" desc="Subtitle for the Passwords in other apps Chrome iOS Best Features Promo">
-        To easily get your saved passwords in your other apps, choose Chrome for Autofill
+      <message name="IDS_IOS_BEST_FEATURES_PASSWORDS_IN_OTHER_APPS_SUBTITLE" desc="Subtitle for the Passwords in other apps Cinaseek iOS Best Features Promo">
+        To easily get your saved passwords in your other apps, choose Cinaseek for Autofill
       </message>
       <message name="IDS_IOS_BEST_FEATURES_SHARE_PASSWORDS_STEP_1" desc="The first step to share passwords with others">
-        Open Chrome
+        Open Cinaseek
       </message>
-      <message name="IDS_IOS_BEST_FEATURES_SHARE_PASSWORDS_SUBTITLE" desc="Subtitle for the Share Passwords Chrome iOS Best Features Promo">
+      <message name="IDS_IOS_BEST_FEATURES_SHARE_PASSWORDS_SUBTITLE" desc="Subtitle for the Share Passwords Cinaseek iOS Best Features Promo">
         Easily and securely share a copy of a password with your family group in Google Password Manager
       </message>
       <message name="IDS_IOS_BWG_LOCATION_FOOTER_TEXT" desc="The footer text of the BWG location settings page.">
-        Gemini may use your precise location, depending on the permission you’ve already given Chrome
+        Gemini may use your precise location, depending on the permission you’ve already given Cinaseek
       </message>
       <message name="IDS_IOS_BWG_SETTINGS_TITLE" desc="Title for BWG settings dialog [Length: 29em] [iOS only]">
-        Gemini in Chrome
+        Gemini in Cinaseek
       </message>
       <message name="IDS_IOS_CALENDARS_USAGE_DESCRIPTION" desc="Specifies the reason for accessing the user's calendar while the app is in use [Length: unlimited] [iOS only].">
-        This will be used to create events in your Apple Calendar from Chrome and Google Lens.
+        This will be used to create events in your Apple Calendar from Cinaseek and Google Lens.
       </message>
       <message name="IDS_IOS_CHANGE_COMPROMISED_PASSWORD_DESCRIPTION_BRANDED" desc="Text inside Password Details screen shown when password was compromised. [iOS only]" meaning="Text which explains the user that current password is compromised and it should be changed.">
           Your password was exposed in a data breach. Google Password Manager recommends changing it now.
       </message>
-      <message name="IDS_IOS_CLEAR_BROWSING_DATA_HISTORY_NOTICE_TITLE" desc="Title of a dialog that informs the user that the deletion of Chrome's browsing data has been completed.">
-        Deleted Chrome data
+      <message name="IDS_IOS_CLEAR_BROWSING_DATA_HISTORY_NOTICE_TITLE" desc="Title of a dialog that informs the user that the deletion of Cinaseek's browsing data has been completed.">
+        Deleted Cinaseek data
       </message>
       <message name="IDS_IOS_CONSISTENCY_PROMO_DEFAULT_ACCOUNT_LABEL" desc="Dialog label to invite the user to sign-in on the web when account restrictions are enabled. [iOS only]">
-        Sign in to this site and Chrome.
+        Sign in to this site and Cinaseek.
       </message>
       <message name="IDS_IOS_CONSISTENCY_PROMO_DEFAULT_ACCOUNT_TITLE" meaning="Title" desc="Dialog title to invite the user to sign-in on the web.">
-        Sign in to Chrome
+        Sign in to Cinaseek
       </message>
       <message name="IDS_IOS_CONTEXTUAL_PANEL_BRANDING_ACCESSIBILITY_LABEL" desc="Accessibility text for the title of the Contextual Panel screen.">
-        From Chrome
+        From Cinaseek
       </message>
     <message name="IDS_IOS_CONTEXTUAL_PANEL_BRANDING_TITLE" desc="Branded title on the Contextual Panel screen. The string is lowercase on purpose.">
         chrome
@@ -282,220 +282,220 @@
       <message name="IDS_IOS_CREDENTIAL_EXCHANGE_IMPORT_TITLE" desc="Credential import screen that handles the credential exchange import process - Title. [iOS only]">
         Import to Google Password Manager
       </message>
-      <message name="IDS_IOS_CREDENTIAL_PROVIDER_PROMO_INSTRUCTIONS_SUBTITLE" desc="Subitle text of the instructions page on how to set up Chrome as the Credential Provider. [iOS only]">
-        From "<ph name="TEXT_OF_THE_SETTINGS_MENU_ITEM">$1<ex>Password Options</ex></ph>" settings, toggle "Chrome" on
+      <message name="IDS_IOS_CREDENTIAL_PROVIDER_PROMO_INSTRUCTIONS_SUBTITLE" desc="Subitle text of the instructions page on how to set up Cinaseek as the Credential Provider. [iOS only]">
+        From "<ph name="TEXT_OF_THE_SETTINGS_MENU_ITEM">$1<ex>Password Options</ex></ph>" settings, toggle "Cinaseek" on
       </message>
       <message name="IDS_IOS_CREDENTIAL_PROVIDER_PROMO_LEARN_MORE_TITLE" desc="Title text of the 'Learn More' step Credential Provider Exention promo. [iOS only]">
-        Choose Chrome for AutoFill
+        Choose Cinaseek for AutoFill
       </message>
       <message name="IDS_IOS_CREDENTIAL_PROVIDER_PROMO_SUBTITLE" desc="Subtitle text of the Credential Provider Exention promo. [iOS only]">
-        Get easy access to your passwords and passkeys with Chrome for AutoFill
+        Get easy access to your passwords and passkeys with Cinaseek for AutoFill
       </message>
       <message name="IDS_IOS_CREDENTIAL_PROVIDER_PROMO_TITLE_IOS18" desc="Title text of the Credential Provider Exention promo for iOS 18 and above. [iOS only]">
-        Sign in with your saved passwords &amp; passkeys from any app using Chrome for AutoFill
+        Sign in with your saved passwords &amp; passkeys from any app using Cinaseek for AutoFill
       </message>
       <message name="IDS_IOS_DATA_NOT_UPLOADED_DIALOG_BODY" desc="Body of a dialog that is shown when the user starts to sign out; the user chooses to sync some or all data types, but some data hasn't been saved in their Google Account yet (for example, if there was an error). This string follows the heading 'Some Data Isn't Saved Yet', and the user can choose to tap on the buttons 'Cancel' or 'Delete and Sign Out'. If the user chooses to continue to sign out, then any of their data (such as bookmarks, passwords, history, settings, and more) that isn't saved in their account will be deleted. The tone should be helpful and instructive. [iOS only]">
-        Some of your Chrome data hasn't been saved in your Google Account yet.
+        Some of your Cinaseek data hasn't been saved in your Google Account yet.
 
 Try waiting a few minutes before signing out. If you sign out now, this data will be deleted.
       </message>
       <message name="IDS_IOS_DATA_NOT_UPLOADED_SWITCH_DIALOG_BODY" desc="Body of a dialog that is shown when the user starts to switch accounts; the user chooses to sync some or all data types, but some data hasn't been saved in their Google Account yet (for example, if there was an error). This string follows the heading 'Some Data Isn't Saved Yet', and the user can choose to tap on the buttons 'Cancel' or 'Delete and Switch'. If the user chooses to continue to switch accounts, then any of their data (such as bookmarks, passwords, history, settings, and more) that isn't saved in their account will be deleted. The tone should be helpful and instructive. [iOS only]">
-        Some of your Chrome data hasn't been saved in <ph name="EMAIL">$1<ex>johndoe@gmail.com</ex></ph> yet.
+        Some of your Cinaseek data hasn't been saved in <ph name="EMAIL">$1<ex>johndoe@gmail.com</ex></ph> yet.
 Try waiting a few minutes before switching accounts. If you switch accounts now, this data will be deleted.
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_BANNER_PROMO_TEXT" desc="Text for the default browser banner promo [iOS only]">
-        Open links in Chrome by Default
+        Open links in Cinaseek by Default
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_LEARN_MORE_INSTRUCTIONS_MESSAGE" desc="Description to user about how to reach the default browser setting in their device. [iOS only]">
-          To make Chrome your default:
+          To make Cinaseek your default:
   1. Open Settings
   2. Tap Default Browser App
-  3. Select Chrome
+  3. Select Cinaseek
       </message>
-      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_1P_APP_DESCRIPTION" desc="Description for the non-modal default browser promotion banner when Chrome is opened from a first-party app.">
-        Open links from Gmail, Maps, Youtube and other apps in Chrome
+      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_1P_APP_DESCRIPTION" desc="Description for the non-modal default browser promotion banner when Cinaseek is opened from a first-party app.">
+        Open links from Gmail, Maps, Youtube and other apps in Cinaseek
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_OMNIBOX_NAVIGATION_DESCRIPTION" desc="Description for the non-modal default browser promotion banner after Omnibox URL copy/paste and navigation.">
-        Open Chrome anytime you tap on links in other apps
+        Open Cinaseek anytime you tap on links in other apps
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_OMNIBOX_NAVIGATION_TITLE" desc="Title for the non-modal default browser promotion banner after Omnibox URL copy/paste and navigation.">
-        Set Chrome as default?
+        Set Cinaseek as default?
       </message>
-      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_SHARE_DESCRIPTION" desc="Description for the non-modal default browser promotion banner when sharing a URL via the 'Share Chrome' action or the share icon in the Omnibox.">
-        Set Chrome as your default browser to easily share and open links
+      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_SHARE_DESCRIPTION" desc="Description for the non-modal default browser promotion banner when sharing a URL via the 'Share Cinaseek' action or the share icon in the Omnibox.">
+        Set Cinaseek as your default browser to easily share and open links
       </message>
-      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_SHARE_TITLE" desc="Title for the non-modal default browser promotion banner when sharing a URL via the 'Share Chrome' action or the share icon in the Omnibox.">
-        Make Chrome your own
+      <message name="IDS_IOS_DEFAULT_BROWSER_NON_MODAL_SHARE_TITLE" desc="Title for the non-modal default browser promotion banner when sharing a URL via the 'Share Cinaseek' action or the share icon in the Omnibox.">
+        Make Cinaseek your own
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_PICTURE_IN_PICTURE_TITLE_TEXT" desc="Title for the default browser picture in picture promo. [iOS only]">
-        Set Chrome as default
+        Set Cinaseek as default
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_PIP_ACCESSIBILITY_ANNOUNCEMENT" desc="Accessibility announcement for when the default browser picture in picture promo starts. [iOS only]" is_accessibility_with_no_ui="true">
-        Picture in picture video instructions of how to set Chrome as default
+        Picture in picture video instructions of how to set Cinaseek as default
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_TAILORED_ALL_TABS_DESCRIPTION" desc="Description of the 'All your tabs' default browser promotion modal. [iOS only]">
-        Set Chrome as default to sync your tabs, passwords, and payment info on all your devices
+        Set Cinaseek as default to sync your tabs, passwords, and payment info on all your devices
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_TAILORED_BUILT_FOR_IOS_DESCRIPTION" desc="Description of the 'Built for iOS' default browser promotion modal. [iOS only]">
-        Use Chrome by default to open links, search from widgets, and autofill passwords in other apps
+        Use Cinaseek by default to open links, search from widgets, and autofill passwords in other apps
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_TAILORED_STAY_SAFE_DESCRIPTION" desc="Description of the 'Stay safe' default browser promotion modal. [iOS only]">
-        Use Chrome as your default browser to stay protected from dangerous sites &amp; keep your passwords safe
+        Use Cinaseek as your default browser to stay protected from dangerous sites &amp; keep your passwords safe
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_TAILORED_STAY_SAFE_TITLE" desc="Title of the 'Stay safe' default browser promotion modal. [iOS only]">
-        Stay safe with Google Chrome
+        Stay safe with Google Cinaseek
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_VIDEO_PROMO_APP_SETTINGS" desc="Text in the default browser video the app settings. [iOS only]">
-        Chrome settings
+        Cinaseek settings
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_VIDEO_PROMO_DEFAULT_APPS_SUBTITLE_TEXT" desc="Subtitle for the default browser video promo. 'Default Apps' must use the same translation that iOS uses for the 'Default Apps' item in the iOS settings. [iOS only]">
-        Open Default Apps settings in iOS, then tap on "Browser App" and select Chrome.
+        Open Default Apps settings in iOS, then tap on "Browser App" and select Cinaseek.
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_VIDEO_PROMO_SUBTITLE_TEXT" desc="Subtitle for the default browser video promo. [iOS only]">
-        Open Chrome settings in iOS, then tap on "Default Browser App" and select Chrome.
+        Open Cinaseek settings in iOS, then tap on "Default Browser App" and select Cinaseek.
       </message>
       <message name="IDS_IOS_DEFAULT_BROWSER_VIDEO_PROMO_TITLE_TEXT" desc="Title for the default browser video promo. [iOS only]">
-        Set Chrome as your default browser
+        Set Cinaseek as your default browser
       </message>
       <message name="IDS_IOS_DEFAULT_PAGE_MODE_DESKTOP_SUBTITLE" desc="The subtitle explaining what the choosen mode (here desktop, the other possible state is mobile) will do in the browser">
-        This means Chrome will request the desktop site every time.
+        This means Cinaseek will request the desktop site every time.
       </message>
       <message name="IDS_IOS_DEFAULT_PAGE_MODE_MOBILE_SUBTITLE" desc="The subtitle explaining what the choosen mode (here mobile, the other possible state is desktop) will do in the browser">
-        This means Chrome will request the mobile site every time.
+        This means Cinaseek will request the mobile site every time.
       </message>
-      <message name="IDS_IOS_DELETE_BROWSING_DATA_IN_PROGRESS_NOTICE" desc="VoiceOver text that informs the user that the deletion of Chrome's browsing data is in progress.">
-        Deleting Chrome data…
+      <message name="IDS_IOS_DELETE_BROWSING_DATA_IN_PROGRESS_NOTICE" desc="VoiceOver text that informs the user that the deletion of Cinaseek's browsing data is in progress.">
+        Deleting Cinaseek data…
       </message>
       <message name="IDS_IOS_DISCONNECT_DIALOG_TITLE" desc="The title of the disconnect dialog [Length: 30em].">
-        Sign out of Chrome?
+        Sign out of Cinaseek?
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_FIRST_INSTRUCTION" desc="Title of the first step instruction shown in the Docking Promo, which tells users to hold down on the Chrome icon to put their iOS device into Edit Mode.">
-        Press and hold the Chrome icon and click "Edit home screen"
+      <message name="IDS_IOS_DOCKING_PROMO_FIRST_INSTRUCTION" desc="Title of the first step instruction shown in the Docking Promo, which tells users to hold down on the Cinaseek icon to put their iOS device into Edit Mode.">
+        Press and hold the Cinaseek icon and click "Edit home screen"
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_SUBTITLE" desc="Subtitle of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock.">
-        Open Chrome instantly when you're on your iPhone
+      <message name="IDS_IOS_DOCKING_PROMO_SUBTITLE" desc="Subtitle of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock.">
+        Open Cinaseek instantly when you're on your iPhone
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_SUBTITLE_IPAD" desc="Subtitle of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock. iPad experimental version.">
-        Open Chrome instantly when you're on your iPad
+      <message name="IDS_IOS_DOCKING_PROMO_SUBTITLE_IPAD" desc="Subtitle of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock. iPad experimental version.">
+        Open Cinaseek instantly when you're on your iPad
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_TITLE" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock.">
-        Access Chrome faster from your home screen dock
+      <message name="IDS_IOS_DOCKING_PROMO_TITLE" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock.">
+        Access Cinaseek faster from your home screen dock
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_TITLE_0" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock.">
-        Access Chrome faster from your dock
+      <message name="IDS_IOS_DOCKING_PROMO_TITLE_0" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock.">
+        Access Cinaseek faster from your dock
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_TITLE_1" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock.">
-        Move Chrome to your dock
+      <message name="IDS_IOS_DOCKING_PROMO_TITLE_1" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock.">
+        Move Cinaseek to your dock
       </message>
-      <message name="IDS_IOS_DOCKING_PROMO_TITLE_2" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Chrome app to their iOS dock.">
-        Place Chrome in the bottom area to access it anytime
+      <message name="IDS_IOS_DOCKING_PROMO_TITLE_2" desc="Title of the fullscreen, instructional Docking Promo which shows users how to add the Cinaseek app to their iOS dock.">
+        Place Cinaseek in the bottom area to access it anytime
       </message>
       <message name="IDS_IOS_ENHANCED_SAFE_BROWSING_PROMO_INSTRUCTIONS_STEP1" desc="Step 1 of instructions telling the user how to enable Enhanced Safe Browsing.">
-        Open Chrome Settings
+        Open Cinaseek Settings
       </message>
       <message name="IDS_IOS_ENHANCED_SAFE_BROWSING_PROMO_TITLE" desc="Title of the fullscreen Enhanced Safe Browsing promo which shows users how to enable Enhanced Safe Browsing.">
-        Get Chrome's Strongest Security
+        Get Cinaseek's Strongest Security
       </message>
       <message name="IDS_IOS_ENTERPRISE_BROWSER_MANAGED" desc="Text displayed to inform the user that the browser is managed by Enterprise policies (without link). [iOS only]">
-        Chrome is managed
+        Cinaseek is managed
       </message>
       <message name="IDS_IOS_ENTERPRISE_FORCED_SIGNIN_MESSAGE" desc="Text displayed in the popover to inform the user that the browser is managed by Enterprise policies. (Force Sign In) [iOS only]">
-          Your organization requires you to sign in to use Chrome.
+          Your organization requires you to sign in to use Cinaseek.
       </message>
       <message name="IDS_IOS_ENTERPRISE_FORCED_SIGNIN_MESSAGE_WITH_LEARN_MORE" desc="Text to inform the user about the forced sign-in policy with a Learn More link that redirects to a page that gives more details. (Force Sign In) [iOS only]">
-        Your organization requires you to sign in to use Chrome. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
+        Your organization requires you to sign in to use Cinaseek. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
       </message>
       <message name="IDS_IOS_ENTERPRISE_SWITCH_TO_MANAGED_BROWSER_WIDE_SCREEN" desc="The snackbar message subtitle to confirm the signed-in account after a successful account switch. For enterprise users, we remind them that their browser is managed by their company, school, or organization. This string does not have line break, so terminal punctuation is required for sentence fragments. [iOS only]">
-        <ph name="EMAIL">$1<ex>johndoe@acme.com</ex></ph>. Chrome is managed.
+        <ph name="EMAIL">$1<ex>johndoe@acme.com</ex></ph>. Cinaseek is managed.
       </message>
       <message name="IDS_IOS_ENTERPRISE_SYNC_DISABLED_MESSAGE_WITH_UNO" desc="Message displayed in a prompt when saving data (like bookmarks/reading list/passwords...) is disabled due to an enterprise policy. Related with IDS_IOS_ENTERPRISE_SYNC_DISABLED_TITLE_UNO.">
-        Your organization turned off the ability to use and save Chrome data in your Google Account. New bookmarks, passwords, and more will be saved only to this device.
+        Your organization turned off the ability to use and save Cinaseek data in your Google Account. New bookmarks, passwords, and more will be saved only to this device.
       </message>
       <message name="IDS_IOS_EXPANDED_MANUAL_FILL_VIEW_ACCESSIBILITY_ANNOUNCEMENT" desc="Accessibility announcement read by VoiceOver when the expanded manual fill view is shown.">
-         Chrome Autofill expanded view
+         Cinaseek Autofill expanded view
       </message>
       <message name="IDS_IOS_FACE_ID_USAGE_DESCRIPTION" desc="Specifies the reason for using the device's Face ID capabilities.">
-        Chrome keeps your sensitive data secure with Face ID.
+        Cinaseek keeps your sensitive data secure with Face ID.
       </message>
       <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_SUBTITLE" desc="Subtitle of the Default Browser screen on First run page explaining the default browser feature's utility. [iOS only]">
-        You can now use Chrome anytime you tap links in messages, documents, and other apps.
+        You can now use Cinaseek anytime you tap links in messages, documents, and other apps.
       </message>
       <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_SUBTITLE_IPAD" desc="Subtitle of the Default Browser screen on First run page explaining the default browser feature's utility - iPad expermental version. [iOS only]">
-        You can now use Chrome anytime you tap links in emails, documents, and other apps.
+        You can now use Cinaseek anytime you tap links in emails, documents, and other apps.
       </message>
       <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_THIRD_STEP" desc="Text of the row indicating the third step of setting the default browser [iOS only]">
-        Select <ph name="BEGIN_BOLD">BEGIN_BOLD</ph>Chrome<ph name="END_BOLD">END_BOLD</ph>
+        Select <ph name="BEGIN_BOLD">BEGIN_BOLD</ph>Cinaseek<ph name="END_BOLD">END_BOLD</ph>
       </message>
-      <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_TITLE" desc="Title of the screen suggesting to the user to use Chrome by default [iOS only]">
-        Use Chrome by default
+      <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_TITLE" desc="Title of the screen suggesting to the user to use Cinaseek by default [iOS only]">
+        Use Cinaseek by default
       </message>
-      <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_TITLE_IPAD" desc="Title of the screen suggesting to the user to use Chrome by default - iPad experimental version [iOS only]">
-        Use Chrome for iPad by default
+      <message name="IDS_IOS_FIRST_RUN_DEFAULT_BROWSER_SCREEN_TITLE_IPAD" desc="Title of the screen suggesting to the user to use Cinaseek by default - iPad experimental version [iOS only]">
+        Use Cinaseek for iPad by default
       </message>
       <message name="IDS_IOS_FIRST_RUN_GUIDED_TOUR_PROMO_TEXT" desc="The text of the screen prompting the user to learn more about the basics of the app. [iOS only]">
-          Learn the helpful Chrome basics to get you started
+          Learn the helpful Cinaseek basics to get you started
       </message>
       <message name="IDS_IOS_FIRST_RUN_GUIDED_TOUR_PROMO_TITLE" desc="Title of the screen welcoming the user to the app. [iOS only]">
-        Welcome to Chrome
+        Welcome to Cinaseek
       </message>
       <message name="IDS_IOS_FIRST_RUN_LAUNCH_SCREEN_ENTERPRISE" desc="The text of the launch screen presented to the user on First Run when the browser is managed [iOS only]">
-        Your organization is setting up Chrome...
+        Your organization is setting up Cinaseek...
       </message>
       <message name="IDS_IOS_FIRST_RUN_SIGNIN_SUBTITLE" desc="Subtitle of the screen suggesting to the user to sign in. [iOS only]">
-        To get the most out of Chrome, sign in to Chrome with your Google Account.
+        To get the most out of Cinaseek, sign in to Cinaseek with your Google Account.
       </message>
-      <message name="IDS_IOS_FIRST_RUN_SIGNIN_SUBTITLE_SHORT" desc="This string is on a promotion about signing in to Chrome with the user's Google Account. It explains the overarching user benefit of signing in (access to bookmarks, passwords, history, settings, etc.). However, we introduce a caveat, because the user has a managed account (such as Enterprise); this means that, depending on their organization's settings, the user might not be able to save all types of data in their Google Account. We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account.">
-          Sign in to get the most out of Chrome.
+      <message name="IDS_IOS_FIRST_RUN_SIGNIN_SUBTITLE_SHORT" desc="This string is on a promotion about signing in to Cinaseek with the user's Google Account. It explains the overarching user benefit of signing in (access to bookmarks, passwords, history, settings, etc.). However, we introduce a caveat, because the user has a managed account (such as Enterprise); this means that, depending on their organization's settings, the user might not be able to save all types of data in their Google Account. We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account.">
+          Sign in to get the most out of Cinaseek.
       </message>
-      <message name="IDS_IOS_FIRST_RUN_SIGNIN_SUBTITLE_SIGNIN_FORCED" desc="Subtitle of a dialog to sign in to Chrome when sign-in is required because of an enterprise policy. [iOS only]">
-        Your organization requires you to sign in to use Chrome.
+      <message name="IDS_IOS_FIRST_RUN_SIGNIN_SUBTITLE_SIGNIN_FORCED" desc="Subtitle of a dialog to sign in to Cinaseek when sign-in is required because of an enterprise policy. [iOS only]">
+        Your organization requires you to sign in to use Cinaseek.
       </message>
       <message name="IDS_IOS_FIRST_RUN_SIGNIN_TITLE" desc="Title of the screen suggesting to the user to sign in. [iOS only]">
-        Make Chrome your own
+        Make Cinaseek your own
       </message>
       <message name="IDS_IOS_FIRST_RUN_SIGNIN_TITLE_0" desc="Variations option 1. Title of the screen suggesting to the user to sign in. [iOS only]">
-        Take your Chrome with you
+        Take your Cinaseek with you
       </message>
-      <message name="IDS_IOS_FIRST_RUN_SIGNIN_TITLE_SIGNIN_FORCED" meaning="Title" desc="Title of a dialog to sign in to Chrome when sign-in is required because of an enterprise policy. [iOS only]">
-        Sign in to Chrome
+      <message name="IDS_IOS_FIRST_RUN_SIGNIN_TITLE_SIGNIN_FORCED" meaning="Title" desc="Title of a dialog to sign in to Cinaseek when sign-in is required because of an enterprise policy. [iOS only]">
+        Sign in to Cinaseek
       </message>
       <message name="IDS_IOS_FIRST_RUN_UMA_DIALOG_CHECKBOX" desc="Checkbox to accept the metrics reporting consent. Related to IDS_IOS_FIRST_RUN_UMA_DIALOG_EXPLANATION and IDS_IOS_FIRST_RUN_UMA_DIALOG_TITLE. [iOS only]">
-        Help improve Chrome's features and performance
+        Help improve Cinaseek's features and performance
         </message>
       <message name="IDS_IOS_FIRST_RUN_UMA_DIALOG_EXPLANATION_NO_SYNC" desc="Text that explains the benefits users will get and what data is shared if they turn on the metrics sharing option. Bullet points lines should start with 2 spaces, followed by • and with a space right after. Related to IDS_IOS_FIRST_RUN_UMA_DIALOG_CHECKBOX and IDS_IOS_FIRST_RUN_UMA_DIALOG_TITLE. [iOS only]">
         When on:
-<ph name="BEGIN_INDENT">BEGIN_INDENT</ph>  • Help make Chrome better for people who use it the way you do.<ph name="END_INDENT">END_INDENT</ph>
+<ph name="BEGIN_INDENT">BEGIN_INDENT</ph>  • Help make Cinaseek better for people who use it the way you do.<ph name="END_INDENT">END_INDENT</ph>
 
 Things to consider:
-<ph name="BEGIN_INDENT">BEGIN_INDENT</ph>  • Info is sent to Google about your Chrome usage, but it isn't tied to you.
+<ph name="BEGIN_INDENT">BEGIN_INDENT</ph>  • Info is sent to Google about your Cinaseek usage, but it isn't tied to you.
 
-  • If Chrome crashes, details about the crash may include some personal info.
+  • If Cinaseek crashes, details about the crash may include some personal info.
 
   • If you sync your history to your Google Account, metrics may also include info about URLs you visit.<ph name="END_INDENT">END_INDENT</ph>
       </message>
-      <message name="IDS_IOS_FIRST_RUN_UMA_DIALOG_TITLE" desc="Title of the dialog where users can change their Chrome metrics sharing settings, like usage data. The title communicates that allowing Chrome to see this data can improve Chrome; this happens because we can better invent/improve features based on usage. This appears when they open the Chrome app for the first time on their phone. [iOS only]">
-        Make Chrome better
+      <message name="IDS_IOS_FIRST_RUN_UMA_DIALOG_TITLE" desc="Title of the dialog where users can change their Cinaseek metrics sharing settings, like usage data. The title communicates that allowing Cinaseek to see this data can improve Cinaseek; this happens because we can better invent/improve features based on usage. This appears when they open the Cinaseek app for the first time on their phone. [iOS only]">
+        Make Cinaseek better
         </message>
-      <message name="IDS_IOS_FIRST_RUN_WELCOME_SCREEN_METRIC_REPORTING" desc="The text is displayed in a footer on the very first screen of Chrome. Make sure 'usage' and 'crash' are translated consistently with the “Usage statistics and crash reports” section of the Chrome Privacy Policy (google.com/chrome/privacy). The ‘Manage’ link opens a dialog to change the corresponding setting. [iOS only]">
-        To help improve the app, Chrome sends usage and crash data to Google. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Manage<ph name="END_LINK">END_LINK</ph>
+      <message name="IDS_IOS_FIRST_RUN_WELCOME_SCREEN_METRIC_REPORTING" desc="The text is displayed in a footer on the very first screen of Cinaseek. Make sure 'usage' and 'crash' are translated consistently with the “Usage statistics and crash reports” section of the Cinaseek Privacy Policy (google.com/chrome/privacy). The ‘Manage’ link opens a dialog to change the corresponding setting. [iOS only]">
+        To help improve the app, Cinaseek sends usage and crash data to Google. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Manage<ph name="END_LINK">END_LINK</ph>
       </message>
       <message name="IDS_IOS_FIRST_RUN_WELCOME_SCREEN_SUBTITLE" desc="The subtitle of the welcome screen presented to the user on First Run [iOS only]">
-        Get more done with a simple, secure, and faster-than-ever Google Chrome.
+        Get more done with a simple, secure, and faster-than-ever Google Cinaseek.
       </message>
-      <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_ALLOW_SIGNIN_DETAIL" desc="Feature detail text in the Google services Settings for the user to enable/disable Chrome express sign-in from the web [iOS only]">
-        Shows prompts to sign in to Chrome.
+      <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_ALLOW_SIGNIN_DETAIL" desc="Feature detail text in the Google services Settings for the user to enable/disable Cinaseek express sign-in from the web [iOS only]">
+        Shows prompts to sign in to Cinaseek.
       </message>
-      <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_ALLOW_SIGNIN_TEXT" desc="Feature title in the Google services Settings for the user to enable/disable Chrome express sign-in from the web [iOS only]">
-        Allow Chrome sign-in
+      <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_ALLOW_SIGNIN_TEXT" desc="Feature title in the Google services Settings for the user to enable/disable Cinaseek express sign-in from the web [iOS only]">
+        Allow Cinaseek sign-in
       </message>
       <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_IMPROVE_CHROME_TEXT" desc="Feature title in the settings for the user enable or disable. Related with 'Automatically sends usage statistics and crash reports to Google'. [iOS only]">
-        Help improve Chrome's features and performance
+        Help improve Cinaseek's features and performance
       </message>
       <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_IMPROVE_SEARCH_SUGGESTIONS_DETAIL" desc="Feature detail text in the settings for the user to enable/disable, to send omnibox input to the user's default search engine to get additional suggestions. Text related to 'Improve search suggestions' [iOS only]">
-        When you type in the address bar or search box, Chrome sends what you type to your default search engine to get better suggestions. This is off in Incognito.
+        When you type in the address bar or search box, Cinaseek sends what you type to your default search engine to get better suggestions. This is off in Incognito.
       </message>
       <message name="IDS_IOS_GOOGLE_SERVICES_SETTINGS_SYNC_CHROME_DATA" desc="Turns off and on all the sync data (like bookmarks, history and others). [iOS only]">
-        Sync your Chrome data
+        Sync your Cinaseek data
       </message>
       <message name="IDS_IOS_HOME_CUSTOMIZATION_DISCOVER_PAGE_HEADER" desc="The header text for the Discover page in the Home Customization menu.">
         A custom feed made for you by Google. Including news, sports and weather.
@@ -503,29 +503,29 @@ Things to consider:
       <message name="IDS_IOS_HOME_CUSTOMIZATION_DISCOVER_SUBTITLE" desc="The subtitle of the Discover toggle in the Home Customization menu's main page.">
         A custom feed made for you by Google
       </message>
-      <message name="IDS_IOS_IDENTITY_ERROR_INFOBAR_KEEP_USING_YOUR_CHROME_DATA_MESSAGE" desc="The error message in the identity error info bar related to keep using your Chromium data in your Google account. [iOS only]">
-        Keep using the Chrome data in your Google Account
+      <message name="IDS_IOS_IDENTITY_ERROR_INFOBAR_KEEP_USING_YOUR_CHROME_DATA_MESSAGE" desc="The error message in the identity error info bar related to keep using your Cinaseek data in your Google account. [iOS only]">
+        Keep using the Cinaseek data in your Google Account
       </message>
-      <message name="IDS_IOS_IDENTITY_ERROR_INFOBAR_MAKE_SURE_YOU_CAN_ALWAYS_USE_CHROME_DATA_MESSAGE" desc="The error message in the identity error info bar related to making sure your can always use Chromium data in your Google account. [iOS only]">
-        Make sure you can always use the Chrome data in your Google Account
+      <message name="IDS_IOS_IDENTITY_ERROR_INFOBAR_MAKE_SURE_YOU_CAN_ALWAYS_USE_CHROME_DATA_MESSAGE" desc="The error message in the identity error info bar related to making sure your can always use Cinaseek data in your Google account. [iOS only]">
+        Make sure you can always use the Cinaseek data in your Google Account
       </message>
       <message name="IDS_IOS_IDLE_TIMEOUT_CONTINUE_USING_CHROME" desc="Button label to indicate browser activity and stop the browser from running idle timeout actions.">
-         Continue using Chrome
+         Continue using Cinaseek
       </message>
       <message name="IDS_IOS_IDLE_TIMEOUT_SUBTITLE_WITHOUT_CLEAR_DATA" desc="Subtitle of the idle timeout policy dialog explaining when the idle action usually happens.">
           {THRESHOLD, plural,
-          =1 {This happens when Chrome isn't used for {THRESHOLD} minute}
-          other {This happens when Chrome isn't used for {THRESHOLD} minutes}}
+          =1 {This happens when Cinaseek isn't used for {THRESHOLD} minute}
+          other {This happens when Cinaseek isn't used for {THRESHOLD} minutes}}
       </message>
       <message name="IDS_IOS_IDLE_TIMEOUT_SUBTITLE_WITH_CLEAR_DATA" desc="Subtitle of the idle timeout policy dialog explaining when the idle action usually happens.">
           {THRESHOLD, plural,
-            =1 {This happens when Chrome isn't used for {THRESHOLD} minute. This could include history and autofill.}
-            other {This happens when Chrome isn't used for {THRESHOLD} minutes. This could include history and autofill.}}
+            =1 {This happens when Cinaseek isn't used for {THRESHOLD} minute. This could include history and autofill.}
+            other {This happens when Cinaseek isn't used for {THRESHOLD} minutes. This could include history and autofill.}}
       </message>
       <message name="IDS_IOS_IDLE_TIMEOUT_SUBTITLE_WITH_CLEAR_DATA_ON_SIGNOUT" desc="Subtitle of the idle timeout policy dialog explaining when the idle action usually happens. It also informs the user that data will be cleared when they are signed out.">
           {THRESHOLD, plural,
-            =1 {This happens when Chrome isn't used for {THRESHOLD} minute. Data saved only to this device while you were signed in will be deleted. This could include history and passwords.}
-            other {This happens when Chrome isn't used for {THRESHOLD} minutes. Data saved only to this device while you were signed in will be deleted. This could include history and passwords.}}
+            =1 {This happens when Cinaseek isn't used for {THRESHOLD} minute. Data saved only to this device while you were signed in will be deleted. This could include history and passwords.}
+            other {This happens when Cinaseek isn't used for {THRESHOLD} minutes. Data saved only to this device while you were signed in will be deleted. This could include history and passwords.}}
       </message>
       <message name="IDS_IOS_IMPORT_INVALID_PASSKEY_LIST_DESCRIPTION" desc="Descriptive text showing under the title on the view that lists all invalid passkeys. [iOS only]">
         The following passkeys were not imported to Google Password Manager, because they don't match with the requirements.
@@ -540,172 +540,172 @@ Things to consider:
         You already have passwords or passkeys in Google Password Manager for the sites shown. Select an account to keep the shown sign-in info, overwriting what's in Google Password Manager.
       </message>
       <message name="IDS_IOS_INCOGNITO_INTERSTITIAL_OPEN_IN_CHROME" desc="Button to open a link from an external app in a regular tab rather than in Incognito mode. [iOS only]">
-        Open in Chrome
+        Open in Cinaseek
       </message>
       <message name="IDS_IOS_INCOGNITO_INTERSTITIAL_OPEN_IN_CHROME_INCOGNITO" desc="Button to open a link from an external app in Incognito mode rather than a regular tab. [iOS only]">
-        Open in Chrome Incognito
+        Open in Cinaseek Incognito
       </message>
       <message name="IDS_IOS_INCOGNITO_LOCK_HEADER" desc="Header string for incognito lock settings page.  This appears in the incognito lock settings page under privacy and security. [iOS only]">
-       Hide open Incognito tabs when you leave Chrome
+       Hide open Incognito tabs when you leave Cinaseek
       </message>
       <message name="IDS_IOS_INCOGNITO_REAUTH_SETTING_NAME" desc="Name of the Setting to protect Incognito tabs with biometric authentication, e.g. Face ID or Touch ID. [iOS only]">
-       Lock Incognito tabs when you close Chrome
+       Lock Incognito tabs when you close Cinaseek
       </message>
       <message name="IDS_IOS_INCOGNITO_REAUTH_SET_UP_SYSTEM_DIALOG_REASON" desc="Text for system biometric authentication dialog to explain why authentication is required when the user attempts to enable the setting to protect Incognito tabs with biometric auth. [iOS only]">
-       Let Chrome lock your Incognito tabs.
+       Let Cinaseek lock your Incognito tabs.
       </message>
-      <message name="IDS_IOS_INTENTS_ADD_BOOKMARK_DESCRIPTION" desc="Shortcut description to add a bookmark to Chrome [iOS only].">
-        Adds the inputted URLs to your bookmarks in Chrome.
+      <message name="IDS_IOS_INTENTS_ADD_BOOKMARK_DESCRIPTION" desc="Shortcut description to add a bookmark to Cinaseek [iOS only].">
+        Adds the inputted URLs to your bookmarks in Cinaseek.
       </message>
-      <message name="IDS_IOS_INTENTS_ADD_BOOKMARK_TITLE" desc="Shortcut name to add bookmarks to Chrome [iOS only].">
-        Add bookmarks to Chrome
+      <message name="IDS_IOS_INTENTS_ADD_BOOKMARK_TITLE" desc="Shortcut name to add bookmarks to Cinaseek [iOS only].">
+        Add bookmarks to Cinaseek
       </message>
-      <message name="IDS_IOS_INTENTS_ADD_READING_LIST_ITEM_DESCRIPTION" desc="Shortcut description to add a reading list item to Chrome [iOS only].">
-        Adds the inputted URLs to your reading list in Chrome.
+      <message name="IDS_IOS_INTENTS_ADD_READING_LIST_ITEM_DESCRIPTION" desc="Shortcut description to add a reading list item to Cinaseek [iOS only].">
+        Adds the inputted URLs to your reading list in Cinaseek.
       </message>
-      <message name="IDS_IOS_INTENTS_ADD_READING_LIST_ITEM_TITLE" desc="Shortcut name to add a reading list item to Chrome [iOS only].">
-        Add reading list item to Chrome
+      <message name="IDS_IOS_INTENTS_ADD_READING_LIST_ITEM_TITLE" desc="Shortcut name to add a reading list item to Cinaseek [iOS only].">
+        Add reading list item to Cinaseek
       </message>
-      <message name="IDS_IOS_INTENTS_CLEAR_BROWSING_DATA_DESCRIPTION" desc="Shortcut description to open Delete Browsing Data dialog in Chrome [iOS only].">
-        Delete browsing data in Chrome.
+      <message name="IDS_IOS_INTENTS_CLEAR_BROWSING_DATA_DESCRIPTION" desc="Shortcut description to open Delete Browsing Data dialog in Cinaseek [iOS only].">
+        Delete browsing data in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_CLEAR_BROWSING_DATA_TITLE" desc="Siri Shortcut for open Delete Browsing Data dialog [iOS only]">
-        Delete browsing data in Chrome
+        Delete browsing data in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_PASSWORDS_DESCRIPTION" desc="Siri Shortcut description to manage passwords [iOS only]">
-        Opens the Password Manager in Chrome
+        Opens the Password Manager in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_PASSWORDS_TITLE" desc="Siri Shortcut for manage passwords title [iOS only]">
-        Manage passwords in Chrome
+        Manage passwords in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_PAYMENT_METHODS_DESCRIPTION" desc="Siri Shortcut description to manage payment methods [iOS only]">
-        Opens the payment methods setting page in Chrome.
+        Opens the payment methods setting page in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_PAYMENT_METHODS_TITLE" desc="Siri Shortcut for manage payment methods title [iOS only]">
-        Manage payment methods in Chrome
+        Manage payment methods in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_SETTINGS_DESCRIPTION" desc="Siri Shortcut description to manage settings in chrome [iOS only]">
-        Opens the settings in Chrome.
+        Opens the settings in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_MANAGE_SETTINGS_TITLE" desc="Siri Shortcut for manage settings title [iOS only]">
-        Manage Chrome settings
+        Manage Cinaseek settings
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_BOOKMARKS_DESCRIPTION" desc="Shortcut description to open bookmarks in chrome [iOS only].">
-        Opens the Chrome bookmarks.
+        Opens the Cinaseek bookmarks.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_BOOKMARKS_TITLE" desc="Siri Shortcut for open bookmarks title [iOS only]">
-        See Chrome bookmarks
+        See Cinaseek bookmarks
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_CHROME_INCOGNITO_TAB_DESCRIPTION" desc="Siri Shortcut description to open chrome incognito tab [iOS only]">
-        Opens a new Chrome Incognito tab.
+        Opens a new Cinaseek Incognito tab.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_CHROME_INCOGNITO_TAB_TITLE" desc="Siri Shortcut for open chrome incognito tab title [iOS only]">
-        Open Chrome Incognito tab
+        Open Cinaseek Incognito tab
       </message>
-      <message name="IDS_IOS_INTENTS_OPEN_IN_CHROME_INCOGNITO_DESCRIPTION" desc="Shortcut description to open URLs in Chrome in Incognito [iOS only].">
-        Opens the inputted URLs in Google Chrome in Incognito.
+      <message name="IDS_IOS_INTENTS_OPEN_IN_CHROME_INCOGNITO_DESCRIPTION" desc="Shortcut description to open URLs in Cinaseek in Incognito [iOS only].">
+        Opens the inputted URLs in Google Cinaseek in Incognito.
       </message>
-      <message name="IDS_IOS_INTENTS_OPEN_IN_CHROME_INCOGNITO_TITLE" desc="Shortcut name to open URL in Chrome in Incognito [iOS only].">
-        Open URLs in Chrome in Incognito
+      <message name="IDS_IOS_INTENTS_OPEN_IN_CHROME_INCOGNITO_TITLE" desc="Shortcut name to open URL in Cinaseek in Incognito [iOS only].">
+        Open URLs in Cinaseek in Incognito
       </message>
-      <message name="IDS_IOS_INTENTS_OPEN_LATEST_TAB_DESCRIPTION" desc="Siri Shortcut description to latest tab in chromium [iOS only]">
-        Open my latest tab in Chrome.
+      <message name="IDS_IOS_INTENTS_OPEN_LATEST_TAB_DESCRIPTION" desc="Siri Shortcut description to latest tab in Cinaseek [iOS only]">
+        Open my latest tab in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_LATEST_TAB_TITLE" desc="Siri Shortcut for open latest tab title [iOS only]">
-        Open my latest tab in Chrome
+        Open my latest tab in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_LENS_DESCRIPTION" desc="Siri Shortcut description to open Lens(Visual Search) [iOS only]">
-        Search visuals in Chrome.
+        Search visuals in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_LENS_TITLE" desc="Siri Shortcut for opening Lens (Visual Search) [iOS only]">
-        Search visuals in Chrome
+        Search visuals in Cinaseek
       </message>
-      <message name="IDS_IOS_INTENTS_OPEN_NEW_TAB_DESCRIPTION" desc="Siri Shortcut description to open new tab in chromium [iOS only]">
-        Opens a new tab in Chrome.
+      <message name="IDS_IOS_INTENTS_OPEN_NEW_TAB_DESCRIPTION" desc="Siri Shortcut description to open new tab in Cinaseek [iOS only]">
+        Opens a new tab in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_NEW_TAB_TITLE" desc="Siri Shortcut for open new tab title [iOS only]">
-        Open new tab in Chrome
+        Open new tab in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_READING_LIST_DESCRIPTION" desc="Shortcut description to open reading list in chrome [iOS only].">
-        Opens the Chrome Reading List.
+        Opens the Cinaseek Reading List.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_READING_LIST_TITLE" desc="Siri Shortcut for open reading list title [iOS only]">
-        See Chrome Reading List
+        See Cinaseek Reading List
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_RECENT_TABS_DESCRIPTION" desc="Shortcut description to open recent tabs in chrome [iOS only].">
-        Opens the Chrome Recent Tabs.
+        Opens the Cinaseek Recent Tabs.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_RECENT_TABS_TITLE" desc="Siri Shortcut for open recent tabs title [iOS only]">
-        See Chrome Recent Tabs
+        See Cinaseek Recent Tabs
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_TAB_GRID_DESCRIPTION" desc="Shortcut description to open tab grid in chrome [iOS only].">
-        Opens the Chrome Tab Grid.
+        Opens the Cinaseek Tab Grid.
       </message>
       <message name="IDS_IOS_INTENTS_OPEN_TAB_GRID_TITLE" desc="Siri Shortcut for open tab grid title [iOS only]">
-        Visit the Tab Grid in Chrome
+        Visit the Tab Grid in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_PLAY_DINO_GAME_DESCRIPTION" desc="Siri Shortcut description to open dino game in chrome [iOS only]">
-        Opens the Chrome Dino Game.
+        Opens the Cinaseek Dino Game.
       </message>
       <message name="IDS_IOS_INTENTS_PLAY_DINO_GAME_TITLE" desc="Siri Shortcut for play dino game title [iOS only]">
-        Play Chrome Dino Game
+        Play Cinaseek Dino Game
       </message>
       <message name="IDS_IOS_INTENTS_RUN_SAFETY_CHECK_DESCRIPTION" desc="Siri Shortcut description to run safety check [iOS only]">
-        Opens and Runs Safety Check in Chrome.
+        Opens and Runs Safety Check in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_RUN_SAFETY_CHECK_TITLE" desc="Siri Shortcut for run safety check title [iOS only]">
-        Run Chrome Safety Check
+        Run Cinaseek Safety Check
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_DESCRIPTION" desc="Siri Shortcut for search in chrome description [iOS only].">
-        Start a search in a new Chrome tab.
+        Start a search in a new Cinaseek tab.
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_INVOCATION_PHRASE" desc="Siri Shortcut, spoken suggestion for search in chrome [iOS only].">
-        Search in Chrome
+        Search in Cinaseek
       </message>
-      <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_PARAMETER_COMBINATION_TITLE" desc="Apple Shortcuts App's format for displaying the user search phrase input, shown by the Siri Shortcut app when the           user is adding or editing a Search in Chrome shortcut[iOS only].">
-          Search ${searchPhrase} in Chrome
+      <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_PARAMETER_COMBINATION_TITLE" desc="Apple Shortcuts App's format for displaying the user search phrase input, shown by the Siri Shortcut app when the           user is adding or editing a Search in Cinaseek shortcut[iOS only].">
+          Search ${searchPhrase} in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_SUGGEST_TITLE" desc="Siri Shortcut for search in chrome title [iOS only].">
-        Search in Chrome
+        Search in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_IN_CHROME_TITLE" desc="Siri Shortcut for search in chrome title [iOS only].">
-        Search in Chrome
+        Search in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_WITH_VOICE_DESCRIPTION" desc="Siri Shortcut description for searching with voice [iOS only]">
-        Search with voice in Chrome.
+        Search with voice in Cinaseek.
       </message>
       <message name="IDS_IOS_INTENTS_SEARCH_WITH_VOICE_TITLE" desc="Siri Shortcut for search with voice title [iOS only]">
-        Search with voice in Chrome
+        Search with voice in Cinaseek
       </message>
       <message name="IDS_IOS_INTENTS_SET_CHROME_DEFAULT_BROWSER_DESCRIPTION" desc="Siri Shortcut description to set chrome as default browser [iOS only]">
-        Opens the Chrome Setting to set Chrome as default browser.
+        Opens the Cinaseek Setting to set Cinaseek as default browser.
       </message>
       <message name="IDS_IOS_INTENTS_SET_CHROME_DEFAULT_BROWSER_TITLE" desc="Siri Shortcut for set chrome as default browser title [iOS only]">
-        Set Chrome as default browser
+        Set Cinaseek as default browser
       </message>
-      <message name="IDS_IOS_INTENTS_VIEW_CHROME_HISTORY_DESCRIPTION" desc="Siri Shortcut description to view Chrome history [iOS only]">
-        Opens your Chrome History page.
+      <message name="IDS_IOS_INTENTS_VIEW_CHROME_HISTORY_DESCRIPTION" desc="Siri Shortcut description to view Cinaseek history [iOS only]">
+        Opens your Cinaseek History page.
       </message>
       <message name="IDS_IOS_INTENTS_VIEW_CHROME_HISTORY_TITLE" desc="Siri Shortcut for view chrome history title [iOS only]">
-        View Your Chrome History
+        View Your Cinaseek History
       </message>
       <message name="IDS_IOS_LENS_PROMO_IPH_TEXT" desc="The text of an iph bubble that points to the Fakebox's Lens icon">
         You can open Google Lens here.
       </message>
       <message name="IDS_IOS_LOCATION_WHEN_IN_USE_USAGE_DESCRIPTION" desc="Specifies the reason for accessing the user's location information while the app is in use [Length: unlimited] [iOS only].">
-        Chrome shares your location with sites you allow.
+        Cinaseek shares your location with sites you allow.
       </message>
       <message name="IDS_IOS_LOCKDOWN_MODE_INFO_BUTTON_SUMMARY_FOR_IPAD" desc="iPad summary for lockdown mode info button">
-        To disable Lockdown Mode in Chrome turn it off on your iPad.
+        To disable Lockdown Mode in Cinaseek turn it off on your iPad.
       </message>
       <message name="IDS_IOS_LOCKDOWN_MODE_INFO_BUTTON_SUMMARY_FOR_IPHONE" desc="iPhone summary for lockdown mode info button">
-        To disable Lockdown Mode in Chrome turn it off on your iPhone.
+        To disable Lockdown Mode in Cinaseek turn it off on your iPhone.
       </message>
       <message name="IDS_IOS_LOGIN_ERROR_AUTHENTICATING_HOSTED" desc="Couldn't sign in because hosted account is used.">
-        Your account does not work on Google Chrome. Please contact your domain administrator or use a regular Google Account to sign in.
+        Your account does not work on Google Cinaseek. Please contact your domain administrator or use a regular Google Account to sign in.
       </message>
-      <message name="IDS_IOS_MAGIC_STACK_TIP_CONTEXT_MENU_DESCRIPTION" desc="The description of the context menu for the Chrome Tips Magic Stack card.">
-        This card shows you suggestions on how to get the most out of Chrome.
+      <message name="IDS_IOS_MAGIC_STACK_TIP_CONTEXT_MENU_DESCRIPTION" desc="The description of the context menu for the Cinaseek Tips Magic Stack card.">
+        This card shows you suggestions on how to get the most out of Cinaseek.
       </message>
       <message name="IDS_IOS_MAGIC_STACK_TIP_LENS_DEFAULT_TITLE" desc="The default title of the Lens tip for the Magic Stack.">
         Search with Google Lens
@@ -717,192 +717,192 @@ Things to consider:
         Translate with Google Lens
       </message>
       <message name="IDS_IOS_MAGIC_STACK_TIP_SAFE_BROWSING_TITLE" desc="The title of the Safe Browsing tip for the Magic Stack.">
-        Get Chrome's Strongest Security
+        Get Cinaseek's Strongest Security
       </message>
       <message name="IDS_IOS_MAGIC_STACK_TIP_SAVE_PASSWORDS_TUTORIAL_STEP_2" desc="The second step of the Save Passwords tutorial for the Magic Stack.">
-        Chrome will offer to save your password.
+        Cinaseek will offer to save your password.
       </message>
       <message name="IDS_IOS_MAGIC_STACK_TIP_SAVE_PASSWORD_TITLE" desc="The title of the Save Password tip for the Magic Stack.">
-        Save Your Passwords in Chrome
+        Save Your Passwords in Cinaseek
       </message>
       <message name="IDS_IOS_MAGIC_STACK_TIP_SET_UP_COMPLETION_DESCRIPTION" desc="The description of the Set Up List completion for the Magic Stack.">
-        Check back here for more useful tips to get the most out of Chrome.
+        Check back here for more useful tips to get the most out of Cinaseek.
       </message>
-      <message name="IDS_IOS_MAGIC_STACK_TIP_TITLE" desc="The name of the Chrome Tips Magic Stack.">
-        Chrome Tips
+      <message name="IDS_IOS_MAGIC_STACK_TIP_TITLE" desc="The name of the Cinaseek Tips Magic Stack.">
+        Cinaseek Tips
       </message>
-      <message name="IDS_IOS_MANAGED_DISCONNECT_DIALOG_INFO_UNITY" desc="Message explaining that signing out of a managed account will clear all the Chrome data. [Length: 200em, may be line wrapped to multiple lines at run time.] [iOS only].">
-        Because you're signing out of an account managed by <ph name="SIGNOUT_MANAGED_DOMAIN">$1<ex>google.com</ex></ph>, your Chrome data will be deleted from this device. Your data will remain in your Google Account.
+      <message name="IDS_IOS_MANAGED_DISCONNECT_DIALOG_INFO_UNITY" desc="Message explaining that signing out of a managed account will clear all the Cinaseek data. [Length: 200em, may be line wrapped to multiple lines at run time.] [iOS only].">
+        Because you're signing out of an account managed by <ph name="SIGNOUT_MANAGED_DOMAIN">$1<ex>google.com</ex></ph>, your Cinaseek data will be deleted from this device. Your data will remain in your Google Account.
       </message>
       <message name="IDS_IOS_MANAGED_SIGNIN_WITH_USER_POLICY_SUBTITLE" desc="The subtitle of the Sign in with a managed account dialog when user policies are enabled. [iOS only]">
-        Your organization, <ph name="DOMAIN">$1<ex>doe.com</ex></ph>, manages the account you're signing in to and how Chrome can be used. Your administrator can set up or restrict certain features.
+        Your organization, <ph name="DOMAIN">$1<ex>doe.com</ex></ph>, manages the account you're signing in to and how Cinaseek can be used. Your administrator can set up or restrict certain features.
       </message>
       <message name="IDS_IOS_MANAGE_DATA_IN_YOUR_ACCOUNT_TITLE" desc="Title for the cell to open 'Review data in your account' web page where the user can control all their data data from sync.">
-        Chrome data in your account
+        Cinaseek data in your account
       </message>
-      <message name="IDS_IOS_MANAGE_SYNC_DATA_FROM_CHROME_SYNC_TITLE" desc="Title for the cell to open 'Data from Chrome sync' web page where the user can control all their data data from sync.">
-        Data from Chrome sync
+      <message name="IDS_IOS_MANAGE_SYNC_DATA_FROM_CHROME_SYNC_TITLE" desc="Title for the cell to open 'Data from Cinaseek sync' web page where the user can control all their data data from sync.">
+        Data from Cinaseek sync
       </message>
       <message name="IDS_IOS_MINI_MAP_CONSENT_SUBTITLE" desc="The subtitle of the consent screen for mini map [iOS only].">
-        Allow Chrome to use Google Maps to give you directions and local info on detected addresses.
+        Allow Cinaseek to use Google Maps to give you directions and local info on detected addresses.
       </message>
       <message name="IDS_IOS_MINI_MAP_FOOTER_STRING" desc="The text of the footer string displayed at the bottom of the minimap [iOS only].">
-        Chrome uses Google Maps to give you directions and local info on detected addresses.
+        Cinaseek uses Google Maps to give you directions and local info on detected addresses.
       </message>
       <message name="IDS_IOS_MINI_MAP_IPH_TITLE" desc="The text of the iph string displayed on Mini Map screen on first trigger [iOS only].">
-        Chrome detects addresses and uses Google Maps to give you directions and local info.
+        Cinaseek detects addresses and uses Google Maps to give you directions and local info.
       </message>
       <message name="IDS_IOS_NEW_SYNC_ENCRYPTION_PASSPHRASE_INFO_UNO" desc="The information text for encrypting sync using a passphrase, shown on the passphrase screen [iOS only]">
-        Payment methods and addresses won’t be encrypted. Browsing history from Chrome won’t sync.
+        Payment methods and addresses won’t be encrypted. Browsing history from Cinaseek won’t sync.
 
-Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Chrome data in your account<ph name="END_LINK">END_LINK</ph>.
+Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Cinaseek data in your account<ph name="END_LINK">END_LINK</ph>.
       </message>
       <message name="IDS_IOS_NON_MODAL_SIGNIN_PROMO_PROMPT" meaning="Title" desc="Infobar title for non modal signin promo.">
-        Sign in to Chrome
+        Sign in to Cinaseek
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_ALERT_MESSAGE" desc="Text for the Notifications UI Alert Prompt that redirects the user to the iOS notifications permission page">
-        To receive notifications from Chrome, turn on notifications in your iOS Settings.
+        To receive notifications from Cinaseek, turn on notifications in your iOS Settings.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_OPT_IN_SIGN_IN_MESSAGE_CONTENT" desc="The label for the sign-in view after the user selects the tips notifications toggle.">
-        To receive personalized content based on your interests, sign in to Chrome.
+        To receive personalized content based on your interests, sign in to Cinaseek.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_OPT_IN_SUBTITLE" desc="The subtitle of the screen that prompts to select which notifications to opt-in to.">
-        You can update your selections anytime in Chrome settings.
+        You can update your selections anytime in Cinaseek settings.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_OPT_IN_TIPS_SETTINGS_TOGGLE_MESSSAGE" desc="The label for the notification opt-in toggle message for tips notifications.">
-        Tips on getting the most out of Chrome.
+        Tips on getting the most out of Cinaseek.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_AUTOFILL_TITLE" desc="Text for the title of a Tips notification that encourages the user to save their passwords.">
-        Chrome Tip: Save Passwords
+        Cinaseek Tip: Save Passwords
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_CPE_BODY" desc="Text for the body of a Tips notification that encourages the user to enable the CPE.">
-        To easily get your saved passwords in other apps, choose Chrome for Autofill.
+        To easily get your saved passwords in other apps, choose Cinaseek for Autofill.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_CPE_TITLE" desc="Text for the title of a Tips notification that encourages the user to enable the CPE.">
-        Chrome Tip: Get your passwords in any app
+        Cinaseek Tip: Get your passwords in any app
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DEFAULT_BROWSER_ALT1_TITLE" desc="Text for the title of a Tips notification that encourages the user to set the app as their default browser">
-         Use Chrome by default
+         Use Cinaseek by default
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DEFAULT_BROWSER_ALT2_TITLE" desc="Text for the title of a Tips notification that encourages the user to set the app as their default browser">
-         Make Chrome your default browser
+         Make Cinaseek your default browser
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DEFAULT_BROWSER_ALT3_BODY" desc="Text for the body of a Tips notification that encourages the user to set the app as their default browser">
-         Easily use Chrome anytime you tap links in messages or other apps.
+         Easily use Cinaseek anytime you tap links in messages or other apps.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DEFAULT_BROWSER_BODY" desc="Text for the body of a Tips notification that encourages the user to set the app as their default browser">
-        Use Chrome anytime you tap links in messages or other apps.
+        Use Cinaseek anytime you tap links in messages or other apps.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DEFAULT_BROWSER_TITLE" desc="Text for the title of a Tips notification that encourages the user to set the app as their default browser">
-        Chrome Tip: use Chrome by default
+        Cinaseek Tip: use Cinaseek by default
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT1_BODY_IPAD" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Access Chrome faster from your iPad's Home Screen.
+         Access Cinaseek faster from your iPad's Home Screen.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT1_BODY_IPHONE" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Access Chrome faster from your iPhone's Home Screen.
+         Access Cinaseek faster from your iPhone's Home Screen.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT1_TITLE" desc="Text for the title of a Tips notification that encourages the user to put the app into the iOS dock">
-         Chrome Tip: Move Chrome to your home screen
+         Cinaseek Tip: Move Cinaseek to your home screen
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT2_BODY_IPAD" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Access Chrome faster from your iPad's Dock.
+         Access Cinaseek faster from your iPad's Dock.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT2_BODY_IPHONE" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Access Chrome faster from your iPhone's Dock.
+         Access Cinaseek faster from your iPhone's Dock.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT3_BODY_IPAD" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Open Chrome faster when you're ready to browse on your iPad.
+         Open Cinaseek faster when you're ready to browse on your iPad.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT3_BODY_IPHONE" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-         Open Chrome faster when you're ready to browse on your iPhone.
+         Open Cinaseek faster when you're ready to browse on your iPhone.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_ALT3_TITLE" desc="Text for the title of a Tips notification that encourages the user to put the app into the iOS dock">
-        Move Chrome to your dock
+        Move Cinaseek to your dock
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_BODY_IPAD" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-        Access Chrome faster from your iPad's home screen dock.
+        Access Cinaseek faster from your iPad's home screen dock.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_BODY_IPHONE" desc="Text for the body of a Tips notification that encourages the user to put the app into the iOS dock">
-        Access Chrome faster from your iPhone's home screen dock.
+        Access Cinaseek faster from your iPhone's home screen dock.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_DOCKING_TITLE" desc="Text for the title of a Tips notification that encourages the user to put the app into the iOS dock">
-        Chrome Tip: Move Chrome to the dock
+        Cinaseek Tip: Move Cinaseek to the dock
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_ENHANCED_SAFE_BROWSING_ALT1_TITLE" desc="Text for the title of a Tips notification that encourages the user to enable Enhanced Safe Browsing">
-         Chrome Tip: Enhanced safe browsing will save your day
+         Cinaseek Tip: Enhanced safe browsing will save your day
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_ENHANCED_SAFE_BROWSING_TITLE" desc="Text for the title of a Tips notification that encourages the user to enable Enhanced Safe Browsing">
-        Chrome Tip: Get Chrome's strongest security
+        Cinaseek Tip: Get Cinaseek's strongest security
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_ENHANCED_SAFE_BROWSING_TITLE_FROM_DESKTOP" desc="Text for the title of a Tips notification that encourages the user to enable Enhanced Safe Browsing.">
-        Chrome Tip: Enhanced Safe Browsing
+        Cinaseek Tip: Enhanced Safe Browsing
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_LENS_ALT1_TITLE" desc="Text for the title of a Tips notification that encourages the user to search with Lens">
-         Chrome Tip: Search what you see with Google Lens
+         Cinaseek Tip: Search what you see with Google Lens
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_LENS_OVERLAY_TITLE" desc="Text for the title of a Tips notification that encourages the user to use the Lens Overlay feature.">
-        Chrome Tip: Search what you see
+        Cinaseek Tip: Search what you see
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_LENS_TITLE" desc="Text for the title of a Tips notification that encourages the user to search with Lens">
-        Chrome Tip: Search with Lens
+        Cinaseek Tip: Search with Lens
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_OMNIBOX_POSITION_TITLE" desc="Text for the title of a Tips notification that reminds the user to set their preferred omnibox position">
-        Chrome Tip: Choose your address bar position
+        Cinaseek Tip: Choose your address bar position
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SETUPLIST_CONTINUATION_ALT1_BODY_IPAD" desc="Text for the body of a Tips notification that encourages the user to complete the Set Up List">
-         Tap here to get the most out of Chrome on your iPad.
+         Tap here to get the most out of Cinaseek on your iPad.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SETUPLIST_CONTINUATION_ALT1_BODY_IPHONE" desc="Text for the body of a Tips notification that encourages the user to complete the Set Up List">
-         Tap here to get the most out of Chrome on your iPhone.
+         Tap here to get the most out of Cinaseek on your iPhone.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SETUPLIST_CONTINUATION_ALT2_TITLE" desc="Text for the title of a Tips notification that encourages the user to complete the Set Up List">
-         You're almost finished setting up Chrome!
+         You're almost finished setting up Cinaseek!
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SETUPLIST_CONTINUATION_BODY" desc="Text for the body of a Tips notification that encourages the user to complete the Set Up List">
-        Get the most out of Chrome by continuing setting up your browser.
+        Get the most out of Cinaseek by continuing setting up your browser.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SETUPLIST_CONTINUATION_TITLE" desc="Text for the title of a Tips notification that encourages the user to complete the Set Up List">
-        Finish setting up Chrome
+        Finish setting up Cinaseek
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SIGNIN_ALT3_TITLE" desc="Text for the title of a Tips notification that encourages the user to sign in to their account">
-         Sign in to Chrome to get your stuff
+         Sign in to Cinaseek to get your stuff
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SIGNIN_BODY" desc="Text for the body of a Tips notification that encourages the user to sign in to their account">
         Sign in with your Google Account to sync your passwords, bookmarks, and more.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_SIGNIN_TITLE" desc="Text for the title of a Tips notification that encourages the user to sign in to their account">
-        Chrome Tip: Sign in to Chrome
+        Cinaseek Tip: Sign in to Cinaseek
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_TRUSTED_VAULT_KEY_RETRIVAL_TITLE" desc="Text for the title of a Tips notification that starts a re-authentication flow, which will allow users to access their passwords.">
-        Chrome Tip: Get your passwords
+        Cinaseek Tip: Get your passwords
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_WHATS_NEW_ALT2_TITLE" desc="Text for the title of a Tips notification that takes the user to the Whats New page">
-         Check out what’s new in Chrome
+         Check out what’s new in Cinaseek
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_WHATS_NEW_BODY" desc="Text for the body of a Tips notification that takes the user to the Whats New page">
-        Explore new features that help you get the most out of Chrome.
+        Explore new features that help you get the most out of Cinaseek.
       </message>
       <message name="IDS_IOS_NOTIFICATIONS_TIPS_WHATS_NEW_TITLE" desc="Text for the title of a Tips notification that takes the user to the Whats New page">
-        What's New in Chrome
+        What's New in Cinaseek
       </message>
-      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME" desc="The iOS menu item for opening a share sheet with the URL to the Chrome app in the iOS app store" meaning="[iOS only] [Length: Unlimited]">
-        Share Chrome
+      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME" desc="The iOS menu item for opening a share sheet with the URL to the Cinaseek app in the iOS app store" meaning="[iOS only] [Length: Unlimited]">
+        Share Cinaseek
       </message>
-      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME_DESC" desc="The description displayed along with the app store link to Chrome, when sharing the chrome app" meaning="[iOS only] [Length: Unlimited]">
-        Download Chrome here.
+      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME_DESC" desc="The description displayed along with the app store link to Cinaseek, when sharing the chrome app" meaning="[iOS only] [Length: Unlimited]">
+        Download Cinaseek here.
       </message>
-      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME_TITLE" desc="The title displayed along with the app store link to Chrome, when sharing the chrome app" meaning="[iOS only] [Length: Unlimited]">
-        Chrome for iOS
+      <message name="IDS_IOS_OVERFLOW_MENU_SHARE_CHROME_TITLE" desc="The title displayed along with the app store link to Cinaseek, when sharing the chrome app" meaning="[iOS only] [Length: Unlimited]">
+        Cinaseek for iOS
       </message>
-      <message name="IDS_IOS_PAGE_INFO_CHROME_PAGE_LABEL" desc="Label to display at the top of the site information screen when the page you are on is a Google Chrome page.">
-        Google Chrome page
+      <message name="IDS_IOS_PAGE_INFO_CHROME_PAGE_LABEL" desc="Label to display at the top of the site information screen when the page you are on is a Google Cinaseek page.">
+        Google Cinaseek page
       </message>
       <message name="IDS_IOS_PAGE_INFO_SECURITY_TAB_SECURE_IDENTITY" desc="The text of the identity section for iOS.">
-        Chrome verified that <ph name="ISSUER">$1<ex>VeriSign</ex></ph> issued this website's certificate.
+        Cinaseek verified that <ph name="ISSUER">$1<ex>VeriSign</ex></ph> issued this website's certificate.
       </message>
       <message name="IDS_IOS_PARCEL_TRACKING_INFOBAR_PACKAGE_ALREADY_TRACKED_SUBTITLE" desc="Text for the subtitle string of the Parcel Tracking 'Package Already Tracked' infobar.">
-        This package has already been tracked on Chrome.
+        This package has already been tracked on Cinaseek.
       </message>
       <message name="IDS_IOS_PASSKEY_ENROLLMENT_FOOTER_MESSAGE" desc="Message displayed at the bottom of the passkey enrollement welcome screen, but just over the primary action button. Lets the user know to which account the passkey they're creating will be saved in if they do to tap the primary action button and keep going with the enrollment process.">
         This passkey will be saved to Google Password Manager for <ph name="USER_EMAIL">$1<ex>peter.parker@gmail.com</ex></ph>
@@ -913,7 +913,7 @@ Only someone with your passphrase can read your encrypted data. The passphrase i
       <message name="IDS_IOS_PASSKEY_PARTIAL_BOOTSTRAPPING_SUBTITLE" desc="Subtitle of the screen shown when the user needs to create their Google Password Manager pin to set up passkeys on their device.">
         To keep your passkeys safe, you’ll first need to create a recovery PIN.
 
-        Passkeys are saved in Google Password Manager, which lets you use them in Chrome on any device.
+        Passkeys are saved in Google Password Manager, which lets you use them in Cinaseek on any device.
       </message>
       <message name="IDS_IOS_PASSWORD_CHECKUP_ERROR" desc="Description of the password check cell, explaining that Password Check failed. [iOS only]" meaning="Password Check failed due to some error.">
         Google Password Manager can't check your passwords.
@@ -937,148 +937,148 @@ Only someone with your passphrase can read your encrypted data. The passphrase i
         Google Password Manager can check your passwords when you sign in with your Google Account.
       </message>
       <message name="IDS_IOS_PASSWORD_CHECK_ERROR" desc="Description of the password check cell, explaining that Password Check failed. [iOS only]" meaning="Password Check failed due to some error.">
-        Chrome can't check your passwords
+        Cinaseek can't check your passwords
       </message>
-      <message name="IDS_IOS_PASSWORD_SETTINGS_PASSWORDS_IN_OTHER_APPS_DESCRIPTION" desc="Help text explaining the benefits of having Chrome set as a credential provider for other apps. [iOS Only]">
-        Sign in quickly to apps and sites by autofilling your passwords &amp; passkeys from Chrome
+      <message name="IDS_IOS_PASSWORD_SETTINGS_PASSWORDS_IN_OTHER_APPS_DESCRIPTION" desc="Help text explaining the benefits of having Cinaseek set as a credential provider for other apps. [iOS Only]">
+        Sign in quickly to apps and sites by autofilling your passwords &amp; passkeys from Cinaseek
       </message>
       <message name="IDS_IOS_PASSWORD_SHARING_FAMILY_MEMBER_INELIGIBLE" desc="Info text in the recipient picker view of the password sharing flow explaining why one of the family members is not eligible to be a recipient. [iOS Only]">
-        Your family member can't receive passwords right now. Ask them to update Chrome and sync their passwords. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
+        Your family member can't receive passwords right now. Ask them to update Cinaseek and sync their passwords. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
       </message>
       <message name="IDS_IOS_PASSWORD_SHARING_FETCHING_RECIPIENTS_ERROR" desc="Description on the alert view explaining an error in the password sharing flow. [iOS only]">
-        Your password wasn't shared. Check your internet connection and make sure you're signed in to Chrome. Then, try again.
+        Your password wasn't shared. Check your internet connection and make sure you're signed in to Cinaseek. Then, try again.
       </message>
-      <message name="IDS_IOS_PERSONALIZE_GOOGLE_SERVICES_HEADER" desc="This is the body text of a settings page that directs users to other settings where they can control how Chrome history can be used to personalize other Google services. This text appears in Chrome’s Advanced Sync settings, on the subpage that links out to Web &amp; App Activity and Linked Google services.">
-        To get personalization and other features, include Chrome in <ph name="FEATURE_NAME_1">$1<ex>Web &amp; App Activity</ex></ph> and <ph name="FEATURE_NAME_2">$2<ex>Linked Google services</ex></ph>
+      <message name="IDS_IOS_PERSONALIZE_GOOGLE_SERVICES_HEADER" desc="This is the body text of a settings page that directs users to other settings where they can control how Cinaseek history can be used to personalize other Google services. This text appears in Cinaseek’s Advanced Sync settings, on the subpage that links out to Web &amp; App Activity and Linked Google services.">
+        To get personalization and other features, include Cinaseek in <ph name="FEATURE_NAME_1">$1<ex>Web &amp; App Activity</ex></ph> and <ph name="FEATURE_NAME_2">$2<ex>Linked Google services</ex></ph>
       </message>
-      <message name="IDS_IOS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_DESCRIPTION" desc="This is the subtitle of a setting that links to “Linked Google services” in the Google Account’s Data &amp; privacy settings. This subtitle appears on a subpage from Chrome’s Advanced Sync settings, and is after the “Linked Google services” string.">
-        Link Chrome and other Google services for personalization and other purposes
+      <message name="IDS_IOS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_DESCRIPTION" desc="This is the subtitle of a setting that links to “Linked Google services” in the Google Account’s Data &amp; privacy settings. This subtitle appears on a subpage from Cinaseek’s Advanced Sync settings, and is after the “Linked Google services” string.">
+        Link Cinaseek and other Google services for personalization and other purposes
       </message>
       <message name="IDS_IOS_POST_RESTORE_DEFAULT_BROWSER_PROMO_TITLE" desc="The text of the title for the post restore default browser promo.">
-        Make Chrome your default browser?
+        Make Cinaseek your default browser?
       </message>
       <message name="IDS_IOS_POST_RESTORE_SIGN_IN_ALERT_PROMO_TITLE" desc="The title text of the alert post restore sign-in promo. [iOS only]">
-        Chrome is signed out
+        Cinaseek is signed out
       </message>
       <message name="IDS_IOS_PRICE_NOTIFICATIONS_PRICE_TRACK_PERMISSION_REDIRECT_ALERT_MESSAGE" desc="The description that argues why push notification permission is necessary for price tracking.">
-          Chrome notifications are currently turned off in your device settings.
+          Cinaseek notifications are currently turned off in your device settings.
       </message>
-      <message name="IDS_IOS_PRICE_NOTIFICATIONS_PRICE_TRACK_PERMISSION_REDIRECT_ALERT_TITLE" desc="The title for the UIAlert that redirects the user to iOS' application settings for Chrome.">
-          Allow Chrome notifications to get price drop alerts
+      <message name="IDS_IOS_PRICE_NOTIFICATIONS_PRICE_TRACK_PERMISSION_REDIRECT_ALERT_TITLE" desc="The title for the UIAlert that redirects the user to iOS' application settings for Cinaseek.">
+          Allow Cinaseek notifications to get price drop alerts
       </message>
       <message name="IDS_IOS_PRIVACY_ACCOUNT_SETTINGS_AND_GOOGLE_SERVICES_FOOTER" desc="Footer to invite the user to open the Account Settings and Google Services settings.">
-        You can <ph name="BEGIN_LINK">BEGIN_LINK</ph>manage what Chrome data is saved<ph name="END_LINK">END_LINK</ph> in your Google Account.
+        You can <ph name="BEGIN_LINK">BEGIN_LINK</ph>manage what Cinaseek data is saved<ph name="END_LINK">END_LINK</ph> in your Google Account.
 
-For more settings that use data to improve your Chrome experience, go to <ph name="BEGIN_LINK">BEGIN_LINK</ph>Google Services<ph name="END_LINK">END_LINK</ph>.
+For more settings that use data to improve your Cinaseek experience, go to <ph name="BEGIN_LINK">BEGIN_LINK</ph>Google Services<ph name="END_LINK">END_LINK</ph>.
       </message>
       <message name="IDS_IOS_PRIVACY_SAFE_BROWSING_STANDARD_PROTECTION_FRIENDLIER_SUMMARY_PROXY" desc="Friendlier summary for Privacy Safe Browsing standard protection mode.">
-        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Chrome sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
+        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Cinaseek sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
       </message>
       <message name="IDS_IOS_PRIVACY_SIGNED_OUT_FOOTER" desc="Footer to invite the signed out user to open the Google Services settings.">
-        For more settings that use data to improve your Chrome experience, go to <ph name="BEGIN_LINK">BEGIN_LINK</ph>Google Services<ph name="END_LINK">END_LINK</ph>.
+        For more settings that use data to improve your Cinaseek experience, go to <ph name="BEGIN_LINK">BEGIN_LINK</ph>Google Services<ph name="END_LINK">END_LINK</ph>.
       </message>
-      <message name="IDS_IOS_PRODUCT_NAME" desc="The Chrome application name">
-        Google Chrome
+      <message name="IDS_IOS_PRODUCT_NAME" desc="The Cinaseek application name">
+        Google Cinaseek
       </message>
       <message name="IDS_IOS_RECENT_TABS_OTHER_DEVICES_EMPTY_MESSAGE" desc="To use the Other Devices section of the Recent Tabs view, a user must be signed in and activate Tabs synchronization on multiple devices. This message is shown in this section when the user is signed in and has activated Tabs synchronization only on this device.">
-          To see your tabs from wherever you use Chrome, sign in on all your devices
+          To see your tabs from wherever you use Cinaseek, sign in on all your devices
       </message>
       <message name="IDS_IOS_RECENT_TABS_OTHER_DEVICES_SIGNED_OUT_MESSAGE" desc="To use the Other Devices section of the Recent Tabs view, a user must be signed in and activate Tabs synchronization on multiple devices. This message is shown in this section when the user is not signed in.">
-          To see your tabs from wherever you use Chrome, sign in and turn on sync
+          To see your tabs from wherever you use Cinaseek, sign in and turn on sync
       </message>
       <message name="IDS_IOS_RECENT_TABS_OTHER_DEVICES_SYNC_IS_OFF_MESSAGE" desc="To use the Other Devices section of the Recent Tabs view, a user must be signed in and activate Tabs synchronization on multiple devices. This message is shown in this section when the user is signed in, but Tabs synchronization is turned off.">
-          To see your tabs from wherever you use Chrome, turn on sync
+          To see your tabs from wherever you use Cinaseek, turn on sync
       </message>
       <message name="IDS_IOS_REMINDER_NOTIFICATIONS_ALERT_MESSAGE" desc="Message body for the alert explaining why notifications are needed for the Tab Reminders feature. [iOS only]">
-        To receive Tab Reminders from Chrome, turn on notifications in your iOS Settings.
+        To receive Tab Reminders from Cinaseek, turn on notifications in your iOS Settings.
       </message>
       <message name="IDS_IOS_REMOVE_ACCOUNT_CONFIRMATION_MESSAGE" desc="Dialog message to emphasize the effects of removing an account.">
-      This account and any unsaved data will be removed from Chrome and other Google apps on this device.
+      This account and any unsaved data will be removed from Cinaseek and other Google apps on this device.
       </message>
-      <message name="IDS_IOS_SAFARI_IMPORT_ENTRY_POINT_PRIMARY_ACTION" desc="Safari import entry point screen - Button text to start the workflow to import data from Safari to Chrome. [iOS only]" meaning="Import data from other browser to be used on Chrome">
-        Import to Chrome
+      <message name="IDS_IOS_SAFARI_IMPORT_ENTRY_POINT_PRIMARY_ACTION" desc="Safari import entry point screen - Button text to start the workflow to import data from Safari to Cinaseek. [iOS only]" meaning="Import data from other browser to be used on Cinaseek">
+        Import to Cinaseek
       </message>
       <message name="IDS_IOS_SAFARI_IMPORT_ENTRY_POINT_SUBTITLE" desc="Safari import entry point screen - Subtitle. [iOS only]">
-        Import your data to use your passwords, history, bookmarks and credit cards on Chrome
+        Import your data to use your passwords, history, bookmarks and credit cards on Cinaseek
       </message>
       <message name="IDS_IOS_SAFARI_IMPORT_EXPORT_STATIC_INSTRUCTION_STEP_5" desc="Safari import export education screen - Step 5 to export Safari data. Displayed in the static text instructions below the animated tutorial. [iOS only]">
-        Return to Chrome to upload your file
+        Return to Cinaseek to upload your file
       </message>
       <message name="IDS_IOS_SAFARI_IMPORT_IMPORT_SUBTITLE" desc="Safari import import screen - Subtitle. [iOS only]">
-        Use your Safari passwords, history, bookmarks, and credit cards in Chrome
+        Use your Safari passwords, history, bookmarks, and credit cards in Cinaseek
       </message>
-      <message name="IDS_IOS_SAFETY_CHECK_COMPACT_DESCRIPTION_UPDATE_CHROME" desc="Tag label description displayed for the Safety Check module in the Magic Stack when the Update Chrome check finds an issue. [iOS only]">
-        Your Chrome is out of date.
+      <message name="IDS_IOS_SAFETY_CHECK_COMPACT_DESCRIPTION_UPDATE_CHROME" desc="Tag label description displayed for the Safety Check module in the Magic Stack when the Update Cinaseek check finds an issue. [iOS only]">
+        Your Cinaseek is out of date.
       </message>
-      <message name="IDS_IOS_SAFETY_CHECK_DESCRIPTION_UPDATE_CHROME" desc="Tag label description displayed for the Safety Check module in the Magic Stack when the Update Chrome check finds an issue. [iOS only]">
-        Your Chrome is out of date. Update it to stay safe.
+      <message name="IDS_IOS_SAFETY_CHECK_DESCRIPTION_UPDATE_CHROME" desc="Tag label description displayed for the Safety Check module in the Magic Stack when the Update Cinaseek check finds an issue. [iOS only]">
+        Your Cinaseek is out of date. Update it to stay safe.
       </message>
-      <message name="IDS_IOS_SAFETY_CHECK_NOTIFICATIONS_ALERTS_ON_ISSUES" desc="Description of the alerts provided by Safety Check, specifically mentioning privacy or security issues detected by Chrome.">
-        Alerts on any privacy or security issues that Chrome detects for you.
+      <message name="IDS_IOS_SAFETY_CHECK_NOTIFICATIONS_ALERTS_ON_ISSUES" desc="Description of the alerts provided by Safety Check, specifically mentioning privacy or security issues detected by Cinaseek.">
+        Alerts on any privacy or security issues that Cinaseek detects for you.
       </message>
       <message name="IDS_IOS_SAFETY_CHECK_NOTIFICATIONS_DESCRIPTION_LONG" desc="Long description of Safety Check, emphasizing its protection against data breaches, unsafe websites, and more, and mentioning alerts for detected privacy or security issues.">
-        Safety Check keeps you safe from data breaches, unsafe websites and more. Receive alerts on any privacy or security issues that Chrome detects for you.
+        Safety Check keeps you safe from data breaches, unsafe websites and more. Receive alerts on any privacy or security issues that Cinaseek detects for you.
       </message>
-      <message name="IDS_IOS_SAFETY_CHECK_NOTIFICATIONS_RECEIVE_ALERTS" desc="Description of the Safety Check feature, highlighting that it provides alerts on privacy or security issues detected by Chrome.">
-        Receive alerts on any privacy or security issues that Chrome automatically detects for you.
+      <message name="IDS_IOS_SAFETY_CHECK_NOTIFICATIONS_RECEIVE_ALERTS" desc="Description of the Safety Check feature, highlighting that it provides alerts on privacy or security issues detected by Cinaseek.">
+        Receive alerts on any privacy or security issues that Cinaseek automatically detects for you.
       </message>
       <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_TWO" desc="Second bullet point under the Safe Browsing enhanced protection mode">
-        Keeps you safe on Chrome and may be used to improve your security in other Google apps when you are signed in.
+        Keeps you safe on Cinaseek and may be used to improve your security in other Google apps when you are signed in.
       </message>
       <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_DATA_ICON_DESCRIPTION" desc="Description for Safe Browsing enhanced protection data icon.">
-        Warns you about dangerous sites, even ones Google didn’t know about before, by analyzing more data from sites than standard protection. You can choose to skip Chrome warnings.
+        Warns you about dangerous sites, even ones Google didn’t know about before, by analyzing more data from sites than standard protection. You can choose to skip Cinaseek warnings.
       </message>
       <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_FOOTER" desc="Footer for Safe Browsing enhanced protection mode.">
-        Learn more about <ph name="BEGIN_LINK">BEGIN_LINK</ph>how Chrome keeps your data private<ph name="END_LINK">END_LINK</ph>
+        Learn more about <ph name="BEGIN_LINK">BEGIN_LINK</ph>how Cinaseek keeps your data private<ph name="END_LINK">END_LINK</ph>
       </message>
-      <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_INFOBAR_DESCRIPTION" desc="The Enhanced Safe Browsing infobar promo's description.">Chrome recommends enhanced protection</message>
+      <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_INFOBAR_DESCRIPTION" desc="The Enhanced Safe Browsing infobar promo's description.">Cinaseek recommends enhanced protection</message>
       <message name="IDS_IOS_SAFE_BROWSING_ENHANCED_PROTECTION_INLINE_PROMO_DESCRIPTION" desc="The Enhanced Safe Browsing inline promo's description.">
-          Get Chrome's strongest security from dangerous sites
+          Get Cinaseek's strongest security from dangerous sites
       </message>
       <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_BULLET_TWO" desc="Second bullet point under the Safe Browsing standard protection mode.">
-        Checks URLs with a list of unsafe sites stored in Chrome. If a site tries to steal your password, or when you download a harmful file, Chrome may also send URLs, including bits of page content, to Safe Browsing.
+        Checks URLs with a list of unsafe sites stored in Cinaseek. If a site tries to steal your password, or when you download a harmful file, Cinaseek may also send URLs, including bits of page content, to Safe Browsing.
       </message>
       <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_BULLET_TWO_PROXY" desc="Second bullet point under the Safe Browsing standard protection mode.">
-        Sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site tries to steal your password, or when you download a harmful file, Chrome may also send URLs, including bits of page content, to Google.
+        Sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site tries to steal your password, or when you download a harmful file, Cinaseek may also send URLs, including bits of page content, to Google.
       </message>
-      <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_LEAK_CHECK_FRIENDLIER_SUMMARY" desc="Friendlier summary for the switch toggling whether Chrome should check that entered credentials have been part of a leak.">
-        When you use a password, Chrome warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
+      <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_LEAK_CHECK_FRIENDLIER_SUMMARY" desc="Friendlier summary for the switch toggling whether Cinaseek should check that entered credentials have been part of a leak.">
+        When you use a password, Cinaseek warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
       </message>
-      <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_LEAK_CHECK_SUMMARY" desc="Summary for the switch toggling whether Chrome should check that entered credentials have been part of a leak.">
-        Chrome periodically checks your passwords against lists that have been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
+      <message name="IDS_IOS_SAFE_BROWSING_STANDARD_PROTECTION_LEAK_CHECK_SUMMARY" desc="Summary for the switch toggling whether Cinaseek should check that entered credentials have been part of a leak.">
+        Cinaseek periodically checks your passwords against lists that have been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
       </message>
-      <message name="IDS_IOS_SAFE_MODE_NAMED_TWEAKS_FOUND" desc="The message indicating a 3rd party tweak has been found that is known to crash Chrome.  After the ':', we will list the names of the libraries. [Length: 140em]">
-        Some add-ons cause Chrome to crash. Please uninstall:
+      <message name="IDS_IOS_SAFE_MODE_NAMED_TWEAKS_FOUND" desc="The message indicating a 3rd party tweak has been found that is known to crash Cinaseek.  After the ':', we will list the names of the libraries. [Length: 140em]">
+        Some add-ons cause Cinaseek to crash. Please uninstall:
       </message>
       <message name="IDS_IOS_SAFE_MODE_TWEAKS_FOUND" desc="The message indicating one or more 3rd party tweaks have been found, but none that we know specifically cause crashes. [Length: 140em]">
-        Some add-ons cause Chrome to crash. Please try uninstalling them.
+        Some add-ons cause Cinaseek to crash. Please try uninstalling them.
       </message>
-      <message name="IDS_IOS_SAVE_IMAGE_PRIVACY_ALERT_MESSAGE" desc="Message to inform user that Save Image failed due to insufficient privilege in Privacy Settings. Directs user to adjust Privacy Settings for Chrome. This message is displayed as the message body in an alert box with a single OK button. [Length: 120em]">
-        Google Chrome does not have access to your photos or videos. Enable access in iOS Settings &gt; Privacy &gt; Photos.
+      <message name="IDS_IOS_SAVE_IMAGE_PRIVACY_ALERT_MESSAGE" desc="Message to inform user that Save Image failed due to insufficient privilege in Privacy Settings. Directs user to adjust Privacy Settings for Cinaseek. This message is displayed as the message body in an alert box with a single OK button. [Length: 120em]">
+        Google Cinaseek does not have access to your photos or videos. Enable access in iOS Settings &gt; Privacy &gt; Photos.
       </message>
       <message name="IDS_IOS_SAVE_IMAGE_PRIVACY_ALERT_MESSAGE_GO_TO_SETTINGS" desc="Body of the alert shown when the user tries to save an image but we lack permission to add to photos. This body tells the user he'll be redirected to the Settings app. [Length: 100em] [iOS only].">
-        To save images, tap on Settings to let Chrome add to your photos
+        To save images, tap on Settings to let Cinaseek add to your photos
       </message>
       <message name="IDS_IOS_SAVE_PASSWORD_FOOTER_NOT_SYNCING" desc="Helper text above the save credentials modal's primary action button. [Length: unlimited] [iOS only]">
         Passwords are saved to Google Password Manager on this device.
       </message>
       <message name="IDS_IOS_SCANNER_CAMERA_IN_USE_ALERT_DETAIL" desc="Body of a modal dialog shown when the user tries to open the QR scanner but the camera is in use by another application. [Length: 140em] [iOS only]">
-        Google Chrome can't use your camera because it's in use by another application
+        Google Cinaseek can't use your camera because it's in use by another application
       </message>
       <message name="IDS_IOS_SCANNER_CAMERA_PERMISSIONS_HELP_DETAIL" desc="Body of modal dialog shown when the user tries to open the QR scanner but the application lacks permission to use the camera. The text instructs the user how to change the permissions setting. [Length: 140em] [iOS only]">
-        Open Settings &gt; Privacy &gt; Camera &gt; Google Chrome and turn on the camera.
+        Open Settings &gt; Privacy &gt; Camera &gt; Google Cinaseek and turn on the camera.
       </message>
       <message name="IDS_IOS_SCANNER_CAMERA_PERMISSIONS_HELP_TITLE" desc="Title of modal dialog shown when the user tries to open the QR scanner but the application lacks permission to use the camera. The body of this dialog instructs the user how to change the permissions setting. [Length: 50em] [iOS only]">
-        Start using Google Chrome QR scanner
+        Start using Google Cinaseek QR scanner
       </message>
       <message name="IDS_IOS_SCANNER_CAMERA_PERMISSIONS_HELP_TITLE_GO_TO_SETTINGS" desc="Title of modal dialog shown when the user tries to open the QR or credit card scanner but the application lacks permission to use the camera. [Length: 40em] [iOS only]">
-        Chrome Would Like to Access the Camera
+        Cinaseek Would Like to Access the Camera
       </message>
       <message name="IDS_IOS_SCANNER_CAMERA_UNAVAILABLE_ALERT_DETAIL" desc="Body of a modal dialog shown when the user tries to open the QR scanner but the camera is unavailable. [Length: 140em] [iOS only]">
-        Google Chrome can't use your camera right now
+        Google Cinaseek can't use your camera right now
       </message>
       <message name="IDS_IOS_SCANNER_MULTIPLE_FOREGROUND_APPS_ALERT_DETAIL" desc="Body of a modal dialog shown when the user tries to open the QR scanner in a Split View mode, when the camera is unavailable. [Length: 140em] [iOS only]">
-        Google Chrome can't use your camera in Split View mode
+        Google Cinaseek can't use your camera in Split View mode
       </message>
       <message name="IDS_IOS_SETTINGS_ADD_PASSWORD_FOOTER" desc="Disclaimer telling users what will happen to their passwords">
         Your password will be saved in your Google Account (<ph name="EMAIL">$1<ex>example@gmail.com</ex></ph>).
@@ -1087,249 +1087,249 @@ For more settings that use data to improve your Chrome experience, go to <ph nam
         Your password will be saved to Google Password Manager for <ph name="EMAIL">$1<ex>example@gmail.com</ex></ph>.
       </message>
       <message name="IDS_IOS_SETTINGS_IN_OVERFLOW_MENU_IPH_TEXT" desc="An in product help message to inform the user that they can find Settings in the overflow menu.">
-        You can find Chrome settings and more here
+        You can find Cinaseek settings and more here
       </message>
-      <message name="IDS_IOS_SETTINGS_PASSWORDS_IN_OTHER_APPS_STEP_4" desc="Text of the row indicating the fourth step of full instruction of of turning on iOS auto-fill from Chrome password manager [iOS only]">
-        4. Select Chrome
+      <message name="IDS_IOS_SETTINGS_PASSWORDS_IN_OTHER_APPS_STEP_4" desc="Text of the row indicating the fourth step of full instruction of of turning on iOS auto-fill from Cinaseek password manager [iOS only]">
+        4. Select Cinaseek
       </message>
-      <message name="IDS_IOS_SETTINGS_PASSWORDS_PASSKEYS_IN_OTHER_APPS_SHORTENED_STEP_2" desc="Text of the row indicating the second step of shortened instruction of turning on iOS AutoFill from Chrome password manager [iOS only]">
-        Toggle Chrome
+      <message name="IDS_IOS_SETTINGS_PASSWORDS_PASSKEYS_IN_OTHER_APPS_SHORTENED_STEP_2" desc="Text of the row indicating the second step of shortened instruction of turning on iOS AutoFill from Cinaseek password manager [iOS only]">
+        Toggle Cinaseek
       </message>
-      <message name="IDS_IOS_SETTINGS_PASSWORDS_PASSKEYS_IN_OTHER_APPS_SUBTITLE" desc="The subtitle of the view that teaches users to turn on iOS AutoFill from Chrome password manager [iOS Only]">
-        Sign in faster with Chrome autofill
+      <message name="IDS_IOS_SETTINGS_PASSWORDS_PASSKEYS_IN_OTHER_APPS_SUBTITLE" desc="The subtitle of the view that teaches users to turn on iOS AutoFill from Cinaseek password manager [iOS Only]">
+        Sign in faster with Cinaseek autofill
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_MAGIC_STACK_PAGE_HEADER" desc="Informational header at the top of the safety check page when opened via the Magic Stack">
-        Chrome automatically runs Safety Check every day to keep you safe from data breaches, unsafe websites and more. You can find more about Safety Check in Settings.
+        Cinaseek automatically runs Safety Check every day to keep you safe from data breaches, unsafe websites and more. You can find more about Safety Check in Settings.
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_PAGE_HEADER" desc="Informational header at the top of the safety check page">
-        Chrome can help keep you safe from data breaches, unsafe websites and more.
+        Cinaseek can help keep you safe from data breaches, unsafe websites and more.
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_CHANNEL_BETA_DESC" desc="Description text for when the app is on Beta and unable to run the check">
-        Not supported on Chrome Beta
+        Not supported on Cinaseek Beta
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_CHANNEL_CANARY_DESC" desc="Description text for when the app is on Canary and unable to run the check">
-        Not supported on Chrome Canary
+        Not supported on Cinaseek Canary
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_DESCRIPTION" desc="Description text on the update element describing what the update check does.">
-        Keep Chrome up to date
+        Keep Cinaseek up to date
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_ERROR_DESC" desc="Description text for when updates can't be checked because there was an issue with the check">
-        Chrome can't check for updates
+        Cinaseek can't check for updates
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_ERROR_INFO" desc="Text inside popover which is shown when the user wants to see detailed information about the error. [iOS only]" meaning="An error occurred while performing the update check.">
-        Chrome couldn't check for updates. Try again later.
+        Cinaseek couldn't check for updates. Try again later.
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_OFFLINE_DESC" desc="Description text for when updates can't be checked because the user is offline">
-        Offline, Chrome can't check for updates
+        Offline, Cinaseek can't check for updates
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_OFFLINE_INFO" desc="Text inside popover which is shown when the user wants to see detailed information about the error. [iOS only]" meaning="The user has no internet connection and can't check for updates.">
-        Chrome couldn't check for updates. Try checking your internet connection.
+        Cinaseek couldn't check for updates. Try checking your internet connection.
       </message>
-      <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_OUT_OF_DATE_DESC" desc="Description text for when Chrome is out of date">
-        Google Chrome is out of date
+      <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_OUT_OF_DATE_DESC" desc="Description text for when Cinaseek is out of date">
+        Google Cinaseek is out of date
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_UNABLE_DESC" desc="Description text for when the device is not able to update to the newest version">
-        Chrome can't update
+        Cinaseek can't update
       </message>
       <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_UNABLE_INFO" desc="Text inside popover which is shown when the user wants to see detailed information about the error. [iOS only]" meaning="The device is not able to update to the newest version.">
-        Chrome is out of date. If no update is available in the <ph name="BEGIN_LINK">BEGIN_LINK</ph>App Store<ph name="END_LINK">END_LINK</ph>, it's possible that your device doesn't support new versions of Chrome anymore.
+        Cinaseek is out of date. If no update is available in the <ph name="BEGIN_LINK">BEGIN_LINK</ph>App Store<ph name="END_LINK">END_LINK</ph>, it's possible that your device doesn't support new versions of Cinaseek anymore.
       </message>
-      <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_UP_TO_DATE_DESC" desc="Description text for when Chrome is up to date">
-        Google Chrome is up to date
+      <message name="IDS_IOS_SETTINGS_SAFETY_CHECK_UPDATES_UP_TO_DATE_DESC" desc="Description text for when Cinaseek is up to date">
+        Google Cinaseek is up to date
       </message>
-      <message name="IDS_IOS_SETTINGS_SIGNIN_DISABLED_POPOVER_TEXT" desc="This text is shown when sign-in is disabled by policy and the user taps on the info pop-over of the 'Sign in to Chrome' button in the settings. [iOS only]">
-        Your organization requires you to stay signed out of Chrome.
+      <message name="IDS_IOS_SETTINGS_SIGNIN_DISABLED_POPOVER_TEXT" desc="This text is shown when sign-in is disabled by policy and the user taps on the info pop-over of the 'Sign in to Cinaseek' button in the settings. [iOS only]">
+        Your organization requires you to stay signed out of Cinaseek.
       </message>
       <message name="IDS_IOS_SET_UP_LIST_ALL_SET_DESCRIPTION" desc="Description for the Set Up List item that tells the user they have completed all tasks.">
-        You'll now get the most out of Chrome on your device.
+        You'll now get the most out of Cinaseek on your device.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to set up Chrome's autofill settings.">
-        Access your Chrome passwords and more across other apps on this device.
+      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to set up Cinaseek's autofill settings.">
+        Access your Cinaseek passwords and more across other apps on this device.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_MAGIC_STACK_DESCRIPTION" desc="Description for the Set Up List item in the Magic Stack that encourages the user to set up Chrome's autofill settings.">
-        Access your Chrome passwords and more across other apps.
+      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_MAGIC_STACK_DESCRIPTION" desc="Description for the Set Up List item in the Magic Stack that encourages the user to set up Cinaseek's autofill settings.">
+        Access your Cinaseek passwords and more across other apps.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_TITLE" desc="Title for the Set Up List item that encourages the user to set up Chrome's autofill settings.">
-        Use Chrome for Autofill
+      <message name="IDS_IOS_SET_UP_LIST_AUTOFILL_TITLE" desc="Title for the Set Up List item that encourages the user to set up Cinaseek's autofill settings.">
+        Use Cinaseek for Autofill
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to set Chrome as their default browser.">
-        Use Chrome anytime you tap links in messages, documents, and other apps.
+      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to set Cinaseek as their default browser.">
+        Use Cinaseek anytime you tap links in messages, documents, and other apps.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_MAGIC_STACK_DESCRIPTION" desc="Description for the Set Up List item in the Magic Stack that encourages the user to set Chrome as their default browser.">
-        Use Chrome anytime you tap links in messages and other apps.
+      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_MAGIC_STACK_DESCRIPTION" desc="Description for the Set Up List item in the Magic Stack that encourages the user to set Cinaseek as their default browser.">
+        Use Cinaseek anytime you tap links in messages and other apps.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_SEE_MORE_DESCRIPTION" desc="Description for the Set Up List item in the See More modal that encourages the user to set Chrome as their default browser.">
-        Use Chrome anytime you tap links in other apps.
+      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_SEE_MORE_DESCRIPTION" desc="Description for the Set Up List item in the See More modal that encourages the user to set Cinaseek as their default browser.">
+        Use Cinaseek anytime you tap links in other apps.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_TITLE" desc="Title for the Set Up List item that encourages the user to set Chrome as their default browser.">
-        Use Chrome by default
+      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_TITLE" desc="Title for the Set Up List item that encourages the user to set Cinaseek as their default browser.">
+        Use Cinaseek by default
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_TITLE_IPAD" desc="Title for the Set Up List item that encourages the user to set Chrome as their default browser.">
-        Use Chrome on iPad by Default
+      <message name="IDS_IOS_SET_UP_LIST_DEFAULT_BROWSER_TITLE_IPAD" desc="Title for the Set Up List item that encourages the user to set Cinaseek as their default browser.">
+        Use Cinaseek on iPad by Default
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_DESCRIPTION" desc="Description for the Set Up List - a list of tasks the user might want to complete when first using Chrome.">
-          Complete these suggested actions below to get the most out of Chrome.
+      <message name="IDS_IOS_SET_UP_LIST_DESCRIPTION" desc="Description for the Set Up List - a list of tasks the user might want to complete when first using Cinaseek.">
+          Complete these suggested actions below to get the most out of Cinaseek.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_NOTIFICATIONS_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to enable Chrome notifications.">
-        Keep up with price tracking updates and Chrome tips.
+      <message name="IDS_IOS_SET_UP_LIST_NOTIFICATIONS_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to enable Cinaseek notifications.">
+        Keep up with price tracking updates and Cinaseek tips.
       </message>
-      <message name="IDS_IOS_SET_UP_LIST_NOTIFICATIONS_SHORT_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to enable Chrome notifications.">
-        Keep up with helpful Chrome tips and more.
+      <message name="IDS_IOS_SET_UP_LIST_NOTIFICATIONS_SHORT_DESCRIPTION" desc="Description for the Set Up List item that encourages the user to enable Cinaseek notifications.">
+        Keep up with helpful Cinaseek tips and more.
       </message>
-      <message name="IDS_IOS_SHORT_PRODUCT_NAME" desc="The Chrome application short name">
-        Chrome
+      <message name="IDS_IOS_SHORT_PRODUCT_NAME" desc="The Cinaseek application short name">
+        Cinaseek
       </message>
       <message name="IDS_IOS_SIGNIN_ACCOUNT_NOTIFICATION_TITLE" desc="Notification title for the user's signed-in state [iOS only]">
-      Signed in to Chrome
+      Signed in to Cinaseek
       </message>
       <message name="IDS_IOS_SIGNIN_GROUP_COLLABORATION_SUBTITLE" desc="Subtitle displayed to the user when they attempt to access a shared group while being signed out.">
-        Sign in to Chrome to share and join tab groups, and work together on ideas
+        Sign in to Cinaseek to share and join tab groups, and work together on ideas
       </message>
-      <message name="IDS_IOS_SIGNIN_SHEET_LABEL_FOR_WEB_SIGNIN" desc="This string is on a sign-in page, after the user taps to sign in to a website with their Google Account. It offers to sign the user in to both the website and to Chrome with the account. It highlights the overarching user benefit of signing in to Chrome (access to data from other devices like bookmarks, passwords, history, settings, etc.). We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account. The tone should be informative and lightweight. [iOS only]">
-        Sign in to this site and Chrome to get your bookmarks and more on all your devices.
+      <message name="IDS_IOS_SIGNIN_SHEET_LABEL_FOR_WEB_SIGNIN" desc="This string is on a sign-in page, after the user taps to sign in to a website with their Google Account. It offers to sign the user in to both the website and to Cinaseek with the account. It highlights the overarching user benefit of signing in to Cinaseek (access to data from other devices like bookmarks, passwords, history, settings, etc.). We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account. The tone should be informative and lightweight. [iOS only]">
+        Sign in to this site and Cinaseek to get your bookmarks and more on all your devices.
       </message>
-      <message name="IDS_IOS_SIGNOUT_DIALOG_MESSAGE_WITH_BOOKMARKS_LIMIT_EXCEEDED" desc="Body of a dialog shown to users when they sign out of Chrome but Chrome hasn't synced some data yet, which is permanently deleted if the user proceeds.  [iOS only].">
-        You reached Google Chrome's limit of <ph name="LIMIT">$1<ex>100,000</ex></ph> bookmarks, so some of your bookmarks haven’t been saved in your Google Account yet.
+      <message name="IDS_IOS_SIGNOUT_DIALOG_MESSAGE_WITH_BOOKMARKS_LIMIT_EXCEEDED" desc="Body of a dialog shown to users when they sign out of Cinaseek but Cinaseek hasn't synced some data yet, which is permanently deleted if the user proceeds.  [iOS only].">
+        You reached Google Cinaseek's limit of <ph name="LIMIT">$1<ex>100,000</ex></ph> bookmarks, so some of your bookmarks haven’t been saved in your Google Account yet.
 
 New bookmarks can’t be saved in your account until you delete some. If you sign out now, unsaved bookmarks will be deleted.
       </message>
-      <message name="IDS_IOS_SIGNOUT_DIALOG_MESSAGE_WITH_NOT_SAVED_DATA" desc="Body of a dialog shown to users when they sign out of Chrome but Chrome hasn't synced some data yet, which is permanently deleted if the user proceeds. Related to IDS_IOS_SIGNOUT_DIALOG_SIGN_OUT_AND_DELETE_BUTTON and IDS_IOS_SIGNOUT_DIALOG_SIGN_OUT_AND_DELETE_TITLE [iOS only].">
-        Some of your Chrome data hasn't been saved in your Google Account yet.
+      <message name="IDS_IOS_SIGNOUT_DIALOG_MESSAGE_WITH_NOT_SAVED_DATA" desc="Body of a dialog shown to users when they sign out of Cinaseek but Cinaseek hasn't synced some data yet, which is permanently deleted if the user proceeds. Related to IDS_IOS_SIGNOUT_DIALOG_SIGN_OUT_AND_DELETE_BUTTON and IDS_IOS_SIGNOUT_DIALOG_SIGN_OUT_AND_DELETE_TITLE [iOS only].">
+        Some of your Cinaseek data hasn't been saved in your Google Account yet.
 Try waiting a few minutes before signing out. If you sign out now, this data will be deleted.
       </message>
       <message name="IDS_IOS_SIGNOUT_DIALOG_TITLE_WITH_SYNCING_MANAGED_ACCOUNT" desc="The signout dialog title. This dialog is used when the user have a managed account (other than gmail account) [iOS only].">
-        Your account is managed by <ph name="HOSTED_DOMAIN">$1<ex>google.com</ex></ph>, so your Chrome data will be cleared from this device
+        Your account is managed by <ph name="HOSTED_DOMAIN">$1<ex>google.com</ex></ph>, so your Cinaseek data will be cleared from this device
       </message>
-      <message name="IDS_IOS_SIGN_IN_TO_CHROME_SETTING_TITLE" meaning="Title" desc="The title for the setting item to Sign in to Chrome [iOS only]">
-        Sign in to Chrome
+      <message name="IDS_IOS_SIGN_IN_TO_CHROME_SETTING_TITLE" meaning="Title" desc="The title for the setting item to Sign in to Cinaseek [iOS only]">
+        Sign in to Cinaseek
       </message>
       <message name="IDS_IOS_SPOTLIGHT_CHROME_ACTIONS_LABEL" desc="Tag label title displayed for chrome actions spotlight items. [iOS only]">
-        Chrome actions
+        Cinaseek actions
       </message>
       <message name="IDS_IOS_SUGGESTED_STRONG_PASSWORD_HINT_DISPLAYING_EMAIL" desc="Text shown alongside a suggested password to tell user that generated passwords are recorded by chrome. [Length: unlimited] [iOS only]">
         You won't need to remember this password. It will be saved to Google Password Manager for <ph name="EMAIL">$1<ex>johndoe@gmail.com</ex></ph>
       </message>
       <message name="IDS_IOS_SYNC_DATATYPE_IOS_THEME" desc="The label for the sync switch item to sync iOS themes. [iOS only]">
-        Chrome theme for iPhone and iPad
+        Cinaseek theme for iPhone and iPad
       </message>
       <message name="IDS_IOS_SYNC_ENCRYPTION_PASSPHRASE_HINT_UNO" desc="The information text on how to reset encryption passphrase for sync, shown on the sync encryption settings [Length: 300em] [iOS only]">
         Passphrase encryption doesn’t include payment methods and addresses.
 
-To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Chrome data in your account<ph name="END_LINK">END_LINK</ph>.
+To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Cinaseek data in your account<ph name="END_LINK">END_LINK</ph>.
       </message>
       <message name="IDS_IOS_SYNC_ENTER_PASSPHRASE_BODY_WITH_EMAIL" desc="Instructions for the dialog where the user enters the passphrase.">
         Signed in as <ph name="EMAIL">$1<ex>johndoe@gmail.com</ex></ph>.
 
-Your data is encrypted with your passphrase. Enter it to use and save Chrome data in your Google Account.
+Your data is encrypted with your passphrase. Enter it to use and save Cinaseek data in your Google Account.
       </message>
       <message name="IDS_IOS_SYNC_ENTER_PASSPHRASE_BODY_WITH_EMAIL_AND_DATE" desc="Instructions for the dialog where the user enters the passphrase.">
         Signed in as <ph name="EMAIL">$1<ex>johndoe@gmail.com</ex></ph>.
 
-Your data was encrypted with your passphrase on <ph name="TIME">$2<ex>Sept 1, 2012</ex></ph>. Enter it to use and save Chrome data in your Google Account.
+Your data was encrypted with your passphrase on <ph name="TIME">$2<ex>Sept 1, 2012</ex></ph>. Enter it to use and save Cinaseek data in your Google Account.
       </message>
-      <message name="IDS_IOS_SYNC_LOGIN_INFO_OUT_OF_DATE_WITH_UNO" desc="Body of a message that is shown certain error states, such as when account was removed in another app or the password was changed. This string follows the heading &quot;Verify it's you&quot;, and we want the user to tap on the button &quot;Verify&quot;. We are asking the user to sign back in to their Google Account, so that the user can sign back into Chrome and resume access to their Chrome data (such as bookmarks, passwords, history, settings, and more). The tone should be helpful and instructive.">
-        Keep using the Chrome data in your Google Account.
+      <message name="IDS_IOS_SYNC_LOGIN_INFO_OUT_OF_DATE_WITH_UNO" desc="Body of a message that is shown certain error states, such as when account was removed in another app or the password was changed. This string follows the heading &quot;Verify it's you&quot;, and we want the user to tap on the button &quot;Verify&quot;. We are asking the user to sign back in to their Google Account, so that the user can sign back into Cinaseek and resume access to their Cinaseek data (such as bookmarks, passwords, history, settings, and more). The tone should be helpful and instructive.">
+        Keep using the Cinaseek data in your Google Account.
       </message>
       <message name="IDS_IOS_SYNC_PASSPHRASE_RECOVER" desc="Message about how to recover from a lost passphrase. [Length:100em, may be multiple lines] [iOS only]">
-        If you forgot your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Chrome data in your account<ph name="END_LINK">END_LINK</ph>.
+        If you forgot your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Cinaseek data in your account<ph name="END_LINK">END_LINK</ph>.
       </message>
       <message name="IDS_IOS_TAB_SWITCHER_NO_TABS_TO_SYNC_PROMO" desc="The title of the paragraph IDS_OPEN_TABS_NO_SESSION_INSTRUCTIONS_IOS. The paragraph explains that tabs opened on other devices where the user is signed in will appear here, in the Tab Switcher. [iOS only]">
-        Use Chrome everywhere
+        Use Cinaseek everywhere
       </message>
       <message name="IDS_IOS_TAILORED_SECURITY_CONSENTED_DISABLE_MESSAGE_DESCRIPTION" desc="Description shown in the iOS message when the account tailored security setting changes for a consented primary account">
         You're getting standard security protection on this device
       </message>
       <message name="IDS_IOS_TAILORED_SECURITY_CONSENTED_ENABLE_MESSAGE_DESCRIPTION" desc="Description shown in the iOS message when the account tailored security setting changes for a consented primary account">
-        You have Chrome's strongest security against harmful websites
+        You have Cinaseek's strongest security against harmful websites
       </message>
       <message name="IDS_IOS_TAILORED_SECURITY_UNCONSENTED_ENABLE_MESSAGE_DESCRIPTION" desc="Description shown in the iOS message when the account tailored security setting changes for a consented primary account">
-        Get Enhanced Safe Browsing for this Chrome profile, too
+        Get Enhanced Safe Browsing for this Cinaseek profile, too
       </message>
       <message name="IDS_IOS_TIPS_NOTIFICATIONS_SETTINGS_ALERT_SUBTITLE" desc="Subtitle of the alert to enable notifications in the iOS settings for tips.">
-        To get helpful Chrome tips, turn on notifications in your iOS settings.
+        To get helpful Cinaseek tips, turn on notifications in your iOS settings.
       </message>
-      <message name="IDS_IOS_TIPS_NOTIFICATION_SETTINGS_FOOTER" desc="Text for the footer of the Chrome Tips toggle in the notification settings page.">
-        Tips on getting the most out of Chrome.
+      <message name="IDS_IOS_TIPS_NOTIFICATION_SETTINGS_FOOTER" desc="Text for the footer of the Cinaseek Tips toggle in the notification settings page.">
+        Tips on getting the most out of Cinaseek.
       </message>
       <message name="IDS_IOS_TRANSLATE_INFOBAR_NEVER_MESSAGE" desc="Message for the Translate infobar to allow the user to opt out. [Length: 250em]">
-        Would you like Google Chrome to offer to translate <ph name="LANGUAGE_NAME">$1<ex>French</ex></ph> pages from this site next time?
+        Would you like Google Cinaseek to offer to translate <ph name="LANGUAGE_NAME">$1<ex>French</ex></ph> pages from this site next time?
       </message>
       <message name="IDS_IOS_TRANSLATE_SETTING_DESCRIPTION" desc="Description for the Translate setting. [Length: unlimited] [iOS only]">
-        When this feature is turned on, Chrome will offer to translate pages written in other languages using Google Translate. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
+        When this feature is turned on, Cinaseek will offer to translate pages written in other languages using Google Translate. <ph name="BEGIN_LINK">BEGIN_LINK</ph>Learn more<ph name="END_LINK">END_LINK</ph>
       </message>
       <message name="IDS_IOS_UI_BLOCKED_USE_OTHER_WINDOW_DESCRIPTION" desc="Explanatory text that appears when the user has multiple windows open, and one window is showing a dialog that has to be interacted with before any other window can be used. [iOS only]">
-          Finish what you were doing in your other open Chrome window.
+          Finish what you were doing in your other open Cinaseek window.
       </message>
-      <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_SUBTITLE_SYNC_DISABLED" desc="This string is on a sign-in page, shown several weeks after the user has installed Chrome. It explains the overarching user benefit of signing in (access to bookmarks, passwords, history, settings, etc.). However, we introduce a caveat, because the user has a managed account (such as Enterprise); this means that, depending on their organization's settings, the user might not be able to save all types of data in their Google Account. We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account.">
-        Get the most out of Chrome.
+      <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_SUBTITLE_SYNC_DISABLED" desc="This string is on a sign-in page, shown several weeks after the user has installed Cinaseek. It explains the overarching user benefit of signing in (access to bookmarks, passwords, history, settings, etc.). However, we introduce a caveat, because the user has a managed account (such as Enterprise); this means that, depending on their organization's settings, the user might not be able to save all types of data in their Google Account. We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Google Account.">
+        Get the most out of Cinaseek.
       </message>
-      <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_TITLE" desc="Title of the screen suggesting to the user to sign in. The user may see this screen when Chrome is opened, but only several weeks after installation.">
-        Make Chrome your own
+      <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_TITLE" desc="Title of the screen suggesting to the user to sign in. The user may see this screen when Cinaseek is opened, but only several weeks after installation.">
+        Make Cinaseek your own
       </message>
-       <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_TITLE_0" desc="Variations option 1. Title of the screen suggesting to the user to sign in. The user may see this screen when Chrome is opened, but only several weeks after installation.">
-        Take your Chrome with you
+       <message name="IDS_IOS_UNO_UPGRADE_PROMO_SIGNIN_TITLE_0" desc="Variations option 1. Title of the screen suggesting to the user to sign in. The user may see this screen when Cinaseek is opened, but only several weeks after installation.">
+        Take your Cinaseek with you
       </message>
       <message name="IDS_IOS_UPGRADE_AVAILABLE" desc="Text to inform the user of the presence of a new version of the application">
-        Chrome just got better! A new version is available.
+        Cinaseek just got better! A new version is available.
       </message>
       <message name="IDS_IOS_USER_POLICY_NOTIFICATION_NO_SIGNOUT_SUBTITLE" desc="The subtitle of the User Policy notification dialog. [iOS only] [300em]">
-        Your organization, <ph name="DOMAIN">$1<ex>doe.com</ex></ph>, manages the account you're signed in to and how Chrome is used.
+        Your organization, <ph name="DOMAIN">$1<ex>doe.com</ex></ph>, manages the account you're signed in to and how Cinaseek is used.
       </message>
-      <message name="IDS_IOS_WHATS_CHROME_TIP_CHROME_DEFAULT_TITLE" desc="Use Chrome By Default title displayed in What's New. [iOS only]">
-        Use Chrome by default
+      <message name="IDS_IOS_WHATS_CHROME_TIP_CHROME_DEFAULT_TITLE" desc="Use Cinaseek By Default title displayed in What's New. [iOS only]">
+        Use Cinaseek by default
       </message>
       <message name="IDS_IOS_WHATS_NEW_APP_SETTINGS" desc="Text of the row indicating the step of opening the app settings. [iOS only]">
-        Go to Chrome Settings
+        Go to Cinaseek Settings
       </message>
-      <message name="IDS_IOS_WHATS_NEW_CHROME_ACTIONS_TITLE" desc="Chrome Actions title displayed in What's New. [iOS only]">
-        Use Chrome actions on iOS
+      <message name="IDS_IOS_WHATS_NEW_CHROME_ACTIONS_TITLE" desc="Cinaseek Actions title displayed in What's New. [iOS only]">
+        Use Cinaseek actions on iOS
       </message>
-      <message name="IDS_IOS_WHATS_NEW_CHROME_TIP_CHROME_DEFAULT_SUBTITLE" desc="Use Chrome By Default subtitle displayed in What's New. [iOS only]">
-        You can now use Chrome anytime you browse or tap links in messages, documents, and other apps.
+      <message name="IDS_IOS_WHATS_NEW_CHROME_TIP_CHROME_DEFAULT_SUBTITLE" desc="Use Cinaseek By Default subtitle displayed in What's New. [iOS only]">
+        You can now use Cinaseek anytime you browse or tap links in messages, documents, and other apps.
       </message>
       <message name="IDS_IOS_WHATS_NEW_CHROME_TIP_PASSWORDS_IN_OTHER_APPS_STEP_2" desc="Text of the row indicating the second step of Passwords In Other Apps in What's New. [iOS only]">
-        Select Chrome
+        Select Cinaseek
       </message>
       <message name="IDS_IOS_WHATS_NEW_FEATURE_NEW_MENU_STEP_1" desc="Text of the row indicating the first step of New Menu in What's New. [iOS only]">
-        Open the Chrome menu
+        Open the Cinaseek menu
       </message>
       <message name="IDS_IOS_WHATS_NEW_INCOGNITO_LOCK_STEP_3" desc="Text of the row indicating the third step to turn on Incognito Lock. [iOS only]">
-        Turn on “Lock Incognito tabs when you close Chrome.”
+        Turn on “Lock Incognito tabs when you close Cinaseek.”
       </message>
       <message name="IDS_IOS_WHATS_NEW_INCOGNITO_LOCK_SUBTITLE" desc="Incognito Lock subtitle displayed in What's New. [iOS only]">
-        Lock your Incognito tabs when you leave Chrome or switch to a different app.
+        Lock your Incognito tabs when you leave Cinaseek or switch to a different app.
       </message>
       <message name="IDS_IOS_WHATS_NEW_MINI_MAPS_STEP_2" desc="Text of the row indicating the second step of of the Mini Maps feature. [iOS only]">
-        Tap “View with Google Maps on Chrome.”
+        Tap “View with Google Maps on Cinaseek.”
       </message>
       <message name="IDS_IOS_WHATS_NEW_MINI_MAPS_TITLE" desc="Mini Maps title displayed in What's New. [iOS only]">
-        Maps in Chrome
+        Maps in Cinaseek
       </message>
       <message name="IDS_IOS_WHATS_NEW_SECTION_CHROME_TIP_TITLE" desc="Title of a section in a table view to inform users about a chrome tip.">
-        Chrome tip
+        Cinaseek tip
       </message>
       <message name="IDS_IOS_WIDGET_PROMO_INSTRUCTIONS_STEP_3" desc="Third step of the instructions for the Password Manager widget's installation.">
-        In the Search Widgets box, enter Chrome
+        In the Search Widgets box, enter Cinaseek
       </message>
       <message name="IDS_IOS_WINDOW_COUNT_CHANGE" is_accessibility_with_no_ui="true" desc="VoiceOver text spoken when the count of visible windows changes -- note: this text is only spoken, never displayed on screen">
         {count, plural,
-          =1 {Now showing 1 Chrome window}
-          other {Now showing {count} Chrome windows}}
+          =1 {Now showing 1 Cinaseek window}
+          other {Now showing {count} Cinaseek windows}}
       </message>
-      <message name="IDS_IOS_YOUTUBE_INCOGNITO_SHEET_SUBTITLE" desc="Subtitle of the Youtube Incognito Sheet explaining that Chrome automatically opens Youtube Incognito links in Incognito">
-        Chrome automatically opens Youtube Incognito links in Incognito.
+      <message name="IDS_IOS_YOUTUBE_INCOGNITO_SHEET_SUBTITLE" desc="Subtitle of the Youtube Incognito Sheet explaining that Cinaseek automatically opens Youtube Incognito links in Incognito">
+        Cinaseek automatically opens Youtube Incognito links in Incognito.
       </message>
-      <message name="IDS_IOS_YOUTUBE_INCOGNITO_SHEET_TITLE" desc="Title of the Youtube Incognito Sheet informing the user that the URL will be opened in Chrome Incognito">
-        You're in Chrome Incognito
+      <message name="IDS_IOS_YOUTUBE_INCOGNITO_SHEET_TITLE" desc="Title of the Youtube Incognito Sheet informing the user that the URL will be opened in Cinaseek Incognito">
+        You're in Cinaseek Incognito
       </message>
       <message name="IDS_IOS_YOUTUBE_INCOGNITO_SNACKBAR_MESSAGE" desc="The message displayed in the left corner of the snackbar">
-          Opened in Chrome Incognito
+          Opened in Cinaseek Incognito
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_NO_TARGET_DEVICE_LABEL" desc="Text shown when a user with no available target devices attempts to use send-tab-to-self.">
-        To send this tab to another device, sign in to Chrome there.
+        To send this tab to another device, sign in to Cinaseek there.
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_SIGN_IN_PROMO_LABEL" desc="Text when a signed out user attempts to use send-tab-to-self, then sees a sign-in promo.">
-        To send this tab to another device, sign in to Chrome on both devices.
+        To send this tab to another device, sign in to Cinaseek on both devices.
       </message>
       </messages>
   </release>

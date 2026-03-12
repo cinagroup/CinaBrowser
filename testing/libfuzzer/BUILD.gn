@@ -1,9 +1,9 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # LibFuzzer is a LLVM tool for coverage-guided fuzz testing.
-# See http://www.chromium.org/developers/testing/libfuzzer
+# See http://www.Cinaseek.org/developers/testing/libfuzzer
 #
 # To enable libfuzzer, 'use_libfuzzer' GN option should be set to true.
 # Or equivalent 'use_afl' or 'use_centipede' options for those engines.
@@ -13,10 +13,10 @@ import("//build/config/sanitizers/sanitizers.gni")
 import("//testing/test.gni")
 
 # This file is depended upon from builds that don't include all
-# of Chromium, so nothing in here should assume the existence of
-# Chromium or Blink. It's OK for subdirectories (e.g. the fuzzers
+# of Cinaseek, so nothing in here should assume the existence of
+# Cinaseek or Blink. It's OK for subdirectories (e.g. the fuzzers
 # or research subdirectories) to have dependencies on other parts
-# of Chromium, but not this file.
+# of Cinaseek, but not this file.
 
 buildflag_header("buildflags") {
   header = "buildflags.h"
@@ -76,7 +76,7 @@ if (fuzzing_engine_supports_custom_main) {
         # Centipede based fuzzers require the centipede runner in order to fuzz.
         "//third_party/fuzztest:centipede",
       ]
-    } else if (use_chromium_fuzzilli) {
+    } else if (use_Cinaseek_fuzzilli) {
       deps = [ "//testing/libfuzzer/fuzzilli:fuzzilli_driver" ]
     }
   }
@@ -181,7 +181,7 @@ source_set("confirm_fuzztest_init") {
   configs += [ "//build/config/compiler:no_exit_time_destructors" ]
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   source_set("libfuzzer_base_wrappers") {
     testonly = true
     public = [ "libfuzzer_base_wrappers.h" ]

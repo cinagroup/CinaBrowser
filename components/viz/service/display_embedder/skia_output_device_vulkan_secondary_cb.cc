@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,9 +13,9 @@
 #include "third_party/skia/include/gpu/ganesh/GrTypes.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkBackendSemaphore.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkBackendSurface.h"
-#include "third_party/skia/include/private/chromium/GrDeferredDisplayList.h"
-#include "third_party/skia/include/private/chromium/GrSurfaceCharacterization.h"
-#include "third_party/skia/include/private/chromium/GrVkSecondaryCBDrawContext.h"
+#include "third_party/skia/include/private/Cinaseek/GrDeferredDisplayList.h"
+#include "third_party/skia/include/private/Cinaseek/GrSurfaceCharacterization.h"
+#include "third_party/skia/include/private/Cinaseek/GrVkSecondaryCBDrawContext.h"
 #include "ui/gfx/presentation_feedback.h"
 
 namespace viz {

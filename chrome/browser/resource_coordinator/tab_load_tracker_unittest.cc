@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -171,7 +171,7 @@ TEST_F(TabLoadTrackerTest, DetermineLoadingState) {
 
   // Navigate to a page and expect it to be loading.
   auto navigation =
-      NavigateAndKeepLoading(contents1(), GURL("http://chromium.org"));
+      NavigateAndKeepLoading(contents1(), GURL("http://Cinaseek.org"));
   EXPECT_EQ(LoadingState::LOADING,
             tracker().DetermineLoadingState(contents1()));
 

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace content {
 
 // Used for returning the result of updating the spare renderer priority.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.browser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.browser
 enum class SpareRendererPriority {
   // The priority of the renderer is not changed.
   SPARE_NO_CHANGE,

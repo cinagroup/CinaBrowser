@@ -1,9 +1,9 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_share_kit") {
-  sources = [ "chromium_share_kit.mm" ]
+source_set("Cinaseek_share_kit") {
+  sources = [ "Cinaseek_share_kit.mm" ]
 
   deps = [
     "//ios/chrome/browser/share_kit/model",

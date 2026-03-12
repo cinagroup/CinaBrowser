@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class BluetoothLowEnergyCentralManagerBridge {
 
  private:
   // TODO(https://crbug.com/330009945): Fix those dangling dangling pointers.
-  // They are dangling on mac_chromium_10.15_rel_ng during
+  // They are dangling on mac_Cinaseek_10.15_rel_ng during
   // ChromeDriverSecureContextTest.testRemoveAllCredentials test.
   raw_ptr<BluetoothLowEnergyDiscoveryManagerMac, AcrossTasksDanglingUntriaged>
       discovery_manager_;

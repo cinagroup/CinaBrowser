@@ -1,4 +1,4 @@
-# GN args template for the Headless Chrome library
+# GN args template for the Headless Cinaseek library
 #
 # Add import to arg.gn in out directory and run gn gen on the directory to use.
 # E.g. for out directory out/foo:

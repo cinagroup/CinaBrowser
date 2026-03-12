@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,11 +13,11 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheet.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetControllerFactory.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetControllerImpl.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetSwipeDetector.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/TouchRestrictingFrameLayout.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheet.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetControllerFactory.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetControllerImpl.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetSwipeDetector.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/TouchRestrictingFrameLayout.java",
   ]
 
   deps = [
@@ -34,15 +34,15 @@ android_library("java") {
     "//ui/accessibility:ax_base_java",
     "//ui/android:ui_java",
   ]
-  resources_package = "org.chromium.components.browser_ui.bottomsheet"
+  resources_package = "org.Cinaseek.components.browser_ui.bottomsheet"
 }
 
 robolectric_library("junit_tests") {
-  resources_package = "org.chromium.components.browser_ui.bottomsheet"
+  resources_package = "org.Cinaseek.components.browser_ui.bottomsheet"
   sources = [
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetControllerImplUnitTest.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetSwipeDetectorTest.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetUnitTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetControllerImplUnitTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetSwipeDetectorTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetUnitTest.java",
   ]
   deps = [
     ":java",
@@ -63,7 +63,7 @@ robolectric_library("junit_tests") {
 android_library("unit_device_javatests") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetObserverTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetObserverTest.java" ]
 
   deps = [
     ":java",

@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,13 +9,13 @@ import("//tools/grit/grit_rule.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptAppModalDialog.java",
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptDialogCustomView.java",
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptModalDialog.java",
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptTabModalDialog.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptAppModalDialog.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptDialogCustomView.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptModalDialog.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptTabModalDialog.java",
   ]
 
-  resources_package = "org.chromium.components.javascript_dialogs"
+  resources_package = "org.Cinaseek.components.javascript_dialogs"
 
   deps = [
     ":java_resources",
@@ -41,8 +41,8 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptAppModalDialog.java",
-    "java/src/org/chromium/components/javascript_dialogs/JavascriptTabModalDialog.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptAppModalDialog.java",
+    "java/src/org/Cinaseek/components/javascript_dialogs/JavascriptTabModalDialog.java",
   ]
 }
 

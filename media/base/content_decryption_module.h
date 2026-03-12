@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ enum class CdmSessionClosedReason {
 };
 
 // An interface that represents the Content Decryption Module (CDM) in the
-// Encrypted Media Extensions (EME) spec in Chromium.
+// Encrypted Media Extensions (EME) spec in Cinaseek.
 // See http://w3c.github.io/encrypted-media/#cdm
 //
 // * Ownership

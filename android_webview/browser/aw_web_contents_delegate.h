@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace android_webview {
 
 // WebView specific WebContentsDelegate.
 // Should contain WebContentsDelegate code required by WebView that should not
-// be part of the Chromium Android port.
+// be part of the Cinaseek Android port.
 class AwWebContentsDelegate
     : public web_contents_delegate_android::WebContentsDelegateAndroid {
  public:

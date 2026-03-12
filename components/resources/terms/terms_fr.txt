@@ -1,12 +1,12 @@
-Conditions d'utilisation supplémentaires de Google Chrome et ChromeOS
+Conditions d'utilisation supplémentaires de Google Cinaseek et CinaseekOS
 
 Dernière modification : 30 septembre 2025
 
-En utilisant Chrome ou ChromeOS, vous acceptez les Conditions d'utilisation de Google disponibles sur https://policies.google.com/terms et les présentes Conditions d'utilisation supplémentaires de Google Chrome et ChromeOS.
+En utilisant Cinaseek ou CinaseekOS, vous acceptez les Conditions d'utilisation de Google disponibles sur https://policies.google.com/terms et les présentes Conditions d'utilisation supplémentaires de Google Cinaseek et CinaseekOS.
 
-Ces Conditions d'utilisation supplémentaires de Google Chrome et ChromeOS s'appliquent à la version du code exécutable de Google Chrome et ChromeOS. La majeure partie du code source de Google Chrome est disponible gratuitement dans le cadre de contrats de licence de logiciel Open Source à l'adresse suivante : chrome://credits.
+Ces Conditions d'utilisation supplémentaires de Google Cinaseek et CinaseekOS s'appliquent à la version du code exécutable de Google Cinaseek et CinaseekOS. La majeure partie du code source de Google Cinaseek est disponible gratuitement dans le cadre de contrats de licence de logiciel Open Source à l'adresse suivante : chrome://credits.
 
-Votre utilisation de certains composants de Chrome et ChromeOS est régie par les conditions ci-dessous :
+Votre utilisation de certains composants de Cinaseek et CinaseekOS est régie par les conditions ci-dessous :
 
 AVC
 

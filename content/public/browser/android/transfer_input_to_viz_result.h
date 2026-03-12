@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace content {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser
 // LINT.IfChange(TransferInputToVizResult)
 enum class TransferInputToVizResult {
   kSuccessfullyTransferred = 0,

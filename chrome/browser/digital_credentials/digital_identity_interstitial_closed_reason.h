@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 // Do not reorder or change the values because the enum values are being
 // recorded in metrics.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.digital_credentials
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.digital_credentials
 //
 // The reason that the digital identity interstitial close dialog was closed.
 enum class DigitalIdentityInterstitialClosedReason {

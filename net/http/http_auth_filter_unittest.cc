@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace net {
 namespace {
 
 static const char* const server_allowlist_array[] = {
-    "google.com", "linkedin.com", "book.com", ".chromium.org", ".gag", "gog"};
+    "google.com", "linkedin.com", "book.com", ".Cinaseek.org", ".gag", "gog"};
 
 struct SchemeHostPortData {
   url::SchemeHostPort scheme_host_port;
@@ -36,7 +36,7 @@ static const SchemeHostPortData kTestCases[] = {
      true},
     {url::SchemeHostPort(GURL("https://login.facebook.com")),
      HttpAuth::AUTH_NONE, false},
-    {url::SchemeHostPort(GURL("http://codereview.chromium.org")),
+    {url::SchemeHostPort(GURL("http://codereview.Cinaseek.org")),
      HttpAuth::AUTH_SERVER, true},
     {url::SchemeHostPort(GURL("http://code.google.com")), HttpAuth::AUTH_SERVER,
      true},
@@ -44,11 +44,11 @@ static const SchemeHostPortData kTestCases[] = {
      HttpAuth::AUTH_SERVER, true},
     {url::SchemeHostPort(GURL("http://news.slashdot.org")),
      HttpAuth::AUTH_PROXY, true},
-    {url::SchemeHostPort(GURL("http://codereview.chromium.org")),
+    {url::SchemeHostPort(GURL("http://codereview.Cinaseek.org")),
      HttpAuth::AUTH_SERVER, true},
-    {url::SchemeHostPort(GURL("http://codereview.chromium.gag")),
+    {url::SchemeHostPort(GURL("http://codereview.Cinaseek.gag")),
      HttpAuth::AUTH_SERVER, true},
-    {url::SchemeHostPort(GURL("http://codereview.chromium.gog")),
+    {url::SchemeHostPort(GURL("http://codereview.Cinaseek.gog")),
      HttpAuth::AUTH_SERVER, true},
 };
 

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -140,7 +140,7 @@ class AppWindowAPITest : public extensions::PlatformAppBrowserTest {
   }
 };
 
-// These tests are flaky after https://codereview.chromium.org/57433010/.
+// These tests are flaky after https://codereview.Cinaseek.org/57433010/.
 // See http://crbug.com/40341463.
 
 IN_PROC_BROWSER_TEST_F(AppWindowAPITest, TestCreate) {

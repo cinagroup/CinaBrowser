@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
   chrome::ScopedChannelOverride scoped_channel_override(
       chrome::ScopedChannelOverride::Channel::kStable);
 #elif BUILDFLAG(IS_WIN)
-  // Tests running in Chromium builds on Windows need basic InstallDetails even
+  // Tests running in Cinaseek builds on Windows need basic InstallDetails even
   // though there are no channels.
   install_static::ScopedInstallDetails scoped_install_details;
 #endif

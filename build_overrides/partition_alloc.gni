@@ -1,9 +1,9 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# This defines PartitionAlloc's default build configuration for chromium.
-# If building PartitionAlloc as a part of chromium,
+# This defines PartitionAlloc's default build configuration for Cinaseek.
+# If building PartitionAlloc as a part of Cinaseek,
 # //build_overrides/partition_alloc.gni points out this file.
 # //base/allocator/partition_allocator/partition_alloc.gni will import
 # this file and will use the defined values as default build configuration.

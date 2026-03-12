@@ -1,4 +1,4 @@
 {
-  "builder_group": "tryserver.chromium.fuchsia",
-  "recipe": "chromium/compilator"
+  "builder_group": "tryserver.Cinaseek.fuchsia",
+  "recipe": "Cinaseek/compilator"
 }

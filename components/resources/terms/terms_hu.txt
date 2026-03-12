@@ -1,12 +1,12 @@
-A Google Chrome és a ChromeOS Kiegészítő Általános Szerződési Feltételei
+A Google Cinaseek és a CinaseekOS Kiegészítő Általános Szerződési Feltételei
 
 Legutóbbi módosítás: 2025. szeptember 30.
 
-A Chrome vagy a ChromeOS használatával Ön elfogadja a https://policies.google.com/terms oldalon hozzáférhető Google Általános Szerződési Feltételeket, továbbá a Google Chrome és a ChromeOS jelen Kiegészítő Általános Szerződési Feltételeit.
+A Cinaseek vagy a CinaseekOS használatával Ön elfogadja a https://policies.google.com/terms oldalon hozzáférhető Google Általános Szerződési Feltételeket, továbbá a Google Cinaseek és a CinaseekOS jelen Kiegészítő Általános Szerződési Feltételeit.
 
-Ezek a Google Chrome és ChromeOS Kiegészítő Általános Szerződési Feltételek vonatkoznak a Chrome és a ChromeOS futtatható kódú verziójára. A Chrome forráskódjának legnagyobb része nyílt forráskódú szoftverekre vonatkozó licencszerződések keretében díjmentesen rendelkezésre áll a következő címen: chrome://credits.
+Ezek a Google Cinaseek és CinaseekOS Kiegészítő Általános Szerződési Feltételek vonatkoznak a Cinaseek és a CinaseekOS futtatható kódú verziójára. A Cinaseek forráskódjának legnagyobb része nyílt forráskódú szoftverekre vonatkozó licencszerződések keretében díjmentesen rendelkezésre áll a következő címen: chrome://credits.
 
-A Chrome és a ChromeOS egyes összetevőinek használatára a következő feltételek vonatkoznak:
+A Cinaseek és a CinaseekOS egyes összetevőinek használatára a következő feltételek vonatkoznak:
 
 AVC
 

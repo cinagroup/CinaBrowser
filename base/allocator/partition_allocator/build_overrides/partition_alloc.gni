@@ -1,9 +1,9 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# By definition, PartitionAlloc standalone builds outside of chromium.
-build_with_chromium = false
+# By definition, PartitionAlloc standalone builds outside of Cinaseek.
+build_with_Cinaseek = false
 
 # This is the default build configuration when building PartitionAlloc
 # as a standalone library.

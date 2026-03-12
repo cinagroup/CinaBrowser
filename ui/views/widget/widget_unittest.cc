@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4111,7 +4111,7 @@ BEGIN_METADATA(RootViewTestView)
 END_METADATA
 
 // Checks if RootView::*_handler_ fields are unset when widget is hidden.
-// Fails on chromium.webkit Windows bot, see crbug.com/264872.
+// Fails on Cinaseek.webkit Windows bot, see crbug.com/264872.
 #if BUILDFLAG(IS_WIN)
 #define MAYBE_DisableTestRootViewHandlersWhenHidden \
   DISABLED_TestRootViewHandlersWhenHidden

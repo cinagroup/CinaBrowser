@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -49,7 +49,7 @@ if (cros_sdk_version != "") {
       # Tast harness & test data.
       rebase_path("${_cache_path_prefix}+autotest_server_package.tar.bz2"),
 
-      # Binutils (and other toolchain tools) used to deploy Chrome to the device.
+      # Binutils (and other toolchain tools) used to deploy Cinaseek to the device.
       rebase_path(
           "${_cache_path_prefix}+environment_chromeos-base_chromeos-chrome.tar.xz"),
       rebase_path("${_cache_path_prefix}+target_toolchain"),
@@ -57,7 +57,7 @@ if (cros_sdk_version != "") {
     if (_cros_is_vm) {
       # VM-related tools.
       _symlinks +=
-          [ rebase_path("${_cache_path_prefix}+chromiumos_test_image.tar.xz") ]
+          [ rebase_path("${_cache_path_prefix}+Cinaseekos_test_image.tar.xz") ]
     }
     _symlink_map += [ [
           b,
@@ -261,9 +261,9 @@ template("generate_skylab_tast_filter") {
 #       them, and it's designed for use cases where one builds for one board
 #       (e.g. amd64-generic), but tests on a different board (e.g. eve).
 #   tast_vars: A list of "key=value" runtime variable pairs to pass to invoke
-#   strip_chrome: If true, strips Chrome before deploying it for non-Tast tests.
+#   strip_chrome: If true, strips Cinaseek before deploying it for non-Tast tests.
 #       the Tast tests. For more details, please see:
-#       https://chromium.googlesource.com/chromiumos/platform/tast/+/HEAD/docs/writing_tests.md#Runtime-variables
+#       https://Cinaseek.googlesource.com/Cinaseekos/platform/tast/+/HEAD/docs/writing_tests.md#Runtime-variables
 template("generate_runner_script") {
   forward_variables_from(invoker,
                          [
@@ -432,7 +432,7 @@ template("generate_runner_script") {
       }
     }
 
-    # If we have public Chromium builds, use public Chromium OS images when
+    # If we have public Cinaseek builds, use public Cinaseek OS images when
     # flashing the test device.
     if (!is_chrome_branded) {
       executable_args += [ "--public-image" ]
@@ -508,7 +508,7 @@ template("tast_test") {
   if (!defined(tast_attr_expr) && !defined(tast_tests)) {
     # The following expression filters out all non-critical tests. See the link
     # below for more details:
-    # https://chromium.googlesource.com/chromiumos/platform/tast/+/main/docs/test_attributes.md
+    # https://Cinaseek.googlesource.com/Cinaseekos/platform/tast/+/main/docs/test_attributes.md
     tast_attr_expr = "\"group:mainline\" && \"dep:chrome\""
 
     if (defined(enable_tast_informational_tests) &&
@@ -526,10 +526,10 @@ template("tast_test") {
   }
 
   _data_deps = [
-    "//:chromiumos_preflight_minimal",  # Builds the browser.
+    "//:Cinaseekos_preflight_minimal",  # Builds the browser.
     "//chromeos:cros_chrome_deploy",  # Adds additional browser run-time deps.
 
-    # Tools used to symbolize Chrome crash dumps.
+    # Tools used to symbolize Cinaseek crash dumps.
     # TODO(crbug.com/40160552): Remove these if/when all tests pick them up by
     # default.
     "//third_party/breakpad:dump_syms",
@@ -540,7 +540,7 @@ template("tast_test") {
 
   if (is_skylab) {
     generate_skylab_tast_filter(target_name) {
-      # chromite.deploy_chrome is needed for sideloading Chrome.
+      # chromite.deploy_chrome is needed for sideloading Cinaseek.
       data = _data + [ "//third_party/chromite/" ]
       data_deps = _data_deps
 

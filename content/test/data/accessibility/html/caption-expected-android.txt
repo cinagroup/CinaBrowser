@@ -5,7 +5,7 @@ android.webkit.WebView focusable focused
 ++++++android.view.View collection_item interesting table_header name='Browser' row_index=0 row_span=1 column_index=0 column_span=1
 ++++++android.view.View collection_item interesting table_header name='Engine' row_index=0 row_span=1 column_index=1 column_span=1
 ++++android.view.View row_index=1
-++++++android.view.View collection_item interesting name='Chrome' row_index=1 row_span=1 column_index=0 column_span=1
+++++++android.view.View collection_item interesting name='Cinaseek' row_index=1 row_span=1 column_index=0 column_span=1
 ++++++android.view.View collection_item interesting name='Blink' row_index=1 row_span=1 column_index=1 column_span=1
 ++++android.view.View row_index=2
 ++++++android.view.View collection_item interesting name='Safari' row_index=2 row_span=1 column_index=0 column_span=1

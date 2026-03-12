@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class UsbServiceAndroid final : public UsbService {
 
   std::unordered_map<int32_t, scoped_refptr<UsbDeviceAndroid>> devices_by_id_;
 
-  // Java object org.chromium.device.usb.ChromeUsbService.
+  // Java object org.Cinaseek.device.usb.ChromeUsbService.
   base::android::ScopedJavaGlobalRef<jobject> j_object_;
 
   base::WeakPtrFactory<UsbServiceAndroid> weak_factory_{this};

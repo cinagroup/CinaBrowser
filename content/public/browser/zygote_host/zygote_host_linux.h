@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 
 namespace content {
 
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/zygote.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/zygote.md
 
 // The zygote host is an interface, in the browser process, to the zygote
 // process.

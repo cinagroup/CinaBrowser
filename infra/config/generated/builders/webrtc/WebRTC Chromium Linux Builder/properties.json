@@ -1,27 +1,27 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
-        "infra/config/generated/builders/webrtc/WebRTC Chromium Linux Builder/gn-args.json"
+        "infra/config/generated/builders/webrtc/WebRTC Cinaseek Linux Builder/gn-args.json"
       ],
       "builder_db": {
         "entries": [
           {
             "builder_id": {
               "bucket": "webrtc",
-              "builder": "WebRTC Chromium Linux Builder",
-              "project": "chromium"
+              "builder": "WebRTC Cinaseek Linux Builder",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.webrtc",
+              "builder_group": "Cinaseek.webrtc",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "dcheck",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
@@ -29,36 +29,36 @@
                 "apply_configs": [
                   "webrtc_test_resources"
                 ],
-                "config": "chromium_webrtc"
+                "config": "Cinaseek_webrtc"
               }
             }
           },
           {
             "builder_id": {
               "bucket": "webrtc",
-              "builder": "WebRTC Chromium Linux Tester",
-              "project": "chromium"
+              "builder": "WebRTC Cinaseek Linux Tester",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.webrtc",
+              "builder_group": "Cinaseek.webrtc",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "dcheck",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium_webrtc"
+                "config": "Cinaseek_webrtc"
               },
               "parent": {
                 "bucket": "webrtc",
-                "builder": "WebRTC Chromium Linux Builder",
-                "project": "chromium"
+                "builder": "WebRTC Cinaseek Linux Builder",
+                "project": "Cinaseek"
               }
             }
           }
@@ -67,18 +67,18 @@
       "builder_ids": [
         {
           "bucket": "webrtc",
-          "builder": "WebRTC Chromium Linux Builder",
-          "project": "chromium"
+          "builder": "WebRTC Cinaseek Linux Builder",
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "webrtc",
-          "builder": "WebRTC Chromium Linux Tester",
-          "project": "chromium"
+          "builder": "WebRTC Cinaseek Linux Tester",
+          "project": "Cinaseek"
         }
       ],
-      "targets_spec_directory": "infra/config/generated/builders/webrtc/WebRTC Chromium Linux Builder/targets"
+      "targets_spec_directory": "infra/config/generated/builders/webrtc/WebRTC Cinaseek Linux Builder/targets"
     }
   },
   "$build/siso": {
@@ -89,7 +89,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -99,7 +99,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.webrtc",
-  "perf_dashboard_machine_group": "ChromiumWebRTC",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.webrtc",
+  "perf_dashboard_machine_group": "CinaseekWebRTC",
+  "recipe": "Cinaseek"
 }

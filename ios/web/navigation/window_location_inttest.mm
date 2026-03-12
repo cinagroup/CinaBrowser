@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ const char kOnLoadCheckScript[] = "isOnLoadTextVisible()";
 const char kNoOpCheckScript[] = "isNoOpTextVisible()";
 
 // URL of a sample file-based page.
-const char kSampleFileBasedURL[] = "/chromium_logo_page.html";
+const char kSampleFileBasedURL[] = "/Cinaseek_logo_page.html";
 
 }  // namespace
 

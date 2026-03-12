@@ -12,7 +12,7 @@ android_library("java") {
     "//components/externalauth/android:java",
     "//google_apis/gaia/android:java",
     "//net/android:net_java",
-    "//third_party/android_deps:chromium_play_services_availability_java",
+    "//third_party/android_deps:Cinaseek_play_services_availability_java",
     "//third_party/android_deps:com_google_errorprone_error_prone_annotations_java",
     "//third_party/androidx:androidx_annotation_annotation_java",
     "//third_party/jni_zero:jni_zero_java",
@@ -30,34 +30,34 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/components/signin/AccessTokenData.java",
-    "java/src/org/chromium/components/signin/AccountCapabilitiesFetcher.java",
-    "java/src/org/chromium/components/signin/AccountEmailDisplayHook.java",
-    "java/src/org/chromium/components/signin/AccountEmailDomainDisplayabilityDelegate.java",
-    "java/src/org/chromium/components/signin/AccountManagerDelegate.java",
-    "java/src/org/chromium/components/signin/AccountManagerDelegateException.java",
-    "java/src/org/chromium/components/signin/AccountManagerFacade.java",
-    "java/src/org/chromium/components/signin/AccountManagerFacadeImpl.java",
-    "java/src/org/chromium/components/signin/AccountManagerFacadeProvider.java",
-    "java/src/org/chromium/components/signin/AccountReauthenticationUtils.java",
-    "java/src/org/chromium/components/signin/AccountRestrictionPatternReceiver.java",
-    "java/src/org/chromium/components/signin/AccountUtils.java",
-    "java/src/org/chromium/components/signin/AccountsChangeObserver.java",
-    "java/src/org/chromium/components/signin/AuthException.java",
-    "java/src/org/chromium/components/signin/ConnectionRetry.java",
-    "java/src/org/chromium/components/signin/NullAccountManagerDelegate.java",
-    "java/src/org/chromium/components/signin/PatternMatcher.java",
-    "java/src/org/chromium/components/signin/PlatformAccount.java",
-    "java/src/org/chromium/components/signin/SigninFeatureMap.java",
-    "java/src/org/chromium/components/signin/base/AccountCapabilities.java",
-    "java/src/org/chromium/components/signin/base/AccountInfo.java",
-    "java/src/org/chromium/components/signin/base/CoreAccountInfo.java",
-    "java/src/org/chromium/components/signin/identitymanager/AccountManagedStatusFinder.java",
-    "java/src/org/chromium/components/signin/identitymanager/IdentityManager.java",
-    "java/src/org/chromium/components/signin/identitymanager/IdentityManagerImpl.java",
-    "java/src/org/chromium/components/signin/identitymanager/IdentityMutator.java",
-    "java/src/org/chromium/components/signin/identitymanager/PrimaryAccountChangeEvent.java",
-    "java/src/org/chromium/components/signin/identitymanager/ProfileOAuth2TokenServiceDelegate.java",
+    "java/src/org/Cinaseek/components/signin/AccessTokenData.java",
+    "java/src/org/Cinaseek/components/signin/AccountCapabilitiesFetcher.java",
+    "java/src/org/Cinaseek/components/signin/AccountEmailDisplayHook.java",
+    "java/src/org/Cinaseek/components/signin/AccountEmailDomainDisplayabilityDelegate.java",
+    "java/src/org/Cinaseek/components/signin/AccountManagerDelegate.java",
+    "java/src/org/Cinaseek/components/signin/AccountManagerDelegateException.java",
+    "java/src/org/Cinaseek/components/signin/AccountManagerFacade.java",
+    "java/src/org/Cinaseek/components/signin/AccountManagerFacadeImpl.java",
+    "java/src/org/Cinaseek/components/signin/AccountManagerFacadeProvider.java",
+    "java/src/org/Cinaseek/components/signin/AccountReauthenticationUtils.java",
+    "java/src/org/Cinaseek/components/signin/AccountRestrictionPatternReceiver.java",
+    "java/src/org/Cinaseek/components/signin/AccountUtils.java",
+    "java/src/org/Cinaseek/components/signin/AccountsChangeObserver.java",
+    "java/src/org/Cinaseek/components/signin/AuthException.java",
+    "java/src/org/Cinaseek/components/signin/ConnectionRetry.java",
+    "java/src/org/Cinaseek/components/signin/NullAccountManagerDelegate.java",
+    "java/src/org/Cinaseek/components/signin/PatternMatcher.java",
+    "java/src/org/Cinaseek/components/signin/PlatformAccount.java",
+    "java/src/org/Cinaseek/components/signin/SigninFeatureMap.java",
+    "java/src/org/Cinaseek/components/signin/base/AccountCapabilities.java",
+    "java/src/org/Cinaseek/components/signin/base/AccountInfo.java",
+    "java/src/org/Cinaseek/components/signin/base/CoreAccountInfo.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/AccountManagedStatusFinder.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/IdentityManager.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/IdentityManagerImpl.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/IdentityMutator.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/PrimaryAccountChangeEvent.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/ProfileOAuth2TokenServiceDelegate.java",
   ]
 }
 
@@ -65,21 +65,21 @@ android_library("java") {
 java_cpp_features("signin_java_features_srcjar") {
   visibility = [ ":*" ]
   sources = [ "//components/signin/public/base/signin_switches.cc" ]
-  class_name = "org.chromium.components.signin.SigninFeatures"
+  class_name = "org.Cinaseek.components.signin.SigninFeatures"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/signin/AccountCapabilitiesFetcher.java",
-    "java/src/org/chromium/components/signin/SigninFeatureMap.java",
-    "java/src/org/chromium/components/signin/base/AccountCapabilities.java",
-    "java/src/org/chromium/components/signin/base/AccountInfo.java",
-    "java/src/org/chromium/components/signin/base/CoreAccountInfo.java",
-    "java/src/org/chromium/components/signin/identitymanager/AccountManagedStatusFinder.java",
-    "java/src/org/chromium/components/signin/identitymanager/IdentityManagerImpl.java",
-    "java/src/org/chromium/components/signin/identitymanager/IdentityMutator.java",
-    "java/src/org/chromium/components/signin/identitymanager/PrimaryAccountChangeEvent.java",
-    "java/src/org/chromium/components/signin/identitymanager/ProfileOAuth2TokenServiceDelegate.java",
+    "java/src/org/Cinaseek/components/signin/AccountCapabilitiesFetcher.java",
+    "java/src/org/Cinaseek/components/signin/SigninFeatureMap.java",
+    "java/src/org/Cinaseek/components/signin/base/AccountCapabilities.java",
+    "java/src/org/Cinaseek/components/signin/base/AccountInfo.java",
+    "java/src/org/Cinaseek/components/signin/base/CoreAccountInfo.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/AccountManagedStatusFinder.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/IdentityManagerImpl.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/IdentityMutator.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/PrimaryAccountChangeEvent.java",
+    "java/src/org/Cinaseek/components/signin/identitymanager/ProfileOAuth2TokenServiceDelegate.java",
   ]
 }
 
@@ -92,7 +92,7 @@ java_cpp_template("account_capabilities_constants_javagen") {
 
 java_cpp_strings("java_constants") {
   sources = [ "//components/signin/public/identity_manager/signin_constants.h" ]
-  class_name = "org.chromium.components.signin.SigninConstants"
+  class_name = "org.Cinaseek.components.signin.SigninConstants"
 }
 
 java_cpp_enum("java_enums") {
@@ -104,9 +104,9 @@ java_cpp_enum("java_enums") {
 
 generate_jni("test_support_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/signin/test/util/AccountCapabilitiesFetcherTestUtil.java",
-    "java/src/org/chromium/components/signin/test/util/AccountInfoSerializer.java",
-    "java/src/org/chromium/components/signin/test/util/AccountManagerFacadeUtil.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountCapabilitiesFetcherTestUtil.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountInfoSerializer.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountManagerFacadeUtil.java",
   ]
 }
 
@@ -129,20 +129,20 @@ android_library("signin_java_test_support") {
     "//third_party/mockito:mockito_java",
   ]
   sources = [
-    "java/src/org/chromium/components/signin/test/util/AccountCapabilitiesBuilder.java",
-    "java/src/org/chromium/components/signin/test/util/AccountCapabilitiesFetcherTestUtil.java",
-    "java/src/org/chromium/components/signin/test/util/AccountHolder.java",
-    "java/src/org/chromium/components/signin/test/util/AccountInfoSerializer.java",
-    "java/src/org/chromium/components/signin/test/util/AccountManagerFacadeUtil.java",
-    "java/src/org/chromium/components/signin/test/util/FakeAccountManagerDelegate.java",
-    "java/src/org/chromium/components/signin/test/util/FakeAccountManagerFacade.java",
-    "java/src/org/chromium/components/signin/test/util/FakeIdentityManager.java",
-    "java/src/org/chromium/components/signin/test/util/FakePlatformAccount.java",
-    "java/src/org/chromium/components/signin/test/util/SharedPrefsAccountStorage.java",
-    "java/src/org/chromium/components/signin/test/util/SigninMatchers.java",
-    "java/src/org/chromium/components/signin/test/util/TestAccounts.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountCapabilitiesBuilder.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountCapabilitiesFetcherTestUtil.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountHolder.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountInfoSerializer.java",
+    "java/src/org/Cinaseek/components/signin/test/util/AccountManagerFacadeUtil.java",
+    "java/src/org/Cinaseek/components/signin/test/util/FakeAccountManagerDelegate.java",
+    "java/src/org/Cinaseek/components/signin/test/util/FakeAccountManagerFacade.java",
+    "java/src/org/Cinaseek/components/signin/test/util/FakeIdentityManager.java",
+    "java/src/org/Cinaseek/components/signin/test/util/FakePlatformAccount.java",
+    "java/src/org/Cinaseek/components/signin/test/util/SharedPrefsAccountStorage.java",
+    "java/src/org/Cinaseek/components/signin/test/util/SigninMatchers.java",
+    "java/src/org/Cinaseek/components/signin/test/util/TestAccounts.java",
   ]
-  resources_package = "org.chromium.components.signin.test.util"
+  resources_package = "org.Cinaseek.components.signin.test.util"
 }
 
 android_resources("java_resources") {
@@ -181,16 +181,16 @@ android_library("unit_device_javatests") {
     "//third_party/mockito:mockito_java",
   ]
 
-  sources = [ "javatests/src/org/chromium/components/signin/AccountManagerFacadeTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/signin/AccountManagerFacadeTest.java" ]
 }
 
 robolectric_library("junit") {
   sources = [
-    "junit/src/org/chromium/components/signin/AccountManagerFacadeImplTest.java",
-    "junit/src/org/chromium/components/signin/AccountReauthenticationUtilsTest.java",
-    "junit/src/org/chromium/components/signin/AccountUtilsTest.java",
-    "junit/src/org/chromium/components/signin/PatternMatcherTest.java",
-    "junit/src/org/chromium/components/signin/base/AccountCapabilitiesTest.java",
+    "junit/src/org/Cinaseek/components/signin/AccountManagerFacadeImplTest.java",
+    "junit/src/org/Cinaseek/components/signin/AccountReauthenticationUtilsTest.java",
+    "junit/src/org/Cinaseek/components/signin/AccountUtilsTest.java",
+    "junit/src/org/Cinaseek/components/signin/PatternMatcherTest.java",
+    "junit/src/org/Cinaseek/components/signin/base/AccountCapabilitiesTest.java",
   ]
   deps = [
     ":java",

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,5 +11,5 @@ declare_args() {
 
   # Specifies Kythe corpus to refer to when emitting Kythe metadata from code
   # generation tools.
-  kythe_corpus = "chromium.googlesource.com/codesearch/chromium/src//main"
+  kythe_corpus = "Cinaseek.googlesource.com/codesearch/Cinaseek/src//main"
 }

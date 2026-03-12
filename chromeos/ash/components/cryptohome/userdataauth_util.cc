@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -202,7 +202,7 @@ cryptohome::MountError CryptohomeErrorToMountError(CryptohomeErrorCode code) {
       NOTREACHED();
     // TODO(dlunev): remove this temporary case after rolling up system api
     // change and adding proper handling for the new enum value in
-    // https://chromium-review.googlesource.com/c/chromium/src/+/2518524
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2518524
     default:
       NOTREACHED();
   }

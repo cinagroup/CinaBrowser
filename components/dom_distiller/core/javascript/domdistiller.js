@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ try {
 
   // The OPTIONS placeholder will be replaced with the DomDistillerOptions at
   // runtime.
-  const distiller = window.org.chromium.distiller.DomDistiller;
+  const distiller = window.org.Cinaseek.distiller.DomDistiller;
   const result = distiller.applyWithOptions(options);
 
   window.setTimeout = originalSetTimeout;

@@ -1,5 +1,5 @@
 {
-  "WebRTC Chromium FYI Mac Builder (dbg)": {
+  "WebRTC Cinaseek FYI Mac Builder (dbg)": {
     "additional_compile_targets": [
       "browser_tests",
       "capture_unittests",

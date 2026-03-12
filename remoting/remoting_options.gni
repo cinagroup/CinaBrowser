@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,9 +18,9 @@ enable_me2me_host = is_win || is_mac || remoting_use_x11
 remoting_rdp_session = 1
 
 if (is_chrome_branded) {
-  branding_path = "//remoting/branding_Chrome"
+  branding_path = "//remoting/branding_Cinaseek"
 } else {
-  branding_path = "//remoting/branding_Chromium"
+  branding_path = "//remoting/branding_Cinaseek"
 }
 
 # h.264 is disabled since it isn't well tested or optimized, and it has issues

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -268,7 +268,7 @@ action("deb_repo_package") {
   if (is_chrome_branded) {
     package = "google-chrome-repo"
   } else {
-    package = "chromium-browser-repo"
+    package = "Cinaseek-browser-repo"
   }
 
   outputs = [ "$root_out_dir/${package}_${pgp_key_version}_all.deb" ]
@@ -319,7 +319,7 @@ copy("common_packaging_files") {
   if (is_chrome_branded) {
     sources += [ "common/google-chrome.info" ]
   } else {
-    sources += [ "common/chromium-browser.info" ]
+    sources += [ "common/Cinaseek-browser.info" ]
   }
 
   outputs = [ "$root_out_dir/installer/common/{{source_file_part}}" ]
@@ -470,7 +470,7 @@ group("installer_deps") {
   }
 }
 
-# Creates .deb and .rpm (RPM for non-ChromeOS only) installer packages.
+# Creates .deb and .rpm (RPM for non-CinaseekOS only) installer packages.
 #
 # channel:
 #   Name of the channel.
@@ -481,7 +481,7 @@ template("linux_package") {
   if (is_chrome_branded) {
     package = "google-chrome"
   } else {
-    package = "chromium-browser"
+    package = "Cinaseek-browser"
   }
 
   deb_target_name = "${target_name}_deb"

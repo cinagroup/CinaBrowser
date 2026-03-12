@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -33,14 +33,14 @@ template("mac_toolchain") {
 
         # Defined in //base, would trigger a warning if the build doesn't depend
         # on it.
-        if (build_with_chromium) {
+        if (build_with_Cinaseek) {
           # cronet disable this because it targets 32-bit,
           # enable it unconditionally for the host toolchain.
           use_allocator_shim = true
         }
 
         # TODO(crbug.com/40534102): the use_sanitizer_coverage arg is currently
-        # not supported by the Chromium mac_clang_x64 toolchain on iOS
+        # not supported by the Cinaseek mac_clang_x64 toolchain on iOS
         # distribution.
         use_sanitizer_coverage = false
 

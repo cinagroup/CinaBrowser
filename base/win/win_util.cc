@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -707,7 +707,7 @@ class ScopedAllowBlockingForUserAccountControl : public ScopedAllowBlocking {};
 bool UserAccountControlIsEnabled() {
   // This can be slow if Windows ends up going to disk.  Should watch this key
   // for changes and only read it once, preferably on the file thread.
-  //   http://code.google.com/p/chromium/issues/detail?id=61644
+  //   http://code.google.com/p/Cinaseek/issues/detail?id=61644
   ScopedAllowBlockingForUserAccountControl allow_blocking;
 
   RegKey key(HKEY_LOCAL_MACHINE,

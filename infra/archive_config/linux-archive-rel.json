@@ -28,7 +28,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chrome-linux"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/chrome-linux.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP",
             "latest_upload": {
@@ -47,7 +47,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chromedriver_linux64"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/chromedriver_linux64.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -64,7 +64,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "content-shell"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/content-shell.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -73,7 +73,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "devtools-frontend"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/devtools-frontend.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -86,7 +86,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "headless-shell"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/headless-shell.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -138,7 +138,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "mojojs"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}/mojojs.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP"
         },
@@ -146,7 +146,7 @@
             "files": [
                 "updater.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -154,7 +154,7 @@
             "files": [
                 "enterprise_companion.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         },
@@ -162,7 +162,7 @@
             "files": [
                 "enterprise_companion_test.zip"
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Linux_x64/{%position%}",
             "archive_type": "ARCHIVE_TYPE_FILES"
         }

@@ -1,11 +1,11 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
 import("//ui/webui/resources/tools/build_webui.gni")
 import("//ui/webui/webui_features.gni")
 
-assert(is_chromeos, "Personalization is for ChromeOS only.")
+assert(is_chromeos, "Personalization is for CinaseekOS only.")
 
 build_webui("build_ts") {
   grd_prefix = "ash_common_personalization"

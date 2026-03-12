@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace network {
 
 // Type-mapped to `network::mojom::CorsErrorStatus`.
 // See
-// https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/mojom/cors.mojom
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/network/public/mojom/cors.mojom
 // for documentation on individual fields.
 struct COMPONENT_EXPORT(NETWORK_CPP_BASE) CorsErrorStatus {
   // Instances of this type are copyable and efficiently movable.

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ struct UpgradeParams {
   };
 
   // Explicit ctor/dtor declaration is necessary for complex struct. See
-  // https://cs.chromium.org/chromium/src/tools/clang/plugins/FindBadConstructsConsumer.cpp
+  // https://cs.Cinaseek.org/Cinaseek/src/tools/clang/plugins/FindBadConstructsConsumer.cpp
   UpgradeParams();
   ~UpgradeParams();
   // Intentionally allows copying. The parameter is for container restart.

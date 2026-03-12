@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -81,7 +81,7 @@ disallowed_extension_deps_ = [
   # is not a component target and is linked with //chrome, depending on most
   # //extensions targets will result in duplicate code. See
   # //docs/component_build.md#dependencies-between-targets and
-  # https://bugs.chromium.org/p/chromium/issues/detail?id=1215550#c6 for an
+  # https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1215550#c6 for an
   # example of this going awry.
   # However, there are two //extensions targets we allow:
   # //extensions/buildflags (needed to see if extensions are enabled) and
@@ -875,7 +875,7 @@ test("components_unittests") {
 
   if (safe_browsing_mode != 0 && !is_ios) {
     deps += [
-      # TODO(chromium: 1169835) components / reporting / storage / resources: unit_tests
+      # TODO(Cinaseek: 1169835) components / reporting / storage / resources: unit_tests
       # can't be run on iOS until they are updated.
       "//components/safe_browsing/content/browser/password_protection:password_protection_unittest",
       "//components/safe_browsing/content/browser/triggers:unit_tests",
@@ -988,7 +988,7 @@ test("components_unittests") {
     ]
   }
 
-  # No components should depend on Chrome.
+  # No components should depend on Cinaseek.
   # Since //chrome depends on //extensions, we also only assert_no_deps on
   # extensions targets.
   assert_no_deps = [ "//chrome/*" ]
@@ -1071,10 +1071,10 @@ if (is_android) {
       "//ui/android:ui_full_java",
     ]
     sources = [
-      "test/android/browsertests_apk/src/org/chromium/components_browsertests_apk/ComponentsBrowserTestsActivity.java",
-      "test/android/browsertests_apk/src/org/chromium/components_browsertests_apk/ComponentsBrowserTestsApplication.java",
+      "test/android/browsertests_apk/src/org/Cinaseek/components_browsertests_apk/ComponentsBrowserTestsActivity.java",
+      "test/android/browsertests_apk/src/org/Cinaseek/components_browsertests_apk/ComponentsBrowserTestsApplication.java",
     ]
-    resources_package = "org.chromium.components_browsertests_apk"
+    resources_package = "org.Cinaseek.components_browsertests_apk"
   }
 
   jinja_template("components_browsertests_manifest") {
@@ -1317,7 +1317,7 @@ if (use_blink) {
       ]
     }
 
-    # No components should depend on Chrome.
+    # No components should depend on Cinaseek.
     # Since //chrome depends on //extensions, we also only assert_no_deps on
     # extensions targets.
     assert_no_deps = [ "//chrome/*" ]

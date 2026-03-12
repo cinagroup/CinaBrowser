@@ -1,11 +1,11 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/config/android/rules.gni")
 
 android_library("java") {
-  sources = [ "java/src/org/chromium/chrome/browser/selection/SelectionPopupBackPressHandler.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/selection/SelectionPopupBackPressHandler.java" ]
 
   deps = [
     "//base:base_java",
@@ -19,7 +19,7 @@ android_library("java") {
 android_library("javatests") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/chrome/browser/selection/SelectionPopupBackPressTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/selection/SelectionPopupBackPressTest.java" ]
 
   deps = [
     "//base:base_java",

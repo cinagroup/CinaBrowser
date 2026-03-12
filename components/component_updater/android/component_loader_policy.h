@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace component_updater {
 // persisted to logs. Entries should not be renumbered and numeric values should
 // never be reused.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.component_updater
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.component_updater
 enum class ComponentLoadResult {
   kComponentLoaded = 0,
   kFailedToConnectToComponentsProviderService = 1,
@@ -126,7 +126,7 @@ class AndroidComponentLoaderPolicy {
       delete;
 
   // A utility method that returns an array of Java objects of
-  // `org.chromium.components.component_updater.ComponentLoaderPolicy`.
+  // `org.Cinaseek.components.component_updater.ComponentLoaderPolicy`.
   static base::android::ScopedJavaLocalRef<jobjectArray>
   ToJavaArrayOfAndroidComponentLoaderPolicy(
       JNIEnv* env,
@@ -141,7 +141,7 @@ class AndroidComponentLoaderPolicy {
 
  private:
   // Returns a Java object of
-  // `org.chromium.components.component_updater.ComponentLoaderPolicy`.
+  // `org.Cinaseek.components.component_updater.ComponentLoaderPolicy`.
   base::android::ScopedJavaLocalRef<jobject> GetJavaObject();
 
   std::string GetComponentId() const;
@@ -156,7 +156,7 @@ class AndroidComponentLoaderPolicy {
   SEQUENCE_CHECKER(sequence_checker_);
 
   // A Java object of
-  // `org.chromium.components.component_updater.ComponentLoaderPolicy`.
+  // `org.Cinaseek.components.component_updater.ComponentLoaderPolicy`.
   base::android::ScopedJavaGlobalRef<jobject> obj_;
 
   std::unique_ptr<ComponentLoaderPolicy> loader_policy_;

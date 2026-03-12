@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ constexpr base::TimeDelta kUpdatePositionInterval = base::Milliseconds(100);
 const char kMprisAPINoTrackPath[] = "/org/mpris/MediaPlayer2/TrackList/NoTrack";
 
 const char kMprisAPICurrentTrackPathFormatString[] =
-    "/org/chromium/MediaPlayer2/TrackList/Track%s";
+    "/org/Cinaseek/MediaPlayer2/TrackList/Track%s";
 
 // Writes `bitmap` to a new temporary PNG file and returns a a pair of the file
 // path and a managed base::ScopedTempFile bound to this sequence.  This should
@@ -104,7 +104,7 @@ WriteBitmapToTmpFile(const SkBitmap& bitmap) {
 }  // namespace
 
 const char kMprisAPIServiceNameFormatString[] =
-    "org.mpris.MediaPlayer2.chromium.instance%i";
+    "org.mpris.MediaPlayer2.Cinaseek.instance%i";
 const char kMprisAPIObjectPath[] = "/org/mpris/MediaPlayer2";
 const char kMprisAPIInterfaceName[] = "org.mpris.MediaPlayer2";
 const char kMprisAPIPlayerInterfaceName[] = "org.mpris.MediaPlayer2.Player";

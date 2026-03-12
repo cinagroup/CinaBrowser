@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ gfx::Size MacAuthenticationView::CalculatePreferredSize(
 }
 
 void MacAuthenticationView::AddedToWidget() {
-  // An `LAAuthenticationView` is an NSView, but Chromium uses the Views
+  // An `LAAuthenticationView` is an NSView, but Cinaseek uses the Views
   // framework for its UI, which just renders pixels onto a backing surface
   // (called a "widget"). Thus any NSViews have to be composited onto what
   // Views renders and positioned in the right place.
@@ -93,7 +93,7 @@ void MacAuthenticationView::Layout(PassKey) {
   bounds.ClampToCenteredSize(gfx::Size(kWidth, kWidth));
   // The Widget represents the backing surface onto which Views renders. We need
   // to know the position of the LAAuthenticationView in relation to the widget
-  // because NSView doesn't know anything about Chromium's Views tree.
+  // because NSView doesn't know anything about Cinaseek's Views tree.
   gfx::Point point = bounds.origin();
   View::ConvertPointToWidget(this, &point);
   // Views puts (0, 0) at the top left and positive-y is downwards. But NSView

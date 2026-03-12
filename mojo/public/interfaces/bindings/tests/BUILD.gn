@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -109,7 +109,7 @@ mojom("test_interfaces") {
       types = [
         {
           mojom = "mojo.test.TypemappedRect"
-          cpp = "::mojo::test::RectChromium"
+          cpp = "::mojo::test::RectCinaseek"
           hashable = true
         },
         {
@@ -118,7 +118,7 @@ mojom("test_interfaces") {
         },
       ]
       traits_headers = [
-        "//mojo/public/cpp/bindings/tests/rect_chromium_traits.h",
+        "//mojo/public/cpp/bindings/tests/rect_Cinaseek_traits.h",
         "//mojo/public/cpp/bindings/tests/shared_rect_traits.h",
       ]
     },
@@ -126,11 +126,11 @@ mojom("test_interfaces") {
       types = [
         {
           mojom = "mojo.test.PickledEnum"
-          cpp = "::mojo::test::PickledEnumChromium"
+          cpp = "::mojo::test::PickledEnumCinaseek"
         },
         {
           mojom = "mojo.test.PickledStruct"
-          cpp = "::mojo::test::PickledStructChromium"
+          cpp = "::mojo::test::PickledStructCinaseek"
           move_only = true
         },
         {
@@ -144,11 +144,11 @@ mojom("test_interfaces") {
         },
       ]
       traits_sources = [
-        "//mojo/public/cpp/bindings/tests/pickled_types_chromium.cc",
+        "//mojo/public/cpp/bindings/tests/pickled_types_Cinaseek.cc",
         "//mojo/public/cpp/bindings/tests/test_native_types.cc",
       ]
       traits_headers = [
-        "//mojo/public/cpp/bindings/tests/pickled_types_chromium.h",
+        "//mojo/public/cpp/bindings/tests/pickled_types_Cinaseek.h",
         "//mojo/public/cpp/bindings/tests/test_native_types.h",
       ]
       traits_deps = [ "//ipc" ]

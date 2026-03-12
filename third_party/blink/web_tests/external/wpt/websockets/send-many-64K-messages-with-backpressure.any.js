@@ -5,7 +5,7 @@
 // META: variant=?wss
 // META: variant=?wpt_flags=h2
 
-// This is a repro for Chromium bug https://crbug.com/1286909. It will timeout
+// This is a repro for Cinaseek bug https://crbug.com/1286909. It will timeout
 // if the bug is present.
 
 // With 0.1 second server-side delay per message, sending 50 messages will take

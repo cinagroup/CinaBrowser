@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -213,14 +213,14 @@ if (is_android) {
     # External code should depend on ":config_java" instead.
     visibility = [ ":*" ]
     sources = [ "gpu_switches.cc" ]
-    class_name = "org.chromium.gpu.config.GpuSwitches"
+    class_name = "org.Cinaseek.gpu.config.GpuSwitches"
   }
 
   java_cpp_features("java_features_srcjar") {
     # External code should depend on ":config_java" instead.
     visibility = [ ":*" ]
     sources = [ "gpu_finch_features.cc" ]
-    class_name = "org.chromium.gpu.config.GpuFeatures"
+    class_name = "org.Cinaseek.gpu.config.GpuFeatures"
   }
 
   android_library("config_java") {

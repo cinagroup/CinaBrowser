@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1139,7 +1139,7 @@ IN_PROC_BROWSER_TEST_F(EncryptedMediaSupportedTypesExternalClearKeyTest,
 IN_PROC_BROWSER_TEST_F(EncryptedMediaSupportedTypesExternalClearKeyTest,
                        InvalidKeySystems) {
   // Case sensitive.
-  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.chromium.ExTeRnAlClEaRkEy",
+  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.Cinaseek.ExTeRnAlClEaRkEy",
                                             kVideoWebMMimeType,
                                             video_webm_codecs()));
 
@@ -1148,17 +1148,17 @@ IN_PROC_BROWSER_TEST_F(EncryptedMediaSupportedTypesExternalClearKeyTest,
       IsSupportedByKeySystem("org.", kVideoWebMMimeType, video_webm_codecs()));
   EXPECT_UNSUPPORTED(
       IsSupportedByKeySystem("org", kVideoWebMMimeType, video_webm_codecs()));
-  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.chromium", kVideoWebMMimeType,
+  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.Cinaseek", kVideoWebMMimeType,
                                             video_webm_codecs()));
-  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.chromium.", kVideoWebMMimeType,
+  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.Cinaseek.", kVideoWebMMimeType,
                                             video_webm_codecs()));
 
   // Incomplete.
   EXPECT_UNSUPPORTED(IsSupportedByKeySystem(
-      "org.chromium.externalclearke", kVideoWebMMimeType, video_webm_codecs()));
+      "org.Cinaseek.externalclearke", kVideoWebMMimeType, video_webm_codecs()));
 
   // Extra character.
-  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.chromium.externalclearkeyz",
+  EXPECT_UNSUPPORTED(IsSupportedByKeySystem("org.Cinaseek.externalclearkeyz",
                                             kVideoWebMMimeType,
                                             video_webm_codecs()));
 
@@ -1166,7 +1166,7 @@ IN_PROC_BROWSER_TEST_F(EncryptedMediaSupportedTypesExternalClearKeyTest,
   // for the special one explicitly marked as "invalid". See
   // ExternalClearKeyKeySystemInfo.
   EXPECT_UNSUPPORTED(
-      IsSupportedByKeySystem("org.chromium.externalclearkey.invalid",
+      IsSupportedByKeySystem("org.Cinaseek.externalclearkey.invalid",
                              kVideoWebMMimeType, video_webm_codecs()));
 }
 

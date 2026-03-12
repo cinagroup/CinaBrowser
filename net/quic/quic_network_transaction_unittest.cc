@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,11 +53,11 @@
 #include "net/proxy_resolution/configured_proxy_resolution_service.h"
 #include "net/proxy_resolution/proxy_config_service_fixed.h"
 #include "net/proxy_resolution/proxy_resolver.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_http_utils.h"
@@ -1076,7 +1076,7 @@ class QuicNetworkTransactionTest
   scoped_refptr<TestTaskRunner> quic_task_runner_;
   std::unique_ptr<HttpNetworkSession> session_;
   MockClientSocketFactory socket_factory_;
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   MockCryptoClientStreamFactory crypto_client_stream_factory_;
   MockHostResolver host_resolver_{/*default_result=*/MockHostResolverBase::
                                       RuleResolver::GetLocalhostResult()};
@@ -1198,7 +1198,7 @@ TEST_P(QuicNetworkTransactionTest, HeaderDecodingDelayHistogram) {
   session_.reset();
 
   histograms.ExpectTotalCount(
-      "Net.QuicChromiumClientStream.HeaderDecodingDelay", 1);
+      "Net.QuicCinaseekClientStream.HeaderDecodingDelay", 1);
 }
 
 TEST_P(QuicNetworkTransactionTest, BasicRequestAndResponseWithAsycWrites) {
@@ -2110,10 +2110,10 @@ TEST_P(QuicNetworkTransactionTest, QuicProxyWithCert) {
   // This certificate is valid for the proxy, but not for the origin.
   EXPECT_TRUE(cert->VerifyNameMatch(kProxyHost));
   EXPECT_FALSE(cert->VerifyNameMatch(kOriginHost));
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
 
@@ -2138,7 +2138,7 @@ TEST_P(QuicNetworkTransactionTest, AlternativeServicesDifferentHost) {
   // valid for the origin but not the alternative, that should work too.
   EXPECT_TRUE(cert->VerifyNameMatch(origin.host()));
   EXPECT_TRUE(cert->VerifyNameMatch(alternative.host()));
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -3055,7 +3055,7 @@ TEST_P(QuicNetworkTransactionTest, TimeoutAfterHandshakeConfirmed) {
   // Use a TestTaskRunner to avoid waiting in real time for timeouts.
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   AddQuicAlternateProtocolMapping(MockCryptoClientStream::ZERO_RTT);
@@ -3237,7 +3237,7 @@ TEST_P(QuicNetworkTransactionTest, TimeoutAfterHandshakeConfirmedThenBroken2) {
   // Use a TestTaskRunner to avoid waiting in real time for timeouts.
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   AddQuicAlternateProtocolMapping(MockCryptoClientStream::ZERO_RTT);
@@ -3714,7 +3714,7 @@ TEST_P(QuicNetworkTransactionTest, RemoteAltSvcWorkingWhileLocalAltSvcBroken) {
   ASSERT_TRUE(cert->VerifyNameMatch("www.example.org"));
   ASSERT_TRUE(cert->VerifyNameMatch("mail.example.org"));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -3798,7 +3798,7 @@ TEST_P(QuicNetworkTransactionTest, BrokenAlternativeOnlyRecordedOnce) {
       ImportCertFromFile(GetTestCertsDirectory(), "wildcard.pem"));
   ASSERT_TRUE(cert->VerifyNameMatch("mail.example.org"));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -3855,7 +3855,7 @@ TEST_P(QuicNetworkTransactionTest,
   ASSERT_TRUE(cert->VerifyNameMatch("www.example.org"));
   ASSERT_TRUE(cert->VerifyNameMatch("mail.example.org"));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -3935,7 +3935,7 @@ TEST_P(QuicNetworkTransactionTest,
   CreateSession();
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   // Set up alternative service for |origin1|.
@@ -4081,7 +4081,7 @@ TEST_P(QuicNetworkTransactionTest, UseExistingAlternativeServiceForQuic) {
   CreateSession();
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   SendRequestAndExpectHttpResponse(kHttpRespData);
@@ -4143,7 +4143,7 @@ TEST_P(QuicNetworkTransactionTest, PoolByOrigin) {
   CreateSession();
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   const char kDestination1[] = "first.example.com";
@@ -4238,7 +4238,7 @@ TEST_P(QuicNetworkTransactionTest, PoolByDestination) {
   CreateSession();
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   const char kDestination1[] = "first.example.com";
@@ -4378,7 +4378,7 @@ TEST_P(QuicNetworkTransactionTest,
   CreateSession();
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   // Send two HTTP requests, responses set up alt-svc lists for the origins.
@@ -4968,7 +4968,7 @@ TEST_P(QuicNetworkTransactionTest, ZeroRTTWithTooEarlyResponse) {
   AddQuicAlternateProtocolMapping(MockCryptoClientStream::ZERO_RTT);
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   HttpNetworkTransaction trans(DEFAULT_PRIORITY, session_.get());
@@ -5047,7 +5047,7 @@ TEST_P(QuicNetworkTransactionTest, ZeroRTTWithMultipleTooEarlyResponse) {
   AddQuicAlternateProtocolMapping(MockCryptoClientStream::ZERO_RTT);
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner_.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner_.get(),
                                                  context_.clock()));
 
   HttpNetworkTransaction trans(DEFAULT_PRIORITY, session_.get());
@@ -6562,7 +6562,7 @@ TEST_P(QuicNetworkTransactionWithDestinationTest, InvalidCertificate) {
   ASSERT_FALSE(cert->VerifyNameMatch(origin1_));
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -6604,7 +6604,7 @@ TEST_P(QuicNetworkTransactionWithDestinationTest, PoolIfCertificateValid) {
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -6671,7 +6671,7 @@ TEST_P(QuicNetworkTransactionWithDestinationTest, PoolIfCertificateValid) {
       base::MakeRefCounted<TestTaskRunner>(context_.mock_clock());
   QuicSessionPoolPeer::SetAlarmFactory(
       session_->quic_session_pool(),
-      std::make_unique<QuicChromiumAlarmFactory>(quic_task_runner.get(),
+      std::make_unique<QuicCinaseekAlarmFactory>(quic_task_runner.get(),
                                                  context_.clock()));
 
   SendRequestAndExpectQuicResponse(origin1_);
@@ -6703,12 +6703,12 @@ TEST_P(QuicNetworkTransactionWithDestinationTest,
   ASSERT_TRUE(cert2->VerifyNameMatch(origin2_));
   ASSERT_FALSE(cert2->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert1;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert2;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #include "build/build_config.h"
 #include "components/webrtc/thread_wrapper.h"
 #include "net/url_request/url_request_context_getter.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
 #include "remoting/protocol/connection_tester.h"
 #include "remoting/protocol/fake_authenticator.h"
 #include "remoting/protocol/ice_config_fetcher.h"
@@ -125,7 +125,7 @@ class IceTransportTest : public testing::Test {
         webrtc::ThreadWrapper::current()->SocketServer();
     host_transport_ = std::make_unique<IceTransport>(
         base::MakeRefCounted<TransportContext>(
-            std::make_unique<ChromiumPortAllocatorFactory>(), socket_factory,
+            std::make_unique<CinaseekPortAllocatorFactory>(), socket_factory,
             /*ice_config_fetcher=*/nullptr, TransportRole::SERVER),
         &host_event_handler_);
     host_transport_->ApplyNetworkSettings(network_settings_);
@@ -136,7 +136,7 @@ class IceTransportTest : public testing::Test {
 
     client_transport_ = std::make_unique<IceTransport>(
         base::MakeRefCounted<TransportContext>(
-            std::make_unique<ChromiumPortAllocatorFactory>(), socket_factory,
+            std::make_unique<CinaseekPortAllocatorFactory>(), socket_factory,
             /*ice_config_fetcher=*/nullptr, TransportRole::CLIENT),
         &client_event_handler_);
     client_transport_->ApplyNetworkSettings(network_settings_);

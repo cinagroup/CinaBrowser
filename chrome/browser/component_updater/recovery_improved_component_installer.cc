@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ void RecoveryComponentActionHandler::Handle(const base::FilePath& action,
 }
 
 void RecoveryComponentActionHandler::Unpack() {
-  auto unzipper = base::MakeRefCounted<update_client::UnzipChromiumFactory>(
+  auto unzipper = base::MakeRefCounted<update_client::UnzipCinaseekFactory>(
                       base::BindRepeating(&unzip::LaunchUnzipper))
                       ->Create();
   update_client::Unpacker::Unpack(

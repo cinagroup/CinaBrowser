@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ class ExtensionPrefsObserver : public base::CheckedObserver {
   // TODO(devlin): This is a bit out of place here, and may be better suited on
   // a general "extension permissions" observer, if/when we have one. See
   // discussion at
-  // https://chromium-review.googlesource.com/c/chromium/src/+/1196107/3/chrome/browser/extensions/runtime_permissions_observer.h#26.
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1196107/3/chrome/browser/extensions/runtime_permissions_observer.h#26.
   virtual void OnExtensionRuntimePermissionsChanged(
       const ExtensionId& extension_id) {}
 

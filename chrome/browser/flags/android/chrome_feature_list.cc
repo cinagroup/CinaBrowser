@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -526,7 +526,7 @@ const base::Feature* const kFeaturesExposedToJava[] = {
 // go/keep-sorted end
 // FEATURE_EXPORT_LIST_END
 };
-// LINT.ThenChange(//chrome/browser/flags/android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureList.java:FeaturesExposedToJava)
+// LINT.ThenChange(//chrome/browser/flags/android/java/src/org/Cinaseek/chrome/browser/flags/ChromeFeatureList.java:FeaturesExposedToJava)
 
 // static
 base::android::FeatureMap* GetFeatureMap() {

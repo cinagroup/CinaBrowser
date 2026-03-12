@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -31,28 +31,28 @@ android_library("java") {
     "//components/search_engines:search_engine_enums_java",
   ]
   sources = [
-    "java/src/org/chromium/components/search_engines/FakeSearchEngineCountryDelegate.java",
-    "java/src/org/chromium/components/search_engines/NoOpSearchEngineCountryDelegate.java",
-    "java/src/org/chromium/components/search_engines/SearchEngineChoiceService.java",
-    "java/src/org/chromium/components/search_engines/SearchEngineCountryDelegate.java",
-    "java/src/org/chromium/components/search_engines/SearchEnginesFeatureUtils.java",
-    "java/src/org/chromium/components/search_engines/TemplateUrl.java",
-    "java/src/org/chromium/components/search_engines/TemplateUrlService.java",
+    "java/src/org/Cinaseek/components/search_engines/FakeSearchEngineCountryDelegate.java",
+    "java/src/org/Cinaseek/components/search_engines/NoOpSearchEngineCountryDelegate.java",
+    "java/src/org/Cinaseek/components/search_engines/SearchEngineChoiceService.java",
+    "java/src/org/Cinaseek/components/search_engines/SearchEngineCountryDelegate.java",
+    "java/src/org/Cinaseek/components/search_engines/SearchEnginesFeatureUtils.java",
+    "java/src/org/Cinaseek/components/search_engines/TemplateUrl.java",
+    "java/src/org/Cinaseek/components/search_engines/TemplateUrlService.java",
   ]
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/search_engines/TemplateUrl.java",
-    "java/src/org/chromium/components/search_engines/TemplateUrlService.java",
+    "java/src/org/Cinaseek/components/search_engines/TemplateUrl.java",
+    "java/src/org/Cinaseek/components/search_engines/TemplateUrlService.java",
   ]
 }
 
 android_library("test_utils_java") {
   testonly = true
   sources = [
-    "java/src/org/chromium/components/search_engines/FakeTemplateUrl.java",
-    "java/src/org/chromium/components/search_engines/TemplateUrlTestHelpers.java",
+    "java/src/org/Cinaseek/components/search_engines/FakeTemplateUrl.java",
+    "java/src/org/Cinaseek/components/search_engines/TemplateUrlTestHelpers.java",
   ]
   deps = [
     ":delegate_java",
@@ -70,8 +70,8 @@ android_library("junit") {
   bypass_platform_checks = true
   testonly = true
   sources = [
-    "java/src/org/chromium/components/search_engines/SearchEngineChoiceServiceUnitTest.java",
-    "java/src/org/chromium/components/search_engines/SearchEnginesFeatureUtilsUnitTest.java",
+    "java/src/org/Cinaseek/components/search_engines/SearchEngineChoiceServiceUnitTest.java",
+    "java/src/org/Cinaseek/components/search_engines/SearchEnginesFeatureUtilsUnitTest.java",
   ]
   deps = [
     ":delegate_java",

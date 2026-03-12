@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/linux-centipede-asan-rel/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Centipede Upload Linux ASan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fuzz",
+              "builder_group": "Cinaseek.fuzz",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_clang",
+                "config": "Cinaseek_clang",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,7 +36,7 @@
         {
           "bucket": "ci",
           "builder": "Centipede Upload Linux ASan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -52,7 +52,7 @@
     "keep_going": 3,
     "output_local_strategy": "minimum",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -61,6 +61,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.linux",
-  "recipe": "chromium/fuzz"
+  "builder_group": "tryserver.Cinaseek.linux",
+  "recipe": "Cinaseek/fuzz"
 }

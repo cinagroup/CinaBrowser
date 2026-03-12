@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ GamepadStandardMappingFunction GetGamepadStandardMappingFunction(
 // appropriately.
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.device.gamepad
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.device.gamepad
 // GENERATED_JAVA_PREFIX_TO_STRIP: BUTTON_INDEX_
 enum CanonicalButtonIndex {
   BUTTON_INDEX_PRIMARY,
@@ -79,7 +79,7 @@ enum XboxSeriesXButtons {
 };
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.device.gamepad
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.device.gamepad
 // GENERATED_JAVA_PREFIX_TO_STRIP: AXIS_INDEX_
 enum CanonicalAxisIndex {
   AXIS_INDEX_LEFT_STICK_X,

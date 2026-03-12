@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -198,14 +198,14 @@ class Server : public ash::FilesInternalsDebugJSONProvider {
   // not resolved directly by the kernel.
   //
   // Instead, file I/O under the /media/fuse/fusebox mount point goes through
-  // the FuseBox daemon (via FUSE) to Chromium (via D-Bus) to the kernel (as
-  // Chromium storage::FileSystemURL code sees storage::kFileSystemTypeLocal
+  // the FuseBox daemon (via FUSE) to Cinaseek (via D-Bus) to the kernel (as
+  // Cinaseek storage::FileSystemURL code sees storage::kFileSystemTypeLocal
   // files living under the underlying file path).
   //
   // That sounds convoluted (and overkill for 'sym-linking' a directory on the
   // local file system), and it is, but it is essentially the same code paths
-  // that FuseBox uses to surface Chromium virtual file systems (VFSs) that are
-  // not otherwise visible on the kernel-level file system. Note that Chromium
+  // that FuseBox uses to surface Cinaseek virtual file systems (VFSs) that are
+  // not otherwise visible on the kernel-level file system. Note that Cinaseek
   // VFSs are not the same as Linux kernel VFSs.
   //
   // The purpose of these Make/Remove methods is to facilitate testing these
@@ -293,7 +293,7 @@ class Server : public ash::FilesInternalsDebugJSONProvider {
   };
 
   // Maps from ReadDir2 cookies to a pair of (1) a buffer of upstream results
-  // from Chromium's storage layer and (2) a possibly-hasnt-arrived-yet pending
+  // from Cinaseek's storage layer and (2) a possibly-hasnt-arrived-yet pending
   // downstream ReadDir2Callback (i.e. a D-Bus RPC response).
   //
   // If the upstream layer sends its results first then we need to buffer until

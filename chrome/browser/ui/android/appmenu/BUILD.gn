@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,19 +7,19 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuBlocker.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuButtonHelper.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuClickHandler.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuDelegate.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuHandler.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuItemProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuItemWithSubmenuProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuObserver.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuPropertiesDelegate.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuSubmenuHeaderItemProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuUtil.java",
-    "java/src/org/chromium/chrome/browser/ui/appmenu/MenuButtonDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuBlocker.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuButtonHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuClickHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuItemProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuItemWithSubmenuProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuPropertiesDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuSubmenuHeaderItemProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/appmenu/MenuButtonDelegate.java",
   ]
   deps = [
     ":java_resources",
@@ -29,7 +29,7 @@ android_library("java") {
     "//third_party/androidx:androidx_interpolator_interpolator_java",
     "//ui/android:ui_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.appmenu"
+  resources_package = "org.Cinaseek.chrome.browser.ui.appmenu"
 }
 
 android_library_factory("factory_java") {
@@ -44,7 +44,7 @@ android_library_factory("factory_java") {
 
   # This internal file will be replaced by a generated file so the resulting
   # android_library target does not actually depend on this internal file.
-  sources = [ "//chrome/browser/ui/android/appmenu/internal/java/src/org/chromium/chrome/browser/ui/appmenu/AppMenuCoordinatorFactory.java" ]
+  sources = [ "//chrome/browser/ui/android/appmenu/internal/java/src/org/Cinaseek/chrome/browser/ui/appmenu/AppMenuCoordinatorFactory.java" ]
 }
 
 android_resources("java_resources") {

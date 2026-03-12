@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -179,8 +179,8 @@ IN_PROC_BROWSER_TEST_F(MAYBE_WebRtcBrowserTest, CanForwardRemoteStream) {
 }
 
 IN_PROC_BROWSER_TEST_F(MAYBE_WebRtcBrowserTest,
-                       NoCrashWhenConnectChromiumSinkToRemoteTrack) {
-  MakeTypicalPeerConnectionCall("ConnectChromiumSinkToRemoteAudioTrack();");
+                       NoCrashWhenConnectCinaseekSinkToRemoteTrack) {
+  MakeTypicalPeerConnectionCall("ConnectCinaseekSinkToRemoteAudioTrack();");
 }
 
 // This test will make a complete PeerConnection-based call but remove the

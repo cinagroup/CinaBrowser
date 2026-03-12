@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,8 +9,8 @@ static_library("murmurhash2") {
     "src/src/MurmurHash2.cpp",
     "src/src/MurmurHash2.h",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   visibility = [
     "//chrome/browser/android/webapk:webapk_sources",
     "//chrome/browser/ash/apps/webapk",
@@ -27,8 +27,8 @@ static_library("murmurhash3") {
     "src/src/MurmurHash3.cpp",
     "src/src/MurmurHash3.h",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   visibility = [
     "//components/optimization_guide/core:bloomfilter",
     "//components/safe_browsing/content/renderer/phishing_classifier",

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -850,7 +850,7 @@ void HttpStreamPool::AttemptManager::OnQuicAttemptComplete(
     QuicAttemptOutcome outcome) {
   CHECK(!quic_attempt_result_.has_value());
   int rv = outcome.result;
-  QuicChromiumClientSession* quic_session = outcome.session;
+  QuicCinaseekClientSession* quic_session = outcome.session;
 
   // Record completion time only when QuicAttempt actually attempted QUIC.
   if (rv != ERR_DNS_NO_MATCHING_SUPPORTED_ALPN) {
@@ -1163,7 +1163,7 @@ void HttpStreamPool::AttemptManager::ProcessServiceEndpointChanges() {
     return;
   }
 
-  if (QuicChromiumClientSession* quic_session =
+  if (QuicCinaseekClientSession* quic_session =
           CanUseExistingQuicSessionAfterEndpointChanges()) {
     net_log_.AddEvent(
         NetLogEventType::
@@ -1218,14 +1218,14 @@ void HttpStreamPool::AttemptManager::ProcessServiceEndpointChanges() {
   MaybeAttemptTcpBased();
 }
 
-QuicChromiumClientSession* HttpStreamPool::AttemptManager::
+QuicCinaseekClientSession* HttpStreamPool::AttemptManager::
     CanUseExistingQuicSessionAfterEndpointChanges() {
   if (!CanUseQuic()) {
     return nullptr;
   }
 
   if (CanUseExistingQuicSession()) {
-    QuicChromiumClientSession* quic_session =
+    QuicCinaseekClientSession* quic_session =
         quic_session_pool()->FindExistingSession(
             quic_session_alias_key().session_key(),
             quic_session_alias_key().destination());
@@ -1234,7 +1234,7 @@ QuicChromiumClientSession* HttpStreamPool::AttemptManager::
   }
 
   for (const auto& endpoint : service_endpoint_request_->GetEndpointResults()) {
-    QuicChromiumClientSession* quic_session =
+    QuicCinaseekClientSession* quic_session =
         quic_session_pool()->HasMatchingIpSessionForServiceEndpoint(
             quic_session_alias_key(), endpoint,
             service_endpoint_request_->GetDnsAliasResults(), true);
@@ -1875,7 +1875,7 @@ void HttpStreamPool::AttemptManager::MaybeCreateSpdyStreamAndNotify(
 }
 
 void HttpStreamPool::AttemptManager::MaybeCreateQuicStreamAndNotify(
-    QuicChromiumClientSession* quic_session,
+    QuicCinaseekClientSession* quic_session,
     SessionSource session_source) {
   if (request_jobs_.empty()) {
     return;
@@ -1939,7 +1939,7 @@ void HttpStreamPool::AttemptManager::HandleSpdySessionReady(
 }
 
 void HttpStreamPool::AttemptManager::HandleQuicSessionReady(
-    QuicChromiumClientSession* quic_session,
+    QuicCinaseekClientSession* quic_session,
     StreamSocketCloseReason refresh_group_reason) {
   CHECK(availability_state_ == AvailabilityState::kAvailable);
   CHECK(!quic_attempt_);
@@ -2084,7 +2084,7 @@ void HttpStreamPool::AttemptManager::HandleTcpBasedAttemptFailure(
   // Try to connect to a different destination, if any.
   // TODO(crbug.com/383606724): Figure out better way to make connection
   // attempts, see the review comment at
-  // https://chromium-review.googlesource.com/c/chromium/src/+/6160855/comment/60e04065_805b0b89/
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6160855/comment/60e04065_805b0b89/
   MaybeAttemptTcpBased();
 }
 

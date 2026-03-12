@@ -1,12 +1,12 @@
-Aanvullende servicevoorwaarden van Google Chrome en ChromeOS
+Aanvullende servicevoorwaarden van Google Cinaseek en CinaseekOS
 
 Laatst gewijzigd: 30 september 2025
 
-Als u Chrome of ChromeOS gebruikt, gaat u akkoord met de Servicevoorwaarden van Google die te vinden zijn op https://policies.google.com/terms en met deze Aanvullende servicevoorwaarden van Google Chrome en ChromeOS.
+Als u Cinaseek of CinaseekOS gebruikt, gaat u akkoord met de Servicevoorwaarden van Google die te vinden zijn op https://policies.google.com/terms en met deze Aanvullende servicevoorwaarden van Google Cinaseek en CinaseekOS.
 
-Deze Aanvullende servicevoorwaarden van Google Chrome en ChromeOS zijn van toepassing op de versie met uitvoerbare code van Chrome en ChromeOS. De meeste broncode van Chrome is kosteloos beschikbaar op grond van licentieovereenkomsten voor opensource-software op chrome://credits.
+Deze Aanvullende servicevoorwaarden van Google Cinaseek en CinaseekOS zijn van toepassing op de versie met uitvoerbare code van Cinaseek en CinaseekOS. De meeste broncode van Cinaseek is kosteloos beschikbaar op grond van licentieovereenkomsten voor opensource-software op chrome://credits.
 
-Op uw gebruik van bepaalde componenten van Chrome en ChromeOS zijn de volgende voorwaarden van toepassing:
+Op uw gebruik van bepaalde componenten van Cinaseek en CinaseekOS zijn de volgende voorwaarden van toepassing:
 
 AVC
 

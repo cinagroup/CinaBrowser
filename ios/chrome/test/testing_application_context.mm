@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #import "components/os_crypt/async/browser/test_utils.h"
 #import "components/supervised_user/core/browser/device_parental_controls.h"
 #import "components/supervised_user/core/browser/device_parental_controls_noop_impl.h"
-#import "components/update_client/net/network_chromium.h"
+#import "components/update_client/net/network_Cinaseek.h"
 #import "components/variations/service/variations_service.h"
 #import "ios/chrome/browser/download/model/auto_deletion/auto_deletion_service.h"
 #import "ios/chrome/browser/optimization_guide/model/optimization_guide_global_state.h"

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -120,11 +120,11 @@ static_library("apr") {
     "src/include",
     "src/include/arch/unix",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
 
-    # Must be after no_chromium_code so -Wno flags show up after -Wall.
+    # Must be after no_Cinaseek_code so -Wno flags show up after -Wall.
     ":apr_warnings",
   ]
 

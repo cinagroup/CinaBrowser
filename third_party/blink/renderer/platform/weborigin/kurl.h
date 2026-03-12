@@ -50,7 +50,7 @@ class TextEncoding;
 // KURL stands for the URL parser in KDE's HTML Widget (KHTML). The name hasn't
 // changed since Blink forked WebKit, which in turn forked KHTML.
 //
-// KURL is Blink's URL class and is the analog to GURL in other Chromium
+// KURL is Blink's URL class and is the analog to GURL in other Cinaseek
 // code. KURL and GURL both share the same underlying URL parser, whose code is
 // located in //url, but KURL is backed by Blink specific blink::Strings. This
 // means that KURLs are usually cheap to copy due to blink::Strings being

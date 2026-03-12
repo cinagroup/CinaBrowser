@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 #include "net/dns/public/resolve_error_info.h"
 #include "net/dns/public/secure_dns_policy.h"
 #include "net/http/http_auth.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/socket/connect_job.h"
 #include "net/socket/connect_job_params.h"
 #include "net/socket/next_proto.h"
@@ -310,7 +310,7 @@ class NET_EXPORT_PRIVATE HttpProxyConnectJob : public ConnectJob,
   std::unique_ptr<SpdyStreamRequest> spdy_stream_request_;
 
   std::unique_ptr<QuicSessionRequest> quic_session_request_;
-  std::unique_ptr<QuicChromiumClientSession::Handle> quic_session_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> quic_session_;
 
   scoped_refptr<HttpAuthController> http_auth_controller_;
 

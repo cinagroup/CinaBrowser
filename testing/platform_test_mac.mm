@@ -1,4 +1,4 @@
-// Copyright 2006-2008 The Chromium Authors
+// Copyright 2006-2008 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
 
 // /!\ WARNING!
 //
-// Chromium compiles this file as ARC, but other dependencies pull it in and
+// Cinaseek compiles this file as ARC, but other dependencies pull it in and
 // compile it as non-ARC. Be sure that this file compiles correctly with either
 // build setting.
 //

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -70,8 +70,8 @@ if (is_android) {
   android_library("test_support_java") {
     testonly = true
     sources = [
-      "test_support/android/java/src/org/chromium/components/data_sharing/SharedGroupTestHelper.java",
-      "test_support/android/java/src/org/chromium/components/data_sharing/TestDataSharingService.java",
+      "test_support/android/java/src/org/Cinaseek/components/data_sharing/SharedGroupTestHelper.java",
+      "test_support/android/java/src/org/Cinaseek/components/data_sharing/TestDataSharingService.java",
     ]
     deps = [
       "//base:base_java",

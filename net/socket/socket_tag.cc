@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace net {
 
 #if BUILDFLAG(IS_ANDROID)
 // Expose UNSET_UID to Java.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum TrafficStatsUid {
   UNSET_UID = -1,
 };
@@ -26,7 +26,7 @@ enum TrafficStatsUid {
 static_assert(UNSET_UID == SocketTag::UNSET_UID,
               "TrafficStatsUid does not match SocketTag::UNSET_UID");
 // Expose UNSET_TAG to Java.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum TrafficStatsTag {
   UNSET_TAG = -1,
 };

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -468,7 +468,7 @@ template("define_autorolled_targets") {
       # Rules are unnecessary.
       ignore_proguard_configs = true
 
-      # ChromeXR does use the APIs that require the native library.
+      # CinaseekXR does use the APIs that require the native library.
       extract_native_libraries = true
     }
 

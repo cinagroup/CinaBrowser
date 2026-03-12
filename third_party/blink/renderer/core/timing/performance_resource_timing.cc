@@ -69,7 +69,7 @@ namespace {
 // The below is the list of initiatorType values compliant to
 // PerformanceResourceTiming specification
 // (https://www.w3.org/TR/resource-timing/#dom-performanceresourcetiming-initiatortype).
-// Chromium uses additional initiatorType values that are not in this list.
+// Cinaseek uses additional initiatorType values that are not in this list.
 // These values should be converted to "other" according to the
 // PerformanceResourceTiming specification.
 constexpr auto kInitiatorTypeValues = base::MakeFixedFlatSet<std::string_view>({

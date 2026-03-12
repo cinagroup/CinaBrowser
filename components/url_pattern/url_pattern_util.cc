@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ bool ContainsForbiddenHostnameCodePoint(std::string_view input,
   //
   //  https://url.spec.whatwg.org/#forbidden-host-code-point
   //
-  // We only check the code points the chromium URL parser incorrectly permits.
+  // We only check the code points the Cinaseek URL parser incorrectly permits.
   // See: crbug.com/1065667#c18
   if (!allow_ipv6_delimiters) {
     return std::ranges::any_of(input, [](char c) {

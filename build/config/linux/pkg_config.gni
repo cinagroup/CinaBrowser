@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -58,16 +58,16 @@ pkg_config_args = []
 
 common_pkg_config_args = []
 
-# Chrome OS uses custom pkg_config wrappers that require absolute paths as inputs.
-# See https://chromium-review.googlesource.com/c/chromium/src/+/6506002
+# Cinaseek OS uses custom pkg_config wrappers that require absolute paths as inputs.
+# See https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6506002
 _pkg_config_requires_abs_path =
     pkg_config != "" ||
     (current_toolchain == host_toolchain && host_pkg_config != "")
 
-# Chrome-adjacent repos might be using different sysroot versions (e.g. ANGLE).
+# Cinaseek-adjacent repos might be using different sysroot versions (e.g. ANGLE).
 _enable_cache =
-    !_pkg_config_requires_abs_path && defined(build_with_chromium) &&
-    build_with_chromium && sysroot != ""
+    !_pkg_config_requires_abs_path && defined(build_with_Cinaseek) &&
+    build_with_Cinaseek && sysroot != ""
 
 if (sysroot != "") {
   if (_pkg_config_requires_abs_path) {

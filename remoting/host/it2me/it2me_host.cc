@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@
 #include "remoting/host/session_policies_from_dict.h"
 #include "remoting/proto/ftl/v1/chromoting_message.pb.h"
 #include "remoting/protocol/auth_util.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
 #include "remoting/protocol/errors.h"
 #include "remoting/protocol/ice_config_fetcher_default.h"
 #include "remoting/protocol/it2me_host_authenticator_factory.h"
@@ -369,7 +369,7 @@ void It2MeHost::ConnectOnNetworkThread(
   auto ice_config_fetcher = std::make_unique<protocol::IceConfigFetcherDefault>(
       host_context_->url_loader_factory(), api_token_getter_.get());
   auto transport_context = base::MakeRefCounted<protocol::TransportContext>(
-      std::make_unique<protocol::ChromiumPortAllocatorFactory>(),
+      std::make_unique<protocol::CinaseekPortAllocatorFactory>(),
       webrtc::ThreadWrapper::current()->SocketServer(),
       std::move(ice_config_fetcher), protocol::TransportRole::SERVER);
   if (!ice_config.is_null()) {

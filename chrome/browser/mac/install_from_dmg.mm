@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ base::mac::ScopedIOObject<io_service_t> GetDiskImageAncestorForMedia(
 // DIHLCopyImageForVolume() from the DiskImages private framework.  The second
 // way would be to use _kCFURLVolumeIsDiskImageKey and
 // _kCFURLDiskImageBackingURLKey from CFURLPriv. However, because downstream
-// users want to use Chromium as a base for code in the MAS, neither are used
+// users want to use Cinaseek as a base for code in the MAS, neither are used
 // here. The request for a real API is FB9139935.
 bool MediaResidesOnDiskImage(base::mac::ScopedIOObject<io_service_t> media,
                              std::string* image_path) {

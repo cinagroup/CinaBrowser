@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class ProtoFetcherStatus {
   static ProtoFetcherStatus GoogleServiceAuthError(
       class GoogleServiceAuthError
           error);  // The copy follows the interface of
-                   // https://source.chromium.org/chromium/chromium/src/+/main:components/signin/public/identity_manager/primary_account_access_token_fetcher.h;l=241;drc=8ba1bad80dc22235693a0dd41fe55c0fd2dbdabd
+                   // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/signin/public/identity_manager/primary_account_access_token_fetcher.h;l=241;drc=8ba1bad80dc22235693a0dd41fe55c0fd2dbdabd
   static ProtoFetcherStatus HttpStatusOrNetError(
       int value = 0);  // Either net::Error (negative numbers, 0 denotes
                        // success) or HTTP status.

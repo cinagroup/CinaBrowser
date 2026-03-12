@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -101,8 +101,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
   source_set("libaom_intrinsics_sse2") {
     # TODO(jianj): Align this with libvpx as this is not used there.
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -116,8 +116,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_sse3") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -128,8 +128,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_ssse3") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -145,8 +145,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_sse4_1") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -160,8 +160,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_sse4_2") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -172,8 +172,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_avx") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (is_win) {
@@ -186,8 +186,8 @@ if (current_cpu == "x86" || (current_cpu == "x64" && !is_msan)) {
 
   source_set("libaom_intrinsics_avx2") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (is_win) {
@@ -206,8 +206,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e" ||
     cpu_arch_full == "arm-neon") {
   source_set("libaom_intrinsics_neon") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     if (current_cpu == "arm") {
       configs -= [ "//build/config/compiler:compiler_arm_fpu" ]
       cflags = [ "-mfpu=neon" ]
@@ -225,8 +225,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e" ||
 if (current_cpu == "arm64" || current_cpu == "arm64e") {
   source_set("libaom_intrinsics_arm_crc32") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -237,8 +237,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
   source_set("libaom_intrinsics_neon_dotprod") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -251,8 +251,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
   source_set("libaom_intrinsics_neon_i8mm") {
     check_includes = false
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
     configs += [ ":libaom_config" ]
     configs -= [ "//build/config/compiler:default_init_stack_vars" ]
     if (!is_win || is_clang) {
@@ -268,8 +268,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
   if (!is_win) {
     source_set("libaom_intrinsics_sve") {
       check_includes = false
-      configs -= [ "//build/config/compiler:chromium_code" ]
-      configs += [ "//build/config/compiler:no_chromium_code" ]
+      configs -= [ "//build/config/compiler:Cinaseek_code" ]
+      configs += [ "//build/config/compiler:no_Cinaseek_code" ]
       configs += [ ":libaom_config" ]
       configs -= [ "//build/config/compiler:default_init_stack_vars" ]
       if (!is_win || is_clang) {
@@ -281,8 +281,8 @@ if (current_cpu == "arm64" || current_cpu == "arm64e") {
 
     source_set("libaom_intrinsics_sve2") {
       check_includes = false
-      configs -= [ "//build/config/compiler:chromium_code" ]
-      configs += [ "//build/config/compiler:no_chromium_code" ]
+      configs -= [ "//build/config/compiler:Cinaseek_code" ]
+      configs += [ "//build/config/compiler:no_Cinaseek_code" ]
       configs += [ ":libaom_config" ]
       configs -= [ "//build/config/compiler:default_init_stack_vars" ]
       if (!is_win || is_clang) {
@@ -299,8 +299,8 @@ static_library("libaom") {
     configs -= [ "//build/config/compiler:default_optimization" ]
     configs += [ "//build/config/compiler:optimize_max" ]
   }
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":libaom_config" ]
   configs -= [ "//build/config/compiler:default_init_stack_vars" ]
 
@@ -378,8 +378,8 @@ static_library("libaomrc") {
     "//third_party/libaom/source/libaom/av1/ratectrl_rtc.cc",
     "//third_party/libaom/source/libaom/av1/ratectrl_rtc.h",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":libaom_config" ]
 
   public_configs = [ ":libaom_public_config" ]
@@ -426,7 +426,7 @@ test("test_libaom") {
 
   if (is_android) {
     use_raw_android_executable = true
-    defines += [ "LIBAOM_TEST_DATA_PATH=/data/local/tmp/chromium_tests_root/third_party/libaom/testdata" ]
+    defines += [ "LIBAOM_TEST_DATA_PATH=/data/local/tmp/Cinaseek_tests_root/third_party/libaom/testdata" ]
     data = [ "testdata/" ]
   } else {
     defines += [ string_join("",
@@ -436,9 +436,9 @@ test("test_libaom") {
                              ]) ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":libaom_config",
     ":test_libaom_config",
   ]

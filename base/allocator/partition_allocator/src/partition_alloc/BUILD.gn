@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,16 +24,16 @@ enable_gwp_asan_support = enable_backup_ref_ptr_support
 enable_pointer_compression =
     enable_pointer_compression_support && has_64_bit_pointers
 
-# Duplicates the setup Chromium uses to define `DCHECK_IS_ON()`, but avails it
+# Duplicates the setup Cinaseek uses to define `DCHECK_IS_ON()`, but avails it
 # as a buildflag.
 partition_alloc_dchecks_are_on =
     partition_alloc_is_debug || partition_alloc_dcheck_always_on
 
 # Building PartitionAlloc for Windows component build.
-# Currently use build_with_chromium not to affect any third_party code,
-# but if any third_party code wants to use, remove build_with_chromium.
+# Currently use build_with_Cinaseek not to affect any third_party code,
+# but if any third_party code wants to use, remove build_with_Cinaseek.
 use_partition_alloc_as_malloc_on_win_component_build =
-    build_with_chromium && is_win && is_component_build
+    build_with_Cinaseek && is_win && is_component_build
 
 # TODO(crbug.com/40276913): Split PartitionAlloc into a public and
 # private parts. The public config would include add the "./include" dir and
@@ -53,7 +53,7 @@ config("public_includes") {
 # This list was initially copied from Dawn, who gathered this list from its own
 # dependants.
 config("dependants_extra_warnings") {
-  # Add them only when building PartitionAlloc as part of Chrome, because we
+  # Add them only when building PartitionAlloc as part of Cinaseek, because we
   # control which clang version we use. Otherwise we risk breaking dependants
   # when they use a different clang version.
   #
@@ -61,7 +61,7 @@ config("dependants_extra_warnings") {
   # fuchsia.kernel involves too many warning. This is not a real issue, because
   # the header is only used by PartitionAlloc internally. The dependants do not
   # include it transitively.
-  if (build_with_chromium && is_clang && !is_fuchsia) {
+  if (build_with_Cinaseek && is_clang && !is_fuchsia) {
     cflags = [
       "-Wc++11-narrowing",
       "-Wconditional-uninitialized",
@@ -360,11 +360,11 @@ if (is_clang_or_gcc) {
 
   if (is_win && is_component_build) {
     group("win_component_build_adapter") {
-      # Currently guard this target by using build_with_chromium to avoid
+      # Currently guard this target by using build_with_Cinaseek to avoid
       # any issues on third_party build. But if any third_party code wants to
       # use allocator_shim for its own component build, we will remove this
       # guard.
-      if (build_with_chromium) {
+      if (build_with_Cinaseek) {
         if (use_allocator_shim) {
           public_deps = [
             ":allocator_base",
@@ -372,7 +372,7 @@ if (is_clang_or_gcc) {
           ]
         }
       }
-      # If not with chromium, currently do nothing.
+      # If not with Cinaseek, currently do nothing.
     }
   }
 
@@ -582,11 +582,11 @@ if (is_clang_or_gcc) {
       configs += [ ":no_stack_protector" ]
 
       if (defined(is_debug) && is_debug) {
-        # Chromium debug build uses -fstack-protector for libc++ modules and the
+        # Cinaseek debug build uses -fstack-protector for libc++ modules and the
         # flag is not compatible with "no_stack_protector" config.
         #
         # Note that `is_debug`, `libcxx_modules` and `use_clang_modules`
-        # arguments are not part of partition_alloc. They are part of Chromium.
+        # arguments are not part of partition_alloc. They are part of Cinaseek.
         # They may be undefined or unused respectively.
         use_libcxx_modules = false
         if (!defined(use_clang_modules)) {
@@ -979,8 +979,8 @@ if (is_clang_or_gcc) {
 }  # if (is_clang_or_gcc)
 
 # TODO(crbug.com/40158212): Consider supporting building tests outside of
-# chromium and having a dedicated 'partition_alloc_unittests' target.
-if (build_with_chromium) {
+# Cinaseek and having a dedicated 'partition_alloc_unittests' target.
+if (build_with_Cinaseek) {
   if (is_linux || is_chromeos || is_android) {
     source_set("debug_proc_maps") {
       testonly = true
@@ -1090,11 +1090,11 @@ if (build_with_chromium) {
       configs += [ ":no_stack_protector" ]
 
       if (defined(is_debug) && is_debug) {
-        # Chromium debug build uses -fstack-protector for libc++ modules and the
+        # Cinaseek debug build uses -fstack-protector for libc++ modules and the
         # flag is not compatible with "no_stack_protector" config.
         #
         # Note that `is_debug`, `libcxx_modules` and `use_clang_modules`
-        # arguments are not part of partition_alloc. They are part of Chromium.
+        # arguments are not part of partition_alloc. They are part of Cinaseek.
         # They may be undefined or unused respectively.
         use_libcxx_modules = false
         if (!defined(use_clang_modules)) {

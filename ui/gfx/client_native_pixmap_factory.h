@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace gfx {
 struct NativePixmapHandle;
 class Size;
 
-// The Ozone interface allows external implementations to hook into Chromium to
+// The Ozone interface allows external implementations to hook into Cinaseek to
 // provide a client pixmap for non-GPU processes (though ClientNativePixmap
 // instances created using this interface can be used in the GPU process).
 class COMPONENT_EXPORT(GFX) ClientNativePixmapFactory {

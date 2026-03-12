@@ -1,8 +1,8 @@
 Document
 ++List
-++++ListItem Name='Chrome'
+++++ListItem Name='Cinaseek'
 ++++++Text Name='1. ' IsControlElement=false
-++++++Text Name='Chrome' IsControlElement=false
+++++++Text Name='Cinaseek' IsControlElement=false
 ++++ListItem Name='Safari'
 ++++++Text Name='2. ' IsControlElement=false
 ++++++Text Name='Safari' IsControlElement=false

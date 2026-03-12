@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,9 +19,9 @@ class TemplateUrlServiceAndroid : public TemplateURLServiceObserver {
  public:
   // Defines the category of template URLs to be displayed in different UI
   // sections. The values are shared with
-  // org.chromium.components.search_engines.TemplateUrlService.
+  // org.Cinaseek.components.search_engines.TemplateUrlService.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.search_engines
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.search_engines
   enum class TemplateUrlCategory {
     kDefault = 0,
     kActiveSiteSearch = 1,

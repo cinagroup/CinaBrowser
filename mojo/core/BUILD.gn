@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -98,7 +98,7 @@ source_set("impl_for_embedder") {
     "//mojo/public/cpp/bindings:mojo_buildflags",
     "//mojo/public/cpp/platform",
     "//third_party/abseil-cpp:absl",
-    "//third_party/ipcz/src:ipcz_chromium",
+    "//third_party/ipcz/src:ipcz_Cinaseek",
   ]
 
   if (mojo_support_legacy_core) {
@@ -195,7 +195,7 @@ source_set("impl_for_embedder") {
   }
 
   # Use target_os == "chromeos" instead of is_chromeos because we need to
-  # build NaCl targets (i.e. IRT) for ChromeOS the same as the rest of ChromeOS.
+  # build NaCl targets (i.e. IRT) for CinaseekOS the same as the rest of CinaseekOS.
   if (is_android || target_os == "chromeos" ||
       (target_os == "linux" && chromeos_is_browser_only)) {
     defines += [ "MOJO_CORE_LEGACY_PROTOCOL" ]
@@ -214,7 +214,7 @@ source_set("driver_for_ipcz_tests") {
     ":embedder_internal",
     "//base",
     "//base/test:test_support",
-    "//third_party/ipcz/src:ipcz_test_support_chromium",
+    "//third_party/ipcz/src:ipcz_test_support_Cinaseek",
   ]
 }
 
@@ -254,7 +254,7 @@ source_set("test_sources") {
     "//mojo/public/cpp/system",
     "//testing/gmock",
     "//testing/gtest",
-    "//third_party/ipcz/src:ipcz_chromium",
+    "//third_party/ipcz/src:ipcz_Cinaseek",
   ]
 
   if (mojo_support_legacy_core) {

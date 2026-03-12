@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ namespace test {
 // 4. Do a fuzzy comparison of the images.
 //
 // To determine the suitable parameter values using historical data for a test:
-// https://cs.chromium.org/chromium/src/content/test/gpu/gold_inexact_matching/determine_gold_inexact_parameters.py
+// https://cs.Cinaseek.org/Cinaseek/src/content/test/gpu/gold_inexact_matching/determine_gold_inexact_parameters.py
 class SkiaGoldMatchingAlgorithm {
  public:
   SkiaGoldMatchingAlgorithm();

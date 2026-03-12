@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,44 +51,44 @@ class SkottieLogWriter : public skottie::Logger {
 };
 
 // Methods for converting from a skottie::<Type>PropertyValue to its
-// corresponding representation in Chromium that gets circulated through the
+// corresponding representation in Cinaseek that gets circulated through the
 // graphics pipeline.
 class SkottiePropertyConversions {
  public:
-  // Convert skottie library representation to Chromium representation:
-  static SkColor ConvertToChromium(
+  // Convert skottie library representation to Cinaseek representation:
+  static SkColor ConvertToCinaseek(
       const skottie::ColorPropertyValue& skottie_value) {
     return skottie_value;
   }
 
-  static SkottieTextPropertyValue ConvertToChromium(
+  static SkottieTextPropertyValue ConvertToCinaseek(
       const skottie::TextPropertyValue& skottie_value) {
     std::string text(skottie_value.fText.c_str());
     return SkottieTextPropertyValue(std::move(text),
                                     gfx::SkRectToRectF(skottie_value.fBox));
   }
 
-  static SkottieTransformPropertyValue ConvertToChromium(
+  static SkottieTransformPropertyValue ConvertToCinaseek(
       const skottie::TransformPropertyValue& skottie_value) {
     SkottieTransformPropertyValue output = {
         /*position*/ gfx::SkPointToPointF(skottie_value.fPosition)};
     return output;
   }
 
-  // Convert Chromium representation to skottie library representation:
-  static void ConvertToSkottie(const SkColor& chromium_value,
+  // Convert Cinaseek representation to skottie library representation:
+  static void ConvertToSkottie(const SkColor& Cinaseek_value,
                                skottie::ColorPropertyValue& skottie_value_out) {
-    skottie_value_out = chromium_value;
+    skottie_value_out = Cinaseek_value;
   }
 
-  static void ConvertToSkottie(const SkottieTextPropertyValue& chromium_value,
+  static void ConvertToSkottie(const SkottieTextPropertyValue& Cinaseek_value,
                                skottie::TextPropertyValue& skottie_value_out) {
-    skottie_value_out.fText.set(chromium_value.text().c_str());
-    skottie_value_out.fBox = gfx::RectFToSkRect(chromium_value.box());
+    skottie_value_out.fText.set(Cinaseek_value.text().c_str());
+    skottie_value_out.fBox = gfx::RectFToSkRect(Cinaseek_value.box());
   }
 
   static void ConvertToSkottie(
-      const SkottieTransformPropertyValue& chromium_value,
+      const SkottieTransformPropertyValue& Cinaseek_value,
       skottie::TransformPropertyValue& skottie_value_out) {
     NOTIMPLEMENTED() << "No use case yet for modifying transform properties";
   }
@@ -96,7 +96,7 @@ class SkottiePropertyConversions {
 
 template <typename SkottiePropertyValueType,
           typename SkottiePropertyHandleType,
-          typename ChromiumPropertyValueType>
+          typename CinaseekPropertyValueType>
 class PropertyManager {
  public:
   PropertyManager() = default;
@@ -114,30 +114,30 @@ class PropertyManager {
     node_names_.insert(node_name);
     SkottieResourceIdHash node_name_hash = HashSkottieResourceId(node_name);
     auto skottie_property_handle = lh();
-    current_vals_as_chromium_.emplace(
-        node_name_hash, SkottiePropertyConversions::ConvertToChromium(
+    current_vals_as_Cinaseek_.emplace(
+        node_name_hash, SkottiePropertyConversions::ConvertToCinaseek(
                             skottie_property_handle->get()));
     skottie_property_handles_[node_name_hash].push_back(
         std::move(skottie_property_handle));
   }
 
   void SetNewValues(
-      const base::flat_map<SkottieResourceIdHash, ChromiumPropertyValueType>&
-          new_vals_as_chromium) {
-    for (const auto& [node_name_hash, new_val_as_chromium] :
-         new_vals_as_chromium) {
-      auto iter = current_vals_as_chromium_.find(node_name_hash);
-      if (iter == current_vals_as_chromium_.end()) {
+      const base::flat_map<SkottieResourceIdHash, CinaseekPropertyValueType>&
+          new_vals_as_Cinaseek) {
+    for (const auto& [node_name_hash, new_val_as_Cinaseek] :
+         new_vals_as_Cinaseek) {
+      auto iter = current_vals_as_Cinaseek_.find(node_name_hash);
+      if (iter == current_vals_as_Cinaseek_.end()) {
         LOG(WARNING) << "Encountered unknown property node with hash: "
                      << node_name_hash;
         continue;
       }
-      iter->second = new_val_as_chromium;
+      iter->second = new_val_as_Cinaseek;
 
       for (auto& skottie_handle : skottie_property_handles_[node_name_hash]) {
         DCHECK(skottie_handle);
         SkottiePropertyValueType current_val_as_skottie = skottie_handle->get();
-        SkottiePropertyConversions::ConvertToSkottie(new_val_as_chromium,
+        SkottiePropertyConversions::ConvertToSkottie(new_val_as_Cinaseek,
                                                      current_val_as_skottie);
         skottie_handle->set(std::move(current_val_as_skottie));
       }
@@ -146,9 +146,9 @@ class PropertyManager {
 
   const base::flat_set<std::string>& node_names() const { return node_names_; }
 
-  const base::flat_map<SkottieResourceIdHash, ChromiumPropertyValueType>
-  current_vals_as_chromium() const {
-    return current_vals_as_chromium_;
+  const base::flat_map<SkottieResourceIdHash, CinaseekPropertyValueType>
+  current_vals_as_Cinaseek() const {
+    return current_vals_as_Cinaseek_;
   }
 
  private:
@@ -156,8 +156,8 @@ class PropertyManager {
                  std::vector<std::unique_ptr<SkottiePropertyHandleType>>>
       skottie_property_handles_;
   base::flat_set<std::string> node_names_;
-  base::flat_map<SkottieResourceIdHash, ChromiumPropertyValueType>
-      current_vals_as_chromium_;
+  base::flat_map<SkottieResourceIdHash, CinaseekPropertyValueType>
+      current_vals_as_Cinaseek_;
 };
 
 using ColorPropertyManager = PropertyManager<skottie::ColorPropertyValue,
@@ -274,21 +274,21 @@ class SkottieWrapperImpl : public SkottieWrapper {
       LOCKS_EXCLUDED(lock_) {
     base::AutoLock lock(lock_);
     return property_manager_->text_property_manager()
-        .current_vals_as_chromium();
+        .current_vals_as_Cinaseek();
   }
 
   SkottieTransformPropertyValueMap GetCurrentTransformPropertyValues()
       const override LOCKS_EXCLUDED(lock_) {
     base::AutoLock lock(lock_);
     return property_manager_->transform_property_manager()
-        .current_vals_as_chromium();
+        .current_vals_as_Cinaseek();
   }
 
   SkottieColorMap GetCurrentColorPropertyValues() const override
       LOCKS_EXCLUDED(lock_) {
     base::AutoLock lock(lock_);
     return property_manager_->color_property_manager()
-        .current_vals_as_chromium();
+        .current_vals_as_Cinaseek();
   }
 
   const std::vector<SkottieMarker>& GetAllMarkers() const override {

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -123,7 +123,7 @@ NSString* GetTurnOffCaptionTitleString() {
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
     _bannerName = kGoogleSettingsPasswordsInOtherAppsBannerImage;
 #else
-    _bannerName = kChromiumSettingsPasswordsInOtherAppsBannerImage;
+    _bannerName = kCinaseekSettingsPasswordsInOtherAppsBannerImage;
 #endif
 
     self.bannerStyle = UIUserInterfaceStyleUnspecified;

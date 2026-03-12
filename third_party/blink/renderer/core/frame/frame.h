@@ -143,7 +143,7 @@ class CORE_EXPORT Frame : public GarbageCollected<Frame> {
   // one representing a cross-process iframe in a renderer separate from the
   // main frame's renderer. For layout and compositing code, often
   // LocalFrame::IsLocalRoot() is more appropriate. If you are unsure, please
-  // reach out to site-isolation-dev@chromium.org.
+  // reach out to site-isolation-dev@Cinaseek.org.
   bool IsMainFrame() const;
 
   // Returns true if this frame is the top-level main frame (associated with

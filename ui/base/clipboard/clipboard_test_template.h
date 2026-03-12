@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -558,7 +558,7 @@ TYPED_TEST(ClipboardTest, URLTest) {
 
 #if BUILDFLAG(IS_WIN)
 // See crbug.com/1477344 for more details on the issue.
-TYPED_TEST(ClipboardTest, ChromiumCustomFormatTest) {
+TYPED_TEST(ClipboardTest, CinaseekCustomFormatTest) {
   std::u16string markup(u"<strong>Hi!</string>"), markup_result;
   std::string url("http://www.example.com/"), url_result;
 
@@ -701,7 +701,7 @@ TYPED_TEST(ClipboardTest, BitmapWriteAndPngRead_N32_Premul_2x7) {
 
 TYPED_TEST(ClipboardTest, PickleTest) {
   const ClipboardFormatType kFormat =
-      ClipboardFormatType::CustomPlatformType("chromium/x-test-format");
+      ClipboardFormatType::CustomPlatformType("Cinaseek/x-test-format");
   std::string payload("test string");
   base::Pickle write_pickle;
   write_pickle.WriteString(payload);
@@ -726,13 +726,13 @@ TYPED_TEST(ClipboardTest, PickleTest) {
 
 TYPED_TEST(ClipboardTest, MultiplePickleTest) {
   const ClipboardFormatType kFormat1 =
-      ClipboardFormatType::CustomPlatformType("chromium/x-test-format1");
+      ClipboardFormatType::CustomPlatformType("Cinaseek/x-test-format1");
   std::string payload1("test string1");
   base::Pickle write_pickle1;
   write_pickle1.WriteString(payload1);
 
   const ClipboardFormatType kFormat2 =
-      ClipboardFormatType::CustomPlatformType("chromium/x-test-format2");
+      ClipboardFormatType::CustomPlatformType("Cinaseek/x-test-format2");
   std::string payload2("test string2");
   base::Pickle write_pickle2;
   write_pickle2.WriteString(payload2);
@@ -772,8 +772,8 @@ TYPED_TEST(ClipboardTest, MultiplePickleTest) {
 
 #if !(BUILDFLAG(IS_IOS) && BUILDFLAG(USE_BLINK))
 TYPED_TEST(ClipboardTest, DataTest) {
-  const std::string kFormatString = "web chromium/x-test-format";
-  const std::u16string kFormatString16 = u"chromium/x-test-format";
+  const std::string kFormatString = "web Cinaseek/x-test-format";
+  const std::u16string kFormatString16 = u"Cinaseek/x-test-format";
   const std::string payload = "test string";
   base::span<const uint8_t> payload_span(
       reinterpret_cast<const uint8_t*>(payload.data()), payload.size());
@@ -801,14 +801,14 @@ TYPED_TEST(ClipboardTest, DataTest) {
 }
 
 TYPED_TEST(ClipboardTest, MultipleDataTest) {
-  const std::string kFormatString1 = "web chromium/x-test-format1";
-  const std::u16string kFormatString116 = u"chromium/x-test-format1";
+  const std::string kFormatString1 = "web Cinaseek/x-test-format1";
+  const std::u16string kFormatString116 = u"Cinaseek/x-test-format1";
   const std::string payload1("test string1");
   base::span<const uint8_t> payload_span1(
       reinterpret_cast<const uint8_t*>(payload1.data()), payload1.size());
 
-  const std::string kFormatString2 = "web chromium/x-test-format2";
-  const std::u16string kFormatString216 = u"chromium/x-test-format2";
+  const std::string kFormatString2 = "web Cinaseek/x-test-format2";
+  const std::u16string kFormatString216 = u"Cinaseek/x-test-format2";
   const std::string payload2("test string2");
   base::span<const uint8_t> payload_span2(
       reinterpret_cast<const uint8_t*>(payload2.data()), payload2.size());
@@ -827,7 +827,7 @@ TYPED_TEST(ClipboardTest, MultipleDataTest) {
   this->clipboard().ReadAvailableStandardAndCustomFormatNames(
       ClipboardBuffer::kCopyPaste, /* data_dst = */ std::nullopt,
       future_names.GetCallback());
-  EXPECT_THAT(future_names.Take(), Contains(u"web chromium/x-test-format1"));
+  EXPECT_THAT(future_names.Take(), Contains(u"web Cinaseek/x-test-format1"));
   std::string custom_format_json = clipboard_test_util::ReadData(
       &this->clipboard(), ClipboardFormatType::WebCustomFormatMap(),
       /* data_dst = */ nullptr);
@@ -850,7 +850,7 @@ TYPED_TEST(ClipboardTest, MultipleDataTest) {
   this->clipboard().ReadAvailableStandardAndCustomFormatNames(
       ClipboardBuffer::kCopyPaste, /* data_dst = */ std::nullopt,
       future_names2.GetCallback());
-  EXPECT_THAT(future_names2.Take(), Contains(u"web chromium/x-test-format2"));
+  EXPECT_THAT(future_names2.Take(), Contains(u"web Cinaseek/x-test-format2"));
   EXPECT_TRUE(custom_format_names.find(kFormatString2) !=
               custom_format_names.end());
   std::string output2 =
@@ -862,8 +862,8 @@ TYPED_TEST(ClipboardTest, MultipleDataTest) {
 }
 
 TYPED_TEST(ClipboardTest, DataAndPortableFormatTest) {
-  const std::string kFormatString1 = "web chromium/x-test-format1";
-  const std::u16string kFormatString116 = u"chromium/x-test-format1";
+  const std::string kFormatString1 = "web Cinaseek/x-test-format1";
+  const std::u16string kFormatString116 = u"Cinaseek/x-test-format1";
   const std::string payload1("test string1");
   base::span<const uint8_t> payload_span1(
       reinterpret_cast<const uint8_t*>(payload1.data()), payload1.size());
@@ -888,7 +888,7 @@ TYPED_TEST(ClipboardTest, DataAndPortableFormatTest) {
   this->clipboard().ReadAvailableStandardAndCustomFormatNames(
       ClipboardBuffer::kCopyPaste, /* data_dst = */ std::nullopt,
       future_names.GetCallback());
-  EXPECT_THAT(future_names.Take(), Contains(u"web chromium/x-test-format1"));
+  EXPECT_THAT(future_names.Take(), Contains(u"web Cinaseek/x-test-format1"));
   std::string custom_format_json = clipboard_test_util::ReadData(
       &this->clipboard(), ClipboardFormatType::WebCustomFormatMap(),
       /* data_dst = */ nullptr);

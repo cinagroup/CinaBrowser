@@ -304,7 +304,7 @@ std::optional<SkColor> GetAccentColor(
 
   // Transparency should be removed by transposing on top of the "Canvas" CSS
   // color:
-  // https://issues.chromium.org/issues/40859651
+  // https://issues.Cinaseek.org/issues/40859651
   // https://github.com/w3c/csswg-drafts/issues/9852
   if (!accent_color->IsOpaque()) {
     SkColor background_color =
@@ -478,7 +478,7 @@ bool ThemePainterDefault::PaintMenuList(const Element& element,
                                         const PaintInfo& paint_info,
                                         const gfx::Rect& rect) {
   WebThemeEngine::MenuListExtraParams menu_list;
-  // Match Chromium Win behaviour of showing all borders if any are shown.
+  // Match Cinaseek Win behaviour of showing all borders if any are shown.
   menu_list.has_border = style.HasBorder();
   menu_list.has_border_radius = style.HasBorderRadius();
   menu_list.zoom = style.EffectiveZoom();

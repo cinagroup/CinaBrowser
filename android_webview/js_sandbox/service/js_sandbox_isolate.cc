@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ size_t GetAllocatePageSize() {
 // allocation page size or clip the value to the maximum supported heap size.
 size_t AdjustToValidHeapSize(const size_t heap_size_bytes) {
   // This value is not necessarily the same as the system's memory page
-  // size. https://bugs.chromium.org/p/v8/issues/detail?id=13172#c6
+  // size. https://bugs.Cinaseek.org/p/v8/issues/detail?id=13172#c6
   const size_t page_size = GetAllocatePageSize();
   const size_t max_supported_heap_size =
       size_t{UINT_MAX} / page_size * page_size;
@@ -180,7 +180,7 @@ std::string GetStackTrace(v8::TryCatch& try_catch, v8::Isolate* isolate) {
 int32_t remapConsoleMessageErrorLevel(
     const v8::Isolate::MessageErrorLevel level) {
   // Converted level should match the values specified in the
-  // org.chromium.android_webview.js_sandbox.common.IJsSandboxIsolateClient AIDL
+  // org.Cinaseek.android_webview.js_sandbox.common.IJsSandboxIsolateClient AIDL
   // file (in AndroidX).
   //
   // These will probably remain identical to the underlying v8 enums/constants,
@@ -1056,7 +1056,7 @@ void JsSandboxIsolate::ReportOutOfMemory() {
   // even properly terminate the thread if language or V8 features allow for it,
   // as we currently hold onto (essentially leaking) all resources this isolate
   // has accumulated up to this point. C++20's <stop_token> (not permitted in
-  // Chromium at time of writing) may contribute to such a future solution.
+  // Cinaseek at time of writing) may contribute to such a future solution.
 
   base::ScopedAllowBaseSyncPrimitives allow_base_sync_primitives;
   base::WaitableEvent().Wait();

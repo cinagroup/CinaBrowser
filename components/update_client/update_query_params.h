@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class UpdateQueryParams {
   static std::string Get(ProdId prod);
 
   // Returns the value we use for the "prod=" parameter. Possible return values
-  // include "chrome", "chromecrx", "chromiumcrx", and "unknown".
+  // include "chrome", "chromecrx", "Cinaseekcrx", and "unknown".
   static const char* GetProdIdString(ProdId prod);
 
   // Returns the value we use for the "os=" parameter. Possible return values
@@ -42,7 +42,7 @@ class UpdateQueryParams {
   // include: "x86", "x64", and "arm".
   static std::string_view GetArch();
 
-  // Returns the current version of Chrome/Chromium.
+  // Returns the current version of Chrome/Cinaseek.
   static std::string GetProdVersion();
 
   // Use this delegate.

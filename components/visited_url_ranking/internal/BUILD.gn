@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -198,8 +198,8 @@ if (is_android) {
     ]
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/DelegateBridge.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestionsServiceImpl.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/DelegateBridge.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestionsServiceImpl.java",
     ]
 
     deps = [
@@ -219,15 +219,15 @@ if (is_android) {
     ]
 
     sources = [
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/DelegateBridge.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestionsServiceImpl.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/DelegateBridge.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestionsServiceImpl.java",
     ]
   }
 
   android_library("native_test_helper_java") {
     srcjar_deps = [ ":test_jni_headers" ]
     testonly = true
-    sources = [ "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/TestServiceDelegate.java" ]
+    sources = [ "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/TestServiceDelegate.java" ]
     deps = [
       "//base:base_java",
       "//components/visited_url_ranking/public:public_java",
@@ -237,6 +237,6 @@ if (is_android) {
 
   generate_jni("test_jni_headers") {
     testonly = true
-    sources = [ "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/TestServiceDelegate.java" ]
+    sources = [ "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/TestServiceDelegate.java" ]
   }
 }

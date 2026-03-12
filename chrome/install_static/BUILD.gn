@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -57,7 +57,7 @@ if (is_win) {
     } else if (is_chrome_for_testing_branded) {
       sources += [ "google_chrome_for_testing_install_modes.h" ]
     } else {
-      sources += [ "chromium_install_modes.h" ]
+      sources += [ "Cinaseek_install_modes.h" ]
     }
 
     libs = [ "kernel32.lib" ]

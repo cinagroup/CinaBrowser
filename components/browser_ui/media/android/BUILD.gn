@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,15 +6,15 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/media/MediaImageCallback.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaImageManager.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationController.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationImageUtils.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationInfo.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationListener.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationManager.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaSessionHelper.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaSessionUma.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaImageCallback.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaImageManager.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationController.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationImageUtils.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationInfo.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationListener.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationManager.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaSessionHelper.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaSessionUma.java",
   ]
 
   deps = [
@@ -32,7 +32,7 @@ android_library("java") {
     "//ui/android:ui_full_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.components.browser_ui.media"
+  resources_package = "org.Cinaseek.components.browser_ui.media"
 }
 
 android_resources("java_resources") {
@@ -56,9 +56,9 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/components/browser_ui/media/MediaImageManagerTest.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationButtonComputationTest.java",
-    "java/src/org/chromium/components/browser_ui/media/MediaNotificationInfoTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaImageManagerTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationButtonComputationTest.java",
+    "java/src/org/Cinaseek/components/browser_ui/media/MediaNotificationInfoTest.java",
   ]
   deps = [
     ":java",

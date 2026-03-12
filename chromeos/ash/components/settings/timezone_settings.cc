@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -212,7 +212,7 @@ static const char* kTimeZones[] = {
 };
 
 std::string GetTimezoneIDAsString() {
-  // Compare with chromiumos/src/platform/init/ui.conf which fixes certain
+  // Compare with Cinaseekos/src/platform/init/ui.conf which fixes certain
   // incorrect states of the timezone symlink on startup. Thus errors occuring
   // here should be rather contrived.
 

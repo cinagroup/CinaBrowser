@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace blink {
 //
 // WTF defines wtf_size_t as an unsigned 32 bit integer. This is to align
 // with the maximum heap allocation object size and save memory. This deviates
-// from Chromium C++ style guide which calls for interfaces to use the
+// from Cinaseek C++ style guide which calls for interfaces to use the
 // stdint.h types (e.g. int32_t, size_t) on the exposed interface.
 //
 // Matching the external API to match the internal API have a number of

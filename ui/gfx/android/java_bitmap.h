@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace gfx {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.gfx
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.gfx
 // The order and values here match AndroidBitmapFormat, as verified
 // by static_asserts in java_bitmap.cc.
 enum BitmapFormat {

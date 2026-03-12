@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ CWV_EXPORT
 // |username| The desired username. For example an email address.
 // |password| The desired password.
 // |site| The website this password is used for. For example
-// "https://www.chromium.org/".
+// "https://www.Cinaseek.org/".
 // |timestamp| The date associated with this password action.
 - (void)addNewPasswordForUsername:(NSString*)username
                          password:(NSString*)password

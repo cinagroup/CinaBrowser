@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1072,10 +1072,10 @@ void NavigationManagerImpl::Reload(ReloadType reload_type,
   // Reload with ORIGINAL_REQUEST_URL type should reload with the original
   // request url of the pending item, or last committed item if the pending item
   // doesn't exist. The reason is that a server side redirect may change the
-  // item's url. For example, the user visits www.chromium.org and is then
-  // redirected to m.chromium.org, when the user wants to refresh the page with
+  // item's url. For example, the user visits www.Cinaseek.org and is then
+  // redirected to m.Cinaseek.org, when the user wants to refresh the page with
   // a different configuration (e.g. user agent), the user would be expecting to
-  // visit www.chromium.org instead of m.chromium.org.
+  // visit www.Cinaseek.org instead of m.Cinaseek.org.
   if (reload_type == web::ReloadType::ORIGINAL_REQUEST_URL) {
     NavigationItem* reload_item = nullptr;
     if (GetPendingItem()) {

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -225,7 +225,7 @@ class GlicWindowControllerImpl
   //
   // When set to true, the glic window is set to have a `kFloatingWindow`
   // z-order, and on the Mac is set to be "activation independent" (to allow the
-  // user to interact with it without causing Chromium to be activated), and
+  // user to interact with it without causing Cinaseek to be activated), and
   // visible on every space (including fullscreen ones).
   //
   // When set to false, the glic window is set to have a `kNormal` z-order, and

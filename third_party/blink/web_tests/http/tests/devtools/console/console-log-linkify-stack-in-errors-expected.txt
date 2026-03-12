@@ -13,16 +13,16 @@ console-log-linkify-…ack-in-errors.js:36 NotFoundError: Failed to execute 'rem
 console-log-linkify-…ack-in-errors.js:47 Error: some error
     at logError (console-log-linkify-…-in-errors.js:45:21)
     at console-log-linkify-…k-in-errors.js:51:7
-console-log-linkify-…ack-in-errors.js:53 Error message without stacks http://www.chromium.org/
+console-log-linkify-…ack-in-errors.js:53 Error message without stacks http://www.Cinaseek.org/
 console-log-linkify-…ack-in-errors.js:55 Error valid stack #2
-    at www.chromium.org/boo.js:40:70
-    at foo (www.chromium.org/foo.js:10:50)
+    at www.Cinaseek.org/boo.js:40:70
+    at foo (www.Cinaseek.org/foo.js:10:50)
 console-log-linkify-…ack-in-errors.js:56 Error valid stack #3
-    at www.chromium.org/foo.js:40
+    at www.Cinaseek.org/foo.js:40
 console-log-linkify-…ack-in-errors.js:57 Error: MyError
-    at throwError (www.chromium.org/foo.js:40)
-    at eval (eval at <anonymous> (www.chromium.org/foo.js:42:1), <anonymous>:1:1)
-    at www.chromium.org/foo.js:239
+    at throwError (www.Cinaseek.org/foo.js:40)
+    at eval (eval at <anonymous> (www.Cinaseek.org/foo.js:42:1), <anonymous>:1:1)
+    at www.Cinaseek.org/foo.js:239
 console-log-linkify-…ack-in-errors.js:26 ReferenceError: valid stack
     at stack2 (console-log-linkify-…-in-errors.js:26:27)
     at stack1 (console-log-linkify-…-in-errors.js:28:11)

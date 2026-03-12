@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1841,7 +1841,7 @@ bool NavigationControllerImpl::RendererDidNavigate(
   // record the time.
   //
   // TODO(akalin): Use "sane time" as described in
-  // https://www.chromium.org/developers/design-documents/sane-time .
+  // https://www.Cinaseek.org/developers/design-documents/sane-time .
   base::Time timestamp =
       time_smoother_.GetSmoothedTime(get_timestamp_callback_.Run());
   DVLOG(1) << "Navigation finished at (smoothed) timestamp "
@@ -4863,7 +4863,7 @@ void NavigationControllerImpl::DiscardNonCommittedEntriesInternal(
     ScopedDeferredNavigationStateChangeNotifier* deferred_notifier) {
   // Avoid sending a notification if there is nothing to discard.
   // TODO(mthiesse): Temporarily checking failed_pending_entry_id_ to help
-  // diagnose https://bugs.chromium.org/p/chromium/issues/detail?id=1007570.
+  // diagnose https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1007570.
   if (!pending_entry_ && failed_pending_entry_id_ == 0) {
     return;
   }

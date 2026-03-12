@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -356,7 +356,7 @@ class GLES2InterfaceForTests : public gpu::gles2::GLES2InterfaceStub,
   }
 
  private:
-  // The target to use when binding a texture to a Chromium image.
+  // The target to use when binding a texture to a Cinaseek image.
 #if BUILDFLAG(IS_MAC)
   static constexpr GLuint kImageCHROMIUMTarget = GC3D_TEXTURE_RECTANGLE_ARB;
 #else

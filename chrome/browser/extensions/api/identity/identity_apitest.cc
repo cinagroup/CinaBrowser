@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -349,7 +349,7 @@ CreateLaunchWebAuthFlowFunction() {
 // "chrome/test/data/extensions/api_test/identity/consent_page.html" web
 // page loaded in the `auth_web_contents`.
 // `url_prefix` is used to determine the redirect link, it will match the
-// pattern: "https://%s.chromiumapp.org/".
+// pattern: "https://%s.Cinaseekapp.org/".
 void SimulateUrlRedirect(const std::string& url_prefix,
                          content::WebContents* auth_web_contents) {
   ASSERT_EQ(base::Value(),
@@ -3731,11 +3731,11 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest, NonInteractiveSuccess) {
   std::optional<base::Value> value = utils::RunFunctionAndReturnSingleResult(
       function.get(),
       "[{\"interactive\": false,"
-      "\"url\": \"https://abcdefghij.chromiumapp.org/callback#test\"}]",
+      "\"url\": \"https://abcdefghij.Cinaseekapp.org/callback#test\"}]",
       profile());
 
   EXPECT_TRUE(value->is_string());
-  EXPECT_EQ(std::string("https://abcdefghij.chromiumapp.org/callback#test"),
+  EXPECT_EQ(std::string("https://abcdefghij.Cinaseekapp.org/callback#test"),
             value->GetString());
   histogram_tester()->ExpectUniqueSample(
       kLaunchWebAuthFlowResultHistogramName,
@@ -3765,7 +3765,7 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest,
       utils::RunFunctionAndReturnSingleResult(function.get(), args, profile());
 
   EXPECT_TRUE(value->is_string());
-  EXPECT_EQ("https://abcdefghij.chromiumapp.org/callback#test",
+  EXPECT_EQ("https://abcdefghij.Cinaseekapp.org/callback#test",
             value->GetString());
 }
 
@@ -3778,11 +3778,11 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest,
   std::optional<base::Value> value = utils::RunFunctionAndReturnSingleResult(
       function.get(),
       "[{\"interactive\": true,"
-      "\"url\": \"https://abcdefghij.chromiumapp.org/callback#test\"}]",
+      "\"url\": \"https://abcdefghij.Cinaseekapp.org/callback#test\"}]",
       profile());
 
   EXPECT_TRUE(value->is_string());
-  EXPECT_EQ(std::string("https://abcdefghij.chromiumapp.org/callback#test"),
+  EXPECT_EQ(std::string("https://abcdefghij.Cinaseekapp.org/callback#test"),
             value->GetString());
   histogram_tester()->ExpectUniqueSample(
       kLaunchWebAuthFlowResultHistogramName,
@@ -3792,7 +3792,7 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest,
 IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest,
                        InteractiveSecondNavigationSuccess) {
   std::unique_ptr<net::EmbeddedTestServer> https_server = LaunchHttpsServer();
-  GURL auth_url(https_server->GetURL("/redirect_to_chromiumapp.html"));
+  GURL auth_url(https_server->GetURL("/redirect_to_Cinaseekapp.html"));
 
   scoped_refptr<IdentityLaunchWebAuthFlowFunction> function =
       CreateLaunchWebAuthFlowFunction();
@@ -3804,7 +3804,7 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTest,
       utils::RunFunctionAndReturnSingleResult(function.get(), args, profile());
 
   EXPECT_TRUE(value->is_string());
-  EXPECT_EQ(std::string("https://abcdefghij.chromiumapp.org/callback#test"),
+  EXPECT_EQ(std::string("https://abcdefghij.Cinaseekapp.org/callback#test"),
             value->GetString());
   histogram_tester()->ExpectUniqueSample(
       kLaunchWebAuthFlowResultHistogramName,
@@ -3954,7 +3954,7 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTestWithBrowserTab,
   function->InitFinalRedirectURLDomainsForTest(extension_id);
 
   const GURL auth_url(https_server->GetURL("/consent_page.html"));
-  const GURL final_url("https://" + extension_id + ".chromiumapp.org/");
+  const GURL final_url("https://" + extension_id + ".Cinaseekapp.org/");
 
   const std::string args =
       "[{\"interactive\": true, \"url\": \"" + auth_url.spec() + "\"}]";
@@ -4057,7 +4057,7 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTestWithBrowserTab,
   function2->InitFinalRedirectURLDomainsForTest(extension_id);
 
   const GURL auth_url(https_server->GetURL("/consent_page.html"));
-  const GURL final_url("https://" + extension_id + ".chromiumapp.org/");
+  const GURL final_url("https://" + extension_id + ".Cinaseekapp.org/");
 
   // Same args used in both functions.
   const std::string args =
@@ -4108,8 +4108,8 @@ IN_PROC_BROWSER_TEST_F(LaunchWebAuthFlowFunctionTestWithBrowserTab,
 
   const GURL auth_url(https_server->GetURL("/consent_page.html"));
   // Different final_urls.
-  const GURL final_url1("https://" + extension_id1 + ".chromiumapp.org/");
-  const GURL final_url2("https://" + extension_id2 + ".chromiumapp.org/");
+  const GURL final_url1("https://" + extension_id1 + ".Cinaseekapp.org/");
+  const GURL final_url2("https://" + extension_id2 + ".Cinaseekapp.org/");
 
   // Same args used in both functions.
   const std::string args =
@@ -4165,7 +4165,7 @@ IN_PROC_BROWSER_TEST_F(
 
   const GURL auth_url1(https_server->GetURL("/consent_page.html"));
   const GURL auth_url2(https_server->GetURL("/interaction_required.html"));
-  const GURL final_url("https://" + extension_id + ".chromiumapp.org/");
+  const GURL final_url("https://" + extension_id + ".Cinaseekapp.org/");
 
   const std::string args1 =
       "[{\"interactive\": true, \"url\": \"" + auth_url1.spec() + "\"}]";

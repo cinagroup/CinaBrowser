@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,9 +46,9 @@
 //     "angle_gles", and "angle_gl". "gles", "angle_vulkan", and "angle_gles"
 //     are supported on Android; "angle_vulkan", "angle_gles", and "angle_gl"
 //     are supported on Linux; "angle_vulkan" and "angle_gles" are supported on
-//     ChromeOS.
+//     CinaseekOS.
 // 11. "gl_version" is a VERSION structure (defined below).
-//     This is only supported on Linux, ChromeOS, and Android.
+//     This is only supported on Linux, CinaseekOS, and Android.
 // 12. "gl_vendor" is a string pattern.
 // 13. "gl_renderer" is a string pattern.
 // 14. "gl_extensions" is a string pattern.
@@ -73,8 +73,8 @@
 //     strings which are disabled by the workaround.
 // 27. "pixel_shader_version" is a VERSION structure (defined below).
 // 28. "test_group" is an non-negative integer. If not specified, it defaults
-//     to 0, which is Chrome's blocklist. Any entries with a non-zero test_group
-//     ID will be appended on top of the default group entries if Chrome runs
+//     to 0, which is Cinaseek's blocklist. Any entries with a non-zero test_group
+//     ID will be appended on top of the default group entries if Cinaseek runs
 //     with --gpu-blocklist-test-group=ID. Entries with non-zero test_group ID
 //     can also be enabled via experimentation. For example:
 //     --enable-features=GPUBlockListTestGroup:test_group/117 or
@@ -94,7 +94,7 @@
 // 31. "intel_gpu_generation" is a VERSION structure. Each Intel GPU has a
 //     specific integer (meaning generation) associated.
 // 32. "subpixel_font_rendering" is either "supported" or "unsupported".
-//     Currently it only applies on ChromeOS where subpixel font rendering
+//     Currently it only applies on CinaseekOS where subpixel font rendering
 //     causes a glitch on Mali GPUs. By default it's "dont_care" and there is
 //     no need to specify that.
 // 33. "driver_update_link" provides a link where affected users with older

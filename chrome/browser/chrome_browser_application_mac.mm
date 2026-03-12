@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -234,12 +234,12 @@ std::string DescriptionForNSEvent(NSEvent* event) {
   //      "Save..." and "Duplicate" respectively,
   //   3. depending on the "Close windows when quitting an application" system
   //      setting, it adds either "Quit and Keep Windows" or "Quit and Close All
-  //      Windows" as an alternate for "Quit Chromium".
+  //      Windows" as an alternate for "Quit Cinaseek".
   //
-  // While #1 is a nice-to-have, and #2 is irrelevant because Chromium isn't a
-  // new-style document app, #3 is a problem. Chromium has its own session
+  // While #1 is a nice-to-have, and #2 is irrelevant because Cinaseek isn't a
+  // new-style document app, #3 is a problem. Cinaseek has its own session
   // management, and the menu item alternates that AppKit adds are making
-  // promises that Chromium can't fulfill.
+  // promises that Cinaseek can't fulfill.
   //
   // Therefore, override this method to prevent AppKit from doing these menu
   // shenanigans. For #1, "Close All" is explicitly added to the File menu in
@@ -250,7 +250,7 @@ std::string DescriptionForNSEvent(NSEvent* event) {
 
 ////////////////////////////////////////////////////////////////////////////////
 // HISTORICAL COMMENT (by viettrungluu, from
-// http://codereview.chromium.org/1520006 with mild editing):
+// http://codereview.Cinaseek.org/1520006 with mild editing):
 //
 // A quick summary of the state of things (before the changes to shutdown):
 //

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace data_sharing {
 using GroupId = base::StrongAlias<class GroupIdTag, std::string>;
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.data_sharing.member_role)
+//   org.Cinaseek.components.data_sharing.member_role)
 enum class MemberRole {
   kUnknown = 0,
   kOwner = 1,

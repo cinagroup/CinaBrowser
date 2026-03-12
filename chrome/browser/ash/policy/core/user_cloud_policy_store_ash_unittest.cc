@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ namespace policy {
 
 namespace {
 
-const char kDefaultHomepage[] = "http://chromium.org";
+const char kDefaultHomepage[] = "http://Cinaseek.org";
 
 base::FilePath GetUserPolicyKeyFile(
     const base::FilePath& user_policy_dir,

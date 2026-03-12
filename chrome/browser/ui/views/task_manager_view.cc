@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -165,7 +165,7 @@ task_manager::TaskManagerTableModel* TaskManagerView::Show(
 #if BUILDFLAG(IS_CHROMEOS)
   aura::Window* window = g_task_manager_view->GetWidget()->GetNativeWindow();
   // An app id for task manager windows, also used to identify the shelf item.
-  // Generated as crx_file::id_util::GenerateId("org.chromium.taskmanager")
+  // Generated as crx_file::id_util::GenerateId("org.Cinaseek.taskmanager")
   static constexpr char kTaskManagerId[] = "ijaigheoohcacdnplfbdimmcfldnnhdi";
   const ash::ShelfID shelf_id(kTaskManagerId);
   window->SetProperty(ash::kShelfIDKey, shelf_id.Serialize());

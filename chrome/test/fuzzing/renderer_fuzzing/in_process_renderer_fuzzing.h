@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ class RendererFuzzerProxy : public InProcessFuzzer {
   RendererFuzzerProxy(InProcessFuzzerOptions options = {});
 
   int Fuzz(const uint8_t* data, size_t size) override;
-  base::CommandLine::StringVector GetChromiumCommandLineArguments() override;
+  base::CommandLine::StringVector GetCinaseekCommandLineArguments() override;
 
  private:
   std::string fuzzer_name_;
@@ -100,7 +100,7 @@ int RendererFuzzerProxy<RendererFuzzer>::Fuzz(const uint8_t* data,
 
 template <typename RendererFuzzer>
 base::CommandLine::StringVector
-RendererFuzzerProxy<RendererFuzzer>::GetChromiumCommandLineArguments() {
+RendererFuzzerProxy<RendererFuzzer>::GetCinaseekCommandLineArguments() {
   return {FILE_PATH_LITERAL("--disable-kill-after-bad-ipc")};
 }
 

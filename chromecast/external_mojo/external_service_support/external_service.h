@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 namespace chromecast {
 namespace external_service_support {
 
-// API for external (non-Chromium process) Mojo services.
+// API for external (non-Cinaseek process) Mojo services.
 class ExternalService : public external_mojo::mojom::ExternalService {
  public:
   ExternalService();

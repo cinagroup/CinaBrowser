@@ -1,4 +1,4 @@
-// This is a regression test for Chromium issue https://crbug.com/1427266.
+// This is a regression test for Cinaseek issue https://crbug.com/1427266.
 test(() => {
   const iframe = document.createElement('iframe');
   document.body.append(iframe);

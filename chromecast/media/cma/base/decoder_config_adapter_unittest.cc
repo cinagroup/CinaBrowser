@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace media {
 namespace {
 
 // Returns an initialized ::media::VideoDecoderConfig.
-::media::VideoDecoderConfig GetChromiumVideoConfig() {
+::media::VideoDecoderConfig GetCinaseekVideoConfig() {
   gfx::Size coded_size(640, 480);
   gfx::Rect visible_rect(640, 480);
   gfx::Size natural_size(640, 480);
@@ -32,11 +32,11 @@ namespace {
 TEST(DecoderConfigAdapterTest, PopulatesVideoCodecLevel) {
   constexpr uint32_t kCodecLevel = 30ul;
 
-  ::media::VideoDecoderConfig chromium_config = GetChromiumVideoConfig();
-  chromium_config.set_level(kCodecLevel);
+  ::media::VideoDecoderConfig Cinaseek_config = GetCinaseekVideoConfig();
+  Cinaseek_config.set_level(kCodecLevel);
 
   VideoConfig cast_config = DecoderConfigAdapter::ToCastVideoConfig(
-      StreamId::kPrimary, chromium_config);
+      StreamId::kPrimary, Cinaseek_config);
 
   EXPECT_EQ(cast_config.codec_profile_level, kCodecLevel);
 }

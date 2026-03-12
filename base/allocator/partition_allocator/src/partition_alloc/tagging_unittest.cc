@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeRandomlySafe) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeRandomly(buffer, 4 * kMemTagGranuleSize, 0u);
   EXPECT_TRUE(bufferp);
@@ -37,7 +37,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeIncrementSafe) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeIncrement(buffer, 4 * kMemTagGranuleSize);
   EXPECT_TRUE(bufferp);
@@ -58,7 +58,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeBadSz) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp =
       TagMemoryRangeRandomly(buffer, 4 * kMemTagGranuleSize - 1, 0u);
@@ -74,7 +74,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeRandomlyNoSz) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeRandomly(buffer, 0, 0u);
   if (cpu.has_mte()) {
@@ -89,7 +89,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeRandomlyBadAlign) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp =
       TagMemoryRangeRandomly(buffer - 1, 4 * kMemTagGranuleSize, 0u);
@@ -105,7 +105,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeIncrementBadSz) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeIncrement(buffer, 4 * kMemTagGranuleSize - 1);
   if (cpu.has_mte()) {
@@ -120,7 +120,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeIncrementNoSz) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeIncrement(buffer, 0);
   if (cpu.has_mte()) {
@@ -135,7 +135,7 @@ TEST(PartitionAllocMemoryTaggingTest, TagMemoryRangeIncrementBadAlign) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   void* bufferp = TagMemoryRangeIncrement(buffer - 1, 4 * kMemTagGranuleSize);
   if (cpu.has_mte()) {

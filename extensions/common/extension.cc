@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -361,7 +361,7 @@ ExtensionResource Extension::GetResource(
 
 // TODO(rafaelw): Move ParsePEMKeyBytes, ProducePEM & FormatPEMForOutput to a
 // util class in base:
-// http://code.google.com/p/chromium/issues/detail?id=13572
+// http://code.google.com/p/Cinaseek/issues/detail?id=13572
 // static
 bool Extension::ParsePEMKeyBytes(std::string_view input, std::string* output) {
   DCHECK(output);

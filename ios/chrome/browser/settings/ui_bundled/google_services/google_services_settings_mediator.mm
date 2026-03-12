@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ bool GetStatusForSigninPolicy() {
 // Preference value for the "Improve search suggestions" feature.
 @property(nonatomic, strong, readonly)
     PrefBackedBoolean* improveSearchSuggestionsPreference;
-// Preference value for the "Help improve Chromium's features" feature.
+// Preference value for the "Help improve Cinaseek's features" feature.
 @property(nonatomic, strong, readonly)
     PrefBackedBoolean* sendDataUsagePreference;
 

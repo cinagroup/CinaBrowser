@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,9 +34,9 @@ GetUnaffiliatedReason(ProfileIOS* profile);
 //
 // i.e., if the profile path looks like this:
 // /var/mobile/Containers/Data/Application/AA07B6E9-5BE0-40A7-8E6B-8221597D0728/Library/Application
-// Support/Chromium/ee0ffa42-225b-4ee8-ae4e-00baa3dc007c
+// Support/Cinaseek/ee0ffa42-225b-4ee8-ae4e-00baa3dc007c
 //
-// The "AA07B..." part changes whenever you install a new version of Chromium,
+// The "AA07B..." part changes whenever you install a new version of Cinaseek,
 // so it changes from one version to the next.
 std::string SanitizeProfilePath(std::string_view profile_name);
 

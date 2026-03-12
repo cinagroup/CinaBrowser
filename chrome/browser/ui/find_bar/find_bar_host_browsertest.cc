@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -526,7 +526,7 @@ IN_PROC_BROWSER_TEST_F(FindInPageControllerTest, SpanSearchable) {
 #define MAYBE_LargePage DISABLED_LargePage
 #elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
     (!defined(NDEBUG) || defined(ADDRESS_SANITIZER))
-// TODO(crbug.com/404825193): Test is flaky on Linux ChromiumOS debug and ASAN
+// TODO(crbug.com/404825193): Test is flaky on Linux CinaseekOS debug and ASAN
 // builds.
 // TODO(crbug.com/40751034): Test is flaky on Linux debug builds.
 // TODO(crbug.com/40760850): Test is flaky on Linux ASAN builds.
@@ -549,7 +549,7 @@ IN_PROC_BROWSER_TEST_F(FindInPageControllerTest, MAYBE_LargePage) {
 #if (BUILDFLAG(IS_MAC) && !defined(NDEBUG)) || defined(ADDRESS_SANITIZER)
 #define MAYBE_FindLongString DISABLED_FindLongString
 #elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !defined(NDEBUG)
-// TODO(crbug.com/404825193): Test is flaky on Linux ChromiumOS debug builds.
+// TODO(crbug.com/404825193): Test is flaky on Linux CinaseekOS debug builds.
 // TODO(crbug.com/40751034): Test is flaky on Linux debug builds.
 #define MAYBE_FindLongString DISABLED_FindLongString
 #else
@@ -1215,7 +1215,7 @@ IN_PROC_BROWSER_TEST_F(FindInPageControllerTest, FindMovesWhenObscuring) {
       browser()->tab_strip_model()->GetActiveWebContents();
 
   int moved_x_coord = FindInPageTillBoxMoves(web_contents, start_position.x(),
-                                             "Chromium", kMoveIterations);
+                                             "Cinaseek", kMoveIterations);
   // The find box should have moved.
   EXPECT_TRUE(moved_x_coord != start_position.x());
 
@@ -1231,7 +1231,7 @@ IN_PROC_BROWSER_TEST_F(FindInPageControllerTest, FindMovesWhenObscuring) {
 
   // Move the find box again.
   moved_x_coord = FindInPageTillBoxMoves(web_contents, start_position.x(),
-                                         "Chromium", kMoveIterations);
+                                         "Cinaseek", kMoveIterations);
   EXPECT_TRUE(moved_x_coord != start_position.x());
 
   // Search for an invalid string.

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -17,7 +17,7 @@ std::string GetDeviceUserAgentSuffix() {
   }
 }
 
-std::string GetChromiumUserAgent() {
+std::string GetCinaseekUserAgent() {
   return embedder_support::GetUserAgent();
 }
 

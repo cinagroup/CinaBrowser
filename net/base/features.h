@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -495,7 +495,7 @@ NET_EXPORT BASE_DECLARE_FEATURE_PARAM(
 // not causing any problems.
 NET_EXPORT BASE_DECLARE_FEATURE(kSpdySessionForProxyAdditionalChecks);
 
-// When this feature is enabled, Chromium will use stored shared dictionaries
+// When this feature is enabled, Cinaseek will use stored shared dictionaries
 // only if the request URL is a localhost URL or the transport layer is using a
 // certificate rooted at a standard CA root.
 NET_EXPORT BASE_DECLARE_FEATURE(

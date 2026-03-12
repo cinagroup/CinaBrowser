@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ constexpr auto kBrowserDescriptors = std::to_array<BrowserDescriptor>({
     {
         "com.google.android.apps.chrome",
         kChromeDefaultSocket,
-        "Chromium",
+        "Cinaseek",
     },
     {
         "com.chrome.canary",
@@ -85,19 +85,19 @@ constexpr auto kBrowserDescriptors = std::to_array<BrowserDescriptor>({
         kChromeDefaultName,
     },
     {
-        "org.chromium.android_webview.shell",
+        "org.Cinaseek.android_webview.shell",
         "webview_devtools_remote",
         "WebView Test Shell",
     },
     {
-        "org.chromium.content_shell_apk",
+        "org.Cinaseek.content_shell_apk",
         "content_shell_devtools_remote",
         "Content Shell",
     },
     {
-        "org.chromium.chrome",
+        "org.Cinaseek.chrome",
         kChromeDefaultSocket,
-        "Chromium",
+        "Cinaseek",
     },
 });
 

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1263,7 +1263,7 @@ TEST_F(TaskEnvironmentTest, ThreadPoolAdvancesTimeUnderIdleMainThread) {
 }
 
 // Regression test for
-// https://chromium-review.googlesource.com/c/chromium/src/+/3255105/5 which
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3255105/5 which
 // incorrectly tried to address crbug.com/1263149 with
 // ThreadPool::FlushForTesting(), stalling thread pool tasks that need main
 // thread collaboration.

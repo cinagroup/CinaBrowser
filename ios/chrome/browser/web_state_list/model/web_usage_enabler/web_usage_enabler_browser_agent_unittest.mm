@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 
 namespace {
 // URL to load in WebStates.
-const char kURL[] = "https://chromium.org";
+const char kURL[] = "https://Cinaseek.org";
 }  // namespace
 
 class WebUsageEnablerBrowserAgentTest : public PlatformTest {

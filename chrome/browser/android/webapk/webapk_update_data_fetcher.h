@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ struct InstallableData;
 }
 
 // WebApkUpdateDataFetcher is the C++ counterpart of
-// org.chromium.chrome.browser's WebApkUpdateDataFetcher in Java. It is created
+// org.Cinaseek.chrome.browser's WebApkUpdateDataFetcher in Java. It is created
 // via a JNI (Initialize) call and MUST BE DESTROYED via Destroy().
 class WebApkUpdateDataFetcher : public content::WebContentsObserver {
  public:

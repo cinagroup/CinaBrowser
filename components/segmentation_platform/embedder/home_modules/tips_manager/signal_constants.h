@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 // other.
 //
 // To decide the proper place for a signal, follow the guidance in
-// https://chromium.googlesource.com/chromium/src/+/HEAD/chrome/browser/prefs/README.md:
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/chrome/browser/prefs/README.md:
 //
 // * Signals related to the device or application itself should be added as
 //   local signals via `kLocalSignalNames`.

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,16 +7,16 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/BoyerMoore.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudController.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudControllerSupplier.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudIphController.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayer.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudPrefs.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudToolbarButtonController.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TabModelTabObserver.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TapToSeekHandler.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TapToSeekSelectionManager.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/BoyerMoore.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudController.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudControllerSupplier.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudIphController.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudPrefs.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudToolbarButtonController.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TabModelTabObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TapToSeekHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TapToSeekSelectionManager.java",
   ]
   deps = [
     ":exceptions_java",
@@ -58,21 +58,21 @@ android_library("java") {
     "//url:gurl_java",
   ]
   srcjar_deps = [ ":jni_headers" ]
-  resources_package = "org.chromium.chrome.browser.readaloud"
+  resources_package = "org.Cinaseek.chrome.browser.readaloud"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayer.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudPrefs.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudPrefs.java",
   ]
 }
 
 android_library("exceptions_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/exceptions/ReadAloudException.java",
-    "java/src/org/chromium/chrome/browser/readaloud/exceptions/ReadAloudNetworkException.java",
-    "java/src/org/chromium/chrome/browser/readaloud/exceptions/ReadAloudUnsupportedException.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/exceptions/ReadAloudException.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/exceptions/ReadAloudNetworkException.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/exceptions/ReadAloudUnsupportedException.java",
   ]
   deps = [
     "//base:base_java",
@@ -82,7 +82,7 @@ android_library("exceptions_java") {
 
 android_library("metrics_java") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/readaloud/ReadAloudMetrics.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudMetrics.java" ]
 
   deps = [
     "//base:base_java",
@@ -93,7 +93,7 @@ android_library("metrics_java") {
 
 android_library("features_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudFeatures.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudFeatures.java",
   ]
   deps = [
     ":metrics_java",
@@ -116,7 +116,7 @@ android_library("features_java") {
 
 generate_jni("features_jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudFeatures.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudFeatures.java",
   ]
 }
 
@@ -177,9 +177,9 @@ android_resources("java_resources") {
 
 android_library("hooks_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudReadabilityHooks.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudReadabilityHooksFactory.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudReadabilityHooksUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudReadabilityHooks.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudReadabilityHooksFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudReadabilityHooksUpstreamImpl.java",
   ]
   deps = [
     "//base:base_java",
@@ -194,7 +194,7 @@ android_library("hooks_java") {
 
 android_library("test_support_java") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/readaloud/testing/MockPrefServiceHelper.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/readaloud/testing/MockPrefServiceHelper.java" ]
   deps = [
     "//chrome/browser/readaloud/android:java",
     "//components/prefs/android:java",
@@ -205,14 +205,14 @@ android_library("test_support_java") {
 robolectric_library("junit") {
   testonly = true
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudControllerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudIphControllerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudPrefsUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/ReadAloudToolbarButtonControllerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TabModelTabObserverUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TapToSeekHandlerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/TapToSeekSelectionManagerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudIphControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudMiniPlayerSceneLayerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudPrefsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/ReadAloudToolbarButtonControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TabModelTabObserverUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TapToSeekHandlerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/TapToSeekSelectionManagerUnitTest.java",
   ]
   deps = [
     ":exceptions_java",
@@ -279,32 +279,32 @@ robolectric_library("junit") {
 
 android_library("player_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/player/Colors.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/InteractionHandler.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/PlayerCoordinator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/PlayerMediator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/PlayerProperties.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/TouchDelegateUtil.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/VisibilityState.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerCoordinator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerMediator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerViewBinder.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/MaxHeightScrollView.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/Menu.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/MenuItem.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/MenuSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/NegativeFeedbackMenuSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/OptionsMenuSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/PlaybackModeIphController.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/SingleMenuSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/SpeedMenuSheetContent.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/VoiceMenu.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerCoordinator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerLayout.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerMediator.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerViewBinder.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/Properties.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/Colors.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/InteractionHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/PlayerCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/PlayerMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/PlayerProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/TouchDelegateUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/VisibilityState.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/MaxHeightScrollView.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/Menu.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/MenuItem.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/MenuSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/NegativeFeedbackMenuSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/OptionsMenuSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/PlaybackModeIphController.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/SingleMenuSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/SpeedMenuSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/VoiceMenu.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerLayout.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/Properties.java",
   ]
   deps = [
     ":features_java",
@@ -336,25 +336,25 @@ android_library("player_java") {
     "//ui/android:ui_java_resources",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.chrome.browser.readaloud.player"
+  resources_package = "org.Cinaseek.chrome.browser.readaloud.player"
 }
 
 robolectric_library("player_junit_java") {
   testonly = true
   sources = [
-    "java/src/org/chromium/chrome/browser/readaloud/player/PlayerCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/PlayerMediatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerMediatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/ExpandedPlayerSheetContentUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/MenuSheetContentUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/MenuUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/OptionsMenuSheetContentUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/SpeedMenuSheetContentUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/expanded/VoiceMenuUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerLayoutUnitTest.java",
-    "java/src/org/chromium/chrome/browser/readaloud/player/mini/MiniPlayerMediatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/PlayerCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/PlayerMediatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerMediatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/ExpandedPlayerSheetContentUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/MenuSheetContentUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/MenuUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/OptionsMenuSheetContentUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/SpeedMenuSheetContentUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/expanded/VoiceMenuUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerLayoutUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/readaloud/player/mini/MiniPlayerMediatorUnitTest.java",
   ]
   deps = [
     ":player_java",

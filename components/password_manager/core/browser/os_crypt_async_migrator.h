@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace password_manager {
 
 // This class is responsible for re-encrypting all passwords using OSCryptAsync
 // API.
-// https://source.chromium.org/chromium/chromium/src/+/main:components/os_crypt/async/README.md
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/os_crypt/async/README.md
 class OSCryptAsyncMigrator : public PasswordStoreConsumer,
                              public CredentialsCleaner {
  public:

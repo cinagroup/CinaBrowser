@@ -1,8 +1,8 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "chromecast/starboard/media/renderer/chromium_starboard_conversions.h"
+#include "chromecast/starboard/media/renderer/Cinaseek_starboard_conversions.h"
 
 #include <cstring>
 #include <optional>
@@ -110,7 +110,7 @@ TEST(StarboardConversionsTest, ConvertsValidVideoConfigToStarboardConfig) {
 
 TEST(StarboardConversionsTest,
      ConvertsValidVideoConfigWithHdrMetadataToStarboardConfig) {
-  VideoDecoderConfig chromium_config(
+  VideoDecoderConfig Cinaseek_config(
       VideoCodec::kHEVC, VideoCodecProfile::HEVCPROFILE_MAIN10,
       VideoDecoderConfig::AlphaMode::kIsOpaque,
       VideoColorSpace(9, 16, 9, gfx::ColorSpace::RangeID::LIMITED),
@@ -136,9 +136,9 @@ TEST(StarboardConversionsTest,
 
   hdr_metadata.smpte_st_2086 = smpte;
   hdr_metadata.cta_861_3 = cta;
-  chromium_config.set_hdr_metadata(hdr_metadata);
+  Cinaseek_config.set_hdr_metadata(hdr_metadata);
 
-  EXPECT_THAT(ToStarboardVideoSampleInfo(chromium_config),
+  EXPECT_THAT(ToStarboardVideoSampleInfo(Cinaseek_config),
               Optional(MatchesVideoSampleInfo({
                   .codec = StarboardVideoCodec::kStarboardVideoCodecH265,
                   .mime = R"-(video/mp4; codecs="hev1.2.6.L0.B0")-",

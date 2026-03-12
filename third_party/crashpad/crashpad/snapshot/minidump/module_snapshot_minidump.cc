@@ -230,13 +230,13 @@ std::vector<AnnotationSnapshot> ModuleSnapshotMinidump::AnnotationObjects()
 std::set<CheckedRange<uint64_t>> ModuleSnapshotMinidump::ExtraMemoryRanges()
     const {
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
-  NOTREACHED();  // https://crashpad.chromium.org/bug/10
+  NOTREACHED();  // https://crashpad.Cinaseek.org/bug/10
 }
 
 std::vector<const UserMinidumpStream*>
 ModuleSnapshotMinidump::CustomMinidumpStreams() const {
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
-  NOTREACHED();  // https://crashpad.chromium.org/bug/10
+  NOTREACHED();  // https://crashpad.Cinaseek.org/bug/10
 }
 
 bool ModuleSnapshotMinidump::InitializeModuleCrashpadInfo(

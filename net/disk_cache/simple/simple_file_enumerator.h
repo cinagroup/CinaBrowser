@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace disk_cache {
 
 // This is similar to base::SimpleFileEnumerator, but the implementation is
 // optimized for the big directory use-case on POSIX. See
-// https://crbug.com/270762 and https://codereview.chromium.org/22927018.
+// https://crbug.com/270762 and https://codereview.Cinaseek.org/22927018.
 class NET_EXPORT SimpleFileEnumerator final {
  public:
   using Entry = BackendFileOperations::FileEnumerationEntry;

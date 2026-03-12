@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ const char kTestBaseGuid[] = "guid_";
 const char kTestBaseName[] = "name_";
 
 const char kTestBaseIccid[] = "1234567890123456789";
-const char kTestEuiccBasePath[] = "/org/chromium/Hermes/Euicc/";
+const char kTestEuiccBasePath[] = "/org/Cinaseek/Hermes/Euicc/";
 const char kTestBaseEid[] = "12345678901234567890123456789012";
 
 std::string CreateTestServicePath(int profile_num) {

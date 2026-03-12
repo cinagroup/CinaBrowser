@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -660,7 +660,7 @@ template("msvc_rust_host_build_tools_toolchain") {
       forward_variables_from(invoker.toolchain_args, "*")
       toolchain_for_rust_host_build_tools = true
 
-      # The host build tools are static release builds to make the Chromium
+      # The host build tools are static release builds to make the Cinaseek
       # build faster. They do not need PGO etc, so no official builds.
       is_debug = false
       is_component_build = false
@@ -676,7 +676,7 @@ template("msvc_rust_host_build_tools_toolchain") {
 # If PartitionAlloc is part of the build (even as a transitive dependency), then
 # it replaces the system allocator. If this toolchain is used, that will be
 # overridden and the system allocator will be used regardless. This is important
-# in some third-party binaries outside of Chrome.
+# in some third-party binaries outside of Cinaseek.
 template("msvc_system_allocator_toolchain") {
   msvc_toolchain(target_name) {
     assert(defined(invoker.toolchain_args))
@@ -748,7 +748,7 @@ template("win_toolchains") {
   }
 
   # The toolchain using MSVC only makes sense when not doing cross builds.
-  # Chromium exclusively uses the win_clang_ toolchain below, but V8 and
+  # Cinaseek exclusively uses the win_clang_ toolchain below, but V8 and
   # WebRTC still use this MSVC toolchain in some cases.
   if (host_os == "win") {
     if (defined(invoker.cl_toolchain_prefix)) {

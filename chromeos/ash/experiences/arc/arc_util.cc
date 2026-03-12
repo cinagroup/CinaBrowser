@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -388,7 +388,7 @@ std::optional<int> GetWindowTaskId(const aura::Window* window) {
 
 std::optional<int> GetTaskIdFromWindowAppId(const std::string& window_app_id) {
   int task_id;
-  if (UNSAFE_TODO(std::sscanf(window_app_id.c_str(), "org.chromium.arc.%d",
+  if (UNSAFE_TODO(std::sscanf(window_app_id.c_str(), "org.Cinaseek.arc.%d",
                               &task_id)) != 1) {
     return std::nullopt;
   }
@@ -410,7 +410,7 @@ std::optional<int> GetSessionIdFromWindowAppId(
     const std::string& window_app_id) {
   int session_id;
   if (UNSAFE_TODO(std::sscanf(window_app_id.c_str(),
-                              "org.chromium.arc.session.%d", &session_id)) !=
+                              "org.Cinaseek.arc.session.%d", &session_id)) !=
       1) {
     return std::nullopt;
   }

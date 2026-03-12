@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -93,7 +93,7 @@ CameraBufferFactory::CreateSharedImageFromGmbHandle(
 // There's no good way to resolve the HAL pixel format to the
 // platform-specific DRM format, other than to actually allocate the buffer
 // and see if the allocation succeeds.
-ChromiumPixelFormat CameraBufferFactory::ResolveStreamBufferFormat(
+CinaseekPixelFormat CameraBufferFactory::ResolveStreamBufferFormat(
     cros::mojom::HalPixelFormat hal_format,
     gfx::BufferUsage usage) {
   const auto key = std::make_pair(hal_format, usage);
@@ -101,11 +101,11 @@ ChromiumPixelFormat CameraBufferFactory::ResolveStreamBufferFormat(
     return resolved_format_usages_[key];
   }
 
-  const ChromiumPixelFormat kUnsupportedFormat{
+  const CinaseekPixelFormat kUnsupportedFormat{
       PIXEL_FORMAT_UNKNOWN, viz::SinglePlaneFormat::kRGBX_8888};
   constexpr size_t kDummyBufferWidth = 128, kDummyBufferHeight = 128;
-  std::vector<ChromiumPixelFormat> cr_formats =
-      HalPixelFormatToChromiumPixelFormat(hal_format);
+  std::vector<CinaseekPixelFormat> cr_formats =
+      HalPixelFormatToCinaseekPixelFormat(hal_format);
   if (cr_formats.empty()) {
     return kUnsupportedFormat;
   }

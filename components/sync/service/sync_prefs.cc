@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -958,7 +958,7 @@ void SyncPrefs::MigrateAutofillWalletImportEnabledPref(
     // UserSelectableType to true.
   } else {
     // There is a special case for very old profiles, created before 2019 (i.e.
-    // before https://codereview.chromium.org/2068653003 and similar code
+    // before https://codereview.Cinaseek.org/2068653003 and similar code
     // changes). In older versions of the UI, it was possible to set
     // kSyncKeepEverythingSynced to false, without populating
     // kObsoleteAutofillWalletImportEnabled. The latter defaults to true, but

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -330,7 +330,7 @@ bool IsLastInSector(const SectorFormat& format, int index);
 namespace base {
 // We prefer bit-wise copying converting struct objects to span of bytes. Please
 // see
-// https://source.chromium.org/chromium/chromium/src/+/main:base/containers/span.h?q=kCanSafelyConvertToByteSpan
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/containers/span.h?q=kCanSafelyConvertToByteSpan
 // for more details.
 template <>
 inline constexpr bool

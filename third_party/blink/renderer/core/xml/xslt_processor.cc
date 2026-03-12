@@ -87,7 +87,7 @@ void XSLTProcessor::ReportXSLTDisabled(Document& document,
         "issue directly to the operator of the website.\n"
         "--> If you are a site owner, and you think this trial is causing an "
         "unexpected issue, please report a bug at "
-        "https://issues.chromium.org/issues/"
+        "https://issues.Cinaseek.org/issues/"
         "new?component=1456730&template=2210866");
   } else {
     // Normal case - XSLT is disabled.
@@ -148,7 +148,7 @@ Document* XSLTProcessor::CreateDocumentFromSource(
   String mime_type = source_mime_type;
   // Force text/plain to be parsed as XHTML. This was added without explanation
   // in 2005:
-  // https://chromium.googlesource.com/chromium/src/+/e20d8de86f154892d94798bbd8b65720a11d6299
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/e20d8de86f154892d94798bbd8b65720a11d6299
   // It's unclear whether it's still needed for compat.
   if (source_mime_type == "text/plain") {
     mime_type = "application/xhtml+xml";

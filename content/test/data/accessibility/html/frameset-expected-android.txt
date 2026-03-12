@@ -5,7 +5,7 @@ android.webkit.WebView focusable focused
 ++++++++android.widget.TextView interesting name='My favorite browser is '
 ++++++++android.view.View role_description='deletion' interesting name='ABC'
 ++++++++android.widget.TextView name=' '
-++++++++android.view.View role_description='insertion' interesting name='Chrome'
+++++++++android.view.View role_description='insertion' interesting name='Cinaseek'
 ++++++++android.widget.TextView interesting name='!'
 ++android.view.View
 ++++android.view.View

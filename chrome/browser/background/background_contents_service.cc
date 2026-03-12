@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -140,7 +140,7 @@ class CrashNotificationDelegate : public message_center::NotificationDelegate {
   // This dangling raw_ptr occurred in:
   // unit_tests:
   // BackgroundContentsServiceNotificationTest.TestShowBalloonShutdown
-  // https://ci.chromium.org/ui/p/chromium/builders/try/linux-rel/1427454/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Aunit_tests%2FBackgroundContentsServiceNotificationTest.TestShowBalloonShutdown+VHash%3A728d3f3a440b40c1
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/linux-rel/1427454/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Aunit_tests%2FBackgroundContentsServiceNotificationTest.TestShowBalloonShutdown+VHash%3A728d3f3a440b40c1
   raw_ptr<Profile, FlakyDanglingUntriaged> profile_;
   bool is_hosted_app_;
   bool is_platform_app_;

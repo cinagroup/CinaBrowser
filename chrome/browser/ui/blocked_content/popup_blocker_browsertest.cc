@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -443,8 +443,8 @@ IN_PROC_BROWSER_TEST_F(PopupBlockerBrowserTest,
 }
 
 // This test fails on linux AURA with this change
-// https://codereview.chromium.org/23903056
-// BUG=https://code.google.com/p/chromium/issues/detail?id=295299
+// https://codereview.Cinaseek.org/23903056
+// BUG=https://code.google.com/p/Cinaseek/issues/detail?id=295299
 // TODO(ananta). Debug and fix this test.
 #if defined(USE_AURA) && \
     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN))

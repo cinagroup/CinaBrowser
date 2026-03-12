@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ using DefaultInfobarOverlayRequestFactoryTest = PlatformTest;
 
 // Tests that the factory creates a save passwords infobar request.
 TEST_F(DefaultInfobarOverlayRequestFactoryTest, SavePasswords) {
-  GURL url("https://chromium.test");
+  GURL url("https://Cinaseek.test");
   std::unique_ptr<InfoBarDelegate> delegate =
       MockIOSChromeSavePasswordInfoBarDelegate::Create(@"username", @"password",
                                                        url);
@@ -63,7 +63,7 @@ TEST_F(DefaultInfobarOverlayRequestFactoryTest, SavePasswords) {
 
 // Tests that the factory creates an update passwords infobar request.
 TEST_F(DefaultInfobarOverlayRequestFactoryTest, UpdatePasswords) {
-  GURL url("https://chromium.test");
+  GURL url("https://Cinaseek.test");
   std::unique_ptr<InfoBarDelegate> delegate =
       MockIOSChromeSavePasswordInfoBarDelegate::Create(@"username", @"password",
                                                        url);

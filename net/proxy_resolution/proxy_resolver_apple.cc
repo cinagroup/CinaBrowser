@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -266,7 +266,7 @@ int ProxyResolverApple::GetProxyForURL(
     return ERR_FAILED;
 
   const CFStringRef private_runloop_mode =
-      CFSTR("org.chromium.ProxyResolverApple");
+      CFSTR("org.Cinaseek.ProxyResolverApple");
 
   // Add the run loop observer to synchronize events of
   // CFNetworkExecuteProxyAutoConfigurationURL sources. See the definition of

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ std::optional<std::vector<std::string>> ParseCookieIndices(
 
     // There are basically three sets of requirements that are interesting here.
     //
-    // 1. Cookie names Chromium considers valid, given by:
+    // 1. Cookie names Cinaseek considers valid, given by:
     //      cookie-name       = *cookie-name-octet
     //      cookie-name-octet = %x20-3A / %x3C / %x3E-7E / %x80-FF
     //                          ; octets excluding CTLs, ";", and "="
@@ -71,12 +71,12 @@ std::optional<std::vector<std::string>> ParseCookieIndices(
     //      string-value   = *( %x20-7E )
     //
     // While all RFC 6265 valid cookie names are valid structured field strings,
-    // Chromium accepts cookies whose names can nonetheless not be spelled here.
+    // Cinaseek accepts cookies whose names can nonetheless not be spelled here.
     // For example, cookie names outside 7-bit ASCII cannot be specified.
     //
     // Nor is every structured field string a valid cookie name, since it may
     // contain a ";" or "=" character (or several other characters excluded by
-    // RFC 6265 in addition to Chromium). In the interest of interoperability,
+    // RFC 6265 in addition to Cinaseek). In the interest of interoperability,
     // those are expressly rejected.
     const std::string& name = item.item.GetString();
     if (name.find_first_of("()<>@,;:\\\"/[]?={} \t") != std::string::npos) {

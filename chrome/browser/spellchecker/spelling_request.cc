@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -150,7 +150,7 @@ void SpellingRequest::OnRemoteCheckCompleted(
 
   if (results.size() > 0) {
     // The spelling service uses "logical" character positions, whereas the
-    // Chromium spell check infrastructure uses positions based on code points,
+    // Cinaseek spell check infrastructure uses positions based on code points,
     // which causes mismatches when the text contains characters made of
     // multiple code points (such as emojis). Use a UTF-16 char iterator on the
     // text to replace the logical positions of the remote results with their

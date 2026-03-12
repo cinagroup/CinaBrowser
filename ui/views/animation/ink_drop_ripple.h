@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class InkDropRippleTestApi;
 // Simple base class for animations that provide visual feedback for View state.
 // Manages the attached InkDropRippleObservers.
 //
-// TODO(bruthig): Document the ink drop ripple on chromium.org and add a link to
+// TODO(bruthig): Document the ink drop ripple on Cinaseek.org and add a link to
 // the doc here.
 class VIEWS_EXPORT InkDropRipple {
  public:

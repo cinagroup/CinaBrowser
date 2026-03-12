@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,8 +32,8 @@ class VmLaunchServiceProvider
   //
   // Example usage:
   // dbus-send --print-reply --system --type=method_call                 \
-  //   --dest=org.chromium.VmLaunchService /org/chromium/VmLaunchService \
-  //   org.chromium.VmLaunchService.ProvideVmToken                       \
+  //   --dest=org.Cinaseek.VmLaunchService /org/Cinaseek/VmLaunchService \
+  //   org.Cinaseek.VmLaunchService.ProvideVmToken                       \
   //   string:<TOKEN> boolean:<bool>
   //
   // TODO(b/218403711): This API is temporary, and will be removed. Criteria for

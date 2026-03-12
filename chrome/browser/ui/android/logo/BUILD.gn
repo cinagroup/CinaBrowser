@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,13 +8,13 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/logo/DoodleCache.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoBridge.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoCoordinator.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoMediator.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoProperties.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoView.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/DoodleCache.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoView.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoViewBinder.java",
   ]
 
   deps = [
@@ -39,15 +39,15 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.logo"
+  resources_package = "org.Cinaseek.chrome.browser.logo"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/logo/LogoBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/logo/LogoBridge.java" ]
 }
 
 android_library("utils_java") {
-  sources = [ "java/src/org/chromium/chrome/browser/logo/LogoUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/logo/LogoUtils.java" ]
 
   deps = [
     ":java_resources",
@@ -57,7 +57,7 @@ android_library("utils_java") {
     "//third_party/androidx:androidx_core_core_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.logo"
+  resources_package = "org.Cinaseek.chrome.browser.logo"
 }
 
 android_resources("java_resources") {
@@ -73,14 +73,14 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.logo"
+  resources_package = "org.Cinaseek.chrome.browser.logo"
   sources = [
-    "java/src/org/chromium/chrome/browser/logo/DoodleCacheUnitTest.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoMediatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoUtilsUnitTest.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoViewBinderUnitTest.java",
-    "java/src/org/chromium/chrome/browser/logo/LogoViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/DoodleCacheUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoMediatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoUtilsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoViewBinderUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/logo/LogoViewTest.java",
   ]
 
   deps = [

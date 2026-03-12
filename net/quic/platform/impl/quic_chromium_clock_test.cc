@@ -1,16 +1,16 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/platform/impl/quic_chromium_clock.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
 
 #include "base/time/time.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace quic::test {
 
-TEST(QuicChromiumClockTest, Now) {
-  QuicChromiumClock clock;
+TEST(QuicCinaseekClockTest, Now) {
+  QuicCinaseekClock clock;
 
   QuicTime start = clock.Now();
   QuicTime now = clock.ApproximateNow();
@@ -20,8 +20,8 @@ TEST(QuicChromiumClockTest, Now) {
   EXPECT_LE(now, end);
 }
 
-TEST(QuicChromiumClockTest, WallNow) {
-  QuicChromiumClock clock;
+TEST(QuicCinaseekClockTest, WallNow) {
+  QuicCinaseekClock clock;
 
   base::Time start = base::Time::Now();
   QuicWallTime now = clock.WallNow();

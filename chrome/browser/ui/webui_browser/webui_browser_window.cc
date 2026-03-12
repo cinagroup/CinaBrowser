@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -441,7 +441,7 @@ ui::ColorProviderKey WebUIBrowserWindow::GetColorProviderKey() const {
 
   // Determine appropriate key.frame_type.
   // TODO(webium): special windows might need FrameType::kNative.
-  key.frame_type = ui::ColorProviderKey::FrameType::kChromium;
+  key.frame_type = ui::ColorProviderKey::FrameType::kCinaseek;
 
 #if BUILDFLAG(IS_WIN)
   if (theme_service && theme_service->UsingDeviceTheme()) {

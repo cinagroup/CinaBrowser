@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,8 +9,8 @@
 #include "ui/base/cocoa/tracking_area.h"
 
 NSString* kViewDidBecomeFirstResponder =
-    @"Chromium.kViewDidBecomeFirstResponder";
-NSString* kSelectionDirection = @"Chromium.kSelectionDirection";
+    @"Cinaseek.kViewDidBecomeFirstResponder";
+NSString* kSelectionDirection = @"Cinaseek.kSelectionDirection";
 
 @implementation BaseView {
   ui::ScopedCrTrackingArea _trackingArea;

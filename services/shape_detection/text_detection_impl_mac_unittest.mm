@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ TEST_F(TextDetectionImplMacTest, ScanOnce) {
       @{NSFontAttributeName : [NSFont fontWithName:@"Helvetica" size:16]};
 
   NSAttributedString* info =
-      [[NSAttributedString alloc] initWithString:@"https://www.chromium.org"
+      [[NSAttributedString alloc] initWithString:@"https://www.Cinaseek.org"
                                       attributes:attributes];
 
   base::apple::ScopedCFTypeRef<CTLineRef> line(

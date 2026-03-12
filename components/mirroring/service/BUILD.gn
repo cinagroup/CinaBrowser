@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -70,7 +70,7 @@ component("mirroring_service") {
     "//ui/gfx",
   ]
 
-  # Make sure to use the Chromium protobuf headers, and not the ones in
+  # Make sure to use the Cinaseek protobuf headers, and not the ones in
   # //third_party/openscreen/src/third_party/protobuf. direct include_dirs
   # takes precedence over those pulled in from configs.
   include_dirs = [ "//third_party/protobuf/src" ]
@@ -129,7 +129,7 @@ source_set("unittests") {
     "//third_party/openscreen/src/cast/streaming:sender",
   ]
 
-  # Make sure to use the Chromium protobuf headers, and not the ones in
+  # Make sure to use the Cinaseek protobuf headers, and not the ones in
   # //third_party/openscreen/src/third_party/protobuf. direct include_dirs
   # takes precedence over those pulled in from configs.
   include_dirs = [ "//third_party/protobuf/src" ]

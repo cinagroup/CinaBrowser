@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -188,7 +188,7 @@ bool NameValuePairsParser::ParseNameValuePairs(const std::string& input,
   bool all_valid = true;
 
   // We use StringPairs to parse pairs since this is the class that is also
-  // used to parse machine-info for server backed state keys in Chromium OS.
+  // used to parse machine-info for server backed state keys in Cinaseek OS.
   base::StringPairs pairs;
   // This gives us somewhat more lenient parsing than strictly respecting the
   // formats we want. For example, whitespace will be removed around the equal

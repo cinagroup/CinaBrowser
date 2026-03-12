@@ -18,7 +18,7 @@
 
 // This file is copied from
 // gRPC repo's src/core/plugin_registry/grpc_plugin_registry.cc then comment out
-// several lb plugins that have been stripped out by BUILD.chromium.gn.template
+// several lb plugins that have been stripped out by BUILD.Cinaseek.gn.template
 
 #include <grpc/grpc.h>
 #include <grpc/support/port_platform.h>

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,7 +107,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, Simple) {
       }
     }
     data_sources: {
-      config: { name: "org.chromium.trace_metadata2" target_buffer: 1 }
+      config: { name: "org.Cinaseek.trace_metadata2" target_buffer: 1 }
     }
   )pb");
   auto trace_config = GetDefaultPerfettoConfig(ParseTraceConfigFromJson(R"json({
@@ -125,7 +125,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, LegacyTraceEvent) {
     buffers { size_kb: 256 fill_policy: DISCARD }
     data_sources: {
       config: {
-        name: "org.chromium.trace_event"
+        name: "org.Cinaseek.trace_event"
         track_event_config: {
           enabled_categories: [ "foo", "__metadata" ]
           disabled_categories: [ "*" ]
@@ -133,7 +133,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, LegacyTraceEvent) {
       }
     }
     data_sources: {
-      config: { name: "org.chromium.trace_metadata2" target_buffer: 1 }
+      config: { name: "org.Cinaseek.trace_metadata2" target_buffer: 1 }
     }
   )pb");
   auto trace_config = GetDefaultPerfettoConfig(ParseTraceConfigFromJson(R"json({
@@ -159,7 +159,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, DisabledCategories) {
       }
     }
     data_sources: {
-      config: { name: "org.chromium.trace_metadata2" target_buffer: 1 }
+      config: { name: "org.Cinaseek.trace_metadata2" target_buffer: 1 }
     }
   )pb");
   auto trace_config = GetDefaultPerfettoConfig(ParseTraceConfigFromJson(R"json({
@@ -174,7 +174,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, DisabledCategories) {
 TEST_F(AdaptPerfettoConfigForChromeTest, PrivacyFiltering) {
   auto perfetto_config = ParsePerfettoConfigFromText(R"pb(
     data_sources: {
-      config: { name: "org.chromium.trace_metadata2" target_buffer: 1 }
+      config: { name: "org.Cinaseek.trace_metadata2" target_buffer: 1 }
     }
   )pb");
   EXPECT_TRUE(AdaptPerfettoConfigForChrome(&perfetto_config,
@@ -185,15 +185,15 @@ TEST_F(AdaptPerfettoConfigForChromeTest, PrivacyFiltering) {
     })json"),
                                /*privacy_filtering_enabled*/ true);
   EXPECT_EQ(PrintConfigToText(GetDataSourceConfig(
-                trace_config, "org.chromium.trace_metadata2")),
+                trace_config, "org.Cinaseek.trace_metadata2")),
             PrintConfigToText(GetDataSourceConfig(
-                perfetto_config, "org.chromium.trace_metadata2")));
+                perfetto_config, "org.Cinaseek.trace_metadata2")));
 }
 
 TEST_F(AdaptPerfettoConfigForChromeTest, DiscardBuffer) {
   auto perfetto_config = ParsePerfettoConfigFromText(R"pb(
     buffers: { fill_policy: DISCARD size_kb: 42 }
-    data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+    data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
   )pb");
   EXPECT_TRUE(AdaptPerfettoConfigForChrome(&perfetto_config));
 }
@@ -202,7 +202,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, MultipleBuffers) {
   auto perfetto_config = ParsePerfettoConfigFromText(R"pb(
     buffers: { fill_policy: RING_BUFFER size_kb: 42 }
     buffers: { fill_policy: DISCARD size_kb: 42 }
-    data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+    data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
   )pb");
   EXPECT_TRUE(AdaptPerfettoConfigForChrome(&perfetto_config));
 }
@@ -219,10 +219,10 @@ TEST_F(AdaptPerfettoConfigForChromeTest, ProcessFilter) {
           disabled_categories: [ "*" ]
         }
       }
-      producer_name_filter: "org.chromium-3"
+      producer_name_filter: "org.Cinaseek-3"
     }
     data_sources: {
-      config: { name: "org.chromium.trace_metadata2" target_buffer: 1 }
+      config: { name: "org.Cinaseek.trace_metadata2" target_buffer: 1 }
     }
   )pb");
   auto trace_config = GetDefaultPerfettoConfig(ParseTraceConfigFromJson(R"json({
@@ -238,7 +238,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, ProcessFilter) {
 #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CASTOS)
 TEST_F(AdaptPerfettoConfigForChromeTest, Systrace) {
   auto perfetto_config = ParsePerfettoConfigFromText(R"pb(
-    data_sources: { config: { name: "org.chromium.trace_system" } }
+    data_sources: { config: { name: "org.Cinaseek.trace_system" } }
   )pb");
   auto trace_config = GetDefaultPerfettoConfig(ParseTraceConfigFromJson(R"json({
       "record_mode": "record-continuously",
@@ -246,9 +246,9 @@ TEST_F(AdaptPerfettoConfigForChromeTest, Systrace) {
     })json"));
   EXPECT_TRUE(AdaptPerfettoConfigForChrome(&perfetto_config));
   EXPECT_EQ(PrintConfigToText(
-                GetDataSourceConfig(trace_config, "org.chromium.trace_system")),
+                GetDataSourceConfig(trace_config, "org.Cinaseek.trace_system")),
             PrintConfigToText(GetDataSourceConfig(
-                perfetto_config, "org.chromium.trace_system")));
+                perfetto_config, "org.Cinaseek.trace_system")));
 }
 #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CASTOS)
 
@@ -271,7 +271,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, EnableSystemBackend_Chrome) {
   auto perfetto_config = ParsePerfettoConfigFromText(R"pb(
     data_sources: {
       config: {
-        name: "org.chromium.trace_event"
+        name: "org.Cinaseek.trace_event"
         track_event_config: {
           enabled_categories: [ "foo", "__metadata" ]
           disabled_categories: [ "*" ]
@@ -287,7 +287,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, EnableSystemBackend_Chrome) {
         }
       }
     }
-    data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+    data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
   )pb");
 
   EXPECT_TRUE(
@@ -309,7 +309,7 @@ TEST_F(AdaptPerfettoConfigForChromeTest, BuiltinDataSource_ClockBoottime) {
         }
       }
     }
-    data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+    data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
     builtin_data_sources { primary_trace_clock: BUILTIN_CLOCK_BOOTTIME }
   )pb");
 

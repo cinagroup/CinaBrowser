@@ -58,7 +58,7 @@ class CORE_EXPORT ExternalPopupMenu final
   // Fills |info| with the popup menu information contained in the
   // PopupMenuClient associated with this ExternalPopupMenu.
   // FIXME: public only for test access. Need to revert once gtest
-  // helpers from chromium are available for blink.
+  // helpers from Cinaseek are available for blink.
   static void GetPopupMenuInfo(HTMLSelectElement&,
                                double* font_size,
                                int32_t* selected_item,

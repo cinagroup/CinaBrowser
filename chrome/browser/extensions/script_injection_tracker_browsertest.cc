@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -686,7 +686,7 @@ IN_PROC_BROWSER_TEST_F(
 // Covers detecting content script injection into an initial empty document.
 //
 // The code below exercises the test steps from "scenario #3" from the "Tracking
-// injections in an initial empty document" section of a @chromium.org document
+// injections in an initial empty document" section of a @Cinaseek.org document
 // here:
 // https://docs.google.com/document/d/1MFprp2ss2r9RNamJ7Jxva1bvRZvec3rzGceDGoJ6vW0/edit?usp=sharing
 IN_PROC_BROWSER_TEST_F(
@@ -995,7 +995,7 @@ IN_PROC_BROWSER_TEST_F(
   // and helpful for verifying the fix for the product code.  This is not ideal,
   // but making the test more robust seems quite difficult - see the discussion
   // in
-  // https://chromium-review.googlesource.com/c/chromium/src/+/3587823/8#message-b4f0abdcc2a6cedf681d33dbe1ddbccc381ad932
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3587823/8#message-b4f0abdcc2a6cedf681d33dbe1ddbccc381ad932
   ASSERT_TRUE(navigation_manager.WaitForResponse());          // Step UI.1.1
   navigation_manager.ResumeNavigation();                      // Step UI.1.2
   const Extension* extension = LoadExtension(unpacked_path);  // Step UI.1.3

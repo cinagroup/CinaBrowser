@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ struct TimingInformation {
   // media was seeked. Ranges will appear in the order in which the audio was
   // given to SODA, such that the first range matches `audio_start_time`, and
   // the last range matches `audio_end_time`.
-  // Note: this metadata is provided by Chromium, and doesn't have a SODA
+  // Note: this metadata is provided by Cinaseek, and doesn't have a SODA
   //       equivalent.
   std::optional<std::vector<MediaTimestampRange>> originating_media_timestamps;
 };

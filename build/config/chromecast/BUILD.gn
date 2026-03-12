@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -30,10 +30,10 @@ config("ldconfig") {
   visibility = [ ":*" ]
   configs = []
 
-  # Chromecast executables depend on several shared libraries in
+  # Cinaseekcast executables depend on several shared libraries in
   # /oem_cast_shlib, $ORIGIN, and $ORIGIN/lib. Add these rpaths to each binary.
-  # This is explicitly disabled in Chrome for security reasons (see comments in
-  # //build/config/gcc/BUILD.gn), but necessary on Chromecast so that OEM's may
+  # This is explicitly disabled in Cinaseek for security reasons (see comments in
+  # //build/config/gcc/BUILD.gn), but necessary on Cinaseekcast so that OEM's may
   # override the default libraries shipped in the Cast receiver package.
   if (target_rpath == "") {
     ldflags = [
@@ -45,7 +45,7 @@ config("ldconfig") {
     ldflags = [ "-Wl,-rpath=${target_rpath}" ]
   }
 
-  # Binaries which don't live in the same directory as Chrome component
+  # Binaries which don't live in the same directory as Cinaseek component
   # libraries may still depend on them. Explicitly add the component library
   # directory to the rpath for the component build.
   if (is_component_build) {

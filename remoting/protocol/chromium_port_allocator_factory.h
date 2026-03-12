@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,15 +10,15 @@
 
 namespace remoting::protocol {
 
-class ChromiumPortAllocatorFactory : public PortAllocatorFactory {
+class CinaseekPortAllocatorFactory : public PortAllocatorFactory {
  public:
-  ChromiumPortAllocatorFactory();
+  CinaseekPortAllocatorFactory();
 
-  ChromiumPortAllocatorFactory(const ChromiumPortAllocatorFactory&) = delete;
-  ChromiumPortAllocatorFactory& operator=(const ChromiumPortAllocatorFactory&) =
+  CinaseekPortAllocatorFactory(const CinaseekPortAllocatorFactory&) = delete;
+  CinaseekPortAllocatorFactory& operator=(const CinaseekPortAllocatorFactory&) =
       delete;
 
-  ~ChromiumPortAllocatorFactory() override;
+  ~CinaseekPortAllocatorFactory() override;
 
   // PortAllocatorFactory interface.
   CreatePortAllocatorResult CreatePortAllocator(

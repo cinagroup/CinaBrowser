@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace android_webview {
 
 // A RestrictedCookieManager conditionally returns cookies from an underlying
 // RestrictedCookieManager, after consulting WebView's cookie settings.
-// We need to do this because Chromium typically configures this per
+// We need to do this because Cinaseek typically configures this per
 // BrowserContext but Android developers can set cookie permissions per WebView.
 // To work around this, we need to feed down to the restricted cookie manager
 // if we wish to disable 3PCs _per_ request.

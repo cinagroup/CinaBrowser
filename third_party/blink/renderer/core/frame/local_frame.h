@@ -518,7 +518,7 @@ class CORE_EXPORT LocalFrame final
   //
   // Navigation-associated interfaces are currently implemented as
   // channel-associated interfaces. See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/mojo_ipc_conversion.md#Channel_Associated-Interfaces
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/mojo_ipc_conversion.md#Channel_Associated-Interfaces
   AssociatedInterfaceProvider* GetRemoteNavigationAssociatedInterfaces();
 
   LocalFrameClient* Client() const;

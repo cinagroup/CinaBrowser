@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,9 +29,9 @@ class UserActivityController;
 //
 // ShouldDeferScreenDim:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.MlDecisionService
-//     /org/chromium/MlDecisionService
-//     org.chromium.MlDecisionService.ShouldDeferScreenDim
+//     --dest=org.Cinaseek.MlDecisionService
+//     /org/Cinaseek/MlDecisionService
+//     org.Cinaseek.MlDecisionService.ShouldDeferScreenDim
 //     boolean: true or false
 //
 // % (True means smart dim decides to defer the imminent screen dimming.)

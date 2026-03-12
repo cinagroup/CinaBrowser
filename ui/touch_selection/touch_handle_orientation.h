@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace ui {
 // handle orientation on java and native side.
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.touch_selection
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.touch_selection
 enum class TouchHandleOrientation {
   LEFT,
   CENTER,

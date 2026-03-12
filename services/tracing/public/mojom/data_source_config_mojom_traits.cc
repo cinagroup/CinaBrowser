@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,10 +48,10 @@ bool StructTraits<tracing::mojom::DataSourceConfigDataView,
     out->set_etw_config_raw(etw_config_raw);
   }
   if (!system_metrics_config_raw.empty()) {
-    out->set_chromium_system_metrics_raw(system_metrics_config_raw);
+    out->set_Cinaseek_system_metrics_raw(system_metrics_config_raw);
   }
   if (!histogram_samples_config_raw.empty()) {
-    out->set_chromium_histogram_samples_raw(histogram_samples_config_raw);
+    out->set_Cinaseek_histogram_samples_raw(histogram_samples_config_raw);
   }
   return true;
 }

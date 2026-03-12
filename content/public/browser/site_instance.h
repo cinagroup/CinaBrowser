@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ using SiteInstanceGroupId = base::IdType32<class SiteInstanceGroupIdTag>;
 //
 // The principal is usually based on the site of the document's URL: the scheme
 // and "registrable domain" (i.e., eTLD+1), not the full origin. For example,
-// https://dev.chromium.org would have a site of https://chromium.org. This
+// https://dev.Cinaseek.org would have a site of https://Cinaseek.org. This
 // preserves compatibility with document.domain modifications, which allow
 // same-site, cross-origin pages to script each other.
 //

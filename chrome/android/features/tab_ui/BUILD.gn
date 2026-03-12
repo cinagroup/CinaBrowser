@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -143,17 +143,17 @@ android_resources("java_resources") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.tab_ui"
+  resources_package = "org.Cinaseek.chrome.tab_ui"
   sources = [
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/LargeMessageCardViewBinderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/MessageCardProviderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/MessageCardViewBinderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/PriceCardViewTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridDialogViewBinderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridDialogViewTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupUiViewBinderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabListViewHolderTest.java",
-    "javatests/src/org/chromium/chrome/browser/tasks/tab_management/pinned_tabs_strip/PinnedTabStripItemViewTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/LargeMessageCardViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/MessageCardProviderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/MessageCardViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/PriceCardViewTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridDialogViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridDialogViewTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupUiViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabListViewHolderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/pinned_tabs_strip/PinnedTabStripItemViewTest.java",
   ]
 
   deps = [
@@ -218,8 +218,8 @@ android_library("unit_device_javatests") {
 
 android_library("test_support_javalib") {
   testonly = true
-  resources_package = "org.chromium.chrome.tab_ui"
-  sources = [ "javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabUiTestHelper.java" ]
+  resources_package = "org.Cinaseek.chrome.tab_ui"
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabUiTestHelper.java" ]
 
   deps = [
     ":java_resources",

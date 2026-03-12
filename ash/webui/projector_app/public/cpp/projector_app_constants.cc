@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ const char kChromeUIUntrustedProjectorSwaAppId[] =
     "hohmppfoilmflgicnofelkdablfahbnl";
 // Also update the Projector app id in the file below.
 // LINT.ThenChange(
-// src/platform/tast-tests/src/chromiumos/tast/local/apps/apps.go)
+// src/platform/tast-tests/src/Cinaseekos/tast/local/apps/apps.go)
 
 const base::FilePath::CharType kProjectorMetadataFileExtension[] =
     FILE_PATH_LITERAL(".projector");

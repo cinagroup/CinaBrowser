@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class SearchIPCRouterTest;
 class SkBitmap;
 
 // This is the browser-side, per-tab implementation of the embeddedSearch API
-// (see https://www.chromium.org/embeddedsearch).
+// (see https://www.Cinaseek.org/embeddedsearch).
 class SearchTabHelper : public content::WebContentsObserver,
                         public content::WebContentsUserData<SearchTabHelper>,
                         public InstantServiceObserver,

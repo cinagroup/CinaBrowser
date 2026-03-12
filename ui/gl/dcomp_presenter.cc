@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ bool DCompPresenter::DestroyDCLayerTree() {
   // become 'dirty'. We must commit the changes to the device in order for the
   // objects to actually be destroyed.
   // Leaving the device in the dirty state for long periods of time means that
-  // if DWM.exe crashes, the Chromium window will become black until the next
+  // if DWM.exe crashes, the Cinaseek window will become black until the next
   // Commit.
   layer_tree_.reset();
   if (auto* dcomp_device = GetDirectCompositionDevice()) {

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1945,7 +1945,7 @@ IN_PROC_BROWSER_TEST_P(SharedDictionaryBrowserTest,
 
 // Tests that encodedBodySize and transferSize are correct for
 // dictionary-compressed resources served from the disk cache.
-// See https://issues.chromium.org/issues/457323840.
+// See https://issues.Cinaseek.org/issues/457323840.
 IN_PROC_BROWSER_TEST_P(SharedDictionaryBrowserTest,
                        EncodedBodySizePreservedFromCache) {
   RunWriteDictionaryTest(FetchType::kLinkRelCompressionDictionary,

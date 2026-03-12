@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
           }
           internal {
             contacts {
-              email: "privacy-sandbox-dev@chromium.org"
+              email: "privacy-sandbox-dev@Cinaseek.org"
             }
           }
           last_reviewed: "2024-06-08"

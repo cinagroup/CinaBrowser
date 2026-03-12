@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -279,7 +279,7 @@ TEST_P(InteractionSequenceViewsTest,
 }
 
 // The tests are failing on debug swiftshader on arm64, see
-// https://ci.chromium.org/ui/p/chromium/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
+// https://ci.Cinaseek.org/ui/p/Cinaseek/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
 // TODO(crbug.com/42050042): Re-enable the tests once we get rid of swiftshader.
 #if BUILDFLAG(IS_FUCHSIA) && !defined(NDEBUG) && defined(ARCH_CPU_ARM64)
 #define MAYBE_TransitionToBubble DISABLED_TransitionToBubble
@@ -332,7 +332,7 @@ TEST_P(InteractionSequenceViewsTest, MAYBE_TransitionToBubble) {
 }
 
 // The tests are failing on debug swiftshader on arm64, see
-// https://ci.chromium.org/ui/p/chromium/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
+// https://ci.Cinaseek.org/ui/p/Cinaseek/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
 // TODO(crbug.com/42050042): Re-enable the tests once we get rid of swiftshader.
 #if BUILDFLAG(IS_FUCHSIA) && !defined(NDEBUG) && defined(ARCH_CPU_ARM64)
 #define MAYBE_TransitionToBubbleThenAbort DISABLED_TransitionToBubbleThenAbort
@@ -384,7 +384,7 @@ TEST_P(InteractionSequenceViewsTest, MAYBE_TransitionToBubbleThenAbort) {
 // NameView tests:
 
 // The tests are failing on debug swiftshader on arm64, see
-// https://ci.chromium.org/ui/p/chromium/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
+// https://ci.Cinaseek.org/ui/p/Cinaseek/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
 // TODO(crbug.com/42050042): Re-enable the tests once we get rid of swiftshader.
 #if BUILDFLAG(IS_FUCHSIA) && !defined(NDEBUG) && defined(ARCH_CPU_ARM64)
 #define MAYBE_NameView_NameViewWithIdentifier \
@@ -442,7 +442,7 @@ TEST_P(InteractionSequenceViewsTest, MAYBE_NameView_NameViewWithIdentifier) {
 }
 
 // The tests are failing on debug swiftshader on arm64, see
-// https://ci.chromium.org/ui/p/chromium/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
+// https://ci.Cinaseek.org/ui/p/Cinaseek/builders/ci/fuchsia-fyi-arm64-dbg/9234/overview
 // TODO(crbug.com/42050042): Re-enable the tests once we get rid of swiftshader.
 #if BUILDFLAG(IS_FUCHSIA) && !defined(NDEBUG) && defined(ARCH_CPU_ARM64)
 #define MAYBE_NameView_NameViewWithNoIdentifier \

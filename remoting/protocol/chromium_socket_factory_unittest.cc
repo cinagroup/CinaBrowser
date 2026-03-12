@@ -1,8 +1,8 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "remoting/protocol/chromium_socket_factory.h"
+#include "remoting/protocol/Cinaseek_socket_factory.h"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -52,10 +52,10 @@ class ConstantScopedFakeClock : public webrtc::ClockInterface {
 
 }  // namespace
 
-class ChromiumSocketFactoryTest : public testing::Test {
+class CinaseekSocketFactoryTest : public testing::Test {
  public:
   void SetUp() override {
-    socket_factory_ = std::make_unique<ChromiumPacketSocketFactory>(nullptr);
+    socket_factory_ = std::make_unique<CinaseekPacketSocketFactory>(nullptr);
 
     socket_ = socket_factory_->CreateUdpSocket(
         webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);
@@ -166,7 +166,7 @@ class ChromiumSocketFactoryTest : public testing::Test {
   ConstantScopedFakeClock fake_clock_;
 };
 
-TEST_F(ChromiumSocketFactoryTest, SendAndReceiveOnePacket) {
+TEST_F(CinaseekSocketFactoryTest, SendAndReceiveOnePacket) {
   std::unique_ptr<webrtc::AsyncPacketSocket> sending_socket =
       socket_factory_->CreateUdpSocket(
           webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);
@@ -176,7 +176,7 @@ TEST_F(ChromiumSocketFactoryTest, SendAndReceiveOnePacket) {
   VerifyCanSendAndReceive(sending_socket.get());
 }
 
-TEST_F(ChromiumSocketFactoryTest, SendAndReceiveOneLargePacket) {
+TEST_F(CinaseekSocketFactoryTest, SendAndReceiveOneLargePacket) {
   std::unique_ptr<webrtc::AsyncPacketSocket> sending_socket =
       socket_factory_->CreateUdpSocket(
           webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);
@@ -187,7 +187,7 @@ TEST_F(ChromiumSocketFactoryTest, SendAndReceiveOneLargePacket) {
   VerifyCanSendAndReceive(sending_socket.get(), packet_data);
 }
 
-TEST_F(ChromiumSocketFactoryTest, SendAndReceiveManyPackets) {
+TEST_F(CinaseekSocketFactoryTest, SendAndReceiveManyPackets) {
   std::unique_ptr<webrtc::AsyncPacketSocket> sending_socket =
       socket_factory_->CreateUdpSocket(
           webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);
@@ -197,12 +197,12 @@ TEST_F(ChromiumSocketFactoryTest, SendAndReceiveManyPackets) {
   VerifyCanSendAndReceive(sending_socket.get(), 100);
 }
 
-TEST_F(ChromiumSocketFactoryTest, SetOptions) {
+TEST_F(CinaseekSocketFactoryTest, SetOptions) {
   EXPECT_EQ(0, socket_->SetOption(webrtc::Socket::OPT_SNDBUF, 4096));
   EXPECT_EQ(0, socket_->SetOption(webrtc::Socket::OPT_RCVBUF, 4096));
 }
 
-TEST_F(ChromiumSocketFactoryTest, PortRange) {
+TEST_F(CinaseekSocketFactoryTest, PortRange) {
   constexpr uint16_t kMinPort = 12400;
   constexpr uint16_t kMaxPort = 12410;
   socket_ = socket_factory_->CreateUdpSocket(
@@ -213,7 +213,7 @@ TEST_F(ChromiumSocketFactoryTest, PortRange) {
   EXPECT_LE(socket_->GetLocalAddress().port(), kMaxPort);
 }
 
-TEST_F(ChromiumSocketFactoryTest, CreateMultiplePortsFromPortRange) {
+TEST_F(CinaseekSocketFactoryTest, CreateMultiplePortsFromPortRange) {
   constexpr uint16_t kPortCount = 5;
   constexpr uint16_t kMinPort = 12400;
   constexpr uint16_t kMaxPort = kMinPort + kPortCount - 1;
@@ -242,7 +242,7 @@ TEST_F(ChromiumSocketFactoryTest, CreateMultiplePortsFromPortRange) {
   ASSERT_EQ(nullptr, extra_socket);
 }
 
-TEST_F(ChromiumSocketFactoryTest, TransientError) {
+TEST_F(CinaseekSocketFactoryTest, TransientError) {
   std::unique_ptr<webrtc::AsyncPacketSocket> sending_socket =
       socket_factory_->CreateUdpSocket(
           webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);
@@ -259,7 +259,7 @@ TEST_F(ChromiumSocketFactoryTest, TransientError) {
   VerifyCanSendAndReceive(sending_socket.get());
 }
 
-TEST_F(ChromiumSocketFactoryTest, CheckSendTime) {
+TEST_F(CinaseekSocketFactoryTest, CheckSendTime) {
   std::unique_ptr<webrtc::AsyncPacketSocket> sending_socket =
       socket_factory_->CreateUdpSocket(
           webrtc_env_, webrtc::SocketAddress("127.0.0.1", 0), 0, 0);

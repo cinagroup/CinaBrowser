@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ bool ProtoFetcherStatus::IsTransientError() const {
   if (state_ == State::HTTP_STATUS_OR_NET_ERROR) {
     // Ideally we should treat a wider set of HTTP status codes as permanent
     // errors (eg. most 4xx responses), but there is no standard utility in
-    // Chromium to classify these and there's no harm in retrying them.
+    // Cinaseek to classify these and there's no harm in retrying them.
     //
     // 401 must be treated as permanent, as it has specific retry handling in
     // ProtoFetcher.

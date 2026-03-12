@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -693,35 +693,35 @@ static_library("mocks") {
 
 if (is_android) {
   java_sources_needing_jni = [
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothAdapter.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothDevice.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattCharacteristic.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattDescriptor.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattService.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothScanFilterBuilder.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothScanFilterList.java",
-    "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothSocket.java",
-    "android/java/src/org/chromium/device/bluetooth/Outcome.java",
-    "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothAdapterWrapper.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothAdapter.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothDevice.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothRemoteGattCharacteristic.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothRemoteGattDescriptor.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothRemoteGattService.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothScanFilterBuilder.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothScanFilterList.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothSocket.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/Outcome.java",
+    "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothAdapterWrapper.java",
   ]
 
   java_sources = java_sources_needing_jni + [
-                   "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothLeScanner.java",
-                   "android/java/src/org/chromium/device/bluetooth/ChromeBluetoothScanCallback.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothDeviceWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothGattCallbackWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothGattCharacteristicWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothGattDescriptorWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothGattServiceWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothGattWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothLeScannerWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/BluetoothSocketWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/DeviceBondStateReceiverWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/DeviceConnectStateReceiverWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/ScanCallbackWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/ScanResultWrapper.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/ScanResultWrapperImpl.java",
-                   "android/java/src/org/chromium/device/bluetooth/wrapper/ThreadUtilsWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothLeScanner.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothScanCallback.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothDeviceWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothGattCallbackWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothGattCharacteristicWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothGattDescriptorWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothGattServiceWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothGattWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothLeScannerWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/BluetoothSocketWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/DeviceBondStateReceiverWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/DeviceConnectStateReceiverWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/ScanCallbackWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/ScanResultWrapper.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/ScanResultWrapperImpl.java",
+                   "android/java/src/org/Cinaseek/device/bluetooth/wrapper/ThreadUtilsWrapper.java",
                  ]
 
   generate_jni("jni_headers") {

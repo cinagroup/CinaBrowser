@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,8 +37,8 @@
 #include "net/http/transport_security_state.h"
 #include "net/log/net_log_with_source.h"
 #include "net/proxy_resolution/configured_proxy_resolution_service.h"
-#include "net/quic/crypto/proof_source_chromium.h"
-#include "net/quic/crypto_test_utils_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
+#include "net/quic/crypto_test_utils_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/socket/client_socket_factory.h"
 #include "net/ssl/ssl_config_service.h"
@@ -110,7 +110,7 @@ class QuicEndToEndTest : public ::testing::Test, public WithTaskEnvironment {
     std::unique_ptr<CertBuilder> cert =
         std::move(CertBuilder::CreateSimpleChain(1)[0]);
     cert->SetSubjectAltName("test.example.com");
-    // ProofSourceChromium assumes the leaf cert uses an RSA key.
+    // ProofSourceCinaseek assumes the leaf cert uses an RSA key.
     cert->UseKeyFromFile(GetTestCertsDirectory().AppendASCII("rsa-2048-1.key"));
     cert_key_ = crypto::keypair::PrivateKey(
         bssl::UpRef(cert->GetKey()), crypto::SubtlePassKey::ForTesting());
@@ -168,8 +168,8 @@ class QuicEndToEndTest : public ::testing::Test, public WithTaskEnvironment {
 
   // Starts the QUIC server listening on a random port.
   void StartServer() {
-    std::unique_ptr<ProofSourceChromium> proof_source =
-        std::make_unique<ProofSourceChromium>();
+    std::unique_ptr<ProofSourceCinaseek> proof_source =
+        std::make_unique<ProofSourceCinaseek>();
     CertificateList cert_list;
     cert_list.push_back(cert_);
     proof_source->InitializeFromCertAndKey(cert_list, *cert_key_);
@@ -346,7 +346,7 @@ class QuicEndToEndMTCTest : public QuicEndToEndTest {
   void SetUp() override {
     auto leaf = std::move(CertBuilder::CreateSimpleChain(1)[0]);
     leaf->SetSubjectAltName("test.example.com");
-    // ProofSourceChromium assumes the leaf cert uses an RSA key.
+    // ProofSourceCinaseek assumes the leaf cert uses an RSA key.
     ASSERT_TRUE(leaf->UseKeyFromFile(
         GetTestCertsDirectory().AppendASCII("rsa-2048-1.key")));
     cert_key_ = crypto::keypair::PrivateKey(
@@ -356,7 +356,7 @@ class QuicEndToEndMTCTest : public QuicEndToEndTest {
     // root_store.textproto). It doesn't actually matter for this test.
     constexpr uint8_t kMtcLogId[] = {0x82, 0xda, 0x4b, 0x30, 0x08};
     // This is the base ID for the MTC experiment (see kMtcExperimentBaseId in
-    // quic_chromium_client_session.cc).
+    // quic_Cinaseek_client_session.cc).
     constexpr uint8_t kMtcBaseId[] = {0x82, 0xda, 0x4b, 0x30, 0x07};
     MtcLogBuilder mtc_log(kMtcLogId, kMtcBaseId);
     uint64_t leaf_index = mtc_log.AddEntry(*leaf);

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -494,7 +494,7 @@ TEST_P(WaylandClipboardTest, ClipboardChangeNotifications) {
       });
   EXPECT_FALSE(clipboard_->IsSelectionOwner(buffer));
 
-  // 2. For selection offered by Chromium.
+  // 2. For selection offered by Cinaseek.
   connection_->serial_tracker().UpdateSerial(wl::SerialType::kMousePress, 1);
   EXPECT_CALL(clipboard_changed_callback, Run(buffer)).Times(1);
   OfferData(buffer, kSampleClipboardText, {kMimeTypeUtf8PlainText});

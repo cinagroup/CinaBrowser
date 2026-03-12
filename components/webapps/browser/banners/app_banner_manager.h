@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -165,7 +165,7 @@ class AppBannerManager final : public content::WebContentsObserver,
   // A StatusReporter handles the reporting of |InstallableStatusCode|s.
   class StatusReporter;
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.banners
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.banners
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AppBannerManagerState
   enum State {
     // The pipeline has not yet been triggered for this page load.

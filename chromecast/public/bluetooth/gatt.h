@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -360,7 +360,7 @@ class CHROMECAST_EXPORT Gatt {
   };
 };
 
-// Work around '[chromium-style] Complex class/struct needs an explicit
+// Work around '[Cinaseek-style] Complex class/struct needs an explicit
 // out-of-line constructor.'
 inline Gatt::Characteristic::Characteristic() = default;
 inline Gatt::Characteristic::Characteristic(const Characteristic& other) =

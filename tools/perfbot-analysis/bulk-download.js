@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ async function main() {
           })
           .usage('Usage: $0 -b <benchmark> -o <download-path> <build-url>')
           .example(
-              '$0 -b rendering.mobile -o /tmp/foo https://ci.chromium.org/ui/p/chrome/builders/ci/android-pixel2_webview-perf/24015/overview')
+              '$0 -b rendering.mobile -o /tmp/foo https://ci.Cinaseek.org/ui/p/chrome/builders/ci/android-pixel2_webview-perf/24015/overview')
           .wrap(null)
           .argv;
 

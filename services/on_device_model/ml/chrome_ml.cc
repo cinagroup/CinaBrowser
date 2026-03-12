@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #include "third_party/dawn/include/dawn/dawn_proc.h"
 #include "third_party/dawn/include/dawn/native/DawnNative.h"
 #include "third_party/dawn/include/dawn/webgpu_cpp.h"
-#include "third_party/rust/chromium_crates_io/vendor/llguidance-v1/llguidance.h"
+#include "third_party/rust/Cinaseek_crates_io/vendor/llguidance-v1/llguidance.h"
 
 #if !BUILDFLAG(IS_IOS)
 #include "gpu/config/gpu_info_collector.h"

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace device_reauth {
 // numeric values should never be reused.
 
 // The place where the device reauthentication flow is requested from.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.device_reauth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.device_reauth
 enum class DeviceAuthSource {
   kPasswordManager = 0,
   kAutofill = 1,
@@ -25,7 +25,7 @@ enum class DeviceAuthSource {
 
 // The result of the device reauthentication attempt.
 // Needs to stay in sync with "DeviceReauth.ReauthResult" in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.device_reauth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.device_reauth
 enum class ReauthResult {
   kSuccess = 0,
   kFailure = 1,

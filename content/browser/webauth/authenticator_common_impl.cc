@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -382,7 +382,7 @@ std::optional<device::CredProtectRequest> ProtectionPolicyToCredProtect(
       // unusual and will only set credProtect level two.
       //
       // See also
-      // https://chromium.googlesource.com/chromium/src/+/main/content/browser/webauth/cred_protect.md
+      // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/browser/webauth/cred_protect.md
       if (make_credential_options.resident_key ==
               device::ResidentKeyRequirement::kRequired &&
           make_credential_options.user_verification ==

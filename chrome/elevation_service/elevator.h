@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -85,7 +85,7 @@ class Elevator
     : public Microsoft::WRL::RuntimeClass<
           Microsoft::WRL::RuntimeClassFlags<Microsoft::WRL::ClassicCom>,
           IElevator2,
-          IElevator2Chromium,
+          IElevator2Cinaseek,
           IElevator2Chrome,
           IElevator2ChromeBeta,
           IElevator2ChromeDev,
@@ -93,7 +93,7 @@ class Elevator
 
           // This class also implements all the Elevator methods.
           IElevator,
-          IElevatorChromium,
+          IElevatorCinaseek,
           IElevatorChrome,
           IElevatorChromeBeta,
           IElevatorChromeDev,

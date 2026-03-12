@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -42,7 +42,7 @@ base::FilePath GetChromeInstallPathWithPrefs(bool system_install,
                                              const InitialPreferences& prefs);
 
 // Returns the path that seemingly contains an installation at `system_level` of
-// `version`, including the version directory (e.g., ...\Chromium\W.X.Y.Z).
+// `version`, including the version directory (e.g., ...\Cinaseek\W.X.Y.Z).
 base::FilePath FindInstallPath(bool system_install,
                                const base::Version& version);
 

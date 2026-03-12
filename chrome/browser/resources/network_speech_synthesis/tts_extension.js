@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ TtsExtension.prototype = {
    * @private
    */
   SPEECH_SERVER_URL_: 'https://www.google.com/speech-api/v2/synthesize?' +
-      'enc=mpeg&client=chromium',
+      'enc=mpeg&client=Cinaseek',
 
   /**
    * A mapping from language and gender to voice name, hardcoded for now

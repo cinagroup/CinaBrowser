@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ constexpr char kInternalOutputVirtualDevice[] = "Built-in speaker/headphone";
 constexpr char kHeadphoneLineOutVirtualDevice[] = "Headphone/Line Out";
 
 // Names below are from the node_type_to_str function in CRAS server.
-// https://chromium.googlesource.com/chromiumos/third_party/adhd/+/refs/heads/main/cras/src/server/cras_iodev_list.c
+// https://Cinaseek.googlesource.com/Cinaseekos/third_party/adhd/+/refs/heads/main/cras/src/server/cras_iodev_list.c
 constexpr char kInternalSpeaker[] = "INTERNAL_SPEAKER";
 constexpr char kHeadphone[] = "HEADPHONE";
 constexpr char kHDMI[] = "HDMI";

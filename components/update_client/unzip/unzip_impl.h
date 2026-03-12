@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,20 +14,20 @@
 
 namespace update_client {
 
-class UnzipChromiumFactory : public UnzipperFactory {
+class UnzipCinaseekFactory : public UnzipperFactory {
  public:
   using Callback =
       base::RepeatingCallback<mojo::PendingRemote<unzip::mojom::Unzipper>()>;
 
-  explicit UnzipChromiumFactory(Callback callback);
+  explicit UnzipCinaseekFactory(Callback callback);
 
-  UnzipChromiumFactory(const UnzipChromiumFactory&) = delete;
-  UnzipChromiumFactory& operator=(const UnzipChromiumFactory&) = delete;
+  UnzipCinaseekFactory(const UnzipCinaseekFactory&) = delete;
+  UnzipCinaseekFactory& operator=(const UnzipCinaseekFactory&) = delete;
 
   std::unique_ptr<Unzipper> Create() const override;
 
  protected:
-  ~UnzipChromiumFactory() override;
+  ~UnzipCinaseekFactory() override;
 
  private:
   const Callback callback_;

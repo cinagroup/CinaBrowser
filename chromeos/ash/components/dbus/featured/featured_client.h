@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ class COMPONENT_EXPORT(CHROMEOS_ASH_COMPONENTS_DBUS_FEATURED) FeaturedClient {
   // |active_group| will not be modified.
   //
   // The platform-side logic that writes these files can be found in
-  // feature::PlatformFeatures::RecordActiveTrial() in chromiumos.
+  // feature::PlatformFeatures::RecordActiveTrial() in Cinaseekos.
   static bool ParseTrialFilename(const base::FilePath& path,
                                  base::FieldTrial::ActiveGroup& active_group);
 

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,11 +11,11 @@
 namespace ash::app_time {
 
 TEST(AppTimeLimitUtils, IsValidExtensionUrl) {
-  EXPECT_FALSE(IsValidExtensionUrl(GURL("https://chromium.org")));
+  EXPECT_FALSE(IsValidExtensionUrl(GURL("https://Cinaseek.org")));
   EXPECT_FALSE(IsValidExtensionUrl(GURL("http://example.org")));
   EXPECT_TRUE(IsValidExtensionUrl(
       GURL("chrome-extension://oafaagfgbdpldilgjjfjocjglfbolmac")));
-  EXPECT_FALSE(IsValidExtensionUrl(GURL("ftp://www.chromium.org")));
+  EXPECT_FALSE(IsValidExtensionUrl(GURL("ftp://www.Cinaseek.org")));
   EXPECT_FALSE(IsValidExtensionUrl(GURL("chrome://flags")));
   EXPECT_FALSE(IsValidExtensionUrl(GURL("about:blank")));
   EXPECT_FALSE(

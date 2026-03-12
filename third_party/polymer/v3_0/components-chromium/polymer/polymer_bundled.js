@@ -637,7 +637,7 @@ let orderedComputed =
  * setting the `notify-dom-change` attribute (`notifyDomChange: true` property)
  * to `dom-if`/`don-repeat` instances.
  */
-// Turn off option for Chromium.
+// Turn off option for Cinaseek.
 const suppressTemplateNotifications = false;
 
 /**
@@ -8116,7 +8116,7 @@ const ElementMixin = dedupingMixin(base => {
      * @suppress {invalidCasts}
      */
     updateStyles(properties) {
-      // Chromium modification to use native API instead of relying on ShadyCSS.
+      // Cinaseek modification to use native API instead of relying on ShadyCSS.
       for (const [name, value] of Object.entries(properties)) {
         this.style.setProperty(name, value);
       }

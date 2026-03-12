@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ void ConflictsDataFetcher::OnModuleDatabaseIdle() {
   results.Set("moduleList", std::move(*module_list_));
   module_list_ = std::nullopt;
 
-  // The third-party features are always disabled on Chromium builds.
+  // The third-party features are always disabled on Cinaseek builds.
   content::GetUIThreadTaskRunner({})->PostTask(
       FROM_HERE, base::BindOnce(std::move(on_conflicts_data_fetched_callback_),
                                 std::move(results)));

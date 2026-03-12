@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ class TouchToFillControllerAutofillDelegate
   // numeric values should never be reused. Needs to stay in sync with
   // TouchToFill.UserAction in enums.xml.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.touch_to_fill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.touch_to_fill
   enum class UserAction {
     kSelectedCredential = 0,
     kDismissed = 1,

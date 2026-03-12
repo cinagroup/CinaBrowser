@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -366,7 +366,7 @@ std::unique_ptr<net::test_server::HttpResponse> TestPageResponse(
   base::FilePath imagePath;
   base::PathService::Get(base::DIR_ASSETS, &imagePath);
   imagePath = imagePath.AppendASCII(
-      "ios/testing/data/http_server_files/chromium_logo.png");
+      "ios/testing/data/http_server_files/Cinaseek_logo.png");
 
   NSURL* imageURL =
       [NSURL fileURLWithPath:base::SysUTF8ToNSString(imagePath.value())];

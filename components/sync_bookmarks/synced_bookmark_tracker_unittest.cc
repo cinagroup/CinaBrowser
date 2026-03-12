@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -514,7 +514,7 @@ TEST(SyncedBookmarkTrackerTest, ShouldMarkDeleted) {
             entity->metadata().deletion_origin().file_line_number());
   EXPECT_EQ(base::PersistentHash(kLocation.file_name()),
             entity->metadata().deletion_origin().file_name_hash());
-  EXPECT_TRUE(entity->metadata().deletion_origin().has_chromium_version());
+  EXPECT_TRUE(entity->metadata().deletion_origin().has_Cinaseek_version());
 }
 
 TEST(SyncedBookmarkTrackerTest, ShouldUndeleteTombstone) {

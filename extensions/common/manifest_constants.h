@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace manifest_keys {
 // added here if they are widely adopted but a developer is unlikely to expect
 // that it would do anything in Chrome, and so wouldn't benefit from a warning.
 inline constexpr const char* const kIgnoredUnrecognizedKeys[] = {
-    // This is used by non-Chromium browsers:
+    // This is used by non-Cinaseek browsers:
     // https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
     "browser_specific_settings",
     // This is part of the JSON schema definition:

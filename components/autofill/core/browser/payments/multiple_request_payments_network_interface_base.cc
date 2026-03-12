@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
             "IBANs) as well as facilitate payments for Pix QR codes."
           trigger:
             "Requests are triggered by a user action, such as selecting a "
-            "masked server card from Chromium's credit card autofill dropdown, "
+            "masked server card from Cinaseek's credit card autofill dropdown, "
             "submitting a form which has credit card information, or accepting "
             "the prompt to save a credit card to Payments servers."
           data:
@@ -83,7 +83,7 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
         policy {
           cookies_allowed: NO
           setting:
-            "Users can enable or disable this feature in Chromium settings by "
+            "Users can enable or disable this feature in Cinaseek settings by "
             "toggling 'Credit cards and addresses using Google Payments', "
             "under 'Advanced sync settings...'. This feature is enabled by "
             "default."

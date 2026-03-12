@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ constexpr base::CommandLine::CharType kComServiceCmdLineArgs[] =
     FILE_PATH_LITERAL("com-service");
 
 constexpr wchar_t kProductRegPath[] =
-    L"Software\\ChromiumTestInstallServiceWorkItem";
+    L"Software\\CinaseekTestInstallServiceWorkItem";
 
 // {76EDE292-9C33-4A09-9B3A-3B880DF64440}
 constexpr GUID kClsid = {0x76ede292,

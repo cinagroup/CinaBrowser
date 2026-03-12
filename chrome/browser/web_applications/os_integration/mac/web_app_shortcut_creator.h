@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@ class WebAppShortcutCreator {
   bool UpdateSignature(const base::FilePath& app_path) const;
 
   // Path to the data directory for this app. For example:
-  // ~/Library/Application Support/Chromium/Default/Web Applications/_crx_abc/
+  // ~/Library/Application Support/Cinaseek/Default/Web Applications/_crx_abc/
   const base::FilePath app_data_dir_;
 
   // Path to the directory where shortcuts are installed. For example:

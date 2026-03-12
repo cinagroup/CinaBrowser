@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ namespace tab_groups {
 
 namespace {
 
-const char kTestURL[] = "https://chromium.org";
+const char kTestURL[] = "https://Cinaseek.org";
 
 std::unique_ptr<KeyedService> CreateMockSyncService(ProfileIOS* profile) {
   return std::make_unique<MockTabGroupSyncService>();

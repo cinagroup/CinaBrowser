@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -351,7 +351,7 @@ IN_PROC_BROWSER_TEST_P(OpticalCharacterRecognizerTest, MAYBE_PerformOCR_Empty) {
 // The image used in this test is very simple to reduce the possibility of
 // failure due to library changes.
 // If this test fails after updating the library, there is a high probability
-// that the new library has some sort of incompatibility with Chromium.
+// that the new library has some sort of incompatibility with Cinaseek.
 // TODO(crbug.com/470431038): Tests time out flakily on Linux debug and release
 // builders.
 #if BUILDFLAG(IS_LINUX)
@@ -744,7 +744,7 @@ IN_PROC_BROWSER_TEST_F(OpticalCharacterRecognizerResultsTest,
 
   base::FilePath image_path =
       base::FilePath(FILE_PATH_LITERAL("ocr"))
-          .Append(FILE_PATH_LITERAL("building_chromium_long.png"));
+          .Append(FILE_PATH_LITERAL("building_Cinaseek_long.png"));
   SkBitmap bitmap = LoadImageFromTestFile(image_path);
   base::test::TestFuture<mojom::VisualAnnotationPtr> perform_future;
   ocr()->PerformOCR(bitmap, perform_future.GetCallback());

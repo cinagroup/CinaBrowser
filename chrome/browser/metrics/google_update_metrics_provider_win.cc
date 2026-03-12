@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ void GoogleUpdateMetricsProviderWin::AsyncInit(
 
 void GoogleUpdateMetricsProviderWin::ProvideSystemProfileMetrics(
     metrics::SystemProfileProto* system_profile_proto) {
-  // Do nothing for chromium builds.
+  // Do nothing for Cinaseek builds.
   if (!IsGoogleChromeBuild())
     return;
   base::UmaHistogramSparse("GoogleUpdate.InstallDetails.UpdateCohortId",

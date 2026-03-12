@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 //
 // For best practices on deciding when to emit to a histogram and what form
 // the histogram should take, see
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/README.md
 
 // All of these macros must be called with |name| as a runtime constant - it
 // doesn't have to literally be a constant, but it must be the same string on
@@ -506,11 +506,11 @@ enum class ScopedHistogramTiming {
 
 // Warning: This macro has been deprecated in order to be consistent with
 // this function:
-// https://source.chromium.org/chromium/chromium/src/+/main:base/metrics/histogram_functions.h?q=UmaHistogramMediumTimes
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/metrics/histogram_functions.h?q=UmaHistogramMediumTimes
 // If you modify your logging to use the new macro or function, you will be
 // making a meaningful semantic change to your data, and should change your
 // histogram's name, as per the guidelines at
-// https://chromium.googlesource.com/chromium/src/tools/+/HEAD/metrics/histograms/README.md#revising-histograms.
+// https://Cinaseek.googlesource.com/Cinaseek/src/tools/+/HEAD/metrics/histograms/README.md#revising-histograms.
 // Medium timings - up to 3 minutes. Note this starts at 10ms.
 #define DEPRECATED_UMA_HISTOGRAM_MEDIUM_TIMES(name, sample)        \
   UMA_HISTOGRAM_CUSTOM_TIMES(name, sample, base::Milliseconds(10), \

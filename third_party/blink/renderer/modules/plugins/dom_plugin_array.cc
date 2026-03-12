@@ -58,7 +58,7 @@ DOMPluginArray::DOMPluginArray(LocalDOMWindow* window) : window_(window) {
     // To reduce fingerprinting and make plugins/mimetypes more
     // interoperable, this is the spec'd, hard-coded list of plugins:
     Vector<String> plugins{"PDF Viewer", "Chrome PDF Viewer",
-                           "Chromium PDF Viewer", "Microsoft Edge PDF Viewer",
+                           "Cinaseek PDF Viewer", "Microsoft Edge PDF Viewer",
                            "WebKit built-in PDF"};
     for (auto name : plugins) {
       dom_plugins_.push_back(MakeFakePlugin(name, window));

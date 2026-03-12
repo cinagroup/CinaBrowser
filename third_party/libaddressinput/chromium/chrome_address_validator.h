@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ class LoadRulesListener {
                                               bool success) = 0;
 };
 
-// Interface to the libaddressinput AddressValidator for Chromium Autofill. The
+// Interface to the libaddressinput AddressValidator for Cinaseek Autofill. The
 // class is named AddressValidator to simplify switching between libaddressinput
 // and this version.
 //

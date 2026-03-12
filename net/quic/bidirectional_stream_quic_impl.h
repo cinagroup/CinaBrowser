@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@
 #include "net/base/load_timing_info.h"
 #include "net/base/net_export.h"
 #include "net/http/bidirectional_stream_impl.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_stream.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_stream.h"
 #include "net/third_party/quiche/src/quiche/common/http/http_header_block.h"
 
 namespace base {
@@ -32,7 +32,7 @@ class NET_EXPORT_PRIVATE BidirectionalStreamQuicImpl
     : public BidirectionalStreamImpl {
  public:
   explicit BidirectionalStreamQuicImpl(
-      std::unique_ptr<QuicChromiumClientSession::Handle> session);
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session);
 
   BidirectionalStreamQuicImpl(const BidirectionalStreamQuicImpl&) = delete;
   BidirectionalStreamQuicImpl& operator=(const BidirectionalStreamQuicImpl&) =
@@ -83,8 +83,8 @@ class NET_EXPORT_PRIVATE BidirectionalStreamQuicImpl
   // Invokes OnFailure(error) on |delegate|.
   void NotifyFailure(BidirectionalStreamImpl::Delegate* delegate, int error);
 
-  const std::unique_ptr<QuicChromiumClientSession::Handle> session_;
-  std::unique_ptr<QuicChromiumClientStream::Handle> stream_;
+  const std::unique_ptr<QuicCinaseekClientSession::Handle> session_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> stream_;
 
   raw_ptr<const BidirectionalStreamRequestInfo> request_info_ = nullptr;
   raw_ptr<BidirectionalStreamImpl::Delegate> delegate_ = nullptr;

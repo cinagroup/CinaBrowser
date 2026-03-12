@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 
 missing_symbol_generated_importer_test(
     "android_library_factory_missing_symbol_test_java") {
-  importer_package = "org.chromium.chrome.test"
-  imported_package = "org.chromium.chrome.browser.android_library_factory"
+  importer_package = "org.Cinaseek.chrome.test"
+  imported_package = "org.Cinaseek.chrome.browser.android_library_factory"
   imported_class_name = "B"
   deps = [
     ":b_factory_java",
@@ -19,12 +19,12 @@ missing_symbol_generated_importer_test(
 
 android_library_factory("b_factory_java") {
   sources = [
-    "../java/src/org/chromium/chrome/browser/android_library_factory/B.java",
+    "../java/src/org/Cinaseek/chrome/browser/android_library_factory/B.java",
   ]
 }
 
 android_library("b_java") {
   sources = [
-    "../java/src/org/chromium/chrome/browser/android_library_factory/B.java",
+    "../java/src/org/Cinaseek/chrome/browser/android_library_factory/B.java",
   ]
 }

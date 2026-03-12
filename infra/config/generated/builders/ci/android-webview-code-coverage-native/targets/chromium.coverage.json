@@ -3,14 +3,14 @@
     "gtest_tests": [
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "isolate_profile_data": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "android_webview_unittests"
           ],
@@ -30,9 +30,9 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "android_webview_unittests",
         "test_id_prefix": "ninja://android_webview/test:android_webview_unittests/"
@@ -41,14 +41,14 @@
         "args": [
           "--use-apk-under-test-flags-file",
           "--webview-mutations-enabled",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "isolate_profile_data": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk_mutations"
           ],
@@ -68,9 +68,9 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 60
         },
         "test": "webview_instrumentation_test_apk",
@@ -80,14 +80,14 @@
         "args": [
           "--disable-field-trial-config",
           "--use-apk-under-test-flags-file",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "isolate_profile_data": true,
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk_no_field_trial"
           ],
@@ -107,9 +107,9 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 30
         },
         "test": "webview_instrumentation_test_apk",

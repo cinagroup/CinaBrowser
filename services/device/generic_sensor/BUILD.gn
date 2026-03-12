@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -139,8 +139,8 @@ source_set("generic_sensor") {
 
 if (is_android) {
   device_sensors_jni_sources = [
-    "android/java/src/org/chromium/device/sensors/PlatformSensor.java",
-    "android/java/src/org/chromium/device/sensors/PlatformSensorProvider.java",
+    "android/java/src/org/Cinaseek/device/sensors/PlatformSensor.java",
+    "android/java/src/org/Cinaseek/device/sensors/PlatformSensorProvider.java",
   ]
 
   generate_jni("jni_headers") {

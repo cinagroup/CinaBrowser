@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,8 +11,8 @@ if (is_android) {
 if (is_android) {
   android_library("internal_java") {
     srcjar_deps = [ ":internal_jni_headers" ]
-    resources_package = "org.chromium.chrome.browser.collaboration"
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationControllerDelegateImpl.java" ]
+    resources_package = "org.Cinaseek.chrome.browser.collaboration"
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationControllerDelegateImpl.java" ]
 
     deps = [
       ":factory_java",
@@ -54,8 +54,8 @@ if (is_android) {
   }
 
   android_library("utils_java") {
-    resources_package = "org.chromium.chrome.browser.collaboration"
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationControllerDelegateFactory.java" ]
+    resources_package = "org.Cinaseek.chrome.browser.collaboration"
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationControllerDelegateFactory.java" ]
 
     deps = [
       "//base:base_java",
@@ -67,7 +67,7 @@ if (is_android) {
 
   android_library("factory_java") {
     srcjar_deps = [ ":jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationServiceFactory.java" ]
 
     deps = [
       "//base:base_java",
@@ -80,20 +80,20 @@ if (is_android) {
   }
 
   generate_jni("jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationServiceFactory.java" ]
   }
 
   generate_jni("internal_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationControllerDelegateImpl.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationControllerDelegateImpl.java" ]
   }
 
   generate_jni("comments_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/comments/CommentsServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/comments/CommentsServiceFactory.java" ]
   }
 
   android_library("comments_factory_java") {
     srcjar_deps = [ ":comments_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/comments/CommentsServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/comments/CommentsServiceFactory.java" ]
     deps = [
       "//base:base_java",
       "//build/android:build_java",
@@ -107,7 +107,7 @@ if (is_android) {
 
   android_library("comments_test_support_java") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/comments/TestCommentsService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/comments/TestCommentsService.java" ]
     deps = [
       "//base:base_java",
       "//components/collaboration/public:java",
@@ -118,7 +118,7 @@ if (is_android) {
 
   android_library("comments_javatests") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/comments/CommentsServiceFactoryTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/comments/CommentsServiceFactoryTest.java" ]
     deps = [
       ":comments_factory_java",
       ":comments_test_support_java",
@@ -139,7 +139,7 @@ if (is_android) {
   android_library("javatests") {
     testonly = true
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/CollaborationServiceFactoryTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationServiceFactoryTest.java" ]
     deps = [
       "//base:base_java",
       "//base:base_java_test_support",
@@ -161,12 +161,12 @@ if (is_android) {
   }
 
   generate_jni("messaging_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/messaging/MessagingBackendServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/messaging/MessagingBackendServiceFactory.java" ]
   }
 
   android_library("messaging_factory_java") {
     srcjar_deps = [ ":messaging_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/messaging/MessagingBackendServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/messaging/MessagingBackendServiceFactory.java" ]
 
     deps = [
       "//base:base_java",
@@ -190,13 +190,13 @@ if (is_android) {
       "//third_party/androidx:androidx_annotation_annotation_java",
       "//url:url_java",
     ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/messaging/TestMessagingBackendService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/messaging/TestMessagingBackendService.java" ]
   }
 
   android_library("messaging_javatests") {
     testonly = true
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/collaboration/messaging/MessagingBackendServiceFactoryTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/collaboration/messaging/MessagingBackendServiceFactoryTest.java" ]
     deps = [
       ":messaging_factory_java",
       ":messaging_test_support_java",

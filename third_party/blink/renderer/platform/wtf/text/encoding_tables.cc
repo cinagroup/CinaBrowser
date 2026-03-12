@@ -349,7 +349,7 @@ const Gb18030EncodeTable& EnsureGb18030EncodeTable() {
       (*array)[pointer] = icu_output;
     }
 
-    // Note: ICU4C that WebKit use has difference, but Chromium does not.
+    // Note: ICU4C that WebKit use has difference, but Cinaseek does not.
     DCHECK_EQ((*array)[6555], 0x3000);
   });
 

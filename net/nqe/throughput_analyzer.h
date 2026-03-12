@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ class NET_EXPORT_PRIVATE ThroughputAnalyzer {
   // Overrides the tick clock used by `this` for testing.
   void SetTickClockForTesting(const base::TickClock* tick_clock);
 
-  // Returns the number of bits received by Chromium so far. The count may not
+  // Returns the number of bits received by Cinaseek so far. The count may not
   // start from zero, so the caller should only look at difference from a prior
   // call. The count is obtained by polling TrafficStats on Android, and
   // net::NetworkActivityMonitor on all other platforms. Virtualized for
@@ -238,7 +238,7 @@ class NET_EXPORT_PRIVATE ThroughputAnalyzer {
   base::TimeTicks last_hanging_request_check_;
 
   // If true, then `this` throughput analyzer stops tracking the throughput
-  // observations until Chromium is restarted. This may happen if the throughput
+  // observations until Cinaseek is restarted. This may happen if the throughput
   // analyzer has lost track of the requests that degrade throughput computation
   // accuracy.
   bool disable_throughput_measurements_ = false;

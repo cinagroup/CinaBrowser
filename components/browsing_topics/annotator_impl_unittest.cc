@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -301,7 +301,7 @@ TEST_F(BrowsingTopicsAnnotatorImplTest, NoneCategoryBelowMinWeight) {
 
 TEST_F(BrowsingTopicsAnnotatorImplTest, HostPreprocessingV1) {
   std::vector<std::pair<std::string, std::string>> tests = {
-      {"www.chromium.org", "chromium org"},
+      {"www.Cinaseek.org", "Cinaseek org"},
       {"foo-bar.com", "foo bar com"},
       {"foo_bar.com", "foo bar com"},
       {"cats.co.uk", "cats co uk"},
@@ -335,7 +335,7 @@ TEST_F(BrowsingTopicsAnnotatorImplTest, HostPreprocessingV1) {
 
 TEST_F(BrowsingTopicsAnnotatorImplTest, HostPreprocessingV2) {
   std::vector<std::pair<std::string, std::string>> tests = {
-      {"www.chromium.org", "chromium org"},
+      {"www.Cinaseek.org", "Cinaseek org"},
       {"foo-bar.com", "foo bar com"},
       {"foo_bar.com", "foo bar com"},
       {"cats.co.uk", "cats co uk"},
@@ -390,7 +390,7 @@ TEST_F(BrowsingTopicsAnnotatorImplTest, HostPreprocessingV2) {
 
 TEST_F(BrowsingTopicsAnnotatorImplTest, PreprocessingNewVersion) {
   std::vector<std::pair<std::string, std::string>> tests = {
-      {"www.chromium.org", "chromium org"},
+      {"www.Cinaseek.org", "Cinaseek org"},
       {"foo-bar.com", "foo bar com"},
       {"foo_bar.com", "foo bar com"},
       {"cats.co.uk", "cats co uk"},

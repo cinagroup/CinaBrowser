@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ struct ConfigureSSLCredentialParams {
 
 // Configures `ssl` to use the specified certificate and `params.private_key`
 // as an available credential. This is a wrapper over |SSL_CREDENTIAL| APIs
-// (https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Credentials).
+// (https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#Credentials).
 //
 // |params.signing_algorithm_prefs|, |params.ocsp_response|, and
 // |params.signed_cert_timestamp| are configured with the respective
@@ -112,7 +112,7 @@ struct ConfigureSSLCredentialParams {
 // If |params.trust_anchor_id| is non-empty, it will be configured as the
 // certificate's corresponding TLS Trust Anchor ID, and
 // `SSL_CREDENTIAL_set_must_match_issuer` will be set to true
-// (https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_CREDENTIAL_set_must_match_issuer).
+// (https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_CREDENTIAL_set_must_match_issuer).
 bool ConfigureSSLCredential(SSL* ssl, ConfigureSSLCredentialParams params);
 
 }  // namespace net

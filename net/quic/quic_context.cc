@@ -1,12 +1,12 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "net/quic/quic_context.h"
 
 #include "net/base/features.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
-#include "net/quic/quic_chromium_connection_helper.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
 #include "net/ssl/cert_compression.h"
 #include "net/ssl/ssl_key_logger.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/crypto_protocol.h"
@@ -47,8 +47,8 @@ QuicParams::QuicParams(const QuicParams& other) = default;
 QuicParams::~QuicParams() = default;
 
 QuicContext::QuicContext()
-    : QuicContext(std::make_unique<QuicChromiumConnectionHelper>(
-          quic::QuicChromiumClock::GetInstance(),
+    : QuicContext(std::make_unique<QuicCinaseekConnectionHelper>(
+          quic::QuicCinaseekClock::GetInstance(),
           quic::QuicRandom::GetInstance())) {}
 
 QuicContext::QuicContext(

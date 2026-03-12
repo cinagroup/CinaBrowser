@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class WebContents;
 // opened using certain flows (see bug for details).
 //
 // Eventually they need to be merged, but in the meantime if you need guidance
-// on which one you should use, please reach out to alexbn@chromium.org.
+// on which one you should use, please reach out to alexbn@Cinaseek.org.
 
 namespace apps {
 

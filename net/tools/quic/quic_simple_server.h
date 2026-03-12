@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -12,9 +12,9 @@
 
 #include "net/base/io_buffer.h"
 #include "net/base/ip_endpoint.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/quic_crypto_server_config.h"
 #include "net/third_party/quiche/src/quiche/quic/core/deterministic_connection_id_generator.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_config.h"
@@ -90,13 +90,13 @@ class QuicSimpleServer : public quic::QuicSpdyServerBase {
   std::unique_ptr<quic::QuicDispatcher> dispatcher_;
 
   // Used by the helper_ to time alarms.
-  quic::QuicChromiumClock clock_;
+  quic::QuicCinaseekClock clock_;
 
   // Used to manage the message loop. Owned by dispatcher_.
-  QuicChromiumConnectionHelper* helper_;
+  QuicCinaseekConnectionHelper* helper_;
 
   // Used to manage the message loop. Owned by dispatcher_.
-  QuicChromiumAlarmFactory* alarm_factory_;
+  QuicCinaseekAlarmFactory* alarm_factory_;
 
   // Listening socket. Also used for outbound client communication.
   std::unique_ptr<UDPServerSocket> socket_;

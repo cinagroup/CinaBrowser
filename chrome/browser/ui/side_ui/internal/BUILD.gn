@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,8 +11,8 @@ android_library("java") {
   ]
 
   sources = [
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiCoordinatorFactory.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiCoordinatorImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiCoordinatorFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiCoordinatorImpl.java",
   ]
 
   deps = [
@@ -26,7 +26,7 @@ android_library("java") {
 
 robolectric_library("junit") {
   testonly = true
-  sources = [ "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiCoordinatorImplTest.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiCoordinatorImplTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

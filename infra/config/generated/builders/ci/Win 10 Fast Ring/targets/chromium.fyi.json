@@ -239,11 +239,11 @@
       },
       {
         "ci_only": true,
-        "module_name": "//third_party/leveldatabase:env_chromium_unittests",
+        "module_name": "//third_party/leveldatabase:env_Cinaseek_unittests",
         "module_scheme": "gtest",
-        "name": "env_chromium_unittests",
-        "test": "env_chromium_unittests",
-        "test_id_prefix": "ninja://third_party/leveldatabase:env_chromium_unittests/"
+        "name": "env_Cinaseek_unittests",
+        "test": "env_Cinaseek_unittests",
+        "test_id_prefix": "ninja://third_party/leveldatabase:env_Cinaseek_unittests/"
       },
       {
         "module_name": "//ui/events:events_unittests",

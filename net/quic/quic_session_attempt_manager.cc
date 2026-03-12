@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #include "net/base/net_export.h"
 #include "net/base/reconnect_notifier.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_endpoint.h"
 #include "net/quic/quic_session_alias_key.h"
 #include "net/quic/quic_session_attempt.h"
@@ -114,7 +114,7 @@ class QuicSessionAttemptManager::Job : public QuicSessionAttempt::Delegate {
     }
   }
 
-  void OnOriginFrameMatched(QuicChromiumClientSession* session) {
+  void OnOriginFrameMatched(QuicCinaseekClientSession* session) {
     NotifyRequestsAndComplete(OK, session, NetErrorDetails());
     // `this` is deleted.
   }
@@ -131,7 +131,7 @@ class QuicSessionAttemptManager::Job : public QuicSessionAttempt::Delegate {
 
     NetErrorDetails error_details;
     if (rv == OK) {
-      QuicChromiumClientSession* session = raw_attempt->session();
+      QuicCinaseekClientSession* session = raw_attempt->session();
       attempts_.erase(it);
       NotifyRequestsAndComplete(rv, session, std::move(error_details));
       return;
@@ -164,7 +164,7 @@ class QuicSessionAttemptManager::Job : public QuicSessionAttempt::Delegate {
 
   // Notifies all requests that the job is complete.
   void NotifyRequests(int rv,
-                      QuicChromiumClientSession* session,
+                      QuicCinaseekClientSession* session,
                       NetErrorDetails error_details) {
     // Cancel other attempts.
     attempts_.clear();
@@ -179,7 +179,7 @@ class QuicSessionAttemptManager::Job : public QuicSessionAttempt::Delegate {
   }
 
   void NotifyRequestsAndComplete(int rv,
-                                 QuicChromiumClientSession* session,
+                                 QuicCinaseekClientSession* session,
                                  NetErrorDetails error_details) {
     NotifyRequests(rv, session, std::move(error_details));
     manager_->OnJobComplete(this);
@@ -248,7 +248,7 @@ void QuicSessionAttemptManager::RemoveRequest(
 }
 
 void QuicSessionAttemptManager::OnOriginFrame(
-    QuicChromiumClientSession* session) {
+    QuicCinaseekClientSession* session) {
   // Collect jobs that can be completed with `session` and then notify them
   // later to avoid erasing jobs during the loop.
   std::vector<Job*> matched_jobs;

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2086,11 +2086,11 @@ TEST_F(DeveloperPrivateApiUnitTest,
   // the preference and keeping a stored set of any granted host permissions,
   // but this then results in a funny edge case:
   // - User has "on specific sites" set, with access to example.com and
-  //   chromium.org granted.
+  //   Cinaseek.org granted.
   // - User changes to "on click" -> no sites are granted.
   // - User visits google.com, and says "always run on this site." This changes
   //   the setting back to "on specific sites", and will implicitly re-grant
-  //   example.com and chromium.org permissions, without any additional
+  //   example.com and Cinaseek.org permissions, without any additional
   //   prompting.
   // To avoid this, we just clear any granted permissions when the user
   // transitions between states. Since this is definitely a power-user surface,
@@ -2138,7 +2138,7 @@ TEST_F(DeveloperPrivateApiUnitTest,
   modifier.SetWithholdHostPermissions(true);
 
   const GURL kGoogleCom("https://google.com/");
-  const GURL kChromiumCom("https://chromium.com");
+  const GURL kCinaseekCom("https://Cinaseek.com");
 
   // Request <all_urls> and google.com so they are both in the runtime granted
   // list. We use the util function to specifically add the <all_urls> pattern
@@ -2161,7 +2161,7 @@ TEST_F(DeveloperPrivateApiUnitTest,
   EXPECT_TRUE(
       permissions_manager->HasGrantedHostPermission(*extension, kGoogleCom));
   EXPECT_TRUE(
-      permissions_manager->HasGrantedHostPermission(*extension, kChromiumCom));
+      permissions_manager->HasGrantedHostPermission(*extension, kCinaseekCom));
 
   // Changing to specific sites should now remove the broad pattern, leaving
   // only the google match pattern.
@@ -2170,7 +2170,7 @@ TEST_F(DeveloperPrivateApiUnitTest,
   EXPECT_TRUE(
       permissions_manager->HasGrantedHostPermission(*extension, kGoogleCom));
   EXPECT_FALSE(
-      permissions_manager->HasGrantedHostPermission(*extension, kChromiumCom));
+      permissions_manager->HasGrantedHostPermission(*extension, kCinaseekCom));
 }
 
 TEST_F(DeveloperPrivateApiUnitTest,
@@ -2191,38 +2191,38 @@ TEST_F(DeveloperPrivateApiUnitTest,
     auto function =
         base::MakeRefCounted<api::DeveloperPrivateAddHostPermissionFunction>();
     std::string args = base::StringPrintf(
-        R"(["%s", "%s"])", extension->id().c_str(), "*://chromium.org/*");
+        R"(["%s", "%s"])", extension->id().c_str(), "*://Cinaseek.org/*");
     EXPECT_TRUE(api_test_utils::RunFunction(function.get(), args, profile()))
         << function->GetError();
   }
 
   // The active permissions (which are given to the extension process) should
   // only include the intersection of what was requested by the extension and
-  // the runtime granted permissions - which is http://chromium.org/*.
-  URLPattern http_chromium(Extension::kValidHostPermissionSchemes,
-                           "http://chromium.org/*");
-  const PermissionSet http_chromium_set(
+  // the runtime granted permissions - which is http://Cinaseek.org/*.
+  URLPattern http_Cinaseek(Extension::kValidHostPermissionSchemes,
+                           "http://Cinaseek.org/*");
+  const PermissionSet http_Cinaseek_set(
       APIPermissionSet(), ManifestPermissionSet(),
-      URLPatternSet({http_chromium}), URLPatternSet());
-  EXPECT_EQ(http_chromium_set,
+      URLPatternSet({http_Cinaseek}), URLPatternSet());
+  EXPECT_EQ(http_Cinaseek_set,
             extension->permissions_data()->active_permissions());
 
   // The runtime granted permissions should include all of what was approved by
-  // the user, which is *://chromium.org/*, and should be present in both the
+  // the user, which is *://Cinaseek.org/*, and should be present in both the
   // scriptable and explicit hosts.
-  URLPattern all_chromium(Extension::kValidHostPermissionSchemes,
-                          "*://chromium.org/*");
-  const PermissionSet all_chromium_set(
+  URLPattern all_Cinaseek(Extension::kValidHostPermissionSchemes,
+                          "*://Cinaseek.org/*");
+  const PermissionSet all_Cinaseek_set(
       APIPermissionSet(), ManifestPermissionSet(),
-      URLPatternSet({all_chromium}), URLPatternSet({all_chromium}));
-  EXPECT_EQ(all_chromium_set,
+      URLPatternSet({all_Cinaseek}), URLPatternSet({all_Cinaseek}));
+  EXPECT_EQ(all_Cinaseek_set,
             *extension_prefs->GetRuntimeGrantedPermissions(extension->id()));
 
   {
     auto function = base::MakeRefCounted<
         api::DeveloperPrivateRemoveHostPermissionFunction>();
     std::string args = base::StringPrintf(
-        R"(["%s", "%s"])", extension->id().c_str(), "*://chromium.org/*");
+        R"(["%s", "%s"])", extension->id().c_str(), "*://Cinaseek.org/*");
     EXPECT_TRUE(api_test_utils::RunFunction(function.get(), args, profile()))
         << function->GetError();
   }
@@ -2419,21 +2419,21 @@ TEST_F(DeveloperPrivateApiUnitTest, DeveloperPrivateGetUserSiteSettings) {
 // restricted sites.
 TEST_F(DeveloperPrivateApiUnitTest, DeveloperPrivateModifyUserSiteSettings) {
   static constexpr char kExample[] = "http://example.com";
-  static constexpr char kChromium[] = "http://chromium.org";
+  static constexpr char kCinaseek[] = "http://Cinaseek.org";
 
   const url::Origin example_url = url::Origin::Create(GURL(kExample));
-  const url::Origin chromium_url = url::Origin::Create(GURL(kChromium));
+  const url::Origin Cinaseek_url = url::Origin::Create(GURL(kCinaseek));
 
   // Add restricted sites, and check that these sites are stored in the manager.
   EXPECT_NO_FATAL_FAILURE(AddUserSpecifiedSites(
-      profile(), base::StringPrintf(R"(["%s","%s"])", kExample, kChromium),
+      profile(), base::StringPrintf(R"(["%s","%s"])", kExample, kCinaseek),
       /*restricted=*/true));
 
   PermissionsManager* manager = PermissionsManager::Get(browser_context());
   EXPECT_THAT(manager->GetUserPermissionsSettings().permitted_sites,
               testing::IsEmpty());
   EXPECT_THAT(manager->GetUserPermissionsSettings().restricted_sites,
-              testing::UnorderedElementsAre(example_url, chromium_url));
+              testing::UnorderedElementsAre(example_url, Cinaseek_url));
 
   // Remove restricted site, and check that the site was removed in the manager.
   EXPECT_NO_FATAL_FAILURE(RemoveUserSpecifiedSites(
@@ -2443,7 +2443,7 @@ TEST_F(DeveloperPrivateApiUnitTest, DeveloperPrivateModifyUserSiteSettings) {
   EXPECT_THAT(manager->GetUserPermissionsSettings().permitted_sites,
               testing::IsEmpty());
   EXPECT_THAT(manager->GetUserPermissionsSettings().restricted_sites,
-              testing::UnorderedElementsAre(chromium_url));
+              testing::UnorderedElementsAre(Cinaseek_url));
 }
 
 // Test that the OnUserSiteSettingsChanged event is fired whenever the user
@@ -2543,11 +2543,11 @@ TEST_F(DeveloperPrivateApiWithPermittedSitesUnitTest,
 TEST_F(DeveloperPrivateApiWithPermittedSitesUnitTest,
        DeveloperPrivateModifyUserSiteSettings) {
   static constexpr char kExample[] = "http://example.com";
-  static constexpr char kChromium[] = "http://chromium.org";
+  static constexpr char kCinaseek[] = "http://Cinaseek.org";
   static constexpr char kGoogle[] = "http://google.com";
 
   const url::Origin example_url = url::Origin::Create(GURL(kExample));
-  const url::Origin chromium_url = url::Origin::Create(GURL(kChromium));
+  const url::Origin Cinaseek_url = url::Origin::Create(GURL(kCinaseek));
   const url::Origin google_url = url::Origin::Create(GURL(kGoogle));
 
   auto get_hosts_arg = [](const char* host) {
@@ -2557,29 +2557,29 @@ TEST_F(DeveloperPrivateApiWithPermittedSitesUnitTest,
   // First, add some permitted and restricted sites, and check that these sites
   // are stored in the manager.
   EXPECT_NO_FATAL_FAILURE(AddUserSpecifiedSites(
-      profile(), base::StringPrintf(R"(["%s","%s"])", kExample, kChromium),
+      profile(), base::StringPrintf(R"(["%s","%s"])", kExample, kCinaseek),
       /*restricted=*/false));
   EXPECT_NO_FATAL_FAILURE(AddUserSpecifiedSites(
       profile(), get_hosts_arg(kGoogle), /*restricted=*/true));
 
   PermissionsManager* manager = PermissionsManager::Get(browser_context());
   EXPECT_THAT(manager->GetUserPermissionsSettings().permitted_sites,
-              testing::UnorderedElementsAre(example_url, chromium_url));
+              testing::UnorderedElementsAre(example_url, Cinaseek_url));
   EXPECT_THAT(manager->GetUserPermissionsSettings().restricted_sites,
               testing::UnorderedElementsAre(google_url));
 
   // Attempting to add a restricted site should remove it as a permitted site.
   EXPECT_NO_FATAL_FAILURE(AddUserSpecifiedSites(
-      profile(), get_hosts_arg(kChromium), /*restricted=*/true));
+      profile(), get_hosts_arg(kCinaseek), /*restricted=*/true));
   EXPECT_NO_FATAL_FAILURE(RemoveUserSpecifiedSites(
       profile(), get_hosts_arg(kExample), /*restricted=*/false));
 
   EXPECT_TRUE(manager->GetUserPermissionsSettings().permitted_sites.empty());
   EXPECT_THAT(manager->GetUserPermissionsSettings().restricted_sites,
-              testing::UnorderedElementsAre(chromium_url, google_url));
+              testing::UnorderedElementsAre(Cinaseek_url, google_url));
 
   EXPECT_NO_FATAL_FAILURE(RemoveUserSpecifiedSites(
-      profile(), base::StringPrintf(R"(["%s","%s"])", kGoogle, kChromium),
+      profile(), base::StringPrintf(R"(["%s","%s"])", kGoogle, kCinaseek),
       /*restricted=*/true));
   EXPECT_TRUE(manager->GetUserPermissionsSettings().restricted_sites.empty());
 }

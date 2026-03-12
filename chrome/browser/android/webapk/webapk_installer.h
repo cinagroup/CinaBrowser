@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ enum class WebApkInstallResult;
 // The enum values are persisted to logs |WebApkInstallSpaceStatus| in
 // enums.xml, therefore they should never be reused nor renumbered.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.webapps
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.webapps
 enum class SpaceStatus {
   ENOUGH_SPACE = 0,
   ENOUGH_SPACE_AFTER_FREE_UP_CACHE = 1,

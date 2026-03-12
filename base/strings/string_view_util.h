@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ constexpr std::basic_string_view<CharT> MakeStringViewWithNulChars(
 // Converts a span over byte-like elements to `std::string_view`.
 //
 // std:: has no direct equivalent for this; however, it eases span adoption in
-// Chromium, which uses `string`s and `string_view`s in many cases that
+// Cinaseek, which uses `string`s and `string_view`s in many cases that
 // rightfully should be containers of `uint8_t`.
 constexpr auto as_string_view(span<const char> s) {
   return std::string_view(s);

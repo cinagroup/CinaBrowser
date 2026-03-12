@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,19 +8,19 @@ import("//chrome/browser/buildflags.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/night_mode/AutoDarkFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/night_mode/GlobalNightModeStateController.java",
-    "java/src/org/chromium/chrome/browser/night_mode/GlobalNightModeStateProviderHolder.java",
-    "java/src/org/chromium/chrome/browser/night_mode/NightModeMetrics.java",
-    "java/src/org/chromium/chrome/browser/night_mode/NightModeStateProvider.java",
-    "java/src/org/chromium/chrome/browser/night_mode/NightModeUtils.java",
-    "java/src/org/chromium/chrome/browser/night_mode/RemoteViewsWithNightModeInflater.java",
-    "java/src/org/chromium/chrome/browser/night_mode/SystemNightModeMonitor.java",
-    "java/src/org/chromium/chrome/browser/night_mode/ThemeType.java",
-    "java/src/org/chromium/chrome/browser/night_mode/WebContentsDarkModeController.java",
-    "java/src/org/chromium/chrome/browser/night_mode/WebContentsDarkModeMessageController.java",
-    "java/src/org/chromium/chrome/browser/night_mode/settings/RadioButtonGroupThemePreference.java",
-    "java/src/org/chromium/chrome/browser/night_mode/settings/ThemeSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/AutoDarkFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/GlobalNightModeStateController.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/GlobalNightModeStateProviderHolder.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/NightModeMetrics.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/NightModeStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/NightModeUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/RemoteViewsWithNightModeInflater.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/SystemNightModeMonitor.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/ThemeType.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/WebContentsDarkModeController.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/WebContentsDarkModeMessageController.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/settings/RadioButtonGroupThemePreference.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/settings/ThemeSettingsFragment.java",
   ]
 
   deps = [
@@ -53,7 +53,7 @@ android_library("java") {
     "//ui/android:ui_utils_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.night_mode"
+  resources_package = "org.Cinaseek.chrome.browser.night_mode"
 }
 
 android_resources("java_resources") {
@@ -71,7 +71,7 @@ android_resources("java_resources") {
 
 android_library("night_mode_java_test_support") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/night_mode/ChromeNightModeTestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/night_mode/CinaseekNightModeTestUtils.java" ]
   deps = [
     ":java",
     "//chrome/browser/preferences:java",
@@ -80,7 +80,7 @@ android_library("night_mode_java_test_support") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/night_mode/settings/ThemeSettingsFragmentTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/night_mode/settings/ThemeSettingsFragmentTest.java" ]
 
   deps = [
     ":java",
@@ -109,14 +109,14 @@ android_library("unit_device_javatests") {
     "//ui/android:ui_java_test_support",
   ]
 
-  resources_package = "org.chromium.chrome.browser.night_mode"
+  resources_package = "org.Cinaseek.chrome.browser.night_mode"
 }
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/night_mode/AutoDarkFeedbackSourceUnitTest.java",
-    "java/src/org/chromium/chrome/browser/night_mode/WebContentsDarkModeControllerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/night_mode/WebContentsDarkModeMessageControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/AutoDarkFeedbackSourceUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/WebContentsDarkModeControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/night_mode/WebContentsDarkModeMessageControllerUnitTest.java",
   ]
 
   deps = [
@@ -154,5 +154,5 @@ robolectric_library("junit") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.night_mode"
+  resources_package = "org.Cinaseek.chrome.browser.night_mode"
 }

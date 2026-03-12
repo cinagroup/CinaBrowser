@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -59,8 +59,8 @@ config("config") {
 # Equivalent of Bazel's `//support/internal:bindings_support`.
 source_set("support_internal_bindings_support") {
   public_configs = [ ":config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   sources = [
     "${_crubit_src_dir}/support/internal/check_no_mutable_aliasing.cc",
@@ -81,8 +81,8 @@ source_set("support_internal_bindings_support") {
 # * `//support:lifetime_annotations`
 source_set("support_all_annotations") {
   public_configs = [ ":config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public = [
     "${_crubit_src_dir}/support/annotations.h",
@@ -102,8 +102,8 @@ source_set("rs_std") {
   visibility = [ "*" ]
 
   public_configs = [ ":config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public = [
     "${_crubit_src_dir}/support/rs_std/char.h",
@@ -122,8 +122,8 @@ source_set("rs_std") {
 # Equivalent of Bazel's `//support:bridge_cpp`.
 source_set("support_bridge_cpp") {
   public_configs = [ ":config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public = [ "${_crubit_src_dir}/support/bridge.h" ]
 }

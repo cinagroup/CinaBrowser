@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -459,8 +459,8 @@ TEST(CodeSignCloneManagerTest, IsFileOpenMoreThanOnceHardLink) {
 
   // Both `temp_file` and `scoped_link` point to the same inode, expect
   // `IsFileOpenMoreThanOnce` behavior to be the same for both.
-  // See the excellent write up by mark@chromium.org on the topic:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/5793760/comment/9df14e62_3a24ccc0
+  // See the excellent write up by mark@Cinaseek.org on the topic:
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5793760/comment/9df14e62_3a24ccc0
   EXPECT_EQ(internal::IsFileOpenMoreThanOnce(temp_file.path()),
             internal::FileOpenMoreThanOnce::kNo);
   EXPECT_EQ(internal::IsFileOpenMoreThanOnce(scoped_hard_link.get()),

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -207,7 +207,7 @@ void AsDawnVertexBufferLayouts(GPUDevice* device,
     return;
   }
 
-  // TODO(cwallez@chromium.org): Should we validate the Length() first so we
+  // TODO(cwallez@Cinaseek.org): Should we validate the Length() first so we
   // don't risk creating HUGE vectors of wgpu::VertexBufferLayout from
   // the sparse array?
   dawn_desc_info->buffers = AsDawnType(descriptor->buffers());

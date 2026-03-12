@@ -16,9 +16,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "accessibility_unittests",
         "test_id_prefix": "ninja://ui/accessibility:accessibility_unittests/"
@@ -38,9 +38,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "browser_tests",
@@ -61,9 +61,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "components_browsertests",
         "test_id_prefix": "ninja://components:components_browsertests/"
@@ -83,9 +83,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 8
         },
         "test": "content_browsertests",
@@ -106,9 +106,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "interactive_ui_tests",
         "test_id_prefix": "ninja://chrome/test:interactive_ui_tests/"
@@ -128,9 +128,9 @@
           "dimensions": {
             "cpu": "arm64",
             "os": "Mac-15",
-            "pool": "chromium.tests.finch"
+            "pool": "Cinaseek.tests.finch"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 3
         },
         "test": "sync_integration_tests",

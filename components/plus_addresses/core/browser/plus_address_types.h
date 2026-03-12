@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,7 +95,7 @@ enum class PlusAddressRequestErrorType {
 
 // Possible error types during the plus address creation flow.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.plus_addresses
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.plus_addresses
 enum class PlusAddressCreationBottomSheetErrorType {
   kNoError = 0,
   // A network request timed out during an attempt to reserve a plus address.

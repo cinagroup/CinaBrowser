@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ base::TimeDelta GetUnusedSitePermissionsRevocationCleanUpThreshold();
 // desktop, Android, and iOS) of the safety check and should be kept in sync
 // with the JS frontend (safety_check_browser_proxy.ts) and |SafetyCheck*|
 // metrics enums in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.safety_check
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.safety_check
 enum class PasswordsStatus {
   kChecking = 0,
   kSafe = 1,
@@ -48,7 +48,7 @@ enum class PasswordsStatus {
   kMaxValue = kMutedCompromisedExist,
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.safety_check
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.safety_check
 enum class SafeBrowsingStatus {
   kChecking = 0,
   kEnabled = 1,
@@ -62,7 +62,7 @@ enum class SafeBrowsingStatus {
   kMaxValue = kEnabledStandardAvailableEnhanced,
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.safety_check
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.safety_check
 enum class UpdateStatus {
   kChecking = 0,
   kUpdated = 1,

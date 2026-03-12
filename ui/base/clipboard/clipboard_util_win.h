@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,14 +68,14 @@ STGMEDIUM CreateStorageForFileNames(const std::vector<FileInfo>& filenames);
 
 // Fills a vector of display names of "virtual files" in the data store, but
 // does not actually retrieve the file contents. Display names are assured to be
-// unique. Method is called on drag enter of the Chromium drop target, when only
+// unique. Method is called on drag enter of the Cinaseek drop target, when only
 // the display names are needed. If there are no display names, returns nullopt.
 COMPONENT_EXPORT(UI_BASE_CLIPBOARD)
 std::optional<std::vector<base::FilePath>> GetVirtualFilenames(
     IDataObject* data_object);
 
 // Retrieves "virtual file" contents via creation of intermediary temp files.
-// Method is called on dropping on the Chromium drop target. Since creating
+// Method is called on dropping on the Cinaseek drop target. Since creating
 // the temp files involves file I/O, the method is asynchronous and the caller
 // must provide a callback function that receives a vector of pairs of temp
 // file paths and display names. The method will invoke the callback with an

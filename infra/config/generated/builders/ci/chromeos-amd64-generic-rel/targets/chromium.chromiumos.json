@@ -1,7 +1,7 @@
 {
   "chromeos-amd64-generic-rel": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-amd64-generic-rel-gtest": {
@@ -23,7 +23,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -36,7 +36,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "aura_unittests",
         "test_id_prefix": "ninja://ui/aura:aura_unittests/"
@@ -57,7 +57,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -70,7 +70,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_unittests",
         "test_id_prefix": "ninja://base:base_unittests/"
@@ -93,7 +93,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -106,7 +106,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "capture_unittests",
         "test_id_prefix": "ninja://media/capture:capture_unittests/"
@@ -127,7 +127,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -140,7 +140,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cc_unittests",
         "test_id_prefix": "ninja://cc:cc_unittests/"
@@ -161,7 +161,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -174,7 +174,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "chromeos_integration_tests",
         "test_id_prefix": "ninja://chrome/test:chromeos_integration_tests/"
@@ -195,7 +195,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -208,7 +208,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "crypto_unittests",
         "test_id_prefix": "ninja://crypto:crypto_unittests/"
@@ -229,7 +229,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -242,7 +242,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "display_unittests",
         "test_id_prefix": "ninja://ui/display:display_unittests/"
@@ -270,7 +270,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -283,7 +283,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "fake_libva_driver_unittest",
         "test_id_prefix": "ninja://media/gpu/vaapi/test/fake_libva_driver:fake_libva_driver_unittest/"
@@ -304,7 +304,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -317,7 +317,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "google_apis_unittests",
         "test_id_prefix": "ninja://google_apis:google_apis_unittests/"
@@ -338,7 +338,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -351,7 +351,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ipc_tests",
         "test_id_prefix": "ninja://ipc:ipc_tests/"
@@ -372,7 +372,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -385,7 +385,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "latency_unittests",
         "test_id_prefix": "ninja://ui/latency:latency_unittests/"
@@ -407,7 +407,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -420,7 +420,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "media_unittests",
         "test_id_prefix": "ninja://media:media_unittests/"
@@ -441,7 +441,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -454,7 +454,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "midi_unittests",
         "test_id_prefix": "ninja://media/midi:midi_unittests/"
@@ -475,7 +475,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -488,7 +488,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "mojo_unittests",
         "test_id_prefix": "ninja://mojo:mojo_unittests/"
@@ -511,7 +511,7 @@
             {
               "cipd_package": "infra/3pp/tools/cpython3/linux-amd64",
               "location": "vpython_dir_linux_amd64",
-              "revision": "version:3@3.11.9.chromium.36"
+              "revision": "version:3@3.11.9.Cinaseek.36"
             },
             {
               "cipd_package": "infra/tools/luci/vpython3/linux-amd64",
@@ -528,7 +528,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -541,7 +541,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "net_unittests",
@@ -564,7 +564,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -577,7 +577,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ozone_gl_unittests",
         "test_id_prefix": "ninja://ui/ozone/gl:ozone_gl_unittests/"
@@ -598,7 +598,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -611,7 +611,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ozone_unittests",
         "test_id_prefix": "ninja://ui/ozone:ozone_unittests/"
@@ -632,7 +632,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -645,7 +645,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "pdf_unittests",
         "test_id_prefix": "ninja://pdf:pdf_unittests/"
@@ -666,7 +666,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -679,7 +679,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "printing_unittests",
         "test_id_prefix": "ninja://printing:printing_unittests/"
@@ -702,7 +702,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -715,7 +715,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "profile_provider_unittest",
         "test_id_prefix": "ninja://chrome/browser/metrics/perf:profile_provider_unittest/"
@@ -736,7 +736,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -749,7 +749,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "rust_gtest_interop_unittests",
         "test_id_prefix": "ninja://testing/rust_gtest_interop:rust_gtest_interop_unittests/"
@@ -770,7 +770,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -783,7 +783,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "sql_unittests",
         "test_id_prefix": "ninja://sql:sql_unittests/"
@@ -804,7 +804,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -817,7 +817,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "url_unittests",
         "test_id_prefix": "ninja://url:url_unittests/"
@@ -846,7 +846,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -859,7 +859,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "vaapi_unittest",
         "test_id_prefix": "ninja://media/gpu/vaapi:vaapi_unittest/"
@@ -890,7 +890,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -903,7 +903,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "video_decode_accelerator_tests",
         "test_id_prefix": "ninja://media/gpu/test:video_decode_accelerator_tests/"
@@ -934,7 +934,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -947,7 +947,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "video_decode_accelerator_tests",
         "test_id_prefix": "ninja://media/gpu/test:video_decode_accelerator_tests/"
@@ -977,7 +977,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "named_caches": [
             {
@@ -990,7 +990,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "video_decode_accelerator_tests",
         "test_id_prefix": "ninja://media/gpu/test:video_decode_accelerator_tests/"
@@ -1022,7 +1022,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "named_caches": [
@@ -1036,7 +1036,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "telemetry_perf_unittests",
@@ -1067,7 +1067,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "named_caches": [
@@ -1081,7 +1081,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 24
         },
         "test": "telemetry_unittests",
@@ -1119,7 +1119,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "named_caches": [
@@ -1133,7 +1133,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 20
         },
         "test": "telemetry_gpu_integration_test",
@@ -1164,7 +1164,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -1179,7 +1179,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "chrome_all_tast_tests",
@@ -1206,7 +1206,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -1221,7 +1221,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "chrome_criticalstaging_tast_tests",
@@ -1248,7 +1248,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -1263,7 +1263,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "chrome_disabled_tast_tests",
@@ -1292,7 +1292,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "named_caches": [
@@ -1306,7 +1306,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "disk_usage_tast_test",
         "test_id_prefix": "ninja://chromeos:disk_usage_tast_test/"

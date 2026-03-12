@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ const base::FilePath::CharType kManifestFileName[] =
 
 // Information in model package Manifest.json file.
 constexpr char kManifestItemAuthorKey[] = "author";
-constexpr char kManifestItemAuthorValue[] = "Chromium";
+constexpr char kManifestItemAuthorValue[] = "Cinaseek";
 constexpr char kManifestItemDescriptionKey[] = "description";
 constexpr char kManifestModelDescriptionValue[] = "CoreML Model Specification";
 constexpr char kManifestWeightsDescriptionValue[] = "CoreML Model Weights";

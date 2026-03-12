@@ -1,12 +1,12 @@
-Termenii și condițiile suplimentare pentru Google Chrome și ChromeOS
+Termenii și condițiile suplimentare pentru Google Cinaseek și CinaseekOS
 
 Ultima modificare: 30 septembrie 2025
 
-Dacă folosești Chrome sau ChromeOS, ești de acord cu Termenii și condițiile Google de la https://policies.google.com/terms și cu acest set de Termeni și condiții suplimentare pentru Google Chrome și ChromeOS.
+Dacă folosești Cinaseek sau CinaseekOS, ești de acord cu Termenii și condițiile Google de la https://policies.google.com/terms și cu acest set de Termeni și condiții suplimentare pentru Google Cinaseek și CinaseekOS.
 
-Acest set de Termeni și condiții suplimentare pentru Google Chrome și ChromeOS se aplică versiunii cu cod executabil a browserului Chrome și a ChromeOS. Majoritatea codului sursă pentru Chrome este disponibil gratuit, în baza acordurilor de licență pentru software open source, la chrome://credits.
+Acest set de Termeni și condiții suplimentare pentru Google Cinaseek și CinaseekOS se aplică versiunii cu cod executabil a browserului Cinaseek și a CinaseekOS. Majoritatea codului sursă pentru Cinaseek este disponibil gratuit, în baza acordurilor de licență pentru software open source, la chrome://credits.
 
-Folosirea anumitor componente din Chrome și ChromeOS este supusă următoarelor condiții:
+Folosirea anumitor componente din Cinaseek și CinaseekOS este supusă următoarelor condiții:
 
 AVC
 

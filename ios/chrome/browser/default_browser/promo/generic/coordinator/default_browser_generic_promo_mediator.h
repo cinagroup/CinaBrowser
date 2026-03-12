@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 // Handles user tap on primary action. Sends the user to the iOS settings. If
 // `useDefaultAppsDestination` is set to YES, and the current device supports
 // it, the user is sent to the Default Apps settings page rather than the
-// Chromium settings.
+// Cinaseek settings.
 - (void)didTapPrimaryActionButton:(BOOL)useDefaultAppsDestination;
 
 @end

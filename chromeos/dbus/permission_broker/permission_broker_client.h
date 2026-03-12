@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace chromeos {
 // API code, where it is used to request explicit access to USB peripherals
 // which the user the browser runs under normally wouldn't have access to. For
 // more details on the permission broker see:
-// http://git.chromium.org/gitweb/?p=chromiumos/platform/permission_broker.git
+// http://git.Cinaseek.org/gitweb/?p=Cinaseekos/platform/permission_broker.git
 class COMPONENT_EXPORT(PERMISSION_BROKER) PermissionBrokerClient {
  public:
   // The ResultCallback's boolean parameter represents the result of the

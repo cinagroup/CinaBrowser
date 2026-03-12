@@ -14,7 +14,7 @@
 
 import("../../build/crashpad_buildconfig.gni")
 
-if (crashpad_is_in_chromium) {
+if (crashpad_is_in_Cinaseek) {
   group("edo") {
     testonly = true
     public_deps = [ "//ios/third_party/edo" ]

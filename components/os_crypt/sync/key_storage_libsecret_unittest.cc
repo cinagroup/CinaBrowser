@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -247,7 +247,7 @@ class LibsecretTest : public testing::Test {
 };
 
 TEST_F(LibsecretTest, LibsecretRepeats) {
-  KeyStorageLibsecret libsecret("chromium");
+  KeyStorageLibsecret libsecret("Cinaseek");
   MockLibsecretLoader::ResetForOSCrypt();
   GetPasswordStore().SetPassword("initial password");
   std::optional<std::string> password = libsecret.GetKey();
@@ -259,7 +259,7 @@ TEST_F(LibsecretTest, LibsecretRepeats) {
 }
 
 TEST_F(LibsecretTest, LibsecretCreatesRandomised) {
-  KeyStorageLibsecret libsecret("chromium");
+  KeyStorageLibsecret libsecret("Cinaseek");
   MockLibsecretLoader::ResetForOSCrypt();
   std::optional<std::string> password = libsecret.GetKey();
   MockLibsecretLoader::ResetForOSCrypt();

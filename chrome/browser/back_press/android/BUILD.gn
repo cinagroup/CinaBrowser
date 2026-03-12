@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/back_press/BackPressHelper.java",
-    "java/src/org/chromium/chrome/browser/back_press/BackPressManager.java",
-    "java/src/org/chromium/chrome/browser/back_press/BackPressMetrics.java",
-    "java/src/org/chromium/chrome/browser/back_press/CloseListenerManager.java",
-    "java/src/org/chromium/chrome/browser/back_press/MinimizeAppAndCloseTabBackPressHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressManager.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressMetrics.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/CloseListenerManager.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/MinimizeAppAndCloseTabBackPressHandler.java",
   ]
 
   deps = [
@@ -32,8 +32,8 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/back_press/BackPressHelperTest.java",
-    "java/src/org/chromium/chrome/browser/back_press/BackPressManagerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressHelperTest.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressManagerUnitTest.java",
   ]
 
   deps = [
@@ -58,8 +58,8 @@ android_library("unit_device_javatests") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/chrome/browser/back_press/BackPressManagerTest.java",
-    "java/src/org/chromium/chrome/browser/back_press/MinimizeAppAndCloseTabBackPressHandlerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/BackPressManagerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/back_press/MinimizeAppAndCloseTabBackPressHandlerUnitTest.java",
   ]
 
   deps = [

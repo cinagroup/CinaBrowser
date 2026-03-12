@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ FakeIpAdapterAddresses::FakeIpAdapterAddresses(
     IFTYPE adapter_type,
     IF_OPER_STATUS adapter_status)
     : adapter_name_(adapter_name) {
-  // Only populate struct members that are used by Chromium.
+  // Only populate struct members that are used by Cinaseek.
   value_ = {};
   value_.Length = sizeof(IP_ADAPTER_ADDRESSES);
   value_.IfType = adapter_type;

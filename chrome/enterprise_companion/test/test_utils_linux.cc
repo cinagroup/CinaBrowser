@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class TestMethodsLinux : public TestMethods {
   base::FilePath GetOlderVersionExePath() override {
     return base::PathService::CheckedGet(base::DIR_EXE)
         .Append("old_enterprise_companion")
-        .Append("chromium_linux64")
+        .Append("Cinaseek_linux64")
         .Append("cipd")
         .Append(kTestExe);
   }

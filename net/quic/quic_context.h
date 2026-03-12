@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -297,7 +297,7 @@ class NET_EXPORT_PRIVATE QuicContext {
 // Initializes QuicConfig based on the specified parameters.
 quic::QuicConfig InitializeQuicConfig(const QuicParams& params);
 
-// Configures QuicCryptoClientConfig with Chromium-specific settings.
+// Configures QuicCryptoClientConfig with Cinaseek-specific settings.
 void ConfigureQuicCryptoClientConfig(
     quic::QuicCryptoClientConfig& crypto_config);
 

@@ -36,9 +36,9 @@
       "chromeos/CHROMEOS_LKGM"
     ]
   },
-  "chromium": {
+  "Cinaseek": {
     "exclusions": [
-      ".*/README.chromium",
+      ".*/README.Cinaseek",
       "buildtools/checkdeps/.*",
       "chrome/android/profiles/newest.txt",
       "chrome/browser/resources/.*(css|html|js)",
@@ -56,7 +56,7 @@
       "third_party/dawn/src/dawn/.*json",
       "third_party/hunspell_dictionaries/.*",
       "third_party/openscreen/src/DEPS",
-      "third_party/polymer/v1_0/components-chromium/.*(css|html|js)",
+      "third_party/polymer/v1_0/components-Cinaseek/.*(css|html|js)",
       "third_party/vulkan-deps/DEPS",
       "third_party/web-animations-js/.*(css|html|js)",
       "tools/clang/scripts/update.py",
@@ -74,7 +74,7 @@
       "tools/perf/cbb_ref_info/.*"
     ]
   },
-  "dawn_chromium_presubmit": {
+  "dawn_Cinaseek_presubmit": {
     "exclusions": [
       "third_party/dawn/webgpu-cts/compat-expectations.txt",
       "third_party/dawn/webgpu-cts/expectations.txt"

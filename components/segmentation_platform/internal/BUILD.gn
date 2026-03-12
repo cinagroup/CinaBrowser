@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -409,8 +409,8 @@ if (is_android) {
     ]
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentationPlatformServiceImpl.java",
-      "android/java/src/org/chromium/components/segmentation_platform/execution/processing/CustomDeviceUtils.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentationPlatformServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/execution/processing/CustomDeviceUtils.java",
     ]
 
     deps = [
@@ -429,8 +429,8 @@ if (is_android) {
     ]
 
     sources = [
-      "android/java/src/org/chromium/components/segmentation_platform/SegmentationPlatformServiceImpl.java",
-      "android/java/src/org/chromium/components/segmentation_platform/execution/processing/CustomDeviceUtils.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/SegmentationPlatformServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/segmentation_platform/execution/processing/CustomDeviceUtils.java",
     ]
   }
 }

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,7 +94,7 @@ void NetworkProfileBubbleView::LinkClicked(const ui::Event& event) {
   WindowOpenDisposition disposition = ui::DispositionFromEventFlags(
       event.flags(), WindowOpenDisposition::NEW_FOREGROUND_TAB);
   content::OpenURLParams params(
-      GURL("https://sites.google.com/a/chromium.org/dev/administrators/"
+      GURL("https://sites.google.com/a/Cinaseek.org/dev/administrators/"
            "common-problems-and-solutions#network_profile"),
       content::Referrer(), disposition, ui::PAGE_TRANSITION_LINK, false);
   navigator_->OpenURL(params, /*navigation_handle_callback=*/{});

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 namespace media_router {
 
-constexpr char kRouteIdPrefix[] = "urn:x-org.chromium:media:route:";
+constexpr char kRouteIdPrefix[] = "urn:x-org.Cinaseek:media:route:";
 
 namespace {
 

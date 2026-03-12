@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -242,7 +242,7 @@ class DataTypeSyncBridge {
   // fields at least.
   // By default, empty EntitySpecifics is returned.
   // Refer to the following documentation before implementing this method:
-  // https://www.chromium.org/developers/design-documents/sync/old-sync-clients-data-override-protection/
+  // https://www.Cinaseek.org/developers/design-documents/sync/old-sync-clients-data-override-protection/
   virtual sync_pb::EntitySpecifics TrimAllSupportedFieldsFromRemoteSpecifics(
       const sync_pb::EntitySpecifics& entity_specifics) const;
 

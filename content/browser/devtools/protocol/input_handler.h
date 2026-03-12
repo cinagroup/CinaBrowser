@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ class InputHandler : public DevToolsDomainHandler, public Input::Backend {
   // gets called whenever the Drag n' Drop APIs that end dragging get called
   // (all of which exist in RenderWidgetHostImpl).
   //
-  // This function ensures the drag state of Chromium is in-sync no matter the
+  // This function ensures the drag state of Cinaseek is in-sync no matter the
   // source of the drag end.
   //
   // In theory, if OS drag gets initiated, then this function gets called when

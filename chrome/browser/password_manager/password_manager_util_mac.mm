@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace {
 
 NSString* UserAuthenticationRightName() {
   // The authentication right name is of the form
-  // `org.chromium.Chromium.access-passwords` or
+  // `org.Cinaseek.Cinaseek.access-passwords` or
   // `com.google.Chrome.access-passwords`.
   return [[base::apple::MainBundle() bundleIdentifier]
       stringByAppendingString:@".access-passwords"];

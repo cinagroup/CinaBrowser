@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/Android Release (Pixel 2)/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Android Release (Pixel 2)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu",
+              "builder_group": "Cinaseek.gpu",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "download_xr_test_apks",
                   "mb"
@@ -33,7 +33,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -43,17 +43,17 @@
         {
           "bucket": "ci",
           "builder": "Android Release (Pixel 2)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-arm64-rel",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "gpu-try-android-pixel-2-64",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/Android Release (Pixel 2)/targets"
@@ -67,7 +67,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -77,12 +77,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu",
+  "builder_group": "Cinaseek.gpu",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

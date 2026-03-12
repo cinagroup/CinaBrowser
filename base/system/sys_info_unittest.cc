@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -402,7 +402,7 @@ TEST_F(SysInfoTest, IsRunningOnChromeOS) {
     EXPECT_TRUE(SysInfo::IsRunningOnChromeOS());
   }
   {
-    const char kLsbRelease3[] = "CHROMEOS_RELEASE_NAME=Chromium OS\n";
+    const char kLsbRelease3[] = "CHROMEOS_RELEASE_NAME=Cinaseek OS\n";
     test::ScopedChromeOSVersionInfo version(kLsbRelease3, Time());
     EXPECT_TRUE(SysInfo::IsRunningOnChromeOS());
   }
@@ -468,7 +468,7 @@ TEST_F(SysInfoTest, KernelVersionNumber) {
   auto current_kernel_version = SysInfo::KernelVersionNumber::Current();
 
   EXPECT_GT(current_kernel_version, SysInfo::KernelVersionNumber());
-  // Chromium will realistically never run on a kernel as old as 2.1.11
+  // Cinaseek will realistically never run on a kernel as old as 2.1.11
   EXPECT_GT(current_kernel_version, SysInfo::KernelVersionNumber(2, 1, 11));
 
   SysInfo::KernelVersionNumber next_major_kernel_version(

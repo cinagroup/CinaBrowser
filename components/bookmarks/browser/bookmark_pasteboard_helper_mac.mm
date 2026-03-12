@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,23 +21,23 @@
 
 namespace bookmarks {
 
-NSString* const kUTTypeChromiumBookmarkDictionaryList =
-    @"org.chromium.bookmark-dictionary-list";
+NSString* const kUTTypeCinaseekBookmarkDictionaryList =
+    @"org.Cinaseek.bookmark-dictionary-list";
 
 namespace {
 
 // UTI used to store profile path to determine which profile a set of bookmarks
 // came from.
-NSString* const kUTTypeChromiumProfilePath = @"org.chromium.profile-path";
+NSString* const kUTTypeCinaseekProfilePath = @"org.Cinaseek.profile-path";
 
 // Internal bookmark ID for a bookmark node.  Used only when moving inside of
 // one profile.
-NSString* const kChromiumBookmarkIdKey = @"ChromiumBookmarkId";
+NSString* const kCinaseekBookmarkIdKey = @"CinaseekBookmarkId";
 
 // Internal bookmark meta info dictionary for a bookmark node.
-NSString* const kChromiumBookmarkMetaInfoKey = @"ChromiumBookmarkMetaInfo";
+NSString* const kCinaseekBookmarkMetaInfoKey = @"CinaseekBookmarkMetaInfo";
 
-// Keys for the type of node in kUTTypeChromiumBookmarkDictionaryList.
+// Keys for the type of node in kUTTypeCinaseekBookmarkDictionaryList.
 NSString* const kWebBookmarkTypeKey = @"WebBookmarkType";
 NSString* const kWebBookmarkTypeList = @"WebBookmarkTypeList";
 NSString* const kWebBookmarkTypeLeaf = @"WebBookmarkTypeLeaf";
@@ -99,12 +99,12 @@ void ConvertNSArrayToElements(
         /*id=*/0, base::Uuid::GenerateRandomV4(), url);
 
     NSNumber* node_id =
-        base::apple::ObjCCast<NSNumber>(bookmark_dict[kChromiumBookmarkIdKey]);
+        base::apple::ObjCCast<NSNumber>(bookmark_dict[kCinaseekBookmarkIdKey]);
     if (node_id)
       new_node->set_id(node_id.longLongValue);
 
     NSDictionary* meta_info = base::apple::ObjCCast<NSDictionary>(
-        bookmark_dict[kChromiumBookmarkMetaInfoKey]);
+        bookmark_dict[kCinaseekBookmarkMetaInfoKey]);
     if (meta_info)
       new_node->SetMetaInfoMap(MetaInfoMapFromDictionary(meta_info));
 
@@ -127,9 +127,9 @@ void ConvertNSArrayToElements(
   }
 }
 
-bool ReadChromiumBookmarks(NSPasteboard* pb,
+bool ReadCinaseekBookmarks(NSPasteboard* pb,
                            std::vector<BookmarkNodeData::Element>* elements) {
-  id bookmarks = [pb propertyListForType:kUTTypeChromiumBookmarkDictionaryList];
+  id bookmarks = [pb propertyListForType:kUTTypeCinaseekBookmarkDictionaryList];
   if (!bookmarks)
     return false;
 
@@ -183,8 +183,8 @@ NSArray* GetNSArrayForBookmarkList(
         kTitleKey : title,
         kURLStringKey : url,
         kWebBookmarkTypeKey : kWebBookmarkTypeLeaf,
-        kChromiumBookmarkIdKey : element_id,
-        kChromiumBookmarkMetaInfoKey : meta_info
+        kCinaseekBookmarkIdKey : element_id,
+        kCinaseekBookmarkMetaInfoKey : meta_info
       };
     } else {
       NSArray* children = GetNSArrayForBookmarkList(element.children);
@@ -192,8 +192,8 @@ NSArray* GetNSArrayForBookmarkList(
         kTitleKey : title,
         kChildrenKey : children,
         kWebBookmarkTypeKey : kWebBookmarkTypeList,
-        kChromiumBookmarkIdKey : element_id,
-        kChromiumBookmarkMetaInfoKey : meta_info
+        kCinaseekBookmarkIdKey : element_id,
+        kCinaseekBookmarkMetaInfoKey : meta_info
       };
     }
     [array addObject:object];
@@ -231,7 +231,7 @@ NSArray<NSPasteboardItem*>* PasteboardItemsFromBookmarks(
   //
   // The OS pasteboard provides support for multiple items, so the array of
   // items created as part of step 1 is set to be the items on the pasteboard.
-  // Blobs of data that are only useful to Chromium are added to the first item
+  // Blobs of data that are only useful to Cinaseek are added to the first item
   // to go along for the ride.
 
   // 1. The flat array of URLs for interoperability.
@@ -243,21 +243,21 @@ NSArray<NSPasteboardItem*>* PasteboardItemsFromBookmarks(
   NSArray<NSPasteboardItem*>* items =
       ui::clipboard_util::PasteboardItemsFromUrls(urls, url_titles);
 
-  // 2. The plist and path for Chromium use.
+  // 2. The plist and path for Cinaseek use.
 
   if (!items.count) {
     // There were no bookmark URLs encoded, therefore the elements being encoded
     // consist of bookmark folders. The data for those folders will be contained
-    // in the Chromium-specific data, so make a single pasteboard item to hold
+    // in the Cinaseek-specific data, so make a single pasteboard item to hold
     // it.
     items = @[ [[NSPasteboardItem alloc] init] ];
   }
 
   [items.firstObject setPropertyList:GetNSArrayForBookmarkList(elements)
-                             forType:kUTTypeChromiumBookmarkDictionaryList];
+                             forType:kUTTypeCinaseekBookmarkDictionaryList];
 
   [items.firstObject setString:base::SysUTF8ToNSString(profile_path.value())
-                       forType:kUTTypeChromiumProfilePath];
+                       forType:kUTTypeCinaseekProfilePath];
 
   return items;
 }
@@ -288,22 +288,22 @@ bool ReadBookmarksFromPasteboard(
     std::vector<BookmarkNodeData::Element>* elements,
     base::FilePath* profile_path) {
   elements->clear();
-  NSString* profile = [pb stringForType:kUTTypeChromiumProfilePath];
+  NSString* profile = [pb stringForType:kUTTypeCinaseekProfilePath];
   *profile_path = base::FilePath(base::SysNSStringToUTF8(profile));
 
   // Corresponding to the two types of data written above in
-  // `PasteboardItemsFromBookmarks()`, first attempt to read the Chromium-only
+  // `PasteboardItemsFromBookmarks()`, first attempt to read the Cinaseek-only
   // data that has more fidelity, and then fall back to reading standard URL
   // types.
 
-  return ReadChromiumBookmarks(pb, elements) ||
+  return ReadCinaseekBookmarks(pb, elements) ||
          ReadStandardBookmarks(pb, elements);
 }
 
 bool PasteboardContainsBookmarks(NSPasteboard* pb) {
   NSArray* availableTypes = @[
     ui::kUTTypeWebKitWebUrlsWithTitles,
-    kUTTypeChromiumBookmarkDictionaryList,
+    kUTTypeCinaseekBookmarkDictionaryList,
     NSPasteboardTypeURL,
   ];
   return [pb availableTypeFromArray:availableTypes] != nil;

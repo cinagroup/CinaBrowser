@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -204,7 +204,7 @@ class BrowserProcess {
   // Starts and manages the policy system.
   virtual policy::ChromeBrowserPolicyConnector* browser_policy_connector() = 0;
 
-  // This is the main interface for chromium components to retrieve policy
+  // This is the main interface for Cinaseek components to retrieve policy
   // information from the policy system.
   virtual policy::PolicyService* policy_service() = 0;
 

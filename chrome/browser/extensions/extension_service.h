@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -116,7 +116,7 @@ class ExtensionServiceInterface {
   virtual base::WeakPtr<ExtensionServiceInterface> AsWeakPtr() = 0;
 };
 
-// Manages installed and running Chromium extensions. An instance is shared
+// Manages installed and running Cinaseek extensions. An instance is shared
 // between normal and incognito profiles.
 class ExtensionService : public ExtensionServiceInterface,
                          public content::RenderProcessHostCreationObserver,

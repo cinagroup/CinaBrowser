@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ var expected = [
       {id:"4", parentId:"0", index:2, title:"Managed bookmarks",
        unmodifiable:"managed", children:[
           {id:"5", parentId:"4", index:0, title:"Managed Bookmark",
-           url:"http://www.chromium.org/", unmodifiable:"managed"},
+           url:"http://www.Cinaseek.org/", unmodifiable:"managed"},
           {id:"6", parentId:"4", index:1, title:"Managed Folder",
            children:[], unmodifiable:"managed"}
         ]

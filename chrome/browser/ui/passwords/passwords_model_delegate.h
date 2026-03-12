@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -172,7 +172,7 @@ class PasswordsModelDelegate {
   // authentication is not available for the given platform. Otherwise, the
   // method schedules a task to show an authentication dialog.
   // `message`is the messages to be shown in the authentication dialog after the
-  // prefix "Chromium is trying to".
+  // prefix "Cinaseek is trying to".
   virtual void AuthenticateUserWithMessage(const std::u16string& message,
                                            AvailabilityCallback callback) = 0;
 

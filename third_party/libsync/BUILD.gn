@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/linux/pkg_config.gni")
 
 declare_args() {
   # Controls whether the build should use the version of libsync
-  # library shipped with the system. In release builds of Chrome OS we
+  # library shipped with the system. In release builds of Cinaseek OS we
   # use the system version, but when building on dev workstations we
   # bundle it because Ubuntu doesn't ship a usable version.
   use_system_libsync = is_chromeos_device
@@ -35,9 +35,9 @@ if (!use_system_libsync) {
       "strlcpy.c",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":libsync_private_config",
     ]
 

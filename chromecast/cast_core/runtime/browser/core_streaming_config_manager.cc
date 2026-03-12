@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace {
 constexpr char kMediaCapabilitiesBindingName[] =
     "cast.__platform__.canDisplayType";
 
-::media::VideoCodec ToChromiumCodec(media::VideoCodec codec) {
+::media::VideoCodec ToCinaseekCodec(media::VideoCodec codec) {
   switch (codec) {
     case media::VideoCodec::kCodecH264:
       return ::media::VideoCodec::kH264;
@@ -45,7 +45,7 @@ constexpr char kMediaCapabilitiesBindingName[] =
   return ::media::VideoCodec::kUnknown;
 }
 
-::media::AudioCodec ToChromiumCodec(media::AudioCodec codec) {
+::media::AudioCodec ToCinaseekCodec(media::AudioCodec codec) {
   switch (codec) {
     case media::AudioCodec::kCodecAAC:
       return ::media::AudioCodec::kAAC;
@@ -112,7 +112,7 @@ cast_streaming::ReceiverConfig CreateConfig(
     DLOG(WARNING) << "No AudioCodecInfos in received AV Settings.";
   } else {
     for (auto& info : *audio_codec_infos) {
-      const auto converted_codec = ToChromiumCodec(info.codec);
+      const auto converted_codec = ToCinaseekCodec(info.codec);
       if (converted_codec == ::media::AudioCodec::kUnknown) {
         DLOG(INFO) << "Skipping processing of unknown audio codec...";
         continue;
@@ -163,7 +163,7 @@ cast_streaming::ReceiverConfig CreateConfig(
   } else {
     std::vector<::media::VideoCodec> video_codecs;
     for (auto& info : *video_codec_infos) {
-      const auto converted_codec = ToChromiumCodec(info.codec);
+      const auto converted_codec = ToCinaseekCodec(info.codec);
       if (converted_codec == ::media::VideoCodec::kUnknown) {
         DLOG(INFO) << "Skipping processing of unknown video codec...";
         continue;

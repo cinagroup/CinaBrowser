@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace {
 // belonging to the same logical window, only one will be represented in the
 // shelf and in the alt-tab menu. S. means string type.
 constexpr char kLogicalWindowIntentPrefix[] =
-    "S.org.chromium.arc.logical_window_id=";
+    "S.org.Cinaseek.arc.logical_window_id=";
 
 std::string GetLogicalWindowIdFromIntent(const std::string& launch_intent) {
   auto intent = arc::Intent::Get(launch_intent);

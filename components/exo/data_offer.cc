@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ void WriteFileDescriptor(base::ScopedFD fd,
 }
 
 ui::ClipboardFormatType GetClipboardFormatType() {
-  static const char kFormatString[] = "chromium/x-file-system-files";
+  static const char kFormatString[] = "Cinaseek/x-file-system-files";
   static base::NoDestructor<ui::ClipboardFormatType> format_type(
       ui::ClipboardFormatType::CustomPlatformType(kFormatString));
   return *format_type;

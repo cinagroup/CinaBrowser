@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -216,7 +216,7 @@ class NSSInitSingleton {
   NSSInitSingleton() {
     // Initializing NSS causes us to do blocking IO.
     // Temporarily allow it until we fix
-    //   http://code.google.com/p/chromium/issues/detail?id=59847
+    //   http://code.google.com/p/Cinaseek/issues/detail?id=59847
     ScopedAllowBlockingForNSS allow_blocking;
 
     EnsureNSPRInit();

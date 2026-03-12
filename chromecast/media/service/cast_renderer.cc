@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -399,7 +399,7 @@ void CastRenderer::OnVideoGeometryChange(const gfx::RectF& rect_f,
     //
     // However, note that the previous cast impl actually ignores this (e.g.
     // it converts OVERLAY_TRANSFORM_ROTATE_CLOCKWISE_90 to ROTATE_90):
-    // https://source.chromium.org/chromium/chromium/src/+/main:chromecast/media/base/video_plane_controller.cc;l=46;drc=5e56f4c4b358b8b16e07a2ba62d07f640300fb9e
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chromecast/media/base/video_plane_controller.cc;l=46;drc=5e56f4c4b358b8b16e07a2ba62d07f640300fb9e
     //
     // So it's not clear what the "correct" behavior is here. Either the cast
     // documentation or the original cast impl was wrong.

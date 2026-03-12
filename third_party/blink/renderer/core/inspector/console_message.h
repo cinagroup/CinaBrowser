@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ struct WebConsoleMessage;
 // to introducing new console messages, and make sure that you understand the
 // implications on the developer experience. A good console message should be
 // actionable and relevant to what the developer is currently doing. Using the
-// DevTools Console panel as a means to advertise best practices or Chromium
+// DevTools Console panel as a means to advertise best practices or Cinaseek
 // agendas has shown to be counterproductive.
 class CORE_EXPORT ConsoleMessage final
     : public GarbageCollected<ConsoleMessage> {

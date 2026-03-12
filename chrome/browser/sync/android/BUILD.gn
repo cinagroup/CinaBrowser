@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,18 +19,18 @@ android_library("java") {
 
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/sync/SyncServiceFactory.java",
-    "java/src/org/chromium/chrome/browser/sync/prefs/CrossDevicePrefTrackerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/SyncServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/prefs/CrossDevicePrefTrackerFactory.java",
   ]
 }
 
 android_library("ui_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/sync/ui/BatchUploadDialogCoordinator.java",
-    "java/src/org/chromium/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardBinder.java",
-    "java/src/org/chromium/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardCoordinator.java",
-    "java/src/org/chromium/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardMediator.java",
-    "java/src/org/chromium/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/ui/BatchUploadDialogCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardProperties.java",
   ]
   deps = [
     "//base:callback_java",
@@ -50,13 +50,13 @@ android_library("ui_java") {
     "//third_party/androidx:androidx_lifecycle_lifecycle_common_java",
     "//ui/android:ui_java",
   ]
-  resources_package = "org.chromium.chrome.browser.sync"
+  resources_package = "org.Cinaseek.chrome.browser.sync"
 }
 
 robolectric_library("junit") {
   testonly = true
 
-  sources = [ "junit/src/org/chromium/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardMediatorTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/sync/ui/batch_upload_card/BatchUploadCardMediatorTest.java" ]
 
   deps = [
     ":ui_java",
@@ -80,7 +80,7 @@ robolectric_library("junit") {
     "//ui/android:ui_java",
     "//ui/android:ui_java_test_support",
   ]
-  resources_package = "org.chromium.chrome.browser.sync"
+  resources_package = "org.Cinaseek.chrome.browser.sync"
 }
 
 generate_jni("jni_headers") {
@@ -90,7 +90,7 @@ generate_jni("jni_headers") {
     "//chrome/browser/sync",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/sync/SyncServiceFactory.java",
-    "java/src/org/chromium/chrome/browser/sync/prefs/CrossDevicePrefTrackerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/SyncServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/sync/prefs/CrossDevicePrefTrackerFactory.java",
   ]
 }

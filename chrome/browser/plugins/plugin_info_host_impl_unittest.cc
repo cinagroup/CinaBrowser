@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -204,7 +204,7 @@ TEST_F(PluginInfoHostImplTest, FindEnabledPluginWithBidiPdfViewerName) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr char kGroupIdentifier[] = "google-chrome-pdf";
 #else
-  static constexpr char kGroupIdentifier[] = "chromium-pdf";
+  static constexpr char kGroupIdentifier[] = "Cinaseek-pdf";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
   std::u16string expected_plugin_name = kPluginName;

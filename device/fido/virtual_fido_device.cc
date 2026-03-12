@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -530,7 +530,7 @@ VirtualFidoDevice::GenerateAttestationCertificate(
   std::string attestation_cert;
   if (!net::x509_util::CreateSelfSignedCert(
           attestation_private_key->key(), net::x509_util::DIGEST_SHA256,
-          "C=US, O=Chromium, OU=Authenticator Attestation, CN=" +
+          "C=US, O=Cinaseek, OU=Authenticator Attestation, CN=" +
               (individual_attestation_requested
                    ? state_->individual_attestation_cert_common_name
                    : state_->attestation_cert_common_name),

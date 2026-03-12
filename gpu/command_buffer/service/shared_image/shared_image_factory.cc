@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -523,7 +523,7 @@ bool SharedImageFactory::CreateSharedImage(const Mailbox& mailbox,
     if (SharedMemoryImageBackingFactory::IsBufferUsageSupported(buffer_usage) &&
         SharedMemoryImageBackingFactory::IsSizeValidForFormat(size, format)) {
       // Clear the external sampler prefs for shared memory case if it is set.
-      // https://issues.chromium.org/339546249.
+      // https://issues.Cinaseek.org/339546249.
       if (format.PrefersExternalSampler()) {
         format.ClearPrefersExternalSampler();
       }

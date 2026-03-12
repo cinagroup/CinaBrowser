@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef CHROMECAST_BINDINGS_BINDINGS_MANAGER_FUCHSIA_H_
 #define CHROMECAST_BINDINGS_BINDINGS_MANAGER_FUCHSIA_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/mem/cpp/fidl.h>
 
 #include <list>
@@ -19,7 +19,7 @@ namespace chromecast {
 namespace bindings {
 
 // Implements the BindingsManager as a ApiBindings FIDL service.
-class BindingsManagerFuchsia : public chromium::cast::ApiBindings,
+class BindingsManagerFuchsia : public Cinaseek::cast::ApiBindings,
                                public BindingsManager {
  public:
   BindingsManagerFuchsia();
@@ -34,7 +34,7 @@ class BindingsManagerFuchsia : public chromium::cast::ApiBindings,
                   std::string_view binding_script) override;
 
  protected:
-  // chromium::cast::ApiBindings implementation:
+  // Cinaseek::cast::ApiBindings implementation:
   void GetAll(GetAllCallback callback) override;
   void Connect(
       std::string port_name,

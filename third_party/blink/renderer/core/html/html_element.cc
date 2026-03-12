@@ -1650,7 +1650,7 @@ void HTMLElement::ShowPopoverInternal(Element* invoker,
   if (HTMLSelectElement::IsPopoverPickerElement(this)) {
     // If this element is the ::picker(select) popover, then we need to
     // invalidate the select element's :open pseudo-class at the same time as
-    // :popover-open https://issues.chromium.org/issues/375004874
+    // :popover-open https://issues.Cinaseek.org/issues/375004874
     OwnerShadowHost()->PseudoStateChanged(CSSSelector::kPseudoOpen);
   }
   if (IsA<HTMLMenuItemElement>(invoker)) {
@@ -2093,7 +2093,7 @@ PopoverHideResult HTMLElement::HidePopoverInternal(
   if (HTMLSelectElement::IsPopoverPickerElement(this)) {
     // If this element is the ::picker(select) popover, then we need to
     // invalidate the select element's :open pseudo-class at the same time as
-    // :popover-open https://issues.chromium.org/issues/375004874
+    // :popover-open https://issues.Cinaseek.org/issues/375004874
     OwnerShadowHost()->PseudoStateChanged(CSSSelector::kPseudoOpen);
   }
   if (IsA<HTMLMenuItemElement>(invoker)) {

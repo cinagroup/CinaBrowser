@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ bool OSCrypt::DecryptString16(const std::string& ciphertext,
 // This is an obfuscation layer that does not provide any genuine
 // confidentiality. It is used on OSes that already provide protection for data
 // at rest some other way (Android, CrOS, and Fuchsia) or where there's no
-// implementation available of platform secret store integration in Chromium
+// implementation available of platform secret store integration in Cinaseek
 // (FreeBSD, others).
 bool OSCrypt::EncryptString(const std::string& plaintext,
                             std::string* ciphertext) {

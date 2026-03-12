@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1475,7 +1475,7 @@ size_t PartitionBucket::SlotSpanCommittedSize(PartitionRoot* root) const {
   //
   // So 1 memory region rather then 3. This matters, because on Linux kernels,
   // there is a maximum number of VMAs per process, with the default limit a bit
-  // less than 2^16, and Chromium sometimes hits the limit (see
+  // less than 2^16, and Cinaseek sometimes hits the limit (see
   // /proc/sys/vm/max_map_count for the current limit), largely because of
   // PartitionAlloc contributing thousands of regions. Locally, on a Linux
   // system, this reduces the number of PartitionAlloc regions by up to

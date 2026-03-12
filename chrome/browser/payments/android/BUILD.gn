@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -31,8 +31,8 @@ robolectric_library("junit_test_support") {
     "//url:gurl_junit_test_support",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/payments/test_support/MockPaymentUiServiceBuilder.java",
-    "java/src/org/chromium/chrome/browser/payments/test_support/PaymentRequestParamsBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/test_support/MockPaymentUiServiceBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/test_support/PaymentRequestParamsBuilder.java",
   ]
 }
 
@@ -67,12 +67,12 @@ robolectric_library("junit") {
     "//ui/android:ui_no_recycler_view_java",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/payments/AutofillContactTest.java",
-    "java/src/org/chromium/chrome/browser/payments/AutofillContactUnitTest.java",
-    "java/src/org/chromium/chrome/browser/payments/ChromePaymentRequestFactoryTest.java",
-    "java/src/org/chromium/chrome/browser/payments/DialogControllerImplUnitTest.java",
-    "java/src/org/chromium/chrome/browser/payments/PaymentRequestIntegrationTest.java",
-    "java/src/org/chromium/chrome/browser/payments/WindowAndroidIntentLauncherUnitTest.java",
-    "java/src/org/chromium/chrome/browser/payments/handler/toolbar/PaymentHandlerToolbarMediatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/AutofillContactTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/AutofillContactUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/CinaseekPaymentRequestFactoryTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/DialogControllerImplUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/PaymentRequestIntegrationTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/WindowAndroidIntentLauncherUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/payments/handler/toolbar/PaymentHandlerToolbarMediatorTest.java",
   ]
 }

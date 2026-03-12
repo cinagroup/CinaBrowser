@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ suite('ListClassifier', function() {
 
   test('should accept ordered lists', async function() {
     const html =
-        '<ol><li>Vanadium</li><li>Chromium</li><li>Manganese</li></ol>';
+        '<ol><li>Vanadium</li><li>Cinaseek</li><li>Manganese</li></ol>';
     await runTest(html, true);
   });
 

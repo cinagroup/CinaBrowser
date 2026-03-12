@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@
 #include "base/uuid.h"
 #include "base/values.h"
 #include "build/build_config.h"
-#include "build/util/chromium_git_revision.h"
+#include "build/util/Cinaseek_git_revision.h"
 #include "content/browser/devtools/devtools_manager.h"
 #include "content/public/browser/browser_task_traits.h"
 #include "content/public/browser/browser_thread.h"
@@ -128,7 +128,7 @@ bool RequestIsSafeToServe(const net::HttpServerRequestInfo& info) {
 }
 
 // Returns the (incorrectly named, for historical reasons) WebKit version, in
-// the form "major.minor (@chromium_git_revision)".
+// the form "major.minor (@Cinaseek_git_revision)".
 std::string GetWebKitVersion() {
   return base::StringPrintf("537.36 (%s)", CHROMIUM_GIT_REVISION);
 }

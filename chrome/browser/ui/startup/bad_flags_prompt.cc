@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -119,7 +119,7 @@ const char* const kBadFlags[] = {
 #endif
 
     // These flags control Blink feature state, which is not supported and is
-    // intended only for use by Chromium developers.
+    // intended only for use by Cinaseek developers.
     switches::kDisableBlinkFeatures,
     switches::kEnableBlinkFeatures,
 
@@ -144,7 +144,7 @@ const char* const kBadFlags[] = {
     switches::kDisableBestEffortTasks,
 
     // GPU sanboxing isn't implemented for the Web GPU API yet meaning it would
-    // be possible to read GPU data for other Chromium processes.
+    // be possible to read GPU data for other Cinaseek processes.
     switches::kEnableUnsafeWebGPU,
 
 #if BUILDFLAG(IS_WIN)

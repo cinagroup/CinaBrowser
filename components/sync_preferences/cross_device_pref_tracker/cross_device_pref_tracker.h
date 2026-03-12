@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class CrossDevicePrefTracker : public KeyedService {
   // numeric values should never be reused.
   //
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  // org.chromium.components.sync_preferences.cross_device_pref_tracker)
+  // org.Cinaseek.components.sync_preferences.cross_device_pref_tracker)
   // LINT.IfChange(ServiceStatus)
   enum class ServiceStatus {
     // The tracker is fully operational and available for use.

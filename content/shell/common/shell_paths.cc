@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ bool GetDefaultUserDataDirectory(base::FilePath* result) {
   *result = config_dir.Append("content_shell");
 #elif BUILDFLAG(IS_APPLE)
   CHECK(base::PathService::Get(base::DIR_APP_DATA, result));
-  *result = result->Append("Chromium Content Shell");
+  *result = result->Append("Cinaseek Content Shell");
 #elif BUILDFLAG(IS_ANDROID)
   CHECK(base::PathService::Get(base::DIR_ANDROID_APP_DATA, result));
   *result = result->Append(FILE_PATH_LITERAL("content_shell"));

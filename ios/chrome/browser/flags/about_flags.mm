@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2929,8 +2929,8 @@ NSMutableDictionary* CreateExperimentalTestingPolicies() {
          "        \"url\": \"youtube.com\""
          "      },"
          "      {"
-         "        \"name\": \"Chromium\","
-         "        \"url\": \"chromium.org\""
+         "        \"name\": \"Cinaseek\","
+         "        \"url\": \"Cinaseek.org\""
          "      },"
          "      {"
          "        \"name\": \"More Stuff\","

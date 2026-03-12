@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_connection_helper.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
 #include "base/no_destructor.h"
 
 namespace net {
@@ -14,23 +14,23 @@ quiche::QuicheBufferAllocator* GetBufferAllocator() {
 }
 }  // namespace
 
-QuicChromiumConnectionHelper::QuicChromiumConnectionHelper(
+QuicCinaseekConnectionHelper::QuicCinaseekConnectionHelper(
     const quic::QuicClock* clock,
     quic::QuicRandom* random_generator)
     : clock_(clock), random_generator_(random_generator) {}
 
-QuicChromiumConnectionHelper::~QuicChromiumConnectionHelper() = default;
+QuicCinaseekConnectionHelper::~QuicCinaseekConnectionHelper() = default;
 
-const quic::QuicClock* QuicChromiumConnectionHelper::GetClock() const {
+const quic::QuicClock* QuicCinaseekConnectionHelper::GetClock() const {
   return clock_;
 }
 
-quic::QuicRandom* QuicChromiumConnectionHelper::GetRandomGenerator() {
+quic::QuicRandom* QuicCinaseekConnectionHelper::GetRandomGenerator() {
   return random_generator_;
 }
 
 quiche::QuicheBufferAllocator*
-QuicChromiumConnectionHelper::GetStreamSendBufferAllocator() {
+QuicCinaseekConnectionHelper::GetStreamSendBufferAllocator() {
   return GetBufferAllocator();
 }
 

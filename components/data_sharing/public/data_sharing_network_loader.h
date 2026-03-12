@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace data_sharing {
 class DataSharingNetworkLoader {
  public:
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.data_sharing)
+  //   org.Cinaseek.components.data_sharing)
   enum class NetworkLoaderStatus {
     kUnknown = 0,
     kSuccess = 1,
@@ -30,7 +30,7 @@ class DataSharingNetworkLoader {
   };
 
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.data_sharing)
+  //   org.Cinaseek.components.data_sharing)
   enum class DataSharingRequestType {
     kUnknown = 0,
     kCreateGroup = 1,

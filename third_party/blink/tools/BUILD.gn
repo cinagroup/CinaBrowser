@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -61,7 +61,7 @@ if (is_android) {
     ]
     data_deps = [
       ":wpt_tests_isolate",
-      "//build/android:devil_chromium_py",
+      "//build/android:devil_Cinaseek_py",
       "//build/android:test_runner_py",
       "//third_party/catapult/devil",
     ]

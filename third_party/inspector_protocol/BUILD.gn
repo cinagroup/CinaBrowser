@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,8 +6,8 @@ component("crdtp") {
   sources = [
     "crdtp/cbor.cc",
     "crdtp/cbor.h",
-    "crdtp/chromium/protocol_traits.cc",
-    "crdtp/chromium/protocol_traits.h",
+    "crdtp/Cinaseek/protocol_traits.cc",
+    "crdtp/Cinaseek/protocol_traits.h",
     "crdtp/dispatch.cc",
     "crdtp/dispatch.h",
     "crdtp/error_support.cc",
@@ -46,7 +46,7 @@ component("crdtp") {
 source_set("crdtp_platform") {
   visibility = [ ":crdtp" ]
   sources = [
-    "crdtp/chromium/json_platform_chromium.cc",
+    "crdtp/Cinaseek/json_platform_Cinaseek.cc",
     "crdtp/json_platform.h",
   ]
   deps = [ "//base" ]
@@ -57,7 +57,7 @@ source_set("crdtp_test") {
   testonly = true
   sources = [
     "crdtp/cbor_test.cc",
-    "crdtp/chromium/protocol_traits_test.cc",
+    "crdtp/Cinaseek/protocol_traits_test.cc",
     "crdtp/dispatch_test.cc",
     "crdtp/error_support_test.cc",
     "crdtp/find_by_first_test.cc",

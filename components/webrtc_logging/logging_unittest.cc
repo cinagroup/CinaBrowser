@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,8 +7,8 @@
 // Also note that we are only allowed to call InitLogging() twice so the test
 // cases are more dense than normal.
 
-// We must include Chromium headers before including the overrides header
-// since webrtc's logging.h file may conflict with chromium.
+// We must include Cinaseek headers before including the overrides header
+// since webrtc's logging.h file may conflict with Cinaseek.
 
 #include "base/logging.h"
 

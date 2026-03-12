@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -498,9 +498,9 @@ TEST_P(PDFiumEngineTest, GetDocumentMetadata) {
   EXPECT_EQ(714u, doc_metadata.size_bytes);
   EXPECT_FALSE(doc_metadata.linearized);
   EXPECT_EQ("Sample PDF Document Info", doc_metadata.title);
-  EXPECT_EQ("Chromium Authors", doc_metadata.author);
+  EXPECT_EQ("Cinaseek Authors", doc_metadata.author);
   EXPECT_EQ("Testing", doc_metadata.subject);
-  EXPECT_EQ("testing,chromium,pdfium,document,info", doc_metadata.keywords);
+  EXPECT_EQ("testing,Cinaseek,pdfium,document,info", doc_metadata.keywords);
   EXPECT_EQ("Your Preferred Text Editor", doc_metadata.creator);
   EXPECT_EQ("fixup_pdf_template.py", doc_metadata.producer);
 

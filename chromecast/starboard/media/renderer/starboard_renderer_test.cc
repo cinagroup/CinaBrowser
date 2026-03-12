@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ void RunPendingTasks() {
 
 // Returns a valid audio config with values arbitrarily set. The values will
 // match the values of GetStarboardAudioConfig.
-::media::AudioDecoderConfig GetChromiumAudioConfig() {
+::media::AudioDecoderConfig GetCinaseekAudioConfig() {
   return ::media::AudioDecoderConfig(
       ::media::AudioCodec::kAAC, ::media::SampleFormat::kSampleFormatS32,
       ::media::ChannelLayoutConfig::Stereo(), 48000, /*extra_data=*/{},
@@ -89,7 +89,7 @@ void RunPendingTasks() {
 
 // Returns a valid video config with values arbitrarily set. The values will
 // match the values of GetStarboardVideoConfig.
-::media::VideoDecoderConfig GetChromiumVideoConfig() {
+::media::VideoDecoderConfig GetCinaseekVideoConfig() {
   ::media::VideoDecoderConfig video_config(
       ::media::VideoCodec::kH264, ::media::VideoCodecProfile::H264PROFILE_HIGH,
       ::media::VideoDecoderConfig::AlphaMode::kIsOpaque,
@@ -102,7 +102,7 @@ void RunPendingTasks() {
 }
 
 // Returns a valid starboard audio config with values arbitrarily set. The
-// values will match the values of GetChromiumAudioConfig.
+// values will match the values of GetCinaseekAudioConfig.
 StarboardAudioSampleInfo GetStarboardAudioConfig() {
   return StarboardAudioSampleInfo{
       .codec = kStarboardAudioCodecAac,
@@ -119,7 +119,7 @@ StarboardAudioSampleInfo GetStarboardAudioConfig() {
 }
 
 // Returns a valid starboard video config with values arbitrarily set. The
-// values will match the values of GetChromiumVideoConfig.
+// values will match the values of GetCinaseekVideoConfig.
 StarboardVideoSampleInfo GetStarboardVideoConfig() {
   return StarboardVideoSampleInfo{
       .codec = kStarboardVideoCodecH264,
@@ -166,8 +166,8 @@ class StarboardRendererTest : public ::testing::Test {
   StarboardRendererTest() {
     mojo::core::Init();
 
-    audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-    video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+    audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+    video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
     ON_CALL(starboard_for_drm_, CreateDrmSystem)
         .WillByDefault(Return(&drm_system_));
@@ -312,11 +312,11 @@ class StarboardRendererTest : public ::testing::Test {
   // std::get()) and avoid for-loops when using these arrays in tests (to keep
   // EXPECT/ASSERT in top-level TEST bodies).
   //
-  // Chromium buffers.
+  // Cinaseek buffers.
   std::array<scoped_refptr<::media::DecoderBuffer>, 3> audio_buffers_;
   std::array<scoped_refptr<::media::DecoderBuffer>, 4> video_buffers_;
 
-  // Starboard buffers corresponding to the chromium buffers.
+  // Starboard buffers corresponding to the Cinaseek buffers.
   std::array<StarboardSampleInfo, 3> sb_audio_buffers_;
   std::array<StarboardSampleInfo, 4> sb_video_buffers_;
 

@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,22 +7,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "GPU Win x64 Builder (dbg)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu",
+              "builder_group": "Cinaseek.gpu",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -30,27 +30,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 x64 Debug (NVIDIA)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu",
+              "builder_group": "Cinaseek.gpu",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU Win x64 Builder (dbg)",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -60,13 +60,13 @@
         {
           "bucket": "ci",
           "builder": "Win10 x64 Debug (NVIDIA)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "gpu-try-win-nvidia-dbg",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/Win10 x64 Debug (NVIDIA)/targets"
@@ -79,12 +79,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu",
+  "builder_group": "Cinaseek.gpu",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

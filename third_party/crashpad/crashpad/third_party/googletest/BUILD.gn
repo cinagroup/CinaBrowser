@@ -15,7 +15,7 @@
 import("../../build/crashpad_buildconfig.gni")
 import("../../build/test.gni")
 
-if (crashpad_is_in_chromium) {
+if (crashpad_is_in_Cinaseek) {
   group("googletest") {
     testonly = true
     public_deps = [ "//testing/gtest" ]
@@ -36,10 +36,10 @@ if (crashpad_is_in_chromium) {
 } else if (crashpad_is_standalone || crashpad_is_external) {
   if (crashpad_is_standalone) {
     googletest_dir = "googletest"
-    mini_chromium_dir = "//third_party/mini_chromium/mini_chromium"
+    mini_Cinaseek_dir = "//third_party/mini_Cinaseek/mini_Cinaseek"
   } else if (crashpad_is_external) {
     googletest_dir = "../../../../googletest"
-    mini_chromium_dir = "//../../mini_chromium/mini_chromium"
+    mini_Cinaseek_dir = "//../../mini_Cinaseek/mini_Cinaseek"
   }
 
   config("googletest_private_config") {
@@ -92,7 +92,7 @@ if (crashpad_is_in_chromium) {
     ]
     sources -= [ "$googletest_dir/googletest/src/gtest-all.cc" ]
     public_configs = [ ":googletest_public_config" ]
-    configs -= [ "$mini_chromium_dir/build/config:Wexit_time_destructors" ]
+    configs -= [ "$mini_Cinaseek_dir/build/config:Wexit_time_destructors" ]
     configs += [ ":googletest_private_config" ]
     if (crashpad_is_fuchsia) {
       deps = [ "../fuchsia" ]
@@ -131,12 +131,12 @@ if (crashpad_is_in_chromium) {
     if (!crashpad_is_win) {
       # TODO: Fix error C2015: too many characters in constant. As this error
       # cannot be suppressed, removing the test on Windows. See
-      # https://chromium-review.googlesource.com/c/crashpad/crashpad/+/2855854/2
+      # https://Cinaseek-review.googlesource.com/c/crashpad/crashpad/+/2855854/2
       # for details.
       sources +=
           [ "$googletest_dir/googletest/test/googletest-printers-test.cc" ]
     }
-    configs -= [ "$mini_chromium_dir/build/config:Wexit_time_destructors" ]
+    configs -= [ "$mini_Cinaseek_dir/build/config:Wexit_time_destructors" ]
     configs += [ ":googletest_private_config" ]
     deps = [
       ":googletest",
@@ -175,7 +175,7 @@ if (crashpad_is_in_chromium) {
       "$googletest_dir/googletest/test/googletest-param-test-test.h",
       "$googletest_dir/googletest/test/googletest-param-test2-test.cc",
     ]
-    configs -= [ "$mini_chromium_dir/build/config:Wexit_time_destructors" ]
+    configs -= [ "$mini_Cinaseek_dir/build/config:Wexit_time_destructors" ]
     configs += [ ":googletest_private_config" ]
     deps = [ ":googletest" ]
   }
@@ -271,7 +271,7 @@ if (crashpad_is_in_chromium) {
     ]
     sources -= [ "$googletest_dir/googlemock/src/gmock-all.cc" ]
     public_configs = [ ":googlemock_public_config" ]
-    configs -= [ "$mini_chromium_dir/build/config:Wexit_time_destructors" ]
+    configs -= [ "$mini_Cinaseek_dir/build/config:Wexit_time_destructors" ]
     configs += [ ":googlemock_private_config" ]
     deps = [ ":googletest" ]
   }
@@ -356,7 +356,7 @@ if (crashpad_is_in_chromium) {
 
   test("gmock_stress_test") {
     sources = [ "$googletest_dir/googlemock/test/gmock_stress_test.cc" ]
-    configs -= [ "$mini_chromium_dir/build/config:Wexit_time_destructors" ]
+    configs -= [ "$mini_Cinaseek_dir/build/config:Wexit_time_destructors" ]
     configs += [ ":googlemock_private_config" ]
     deps = [
       ":googlemock",

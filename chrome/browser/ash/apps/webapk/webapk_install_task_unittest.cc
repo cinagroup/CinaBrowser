@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -212,7 +212,7 @@ TEST_F(WebApkInstallTaskTest, SuccessfulInstall) {
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
 
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
   base::HistogramTester histograms;
 
   EXPECT_TRUE(InstallWebApk(app_id));
@@ -226,13 +226,13 @@ TEST_F(WebApkInstallTaskTest, SuccessfulInstall) {
 
   ASSERT_EQ(fake_webapk_instance()->handled_packages().size(), 1u);
   ASSERT_EQ(fake_webapk_instance()->handled_packages().count(
-                "org.chromium.webapk.some_package"),
+                "org.Cinaseek.webapk.some_package"),
             1u);
 
   ASSERT_THAT(apps::webapk_prefs::GetWebApkAppIds(profile()),
               testing::ElementsAre(app_id));
   ASSERT_EQ(*apps::webapk_prefs::GetWebApkPackageName(profile(), app_id),
-            "org.chromium.webapk.some_package");
+            "org.Cinaseek.webapk.some_package");
   histograms.ExpectBucketCount(apps::kWebApkInstallResultHistogram,
                                apps::WebApkInstallStatus::kSuccess, 1);
 }
@@ -258,7 +258,7 @@ TEST_F(WebApkInstallTaskTest, ShareTarget) {
   auto app_id =
       web_app::test::InstallWebApp(profile(), std::move(web_app_info));
 
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
@@ -307,14 +307,14 @@ TEST_F(WebApkInstallTaskTest, FailedArcInstall) {
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
 
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
   fake_webapk_instance()->set_install_result(
       arc::mojom::WebApkInstallResult::kErrorResolveNetworkError);
   base::HistogramTester histograms;
 
   ASSERT_FALSE(InstallWebApk(app_id));
   ASSERT_EQ(fake_webapk_instance()->handled_packages().count(
-                "org.chromium.webapk.some_package"),
+                "org.Cinaseek.webapk.some_package"),
             1u);
   ASSERT_EQ(apps::webapk_prefs::GetWebApkAppIds(profile()).size(), 0u);
   histograms.ExpectBucketCount(apps::kWebApkInstallResultHistogram,
@@ -354,12 +354,12 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateShortName) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   // Install the same app with |short_name| changed. This should trigger an
@@ -374,7 +374,7 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateShortName) {
   ASSERT_THAT(last_webapk_request()->update_reasons(),
               ::testing::ElementsAre(webapk::WebApk::SHORT_NAME_DIFFERS));
   ASSERT_EQ(last_webapk_request()->package_name(),
-            "org.chromium.webapk.some_package");
+            "org.Cinaseek.webapk.some_package");
   ASSERT_EQ(last_webapk_request()->version(), "1");
 
   webapk::WebAppManifest manifest = last_webapk_request()->manifest();
@@ -389,12 +389,12 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateScope) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   // Install the same app with |scope| changed. This should trigger an
@@ -423,13 +423,13 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateIconHash) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
   // Change icon hash.
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package", "fakeiconhash123456789"));
+      "org.Cinaseek.webapk.some_package", "fakeiconhash123456789"));
 
   auto web_app_info = BuildDefaultWebAppInfo();
   web_app::test::InstallWebApp(profile(), std::move(web_app_info));
@@ -450,11 +450,11 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateShareTarget) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   // Install the same app with |share_target| changed. This should trigger an
@@ -483,12 +483,12 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateMultipleChanges) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   auto web_app_info = BuildDefaultWebAppInfo();
@@ -522,10 +522,10 @@ TEST_F(WebApkInstallTaskTest, SuccessfulUpdateMultipleChanges) {
 TEST_F(WebApkInstallTaskTest, AbandonedUpdateNoChanges) {
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
   EXPECT_TRUE(InstallWebApk(app_id));
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   // Install the same app with no changes. This should fail.
@@ -543,7 +543,7 @@ TEST_F(WebApkInstallTaskTest, FailedUpdateWebApkInfoInvalid) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
@@ -559,12 +559,12 @@ TEST_F(WebApkInstallTaskTest, FailedUpdateNetworkError) {
   // Install an initial app.
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 
   fake_webapk_instance()->set_web_apk_info(BuildDefaultWebApkInfo(
-      "org.chromium.webapk.some_package",
+      "org.Cinaseek.webapk.some_package",
       last_webapk_request()->manifest().icons(0).hash()));
 
   // Install the same app with |short_name| changed. This should trigger an
@@ -596,7 +596,7 @@ TEST_F(WebApkInstallTaskTest, SingleAbi) {
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
 
-  webapk_test_server()->RespondWithSuccess("org.chromium.webapk.some_package");
+  webapk_test_server()->RespondWithSuccess("org.Cinaseek.webapk.some_package");
 
   EXPECT_TRUE(InstallWebApk(app_id));
 

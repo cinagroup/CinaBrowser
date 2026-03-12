@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ class CWVSSLErrorHandlerTest : public PlatformTest {
 
 TEST_F(CWVSSLErrorHandlerTest, Initialization) {
   web::FakeWebState web_state;
-  NSURL* URL = [NSURL URLWithString:@"https://www.chromium.org"];
+  NSURL* URL = [NSURL URLWithString:@"https://www.Cinaseek.org"];
   NSDictionary* user_info =
       @{NSLocalizedDescriptionKey : @"This is an error description."};
   NSError* error = [NSError errorWithDomain:@"TestDomain"
@@ -51,7 +51,7 @@ TEST_F(CWVSSLErrorHandlerTest, Initialization) {
 
 TEST_F(CWVSSLErrorHandlerTest, DisplayHTML) {
   web::FakeWebState web_state;
-  NSURL* URL = [NSURL URLWithString:@"https://www.chromium.org"];
+  NSURL* URL = [NSURL URLWithString:@"https://www.Cinaseek.org"];
   NSError* error = [NSError errorWithDomain:@"TestDomain" code:-1 userInfo:nil];
   net::SSLInfo ssl_info;
   __block NSString* displayed_html = nil;
@@ -73,7 +73,7 @@ TEST_F(CWVSSLErrorHandlerTest, CanOverrideAndReload) {
   auto navigation_manager = std::make_unique<web::FakeNavigationManager>();
   web::FakeNavigationManager* navigation_manager_ptr = navigation_manager.get();
   web_state.SetNavigationManager(std::move(navigation_manager));
-  NSURL* URL = [NSURL URLWithString:@"https://www.chromium.org"];
+  NSURL* URL = [NSURL URLWithString:@"https://www.Cinaseek.org"];
   NSError* error = [NSError errorWithDomain:@"TestDomain" code:-1 userInfo:nil];
   net::SSLInfo ssl_info;
   ssl_info.is_fatal_cert_error = true;
@@ -97,7 +97,7 @@ TEST_F(CWVSSLErrorHandlerTest, CannotOverrideAndReload) {
   auto navigation_manager = std::make_unique<web::FakeNavigationManager>();
   web::FakeNavigationManager* navigation_manager_ptr = navigation_manager.get();
   web_state.SetNavigationManager(std::move(navigation_manager));
-  NSURL* URL = [NSURL URLWithString:@"https://www.chromium.org"];
+  NSURL* URL = [NSURL URLWithString:@"https://www.Cinaseek.org"];
   NSError* error = [NSError errorWithDomain:@"TestDomain" code:-1 userInfo:nil];
   net::SSLInfo ssl_info;
   ssl_info.is_fatal_cert_error = false;

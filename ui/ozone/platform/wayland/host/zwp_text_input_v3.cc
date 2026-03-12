@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,11 +154,11 @@ void ZwpTextInputV3Impl::Reset() {
   // unexpectedly. So at this point, leave it unimplemented.
   //
   // If no reset is implemented at all, it can lead to bad user experience,
-  // e.g. preedit being duplicated if composition is aborted on the chromium
+  // e.g. preedit being duplicated if composition is aborted on the Cinaseek
   // side by clicking in the input field. So the logic below is still needed
   // until a proper fix is in place.
   //
-  // Even though chromium expects only preedit to be reset, the surrounding text
+  // Even though Cinaseek expects only preedit to be reset, the surrounding text
   // in fact could change along with reset being called if composition was
   // canceled internally. So we shouldn't keep old surrounding text anyway. See
   // related crbug.com/353915732 where surrounding text update is not sent after

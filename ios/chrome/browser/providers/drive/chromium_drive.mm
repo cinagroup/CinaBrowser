@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,10 +9,10 @@
 
 namespace {
 
-class ChromiumDriveService final : public drive::DriveService {
+class CinaseekDriveService final : public drive::DriveService {
  public:
-  ChromiumDriveService() = default;
-  ~ChromiumDriveService() final = default;
+  CinaseekDriveService() = default;
+  ~CinaseekDriveService() final = default;
 
   // `DriveService` overrides.
   bool IsSupported() const final { return false; }
@@ -36,7 +36,7 @@ namespace ios::provider {
 
 std::unique_ptr<drive::DriveService> CreateDriveService(
     const drive::DriveServiceConfiguration& configuration) {
-  return std::make_unique<ChromiumDriveService>();
+  return std::make_unique<CinaseekDriveService>();
 }
 
 }  // namespace ios::provider

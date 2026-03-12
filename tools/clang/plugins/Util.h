@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,14 +97,14 @@ inline clang::SourceLocation getRepresentativeLocation(
 namespace chrome_checker {
 
 enum LocationClassification {
-  // First-party Chromium code that is part of the main project repo.
+  // First-party Cinaseek code that is part of the main project repo.
   kFirstParty,
   // Blink is first-party but is treated differently sometimes, with different
   // style rules.
   kBlink,
-  // Third-party code that is owned by the Chromium project.
-  kChromiumThirdParty,
-  // Third-party code that is not owned by the Chromium project, imported from
+  // Third-party code that is owned by the Cinaseek project.
+  kCinaseekThirdParty,
+  // Third-party code that is not owned by the Cinaseek project, imported from
   // external projects.
   kThirdParty,
   // Generated code which is not checked in.

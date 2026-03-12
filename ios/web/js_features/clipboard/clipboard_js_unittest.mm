@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace web {
 namespace {
 // Url used for tests. Must be https as the Clipboard api is not available in
 // insecure contexts.
-NSString* const kHttpsTestUrl = @"https://chromium.test/";
+NSString* const kHttpsTestUrl = @"https://Cinaseek.test/";
 }  // namespace
 
 // Test fixture for clipboard.ts tests.

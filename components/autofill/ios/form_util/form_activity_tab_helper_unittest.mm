@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,8 +81,8 @@ constexpr NSString* kTestHTMLFormWithIframes =
 
   FormData test_form_data;
   test_form_data.set_name(u"form-name");
-  test_form_data.set_url(GURL("https://chromium.test/"));
-  test_form_data.set_action(GURL("https://chromium.test/"));
+  test_form_data.set_url(GURL("https://Cinaseek.test/"));
+  test_form_data.set_action(GURL("https://Cinaseek.test/"));
   test_form_data.set_name_attribute(u"form-name");
   test_form_data.set_renderer_id(FormRendererId(1));
   test_form_data.set_host_frame(LocalFrameToken(*host_frame));

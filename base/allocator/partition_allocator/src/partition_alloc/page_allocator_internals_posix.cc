@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,8 +142,8 @@ void NameRegion(void* start, size_t length, PageTag page_tag) {
     case PageTag::kPartitionAlloc:
       name = "partition_alloc";
       break;
-    case PageTag::kChromium:
-      name = "chromium";
+    case PageTag::kCinaseek:
+      name = "Cinaseek";
       break;
     case PageTag::kV8:
       name = "v8";

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,8 +95,8 @@ class ObjectManagerTest
 
     object_manager_ = bus_->GetObjectManager(
         test_service_->service_name(),
-        ObjectPath("/org/chromium/TestService"));
-    object_manager_->RegisterInterface("org.chromium.TestInterface", this);
+        ObjectPath("/org/Cinaseek/TestService"));
+    object_manager_->RegisterInterface("org.Cinaseek.TestInterface", this);
 
     WaitForObject();
   }
@@ -153,7 +153,7 @@ class ObjectManagerTest
     Properties* properties = static_cast<Properties*>(
         object_manager_->GetProperties(
             object_path,
-            "org.chromium.TestInterface"));
+            "org.Cinaseek.TestInterface"));
     if (name == properties->name.name())
       last_name_value_ = properties->name.value();
 
@@ -195,9 +195,9 @@ class ObjectManagerTest
   void PerformAction(const std::string& action, const ObjectPath& object_path) {
     ObjectProxy* object_proxy = bus_->GetObjectProxy(
         test_service_->service_name(),
-        ObjectPath("/org/chromium/TestObject"));
+        ObjectPath("/org/Cinaseek/TestObject"));
 
-    MethodCall method_call("org.chromium.TestInterface", "PerformAction");
+    MethodCall method_call("org.Cinaseek.TestInterface", "PerformAction");
     MessageWriter writer(&method_call);
     writer.AppendString(action);
     writer.AppendObjectPath(object_path);
@@ -229,12 +229,12 @@ class ObjectManagerTest
 
 TEST_F(ObjectManagerTest, InitialObject) {
   ObjectProxy* object_proxy = object_manager_->GetObjectProxy(
-      ObjectPath("/org/chromium/TestObject"));
+      ObjectPath("/org/Cinaseek/TestObject"));
   EXPECT_NE(nullptr, object_proxy);
 
   Properties* properties = static_cast<Properties*>(
-      object_manager_->GetProperties(ObjectPath("/org/chromium/TestObject"),
-                                     "org.chromium.TestInterface"));
+      object_manager_->GetProperties(ObjectPath("/org/Cinaseek/TestObject"),
+                                     "org.Cinaseek.TestInterface"));
   EXPECT_NE(nullptr, properties);
 
   EXPECT_EQ("TestService", properties->name.value());
@@ -254,124 +254,124 @@ TEST_F(ObjectManagerTest, InitialObject) {
 
 TEST_F(ObjectManagerTest, UnknownObjectProxy) {
   ObjectProxy* object_proxy = object_manager_->GetObjectProxy(
-      ObjectPath("/org/chromium/UnknownObject"));
+      ObjectPath("/org/Cinaseek/UnknownObject"));
   EXPECT_EQ(nullptr, object_proxy);
 }
 
 TEST_F(ObjectManagerTest, UnknownObjectProperties) {
   Properties* properties = static_cast<Properties*>(
-      object_manager_->GetProperties(ObjectPath("/org/chromium/UnknownObject"),
-                                     "org.chromium.TestInterface"));
+      object_manager_->GetProperties(ObjectPath("/org/Cinaseek/UnknownObject"),
+                                     "org.Cinaseek.TestInterface"));
   EXPECT_EQ(nullptr, properties);
 }
 
 TEST_F(ObjectManagerTest, UnknownInterfaceProperties) {
   Properties* properties = static_cast<Properties*>(
-      object_manager_->GetProperties(ObjectPath("/org/chromium/TestObject"),
-                                     "org.chromium.UnknownService"));
+      object_manager_->GetProperties(ObjectPath("/org/Cinaseek/TestObject"),
+                                     "org.Cinaseek.UnknownService"));
   EXPECT_EQ(nullptr, properties);
 }
 
 TEST_F(ObjectManagerTest, GetObjects) {
   std::vector<ObjectPath> object_paths = object_manager_->GetObjects();
   ASSERT_EQ(1U, object_paths.size());
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[0]);
 }
 
 TEST_F(ObjectManagerTest, GetObjectsWithInterface) {
   std::vector<ObjectPath> object_paths =
-      object_manager_->GetObjectsWithInterface("org.chromium.TestInterface");
+      object_manager_->GetObjectsWithInterface("org.Cinaseek.TestInterface");
   ASSERT_EQ(1U, object_paths.size());
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[0]);
 }
 
 TEST_F(ObjectManagerTest, GetObjectsWithUnknownInterface) {
   std::vector<ObjectPath> object_paths =
-      object_manager_->GetObjectsWithInterface("org.chromium.UnknownService");
+      object_manager_->GetObjectsWithInterface("org.Cinaseek.UnknownService");
   EXPECT_EQ(0U, object_paths.size());
 }
 
 TEST_F(ObjectManagerTest, SameObject) {
   ObjectManager* object_manager = bus_->GetObjectManager(
       test_service_->service_name(),
-      ObjectPath("/org/chromium/TestService"));
+      ObjectPath("/org/Cinaseek/TestService"));
   EXPECT_EQ(object_manager_, object_manager);
 }
 
 TEST_F(ObjectManagerTest, DifferentObjectForService) {
   ObjectManager* object_manager = bus_->GetObjectManager(
-      "org.chromium.DifferentService",
-      ObjectPath("/org/chromium/TestService"));
+      "org.Cinaseek.DifferentService",
+      ObjectPath("/org/Cinaseek/TestService"));
   EXPECT_NE(object_manager_, object_manager);
 }
 
 TEST_F(ObjectManagerTest, DifferentObjectForPath) {
   ObjectManager* object_manager = bus_->GetObjectManager(
       test_service_->service_name(),
-      ObjectPath("/org/chromium/DifferentService"));
+      ObjectPath("/org/Cinaseek/DifferentService"));
   EXPECT_NE(object_manager_, object_manager);
 }
 
 TEST_F(ObjectManagerTest, SecondObject) {
-  PerformAction("AddObject", ObjectPath("/org/chromium/SecondObject"));
+  PerformAction("AddObject", ObjectPath("/org/Cinaseek/SecondObject"));
   WaitForObject();
 
   ObjectProxy* object_proxy = object_manager_->GetObjectProxy(
-      ObjectPath("/org/chromium/SecondObject"));
+      ObjectPath("/org/Cinaseek/SecondObject"));
   EXPECT_NE(nullptr, object_proxy);
 
   Properties* properties = static_cast<Properties*>(
-      object_manager_->GetProperties(ObjectPath("/org/chromium/SecondObject"),
-                                     "org.chromium.TestInterface"));
+      object_manager_->GetProperties(ObjectPath("/org/Cinaseek/SecondObject"),
+                                     "org.Cinaseek.TestInterface"));
   EXPECT_NE(nullptr, properties);
 
   std::vector<ObjectPath> object_paths = object_manager_->GetObjects();
   ASSERT_EQ(2U, object_paths.size());
 
   std::sort(object_paths.begin(), object_paths.end());
-  EXPECT_EQ(ObjectPath("/org/chromium/SecondObject"), object_paths[0]);
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[1]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/SecondObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[1]);
 
   object_paths =
-      object_manager_->GetObjectsWithInterface("org.chromium.TestInterface");
+      object_manager_->GetObjectsWithInterface("org.Cinaseek.TestInterface");
   ASSERT_EQ(2U, object_paths.size());
 
   std::sort(object_paths.begin(), object_paths.end());
-  EXPECT_EQ(ObjectPath("/org/chromium/SecondObject"), object_paths[0]);
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[1]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/SecondObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[1]);
 }
 
 TEST_F(ObjectManagerTest, RemoveSecondObject) {
-  PerformAction("AddObject", ObjectPath("/org/chromium/SecondObject"));
+  PerformAction("AddObject", ObjectPath("/org/Cinaseek/SecondObject"));
   WaitForObject();
 
   std::vector<ObjectPath> object_paths = object_manager_->GetObjects();
   ASSERT_EQ(2U, object_paths.size());
 
-  PerformAction("RemoveObject", ObjectPath("/org/chromium/SecondObject"));
+  PerformAction("RemoveObject", ObjectPath("/org/Cinaseek/SecondObject"));
   WaitForRemoveObject();
 
   ObjectProxy* object_proxy = object_manager_->GetObjectProxy(
-      ObjectPath("/org/chromium/SecondObject"));
+      ObjectPath("/org/Cinaseek/SecondObject"));
   EXPECT_EQ(nullptr, object_proxy);
 
   Properties* properties = static_cast<Properties*>(
-      object_manager_->GetProperties(ObjectPath("/org/chromium/SecondObject"),
-                                     "org.chromium.TestInterface"));
+      object_manager_->GetProperties(ObjectPath("/org/Cinaseek/SecondObject"),
+                                     "org.Cinaseek.TestInterface"));
   EXPECT_EQ(nullptr, properties);
 
   object_paths = object_manager_->GetObjects();
   ASSERT_EQ(1U, object_paths.size());
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[0]);
 
   object_paths =
-      object_manager_->GetObjectsWithInterface("org.chromium.TestInterface");
+      object_manager_->GetObjectsWithInterface("org.Cinaseek.TestInterface");
   ASSERT_EQ(1U, object_paths.size());
-  EXPECT_EQ(ObjectPath("/org/chromium/TestObject"), object_paths[0]);
+  EXPECT_EQ(ObjectPath("/org/Cinaseek/TestObject"), object_paths[0]);
 }
 
 TEST_F(ObjectManagerTest, OwnershipLost) {
-  PerformAction("ReleaseOwnership", ObjectPath("/org/chromium/TestService"));
+  PerformAction("ReleaseOwnership", ObjectPath("/org/Cinaseek/TestService"));
   WaitForRemoveObject();
 
   std::vector<ObjectPath> object_paths = object_manager_->GetObjects();
@@ -379,7 +379,7 @@ TEST_F(ObjectManagerTest, OwnershipLost) {
 }
 
 TEST_F(ObjectManagerTest, OwnershipLostAndRegained) {
-  PerformAction("Ownership", ObjectPath("/org/chromium/TestService"));
+  PerformAction("Ownership", ObjectPath("/org/Cinaseek/TestService"));
   WaitForRemoveObject();
   WaitForObject();
 
@@ -390,21 +390,21 @@ TEST_F(ObjectManagerTest, OwnershipLostAndRegained) {
 // Flaky: crbug.com/1174515
 TEST_F(ObjectManagerTest, DISABLED_PropertiesChangedAsObjectsReceived) {
   // Remove the existing object manager.
-  object_manager_->UnregisterInterface("org.chromium.TestInterface");
+  object_manager_->UnregisterInterface("org.Cinaseek.TestInterface");
   run_loop_ = std::make_unique<base::RunLoop>();
   EXPECT_TRUE(bus_->RemoveObjectManager(
       test_service_->service_name(),
-      ObjectPath("/org/chromium/TestService"),
+      ObjectPath("/org/Cinaseek/TestService"),
       run_loop_->QuitClosure()));
   run_loop_->Run();
 
   PerformAction("SetSendImmediatePropertiesChanged",
-                ObjectPath("/org/chromium/TestService"));
+                ObjectPath("/org/Cinaseek/TestService"));
 
   object_manager_ = bus_->GetObjectManager(
       test_service_->service_name(),
-      ObjectPath("/org/chromium/TestService"));
-  object_manager_->RegisterInterface("org.chromium.TestInterface", this);
+      ObjectPath("/org/Cinaseek/TestService"));
+  object_manager_->RegisterInterface("org.Cinaseek.TestInterface", this);
 
   // The newly created object manager should call GetManagedObjects immediately
   // after setting up the match rule for PropertiesChanged. We should process

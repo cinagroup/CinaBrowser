@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -108,7 +108,7 @@ TEST_F(FaviconCallbackTest, IconFavicon) {
 TEST_F(FaviconCallbackTest, AppleTouchIconFavicon) {
   ASSERT_TRUE(observer()->favicon_url_candidates().empty());
   LoadHtml(@"<link rel='apple-touch-icon' href='http://fav.ico'>",
-           GURL("https://chromium.test"));
+           GURL("https://Cinaseek.test"));
 
   EXPECT_TRUE(WaitUntilConditionOrTimeout(kWaitForActionTimeout, ^{
     return observer()->favicon_url_updated();
@@ -120,7 +120,7 @@ TEST_F(FaviconCallbackTest, AppleTouchIconFavicon) {
   EXPECT_EQ(GURL("http://fav.ico"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kTouchIcon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"), favicons[1].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"), favicons[1].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[1].icon_type);
   ASSERT_TRUE(favicons[1].icon_sizes.empty());
 }
@@ -129,7 +129,7 @@ TEST_F(FaviconCallbackTest, AppleTouchIconFavicon) {
 TEST_F(FaviconCallbackTest, AppleTouchIconPrecomposedFavicon) {
   ASSERT_TRUE(observer()->favicon_url_candidates().empty());
   LoadHtml(@"<link rel='apple-touch-icon-precomposed' href='http://fav.ico'>",
-           GURL("https://chromium.test"));
+           GURL("https://Cinaseek.test"));
 
   EXPECT_TRUE(WaitUntilConditionOrTimeout(kWaitForActionTimeout, ^{
     return observer()->favicon_url_updated();
@@ -141,7 +141,7 @@ TEST_F(FaviconCallbackTest, AppleTouchIconPrecomposedFavicon) {
   EXPECT_EQ(GURL("http://fav.ico"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kTouchPrecomposedIcon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"), favicons[1].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"), favicons[1].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[1].icon_type);
   ASSERT_TRUE(favicons[1].icon_sizes.empty());
 }
@@ -149,7 +149,7 @@ TEST_F(FaviconCallbackTest, AppleTouchIconPrecomposedFavicon) {
 // Tests page without favicon link.
 TEST_F(FaviconCallbackTest, NoFavicon) {
   ASSERT_TRUE(observer()->favicon_url_candidates().empty());
-  LoadHtml(@"<html></html>", GURL("https://chromium.test/test/test.html"));
+  LoadHtml(@"<html></html>", GURL("https://Cinaseek.test/test/test.html"));
 
   EXPECT_TRUE(WaitUntilConditionOrTimeout(kWaitForActionTimeout, ^{
     return observer()->favicon_url_updated();
@@ -158,7 +158,7 @@ TEST_F(FaviconCallbackTest, NoFavicon) {
   const std::vector<FaviconURL>& favicons =
       observer()->favicon_url_candidates();
   ASSERT_EQ(1U, favicons.size());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"), favicons[0].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
 }
@@ -167,7 +167,7 @@ TEST_F(FaviconCallbackTest, NoFavicon) {
 TEST_F(FaviconCallbackTest, NoFaviconWithQuery) {
   ASSERT_TRUE(observer()->favicon_url_candidates().empty());
   LoadHtml(@"<html></html>",
-           GURL("https://chromium.test/test/test.html?q1#h1"));
+           GURL("https://Cinaseek.test/test/test.html?q1#h1"));
 
   EXPECT_TRUE(WaitUntilConditionOrTimeout(kWaitForActionTimeout, ^{
     return observer()->favicon_url_updated();
@@ -176,7 +176,7 @@ TEST_F(FaviconCallbackTest, NoFaviconWithQuery) {
   const std::vector<FaviconURL>& favicons =
       observer()->favicon_url_candidates();
   ASSERT_EQ(1U, favicons.size());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"), favicons[0].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
 }
@@ -214,7 +214,7 @@ TEST_F(FaviconCallbackTest, MultipleFavicons) {
 TEST_F(FaviconCallbackTest, InvalidFaviconUrl) {
   ASSERT_TRUE(observer()->favicon_url_candidates().empty());
   LoadHtml(@"<html><head><link rel='icon' href='http://'></head></html>",
-           GURL("https://chromium.test"));
+           GURL("https://Cinaseek.test"));
 
   EXPECT_TRUE(WaitUntilConditionOrTimeout(kWaitForActionTimeout, ^{
     return observer()->favicon_url_updated();
@@ -223,7 +223,7 @@ TEST_F(FaviconCallbackTest, InvalidFaviconUrl) {
   const std::vector<FaviconURL>& favicons =
       observer()->favicon_url_candidates();
   ASSERT_EQ(1U, favicons.size());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"), favicons[0].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
 }
@@ -241,7 +241,7 @@ TEST_F(FaviconCallbackTest, EmptyFaviconUrl) {
       observer()->favicon_url_candidates();
   ASSERT_EQ(1U, favicons.size());
   // TODO(crbug.com/41319193): This result is not correct.
-  EXPECT_EQ(GURL("https://chromium.test/"), favicons[0].icon_url);
+  EXPECT_EQ(GURL("https://Cinaseek.test/"), favicons[0].icon_url);
   EXPECT_EQ(FaviconURL::IconType::kFavicon, favicons[0].icon_type);
   ASSERT_TRUE(favicons[0].icon_sizes.empty());
 }

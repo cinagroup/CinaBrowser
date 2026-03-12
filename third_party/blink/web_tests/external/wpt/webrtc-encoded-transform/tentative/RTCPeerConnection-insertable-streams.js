@@ -180,7 +180,7 @@ function additionalDataSize(descriptor) {
 // Compute the buffer reported in the additionalData field using the metadata
 // provided by a video frame.
 // Based on the webrtc::RtpDescriptorAuthentication() C++ function at
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/rtp_rtcp/source/rtp_descriptor_authentication.cc
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/rtp_rtcp/source/rtp_descriptor_authentication.cc
 function computeAdditionalData(videoFrame) {
   const kMaxSpatialLayers = 8;
   const kMaxTemporalLayers = 8;

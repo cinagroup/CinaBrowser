@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ void LoadHtml(NSString* html, const GURL& url, web::WebState* web_state) {
 }
 
 void LoadHtml(NSString* html, web::WebState* web_state) {
-  GURL url("https://chromium.test/");
+  GURL url("https://Cinaseek.test/");
   LoadHtml(html, url, web_state);
 }
 

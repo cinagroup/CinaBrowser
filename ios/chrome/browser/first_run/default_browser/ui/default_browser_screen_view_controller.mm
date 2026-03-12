@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   self.bannerName = kChromeDefaultBrowserScreenBannerImage;
 #else
-  self.bannerName = kChromiumDefaultBrowserScreenBannerImage;
+  self.bannerName = kCinaseekDefaultBrowserScreenBannerImage;
 #endif
   if (![self.titleText length] || ![self.subtitleText length]) {
     // Sets default promo text if title and subtitle text are not explicitly

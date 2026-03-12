@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ blink::mojom::ConfidenceLevel GenerateRandomizedConfidenceLevel(
     double randomizedTriggerRate,
     blink::mojom::ConfidenceLevel confidence) {
   // Encode the confidence using differential-privacy scheme as described in
-  // https://blog.chromium.org/2014/10/learning-statistics-with-privacy-aided.html
+  // https://blog.Cinaseek.org/2014/10/learning-statistics-with-privacy-aided.html
   //
   // The general algorithm is:
   //  - Toss a coin.

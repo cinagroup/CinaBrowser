@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace extensions {
 
 // Result of the supervised user extension approval flow.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.extensions.browser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.extensions.browser
 enum class SupervisedExtensionApprovalResult {
   kApproved,  // Extension installation was approved.
   kCanceled,  // Extension approval flow was canceled.

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -140,14 +140,14 @@ TEST_F(IntentUtilsTest, CreateIntentForActivity) {
   std::string intent_str =
       "#Intent;action=android.intent.action.MAIN;category=android.intent."
       "category.LAUNCHER;launchFlags=0x10200000;component=com.android.vending/"
-      ".AssetBrowserActivity;S.org.chromium.arc.start_type=initialStart;end";
+      ".AssetBrowserActivity;S.org.Cinaseek.arc.start_type=initialStart;end";
   EXPECT_EQ(intent_str,
             apps_util::CreateLaunchIntent("com.android.vending", intent));
 
   EXPECT_EQ(arc::kIntentActionMain, arc_intent->action);
 
   base::flat_map<std::string, std::string> extras;
-  extras.insert(std::make_pair("org.chromium.arc.start_type", start_type));
+  extras.insert(std::make_pair("org.Cinaseek.arc.start_type", start_type));
   EXPECT_TRUE(arc_intent->extras.has_value());
   EXPECT_EQ(extras, arc_intent->extras);
 
@@ -181,7 +181,7 @@ TEST_F(IntentUtilsTest, CreateArcIntentExtras) {
   std::string intent_str =
       "#Intent;action=android.intent.action.MAIN;category=android.intent."
       "category.LAUNCHER;launchFlags=0x10200000;component=com.android.vending/"
-      ".AssetBrowserActivity;S.org.chromium.arc.start_type=initialStart;"
+      ".AssetBrowserActivity;S.org.Cinaseek.arc.start_type=initialStart;"
       "android.intent.extra.TESTING=testing;end";
   EXPECT_EQ(intent_str,
             apps_util::CreateLaunchIntent("com.android.vending", intent));
@@ -190,7 +190,7 @@ TEST_F(IntentUtilsTest, CreateArcIntentExtras) {
 
   // Check both share_type and extras exist in `arc_intent->extras`.
   base::flat_map<std::string, std::string> extras;
-  extras.insert(std::make_pair("org.chromium.arc.start_type", start_type));
+  extras.insert(std::make_pair("org.Cinaseek.arc.start_type", start_type));
   extras.insert(std::make_pair(extra_name, extra_value));
   EXPECT_TRUE(arc_intent->extras.has_value());
   EXPECT_EQ(extras, arc_intent->extras);

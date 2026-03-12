@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -48,10 +48,10 @@ rust_static_library("bridge_rust_side") {
     "//third_party/rust/read_fonts/v0_37:lib",
     "//third_party/rust/skrifa/v0_40:lib",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
   no_clippy = true  # TODO(https://crbug.com/472355480)
 }
@@ -251,7 +251,7 @@ component("skia") {
     "ext/skia_utils_base.h",
   ]
   sources = [
-    # Chrome sources.
+    # Cinaseek sources.
     "config/SkUserConfig.h",
     "config/sk_ref_cnt_ext_debug.h",
     "config/sk_ref_cnt_ext_release.h",
@@ -333,8 +333,8 @@ component("skia") {
   public += skia_utils_public
   public += skia_effects_public
   public += skia_effects_imagefilter_public
-  public += skia_utils_chromium
-  public += skia_discardable_memory_chromium
+  public += skia_utils_Cinaseek
+  public += skia_discardable_memory_Cinaseek
   public += skia_codec_public
   public += skia_codec_rust_png_public
   public += skia_encode_public
@@ -470,11 +470,11 @@ component("skia") {
     ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
     ":skia_library_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
   all_dependent_configs = [ ":skia_config" ]
 
@@ -549,7 +549,7 @@ component("skia") {
 
   if (skia_support_gpu) {
     public += skia_gpu_public
-    public += skia_gpu_chromium_public
+    public += skia_gpu_Cinaseek_public
     sources += skia_ganesh_private
     sources += skia_null_gpu_sources
     sources += skia_sksl_pipeline_sources
@@ -561,10 +561,10 @@ component("skia") {
     }
     if (enable_vulkan) {
       public += skia_gpu_vk_public
-      public += skia_gpu_vk_chromium_public
+      public += skia_gpu_vk_Cinaseek_public
       sources += skia_gpu_vk_private
       sources += skia_shared_vk_sources
-      sources += skia_gpu_vk_chromium_private
+      sources += skia_gpu_vk_Cinaseek_private
     }
 
     public_deps += [ ":skia_graphite_public" ]
@@ -631,10 +631,10 @@ rust_static_library("rust_common_ffi") {
   sources = skia_rust_common_ffi_rs_srcs
   cxx_bindings = skia_rust_common_ffi_cxx_bridge_srcs
   public_deps = [ ":rust_common_ffi_cpp" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
   no_clippy = true  # TODO(https://crbug.com/472355480)
 }
@@ -648,11 +648,11 @@ source_set("rust_common_ffi_cpp") {
     ":skia_core_public_headers",
     "//build/rust:cxx_cppdeps",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
     ":skia_library_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 }
 
@@ -668,10 +668,10 @@ rust_static_library("rust_png_ffi") {
     ":rust_common_ffi",
     "//third_party/rust/png/v0_18:lib",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
   no_clippy = true  # TODO(https://crbug.com/472355480)
 }
@@ -679,11 +679,11 @@ rust_static_library("rust_png_ffi") {
 source_set("rust_png_ffi_cpp") {
   visibility = [ ":*" ]
   public = skia_codec_rust_png_ffi_cpp_hdrs
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
     ":skia_library_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 }
 
@@ -698,10 +698,10 @@ rust_static_library("rust_bmp_ffi") {
     ":rust_common_ffi",
     "//third_party/rust/image/v0_25:lib",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 }
 
@@ -720,11 +720,11 @@ source_set("rust_bmp_ffi_cpp") {
   deps = [ ":rust_bmp_ffi_cxx_generated_gen" ]
   check_includes =
       false  # Logically part of skia, but split out for build reasons
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":skia_config",
     ":skia_library_config",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 }
 
@@ -744,7 +744,7 @@ template("skia_source_set") {
       configs += [ "//build/config/compiler:optimize_max" ]
     }
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":skia_config",
       ":skia_library_config",
@@ -753,7 +753,7 @@ template("skia_source_set") {
       # and then we shouldn't need these configs.
       ":skcms_implementation_config",
       ":skcms_public_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
     # TODO(crbug.com/40031409): Fix code that adds exit-time destructors and
@@ -1050,7 +1050,7 @@ if (is_apple) {
 
     sources = [
       "$root_out_dir/test_fonts/Ahem.ttf",
-      "ext/data/test_fonts/ChromiumAATTest.ttf",
+      "ext/data/test_fonts/CinaseekAATTest.ttf",
     ]
 
     outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]

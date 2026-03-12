@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -724,7 +724,7 @@ IN_PROC_BROWSER_TEST_F(CrossSiteDocumentBlockingTestBase,
   fetch_result = std::string(TrimWhitespaceASCII(fetch_result, base::TRIM_ALL));
 
   // Verify that the response was not blocked.
-  EXPECT_EQ("runMe({ \"name\" : \"chromium\" });", fetch_result);
+  EXPECT_EQ("runMe({ \"name\" : \"Cinaseek\" });", fetch_result);
 }
 
 // Regression test for https://crbug.com/958421.

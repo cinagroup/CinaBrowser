@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 // High performance implementation of the MT21 decompression algorithm. It is
 // recommended reading the unoptimized implementation here before diving into
 // this
-// https://source.chromium.org/chromiumos/_/chromium/chromiumos/platform/drm-tests/+/94106a2845911104895c50aa5d70c6e5fc8972fc:pixel_formats/mt21_converter.c;drc=091692f34d333dec8fd3a8e375a4ad5a65682cb2;bpv=0;bpt=0
+// https://source.Cinaseek.org/Cinaseekos/_/Cinaseek/Cinaseekos/platform/drm-tests/+/94106a2845911104895c50aa5d70c6e5fc8972fc:pixel_formats/mt21_converter.c;drc=091692f34d333dec8fd3a8e375a4ad5a65682cb2;bpv=0;bpt=0
 //
 // This algorithm should achieve a throughput of about 156 megapixels per second
 // on a single Cortex A72.

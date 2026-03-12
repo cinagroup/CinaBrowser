@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,7 +21,7 @@ declare_args() {
   # browser). You can change this package name to work around signing key
   # conflicts (INSTALL_FAILED_UPDATE_INCOMPATIBLE) on devices/emulators which
   # have the shell browser preinstalled under the default package name.
-  system_webview_shell_package_name = "org.chromium.webview_shell"
+  system_webview_shell_package_name = "org.Cinaseek.webview_shell"
 }
 
 system_webview_shell_android_manifest =
@@ -46,26 +46,26 @@ android_apk("system_webview_shell_apk") {
 android_library("system_webview_shell_apk_java") {
   testonly = true
   sources = [
-    "apk/src/org/chromium/webview_shell/EdgeToEdgeUtil.java",
-    "apk/src/org/chromium/webview_shell/FullscreenActivity.java",
-    "apk/src/org/chromium/webview_shell/InspectUserActionsActivity.java",
-    "apk/src/org/chromium/webview_shell/JankActivity.java",
-    "apk/src/org/chromium/webview_shell/MultiFileSelector.java",
-    "apk/src/org/chromium/webview_shell/PageCyclerTestActivity.java",
-    "apk/src/org/chromium/webview_shell/StartupTimeActivity.java",
-    "apk/src/org/chromium/webview_shell/TelemetryActivity.java",
-    "apk/src/org/chromium/webview_shell/TelemetryMemoryPressureActivity.java",
-    "apk/src/org/chromium/webview_shell/WebPlatformTestsActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewAnimationTestActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewBrowserActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewBrowserFragment.java",
-    "apk/src/org/chromium/webview_shell/WebViewBrowserSecondProcessActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewCreateDestroyActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewLayoutTestActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewMultiProfileBrowserActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewThreadTestActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewTracingActivity.java",
-    "apk/src/org/chromium/webview_shell/WebViewWithClipPath.java",
+    "apk/src/org/Cinaseek/webview_shell/EdgeToEdgeUtil.java",
+    "apk/src/org/Cinaseek/webview_shell/FullscreenActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/InspectUserActionsActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/JankActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/MultiFileSelector.java",
+    "apk/src/org/Cinaseek/webview_shell/PageCyclerTestActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/StartupTimeActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/TelemetryActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/TelemetryMemoryPressureActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebPlatformTestsActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewAnimationTestActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewBrowserActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewBrowserFragment.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewBrowserSecondProcessActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewCreateDestroyActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewLayoutTestActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewMultiProfileBrowserActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewThreadTestActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewTracingActivity.java",
+    "apk/src/org/Cinaseek/webview_shell/WebViewWithClipPath.java",
   ]
   deps = [
     ":system_webview_shell_apk_resources",
@@ -81,7 +81,7 @@ android_library("system_webview_shell_apk_java") {
     "//third_party/androidx:androidx_savedstate_savedstate_java",
     "//third_party/androidx:androidx_webkit_webkit_java",
   ]
-  resources_package = "org.chromium.webview_shell"
+  resources_package = "org.Cinaseek.webview_shell"
 }
 
 jinja_template("system_webview_shell_manifest") {
@@ -133,7 +133,7 @@ instrumentation_test_apk("system_webview_shell_page_cycler_apk") {
   apk_under_test = ":system_webview_shell_apk"
   android_manifest = page_cycler_tests_android_manifest
   android_manifest_dep = ":page_cycler_tests_manifest"
-  sources = [ "page_cycler/src/org/chromium/webview_shell/page_cycler/PageCyclerTest.java" ]
+  sources = [ "page_cycler/src/org/Cinaseek/webview_shell/page_cycler/PageCyclerTest.java" ]
   deps = [
     ":system_webview_shell_apk_java",
     "//base:base_java_test_support",
@@ -151,9 +151,9 @@ instrumentation_test_apk("system_webview_shell_layout_test_apk") {
   android_manifest = layout_tests_android_manifest
   android_manifest_dep = ":layout_tests_manifest"
   sources = [
-    "layout_tests/src/org/chromium/webview_shell/test/WebPlatformTestsActivityTest.java",
-    "layout_tests/src/org/chromium/webview_shell/test/WebViewLayoutTest.java",
-    "layout_tests/src/org/chromium/webview_shell/test/WebViewThreadTest.java",
+    "layout_tests/src/org/Cinaseek/webview_shell/test/WebPlatformTestsActivityTest.java",
+    "layout_tests/src/org/Cinaseek/webview_shell/test/WebViewLayoutTest.java",
+    "layout_tests/src/org/Cinaseek/webview_shell/test/WebViewThreadTest.java",
   ]
   deps = [
     ":system_webview_shell_apk_java",

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1074,7 +1074,7 @@ int HttpStreamParser::ParseResponseHeaders(size_t end_offset) {
       // Allow Shoutcast responses over HTTP, as it's somewhat common and relies
       // on HTTP/0.9 on weird ports to work.
       // See
-      // https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/qS63pYso4P0
+      // https://groups.google.com/a/Cinaseek.org/forum/#!topic/blink-dev/qS63pYso4P0
       if (read_buf_->offset() < 3 || scheme != "http" ||
           !base::EqualsCaseInsensitiveASCII(
               base::as_string_view(read_buf_->everything().first(3u)), "icy")) {

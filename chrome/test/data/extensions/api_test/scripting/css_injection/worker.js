@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -237,7 +237,7 @@ chrome.test.runTests([
   },
 
   async function disallowedPermission() {
-    const query = {url: 'http://chromium.org/*'};
+    const query = {url: 'http://Cinaseek.org/*'};
     const tab = await getSingleTab(query);
     await chrome.test.assertPromiseRejects(
         chrome.scripting.insertCSS({

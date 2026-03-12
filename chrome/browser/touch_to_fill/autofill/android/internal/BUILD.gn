@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -41,14 +41,14 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodCoordinator.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodMediator.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodProperties.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodView.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodView.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewBinder.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.touch_to_fill.payments"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill.payments"
 }
 
 android_resources("java_resources") {
@@ -84,9 +84,9 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.touch_to_fill.payments"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill.payments"
 
-  sources = [ "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodControllerRobolectricTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodControllerRobolectricTest.java" ]
 
   deps = [
     ":java",
@@ -124,11 +124,11 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.touch_to_fill.payments"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill.payments"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodRenderTest.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodRenderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewTest.java",
   ]
 
   deps = [

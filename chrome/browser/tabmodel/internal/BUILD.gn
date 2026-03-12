@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,10 +16,10 @@ android_library("java") {
   sources = [
     # This factory needs to stay as a Java file for the
     # //chrome/browser/tabmodel:factory_javafactory target.
-    "android/java/src/org/chromium/chrome/browser/tabmodel/AsyncTabParamsManagerFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/tabmodel/AsyncTabParamsManagerFactory.java",
 
     # Please keep this file in Kotlin to prevent regressions in kotlin support.
-    "android/java/src/org/chromium/chrome/browser/tabmodel/AsyncTabParamsManagerImpl.kt",
+    "android/java/src/org/Cinaseek/chrome/browser/tabmodel/AsyncTabParamsManagerImpl.kt",
   ]
   deps = [
     "//base:base_java",

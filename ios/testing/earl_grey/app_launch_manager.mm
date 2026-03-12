@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -178,7 +178,7 @@ bool LaunchArgumentsAreEqual(NSArray<NSString*>* args1,
   application.launchArguments = arguments;
 
   // Instruct EG to not DYLD_INSERT_LIBRARIES, which can interfere with
-  // Chromium's framework setup.
+  // Cinaseek's framework setup.
   NSMutableDictionary<NSString*, NSString*>* mutableEnv =
       [application.launchEnvironment mutableCopy];
   mutableEnv[@"EG_SKIP_INSERT_LIBRARIES"] = @"YES";

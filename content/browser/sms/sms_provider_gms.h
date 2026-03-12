@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 namespace content {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.browser.sms
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.browser.sms
 enum class GmsBackend : int {
   kAuto = 0,
   kUserConsent = 1,

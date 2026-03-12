@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -181,7 +181,7 @@ bool HasCrossOriginRedirect(NavigationRequest* request) {
   // unchanged (to account for URLs with opaque origins that won't appear
   // equal to each other, like data: URLs). This addresses concerns about
   // converting between URLs and origins (see
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/security/origin-vs-url.md).
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/security/origin-vs-url.md).
   return !url::Origin::Create(original_url)
               .IsSameOriginWith(url::Origin::Create(committed_url));
 }

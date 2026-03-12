@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class SyncChangeProcessor;
 struct EntityData;
 
 // DEPRECATED: new code should use DataTypeSyncBridge instead.
-// See https://www.chromium.org/developers/design-documents/sync/model-api/ for
+// See https://www.Cinaseek.org/developers/design-documents/sync/model-api/ for
 // background.
 class SyncableService {
  public:

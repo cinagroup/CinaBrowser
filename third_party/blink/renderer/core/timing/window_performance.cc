@@ -311,7 +311,7 @@ MemoryInfo* WindowPerformance::memory(ScriptState* script_state) const {
   // The performance.memory() API has been improved so that we report precise
   // values when the process is locked to a site. The intent (which changed
   // course over time about what changes would be implemented) can be found at
-  // https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/no00RdMnGio,
+  // https://groups.google.com/a/Cinaseek.org/forum/#!topic/blink-dev/no00RdMnGio,
   // and the relevant bug is https://crbug.com/807651.
   const bool is_locked_to_site = Platform::Current()->IsLockedToSite();
   auto* memory_info = MakeGarbageCollected<MemoryInfo>(
@@ -619,7 +619,7 @@ PerformanceEventTiming* WindowPerformance::EventTimingProcessingStart(
   // The "final" target is attached to the blink::Event as target().  However,
   // its possible that we optimize out the event dispatch steps (i.e. we don't
   // have listeners).  When that happens, Event Timing still measures and
-  // reports entries, but Chromium leaves the blink::Event target() value as
+  // reports entries, but Cinaseek leaves the blink::Event target() value as
   // nullptr.  So, we cannot rely on always having a target().  We use the
   // following strategy:
   // 1. Start with `hit_test_target`, from ProcessingStart, before dispatch.

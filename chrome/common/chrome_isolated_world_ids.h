@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,5 +29,5 @@ enum ChromeIsolatedWorldIDs {
   // to this number.
   ISOLATED_WORLD_ID_EXTENSIONS
 };
-// LINT.ThenChange(//chrome/android/java/src/org/chromium/chrome/browser/common/ChromeIsolatedWorldIds.java)
+// LINT.ThenChange(//chrome/android/java/src/org/Cinaseek/chrome/browser/common/ChromeIsolatedWorldIds.java)
 #endif  // CHROME_COMMON_CHROME_ISOLATED_WORLD_IDS_H_

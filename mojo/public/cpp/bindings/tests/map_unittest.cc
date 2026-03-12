@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/flat_map.h"
-#include "mojo/public/cpp/bindings/tests/rect_chromium.h"
+#include "mojo/public/cpp/bindings/tests/rect_Cinaseek.h"
 #include "mojo/public/interfaces/bindings/tests/rect.test-mojom.h"
 #include "mojo/public/interfaces/bindings/tests/test_structs.test-mojom.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -32,9 +32,9 @@ TEST(MapTest, StructKey) {
 TEST(MapTest, TypemappedStructKey) {
   base::flat_map<ContainsHashablePtr, int32_t> map;
   map.insert(
-      std::make_pair(ContainsHashable::New(RectChromium(1, 2, 3, 4)), 123));
+      std::make_pair(ContainsHashable::New(RectCinaseek(1, 2, 3, 4)), 123));
 
-  ContainsHashablePtr key = ContainsHashable::New(RectChromium(1, 2, 3, 4));
+  ContainsHashablePtr key = ContainsHashable::New(RectCinaseek(1, 2, 3, 4));
   ASSERT_NE(map.end(), map.find(key));
   ASSERT_EQ(123, map.find(key)->second);
 

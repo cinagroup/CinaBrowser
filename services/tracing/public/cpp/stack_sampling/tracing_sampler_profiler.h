@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -249,7 +249,7 @@ class COMPONENT_EXPORT(TRACING_CPP) TracingSamplerProfiler {
   std::unique_ptr<base::StackSamplingProfiler> profiler_ GUARDED_BY(lock_);
   // This dangling raw_ptr occurred in:
   // services_unittests: TracingSampleProfilerTest.SamplingChildThread
-  // https://ci.chromium.org/ui/p/chromium/builders/try/win-rel/237204/test-results?q=ExactID%3Aninja%3A%2F%2Fservices%3Aservices_unittests%2FTracingSampleProfilerTest.SamplingChildThread+VHash%3A83af393c6a76b581
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/win-rel/237204/test-results?q=ExactID%3Aninja%3A%2F%2Fservices%3Aservices_unittests%2FTracingSampleProfilerTest.SamplingChildThread+VHash%3A83af393c6a76b581
   raw_ptr<TracingProfileBuilder, FlakyDanglingUntriaged> profile_builder_ =
       nullptr;
   base::RepeatingClosure sample_callback_for_testing_;

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,9 +57,9 @@ BucketLocator CreateNonDefaultBucket() {
 
 TEST(FileSystemURLTest, ParsePersistent) {
   FileSystemURL url = CreateFileSystemURL(
-      "filesystem:http://chromium.org/persistent/directory/file");
+      "filesystem:http://Cinaseek.org/persistent/directory/file");
   ASSERT_TRUE(url.is_valid());
-  EXPECT_EQ("http://chromium.org/", url.origin().GetURL().spec());
+  EXPECT_EQ("http://Cinaseek.org/", url.origin().GetURL().spec());
   EXPECT_EQ(kFileSystemTypePersistent, url.type());
   EXPECT_EQ(FPL("file"), VirtualPath::BaseName(url.path()).value());
   EXPECT_EQ(FPL("directory"), url.path().DirName().value());
@@ -67,9 +67,9 @@ TEST(FileSystemURLTest, ParsePersistent) {
 
 TEST(FileSystemURLTest, ParseTemporary) {
   FileSystemURL url = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/directory/file");
+      "filesystem:http://Cinaseek.org/temporary/directory/file");
   ASSERT_TRUE(url.is_valid());
-  EXPECT_EQ("http://chromium.org/", url.origin().GetURL().spec());
+  EXPECT_EQ("http://Cinaseek.org/", url.origin().GetURL().spec());
   EXPECT_EQ(kFileSystemTypeTemporary, url.type());
   EXPECT_EQ(FPL("file"), VirtualPath::BaseName(url.path()).value());
   EXPECT_EQ(FPL("directory"), url.path().DirName().value());
@@ -90,14 +90,14 @@ TEST(FileSystemURLTest, CreateSibling) {
   // Test the happy case.
   {
     FileSystemURL original = CreateFileSystemURL(
-        "filesystem:http://chromium.org/temporary/parent/brother");
+        "filesystem:http://Cinaseek.org/temporary/parent/brother");
     FileSystemURL sibling = original.CreateSibling(sibling_name);
 
     ASSERT_TRUE(original.is_valid());
     ASSERT_TRUE(sibling.is_valid());
-    EXPECT_EQ("filesystem:http://chromium.org/temporary/parent/sister",
+    EXPECT_EQ("filesystem:http://Cinaseek.org/temporary/parent/sister",
               sibling.ToGURL().spec());
-    EXPECT_EQ("http://chromium.org/", sibling.origin().GetURL().spec());
+    EXPECT_EQ("http://Cinaseek.org/", sibling.origin().GetURL().spec());
     EXPECT_EQ(kFileSystemTypeTemporary, sibling.type());
 
     EXPECT_FALSE(original.virtual_path().empty());
@@ -117,8 +117,8 @@ TEST(FileSystemURLTest, CreateSibling) {
   // Test starting from an empty virtual path (whether by a "" or "/." suffix).
   // CreateSibling is also happy here.
   const std::string string_forms[] = {
-      "filesystem:http://chromium.org/temporary",
-      "filesystem:http://chromium.org/temporary/.",
+      "filesystem:http://Cinaseek.org/temporary",
+      "filesystem:http://Cinaseek.org/temporary/.",
   };
   for (const auto& string_form : string_forms) {
     FileSystemURL original = CreateFileSystemURL(string_form);
@@ -128,9 +128,9 @@ TEST(FileSystemURLTest, CreateSibling) {
 
     ASSERT_TRUE(original.is_valid());
     ASSERT_TRUE(sibling.is_valid());
-    EXPECT_EQ("filesystem:http://chromium.org/temporary/sister",
+    EXPECT_EQ("filesystem:http://Cinaseek.org/temporary/sister",
               sibling.ToGURL().spec());
-    EXPECT_EQ("http://chromium.org/", sibling.origin().GetURL().spec());
+    EXPECT_EQ("http://Cinaseek.org/", sibling.origin().GetURL().spec());
     EXPECT_EQ(kFileSystemTypeTemporary, sibling.type());
 
     EXPECT_TRUE(original.virtual_path().empty());
@@ -207,13 +207,13 @@ TEST(FileSystemURLTest, CreateSiblingPreservesBuckets) {
   BucketLocator bucket = CreateNonDefaultBucket();
 
   FileSystemURL a_bucket = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/i/has/a.bucket");
+      "filesystem:http://Cinaseek.org/temporary/i/has/a.bucket");
   a_bucket.SetBucket(bucket);
   FileSystemURL with =
       a_bucket.CreateSibling(*base::SafeBaseName::Create(FPL("with")));
 
   FileSystemURL no_bucket = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/i/has/no.bucket");
+      "filesystem:http://Cinaseek.org/temporary/i/has/no.bucket");
   FileSystemURL without =
       no_bucket.CreateSibling(*base::SafeBaseName::Create(FPL("without")));
 
@@ -235,9 +235,9 @@ TEST(FileSystemURLTest, CreateSiblingNotSupportedForContentUri) {
 
 TEST(FileSystemURLTest, EnsureFilePathIsRelative) {
   FileSystemURL url = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/////directory/file");
+      "filesystem:http://Cinaseek.org/temporary/////directory/file");
   ASSERT_TRUE(url.is_valid());
-  EXPECT_EQ("http://chromium.org/", url.origin().GetURL().spec());
+  EXPECT_EQ("http://Cinaseek.org/", url.origin().GetURL().spec());
   EXPECT_EQ(kFileSystemTypeTemporary, url.type());
   EXPECT_EQ(FPL("file"), VirtualPath::BaseName(url.path()).value());
   EXPECT_EQ(FPL("directory"), url.path().DirName().value());
@@ -245,18 +245,18 @@ TEST(FileSystemURLTest, EnsureFilePathIsRelative) {
 }
 
 TEST(FileSystemURLTest, RejectBadSchemes) {
-  EXPECT_FALSE(CreateFileSystemURL("http://chromium.org/").is_valid());
-  EXPECT_FALSE(CreateFileSystemURL("https://chromium.org/").is_valid());
+  EXPECT_FALSE(CreateFileSystemURL("http://Cinaseek.org/").is_valid());
+  EXPECT_FALSE(CreateFileSystemURL("https://Cinaseek.org/").is_valid());
   EXPECT_FALSE(CreateFileSystemURL("file:///foo/bar").is_valid());
   EXPECT_FALSE(CreateFileSystemURL("foobar:///foo/bar").is_valid());
 }
 
 TEST(FileSystemURLTest, UnescapePath) {
   FileSystemURL url = CreateFileSystemURL(
-      "filesystem:http://chromium.org/persistent/%7Echromium/space%20bar");
+      "filesystem:http://Cinaseek.org/persistent/%7ECinaseek/space%20bar");
   ASSERT_TRUE(url.is_valid());
   EXPECT_EQ(FPL("space bar"), VirtualPath::BaseName(url.path()).value());
-  EXPECT_EQ(FPL("~chromium"), url.path().DirName().value());
+  EXPECT_EQ(FPL("~Cinaseek"), url.path().DirName().value());
 }
 
 TEST(FileSystemURLTest, RejectBadType) {
@@ -273,14 +273,14 @@ TEST(FileSystemURLTest, RejectMalformedURL) {
 
 TEST(FileSystemURLTest, CompareURLs) {
   const auto urls = std::to_array<GURL>({
-      GURL("filesystem:http://chromium.org/temporary/dir a/file a"),
-      GURL("filesystem:http://chromium.org/temporary/dir a/file a"),
-      GURL("filesystem:http://chromium.org/temporary/dir a/file b"),
-      GURL("filesystem:http://chromium.org/temporary/dir a/file aa"),
-      GURL("filesystem:http://chromium.org/temporary/dir b/file a"),
-      GURL("filesystem:http://chromium.org/temporary/dir aa/file b"),
-      GURL("filesystem:http://chromium.com/temporary/dir a/file a"),
-      GURL("filesystem:https://chromium.org/temporary/dir a/file a"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir a/file a"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir a/file a"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir a/file b"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir a/file aa"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir b/file a"),
+      GURL("filesystem:http://Cinaseek.org/temporary/dir aa/file b"),
+      GURL("filesystem:http://Cinaseek.com/temporary/dir a/file a"),
+      GURL("filesystem:https://Cinaseek.org/temporary/dir a/file a"),
   });
 
   FileSystemURL::Comparator compare;
@@ -294,9 +294,9 @@ TEST(FileSystemURLTest, CompareURLs) {
   }
 
   FileSystemURL a = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/dir a/file a");
+      "filesystem:http://Cinaseek.org/temporary/dir a/file a");
   FileSystemURL b = CreateFileSystemURL(
-      "filesystem:http://chromium.org/persistent/dir a/file a");
+      "filesystem:http://Cinaseek.org/persistent/dir a/file a");
   EXPECT_EQ(a.type() < b.type(), compare(a, b));
   EXPECT_EQ(b.type() < a.type(), compare(b, a));
 
@@ -309,7 +309,7 @@ TEST(FileSystemURLTest, CompareURLs) {
   EXPECT_EQ(a.type() < b.type(), compare(a, b));
   // c is a copy of a, just without a bucket value set.
   const FileSystemURL c = CreateFileSystemURL(
-      "filesystem:http://chromium.org/temporary/dir a/file a");
+      "filesystem:http://Cinaseek.org/temporary/dir a/file a");
   // Ensure that buckets are taken into consideration for comparison.
   EXPECT_EQ(a.bucket() < c.bucket(), compare(a, c));
 }
@@ -321,7 +321,7 @@ TEST(FileSystemURLTest, IsParent) {
   const std::string root2 = GetFileSystemRootURI(GURL("http://example.com"),
                                                  kFileSystemTypePersistent)
                                 .spec();
-  const std::string root3 = GetFileSystemRootURI(GURL("http://chromium.org"),
+  const std::string root3 = GetFileSystemRootURI(GURL("http://Cinaseek.org"),
                                                  kFileSystemTypeTemporary)
                                 .spec();
 
@@ -375,12 +375,12 @@ TEST(FileSystemURLTest, IsParent) {
 TEST(FileSystemURLTest, ToGURL) {
   EXPECT_TRUE(FileSystemURL().ToGURL().is_empty());
   const char* kTestURL[] = {
-      "filesystem:http://chromium.org/persistent/directory/file0",
-      "filesystem:http://chromium.org/temporary/directory/file1",
-      "filesystem:http://chromium.org/isolated/directory/file2",
-      "filesystem:http://chromium.org/external/directory/file2",
-      "filesystem:http://chromium.org/test/directory/file3",
-      "filesystem:http://chromium.org/test/plus%2B/space%20/colon%3A",
+      "filesystem:http://Cinaseek.org/persistent/directory/file0",
+      "filesystem:http://Cinaseek.org/temporary/directory/file1",
+      "filesystem:http://Cinaseek.org/isolated/directory/file2",
+      "filesystem:http://Cinaseek.org/external/directory/file2",
+      "filesystem:http://Cinaseek.org/test/directory/file3",
+      "filesystem:http://Cinaseek.org/test/plus%2B/space%20/colon%3A",
   };
 
   for (const char* url : kTestURL)

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class SystemTracingSession
     : public Microsoft::WRL::RuntimeClass<
           Microsoft::WRL::RuntimeClassFlags<Microsoft::WRL::ClassicCom>,
           ISystemTraceSession,
-          ISystemTraceSessionChromium,
+          ISystemTraceSessionCinaseek,
           ISystemTraceSessionChrome,
           ISystemTraceSessionChromeBeta,
           ISystemTraceSessionChromeDev,

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,9 +9,9 @@
 
 namespace media {
 
-// Custom error HRESULTs used by Chromium media code on Windows.
+// Custom error HRESULTs used by Cinaseek media code on Windows.
 // See https://docs.microsoft.com/en-us/windows/win32/com/codes-in-facility-itf
-// Chromium media code is reserving the range [0x8004FA00, 0x8004FBFF].
+// Cinaseek media code is reserving the range [0x8004FA00, 0x8004FBFF].
 // Reported to metrics, please never modify or reuse existing values.
 // For new values, please also add them to enums.xml.
 

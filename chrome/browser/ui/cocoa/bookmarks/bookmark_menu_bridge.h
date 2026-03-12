@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ class BookmarkNode;
 // This class needs to be C++, not ObjC, since it derives from
 // BookmarkMergedSurfaceServiceObserver.
 //
-// Most Chromium Cocoa menu items are static from a nib (e.g. New
+// Most Cinaseek Cocoa menu items are static from a nib (e.g. New
 // Tab), but may be enabled/disabled under certain circumstances
 // (e.g. Cut and Paste).  In addition, most Cocoa menu items have
 // firstResponder: as a target.  Unusually, bookmark menu items are

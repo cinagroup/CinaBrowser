@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,11 +38,11 @@ void InitializeGcpwCrashReporting(GcpCrashReporterClient* crash_client);
 // database.
 base::FilePath GetFolderForCrashDumps();
 
-// No-op in Chromium builds.
+// No-op in Cinaseek builds.
 void SetCommonCrashKeys(const base::CommandLine& command_line);
 
 // Returns the system level registry keys for crash dump upload consent.
-// Always returns false in Chromium builds.
+// Always returns false in Cinaseek builds.
 bool GetGCPWCollectStatsConsent();
 
 }  // namespace credential_provider

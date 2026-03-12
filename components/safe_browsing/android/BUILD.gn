@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -23,25 +23,25 @@ android_library("safe_browsing_java") {
   ]
 
   sources = [
-    "java/src/org/chromium/components/safe_browsing/OsAdditionalSecurityProvider.java",
-    "java/src/org/chromium/components/safe_browsing/OsAdditionalSecurityUtil.java",
-    "java/src/org/chromium/components/safe_browsing/SafeBrowsingApiBridge.java",
-    "java/src/org/chromium/components/safe_browsing/SafeBrowsingApiHandler.java",
-    "java/src/org/chromium/components/safe_browsing/SafetyNetApiHandler.java",
+    "java/src/org/Cinaseek/components/safe_browsing/OsAdditionalSecurityProvider.java",
+    "java/src/org/Cinaseek/components/safe_browsing/OsAdditionalSecurityUtil.java",
+    "java/src/org/Cinaseek/components/safe_browsing/SafeBrowsingApiBridge.java",
+    "java/src/org/Cinaseek/components/safe_browsing/SafeBrowsingApiHandler.java",
+    "java/src/org/Cinaseek/components/safe_browsing/SafetyNetApiHandler.java",
   ]
-  resources_package = "org.chromium.components.safe_browsing"
+  resources_package = "org.Cinaseek.components.safe_browsing"
 }
 
 # Expose Safe Browsing feature flags to Java code
 java_cpp_features("sb_java_features_srcjar") {
   visibility = [ ":*" ]
   sources = [ "//components/safe_browsing/core/common/features.cc" ]
-  class_name = "org.chromium.components.safe_browsing.SafeBrowsingFeatures"
+  class_name = "org.Cinaseek.components.safe_browsing.SafeBrowsingFeatures"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/safe_browsing/SafeBrowsingApiBridge.java",
+    "java/src/org/Cinaseek/components/safe_browsing/SafeBrowsingApiBridge.java",
   ]
 }
 
@@ -152,12 +152,12 @@ android_library("native_java_unittests_java") {
   ]
 
   srcjar_deps = [ ":native_j_unittests_jni_headers" ]
-  sources = [ "native_java_unittests/src/org/chromium/components/safe_browsing/SafeBrowsingApiHandlerBridgeNativeUnitTestHelper.java" ]
+  sources = [ "native_java_unittests/src/org/Cinaseek/components/safe_browsing/SafeBrowsingApiHandlerBridgeNativeUnitTestHelper.java" ]
 }
 
 generate_jni("native_j_unittests_jni_headers") {
   testonly = true
-  sources = [ "native_java_unittests/src/org/chromium/components/safe_browsing/SafeBrowsingApiHandlerBridgeNativeUnitTestHelper.java" ]
+  sources = [ "native_java_unittests/src/org/Cinaseek/components/safe_browsing/SafeBrowsingApiHandlerBridgeNativeUnitTestHelper.java" ]
 }
 
 source_set("unit_tests_mobile_test_support") {
@@ -221,5 +221,5 @@ java_cpp_enum("java_enums") {
 java_cpp_strings("switches_srcjar") {
   sources =
       [ "//components/safe_browsing/core/common/safebrowsing_switches.cc" ]
-  class_name = "org.chromium.chrome.browser.safe_browsing.SafeBrowsingSwitches"
+  class_name = "org.Cinaseek.chrome.browser.safe_browsing.SafeBrowsingSwitches"
 }

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace content {
 
 class StoragePartitionConfig;
 
-// SecurityPrincipal is an abstraction used by Chromium's process model to
+// SecurityPrincipal is an abstraction used by Cinaseek's process model to
 // divide documents, workers, and other web content into processes.
 //
 // All documents and workers within a SiteInstance are considered part of

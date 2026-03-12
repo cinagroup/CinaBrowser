@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace ash {
 
 // Converts a `manta::proto::ScannerAction` into an "externally tagged"
 // `base::DictValue` for use in filing feedback.
-// Required as Chromium's lite runtime for Protobuf does not support descriptors
+// Required as Cinaseek's lite runtime for Protobuf does not support descriptors
 // and, by extension, text format.
 ASH_EXPORT base::DictValue ScannerActionToDict(
     manta::proto::ScannerAction action);

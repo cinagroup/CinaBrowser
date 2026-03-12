@@ -15,9 +15,9 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gpu_unittests",
         "test_id_prefix": "ninja://gpu:gpu_unittests/",
@@ -37,7 +37,7 @@
             "gpu": "8086:3e9b",
             "os": "Mac-14.5"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "gpu_unittests",
         "test_id_prefix": "ninja://gpu:gpu_unittests/",
@@ -61,9 +61,9 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "services_unittests",
         "test_id_prefix": "ninja://services:services_unittests/",
@@ -87,7 +87,7 @@
             "gpu": "8086:3e9b",
             "os": "Mac-14.5"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "services_unittests",
         "test_id_prefix": "ninja://services:services_unittests/",
@@ -124,10 +124,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -163,7 +163,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -198,10 +198,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -237,7 +237,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -281,10 +281,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -329,7 +329,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -373,10 +373,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -421,7 +421,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -456,10 +456,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -495,7 +495,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -530,10 +530,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -569,7 +569,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -608,10 +608,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -651,7 +651,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -695,10 +695,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -743,7 +743,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -787,10 +787,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -835,7 +835,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -871,10 +871,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -911,7 +911,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -947,10 +947,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -987,7 +987,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1022,10 +1022,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1061,7 +1061,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1096,10 +1096,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1135,7 +1135,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1170,10 +1170,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1209,7 +1209,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1244,10 +1244,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1283,7 +1283,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1321,10 +1321,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 20
         },
         "test": "telemetry_gpu_integration_test",
@@ -1364,7 +1364,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 20
         },
         "test": "telemetry_gpu_integration_test",
@@ -1401,10 +1401,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test",
@@ -1442,7 +1442,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "telemetry_gpu_integration_test",
@@ -1480,10 +1480,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1521,7 +1521,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1557,10 +1557,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1597,7 +1597,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1632,10 +1632,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1671,7 +1671,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1706,10 +1706,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1745,7 +1745,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1780,10 +1780,10 @@
             "gpu": "1002:7340",
             "hidpi": "1",
             "os": "Mac-14.4.1",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",
@@ -1819,7 +1819,7 @@
             "os": "Mac-14.5"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/",

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ using autofill::FormRendererId;
 using UserDecision = autofill::AutofillClient::AddressPromptUserDecision;
 
 NSErrorDomain const CWVAutofillErrorDomain =
-    @"org.chromium.chromewebview.AutofillErrorDomain";
+    @"org.Cinaseek.chromewebview.AutofillErrorDomain";
 
 @interface CWVAutofillController () <AutofillManagerObserver,
                                      CRWWebFramesManagerObserver>

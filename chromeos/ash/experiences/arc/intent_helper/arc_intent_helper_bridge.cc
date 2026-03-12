@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -389,13 +389,13 @@ void ArcIntentHelperBridge::SendNewCaptureBroadcast(bool is_video,
   }
 
   std::string action =
-      is_video ? "org.chromium.arc.intent_helper.ACTION_SEND_NEW_VIDEO"
-               : "org.chromium.arc.intent_helper.ACTION_SEND_NEW_PICTURE";
+      is_video ? "org.Cinaseek.arc.intent_helper.ACTION_SEND_NEW_VIDEO"
+               : "org.Cinaseek.arc.intent_helper.ACTION_SEND_NEW_PICTURE";
   base::DictValue value;
   value.Set("file_path", file_path);
   std::string extras = base::WriteJson(value).value_or("");
 
-  instance->SendBroadcast(action, "org.chromium.arc.intent_helper",
+  instance->SendBroadcast(action, "org.Cinaseek.arc.intent_helper",
                           /*cls=*/std::string(), extras);
 }
 

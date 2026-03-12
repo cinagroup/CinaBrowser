@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ enum class UiState {
 // This enum is used to denote the UI events in the Facilitated Payments bottom
 // sheet.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.facilitated_payments.core.ui_utils)
+//   org.Cinaseek.components.facilitated_payments.core.ui_utils)
 enum class UiEvent {
   // Represents a new screen being shown. This includes both opening the bottom
   // sheet to show a screen, and replacing an existing screen to show a new
@@ -57,7 +57,7 @@ enum class UiEvent {
 // LINT.IfChange(FopSelectorAction)
 //
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.facilitated_payments.core.ui_utils)
+//   org.Cinaseek.components.facilitated_payments.core.ui_utils)
 enum class FopSelectorAction {
   // User selected a FOP for payment.
   kFopSelected = 0,
@@ -77,7 +77,7 @@ enum class FopSelectorAction {
 // LINT.IfChange(PaymentLinkFopSelectorAction)
 //
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.facilitated_payments.core.ui_utils)
+//   org.Cinaseek.components.facilitated_payments.core.ui_utils)
 enum class PaymentLinkFopSelectorAction {
   // User has selected eWallet for payment.
   kEwalletSelected = 0,

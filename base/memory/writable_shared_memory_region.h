@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ class BASE_EXPORT WritableSharedMemoryRegion {
   // On Windows it is necessary in rare cases to take a writable handle from a
   // region that will be converted to read-only. On this platform it is a safe
   // operation, as the handle returned from this method will remain writable
-  // after the region is converted to read-only. However, it breaks chromium's
+  // after the region is converted to read-only. However, it breaks Cinaseek's
   // WritableSharedMemoryRegion semantics and so should be use with care.
   HANDLE UnsafeGetPlatformHandle() const { return handle_.GetPlatformHandle(); }
 #endif

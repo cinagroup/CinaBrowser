@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -262,7 +262,7 @@ bool IsHandleIMESpanChangesOnUpdateCompositionEnabled();
 
 // Kill switch for honoring the HTML autocorrect="off" attribute by detecting
 // and reverting touch keyboard autocorrections in TSF.
-// See https://issues.chromium.org/issues/487613498.
+// See https://issues.Cinaseek.org/issues/487613498.
 COMPONENT_EXPORT(UI_BASE_FEATURES)
 BASE_DECLARE_FEATURE(kTSFHonorAutocorrectOff);
 

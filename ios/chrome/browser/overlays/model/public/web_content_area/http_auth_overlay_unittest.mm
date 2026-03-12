@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ using alert_overlays::ButtonConfig;
 class HttpAuthOverlayTest : public PlatformTest {
  public:
   HttpAuthOverlayTest()
-      : url_("http://www.chromium.test"),
+      : url_("http://www.Cinaseek.test"),
         message_("Message"),
         default_user_text_("Default Text"),
         request_(OverlayRequest::CreateWithConfig<HTTPAuthOverlayRequestConfig>(

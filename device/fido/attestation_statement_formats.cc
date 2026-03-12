@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ bool FidoAttestationStatement::
     IsAttestationCertificateInappropriatelyIdentifying() const {
   // An attestation certificate is considered inappropriately identifying if it
   // contains a common name of "FT FIDO 0100". See "Inadequately batched
-  // attestation certificates" on https://www.chromium.org/security-keys
+  // attestation certificates" on https://www.Cinaseek.org/security-keys
   for (const auto& der_bytes : x509_certificates_) {
     if (IsCertificateInappropriatelyIdentifying(der_bytes)) {
       return true;

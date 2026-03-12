@@ -5500,7 +5500,7 @@ bool AXObjectCacheImpl::IsImmediateProcessingRequired(
 // RenderAccessibilityImpl:AXReadyCallback to start serialization process.
 //
 // Check the below CL for more information:
-// https://chromium-review.googlesource.com/c/chromium/src/+/4994320
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4994320
 void AXObjectCacheImpl::AddEventToSerializationQueue(
     const ui::AXEvent& event,
     bool immediate_serialization) {

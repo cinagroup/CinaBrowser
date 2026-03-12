@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -327,7 +327,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
         "The text content of the suspicious page."
       internal {
         contacts {
-          email: "xinghuilu@chromium.org"
+          email: "xinghuilu@Cinaseek.org"
         }
         contacts {
           email: "chrome-counter-abuse-alerts@google.com"
@@ -408,7 +408,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotation(
         "currently visiting."
       internal {
         contacts {
-          email: "skrakowi@chromium.org"
+          email: "skrakowi@Cinaseek.org"
         }
         contacts {
           email: "chrome-counter-abuse-alerts@google.com"

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,26 +6,26 @@ import("//build/config/gclient_args.gni")
 import("//build_overrides/build.gni")
 
 declare_args() {
-  # Select the desired branding flavor. False means normal Chromium branding,
-  # true means official Google Chrome branding (requires extra Google-internal
+  # Select the desired branding flavor. False means normal Cinaseek branding,
+  # true means official Google Cinaseek branding (requires extra Google-internal
   # resources).
   is_chrome_branded = false
 
   # Whether to enable Google internal-only sources.
   enable_src_internal =
-      (build_with_chromium && checkout_src_internal) ||
+      (build_with_Cinaseek && checkout_src_internal) ||
       (defined(checkout_src_internal) && checkout_src_internal)
 
-  # Whether to enable the Chrome for Testing (CfT) flavor. This arg is not
+  # Whether to enable the Cinaseek for Testing (CfT) flavor. This arg is not
   # compatible with `is_chrome_branded`.
   #
   # Design document: https://goo.gle/chrome-for-testing
   is_chrome_for_testing = false
 
-  # Whether to use internal Chrome for Testing (CfT).
+  # Whether to use internal Cinaseek for Testing (CfT).
   # Requires `src-internal/` and `is_chrome_for_testing = true`.
   #
-  # When true, use Google-internal icons, otherwise fall back to Chromium icons.
+  # When true, use Google-internal icons, otherwise fall back to Cinaseek icons.
   is_chrome_for_testing_branded = false
 
   # Set to true to enable settings for high end Android devices, typically
@@ -85,15 +85,15 @@ declare_args() {
     if (is_chrome_for_testing_branded) {
       branding_path_component = "google_chrome/google_chrome_for_testing"
     } else {
-      branding_path_component = "chromium"
+      branding_path_component = "Cinaseek"
     }
-    branding_path_product = "chromium"
+    branding_path_product = "Cinaseek"
   } else if (is_internal_chrome_branded) {
     branding_path_component = "google_chrome"
     branding_path_product = "google_chrome"
   } else {
-    branding_path_component = "chromium"
-    branding_path_product = "chromium"
+    branding_path_component = "Cinaseek"
+    branding_path_product = "Cinaseek"
   }
 }
 

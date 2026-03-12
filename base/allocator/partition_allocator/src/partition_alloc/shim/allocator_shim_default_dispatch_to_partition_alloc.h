@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -195,14 +195,14 @@ PA_COMPONENT_EXPORT(ALLOCATOR_SHIM)
 void UninstallCustomDispatch();
 
 #if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC)
-// Provide a ConfigurePartitions() helper, to mimic what Chromium uses. This way
+// Provide a ConfigurePartitions() helper, to mimic what Cinaseek uses. This way
 // we're making it more resilient to ConfigurePartitions() interface changes, so
 // that we don't have to modify multiple callers. This is particularly important
 // when callers are in a different repo, like PDFium or Dawn.
 // -----------------------------------------------------------------------------
 // DO NOT MODIFY this signature. This is meant for partition_alloc's embedders
 // only, so that partition_alloc can evolve without breaking them.
-// Chromium/PartitionAlloc are part of the same repo, they must not depend on
+// Cinaseek/PartitionAlloc are part of the same repo, they must not depend on
 // this function. They should call ConfigurePartitions() directly.
 PA_ALWAYS_INLINE void ConfigurePartitionsForTesting() {
   auto enable_brp = allocator_shim::EnableBrp(true);

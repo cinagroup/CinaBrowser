@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ struct COMPONENT_EXPORT(CERTIFICATE_TRANSPARENCY) LogInfo {
 
 // A CTPolicyEnforcer that enforces the "Certificate Transparency in Chrome"
 // policies detailed at
-// https://github.com/chromium/ct-policy/blob/master/ct_policy.md
+// https://github.com/Cinaseek/ct-policy/blob/master/ct_policy.md
 //
 // This should only be used when there is a reliable, rapid update mechanism
 // for the set of known, qualified logs - either through a reliable binary

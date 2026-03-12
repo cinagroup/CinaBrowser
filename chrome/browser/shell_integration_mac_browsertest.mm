@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ using ShellIntegrationMacBrowserTest = InProcessBrowserTest;
 // IsDefaultClientForScheme) rely on C++ logic in shell_integration_mac.mm.
 //
 // This test ensures these two separate implementations remain in sync for the
-// build configuration under test (typically Stable or Chromium).
+// build configuration under test (typically Stable or Cinaseek).
 //
 // Note: Logic for removing the scheme for non-stable channels (Beta/Dev/Canary)
 // happens during signing (chrome/installer/mac/signing/modification.py) and is
@@ -54,7 +54,7 @@ IN_PROC_BROWSER_TEST_F(ShellIntegrationMacBrowserTest,
   }
 
   if (expected_scheme.empty()) {
-    // If we expect no scheme, we should NOT find "google-chrome" or "chromium"
+    // If we expect no scheme, we should NOT find "google-chrome" or "Cinaseek"
     // registered as a direct launch URL scheme.
 
     // Explicitly check that we don't have "google-chrome" registered if we

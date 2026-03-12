@@ -5028,7 +5028,7 @@ KURL Document::FallbackBaseURL() const {
 
   // TODO(https://github.com/whatwg/html/issues/9025): Don't let a sandboxed
   // iframe (without 'allow-same-origin') inherit a fallback base url.
-  // https://chromium-review.googlesource.com/c/chromium/src/+/4324738
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4324738
 
   // [spec] 1. If document is an iframe srcdoc document, then return the
   //           document base URL of document's browsing context's container
@@ -7543,7 +7543,7 @@ void Document::SetEncodingData(const DocumentEncodingData& new_data) {
   encoding_data_ = new_data;
 
   // FIXME: Should be removed as part of
-  // https://code.google.com/p/chromium/issues/detail?id=319643
+  // https://code.google.com/p/Cinaseek/issues/detail?id=319643
   bool should_use_visual_ordering =
       encoding_data_.Encoding().UsesVisualOrdering();
   if (should_use_visual_ordering != visually_ordered_) {

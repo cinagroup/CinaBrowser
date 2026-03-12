@@ -1,11 +1,11 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "gpu/command_buffer/client/client_shared_image.h"
 
 #include <GLES2/gl2.h>
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 
 #include <optional>
 #include <utility>
@@ -76,7 +76,7 @@ bool GMBIsNative(gfx::GpuMemoryBufferType gmb_type) {
 //     support to the //media code, which detects the lack of support *based on*
 //     on the texture target being 0.
 // * On all other platforms GL_TEXTURE_2D is always used (external sampling is
-//   supported in Chromium only on Ozone).
+//   supported in Cinaseek only on Ozone).
 uint32_t ComputeTextureTargetForSharedImage(
     SharedImageMetadata metadata,
     gfx::GpuMemoryBufferType client_gmb_type,
@@ -159,7 +159,7 @@ base::span<uint8_t> ClientSharedImage::ScopedMapping::GetMemoryForPlane(
   // VideoFrame requires that the buffer returned from this method be of size
   // that is equal to the size in its internal layout, which for NativePixmap is
   // overridden to be the size of the plane stored in the GMB handle
-  // (https://source.chromium.org/chromium/chromium/src/+/main:media/base/video_frame.cc;drc=21e6d1583d1b5683f21556f6125b340d25a6b937;l=527).
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/base/video_frame.cc;drc=21e6d1583d1b5683f21556f6125b340d25a6b937;l=527).
   // TODO(crbug.com/404905709): Eliminate that VideoFrame override and do
   // tightening here for NativePixmap.
   if (buffer_->GetType() == gfx::GpuMemoryBufferType::NATIVE_PIXMAP) {
@@ -774,7 +774,7 @@ scoped_refptr<ClientSharedImage> ClientSharedImage::CreateForTesting(
 
   // Since the |mappable_buffer| here is always a shared memory, clear the
   // external sampler prefs if it is already set by client.
-  // https://issues.chromium.org/339546249.
+  // https://issues.Cinaseek.org/339546249.
   if (info.meta.format.PrefersExternalSampler()) {
     info.meta.format.ClearPrefersExternalSampler();
   }

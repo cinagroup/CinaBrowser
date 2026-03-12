@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,7 +66,7 @@ class SafeBrowsingUrlAllowListTest : public PlatformTest {
 
 // Tests that the allowed threat types are properly recorded.
 TEST_F(SafeBrowsingUrlAllowListTest, AllowUnsafeNavigations) {
-  const GURL url("http://www.chromium.test");
+  const GURL url("http://www.Cinaseek.test");
 
   // Unsafe navigations should not initially be allowed.
   EXPECT_FALSE(allow_list()->AreUnsafeNavigationsAllowed(url));
@@ -107,7 +107,7 @@ TEST_F(SafeBrowsingUrlAllowListTest, AllowUnsafeNavigations) {
 
 // Tests that pending unsafe navigation decisions are properly recorded.
 TEST_F(SafeBrowsingUrlAllowListTest, AddPendingDecisions) {
-  const GURL url("http://www.chromium.test");
+  const GURL url("http://www.Cinaseek.test");
 
   // The URL should not initially have any pending decisions.
   EXPECT_FALSE(allow_list()->IsUnsafeNavigationDecisionPending(url));
@@ -151,7 +151,7 @@ TEST_F(SafeBrowsingUrlAllowListTest, AddPendingDecisions) {
 // Tests that the pending decisions for a threat type are erased if the threat
 // has been allowed for that URL.
 TEST_F(SafeBrowsingUrlAllowListTest, AllowPendingThreat) {
-  const GURL url("http://www.chromium.test");
+  const GURL url("http://www.Cinaseek.test");
   EXPECT_CALL(allow_list_observer_,
               ThreatPolicyUpdated(allow_list(), url, kFirstThreatType,
                                   SafeBrowsingUrlAllowList::Policy::kPending));
@@ -170,8 +170,8 @@ TEST_F(SafeBrowsingUrlAllowListTest, AllowPendingThreat) {
 
 // Tests that allowed threats are recorded for the entire domain of a URL.
 TEST_F(SafeBrowsingUrlAllowListTest, DomainAllowDecisions) {
-  const GURL url("http://www.chromium.test");
-  const GURL url_with_path("http://www.chromium.test/path");
+  const GURL url("http://www.Cinaseek.test");
+  const GURL url_with_path("http://www.Cinaseek.test/path");
 
   // Insert a pending decision and verify that it is pending for other URLs from
   // the same domain.

@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,28 +7,28 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/actor/ActorBroadcastReceiver.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorForegroundServiceController.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorForegroundServiceManager.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorKeyedService.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorKeyedServiceFactory.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorNotificationService.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorPictureInPictureController.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorServiceTabUtils.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorTask.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorTaskId.java",
-    "java/src/org/chromium/chrome/browser/actor/NoOpActorForegroundServiceController.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlCoordinator.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlMediator.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlProperties.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlView.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlViewBinder.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayCoordinator.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayMediator.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayProperties.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayView.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayViewBinder.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorUiTabController.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorBroadcastReceiver.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorForegroundServiceController.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorForegroundServiceManager.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorKeyedService.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorKeyedServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorNotificationService.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorPictureInPictureController.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorServiceTabUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorTask.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorTaskId.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/NoOpActorForegroundServiceController.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlView.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayView.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorUiTabController.java",
   ]
 
   deps = [
@@ -62,16 +62,16 @@ android_library("java") {
     "//chrome/browser/actor/ui:enums_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.actor.ui"
+  resources_package = "org.Cinaseek.chrome.browser.actor.ui"
 }
 
 generate_jni("jni_headers") {
   visibility = [ ":*" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/actor/ActorKeyedService.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorKeyedServiceFactory.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorTask.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorUiTabController.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorKeyedService.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorKeyedServiceFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorTask.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorUiTabController.java",
   ]
 }
 
@@ -113,10 +113,10 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/actor/ActorForegroundServiceManagerTest.java",
-    "java/src/org/chromium/chrome/browser/actor/ActorPictureInPictureControllerTest.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorControlCoordinatorTest.java",
-    "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorForegroundServiceManagerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ActorPictureInPictureControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorControlCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayCoordinatorTest.java",
   ]
   deps = [
     ":java",
@@ -144,13 +144,13 @@ robolectric_library("junit") {
     "//ui/android:ui_java",
     "//ui/android:ui_java_test_support",
   ]
-  resources_package = "org.chromium.chrome.browser.actor.ui"
+  resources_package = "org.Cinaseek.chrome.browser.actor.ui"
 }
 
 android_library("unit_device_javatests") {
-  resources_package = "org.chromium.chrome.browser.actor"
+  resources_package = "org.Cinaseek.chrome.browser.actor"
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/actor/ui/ActorOverlayViewRenderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/actor/ui/ActorOverlayViewRenderTest.java" ]
   deps = [
     ":java",
     ":java_resources",

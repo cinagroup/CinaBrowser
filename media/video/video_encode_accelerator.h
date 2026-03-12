@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ struct MEDIA_EXPORT Vp8Metadata final {
 
 // Metadata for a VP9 bitstream buffer, this struct resembles
 // webrtc::CodecSpecificInfoVP9 [1]
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/webrtc/modules/video_coding/include/video_codec_interface.h;l=56;drc=e904161cecbe5e2ca31382e2a62fc776151bb8f2
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/webrtc/modules/video_coding/include/video_codec_interface.h;l=56;drc=e904161cecbe5e2ca31382e2a62fc776151bb8f2
 struct MEDIA_EXPORT Vp9Metadata final {
   Vp9Metadata();
   ~Vp9Metadata();

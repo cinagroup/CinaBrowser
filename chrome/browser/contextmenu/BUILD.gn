@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,7 +18,7 @@ if (is_android) {
   import("//third_party/jni_zero/jni_zero.gni")
 
   android_library("java") {
-    sources = [ "java/src/org/chromium/chrome/browser/contextmenu/ContextMenuNativeDelegateImpl.java" ]
+    sources = [ "java/src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuNativeDelegateImpl.java" ]
 
     srcjar_deps = [ ":jni_headers" ]
 
@@ -36,6 +36,6 @@ if (is_android) {
   }
 
   generate_jni("jni_headers") {
-    sources = [ "java/src/org/chromium/chrome/browser/contextmenu/ContextMenuNativeDelegateImpl.java" ]
+    sources = [ "java/src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuNativeDelegateImpl.java" ]
   }
 }

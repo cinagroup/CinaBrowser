@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -260,7 +260,7 @@ class FirstRunInteractiveUiTest
  protected:
   const std::string kTestGivenName = "Joe";
   const std::string kTestEmail = "joe.consumer@gmail.com";
-  const std::string kTestEnterpriseEmail = "joe.consumer@chromium.org";
+  const std::string kTestEnterpriseEmail = "joe.consumer@Cinaseek.org";
 
   const base::HistogramTester& histogram_tester() const {
     return histogram_tester_;
@@ -396,7 +396,7 @@ class FirstRunInteractiveUiTest
     // Controls behavior of sync buttons and supervision.
     if (with_extended_info && account_email == kTestEnterpriseEmail) {
       account_info = AccountInfo::Builder(account_info)
-                         .SetHostedDomain("chromium.org")
+                         .SetHostedDomain("Cinaseek.org")
                          .Build();
     }
     AccountCapabilitiesTestMutator mutator(&account_info.capabilities);
@@ -1412,7 +1412,7 @@ IN_PROC_BROWSER_TEST_P(FirstRunParameterizedInteractiveUiTest,
           identity_manager->GetPrimaryAccountId(signin::ConsentLevel::kSignin));
   account_info = signin::WithGeneratedUserInfo(account_info, kTestGivenName);
   account_info = AccountInfo::Builder(account_info)
-                     .SetHostedDomain("chromium.org")
+                     .SetHostedDomain("Cinaseek.org")
                      .Build();
   // Pulled out of the test sequence because it waits using `RunLoop`s.
   signin::UpdateAccountInfoForAccount(identity_manager, account_info);
@@ -1673,7 +1673,7 @@ IN_PROC_BROWSER_TEST_F(FirstRunWithHatsInteractiveUiTestWithSyncService,
           identity_manager.GetPrimaryAccountId(signin::ConsentLevel::kSignin));
   account_info = signin::WithGeneratedUserInfo(account_info, kTestGivenName);
   account_info = AccountInfo::Builder(account_info)
-                     .SetHostedDomain("chromium.org")
+                     .SetHostedDomain("Cinaseek.org")
                      .Build();
   signin::UpdateAccountInfoForAccount(&identity_manager,
                                       std::move(account_info));

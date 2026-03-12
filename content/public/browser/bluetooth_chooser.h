@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace content {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser.bluetooth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser.bluetooth
 enum class BluetoothChooserEvent {
   DENIED_PERMISSION,
   CANCELLED,
@@ -45,9 +45,9 @@ class CONTENT_EXPORT BluetoothChooser {
   BluetoothChooser() {}
   virtual ~BluetoothChooser();
 
-  // Some platforms (especially Android) require Chromium to have permission
+  // Some platforms (especially Android) require Cinaseek to have permission
   // from the user before it can scan for Bluetooth devices. This function
-  // returns false if Chromium isn't even allowed to ask. It defaults to true.
+  // returns false if Cinaseek isn't even allowed to ask. It defaults to true.
   virtual bool CanAskForScanningPermission();
 
   // Lets the chooser tell the user the state of the Bluetooth adapter. This

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ struct FuzzerEnvironment {
   ~FuzzerEnvironment() = default;
 
   std::unique_ptr<SSLConfigService> ssl_config_service;
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   MockCryptoClientStreamFactory crypto_client_stream_factory;
   url::SchemeHostPort scheme_host_port;
   NetLogWithSource net_log;
@@ -165,7 +165,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
       callback.callback());
 
   callback.WaitForResult();
-  std::unique_ptr<QuicChromiumClientSession::Handle> session =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session =
       request.ReleaseSessionHandle();
   if (!session) {
     return 0;

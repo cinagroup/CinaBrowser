@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,9 +14,9 @@
 
 namespace blink {
 
-#define STATIC_ASSERT_MATCHING_STATUS_ENUM(webkit_name, chromium_name)    \
+#define STATIC_ASSERT_MATCHING_STATUS_ENUM(webkit_name, Cinaseek_name)    \
   static_assert(static_cast<int>(WebMediaSource::webkit_name) ==          \
-                    static_cast<int>(media::ChunkDemuxer::chromium_name), \
+                    static_cast<int>(media::ChunkDemuxer::Cinaseek_name), \
                 "mismatching status enum values: " #webkit_name)
 STATIC_ASSERT_MATCHING_STATUS_ENUM(kAddStatusOk, kOk);
 STATIC_ASSERT_MATCHING_STATUS_ENUM(kAddStatusNotSupported, kNotSupported);

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3175,7 +3175,7 @@ IN_PROC_BROWSER_TEST_F(DesksTemplatesClientArcTest,
   // Create the window for app1. The task id needs to match the
   // `window_app_id` arg of `CreateExoWindow`.
   const int32_t kTaskId1 = 100;
-  views::Widget* widget = ash::CreateExoWindow("org.chromium.arc.100");
+  views::Widget* widget = ash::CreateExoWindow("org.Cinaseek.arc.100");
   widget->SetBounds(gfx::Rect(500, 500));
   full_restore::SaveAppLaunchInfo(
       browser()->profile()->GetPath(),
@@ -3212,7 +3212,7 @@ IN_PROC_BROWSER_TEST_F(DesksTemplatesClientArcTest,
 
   // Create the window to simulate launching the ARC app.
   const int32_t kTaskId2 = 200;
-  auto* widget1 = ash::CreateExoWindow("org.chromium.arc.200");
+  auto* widget1 = ash::CreateExoWindow("org.Cinaseek.arc.200");
   auto* window1 = widget1->GetNativeWindow();
   arc_helper()->CreateTask(app_id, kTaskId2, session_id1);
 

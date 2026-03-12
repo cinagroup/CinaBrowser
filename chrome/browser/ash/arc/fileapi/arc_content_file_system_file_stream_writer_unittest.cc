@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace arc {
 
 namespace {
 
-constexpr char kArcUrlPrefix[] = "content://org.chromium.foo/";
+constexpr char kArcUrlPrefix[] = "content://org.Cinaseek.foo/";
 
 std::unique_ptr<KeyedService> CreateFileSystemOperationRunnerForTesting(
     content::BrowserContext* context) {

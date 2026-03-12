@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -405,7 +405,7 @@ TEST(PlatformThreadTest,
 
 // Ideally PlatformThread::CanChangeThreadType() would be true on all
 // platforms for all priorities. This not being the case. This test documents
-// and hardcodes what we know. Please inform scheduler-dev@chromium.org if this
+// and hardcodes what we know. Please inform scheduler-dev@Cinaseek.org if this
 // proprerty changes for a given platform.
 TEST(PlatformThreadTest, CanChangeThreadType) {
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,9 +24,9 @@ android_library("java") {
   ]
 
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/components/content_capture/ContentCaptureTestSupport.java" ]
+  sources = [ "java/src/org/Cinaseek/components/content_capture/ContentCaptureTestSupport.java" ]
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/content_capture/ContentCaptureTestSupport.java" ]
+  sources = [ "java/src/org/Cinaseek/components/content_capture/ContentCaptureTestSupport.java" ]
 }

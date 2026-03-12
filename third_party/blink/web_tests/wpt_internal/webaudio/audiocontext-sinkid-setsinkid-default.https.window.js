@@ -3,7 +3,7 @@
 const audioContext = new AudioContext();
 
 promise_test(async t => {
-  // Chromium enumerateDevices() returns 'default' as a deviceId for default
+  // Cinaseek enumerateDevices() returns 'default' as a deviceId for default
   // device. So, it should be accepted as a sinkId parameter.
   await audioContext.setSinkId('default');
   t.step(() => {

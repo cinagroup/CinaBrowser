@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -399,7 +399,7 @@ TEST(X509CertificateModel, GlobalsignComCert) {
 
 TEST(X509CertificateModel, NSCertComment) {
   auto cert = net::ImportCertFromFile(net::GetTestCertsDirectory(),
-                                      "foaf.me.chromium-test-cert.der");
+                                      "foaf.me.Cinaseek-test-cert.der");
   ASSERT_TRUE(cert.get());
   x509_certificate_model::X509CertificateModel model(
       bssl::UpRef(cert->cert_buffer()));

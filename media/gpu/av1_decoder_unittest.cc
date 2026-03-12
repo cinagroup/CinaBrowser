@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -930,7 +930,7 @@ TEST_F(AV1DecoderTest, TryAgainSubmitDecode) {
 // This test verifies that AV1 videos which are encoded using reference frame
 // scaling can be decoded completely. Reference frame scaling allows resolution
 // changes in a video stream without requiring a key frame. Please refer to
-// the chromium bug https://issues.chromium.org/issues/338251332 for details.
+// the Cinaseek bug https://issues.Cinaseek.org/issues/338251332 for details.
 TEST_F(AV1DecoderTest, DecodeWithFrameSizeChange) {
   // The AV1 test video has three different frame sizes.
   // It starts out with width and height of 1920 x 1080 (100 frames). The

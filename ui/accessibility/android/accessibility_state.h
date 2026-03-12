@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace ui {
 
 // Provides methods for measuring accessibility state on Android via
-// org.chromium.ui.accessibility.AccessibilityState.
+// org.Cinaseek.ui.accessibility.AccessibilityState.
 class COMPONENT_EXPORT(AX_BASE_ANDROID) AccessibilityState {
  public:
   class AccessibilityStateObserver : public base::CheckedObserver {

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -600,21 +600,21 @@ void SigninViewController::ShowDiceSigninTab(
 #if DCHECK_IS_ON()
   if (!AccountConsistencyModeManager::IsDiceEnabledForProfile(GetProfile())) {
     // Developers often fall into the trap of not configuring the OAuth client
-    // ID and client secret and then attempt to sign in to Chromium, which
+    // ID and client secret and then attempt to sign in to Cinaseek, which
     // fail as the account consistency is disabled. Explicitly check that the
     // OAuth client ID are configured when developers attempt to sign in to
-    // Chromium.
+    // Cinaseek.
     DCHECK(google_apis::HasOAuthClientConfigured())
         << "You must configure the OAuth client ID and client secret in order "
-           "to sign in to Chromium. See instruction at "
-           "https://www.chromium.org/developers/how-tos/api-keys";
+           "to sign in to Cinaseek. See instruction at "
+           "https://www.Cinaseek.org/developers/how-tos/api-keys";
 
     // Account consistency mode does not support signing in to Chrome due to
     // some other unexpected reason. Signing in to Chrome is not supported.
     NOTREACHED()
         << "OAuth client ID and client secret is configured, but "
            "the account consistency mode does not support signing in to "
-           "Chromium.";
+           "Cinaseek.";
   }
 #endif
 

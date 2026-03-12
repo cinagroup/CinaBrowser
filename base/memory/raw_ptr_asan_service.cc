@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -638,7 +638,7 @@ bool RawPtrAsanService::CheckFaultAddress(uintptr_t fault_address,
     debug::AsanService::GetInstance()->Log(
         "\nMiraclePtr Status: %s\n%s\n%s\n"
         "Refer to "
-        "https://chromium.googlesource.com/chromium/src/+/main/base/memory/"
+        "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/base/memory/"
         "raw_ptr.md for details.",
         ProtectionStatusToString(crash_info.protection_status),
         crash_info.crash_details, crash_info.protection_details);
@@ -779,7 +779,7 @@ void RawPtrAsanService::ErrorReportCallback(const char* reason,
   debug::AsanService::GetInstance()->Log(
       "\nMiraclePtr Status: %s\n%s\n%s\n"
       "Refer to "
-      "https://chromium.googlesource.com/chromium/src/+/main/base/memory/"
+      "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/base/memory/"
       "raw_ptr.md for details.",
       ProtectionStatusToString(crash_info.protection_status),
       crash_info.crash_details, crash_info.protection_details);
@@ -844,7 +844,7 @@ void RawPtrAsanService::WarnOnDanglingExtraction(
       "Otherwise, it is still likely a bug to rely on the address of an "
       "already freed allocation.\n"
       "Refer to "
-      "https://chromium.googlesource.com/chromium/src/+/main/base/memory/"
+      "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/base/memory/"
       "raw_ptr.md for details.");
 }
 
@@ -857,7 +857,7 @@ void RawPtrAsanService::CrashOnDanglingInstantiation(
       "Note that this report might be a false positive if at the moment of the "
       "crash another raw_ptr<T> is guaranteed to keep the allocation alive.\n"
       "Refer to "
-      "https://chromium.googlesource.com/chromium/src/+/main/base/memory/"
+      "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/base/memory/"
       "raw_ptr.md for details.");
   base::ImmediateCrash();
 }

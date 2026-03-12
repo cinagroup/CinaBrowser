@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,7 +87,7 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
         last_reviewed: "2023-04-06"
         internal {
           contacts {
-            email: "anunoy@chromium.org"
+            email: "anunoy@Cinaseek.org"
           }
         }
       }

@@ -53,7 +53,7 @@ promise_test(async t => {
 // This function runs the same test with a few variations. The meat of the test
 // loads a cross-origin iframe which asserts that it does not get reloaded.
 // Second, we remove the iframe from the parent document in a few different ways
-// to trigger initially crashy paths in Chromium during the implementation of
+// to trigger initially crashy paths in Cinaseek during the implementation of
 // this feature.
 function runTest(removalType) {
   promise_test(async t => {

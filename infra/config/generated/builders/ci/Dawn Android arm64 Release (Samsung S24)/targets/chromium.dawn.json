@@ -5,7 +5,7 @@
         "args": [
           "noop_sleep",
           "--show-stdout",
-          "--browser=android-chromium",
+          "--browser=android-Cinaseek",
           "--passthrough",
           "-v",
           "--stable-jobs",
@@ -32,13 +32,13 @@
             "device_os_type": "user",
             "device_type": "s5e9945",
             "os": "Android",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "expiration": 21600,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test_android_chrome",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test_android_chrome/"

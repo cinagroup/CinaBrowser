@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ enum class FirstRunSeedImportResult {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.variations
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.variations
 // LINT.IfChange(LoadSeedResult)
 enum class LoadSeedResult {
   kSuccess = 0,

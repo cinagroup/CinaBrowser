@@ -10,7 +10,7 @@
     "keep_going": 3,
     "output_local_strategy": "minimum",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -19,6 +19,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.linux",
-  "recipe": "chromium/fuzz"
+  "builder_group": "tryserver.Cinaseek.linux",
+  "recipe": "Cinaseek/fuzz"
 }

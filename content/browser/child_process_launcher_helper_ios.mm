@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -359,7 +359,7 @@ void ChildProcessLauncherHelper::OnChildProcessStarted(
       // to the child process. The child process will then deserialize
       // it before then assigning the TMPDIR environment variable. We
       // do this via XPC so that it is done early enough in the process
-      // creation so TMPDIR is set before any real Chromium code runs.
+      // creation so TMPDIR is set before any real Cinaseek code runs.
       scoped_temp_dir_ = std::make_unique<base::ScopedTempDir>();
       CHECK(scoped_temp_dir_->CreateUniqueTempDir());
 

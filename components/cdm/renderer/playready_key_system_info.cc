@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ bool PlayReadyKeySystemInfo::IsSupportedInitDataType(
 
   // To make KeySystemConfigSelector::GetSupportedConfiguration work correctly,
   // use the hardware secure codecs since there are no supported software codecs
-  // in Chromium. If software secure codecs (aka. codecs_) is used here when
+  // in Cinaseek. If software secure codecs (aka. codecs_) is used here when
   // the keysystem is "com.microsoft.playready.recommendation", then this will
   // always return false which is not correct when robustness=3000.
   const media::SupportedCodecs codecs = hw_secure_codecs_;
@@ -106,7 +106,7 @@ EmeConfig::Rule PlayReadyKeySystemInfo::GetRobustnessConfigRule(
     return EmeConfig{.hw_secure_codecs = EmeConfigRuleState::kRequired};
   }
 
-  // Software secure PlayReady is not supported in Chromium.
+  // Software secure PlayReady is not supported in Cinaseek.
   return EmeConfig::UnsupportedRule();
 }
 

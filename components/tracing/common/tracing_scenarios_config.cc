@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -171,28 +171,28 @@ perfetto::protos::gen::TraceConfig CreateDefaultPresetTracingConfig() {
   }
   {
     auto* ds = trace_config.add_data_sources()->mutable_config();
-    ds->set_name("org.chromium.trace_metadata2");
+    ds->set_name("org.Cinaseek.trace_metadata2");
     ds->set_target_buffer(1);
   }
   {
     auto* ds = trace_config.add_data_sources()->mutable_config();
-    ds->set_name("org.chromium.background_scenario_metadata");
+    ds->set_name("org.Cinaseek.background_scenario_metadata");
     ds->set_target_buffer(1);
   }
   trace_config.add_data_sources()->mutable_config()->set_name(
-      "org.chromium.triggers");
+      "org.Cinaseek.triggers");
   trace_config.add_data_sources()->mutable_config()->set_name(
-      "org.chromium.system_metrics");
+      "org.Cinaseek.system_metrics");
   trace_config.add_data_sources()->mutable_config()->set_name(
-      "org.chromium.sampler_profiler");
+      "org.Cinaseek.sampler_profiler");
   {
     auto* ds = trace_config.add_data_sources()->mutable_config();
-    ds->set_name("org.chromium.histogram_sample");
-    perfetto::protos::gen::ChromiumHistogramSamplesConfig histogram_config;
+    ds->set_name("org.Cinaseek.histogram_sample");
+    perfetto::protos::gen::CinaseekHistogramSamplesConfig histogram_config;
     for (auto* histogram : kHistogramSamplesFilterList) {
       histogram_config.add_histograms()->set_histogram_name(histogram);
     }
-    ds->set_chromium_histogram_samples_raw(
+    ds->set_Cinaseek_histogram_samples_raw(
         histogram_config.SerializeAsString());
   }
   {
@@ -212,7 +212,7 @@ perfetto::protos::gen::TraceConfig CreatePresetTracingConfigWithEtw() {
   auto trace_config = CreateDefaultPresetTracingConfig();
   {
     auto* ds = trace_config.add_data_sources()->mutable_config();
-    ds->set_name("org.chromium.etw_system");
+    ds->set_name("org.Cinaseek.etw_system");
     perfetto::protos::gen::EtwConfig etw_config;
     etw_config.add_scheduler_provider_events("CONTEXT_SWITCH");
     etw_config.add_scheduler_provider_events("DISPATCHER");

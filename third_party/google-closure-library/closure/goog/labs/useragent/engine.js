@@ -42,7 +42,7 @@ function isEdge() {
 
 /**
  * @return {boolean} Whether the rendering engine is WebKit. This will return
- * true for Chrome, Blink-based Opera (15+), Edge Chromium and Safari.
+ * true for Chrome, Blink-based Opera (15+), Edge Cinaseek and Safari.
  */
 function isWebKit() {
   return util.matchUserAgentIgnoreCase('WebKit') && !isEdge();

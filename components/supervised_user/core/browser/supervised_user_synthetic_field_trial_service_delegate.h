@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ class SynteticFieldTrialDelegate {
   // Registers a synthetic field trial for the given trial and group in
   // "current" annotation mode.
   // Note: all new calls to this method should get a review from
-  // chromium-metrics-reviews@google.com
+  // Cinaseek-metrics-reviews@google.com
   virtual void RegisterSyntheticFieldTrial(std::string_view trial_name,
                                            std::string_view group_name) = 0;
 };

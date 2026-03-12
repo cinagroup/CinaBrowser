@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@ class TabStripUIEmbedder;
 
 // These data types must be in all lowercase.
 inline constexpr char16_t kWebUITabIdDataType[] =
-    u"application/vnd.chromium.tab";
+    u"application/vnd.Cinaseek.tab";
 inline constexpr char16_t kWebUITabGroupIdDataType[] =
-    u"application/vnd.chromium.tabgroup";
+    u"application/vnd.Cinaseek.tabgroup";
 
 class TabStripUI;
 

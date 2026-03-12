@@ -23,8 +23,8 @@ ci/CFI Linux CF
 ci/CFI Linux ToT
 ci/Centipede High End Upload Linux ASan
 ci/Centipede Upload Linux ASan
-ci/ChromeOS FYI Release (amd64-generic)
-ci/ChromiumOS ASAN Release
+ci/CinaseekOS FYI Release (amd64-generic)
+ci/CinaseekOS ASAN Release
 ci/CrWinAsan
 ci/CrWinAsan(dll)
 ci/Dawn Android arm Builder
@@ -36,7 +36,7 @@ ci/Dawn Android arm64 DEPS Builder
 ci/Dawn Android arm64 DEPS Release (Pixel 6)
 ci/Dawn Android arm64 Release (Pixel 6)
 ci/Dawn Android arm64 Release (Samsung S24)
-ci/Dawn Chromium Presubmit
+ci/Dawn Cinaseek Presubmit
 ci/Dawn Linux x64 Builder
 ci/Dawn Linux x64 DEPS Builder
 ci/Dawn Linux x64 DEPS Release (Intel UHD 630)
@@ -108,7 +108,7 @@ ci/GPU Mac Builder
 ci/GPU Mac Builder (dbg)
 ci/GPU Win x64 Builder
 ci/GPU Win x64 Builder (dbg)
-ci/Libfuzzer Upload Chrome OS ASan
+ci/Libfuzzer Upload Cinaseek OS ASan
 ci/Libfuzzer Upload Linux ASan
 ci/Libfuzzer Upload Linux ASan Debug
 ci/Libfuzzer Upload Linux MSan
@@ -127,10 +127,10 @@ ci/Linux Builder
 ci/Linux Builder (Wayland)
 ci/Linux Builder (dbg)
 ci/Linux CFI
-ci/Linux Chromium OS ASan LSan Builder
-ci/Linux Chromium OS ASan LSan Tests (1)
-ci/Linux ChromiumOS MSan Builder
-ci/Linux ChromiumOS MSan Tests
+ci/Linux Cinaseek OS ASan LSan Builder
+ci/Linux Cinaseek OS ASan LSan Tests (1)
+ci/Linux CinaseekOS MSan Builder
+ci/Linux CinaseekOS MSan Tests
 ci/Linux FYI Debug (NVIDIA)
 ci/Linux FYI Experimental Release (AMD 780M)
 ci/Linux FYI Experimental Release (AMD 890M)
@@ -192,8 +192,8 @@ ci/ToTAndroid x86
 ci/ToTAndroid64
 ci/ToTAndroidCoverage x86
 ci/ToTAndroidOfficial
-ci/ToTChromeOS
-ci/ToTChromeOS (dbg)
+ci/ToTCinaseekOS
+ci/ToTCinaseekOS (dbg)
 ci/ToTFuchsia x64
 ci/ToTFuchsiaOfficial arm64
 ci/ToTLinux
@@ -278,8 +278,8 @@ ci/android-15-x64-rel
 ci/android-16-x64-dbg-tests
 ci/android-16-x64-rel
 ci/android-androidx-packager
-ci/android-angle-chromium-arm64-builder
-ci/android-angle-chromium-arm64-pixel2
+ci/android-angle-Cinaseek-arm64-builder
+ci/android-angle-Cinaseek-arm64-pixel2
 ci/android-archive-rel
 ci/android-arm64-archive-rel
 ci/android-bfcache-rel
@@ -348,9 +348,9 @@ ci/ios-device
 ci/ios-simulator
 ci/ios-simulator-full-configs
 ci/ios-simulator-noncq
-ci/linux-angle-chromium-builder
-ci/linux-angle-chromium-intel
-ci/linux-angle-chromium-nvidia
+ci/linux-angle-Cinaseek-builder
+ci/linux-angle-Cinaseek-intel
+ci/linux-angle-Cinaseek-nvidia
 ci/linux-archive-rel
 ci/linux-bfcache-rel
 ci/linux-blink-asan-rel
@@ -371,8 +371,8 @@ ci/linux-gcc-rel
 ci/linux-oi-rel
 ci/linux-presubmit
 ci/linux-rel-cft
-ci/linux-swangle-chromium-x64
-ci/linux-swangle-chromium-x64-exp
+ci/linux-swangle-Cinaseek-x64
+ci/linux-swangle-Cinaseek-x64-exp
 ci/linux-swangle-tot-swiftshader-x64
 ci/linux-swangle-x64
 ci/linux-swangle-x64-exp
@@ -387,9 +387,9 @@ ci/linux-x64-libfuzzer-asan-rel-tests
 ci/linux-x64-libfuzzer-msan-rel-tests
 ci/linux-x64-libfuzzer-ubsan-rel-tests
 ci/linux-x86-libfuzzer-asan-rel-tests
-ci/mac-angle-chromium-amd
-ci/mac-angle-chromium-builder
-ci/mac-angle-chromium-intel
+ci/mac-angle-Cinaseek-amd
+ci/mac-angle-Cinaseek-builder
+ci/mac-angle-Cinaseek-intel
 ci/mac-archive-rel
 ci/mac-arm64-archive-rel
 ci/mac-arm64-dbg
@@ -398,14 +398,14 @@ ci/mac-arm64-on-arm64-rel
 ci/mac-arm64-rel
 ci/mac-official
 ci/mac-rel-cft
-ci/mac-swangle-chromium-x64
+ci/mac-swangle-Cinaseek-x64
 ci/mac12-arm64-rel-tests
 ci/mac13-arm64-rel-tests
 ci/mac14-arm64-rel-tests
 ci/mac15-arm64-rel-tests
 ci/mac15-x64-rel-tests
-ci/win-angle-chromium-x64-builder
-ci/win-angle-chromium-x86-builder
+ci/win-angle-Cinaseek-x64-builder
+ci/win-angle-Cinaseek-x86-builder
 ci/win-archive-rel
 ci/win-arm64-dbg
 ci/win-arm64-rel
@@ -413,14 +413,14 @@ ci/win-asan
 ci/win-official
 ci/win-presubmit
 ci/win-rel-cft
-ci/win-swangle-chromium-x86
+ci/win-swangle-Cinaseek-x86
 ci/win-swangle-tot-swiftshader-x64
 ci/win-swangle-tot-swiftshader-x86
 ci/win-swangle-x64
 ci/win-swangle-x86
 ci/win-x64-libfuzzer-asan-rel-tests
-ci/win10-angle-chromium-x64-intel
-ci/win10-angle-chromium-x64-nvidia
+ci/win10-angle-Cinaseek-x64-intel
+ci/win10-angle-Cinaseek-x64-nvidia
 ci/win11-arm64-rel-tests
 ci/win32-archive-rel
 ci/win32-official
@@ -443,7 +443,7 @@ try/android-15-tablet-x64-rel
 try/android-15-x64-rel
 try/android-16-x64-dbg
 try/android-16-x64-rel
-try/android-angle-chromium-try
+try/android-angle-Cinaseek-try
 try/android-arm-compile-dbg
 try/android-arm64-compile-dbg
 try/android-arm64-rel
@@ -592,7 +592,7 @@ try/ios-simulator
 try/ios-simulator-exp
 try/ios-simulator-full-configs
 try/ios-simulator-noncq
-try/linux-angle-chromium-try
+try/linux-angle-Cinaseek-try
 try/linux-asan-dbg
 try/linux-asan-media-rel
 try/linux-asan-media-v8-arm-rel
@@ -633,8 +633,8 @@ try/linux-perfetto-rel
 try/linux-presubmit
 try/linux-rel
 try/linux-rel-cft
-try/linux-swangle-chromium-try-x64
-try/linux-swangle-chromium-try-x64-exp
+try/linux-swangle-Cinaseek-try-x64
+try/linux-swangle-Cinaseek-try-x64-exp
 try/linux-swangle-try-tot-swiftshader-x64
 try/linux-swangle-try-x64
 try/linux-swangle-try-x64-exp
@@ -656,18 +656,18 @@ try/linux-x64-libfuzzer-asan-rel-tests
 try/linux-x64-libfuzzer-msan-rel-tests
 try/linux-x64-libfuzzer-ubsan-rel-tests
 try/linux-x86-libfuzzer-asan-rel-tests
-try/linux_chromium_archive_rel_ng
-try/linux_chromium_asan_rel_ng
-try/linux_chromium_cfi_rel_ng
-try/linux_chromium_chromeos_asan_rel_ng
-try/linux_chromium_chromeos_msan_rel_ng
-try/linux_chromium_compile_dbg_ng
-try/linux_chromium_compile_rel_ng
-try/linux_chromium_dbg_ng
-try/linux_chromium_msan_rel_ng
-try/linux_chromium_tsan_rel_ng
-try/linux_chromium_ubsan_rel_ng
-try/mac-angle-chromium-try
+try/linux_Cinaseek_archive_rel_ng
+try/linux_Cinaseek_asan_rel_ng
+try/linux_Cinaseek_cfi_rel_ng
+try/linux_Cinaseek_chromeos_asan_rel_ng
+try/linux_Cinaseek_chromeos_msan_rel_ng
+try/linux_Cinaseek_compile_dbg_ng
+try/linux_Cinaseek_compile_rel_ng
+try/linux_Cinaseek_dbg_ng
+try/linux_Cinaseek_msan_rel_ng
+try/linux_Cinaseek_tsan_rel_ng
+try/linux_Cinaseek_ubsan_rel_ng
+try/mac-angle-Cinaseek-try
 try/mac-arm64-clobber-rel
 try/mac-arm64-libfuzzer-asan-rel-tests
 try/mac-arm64-on-arm64-rel
@@ -683,7 +683,7 @@ try/mac-official
 try/mac-rel
 try/mac-rel-cft
 try/mac-skia-alt-arm64-blink-rel
-try/mac-swangle-chromium-try-x64
+try/mac-swangle-Cinaseek-try-x64
 try/mac-updater-try-builder-dbg
 try/mac-updater-try-builder-rel
 try/mac-x64-compile-dbg
@@ -695,10 +695,10 @@ try/mac14-arm64-rel
 try/mac14-tests
 try/mac15-arm64-rel
 try/mac15-x64-rel-tests
-try/mac_chromium_asan_rel_ng
-try/mac_chromium_compile_dbg_ng
-try/mac_chromium_compile_rel_ng
-try/mac_chromium_dbg_ng
+try/mac_Cinaseek_asan_rel_ng
+try/mac_Cinaseek_compile_dbg_ng
+try/mac_Cinaseek_compile_rel_ng
+try/mac_Cinaseek_dbg_ng
 try/mega-cq-launcher
 try/network_service_linux
 try/reclient-config-deployment-verifier
@@ -707,8 +707,8 @@ try/targets-config-verifier
 try/targets-config-verifier-dev
 try/tricium-metrics-analysis
 try/tricium-oilpan-analysis
-try/win-angle-chromium-x64-try
-try/win-angle-chromium-x86-try
+try/win-angle-Cinaseek-x64-try
+try/win-angle-Cinaseek-x86-try
 try/win-arm64-compile-dbg
 try/win-arm64-dbg
 try/win-arm64-rel
@@ -724,7 +724,7 @@ try/win-official
 try/win-presubmit
 try/win-rel
 try/win-rel-cft
-try/win-swangle-chromium-try-x86
+try/win-swangle-Cinaseek-try-x86
 try/win-swangle-try-tot-swiftshader-x64
 try/win-swangle-try-tot-swiftshader-x86
 try/win-swangle-try-x64
@@ -738,6 +738,6 @@ try/win10-dbg
 try/win11-rel
 try/win32-clobber-rel
 try/win32-official
-try/win_chromium_compile_dbg_ng
-try/win_chromium_compile_rel_ng
-try/win_chromium_x64_rel_ng
+try/win_Cinaseek_compile_dbg_ng
+try/win_Cinaseek_compile_rel_ng
+try/win_Cinaseek_x64_rel_ng

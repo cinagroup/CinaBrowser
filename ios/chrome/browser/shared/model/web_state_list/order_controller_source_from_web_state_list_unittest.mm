@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 
 namespace {
 
-const char kURL[] = "https://chromium.org/";
+const char kURL[] = "https://Cinaseek.org/";
 
 // A fake NavigationManager used to test opener-opened relationship in the
 // WebStateList.

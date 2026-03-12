@@ -1,9 +1,9 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_partial_translate") {
-  sources = [ "chromium_partial_translate.mm" ]
+source_set("Cinaseek_partial_translate") {
+  sources = [ "Cinaseek_partial_translate.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/partial_translate:partial_translate_api",

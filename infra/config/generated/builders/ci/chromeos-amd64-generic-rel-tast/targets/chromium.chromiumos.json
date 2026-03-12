@@ -22,7 +22,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -37,7 +37,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "chrome_all_tast_tests",
@@ -64,7 +64,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -79,7 +79,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "chrome_criticalstaging_tast_tests",
@@ -106,7 +106,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "io_timeout": 3600,
@@ -121,7 +121,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "chrome_disabled_tast_tests",
@@ -150,7 +150,7 @@
             "cpu": "x86-64",
             "kvm": "1",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
           "idempotent": false,
           "named_caches": [
@@ -164,7 +164,7 @@
               "caches": "cros_vm"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "disk_usage_tast_test",
         "test_id_prefix": "ninja://chromeos:disk_usage_tast_test/"

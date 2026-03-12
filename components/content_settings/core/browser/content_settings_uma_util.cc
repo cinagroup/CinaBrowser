@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -183,7 +183,7 @@ std::string GetProviderNameForHistograms(
 
   switch (provider_type) {
     // Update the `ContentAllProviderTypes` variants in
-    // https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/metadata/content/histograms.xml
+    // https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/metadata/content/histograms.xml
     // when new providers are added.
     case ProviderType::kWebuiAllowlistProvider:
       return "WebuiAllowlistProvider";

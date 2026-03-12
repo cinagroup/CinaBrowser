@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,7 +72,7 @@ void LaunchShimForTesting(
     const std::vector<GURL>& urls,
     ShimLaunchedCallback launched_callback,
     ShimTerminatedCallback terminated_callback,
-    const base::FilePath& chromium_path = base::FilePath());
+    const base::FilePath& Cinaseek_path = base::FilePath());
 
 // Waits for the shim with the given `app_id` and `shim_path` to terminate. If
 // there is no running application matching `app_id` and `shim_path` returns

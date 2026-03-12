@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -614,7 +614,7 @@ TEST_F(PrintBackendCupsIppHelperTest, LegalPaperDefault) {
 }
 
 // Tests that CapsAndDefaultsFromPrinter() does not propagate papers with
-// invalid sizes or margins to the Chromium print backend.
+// invalid sizes or margins to the Cinaseek print backend.
 TEST_F(PrintBackendCupsIppHelperTest, OmitPapersWithInvalidSizes) {
   printer_->SetMediaColDatabase(
       MakeMediaColDatabase(ipp_, {
@@ -647,7 +647,7 @@ TEST_F(PrintBackendCupsIppHelperTest, OmitPapersWithInvalidSizes) {
 }
 
 // Tests that CapsAndDefaultsFromPrinter() will propagate custom size ranges
-// from the  the media-col-database to the Chromium print backend.
+// from the  the media-col-database to the Cinaseek print backend.
 TEST_F(PrintBackendCupsIppHelperTest, IncludePapersWithSizeRanges) {
   printer_->SetMediaColDatabase(MakeMediaColDatabase(
       ipp_, {

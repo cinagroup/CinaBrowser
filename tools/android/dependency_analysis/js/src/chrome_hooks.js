@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ function shortenClassName(name) {
  * @return {string} The shortened package name.
  */
 function shortenPackageName(name) {
-  return name.replace('org.chromium.', '.').replace('chrome.browser.', 'c.b.');
+  return name.replace('org.Cinaseek.', '.').replace('chrome.browser.', 'c.b.');
 }
 
 /**

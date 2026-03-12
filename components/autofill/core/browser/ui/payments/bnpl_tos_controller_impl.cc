@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace {
 // LINT.IfChange
 constexpr std::string_view kWalletLinkText = "wallet.google.com";
 constexpr std::string_view kWalletUrlString = "https://wallet.google.com/";
-// LINT.ThenChange(//chrome/browser/touch_to_fill/autofill/android/internal/java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodMediator.java)
+// LINT.ThenChange(//chrome/browser/touch_to_fill/autofill/android/internal/java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodMediator.java)
 }  // namespace
 
 BnplTosControllerImpl::BnplTosControllerImpl(AutofillClient* client)

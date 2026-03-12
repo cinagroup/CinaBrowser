@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ void ArcTaskWindowBuilder::Prepare(views::Widget* widget) {
   // AppServiceAppWindowShelfController.
   exo::SetShellApplicationId(
       widget->GetNativeWindow(),
-      base::StringPrintf("org.chromium.arc.%d", task_id_));
+      base::StringPrintf("org.Cinaseek.arc.%d", task_id_));
   widget->GetNativeWindow()->SetProperty(
       ash::kArcPackageNameKey,
       package_name_.empty() ? "an.arc.pkg.T3ST" : package_name_);

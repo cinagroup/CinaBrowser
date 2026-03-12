@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 #include "net/url_request/url_request_context_getter.h"
 #include "remoting/base/logging.h"
 #include "remoting/base/oauth_token_getter.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
 #include "remoting/protocol/ice_config_fetcher.h"
 #include "remoting/protocol/port_allocator_factory.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
@@ -60,7 +60,7 @@ void PrintIceConfig(const IceConfig& ice_config) {
 scoped_refptr<TransportContext> TransportContext::ForTests(TransportRole role) {
   webrtc::ThreadWrapper::EnsureForCurrentMessageLoop();
   return base::MakeRefCounted<TransportContext>(
-      std::make_unique<protocol::ChromiumPortAllocatorFactory>(),
+      std::make_unique<protocol::CinaseekPortAllocatorFactory>(),
       webrtc::ThreadWrapper::current()->SocketServer(),
       /*ice_config_fetcher=*/nullptr, role);
 }

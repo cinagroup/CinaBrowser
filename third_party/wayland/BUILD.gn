@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/linux/pkg_config.gni")
@@ -62,10 +62,10 @@ if (!use_system_libwayland) {
       "src/src/wayland-util.h",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_hide_symbols",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
     public_configs = [ ":wayland_config" ]
@@ -80,11 +80,11 @@ if (!use_system_libwayland) {
 
     deps = [ ":wayland_util" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_hide_symbols",
       ":wayland_build_workaround_private_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//build/config/linux/libffi",
     ]
 
@@ -108,11 +108,11 @@ if (!use_system_libwayland) {
 
     public_deps = [ ":wayland_server_protocol" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_hide_symbols",
       ":wayland_build_workaround_private_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//build/config/linux/libffi",
     ]
 
@@ -139,10 +139,10 @@ if (!use_system_libwayland) {
 
     public_deps = [ ":wayland_server_protocol" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_private_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//build/config/linux/libffi",
     ]
 
@@ -159,11 +159,11 @@ if (!use_system_libwayland) {
       ":wayland_util",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_hide_symbols",
       ":wayland_build_workaround_private_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//build/config/linux/libffi",
     ]
 
@@ -183,10 +183,10 @@ if (!use_system_libwayland) {
       ":wayland_util",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_private_config",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//build/config/linux/libffi",
     ]
 
@@ -206,10 +206,10 @@ if (!use_system_libwayland) {
       ":wayland_util",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":wayland_build_workaround_hide_symbols",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
     ]
 
     public_configs = [ ":wayland_config" ]
@@ -228,9 +228,9 @@ if (!use_system_libwayland) {
 
     deps = [ ":wayland_client_protocol" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":wayland_build_workaround_hide_symbols",
       ":wayland_build_workaround_private_config",
       ":wayland_config",
@@ -297,9 +297,9 @@ executable("wayland_scanner") {
     "//third_party/expat",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":wayland_scanner_config",
   ]
 }

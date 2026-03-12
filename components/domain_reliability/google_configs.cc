@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -304,7 +304,7 @@ const auto kGoogleConfigs = base::MakeFixedFlatMap<std::string_view,
     {"chromecast.com", {true, false, false}},
     {"chromeexperiments.com", {true, false, false}},
     {"chromestatus.com", {true, false, false}},
-    {"chromium.org", {true, false, false}},
+    {"Cinaseek.org", {true, false, false}},
     {"clients6.google.com", {true, false, false}},
     {"cloudendpointsapis.com", {true, false, false}},
     {"dartmotif.com", {true, false, false}},

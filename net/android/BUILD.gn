@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,33 +8,33 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("net_java") {
   sources = [
-    "java/src/org/chromium/net/AndroidCertVerifyResult.java",
-    "java/src/org/chromium/net/AndroidKeyStore.java",
-    "java/src/org/chromium/net/AndroidNetworkLibrary.java",
-    "java/src/org/chromium/net/AndroidTrafficStats.java",
-    "java/src/org/chromium/net/ChromiumNetworkAdapter.java",
-    "java/src/org/chromium/net/DnsStatus.java",
-    "java/src/org/chromium/net/GURLUtils.java",
-    "java/src/org/chromium/net/HttpNegotiateAuthenticator.java",
-    "java/src/org/chromium/net/HttpNegotiateConstants.java",
-    "java/src/org/chromium/net/HttpUtil.java",
-    "java/src/org/chromium/net/MimeTypeFilter.java",
-    "java/src/org/chromium/net/NetStringUtil.java",
-    "java/src/org/chromium/net/NetworkActiveNotifier.java",
-    "java/src/org/chromium/net/NetworkCapabilitiesWrapper.java",
-    "java/src/org/chromium/net/NetworkChangeNotifier.java",
-    "java/src/org/chromium/net/NetworkChangeNotifierAutoDetect.java",
-    "java/src/org/chromium/net/NetworkTrafficAnnotationTag.java",
-    "java/src/org/chromium/net/ProxyBroadcastReceiver.java",
-    "java/src/org/chromium/net/ProxyChangeListener.java",
-    "java/src/org/chromium/net/RegistrationPolicyAlwaysRegister.java",
-    "java/src/org/chromium/net/RegistrationPolicyApplicationStatus.java",
-    "java/src/org/chromium/net/X509Util.java",
+    "java/src/org/Cinaseek/net/AndroidCertVerifyResult.java",
+    "java/src/org/Cinaseek/net/AndroidKeyStore.java",
+    "java/src/org/Cinaseek/net/AndroidNetworkLibrary.java",
+    "java/src/org/Cinaseek/net/AndroidTrafficStats.java",
+    "java/src/org/Cinaseek/net/CinaseekNetworkAdapter.java",
+    "java/src/org/Cinaseek/net/DnsStatus.java",
+    "java/src/org/Cinaseek/net/GURLUtils.java",
+    "java/src/org/Cinaseek/net/HttpNegotiateAuthenticator.java",
+    "java/src/org/Cinaseek/net/HttpNegotiateConstants.java",
+    "java/src/org/Cinaseek/net/HttpUtil.java",
+    "java/src/org/Cinaseek/net/MimeTypeFilter.java",
+    "java/src/org/Cinaseek/net/NetStringUtil.java",
+    "java/src/org/Cinaseek/net/NetworkActiveNotifier.java",
+    "java/src/org/Cinaseek/net/NetworkCapabilitiesWrapper.java",
+    "java/src/org/Cinaseek/net/NetworkChangeNotifier.java",
+    "java/src/org/Cinaseek/net/NetworkChangeNotifierAutoDetect.java",
+    "java/src/org/Cinaseek/net/NetworkTrafficAnnotationTag.java",
+    "java/src/org/Cinaseek/net/ProxyBroadcastReceiver.java",
+    "java/src/org/Cinaseek/net/ProxyChangeListener.java",
+    "java/src/org/Cinaseek/net/RegistrationPolicyAlwaysRegister.java",
+    "java/src/org/Cinaseek/net/RegistrationPolicyApplicationStatus.java",
+    "java/src/org/Cinaseek/net/X509Util.java",
   ]
   if (is_cronet_for_aosp_build) {
-    sources += [ "//components/cronet/android/platform-only/org/chromium/net/ConnectivityManagerShim.java" ]
+    sources += [ "//components/cronet/android/platform-only/org/Cinaseek/net/ConnectivityManagerShim.java" ]
   } else {
-    sources += [ "java/src/org/chromium/net/ConnectivityManagerShim.java" ]
+    sources += [ "java/src/org/Cinaseek/net/ConnectivityManagerShim.java" ]
   }
   deps = [
     ":net_thread_stats_uid_java",
@@ -50,18 +50,18 @@ android_library("net_java") {
     ":net_errors_java",
     "//net:net_jni_headers",
   ]
-  resources_package = "org.chromium.native_test"
+  resources_package = "org.Cinaseek.native_test"
 }
 
 android_library("net_thread_stats_uid_java") {
-  sources = [ "java/src/org/chromium/net/ThreadStatsUid.java" ]
+  sources = [ "java/src/org/Cinaseek/net/ThreadStatsUid.java" ]
 }
 
 android_aidl("embedded_test_server_aidl") {
-  interface_file = "../test/android/javatests/src/org/chromium/net/test/IEmbeddedTestServerInterface.aidl"
+  interface_file = "../test/android/javatests/src/org/Cinaseek/net/test/IEmbeddedTestServerInterface.aidl"
   sources = [
-    "../test/android/javatests/src/org/chromium/net/test/IConnectionListener.aidl",
-    "../test/android/javatests/src/org/chromium/net/test/IEmbeddedTestServerImpl.aidl",
+    "../test/android/javatests/src/org/Cinaseek/net/test/IConnectionListener.aidl",
+    "../test/android/javatests/src/org/Cinaseek/net/test/IEmbeddedTestServerImpl.aidl",
   ]
 }
 
@@ -73,19 +73,19 @@ android_library("embedded_test_server_aidl_java") {
 
 generate_jni("net_test_support_jni") {
   testonly = true
-  sources = [ "../test/android/javatests/src/org/chromium/net/AndroidNetworkLibraryTestUtil.java" ]
+  sources = [ "../test/android/javatests/src/org/Cinaseek/net/AndroidNetworkLibraryTestUtil.java" ]
 }
 
 android_library("net_java_test_support") {
   testonly = true
   sources = [
-    "../test/android/javatests/src/org/chromium/net/AndroidNetworkLibraryTestUtil.java",
-    "../test/android/javatests/src/org/chromium/net/test/EmbeddedTestServer.java",
-    "../test/android/javatests/src/org/chromium/net/test/EmbeddedTestServerRule.java",
-    "../test/android/javatests/src/org/chromium/net/test/util/CertTestUtil.java",
-    "../test/android/javatests/src/org/chromium/net/test/util/NetworkChangeNotifierTestUtil.java",
-    "../test/android/javatests/src/org/chromium/net/test/util/TestWebServer.java",
-    "../test/android/javatests/src/org/chromium/net/test/util/WebServer.java",
+    "../test/android/javatests/src/org/Cinaseek/net/AndroidNetworkLibraryTestUtil.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/EmbeddedTestServer.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/EmbeddedTestServerRule.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/util/CertTestUtil.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/util/NetworkChangeNotifierTestUtil.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/util/TestWebServer.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/util/WebServer.java",
   ]
   deps = [
     ":embedded_test_server_aidl_java",
@@ -109,19 +109,19 @@ android_library("net_java_test_support") {
 
 generate_jni("net_test_support_provider_jni") {
   testonly = true
-  sources = [ "../test/android/javatests/src/org/chromium/net/test/EmbeddedTestServerImpl.java" ]
+  sources = [ "../test/android/javatests/src/org/Cinaseek/net/test/EmbeddedTestServerImpl.java" ]
 }
 
 generate_jni("dummy_spnego_authenticator_jni") {
   testonly = true
-  sources = [ "../test/android/javatests/src/org/chromium/net/test/DummySpnegoAuthenticator.java" ]
+  sources = [ "../test/android/javatests/src/org/Cinaseek/net/test/DummySpnegoAuthenticator.java" ]
 }
 
 android_library("net_test_support_provider_java") {
   testonly = true
   sources = [
-    "../test/android/javatests/src/org/chromium/net/test/EmbeddedTestServerImpl.java",
-    "../test/android/javatests/src/org/chromium/net/test/EmbeddedTestServerService.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/EmbeddedTestServerImpl.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/EmbeddedTestServerService.java",
   ]
   srcjar_deps = [ ":net_test_support_provider_jni" ]
 
@@ -139,8 +139,8 @@ android_library("net_test_support_provider_java") {
 android_library("dummy_spnego_authenticator_java") {
   testonly = true
   sources = [
-    "../test/android/javatests/src/org/chromium/net/test/DummySpnegoAuthenticator.java",
-    "../test/android/javatests/src/org/chromium/net/test/DummySpnegoAuthenticatorService.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/DummySpnegoAuthenticator.java",
+    "../test/android/javatests/src/org/Cinaseek/net/test/DummySpnegoAuthenticatorService.java",
   ]
   srcjar_deps = [ ":dummy_spnego_authenticator_jni" ]
 
@@ -191,7 +191,7 @@ android_apk("net_test_support_apk") {
     ":net_test_support_provider_java",
   ]
   android_manifest = "../test/android/javatests/AndroidManifest.xml"
-  apk_name = "ChromiumNetTestSupport"
+  apk_name = "CinaseekNetTestSupport"
   shared_libraries = [ ":net_java_test_native_support" ]
   srcjar_deps = [ ":net_java_test_native_support__jni_registration" ]
 }
@@ -211,25 +211,25 @@ android_resources("net_unittests_apk_resources") {
 generate_jni("net_tests_jni") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/net/AndroidKeyStoreTestUtil.java",
-    "javatests/src/org/chromium/net/AndroidProxyConfigServiceTestUtil.java",
+    "javatests/src/org/Cinaseek/net/AndroidKeyStoreTestUtil.java",
+    "javatests/src/org/Cinaseek/net/AndroidProxyConfigServiceTestUtil.java",
   ]
 }
 
 android_library("net_tests_java") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/net/AndroidKeyStoreTestUtil.java",
-    "javatests/src/org/chromium/net/AndroidNetworkLibraryTest.java",
-    "javatests/src/org/chromium/net/AndroidProxyConfigServiceTestUtil.java",
-    "javatests/src/org/chromium/net/AndroidProxySelectorTest.java",
-    "javatests/src/org/chromium/net/HttpUtilTest.java",
-    "javatests/src/org/chromium/net/MimeTypeFilterTest.java",
-    "javatests/src/org/chromium/net/NetErrorsTest.java",
-    "javatests/src/org/chromium/net/NetworkChangeNotifierNoNativeTest.java",
-    "javatests/src/org/chromium/net/NetworkChangeNotifierTest.java",
-    "javatests/src/org/chromium/net/ProxyChangeListenerTest.java",
-    "javatests/src/org/chromium/net/X509UtilTest.java",
+    "javatests/src/org/Cinaseek/net/AndroidKeyStoreTestUtil.java",
+    "javatests/src/org/Cinaseek/net/AndroidNetworkLibraryTest.java",
+    "javatests/src/org/Cinaseek/net/AndroidProxyConfigServiceTestUtil.java",
+    "javatests/src/org/Cinaseek/net/AndroidProxySelectorTest.java",
+    "javatests/src/org/Cinaseek/net/HttpUtilTest.java",
+    "javatests/src/org/Cinaseek/net/MimeTypeFilterTest.java",
+    "javatests/src/org/Cinaseek/net/NetErrorsTest.java",
+    "javatests/src/org/Cinaseek/net/NetworkChangeNotifierNoNativeTest.java",
+    "javatests/src/org/Cinaseek/net/NetworkChangeNotifierTest.java",
+    "javatests/src/org/Cinaseek/net/ProxyChangeListenerTest.java",
+    "javatests/src/org/Cinaseek/net/X509UtilTest.java",
   ]
   srcjar_deps = [ ":net_tests_jni" ]
   deps = [
@@ -272,8 +272,8 @@ java_cpp_enum("net_android_java_enums_srcjar") {
 
 robolectric_binary("net_junit_tests") {
   sources = [
-    "junit/src/org/chromium/net/HttpNegotiateAuthenticatorTest.java",
-    "junit/src/org/chromium/net/NetworkTrafficAnnotationTagTest.java",
+    "junit/src/org/Cinaseek/net/HttpNegotiateAuthenticatorTest.java",
+    "junit/src/org/Cinaseek/net/NetworkTrafficAnnotationTagTest.java",
   ]
   deps = [
     ":net_java",

@@ -1,24 +1,24 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
-        "infra/config/generated/builders/webrtc.fyi/WebRTC Chromium FYI Android Builder (dbg)/gn-args.json"
+        "infra/config/generated/builders/webrtc.fyi/WebRTC Cinaseek FYI Android Builder (dbg)/gn-args.json"
       ],
       "builder_db": {
         "entries": [
           {
             "builder_id": {
               "bucket": "webrtc.fyi",
-              "builder": "WebRTC Chromium FYI Android Builder (dbg)",
-              "project": "chromium"
+              "builder": "WebRTC Cinaseek FYI Android Builder (dbg)",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.webrtc.fyi",
+              "builder_group": "Cinaseek.webrtc.fyi",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "dcheck",
                   "mb",
@@ -34,7 +34,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium_webrtc_tot"
+                "config": "Cinaseek_webrtc_tot"
               }
             }
           }
@@ -43,11 +43,11 @@
       "builder_ids": [
         {
           "bucket": "webrtc.fyi",
-          "builder": "WebRTC Chromium FYI Android Builder (dbg)",
-          "project": "chromium"
+          "builder": "WebRTC Cinaseek FYI Android Builder (dbg)",
+          "project": "Cinaseek"
         }
       ],
-      "targets_spec_directory": "infra/config/generated/builders/webrtc.fyi/WebRTC Chromium FYI Android Builder (dbg)/targets"
+      "targets_spec_directory": "infra/config/generated/builders/webrtc.fyi/WebRTC Cinaseek FYI Android Builder (dbg)/targets"
     }
   },
   "$build/siso": {
@@ -58,7 +58,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -68,6 +68,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.webrtc.fyi",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.webrtc.fyi",
+  "recipe": "Cinaseek"
 }

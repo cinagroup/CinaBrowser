@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -634,7 +634,7 @@ TEST_F(CWVAutofillControllerTest, NotifyUserOfLeak) {
   id delegate = OCMProtocolMock(@protocol(CWVAutofillControllerDelegate));
   autofill_controller_.delegate = delegate;
 
-  GURL leak_url("https://www.chromium.org");
+  GURL leak_url("https://www.Cinaseek.org");
   password_manager::CredentialLeakType leak_type =
       password_manager::CreateLeakType(password_manager::IsSaved(true),
                                        password_manager::IsReused(true),

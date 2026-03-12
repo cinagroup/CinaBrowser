@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ int64_t ConvertTimestamp(base::TimeTicks ticks) {
 // because it is kept in sync with the proto enum `google.rpc.Code`, which is
 // the format the server expects and which is less convenient to use here than
 // `absl::StatusCode`.
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/abseil-cpp/absl/status/status.h;drc=083488f5118f2ecf1e927925d9b679f21f8541d0;l=83
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/abseil-cpp/absl/status/status.h;drc=083488f5118f2ecf1e927925d9b679f21f8541d0;l=83
 // https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto#L32
 absl::StatusCode NetErrorToCanonicalStatus(net::Error net_error) {
   switch (net_error) {

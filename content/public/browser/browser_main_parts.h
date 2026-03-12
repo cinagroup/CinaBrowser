@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ namespace content {
 //    owned by content. As such, this is still "single-threaded" initialization
 //    as far as content and its embedders are concerned and the right place to
 //    initialize thread-compatible objects:
-//    https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks.md#threading-lexicon
+//    https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/threading_and_tasks.md#threading-lexicon
 //
 //  - PostCreateThreads: things that should be done as early as possible but
 //    need browser process threads to be alive (i.e. BrowserThread::IO is up and

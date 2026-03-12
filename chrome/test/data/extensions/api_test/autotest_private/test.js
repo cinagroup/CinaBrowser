@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -509,24 +509,24 @@ var defaultTests = [
   function getAllInstalledApps() {
     chrome.autotestPrivate.getAllInstalledApps(chrome.test.callbackPass(
       apps => {
-        // Limit apps to chromium to filter out default apps.
-        const chromium = apps.find(
+        // Limit apps to Cinaseek to filter out default apps.
+        const Cinaseek = apps.find(
           app => app.appId == 'mgndgikekgjfcpckkfioiadnlibdjbkf');
-        chrome.test.assertTrue(!!chromium);
-        // Only check that name and shortName are set for Chromium because
+        chrome.test.assertTrue(!!Cinaseek);
+        // Only check that name and shortName are set for Cinaseek because
         // their values change if chrome_branded is true.
-        chrome.test.assertTrue(!!chromium.name);
-        chrome.test.assertTrue(!!chromium.shortName);
-        chrome.test.assertEq(chromium.publisherId, "");
-        chrome.test.assertEq(chromium.additionalSearchTerms, []);
-        chrome.test.assertEq(chromium.readiness, 'Ready');
-        chrome.test.assertEq(chromium.showInLauncher, true);
-        chrome.test.assertEq(chromium.showInSearch, true);
-        chrome.test.assertEq(chromium.type, 'Extension');
-        chrome.test.assertEq(chromium.installSource, 'System');
+        chrome.test.assertTrue(!!Cinaseek.name);
+        chrome.test.assertTrue(!!Cinaseek.shortName);
+        chrome.test.assertEq(Cinaseek.publisherId, "");
+        chrome.test.assertEq(Cinaseek.additionalSearchTerms, []);
+        chrome.test.assertEq(Cinaseek.readiness, 'Ready');
+        chrome.test.assertEq(Cinaseek.showInLauncher, true);
+        chrome.test.assertEq(Cinaseek.showInSearch, true);
+        chrome.test.assertEq(Cinaseek.type, 'Extension');
+        chrome.test.assertEq(Cinaseek.installSource, 'System');
     }));
   },
-  // This test verifies that only Chromium is available by default.
+  // This test verifies that only Cinaseek is available by default.
   function getShelfItems() {
     chrome.autotestPrivate.getShelfItems(chrome.test.callbackPass(items => {
       chrome.test.assertEq(1, items.length);

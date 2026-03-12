@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -109,8 +109,8 @@ IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
 IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
                        HandleDropTargetViewLinkDrop_EndDropTarget) {
   ui::OSExchangeData data;
-  const GURL kDropUrl("http://www.chromium.org/");
-  data.SetURL(kDropUrl, u"Chromium");
+  const GURL kDropUrl("http://www.Cinaseek.org/");
+  data.SetURL(kDropUrl, u"Cinaseek");
   gfx::PointF point = {10, 10};
   ui::DropTargetEvent event(data, point, point, ui::DragDropTypes::DRAG_LINK);
 
@@ -138,8 +138,8 @@ IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
 IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
                        HandleDropTargetViewLinkDrop_StartDropTarget) {
   ui::OSExchangeData data;
-  const GURL kDropUrl("http://www.chromium.org/");
-  data.SetURL(kDropUrl, u"Chromium");
+  const GURL kDropUrl("http://www.Cinaseek.org/");
+  data.SetURL(kDropUrl, u"Cinaseek");
   gfx::PointF point = {10, 10};
   ui::DropTargetEvent event(data, point, point, ui::DragDropTypes::DRAG_LINK);
 
@@ -169,8 +169,8 @@ IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
   browser()->tab_strip_model()->SetTabPinned(0, true);
 
   ui::OSExchangeData data;
-  const GURL kDropUrl("http://www.chromium.org/");
-  data.SetURL(kDropUrl, u"Chromium");
+  const GURL kDropUrl("http://www.Cinaseek.org/");
+  data.SetURL(kDropUrl, u"Cinaseek");
   gfx::PointF point = {10, 10};
   ui::DropTargetEvent event(data, point, point, ui::DragDropTypes::DRAG_LINK);
 
@@ -203,8 +203,8 @@ IN_PROC_BROWSER_TEST_F(MultiContentsViewBrowserTest,
   browser()->tab_strip_model()->AddToNewGroup({0});
 
   ui::OSExchangeData data;
-  const GURL kDropUrl("http://www.chromium.org/");
-  data.SetURL(kDropUrl, u"Chromium");
+  const GURL kDropUrl("http://www.Cinaseek.org/");
+  data.SetURL(kDropUrl, u"Cinaseek");
   gfx::PointF point = {10, 10};
   ui::DropTargetEvent event(data, point, point, ui::DragDropTypes::DRAG_LINK);
 

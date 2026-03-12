@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -644,7 +644,7 @@ const EnvelopeHeader& CBORTokenizer::GetEnvelopeHeader() const {
 //   and then checking whether the sum went past it.
 //
 // See also
-// https://chromium.googlesource.com/chromium/src/+/main/docs/security/integer-semantics.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/security/integer-semantics.md
 static const uint64_t kMaxValidLength =
     std::min<uint64_t>(std::numeric_limits<uint64_t>::max() >> 2,
                        std::numeric_limits<size_t>::max());

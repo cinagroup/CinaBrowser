@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ void DeterminePageLanguageDoesNotCrash(std::string code,
                                    model_reliability_score);
 }
 
-// Note: Once chromium support adding fuzztests in unittests, this file could
+// Note: Once Cinaseek support adding fuzztests in unittests, this file could
 // be merged with the corresponding unittest file.
 FUZZ_TEST(LanguageDetectionUtilFuzzTest, DeterminePageLanguageDoesNotCrash);
 

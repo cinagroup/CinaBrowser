@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 #include <GLES3/gl3.h>
 #include <GLES3/gl31.h>
 #include <stddef.h>
@@ -198,7 +198,7 @@ GLES2Implementation::GLES2Implementation(
     GpuControl* gpu_control)
     : ImplementationBase(helper, transfer_buffer, gpu_control),
       helper_(helper),
-      chromium_framebuffer_multisample_(kUnknownExtensionStatus),
+      Cinaseek_framebuffer_multisample_(kUnknownExtensionStatus),
       gl_capabilities_(gpu_control->GetGLCapabilities()),
       pack_alignment_(4),
       pack_row_length_(0),
@@ -536,9 +536,9 @@ bool GLES2Implementation::IsExtensionAvailableHelper(const char* extension,
   }
 }
 
-bool GLES2Implementation::IsChromiumFramebufferMultisampleAvailable() {
+bool GLES2Implementation::IsCinaseekFramebufferMultisampleAvailable() {
   return IsExtensionAvailableHelper("GL_CHROMIUM_framebuffer_multisample",
-                                    &chromium_framebuffer_multisample_);
+                                    &Cinaseek_framebuffer_multisample_);
 }
 
 const std::string& GLES2Implementation::GetLogPrefix() const {
@@ -818,7 +818,7 @@ bool GLES2Implementation::GetHelper(GLenum pname, GLint* params) {
       return true;
     case GL_READ_FRAMEBUFFER_BINDING:
       if (gl_capabilities_.major_version >= 3 ||
-          IsChromiumFramebufferMultisampleAvailable()) {
+          IsCinaseekFramebufferMultisampleAvailable()) {
         *params = bound_read_framebuffer_;
         return true;
       }
@@ -4861,7 +4861,7 @@ void GLES2Implementation::BindFramebufferHelper(GLenum target,
     case GL_READ_FRAMEBUFFER:
 #if EXPENSIVE_DCHECKS_ARE_ON()
       DCHECK(gl_capabilities_.major_version >= 3 ||
-             IsChromiumFramebufferMultisampleAvailable());
+             IsCinaseekFramebufferMultisampleAvailable());
 #endif
       if (bound_read_framebuffer_ != framebuffer) {
         bound_read_framebuffer_ = framebuffer;
@@ -4871,7 +4871,7 @@ void GLES2Implementation::BindFramebufferHelper(GLenum target,
     case GL_DRAW_FRAMEBUFFER:
 #if EXPENSIVE_DCHECKS_ARE_ON()
       DCHECK(gl_capabilities_.major_version >= 3 ||
-             IsChromiumFramebufferMultisampleAvailable());
+             IsCinaseekFramebufferMultisampleAvailable());
 #endif
       if (bound_framebuffer_ != framebuffer) {
         bound_framebuffer_ = framebuffer;
@@ -5740,7 +5740,7 @@ void GLES2Implementation::RequestExtensionCHROMIUM(const char* extension) {
   const auto checks = std::to_array<ExtensionCheck>({
       {
           "GL_CHROMIUM_framebuffer_multisample",
-          &chromium_framebuffer_multisample_,
+          &Cinaseek_framebuffer_multisample_,
       },
   });
   for (const ExtensionCheck& check : checks) {

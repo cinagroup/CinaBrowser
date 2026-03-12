@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #include "third_party/skia/include/core/SkImage.h"
 #include "third_party/skia/include/core/SkImageInfo.h"
 #include "third_party/skia/include/core/SkRefCnt.h"
-#include "third_party/skia/include/private/chromium/SkPMColor.h"
+#include "third_party/skia/include/private/Cinaseek/SkPMColor.h"
 
 // web_tests/images/resources/png-animated-idat-part-of-animation.png
 // is modified in multiple tests to simulate erroneous PNGs. As a reference,
@@ -1234,7 +1234,7 @@ TEST(StaticPNGTests, RepetitionCountForPartialNonanimatedInput) {
 // assume libpng's output has alpha, resulting in memory errors. See
 // https://github.com/glennrp/libpng/issues/482.
 //
-// Since Chromium chooses to undefine PNG_READ_OPT_PLTE_SUPPORTED in
+// Since Cinaseek chooses to undefine PNG_READ_OPT_PLTE_SUPPORTED in
 // pnglibconf.h, it is not affected by this potential bug. For extra assurance,
 // this test decodes this image and makes sure there are no errors.
 TEST(StaticPNGTests, ColorType2TrnsBeforePlte) {

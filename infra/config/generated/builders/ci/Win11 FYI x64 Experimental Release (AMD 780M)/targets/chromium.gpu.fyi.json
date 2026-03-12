@@ -25,13 +25,13 @@
             "display_attached": "1",
             "gpu": "1002:1900-32.0.21025.10016",
             "os": "Windows-11-26100",
-            "pool": "chromium.tests.gpu.experimental"
+            "pool": "Cinaseek.tests.gpu.experimental"
           },
           "expiration": 43200,
           "hard_timeout": 1800,
           "idempotent": false,
           "io_timeout": 1800,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"

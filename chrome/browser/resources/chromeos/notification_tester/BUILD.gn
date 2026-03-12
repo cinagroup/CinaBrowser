@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -65,7 +65,7 @@ js_library("notification_tester") {
   deps = [
     ":form_constants",
     ":types",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [
     "$externs_path/chrome_send.js",
@@ -75,7 +75,7 @@ js_library("notification_tester") {
 
 js_library("select_custom") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 

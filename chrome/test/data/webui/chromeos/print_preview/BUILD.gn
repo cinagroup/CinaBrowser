@@ -1,9 +1,9 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("../../build_webui_tests.gni")
-assert(is_chromeos, "ChromeOS Print Preview tests are ChromeOS-only")
+assert(is_chromeos, "CinaseekOS Print Preview tests are CinaseekOS-only")
 
 build_webui_tests("build") {
   cc_test_files = [

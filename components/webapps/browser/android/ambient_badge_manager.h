@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ class AmbientBadgeManager : public InstallableAmbientBadgeClient {
   ~AmbientBadgeManager() override;
 
   // This enum backs a UMA histogram , so it should be treated as append-only.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.banners
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.banners
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AmbientBadgeState
   enum class State {
     // The ambient badge pipeline has not yet been triggered for this page load.

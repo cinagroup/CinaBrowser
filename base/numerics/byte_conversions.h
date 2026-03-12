@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 
 #include "base/numerics/basic_ops_impl.h"
 
-// Chromium only builds and runs on Little Endian machines.
+// Cinaseek only builds and runs on Little Endian machines.
 static_assert(std::endian::native == std::endian::little);
 
 namespace base {

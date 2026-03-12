@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -364,7 +364,7 @@ TEST_F(TemplateURLServiceWithDatabaseUnitTest,
   ASSERT_TRUE(old_prepopulated_engine);
 
   const std::string new_engine_url_from_play =
-      "https://new.chromium?q={searchTerms}";
+      "https://new.Cinaseek?q={searchTerms}";
   const std::u16string new_engine_name_from_play = u"New Engine From Play";
   const auto new_engine_data = TemplateURLService::CreatePlayAPITemplateURLData(
       overriden_keyword, new_engine_name_from_play, new_engine_url_from_play);
@@ -379,7 +379,7 @@ TEST_F(TemplateURLServiceWithDatabaseUnitTest,
   EXPECT_EQ(new_play_engine->prepopulate_id(), /* bing_id */ 3);
   EXPECT_EQ(new_play_engine, template_url_service().GetDefaultSearchProvider());
 
-  // The properties are the ones coming from Chromium database: reconciliation
+  // The properties are the ones coming from Cinaseek database: reconciliation
   // detects matching defiition and re-uses it.
   EXPECT_EQ(new_play_engine->url(), old_prepopulated_engine->url());
   EXPECT_EQ(new_play_engine->short_name(), new_engine_name_from_play);
@@ -442,7 +442,7 @@ TEST_F(TemplateURLServiceWithDatabaseUnitTest,
   AddPlayApiEngineLegacy(play_engine_keyword, /*set_as_default=*/false);
 
   const std::string new_engine_url_from_play =
-      "https://play.chromium?q={searchTerms}&is_new=true";
+      "https://play.Cinaseek?q={searchTerms}&is_new=true";
   const std::u16string new_engine_name_from_play = u"Play Engine New";
   const auto new_play_engine_data =
       TemplateURLService::CreatePlayAPITemplateURLData(
@@ -472,9 +472,9 @@ TEST_F(TemplateURLServiceWithDatabaseUnitTest,
 TEST_F(TemplateURLServiceWithDatabaseUnitTest,
        ResetPlayAPISearchEngine_DseSetByPolicy) {
   TemplateURLData policy_engine_data;
-  policy_engine_data.SetShortName(u"Chromium.org Search");
+  policy_engine_data.SetShortName(u"Cinaseek.org Search");
   policy_engine_data.SetKeyword(u"cr_search");
-  policy_engine_data.SetURL("https://search.chromium.org?q={searchTerms}");
+  policy_engine_data.SetURL("https://search.Cinaseek.org?q={searchTerms}");
 
   template_url_service().ApplyDefaultSearchChangeForTesting(
       &policy_engine_data, DefaultSearchManager::FROM_POLICY);
@@ -506,9 +506,9 @@ TEST_F(TemplateURLServiceWithDatabaseUnitTest,
 TEST_F(TemplateURLServiceWithDatabaseUnitTest,
        ResetPlayAPISearchEngine_NewHasSameKeywordAsPolicyEngine) {
   TemplateURLData policy_engine_data;
-  policy_engine_data.SetShortName(u"Chromium.org Search");
+  policy_engine_data.SetShortName(u"Cinaseek.org Search");
   policy_engine_data.SetKeyword(u"cr_search");
-  policy_engine_data.SetURL("https://search.chromium.org?q={searchTerms}");
+  policy_engine_data.SetURL("https://search.Cinaseek.org?q={searchTerms}");
 
   template_url_service().ApplyDefaultSearchChangeForTesting(
       &policy_engine_data, DefaultSearchManager::FROM_POLICY);

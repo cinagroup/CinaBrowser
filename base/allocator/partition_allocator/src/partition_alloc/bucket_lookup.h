@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 
 // `BucketIndexLookup` class provides 2-way mapping between "allocation size"
 // and "bucket index".
-// https://chromium.googlesource.com/chromium/src/+/HEAD/base/allocator/partition_allocator/buckets.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/base/allocator/partition_allocator/buckets.md
 //
 // We have two different mappings; Neutral Bucket
 // Distribution and Denser Bucket Distribution. As the name implies, Denser one

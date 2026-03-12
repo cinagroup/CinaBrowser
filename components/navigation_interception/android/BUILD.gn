@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,5 +13,5 @@ android_library("navigation_interception_java") {
     "//ui/android:ui_no_recycler_view_java",
     "//url:gurl_java",
   ]
-  sources = [ "java/src/org/chromium/components/navigation_interception/InterceptNavigationDelegate.java" ]
+  sources = [ "java/src/org/Cinaseek/components/navigation_interception/InterceptNavigationDelegate.java" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -233,7 +233,7 @@ InlineLoginHandlerImpl::~InlineLoginHandlerImpl() = default;
 
 // static
 void InlineLoginHandlerImpl::SetExtraInitParams(base::DictValue& params) {
-  params.Set("service", "chromiumsync");
+  params.Set("service", "Cinaseeksync");
 
   const GURL& url = GaiaUrls::GetInstance()->embedded_signin_url();
   params.Set("clientId", GaiaUrls::GetInstance()->oauth2_chrome_client_id());

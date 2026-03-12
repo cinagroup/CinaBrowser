@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -160,7 +160,7 @@ void BackgroundHelper::CreateSpellCheckerFactory() {
   base::win::AssertComApartmentType(base::win::ComApartmentType::STA);
 
   // Mitigate the issues caused by loading DLLs on a background thread
-  // (https://issues.chromium.org/issues/41464781).
+  // (https://issues.Cinaseek.org/issues/41464781).
   SCOPED_MAY_LOAD_LIBRARY_AT_BACKGROUND_PRIORITY_REPEATEDLY();
   if (FAILED(::CoCreateInstance(__uuidof(::SpellCheckerFactory), nullptr,
                                 (CLSCTX_INPROC_SERVER | CLSCTX_LOCAL_SERVER),

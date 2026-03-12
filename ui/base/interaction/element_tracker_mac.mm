@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,9 +13,9 @@
 #include "ui/base/interaction/element_identifier.h"
 
 // Note the variation in logging used in this file. For assertions about values
-// passed within Chromium, CHECK is used, but for callbacks derived from OS
+// passed within Cinaseek, CHECK is used, but for callbacks derived from OS
 // notifications, LOG(ERROR) is used, as hard failure is not desired for
-// something out of Chromium's control, but a very noisy failure is desired so
+// something out of Cinaseek's control, but a very noisy failure is desired so
 // that it can be noticed and fixed.
 
 namespace ui {

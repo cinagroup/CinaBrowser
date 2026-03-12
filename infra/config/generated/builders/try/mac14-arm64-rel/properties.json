@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/mac14-arm64-rel/gn-args.json"
@@ -10,27 +10,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac-arm64-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.mac",
+              "builder_group": "Cinaseek.mac",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
                 "apply_configs": [
-                  "chromium_with_telemetry_dependencies",
+                  "Cinaseek_with_telemetry_dependencies",
                   "use_clang_coverage"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -38,28 +38,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac14-arm64-rel-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.mac",
+              "builder_group": "Cinaseek.mac",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "mac-arm64-rel",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -69,14 +69,14 @@
         {
           "bucket": "ci",
           "builder": "mac-arm64-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "mac14-arm64-rel-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/mac14-arm64-rel/targets"
@@ -91,7 +91,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -100,6 +100,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.mac",
-  "recipe": "chromium_trybot"
+  "builder_group": "tryserver.Cinaseek.mac",
+  "recipe": "Cinaseek_trybot"
 }

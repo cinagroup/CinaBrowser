@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1935,7 +1935,7 @@ TEST_P(WebNNGraphImplBackendTest, BuildAndComputeSingleOperatorGru) {
   }
 }
 
-// TODO(https://issues.chromium.org/issues/331250158): Delete the test cases
+// TODO(https://issues.Cinaseek.org/issues/331250158): Delete the test cases
 // after the WPT conformance tests are completed.
 template <typename T>
 struct GruCellTester {
@@ -3018,7 +3018,7 @@ TEST_P(WebNNGraphImplBackendTest, BuildMultipleConstantsAppendingInputs) {
 //                 gemm
 // This test case could reproduce the issue of ResNetV2 50 model of WebNN image
 // classification sample:
-// https://bugs.chromium.org/p/chromium/issues/detail?id=1509747
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1509747
 TEST_P(WebNNGraphImplBackendTest, BuildGemmWithReshapedConstantOperand) {
   // Build the mojom graph info.
   mojo::AssociatedRemote<mojom::WebNNGraphBuilder> remote =

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -37,10 +37,10 @@ target(_target_type, "atomic") {
     }
   }
 
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/coverage:default_coverage",
   ]
 }

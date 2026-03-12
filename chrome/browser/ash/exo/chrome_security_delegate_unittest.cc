@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -341,7 +341,7 @@ TEST_F(ChromeSecurityDelegateTest, SendFileInfoConvertPaths) {
                                  base::BindOnce(&CaptureUTF16, &data));
   task_environment_.RunUntilIdle();
   EXPECT_EQ(
-      "content://org.chromium.arc.volumeprovider/"
+      "content://org.Cinaseek.arc.volumeprovider/"
       "0000000000000000000000000000CAFEF00D2019/file1",
       data);
 
@@ -350,10 +350,10 @@ TEST_F(ChromeSecurityDelegateTest, SendFileInfoConvertPaths) {
                                  base::BindOnce(&CaptureUTF16, &data));
   task_environment_.RunUntilIdle();
   EXPECT_EQ(
-      "content://org.chromium.arc.volumeprovider/"
+      "content://org.Cinaseek.arc.volumeprovider/"
       "0000000000000000000000000000CAFEF00D2019/file1"
       "\r\n"
-      "content://org.chromium.arc.volumeprovider/"
+      "content://org.Cinaseek.arc.volumeprovider/"
       "0000000000000000000000000000CAFEF00D2019/file2",
       data);
 

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,8 +36,8 @@ constexpr KWalletDBus::Error CANNOT_CONTACT =
 const char kExpectedFolderName[] = "Chrome Keys";
 const char kExpectedEntryName[] = "Chrome Safe Storage";
 #else
-const char kExpectedFolderName[] = "Chromium Keys";
-const char kExpectedEntryName[] = "Chromium Safe Storage";
+const char kExpectedFolderName[] = "Cinaseek Keys";
+const char kExpectedEntryName[] = "Cinaseek Safe Storage";
 #endif
 
 const char kAppName[] = "test-app";

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -519,7 +519,7 @@ void FuchsiaVideoDecoder::OnStreamProcessorAllocateOutputBuffers(
   }
 
   output_buffer_collection_->Initialize(std::move(constraints),
-                                        "ChromiumVideoDecoderOutput");
+                                        "CinaseekVideoDecoderOutput");
 }
 
 void FuchsiaVideoDecoder::OnStreamProcessorEndOfStream() {

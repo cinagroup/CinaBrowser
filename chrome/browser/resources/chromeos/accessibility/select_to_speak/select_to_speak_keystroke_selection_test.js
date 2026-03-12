@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -699,15 +699,15 @@ AX_TEST_F(
       });
 
       await this.setValueAndTextSelection(
-          omnibox, 'Hello, Chromium a11y', 0, 20);
-      assertEquals('Hello, Chromium a11y', omnibox.value);
+          omnibox, 'Hello, Cinaseek a11y', 0, 20);
+      assertEquals('Hello, Cinaseek a11y', omnibox.value);
       assertEquals(0, omnibox.textSelStart);
       assertEquals(20, omnibox.textSelEnd);
 
       await this.triggerReadSelectedText();
       assertTrue(this.mockTts.currentlySpeaking());
       this.assertEqualsCollapseWhitespace(
-          this.mockTts.pendingUtterances()[0], 'Hello, Chromium a11y');
+          this.mockTts.pendingUtterances()[0], 'Hello, Cinaseek a11y');
     });
 
 AX_TEST_F(
@@ -719,8 +719,8 @@ AX_TEST_F(
       });
 
       await this.setValueAndTextSelection(
-          omnibox, 'Hello, Chromium a11y', 0, 5);
-      assertEquals('Hello, Chromium a11y', omnibox.value);
+          omnibox, 'Hello, Cinaseek a11y', 0, 5);
+      assertEquals('Hello, Cinaseek a11y', omnibox.value);
       assertEquals(0, omnibox.textSelStart);
       assertEquals(5, omnibox.textSelEnd);
 
@@ -740,15 +740,15 @@ AX_TEST_F(
       });
 
       await this.setValueAndTextSelection(
-          omnibox, 'Hello, Chromium a11y', 7, 20);
-      assertEquals('Hello, Chromium a11y', omnibox.value);
+          omnibox, 'Hello, Cinaseek a11y', 7, 20);
+      assertEquals('Hello, Cinaseek a11y', omnibox.value);
       assertEquals(7, omnibox.textSelStart);
       assertEquals(20, omnibox.textSelEnd);
 
       await this.triggerReadSelectedText(root);
       assertTrue(this.mockTts.currentlySpeaking());
       this.assertEqualsCollapseWhitespace(
-          this.mockTts.pendingUtterances()[0], 'Chromium a11y');
+          this.mockTts.pendingUtterances()[0], 'Cinaseek a11y');
     });
 
 AX_TEST_F(
@@ -760,15 +760,15 @@ AX_TEST_F(
       });
 
       await this.setValueAndTextSelection(
-          omnibox, 'Hello, Chromium a11y', 7, 15);
-      assertEquals('Hello, Chromium a11y', omnibox.value);
+          omnibox, 'Hello, Cinaseek a11y', 7, 15);
+      assertEquals('Hello, Cinaseek a11y', omnibox.value);
       assertEquals(7, omnibox.textSelStart);
       assertEquals(15, omnibox.textSelEnd);
 
       await this.triggerReadSelectedText();
       assertTrue(this.mockTts.currentlySpeaking());
       this.assertEqualsCollapseWhitespace(
-          this.mockTts.pendingUtterances()[0], 'Chromium');
+          this.mockTts.pendingUtterances()[0], 'Cinaseek');
     });
 
 AX_TEST_F(
@@ -780,8 +780,8 @@ AX_TEST_F(
       });
 
       await this.setValueAndTextSelection(
-          omnibox, 'Hello, Chromium a11y', 0, 0);
-      assertEquals('Hello, Chromium a11y', omnibox.value);
+          omnibox, 'Hello, Cinaseek a11y', 0, 0);
+      assertEquals('Hello, Cinaseek a11y', omnibox.value);
       assertEquals(0, omnibox.textSelStart);
       assertEquals(0, omnibox.textSelEnd);
 

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -63,32 +63,32 @@ android_resources("cast_shell_android_stub_resources") {
 android_library("cast_command_line_helper_java") {
   java_src_dir = "//chromecast/browser/android/apk/src"
   sources = [
-    "$java_src_dir/org/chromium/chromecast/shell/CastCommandLineHelper.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/CastCommandLineHelper.java",
   ]
   deps = [ "//base:base_java" ]
 }
 
 android_library("cast_intents_java") {
   java_src_dir = "//chromecast/browser/android/apk/src"
-  sources = [ "$java_src_dir/org/chromium/chromecast/shell/CastIntents.java" ]
+  sources = [ "$java_src_dir/org/Cinaseek/chromecast/shell/CastIntents.java" ]
 }
 
 android_aidl("logs_provider_aidl") {
   java_src_dir = "//chromecast/browser/android/apk/src"
   interface_file =
-      "$java_src_dir/org/chromium/chromecast/shell/logs_provider_service.aidl"
+      "$java_src_dir/org/Cinaseek/chromecast/shell/logs_provider_service.aidl"
 
   sources =
-      [ "$java_src_dir/org/chromium/chromecast/shell/IDeviceLogsProvider.aidl" ]
+      [ "$java_src_dir/org/Cinaseek/chromecast/shell/IDeviceLogsProvider.aidl" ]
 }
 
 android_library("reactive_android_java") {
   java_src_dir = "//chromecast/browser/android/apk/src"
   sources = [
-    "$java_src_dir/org/chromium/chromecast/shell/AsyncTaskRunner.java",
-    "$java_src_dir/org/chromium/chromecast/shell/BroadcastReceiverScope.java",
-    "$java_src_dir/org/chromium/chromecast/shell/HandlerScheduler.java",
-    "$java_src_dir/org/chromium/chromecast/shell/LocalBroadcastReceiverScope.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/AsyncTaskRunner.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/BroadcastReceiverScope.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/HandlerScheduler.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/LocalBroadcastReceiverScope.java",
   ]
   deps = [
     "//base:base_java",
@@ -102,12 +102,12 @@ android_library("reactive_android_java") {
 android_library("crash_handler_java") {
   java_src_dir = "//chromecast/browser/android/apk/src"
   sources = [
-    "$java_src_dir/org/chromium/chromecast/shell/AndroidAppLogcatProvider.java",
-    "$java_src_dir/org/chromium/chromecast/shell/CastCrashHandler.java",
-    "$java_src_dir/org/chromium/chromecast/shell/CastCrashUploader.java",
-    "$java_src_dir/org/chromium/chromecast/shell/CastCrashUploaderFactory.java",
-    "$java_src_dir/org/chromium/chromecast/shell/ElidedLogcatProvider.java",
-    "$java_src_dir/org/chromium/chromecast/shell/LogcatElision.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/AndroidAppLogcatProvider.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/CastCrashHandler.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/CastCrashUploader.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/CastCrashUploaderFactory.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/ElidedLogcatProvider.java",
+    "$java_src_dir/org/Cinaseek/chromecast/shell/LogcatElision.java",
   ]
   srcjar_deps = [ ":logs_provider_aidl" ]
   deps = [
@@ -123,7 +123,7 @@ android_library("crash_handler_java") {
 }
 
 generate_jni("crash_handler_jni_headers") {
-  sources = [ "apk/src/org/chromium/chromecast/shell/CastCrashHandler.java" ]
+  sources = [ "apk/src/org/Cinaseek/chromecast/shell/CastCrashHandler.java" ]
 }
 
 common_android_library_deps = [
@@ -155,30 +155,30 @@ common_android_library_deps = [
 
 common_java_src_dir = "//chromecast/browser/android/apk/src"
 common_java_sources = [
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastBrowser.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastBrowserApplication.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastBrowserHelper.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastBrowserImpl.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastBrowserService.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastContentWindowAndroid.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastMetricsHelper.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastWebContentsActivity.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastWebContentsComponent.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastWebContentsIntentUtils.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastWebContentsScopes.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/CastWebContentsSurfaceHelper.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/TaskRemovedMonitorService.java",
-  "$common_java_src_dir/org/chromium/chromecast/shell/WebContentsRegistry.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastBrowser.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastBrowserApplication.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastBrowserHelper.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastBrowserImpl.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastBrowserService.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastContentWindowAndroid.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastMetricsHelper.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastWebContentsActivity.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastWebContentsComponent.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastWebContentsIntentUtils.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastWebContentsScopes.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/CastWebContentsSurfaceHelper.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/TaskRemovedMonitorService.java",
+  "$common_java_src_dir/org/Cinaseek/chromecast/shell/WebContentsRegistry.java",
 ]
 
 generate_product_config_srcjar("product_config_for_browser") {
-  java_package = "org.chromium.chromecast.shell"
+  java_package = "org.Cinaseek.chromecast.shell"
 }
 
 generate_jni("jni_headers") {
   sources = [
-    "apk/src/org/chromium/chromecast/shell/CastContentWindowAndroid.java",
-    "apk/src/org/chromium/chromecast/shell/CastMetricsHelper.java",
+    "apk/src/org/Cinaseek/chromecast/shell/CastContentWindowAndroid.java",
+    "apk/src/org/Cinaseek/chromecast/shell/CastMetricsHelper.java",
   ]
 
   deps = [ "//components/android_autofill/browser:jni_headers_features" ]
@@ -187,7 +187,7 @@ generate_jni("jni_headers") {
 android_library("cast_shell_java") {
   sources = common_java_sources
 
-  resources_package = "org.chromium.chromecast.shell"
+  resources_package = "org.Cinaseek.chromecast.shell"
   srcjar_deps = [
     ":jni_headers",
     ":product_config_for_browser",
@@ -208,7 +208,7 @@ android_library("cast_shell_java") {
 android_library("cast_browser_java") {
   sources = common_java_sources
 
-  resources_package = "org.chromium.chromecast.shell"
+  resources_package = "org.Cinaseek.chromecast.shell"
   srcjar_deps = [
     ":jni_headers",
     "//chromecast/browser:java_enums",
@@ -223,17 +223,17 @@ android_library("cast_browser_java") {
 
 robolectric_binary("cast_shell_junit_tests") {
   sources = [
-    "junit/src/org/chromium/chromecast/shell/AsyncTaskRunnerTest.java",
-    "junit/src/org/chromium/chromecast/shell/BroadcastReceiverScopeTest.java",
-    "junit/src/org/chromium/chromecast/shell/CastWebContentsActivityTest.java",
-    "junit/src/org/chromium/chromecast/shell/CastWebContentsComponentTest.java",
-    "junit/src/org/chromium/chromecast/shell/CastWebContentsIntentUtilsTest.java",
-    "junit/src/org/chromium/chromecast/shell/CastWebContentsSurfaceHelperTest.java",
-    "junit/src/org/chromium/chromecast/shell/ElidedLogcatProviderUnitTest.java",
-    "junit/src/org/chromium/chromecast/shell/HandlerSchedulerTest.java",
-    "junit/src/org/chromium/chromecast/shell/LocalBroadcastReceiverScopeTest.java",
-    "junit/src/org/chromium/chromecast/shell/LogcatElisionUnitTest.java",
-    "junit/src/org/chromium/chromecast/shell/TaskRemovedMonitorServiceTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/AsyncTaskRunnerTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/BroadcastReceiverScopeTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/CastWebContentsActivityTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/CastWebContentsComponentTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/CastWebContentsIntentUtilsTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/CastWebContentsSurfaceHelperTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/ElidedLogcatProviderUnitTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/HandlerSchedulerTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/LocalBroadcastReceiverScopeTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/LogcatElisionUnitTest.java",
+    "junit/src/org/Cinaseek/chromecast/shell/TaskRemovedMonitorServiceTest.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ class AppLauncherTabHelperTest : public PlatformTest {
     auto navigation_manager = std::make_unique<FakeNavigationManager>();
     navigation_manager_ = navigation_manager.get();
     web_state_.SetNavigationManager(std::move(navigation_manager));
-    web_state_.SetCurrentURL(GURL("https://chromium.org"));
+    web_state_.SetCurrentURL(GURL("https://Cinaseek.org"));
     web_state_.SetBrowserState(profile_.get());
     web_state_.WasShown();
     browser_presentation_provider_ =
@@ -216,7 +216,7 @@ class AppLauncherTabHelperTest : public PlatformTest {
   bool TestReadingListUpdate(bool is_app_blocked,
                              bool is_link_transition,
                              bool expected_read_status) {
-    web_state_.SetCurrentURL(GURL("https://chromium.org"));
+    web_state_.SetCurrentURL(GURL("https://Cinaseek.org"));
     GURL pending_url("http://google.com");
     navigation_manager_->AddItem(pending_url, ui::PAGE_TRANSITION_LINK);
     web::NavigationItem* item = navigation_manager_->GetItemAtIndex(0);

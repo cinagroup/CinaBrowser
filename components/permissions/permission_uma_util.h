@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ enum class PermissionSourceUI {
   PROMPT = 0,
 
   // Origin info bubble.
-  // https://www.chromium.org/Home/chromium-security/enamel/goals-for-the-origin-info-bubble
+  // https://www.Cinaseek.org/Home/Cinaseek-security/enamel/goals-for-the-origin-info-bubble
   OIB = 1,
 
   // chrome://settings/content/siteDetails?site=[SITE]
@@ -576,7 +576,7 @@ enum class PermissionChangeInfo {
 
 // LINT.IfChange(DismissalType)
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.permissions
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.permissions
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: DismissalType
 enum class DismissalType {
   // Fallback if a more specific dismissal type is not available..

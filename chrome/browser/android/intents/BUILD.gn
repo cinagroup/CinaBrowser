@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,13 +6,13 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/intents/BrowserIntentUtils.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/intents/BrowserIntentUtils.java" ]
   deps = [ "//base:base_java" ]
 }
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/intents/BrowserIntentUtilsUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/intents/BrowserIntentUtilsUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

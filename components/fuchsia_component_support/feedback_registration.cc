@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ void RegisterProductDataForCrashReporting(
   // Only register the |crash_product_name| for official Chrome-branded builds.
   // Otherwise, the crashes will be handled as non-component-specific crashes.
   // Since Fuchsia handles crashes, it is possible that Fuchsia will upload a
-  // crash for an unofficial and/or unbranded build of a Chromium-based
+  // crash for an unofficial and/or unbranded build of a Cinaseek-based
   // component if it is running on an official Fuchsia build. To avoid adding
   // noise from such crash reports, which are not received on other platforms,
   // do not set a product name for such builds.

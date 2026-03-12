@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ void MigrateProfileData(base::FilePath cache_path,
   FilePath old_cache_path;
   base::PathService::Get(base::DIR_CACHE, &old_cache_path);
   old_cache_path = old_cache_path.DirName().Append(
-      FILE_PATH_LITERAL("org.chromium.android_webview"));
+      FILE_PATH_LITERAL("org.Cinaseek.android_webview"));
 
   if (base::PathExists(old_cache_path)) {
     migration_happened = true;
@@ -331,7 +331,7 @@ void AwBrowserContext::CreateUserPrefService() {
     // background, but it might require additional cross-thread synchronization.
     //
     // Note that for the default profile blocking IO is already permitted on the
-    // UI thread due to being called during Chromium/browser
+    // UI thread due to being called during Cinaseek/browser
     // initialization. ScopedAllowBlocking is explicitly needed for non-default
     // profiles as they are instead created from a calling environment where
     // normal threading restrictions apply.
@@ -594,7 +594,7 @@ void AwBrowserContext::ConfigureNetworkContextParams(
   // shown to be beneficial to page load performance and connection reuse for
   // Android apps using WebView, based on experiments ran in 2025.
   //
-  // TODO(crbug.com/446163651): Remove this override if/when the Chromium-wide
+  // TODO(crbug.com/446163651): Remove this override if/when the Cinaseek-wide
   // default for QUIC's idle connection timeout is updated.
   context_params->quic_idle_connection_timeout_seconds = 300;
 

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,7 +27,7 @@ ios_appex_bundle("appex") {
 
   extra_substitutions = [
     "CHROME_CHANNEL_SCHEME=${url_channel_scheme}-eg",
-    "CHROMIUM_SHORT_NAME=$chromium_short_name",
+    "CHROMIUM_SHORT_NAME=$Cinaseek_short_name",
   ]
 
   entitlements_target = ":compile_entitlements"

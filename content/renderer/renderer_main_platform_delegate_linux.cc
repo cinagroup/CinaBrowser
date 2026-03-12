@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ void RendererMainPlatformDelegate::PlatformUninitialize() {
 
 bool RendererMainPlatformDelegate::EnableSandbox() {
   // The setuid sandbox is started in the zygote process: zygote_main_linux.cc
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/suid_sandbox.md
   //
   // Anything else is started in InitializeSandbox().
   sandbox::policy::SandboxLinux::Options options;

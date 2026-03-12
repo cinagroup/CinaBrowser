@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,7 +90,7 @@ JNI_OfflinePageEvaluationBridge_CreateJavaSavePageRequests(
     JNIEnv* env,
     std::vector<std::unique_ptr<SavePageRequest>> requests) {
   ScopedJavaLocalRef<jclass> save_page_request_clazz = base::android::GetClass(
-      env, "org/chromium/chrome/browser/offlinepages/SavePageRequest");
+      env, "org/Cinaseek/chrome/browser/offlinepages/SavePageRequest");
   jobjectArray joa = env->NewObjectArray(
       requests.size(), save_page_request_clazz.obj(), nullptr);
   base::android::CheckException(env);

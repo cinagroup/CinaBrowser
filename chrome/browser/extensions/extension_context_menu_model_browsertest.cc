@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1237,7 +1237,7 @@ IN_PROC_BROWSER_TEST_F(ExtensionContextMenuModelTest,
        kOnAllSites},
       {"http://*/maps",
        "http://*/maps",
-       embedded_test_server()->GetURL("chromium.org", "/simple.html"),
+       embedded_test_server()->GetURL("Cinaseek.org", "/simple.html"),
        {kOnClick, kOnSite, kOnAllSites},
        {kOnClick, kOnSite, kOnAllSites},
        kOnAllSites},
@@ -1258,7 +1258,7 @@ IN_PROC_BROWSER_TEST_F(ExtensionContextMenuModelTest,
       // option).
       {"http://*.com/*",
        "http://*.com/*",
-       embedded_test_server()->GetURL("chromium.org", "/simple.html"),
+       embedded_test_server()->GetURL("Cinaseek.org", "/simple.html"),
        {},
        {}},
       // No access controls should ever show for restricted pages, like
@@ -1460,7 +1460,7 @@ IN_PROC_BROWSER_TEST_F(
   const GURL kActiveUrl =
       embedded_test_server()->GetURL("www.active.com", "/simple.html");
   const GURL kOrgUrl =
-      embedded_test_server()->GetURL("www.chromium.org", "/simple.html");
+      embedded_test_server()->GetURL("www.Cinaseek.org", "/simple.html");
   const GURL kOtherUrl =
       embedded_test_server()->GetURL("www.other.com", "/simple.html");
 
@@ -1548,7 +1548,7 @@ IN_PROC_BROWSER_TEST_F(ExtensionContextMenuModelTest,
   const GURL kOriginalUrl =
       embedded_test_server()->GetURL("www.example.com", "/simple.html");
   const GURL kNewUrl =
-      embedded_test_server()->GetURL("www.chromium.org", "/simple.html");
+      embedded_test_server()->GetURL("www.Cinaseek.org", "/simple.html");
 
   // Add an extension with all urls, and withhold permissions.
   const Extension* extension =

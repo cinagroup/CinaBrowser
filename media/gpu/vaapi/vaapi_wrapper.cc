@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -116,7 +116,7 @@ std::pair<base::ScopedFD, bool> LoadDrmFD(const base::FilePath& dev_path) {
                           /*should_skip=*/true);
   }
   // Skip NVIDIA device because their VA-API drivers do not support
-  // Chromium and can sometimes cause crashes (see crbug.com/1492880).
+  // Cinaseek and can sometimes cause crashes (see crbug.com/1492880).
   if (base::EqualsCaseInsensitiveASCII(version_name, "nvidia-drm") &&
       !base::FeatureList::IsEnabled(kVaapiOnNvidiaGPUs)) {
     LOG(WARNING) << "Should skip nVidia device named: " << version_name;
@@ -385,9 +385,9 @@ media::VAImplementation VendorStringToImplementationType(
   } else if (base::StartsWith(va_vendor_string, "Intel iHD driver",
                               base::CompareCase::SENSITIVE)) {
     return media::VAImplementation::kIntelIHD;
-  } else if (base::StartsWith(va_vendor_string, "Chromium fake libva driver",
+  } else if (base::StartsWith(va_vendor_string, "Cinaseek fake libva driver",
                               base::CompareCase::SENSITIVE)) {
-    return media::VAImplementation::kChromiumFakeDriver;
+    return media::VAImplementation::kCinaseekFakeDriver;
   }
   return media::VAImplementation::kOther;
 }
@@ -1518,7 +1518,7 @@ bool IsLibVACompatible(const base::Version& runtime,
   // Since the libva is now ABI-compatible, relax the version check which helps
   // in upgrading the libva, without breaking any existing functionality. Make
   // sure the system version (|runtime|) is not older than the version with
-  // which the chromium is built (|build_time|) since libva is only guaranteed
+  // which the Cinaseek is built (|build_time|) since libva is only guaranteed
   // to be backward (and not forward) compatible.
   return runtime >= build_time;
 }
@@ -2450,7 +2450,7 @@ std::unique_ptr<ScopedVASurface> VaapiWrapper::CreateVASurfaceForPixmap(
   // plumbed for JPEG decoding and encoding.
   const bool use_drm_prime_2 =
       (GetImplementationType() == VAImplementation::kIntelIHD ||
-       GetImplementationType() == VAImplementation::kChromiumFakeDriver ||
+       GetImplementationType() == VAImplementation::kCinaseekFakeDriver ||
        GetImplementationType() == VAImplementation::kMesaGallium) &&
       !protected_content &&
       pixmap->GetFormatModifier() != gfx::NativePixmapHandle::kNoModifier;

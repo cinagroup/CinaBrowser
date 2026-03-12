@@ -1,8 +1,8 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/inspector_protocol/crdtp/chromium/protocol_traits.h"
+#include "third_party/inspector_protocol/crdtp/Cinaseek/protocol_traits.h"
 
 #include <string_view>
 #include <utility>
@@ -98,7 +98,7 @@ bool ProtocolTypeTraits<std::string>::Deserialize(DeserializerState* state,
   }
   if (tokenizer->TokenTag() == cbor::CBORTokenTag::STRING16) {
     const auto str = tokenizer->GetString16WireRep();
-    // In Chromium, we do not support big endian architectures, so no conversion
+    // In Cinaseek, we do not support big endian architectures, so no conversion
     // is needed to interpret UTF16LE.
     base::UTF16ToUTF8(reinterpret_cast<const char16_t*>(str.data()),
                       str.size() / 2, value);

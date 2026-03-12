@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -169,26 +169,26 @@ android_library("java") {
 
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/ConfirmationDialogHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordCheckupClientMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerAndroidBackendUtil.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerLifecycleHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerUtilBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordMetricsUtil.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreCredential.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/settings/PasswordsPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/ConfirmationDialogHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupClientMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerAndroidBackendUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerLifecycleHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerUtilBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordMetricsUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreCredential.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/settings/PasswordsPreference.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.password_manager"
+  resources_package = "org.Cinaseek.chrome.browser.password_manager"
 }
 
 generate_jni("jni_headers") {
@@ -197,27 +197,27 @@ generate_jni("jni_headers") {
     "//chrome/browser",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerLifecycleHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerUtilBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreCredential.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerLifecycleHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerUtilBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreCredential.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeImpl.java",
   ]
 }
 
 android_library("utils_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/CustomTabIntentHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/GmsUpdateLauncher.java",
-    "java/src/org/chromium/chrome/browser/password_manager/HelpUrlLauncher.java",
-    "java/src/org/chromium/chrome/browser/password_manager/LoginDbDeprecationUtilBridge.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordExportLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CustomTabIntentHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/GmsUpdateLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/HelpUrlLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/LoginDbDeprecationUtilBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordExportLauncher.java",
   ]
 
   srcjar_deps = [ ":utils_jni_headers" ]
@@ -246,7 +246,7 @@ android_library("utils_java") {
     "//third_party/jni_zero:jni_zero_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.password_manager"
+  resources_package = "org.Cinaseek.chrome.browser.password_manager"
 }
 
 generate_jni("utils_jni_headers") {
@@ -254,7 +254,7 @@ generate_jni("utils_jni_headers") {
     ":*",
     "//chrome/browser",
   ]
-  sources = [ "java/src/org/chromium/chrome/browser/password_manager/LoginDbDeprecationUtilBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/password_manager/LoginDbDeprecationUtilBridge.java" ]
 }
 
 java_group("javatests") {
@@ -269,29 +269,29 @@ robolectric_binary("password_manager_junit_tests") {
       [ "//chrome/android/junit:libchrome_junit_tests($robolectric_toolchain)" ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/ConfirmationDialogHelperTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/FakeCredentialManagerLauncherTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/FakePasswordManagerBackendSupportHelperTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/FakePasswordSettingsAccessorFactoryImplTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/FakePasswordStoreAndroidBackendTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/GmsUpdateLauncherTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/HelpUrlLauncherTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/LoginDbDeprecationUtilBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordCheckupClientMetricsRecorderTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordExportLauncherTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordManagerAndroidBackendUtilTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordManagerCheckupHelperTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordManagerHelperTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordManagerLifecycleHelperTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordSettingsAccessorFactoryTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterMetricsRecorderTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeTest.java",
-    "junit/src/org/chromium/chrome/browser/password_manager/tests/utils/FakePasswordCheckupClientHelperTest.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CctPasswordSavingMetricsRecorderBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/ConfirmationDialogHelperTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/FakeCredentialManagerLauncherTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordManagerBackendSupportHelperTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordSettingsAccessorFactoryImplTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordStoreAndroidBackendTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/GmsUpdateLauncherTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/HelpUrlLauncherTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/LoginDbDeprecationUtilBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupClientMetricsRecorderTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordExportLauncherTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerAndroidBackendUtilTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerCheckupHelperTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerHelperTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerLifecycleHelperTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsAccessorFactoryTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterDispatcherBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterMetricsRecorderTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsUpdaterReceiverBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendDispatcherBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendReceiverBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegateBridgeTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/password_manager/tests/utils/FakePasswordCheckupClientHelperTest.java",
   ]
 
   deps = [
@@ -383,17 +383,17 @@ android_library("settings_interface_java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/CredentialManagerLauncher.java",
-    "java/src/org/chromium/chrome/browser/password_manager/CredentialManagerLauncherFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/CredentialManagerLauncherFactoryUpstreamImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordCheckupClientHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordCheckupClientHelperFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordCheckupClientHelperFactoryUpstreamImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerBackendSupportHelper.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerBackendSupportHelperUpstreamImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsAccessor.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsAccessorFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSettingsAccessorFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CredentialManagerLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CredentialManagerLauncherFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/CredentialManagerLauncherFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupClientHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupClientHelperFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupClientHelperFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerBackendSupportHelper.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerBackendSupportHelperUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsAccessor.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsAccessorFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSettingsAccessorFactoryUpstreamImpl.java",
   ]
 }
 
@@ -407,18 +407,18 @@ android_library("backend_interface_java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackend.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordStoreAndroidBackendFactoryUpstreamImpl.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegate.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegateFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordSyncControllerDelegateFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackend.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordStoreAndroidBackendFactoryUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegateFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordSyncControllerDelegateFactoryUpstreamImpl.java",
   ]
 }
 
 generate_jni("test_support_jni_headers") {
   testonly = true
-  sources = [ "test_support/java/src/org/chromium/chrome/browser/password_manager/PasswordManagerTestUtilsBridge.java" ]
+  sources = [ "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerTestUtilsBridge.java" ]
 }
 
 static_library("test_support") {
@@ -439,19 +439,19 @@ android_library("test_support_java") {
   testonly = true
   srcjar_deps = [ ":test_support_jni_headers" ]
   sources = [
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakeCredentialManagerLauncher.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakeCredentialManagerLauncherFactoryImpl.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordCheckupClientHelper.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordCheckupClientHelperFactoryImpl.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordManagerBackendSupportHelper.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordSettingsAccessor.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordSettingsAccessorFactoryImpl.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordStoreAndroidBackend.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordStoreAndroidBackendFactoryImpl.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordSyncControllerDelegate.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/FakePasswordSyncControllerDelegateFactoryImpl.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/PasswordManagerTestHelper.java",
-    "test_support/java/src/org/chromium/chrome/browser/password_manager/PasswordManagerTestUtilsBridge.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakeCredentialManagerLauncher.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakeCredentialManagerLauncherFactoryImpl.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordCheckupClientHelper.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordCheckupClientHelperFactoryImpl.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordManagerBackendSupportHelper.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordSettingsAccessor.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordSettingsAccessorFactoryImpl.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordStoreAndroidBackend.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordStoreAndroidBackendFactoryImpl.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordSyncControllerDelegate.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/FakePasswordSyncControllerDelegateFactoryImpl.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerTestHelper.java",
+    "test_support/java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerTestUtilsBridge.java",
   ]
 
   deps = [
@@ -476,9 +476,9 @@ android_library("test_support_java") {
 
 android_library("password_manager_resource_provider_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerResourceProvider.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerResourceProviderFactory.java",
-    "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerResourceProviderUpstreamImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerResourceProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerResourceProviderFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerResourceProviderUpstreamImpl.java",
   ]
 
   deps = [
@@ -488,7 +488,7 @@ android_library("password_manager_resource_provider_java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.password_manager"
+  resources_package = "org.Cinaseek.chrome.browser.password_manager"
 }
 
 source_set("utils") {

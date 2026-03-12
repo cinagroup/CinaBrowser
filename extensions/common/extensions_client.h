@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ class ExtensionsClient {
   virtual const PermissionMessageProvider& GetPermissionMessageProvider()
       const = 0;
 
-  // Returns the application name. For example, "Chromium" or "app_shell".
+  // Returns the application name. For example, "Cinaseek" or "app_shell".
   virtual const std::string GetProductName() = 0;
 
   // Takes the list of all hosts and filters out those with special

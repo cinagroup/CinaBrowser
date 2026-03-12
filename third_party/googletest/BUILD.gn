@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,7 +14,7 @@ config("gtest_config") {
   ]
 
   defines = [
-    # Chromium always links googletest statically, so no API qualifier is
+    # Cinaseek always links googletest statically, so no API qualifier is
     # necessary. The definition in gtest-port.h at the time of this writing
     # causes crashes in content_browsertests.
     "GTEST_API_=",
@@ -62,7 +62,7 @@ config("gmock_config") {
 }
 
 # Do NOT depend on this directly. Use //testing/gtest instead.
-# See README.chromium for details.
+# See README.Cinaseek for details.
 source_set("gtest") {
   testonly = true
   sources = [
@@ -122,15 +122,15 @@ source_set("gtest") {
 
   public_configs = [ ":gtest_config" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   defines = []
 
   # googletest only needs `absl`, but this makes gn check happier.
   deps = [ "//third_party/abseil-cpp:absl_full" ]
   public_deps = [ "//third_party/re2" ]
-  if (!build_with_chromium) {
+  if (!build_with_Cinaseek) {
     defines += [ "GTEST_DISABLE_PRINT_STACK_TRACE" ]
     sources -= [
       "custom/gtest/internal/custom/stack_trace_getter.cc",
@@ -149,7 +149,7 @@ source_set("gtest") {
 }
 
 # Do NOT depend on this directly. Use //testing/gtest:gtest_main instead.
-# See README.chromium for details.
+# See README.Cinaseek for details.
 source_set("gtest_main") {
   testonly = true
   sources = [ "src/googletest/src/gtest_main.cc" ]
@@ -157,7 +157,7 @@ source_set("gtest_main") {
 }
 
 # Do NOT depend on this directly. Use //testing/gmock instead.
-# See README.chromium for details.
+# See README.Cinaseek for details.
 source_set("gmock") {
   testonly = true
   sources = [
@@ -193,7 +193,7 @@ source_set("gmock") {
 }
 
 # Do NOT depend on this directly. Use //testing/gmock:gmock_main instead.
-# See README.chromium for details.
+# See README.Cinaseek for details.
 static_library("gmock_main") {
   testonly = true
   sources = [ "src/googlemock/src/gmock_main.cc" ]

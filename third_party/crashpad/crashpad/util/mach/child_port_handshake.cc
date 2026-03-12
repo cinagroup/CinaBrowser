@@ -106,7 +106,7 @@ mach_port_t ChildPortHandshakeServer::RunServer(
   errno = pthread_threadid_np(pthread_self(), &thread_id);
   PCHECK(errno == 0) << "pthread_threadid_np";
   std::string service_name = base::StringPrintf(
-      "org.chromium.crashpad.child_port_handshake.%d.%llu.%s",
+      "org.Cinaseek.crashpad.child_port_handshake.%d.%llu.%s",
       getpid(),
       thread_id,
       RandomString().c_str());

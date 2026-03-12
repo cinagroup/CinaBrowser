@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,19 +73,19 @@ TEST(WebAppHelpers, IsValidWebAppUrl) {
                 GURL("chrome-extension://oafaagfgbdpldilgjjfjocjglfbolmac")),
             is_chrome_extension_valid_web_app);
 
-  EXPECT_TRUE(IsValidWebAppUrl(GURL("https://chromium.org")));
-  EXPECT_TRUE(IsValidWebAppUrl(GURL("https://www.chromium.org")));
+  EXPECT_TRUE(IsValidWebAppUrl(GURL("https://Cinaseek.org")));
+  EXPECT_TRUE(IsValidWebAppUrl(GURL("https://www.Cinaseek.org")));
   EXPECT_TRUE(
-      IsValidWebAppUrl(GURL("https://www.chromium.org/path/to/page.html")));
-  EXPECT_TRUE(IsValidWebAppUrl(GURL("http://chromium.org")));
-  EXPECT_TRUE(IsValidWebAppUrl(GURL("http://www.chromium.org")));
+      IsValidWebAppUrl(GURL("https://www.Cinaseek.org/path/to/page.html")));
+  EXPECT_TRUE(IsValidWebAppUrl(GURL("http://Cinaseek.org")));
+  EXPECT_TRUE(IsValidWebAppUrl(GURL("http://www.Cinaseek.org")));
   EXPECT_TRUE(
-      IsValidWebAppUrl(GURL("http://www.chromium.org/path/to/page.html")));
+      IsValidWebAppUrl(GURL("http://www.Cinaseek.org/path/to/page.html")));
   EXPECT_TRUE(IsValidWebAppUrl(GURL("https://examle.com/foo?bar")));
   EXPECT_TRUE(IsValidWebAppUrl(GURL("https://examle.com/foo#bar")));
 
   EXPECT_FALSE(IsValidWebAppUrl(GURL()));
-  EXPECT_FALSE(IsValidWebAppUrl(GURL("ftp://www.chromium.org")));
+  EXPECT_FALSE(IsValidWebAppUrl(GURL("ftp://www.Cinaseek.org")));
   EXPECT_FALSE(IsValidWebAppUrl(GURL("chrome://flags")));
   EXPECT_FALSE(IsValidWebAppUrl(GURL("about:blank")));
   EXPECT_FALSE(

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -163,7 +163,7 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiTest, Bookmarks) {
   {
     base::DictValue node;
     node.Set("name", "Managed Bookmark");
-    node.Set("url", "http://www.chromium.org");
+    node.Set("url", "http://www.Cinaseek.org");
     list.Append(std::move(node));
   }
 
@@ -294,7 +294,7 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
 
   // Create a new folder.
   const bookmarks::BookmarkNode* model_node = model()->AddURL(
-      model()->other_node(), 0, u"Chromium", GURL("https://www.chromium.org/"));
+      model()->other_node(), 0, u"Cinaseek", GURL("https://www.Cinaseek.org/"));
 
   // The onCreated event should have been called.
   EXPECT_EQ(event_observer()->all_events().size(), 1u);
@@ -307,12 +307,12 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
   // Create bookmarks in each of the local permanent folders. This ensures
   // they are visible both before and after the account permanent folders are
   // created.
-  model()->AddURL(model()->bookmark_bar_node(), 0, u"Chromium",
-                  GURL("https://www.chromium.org/"));
-  model()->AddURL(model()->other_node(), 0, u"Chromium",
-                  GURL("https://www.chromium.org/"));
-  model()->AddURL(model()->mobile_node(), 0, u"Chromium",
-                  GURL("https://www.chromium.org/"));
+  model()->AddURL(model()->bookmark_bar_node(), 0, u"Cinaseek",
+                  GURL("https://www.Cinaseek.org/"));
+  model()->AddURL(model()->other_node(), 0, u"Cinaseek",
+                  GURL("https://www.Cinaseek.org/"));
+  model()->AddURL(model()->mobile_node(), 0, u"Cinaseek",
+                  GURL("https://www.Cinaseek.org/"));
   event_observer()->ClearEvents();
 
   // Create the account permanent folders.
@@ -331,7 +331,7 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
                        OnMoved_CalledWhenBookmarkMoved) {
   // Create a new bookmark in the other folder.
   const bookmarks::BookmarkNode* bookmark_node = model()->AddURL(
-      model()->other_node(), 0, u"Chromium", GURL("https://www.chromium.org/"));
+      model()->other_node(), 0, u"Cinaseek", GURL("https://www.Cinaseek.org/"));
   event_observer()->ClearEvents();
 
   // Move the bookmark to the bookmark bar.
@@ -347,8 +347,8 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
 IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest, MoveMakesSourceFolderInvisible) {
   // Create a new bookmark in the mobile folder.
   const bookmarks::BookmarkNode* bookmark_node =
-      model()->AddURL(model()->mobile_node(), 0, u"Chromium",
-                      GURL("https://www.chromium.org/"));
+      model()->AddURL(model()->mobile_node(), 0, u"Cinaseek",
+                      GURL("https://www.Cinaseek.org/"));
   event_observer()->ClearEvents();
 
   // Move the bookmark to the bookmark bar. This causes the mobile folder to
@@ -378,7 +378,7 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
                        MoveMakesDestinationFolderVisible) {
   // Create a new bookmark in the other folder.
   const bookmarks::BookmarkNode* bookmark_node = model()->AddURL(
-      model()->other_node(), 0, u"Chromium", GURL("https://www.chromium.org/"));
+      model()->other_node(), 0, u"Cinaseek", GURL("https://www.Cinaseek.org/"));
   event_observer()->ClearEvents();
 
   // Move the bookmark to the mobile folder. This causes the mobile folder to
@@ -398,7 +398,7 @@ IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
 IN_PROC_BROWSER_TEST_F(BookmarksApiEventsTest,
                        OnRemoved_CalledWhenBookmarkRemoved) {
   const bookmarks::BookmarkNode* model_node = model()->AddURL(
-      model()->other_node(), 0, u"Chromium", GURL("https://www.chromium.org/"));
+      model()->other_node(), 0, u"Cinaseek", GURL("https://www.Cinaseek.org/"));
   event_observer()->ClearEvents();
 
   // Remove the bookmark.

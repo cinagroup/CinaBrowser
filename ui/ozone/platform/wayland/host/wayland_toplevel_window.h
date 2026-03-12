@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -228,7 +228,7 @@ class WaylandToplevelWindow : public WaylandWindow,
   bool is_xdg_active_ = false;
   bool is_suspended_ = false;
 
-  // Id of the chromium app passed through
+  // Id of the Cinaseek app passed through
   // PlatformWindowInitProperties::wm_class_name. This is used by Wayland
   // compositor to identify the app, unite it's windows into the same stack of
   // windows and find *.desktop file to set various preferences including icons.

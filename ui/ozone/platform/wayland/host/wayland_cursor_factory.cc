@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -265,7 +265,7 @@ void WaylandCursorFactory::FlushThemeCache(bool force) {
     // from the next theme, we will destroy it (see OnCursorBufferAttached()
     // above). If more than one theme has been changed but we didn't take any
     // cursors from them (which is possible if the user played with settings but
-    // didn't switch into Chromium), we don't need to track them all.
+    // didn't switch into Cinaseek), we don't need to track them all.
     if (!unloaded_theme_ && num_cursor_objects != 0) {
       unloaded_theme_ = std::move(theme_cache_);
     }

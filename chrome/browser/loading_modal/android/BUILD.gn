@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -15,11 +15,11 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/loading_modal/LoadingModalDialogCoordinator.java",
-    "java/src/org/chromium/chrome/browser/loading_modal/LoadingModalDialogMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/loading_modal/LoadingModalDialogCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/loading_modal/LoadingModalDialogMediator.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.loading_modal"
+  resources_package = "org.Cinaseek.chrome.browser.loading_modal"
 }
 
 android_resources("java_resources") {
@@ -32,8 +32,8 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  sources = [ "junit/src/org/chromium/chrome/browser/loading_modal/LoadingModalDialogMediatorTest.java" ]
-  resources_package = "org.chromium.chrome.browser.loading_modal"
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/loading_modal/LoadingModalDialogMediatorTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.loading_modal"
 
   deps = [
     ":java",
@@ -47,9 +47,9 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.loading_modal"
+  resources_package = "org.Cinaseek.chrome.browser.loading_modal"
 
-  sources = [ "javatests/src/org/chromium/chrome/browser/loading_modal/LoadingModalDialogIntegrationTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/loading_modal/LoadingModalDialogIntegrationTest.java" ]
 
   deps = [
     ":java",

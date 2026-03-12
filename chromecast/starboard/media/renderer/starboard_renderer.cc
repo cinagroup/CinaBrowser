@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ base::TimeDelta StarboardRenderer::GetMediaTime() {
   // uses a MojoRenderer, this should always be called from the media thread.
   //
   // Note that CastRenderer::GetMediaTime makes this same assumption here:
-  // https://source.chromium.org/chromium/chromium/src/+/main:chromecast/media/service/cast_renderer.cc;l=353;drc=27c605b83ca683345a58ec734e98223ae4e7adf7
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chromecast/media/service/cast_renderer.cc;l=353;drc=27c605b83ca683345a58ec734e98223ae4e7adf7
   CHECK(media_task_runner_->RunsTasksInCurrentSequence());
   if (!player_manager_) {
     LOG(ERROR) << "StarboardRenderer was not successfully initialized before "

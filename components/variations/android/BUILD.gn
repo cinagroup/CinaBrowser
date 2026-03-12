@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,12 +6,12 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("variations_seed_jni") {
-  sources = [ "java/src/org/chromium/components/variations/firstrun/VariationsSeedBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/variations/firstrun/VariationsSeedBridge.java" ]
 }
 
 generate_jni("variations_data_jni") {
   sources = [
-    "java/src/org/chromium/components/variations/VariationsAssociatedData.java",
+    "java/src/org/Cinaseek/components/variations/VariationsAssociatedData.java",
   ]
 }
 
@@ -32,17 +32,17 @@ android_library("variations_java") {
     ":variations_seed_jni",
   ]
   sources = [
-    "java/src/org/chromium/components/variations/NormalizedMurmurHashEntropyProvider.java",
-    "java/src/org/chromium/components/variations/VariationsAssociatedData.java",
-    "java/src/org/chromium/components/variations/VariationsCompressionUtils.java",
-    "java/src/org/chromium/components/variations/firstrun/VariationsSeedBridge.java",
-    "java/src/org/chromium/components/variations/firstrun/VariationsSeedFetcher.java",
+    "java/src/org/Cinaseek/components/variations/NormalizedMurmurHashEntropyProvider.java",
+    "java/src/org/Cinaseek/components/variations/VariationsAssociatedData.java",
+    "java/src/org/Cinaseek/components/variations/VariationsCompressionUtils.java",
+    "java/src/org/Cinaseek/components/variations/firstrun/VariationsSeedBridge.java",
+    "java/src/org/Cinaseek/components/variations/firstrun/VariationsSeedFetcher.java",
   ]
 }
 
 generate_jni("test_support_jni_headers") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/variations/NormalizedMurmurHashEntropyProviderTestUtilsBridge.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/variations/NormalizedMurmurHashEntropyProviderTestUtilsBridge.java" ]
 }
 
 static_library("test_support") {
@@ -59,7 +59,7 @@ static_library("test_support") {
 android_library("test_support_java") {
   testonly = true
   srcjar_deps = [ ":test_support_jni_headers" ]
-  sources = [ "javatests/src/org/chromium/components/variations/NormalizedMurmurHashEntropyProviderTestUtilsBridge.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/variations/NormalizedMurmurHashEntropyProviderTestUtilsBridge.java" ]
   deps = [
     "//build/android:build_java",
     "//third_party/jni_zero:jni_zero_java",
@@ -68,7 +68,7 @@ android_library("test_support_java") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/variations/NormalizedMurmurHashEntropyProviderTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/variations/NormalizedMurmurHashEntropyProviderTest.java" ]
   deps = [
     ":test_support_java",
     ":variations_java",
@@ -84,8 +84,8 @@ android_library("unit_device_javatests") {
 
 robolectric_library("components_variations_junit_tests") {
   sources = [
-    "junit/src/org/chromium/components/variations/VariationsCompressionUtilsTest.java",
-    "junit/src/org/chromium/components/variations/firstrun/VariationsSeedFetcherTest.java",
+    "junit/src/org/Cinaseek/components/variations/VariationsCompressionUtilsTest.java",
+    "junit/src/org/Cinaseek/components/variations/firstrun/VariationsSeedFetcherTest.java",
   ]
   deps = [
     ":variations_java",

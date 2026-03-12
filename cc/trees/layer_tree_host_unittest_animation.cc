@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1751,7 +1751,7 @@ class LayerTreeHostAnimationTestIsAnimating
   FakeContentLayerClient client_;
 };
 
-// TODO(https://issues.chromium.org/41490442): Flaky on Linux/ASAN/debug.
+// TODO(https://issues.Cinaseek.org/41490442): Flaky on Linux/ASAN/debug.
 // TODO(crbug.com/364634743): Flaky on Android.
 #if BUILDFLAG(IS_LINUX) || defined(ADDRESS_SANITIZER) || !defined(NDEBUG) || \
     BUILDFLAG(IS_ANDROID)

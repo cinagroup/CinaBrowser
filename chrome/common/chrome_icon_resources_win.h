@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,16 +46,16 @@ enum {
   kPDFDocIndex = 11,
 
 #else   // BUILDFLAG(GOOGLE_CHROME_BRANDING)
-  // The Chromium App Launcher icon.
+  // The Cinaseek App Launcher icon.
   kAppLauncherIndex = 1,
 
-  // The Chromium incognito icon.
+  // The Cinaseek incognito icon.
   kIncognitoIndex = 2,
 
-  // The Chromium html doc icon.
+  // The Cinaseek html doc icon.
   kHtmlDocIndex = 3,
 
-  // The Chromium PDF doc icon.
+  // The Cinaseek PDF doc icon.
   kPDFDocIndex = 4,
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 };

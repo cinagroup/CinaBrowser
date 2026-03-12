@@ -469,7 +469,7 @@ void FontDescription::UpdateSyntheticOblique() {
 
 SkFontStyle FontDescription::SkiaFontStyle() const {
   // FIXME(drott): This is a lossy conversion, compare
-  // https://bugs.chromium.org/p/skia/issues/detail?id=6844
+  // https://bugs.Cinaseek.org/p/skia/issues/detail?id=6844
   int skia_width = SkFontStyle::kNormal_Width;
   if (Stretch() <= kUltraCondensedWidthValue) {
     skia_width = SkFontStyle::kUltraCondensed_Width;

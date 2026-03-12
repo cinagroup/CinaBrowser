@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ namespace extensions {
 // * Use ExtensionHostTestHelper when you need to wait for an expected
 //   _event_ - such as host destruction.
 // See also
-// https://chromium.googlesource.com/chromium/src/+/main/docs/patterns/synchronous-runloop.md#events-vs-states
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/patterns/synchronous-runloop.md#events-vs-states
 // TODO(devlin): Rename this to ExtensionBackgroundContextWaiter? It supports
 // service workers in addition to background (and event) pages.
 class ExtensionBackgroundPageWaiter {

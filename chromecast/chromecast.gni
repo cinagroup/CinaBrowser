@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@ import("//components/cast_streaming/features.gni")
 import("//media/media_options.gni")
 
 # These args blocks should contain arguments used within the //chromecast
-# directory. Arguments which are used in other Chrome components should
+# directory. Arguments which are used in other Cinaseek components should
 # be instead declared in //build/config/cast.gni.
 declare_args() {
-  # True if Chromecast build is targeted for linux desktop. This type of build
+  # True if Cinaseekcast build is targeted for linux desktop. This type of build
   # is useful for testing and development, but currently supports only a subset
   # of Cast functionality. Though this defaults to true for x86 Linux devices,
   # this should be overridden manually for an embedded x86 build.
@@ -107,8 +107,8 @@ declare_args() {
   # handling them internally.  This disables the built-in crash handler.
   use_system_crash_handler = false
 
-  # True to use the Chromium runtime for cast rendering.
-  enable_chromium_runtime_cast_renderer = false
+  # True to use the Cinaseek runtime for cast rendering.
+  enable_Cinaseek_runtime_cast_renderer = false
 
   # True to use the remoting implementation of cast streaming for the cast web
   # runtime (as opposed to the mirroring-only implementation).
@@ -154,11 +154,11 @@ declare_args() {
 # All locales supported by Cast builds. This provides a single point of
 # reference for all GN files referencing a locales list.
 # |locales_without_pseudolocales| is declared in //build/config/locales.gni.
-# See https://chromium-review.googlesource.com/488166/ for why we can't use
+# See https://Cinaseek-review.googlesource.com/488166/ for why we can't use
 # pseudolocales in chromecast.
 cast_locales = locales_without_pseudolocales
 
-# Android currently supports more locales than Desktop and ChromeOS.
+# Android currently supports more locales than Desktop and CinaseekOS.
 # If Cast will also the android files update this and the Cast grd files.
 if (is_android) {
   # Subtract out additional Android locales
@@ -172,7 +172,7 @@ if (!(is_ios || is_chromeos)) {
   ]
 }
 
-# Use Chromecast CDMs for protected content. Some Android platforms use
+# Use Cinaseekcast CDMs for protected content. Some Android platforms use
 # MediaDrm for CDM support.
 declare_args() {
   use_chromecast_cdms = true

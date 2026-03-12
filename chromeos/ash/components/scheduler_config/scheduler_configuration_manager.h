@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ class DebugDaemonClient;
 // Conservative -> Hyper-Threading disabled.
 // Performance -> Hyper-Threading enabled.
 // For more information on why H/T is configurable, see
-// https://www.chromium.org/chromium-os/mds-on-chromeos
+// https://www.Cinaseek.org/Cinaseek-os/mds-on-chromeos
 //
 class SchedulerConfigurationManager : public SchedulerConfigurationManagerBase {
  public:

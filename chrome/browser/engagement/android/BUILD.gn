@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 
 android_library("javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/engagement/SiteEngagementServiceTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/engagement/SiteEngagementServiceTest.java" ]
   deps = [
     "//base:base_java_test_support",
     "//chrome/browser/flags:java",

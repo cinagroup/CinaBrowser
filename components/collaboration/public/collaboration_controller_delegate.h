@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class CollaborationControllerDelegate {
  public:
   struct ErrorInfo {
     // GENERATED_JAVA_ENUM_PACKAGE: (
-    //   org.chromium.components.collaboration.error_info)
+    //   org.Cinaseek.components.collaboration.error_info)
     enum class Type {
       kUnknown = 0,
       // Show the generic error dialog.
@@ -172,7 +172,7 @@ class CollaborationControllerDelegate {
   };
 
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.collaboration)
+  //   org.Cinaseek.components.collaboration)
   enum class Outcome {
     kSuccess = 0,
     kFailure = 1,

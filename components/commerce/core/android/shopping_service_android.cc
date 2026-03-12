@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ ScopedJavaLocalRef<jobjectArray> ConvertToJavaDiscountInfos(
   std::vector<ScopedJavaLocalRef<jobject>> j_discount_infos;
 
   jclass discount_info_clazz =
-      org_chromium_components_commerce_core_DiscountInfo_clazz(env);
+      org_Cinaseek_components_commerce_core_DiscountInfo_clazz(env);
 
   for (size_t i = 0; i < info.size(); i++) {
     ScopedJavaLocalRef<jobject> discount_info_java =

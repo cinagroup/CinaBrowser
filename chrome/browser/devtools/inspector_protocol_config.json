@@ -65,7 +65,7 @@
     "lib": {
         "package": "chrome/browser/devtools/protocol",
         "output": "protocol",
-        "protocol_traits": "third_party/inspector_protocol/crdtp/chromium/protocol_traits.h"
+        "protocol_traits": "third_party/inspector_protocol/crdtp/Cinaseek/protocol_traits.h"
     },
 
     "crdtp": {

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -8,16 +8,16 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteAnimationGradientDrawable.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteBridge.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteController.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteDialogDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteMediator.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteMetricsDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteProperties.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteTabsFilter.java",
-    "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteAnimationGradientDrawable.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteBridge.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteController.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteDialogDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteMediator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteMetricsDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteTabsFilter.java",
+    "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteViewBinder.java",
   ]
   deps = [
     ":java_resources",
@@ -58,11 +58,11 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.quick_delete"
+  resources_package = "org.Cinaseek.chrome.browser.quick_delete"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteBridge.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteBridge.java" ]
 }
 
 android_resources("java_resources") {
@@ -83,13 +83,13 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.quick_delete"
+  resources_package = "org.Cinaseek.chrome.browser.quick_delete"
   sources = [
-    "android/junit/src/org/chromium/chrome/browser/quick_delete/QuickDeleteDialogDelegateUnitTest.java",
-    "android/junit/src/org/chromium/chrome/browser/quick_delete/QuickDeleteMediatorTest.java",
-    "android/junit/src/org/chromium/chrome/browser/quick_delete/QuickDeleteMetricsDelegateTest.java",
-    "android/junit/src/org/chromium/chrome/browser/quick_delete/QuickDeleteTabsFilterTest.java",
-    "android/junit/src/org/chromium/chrome/browser/quick_delete/QuickDeleteViewBinderTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteDialogDelegateUnitTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteMediatorTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteMetricsDelegateTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteTabsFilterTest.java",
+    "android/junit/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteViewBinderTest.java",
   ]
   deps = [
     ":java",
@@ -129,13 +129,13 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.quick_delete"
+  resources_package = "org.Cinaseek.chrome.browser.quick_delete"
 
   sources = [
-    "android/javatests/src/org/chromium/chrome/browser/quick_delete/QuickDeleteAnimationGradientDrawableRenderTest.java",
-    "android/javatests/src/org/chromium/chrome/browser/quick_delete/QuickDeleteBridgeTest.java",
-    "android/javatests/src/org/chromium/chrome/browser/quick_delete/QuickDeleteControllerTest.java",
-    "android/javatests/src/org/chromium/chrome/browser/quick_delete/QuickDeleteDialogDelegateTest.java",
+    "android/javatests/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteAnimationGradientDrawableRenderTest.java",
+    "android/javatests/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteBridgeTest.java",
+    "android/javatests/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteControllerTest.java",
+    "android/javatests/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteDialogDelegateTest.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,8 +40,8 @@ class GPU_GLES2_EXPORT FeatureInfo : public base::RefCounted<FeatureInfo> {
     // Use glBlitFramebuffer() and glRenderbufferStorageMultisample() with
     // GL_EXT_framebuffer_multisample-style semantics (as opposed to
     // GL_EXT_multisampled_render_to_texture semantics).
-    bool chromium_framebuffer_multisample = false;
-    bool chromium_sync_query = false;
+    bool Cinaseek_framebuffer_multisample = false;
+    bool Cinaseek_sync_query = false;
     bool multisampled_render_to_texture = false;
     // Use the IMG GLenum values rather than EXT.
     bool use_img_for_multisampled_render_to_texture = false;
@@ -77,28 +77,28 @@ class GPU_GLES2_EXPORT FeatureInfo : public base::RefCounted<FeatureInfo> {
     bool blend_equation_advanced = false;
     bool ext_texture_rg = false;
     bool ext_texture_norm16 = false;
-    bool chromium_image_ar30 = false;
-    bool chromium_image_ab30 = false;
+    bool Cinaseek_image_ar30 = false;
+    bool Cinaseek_image_ab30 = false;
     bool emulate_primitive_restart_fixed_index = false;
     bool ext_render_buffer_format_bgra8888 = false;
     bool ext_multisample_compatibility = false;
     bool ext_blend_func_extended = false;
-    bool chromium_color_buffer_float_rgb = false;
-    bool chromium_color_buffer_float_rgba = false;
+    bool Cinaseek_color_buffer_float_rgb = false;
+    bool Cinaseek_color_buffer_float_rgba = false;
     bool angle_robust_client_memory = false;
     bool khr_debug = false;
-    bool chromium_bind_generates_resource = false;
+    bool Cinaseek_bind_generates_resource = false;
     bool angle_webgl_compatibility = false;
     bool ext_srgb_write_control = false;
     bool ext_srgb = false;
-    bool chromium_copy_texture = false;
+    bool Cinaseek_copy_texture = false;
     bool ext_disjoint_timer_query = false;
     bool angle_client_arrays = false;
     bool angle_request_extension = false;
     bool ext_debug_marker = false;
     bool ext_pixel_buffer_object = false;
     bool ext_window_rectangles = false;
-    bool chromium_gpu_fence = false;
+    bool Cinaseek_gpu_fence = false;
     bool separate_stencil_ref_mask_writemask = false;
     bool mesa_framebuffer_flip_y = false;
     bool ovr_multiview2 = false;
@@ -107,7 +107,7 @@ class GPU_GLES2_EXPORT FeatureInfo : public base::RefCounted<FeatureInfo> {
     bool nv_internalformat_sample_query = false;
     bool amd_framebuffer_multisample_advanced = false;
     bool ext_float_blend = false;
-    bool chromium_completion_query = false;
+    bool Cinaseek_completion_query = false;
     bool oes_fbo_render_mipmap = false;
     bool webgl_draw_instanced_base_vertex_base_instance = false;
     bool webgl_multi_draw_instanced_base_vertex_base_instance = false;

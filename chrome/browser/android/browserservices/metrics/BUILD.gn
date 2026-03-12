@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/browserservices/metrics/OriginVerifierMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/browserservices/metrics/TrustedWebActivityUmaRecorder.java",
-    "java/src/org/chromium/chrome/browser/browserservices/metrics/WebApkUkmRecorder.java",
-    "java/src/org/chromium/chrome/browser/browserservices/metrics/WebApkUmaRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/browserservices/metrics/OriginVerifierMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/browserservices/metrics/TrustedWebActivityUmaRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/browserservices/metrics/WebApkUkmRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/browserservices/metrics/WebApkUmaRecorder.java",
   ]
   deps = [
     "//base:base_java",
@@ -27,5 +27,5 @@ android_library("java") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/browserservices/metrics/WebApkUkmRecorder.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/browserservices/metrics/WebApkUkmRecorder.java" ]
 }

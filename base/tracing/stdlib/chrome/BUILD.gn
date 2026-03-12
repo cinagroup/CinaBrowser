@@ -1,9 +1,9 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # List the SQL files in the perfetto_sql_files.gni so the list can be
-# used in Chromium targets as well.
+# used in Cinaseek targets as well.
 import("perfetto_sql_files.gni")
 
 # This file is rolled to Perfetto so this relative path is intended to

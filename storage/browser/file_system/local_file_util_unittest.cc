@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -385,7 +385,7 @@ TEST_F(LocalFileUtilTest, MoveDirectory) {
 // There is an equivalent "remove permissions" mechanism on Windows, but it's
 // simpler if this test is only enabled when BUILDFLAG(IS_POSIX). The
 // LocalFileUtil code itself already uses the cross-platform abstractions in
-// Chromium's base namespace.
+// Cinaseek's base namespace.
 #if BUILDFLAG(IS_POSIX)
 TEST_F(LocalFileUtilTest, FileEnumeratorError) {
   const char* dir_name = "file_enumerator_error_dir";

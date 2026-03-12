@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -847,7 +847,7 @@ TEST_F(NotificationChannelsProviderAndroidTest,
 
   fake_bridge_->CreateChannel("https://example.com", base::Time::Now(),
                               false /* enabled */);
-  fake_bridge_->CreateChannel("https://chromium.org", base::Time::Now(),
+  fake_bridge_->CreateChannel("https://Cinaseek.org", base::Time::Now(),
                               false /* enabled */);
   fake_bridge_->CreateChannel("https://foo.com", base::Time::Now(),
                               true /* enabled */);

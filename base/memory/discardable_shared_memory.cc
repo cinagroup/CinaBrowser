@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -305,7 +305,7 @@ DiscardableSharedMemory::LockResult DiscardableSharedMemory::Lock(
   // is a no-op on macOS.
   //
   // For more information, see
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=823915.
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=823915.
   base::span<uint8_t> mapped = mapped_memory();
   madvise(mapped.data(), AlignToPageSize(mapped.size()), MADV_FREE_REUSE);
   return DiscardableSharedMemory::SUCCESS;

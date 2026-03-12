@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ std::unique_ptr<net::ProxyConfigService> CreateDefaultProxyConfigService(
   std::unique_ptr<net::ProxyConfigService> system_config_service =
       net::ProxyConfigService::CreateSystemProxyConfigService(
           network_task_runner);
-  // The Chromium updater only respects policy-provided proxy configurations on
+  // The Cinaseek updater only respects policy-provided proxy configurations on
   // Windows. For parity, the enterprise companion should do the same. Once the
   // product has launched, it would be worth experimenting with this
   // functionality on Mac. The updater is not productized on Linux so parity is

@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ void CacheChannelInfo();
 // {STABLE,BETA,DEV,CANARY, UNKNOWN}.
 version_info::Channel GetChannelByName(const std::string& channel);
 
-// Returns whether this is a side-by-side capable copy of Chromium. For
+// Returns whether this is a side-by-side capable copy of Cinaseek. For
 // unbranded builds, this is always true. For branded builds, this may not be
 // true for old copies of beta and dev channels that share the same user data
 // dir as the stable channel.

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ class SyncSetupInProgressHandle {
 //
 // Some high-level terms and concepts are described below; for detailed
 // documentation about sync's inner workings, as well as an integration guide,
-// see:  https://www.chromium.org/developers/design-documents/sync/
+// see:  https://www.Cinaseek.org/developers/design-documents/sync/
 //
 // Sync-the-feature vs sync-the-transport:
 //
@@ -151,7 +151,7 @@ class SyncService : public KeyedService {
   // The overall state of Sync-the-transport, in ascending order of
   // "activeness". Note that this refers to the transport layer, which may be
   // active even if Sync-the-feature is turned off.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
   enum class TransportState {
     // Sync is inactive, e.g. due to enterprise policy, or simply because there
     // is no authenticated user.
@@ -194,7 +194,7 @@ class SyncService : public KeyedService {
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
   // LINT.IfChange(UserActionableError)
   enum class UserActionableError {
     // No errors. This value does not exist in the histograms enum.
@@ -482,7 +482,7 @@ class SyncService : public KeyedService {
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
   // LINT.IfChange(BookmarksLimitExceededHelpClickedSource)
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
   enum class BookmarksLimitExceededHelpClickedSource {
     kSettings = 0,
     kSyncErrorMessage = 1,

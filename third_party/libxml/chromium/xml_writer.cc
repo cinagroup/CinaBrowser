@@ -1,12 +1,12 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/libxml/chromium/xml_writer.h"
+#include "third_party/libxml/Cinaseek/xml_writer.h"
 
 #include <libxml/xmlwriter.h>
 
-#include "third_party/libxml/chromium/libxml_utils.h"
+#include "third_party/libxml/Cinaseek/libxml_utils.h"
 
 XmlWriter::XmlWriter() : writer_(nullptr), buffer_(nullptr) {}
 

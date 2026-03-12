@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ static constexpr FramerateAndResolution kDefaultMaxFramerateAndResolution = {
 static constexpr gfx::Size kDefaultMinResolution(32, 32);
 
 // For H.264, some NVIDIA GPUs may report `MF_VIDEO_MAX_MB_PER_SEC` value equals
-// to `6799902`, resulting chromium think 8K & 30fps is supported, and some
+// to `6799902`, resulting Cinaseek think 8K & 30fps is supported, and some
 // Intel GPUs only support level 5.2. Since most devices only support up to 4K,
 // so we set level 5.2 as the max allowed level here to limit max resolution and
 // framerate combination can only go up to 2K & 172fps, or 4K & 64fps.
@@ -67,7 +67,7 @@ static constexpr FramerateAndResolution kVP9Modern8KMaxFramerateAndResolution =
     {180, gfx::Size(7680, 4320)};
 
 // For H.265/AV1, some NVIDIA GPUs may report `MF_VIDEO_MAX_MB_PER_SEC` value
-// equals to `7255273`, resulting chromium think 2K & 880fps is supported. Since
+// equals to `7255273`, resulting Cinaseek think 2K & 880fps is supported. Since
 // the max level of H.265/AV1 (6.2/6.3) do not allow framerate >= 300fps, so we
 // set level 6.2/6.3 as the max allowed level here and limit max resolution and
 // framerate combination can only go up to 2K/4K & 300fps, 8K & 128fps.

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -342,7 +342,7 @@ TEST_F(OmniboxAutocompleteControllerTest, OpenClipboardURLMatch) {
   autocomplete_controller_->SetAutocompleteMatches({clipboard_match});
 
   // Set the clipboard content.
-  GURL pasteboard_url = GURL("https://chromium.org");
+  GURL pasteboard_url = GURL("https://Cinaseek.org");
   clipboard_->SetClipboardURL(pasteboard_url, base::TimeDelta::Min());
 
   // Open the clipboard match.

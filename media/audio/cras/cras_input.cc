@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -267,7 +267,7 @@ void CrasInputStream::Start(AudioInputCallback* callback) {
   DCHECK(callback);
 
   // Channel map to CRAS_CHANNEL, values in the same order of
-  // corresponding source in Chromium defined Channels.
+  // corresponding source in Cinaseek defined Channels.
   static const int kChannelMap[] = {
       CRAS_CH_FL,  CRAS_CH_FR,  CRAS_CH_FC, CRAS_CH_LFE, CRAS_CH_RL, CRAS_CH_RR,
       CRAS_CH_FLC, CRAS_CH_FRC, CRAS_CH_RC, CRAS_CH_SL,  CRAS_CH_SR};

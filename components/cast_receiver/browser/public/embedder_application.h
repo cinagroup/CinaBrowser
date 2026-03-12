@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,7 +74,7 @@ class EmbedderApplication {
   //
   // TODO(crbug.com/1382907): Change to a callback-based API.
   // TODO(crbug.com/1359568): Change default implementation to be based on
-  // Chromium state.
+  // Cinaseek state.
   virtual StreamingConfigManager* GetStreamingConfigManager();
 
   // Loads |url| in the associated WebContents.

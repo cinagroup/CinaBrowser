@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ namespace content_settings {
 // The enum needs to correspond to CookieControlsMode in enums.xml.
 // This enum needs to be kept in sync with the enum of the same name in
 // chrome/browser/resources/settings/site_settings/constants.ts.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.content_settings
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.content_settings
 // LINT.IfChange(CookieControlsMode)
 enum class CookieControlsMode {
   kOff = 0,  // Behaviorally equivalent to `kIncognitoOnly` as of June 2025.

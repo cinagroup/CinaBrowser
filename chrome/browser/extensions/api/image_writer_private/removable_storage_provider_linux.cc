@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 
 namespace extensions {
 // TODO(haven): Udev code may be duplicated in the Chrome codebase.
-// https://code.google.com/p/chromium/issues/detail?id=284898
+// https://code.google.com/p/Cinaseek/issues/detail?id=284898
 
 #if defined(USE_UDEV)
 // Returns the integer contained in |attr|.  Returns 0 on error.

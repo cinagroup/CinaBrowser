@@ -1778,7 +1778,7 @@ class CORE_EXPORT Document : public ContainerNode,
   // prior to adding new console messages, and make sure that you understand the
   // implications on the developer experience. A good console message should be
   // actionable and relevant to what the developer is currently doing. Using the
-  // DevTools Console panel as a means to advertise best practices or Chromium
+  // DevTools Console panel as a means to advertise best practices or Cinaseek
   // agendas has shown to be counterproductive.
   void AddConsoleMessage(ConsoleMessage* message,
                          bool discard_duplicates = false) const;

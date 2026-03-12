@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,24 +6,24 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
-  resources_package = "org.chromium.chrome.browser.pwm_disabled"
+  resources_package = "org.Cinaseek.chrome.browser.pwm_disabled"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/pwm_disabled/CallbackDelayer.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/DialogManager.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/ExportErrorDialogFragment.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/NonCancelableProgressBar.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogController.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogFragment.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogProperties.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogViewBinder.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowController.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowControllerFactory.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogCoordinator.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogMediator.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PwmDeprecationDialogsMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/SingleThreadBarrierClosure.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/TimedCallbackDelayer.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/CallbackDelayer.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/DialogManager.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/ExportErrorDialogFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/NonCancelableProgressBar.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogController.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowController.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowControllerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PwmDeprecationDialogsMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/SingleThreadBarrierClosure.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/TimedCallbackDelayer.java",
   ]
 
   deps = [
@@ -60,14 +60,14 @@ robolectric_library("junit") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/chrome/browser/pwm_disabled/DialogManagerTest.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/EnsureAsyncPostingRule.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/ManualCallbackDelayer.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogTest.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowControllerTest.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogTest.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/SingleThreadBarrierClosureTest.java",
-    "java/src/org/chromium/chrome/browser/pwm_disabled/TimedCallbackDelayerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/DialogManagerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/EnsureAsyncPostingRule.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/ManualCallbackDelayer.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadDialogTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordCsvDownloadFlowControllerTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/PasswordManagerUnavailableDialogTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/SingleThreadBarrierClosureTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pwm_disabled/TimedCallbackDelayerTest.java",
   ]
 
   deps = [

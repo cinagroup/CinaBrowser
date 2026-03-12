@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ extern const char kDeleteBrowsingDataDialogHistogram[];
 // c/b/r/s/clear_browsing_data_dialog/clear_browsing_data_browser_proxy.ts
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.browsing_data
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.browsing_data
 // LINT.IfChange(BrowsingDataType)
 enum class BrowsingDataType {
   HISTORY = 0,
@@ -50,7 +50,7 @@ enum class BrowsingDataType {
 // c/b/r/s/clear_browsing_data_dialog/clear_browsing_data_browser_proxy.ts
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.browsing_data
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.browsing_data
 // LINT.IfChange(TimePeriod)
 enum class TimePeriod {
   LAST_HOUR = 0,
@@ -70,7 +70,7 @@ enum class TimePeriod {
 // Must be kept in sync with the DeleteBrowsingDataAction in enums.xml.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.browsing_data
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.browsing_data
 //
 // Note: Make sure to keep in sync with DeleteBrowsingDataAction defined in
 //   chrome/browser/resources/settings/site_settings/metrics_browser_proxy.ts

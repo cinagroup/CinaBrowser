@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -279,7 +279,7 @@ TEST_F(FirstRunTest, MAYBE_InitialPrefsUsedIfReadable) {
   std::unique_ptr<installer::InitialPreferences> prefs =
       first_run::LoadInitialPrefs();
   ASSERT_TRUE(prefs);
-  EXPECT_EQ(prefs->GetFirstRunTabs()[0], "https://www.chromium.org/initial");
+  EXPECT_EQ(prefs->GetFirstRunTabs()[0], "https://www.Cinaseek.org/initial");
 }
 
 #if BUILDFLAG(IS_MAC)
@@ -296,7 +296,7 @@ TEST_F(FirstRunTest, MAYBE_LegacyInitialPrefsUsedIfNewFileIsNotPresent) {
       first_run::LoadInitialPrefs();
 
   ASSERT_TRUE(prefs);
-  EXPECT_EQ(prefs->GetFirstRunTabs()[0], "https://www.chromium.org/legacy");
+  EXPECT_EQ(prefs->GetFirstRunTabs()[0], "https://www.Cinaseek.org/legacy");
 }
 
 }  // namespace first_run

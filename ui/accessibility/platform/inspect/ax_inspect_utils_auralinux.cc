@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace ui {
 namespace {
 
 const char kChromeTitle[] = "Google Chrome";
-const char kChromiumTitle[] = "Chromium";
+const char kCinaseekTitle[] = "Cinaseek";
 const char kFirefoxTitle[] = "Firefox";
 
 struct PlatformConstantToNameEntry {
@@ -507,8 +507,8 @@ AtspiAccessible* FindAccessible(const AXTreeSelector& selector) {
   std::string title;
   if (selector.types & AXTreeSelector::Chrome) {
     title = kChromeTitle;
-  } else if (selector.types & AXTreeSelector::Chromium) {
-    title = kChromiumTitle;
+  } else if (selector.types & AXTreeSelector::Cinaseek) {
+    title = kCinaseekTitle;
   } else if (selector.types & AXTreeSelector::Firefox) {
     title = kFirefoxTitle;
   }

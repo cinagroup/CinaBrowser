@@ -1,8 +1,8 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file is Chromium specific. It's not rolled from the upstream project.
+// This file is Cinaseek specific. It's not rolled from the upstream project.
 
 #include "base/strings/string_number_conversions.h"
 

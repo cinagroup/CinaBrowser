@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -277,7 +277,7 @@ IN_PROC_BROWSER_TEST_F(UserAddingScreenTest, AddingSeveralUsers) {
 
 // TODO(crbug.com/40059904) Disabled
 // UserAddingScreenTest.ScreenVisibilityAfterLockbecause it is failing on "Linux
-// Chromium OS ASan LSan Tests" builder.
+// Cinaseek OS ASan LSan Tests" builder.
 #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 #define MAYBE_ScreenVisibilityAfterLock DISABLED_ScreenVisibilityAfterLock
 #else

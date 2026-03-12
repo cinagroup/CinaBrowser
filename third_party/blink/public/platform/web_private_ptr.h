@@ -82,7 +82,7 @@ enum class WebPrivatePtrStrength {
 //     // Implemented in the .cc file as it requires full definition of Foo.
 //     BLINK_EXPORT void Assign(const WebFoo&);
 //
-//     // Methods that are exposed to Chromium and which are specific to
+//     // Methods that are exposed to Cinaseek and which are specific to
 //     // WebFoo go here.
 //     BLINK_EXPORT DoWebFooThing();
 //

@@ -60,11 +60,11 @@ typedef interface ISystemTraceSession ISystemTraceSession;
 #endif 	/* __ISystemTraceSession_FWD_DEFINED__ */
 
 
-#ifndef __ISystemTraceSessionChromium_FWD_DEFINED__
-#define __ISystemTraceSessionChromium_FWD_DEFINED__
-typedef interface ISystemTraceSessionChromium ISystemTraceSessionChromium;
+#ifndef __ISystemTraceSessionCinaseek_FWD_DEFINED__
+#define __ISystemTraceSessionCinaseek_FWD_DEFINED__
+typedef interface ISystemTraceSessionCinaseek ISystemTraceSessionCinaseek;
 
-#endif 	/* __ISystemTraceSessionChromium_FWD_DEFINED__ */
+#endif 	/* __ISystemTraceSessionCinaseek_FWD_DEFINED__ */
 
 
 #ifndef __ISystemTraceSessionChrome_FWD_DEFINED__
@@ -102,11 +102,11 @@ typedef interface ISystemTraceSession ISystemTraceSession;
 #endif 	/* __ISystemTraceSession_FWD_DEFINED__ */
 
 
-#ifndef __ISystemTraceSessionChromium_FWD_DEFINED__
-#define __ISystemTraceSessionChromium_FWD_DEFINED__
-typedef interface ISystemTraceSessionChromium ISystemTraceSessionChromium;
+#ifndef __ISystemTraceSessionCinaseek_FWD_DEFINED__
+#define __ISystemTraceSessionCinaseek_FWD_DEFINED__
+typedef interface ISystemTraceSessionCinaseek ISystemTraceSessionCinaseek;
 
-#endif 	/* __ISystemTraceSessionChromium_FWD_DEFINED__ */
+#endif 	/* __ISystemTraceSessionCinaseek_FWD_DEFINED__ */
 
 
 #ifndef __ISystemTraceSessionChrome_FWD_DEFINED__
@@ -258,19 +258,19 @@ enum : HRESULT {
 extern RPC_IF_HANDLE __MIDL_itf_tracing_service_idl_0000_0001_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_tracing_service_idl_0000_0001_v0_0_s_ifspec;
 
-#ifndef __ISystemTraceSessionChromium_INTERFACE_DEFINED__
-#define __ISystemTraceSessionChromium_INTERFACE_DEFINED__
+#ifndef __ISystemTraceSessionCinaseek_INTERFACE_DEFINED__
+#define __ISystemTraceSessionCinaseek_INTERFACE_DEFINED__
 
-/* interface ISystemTraceSessionChromium */
+/* interface ISystemTraceSessionCinaseek */
 /* [unique][helpstring][uuid][oleautomation][object] */ 
 
 
-EXTERN_C const IID IID_ISystemTraceSessionChromium;
+EXTERN_C const IID IID_ISystemTraceSessionCinaseek;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
     MIDL_INTERFACE("A3FD580A-FFD4-4075-9174-75D0B199D3CB")
-    ISystemTraceSessionChromium : public ISystemTraceSession
+    ISystemTraceSessionCinaseek : public ISystemTraceSession
     {
     public:
     };
@@ -278,37 +278,37 @@ EXTERN_C const IID IID_ISystemTraceSessionChromium;
     
 #else 	/* C style interface */
 
-    typedef struct ISystemTraceSessionChromiumVtbl
+    typedef struct ISystemTraceSessionCinaseekVtbl
     {
         BEGIN_INTERFACE
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ISystemTraceSessionChromium * This,
+            ISystemTraceSessionCinaseek * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ISystemTraceSessionChromium * This);
+            ISystemTraceSessionCinaseek * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            ISystemTraceSessionChromium * This);
+            ISystemTraceSessionCinaseek * This);
         
         DECLSPEC_XFGVIRT(ISystemTraceSession, AcceptInvitation)
         HRESULT ( STDMETHODCALLTYPE *AcceptInvitation )( 
-            ISystemTraceSessionChromium * This,
+            ISystemTraceSessionCinaseek * This,
             /* [string][in] */ const WCHAR *server_name,
             /* [out] */ DWORD *pid);
         
         END_INTERFACE
-    } ISystemTraceSessionChromiumVtbl;
+    } ISystemTraceSessionCinaseekVtbl;
 
-    interface ISystemTraceSessionChromium
+    interface ISystemTraceSessionCinaseek
     {
-        CONST_VTBL struct ISystemTraceSessionChromiumVtbl *lpVtbl;
+        CONST_VTBL struct ISystemTraceSessionCinaseekVtbl *lpVtbl;
     };
 
     
@@ -316,17 +316,17 @@ EXTERN_C const IID IID_ISystemTraceSessionChromium;
 #ifdef COBJMACROS
 
 
-#define ISystemTraceSessionChromium_QueryInterface(This,riid,ppvObject)	\
+#define ISystemTraceSessionCinaseek_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define ISystemTraceSessionChromium_AddRef(This)	\
+#define ISystemTraceSessionCinaseek_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define ISystemTraceSessionChromium_Release(This)	\
+#define ISystemTraceSessionCinaseek_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define ISystemTraceSessionChromium_AcceptInvitation(This,server_name,pid)	\
+#define ISystemTraceSessionCinaseek_AcceptInvitation(This,server_name,pid)	\
     ( (This)->lpVtbl -> AcceptInvitation(This,server_name,pid) ) 
 
 
@@ -338,7 +338,7 @@ EXTERN_C const IID IID_ISystemTraceSessionChromium;
 
 
 
-#endif 	/* __ISystemTraceSessionChromium_INTERFACE_DEFINED__ */
+#endif 	/* __ISystemTraceSessionCinaseek_INTERFACE_DEFINED__ */
 
 
 #ifndef __ISystemTraceSessionChrome_INTERFACE_DEFINED__

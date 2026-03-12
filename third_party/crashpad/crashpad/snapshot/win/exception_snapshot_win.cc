@@ -270,7 +270,7 @@ bool ExceptionSnapshotWin::InitializeFromExceptionPointers(
       codes_.push_back(first_record.ExceptionInformation[i]);
     }
     if (first_record.ExceptionRecord) {
-      // https://crashpad.chromium.org/bug/43
+      // https://crashpad.Cinaseek.org/bug/43
       LOG(WARNING) << "dropping chained ExceptionRecord";
     }
 

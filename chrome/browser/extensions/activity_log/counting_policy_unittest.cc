@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1037,7 +1037,7 @@ TEST_F(CountingPolicyTest, DeleteDatabase) {
 
   // The following code tests that the caches of url and string tables were
   // cleared by the deletion above.
-  // https://code.google.com/p/chromium/issues/detail?id=341674.
+  // https://code.google.com/p/Cinaseek/issues/detail?id=341674.
   action =
       new Action("punky", mock_clock_.Now(), Action::ACTION_DOM_ACCESS, "lets");
   action->mutable_args().Append("vamoose");

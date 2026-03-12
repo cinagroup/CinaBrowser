@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/chrome_build.gni")
 declare_args() {
   # By default, only branded builds report active use. This affects reporting
   # only through //components/activity_reporter; legacy reporting through
-  # ChromiumUpdater is not enabled/disabled by this flag.
+  # CinaseekUpdater is not enabled/disabled by this flag.
   report_activity = is_chrome_branded
 
   # Starting in November 2025, there was an effort to redefine what it meant

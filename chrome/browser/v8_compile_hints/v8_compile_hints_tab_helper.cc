@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ void V8CompileHintsTabHelper::PrimaryPageChanged(content::Page& page) {
     return;
   }
 
-  // TODO(chromium:1406506): Consider avoiding sending the data unnecessarily if
+  // TODO(Cinaseek:1406506): Consider avoiding sending the data unnecessarily if
   // we're doing a back-forward navigation. This can be done e.g., by attaching
   // a bool flag to DocumentUserData.
 

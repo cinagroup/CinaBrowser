@@ -1,16 +1,16 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/native_page/BasicNativePage.java",
-    "java/src/org/chromium/chrome/browser/ui/native_page/BasicSmoothTransitionDelegate.java",
-    "java/src/org/chromium/chrome/browser/ui/native_page/FrozenNativePage.java",
-    "java/src/org/chromium/chrome/browser/ui/native_page/NativePage.java",
-    "java/src/org/chromium/chrome/browser/ui/native_page/NativePageHost.java",
-    "java/src/org/chromium/chrome/browser/ui/native_page/TouchEnabledDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/BasicNativePage.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/BasicSmoothTransitionDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/FrozenNativePage.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/NativePage.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/NativePageHost.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/TouchEnabledDelegate.java",
   ]
   deps = [
     "//base:base_java",
@@ -29,7 +29,7 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/native_page/NativePageTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/native_page/NativePageTest.java",
   ]
 
   deps = [

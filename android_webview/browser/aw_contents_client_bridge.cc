@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -346,7 +346,7 @@ bool AwContentsClientBridge::ShouldOverrideUrlLoading(
       env, obj, url, has_user_gesture, is_redirect, header_names, header_values,
       is_outermost_main_frame);
   if (HasException(env)) {
-    // Tell the chromium message loop to not perform any tasks after the current
+    // Tell the Cinaseek message loop to not perform any tasks after the current
     // one - we want to make sure we return to Java cleanly without first making
     // any new JNI calls.
     base::CurrentUIThread::Get()->Abort();

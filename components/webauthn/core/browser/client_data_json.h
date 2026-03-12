@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace webauthn {
 // ClientDataRequestType enumerates different request types that
 // CollectedClientData can be built for. See
 // |BuildClientDataJson|.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content_public.browser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content_public.browser
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ClientDataRequestType
 enum class ClientDataRequestType {
   kWebAuthnCreate,

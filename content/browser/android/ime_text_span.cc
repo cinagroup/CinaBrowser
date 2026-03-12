@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ base::android::ScopedJavaLocalRef<jobjectArray> ToImeTextSpanJniArray(
     const std::vector<ui::mojom::ImeTextSpanInfoPtr>& mojo_spans) {
   jobjectArray ime_text_span_array = env->NewObjectArray(
       mojo_spans.size(),
-      org_chromium_content_browser_input_ImeTextSpan_clazz(env), nullptr);
+      org_Cinaseek_content_browser_input_ImeTextSpan_clazz(env), nullptr);
 
   base::android::CheckException(env);
 

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ constexpr int kProductId = 0x1337;
 constexpr char kUsbManufacturer[] = "Usb MakesPrinters";
 constexpr char kUsbModel[] = "Printer ModelName";
 
-constexpr char kMakeAndModel[] = "Chromium RazLazer X4321er";
+constexpr char kMakeAndModel[] = "Cinaseek RazLazer X4321er";
 constexpr char kEffectiveMakeAndModel[] = "Generic PostScript";
 
 constexpr char kDocumentFormatDefault[] = "Default";

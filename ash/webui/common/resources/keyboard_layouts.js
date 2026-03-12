@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -524,7 +524,7 @@ const kSpainSpanish = [
  * [0]:
  * https://storage.googleapis.com/chromeos-factory-docs/sdk/regions.html#available-regions
  * [1]:
- * https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/third_party/kernel/upstream/include/uapi/linux/input-event-codes.h
+ * https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/third_party/kernel/upstream/include/uapi/linux/input-event-codes.h
  *
  * @const {!Object<string, !Array<!Array<(number|string|!{
  *   main: ?string,

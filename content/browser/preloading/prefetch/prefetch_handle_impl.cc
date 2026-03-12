@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ void PrefetchContainerObserver::OnDeterminedHead(
   if (on_prefetch_head_received_) {
     // This condition will be used in a callback provided in the future.
     // See
-    // https://chromium-review.googlesource.com/c/chromium/src/+/6615559/comment/3f439d19_8c9cf99a
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6615559/comment/3f439d19_8c9cf99a
     //
     // TODO(crbug.com/400761083): Use the callback.
     if (prefetch_container.GetLoadState() ==

@@ -1,11 +1,11 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #import "ios/chrome/browser/omnibox/model/omnibox_image_fetcher.h"
 
 #import "components/image_fetcher/core/image_data_fetcher.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "ios/chrome/common/ui/favicon/favicon_attributes.h"
 
 namespace {

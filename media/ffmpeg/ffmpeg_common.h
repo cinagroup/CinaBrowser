@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ inline base::span<uint8_t> AVPacketData(const AVPacket& packet) {
   // SAFETY: Once initialized by ffmpeg, an `AVPacket` will describe a valid
   // buffer. We assume that callers do not create uninitialized `AVPacket`s on
   // the stack, as ffmpeg's documentation says to only create `AVPacket`s with
-  // `av_packet_alloc`, or `ScopedAVPacket` in Chromium. This is not enforced
+  // `av_packet_alloc`, or `ScopedAVPacket` in Cinaseek. This is not enforced
   // due to limitations from ffmpeg being a C API.
   return UNSAFE_BUFFERS(
       base::span(packet.data, base::checked_cast<size_t>(packet.size)));

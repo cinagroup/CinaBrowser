@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@ class LaunchApplicationTest : public testing::Test {
  public:
   void SetUp() override {
     helper_bundle_id_ =
-        SysUTF8ToNSString("org.chromium.LaunchApplicationTestHelper." +
+        SysUTF8ToNSString("org.Cinaseek.LaunchApplicationTestHelper." +
                           Uuid::GenerateRandomV4().AsLowercaseString());
 
     FilePath data_root;

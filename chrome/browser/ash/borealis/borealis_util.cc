@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace borealis {
 const char kInstallerAppId[] = "dkecggknbdokeipkgnhifhiokailichf";
 const char kClientAppId[] = "epfhbkiklgmlkhfpbcdleadnhcfdjfmo";
 const char kLauncherSearchAppId[] = "ceoplblcdaffnnflkkcagjpomjgedmdl";
-const char kIgnoredAppIdPrefix[] = "org.chromium.guest_os.borealis.xid.";
+const char kIgnoredAppIdPrefix[] = "org.Cinaseek.guest_os.borealis.xid.";
 const char kBorealisDlcName[] = "borealis-dlc";
 const char kAllowedScheme[] = "steam";
 const re2::LazyRE2 kURLAllowlistRegex[] = {
@@ -41,13 +41,13 @@ namespace {
 // Some Steam updater windows use Zenity to show dialog boxes, and use its
 // default WMClass.
 static constexpr char kZenityId[] =
-    "borealis_anon:org.chromium.guest_os.borealis.wmclass.Zenity";
+    "borealis_anon:org.Cinaseek.guest_os.borealis.wmclass.Zenity";
 // The Steam client is not a game.
 static constexpr char kSteamClientId[] =
-    "borealis_anon:org.chromium.guest_os.borealis.wmclass.steam";
+    "borealis_anon:org.Cinaseek.guest_os.borealis.wmclass.steam";
 // 769 is the Steam App ID assigned to the Steam Big Picture client as of 2023.
 static constexpr char kSteamBigPictureId[] =
-    "borealis_anon:org.chromium.guest_os.borealis.xprop.769";
+    "borealis_anon:org.Cinaseek.guest_os.borealis.xprop.769";
 
 // The regex used for extracting the "steam game id" of a .desktop's "Exec="
 // field.
@@ -56,7 +56,7 @@ const re2::LazyRE2 kSteamGameIdFromExecRegex = {
 // The regex used for extracting the "steam game id" of a borealis window (or
 // anonymous app).
 const re2::LazyRE2 kSteamGameIdFromWindowRegex = {
-    "org\\.chromium\\.guest_os\\.borealis\\.xprop\\.(\\d+)"};
+    "org\\.Cinaseek\\.guest_os\\.borealis\\.xprop\\.(\\d+)"};
 
 // Works for window-data either in the exo_id form, or the anonymous app_id
 // form.

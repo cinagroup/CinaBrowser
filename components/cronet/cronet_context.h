@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,13 +100,13 @@ class CronetContext {
 
     // Called before sending a tunnel establishment request. This is used to
     // forward //net's ProxyDelegate::OnBeforeTunnelRequest to, the embedder
-    // provided, org.chromium.net.Proxy.Callback#onBeforeTunnelRequest.
+    // provided, org.Cinaseek.net.Proxy.Callback#onBeforeTunnelRequest.
     // If the tunnel establishment request should be allowed to continue, pass
     // an net::HttpRequestHeaders object to `callback`. These will be sent only
     // to the proxy, as part of the tunnel establishment request. If it should
     // be canceled, pass a net::Error (other than OK and ERR_IO_PENDING). When
     // canceled, we will attempt to connect via the next proxy in the list (see
-    // org.chromium.net.ProxyOptions for more info).
+    // org.Cinaseek.net.ProxyOptions for more info).
     //
     // WARNING: `callback` must never be called inline, it must instead be
     // posted back onto the network thread.
@@ -117,12 +117,12 @@ class CronetContext {
     // Called after receiving a response to the tunnel establishment request.
     // This is used to forward //net's ProxyDelegate::OnTunnelHeadersReceived
     // to, the embedder provided,
-    // org.chromium.net.Proxy.Callback#onTunnelHeadersReceived.
+    // org.Cinaseek.net.Proxy.Callback#onTunnelHeadersReceived.
     // To allow the tunnel connection to proxy requests, pass `net::OK` to
     // `callback`.  Instead, to cancel the tunnel connection, pass it a
     // net::Error other than OK and ERR_IO_PENDING.
     // When canceled, we will attempt to connect via the next proxy in the list
-    // (see org.chromium.net.ProxyOptions for more info).
+    // (see org.Cinaseek.net.ProxyOptions for more info).
     //
     // WARNING: `callback` must never be called inline, it must instead be
     // posted back onto the network thread.

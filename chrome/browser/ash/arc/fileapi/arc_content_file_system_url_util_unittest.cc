@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ TEST(ArcContentFileSystemUrlUtilTest, EncodeAndDecodeExternalFileUrl) {
     EXPECT_EQ(src, result);
   }
   {
-    GURL src("content://org.chromium.foo/bar/baz");
+    GURL src("content://org.Cinaseek.foo/bar/baz");
     GURL dest = ArcUrlToExternalFileUrl(src);
     EXPECT_TRUE(dest.is_valid());
     EXPECT_EQ(content::kExternalFileScheme, dest.GetScheme());
@@ -34,7 +34,7 @@ TEST(ArcContentFileSystemUrlUtilTest, EncodeAndDecodeExternalFileUrl) {
     EXPECT_EQ(src, result);
   }
   {
-    GURL src("content://org.chromium.foo/bar/%19%20%21");
+    GURL src("content://org.Cinaseek.foo/bar/%19%20%21");
     GURL dest = ArcUrlToExternalFileUrl(src);
     EXPECT_TRUE(dest.is_valid());
     EXPECT_EQ(content::kExternalFileScheme, dest.GetScheme());
@@ -43,7 +43,7 @@ TEST(ArcContentFileSystemUrlUtilTest, EncodeAndDecodeExternalFileUrl) {
     EXPECT_EQ(src, result);
   }
   {
-    GURL src("content://org.chromium.foo/!@#$%^&*()_+|~-=\\`[]{};':\"<>?,./");
+    GURL src("content://org.Cinaseek.foo/!@#$%^&*()_+|~-=\\`[]{};':\"<>?,./");
     GURL dest = ArcUrlToExternalFileUrl(src);
     EXPECT_TRUE(dest.is_valid());
     EXPECT_EQ(content::kExternalFileScheme, dest.GetScheme());
@@ -56,7 +56,7 @@ TEST(ArcContentFileSystemUrlUtilTest, EncodeAndDecodeExternalFileUrl) {
         0x307b,  // HIRAGANA_LETTER_HO
         0x3052,  // HIRAGANA_LETTER_GE
     };
-    GURL src("content://org.chromium.foo/" + base::UTF16ToUTF8(utf16_string));
+    GURL src("content://org.Cinaseek.foo/" + base::UTF16ToUTF8(utf16_string));
     GURL dest = ArcUrlToExternalFileUrl(src);
     EXPECT_TRUE(dest.is_valid());
     EXPECT_EQ(content::kExternalFileScheme, dest.GetScheme());
@@ -67,7 +67,7 @@ TEST(ArcContentFileSystemUrlUtilTest, EncodeAndDecodeExternalFileUrl) {
 }
 
 TEST(ArcContentFileSystemUrlUtilTest, FileSystemUrlToArcUrl) {
-  GURL arc_url("content://org.chromium.foo/bar/baz");
+  GURL arc_url("content://org.Cinaseek.foo/bar/baz");
 
   base::FilePath path =
       base::FilePath(kContentFileSystemMountPointPath)
@@ -80,7 +80,7 @@ TEST(ArcContentFileSystemUrlUtilTest, FileSystemUrlToArcUrl) {
 }
 
 TEST(ArcContentFileSystemUrlUtilTest, PathToArcUrl) {
-  GURL arc_url("content://org.chromium.foo/bar/baz");
+  GURL arc_url("content://org.Cinaseek.foo/bar/baz");
 
   base::FilePath path =
       base::FilePath(kContentFileSystemMountPointPath)

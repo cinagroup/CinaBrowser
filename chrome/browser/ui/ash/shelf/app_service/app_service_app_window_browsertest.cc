@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,9 +81,9 @@ constexpr char kTestPaymentAppName[] = "Test ARC Payment App";
 constexpr char kTestAppPackage[] = "test.arc.app.package";
 constexpr char kTestAppActivity[] = "test.arc.app.package.activity";
 constexpr char kTestAppActivity2[] = "test.arc.gitapp.package.activity2";
-constexpr char kTestPaymentAppPackage[] = "org.chromium.arc.payment_app";
+constexpr char kTestPaymentAppPackage[] = "org.Cinaseek.arc.payment_app";
 constexpr char kTestPaymentAppActivity[] =
-    "org.chromium.arc.payment_app.InvokePaymentAppActivity";
+    "org.Cinaseek.arc.payment_app.InvokePaymentAppActivity";
 
 ash::ShelfAction SelectItem(
     const ash::ShelfID& id,
@@ -143,8 +143,8 @@ std::string CreateIntentUriWithShelfGroupAndLogicalWindow(
     const std::string& shelf_group_id,
     const std::string& logical_window_id) {
   return base::StringPrintf(
-      "#Intent;S.org.chromium.arc.logical_window_id=%s;"
-      "S.org.chromium.arc.shelf_group_id=%s;end",
+      "#Intent;S.org.Cinaseek.arc.logical_window_id=%s;"
+      "S.org.Cinaseek.arc.shelf_group_id=%s;end",
       logical_window_id.c_str(), shelf_group_id.c_str());
 }
 
@@ -391,7 +391,7 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowBorealisBrowserTest,
   std::string app_id = MakeBorealisApp("vm", "container", "foo");
 
   views::Widget* widget =
-      CreateExoWindow("org.chromium.guest_os.borealis.wmclass.foo");
+      CreateExoWindow("org.Cinaseek.guest_os.borealis.wmclass.foo");
 
   EXPECT_EQ(1u,
             app_service_proxy_->InstanceRegistry().GetInstances(app_id).size());
@@ -405,9 +405,9 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowBorealisBrowserTest,
 IN_PROC_BROWSER_TEST_F(AppServiceAppWindowBorealisBrowserTest,
                        BorealisUnknownApp) {
   views::Widget* widget =
-      CreateExoWindow("org.chromium.guest_os.borealis.wmclass.bar");
+      CreateExoWindow("org.Cinaseek.guest_os.borealis.wmclass.bar");
   std::string app_id =
-      "borealis_anon:org.chromium.guest_os.borealis.wmclass.bar";
+      "borealis_anon:org.Cinaseek.guest_os.borealis.wmclass.bar";
 
   EXPECT_EQ(1u,
             app_service_proxy_->InstanceRegistry().GetInstances(app_id).size());
@@ -443,7 +443,7 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowBorealisBrowserTest,
   EXPECT_CALL(observer, OnAppStarted(app_id));
   EXPECT_CALL(observer, OnWindowStarted(app_id, testing::_));
   views::Widget* widget =
-      CreateExoWindow("org.chromium.guest_os.borealis.wmclass.foo");
+      CreateExoWindow("org.Cinaseek.guest_os.borealis.wmclass.foo");
 
   EXPECT_CALL(observer, OnWindowFinished(app_id, widget->GetNativeWindow()));
   EXPECT_CALL(observer, OnAppFinished(app_id, widget->GetNativeWindow()));
@@ -679,7 +679,7 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowArcAppBrowserTest, ArcAppsWindow) {
   SendPackageAdded(kTestAppPackage, false);
 
   // Create the window for app1.
-  views::Widget* arc_window1 = CreateExoWindow("org.chromium.arc.1");
+  views::Widget* arc_window1 = CreateExoWindow("org.Cinaseek.arc.1");
   const std::string app_id1 = GetTestApp1Id(kTestAppPackage);
 
   // Simulate task creation so the app is marked as running/open.
@@ -709,7 +709,7 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowArcAppBrowserTest, ArcAppsWindow) {
   info = app_prefs()->GetApp(app_id2);
   app_host()->OnTaskCreated(2, info->package_name, info->activity, info->name,
                             info->intent_uri, /*session_id=*/0);
-  views::Widget* arc_window2 = CreateExoWindow("org.chromium.arc.2");
+  views::Widget* arc_window2 = CreateExoWindow("org.Cinaseek.arc.2");
   EXPECT_TRUE(controller_->GetItem(ash::ShelfID(app_id2)));
 
   // Check the window state in instance for app2
@@ -768,8 +768,8 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowArcAppBrowserTest, LogicalWindowId) {
   SendPackageAdded(kTestAppPackage, false);
 
   // Create the windows for the app.
-  views::Widget* arc_window1 = CreateExoWindow("org.chromium.arc.1");
-  views::Widget* arc_window2 = CreateExoWindow("org.chromium.arc.2");
+  views::Widget* arc_window1 = CreateExoWindow("org.Cinaseek.arc.1");
+  views::Widget* arc_window2 = CreateExoWindow("org.Cinaseek.arc.2");
 
   // Simulate task creation so the app is marked as running/open.
   const std::string app_id = GetTestApp1Id(kTestAppPackage);
@@ -839,7 +839,7 @@ IN_PROC_BROWSER_TEST_F(AppServiceAppWindowArcAppBrowserTest, PaymentApp) {
   SendPackageAdded(kTestPaymentAppPackage, false);
 
   // Create the windows for the payment app.
-  views::Widget* payment_window = CreateExoWindow("org.chromium.arc.1");
+  views::Widget* payment_window = CreateExoWindow("org.Cinaseek.arc.1");
 
   // Simulate task creation so the app is marked as running/open.
   const std::string payment_app_id =

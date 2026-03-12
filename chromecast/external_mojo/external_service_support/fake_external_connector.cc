@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ FakeExternalConnector::RequestConnector() {
   return mojo::PendingRemote<external_mojo::mojom::ExternalConnector>();
 }
 
-void FakeExternalConnector::SendChromiumConnectorRequest(
+void FakeExternalConnector::SendCinaseekConnectorRequest(
     mojo::ScopedMessagePipeHandle request) {}
 
 void FakeExternalConnector::BindInterfaceInternal(

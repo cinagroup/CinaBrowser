@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1580,7 +1580,7 @@ TEST_F(DnsTransactionTest, ConnectFailure) {
   transaction_ids_.push_back(0);  // Needed to make a DnsUDPAttempt.
   TransactionHelper helper0(ERR_CONNECTION_REFUSED);
 
-  helper0.StartTransaction(transaction_factory_.get(), "www.chromium.org",
+  helper0.StartTransaction(transaction_factory_.get(), "www.Cinaseek.org",
                            dns_protocol::kTypeA, DnsTransactionFactory::AttemptMode::kClassic,
                            resolve_context_.get());
   helper0.RunUntilComplete();
@@ -1600,7 +1600,7 @@ TEST_F(DnsTransactionTest, ConnectFailure_SocketLimitReached) {
   transaction_ids_.push_back(0);  // Needed to make a DnsUDPAttempt.
   TransactionHelper helper0(ERR_CONNECTION_REFUSED);
 
-  helper0.StartTransaction(transaction_factory_.get(), "www.chromium.org",
+  helper0.StartTransaction(transaction_factory_.get(), "www.Cinaseek.org",
                            dns_protocol::kTypeA, DnsTransactionFactory::AttemptMode::kClassic,
                            resolve_context_.get());
   helper0.RunUntilComplete();

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -236,7 +236,7 @@ if (is_android) {
   java_cpp_features("java_features_srcjar") {
     visibility = [ ":*" ]
     sources = [ "features.cc" ]
-    class_name = "org.chromium.ui.events.UiEventsFeatures"
+    class_name = "org.Cinaseek.ui.events.UiEventsFeatures"
   }
   android_library("ui_events_features_java") {
     srcjar_deps = [ ":java_features_srcjar" ]

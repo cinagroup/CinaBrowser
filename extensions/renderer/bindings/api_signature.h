@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class APISignature {
       const base::Value* returns_async);
 
   struct V8ParseResult {
-    // Appease the Chromium style plugin (out of line ctor/dtor).
+    // Appease the Cinaseek style plugin (out of line ctor/dtor).
     V8ParseResult();
     ~V8ParseResult();
     V8ParseResult(V8ParseResult&& other);
@@ -81,7 +81,7 @@ class APISignature {
   };
 
   struct JSONParseResult {
-    // Appease the Chromium style plugin (out of line ctor/dtor).
+    // Appease the Cinaseek style plugin (out of line ctor/dtor).
     JSONParseResult();
     ~JSONParseResult();
     JSONParseResult(JSONParseResult&& other);

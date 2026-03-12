@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -262,7 +262,7 @@ BOOL IsChooseFromDriveAvailable(Browser* browser,
     _filePickerAction = [UIAction
         actionWithTitle:[self filePickerActionLabel]
                   image:DefaultSymbolWithConfiguration(kFolderSymbol, nil)
-             identifier:@"chromium.uploadfile.choosefile"
+             identifier:@"Cinaseek.uploadfile.choosefile"
                 handler:^(UIAction* action) {
                   [weakSelf
                       showPickerForContextMenuActionVariant:
@@ -346,7 +346,7 @@ BOOL IsChooseFromDriveAvailable(Browser* browser,
         actionWithTitle:[self photoPickerActionLabel]
                   image:DefaultSymbolWithConfiguration(kPhotoOnRectangleSymbol,
                                                        nil)
-             identifier:@"chromium.uploadfile.choosephoto"
+             identifier:@"Cinaseek.uploadfile.choosephoto"
                 handler:^(UIAction* action) {
                   [weakSelf showPickerForContextMenuActionVariant:
                                 FileUploadPanelContextMenuActionVariant::
@@ -435,7 +435,7 @@ BOOL IsChooseFromDriveAvailable(Browser* browser,
     _cameraAction = [UIAction
         actionWithTitle:[self cameraActionLabel]
                   image:DefaultSymbolWithConfiguration(kSystemCameraSymbol, nil)
-             identifier:@"chromium.uploadfile.choosecamera"
+             identifier:@"Cinaseek.uploadfile.choosecamera"
                 handler:^(UIAction* action) {
                   [weakSelf
                       showPickerForContextMenuActionVariant:
@@ -509,7 +509,7 @@ BOOL IsChooseFromDriveAvailable(Browser* browser,
     _driveFilePickerAction = [UIAction
         actionWithTitle:[self driveFilePickerActionLabel]
                   image:driveSymbol
-             identifier:@"chromium.uploadfile.choosefromdrive"
+             identifier:@"Cinaseek.uploadfile.choosefromdrive"
                 handler:^(UIAction* action) {
                   [weakSelf showPickerForContextMenuActionVariant:
                                 FileUploadPanelContextMenuActionVariant::

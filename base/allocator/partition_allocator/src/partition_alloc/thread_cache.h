@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -114,7 +114,7 @@ class PA_COMPONENT_EXPORT(PARTITION_ALLOC) ThreadCacheRegistry {
   //   static local variables don't work (as they call into the uninitialized
   //   runtime). To sidestep that, we use a regular global variable in the .cc,
   //   which is fine as this object's constructor is constexpr.
-  // - Marked inline so that the chromium style plugin doesn't complain that a
+  // - Marked inline so that the Cinaseek style plugin doesn't complain that a
   //   "complex constructor" has an inline body. This warning is disabled when
   //   the constructor is explicitly marked "inline". Note that this is a false
   //   positive of the plugin, since constexpr implies inline.

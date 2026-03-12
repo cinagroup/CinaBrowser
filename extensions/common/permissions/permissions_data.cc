@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -300,7 +300,7 @@ URLPatternSet PermissionsData::GetUserBlockedHosts() const {
     // restrictions).
     // TODO(crbug.com/40803363): It'd be nice to change this (even if
     // app shell just sets a global context id) so that we can DCHECK it here.
-    // If we didn't have a context ID set in production Chromium, it'd be a bug
+    // If we didn't have a context ID set in production Cinaseek, it'd be a bug
     // and would result in the extension potentially having access to user-
     // restricted sites.
     return {};

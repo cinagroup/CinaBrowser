@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,9 +90,9 @@ CAPTURE_EXPORT
 // -stopCapture.
 - (void)takePhoto;
 
-// This function translates Mac Core Video pixel formats to Chromium pixel
+// This function translates Mac Core Video pixel formats to Cinaseek pixel
 // formats. This implementation recognizes NV12.
-+ (media::VideoPixelFormat)FourCCToChromiumPixelFormat:(FourCharCode)code;
++ (media::VideoPixelFormat)FourCCToCinaseekPixelFormat:(FourCharCode)code;
 
 - (void)setOnPhotoOutputStoppedForTesting:
     (base::RepeatingCallback<void()>)onPhotoOutputStopped;

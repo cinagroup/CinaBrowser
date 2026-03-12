@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/chrome_build.gni")
 declare_args() {
   # Build flag to include resources for the animated screensaver in ash builds.
   #
-  # Currently, these resources are included by default for internal ChromeOS
+  # Currently, these resources are included by default for internal CinaseekOS
   # builds as both conditions below are prerequisites for downloading Lottie
   # ambient mode resources from CIPD in the DEPS file.
   #

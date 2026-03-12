@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
   // Automatically generated enum to interface with Java world.
   //
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum AndroidImageFormat {
     // Android graphics ImageFormat mapping, see reference in:
     // http://developer.android.com/reference/android/graphics/ImageFormat.html
@@ -50,7 +50,7 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
   // A Java counterpart will be generated for this enum.
   // The values of these are matched with the ones in media::VideoCaptureError
   // to allow direct static_casting.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum class AndroidVideoCaptureError {
     ANDROID_API_1_CAMERA_ERROR_CALLBACK_RECEIVED = 68,
     ANDROID_API_2_CAMERA_DEVICE_ERROR_RECEIVED = 69,
@@ -64,7 +64,7 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
   // A Java counterpart will be generated for this enum.
   // The values of these are matched with the ones in
   // media::VideoCaptureFrameDropReason to allow direct static_casting.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
   enum class AndroidVideoCaptureFrameDropReason {
     ANDROID_API_1_UNEXPECTED_DATA_LENGTH = 8,
     ANDROID_API_2_ACQUIRED_IMAGE_IS_NULL = 9,
@@ -104,13 +104,13 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
       int32_t rotation,
       int64_t timestamp);
 
-  // Implement org.chromium.media.VideoCapture.Natives.OnFrameAvailable.
+  // Implement org.Cinaseek.media.VideoCapture.Natives.OnFrameAvailable.
   void OnFrameAvailable(JNIEnv* env,
                         const base::android::JavaRef<jbyteArray>& data,
                         int32_t length,
                         int32_t rotation);
 
-  // Implement org.chromium.media.VideoCapture.Natives.OnI420FrameAvailable.
+  // Implement org.Cinaseek.media.VideoCapture.Natives.OnI420FrameAvailable.
   void OnI420FrameAvailable(JNIEnv* env,
                             const base::android::JavaRef<jobject>& y_buffer,
                             int32_t y_stride,
@@ -124,19 +124,19 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
                             int64_t timestamp);
 
   // Implement
-  // org.chromium.media.VideoCapture.Natives.onHardwareBufferAvailable.
+  // org.Cinaseek.media.VideoCapture.Natives.onHardwareBufferAvailable.
   void OnHardwareBufferAvailable(
       JNIEnv* env,
       const base::android::JavaRef<jobject>& hardwareBuffer,
       int32_t rotation,
       int64_t timestamp);
 
-  // Implement org.chromium.media.VideoCapture.Natives.OnError.
+  // Implement org.Cinaseek.media.VideoCapture.Natives.OnError.
   void OnError(JNIEnv* env,
                int android_video_capture_error,
                const base::android::JavaRef<jstring>& message);
 
-  // Implement org.chromium.media.VideoCapture.nativeOnFrameDropped.
+  // Implement org.Cinaseek.media.VideoCapture.nativeOnFrameDropped.
   void OnFrameDropped(JNIEnv* env,
                       int android_video_capture_frame_drop_reason);
 
@@ -145,16 +145,16 @@ class CAPTURE_EXPORT VideoCaptureDeviceAndroid : public VideoCaptureDevice {
       int64_t callback_id,
       const base::android::JavaRef<jobject>& photo_capabilities);
 
-  // Implement org.chromium.media.VideoCapture.nativeOnPhotoTaken.
+  // Implement org.Cinaseek.media.VideoCapture.nativeOnPhotoTaken.
   void OnPhotoTaken(JNIEnv* env,
                     int64_t callback_id,
                     const base::android::JavaRef<jbyteArray>& data);
 
-  // Implement org.chromium.media.VideoCapture.nativeOnStarted.
+  // Implement org.Cinaseek.media.VideoCapture.nativeOnStarted.
   void OnStarted(JNIEnv* env);
 
   // Implement
-  // org.chromium.media.VideoCapture.nativeDCheckCurrentlyOnIncomingTaskRunner.
+  // org.Cinaseek.media.VideoCapture.nativeDCheckCurrentlyOnIncomingTaskRunner.
   void DCheckCurrentlyOnIncomingTaskRunner(JNIEnv* env);
 
   void ConfigureForTesting();

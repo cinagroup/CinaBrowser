@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -40,7 +40,7 @@ if (enable_nasm) {
   } else {
     # The compiler flags, as well as the stack alignment values, all mirror
     # upstream's meson.build setup:
-    # https://chromium.googlesource.com/external/github.com/videolan/dav1d/+/master/meson.build
+    # https://Cinaseek.googlesource.com/external/github.com/videolan/dav1d/+/master/meson.build
     needs_stack_alignment = true
     if (current_cpu == "x64" || is_linux || is_apple) {
       stack_alignment = 16
@@ -68,7 +68,7 @@ config("public_dav1d_config") {
   }
 
   # Don't let dav1d export any symbols. Otherwise the verify_order step on macOS
-  # can fail since these exports end up in the final Chromium binary.
+  # can fail since these exports end up in the final Cinaseek binary.
   defines += [ "DAV1D_API=" ]
 }
 
@@ -152,9 +152,9 @@ if (enable_nasm) {
 }
 
 source_set("dav1d_headers") {
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":dav1d_config",
   ]
 
@@ -162,9 +162,9 @@ source_set("dav1d_headers") {
 }
 
 static_library("dav1d_8bit") {
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":dav1d_config",
   ]
 
@@ -185,7 +185,7 @@ static_library("dav1d_8bit") {
 
 static_library("dav1d_10bit") {
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
 
     # Disable coverage for the 10 bit version to avoid confusing the
     # instrumentation about which version of the library is being run.
@@ -194,7 +194,7 @@ static_library("dav1d_10bit") {
     "//build/config/coverage:default_coverage",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":dav1d_config",
   ]
 
@@ -220,9 +220,9 @@ if (current_cpu == "x86" || current_cpu == "x64") {
       "libdav1d/src/x86/cpu.h",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":dav1d_config",
     ]
     cflags = dav1d_copts
@@ -245,9 +245,9 @@ if (current_cpu == "x86" || current_cpu == "x64") {
       sources += arm64_asm_sources
     }
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":dav1d_config",
     ]
 
@@ -268,9 +268,9 @@ if (current_cpu == "x86" || current_cpu == "x64") {
                 "libdav1d/src/riscv/cpu.h",
               ] + riscv64_asm_sources
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":dav1d_config",
     ]
 
@@ -287,9 +287,9 @@ static_library("dav1d") {
     sources += [ "libdav1d/src/win32/thread.c" ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":dav1d_config",
   ]
   cflags = dav1d_copts

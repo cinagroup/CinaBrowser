@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ const base::FilePath::CharType kDefaultAppOrderFileName[] =
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
     FILE_PATH_LITERAL("/usr/share/google-chrome/default_app_order.json");
 #else
-    FILE_PATH_LITERAL("/usr/share/chromium/default_app_order.json");
+    FILE_PATH_LITERAL("/usr/share/Cinaseek/default_app_order.json");
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 const base::FilePath::CharType kMachineHardwareInfoFileName[] =

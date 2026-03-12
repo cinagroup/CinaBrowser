@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class TimeTicks;
 // the user metrics system.
 
 // For best practices on deciding when to emit a user action, see
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/actions/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/actions/README.md
 
 // Record that the user performed an action.
 // This function must be called after the task runner has been set with

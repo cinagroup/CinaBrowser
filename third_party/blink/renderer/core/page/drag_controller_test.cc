@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -732,7 +732,7 @@ TEST_F(DragControllerTest,
   EXPECT_EQ("", drag_text_area->Value());
 }
 
-// https://issues.chromium.org/issues/379761996
+// https://issues.Cinaseek.org/issues/379761996
 TEST_F(DragControllerTest, ResumeCaretBlinkingAfterDrag) {
   SetBodyInnerHTML(R"HTML(
     <style>

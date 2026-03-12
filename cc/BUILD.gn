@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/sanitizers/sanitizers.gni")
@@ -1118,7 +1118,7 @@ cc_test("cc_perftests") {
     "//ui/gl:test_support",
   ]
 
-  # This target should not require the Chrome executable to run.
+  # This target should not require the Cinaseek executable to run.
   assert_no_deps = [ "//chrome" ]
 
   data = [ "//components/test/data/viz/" ]
@@ -1136,9 +1136,9 @@ if (is_android) {
 
   generate_jni("cc_jni_headers") {
     sources = [
-      "input/android/java/src/org/chromium/cc/input/BrowserControlsOffsetTagModifications.java",
-      "input/android/java/src/org/chromium/cc/input/BrowserControlsOffsetTags.java",
-      "input/android/java/src/org/chromium/cc/input/OffsetTag.java",
+      "input/android/java/src/org/Cinaseek/cc/input/BrowserControlsOffsetTagModifications.java",
+      "input/android/java/src/org/Cinaseek/cc/input/BrowserControlsOffsetTags.java",
+      "input/android/java/src/org/Cinaseek/cc/input/OffsetTag.java",
     ]
   }
 
@@ -1151,9 +1151,9 @@ if (is_android) {
     ]
 
     sources = [
-      "input/android/java/src/org/chromium/cc/input/BrowserControlsOffsetTagModifications.java",
-      "input/android/java/src/org/chromium/cc/input/BrowserControlsOffsetTags.java",
-      "input/android/java/src/org/chromium/cc/input/OffsetTag.java",
+      "input/android/java/src/org/Cinaseek/cc/input/BrowserControlsOffsetTagModifications.java",
+      "input/android/java/src/org/Cinaseek/cc/input/BrowserControlsOffsetTags.java",
+      "input/android/java/src/org/Cinaseek/cc/input/OffsetTag.java",
     ]
 
     deps = [

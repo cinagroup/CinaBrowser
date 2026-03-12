@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,11 +72,11 @@ class CanonicalURLRetrieverTest : public PlatformTest {
 // found and given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLDifferentFromVisible) {
   web::test::LoadHtml(
-      @"<link rel=\"canonical\" href=\"https://chromium.test\">",
-      GURL("https://m.chromium.test/"), web_state());
+      @"<link rel=\"canonical\" href=\"https://Cinaseek.test\">",
+      GURL("https://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
-  EXPECT_EQ("https://chromium.test/", url);
+  EXPECT_EQ("https://Cinaseek.test/", url);
   histogram_tester_.ExpectUniqueSample(
       ui_metrics::kCanonicalURLResultHistogram,
       ui_metrics::SUCCESS_CANONICAL_URL_DIFFERENT_FROM_VISIBLE, 1);
@@ -86,11 +86,11 @@ TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLDifferentFromVisible) {
 // found and given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLSameAsVisible) {
   web::test::LoadHtml(
-      @"<link rel=\"canonical\" href=\"https://chromium.test\">",
-      GURL("https://chromium.test/"), web_state());
+      @"<link rel=\"canonical\" href=\"https://Cinaseek.test\">",
+      GURL("https://Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
-  EXPECT_EQ("https://chromium.test/", url);
+  EXPECT_EQ("https://Cinaseek.test/", url);
   histogram_tester_.ExpectUniqueSample(
       ui_metrics::kCanonicalURLResultHistogram,
       ui_metrics::SUCCESS_CANONICAL_URL_SAME_AS_VISIBLE, 1);
@@ -100,7 +100,7 @@ TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLSameAsVisible) {
 // completion block.
 TEST_F(CanonicalURLRetrieverTest, TestNoCanonicalURLFound) {
   web::test::LoadHtml(@"No canonical link on this page.",
-                      GURL("https://m.chromium.test/"), web_state());
+                      GURL("https://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
   EXPECT_TRUE(url.is_empty());
@@ -112,8 +112,8 @@ TEST_F(CanonicalURLRetrieverTest, TestNoCanonicalURLFound) {
 // Validates that if the found canonical URL is invalid, an empty GURL is
 // given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestInvalidCanonicalFound) {
-  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"chromium\">",
-                      GURL("https://m.chromium.test/"), web_state());
+  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"Cinaseek\">",
+                      GURL("https://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
   EXPECT_TRUE(url.is_empty());
@@ -126,12 +126,12 @@ TEST_F(CanonicalURLRetrieverTest, TestInvalidCanonicalFound) {
 // to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestMultipleCanonicalURLsFound) {
   web::test::LoadHtml(
-      @"<link rel=\"canonical\" href=\"https://chromium.test\">"
-      @"<link rel=\"canonical\" href=\"https://chromium1.test\">",
-      GURL("https://m.chromium.test/"), web_state());
+      @"<link rel=\"canonical\" href=\"https://Cinaseek.test\">"
+      @"<link rel=\"canonical\" href=\"https://Cinaseek1.test\">",
+      GURL("https://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
-  EXPECT_EQ("https://chromium.test/", url);
+  EXPECT_EQ("https://Cinaseek.test/", url);
   histogram_tester_.ExpectUniqueSample(
       ui_metrics::kCanonicalURLResultHistogram,
       ui_metrics::SUCCESS_CANONICAL_URL_DIFFERENT_FROM_VISIBLE, 1);
@@ -140,8 +140,8 @@ TEST_F(CanonicalURLRetrieverTest, TestMultipleCanonicalURLsFound) {
 // Validates that if the visible and canonical URLs are http, an empty GURL is
 // given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLHTTP) {
-  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"http://chromium.test\">",
-                      GURL("http://m.chromium.test/"), web_state());
+  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"http://Cinaseek.test\">",
+                      GURL("http://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
   EXPECT_TRUE(url.is_empty());
@@ -154,8 +154,8 @@ TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLHTTP) {
 // empty GURL is given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLHTTPSUpgrade) {
   web::test::LoadHtml(
-      @"<link rel=\"canonical\" href=\"https://chromium.test\">",
-      GURL("http://m.chromium.test/"), web_state());
+      @"<link rel=\"canonical\" href=\"https://Cinaseek.test\">",
+      GURL("http://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
   EXPECT_TRUE(url.is_empty());
@@ -167,11 +167,11 @@ TEST_F(CanonicalURLRetrieverTest, TestCanonicalURLHTTPSUpgrade) {
 // Validates that if the visible URL is HTTPS but the canonical URL is HTTP, it
 // is found and given to the completion block.
 TEST_F(CanonicalURLRetrieverTest, TestCanonicalLinkHTTPSDowngrade) {
-  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"http://chromium.test\">",
-                      GURL("https://m.chromium.test/"), web_state());
+  web::test::LoadHtml(@"<link rel=\"canonical\" href=\"http://Cinaseek.test\">",
+                      GURL("https://m.Cinaseek.test/"), web_state());
 
   GURL url = RetrieveCanonicalUrl();
-  EXPECT_EQ("http://chromium.test/", url);
+  EXPECT_EQ("http://Cinaseek.test/", url);
   histogram_tester_.ExpectUniqueSample(
       ui_metrics::kCanonicalURLResultHistogram,
       ui_metrics::SUCCESS_CANONICAL_URL_NOT_HTTPS, 1);

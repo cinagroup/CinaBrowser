@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace ntp_tiles {
 // enums.xml.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.suggestions.tile
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.suggestions.tile
 enum class TileTitleSource {
   // The title might be invalid, aggregated, user-set, extracted from history,
   // not loaded or simply not known.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -818,7 +818,7 @@ TEST_F(SQLitePersistentCookieStoreTest, FilterBadCookiesAndFixupDb) {
                       {"sub.google.izzle", "E", "F", "/path"},
 
                       // A canonical cookie for another eTLD+1
-                      {"chromium.org", "G", "H", "/dir"}};
+                      {"Cinaseek.org", "G", "H", "/dir"}};
 
   int64_t creation_time = 1;
   base::Time last_update(base::Time::Now());
@@ -846,7 +846,7 @@ TEST_F(SQLitePersistentCookieStoreTest, FilterBadCookiesAndFixupDb) {
   CanonicalCookieVector cookies = CreateAndLoad(
       /*crypt_cookies=*/false, /*restore_old_session_cookies=*/false);
   ASSERT_EQ(1U, cookies.size());
-  EXPECT_STREQ("chromium.org", cookies[0]->Domain().c_str());
+  EXPECT_STREQ("Cinaseek.org", cookies[0]->Domain().c_str());
   EXPECT_STREQ("G", cookies[0]->Name().c_str());
   EXPECT_STREQ("H", cookies[0]->Value().c_str());
   EXPECT_STREQ("/dir", cookies[0]->Path().c_str());

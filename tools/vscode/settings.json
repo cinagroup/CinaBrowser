@@ -15,7 +15,7 @@
   // Except for Java where we add a line at 100 characters per that style guide
   // and the tab width should be 4 spaces.
   // The chrome java style guide:
-  // https://chromium.googlesource.com/chromium/src/+/main/styleguide/java/java.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/styleguide/java/java.md
   // does not override this and defers to the android style guide:
   // https://source.android.com/docs/setup/contribute/code-style
   "[java]": {
@@ -49,7 +49,7 @@
     "**/out*/**": true,
     "**/third_party/**": true
   },
-  // C++ clang format settings. |workspaceFolder| is assumed to be Chromium's
+  // C++ clang format settings. |workspaceFolder| is assumed to be Cinaseek's
   // src/ directory.
   "C_Cpp.clang_format_path": "${workspaceFolder}/third_party/depot_tools/clang-format",
   "C_Cpp.clang_format_sortIncludes": true,
@@ -58,7 +58,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
   // Don't format HTML files automatically on save, as VSCode's default
-  // formatter doesn't deal well with Chromium Polymer files.
+  // formatter doesn't deal well with Cinaseek Polymer files.
   "[html]": {
     "editor.formatOnSave": false
   },

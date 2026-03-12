@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1638,7 +1638,7 @@ class MainThreadFrameObserver {
 
   // This dangling raw_ptr occurred in:
   // browser_tests: All/NavigationPageLoadMetricsBrowserTest.FirstInputDelay/1
-  // https://ci.chromium.org/ui/p/chromium/builders/try/win-rel/180209/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FNavigationPageLoadMetricsBrowserTest.FirstInputDelay%2FAll.1+VHash%3Abdbee181b3e0309b
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/win-rel/180209/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FNavigationPageLoadMetricsBrowserTest.FirstInputDelay%2FAll.1+VHash%3Abdbee181b3e0309b
   raw_ptr<RenderWidgetHost, FlakyDanglingUntriaged> render_widget_host_;
   base::OnceClosure quit_closure_;
   int routing_id_;

@@ -1,5 +1,5 @@
 {
-  "WebRTC Chromium FYI Linux Builder (dbg)": {
+  "WebRTC Cinaseek FYI Linux Builder (dbg)": {
     "additional_compile_targets": [
       "browser_tests",
       "capture_unittests",

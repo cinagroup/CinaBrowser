@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace blink {
 // [1] https://dev.w3.org/2011/webrtc/editor/getusermedia.html#mediastreamtrack
 //
 // TODO(wuchengli): Add unit test. See the link below for reference.
-// https://src.chromium.org/viewvc/chrome/trunk/src/content/renderer/media/rtc_
+// https://src.Cinaseek.org/viewvc/chrome/trunk/src/content/renderer/media/rtc_
 // video_decoder_unittest.cc?revision=180591&view=markup
 class MODULES_EXPORT MediaStreamVideoRendererSink
     : public MediaStreamVideoRenderer,

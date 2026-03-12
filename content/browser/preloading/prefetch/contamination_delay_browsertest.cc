@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -224,7 +224,7 @@ IN_PROC_BROWSER_TEST_F(ContaminationDelayBrowserTest, IgnoresIfExempt) {
 
 #ifndef NDEBUG
 // TODO(http://crbug.com/404944178): This test is flaky on debug builds.
-// https://ci.chromium.org/ui/test/chromium/ninja%3A%2F%2Fcontent%2Ftest%3Acontent_browsertests%2FContaminationDelayBrowserTest.IgnoresIfExempt_BrowserInitiated
+// https://ci.Cinaseek.org/ui/test/Cinaseek/ninja%3A%2F%2Fcontent%2Ftest%3Acontent_browsertests%2FContaminationDelayBrowserTest.IgnoresIfExempt_BrowserInitiated
 #define MAYBE_IgnoresIfExempt_BrowserInitiated \
   DISABLED_IgnoresIfExempt_BrowserInitiated
 #else

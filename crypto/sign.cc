@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ bool CanUseKeyForSignatureKind(SignatureKind kind,
     case RSA_PSS_SHA384:
     case RSA_PSS_SHA512:
       // There exists an EVP_PKEY_RSA_PSS key type for RSA-PSS-specific keys,
-      // but BoringSSL doesn't implement it and Chromium doesn't use it.
+      // but BoringSSL doesn't implement it and Cinaseek doesn't use it.
       return id == EVP_PKEY_RSA;
     case ECDSA_SHA256:
       return id == EVP_PKEY_EC;

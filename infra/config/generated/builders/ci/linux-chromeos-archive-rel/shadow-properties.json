@@ -10,7 +10,7 @@
     "experiments": [],
     "output_local_strategy": "greedy",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 500
   }
 }

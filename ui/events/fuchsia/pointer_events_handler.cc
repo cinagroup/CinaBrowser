@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -422,7 +422,7 @@ void PointerEventsHandler::OnMouseSourceWatchResult(
                                   sample->scroll_h_physical_pixel() ||
                                   sample->scroll_v_physical_pixel();
       // Do not filterout mouse wheel here, because the wheel event may be
-      // bundled with button down and button up event. Chromium will need to
+      // bundled with button down and button up event. Cinaseek will need to
       // split it to 2 events.
       const bool is_button_event = changed_buttons != 0;
 

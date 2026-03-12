@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ class Bus;
 
 namespace ash {
 
-// A class to make DBus calls for the org.chromium.Spaced service.
+// A class to make DBus calls for the org.Cinaseek.Spaced service.
 class COMPONENT_EXPORT(SPACED_CLIENT) SpacedClient {
  public:
   class Observer : public base::CheckedObserver {

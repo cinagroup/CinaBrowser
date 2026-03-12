@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -296,7 +296,7 @@ CastNetworkContexts::CreateCookieManagerParams() {
   // Restrict cookie access to session only and block storage access for
   // domains not in the allowlist.
   // Note: storage access control depends on the feature |kStorageAccessAPI|
-  // which has not been enabled by default in chromium.
+  // which has not been enabled by default in Cinaseek.
   settings.push_back(CreateContentSetting(
       /*primary_pattern=*/"*",
       /*secondary_pattern=*/"*", ContentSetting::CONTENT_SETTING_SESSION_ONLY));

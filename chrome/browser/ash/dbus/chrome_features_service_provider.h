@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@ namespace ash {
 //
 // IsCrostiniEnabled:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.ChromeFeaturesService
-//     /org/chromium/ChromeFeaturesService
-//     org.chromium.ChromeFeaturesServiceInterface.IsCrostiniEnabled
+//     --dest=org.Cinaseek.ChromeFeaturesService
+//     /org/Cinaseek/ChromeFeaturesService
+//     org.Cinaseek.ChromeFeaturesServiceInterface.IsCrostiniEnabled
 //     string:"|user id hash|"
 //
 // % (If |user id hash| is set correctly, returns true if Crostini is enabled
@@ -34,9 +34,9 @@ namespace ash {
 //
 // IsPluginVmEnabled:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.ChromeFeaturesService
-//     /org/chromium/ChromeFeaturesService
-//     org.chromium.ChromeFeaturesServiceInterface.IsPluginVmEnabled
+//     --dest=org.Cinaseek.ChromeFeaturesService
+//     /org/Cinaseek/ChromeFeaturesService
+//     org.Cinaseek.ChromeFeaturesServiceInterface.IsPluginVmEnabled
 //     string:"|user id hash|"
 //
 // % (If |user id hash| is set correctly, returns true if Plugin VMs are enabled

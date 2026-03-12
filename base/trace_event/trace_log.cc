@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -429,7 +429,7 @@ void TraceLog::SetEnabled(const TraceConfig& trace_config) {
   if (trace_config.IsCategoryGroupEnabled("disabled-by-default-memory-infra")) {
     data_source = perfetto_config.add_data_sources();
     source_config = data_source->mutable_config();
-    source_config->set_name("org.chromium.memory_instrumentation");
+    source_config->set_name("org.Cinaseek.memory_instrumentation");
     source_config->set_target_buffer(0);
     source_chrome_config = source_config->mutable_chrome_config();
     source_chrome_config->set_trace_config(trace_config.ToString());

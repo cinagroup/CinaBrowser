@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ class EVENTS_EXPORT MotionEventAndroid : public MotionEvent {
   // TODO(crbug.com/41493853): Cleanup GetEventTime method to have same
   // semantics as Android side of MotionEvent.GetEventTime(). On Android side
   // GetEventTime() gives timestamp of the most recent input event, while in
-  // chromium it gives timestamp of the oldest input event for batched inputs.
+  // Cinaseek it gives timestamp of the oldest input event for batched inputs.
   base::TimeTicks GetEventTime() const override;
   base::TimeTicks GetLatestEventTime() const override;
   base::TimeTicks GetRawDownTime() const override;

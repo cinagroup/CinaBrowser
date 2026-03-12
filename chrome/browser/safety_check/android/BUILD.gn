@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckBridge.java",
   ]
 }
 
@@ -26,16 +26,16 @@ source_set("android") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/safety_check/PasswordsCheckPreferenceProperties.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckBridge.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckComponentUi.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckCoordinator.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckElementPreference.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckMediator.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckProperties.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckUpdatesDelegate.java",
-    "java/src/org/chromium/chrome/browser/safety_check/SafetyCheckViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/PasswordsCheckPreferenceProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckComponentUi.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckElementPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckUpdatesDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckViewBinder.java",
   ]
   deps = [
     ":java_resources",
@@ -74,13 +74,13 @@ android_library("java") {
     ":jni_headers",
     ":safety_check_enums",
   ]
-  resources_package = "org.chromium.chrome.browser.safety_check"
+  resources_package = "org.Cinaseek.chrome.browser.safety_check"
 }
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.safety_check"
-  sources = [ "javatests/src/org/chromium/chrome/browser/safety_check/SafetyCheckSettingsFragmentTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.safety_check"
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckSettingsFragmentTest.java" ]
   deps = [
     ":java",
     ":java_resources",
@@ -116,8 +116,8 @@ android_library("javatests") {
 
 robolectric_library("junit") {
   sources = [
-    "javatests/src/org/chromium/chrome/browser/safety_check/PasswordsCheckPreferencePropertiesTest.java",
-    "javatests/src/org/chromium/chrome/browser/safety_check/SafetyCheckMediatorTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/safety_check/PasswordsCheckPreferencePropertiesTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/safety_check/SafetyCheckMediatorTest.java",
   ]
   deps = [
     ":java",

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1965,7 +1965,7 @@ SANDBOX_TEST(SandboxBPF, DISABLE_ON_TSAN(SeccompRetTrace)) {
   }
 
 // This test is disabled on arm due to a kernel bug.
-// See https://code.google.com/p/chromium/issues/detail?id=383977
+// See https://code.google.com/p/Cinaseek/issues/detail?id=383977
 #if defined(__arm__) || defined(__aarch64__)
   printf("This test is currently disabled on ARM32/64 due to a kernel bug.");
 #elif defined(__mips__)

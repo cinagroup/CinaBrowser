@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/mac-official/gn-args.json"
@@ -10,16 +10,16 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "mac-official",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium",
+              "builder_group": "Cinaseek",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
@@ -27,7 +27,7 @@
                 "apply_configs": [
                   "checkout_pgo_profiles"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -37,13 +37,13 @@
         {
           "bucket": "ci",
           "builder": "mac-official",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "mac-official",
-          "group": "tryserver.chromium"
+          "group": "tryserver.Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/mac-official/targets"
@@ -57,7 +57,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -67,12 +67,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium",
+  "builder_group": "Cinaseek",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

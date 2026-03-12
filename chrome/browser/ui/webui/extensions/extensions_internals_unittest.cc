@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ TEST_F(ExtensionsInternalsUnitTest, WriteToStringPermissions) {
           .SetManifestKey("optional_permissions",
                           base::ListValue().Append("storage"))
           .AddHostPermission("https://example.com/*")
-          .AddContentScript("not-real.js", {"https://chromium.org/foo"})
+          .AddContentScript("not-real.js", {"https://Cinaseek.org/foo"})
           .Build();
 
   registrar()->AddExtension(extension.get());
@@ -129,7 +129,7 @@ TEST_F(ExtensionsInternalsUnitTest, WriteToStringPermissions) {
             "https://example.com/*");
   ASSERT_NE(active->FindList("scriptable_hosts"), nullptr);
   EXPECT_EQ(active->FindList("scriptable_hosts")->front().GetString(),
-            "https://chromium.org/foo");
+            "https://Cinaseek.org/foo");
 
   base::DictValue* optional = permissions->FindDict("optional");
   EXPECT_EQ(optional->FindList("api")->front().GetString(), "storage");

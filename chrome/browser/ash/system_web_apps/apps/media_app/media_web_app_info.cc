@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ constexpr FileHandlerConfig kFileHandlers[] = {
     {"image/tiff", ".arw,.cr2,.dng,.nef,.nrw,.orf,.raf,.rw2"},
 
     // More video formats; building on the video/* wildcard which doesn't
-    // actually catch very much due to hard-coded maps in Chromium. Again, the
+    // actually catch very much due to hard-coded maps in Cinaseek. Again, the
     // MIME type doesn't really matter. "video/mpeg" is used a catchall for
     // unknown mime types.
     {"video/ogg", ".ogv,.ogx,.ogm"},

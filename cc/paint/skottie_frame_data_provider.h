@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 
 namespace cc {
 
-// A Chromium-specific version of the skresources::ResourceProvider API, which
+// A Cinaseek-specific version of the skresources::ResourceProvider API, which
 // allows the code driving the animation to specify which image should be used
 // for each asset in each frame of the animation. Callers rendering Skottie
 // animations that may have images embedded in them must implement this API. In

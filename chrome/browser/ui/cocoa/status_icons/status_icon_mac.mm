@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 static const char kStatusItemControllerKey = 0;
 
 // This class bridges between the Objective-C API for status items and the C++
-// classes integrating with Chromium. Owned by the NSStatusBarButton as an
+// classes integrating with Cinaseek. Owned by the NSStatusBarButton as an
 // associated object with the key &kStatusItemControllerKey.
 @interface StatusItemController : NSObject
 // Designated initializer.

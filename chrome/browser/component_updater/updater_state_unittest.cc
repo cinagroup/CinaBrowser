@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace component_updater {
 
 class UpdaterStateTest : public testing::Test {};
 
-TEST_F(UpdaterStateTest, SerializeChromium) {
+TEST_F(UpdaterStateTest, SerializeCinaseek) {
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
   EXPECT_STREQ("0", UpdaterState::GetState(false).at("ismachine").c_str());
   EXPECT_STREQ("1", UpdaterState::GetState(true).at("ismachine").c_str());

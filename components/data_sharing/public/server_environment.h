@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace data_sharing {
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.data_sharing.server_environment)
+//   org.Cinaseek.components.data_sharing.server_environment)
 enum class ServerEnvironment { kProduction = 0, kStaging = 1, kAutopush = 2 };
 
 }  // namespace data_sharing

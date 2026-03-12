@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -200,7 +200,7 @@ BASE_DECLARE_FEATURE(kStructuredCloningForMessaging);
 
 // If enabled, APIs of the Telemetry Extension platform that have pending
 // approval will be enabled. Read more about the platform here:
-// https://chromium.googlesource.com/chromium/src/+/master/docs/telemetry_extension/README.md.
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/master/docs/telemetry_extension/README.md.
 BASE_DECLARE_FEATURE(kTelemetryExtensionPendingApprovalApi);
 
 // Used to control whether downloads initiated by `WebstoreInstaller` are marked

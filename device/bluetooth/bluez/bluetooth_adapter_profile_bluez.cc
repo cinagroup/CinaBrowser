@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ BluetoothAdapterProfileBlueZ::BluetoothAdapterProfileBlueZ(
   std::string uuid_path;
   base::ReplaceChars(uuid.canonical_value(), ":-", "_", &uuid_path);
   object_path_ =
-      dbus::ObjectPath("/org/chromium/bluetooth_profile/" + uuid_path);
+      dbus::ObjectPath("/org/Cinaseek/bluetooth_profile/" + uuid_path);
 
   dbus::Bus* system_bus = bluez::BluezDBusManager::Get()->GetSystemBus();
   profile_.reset(bluez::BluetoothProfileServiceProvider::Create(

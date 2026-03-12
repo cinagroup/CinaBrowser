@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -884,7 +884,7 @@ class AnchorElementInteractionViewportHeuristicsTest
 TEST_F(AnchorElementInteractionViewportHeuristicsTest, BasicTest) {
   // When this is enabled, host receives an additional PointerOver call that it
   // does not expect. This test should account for mouse hover over both active
-  // and inactive pages. https://issues.chromium.org/issues/488090081
+  // and inactive pages. https://issues.Cinaseek.org/issues/488090081
   ScopedSyntheticMouseHoverOverInactivePageForTest
       disable_synthetic_mouse_hover_over_inactive_page(false);
 
@@ -1042,7 +1042,7 @@ TEST_F(AnchorElementInteractionViewportHeuristicsTest,
        PointerDownImmediatelyAfterScroll) {
   // When this is enabled, host receives an additional PointerOver call that it
   // does not expect. This test should account for mouse hover over both active
-  // and inactive pages. https://issues.chromium.org/issues/488090081
+  // and inactive pages. https://issues.Cinaseek.org/issues/488090081
   ScopedSyntheticMouseHoverOverInactivePageForTest
       disable_synthetic_mouse_hover_over_inactive_page(false);
 
@@ -1089,7 +1089,7 @@ TEST_F(AnchorElementInteractionViewportHeuristicsTest,
        EagerHeuristicsTriggerForAnchorsInViewport) {
   // When this is enabled, host receives an additional PointerOver call that it
   // does not expect. This test should account for mouse hover over both active
-  // and inactive pages. https://issues.chromium.org/issues/488090081
+  // and inactive pages. https://issues.Cinaseek.org/issues/488090081
   ScopedSyntheticMouseHoverOverInactivePageForTest
       disable_synthetic_mouse_hover_over_inactive_page(false);
 
@@ -1128,7 +1128,7 @@ TEST_F(AnchorElementInteractionViewportHeuristicsTest,
        PredictorDisabledIfAllAnchorsNotSampledIn) {
   // When this is enabled, host receives an additional PointerOver call that it
   // does not expect. This test should account for mouse hover over both active
-  // and inactive pages. https://issues.chromium.org/issues/488090081
+  // and inactive pages. https://issues.Cinaseek.org/issues/488090081
   ScopedSyntheticMouseHoverOverInactivePageForTest
       disable_synthetic_mouse_hover_over_inactive_page(false);
 

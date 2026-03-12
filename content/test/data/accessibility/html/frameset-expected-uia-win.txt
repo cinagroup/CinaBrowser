@@ -7,7 +7,7 @@ Document
 ++++++++++Text Name='ABC'
 ++++++++Text Name=' '
 ++++++++Group IsControlElement=false
-++++++++++Text Name='Chrome'
+++++++++++Text Name='Cinaseek'
 ++++++++Text Name='!'
 ++Document IsControlElement=false
 ++++Document

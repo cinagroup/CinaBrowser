@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ class AwContents : public FindHelper::Listener,
   }
 
   // |handler| is an instance of
-  // org.chromium.android_webview.AwHttpAuthHandler.
+  // org.Cinaseek.android_webview.AwHttpAuthHandler.
   bool OnReceivedHttpAuthRequest(const base::android::JavaRef<jobject>& handler,
                                  const std::string& host,
                                  const std::string& realm);

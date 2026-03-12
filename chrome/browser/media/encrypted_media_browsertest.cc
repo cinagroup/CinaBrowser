@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@
 
 #if BUILDFLAG(ENABLE_LIBRARY_CDMS)
 const char kExternalClearKeyInitializeFailKeySystem[] =
-    "org.chromium.externalclearkey.initializefail";
+    "org.Cinaseek.externalclearkey.initializefail";
 #endif  // BUILDFLAG(ENABLE_LIBRARY_CDMS)
 
 // Sessions to load.
@@ -807,7 +807,7 @@ class ParameterizedEncryptedMediaTestBase : public EncryptedMediaTestBase {
 // 1. Only parameterized (*_P) tests can be used. Non-parameterized (*_F)
 // tests will crash at GetParam().
 // 2. For key systems backed by library CDMs, the latest CDM interface version
-// supported by both the CDM and Chromium will be used.
+// supported by both the CDM and Cinaseek will be used.
 class EncryptedMediaTest
     : public ParameterizedEncryptedMediaTestBase,
       public WithParamInterface<std::tuple<const char*, SrcType>> {

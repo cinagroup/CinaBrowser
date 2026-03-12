@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ void EchoAIProofreader::Proofread(
         pending_responder) {
   mojo::Remote<blink::mojom::ModelStreamingResponder> responder(
       std::move(pending_responder));
-  responder->OnStreaming("Model not available in Chromium\n" + input);
+  responder->OnStreaming("Model not available in Cinaseek\n" + input);
   responder->OnCompletion(/*context_info=*/nullptr);
 }
 
@@ -38,7 +38,7 @@ void EchoAIProofreader::GetCorrectionType(
         pending_responder) {
   mojo::Remote<blink::mojom::ModelStreamingResponder> responder(
       std::move(pending_responder));
-  responder->OnStreaming("Model not available in Chromium\n" + input);
+  responder->OnStreaming("Model not available in Cinaseek\n" + input);
   responder->OnCompletion(/*context_info=*/nullptr);
 }
 

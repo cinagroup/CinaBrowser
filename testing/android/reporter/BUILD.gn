@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,12 +6,12 @@ import("//build/config/android/rules.gni")
 
 android_library("reporter_java") {
   testonly = true
-  chromium_code = true
+  Cinaseek_code = true
 
   deps = [
     "//base:log_java",
     "//build/android/gtest_apk:native_test_instrumentation_test_runner_java",
   ]
 
-  sources = [ "java/src/org/chromium/test/reporter/TestStatusReporter.java" ]
+  sources = [ "java/src/org/Cinaseek/test/reporter/TestStatusReporter.java" ]
 }

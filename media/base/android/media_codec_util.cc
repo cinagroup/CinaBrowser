@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ constexpr char kDtseMimeType[] = "audio/vnd.dts;profile=lbr";
 constexpr char kDtsxP2MimeType[] = "audio/vnd.dts.uhd;profile=p2";
 }  // namespace
 
-static CodecProfileLevel MediaCodecProfileLevelToChromiumProfileLevel(
+static CodecProfileLevel MediaCodecProfileLevelToCinaseekProfileLevel(
     JNIEnv* env,
     const base::android::JavaRef<jobject>& j_codec_profile_level) {
   VideoCodec codec = static_cast<VideoCodec>(
@@ -257,7 +257,7 @@ void MediaCodecUtil::AddSupportedCodecProfileLevels(
       Java_MediaCodecUtil_getSupportedCodecProfileLevels(env));
   for (auto java_codec_profile_level :
        j_codec_profile_levels.ReadElements<jobject>()) {
-    result->push_back(MediaCodecProfileLevelToChromiumProfileLevel(
+    result->push_back(MediaCodecProfileLevelToCinaseekProfileLevel(
         env, java_codec_profile_level));
   }
 }

@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -297,12 +297,12 @@ static_library("remoting_lib_ps") {
     "$target_gen_dir/chromoting_lib_p.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
 
-    # Must be after no_chromium_code so the -Wno flags appear after the /W3
-    # added by no_chromium_code.
+    # Must be after no_Cinaseek_code so the -Wno flags appear after the /W3
+    # added by no_Cinaseek_code.
     ":MIDL_config",
   ]
 

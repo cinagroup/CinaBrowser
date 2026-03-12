@@ -1,9 +1,9 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 
 #include <string_view>
 #include <utility>
@@ -34,15 +34,15 @@ using std::string;
 
 namespace net {
 
-ProofVerifyDetailsChromium::ProofVerifyDetailsChromium() = default;
+ProofVerifyDetailsCinaseek::ProofVerifyDetailsCinaseek() = default;
 
-ProofVerifyDetailsChromium::~ProofVerifyDetailsChromium() = default;
+ProofVerifyDetailsCinaseek::~ProofVerifyDetailsCinaseek() = default;
 
-ProofVerifyDetailsChromium::ProofVerifyDetailsChromium(
-    const ProofVerifyDetailsChromium&) = default;
+ProofVerifyDetailsCinaseek::ProofVerifyDetailsCinaseek(
+    const ProofVerifyDetailsCinaseek&) = default;
 
-quic::ProofVerifyDetails* ProofVerifyDetailsChromium::Clone() const {
-  ProofVerifyDetailsChromium* other = new ProofVerifyDetailsChromium;
+quic::ProofVerifyDetails* ProofVerifyDetailsCinaseek::Clone() const {
+  ProofVerifyDetailsCinaseek* other = new ProofVerifyDetailsCinaseek;
   other->cert_verify_result = cert_verify_result;
   return other;
 }
@@ -50,9 +50,9 @@ quic::ProofVerifyDetails* ProofVerifyDetailsChromium::Clone() const {
 // A Job handles the verification of a single proof.  It is owned by the
 // quic::ProofVerifier. If the verification can not complete synchronously, it
 // will notify the quic::ProofVerifier upon completion.
-class ProofVerifierChromium::Job {
+class ProofVerifierCinaseek::Job {
  public:
-  Job(ProofVerifierChromium* proof_verifier,
+  Job(ProofVerifierCinaseek* proof_verifier,
       CertVerifier* cert_verifier,
       TransportSecurityState* transport_security_state,
       SCTAuditingDelegate* sct_auditing_delegate,
@@ -131,10 +131,10 @@ class ProofVerifierChromium::Job {
   // Must be before `cert_verifier_request_`, to avoid dangling pointer
   // warnings, as the Request may be storing a raw pointer to which may have a
   // raw_ptr to its `cert_verify_result`.
-  std::unique_ptr<ProofVerifyDetailsChromium> verify_details_;
+  std::unique_ptr<ProofVerifyDetailsCinaseek> verify_details_;
 
   // Proof verifier to notify when this jobs completes.
-  raw_ptr<ProofVerifierChromium> proof_verifier_;
+  raw_ptr<ProofVerifierCinaseek> proof_verifier_;
 
   // The underlying verifier used for verifying certificates.
   raw_ptr<CertVerifier> verifier_;
@@ -170,8 +170,8 @@ class ProofVerifierChromium::Job {
   NetLogWithSource net_log_;
 };
 
-ProofVerifierChromium::Job::Job(
-    ProofVerifierChromium* proof_verifier,
+ProofVerifierCinaseek::Job::Job(
+    ProofVerifierCinaseek* proof_verifier,
     CertVerifier* cert_verifier,
     TransportSecurityState* transport_security_state,
     SCTAuditingDelegate* sct_auditing_delegate,
@@ -189,7 +189,7 @@ ProofVerifierChromium::Job::Job(
   CHECK(transport_security_state_);
 }
 
-ProofVerifierChromium::Job::~Job() {
+ProofVerifierCinaseek::Job::~Job() {
   base::TimeTicks end_time = base::TimeTicks::Now();
   UMA_HISTOGRAM_TIMES("Net.QuicSession.VerifyProofTime",
                       end_time - start_time_);
@@ -200,7 +200,7 @@ ProofVerifierChromium::Job::~Job() {
   }
 }
 
-quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyProof(
+quic::QuicAsyncStatus ProofVerifierCinaseek::Job::VerifyProof(
     const string& hostname,
     const uint16_t port,
     const string& server_config,
@@ -224,7 +224,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyProof(
     return quic::QUIC_FAILURE;
   }
 
-  verify_details_ = std::make_unique<ProofVerifyDetailsChromium>();
+  verify_details_ = std::make_unique<ProofVerifyDetailsCinaseek>();
 
   // Converts |certs| to |cert_|.
   if (!GetX509Certificate(certs, error_details, verify_details))
@@ -245,7 +245,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyProof(
                     error_details, verify_details, std::move(callback));
 }
 
-quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyCertChain(
+quic::QuicAsyncStatus ProofVerifierCinaseek::Job::VerifyCertChain(
     const string& hostname,
     const uint16_t port,
     const std::vector<string>& certs,
@@ -266,7 +266,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyCertChain(
     return quic::QUIC_FAILURE;
   }
 
-  verify_details_ = std::make_unique<ProofVerifyDetailsChromium>();
+  verify_details_ = std::make_unique<ProofVerifyDetailsCinaseek>();
 
   // Converts |certs| to |cert_|.
   if (!GetX509Certificate(certs, error_details, verify_details))
@@ -276,7 +276,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyCertChain(
                     verify_details, std::move(callback));
 }
 
-bool ProofVerifierChromium::Job::GetX509Certificate(
+bool ProofVerifierCinaseek::Job::GetX509Certificate(
     const std::vector<string>& certs,
     std::string* error_details,
     std::unique_ptr<quic::ProofVerifyDetails>* verify_details) {
@@ -304,7 +304,7 @@ bool ProofVerifierChromium::Job::GetX509Certificate(
   return true;
 }
 
-quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyCert(
+quic::QuicAsyncStatus ProofVerifierCinaseek::Job::VerifyCert(
     const string& hostname,
     const uint16_t port,
     const std::string& ocsp_response,
@@ -332,7 +332,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::Job::VerifyCert(
   }
 }
 
-int ProofVerifierChromium::Job::DoLoop(int last_result) {
+int ProofVerifierCinaseek::Job::DoLoop(int last_result) {
   int rv = last_result;
   do {
     State state = next_state_;
@@ -355,11 +355,11 @@ int ProofVerifierChromium::Job::DoLoop(int last_result) {
   return rv;
 }
 
-void ProofVerifierChromium::Job::OnIOComplete(int result) {
+void ProofVerifierCinaseek::Job::OnIOComplete(int result) {
   int rv = DoLoop(result);
   if (rv != ERR_IO_PENDING) {
     std::unique_ptr<quic::ProofVerifierCallback> callback(std::move(callback_));
-    // Callback expects quic::ProofVerifyDetails not ProofVerifyDetailsChromium.
+    // Callback expects quic::ProofVerifyDetails not ProofVerifyDetailsCinaseek.
     std::unique_ptr<quic::ProofVerifyDetails> verify_details(
         std::move(verify_details_));
     callback->Run(rv == OK, error_details_, &verify_details);
@@ -368,19 +368,19 @@ void ProofVerifierChromium::Job::OnIOComplete(int result) {
   }
 }
 
-int ProofVerifierChromium::Job::DoVerifyCert(int result) {
+int ProofVerifierCinaseek::Job::DoVerifyCert(int result) {
   next_state_ = STATE_VERIFY_CERT_COMPLETE;
 
   return verifier_->Verify(
       CertVerifier::RequestParams(cert_, hostname_, cert_verify_flags_,
                                   ocsp_response_, cert_sct_),
       &verify_details_->cert_verify_result,
-      base::BindOnce(&ProofVerifierChromium::Job::OnIOComplete,
+      base::BindOnce(&ProofVerifierCinaseek::Job::OnIOComplete,
                      base::Unretained(this)),
       &cert_verifier_request_, net_log_);
 }
 
-bool ProofVerifierChromium::Job::ShouldAllowUnknownRootForHost(
+bool ProofVerifierCinaseek::Job::ShouldAllowUnknownRootForHost(
     const std::string& hostname) {
   if (proof_verifier_->hostnames_to_allow_unknown_roots_.contains("")) {
     return true;
@@ -388,7 +388,7 @@ bool ProofVerifierChromium::Job::ShouldAllowUnknownRootForHost(
   return proof_verifier_->hostnames_to_allow_unknown_roots_.contains(hostname);
 }
 
-int ProofVerifierChromium::Job::DoVerifyCertComplete(int result) {
+int ProofVerifierCinaseek::Job::DoVerifyCertComplete(int result) {
   base::UmaHistogramSparse("Net.QuicSession.CertVerificationResult", -result);
   verify_details_->cert_verify_net_error_for_metrics_only = result;
   cert_verifier_request_.reset();
@@ -448,7 +448,7 @@ int ProofVerifierChromium::Job::DoVerifyCertComplete(int result) {
   return result;
 }
 
-bool ProofVerifierChromium::Job::VerifySignature(
+bool ProofVerifierCinaseek::Job::VerifySignature(
     const string& signed_data,
     quic::QuicTransportVersion quic_version,
     std::string_view chlo_hash,
@@ -498,7 +498,7 @@ bool ProofVerifierChromium::Job::VerifySignature(
   return true;
 }
 
-ProofVerifierChromium::ProofVerifierChromium(
+ProofVerifierCinaseek::ProofVerifierCinaseek(
     CertVerifier* cert_verifier,
     TransportSecurityState* transport_security_state,
     SCTAuditingDelegate* sct_auditing_delegate,
@@ -513,9 +513,9 @@ ProofVerifierChromium::ProofVerifierChromium(
   DCHECK(transport_security_state_);
 }
 
-ProofVerifierChromium::~ProofVerifierChromium() = default;
+ProofVerifierCinaseek::~ProofVerifierCinaseek() = default;
 
-quic::QuicAsyncStatus ProofVerifierChromium::VerifyProof(
+quic::QuicAsyncStatus ProofVerifierCinaseek::VerifyProof(
     const std::string& hostname,
     const uint16_t port,
     const std::string& server_config,
@@ -533,11 +533,11 @@ quic::QuicAsyncStatus ProofVerifierChromium::VerifyProof(
     *error_details = "Missing context";
     return quic::QUIC_FAILURE;
   }
-  const ProofVerifyContextChromium* chromium_context =
-      reinterpret_cast<const ProofVerifyContextChromium*>(verify_context);
+  const ProofVerifyContextCinaseek* Cinaseek_context =
+      reinterpret_cast<const ProofVerifyContextCinaseek*>(verify_context);
   std::unique_ptr<Job> job = std::make_unique<Job>(
       this, cert_verifier_, transport_security_state_, sct_auditing_delegate_,
-      chromium_context->cert_verify_flags, chromium_context->net_log);
+      Cinaseek_context->cert_verify_flags, Cinaseek_context->net_log);
   quic::QuicAsyncStatus status = job->VerifyProof(
       hostname, port, server_config, quic_version, chlo_hash, certs, cert_sct,
       signature, error_details, verify_details, std::move(callback));
@@ -548,7 +548,7 @@ quic::QuicAsyncStatus ProofVerifierChromium::VerifyProof(
   return status;
 }
 
-quic::QuicAsyncStatus ProofVerifierChromium::VerifyCertChain(
+quic::QuicAsyncStatus ProofVerifierCinaseek::VerifyCertChain(
     const std::string& hostname,
     const uint16_t port,
     const std::vector<std::string>& certs,
@@ -563,11 +563,11 @@ quic::QuicAsyncStatus ProofVerifierChromium::VerifyCertChain(
     *error_details = "Missing context";
     return quic::QUIC_FAILURE;
   }
-  const ProofVerifyContextChromium* chromium_context =
-      reinterpret_cast<const ProofVerifyContextChromium*>(verify_context);
+  const ProofVerifyContextCinaseek* Cinaseek_context =
+      reinterpret_cast<const ProofVerifyContextCinaseek*>(verify_context);
   std::unique_ptr<Job> job = std::make_unique<Job>(
       this, cert_verifier_, transport_security_state_, sct_auditing_delegate_,
-      chromium_context->cert_verify_flags, chromium_context->net_log);
+      Cinaseek_context->cert_verify_flags, Cinaseek_context->net_log);
   quic::QuicAsyncStatus status =
       job->VerifyCertChain(hostname, port, certs, ocsp_response, cert_sct,
                            error_details, verify_details, std::move(callback));
@@ -579,12 +579,12 @@ quic::QuicAsyncStatus ProofVerifierChromium::VerifyCertChain(
 }
 
 std::unique_ptr<quic::ProofVerifyContext>
-ProofVerifierChromium::CreateDefaultContext() {
-  return std::make_unique<ProofVerifyContextChromium>(0,
+ProofVerifierCinaseek::CreateDefaultContext() {
+  return std::make_unique<ProofVerifyContextCinaseek>(0,
                                                       net::NetLogWithSource());
 }
 
-void ProofVerifierChromium::OnJobComplete(Job* job) {
+void ProofVerifierCinaseek::OnJobComplete(Job* job) {
   active_jobs_.erase(job);
 }
 

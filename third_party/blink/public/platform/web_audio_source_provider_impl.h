@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -129,7 +129,7 @@ class BLINK_PLATFORM_EXPORT WebAudioSourceProviderImpl
 
   // This dangling raw_ptr occurred in:
   // blink_unittests: WebMediaPlayerImplTest.MediaPositionState_Playing
-  // https://ci.chromium.org/ui/p/chromium/builders/try/win-rel/237451/test-results?q=ExactID%3Aninja%3A%2F%2Fthird_party%2Fblink%2Frenderer%2Fcontroller%3Ablink_unittests%2FWebMediaPlayerImplTest.MediaPositionState_Playing+VHash%3Abfecf1e29c759a1c
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/win-rel/237451/test-results?q=ExactID%3Aninja%3A%2F%2Fthird_party%2Fblink%2Frenderer%2Fcontroller%3Ablink_unittests%2FWebMediaPlayerImplTest.MediaPositionState_Playing+VHash%3Abfecf1e29c759a1c
   const raw_ptr<media::MediaLog, FlakyDanglingUntriaged> media_log_;
 
   base::OnceClosure on_set_client_callback_;

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_executor.h"
 #include "services/data_decoder/xml_parser.h"
-#include "third_party/libxml/chromium/libxml_utils.h"
+#include "third_party/libxml/Cinaseek/libxml_utils.h"
 
 namespace {
 

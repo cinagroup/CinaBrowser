@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -191,7 +191,7 @@ TEST_F(TracingServiceTest, PerfettoClientConsumer) {
   MockProducer producer;
   base::RunLoop on_producer_connected;
   producer.Connect(perfetto_service(),
-                   std::string("org.chromium-") + base::NumberToString(pid));
+                   std::string("org.Cinaseek-") + base::NumberToString(pid));
   EXPECT_CALL(producer, OnConnect())
       .WillOnce(
           base::test::RunOnceClosure(on_producer_connected.QuitClosure()));
@@ -402,7 +402,7 @@ TEST_F(TracingServiceTest, TraceToFile) {
   MockProducer producer;
   base::RunLoop on_producer_connected;
   producer.Connect(perfetto_service(),
-                   std::string("org.chromium-") + base::NumberToString(pid));
+                   std::string("org.Cinaseek-") + base::NumberToString(pid));
   EXPECT_CALL(producer, OnConnect())
       .WillOnce(
           base::test::RunOnceClosure(on_producer_connected.QuitClosure()));

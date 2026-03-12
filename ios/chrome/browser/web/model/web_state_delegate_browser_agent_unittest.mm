@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -170,7 +170,7 @@ TEST_F(WebStateDelegateBrowserAgentTest, OpenURLCurrentTab) {
 // the WebState's OverlayRequestQueue at OverlayModality::kWebContentArea.
 TEST_F(WebStateDelegateBrowserAgentTest, OnAuthRequired) {
   NSURLProtectionSpace* protection_space =
-      [[NSURLProtectionSpace alloc] initWithProxyHost:@"http://chromium.test"
+      [[NSURLProtectionSpace alloc] initWithProxyHost:@"http://Cinaseek.test"
                                                  port:0
                                                  type:nil
                                                 realm:nil
@@ -205,7 +205,7 @@ TEST_F(WebStateDelegateBrowserAgentTest, GetJavaScriptDialogPresenter) {
   EXPECT_TRUE(presenter);
 
   // Present a JavaScript alert.
-  GURL kOriginUrl("http://chromium.test");
+  GURL kOriginUrl("http://Cinaseek.test");
   presenter->RunJavaScriptAlertDialog(
       web_state, url::Origin::Create(kOriginUrl), @"", base::DoNothing());
 

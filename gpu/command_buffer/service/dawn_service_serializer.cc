@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ DawnServiceSerializer::CommandBuffer::~CommandBuffer() = default;
 
 // Thread local boolean used to determine whether a thread is still recording
 // data. We need to use thread_local here because the calling thread might not
-// be a Dawn/Chromium managed thread, i.e. a Metal thread.
+// be a Dawn/Cinaseek managed thread, i.e. a Metal thread.
 static constinit thread_local bool current_thread_pending_flush = false;
 
 DawnServiceSerializer::DawnServiceSerializer(DecoderClient* client)

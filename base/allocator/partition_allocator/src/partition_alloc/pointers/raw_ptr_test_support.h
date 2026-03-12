@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 // to the `CountersMatch()` matcher.
 //
 // TODO(tsepez): Although we only want one kind of these, the class is still
-// a template to circumvent the chromium-style out-of-line constructor rule.
+// a template to circumvent the Cinaseek-style out-of-line constructor rule.
 // Adding such a constructor would make this no longer be an aggregate and
 // that would prohibit designated initiaizers.
 template <int IGNORE>

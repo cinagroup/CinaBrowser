@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -228,7 +228,7 @@ constexpr char kPolicySettingWithEntriesMatchingMultipleDevices[] = R"(
         "urls": ["https://www.youtube.com"]
       }, {
         "devices": [{}],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -243,8 +243,8 @@ TEST_F(UsbPolicyAllowedDevicesTest, IsDeviceAllowed) {
   const auto kGoogleOrigin = url::Origin::Create(GURL("https://google.com"));
   const auto kYoutubeOrigin =
       url::Origin::Create(GURL("https://www.youtube.com"));
-  const auto kChromiumOrigin =
-      url::Origin::Create(GURL("https://chromium.org"));
+  const auto kCinaseekOrigin =
+      url::Origin::Create(GURL("https://Cinaseek.org"));
 
   auto specific_device_info = device_manager_.CreateAndAddDevice(
       1234, 5678, "Google", "Gizmo", "123ABC");
@@ -271,13 +271,13 @@ TEST_F(UsbPolicyAllowedDevicesTest, IsDeviceAllowed) {
   EXPECT_FALSE(usb_policy_allowed_devices->IsDeviceAllowed(
       kYoutubeOrigin, *unrelated_device_info));
 
-  // Check that any device is allowed for https://chromium.org.
+  // Check that any device is allowed for https://Cinaseek.org.
   EXPECT_TRUE(usb_policy_allowed_devices->IsDeviceAllowed(
-      kChromiumOrigin, *specific_device_info));
-  EXPECT_TRUE(usb_policy_allowed_devices->IsDeviceAllowed(kChromiumOrigin,
+      kCinaseekOrigin, *specific_device_info));
+  EXPECT_TRUE(usb_policy_allowed_devices->IsDeviceAllowed(kCinaseekOrigin,
                                                           *vendor_device_info));
   EXPECT_TRUE(usb_policy_allowed_devices->IsDeviceAllowed(
-      kChromiumOrigin, *unrelated_device_info));
+      kCinaseekOrigin, *unrelated_device_info));
 }
 
 TEST_F(UsbPolicyAllowedDevicesTest, IsDeviceAllowedForUrlsNotInPref) {
@@ -289,7 +289,7 @@ TEST_F(UsbPolicyAllowedDevicesTest, IsDeviceAllowedForUrlsNotInPref) {
   const url::Origin origins[] = {
       url::Origin::Create(GURL("https://evil.com")),
       url::Origin::Create(GURL("https://very.evil.com")),
-      url::Origin::Create(GURL("https://chromium.deceptive.org"))};
+      url::Origin::Create(GURL("https://Cinaseek.deceptive.org"))};
 
   auto device_info = device_manager_.CreateAndAddDevice(1234, 5678, "Google",
                                                         "Gizmo", "123ABC");

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -726,7 +726,7 @@ HRESULT MediaFoundationRenderer::CreateMediaEngine(
       creation_flags, creation_attributes.Get(), &mf_media_engine_));
 
   // The Media Foundation Media Engine has an initial playback rate of 1.0, but
-  // chromium uses an initial playback rate of 0.0. The Media Engine's topology
+  // Cinaseek uses an initial playback rate of 0.0. The Media Engine's topology
   // may not be completely loaded at this point - so we use
   // SetDefaultPlaybackRate as using SetPlaybackRate may be overwritten while
   // the topology is loading.

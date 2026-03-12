@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -344,7 +344,7 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_Basic) {
       Do Not Edit! -->
       <DL>
       <DT><A HREF="https://www.google.com/" ADD_DATE="904914000">Google</A>
-      <DT><A HREF="https://www.chromium.org/">Chromium</A>
+      <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>
       </DL>)");
   EXPECT_EQ(GetNumberOfBookmarksImported(), 2);
   const base::Time import_end_time = base::Time::Now();
@@ -359,7 +359,7 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_Basic) {
                             base::Time::FromSecondsSinceUnixEpoch(904914000)),
               // No timestamp maps to current time, within the import time.
               IsUrlBookmarkWithinTimeRange(
-                  u"Chromium", GURL("https://www.chromium.org/"),
+                  u"Cinaseek", GURL("https://www.Cinaseek.org/"),
                   import_start_time, import_end_time)))));
   EXPECT_EQ(GetReadingListModel().size(), 0u);
 
@@ -382,7 +382,7 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_NoTopLevelDL) {
       It will be read and overwritten.
       Do Not Edit! -->
       <DT><A HREF="https://www.google.com/" ADD_DATE="904914000">Google</A>
-      <DT><A HREF="https://www.chromium.org/">Chromium</A>)");
+      <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>)");
   const base::Time import_end_time = base::Time::Now();
   EXPECT_EQ(GetNumberOfBookmarksImported(), 2);
 
@@ -395,7 +395,7 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_NoTopLevelDL) {
               IsUrlBookmark(u"Google", GURL("https://www.google.com/"),
                             base::Time::FromSecondsSinceUnixEpoch(904914000)),
               IsUrlBookmarkWithinTimeRange(
-                  u"Chromium", GURL("https://www.chromium.org/"),
+                  u"Cinaseek", GURL("https://www.Cinaseek.org/"),
                   import_start_time, import_end_time)))));
 
   EXPECT_EQ(GetReadingListModel().size(), 0u);
@@ -516,8 +516,8 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_MiscJunk) {
       <DT><A>Google</A>
       <DT><H3>Folder 1</H3>
       <DL><p>
-        <DT><A HREF="https://www.chromium.org/">Chromium</A>
-        ICON_URI="https://www.chromium.org/favicon.ico"
+        <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>
+        ICON_URI="https://www.Cinaseek.org/favicon.ico"
         <DT><A HREF="https://www.example.org/" ADD_DATE="Last Tuesday">Example</A>
         <DT><A>Google Reader</A>
       </DL><p>
@@ -543,7 +543,7 @@ TEST_F(StablePortabilityDataImporterTest, Bookmarks_MiscJunk) {
                        // entries. Ensure the valid ones are preserved.
                        ElementsAre(
                            IsUrlBookmarkWithinTimeRange(
-                               u"Chromium", GURL("https://www.chromium.org/"),
+                               u"Cinaseek", GURL("https://www.Cinaseek.org/"),
                                import_start_time, import_end_time),
                            IsUrlBookmarkWithinTimeRange(
                                u"Example", GURL("https://www.example.org/"),
@@ -609,8 +609,8 @@ TEST_F(StablePortabilityDataImporterTest, History_Basic) {
         "synced": true
       },
       {
-        "url": "https://www.chromium.org/",
-        "title": "Chromium",
+        "url": "https://www.Cinaseek.org/",
+        "title": "Cinaseek",
         "visit_time_unix_epoch_usec": 1674205260000000
       }
     ]
@@ -631,8 +631,8 @@ TEST_F(StablePortabilityDataImporterTest, History_Basic) {
                                base::Microseconds(1674205200000000));
 
   history::URLResult expected_row2;
-  expected_row2.set_url(GURL("https://www.chromium.org/"));
-  expected_row2.set_title(u"Chromium");
+  expected_row2.set_url(GURL("https://www.Cinaseek.org/"));
+  expected_row2.set_title(u"Cinaseek");
   expected_row2.set_visit_count(1);
   expected_row2.set_typed_count(0);
   expected_row2.set_last_visit(base::Time::UnixEpoch() +
@@ -781,8 +781,8 @@ TEST_F(StablePortabilityDataImporterTest, History_MixedValidAndInvalid) {
         "title": "Invalid Entry, no URL"
       },
       {
-        "url": "https://www.chromium.org/",
-        "title": "Chromium",
+        "url": "https://www.Cinaseek.org/",
+        "title": "Cinaseek",
         "visit_time_unix_epoch_usec": 1674205260000000
       }
     ]
@@ -803,8 +803,8 @@ TEST_F(StablePortabilityDataImporterTest, History_MixedValidAndInvalid) {
                                base::Microseconds(1674205200000000));
 
   history::URLResult expected_row2;
-  expected_row2.set_url(GURL("https://www.chromium.org/"));
-  expected_row2.set_title(u"Chromium");
+  expected_row2.set_url(GURL("https://www.Cinaseek.org/"));
+  expected_row2.set_title(u"Cinaseek");
   expected_row2.set_visit_count(1);
   expected_row2.set_typed_count(0);
   expected_row2.set_last_visit(base::Time::UnixEpoch() +

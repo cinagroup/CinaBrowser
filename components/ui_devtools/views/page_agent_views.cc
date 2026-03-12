@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ void AddFrameResources(
   for (const auto& source : all_sources) {
     frame_resources->emplace_back(
         protocol::Page::FrameResource::create()
-            .setUrl(kChromiumCodeSearchSrcURL + source)
+            .setUrl(kCinaseekCodeSearchSrcURL + source)
             .setType("Document")
             .setMimeType("text/x-c++hdr")
             .build());
@@ -75,7 +75,7 @@ protocol::Response PageAgentViews::getResourceTree(
   std::unique_ptr<protocol::Page::Frame> frame_object =
       protocol::Page::Frame::create()
           .setId("1")
-          .setUrl(kChromiumCodeSearchURL)
+          .setUrl(kCinaseekCodeSearchURL)
           .build();
   auto subresources =
       std::make_unique<protocol::Array<protocol::Page::FrameResource>>();

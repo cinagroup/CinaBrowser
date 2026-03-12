@@ -33,12 +33,12 @@
             {
               "children": [
                 {
-                  "name": "Chromium",
-                  "url": "chromium.org"
+                  "name": "Cinaseek",
+                  "url": "Cinaseek.org"
                 },
                 {
-                  "name": "Chromium Developers",
-                  "url": "dev.chromium.org"
+                  "name": "Cinaseek Developers",
+                  "url": "dev.Cinaseek.org"
                 }
               ],
               "name": "Chrome links"
@@ -59,12 +59,12 @@
               {
                 "children": [
                   {
-                    "name": "Chromium",
-                    "url": "http://chromium.org/"
+                    "name": "Cinaseek",
+                    "url": "http://Cinaseek.org/"
                   },
                   {
-                    "name": "Chromium Developers",
-                    "url": "http://dev.chromium.org/"
+                    "name": "Cinaseek Developers",
+                    "url": "http://dev.Cinaseek.org/"
                   }
                 ],
                 "name": "Chrome links"

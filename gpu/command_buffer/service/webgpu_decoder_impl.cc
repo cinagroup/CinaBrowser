@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1299,10 +1299,10 @@ ContextResult WebGPUDecoderImpl::Initialize(
 
 bool WebGPUDecoderImpl::IsFeatureExposed(wgpu::FeatureName feature) const {
   switch (feature) {
-    case wgpu::FeatureName::ChromiumExperimentalTimestampQueryInsidePasses:
+    case wgpu::FeatureName::CinaseekExperimentalTimestampQueryInsidePasses:
     case wgpu::FeatureName::MultiDrawIndirect:
     case wgpu::FeatureName::SharedBufferMemoryD3D12Resource:
-    case wgpu::FeatureName::ChromiumExperimentalSubgroupMatrix:
+    case wgpu::FeatureName::CinaseekExperimentalSubgroupMatrix:
       return safety_level_ == webgpu::SafetyLevel::kUnsafe;
     case wgpu::FeatureName::AdapterPropertiesD3D:
     case wgpu::FeatureName::AdapterPropertiesVk:
@@ -1821,9 +1821,9 @@ wgpu::Adapter WebGPUDecoderImpl::CreatePreferredAdapter(
           wgpu::FeatureName::SharedTextureMemoryAHardwareBuffer);
     }
 #else
-    // Chromium is in the midst of being transitioned to SharedTextureMemory
+    // Cinaseek is in the midst of being transitioned to SharedTextureMemory
     // platform by platform. On platforms that have not yet been transitioned,
-    // Chromium uses the platform-specific ExternalImage API surfaces.  NOTE:
+    // Cinaseek uses the platform-specific ExternalImage API surfaces.  NOTE:
     // These platforms should be switched to the corresponding
     // SharedTextureMemory feature check as they are converted to using
     // SharedTextureMemory.

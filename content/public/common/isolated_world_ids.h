@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,6 +21,6 @@ enum IsolatedWorldIDs : int32_t {
   // via RenderFrameImpl::OnJavaScriptExecuteRequestInIsolatedWorld update this.
   ISOLATED_WORLD_ID_MAX = ISOLATED_WORLD_ID_CONTENT_END + 10,
 };
-// LINT.ThenChange(//content/public/android/java/src/org/chromium/content_public/common/IsolatedWorldIds.java)
+// LINT.ThenChange(//content/public/android/java/src/org/Cinaseek/content_public/common/IsolatedWorldIds.java)
 }  // namespace content
 #endif  // CONTENT_PUBLIC_COMMON_ISOLATED_WORLD_IDS_H_

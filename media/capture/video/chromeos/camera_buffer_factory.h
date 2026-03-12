@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,13 +41,13 @@ class CAPTURE_EXPORT CameraBufferFactory {
       gfx::BufferUsage usage,
       const gfx::ColorSpace& color_space = gfx::ColorSpace());
 
-  virtual ChromiumPixelFormat ResolveStreamBufferFormat(
+  virtual CinaseekPixelFormat ResolveStreamBufferFormat(
       cros::mojom::HalPixelFormat hal_format,
       gfx::BufferUsage usage);
 
  private:
   std::map<std::pair<cros::mojom::HalPixelFormat, gfx::BufferUsage>,
-           ChromiumPixelFormat>
+           CinaseekPixelFormat>
       resolved_format_usages_;
 };
 

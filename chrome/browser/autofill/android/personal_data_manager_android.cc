@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -650,7 +650,7 @@ PersonalDataManagerAndroid::GetIbansForSettings(JNIEnv* env) {
     j_ibans_list.push_back(CreateJavaIbanFromNative(env, *iban));
   }
   ScopedJavaLocalRef<jclass> type = base::android::GetClass(
-      env, "org/chromium/chrome/browser/autofill/PersonalDataManager$Iban");
+      env, "org/Cinaseek/chrome/browser/autofill/PersonalDataManager$Iban");
   return base::android::ToTypedJavaArrayOfObjects(env, j_ibans_list,
                                                   type.obj());
 }
@@ -690,7 +690,7 @@ PersonalDataManagerAndroid::GetMaskedBankAccounts(JNIEnv* env) {
                                                               bank_account);
                      });
   ScopedJavaLocalRef<jclass> type = base::android::GetClass(
-      env, "org/chromium/components/autofill/payments/BankAccount");
+      env, "org/Cinaseek/components/autofill/payments/BankAccount");
   return base::android::ToTypedJavaArrayOfObjects(env, j_bank_accounts_list,
                                                   type.obj());
 }
@@ -759,7 +759,7 @@ PersonalDataManagerAndroid::GetBnplIssuersForSettings(JNIEnv* env) {
                            env, bnpl_issuer);
                      });
   ScopedJavaLocalRef<jclass> type = base::android::GetClass(
-      env, "org/chromium/components/autofill/payments/BnplIssuerForSettings");
+      env, "org/Cinaseek/components/autofill/payments/BnplIssuerForSettings");
   return base::android::ToTypedJavaArrayOfObjects(env, jbnpl_issuers_list,
                                                   type.obj());
 }

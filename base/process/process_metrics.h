@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ struct ProcessMemoryInfo {
 // To obtain consistent memory metrics, use the memory_instrumentation service.
 //
 // For further documentation on memory, see
-// https://chromium.googlesource.com/chromium/src/+/HEAD/docs/README.md#Memory
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/README.md#Memory
 class BASE_EXPORT ProcessMetrics {
  public:
   ProcessMetrics(const ProcessMetrics&) = delete;

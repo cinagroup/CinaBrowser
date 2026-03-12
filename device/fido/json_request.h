@@ -1,7 +1,7 @@
 #ifndef DEVICE_FIDO_JSON_REQUEST_H_
 #define DEVICE_FIDO_JSON_REQUEST_H_
 
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -246,7 +246,7 @@ void MaskWebSocketFramePayload(const WebSocketMaskingKey& masking_key,
     // This is not quite standard-compliant C++. However, the standard-compliant
     // equivalent (using memcpy()) compiles to slower code using g++. In
     // practice, this will work for the compilers and architectures currently
-    // supported by Chromium, and the tests are extremely unlikely to pass if a
+    // supported by Cinaseek, and the tests are extremely unlikely to pass if a
     // future compiler/architecture breaks it.
     *reinterpret_cast<PackedMaskType*>(aligned.data()) ^= packed_mask_key;
     aligned = aligned.subspan(kPackedMaskKeySize);

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -55,13 +55,13 @@ if (is_android) {
     executable = "run_benchmark"
     wrapper_script = "$root_build_dir/bin/run_benchmark"
     executable_args = [
-      "--chromium-output-directory",
+      "--Cinaseek-output-directory",
       "@WrappedPath(.)",
     ]
   }
 }
 
-# Group for running benchmarks without building Chrome.
+# Group for running benchmarks without building Cinaseek.
 group("perf_without_chrome") {
   testonly = true
   data_deps = [

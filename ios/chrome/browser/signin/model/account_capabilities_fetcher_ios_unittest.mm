@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@
 
 namespace {
 
-const char kTestEmail[] = "janedoe@chromium.org";
+const char kTestEmail[] = "janedoe@Cinaseek.org";
 
 void CheckCapability(signin::Tribool capability_expected,
                      const CoreAccountId& account_id,

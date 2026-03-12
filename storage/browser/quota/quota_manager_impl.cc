@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -927,7 +927,7 @@ QuotaManagerImpl::QuotaManagerImpl(
     db_runner_ = base::ThreadPool::CreateSequencedTaskRunner(traits);
   } else {
     // Note that this path is not quite what's actually used by the database,
-    // but all it needs is to be unique relative to all other Chromium features.
+    // but all it needs is to be unique relative to all other Cinaseek features.
     db_runner_ = base::ThreadPool::CreateSequencedTaskRunnerForResource(
         traits, profile_path_.AppendASCII(QuotaDatabase::kDatabaseName));
   }

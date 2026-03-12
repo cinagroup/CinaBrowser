@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ class NET_EXPORT URLRequestContext final {
   const HttpNetworkSessionContext* GetNetworkSessionContext() const;
 
 #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX)
-  // This function should not be used in Chromium, please use the version with
+  // This function should not be used in Cinaseek, please use the version with
   // NetworkTrafficAnnotationTag in the future.
   //
   // The unannotated method is not available on desktop Linux + Windows. It's

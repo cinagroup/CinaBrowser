@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace content {
 namespace {
 
 constexpr char kResponsePrefix[] =
-    "On-device model is not available in Chromium, this API is just echoing "
+    "On-device model is not available in Cinaseek, this API is just echoing "
     "back the input:\n";
 // Trigger prefix for generating mock tool calls in tests.
 // When input starts with this prefix, the echo model will generate tool calls

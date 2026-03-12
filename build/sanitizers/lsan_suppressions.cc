@@ -1,11 +1,11 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file contains the default suppressions for LeakSanitizer.
 // You can also pass additional suppressions via LSAN_OPTIONS:
 // LSAN_OPTIONS=suppressions=/path/to/suppressions. Please refer to
-// http://dev.chromium.org/developers/testing/leaksanitizer for more info.
+// http://dev.Cinaseek.org/developers/testing/leaksanitizer for more info.
 
 #include "build/build_config.h"
 
@@ -13,7 +13,7 @@
 
 // Please make sure the code below declares a single string variable
 // kLSanDefaultSuppressions which contains LSan suppressions delimited by
-// newlines. See http://dev.chromium.org/developers/testing/leaksanitizer
+// newlines. See http://dev.Cinaseek.org/developers/testing/leaksanitizer
 // for the instructions on writing suppressions.
 char kLSanDefaultSuppressions[] =
     // Intentional leak used as sanity test for Valgrind/memcheck.
@@ -63,7 +63,7 @@ char kLSanDefaultSuppressions[] =
     // Suppress leaks from temporary files. http://crbug.com/1433299
     "leak:(deleted)\n"
 
-    // ================ Leaks in Chromium code ================
+    // ================ Leaks in Cinaseek code ================
     // PLEASE DO NOT ADD SUPPRESSIONS FOR NEW LEAKS.
     // Instead, commits that introduce memory leaks should be reverted.
     // Suppressing the leak is acceptable in some cases when reverting is

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ namespace enterprise_connectors {
 
 namespace {
 
-constexpr char kUserName[] = "test@chromium.org";
+constexpr char kUserName[] = "test@Cinaseek.org";
 
 constexpr char kScanId1[] = "scan id 1";
 constexpr char kScanId2[] = "scan id 2";

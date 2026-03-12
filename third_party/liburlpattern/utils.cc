@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Copyright 2014 Blake Embrey (hello@blakeembrey.com)
 // Use of this source code is governed by an MIT-style license that can be
 // found in the LICENSE file or at https://opensource.org/licenses/MIT.
@@ -58,7 +58,7 @@ bool IsNameCodepoint(UChar32 c, bool first_codepoint) {
   // Require group names to follow the same character restrictions as
   // javascript identifiers.  This code originates from v8 at:
   //
-  // https://source.chromium.org/chromium/chromium/src/+/master:v8/src/strings/char-predicates.cc;l=17-34;drc=be014256adea1552d4a044ef80616cdab6a7d549
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/master:v8/src/strings/char-predicates.cc;l=17-34;drc=be014256adea1552d4a044ef80616cdab6a7d549
   //
   // We deviate from js identifiers, however, in not support the backslash
   // character.  This is mainly used in js identifiers to allow escaped

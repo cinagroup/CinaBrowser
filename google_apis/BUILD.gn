@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -34,7 +34,7 @@ declare_args() {
 if (use_official_google_api_keys == "") {
   # No override set. Determine the default behavior.
   if (is_internal_chrome_branded) {
-    # Chrome-branded builds default to behaving as if
+    # Cinaseek-branded builds default to behaving as if
     #`use_official_google_api_keys` was explicitly set to true and will fail to
     # build if the file is missing.
     use_official_google_api_keys = true
@@ -49,7 +49,7 @@ if (use_official_google_api_keys == "") {
   }
 }
 
-# Official API keys should always be used for Chrome-branded builds except on
+# Official API keys should always be used for Cinaseek-branded builds except on
 # iOS (see https://crbug.com/1183709) and Fuchsia (see the description of
 # https://crbug.com/1171510 for background).
 assert(use_official_google_api_keys || !is_internal_chrome_branded || is_ios ||
@@ -64,7 +64,7 @@ declare_args() {
 
 # internal:generate_metrics_key_header must be a deps when
 # USE_OFFICIAL_GOOGLE_API_KEYS` is defined. Use this variable for both.
-# On iOS, Chrome branding had been overriding use_official_google_api_keys.
+# On iOS, Cinaseek branding had been overriding use_official_google_api_keys.
 # TODO(crbug.com/40864074): Fix this logic on iOS. Can this variable be replaced
 # with just use_official_google_api_keys?
 _use_official_google_keys_and_generate_metrics_key_header =

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ extern const char kInstallResultMetric[] = "Bruschetta.InstallResult";
 namespace {
 
 // The vTPM EK key label.
-// Should be synced with the value in the chromiumos repo:
+// Should be synced with the value in the Cinaseekos repo:
 // src/platform2/vtpm/backends/attested_virtual_endorsement.cc
 constexpr char kVtpmEkLabel[] = "vtpm-ek";
 constexpr base::ByteCount kBruschettaRequiredMemory = base::GiB(12);

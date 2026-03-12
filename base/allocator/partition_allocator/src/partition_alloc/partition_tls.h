@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@
 #endif
 
 // Barebones TLS implementation for use in PartitionAlloc. This doesn't use the
-// general chromium TLS handling to avoid dependencies, but more importantly
+// general Cinaseek TLS handling to avoid dependencies, but more importantly
 // because it allocates memory.
 namespace partition_alloc::internal {
 
@@ -92,7 +92,7 @@ bool PartitionTlsCreate(PartitionTlsKey* key, void (*destructor)(void*));
 PA_ALWAYS_INLINE void* PartitionTlsGet(PartitionTlsKey key) {
   // Accessing TLS resets the last error, which then makes |GetLastError()|
   // return something misleading. While this means that properly using
-  // |GetLastError()| is difficult, there is currently code in Chromium which
+  // |GetLastError()| is difficult, there is currently code in Cinaseek which
   // expects malloc() to *not* reset it. Meaning that we either have to fix this
   // code, or pay the cost of saving/restoring it.
   //

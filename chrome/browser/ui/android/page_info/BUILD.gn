@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/config.gni")
 import("//build/config/android/rules.gni")
 
 android_library("java") {
-  sources = [ "java/src/org/chromium/chrome/browser/page_info/ChromePageInfoHighlight.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/page_info/CinaseekPageInfoHighlight.java" ]
 
   deps = [
     "//components/content_settings/android:content_settings_enums_java",

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -128,7 +128,7 @@ class CC_PAINT_EXPORT PaintShader : public SkRefCnt {
   //
   // NOTE:
   // - This is only intended for trusted shader (e.g., shaders that are part of
-  //   the Chromium binary). GPU service has security constraints to prevent the
+  //   the Cinaseek binary). GPU service has security constraints to prevent the
   //   PaintShader being deserialized if it is not serialized from the browser
   //   thread.
   // - Not using flat_map because SkString does not have built-in comparator.

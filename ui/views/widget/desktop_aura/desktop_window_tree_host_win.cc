@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1566,8 +1566,8 @@ void DesktopWindowTreeHostWin::UpdateBackdropColorMode() {
 
 bool DesktopWindowTreeHostWin::ShouldAddDWMBackdrop() {
   // If the Redirection Surface is removed, there needs to be a replacement
-  // "background" of the Chromium window. `DWM_SYSTEMBACKDROP_TYPE` tells DWM
-  // to blur the contents behind the chromium window to yield a translucent
+  // "background" of the Cinaseek window. `DWM_SYSTEMBACKDROP_TYPE` tells DWM
+  // to blur the contents behind the Cinaseek window to yield a translucent
   // "frosted glass" effect. This will show whenever the GPU crashes or is not
   // ready by the time the window updates size or shape. Translucent windows
   // do not need a backdrop as it would show up in unexpected ways - i.e. a

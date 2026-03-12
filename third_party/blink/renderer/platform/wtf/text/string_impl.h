@@ -89,7 +89,7 @@ typedef HashMap<wtf_size_t, StringImpl*, AlreadyHashedTraits>
     StaticStringsTable;
 
 // You can find documentation about this class in this doc:
-// https://chromium.googlesource.com/chromium/src/+/HEAD/third_party/blink/renderer/platform/wtf/text/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/third_party/blink/renderer/platform/wtf/text/README.md
 class WTF_EXPORT StringImpl {
  private:
   // StringImpls are allocated out of the WTF buffer partition.

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,13 +29,13 @@ using tab_groups::TabGroupId;
 using tab_groups::TabGroupVisualData;
 
 namespace {
-const char kURL0[] = "https://chromium.org/0";
-const char kURL1[] = "https://chromium.org/1";
-const char kURL2[] = "https://chromium.org/2";
-const char kURL3[] = "https://chromium.org/3";
-const char kURL4[] = "https://chromium.org/4";
-const char kURL5[] = "https://chromium.org/5";
-const char kURL6[] = "https://chromium.org/6";
+const char kURL0[] = "https://Cinaseek.org/0";
+const char kURL1[] = "https://Cinaseek.org/1";
+const char kURL2[] = "https://Cinaseek.org/2";
+const char kURL3[] = "https://Cinaseek.org/3";
+const char kURL4[] = "https://Cinaseek.org/4";
+const char kURL5[] = "https://Cinaseek.org/5";
+const char kURL6[] = "https://Cinaseek.org/6";
 
 // WebStateList observer that records which events have been called by the
 // WebStateList.
@@ -1655,9 +1655,9 @@ TEST_F(WebStateListTest, PinnedAndRegularTabsCount) {
 // Tests InsertWebState method correctly updates insertion index if it is in the
 // pinned WebStates range.
 TEST_F(WebStateListTest, InsertWebState_InsertionInPinnedRange) {
-  const char testURL0[] = "https://chromium.org/test_0";
-  const char testURL1[] = "https://chromium.org/test_1";
-  const char testURL2[] = "https://chromium.org/test_2";
+  const char testURL0[] = "https://Cinaseek.org/test_0";
+  const char testURL1[] = "https://Cinaseek.org/test_1";
+  const char testURL2[] = "https://Cinaseek.org/test_2";
 
   EXPECT_TRUE(web_state_list_.empty());
 
@@ -1692,9 +1692,9 @@ TEST_F(WebStateListTest, InsertWebState_InsertionInPinnedRange) {
 // Tests InsertWebState method correctly updates insertion index when the params
 // specify it should be pinned.
 TEST_F(WebStateListTest, InsertWebState_InsertWebStatePinned) {
-  const char testURL0[] = "https://chromium.org/test_0";
-  const char testURL1[] = "https://chromium.org/test_1";
-  const char testURL2[] = "https://chromium.org/test_2";
+  const char testURL0[] = "https://Cinaseek.org/test_0";
+  const char testURL1[] = "https://Cinaseek.org/test_1";
+  const char testURL2[] = "https://Cinaseek.org/test_2";
 
   EXPECT_TRUE(web_state_list_.empty());
 

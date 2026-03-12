@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,8 +34,8 @@ base::FilePath GetFrameworkBundlePath() {
   path = path.DirName().DirName();
   DCHECK_EQ(path.BaseName().value(), "Contents");
 
-  // |path| is Chromium.app/Contents, so go down to
-  // Chromium.app/Contents/Frameworks/Chromium Framework.framework/Versions/X.
+  // |path| is Cinaseek.app/Contents, so go down to
+  // Cinaseek.app/Contents/Frameworks/Cinaseek Framework.framework/Versions/X.
   path = path.Append("Frameworks")
              .Append(kFrameworkName)
              .Append("Versions")

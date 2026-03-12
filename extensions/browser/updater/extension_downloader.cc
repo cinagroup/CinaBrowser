@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -505,7 +505,7 @@ void ExtensionDownloader::CreateManifestLoader() {
             "a user triggers an extension update flow."
           data:
             "The extension id, version and install source (the cause of the "
-            "update flow). The client's OS, architecture, language, Chromium "
+            "update flow). The client's OS, architecture, language, Cinaseek "
             "version, channel and a flag stating whether the request "
             "originated in the foreground or the background. Authentication is "
             "used only for non-Chrome-Web-Store update_urls."
@@ -535,7 +535,7 @@ void ExtensionDownloader::CreateManifestLoader() {
   }
 
   // Send traffic-management headers to the webstore, and omit credentials.
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=647516
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=647516
   if (extension_urls::IsWebstoreUpdateUrl(active_request->full_url())) {
     resource_request->headers.SetHeader(kUpdateInteractivityHeader,
                                         active_request->foreground_check()

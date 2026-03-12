@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,7 +14,7 @@ import("//build/config/cast.gni")
 # TODO(rockot): Maybe we can factor these dependencies out of //mojo. They're
 # used to conditionally enable message ID scrambling in a way which is
 # consistent across toolchains and which is affected by branded vs non-branded
-# Chrome builds. Ideally we could create some generic knobs here that could be
+# Cinaseek builds. Ideally we could create some generic knobs here that could be
 # flipped elsewhere though.
 import("//build/config/chrome_build.gni")
 import("//build/config/features.gni")
@@ -26,17 +26,17 @@ import("//third_party/ply/ply.gni")
 declare_args() {
   # Indicates whether typemapping should be supported in this build
   # configuration. This may be disabled when building external projects which
-  # depend on //mojo but which do not need/want all of the Chromium tree
+  # depend on //mojo but which do not need/want all of the Cinaseek tree
   # dependencies that come with typemapping.
   #
-  # Note that (perhaps obviously) a huge amount of Chromium code will not build
+  # Note that (perhaps obviously) a huge amount of Cinaseek code will not build
   # with typemapping disabled, so it is never valid to set this to |false| in
-  # any Chromium build configuration.
+  # any Cinaseek build configuration.
   enable_mojom_typemapping = true
 
   # Controls message ID scrambling behavior. If |true|, message IDs are
   # scrambled (i.e. randomized based on the contents of //chrome/VERSION) on
-  # non-Chrome OS desktop platforms. Enabled on official builds by default.
+  # non-Cinaseek OS desktop platforms. Enabled on official builds by default.
   # Set to |true| to enable message ID scrambling on a specific build.
   # See also `enable_scrambled_message_ids` below for more details.
   enable_mojom_message_id_scrambling = is_official_build
@@ -64,7 +64,7 @@ if (is_chromeos) {
 
 # NOTE: We would like to avoid scrambling message IDs where it doesn't add
 # value, so we limit the behavior to desktop builds for now.
-# We *cannot* enable scrambling on Chrome OS (it would break ARC).
+# We *cannot* enable scrambling on Cinaseek OS (it would break ARC).
 enable_scrambled_message_ids = enable_mojom_message_id_scrambling &&
                                (is_mac || is_win || (is_linux && !is_castos))
 if (enable_scrambled_message_ids) {
@@ -181,7 +181,7 @@ if (enable_scrambled_message_ids) {
 #       interfaces. Useful with targets outside //, e.g. in parent directories
 #       above "//". The default input root is //
 #       Example: Vivaldi's source root is "//vivaldi/",
-#       and "//vivaldi/chromium/" is "//"
+#       and "//vivaldi/Cinaseek/" is "//"
 #       In such cases, not using this argument lead to the output files being
 #       located in different directories than expected.
 #
@@ -363,7 +363,7 @@ if (enable_scrambled_message_ids) {
 #
 # The following parameters are used to support the component build. They are
 # needed so that bindings which are linked with a component can use the same
-# export settings for classes. The first three are for the chromium variant, and
+# export settings for classes. The first three are for the Cinaseek variant, and
 # the last three are for the blink variant. These parameters can also override
 # |component_macro_prefix| for a specific variant, allowing e.g. one variant
 # to be linked into a larger non-mojom component target, while all other
@@ -384,7 +384,7 @@ if (enable_scrambled_message_ids) {
 # The following parameters are used to correct component build dependencies.
 # They are needed so mojom-mojom dependencies follow the rule that dependencies
 # on a source set in another component are replaced by a dependency on the
-# containing component. The first two are for the chromium variant; the other
+# containing component. The first two are for the Cinaseek variant; the other
 # two are for the blink variant.
 #   overridden_deps (optional)
 #       The list of mojom deps to be overridden.
@@ -1847,7 +1847,7 @@ template("mojom") {
         ]
 
         # Disable warnings/checks on these generated files.
-        chromium_code = false
+        Cinaseek_code = false
 
         foreach(d, all_deps) {
           # Resolve the name, so that a target //mojo/something becomes
@@ -1876,7 +1876,7 @@ template("mojom") {
   # Targets needed by both TS and JS bindings targets. These are needed
   # unconditionally for JS bindings targets, and are needed for TS bindings
   # targets when generate_legacy_js_bindings is true. This option is provided
-  # since the legacy bindings are needed by Blink tests and non-Chromium users,
+  # since the legacy bindings are needed by Blink tests and non-Cinaseek users,
   # which are not expected to migrate to modules or TypeScript.
   if (generate_legacy_js && (generate_js_fuzzing ||
                              !defined(invoker.cpp_only) || !invoker.cpp_only)) {
@@ -1974,7 +1974,7 @@ template("mojom") {
     }
   }
 
-  # js_library() closure compiler targets, primarily used on ChromeOS. Only
+  # js_library() closure compiler targets, primarily used on CinaseekOS. Only
   # generate these targets if the mojom target is not C++ only and is not using
   # TypeScript.
   if (generate_mojom_closure_libraries &&

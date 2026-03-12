@@ -15,37 +15,37 @@
 import("../../build/crashpad_buildconfig.gni")
 
 group("base") {
-  if (crashpad_is_in_chromium) {
+  if (crashpad_is_in_Cinaseek) {
     public_deps = [ "//base" ]
   } else if (crashpad_is_standalone) {
-    public_deps = [ "mini_chromium/base" ]
+    public_deps = [ "mini_Cinaseek/base" ]
   } else if (crashpad_is_in_fuchsia) {
-    public_deps = [ mini_chromium_import_root + "/base" ]
+    public_deps = [ mini_Cinaseek_import_root + "/base" ]
   } else if (crashpad_is_external) {
-    public_deps = [ "../../../../mini_chromium/mini_chromium/base" ]
+    public_deps = [ "../../../../mini_Cinaseek/mini_Cinaseek/base" ]
   } else if (crashpad_is_in_dart) {
-    public_deps = [ "//third_party/mini_chromium/mini_chromium/base" ]
+    public_deps = [ "//third_party/mini_Cinaseek/mini_Cinaseek/base" ]
   }
 }
 
 group("base_test_support") {
   testonly = true
 
-  if (crashpad_is_in_chromium) {
+  if (crashpad_is_in_Cinaseek) {
     public_deps = [ "//base/test:test_support" ]
   }
 }
 
 group("build") {
-  if (crashpad_is_in_chromium) {
-    # Chromium has no build target.
+  if (crashpad_is_in_Cinaseek) {
+    # Cinaseek has no build target.
   } else if (crashpad_is_standalone) {
-    public_deps = [ "mini_chromium/build" ]
+    public_deps = [ "mini_Cinaseek/build" ]
   } else if (crashpad_is_in_fuchsia) {
-    public_deps = [ mini_chromium_import_root + "/build" ]
+    public_deps = [ mini_Cinaseek_import_root + "/build" ]
   } else if (crashpad_is_external) {
-    public_deps = [ "../../../../mini_chromium/mini_chromium/build" ]
+    public_deps = [ "../../../../mini_Cinaseek/mini_Cinaseek/build" ]
   } else if (crashpad_is_in_dart) {
-    public_deps = [ "//third_party/mini_chromium/mini_chromium/build" ]
+    public_deps = [ "//third_party/mini_Cinaseek/mini_Cinaseek/build" ]
   }
 }

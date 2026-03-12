@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -133,7 +133,7 @@ std::variant<FailedParse, SuccessfulEmptyParse, SuccessfulParse> ParseTagImpl(
 
     // SAFETY: Ths boringssl api guarantees that the buffer contains the number
     // of bytes returned by `CBS_len`.
-    // https://commondatastorage.googleapis.com/chromium-boringssl-docs/bytestring.h.html#CBS_data
+    // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/bytestring.h.html#CBS_data
     base::span<const uint8_t> oid_span =
         UNSAFE_BUFFERS(base::span(CBS_data(&oid), CBS_len(&oid)));
     if (oid_span == kTagOID) {
@@ -483,7 +483,7 @@ std::optional<std::vector<uint8_t>> SetTagImpl(
   ret.reserve(cbb_len + padding);
   // Copy the CBB result into a std::vector, padding to 8-byte alignment.
   // SAFETY: the CBB data comes in from boringssl as a memory buffer; see
-  // https://commondatastorage.googleapis.com/chromium-boringssl-docs/bytestring.h.html#CBB_finish
+  // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/bytestring.h.html#CBB_finish
   UNSAFE_BUFFERS(ret.insert(ret.begin(), cbb_data, cbb_data + cbb_len));
   ret.insert(ret.end(), padding, 0);
   OPENSSL_free(cbb_data);

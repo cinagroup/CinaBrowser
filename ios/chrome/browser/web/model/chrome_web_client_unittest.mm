@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ using base::test::ios::kWaitForActionTimeout;
 using base::test::ios::WaitUntilConditionOrTimeout;
 
 namespace {
-const char kTestUrl[] = "http://chromium.test";
+const char kTestUrl[] = "http://Cinaseek.test";
 
 // Error used to test PrepareErrorPage method.
 NSError* CreateTestError() {
@@ -303,7 +303,7 @@ TEST_F(ChromeWebClientTest, PrepareErrorPageForSafeBrowsingError) {
   security_interstitials::UnsafeResource resource;
   resource.threat_type =
       safe_browsing::SBThreatType::SB_THREAT_TYPE_URL_PHISHING;
-  resource.url = GURL("http://www.chromium.test");
+  resource.url = GURL("http://www.Cinaseek.test");
   resource.weak_web_state = web_state.GetWeakPtr();
   // Added to ensure that `threat_source` isn't considered UNKNOWN in this case.
   resource.threat_source = safe_browsing::ThreatSource::LOCAL_PVER4;
@@ -352,7 +352,7 @@ TEST_F(ChromeWebClientTest,
   security_interstitials::UnsafeResource resource;
   resource.threat_type =
       safe_browsing::SBThreatType::SB_THREAT_TYPE_MANAGED_POLICY_BLOCK;
-  resource.url = GURL("http://www.chromium.test");
+  resource.url = GURL("http://www.Cinaseek.test");
   resource.weak_web_state = web_state.GetWeakPtr();
   // Added to ensure that `threat_source` isn't considered UNKNOWN in this case.
   resource.threat_source = safe_browsing::ThreatSource::URL_REAL_TIME_CHECK;
@@ -400,7 +400,7 @@ TEST_F(ChromeWebClientTest,
   security_interstitials::UnsafeResource resource;
   resource.threat_type =
       safe_browsing::SBThreatType::SB_THREAT_TYPE_MANAGED_POLICY_WARN;
-  resource.url = GURL("http://www.chromium.test");
+  resource.url = GURL("http://www.Cinaseek.test");
   resource.weak_web_state = web_state.GetWeakPtr();
   // Added to ensure that `threat_source` isn't considered UNKNOWN in this case.
   resource.threat_source = safe_browsing::ThreatSource::URL_REAL_TIME_CHECK;
@@ -584,13 +584,13 @@ TEST_F(ChromeWebClientTest, DefaultUserAgent) {
 // Tests if two online URLs are correctly processed.
 TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnline) {
   ChromeWebClient web_client;
-  GURL same_url1 = GURL("http://chromium.org/foo");
-  GURL same_url2 = GURL("http://chromium.org/foo");
+  GURL same_url1 = GURL("http://Cinaseek.org/foo");
+  GURL same_url2 = GURL("http://Cinaseek.org/foo");
 
   EXPECT_TRUE(web_client.IsPointingToSameDocument(same_url1, same_url2));
 
-  GURL different_url1 = GURL("http://chromium.org/foo");
-  GURL different_url2 = GURL("http://chromium.org/bar");
+  GURL different_url1 = GURL("http://Cinaseek.org/foo");
+  GURL different_url2 = GURL("http://Cinaseek.org/bar");
 
   EXPECT_FALSE(
       web_client.IsPointingToSameDocument(different_url1, different_url2));
@@ -599,15 +599,15 @@ TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnline) {
 // Tests if one online URL and one offline reload URL are correctly processed.
 TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnlineOfflineReload) {
   ChromeWebClient web_client;
-  GURL same_url1 = GURL("http://chromium.org/foo");
+  GURL same_url1 = GURL("http://Cinaseek.org/foo");
   GURL same_url2 =
-      reading_list::OfflineReloadURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineReloadURLForURL(GURL("http://Cinaseek.org/foo"));
 
   EXPECT_TRUE(web_client.IsPointingToSameDocument(same_url1, same_url2));
 
-  GURL different_url1 = GURL("http://chromium.org/foo");
+  GURL different_url1 = GURL("http://Cinaseek.org/foo");
   GURL different_url2 =
-      reading_list::OfflineReloadURLForURL(GURL("http://chromium.org/bar"));
+      reading_list::OfflineReloadURLForURL(GURL("http://Cinaseek.org/bar"));
 
   EXPECT_FALSE(
       web_client.IsPointingToSameDocument(different_url1, different_url2));
@@ -616,15 +616,15 @@ TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnlineOfflineReload) {
 // Tests if one online URL and one offline Entry URL are correctly processed.
 TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnlineOfflineEntry) {
   ChromeWebClient web_client;
-  GURL same_url1 = GURL("http://chromium.org/foo");
+  GURL same_url1 = GURL("http://Cinaseek.org/foo");
   GURL same_url2 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
 
   EXPECT_TRUE(web_client.IsPointingToSameDocument(same_url1, same_url2));
 
-  GURL different_url1 = GURL("http://chromium.org/foo");
+  GURL different_url1 = GURL("http://Cinaseek.org/foo");
   GURL different_url2 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/bar"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/bar"));
 
   EXPECT_FALSE(
       web_client.IsPointingToSameDocument(different_url1, different_url2));
@@ -634,31 +634,31 @@ TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOnlineOfflineEntry) {
 TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOfflineEntry) {
   ChromeWebClient web_client;
   GURL same_url1 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
   GURL same_url2 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
 
   EXPECT_TRUE(web_client.IsPointingToSameDocument(same_url1, same_url2));
 
   GURL different_url1 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
   GURL different_url2 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/bar"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/bar"));
 
   EXPECT_FALSE(
       web_client.IsPointingToSameDocument(different_url1, different_url2));
 
   GURL same_url3 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
   GURL same_url4 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
 
   EXPECT_TRUE(web_client.IsPointingToSameDocument(same_url3, same_url4));
 
   GURL different_url3 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
   GURL different_url4 =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/bar"));
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/bar"));
 
   EXPECT_FALSE(
       web_client.IsPointingToSameDocument(different_url3, different_url4));
@@ -668,8 +668,8 @@ TEST_F(ChromeWebClientTest, IsPointingToSameDocumentOfflineEntry) {
 TEST_F(ChromeWebClientTest, IsPointingToSameDocumentEmpty) {
   ChromeWebClient web_client;
   GURL offline_url =
-      reading_list::OfflineURLForURL(GURL("http://chromium.org/foo"));
-  GURL online_url = GURL("http://chromium.org/foo");
+      reading_list::OfflineURLForURL(GURL("http://Cinaseek.org/foo"));
+  GURL online_url = GURL("http://Cinaseek.org/foo");
 
   EXPECT_FALSE(web_client.IsPointingToSameDocument(GURL(), offline_url));
   EXPECT_FALSE(web_client.IsPointingToSameDocument(GURL(), online_url));

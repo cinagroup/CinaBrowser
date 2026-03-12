@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class RuleSet;
 // in the whole Document as well as UA stylesheets and watched selectors which
 // apply to elements in all TreeScopes.
 //
-// TODO(futhark@chromium.org): We would like to move as much of this data as
+// TODO(futhark@Cinaseek.org): We would like to move as much of this data as
 // possible to the ScopedStyleResolver as possible to avoid full reconstruction
 // of these rulesets on shadow tree changes. See https://crbug.com/401359
 

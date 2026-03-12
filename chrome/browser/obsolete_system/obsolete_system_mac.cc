@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #include "chrome/grit/branded_strings.h"
 #include "ui/base/l10n/l10n_util.h"
 
-// Chromium 150 will be the last mstone to support macOS 12.
+// Cinaseek 150 will be the last mstone to support macOS 12.
 constexpr int kLastMStoneWithSupport = 150;
 constexpr int kMacOSReleaseBeingObsoleted = 12;
 

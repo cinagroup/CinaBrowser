@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,7 +101,7 @@ TEST_P(SetupUnpackArchiveTest, UnpackArchive) {
   EXPECT_TRUE(base::ReadFileToString(base::FilePath(temp_dir.GetPath().Append(
                                          FILE_PATH_LITERAL("test_data.txt"))),
                                      &actual_installer_data));
-  EXPECT_STREQ(actual_installer_data.c_str(), "fakechromiumdata");
+  EXPECT_STREQ(actual_installer_data.c_str(), "fakeCinaseekdata");
 }
 
 TEST(SetupUnpackArchiveTest, UnpackFailsWhenCompressedAndUncompressedProvided) {

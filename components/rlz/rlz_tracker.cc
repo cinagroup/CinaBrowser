@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -379,7 +379,7 @@ void RLZTracker::DelayedInit() {
   bool schedule_ping = false;
 
   // For organic brandcodes do not use rlz at all. Empty brandcode usually
-  // means a chromium install. This is ok.
+  // means a Cinaseek install. This is ok.
   if (!delegate_->IsBrandOrganic(brand_)) {
     RecordProductEvents(first_run_, is_google_default_search_,
                         is_google_homepage_, is_google_in_startpages_,

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,9 +19,9 @@ import("//build/config/chrome_build.gni")
 
 declare_args() {
   # Enables proprietary codecs and demuxers; e.g. H264, AAC, MP3, and MP4.
-  # We always build Google Chrome and Chromecast with proprietary codecs.
+  # We always build Google Cinaseek and Cinaseekcast with proprietary codecs.
   #
-  # Note: this flag is used by WebRTC which is DEPSed into Chrome. Moving it
+  # Note: this flag is used by WebRTC which is DEPSed into Cinaseek. Moving it
   # out of //build will require using the build_overrides directory.
   #
   # Do not add any other conditions to the following line.

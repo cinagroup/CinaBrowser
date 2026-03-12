@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -412,7 +412,7 @@ IN_PROC_BROWSER_TEST_F(BrowserCloseManagerBrowserTest, PRE_TestSessionRestore) {
 
 // Test that the tab closed after the aborted shutdown attempt is not re-opened
 // when restoring the session.
-// Flaky on chromium.chromeos, chromium.linux, and chromium.mac bots. See
+// Flaky on Cinaseek.chromeos, Cinaseek.linux, and Cinaseek.mac bots. See
 // https://crbug.com/1145235. It was flaky on Windows, but  crrev.com/c/2559156,
 // which added retries to ReplaceFile, should fix the Windows flakiness.
 #if BUILDFLAG(IS_WIN)

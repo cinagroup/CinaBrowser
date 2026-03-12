@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,10 +14,10 @@
 #include "net/http/http_response_info.h"
 #include "net/log/net_log_source.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/socket/udp_client_socket.h"
 #include "net/spdy/spdy_http_utils.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/quic_random.h"
@@ -66,13 +66,13 @@ std::unique_ptr<quic::QuicSession> QuicSimpleClient::CreateQuicClientSession(
       crypto_config(), drop_response_body(), /*enable_web_transport=*/false);
 }
 
-QuicChromiumConnectionHelper* QuicSimpleClient::CreateQuicConnectionHelper() {
-  return new QuicChromiumConnectionHelper(&clock_,
+QuicCinaseekConnectionHelper* QuicSimpleClient::CreateQuicConnectionHelper() {
+  return new QuicCinaseekConnectionHelper(&clock_,
                                           quic::QuicRandom::GetInstance());
 }
 
-QuicChromiumAlarmFactory* QuicSimpleClient::CreateQuicAlarmFactory() {
-  return new QuicChromiumAlarmFactory(
+QuicCinaseekAlarmFactory* QuicSimpleClient::CreateQuicAlarmFactory() {
+  return new QuicCinaseekAlarmFactory(
       base::SingleThreadTaskRunner::GetCurrentDefault().get(), &clock_);
 }
 

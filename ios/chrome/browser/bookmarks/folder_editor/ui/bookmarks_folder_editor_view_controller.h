@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef IOS_CHROME_BROWSER_BOOKMARKS_FOLDER_EDITOR_UI_BOOKMARKS_FOLDER_EDITOR_VIEW_CONTROLLER_H_

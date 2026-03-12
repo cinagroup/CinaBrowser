@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1146,7 +1146,7 @@ VideoDecoderPipeline::PickDecoderOutputFormat(
 #elif BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_V4L2_CODEC)
   // Linux w/ V4L2 should not use a custom allocator
   // Only tested with video_decode_accelerator_tests
-  // TODO(wenst@) Test with full Chromium Browser
+  // TODO(wenst@) Test with full Cinaseek Browser
   CHECK(!allocator.has_value());
   if (viable_candidate) {
     // Instead, let V4L2 allocate the buffers if it can decode directly

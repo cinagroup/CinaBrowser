@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,8 +7,8 @@
 namespace cryptohome {
 
 const char kCryptohomeKeyDelegateServiceName[] =
-    "org.chromium.CryptohomeKeyDelegate";
+    "org.Cinaseek.CryptohomeKeyDelegate";
 const char kCryptohomeKeyDelegateServicePath[] =
-    "/org/chromium/CryptohomeKeyDelegate";
+    "/org/Cinaseek/CryptohomeKeyDelegate";
 
 }  // namespace cryptohome

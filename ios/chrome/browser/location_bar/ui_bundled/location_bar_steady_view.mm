@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -436,7 +436,7 @@ const CGFloat kSmallerLocationLabelFontMultiplier = 0.75;
   // Use attributed text to force LTR direction for URLs, preventing RTL
   // characters from messing up the visual order (e.g. IDN with RTL scripts).
   NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
-  // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/url_display_guidelines/url_display_guidelines.md#rtl
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/security/url_display_guidelines/url_display_guidelines.md#rtl
   [style setBaseWritingDirection:NSWritingDirectionLeftToRight];
   [style setLineBreakMode:clipTail ? NSLineBreakByTruncatingTail
                                    : NSLineBreakByTruncatingHead];

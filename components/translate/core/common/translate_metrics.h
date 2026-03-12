@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ enum class LanguageVerificationType {
 // Enum for the Translate.CompactInfobar.Event UMA histogram.
 // Note: This enum is used to back an UMA histogram, and should be treated as
 // append-only.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.infobar
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.infobar
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: InfobarEvent
 enum class InfobarEvent {
   INFOBAR_IMPRESSION = 0,

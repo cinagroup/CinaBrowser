@@ -22,7 +22,7 @@ source_set("tool_support") {
 
   public_configs = [ "..:crashpad_config" ]
 
-  deps = [ "$mini_chromium_source_parent:base" ]
+  deps = [ "$mini_Cinaseek_source_parent:base" ]
 }
 
 crashpad_executable("dump_minidump_annotations") {
@@ -46,7 +46,7 @@ if (!crashpad_is_ios && !crashpad_is_fuchsia) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../build:default_exe_manifest_win",
       "../client",
       "../compat",
@@ -59,7 +59,7 @@ if (!crashpad_is_ios && !crashpad_is_fuchsia) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../build:default_exe_manifest_win",
       "../compat",
       "../util",
@@ -72,7 +72,7 @@ crashpad_executable("base94_encoder") {
   sources = [ "base94_encoder.cc" ]
   deps = [
     ":tool_support",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../build:default_exe_manifest_win",
     "../util",
   ]
@@ -84,7 +84,7 @@ if (!crashpad_is_fuchsia && !crashpad_is_ios) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../build:default_exe_manifest_win",
       "../compat",
       "../minidump",
@@ -118,7 +118,7 @@ if (crashpad_is_mac || crashpad_is_fuchsia) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
       "../util",
@@ -132,7 +132,7 @@ if (crashpad_is_mac) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../compat",
       "../util",
     ]
@@ -153,7 +153,7 @@ if (crashpad_is_mac) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../compat",
       "../util",
     ]
@@ -169,7 +169,7 @@ if (crashpad_is_mac) {
 
     deps = [
       ":tool_support",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../build:apple_enable_arc",
       "../compat",
       "../util",

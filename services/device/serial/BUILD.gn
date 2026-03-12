@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -140,7 +140,7 @@ if (is_win || ((is_linux || is_chromeos) && use_udev) || is_mac || is_android) {
 
 if (is_android) {
   java_sources_needing_jni =
-      [ "android/java/src/org/chromium/device/serial/ChromeSerialManager.java" ]
+      [ "android/java/src/org/Cinaseek/device/serial/CinaseekSerialManager.java" ]
 
   generate_jni("jni_headers") {
     sources = java_sources_needing_jni
@@ -161,7 +161,7 @@ if (is_android) {
   }
 
   javatest_sources_needing_jni =
-      [ "android/javatests/src/org/chromium/device/serial/CppTestHelper.java" ]
+      [ "android/javatests/src/org/Cinaseek/device/serial/CppTestHelper.java" ]
 
   generate_jni("native_unittests_jni_headers") {
     testonly = true

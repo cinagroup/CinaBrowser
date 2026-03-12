@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ void ShowContextMenu(NSMenu* menu,
     // - menu completed
     //
     // However, the OS notification for "element activated" fires *after* the OS
-    // notification for "element hidden", so Chromium code handling the "element
+    // notification for "element hidden", so Cinaseek code handling the "element
     // hidden" callback responds by doing a post to the main dispatch queue.
     // Therefore, because there's already a post on the main dispatch queue,
     // this event must be posted to the main dispatch queue as well to ensure

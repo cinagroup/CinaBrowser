@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,13 +12,13 @@ android_library("java") {
     "//base:service_loader_java",
     "//components/embedder_support/android:util_java",
     "//content/public/android:content_java",
-    "//third_party/android_deps:chromium_play_services_availability_java",
+    "//third_party/android_deps:Cinaseek_play_services_availability_java",
     "//third_party/androidx:androidx_annotation_annotation_java",
   ]
   sources = [
-    "java/src/org/chromium/components/externalauth/ExternalAuthGoogleDelegate.java",
-    "java/src/org/chromium/components/externalauth/ExternalAuthUtils.java",
-    "java/src/org/chromium/components/externalauth/UserRecoverableErrorHandler.java",
+    "java/src/org/Cinaseek/components/externalauth/ExternalAuthGoogleDelegate.java",
+    "java/src/org/Cinaseek/components/externalauth/ExternalAuthUtils.java",
+    "java/src/org/Cinaseek/components/externalauth/UserRecoverableErrorHandler.java",
   ]
 }
 
@@ -34,6 +34,6 @@ robolectric_library("junit") {
   ]
 
   sources = [
-    "junit/src/org/chromium/components/externalauth/ExternalAuthUtilsTest.java",
+    "junit/src/org/Cinaseek/components/externalauth/ExternalAuthUtilsTest.java",
   ]
 }

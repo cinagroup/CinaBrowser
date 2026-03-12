@@ -43,7 +43,7 @@
 #include "build/build_config.h"
 #include "device/vr/buildflags/buildflags.h"
 #include "device/vr/public/mojom/vr_service.mojom-blink-forward.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/gles2_interface.h"
 #include "gpu/command_buffer/client/shared_image_interface.h"
 #include "gpu/command_buffer/common/capabilities.h"
@@ -6309,7 +6309,7 @@ void WebGLRenderingContextBase::TexImageHelperMediaVideoFrame(
       caps.egl_image_external &&
       Extensions3DUtil::CopyTextureCHROMIUMNeedsESSL3(params.internalformat);
   const bool have_image_external_essl3 = caps.egl_image_external_essl3;
-  const bool use_copy_texture_chromium =
+  const bool use_copy_texture_Cinaseek =
       params.function_id == kTexImage2D && source_image_rect_is_default &&
       params.depth.value_or(1) == 1 && GL_TEXTURE_2D == params.target &&
       (have_image_external_essl3 || !may_need_image_external_essl3) &&
@@ -6358,7 +6358,7 @@ void WebGLRenderingContextBase::TexImageHelperMediaVideoFrame(
   // 8-bit format. Converting 16-bits formatted source texture to 8-bits
   // formatted texture will cause precision lost. So, uploading such video
   // texture to half float or float texture can not use GPU-GPU path.
-  else if (use_copy_texture_chromium) {
+  else if (use_copy_texture_Cinaseek) {
     DCHECK(Extensions3DUtil::CanUseCopyTextureCHROMIUM(params.target));
     DCHECK_EQ(params.xoffset, 0);
     DCHECK_EQ(params.yoffset, 0);

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,14 +41,14 @@ using InhibitReason = CellularInhibitor::InhibitReason;
 namespace {
 
 // EUICC constants
-const char kTestEuiccPath0[] = "/org/chromium/Hermes/Euicc/0";
-const char kTestEuiccPath1[] = "/org/chromium/Hermes/Euicc/1";
+const char kTestEuiccPath0[] = "/org/Cinaseek/Hermes/Euicc/0";
+const char kTestEuiccPath1[] = "/org/Cinaseek/Hermes/Euicc/1";
 const char kTestEid0[] = "00000000000000000000000000000000";
 const char kTestEid1[] = "11111111111111111111111111111111";
 
 // Profile constants
 const char kTestProfilePath0[] =
-    "/org/chromium/Hermes/Euicc/0/Profile/0000000000000000000";
+    "/org/Cinaseek/Hermes/Euicc/0/Profile/0000000000000000000";
 const char kTestProfileIccid0[] = "0000000000000000000";
 const char kTestProfileName0[] = "Name";
 const char kTestProfileNickname0[] = "Nickname";

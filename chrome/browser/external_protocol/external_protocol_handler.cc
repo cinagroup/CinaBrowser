@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -206,7 +206,7 @@ void LaunchUrlWithoutSecurityCheckWithDelegate(
       browser->tab_strip_model()->GetIndexOfWebContents(web_contents) !=
           TabStripModel::kNoTab) {
     // Defer destruction of `WebContents` to avoid synchronously destroying
-    // NavigationURLLoader(Impl) here. See https://issues.chromium.org/361600654
+    // NavigationURLLoader(Impl) here. See https://issues.Cinaseek.org/361600654
     content::GetUIThreadTaskRunner({})->PostTask(
         FROM_HERE, base::BindOnce(&content::WebContents::Close,
                                   web_contents->GetWeakPtr()));

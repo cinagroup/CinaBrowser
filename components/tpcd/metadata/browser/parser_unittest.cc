@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ class ParserTest : public ::testing::Test {
 
   // The death test is not reliable on old x86 Android:
   // https://crbug.com/815537 &
-  // https://source.chromium.org/chromium/chromium/src/+/main:base/test/test_suite.cc;l=633;drc=b24613adfd8336234c263d1cc8315752368ce7b5.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/test/test_suite.cc;l=633;drc=b24613adfd8336234c263d1cc8315752368ce7b5.
   bool ShouldSkipTest() {
 #if BUILDFLAG(IS_ANDROID) && defined(ARCH_CPU_X86)
     return base::android::android_info::sdk_int() <=

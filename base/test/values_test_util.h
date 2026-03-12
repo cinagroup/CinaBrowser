@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace base::test {
 namespace internal {
 
 // Default parsing options for the json util functions. By default, the content
-// will be parsed with the default set of Chromium-specific behaviours
+// will be parsed with the default set of Cinaseek-specific behaviours
 // implemented in `JSONReader`, and additionally allowing trailing commas.
 inline constexpr int kDefaultJsonParseOptions =
     JSON_PARSE_CHROMIUM_EXTENSIONS | JSON_ALLOW_TRAILING_COMMAS;

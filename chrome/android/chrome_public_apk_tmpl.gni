@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -22,8 +22,8 @@ import("channel.gni")
 declare_args() {
   # Android package name to use when compiling the public chrome targets
   # (chrome_public_apk, trichrome_chrome_bundle, etc. as well as the
-  # *_bundle variants). This defaults to the Chromium browser package name.
-  chrome_public_manifest_package = "org.chromium.chrome"
+  # *_bundle variants). This defaults to the Cinaseek browser package name.
+  chrome_public_manifest_package = "org.Cinaseek.chrome"
   if (use_stable_package_name_for_trichrome) {
     chrome_public_manifest_package += ".stable"
   } else if (android_channel != "default") {
@@ -31,7 +31,7 @@ declare_args() {
   }
 }
 
-chrome_public_test_manifest_package = "org.chromium.chrome.tests"
+chrome_public_test_manifest_package = "org.Cinaseek.chrome.tests"
 
 default_chrome_public_jinja_variables = [
   "channel=$android_channel",
@@ -41,7 +41,7 @@ default_chrome_public_jinja_variables = [
   "enable_arcore=$enable_arcore",
   "is_desktop_android=$is_desktop_android",
   "enable_screen_capture=$enable_screen_capture",
-  "zygote_preload_class=org.chromium.content_public.app.ZygotePreload",
+  "zygote_preload_class=org.Cinaseek.content_public.app.ZygotePreload",
 ]
 
 monochrome_android_manifest_jinja_variables =
@@ -100,8 +100,8 @@ template("split_manifest_template") {
   }
 }
 
-# A template used to declare any target that will implement a full Chromium
-# or Chrome application, either as an APK, or an app bundle module.
+# A template used to declare any target that will implement a full Cinaseek
+# or Cinaseek application, either as an APK, or an app bundle module.
 #
 # Variables:
 #   target_type: Either 'android_apk' or 'android_app_bundle_module'.
@@ -271,9 +271,9 @@ template("chrome_common_apk_or_module_tmpl") {
       is_base_module = true
     }
 
-    product_config_java_packages = [ "org.chromium.chrome.browser" ]
+    product_config_java_packages = [ "org.Cinaseek.chrome.browser" ]
 
-    # Chrome does not enable Strict Mode checks.
+    # Cinaseek does not enable Strict Mode checks.
     disable_strict_mode_context = true
 
     if (enable_silent_java_assert_reporting) {
@@ -468,7 +468,7 @@ template("chrome_common_apk_or_module_tmpl") {
       }
     }
 
-    # Chrome uses the window APIs directly instead of going through the
+    # Cinaseek uses the window APIs directly instead of going through the
     # androidx middleware.
     # See //third_party/android_sdk/window_extensions/README.md
     assert_no_deps = [
@@ -544,7 +544,7 @@ template("chrome_common_apk_or_module_tmpl") {
       # native libraries will end up in the Trichrome library.
       if (android_64bit_target_cpu) {
         # Build //android_webview:monochrome with the opposite bitness that
-        # Chrome runs in.
+        # Cinaseek runs in.
         if (_is_64_bit_browser) {
           srcjar_deps += [ "//chrome/android:libmonochrome_64__jni_registration($default_toolchain)" ]
         } else {
@@ -602,7 +602,7 @@ template("chrome_common_apk_or_module_tmpl") {
       library_always_compress += [ "libchrome_crashpad_handler.so" ]
     } else if (!_is_trichrome) {
       # Crashpad trampoline lives in TrichromeLibrary.apk.
-      # https://chromium.googlesource.com/chromium/src/+/main/docs/android_native_libraries.md#Crashpad-Packaging
+      # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/android_native_libraries.md#Crashpad-Packaging
       if (_include_primary_abi) {
         deps += [
           "//third_party/crashpad/crashpad/handler:crashpad_handler_trampoline",
@@ -617,26 +617,26 @@ template("chrome_common_apk_or_module_tmpl") {
       }
     }
 
-    # The Chromium Linker depends on ASharedMemory_create() introduced in O.
-    use_chromium_linker = chromium_linker_supported && _is_trichrome
+    # The Cinaseek Linker depends on ASharedMemory_create() introduced in O.
+    use_Cinaseek_linker = Cinaseek_linker_supported && _is_trichrome
 
-    if (use_chromium_linker) {
+    if (use_Cinaseek_linker) {
       if (android_64bit_target_cpu && !_is_64_bit_browser) {
-        deps += [ "//base/android/linker:chromium_android_linker($android_secondary_abi_toolchain)" ]
+        deps += [ "//base/android/linker:Cinaseek_android_linker($android_secondary_abi_toolchain)" ]
         secondary_abi_loadable_modules +=
-            [ "$_secondary_out_dir/libchromium_android_linker$shlib_extension" ]
+            [ "$_secondary_out_dir/libCinaseek_android_linker$shlib_extension" ]
       } else {
-        deps += [ "//base/android/linker:chromium_android_linker" ]
+        deps += [ "//base/android/linker:Cinaseek_android_linker" ]
         loadable_modules +=
-            [ "$root_out_dir/libchromium_android_linker$shlib_extension" ]
+            [ "$root_out_dir/libCinaseek_android_linker$shlib_extension" ]
       }
       if (_is_64_bit_browser && build_hwasan_splits) {
         deps += [
-          "//base/android/linker:chromium_android_linker($_hwasan_toolchain)",
+          "//base/android/linker:Cinaseek_android_linker($_hwasan_toolchain)",
         ]
         _hwasan_outdir = get_label_info(":($_hwasan_toolchain)", "root_out_dir")
         loadable_modules +=
-            [ "$_hwasan_outdir/libchromium_android_linker$shlib_extension" ]
+            [ "$_hwasan_outdir/libCinaseek_android_linker$shlib_extension" ]
       }
     }
 
@@ -645,9 +645,9 @@ template("chrome_common_apk_or_module_tmpl") {
         static_library_provider_use_secondary_abi = true
       }
 
-      # Include placeholder libraries to make Chrome multiarch in the same way
-      # as Monochrome, even though Chrome only runs with one of the two
-      # bitnesses. This allows the "32-bit" and "64-bit" versions of Chrome to
+      # Include placeholder libraries to make Cinaseek multiarch in the same way
+      # as Monochrome, even though Cinaseek only runs with one of the two
+      # bitnesses. This allows the "32-bit" and "64-bit" versions of Cinaseek to
       # depend on their respective versions of the shared library APK even
       # though they're functionally the same.
       if (_include_primary_abi && loadable_modules == []) {

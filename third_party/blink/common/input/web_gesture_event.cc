@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,7 +102,7 @@ ui::ScrollInputType WebGestureEvent::GetScrollInputType() const {
       DCHECK(IsGestureScroll() || IsPinchGestureEventType(GetType()));
       // TODO(crbug.com/1060268): Use of Wheel for Touchpad, especially for
       // pinch events, is confusing and not ideal. There are currently a few
-      // different enum types in use across chromium code base for specifying
+      // different enum types in use across Cinaseek code base for specifying
       // gesture input device. Since we don't want to add yet another one, the
       // most appropriate enum type to use here seems to be
       // `ui::ScrollInputType` which does not have a separate value for

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,7 +65,7 @@ BASE_FEATURE(kFastFilePathIsParent, FEATURE_ENABLED_BY_DEFAULT);
 #if BUILDFLAG(IS_ANDROID)
 // LINT.IfChange
 #define LOW_MEMORY_DEVICE_THRESHOLD_MB 1024
-// LINT.ThenChange(//base/android/java/src/org/chromium/base/SysUtils.java)
+// LINT.ThenChange(//base/android/java/src/org/Cinaseek/base/SysUtils.java)
 #elif BUILDFLAG(IS_IOS)
 // For M99, 45% of devices have 2GB of RAM, and 55% have more.
 #define LOW_MEMORY_DEVICE_THRESHOLD_MB 1024

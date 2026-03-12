@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class PrivacySandboxActivityTypesService : public KeyedService {
   // groups based on their Chrome usage patterns. This will enable us to tailor
   // the user experience for specific launches in the near future.
   //
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_sandbox
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_sandbox
   // LINT.IfChange(PrivacySandboxStorageActivityType)
   enum class PrivacySandboxStorageActivityType {
     kOther = 0,               // Partial CCT and all other unknowns
@@ -38,7 +38,7 @@ class PrivacySandboxActivityTypesService : public KeyedService {
     kAGSACustomTab = 2,       // AGSA-CCT
     kNonAGSACustomTab = 3,    // Non-AGSA-CCT
     kTrustedWebActivity = 4,  // TWA
-    //   https://chromium.googlesource.com/chromium/src/+/HEAD/docs/webapps/README.md
+    //   https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/webapps/README.md
     kWebapp = 5,  // Shortcut
     //   - https://web.dev/webapks/
     kWebApk = 6,  // PWA

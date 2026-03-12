@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 
 namespace base {
 
-// `FixedArray` provides `absl::FixedArray` in Chromium, but when `T` is
+// `FixedArray` provides `absl::FixedArray` in Cinaseek, but when `T` is
 // trivially-default-constructible, forces the no-default-value constructor to
 // initialize the elements to `T()`, instead of leaving them uninitialized. This
 // makes `base::FixedArray` behave like `std::vector` instead of `std::array`

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -169,14 +169,14 @@ TEST_F(ExtensionBookmarksTest, GetModifiableNode) {
 
 TEST_F(ExtensionBookmarksTest, GetManagedNode) {
   const BookmarkNode* managed_bookmark =
-      model_->AddURL(managed_->managed_node(), 0, u"Chromium",
-                     GURL("http://www.chromium.org/"));
+      model_->AddURL(managed_->managed_node(), 0, u"Cinaseek",
+                     GURL("http://www.Cinaseek.org/"));
   BookmarkTreeNode tree =
       GetBookmarkTreeNode(model_, managed_, managed_bookmark,
                           /*recurse=*/false,
                           /*only_folders=*/false);
-  EXPECT_EQ("Chromium", tree.title);
-  EXPECT_EQ("http://www.chromium.org/", *tree.url);
+  EXPECT_EQ("Cinaseek", tree.title);
+  EXPECT_EQ("http://www.Cinaseek.org/", *tree.url);
   EXPECT_EQ(api::bookmarks::BookmarkTreeNodeUnmodifiable::kManaged,
             tree.unmodifiable);
   EXPECT_EQ(api::bookmarks::FolderType::kNone, tree.folder_type);
@@ -254,8 +254,8 @@ TEST_F(ExtensionBookmarksTest,
   // Managed nodes are never syncing.
   EXPECT_FALSE(GetSingleBookmarkTreeNode(managed_->managed_node()).syncing);
   const BookmarkNode* managed_bookmark =
-      model_->AddURL(managed_->managed_node(), 0, u"Chromium",
-                     GURL("http://www.chromium.org"));
+      model_->AddURL(managed_->managed_node(), 0, u"Cinaseek",
+                     GURL("http://www.Cinaseek.org"));
   EXPECT_FALSE(GetSingleBookmarkTreeNode(managed_bookmark).syncing);
 }
 
@@ -309,8 +309,8 @@ TEST_F(ExtensionBookmarksTest, RemoveNodePermanent) {
 
 TEST_F(ExtensionBookmarksTest, RemoveNodeManaged) {
   const BookmarkNode* managed_bookmark =
-      model_->AddURL(managed_->managed_node(), 0, u"Chromium",
-                     GURL("http://www.chromium.org"));
+      model_->AddURL(managed_->managed_node(), 0, u"Cinaseek",
+                     GURL("http://www.Cinaseek.org"));
   std::string error;
   EXPECT_FALSE(
       RemoveNode(model_, managed_, managed_bookmark->id(), true, &error));

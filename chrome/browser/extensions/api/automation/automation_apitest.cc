@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -889,7 +889,7 @@ IN_PROC_BROWSER_TEST_P(AutomationApiTestWithContextType, IframeNav) {
       << message_;
 }
 
-// TODO(crbug.com/1325383): test is flaky on Chromium OS MSAN builder.
+// TODO(crbug.com/1325383): test is flaky on Cinaseek OS MSAN builder.
 #if BUILDFLAG(IS_CHROMEOS) && defined(MEMORY_SANITIZER)
 #define MAYBE_AddRemoveEventListeners DISABLED_AddRemoveEventListeners
 #else

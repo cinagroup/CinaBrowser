@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -310,7 +310,7 @@ void ContentSubresourceFilterWebContentsHelper::DidFinishNavigation(
         // the first navigation in a frame, however, in some cases we actually
         // attach this TabHelper after a navigation has occurred (possibly
         // before it has finished). See
-        // https://groups.google.com/a/chromium.org/g/navigation-dev/c/cY5V-w-xPRM/m/uC1Nsg_KAwAJ.
+        // https://groups.google.com/a/Cinaseek.org/g/navigation-dev/c/cY5V-w-xPRM/m/uC1Nsg_KAwAJ.
         // CHECK(rfh->GetLastCommittedURL().is_empty() ||
         //       rfh->GetLastCommittedURL().IsAboutBlank());
         // CHECK(!GetThrottleManager(rfh->GetPage()));

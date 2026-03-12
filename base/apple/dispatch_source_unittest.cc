@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ TEST_F(DispatchSourceTest, ReceiveAfterResume) {
   mach_port_t port = GetPort();
 
   bool __block did_receive = false;
-  DispatchSource source("org.chromium.base.test.ReceiveAfterResume", port, ^{
+  DispatchSource source("org.Cinaseek.base.test.ReceiveAfterResume", port, ^{
     mach_msg_empty_rcv_t msg = {{0}};
     msg.header.msgh_size = sizeof(msg);
     msg.header.msgh_local_port = port;
@@ -81,7 +81,7 @@ TEST_F(DispatchSourceTest, NoMessagesAfterDestruction) {
   int* __block count_ptr = count.get();
 
   std::unique_ptr<DispatchSource> source(new DispatchSource(
-      "org.chromium.base.test.NoMessagesAfterDestruction", port, ^{
+      "org.Cinaseek.base.test.NoMessagesAfterDestruction", port, ^{
         mach_msg_empty_rcv_t msg = {{0}};
         msg.header.msgh_size = sizeof(msg);
         msg.header.msgh_local_port = port;
@@ -92,7 +92,7 @@ TEST_F(DispatchSourceTest, NoMessagesAfterDestruction) {
   source->Resume();
 
   dispatch_queue_t queue =
-      dispatch_queue_create("org.chromium.base.test.MessageSend", NULL);
+      dispatch_queue_create("org.Cinaseek.base.test.MessageSend", NULL);
   dispatch_semaphore_t signal = dispatch_semaphore_create(0);
   for (int i = 0; i < 30; ++i) {
     dispatch_async(queue, ^{
@@ -147,7 +147,7 @@ class DispatchSourceFdTest : public testing::Test {
 TEST_F(DispatchSourceFdTest, ReceiveAfterResume) {
   dispatch_semaphore_t signal = dispatch_semaphore_create(0);
   dispatch_queue_t queue = dispatch_queue_create(
-      "org.chromium.base.test.ReceiveAfterResume", DISPATCH_QUEUE_SERIAL);
+      "org.Cinaseek.base.test.ReceiveAfterResume", DISPATCH_QUEUE_SERIAL);
   int read_fd = GetRead();
 
   bool __block did_receive = false;

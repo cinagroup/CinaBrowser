@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ const char* kPrivateDir = "/private/";
 const char* kTemporaryDir = "/temporary/";
 const char* kPublicDir = "/public/";
 const char* kChromePublicSdCardDir =
-    "/sd-card/1234-5678/Android/data/org.chromium.chrome/files/Download";
+    "/sd-card/1234-5678/Android/data/org.Cinaseek.chrome/files/Download";
 }  // namespace
 
 class DownloadArchiveManagerTest : public testing::Test {

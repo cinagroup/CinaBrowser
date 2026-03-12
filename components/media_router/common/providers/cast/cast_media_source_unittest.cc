@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -134,7 +134,7 @@ TEST(CastMediaSourceTest, FromRemotePlaybackURL) {
 }
 
 TEST(CastMediaSourceTest, FromMirroringURN) {
-  MediaSource::Id source_id("urn:x-org.chromium.media:source:tab:5");
+  MediaSource::Id source_id("urn:x-org.Cinaseek.media:source:tab:5");
   std::unique_ptr<CastMediaSource> source =
       CastMediaSource::FromMediaSourceId(source_id);
   ASSERT_TRUE(source);
@@ -148,7 +148,7 @@ TEST(CastMediaSourceTest, FromMirroringURN) {
 }
 
 TEST(CastMediaSourceTest, FromDesktopUrnWithoutAudio) {
-  MediaSource::Id source_id("urn:x-org.chromium.media:source:desktop:foo");
+  MediaSource::Id source_id("urn:x-org.Cinaseek.media:source:desktop:foo");
   std::unique_ptr<CastMediaSource> source =
       CastMediaSource::FromMediaSourceId(source_id);
   ASSERT_TRUE(source);
@@ -161,7 +161,7 @@ TEST(CastMediaSourceTest, FromDesktopUrnWithoutAudio) {
 
 TEST(CastMediaSourceTest, FromDesktopUrnWithAudio) {
   MediaSource::Id source_id(
-      "urn:x-org.chromium.media:source:desktop:foo?with_audio=true");
+      "urn:x-org.Cinaseek.media:source:desktop:foo?with_audio=true");
   std::unique_ptr<CastMediaSource> source =
       CastMediaSource::FromMediaSourceId(source_id);
   ASSERT_TRUE(source);

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -156,7 +156,7 @@ void GolombRiceEncode(MT21BlockWriter& writer, int symbol, int k) {
 
 // Unoptimized version of our pixel prediction algorithm. This is essentially a
 // copy of the version here:
-// https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/platform/drm-tests/pixel_formats/mt21_converter.c;drc=091692f34d333dec8fd3a8e375a4ad5a65682cb2;l=173
+// https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/platform/drm-tests/pixel_formats/mt21_converter.c;drc=091692f34d333dec8fd3a8e375a4ad5a65682cb2;l=173
 uint8_t PredictPixelValue(const uint8_t* subblock, int x, int y, int width) {
   if (y == 0) {
     return subblock[x + 1];

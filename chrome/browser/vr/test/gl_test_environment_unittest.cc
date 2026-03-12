@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace vr {
 // TODO(crbug.com/40881517): Re-enable this test on MSAN if not removed.
 // TODO(crbug.com/40190919): Re-enable this test on Linux in general, or fully
 // remove if DrawVrBrowsingMode is removed (see
-// https://chromium-review.googlesource.com/c/chromium/src/+/4102520/comments/b1cb2e21_5078eef7).
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4102520/comments/b1cb2e21_5078eef7).
 #if BUILDFLAG(IS_LINUX)
 #define MAYBE_InitializeAndCleanup DISABLED_InitializeAndCleanup
 #else

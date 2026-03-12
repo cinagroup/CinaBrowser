@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import("//build/rust/gni_impl/rust_target.gni")
 # multiple .rs files.
 #
 # We term this 'rust_static_library' because it is used most analogously
-# to a C++ 'static_library' in Chromium. Like the C++ one, it can be compiled
+# to a C++ 'static_library' in Cinaseek. Like the C++ one, it can be compiled
 # independently into an intermediate linking target. The output contains the
 # object file(s) of the GN target's sources, and not its dependencies.
 #
@@ -139,7 +139,7 @@ import("//build/rust/gni_impl/rust_target.gni")
 #   crate_name (optional)
 #     Discouraged - first-party code should prefer to use the auto-generated,
 #     target-based crate name which is guaranteed to be globally unique (and
-#     still ergonomic to import and use via the `chromium::import!` macro).
+#     still ergonomic to import and use via the `Cinaseek::import!` macro).
 #
 #   inputs (optional)
 #     Additional input files needed for compilation (such as `include!`ed files)
@@ -197,7 +197,7 @@ template("rust_static_library") {
 
       # NOTE: TargetName=>CrateName mangling algorithm should be updated
       # simultaneously in 3 places: here, //build/rust/rust_target.gni,
-      # //build/rust/chromium_prelude/import_attribute.rs
+      # //build/rust/Cinaseek_prelude/import_attribute.rs
       if (defined(invoker.crate_name)) {
         _crate_name = invoker.crate_name
       } else {

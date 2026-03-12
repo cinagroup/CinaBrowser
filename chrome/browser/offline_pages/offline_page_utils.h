@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class OfflinePageUtils {
   };
 
   // Controls the UI action that could be triggered during download.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.offlinepages
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.offlinepages
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: DownloadUiActionFlags
   enum class DownloadUIActionFlags {
     NONE = 0x0,

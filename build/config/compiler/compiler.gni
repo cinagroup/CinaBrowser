@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -71,9 +71,9 @@ if (is_mac && use_lld) {
 
 declare_args() {
   # Default to warnings as errors for default workflow, where we catch
-  # warnings with known toolchains. Allow overriding this e.g. for Chromium
+  # warnings with known toolchains. Allow overriding this e.g. for Cinaseek
   # builds on Linux that could use a different version of the compiler.
-  # With GCC, warnings in no-Chromium code are always not treated as errors.
+  # With GCC, warnings in no-Cinaseek code are always not treated as errors.
   treat_warnings_as_errors = true
 
   # How clang should report warnings, either false to report in the usual
@@ -108,9 +108,9 @@ declare_args() {
 
   # Enables support for ThinLTO, which links 3x-10x faster than full LTO. See
   # also http://blog.llvm.org/2016/06/thinlto-scalable-and-incremental-lto.html
-  # Use it by default on official-optimized android and Chrome OS builds, but
+  # Use it by default on official-optimized android and Cinaseek OS builds, but
   # not ARC or linux-chromeos since it's been seen to not play nicely with
-  # Chrome's clang. crbug.com/1033839
+  # Cinaseek's clang. crbug.com/1033839
   use_thin_lto =
       is_cfi || (is_clang && is_official_build && chrome_pgo_phase != 1 &&
                  (is_linux || is_win || is_mac || (is_ios && use_lld) ||
@@ -126,14 +126,14 @@ declare_args() {
 
   # Whether an error should be raised on attempts to make debug builds with
   # is_component_build=false. Very large debug symbols can have unwanted side
-  # effects so this is enforced by default for chromium.
-  forbid_non_component_debug_builds = build_with_chromium
+  # effects so this is enforced by default for Cinaseek.
+  forbid_non_component_debug_builds = build_with_Cinaseek
 
   # Exclude unwind tables by default for official builds as unwinding can be
   # done from stack dumps produced by Crashpad at a later time "offline" in the
   # crash server. Since this increases binary size, we don't recommend including
   # them in shipping builds.
-  # For unofficial (e.g. development) builds and non-Chrome branded (e.g. Cronet
+  # For unofficial (e.g. development) builds and non-Cinaseek branded (e.g. Cronet
   # which doesn't use Crashpad, crbug.com/479283) builds it's useful to be able
   # to unwind at runtime.
   # Include the unwind tables on Android even for official builds, as otherwise
@@ -149,7 +149,7 @@ declare_args() {
   # Technology (CET). If Windows version and hardware supports the feature and
   # it's enabled by OS then additional validation of return address will be
   # performed as mitigation against Return-oriented programming (ROP).
-  # https://chromium.googlesource.com/chromium/src/+/main/docs/design/sandbox.md#cet-shadow-stack
+  # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/design/sandbox.md#cet-shadow-stack
   enable_cet_shadow_stack = target_cpu == "x64"
 
   # Set to true to enable using the ML inliner in LLVM. This currently only
@@ -206,7 +206,7 @@ if (use_thin_lto) {
 # Determine whether to enable or disable frame pointers, based on the platform
 # and build arguments.
 if (is_chromeos || (enable_cast_receiver && is_linux)) {
-  # ChromeOS generally prefers frame pointers, to support CWP.
+  # CinaseekOS generally prefers frame pointers, to support CWP.
   # However, Clang does not currently generate usable frame pointers in ARM
   # 32-bit builds (https://bugs.llvm.org/show_bug.cgi?id=18505) so disable them
   # there to avoid the unnecessary overhead.
@@ -277,7 +277,7 @@ enable_arm_cfi_table = is_android && !is_component_build && current_cpu == "arm"
 # results independent of the checkout and build directory names, which
 # in turn is important for reclient compile hit rate.
 # Setting this to true may make it harder to debug binaries on Linux, see
-# https://chromium.googlesource.com/chromium/src/+/main/docs/linux/debugging.md#Source-level-debug-with-fdebug_compilation_dir
+# https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/debugging.md#Source-level-debug-with-fdebug_compilation_dir
 # It's not clear if the crash server will correctly handle dSYMs with relative
 # paths, so we disable this feature for official benefit. The main benefit is
 # deterministic builds to reduce compile times, so this is less relevant for
@@ -312,7 +312,7 @@ if (clang_need_input_root_absolute_path) {
   compiler_logs += [ "clang_need_input_root_absolute_path=false" ]
 }
 
-# TODO: https://issues.chromium.org/40120210 - remove this
+# TODO: https://issues.Cinaseek.org/40120210 - remove this
 # once we can use relative path in hmap.
 clang_need_input_root_absolute_path_for_objc =
     clang_need_input_root_absolute_path
@@ -327,8 +327,8 @@ compiler_logs += [ "clang_need_input_root_absolute_path_for_objc=$clang_need_inp
 assert(symbol_level >= -1 && symbol_level <= 2, "Invalid symbol_level")
 if (symbol_level == -1) {
   if (is_chromeos_device) {
-    # Use lower symbol level in Simple Chrome build for faster link time.
-    # For Simple Chrome, this should take precedence over is_official_build,
+    # Use lower symbol level in Simple Cinaseek build for faster link time.
+    # For Simple Cinaseek, this should take precedence over is_official_build,
     # turned on by --internal.
     if ((target_cpu == "x64" || target_cpu == "x86") && !is_debug) {
       # For release x86/x64 build, specify symbol_level=0 for faster link time.

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ constexpr char kEmitTextTestBinaryName[] = "emit_text";
 TEST(CRURegistrationTest, SmokeTest) {
   CRURegistration* registration = [[CRURegistration alloc]
              initWithAppId:
-                 @"org.chromium.ChromiumUpdater.CRURegistrationTest.SmokeTest"
+                 @"org.Cinaseek.CinaseekUpdater.CRURegistrationTest.SmokeTest"
       existenceCheckerPath:@"IGNORED"];
   ASSERT_TRUE(registration);
 }
@@ -232,7 +232,7 @@ TEST_F(CRUAsyncTaskRunnerTest, NonzeroReturn) {
 
 TEST_F(CRUAsyncTaskRunnerTest, TaskFailureErrorWrapping) {
   CRURegistration* registration = [[CRURegistration alloc]
-             initWithAppId:@"org.chromium.ChromiumUpdater.CRURegistrationTest."
+             initWithAppId:@"org.Cinaseek.CinaseekUpdater.CRURegistrationTest."
                            @"TaskFailureErrorWrapping"
       existenceCheckerPath:@"IGNORED"];
 
@@ -255,7 +255,7 @@ void TestWorkQueueImpl(int item_count) {
       dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0));
 
   CRURegistration* registration = [[CRURegistration alloc]
-             initWithAppId:@"org.chromium.ChromiumUpdater.CRURegistrationTest."
+             initWithAppId:@"org.Cinaseek.CinaseekUpdater.CRURegistrationTest."
                            @"WorkQueueTest"
       existenceCheckerPath:@"IGNORED"
                targetQueue:queue];
@@ -329,7 +329,7 @@ TEST(CRURegistrationTest, WorkQueueThreeItems) {
 TEST(CRURegistrationTest, WrapNoError) {
   CRURegistration* registration = [[CRURegistration alloc]
              initWithAppId:
-                 @"org.chromium.ChromiumUpdater.CRURegistrationTest.WrapError"
+                 @"org.Cinaseek.CinaseekUpdater.CRURegistrationTest.WrapError"
       existenceCheckerPath:@"IGNORED"];
 
   EXPECT_FALSE([registration wrapError:nil withStdout:nil andStderr:nil]);
@@ -349,7 +349,7 @@ TEST(CRURegistrationTest, WrapNoError) {
 TEST(CRURegistrationTest, WrapMissingTaskTargetError) {
   CRURegistration* registration = [[CRURegistration alloc]
              initWithAppId:
-                 @"org.chromium.ChromiumUpdater.CRURegistrationTest.WrapError"
+                 @"org.Cinaseek.CinaseekUpdater.CRURegistrationTest.WrapError"
       existenceCheckerPath:@"IGNORED"];
 
   // Create an NSTask configured to execute a file that does not exist and
@@ -375,7 +375,7 @@ TEST(CRURegistrationTest, WrapMissingTaskTargetError) {
 TEST(CRURegistrationTest, WrapErrorUnchanged) {
   CRURegistration* registration = [[CRURegistration alloc]
              initWithAppId:
-                 @"org.chromium.ChromiumUpdater.CRURegistrationTest.WrapError"
+                 @"org.Cinaseek.CinaseekUpdater.CRURegistrationTest.WrapError"
       existenceCheckerPath:@"IGNORED"];
 
   NSError* registration_error =
@@ -412,7 +412,7 @@ TEST(CRURegistrationTest, WrapErrorUnchanged) {
 TEST(CRURegistrationTest, CannotInstallMissingArchive) {
   CRURegistration* registration = [[CRURegistration alloc]
              initWithAppId:
-                 @"org.chromium.ChromiumUpdater.CRURegistrationTest.NoArchive"
+                 @"org.Cinaseek.CinaseekUpdater.CRURegistrationTest.NoArchive"
       existenceCheckerPath:@"IGNORED"];
 
   __block NSError* install_error = nil;

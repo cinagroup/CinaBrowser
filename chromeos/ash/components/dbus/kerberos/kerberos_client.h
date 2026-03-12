@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class Bus;
 
 namespace ash {
 
-// KerberosClient is used to communicate with the org.chromium.Kerberos
+// KerberosClient is used to communicate with the org.Cinaseek.Kerberos
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(KERBEROS) KerberosClient {
@@ -87,8 +87,8 @@ class COMPONENT_EXPORT(KERBEROS) KerberosClient {
   KerberosClient(const KerberosClient&) = delete;
   KerberosClient& operator=(const KerberosClient&) = delete;
 
-  // Kerberos daemon D-Bus method calls. See org.chromium.Kerberos.xml and
-  // kerberos_service.proto in Chromium OS code for the documentation of the
+  // Kerberos daemon D-Bus method calls. See org.Cinaseek.Kerberos.xml and
+  // kerberos_service.proto in Cinaseek OS code for the documentation of the
   // methods and request/response messages.
   virtual void AddAccount(const kerberos::AddAccountRequest& request,
                           AddAccountCallback callback) = 0;

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -177,7 +177,7 @@ class CORE_EXPORT DevToolsSession
   HeapVector<Member<InspectorAgent>> agents_;
   // Notifications are lazily serialized to shift the serialization overhead
   // from performance measurements. We may want to revisit this.
-  // See https://bugs.chromium.org/p/chromium/issues/detail?id=1044989#c8
+  // See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1044989#c8
   Vector<base::OnceCallback<std::vector<uint8_t>()>> notification_queue_;
   const bool client_expects_binary_responses_;
   const bool client_is_trusted_;

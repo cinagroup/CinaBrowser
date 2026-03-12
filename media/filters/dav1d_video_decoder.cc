@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ static VideoPixelFormat Dav1dImgFmtToVideoPixelFormat(
     const Dav1dPictureParameters* pic) {
   switch (pic->layout) {
     // Single plane monochrome images will be converted to standard 3 plane ones
-    // since Chromium doesn't support single Y plane images.
+    // since Cinaseek doesn't support single Y plane images.
     case DAV1D_PIXEL_LAYOUT_I400:
     case DAV1D_PIXEL_LAYOUT_I420:
       switch (pic->bpc) {

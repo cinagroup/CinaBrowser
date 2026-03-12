@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,19 +8,19 @@
 
 namespace ui {
 
-NSString* const kUTTypeChromiumImageAndHtml = @"org.chromium.image-html";
+NSString* const kUTTypeCinaseekImageAndHtml = @"org.Cinaseek.image-html";
 
-NSString* const kUTTypeChromiumInitiatedDrag =
-    @"org.chromium.chromium-initiated-drag";
+NSString* const kUTTypeCinaseekInitiatedDrag =
+    @"org.Cinaseek.Cinaseek-initiated-drag";
 
-NSString* const kUTTypeChromiumPrivilegedInitiatedDrag =
-    @"org.chromium.chromium-privileged-initiated-drag";
+NSString* const kUTTypeCinaseekPrivilegedInitiatedDrag =
+    @"org.Cinaseek.Cinaseek-privileged-initiated-drag";
 
-NSString* const kUTTypeChromiumRendererInitiatedDrag =
-    @"org.chromium.chromium-renderer-initiated-drag";
+NSString* const kUTTypeCinaseekRendererInitiatedDrag =
+    @"org.Cinaseek.Cinaseek-renderer-initiated-drag";
 
-NSString* const kUTTypeChromiumDataTransferCustomData =
-    @"org.chromium.web-custom-data";
+NSString* const kUTTypeCinaseekDataTransferCustomData =
+    @"org.Cinaseek.web-custom-data";
 
 NSString* const kUTTypeConfidentialData = @"org.nspasteboard.ConcealedType";
 
@@ -44,6 +44,6 @@ NSString* const kUTTypeWebKitWebSmartPaste =
 NSString* const kUTTypeWebKitWebUrlsWithTitles =
     @"dyn.ah62d4rv4gu8zs3pcnzme2641rf4guzdmsv0gn64uqm10c6xenv61a3k";
 
-NSString* const kUTTypeChromiumSourceUrl = @"org.chromium.source-url";
+NSString* const kUTTypeCinaseekSourceUrl = @"org.Cinaseek.source-url";
 
 }  // namespace ui

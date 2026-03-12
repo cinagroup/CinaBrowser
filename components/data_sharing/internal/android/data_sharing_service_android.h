@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,7 +74,7 @@ class DataSharingServiceAndroid : public base::SupportsUserData::Data {
 
   // Returns the observer that routes the notifications to Java observers. The
   // returned object is of type:
-  // org.chromium.components.data_sharing.ObserverBridge.
+  // org.Cinaseek.components.data_sharing.ObserverBridge.
   ScopedJavaLocalRef<jobject> GetJavaObserverBridge();
 
  private:

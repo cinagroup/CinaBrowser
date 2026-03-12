@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -48,11 +48,11 @@ group("jni_headers") {
 }
 
 android_library("public_java") {
-  resources_package = "org.chromium.chrome.browser.facilitated_payments"
+  resources_package = "org.Cinaseek.chrome.browser.facilitated_payments"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/facilitated_payments/FacilitatedPaymentsPaymentMethodsComponent.java",
-    "java/src/org/chromium/chrome/browser/facilitated_payments/FacilitatedPaymentsSequenceView.java",
+    "java/src/org/Cinaseek/chrome/browser/facilitated_payments/FacilitatedPaymentsPaymentMethodsComponent.java",
+    "java/src/org/Cinaseek/chrome/browser/facilitated_payments/FacilitatedPaymentsSequenceView.java",
   ]
 
   deps = [

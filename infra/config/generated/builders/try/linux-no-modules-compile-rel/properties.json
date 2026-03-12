@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/linux-no-modules-compile-rel/gn-args.json"
@@ -10,22 +10,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-no-modules-compile-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.linux",
+              "builder_group": "Cinaseek.linux",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -35,7 +35,7 @@
         {
           "bucket": "ci",
           "builder": "linux-no-modules-compile-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/linux-no-modules-compile-rel/targets"
@@ -52,7 +52,7 @@
     "keep_going": 0,
     "output_local_strategy": "minimum",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -61,6 +61,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.linux",
-  "recipe": "chromium_trybot"
+  "builder_group": "tryserver.Cinaseek.linux",
+  "recipe": "Cinaseek_trybot"
 }

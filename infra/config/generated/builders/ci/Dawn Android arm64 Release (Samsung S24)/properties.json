@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,15 +7,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Dawn Android arm64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dawn",
+              "builder_group": "Cinaseek.dawn",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -30,7 +30,7 @@
                   "android",
                   "dawn_top_of_tree"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -38,15 +38,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Dawn Android arm64 Release (Samsung S24)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dawn",
+              "builder_group": "Cinaseek.dawn",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -61,12 +61,12 @@
                   "android",
                   "dawn_top_of_tree"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "Dawn Android arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -77,13 +77,13 @@
         {
           "bucket": "ci",
           "builder": "Dawn Android arm64 Release (Samsung S24)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-dawn-arm64-s24-rel",
-          "group": "tryserver.chromium.dawn"
+          "group": "tryserver.Cinaseek.dawn"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/Dawn Android arm64 Release (Samsung S24)/targets"
@@ -96,12 +96,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.dawn",
+  "builder_group": "Cinaseek.dawn",
   "dawn_ref": "refs/heads/main",
   "gardener_rotations": [
     "dawn"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
     "dawn"
   ]

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -312,7 +312,7 @@ class NetworkMetricsHelperTest : public testing::Test {
 TEST_F(NetworkMetricsHelperTest, EnableTechnologyWithErrors) {
   NetworkMetricsHelper::LogEnableTechnologyResult(
       shill::kTypeWifi,
-      /*success=*/false, "org.chromium.flimflam.Error.AlreadyConnected");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.AlreadyConnected");
   histogram_tester_->ExpectTotalCount(kEnableWifiResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kEnableWifiResultCodeHistogram,
@@ -320,7 +320,7 @@ TEST_F(NetworkMetricsHelperTest, EnableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogEnableTechnologyResult(
       shill::kTypeEthernet,
-      /*success=*/false, "org.chromium.flimflam.Error.OperationTimeout");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.OperationTimeout");
   histogram_tester_->ExpectTotalCount(kEnableEthernetResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kEnableEthernetResultCodeHistogram,
@@ -328,7 +328,7 @@ TEST_F(NetworkMetricsHelperTest, EnableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogEnableTechnologyResult(
       shill::kTypeCellular,
-      /*success=*/false, "org.chromium.flimflam.Error.NoCarrier");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.NoCarrier");
   histogram_tester_->ExpectTotalCount(kEnableCellularResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kEnableCellularResultCodeHistogram,
@@ -336,7 +336,7 @@ TEST_F(NetworkMetricsHelperTest, EnableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogEnableTechnologyResult(
       shill::kTypeVPN,
-      /*success=*/false, "org.chromium.flimflam.Error.WrongState");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.WrongState");
   histogram_tester_->ExpectTotalCount(kEnableVpnResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kEnableVpnResultCodeHistogram, ShillConnectResult::kErrorResultWrongState,
@@ -346,7 +346,7 @@ TEST_F(NetworkMetricsHelperTest, EnableTechnologyWithErrors) {
 TEST_F(NetworkMetricsHelperTest, DisableTechnologyWithErrors) {
   NetworkMetricsHelper::LogDisableTechnologyResult(
       shill::kTypeWifi,
-      /*success=*/false, "org.chromium.flimflam.Error.AlreadyConnected");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.AlreadyConnected");
   histogram_tester_->ExpectTotalCount(kDisableWifiResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kDisableWifiResultCodeHistogram,
@@ -354,7 +354,7 @@ TEST_F(NetworkMetricsHelperTest, DisableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogDisableTechnologyResult(
       shill::kTypeEthernet,
-      /*success=*/false, "org.chromium.flimflam.Error.OperationTimeout");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.OperationTimeout");
   histogram_tester_->ExpectTotalCount(kDisableEthernetResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kDisableEthernetResultCodeHistogram,
@@ -362,7 +362,7 @@ TEST_F(NetworkMetricsHelperTest, DisableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogDisableTechnologyResult(
       shill::kTypeCellular,
-      /*success=*/false, "org.chromium.flimflam.Error.NoCarrier");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.NoCarrier");
   histogram_tester_->ExpectTotalCount(kDisableCellularResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kDisableCellularResultCodeHistogram,
@@ -370,7 +370,7 @@ TEST_F(NetworkMetricsHelperTest, DisableTechnologyWithErrors) {
 
   NetworkMetricsHelper::LogDisableTechnologyResult(
       shill::kTypeVPN,
-      /*success=*/false, "org.chromium.flimflam.Error.WrongState");
+      /*success=*/false, "org.Cinaseek.flimflam.Error.WrongState");
   histogram_tester_->ExpectTotalCount(kDisableVpnResultCodeHistogram, 1);
   histogram_tester_->ExpectBucketCount(
       kDisableVpnResultCodeHistogram,

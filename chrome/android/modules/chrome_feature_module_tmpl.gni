@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,14 +7,14 @@ import("//build/config/locales.gni")
 import("//chrome/android/modules/chrome_feature_modules.gni")
 import("//components/module_installer/android/module_desc_java.gni")
 
-# Instantiates a Chrome-specific app bundle module.
+# Instantiates a Cinaseek-specific app bundle module.
 #
 # Supports most variables of the android_app_bundle_module, plus:
 #   module_desc: Descriptor of this module. See
 #     //chrome/android/modules/chrome_feature_modules.gni for the format.
 #   is_monochrome: (Optional) Whether this module is Monochrome.
 #   is_trichrome: (Optional) Whether this module is Trichrome.
-#   is_64_bit_browser: (Optional) Whether Chrome (as opposed to WebView) runs in
+#   is_64_bit_browser: (Optional) Whether Cinaseek (as opposed to WebView) runs in
 #     64 bit.
 template("chrome_feature_module") {
   assert(defined(invoker.module_desc))

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -381,7 +381,7 @@ TEST_F(GaiaAuthFetcherTest, MultiloginRequestFormat) {
   EXPECT_EQ("POST", request0.method);
   EXPECT_THAT(request0.headers.GetHeader("Authorization"),
               Optional(std::string("MultiBearer token1:id1,token2:id2")));
-  EXPECT_EQ("source=ChromiumBrowser&reuseCookies=0&externalCcResult=cc_result",
+  EXPECT_EQ("source=CinaseekBrowser&reuseCookies=0&externalCcResult=cc_result",
             request0.url.GetQuery());
 
   auth.TestOnURLLoadCompleteInternal(net::OK, net::HTTP_OK, std::string());
@@ -393,7 +393,7 @@ TEST_F(GaiaAuthFetcherTest, MultiloginRequestFormat) {
   ASSERT_TRUE(auth.HasPendingFetch());
 
   const network::ResourceRequest& request1 = received_requests_.at(1);
-  EXPECT_EQ("source=ChromiumBrowser&reuseCookies=1&externalCcResult=cc_result",
+  EXPECT_EQ("source=CinaseekBrowser&reuseCookies=1&externalCcResult=cc_result",
             request1.url.GetQuery());
 }
 
@@ -415,7 +415,7 @@ TEST_F(GaiaAuthFetcherTest, MultiloginEnableOamlCookieBindingUnenforced) {
   EXPECT_THAT(request.headers.GetHeader("Authorization"),
               Optional(std::string("MultiBearer token:id")));
   EXPECT_EQ(
-      "source=ChromiumBrowser&reuseCookies=0&externalCcResult=cc_result&cookie_"
+      "source=CinaseekBrowser&reuseCookies=0&externalCcResult=cc_result&cookie_"
       "binding=1",
       request.url.GetQuery());
 }
@@ -438,7 +438,7 @@ TEST_F(GaiaAuthFetcherTest, MultiloginEnableOamlCookieBindingEnforced) {
   EXPECT_THAT(request.headers.GetHeader("Authorization"),
               Optional(std::string("MultiBearer token:id")));
   EXPECT_EQ(
-      "source=ChromiumBrowser&reuseCookies=0&externalCcResult=cc_result&cookie_"
+      "source=CinaseekBrowser&reuseCookies=0&externalCcResult=cc_result&cookie_"
       "binding=2",
       request.url.GetQuery());
 }

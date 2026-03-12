@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ CWV_EXPORT
                                   password:(NSString*)password;
 
 // Generates a random password.
-// |host| For example "www.chromium.org". This is used to look up the password
+// |host| For example "www.Cinaseek.org". This is used to look up the password
 // requirements like length, upper/lower case, symbols, etc.
 // |APIKey| Used to access the password spec API.
 // |completionHandler| Will be called asynchronously with a generated password.

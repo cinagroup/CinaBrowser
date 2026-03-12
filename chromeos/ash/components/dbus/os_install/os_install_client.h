@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class Bus;
 namespace ash {
 
 // OsInstallClient is used to communicate with the
-// org.chromium.OsInstallService system service. The browser uses this
+// org.Cinaseek.OsInstallService system service. The browser uses this
 // service to install the OS from a USB device to disk.
 class COMPONENT_EXPORT(OS_INSTALL) OsInstallClient {
  public:

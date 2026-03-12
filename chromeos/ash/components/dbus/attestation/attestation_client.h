@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class Bus;
 
 namespace ash {
 
-// AttestationClient is used to communicate with the org.chromium.Attestation
+// AttestationClient is used to communicate with the org.Cinaseek.Attestation
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(ASH_DBUS_ATTESTATION) AttestationClient {
@@ -238,8 +238,8 @@ class COMPONENT_EXPORT(ASH_DBUS_ATTESTATION) AttestationClient {
   // Gets the verified access server type from command-line arguments.
   static ::attestation::VAType GetVerifiedAccessServerType();
 
-  // Attestation daemon D-Bus method calls. See org.chromium.Attestation.xml and
-  // the corresponding protobuf definitions in Chromium OS code for the
+  // Attestation daemon D-Bus method calls. See org.Cinaseek.Attestation.xml and
+  // the corresponding protobuf definitions in Cinaseek OS code for the
   // documentation of the methods and request/ messages.
 
   virtual void GetKeyInfo(const ::attestation::GetKeyInfoRequest& request,

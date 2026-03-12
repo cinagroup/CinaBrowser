@@ -10,7 +10,7 @@ rootWebArea
 ++++++++staticText name=' '
 ++++++++++inlineTextBox name=' '
 ++++++++contentInsertion
-++++++++++staticText name='Chrome'
-++++++++++++inlineTextBox name='Chrome'
+++++++++++staticText name='Cinaseek'
+++++++++++++inlineTextBox name='Cinaseek'
 ++++++++staticText name='!'
 ++++++++++inlineTextBox name='!'

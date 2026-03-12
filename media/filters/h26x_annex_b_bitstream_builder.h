@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -30,7 +30,7 @@ class MEDIA_EXPORT H26xAnnexBBitstreamBuilder {
   // - For VA-API encoder, set |insert_emulation_prevention_bytes| to |false| as
   //   VA-API takes SPS/PPS RBSP and outputs the AnnexB bitstream.
   // - For D3D12 encoder, set |insert_emulation_prevention_bytes| to |true| as
-  //   it only outputs slice NALU. We add SPS/PPS with EPB in Chromium to create
+  //   it only outputs slice NALU. We add SPS/PPS with EPB in Cinaseek to create
   //   an AnnexB bitstream.
   explicit H26xAnnexBBitstreamBuilder(
       bool insert_emulation_prevention_bytes = false);

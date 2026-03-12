@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -192,7 +192,7 @@ class BackgroundMetadataDataSource
 
   static void Register() {
     perfetto::DataSourceDescriptor desc;
-    desc.set_name("org.chromium.background_scenario_metadata");
+    desc.set_name("org.Cinaseek.background_scenario_metadata");
     CHECK(perfetto::DataSource<BackgroundMetadataDataSource>::Register(desc));
   }
 

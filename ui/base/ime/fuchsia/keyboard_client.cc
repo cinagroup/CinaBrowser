@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -224,7 +224,7 @@ bool KeyboardClient::ProcessKeyEvent(
     // If the KeyMeaning is specified then use it to set the DOM Key.
 
     // Ignore events with codepoints outside the Basic Multilingual Plane,
-    // since the Chromium keyboard pipeline cannot currently handle them.
+    // since the Cinaseek keyboard pipeline cannot currently handle them.
     if (key_event.key_meaning()->codepoint() &&
         (key_event.key_meaning()->codepoint().value() >
          std::numeric_limits<char16_t>::max())) {

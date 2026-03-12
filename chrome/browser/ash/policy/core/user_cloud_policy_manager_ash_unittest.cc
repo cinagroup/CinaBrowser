@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -186,7 +186,7 @@ class UserCloudPolicyManagerAshTest : public testing::Test {
     GetExpectedDefaultPolicy(&policy_map_);
     policy_map_.Set(key::kHomepageLocation, POLICY_LEVEL_MANDATORY,
                     POLICY_SCOPE_USER, POLICY_SOURCE_CLOUD,
-                    base::Value("http://chromium.org"), nullptr);
+                    base::Value("http://Cinaseek.org"), nullptr);
     expected_bundle_.Get(PolicyNamespace(POLICY_DOMAIN_CHROME, std::string())) =
         policy_map_.Clone();
 
@@ -196,7 +196,7 @@ class UserCloudPolicyManagerAshTest : public testing::Test {
     register_response->set_device_management_token(kDMToken);
 
     em::CloudPolicySettings policy_proto;
-    policy_proto.mutable_homepagelocation()->set_value("http://chromium.org");
+    policy_proto.mutable_homepagelocation()->set_value("http://Cinaseek.org");
     ASSERT_TRUE(
         policy_proto.SerializeToString(policy_data_.mutable_policy_value()));
     policy_data_.set_policy_type(dm_protocol::GetChromeUserPolicyType());

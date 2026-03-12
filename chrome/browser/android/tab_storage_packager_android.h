@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class StoragePackage;
 class TabInterface;
 
 // The types of TabModels, differing in terms of scope.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.app.tabmodel
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.app.tabmodel
 enum class TabModelType {
   kUnknown = 0,
   // Scoped to a window ID & regular profile.

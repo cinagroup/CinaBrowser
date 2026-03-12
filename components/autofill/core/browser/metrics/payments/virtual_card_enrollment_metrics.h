@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ enum class VirtualCardEnrollmentBubbleSource {
 // numeric values should never be reused.
 //
 // A java IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class VirtualCardEnrollmentLinkType {
   // User selected the Google Payments terms of service link.
   VIRTUAL_CARD_ENROLLMENT_GOOGLE_PAYMENTS_TOS_LINK = 0,

@@ -7,7 +7,7 @@
 ++++++++++[static] name='ABC'
 ++++++++[static] name=' '
 ++++++++[content insertion]
-++++++++++[static] name='Chrome'
+++++++++++[static] name='Cinaseek'
 ++++++++[static] name='!'
 ++[internal frame]
 ++++[document web]

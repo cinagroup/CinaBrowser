@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -715,10 +715,10 @@ void ExistingUserController::OnAuthFailure(const AuthFailure& failure) {
                        ReauthReason::kMissingCryptohome);
   } else if (is_known_user &&
              failure.reason() == AuthFailure::UNRECOVERABLE_CRYPTOHOME) {
-    // TODO(chromium:1140868, dlunev): for now we route unrecoverable the same
+    // TODO(Cinaseek:1140868, dlunev): for now we route unrecoverable the same
     // way as missing because it is removed under the hood in cryptohomed when
     // the condition met. We should surface that up and deal with it on the
-    // chromium level, including making the decision user-driven.
+    // Cinaseek level, including making the decision user-driven.
     ForceOnlineLoginForAccountId(last_login_attempt_account_id_);
     RecordReauthReason(last_login_attempt_account_id_,
                        ReauthReason::kUnrecoverableCryptohome);

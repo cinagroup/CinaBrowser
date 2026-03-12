@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,11 +7,11 @@ import("//build/config/android/rules.gni")
 
 robolectric_library("components_autofill_junit_tests") {
   sources = [
-    "src/org/chromium/components/autofill/AutofillProviderTest.java",
-    "src/org/chromium/components/autofill/AutofillRequestTest.java",
-    "src/org/chromium/components/autofill/AutofillSessionUMATest.java",
-    "src/org/chromium/components/autofill/FormDataTest.java",
-    "src/org/chromium/components/autofill/PrefillRequestTest.java",
+    "src/org/Cinaseek/components/autofill/AutofillProviderTest.java",
+    "src/org/Cinaseek/components/autofill/AutofillRequestTest.java",
+    "src/org/Cinaseek/components/autofill/AutofillSessionUMATest.java",
+    "src/org/Cinaseek/components/autofill/FormDataTest.java",
+    "src/org/Cinaseek/components/autofill/PrefillRequestTest.java",
   ]
   deps = [
     "//base:base_java_test_support",

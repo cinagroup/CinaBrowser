@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class MethodCall;
 
 namespace ash {
 
-// FjordOobeServiceProvider implements the org.chromium.FjordOobeService D-Bus
+// FjordOobeServiceProvider implements the org.Cinaseek.FjordOobeService D-Bus
 // interface. It is used by the Fjord variant of OOBE and allows for IPC to
 // control parts of OOBE that are specific to Fjord OOBE.
 class FjordOobeServiceProvider

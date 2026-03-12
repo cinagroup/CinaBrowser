@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ ScopedJavaLocalRef<jobject> CreateJavaGroupData(JNIEnv* env,
       ConvertUTF8ToJavaString(env, group_data.display_name),
       ToTypedJavaArrayOfObjects(
           env, base::span(j_members),
-          org_chromium_components_data_1sharing_GroupMember_clazz(env)),
+          org_Cinaseek_components_data_1sharing_GroupMember_clazz(env)),
       ConvertUTF8ToJavaString(env, group_data.group_token.access_token));
 }
 
@@ -76,7 +76,7 @@ ScopedJavaLocalRef<jobjectArray> CreateGroupedDataArray(
   if (!j_groups_data.empty()) {
     j_group_array = ToTypedJavaArrayOfObjects(
         env, base::span(j_groups_data),
-        org_chromium_components_data_1sharing_GroupData_clazz(env));
+        org_Cinaseek_components_data_1sharing_GroupData_clazz(env));
   }
 
   return j_group_array;
@@ -96,7 +96,7 @@ ScopedJavaLocalRef<jobject> CreateJavaSharedTabGroupPreview(
   if (!j_tabs.empty()) {
     j_tabs_array = ToTypedJavaArrayOfObjects(
         env, base::span(j_tabs),
-        org_chromium_components_data_1sharing_TabPreview_clazz(env));
+        org_Cinaseek_components_data_1sharing_TabPreview_clazz(env));
   }
   return Java_SharedTabGroupPreview_createSharedTabGroupPreview(
       env, ConvertUTF8ToJavaString(env, preview.title), j_tabs_array);

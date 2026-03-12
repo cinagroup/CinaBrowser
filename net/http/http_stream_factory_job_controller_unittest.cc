@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,11 +65,11 @@
 #include "net/proxy_resolution/proxy_list.h"
 #include "net/proxy_resolution/proxy_resolution_service.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_connection_helper.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_server_info.h"
 #include "net/quic/quic_session_alias_key.h"
@@ -179,15 +179,15 @@ class FailingProxyResolverFactory : public ProxyResolverFactory {
   }
 };
 
-// A subclass of QuicChromiumClientSession that "goes away" right after
+// A subclass of QuicCinaseekClientSession that "goes away" right after
 // CreateHandle was called.
-class MockQuicChromiumClientSession : public QuicChromiumClientSession {
+class MockQuicCinaseekClientSession : public QuicCinaseekClientSession {
  public:
-  using QuicChromiumClientSession::QuicChromiumClientSession;
+  using QuicCinaseekClientSession::QuicCinaseekClientSession;
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> CreateHandle(
+  std::unique_ptr<QuicCinaseekClientSession::Handle> CreateHandle(
       url::SchemeHostPort destination) override {
-    auto res = QuicChromiumClientSession::CreateHandle(destination);
+    auto res = QuicCinaseekClientSession::CreateHandle(destination);
     // Make the session go away right after it was created.
     SetGoingAwayForTesting(true);
     return res;
@@ -1190,12 +1190,12 @@ class JobControllerReconsiderProxyAfterErrorTest
     factory_ = session_->http_stream_factory();
   }
 
-  std::unique_ptr<MockQuicChromiumClientSession> CreateMockQUICProxySession(
+  std::unique_ptr<MockQuicCinaseekClientSession> CreateMockQUICProxySession(
       url::SchemeHostPort server) {
     const IPEndPoint kIpEndPoint = IPEndPoint(IPAddress::IPv4AllZeros(), 0);
     quic::test::MockRandom random{0};
     quic::MockClock clock;
-    QuicChromiumConnectionHelper helper(&clock, &random);
+    QuicCinaseekConnectionHelper helper(&clock, &random);
     quic::test::MockAlarmFactory alarm_factory;
     quic::test::MockConnectionIdGenerator connection_id_generator;
     TransportSecurityState transport_security_state;
@@ -1222,7 +1222,7 @@ class JobControllerReconsiderProxyAfterErrorTest
         NetworkAnonymizationKey(), SecureDnsPolicy::kAllow,
         /*require_dns_https_alpn=*/false,
         /*disable_cert_verification_network_fetches=*/true);
-    auto new_session = std::make_unique<MockQuicChromiumClientSession>(
+    auto new_session = std::make_unique<MockQuicCinaseekClientSession>(
         connection, std::move(socket), session_->quic_session_pool(),
         &crypto_client_stream_factory_, &clock, &transport_security_state,
         &ssl_config_service,
@@ -1286,7 +1286,7 @@ class JobControllerReconsiderProxyAfterErrorTest
   }
 
  protected:
-  std::vector<raw_ptr<MockQuicChromiumClientSession>> mock_proxy_sessions_;
+  std::vector<raw_ptr<MockQuicCinaseekClientSession>> mock_proxy_sessions_;
 
  private:
   // Use real Jobs so that Job::Resume() is not mocked out. When main job is
@@ -2688,7 +2688,7 @@ constexpr struct QuicProxyTestCase {
     {QuicErrorPhase::kHostResolution, ERR_NAME_NOT_RESOLVED},
     // Test that proxy session gets activated but then failed before requesting
     // the stream. The error is determined by
-    // QuicChromiumClientSession::Handle::RequestStream.
+    // QuicCinaseekClientSession::Handle::RequestStream.
     {QuicErrorPhase::kProxySession, ERR_CONNECTION_CLOSED},
     {QuicErrorPhase::kUdpConnect, ERR_ADDRESS_UNREACHABLE},
     {QuicErrorPhase::kUdpConnect, ERR_CONNECTION_TIMED_OUT},
@@ -2831,7 +2831,7 @@ TEST_P(JobControllerReconsiderProxyAfterErrorQuicProxyTest, Test) {
     // Mock sessions must be removed from the vector before the session pool
     // destroys them to avoid dangling pointers.
     while (!mock_proxy_sessions_.empty()) {
-      MockQuicChromiumClientSession* session = mock_proxy_sessions_.back();
+      MockQuicCinaseekClientSession* session = mock_proxy_sessions_.back();
       mock_proxy_sessions_.pop_back();
       quic_session_pool->DeactivateSessionForTesting(session);
     }
@@ -6083,7 +6083,7 @@ class HttpStreamFactoryJobControllerDnsHttpsAlpnTest
     CHECK(quic_request_result);
     CHECK_EQ(OK, *quic_request_result);
 
-    std::unique_ptr<QuicChromiumClientSession::Handle> session =
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session =
         quic_request.ReleaseSessionHandle();
     std::set<std::string> dns_aliases =
         session->GetDnsAliasesForSessionKey(quic_request.session_key());
@@ -7596,7 +7596,7 @@ TEST_F(HttpStreamFactoryJobControllerPoolTest,
   quic_data_->AddWrite(SYNCHRONOUS, ERR_IO_PENDING);
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert =
       ImportCertFromFile(GetTestCertsDirectory(), "test_names.pem");
   CHECK(verify_details1.cert_verify_result.verified_cert);
@@ -7619,7 +7619,7 @@ TEST_F(HttpStreamFactoryJobControllerPoolTest,
   MockQuicData quic_data2(version_);
   quic_data2.AddRead(SYNCHRONOUS, ERR_IO_PENDING);
   quic_data2.AddWrite(SYNCHRONOUS, ERR_IO_PENDING);
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert =
       ImportCertFromFile(GetTestCertsDirectory(), "wildcard.pem");
   CHECK(verify_details2.cert_verify_result.verified_cert);
@@ -7759,7 +7759,7 @@ class HttpStreamFactoryJobControllerWsOverH3Test
     if (mock_quic_session_ && session_) {
       // Clear the member first. Deactivation frees the session, so the
       // `raw_ptr` would dangle if we didn't null it beforehand.
-      QuicChromiumClientSession* session_to_deactivate =
+      QuicCinaseekClientSession* session_to_deactivate =
           std::exchange(mock_quic_session_, nullptr);
       session_->quic_session_pool()->DeactivateSessionForTesting(
           session_to_deactivate);
@@ -7789,7 +7789,7 @@ class HttpStreamFactoryJobControllerWsOverH3Test
         /*require_dns_https_alpn=*/false,
         /*disable_cert_verification_network_fetches=*/false);
     quic::QuicConfig quic_config(quic::test::DefaultQuicConfig());
-    auto new_session = std::make_unique<QuicChromiumClientSession>(
+    auto new_session = std::make_unique<QuicCinaseekClientSession>(
         connection, std::move(socket), session_->quic_session_pool(),
         &crypto_client_stream_factory_, &clock_, &transport_security_state_,
         &ssl_config_service_,
@@ -7819,7 +7819,7 @@ class HttpStreamFactoryJobControllerWsOverH3Test
         MultiplexedSessionCreationInitiator::kUnknown,
         NetLogWithSource::Make(NetLogSourceType::NONE));
 
-    QuicChromiumClientSession* raw_session = new_session.get();
+    QuicCinaseekClientSession* raw_session = new_session.get();
 
     quic::test::NoopQpackStreamSenderDelegate noop_qpack_stream_sender_delegate;
     new_session->Initialize();
@@ -7839,7 +7839,7 @@ class HttpStreamFactoryJobControllerWsOverH3Test
   base::test::ScopedFeatureList feature_list_;
   quic::test::MockRandom random_{0};
   quic::MockClock clock_;
-  QuicChromiumConnectionHelper helper_{&clock_, &random_};
+  QuicCinaseekConnectionHelper helper_{&clock_, &random_};
   quic::test::MockAlarmFactory alarm_factory_;
   TransportSecurityState transport_security_state_;
   SSLConfigServiceDefaults ssl_config_service_;
@@ -7853,7 +7853,7 @@ class HttpStreamFactoryJobControllerWsOverH3Test
   bool has_quic_session_ = false;
 
  protected:
-  raw_ptr<QuicChromiumClientSession> mock_quic_session_ = nullptr;
+  raw_ptr<QuicCinaseekClientSession> mock_quic_session_ = nullptr;
 };
 
 TEST_F(HttpStreamFactoryJobControllerWsOverH3Test, NoJobWhenFlagDisabled) {
@@ -8037,7 +8037,7 @@ TEST_F(HttpStreamFactoryJobControllerWsOverH3Test,
   job_factory_.set_on_create_callback(
       base::BindLambdaForTesting([this](HttpStreamFactory::JobType job_type) {
         if (job_type == HttpStreamFactory::WS_OVER_H3) {
-          QuicChromiumClientSession* session_to_deactivate =
+          QuicCinaseekClientSession* session_to_deactivate =
               std::exchange(mock_quic_session_, nullptr);
           session_->quic_session_pool()->DeactivateSessionForTesting(
               session_to_deactivate);

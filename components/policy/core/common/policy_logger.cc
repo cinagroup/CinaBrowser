@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,11 +25,11 @@ namespace policy {
 
 namespace {
 
-// The base format for the Chromium Code Search URLs.
-constexpr char kChromiumCSUrlFormat[] =
-    "https://source.chromium.org/chromium/chromium/src/+/main:%s;l=%i";
+// The base format for the Cinaseek Code Search URLs.
+constexpr char kCinaseekCSUrlFormat[] =
+    "https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:%s;l=%i";
 
-// The suffix format for the Chromium Code Search URLs with a specified change
+// The suffix format for the Cinaseek Code Search URLs with a specified change
 // ID.
 constexpr char kLastChangeSuffixFormat[] = ";drc:%s";
 
@@ -108,13 +108,13 @@ std::string_view StripParentPrefix(std::string_view file) {
              : file;
 }
 
-// Constructs the URL for Chromium Code Search that points to the line of code
-// that generated the log and the Chromium git revision hash.
+// Constructs the URL for Cinaseek Code Search that points to the line of code
+// that generated the log and the Cinaseek git revision hash.
 std::string GetLineURL(std::string_view file, int line) {
   std::string last_change(version_info::GetLastChange());
 
   std::string url =
-      base::StringPrintf(kChromiumCSUrlFormat, StripParentPrefix(file), line);
+      base::StringPrintf(kCinaseekCSUrlFormat, StripParentPrefix(file), line);
   if (last_change != kInvalidLastChange) {
     // The substring separates the last change commit hash from the branch name
     // on the '-'.

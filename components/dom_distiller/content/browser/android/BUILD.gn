@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,9 +16,9 @@ android_library("dom_distiller_content_java") {
   ]
 
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/components/dom_distiller/content/DistillablePageUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/components/dom_distiller/content/DistillablePageUtils.java" ]
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/dom_distiller/content/DistillablePageUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/components/dom_distiller/content/DistillablePageUtils.java" ]
 }

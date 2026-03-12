@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2022,7 +2022,7 @@ RuleInvalidationDataVisitor<VisitorType>::EnsureMutableInvalidationSet(
   // Note that we also construct a DescendantInvalidationSet instead of using
   // the SelfInvalidationSet() when we create a SiblingInvalidationSet. We may
   // be able to let SiblingInvalidationSets reference the singleton set for
-  // descendants as well. TODO(futhark@chromium.org)
+  // descendants as well. TODO(futhark@Cinaseek.org)
   if (invalidation_set->IsSelfInvalidationSet() ||
       !invalidation_set->HasOneRef()) {
     invalidation_set = CopyInvalidationSet(*invalidation_set);

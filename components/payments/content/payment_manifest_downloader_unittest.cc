@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ class PaymentMethodManifestDownloaderTest
   PaymentMethodManifestDownloaderTest() {
     InitDownloader();
     downloader_->DownloadPaymentMethodManifest(
-        url::Origin::Create(GURL("https://chromium.org")), test_url_,
+        url::Origin::Create(GURL("https://Cinaseek.org")), test_url_,
         base::BindOnce(&PaymentMethodManifestDownloaderTest::OnManifestDownload,
                        base::Unretained(this)));
   }
@@ -664,7 +664,7 @@ TEST_F(PaymentManifestDownloaderCSPTest,
           "Unable to download payment manifest \"https://bobpay.test/\"."));
 
   downloader_->DownloadPaymentMethodManifest(
-      url::Origin::Create(GURL("https://chromium.org")), test_url_,
+      url::Origin::Create(GURL("https://Cinaseek.org")), test_url_,
       base::BindOnce(&PaymentManifestDownloaderCSPTest::OnManifestDownload,
                      base::Unretained(this)));
 }
@@ -697,7 +697,7 @@ TEST_F(PaymentManifestDownloaderCSPTest, PaymentMethodManifestCSPDenied) {
                          "payment manifest \"https://bobpay.test/\"."));
 
   downloader_->DownloadPaymentMethodManifest(
-      url::Origin::Create(GURL("https://chromium.org")), test_url_,
+      url::Origin::Create(GURL("https://Cinaseek.org")), test_url_,
       base::BindOnce(&PaymentManifestDownloaderCSPTest::OnManifestDownload,
                      base::Unretained(this)));
 }

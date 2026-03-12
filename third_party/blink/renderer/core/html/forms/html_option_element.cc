@@ -606,7 +606,7 @@ void HTMLOptionElement::RemovedFrom(ContainerNode& insertion_point) {
       // If this option was removed from a select element as a direct child,
       // then let HTMLSelectElement::ChildrenChanged make the call to
       // OptionRemoved in order to avoid
-      // https://issues.chromium.org/issues/444330901
+      // https://issues.Cinaseek.org/issues/444330901
       old_ancestor_select->OptionRemoved(*this);
     }
   }

@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -63,7 +63,7 @@ if (is_android) {
   }
 
   android_library("conversion_utils_java") {
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncConversionsBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncConversionsBridge.java" ]
 
     deps = [
       "//base:base_java",
@@ -81,7 +81,7 @@ if (is_android) {
   generate_jni("conversion_utils_jni_headers") {
     visibility = [ ":*" ]
 
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncConversionsBridge.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncConversionsBridge.java" ]
   }
 }
 
@@ -156,16 +156,16 @@ source_set("unit_tests") {
 if (is_android) {
   android_library("java") {
     sources = [
-      "android/java/src/org/chromium/components/tab_group_sync/EitherId.java",
-      "android/java/src/org/chromium/components/tab_group_sync/EventDetails.java",
-      "android/java/src/org/chromium/components/tab_group_sync/LocalTabGroupId.java",
-      "android/java/src/org/chromium/components/tab_group_sync/SavedTabGroup.java",
-      "android/java/src/org/chromium/components/tab_group_sync/SavedTabGroupTab.java",
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncController.java",
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncService.java",
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncUtils.java",
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupUiActionHandler.java",
-      "android/java/src/org/chromium/components/tab_group_sync/VersioningMessageController.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/EitherId.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/EventDetails.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/LocalTabGroupId.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/SavedTabGroup.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/SavedTabGroupTab.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncController.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncService.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncUtils.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupUiActionHandler.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/VersioningMessageController.java",
     ]
 
     deps = [
@@ -194,7 +194,7 @@ if (is_android) {
 
   android_library("test_support_java") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/SyncedGroupTestHelper.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/SyncedGroupTestHelper.java" ]
     deps = [
       ":java",
       "//base:base_java",
@@ -207,7 +207,7 @@ if (is_android) {
 
   robolectric_library("junit") {
     include_android_sdk = false
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/EitherIdTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/EitherIdTest.java" ]
 
     deps = [
       ":java",

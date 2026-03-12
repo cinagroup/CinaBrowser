@@ -1,8 +1,8 @@
 {
-  "$build/chromium": {
+  "$build/Cinaseek": {
     "fail_build_on_clang_warnings": true
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/ToTWinArm64PGO/gn-args.json"
@@ -13,17 +13,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "ToTWinArm64PGO",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.clang",
+              "builder_group": "Cinaseek.clang",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_win_clang_tot",
+                "config": "Cinaseek_win_clang_tot",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "win"
@@ -32,7 +32,7 @@
                 "apply_configs": [
                   "clang_tot"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -42,7 +42,7 @@
         {
           "bucket": "ci",
           "builder": "ToTWinArm64PGO",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/ToTWinArm64PGO/targets"
@@ -56,7 +56,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted"
+    "project": "rbe-Cinaseek-trusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -65,7 +65,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.clang",
-  "perf_dashboard_machine_group": "ChromiumClang",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.clang",
+  "perf_dashboard_machine_group": "CinaseekClang",
+  "recipe": "Cinaseek"
 }

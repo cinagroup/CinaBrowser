@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 
 namespace remoting {
 
-#define SERVICE_NAME "org.chromium.chromoting"
+#define SERVICE_NAME "org.Cinaseek.chromoting"
 #define BROKER_NAME SERVICE_NAME ".broker"
 
 #define APPLICATIONS_DIR "/Applications/"

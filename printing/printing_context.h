@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ class COMPONENT_EXPORT(PRINTING) PrintingContext {
   // asynchronous printing API.
   // On Android, when `is_scripted` is true, calling it initiates a full
   // printing flow from the framework's PrintManager.
-  // (see https://codereview.chromium.org/740983002/)
+  // (see https://codereview.Cinaseek.org/740983002/)
   virtual void AskUserForSettings(int max_pages,
                                   bool has_selection,
                                   bool is_scripted,

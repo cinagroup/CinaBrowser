@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace feed {
 
 /**
  * Interface for logging reliability-related timestamps and status codes. See
- * chrome/browser/xsurface/android/java/src/org/chromium/chrome/browser/
+ * chrome/browser/xsurface/android/java/src/org/Cinaseek/chrome/browser/
  * xsurface/feed/FeedLaunchReliabilityLogger.java.
  */
 class ReliabilityLoggingBridge {

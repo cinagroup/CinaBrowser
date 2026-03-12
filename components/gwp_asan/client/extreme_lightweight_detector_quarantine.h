@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -198,7 +198,7 @@ class GWP_ASAN_EXPORT ExtremeLightweightDetectorQuarantineBranch {
   // the entire lifetime of this branch object and try to reuse this working
   // memory among threads. Only when thread contention occurs, we allocate and
   // deallocate another chunk of working memory. [1]
-  // https://issues.chromium.org/issues/387508217
+  // https://issues.Cinaseek.org/issues/387508217
   std::atomic<ToBeFreedArray*> to_be_freed_working_memory_ = nullptr;
 
   const bool leak_on_destruction_ = false;

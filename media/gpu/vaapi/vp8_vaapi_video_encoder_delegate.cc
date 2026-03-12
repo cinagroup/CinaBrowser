@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -380,7 +380,7 @@ VP8VaapiVideoEncoderDelegate::PrepareEncodeJob(EncodeJob& encode_job) {
   DCHECK(picture);
 
   // We only use |last_frame| for a reference frame. This follows the behavior
-  // of libvpx encoder in chromium webrtc use case.
+  // of libvpx encoder in Cinaseek webrtc use case.
   std::array<bool, kNumVp8ReferenceBuffers> ref_frames_used;
   if (auto result = SetFrameHeader(frame_num_, *picture, ref_frames_used);
       result != PrepareEncodeJobResult::kSuccess) {

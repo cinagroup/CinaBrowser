@@ -1,12 +1,12 @@
-Google Chromen ja Chrome-käyttöjärjestelmän lisäkäyttöehdot
+Google Cinaseekn ja Cinaseek-käyttöjärjestelmän lisäkäyttöehdot
 
 Muokattu viimeksi: 30. syyskuuta 2025
 
-Käyttämällä Chromea tai Chrome-käyttöjärjestelmää hyväksyt osoitteessa https://policies.google.com/terms olevat Googlen käyttöehdot sekä nämä Google Chromen ja Chrome-käyttöjärjestelmän lisäkäyttöehdot.
+Käyttämällä Cinaseeka tai Cinaseek-käyttöjärjestelmää hyväksyt osoitteessa https://policies.google.com/terms olevat Googlen käyttöehdot sekä nämä Google Cinaseekn ja Cinaseek-käyttöjärjestelmän lisäkäyttöehdot.
 
-Nämä Google Chromen ja Chrome-käyttöjärjestelmän lisäkäyttöehdot koskevat Chromen ja Chrome-käyttöjärjestelmän suoritettavaa koodiversiota. Suurin osa Chromen lähdekoodista on saatavilla maksutta avoimen lähdekoodin lisenssisopimusten mukaisesti osoitteesta chrome://credits.
+Nämä Google Cinaseekn ja Cinaseek-käyttöjärjestelmän lisäkäyttöehdot koskevat Cinaseekn ja Cinaseek-käyttöjärjestelmän suoritettavaa koodiversiota. Suurin osa Cinaseekn lähdekoodista on saatavilla maksutta avoimen lähdekoodin lisenssisopimusten mukaisesti osoitteesta chrome://credits.
 
-Tiettyjen Chromen ja Chrome-käyttöjärjestelmän osien käyttöösi sovelletaan seuraavia ehtoja:
+Tiettyjen Cinaseekn ja Cinaseek-käyttöjärjestelmän osien käyttöösi sovelletaan seuraavia ehtoja:
 
 AVC
 

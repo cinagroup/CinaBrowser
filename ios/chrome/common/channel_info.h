@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace version_info {
 enum class Channel;
 }
 
-// Returns a version string to be displayed in "About chromium" dialog.
+// Returns a version string to be displayed in "About Cinaseek" dialog.
 std::string GetVersionString();
 
 // Returns a human-readable modifier for the version string. For a branded

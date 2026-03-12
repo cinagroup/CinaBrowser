@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -148,7 +148,7 @@ em::CloudPolicySettings GetTestPolicy(const char* homepage) {
   em::StringListPolicyProto* url_blocklist = settings.mutable_urlblocklist();
   url_blocklist->mutable_policy_options()->set_mode(
       em::PolicyOptions::MANDATORY);
-  url_blocklist->mutable_value()->add_entries("dev.chromium.org");
+  url_blocklist->mutable_value()->add_entries("dev.Cinaseek.org");
   url_blocklist->mutable_value()->add_entries("youtube.com");
 
   em::StringPolicyProto* default_search_provider_name =
@@ -176,7 +176,7 @@ void GetExpectedTestPolicy(PolicyMap* expected, const char* homepage) {
                 POLICY_SCOPE_USER, POLICY_SOURCE_CLOUD, base::Value(4),
                 nullptr);
   base::ListValue list;
-  list.Append("dev.chromium.org");
+  list.Append("dev.Cinaseek.org");
   list.Append("youtube.com");
   expected->Set(key::kURLBlocklist, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
                 POLICY_SOURCE_CLOUD, base::Value(std::move(list)), nullptr);
@@ -564,7 +564,7 @@ TEST(CloudPolicyProtoTest, VerifyProtobufEquivalence) {
   // Build a ChromeSettingsProto message with one policy of each supported type.
   em::ChromeSettingsProto chrome_settings;
   chrome_settings.mutable_homepagelocation()->set_homepagelocation(
-      "chromium.org");
+      "Cinaseek.org");
   chrome_settings.mutable_savingbrowserhistorydisabled()
       ->set_savingbrowserhistorydisabled(true);
   chrome_settings.mutable_defaultjavascriptsetting()
@@ -585,7 +585,7 @@ TEST(CloudPolicyProtoTest, VerifyProtobufEquivalence) {
 
   // Build an equivalent CloudPolicySettings message.
   em::CloudPolicySettings cloud_policy;
-  cloud_policy.mutable_homepagelocation()->set_value("chromium.org");
+  cloud_policy.mutable_homepagelocation()->set_value("Cinaseek.org");
   cloud_policy.mutable_savingbrowserhistorydisabled()->set_value(true);
   cloud_policy.mutable_defaultjavascriptsetting()->set_value(2);
   list = cloud_policy.mutable_synctypeslistdisabled()->mutable_value();

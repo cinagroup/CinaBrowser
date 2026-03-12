@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -608,7 +608,7 @@ TEST_F(Mp4MuxerBoxWriterTest, Mp4MovieVisualSampleEntry) {
 
   mp4::writable_boxes::VisualSampleEntry visual_sample_entry(VideoCodec::kH264);
   visual_sample_entry.coded_size = gfx::Size(kWidth, kHeight);
-  visual_sample_entry.compressor_name = "Chromium AVC Coding";
+  visual_sample_entry.compressor_name = "Cinaseek AVC Coding";
 
   mp4::writable_boxes::AVCDecoderConfiguration avc = {};
   avc.avc_config_record.version = 1;

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -846,7 +846,7 @@ bool NativeViewGLSurfaceEGL::GetFrameTimestampInfoIfAvailable(
                                               EGL_TIMESTAMP_INVALID_ANDROID);
 
   // TODO(vikassoni): File a driver bug for eglGetFrameTimestampsANDROID().
-  // See https://bugs.chromium.org/p/chromium/issues/detail?id=966638.
+  // See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=966638.
   // As per the spec, the driver is expected to return a valid timestamp from
   // the call eglGetFrameTimestampsANDROID() when its not
   // EGL_TIMESTAMP_PENDING_ANDROID or EGL_TIMESTAMP_INVALID_ANDROID. But

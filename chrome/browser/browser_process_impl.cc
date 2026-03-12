@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -137,7 +137,7 @@
 #include "components/supervised_user/core/browser/device_parental_controls_noop_impl.h"
 #include "components/translate/core/browser/translate_download_manager.h"
 #include "components/ukm/ukm_service.h"
-#include "components/update_client/net/network_chromium.h"
+#include "components/update_client/net/network_Cinaseek.h"
 #include "components/update_client/update_query_params.h"
 #include "components/variations/service/variations_service.h"
 #include "components/web_resource/web_resource_pref_names.h"
@@ -427,7 +427,7 @@ void BrowserProcessImpl::Init() {
 #if BUILDFLAG(ENABLE_CHROME_NOTIFICATIONS)
   message_center::MessageCenter::Initialize();
   // Set the system notification source display name ("Google Chrome" or
-  // "Chromium").
+  // "Cinaseek").
   if (message_center::MessageCenter::Get()) {
     message_center::MessageCenter::Get()->SetSystemNotificationAppName(
         l10n_util::GetStringUTF16(IDS_PRODUCT_NAME));
@@ -1344,7 +1344,7 @@ activity_reporter::ActivityReporter* BrowserProcessImpl::activity_reporter() {
         base::BindRepeating(
             [](PrefService* pref_service) { return pref_service; },
             local_state()),
-        base::MakeRefCounted<update_client::NetworkFetcherChromiumFactory>(
+        base::MakeRefCounted<update_client::NetworkFetcherCinaseekFactory>(
             system_network_context_manager()->GetSharedURLLoaderFactory(),
             // Never send cookies for activity reports.
             base::BindRepeating([](const GURL& url) { return false; })),

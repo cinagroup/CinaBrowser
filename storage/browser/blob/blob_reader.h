@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ class FileStreamReader;
 // Use a BlobDataHandle to create an instance.
 //
 // For more information on how to read Blobs in your specific situation, see:
-// https://chromium.googlesource.com/chromium/src/+/HEAD/storage/browser/blob/README.md#how-to-use-blobs-browser_side-accessing-reading
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/storage/browser/blob/README.md#how-to-use-blobs-browser_side-accessing-reading
 class COMPONENT_EXPORT(STORAGE_BROWSER) BlobReader {
  public:
   class COMPONENT_EXPORT(STORAGE_BROWSER) FileStreamReaderProvider {

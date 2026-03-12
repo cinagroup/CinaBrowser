@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@
 
 namespace audio {
 
-BASE_FEATURE(kRestrictOwnAudioAddChromiumBack,
+BASE_FEATURE(kRestrictOwnAudioAddCinaseekBack,
              base::FEATURE_ENABLED_BY_DEFAULT);
 
 // static
@@ -32,7 +32,7 @@ LoopbackMixin::MaybeCreateRestrictOwnAudioLoopbackMixin(
     const media::AudioParameters& params,
     OnDataCallback on_data_callback) {
   if (!(media::IsRestrictOwnAudioSupported() &&
-        base::FeatureList::IsEnabled(kRestrictOwnAudioAddChromiumBack))) {
+        base::FeatureList::IsEnabled(kRestrictOwnAudioAddCinaseekBack))) {
     return nullptr;
   }
 

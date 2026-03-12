@@ -944,8 +944,8 @@
                 {
                     "name": "Enabled",
                     "enable_features": [
-                        "LowLatencyCanvas2dImageChromium",
-                        "LowLatencyWebGLImageChromium"
+                        "LowLatencyCanvas2dImageCinaseek",
+                        "LowLatencyWebGLImageCinaseek"
                     ],
                     "min_os_version": "10.0.0"
                 }
@@ -18326,7 +18326,7 @@
             "experiments": [
                 {
                     "//0": "This feature has shipped for Chrome but not for ",
-                    "//1": "Chromium embedders, so the corresponding feature ",
+                    "//1": "Cinaseek embedders, so the corresponding feature ",
                     "//2": "flag value is false but we rely on this entry to ",
                     "//3": "enable the feature for most types of tests",
                     "name": "EnableFeatureForTests",
@@ -21921,7 +21921,7 @@
                 {
                     "name": "Enabled",
                     "params": {
-                        "omnibox_allowed_package_names": "org.chromium.customtabsclient"
+                        "omnibox_allowed_package_names": "org.Cinaseek.customtabsclient"
                     },
                     "enable_features": [
                         "SearchInCCT"
@@ -23476,7 +23476,7 @@
             "experiments": [
                 {
                     "//0": "This feature has shipped for Chrome but not for ",
-                    "//1": "Chromium embedders, so the corresponding feature ",
+                    "//1": "Cinaseek embedders, so the corresponding feature ",
                     "//2": "flag value is false but we rely on this entry to ",
                     "//3": "enable the feature for most types of tests",
                     "name": "EnableFeatureForTests",

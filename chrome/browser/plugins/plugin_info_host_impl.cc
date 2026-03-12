@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -108,7 +108,7 @@ std::unique_ptr<PluginMetadata> GetPluginMetadata(const WebPluginInfo& plugin) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
     identifier = "google-chrome-pdf";
 #else
-    identifier = "chromium-pdf";
+    identifier = "Cinaseek-pdf";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
     security_status = PluginMetadata::SECURITY_STATUS_FULLY_TRUSTED;
   } else if (plugin.path.value() ==
@@ -116,7 +116,7 @@ std::unique_ptr<PluginMetadata> GetPluginMetadata(const WebPluginInfo& plugin) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
     identifier = "google-chrome-pdf-plugin";
 #else
-    identifier = "chromium-pdf-plugin";
+    identifier = "Cinaseek-pdf-plugin";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
     security_status = PluginMetadata::SECURITY_STATUS_FULLY_TRUSTED;
   }

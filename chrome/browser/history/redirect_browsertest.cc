@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -124,7 +124,7 @@ IN_PROC_BROWSER_TEST_F(RedirectTest, Client) {
                            ->GetLastCommittedURL());
 }
 
-// http://code.google.com/p/chromium/issues/detail?id=62772
+// http://code.google.com/p/Cinaseek/issues/detail?id=62772
 IN_PROC_BROWSER_TEST_F(RedirectTest, ClientEmptyReferer) {
   ASSERT_TRUE(embedded_test_server()->Start());
 

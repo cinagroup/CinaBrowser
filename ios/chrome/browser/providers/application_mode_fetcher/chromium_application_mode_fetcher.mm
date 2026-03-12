@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace ios::provider {
 void FetchApplicationMode(const GURL& url,
                           NSString* app_id,
                           AppModeFetchingResponse fetching_response) {
-  // Application update is not supported in Chromium.
+  // Application update is not supported in Cinaseek.
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE, base::BindOnce(std::move(fetching_response), false, nil));
 }

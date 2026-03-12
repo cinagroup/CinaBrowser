@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ using base::test::ios::WaitUntilConditionOrTimeout;
 
 namespace {
 const char kTestCertFileName[] = "ok_cert.pem";
-const char kTestHostName[] = "https://chromium.test/";
+const char kTestHostName[] = "https://Cinaseek.test/";
 }  // namespace
 
 // Test fixture for IOSSSLErrorHander when used with a WebState that hasn't

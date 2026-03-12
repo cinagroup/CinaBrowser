@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@
 # (1) It is *necessary* to use the file to consume Device Gamepad (the
 # current files define structs that are used as a consistent interpretation of
 # shared memory by the Device Gamepad and its clients).
-# (2) The file has no dependencies on the STL or Chromium code and will not
+# (2) The file has no dependencies on the STL or Cinaseek code and will not
 # grow them over time (the current files are POD structs and will necessarily
 # stay that way due to their above-described purpose).
-# Consult {platform-architecture-dev, services-dev}@chromium.org in the case
+# Consult {platform-architecture-dev, services-dev}@Cinaseek.org in the case
 # of any uncertainty.
 component("shared_with_blink") {
   sources = [
@@ -27,7 +27,7 @@ component("shared_with_blink") {
 
 # Normally typemap traits sources should be build directly into mojom targets
 # via the typemap file. This target is for typemapped types whose
-# traits are shared between chromium and blink variants.
+# traits are shared between Cinaseek and blink variants.
 component("shared_typemap_traits") {
   output_name = "gamepad_shared_typemap_traits"
 

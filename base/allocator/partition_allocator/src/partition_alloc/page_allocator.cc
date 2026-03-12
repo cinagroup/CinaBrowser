@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -393,7 +393,7 @@ bool ReserveAddressSpace(size_t size) {
         0, size,
         PageAccessibilityConfiguration(
             PageAccessibilityConfiguration::kInaccessible),
-        PageTag::kChromium);
+        PageTag::kCinaseek);
     if (mem) {
       // We guarantee this alignment when reserving address space.
       PA_DCHECK(!(mem & internal::PageAllocationGranularityOffsetMask()));

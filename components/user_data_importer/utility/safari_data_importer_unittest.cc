@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -480,7 +480,7 @@ TEST_F(SafariDataImporterTest, Bookmarks_Basic) {
       Do Not Edit! -->
       <DL>
       <DT><A HREF="https://www.google.com/" ADD_DATE="904914000">Google</A>
-      <DT><A HREF="https://www.chromium.org/">Chromium</A>
+      <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>
       </DL>)");
 
   ASSERT_EQ(GetPendingBookmarks().size(), 2u);
@@ -494,10 +494,10 @@ TEST_F(SafariDataImporterTest, Bookmarks_Basic) {
 
   entry = GetPendingBookmarks()[1];
   EXPECT_FALSE(entry.is_folder);
-  EXPECT_EQ(entry.title, u"Chromium");
+  EXPECT_EQ(entry.title, u"Cinaseek");
   // No timestamp maps to current time.
   EXPECT_EQ(entry.creation_time, base::Time::Now());
-  EXPECT_EQ(entry.url, GURL("https://www.chromium.org/"));
+  EXPECT_EQ(entry.url, GURL("https://www.Cinaseek.org/"));
   EXPECT_THAT(entry.path, IsEmpty());
 
   EXPECT_EQ(GetPendingReadingList().size(), 0u);
@@ -515,7 +515,7 @@ TEST_F(SafariDataImporterTest, Bookmarks_NoTopLevelDL) {
       It will be read and overwritten.
       Do Not Edit! -->
       <DT><A HREF="https://www.google.com/" ADD_DATE="904914000">Google</A>
-      <DT><A HREF="https://www.chromium.org/">Chromium</A>)");
+      <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>)");
 
   ASSERT_EQ(GetPendingBookmarks().size(), 2u);
   ImportedBookmarkEntry entry = GetPendingBookmarks()[0];
@@ -528,10 +528,10 @@ TEST_F(SafariDataImporterTest, Bookmarks_NoTopLevelDL) {
 
   entry = GetPendingBookmarks()[1];
   EXPECT_FALSE(entry.is_folder);
-  EXPECT_EQ(entry.title, u"Chromium");
+  EXPECT_EQ(entry.title, u"Cinaseek");
   // No timestamp maps to current time.
   EXPECT_EQ(entry.creation_time, base::Time::Now());
-  EXPECT_EQ(entry.url, GURL("https://www.chromium.org/"));
+  EXPECT_EQ(entry.url, GURL("https://www.Cinaseek.org/"));
   EXPECT_THAT(entry.path, IsEmpty());
 
   EXPECT_EQ(GetPendingReadingList().size(), 0u);
@@ -710,8 +710,8 @@ TEST_F(SafariDataImporterTest, Bookmarks_MiscJunk) {
       <DT><A>Google</A>
       <DT><H3>Folder 1</H3>
       <DL><p>
-        <DT><A HREF="https://www.chromium.org/">Chromium</A>
-        ICON_URI="https://www.chromium.org/favicon.ico"
+        <DT><A HREF="https://www.Cinaseek.org/">Cinaseek</A>
+        ICON_URI="https://www.Cinaseek.org/favicon.ico"
         <DT><A HREF="https://www.example.org/" ADD_DATE="Last Tuesday">Example</A>
         <DT><A>Google Reader</A>
       </DL><p>
@@ -740,10 +740,10 @@ TEST_F(SafariDataImporterTest, Bookmarks_MiscJunk) {
   // ones are preserved.
   entry = GetPendingBookmarks()[1];
   EXPECT_FALSE(entry.is_folder);
-  EXPECT_EQ(entry.title, u"Chromium");
+  EXPECT_EQ(entry.title, u"Cinaseek");
   // No timestamp maps to current time.
   EXPECT_EQ(entry.creation_time, base::Time::Now());
-  EXPECT_EQ(entry.url, GURL("https://www.chromium.org/"));
+  EXPECT_EQ(entry.url, GURL("https://www.Cinaseek.org/"));
   EXPECT_THAT(entry.path, ElementsAre(u"Folder 1"));
 
   entry = GetPendingBookmarks()[2];
@@ -764,10 +764,10 @@ TEST_F(SafariDataImporterTest, Bookmarks_MiscJunk) {
   // ones are preserved.
   ImportedBookmarkEntry entry = GetPendingBookmarks()[0];
   EXPECT_FALSE(entry.is_folder);
-  EXPECT_EQ(entry.title, u"Chromium");
+  EXPECT_EQ(entry.title, u"Cinaseek");
   // No timestamp maps to current time.
   EXPECT_EQ(entry.creation_time, base::Time::Now());
-  EXPECT_EQ(entry.url, GURL("https://www.chromium.org/"));
+  EXPECT_EQ(entry.url, GURL("https://www.Cinaseek.org/"));
   EXPECT_THAT(entry.path, ElementsAre(u"Folder 1"));
 
   entry = GetPendingBookmarks()[1];

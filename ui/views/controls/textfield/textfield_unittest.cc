@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1388,7 +1388,7 @@ TEST_F(TextfieldTest, LineSelection) {
 #if BUILDFLAG(IS_MAC)
   // Mac: Cmd+Shift+Right when whole line is selected (11->0) -> Should collapse
   // to end (11->11). This matches the behavior fixed in
-  // https://issues.chromium.org/issues/396057270, where returning to the
+  // https://issues.Cinaseek.org/issues/396057270, where returning to the
   // selection start position should collapse the selection.
   EXPECT_EQ(u"", textfield_->GetSelectedText());
 #else

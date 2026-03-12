@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -282,7 +282,7 @@ void WebServiceWorkerProviderImpl::OnDidGetRegistrationForReady(
   // mojo::ReportBadMessage(), this is forced by Mojo, please see
   // content::ServiceWorkerContainerHost::GetRegistrationForReady(). We'll find
   // a better solution once the discussion at
-  // https://groups.google.com/a/chromium.org/forum/#!topic/chromium-mojo/NNsogKNurlA
+  // https://groups.google.com/a/Cinaseek.org/forum/#!topic/Cinaseek-mojo/NNsogKNurlA
   // settled.
   CHECK(registration);
   DCHECK_NE(blink::mojom::kInvalidServiceWorkerRegistrationId,

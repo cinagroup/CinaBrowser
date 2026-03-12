@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 // An enum to describe the context in which a system location setting prompt
 // is triggered to allow the prompt UI to be customized to the given context.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.location
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.location
 enum LocationSettingsDialogContext {
   // Default context.
   DEFAULT = 1,

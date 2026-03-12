@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -285,7 +285,7 @@ WidgetAXManager::AccessibilityGetNativeViewAccessible() {
     return gfx::NativeViewAccessible();
   }
 #if BUILDFLAG(IS_MAC)
-  // On macOS, the chromium accessibility tree is attached to an NSView. We must
+  // On macOS, the Cinaseek accessibility tree is attached to an NSView. We must
   // return the NativeViewAccessible for the NSView to connect our internal tree
   // to the native one.
   if (auto* native_widget =
@@ -315,7 +315,7 @@ WidgetAXManager::AccessibilityGetNativeViewAccessibleForWindow() {
     return gfx::NativeViewAccessible();
   }
 #if BUILDFLAG(IS_MAC)
-  // On macOS, the chromium accessibility tree is attached to an NSView itself
+  // On macOS, the Cinaseek accessibility tree is attached to an NSView itself
   // connected to an NSWindow. We must return the NativeViewAccessible for the
   // NSWindow to connect our internal tree to the native one.
   //

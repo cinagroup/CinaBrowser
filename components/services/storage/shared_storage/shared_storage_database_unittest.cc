@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -222,9 +222,9 @@ TEST_F(SharedStorageDatabaseTest, CurrentVersion_LoadFromFile) {
   url::Origin youtube_com = url::Origin::Create(GURL("http://youtube.com/"));
   EXPECT_EQ(1L, db_->Length(youtube_com));
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
-  EXPECT_EQ(db_->Get(chromium_org, u"a").data, u"");
-  EXPECT_EQ(db_->Get(chromium_org, u"a")
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
+  EXPECT_EQ(db_->Get(Cinaseek_org, u"a").data, u"");
+  EXPECT_EQ(db_->Get(Cinaseek_org, u"a")
                 .last_used_time.ToDeltaSinceWindowsEpoch()
                 .InMicroseconds(),
             13313037416916308);
@@ -232,7 +232,7 @@ TEST_F(SharedStorageDatabaseTest, CurrentVersion_LoadFromFile) {
   TestSharedStorageEntriesListener listener(
       task_environment_.GetMainThreadTaskRunner());
   EXPECT_EQ(OperationResult::kSuccess,
-            db_->Keys(chromium_org, listener.BindNewPipeAndPassRemote()));
+            db_->Keys(Cinaseek_org, listener.BindNewPipeAndPassRemote()));
   listener.Flush();
   EXPECT_THAT(listener.TakeKeys(), ElementsAre(u"a", u"b", u"c"));
   EXPECT_EQ("", listener.error_message());
@@ -290,7 +290,7 @@ TEST_F(SharedStorageDatabaseTest, CurrentVersion_LoadFromFile) {
   std::vector<url::Origin> origins;
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
-  EXPECT_THAT(origins, ElementsAre(abc_xyz, chromium_org, google_com,
+  EXPECT_THAT(origins, ElementsAre(abc_xyz, Cinaseek_org, google_com,
                                    google_org, grow_with_google_com, gv_com,
                                    waymo_com, withgoogle_com, youtube_com));
 
@@ -298,7 +298,7 @@ TEST_F(SharedStorageDatabaseTest, CurrentVersion_LoadFromFile) {
                    db_->GetRemainingBudget(net::SchemefulSite(abc_xyz)).bits);
   EXPECT_DOUBLE_EQ(
       kBitBudget,
-      db_->GetRemainingBudget(net::SchemefulSite(chromium_org)).bits);
+      db_->GetRemainingBudget(net::SchemefulSite(Cinaseek_org)).bits);
   EXPECT_DOUBLE_EQ(
       kBitBudget, db_->GetRemainingBudget(net::SchemefulSite(google_com)).bits);
   EXPECT_DOUBLE_EQ(
@@ -373,13 +373,13 @@ TEST_F(SharedStorageDatabaseTest, Version1_LoadFromFileNoBudgetTables) {
   url::Origin youtube_com = url::Origin::Create(GURL("http://youtube.com/"));
   EXPECT_EQ(1L, db_->Length(youtube_com));
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
-  EXPECT_EQ(db_->Get(chromium_org, u"a").data, u"");
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
+  EXPECT_EQ(db_->Get(Cinaseek_org, u"a").data, u"");
 
   TestSharedStorageEntriesListener listener(
       task_environment_.GetMainThreadTaskRunner());
   EXPECT_EQ(OperationResult::kSuccess,
-            db_->Keys(chromium_org, listener.BindNewPipeAndPassRemote()));
+            db_->Keys(Cinaseek_org, listener.BindNewPipeAndPassRemote()));
   listener.Flush();
   EXPECT_THAT(listener.TakeKeys(), ElementsAre(u"a", u"b", u"c"));
   EXPECT_EQ("", listener.error_message());
@@ -437,7 +437,7 @@ TEST_F(SharedStorageDatabaseTest, Version1_LoadFromFileNoBudgetTables) {
   std::vector<url::Origin> origins;
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
-  EXPECT_THAT(origins, ElementsAre(abc_xyz, chromium_org, google_com,
+  EXPECT_THAT(origins, ElementsAre(abc_xyz, Cinaseek_org, google_com,
                                    google_org, grow_with_google_com, gv_com,
                                    waymo_com, withgoogle_com, youtube_com));
 
@@ -445,7 +445,7 @@ TEST_F(SharedStorageDatabaseTest, Version1_LoadFromFileNoBudgetTables) {
                    db_->GetRemainingBudget(net::SchemefulSite(abc_xyz)).bits);
   EXPECT_DOUBLE_EQ(
       kBitBudget,
-      db_->GetRemainingBudget(net::SchemefulSite(chromium_org)).bits);
+      db_->GetRemainingBudget(net::SchemefulSite(Cinaseek_org)).bits);
   EXPECT_DOUBLE_EQ(
       kBitBudget, db_->GetRemainingBudget(net::SchemefulSite(google_com)).bits);
   EXPECT_DOUBLE_EQ(
@@ -2572,11 +2572,11 @@ TEST_F(SharedStorageDatabaseIteratorTest, Keys) {
   EXPECT_EQ(9U, utility.BatchCountForId(id1));
   utility.VerifyNoErrorForId(id1);
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   size_t id2 = utility.RegisterListener();
   EXPECT_EQ(
       OperationResult::kSuccess,
-      db_->Keys(chromium_org, utility.BindNewPipeAndPassRemoteForId(id2)));
+      db_->Keys(Cinaseek_org, utility.BindNewPipeAndPassRemoteForId(id2)));
   utility.FlushForId(id2);
   EXPECT_EQ(26U, utility.TakeKeysForId(id2).size());
 
@@ -2630,11 +2630,11 @@ TEST_F(SharedStorageDatabaseIteratorTest, Entries) {
   EXPECT_EQ(9U, utility.BatchCountForId(id1));
   utility.VerifyNoErrorForId(id1);
 
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   size_t id2 = utility.RegisterListener();
   EXPECT_EQ(
       OperationResult::kSuccess,
-      db_->Entries(chromium_org, utility.BindNewPipeAndPassRemoteForId(id2)));
+      db_->Entries(Cinaseek_org, utility.BindNewPipeAndPassRemoteForId(id2)));
   utility.FlushForId(id2);
   EXPECT_EQ(26U, utility.TakeEntriesForId(id2).size());
 
@@ -2704,7 +2704,7 @@ TEST_F(SharedStorageDatabaseTest, FiveOrigins) {
   ASSERT_TRUE(db_->is_filebacked());
 
   url::Origin abc_xyz = url::Origin::Create(GURL("http://abc.xyz"));
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   url::Origin google_com = url::Origin::Create(GURL("http://google.com/"));
   url::Origin google_org = url::Origin::Create(GURL("http://google.org/"));
   url::Origin gv_com = url::Origin::Create(GURL("http://gv.com"));
@@ -2712,7 +2712,7 @@ TEST_F(SharedStorageDatabaseTest, FiveOrigins) {
   std::vector<url::Origin> origins;
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
-  EXPECT_THAT(origins, ElementsAre(abc_xyz, chromium_org, google_com,
+  EXPECT_THAT(origins, ElementsAre(abc_xyz, Cinaseek_org, google_com,
                                    google_org, gv_com));
 
   histogram_tester_.ExpectUniqueSample(kIsFileBackedHistogram, true, 1);
@@ -2745,7 +2745,7 @@ TEST_F(SharedStorageDatabaseTest, SixOrigins) {
   ASSERT_TRUE(db_->is_filebacked());
 
   url::Origin abc_xyz = url::Origin::Create(GURL("http://abc.xyz"));
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   url::Origin google_com = url::Origin::Create(GURL("http://google.com/"));
   url::Origin google_org = url::Origin::Create(GURL("http://google.org/"));
   url::Origin gv_com = url::Origin::Create(GURL("http://gv.com"));
@@ -2754,7 +2754,7 @@ TEST_F(SharedStorageDatabaseTest, SixOrigins) {
   std::vector<url::Origin> origins;
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
-  EXPECT_THAT(origins, ElementsAre(abc_xyz, chromium_org, google_com,
+  EXPECT_THAT(origins, ElementsAre(abc_xyz, Cinaseek_org, google_com,
                                    google_org, gv_com, waymo_com));
 
   histogram_tester_.ExpectUniqueSample(kIsFileBackedHistogram, true, 1);
@@ -2787,7 +2787,7 @@ TEST_F(SharedStorageDatabaseTest, SevenOrigins) {
   ASSERT_TRUE(db_->is_filebacked());
 
   url::Origin abc_xyz = url::Origin::Create(GURL("http://abc.xyz"));
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   url::Origin google_com = url::Origin::Create(GURL("http://google.com/"));
   url::Origin google_org = url::Origin::Create(GURL("http://google.org/"));
   url::Origin gv_com = url::Origin::Create(GURL("http://gv.com"));
@@ -2799,7 +2799,7 @@ TEST_F(SharedStorageDatabaseTest, SevenOrigins) {
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
   EXPECT_THAT(origins,
-              ElementsAre(abc_xyz, chromium_org, google_com, google_org, gv_com,
+              ElementsAre(abc_xyz, Cinaseek_org, google_com, google_org, gv_com,
                           waymo_com, with_google_com));
 
   histogram_tester_.ExpectUniqueSample(kIsFileBackedHistogram, true, 1);
@@ -2831,7 +2831,7 @@ TEST_F(SharedStorageDatabaseTest, EightOrigins) {
   ASSERT_TRUE(db_->is_filebacked());
 
   url::Origin abc_xyz = url::Origin::Create(GURL("http://abc.xyz"));
-  url::Origin chromium_org = url::Origin::Create(GURL("http://chromium.org/"));
+  url::Origin Cinaseek_org = url::Origin::Create(GURL("http://Cinaseek.org/"));
   url::Origin google_com = url::Origin::Create(GURL("http://google.com/"));
   url::Origin google_org = url::Origin::Create(GURL("http://google.org/"));
   url::Origin gv_com = url::Origin::Create(GURL("http://gv.com"));
@@ -2844,7 +2844,7 @@ TEST_F(SharedStorageDatabaseTest, EightOrigins) {
   for (const auto& info : db_->FetchOrigins())
     origins.push_back(info->storage_key.origin());
   EXPECT_THAT(origins,
-              ElementsAre(abc_xyz, chromium_org, google_com, google_org, gv_com,
+              ElementsAre(abc_xyz, Cinaseek_org, google_com, google_org, gv_com,
                           waymo_com, with_google_com, youtube_com));
 
   histogram_tester_.ExpectUniqueSample(kIsFileBackedHistogram, true, 1);

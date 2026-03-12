@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -764,7 +764,7 @@ IN_PROC_BROWSER_TEST_F(EVBrowserTest, TestHTTPSEVNoOCSPCheck) {
       chrome_test_utils::GetActiveWebContents(this), AuthState::NONE);
 
   net::CertStatus cert_status = GetCurrentCertStatus();
-  EXPECT_EQ(ssl_test_util::SystemUsesChromiumEVMetadata(),
+  EXPECT_EQ(ssl_test_util::SystemUsesCinaseekEVMetadata(),
             static_cast<bool>(cert_status & net::CERT_STATUS_IS_EV));
   EXPECT_FALSE(cert_status & net::CERT_STATUS_REV_CHECKING_ENABLED);
 }

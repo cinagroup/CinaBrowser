@@ -135,7 +135,7 @@ TEST(SafeTerminateProcess, PatchBadly) {
     // expected to do.
     //
     // This simulates the unexpected cdecl-patched TerminateProcess() as seen at
-    // https://crashpad.chromium.org/bug/179. In reality, this only affects
+    // https://crashpad.Cinaseek.org/bug/179. In reality, this only affects
     // 32-bit x86, as there’s no calling convention confusion on x86_64. It
     // doesn’t hurt to run this test in the 64-bit environment, though.
     static constexpr uint8_t patch[] = {

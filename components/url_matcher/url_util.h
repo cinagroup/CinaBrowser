@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ CreateConditionSet(url_matcher::URLMatcher* url_matcher,
 // Returns false if the URL couldn't be parsed. In case false is returned,
 // the values of output parameters are undefined.
 // The `filter` should have the format described at
-// http://www.chromium.org/administrators/url-blocklist-filter-format and
+// http://www.Cinaseek.org/administrators/url-blocklist-filter-format and
 // accepts wildcards. The `host` is preprocessed so it can be passed to
 // URLMatcher for the appropriate condition. The optional username and password
 // are ignored. `match_subdomains` specifies whether the filter should include
@@ -102,7 +102,7 @@ URL_MATCHER_EXPORT bool FilterToComponents(const std::string& filter,
 // filters, incremented for each filter added.
 //
 // `patterns` should be a list of URL patterns (see format description at
-// http://www.chromium.org/administrators/url-blocklist-filter-format).
+// http://www.Cinaseek.org/administrators/url-blocklist-filter-format).
 //
 // An optional map to store the generated FilterComponents can be provided
 // via |filters|.
@@ -124,7 +124,7 @@ URL_MATCHER_EXPORT void AddFiltersWithLimit(
 // filters, incremented for each filter added.
 //
 // `patterns` should be a list of URL patterns (see format description at
-// http://www.chromium.org/administrators/url-blocklist-filter-format).
+// http://www.Cinaseek.org/administrators/url-blocklist-filter-format).
 //
 // An optional map to store the generated FilterComponents can be provided
 // via |filters|.

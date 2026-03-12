@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -497,7 +497,7 @@ void SpdyHttpStream::MaybeScheduleBufferedReadCallback() {
   // historical behavior. It would be interesting to evaluate whether it can be
   // invoked synchronously to avoid the overhead of posting a task. A long time
   // ago, the callback was invoked synchronously
-  // https://codereview.chromium.org/652209/diff/2018/net/spdy/spdy_stream.cc.
+  // https://codereview.Cinaseek.org/652209/diff/2018/net/spdy/spdy_stream.cc.
   if (response_body_queue_.GetTotalSize() >=
       static_cast<size_t>(user_buffer_len_)) {
     buffered_read_timer_.Start(FROM_HERE, base::TimeDelta() /* no delay */,

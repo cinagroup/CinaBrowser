@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,8 +16,8 @@ bool IsValidObjectPath(const std::string& value) {
   if (!base::StartsWith(value, "/", base::CompareCase::SENSITIVE))
     return false;
 
-  // Elements are pieces delimited by '/'. For instance, "org", "chromium",
-  // "Foo" are elements of "/org/chromium/Foo".
+  // Elements are pieces delimited by '/'. For instance, "org", "Cinaseek",
+  // "Foo" are elements of "/org/Cinaseek/Foo".
   int element_length = 0;
   for (size_t i = 1; i < value.size(); ++i) {
     const char c = value[i];

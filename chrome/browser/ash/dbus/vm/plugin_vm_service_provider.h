@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,8 +26,8 @@ namespace ash {
 //
 // GetLicenseData:
 // % dbus-send --system --type=method_call --print-reply
-// --dest=org.chromium.PluginVmService /org/chromium/PluginVmService
-// org.chromium.PluginVmServiceInterface.GetLicenseData
+// --dest=org.Cinaseek.PluginVmService /org/Cinaseek/PluginVmService
+// org.Cinaseek.PluginVmServiceInterface.GetLicenseData
 //
 // % (returns message GetLicenseDataResponse {
 //  string license_key = 1; // If available, this contains the PluginVm
@@ -40,15 +40,15 @@ namespace ash {
 //
 // ShowSettingsPage:
 // % dbus-send --system --type=method_call --print-reply
-// --dest=org.chromium.PluginVmService /org/chromium/PluginVmService
-// org.chromium.PluginVmServiceInterface.ShowSettingsPage
+// --dest=org.Cinaseek.PluginVmService /org/Cinaseek/PluginVmService
+// org.Cinaseek.PluginVmServiceInterface.ShowSettingsPage
 // array:byte:0x0a,0x10,0x70,0x6c,0x75,0x67,0x69,0x6e,0x56,0x6d,0x2f,0x64,0x65,
 // 0x74,0x61,0x69,0x6c,0x73
 //
 // GetPermissions:
 // % dbus-send --system --type=method_call --print-reply
-// --dest=org.chromium.PluginVmService /org/chromium/PluginVmService
-// org.chromium.PluginVmServiceInterface.GetPermissions
+// --dest=org.Cinaseek.PluginVmService /org/Cinaseek/PluginVmService
+// org.Cinaseek.PluginVmServiceInterface.GetPermissions
 //
 // % (returns message GetPermissionsResponse {
 //  bool data_collection_enabled = 1; // Data collection enablement status.
@@ -56,8 +56,8 @@ namespace ash {
 //
 // GetUserId:
 // % dbus-send --system --type=method_call --print-reply
-// --dest=org.chromium.PluginVmService /org/chromium/PluginVmService
-// org.chromium.PluginVmServiceInterface.GetUserId
+// --dest=org.Cinaseek.PluginVmService /org/Cinaseek/PluginVmService
+// org.Cinaseek.PluginVmServiceInterface.GetUserId
 //
 // % (returns message GetLicenseDataResponse {
 //  string plugin_vm_user_id = 1; // If available, this contains the PluginVm

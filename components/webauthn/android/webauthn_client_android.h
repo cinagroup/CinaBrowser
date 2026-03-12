@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class DiscoverableCredentialMetadata;
 namespace webauthn {
 
 // The type of mediation that is being used for a WebAuthn GetAssertion request.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class AssertionMediationType {
   kModal = 0,
@@ -33,7 +33,7 @@ enum class AssertionMediationType {
 };
 
 // Reason codes for non-credential completion of the request.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class NonCredentialReturnReason {
   kImmediateNoCredentials = 0,

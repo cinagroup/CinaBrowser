@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // from Chrome, the associated ID will remain and be marked as obsolete.
 //
 // Automatically generate a corresponding Java enum:
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.omnibox.action
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.omnibox.action
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: OmniboxPedalId
 enum class OmniboxPedalId {
   NONE = 0,

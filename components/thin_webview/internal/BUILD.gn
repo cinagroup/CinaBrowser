@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -32,10 +32,10 @@ static_library("internal") {
 android_library("internal_java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/thinwebview/internal/CompositorViewImpl.java",
-    "java/src/org/chromium/components/thinwebview/internal/ThinWebViewActionModeCallback.java",
-    "java/src/org/chromium/components/thinwebview/internal/ThinWebViewContextMenuItemDelegate.java",
-    "java/src/org/chromium/components/thinwebview/internal/ThinWebViewImpl.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/CompositorViewImpl.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/ThinWebViewActionModeCallback.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/ThinWebViewContextMenuItemDelegate.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/ThinWebViewImpl.java",
   ]
 
   deps = [
@@ -55,7 +55,7 @@ android_library("internal_java") {
 generate_jni("jni_headers") {
   visibility = [ ":*" ]
   sources = [
-    "java/src/org/chromium/components/thinwebview/internal/CompositorViewImpl.java",
-    "java/src/org/chromium/components/thinwebview/internal/ThinWebViewImpl.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/CompositorViewImpl.java",
+    "java/src/org/Cinaseek/components/thinwebview/internal/ThinWebViewImpl.java",
   ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1862,7 +1862,7 @@ void BrowserCommandController::UpdateCommandsForIncognitoAvailability() {
 }
 
 void BrowserCommandController::UpdateCommandsForExtensionsMenu() {
-  // TODO(crbug.com/41124423): Talk with isandrk@chromium.org about whether this
+  // TODO(crbug.com/41124423): Talk with isandrk@Cinaseek.org about whether this
   // is necessary for the experiment or not.
   if (is_locked_fullscreen_) {
     return;

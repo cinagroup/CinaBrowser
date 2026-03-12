@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ constexpr char kGateway[] = "192.168.0.1";
 constexpr char kNameServer0[] = "1.1.1.1";
 constexpr char kNameServer1[] = "2.2.2.2";
 constexpr char kSearchDomain0[] = "example.com";
-constexpr char kSearchDomain1[] = "chromium.org";
+constexpr char kSearchDomain1[] = "Cinaseek.org";
 constexpr char kAllowedBSSID0[] = "00:11:22:33:44:55";
 constexpr char kAllowedBSSID1[] = "66:77:88:99:AA:BB";
 constexpr char kSecurityEAP[] = "WPA-EAP";

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,8 +21,8 @@
 #include "net/dns/mock_host_resolver.h"
 #include "net/http/http_network_session.h"
 #include "net/http/http_status_code.h"
-#include "net/quic/crypto/proof_source_chromium.h"
-#include "net/quic/crypto_test_utils_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
+#include "net/quic/crypto_test_utils_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/test/cert_test_util.h"
 #include "net/test/embedded_test_server/embedded_test_server.h"
@@ -138,7 +138,7 @@ class URLRequestQuicPerfTest : public ::testing::Test {
     memory_cache_backend_.AddSimpleResponse(kOriginHost, kHelloPath,
                                             kHelloStatus, kHelloAltSvcResponse);
     quic_server_ = std::make_unique<QuicSimpleServer>(
-        net::test::ProofSourceForTestingChromium(), config,
+        net::test::ProofSourceForTestingCinaseek(), config,
         quic::QuicCryptoServerConfig::ConfigOptions(),
         quic::AllSupportedVersions(), &memory_cache_backend_);
     int rv = quic_server_->Listen(

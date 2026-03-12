@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ namespace {
 const char kTestID[] = "test_id";
 const char kTestChallenge[] = "test_challenge";
 const char kTestCertificate[] = "test_certificate";
-const char kTestEmail[] = "test_email@chromium.org";
+const char kTestEmail[] = "test_email@Cinaseek.org";
 
 class FakeDelegate : public PlatformVerificationFlow::Delegate {
  public:

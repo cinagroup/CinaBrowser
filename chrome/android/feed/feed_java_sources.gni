@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -23,12 +23,12 @@ feed_deps = [
 ]
 
 feed_java_sources = [
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/FeedItemDecoration.java",
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/FeedSurfaceCoordinator.java",
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/FeedSurfaceMediator.java",
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/HasContentListener.java",
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/NtpFeedSurfaceLifecycleManager.java",
-  "//chrome/android/feed/core/java/src/org/chromium/chrome/browser/feed/shared/ui/MaterialSpinnerView.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/FeedItemDecoration.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/FeedSurfaceCoordinator.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/FeedSurfaceMediator.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/HasContentListener.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/NtpFeedSurfaceLifecycleManager.java",
+  "//chrome/android/feed/core/java/src/org/Cinaseek/chrome/browser/feed/shared/ui/MaterialSpinnerView.java",
 ]
 
 feed_srcjar_deps = []

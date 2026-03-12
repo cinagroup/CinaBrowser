@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ base::android::ScopedJavaLocalRef<jobjectArray> CreateJavaMessagePort(
   JNIEnv* env = base::android::AttachCurrentThread();
   return base::android::ToTypedJavaArrayOfObjects(
       env, base::span(j_descriptors),
-      org_chromium_content_browser_AppWebMessagePort_clazz(env));
+      org_Cinaseek_content_browser_AppWebMessagePort_clazz(env));
 }
 
 // static

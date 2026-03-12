@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5055,7 +5055,7 @@ void DragTabToWindowInSeparateDisplayStep2(
 }  // namespace
 
 // Drags from browser to another browser on a second display and releases input.
-// TODO(crbug.com/329747667): Test is flaky on "Linux ChromiumOS MSan Tests"
+// TODO(crbug.com/329747667): Test is flaky on "Linux CinaseekOS MSan Tests"
 #if BUILDFLAG(IS_CHROMEOS) && defined(MEMORY_SANITIZER)
 #define MAYBE_DragTabToWindowInSeparateDisplay \
   DISABLED_DragTabToWindowInSeparateDisplay

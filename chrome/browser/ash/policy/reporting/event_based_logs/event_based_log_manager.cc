@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 
 namespace {
 
-// `EnumerateEnumValues()` is not available on Chromium so we have hard-coded
+// `EnumerateEnumValues()` is not available on Cinaseek so we have hard-coded
 // list of available enum values.
 constexpr ash::reporting::TriggerEventType kAllTriggerEventTypes[] = {
     ash::reporting::TRIGGER_EVENT_TYPE_UNSPECIFIED,

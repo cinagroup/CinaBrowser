@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -720,7 +720,7 @@ skgpu::graphite::TextureInfo GraphitePromiseTextureInfo(
       mipmapped ? skgpu::Mipmapped::kYes : skgpu::Mipmapped::kNo;
 #if BUILDFLAG(ENABLE_VULKAN)
   if (ycbcr_info) {
-    // Populate the YCbCr info of the DawnTextureInfo from the Chromium info.
+    // Populate the YCbCr info of the DawnTextureInfo from the Cinaseek info.
     dawn_texture_info.fYcbcrVkDescriptor =
         ToDawnYCbCrVkDescriptor(ycbcr_info.value());
   }
@@ -748,7 +748,7 @@ wgpu::YCbCrVkDescriptor ToDawnYCbCrVkDescriptor(
           : wgpu::FilterMode::Nearest;
   ycbcr_desc.externalFormat = ycbcr_info.external_format;
 
-  // NOTE: Chromium does not use this feature.
+  // NOTE: Cinaseek does not use this feature.
   ycbcr_desc.forceExplicitReconstruction = false;
 
   return ycbcr_desc;

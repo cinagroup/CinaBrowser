@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,11 +7,11 @@ import("//build/config/android/rules.gni")
 assert(is_android)
 
 android_library("android_swipe_refresh_java") {
-  chromium_code = false  # Don't lint.
+  Cinaseek_code = false  # Don't lint.
   sources = [
-    "java/src/org/chromium/third_party/android/swiperefresh/CircleImageView.java",
-    "java/src/org/chromium/third_party/android/swiperefresh/MaterialProgressDrawable.java",
-    "java/src/org/chromium/third_party/android/swiperefresh/SwipeRefreshLayout.java",
+    "java/src/org/Cinaseek/third_party/android/swiperefresh/CircleImageView.java",
+    "java/src/org/Cinaseek/third_party/android/swiperefresh/MaterialProgressDrawable.java",
+    "java/src/org/Cinaseek/third_party/android/swiperefresh/SwipeRefreshLayout.java",
   ]
   deps = [
     "//third_party/androidx:androidx_annotation_annotation_java",

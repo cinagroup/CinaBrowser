@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace content_relationship_verification {
 extern const char kDigitalAssetLinksCheckResponseKeyLinked[];
 
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.content_relationship_verification)
+//   org.Cinaseek.components.content_relationship_verification)
 enum class RelationshipCheckResult {
   kSuccess = 0,
   kFailure,

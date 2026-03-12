@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -168,7 +168,7 @@ IN_PROC_BROWSER_TEST_P(UserScriptsAPITest, GetUserScripts) {
 // TODO(crbug.com/371432155): Port to desktop Android when chrome.tabs API is
 // available.
 // TODO(crbug.com/40935741, crbug.com/335421977): Flaky on Linux debug and on
-// "Linux ChromiumOS MSan Tests".
+// "Linux CinaseekOS MSan Tests".
 #if (BUILDFLAG(IS_LINUX) && !defined(NDEBUG)) || \
     (BUILDFLAG(IS_CHROMEOS) && defined(MEMORY_SANITIZER))
 #define MAYBE_RegisterUserScripts DISABLED_RegisterUserScripts
@@ -224,7 +224,7 @@ IN_PROC_BROWSER_TEST_P(UserScriptsAPITest, ExecuteUserScripts_SizeLimit) {
 
 // TODO(crbug.com/371432155): Port to desktop Android when chrome.tabs API is
 // available.
-// TODO(crbug.com/335421977): Flaky on "Linux ChromiumOS MSan Tests".
+// TODO(crbug.com/335421977): Flaky on "Linux CinaseekOS MSan Tests".
 #if BUILDFLAG(IS_CHROMEOS) && defined(MEMORY_SANITIZER)
 #define MAYBE_ConfigureWorld DISABLED_ConfigureWorld
 #else

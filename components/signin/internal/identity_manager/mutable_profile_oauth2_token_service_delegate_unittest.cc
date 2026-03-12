@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -413,7 +413,7 @@ TEST_F(MutableProfileOAuth2TokenServiceDelegateTest, PersistenceDBUpgrade) {
       CoreAccountId::FromGaiaId(GaiaId("primaryAccount"));
 
   // Populate DB with legacy service tokens (all expected to be discarded).
-  AddAuthTokenManually("chromiumsync", "syncServiceToken");
+  AddAuthTokenManually("Cinaseeksync", "syncServiceToken");
   AddAuthTokenManually("lso", "lsoToken");
   AddAuthTokenManually("kObfuscatedGaiaId", "primaryLegacyRefreshToken");
 

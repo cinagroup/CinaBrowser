@@ -6,12 +6,12 @@
 
 import("//build/config/gclient_args.gni")
 
-# Chrome does not (and should not) depend on `libpng`.
+# Cinaseek does not (and should not) depend on `libpng`.
 visibility = []
 
-# Dependency edges that are used in projects outside of Chromium that pull in
+# Dependency edges that are used in projects outside of Cinaseek that pull in
 # this directory (e.g. ones only needed in standalone PDFium builds).
-if (!build_with_chromium) {
+if (!build_with_Cinaseek) {
   # PDFium => libpng dependency (when `!pdf_enable_rust_png` or
   # `!pdf_use_skia`).
   #
@@ -20,20 +20,20 @@ if (!build_with_chromium) {
   visibility += [ "//third_party:png" ]
 }
 
-# Dependencies that do not really flow into Chrome binaries.
+# Dependencies that do not really flow into Cinaseek binaries.
 visibility += [
   # `build/config/android/*.gni` =>
   #     => `libwebp:cwebp` (`executable`)
   #     => `libwebp:imagedec`
   #     => `libpng` dependency.
   # The `cwebp` `executable` is used during build process, but depending on it
-  # does not result in linking the `libpng` library into Chrome binary.  See
+  # does not result in linking the `libpng` library into Cinaseek binary.  See
   # also `cwebp_exe_allowed_visibility` in
   # `//third_party/libwebp/visibility.gni`.
   "//third_party/libwebp:imagedec",
 
   # `weston` => `libpng` is a test-only dependency as described in
-  # `//third_party/weston/README.chromium`.  The `weston` targets are not
+  # `//third_party/weston/README.Cinaseek`.  The `weston` targets are not
   # marked as `testonly` but their `visibility` is restricted and (in build
   # configurations meant for testing) the only dependency of product code is
   # the `data_deps` edge from `//ui/ozone/platform/wayland` to the

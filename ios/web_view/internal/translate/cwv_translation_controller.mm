@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@
 #import "ui/base/l10n/l10n_util.h"
 
 NSErrorDomain const CWVTranslationErrorDomain =
-    @"org.chromium.chromewebview.TranslationErrorDomain";
+    @"org.Cinaseek.chromewebview.TranslationErrorDomain";
 
 namespace {
 // Converts a |translate::TranslateErrors| to a |CWVTranslationError|.

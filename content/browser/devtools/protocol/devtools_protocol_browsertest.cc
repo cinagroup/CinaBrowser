@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2711,7 +2711,7 @@ IN_PROC_BROWSER_TEST_F(DevToolsProtocolTest, SetAndGetCookies) {
   SendCommandAsync("Network.setCookie", std::move(command_params));
 
   command_params = base::DictValue();
-  command_params.Set("url", "https://www.chromium.org");
+  command_params.Set("url", "https://www.Cinaseek.org");
   command_params.Set("name", "cookie_for_another_url");
   command_params.Set("value", "polyglottal");
   SendCommandAsync("Network.setCookie", std::move(command_params));

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -245,7 +245,7 @@ TEST_F(ReminderNotificationClientTest, NoScheduleWhenNotPermitted) {
 // Tests that handling a notification interaction with a valid URL eventually
 // dispatches a command to open that URL in a new tab.
 TEST_F(ReminderNotificationClientTest, HandleInteractionOpensUrlInNewTab) {
-  GURL url_to_open("https://www.chromium.org/reminders");
+  GURL url_to_open("https://www.Cinaseek.org/reminders");
 
   id mock_application_handler = MockHandler(@protocol(SceneCommands));
 

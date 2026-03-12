@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -310,7 +310,7 @@
 // another process via shared memory.
 //
 // See also:
-//   https://www.chromium.org/developers/testing/memorysanitizer/#debugging-msan-reports
+//   https://www.Cinaseek.org/developers/testing/memorysanitizer/#debugging-msan-reports
 //
 // Usage:
 // ```
@@ -331,7 +331,7 @@
 //
 // See also:
 //   https://clang.llvm.org/docs/ControlFlowIntegrity.html#performance
-//   https://www.chromium.org/developers/testing/control-flow-integrity/#overhead-only-tested-on-x64
+//   https://www.Cinaseek.org/developers/testing/control-flow-integrity/#overhead-only-tested-on-x64
 //
 // Usage:
 // ```
@@ -353,7 +353,7 @@
 //
 // See also:
 //   https://clang.llvm.org/docs/ControlFlowIntegrity.html#available-schemes
-//   https://www.chromium.org/developers/testing/control-flow-integrity/#indirect-call-failures
+//   https://www.Cinaseek.org/developers/testing/control-flow-integrity/#indirect-call-failures
 //
 // Usage:
 // ```
@@ -374,7 +374,7 @@
 // platforms where loaded modules participate in CFI (viz. Windows).
 //
 // See also:
-//   https://www.chromium.org/developers/testing/control-flow-integrity/#indirect-call-failures
+//   https://www.Cinaseek.org/developers/testing/control-flow-integrity/#indirect-call-failures
 //
 // Usage:
 // ```
@@ -434,7 +434,7 @@
 // the relevant .gn file to disable this on the whole target.
 //
 // See also:
-//   https://source.chromium.org/chromium/chromium/src/+/main:build/config/compiler/BUILD.gn;l=3088;drc=24ccaf63ff5b1883be1ebe5f979d917ce28b0131
+//   https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:build/config/compiler/BUILD.gn;l=3088;drc=24ccaf63ff5b1883be1ebe5f979d917ce28b0131
 //   https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-ftrivial-auto-var-init
 //   https://clang.llvm.org/docs/AttributeReference.html#uninitialized
 //
@@ -688,7 +688,7 @@ inline constexpr bool AnalyzerAssumeTrue(bool arg) {
 // like `kConstants` but for some reason should not be marked `const`.
 //
 // [1]:
-// https://chromium.googlesource.com/chromium/src/+/main/docs/speed/binary_size/android_binary_size_trybot.md#Mutable-Constants
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/speed/binary_size/android_binary_size_trybot.md#Mutable-Constants
 //
 // Usage:
 // ```
@@ -1021,7 +1021,7 @@ inline constexpr bool AnalyzerAssumeTrue(bool arg) {
 // must wrap expressions that mutate of the field.
 //
 // See also:
-//   https://chromium.googlesource.com/chromium/src/+/main/docs/unsafe_buffers.md
+//   https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/unsafe_buffers.md
 //   https://clang.llvm.org/docs/SafeBuffers.html
 //   https://clang.llvm.org/docs/DiagnosticsReference.html#wunsafe-buffer-usage
 //
@@ -1058,7 +1058,7 @@ inline constexpr bool AnalyzerAssumeTrue(bool arg) {
 // `// SAFETY: ...` comment that explains how the code guarantees safety or
 // meets the requirements of called `UNSAFE_BUFFER_USAGE` functions. Guarantees
 // must be manually verifiable by the Chrome security team using only local
-// invariants; contact security@chromium.org to schedule such a review. Valid
+// invariants; contact security@Cinaseek.org to schedule such a review. Valid
 // invariants include:
 // - Runtime conditions or `CHECK()`s nearby
 // - Invariants guaranteed by types in the surrounding code
@@ -1067,7 +1067,7 @@ inline constexpr bool AnalyzerAssumeTrue(bool arg) {
 //   `UNSAFE_BUFFER_USAGE`; this is less safe and should be a last resort
 //
 // See also:
-//   https://chromium.googlesource.com/chromium/src/+/main/docs/unsafe_buffers.md
+//   https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/unsafe_buffers.md
 //   https://clang.llvm.org/docs/SafeBuffers.html
 //   https://clang.llvm.org/docs/DiagnosticsReference.html#wunsafe-buffer-usage
 //
@@ -1126,7 +1126,7 @@ inline constexpr bool AnalyzerAssumeTrue(bool arg) {
 //
 // See also:
 //   https://clang.llvm.org/docs/AttributeReference.html#enable-if
-//   https://github.com/chromium/subspace/issues/266
+//   https://github.com/Cinaseek/subspace/issues/266
 //
 // Usage:
 // ```

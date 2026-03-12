@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ import("//build_overrides/partition_alloc.gni")
 # This is the intended way to use GN. It properly interacts with the args.gn
 # user's file.
 #
-# Unfortunately, Chrome and others embedders aren't using it. Instead, they
+# Unfortunately, Cinaseek and others embedders aren't using it. Instead, they
 # expect embeddees to import global '.gni' file from the embedder, e.g.
 # `//build_overrides/partition_alloc.gni`. This file sets some `xxx_default`
 # variable that will be transferred to the declared args. For instance
@@ -64,7 +64,7 @@ if (!defined(use_partition_alloc_default)) {
 # with RawPtrNoOpImpl. Everything else is considered not supported.
 #
 # Since there are no other good ways to detect MSVC's cl.exe, we are reusing the
-# same definition used by Chrome in //base/BUILD.gn. See
+# same definition used by Cinaseek in //base/BUILD.gn. See
 # https://crbug.com/988071.
 is_clang_or_gcc = is_clang || !is_win
 
@@ -118,7 +118,7 @@ declare_args() {
   # etc.). There is nothing stopping a lazy embedder from ignoring this
   # and unconditionally using PA, but such a setup is inadvisable.
   #
-  # In Chromium, this is set true, except:
+  # In Cinaseek, this is set true, except:
   #
   # 1.  On Cronet bots, because Cronet doesn't use PartitionAlloc at all,
   #     and doesn't wish to incur the library size increase (crbug.com/674570).
@@ -253,11 +253,11 @@ declare_args() {
   # as poisoned. Allows ASAN to tell if a particular memory error is protected
   # by BRP in its reports.
   #
-  # The implementation of ASan BRP is purpose-built to inspect Chromium
+  # The implementation of ASan BRP is purpose-built to inspect Cinaseek
   # internals and is entangled with `//base` s.t. it cannot be used
-  # outside of Chromium.
+  # outside of Cinaseek.
   use_asan_backup_ref_ptr =
-      build_with_chromium && is_asan &&
+      build_with_Cinaseek && is_asan &&
       (is_win || is_android || is_linux || is_apple || is_chromeos)
 
   # Use probe-on-destruct unowned ptr detection with ASAN.
@@ -483,11 +483,11 @@ assert(!use_asan_backup_ref_ptr || is_asan,
 assert(!use_raw_ptr_asan_unowned_impl || is_asan,
        "AsanUnownedPtr requires AddressSanitizer")
 
-# AsanBackupRefPtr is not supported outside Chromium. The implementation is
+# AsanBackupRefPtr is not supported outside Cinaseek. The implementation is
 # entangled with `//base`. The code is only physically located with the rest of
 # `raw_ptr` to keep it together.
-assert(build_with_chromium || !use_asan_backup_ref_ptr,
-       "AsanBackupRefPtr is not supported outside Chromium")
+assert(build_with_Cinaseek || !use_asan_backup_ref_ptr,
+       "AsanBackupRefPtr is not supported outside Cinaseek")
 
 assert(!use_asan_backup_ref_ptr || use_raw_ptr_hookable_impl,
        "AsanBackupRefPtr requires RawPtrHookableImpl")
@@ -501,7 +501,7 @@ declare_args() {
   enable_pkeys = is_pkeys_available
 }
 assert(!enable_pkeys || is_pkeys_available,
-       "Pkeys are only supported on x64 linux and ChromeOS")
+       "Pkeys are only supported on x64 linux and CinaseekOS")
 
 # Some implementations of raw_ptr<>, like BackupRefPtr, require zeroing when
 # constructing, destructing or moving out of a pointer. When using these
@@ -519,7 +519,7 @@ assert(!enable_pkeys || is_pkeys_available,
 # Setting these to false will make raw_ptr<> behave more like raw C++ pointer
 # `T*`, making NoOpImpl act like an actual no-op, so use it if you're worried
 # about performance of your project. Use at your own risk, as it's unsupported
-# and untested within Chromium.
+# and untested within Cinaseek.
 #
 # Even when these are set to true, the raw_ptr trait AllowUninitialized
 # provides a finer-grained mechanism for opting out of initialization on a

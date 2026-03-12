@@ -22,7 +22,7 @@
 #include "leveldb/db.h"
 #include "leveldb/env.h"
 #include "leveldb/export.h"
-#include "port/port_chromium.h"
+#include "port/port_Cinaseek.h"
 
 namespace base {
 namespace trace_event {
@@ -124,23 +124,23 @@ LEVELDB_EXPORT std::string DatabaseNameForRewriteDB(
 // space. A value of -1 will return leveldb's default write buffer size.
 LEVELDB_EXPORT extern size_t WriteBufferSize(int64_t disk_space);
 
-// Thread safety: `ChromiumEnv` is safe to use from multiple threads as long as
-// it's created and destroyed safely. In Chromium, ChromiumEnv is created via a
+// Thread safety: `CinaseekEnv` is safe to use from multiple threads as long as
+// it's created and destroyed safely. In Cinaseek, CinaseekEnv is created via a
 // NoDestructor singleton, so as a function-local static, construction is
 // thread-safe as of C++11. The NoDestructor-wrapped instance is never
 // destroyed.
-class LEVELDB_EXPORT ChromiumEnv : public leveldb::Env {
+class LEVELDB_EXPORT CinaseekEnv : public leveldb::Env {
  public:
   using ScheduleFunc = void(void*);
 
-  // Constructs a ChromiumEnv instance with an unrestricted FilesystemProxy
+  // Constructs a CinaseekEnv instance with an unrestricted FilesystemProxy
   // instance that performs direct filesystem access.
-  ChromiumEnv();
+  CinaseekEnv();
 
-  // Constructs a ChromiumEnv instance with a custom FilesystemProxy instance.
-  explicit ChromiumEnv(std::unique_ptr<storage::FilesystemProxy> filesystem);
+  // Constructs a CinaseekEnv instance with a custom FilesystemProxy instance.
+  explicit CinaseekEnv(std::unique_ptr<storage::FilesystemProxy> filesystem);
 
-  ~ChromiumEnv() override;
+  ~CinaseekEnv() override;
 
   bool FileExists(const std::string& fname) override;
   leveldb::Status GetChildren(const std::string& dir,
@@ -253,10 +253,10 @@ class LEVELDB_EXPORT DBTracker {
 
   using DatabaseVisitor = base::RepeatingCallback<void(TrackedDB*)>;
 
-  friend class ChromiumEnvDBTrackerTest;
-  FRIEND_TEST_ALL_PREFIXES(ChromiumEnvDBTrackerTest, IsTrackedDB);
-  FRIEND_TEST_ALL_PREFIXES(ChromiumEnvDBTrackerTest, MemoryDumpCreation);
-  FRIEND_TEST_ALL_PREFIXES(ChromiumEnvDBTrackerTest, MemEnvMemoryDumpCreation);
+  friend class CinaseekEnvDBTrackerTest;
+  FRIEND_TEST_ALL_PREFIXES(CinaseekEnvDBTrackerTest, IsTrackedDB);
+  FRIEND_TEST_ALL_PREFIXES(CinaseekEnvDBTrackerTest, MemoryDumpCreation);
+  FRIEND_TEST_ALL_PREFIXES(CinaseekEnvDBTrackerTest, MemEnvMemoryDumpCreation);
 
   DBTracker();
   ~DBTracker();

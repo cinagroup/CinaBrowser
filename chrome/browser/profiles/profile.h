@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ class ProfileObserver;
 
 // Instead of adding more members to Profile, consider creating a
 // KeyedService. See
-// http://dev.chromium.org/developers/design-documents/profile-architecture
+// http://dev.Cinaseek.org/developers/design-documents/profile-architecture
 class Profile : public content::BrowserContext {
  public:
   enum class CreateMode {

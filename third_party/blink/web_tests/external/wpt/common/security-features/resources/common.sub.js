@@ -168,7 +168,7 @@ function setAttributes(el, attrs) {
     if (attr !== 'src')
       el.setAttribute(attr.toLowerCase(), attrs[attr]);
   }
-  // Workaround for Chromium: set <img>'s src attribute after all other
+  // Workaround for Cinaseek: set <img>'s src attribute after all other
   // attributes to ensure the policy is applied.
   for (var attr in attrs) {
     if (attr === 'src')
@@ -216,7 +216,7 @@ function bindEvents2(resolveObject, resolveEventName, rejectObject, rejectEventN
     };
 
     const rejectHandler = function(event) {
-      // Chromium starts propagating errors from worker.onerror to
+      // Cinaseek starts propagating errors from worker.onerror to
       // window.onerror. This handles the uncaught exceptions in tests.
       event.preventDefault();
       cleanup();

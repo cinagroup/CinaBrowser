@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -489,9 +489,9 @@ test("device_unittests") {
 
 if (is_android) {
   bluetooth_java_sources_needing_jni = [
-    "bluetooth/test/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothLeScannerTestUtil.java",
-    "bluetooth/test/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothScanFilter.java",
-    "bluetooth/test/android/java/src/org/chromium/device/bluetooth/Fakes.java",
+    "bluetooth/test/android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothLeScannerTestUtil.java",
+    "bluetooth/test/android/java/src/org/Cinaseek/device/bluetooth/CinaseekBluetoothScanFilter.java",
+    "bluetooth/test/android/java/src/org/Cinaseek/device/bluetooth/Fakes.java",
   ]
 
   generate_jni("bluetooth_test_jni_headers") {
@@ -520,9 +520,9 @@ if (is_android) {
 
   robolectric_binary("device_junit_tests") {
     sources = [
-      "gamepad/android/junit/src/org/chromium/device/gamepad/GamepadDeviceTest.java",
-      "gamepad/android/junit/src/org/chromium/device/gamepad/GamepadMappingsTest.java",
-      "vr/public/junit/src/org/chromium/device/vr/XrFeatureStatusTest.java",
+      "gamepad/android/junit/src/org/Cinaseek/device/gamepad/GamepadDeviceTest.java",
+      "gamepad/android/junit/src/org/Cinaseek/device/gamepad/GamepadMappingsTest.java",
+      "vr/public/junit/src/org/Cinaseek/device/vr/XrFeatureStatusTest.java",
     ]
     deps = [
       "$google_play_services_package:google_play_services_base_java",

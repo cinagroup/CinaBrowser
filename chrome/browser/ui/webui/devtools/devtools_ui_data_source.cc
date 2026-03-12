@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -263,7 +263,7 @@ void DevToolsDataSource::StartRemoteDataRequest(
         semantics {
           sender: "Developer Tools Remote Data Request From Google"
           description:
-            "This service fetches Chromium DevTools front-end files from the "
+            "This service fetches Cinaseek DevTools front-end files from the "
             "cloud for the remote debugging scenario."
           trigger:
             "When user attaches to mobile phone for debugging."
@@ -297,7 +297,7 @@ void DevToolsDataSource::StartCustomDataRequest(
         semantics {
           sender: "Developer Tools Remote Data Request"
           description:
-            "This service fetches Chromium DevTools front-end files from the "
+            "This service fetches Cinaseek DevTools front-end files from the "
             "cloud for the remote debugging scenario. This can only happen if "
             "a URL was passed on the commandline via flag "
             "'--custom-devtools-frontend'. This URL overrides the default "

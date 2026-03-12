@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ bool CreateSessionRequest::GetContentData(std::string* upload_content_type,
   *upload_content_type = boca::kContentTypeApplicationJson;
 
   // We have to do manual serialization because Json library only exists in
-  // protobuf-full, but chromium only include protobuf-lite.
+  // protobuf-full, but Cinaseek only include protobuf-lite.
   base::DictValue root;
   // Session metadata.
   base::DictValue teacher;

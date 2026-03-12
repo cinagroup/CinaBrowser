@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -245,7 +245,7 @@ class DownloadBubbleSecurityViewTest : public ChromeViewsTestBase {
             download::DownloadDangerType::DOWNLOAD_DANGER_TYPE_DANGEROUS_FILE));
     ON_CALL(download_item1_, IsDangerous()).WillByDefault(Return(true));
     ON_CALL(download_item1_, GetReferrerUrl())
-        .WillByDefault(ReturnRefOfCopy(GURL("https://chromium.org")));
+        .WillByDefault(ReturnRefOfCopy(GURL("https://Cinaseek.org")));
     ON_CALL(download_item1_, GetTargetFilePath())
         .WillByDefault(ReturnRefOfCopy(base::FilePath()));
     ON_CALL(download_item1_, GetURL())
@@ -256,7 +256,7 @@ class DownloadBubbleSecurityViewTest : public ChromeViewsTestBase {
             download::DownloadDangerType::DOWNLOAD_DANGER_TYPE_DANGEROUS_FILE));
     ON_CALL(download_item2_, IsDangerous()).WillByDefault(Return(true));
     ON_CALL(download_item2_, GetReferrerUrl())
-        .WillByDefault(ReturnRefOfCopy(GURL("https://chromium.org")));
+        .WillByDefault(ReturnRefOfCopy(GURL("https://Cinaseek.org")));
     ON_CALL(download_item2_, GetTargetFilePath())
         .WillByDefault(ReturnRefOfCopy(base::FilePath()));
     ON_CALL(download_item2_, GetURL())

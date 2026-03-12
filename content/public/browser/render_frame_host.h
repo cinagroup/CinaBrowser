@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -696,7 +696,7 @@ class CONTENT_EXPORT RenderFrameHost : public IPC::Listener {
   // existence.
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.content_public.browser)
+  //   org.Cinaseek.content_public.browser)
   enum class LifecycleState {
     // RenderFrameHost is waiting for an acknowledgment from the renderer to
     // to commit a cross-RenderFrameHost navigation and swap in this

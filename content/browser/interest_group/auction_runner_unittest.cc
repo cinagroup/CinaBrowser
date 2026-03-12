@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5036,7 +5036,7 @@ TEST_F(AuctionRunnerTest, BasicDebug) {
               "params.hitBreakpoints");
       ASSERT_TRUE(hit_breakpoints);
       // This is LE and not EQ to work around
-      // https://bugs.chromium.org/p/v8/issues/detail?id=12586
+      // https://bugs.Cinaseek.org/p/v8/issues/detail?id=12586
       ASSERT_LE(1u, hit_breakpoints->size());
       ASSERT_TRUE((*hit_breakpoints)[0].is_string());
       EXPECT_EQ(base::StringPrintf("1:11:0:%s", debug_url.spec().c_str()),

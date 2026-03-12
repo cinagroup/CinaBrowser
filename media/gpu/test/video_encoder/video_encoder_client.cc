@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ namespace {
 // deadlock. See crrev/c/2340653.
 // FFmpeg decoder buffers until its thread pool is full. The number of desired
 // threads is 12 in 4k.
-// https://source.chromium.org/chromium/chromium/src/+/main:media/filters/ffmpeg_video_decoder.cc;l=94;drc=002c0bc1ac64f33a327a42a54afb87500943a3b3
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/filters/ffmpeg_video_decoder.cc;l=94;drc=002c0bc1ac64f33a327a42a54afb87500943a3b3
 // Therefore, we need to have the number of bitstream buffers. See b/277368164.
 static unsigned int kMinInFlightFrames = 12;
 

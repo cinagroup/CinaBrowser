@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@ var TEST_HOST = 'www.chrome_extensions.' + TEST_DOMAIN;
 var TEST_URL = 'http://' + TEST_HOST + '/foobar.html?arg=toolbar&param=true';
 var TEST_URL_HTTPS =
     'https://' + TEST_HOST + '/foobar.html?arg=toolbar&param=true';
-var TEST_URL2 = 'http://chromium.' + TEST_DOMAIN + '/index.html';
+var TEST_URL2 = 'http://Cinaseek.' + TEST_DOMAIN + '/index.html';
 var TEST_URL3 = 'https://' + TEST_HOST + '/content.html';
 var TEST_URL4 = 'https://' + TEST_HOST + TEST_PATH + '/content.html';
 var TEST_URL5 = 'http://' + TEST_HOST + TEST_PATH + '/content.html';

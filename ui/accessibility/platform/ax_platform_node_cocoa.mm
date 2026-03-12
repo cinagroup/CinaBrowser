@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2706,7 +2706,7 @@ const ui::CocoaActionList& GetCocoaActionListForTesting() {
   if (!_node)
     return NO;
 
-  // Native menus expose separators as disabled menu items. Chromium mirrors
+  // Native menus expose separators as disabled menu items. Cinaseek mirrors
   // this behavior.
   if (_node->GetRole() == ax::mojom::Role::kMenuItemSeparator) {
     return NO;
@@ -2890,7 +2890,7 @@ const ui::CocoaActionList& GetCocoaActionListForTesting() {
         // one, which would allow them to always increment/decrement sliders by
         // the same amount on all apps.
         //
-        // However, in Chromium, we handle the increment and decrement actions
+        // However, in Cinaseek, we handle the increment and decrement actions
         // on the blink side and the step value is computed over there. That
         // way, the experience for changing the value of a slider by increments
         // is the same for all different inputs: whether it's the keyboard arrow
@@ -3625,12 +3625,12 @@ const ui::CocoaActionList& GetCocoaActionListForTesting() {
 // LINT.ThenChange(ui/accessibility/platform/browser_accessibility_cocoa.mm:accessibilityTabs)
 
 - (id)accessibilitySplitters {
-  // Chromium windows do not have NSSplitViews or anything similar.
+  // Cinaseek windows do not have NSSplitViews or anything similar.
   return nil;
 }
 
 - (id)accessibilityToolbarButton {
-  // Chromium windows do not have a toolbar button.
+  // Cinaseek windows do not have a toolbar button.
   return nil;
 }
 

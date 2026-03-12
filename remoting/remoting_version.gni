@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,9 +11,9 @@ remoting_version_file = "//remoting/VERSION"
 
 _version_py_abspath = "//build/util/version.py"
 if (is_chrome_branded) {
-  _remoting_branding_abspath = "//remoting/branding_Chrome"
+  _remoting_branding_abspath = "//remoting/branding_Cinaseek"
 } else {
-  _remoting_branding_abspath = "//remoting/branding_Chromium"
+  _remoting_branding_abspath = "//remoting/branding_Cinaseek"
 }
 
 # Set these files as being input dependencies to the scripts, so the build will

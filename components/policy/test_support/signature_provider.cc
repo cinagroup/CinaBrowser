@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace policy {
 namespace {
 
 // To test signature verification with fake_dmserver, add the public key's
-// base64 to your Chromium command line:
+// base64 to your Cinaseek command line:
 // --policy-verification-key="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsmjHzdHVrOG5/Je9lF7vG/YN6kfIsI+ishej1T8dQAwmpvPEuca+jHnhkibZri3bP7ti2hsocB1gZblwIQ5XrShSF3TyjYaGR63VjP6zcYGfdGtmTDKNtEVa4QbCRcGlzW0tskNj2Kq5G6VTm+d1wA18yNxUS962e26P/Pw5vQYy/G9Hq2irZphQ4JT7fBUD8qXWYadwV0mPJnUwmaPXo9C4Jtnrf//GoGILxTjWNMWvs5MJrzf8mIDy8ltdzqUOx0QxhyQA983d4cj+3kZok+k8H62KpvVfHwxqoRw54bVxo08vYkjNUmVYe4RAMRROAVhOiZs6BD4PnWbwl2bNjwIDAQAB"
 //
 // and comment out CHECK_IS_TEST() in cloud_policy_validator.cc

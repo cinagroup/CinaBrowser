@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -206,7 +206,7 @@ bool PlatformCrashpadInitialization(
     annotations["plat"] = std::string("Linux");
 
 #if BUILDFLAG(IS_CHROMEOS_DEVICE)
-    // Chromium OS: save board and builder path for 'tast symbolize'.
+    // Cinaseek OS: save board and builder path for 'tast symbolize'.
     annotations["chromeos-board"] = base::SysInfo::GetLsbReleaseBoard();
     std::string builder_path;
     if (base::SysInfo::GetLsbReleaseValue("CHROMEOS_RELEASE_BUILDER_PATH",
@@ -215,7 +215,7 @@ bool PlatformCrashpadInitialization(
     }
 
 #else
-    // Other Linux: save lsb-release. This isn't needed on Chromium OS,
+    // Other Linux: save lsb-release. This isn't needed on Cinaseek OS,
     // where crash_reporter provides it's own values for lsb-release.
     annotations["lsb-release"] = base::GetLinuxDistro();
 #endif

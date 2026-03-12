@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -422,7 +422,7 @@ void AnalyseForm(const FormInputCollection& form_input_collection,
 
 }  // namespace
 
-// Out-of-line definitions to keep [chromium-style] happy.
+// Out-of-line definitions to keep [Cinaseek-style] happy.
 PagePasswordsAnalyser::PagePasswordsAnalyser() = default;
 
 PagePasswordsAnalyser::~PagePasswordsAnalyser() = default;

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,9 +36,9 @@ namespace {
 
 #if BUILDFLAG(IS_ANDROID)
 // Defined in
-// //base/test/android/javatests/src/org/chromium/base/test/util/UrlUtils.java.
-constexpr char kExpectedChromiumTestsRoot[] =
-    "/storage/emulated/0/chromium_tests_root";
+// //base/test/android/javatests/src/org/Cinaseek/base/test/util/UrlUtils.java.
+constexpr char kExpectedCinaseekTestsRoot[] =
+    "/storage/emulated/0/Cinaseek_tests_root";
 #endif
 
 // Returns true if PathService::Get returns true and sets the path parameter
@@ -52,7 +52,7 @@ bool ReturnsValidPath(int key) {
   bool check_path_exists = true;
 
 #if BUILDFLAG(IS_POSIX)
-  // If chromium has never been started on this account, the cache path may not
+  // If Cinaseek has never been started on this account, the cache path may not
   // exist.
   if (key == DIR_CACHE) {
     check_path_exists = false;
@@ -353,7 +353,7 @@ TEST_F(PathServiceTest, DIR_ASSETS) {
   EXPECT_EQ(path.value(), "/pkg");
 #elif BUILDFLAG(IS_ANDROID)
   // This key is overridden in //base/test/test_support_android.cc.
-  EXPECT_EQ(path.value(), kExpectedChromiumTestsRoot);
+  EXPECT_EQ(path.value(), kExpectedCinaseekTestsRoot);
 #elif BUILDFLAG(IS_IOS_MACCATALYST)
   EXPECT_TRUE(base::apple::FrameworkBundlePath().IsParent(path));
 #elif BUILDFLAG(IS_IOS)
@@ -373,7 +373,7 @@ TEST_F(PathServiceTest, DIR_OUT_TEST_DATA_ROOT) {
   EXPECT_EQ(path.value(), "/pkg");
 #elif BUILDFLAG(IS_ANDROID)
   // This key is overridden in //base/test/test_support_android.cc.
-  EXPECT_EQ(path.value(), kExpectedChromiumTestsRoot);
+  EXPECT_EQ(path.value(), kExpectedCinaseekTestsRoot);
 #elif BUILDFLAG(IS_IOS)
   // On iOS, build output files are moved to the resources directory.
   EXPECT_EQ(path, base::apple::FrameworkBundlePath());
@@ -458,13 +458,13 @@ TEST_F(PathServiceTest, DIR_SRC_TEST_DATA_ROOT) {
 // These keys are overridden in //base/test/test_support_android.cc.
 TEST_F(PathServiceTest, AndroidTestOverrides) {
   EXPECT_EQ(PathService::CheckedGet(DIR_ANDROID_APP_DATA).value(),
-            kExpectedChromiumTestsRoot);
+            kExpectedCinaseekTestsRoot);
   EXPECT_EQ(PathService::CheckedGet(DIR_ASSETS).value(),
-            kExpectedChromiumTestsRoot);
+            kExpectedCinaseekTestsRoot);
   EXPECT_EQ(PathService::CheckedGet(DIR_SRC_TEST_DATA_ROOT).value(),
-            kExpectedChromiumTestsRoot);
+            kExpectedCinaseekTestsRoot);
   EXPECT_EQ(PathService::CheckedGet(DIR_OUT_TEST_DATA_ROOT).value(),
-            kExpectedChromiumTestsRoot);
+            kExpectedCinaseekTestsRoot);
 }
 
 #endif  // BUILDFLAG(IS_FUCHSIA)

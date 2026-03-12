@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ void ContentInfoBarManager::WebContentsDestroyed() {
   // this object otherwise during the destruction.
   // TODO(blundell): This operation seems unnecessary as detailed in the
   // conversation on
-  // https://chromium-review.googlesource.com/c/chromium/src/+/2859170/7 .
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2859170/7 .
   // Look at removing it.
   web_contents()->RemoveUserData(UserDataKey());
   // That was the equivalent of "delete this". This object is now destroyed;

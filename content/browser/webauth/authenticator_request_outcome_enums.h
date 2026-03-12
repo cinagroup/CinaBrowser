@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace content {
 // WebAuthenticationGetAssertionOutcome, and must be kept in sync with the
 // definition in tools/metrics/histograms/metadata/webauthn/enums.xml. These
 // must not be reordered and numeric values must not be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class GetAssertionOutcome {
   kSuccess = 0,
@@ -36,7 +36,7 @@ enum class GetAssertionOutcome {
 // WebAuthenticationMakeCredentialOutcome, and must be kept in sync with the
 // definition in tools/metrics/histograms/metadata/webauthn/enums.xml. These
 // must not be reordered and numeric values must not be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class MakeCredentialOutcome {
   kSuccess = 0,
@@ -66,7 +66,7 @@ enum class MakeCredentialOutcome {
 // This must match the `WebAuthenticationRequestMode` in
 // tools/metrics/histograms/metadata/webauthn/enums.xml. These must not be
 // reordered and numeric values must not be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class AuthenticationRequestMode {
   kModalWebAuthn = 0,
@@ -80,7 +80,7 @@ enum class AuthenticationRequestMode {
 // LINT.IfChange(CredentialRequestResult)
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webauthn
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webauthn
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class CredentialRequestResult {
   kTimeout = 0,

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3658,7 +3658,7 @@ TEST_F(NavigationControllerTest, ClearFaviconOnRedirect) {
   EXPECT_TRUE(entry);
   EXPECT_EQ(kPageWithFavicon, entry->GetURL());
 
-  // Simulate Chromium having set the favicon for |kPageWithFavicon|.
+  // Simulate Cinaseek having set the favicon for |kPageWithFavicon|.
   content::FaviconStatus& favicon_status = entry->GetFavicon();
   favicon_status.image = CreateImage(SK_ColorWHITE);
   favicon_status.url = kIconURL;
@@ -3693,7 +3693,7 @@ TEST_F(NavigationControllerTest, BackNavigationDoesNotClearFavicon) {
   EXPECT_EQ(1U, navigation_entry_committed_counter_);
   navigation_entry_committed_counter_ = 0;
 
-  // Simulate Chromium having set the favicon for |kUrl1|.
+  // Simulate Cinaseek having set the favicon for |kUrl1|.
   gfx::Image favicon_image = CreateImage(SK_ColorWHITE);
   content::NavigationEntry* entry = controller.GetLastCommittedEntry();
   EXPECT_TRUE(entry);
@@ -4039,7 +4039,7 @@ bool SrcDocRewriter(GURL* url, BrowserContext* browser_context) {
 // subframe URL. Regression test for https://crbug.com/895065.
 TEST_F(NavigationControllerTest, NoURLRewriteForSubframes) {
   const GURL kUrl1("http://google.com");
-  const GURL kUrl2("http://chromium.org");
+  const GURL kUrl2("http://Cinaseek.org");
   const GURL kSrcDoc("about:srcdoc");
 
   // First, set up a handler that will rewrite srcdoc urls.
@@ -4466,7 +4466,7 @@ class NavigationControllerFencedFrameTest : public NavigationControllerTest {
 // the fenced frame URL.
 TEST_F(NavigationControllerFencedFrameTest, NoURLRewriteForFencedFrames) {
   const GURL kUrl1("http://google.com");
-  const GURL kUrl2("http://chromium.org");
+  const GURL kUrl2("http://Cinaseek.org");
 
   // First, set up a handler that will rewrite urls.
   BrowserURLHandlerImpl::GetInstance()->AddHandlerPair(

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -641,7 +641,7 @@ void ClientSession::OnConnectionAuthenticated(
   // of deferred handlers if not.
   // TODO(rkjnsn): During a future refactor, see if this can be improved. E.g.,
   // perhaps ensuring at a higher layer that additional events don't occur until
-  // the ClientSession is ready, or using co_await (once approved in Chromium)
+  // the ClientSession is ready, or using co_await (once approved in Cinaseek)
   // to wait for the desktop environment more simply and safely when it is used.
   desktop_environment_factory_->Create(
       weak_factory_.GetWeakPtr(), weak_factory_.GetWeakPtr(), options,

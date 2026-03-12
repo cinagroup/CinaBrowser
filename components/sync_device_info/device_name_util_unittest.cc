@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -185,13 +185,13 @@ TEST_F(DeviceNameUtilTest, GetDeviceDisplayNames_Linux_SigninOnly) {
 
 TEST_F(DeviceNameUtilTest, GetDeviceDisplayNames_Linux_FullySynced) {
   std::unique_ptr<DeviceInfo> device = CreateFakeDeviceInfo(
-      "guid", "bob.chromium.org", sync_pb::SyncEnums_DeviceType_TYPE_LINUX,
+      "guid", "bob.Cinaseek.org", sync_pb::SyncEnums_DeviceType_TYPE_LINUX,
       DeviceInfo::OsType::kLinux, DeviceInfo::FormFactor::kDesktop, "LENOVO",
       "30BDS0RA0G");
   DeviceDisplayNames names = GetDeviceDisplayNames(device.get());
 
-  EXPECT_EQ("bob.chromium.org", names.full_name);
-  EXPECT_EQ("bob.chromium.org", names.short_name);
+  EXPECT_EQ("bob.Cinaseek.org", names.full_name);
+  EXPECT_EQ("bob.Cinaseek.org", names.short_name);
 }
 
 TEST_F(DeviceNameUtilTest, CheckManufacturerNameCapitalization) {

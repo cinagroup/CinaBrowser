@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -444,7 +444,7 @@ void AutocorrectManager::RecordPendingMetricsAwaitingKeyPress() {
 
   if (pending_suggestion_provider_metric_ && IsVkAutocorrect()) {
     // TODO(b/270090192): Unfortunately the virtual keyboard does not support
-    // the callback used to inform Chromium of the AutocorrectSuggestionProvider
+    // the callback used to inform Cinaseek of the AutocorrectSuggestionProvider
     // used in the IME service. Once it does then we can record this same metric
     // for the virtual keyboard.
     pending_suggestion_provider_metric_ = std::nullopt;

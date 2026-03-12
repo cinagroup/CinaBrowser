@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ bool JavaHeapDumpProvider::OnMemoryDump(const MemoryDumpArgs& args,
   // As a consequence, the heap size metric will tend to be heavily quantized:
   // the heap starts at a given size (see the system property
   // "dalvik.vm.heapstartsize"), then can go down, or up, to a maximum of
-  // "dalvik.vm.heapgrowthlimit", since Chromium typically does not request a
+  // "dalvik.vm.heapgrowthlimit", since Cinaseek typically does not request a
   // large heap (android:largeHeap in the application tag inside the manifest).
   MemoryAllocatorDump* outer_dump = pmd->CreateAllocatorDump("java_heap");
   outer_dump->AddScalar(MemoryAllocatorDump::kNameSize,

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ class AcknowledgeGroupedCredentialSheetBridge {
   // and numeric values should never be reused.
   //
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //    org.chromium.chrome.browser.grouped_affiliations)
+  //    org.Cinaseek.chrome.browser.grouped_affiliations)
   enum class DismissReason {
     kAccept = 0,
     kBack = 1,

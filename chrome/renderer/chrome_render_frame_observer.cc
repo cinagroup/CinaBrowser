@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -398,7 +398,7 @@ void ChromeRenderFrameObserver::RequestImageForContextNode(
   std::vector<lens::mojom::LatencyLogPtr> latency_logs;
 
   // Map for converting between multiple mojom ImageFormat structures to
-  // prevent a circular dependency (go/lens-logging-in-chromium)
+  // prevent a circular dependency (go/lens-logging-in-Cinaseek)
   // TODO(shivpatel): add default value UNKNOWN for if ImageFormat is updated
   const std::map<chrome::mojom::ImageFormat, lens::mojom::ImageFormat>
       image_format_conversion = {

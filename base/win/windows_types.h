@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -355,7 +355,7 @@ inline MSG* ChromeToWindowsType(CHROME_MSG* p) {
 #endif
 
 // These macros are all defined by windows.h and are also used as the names of
-// functions in the Chromium code base. Having these macros consistently defined
+// functions in the Cinaseek code base. Having these macros consistently defined
 // or undefined can be critical to avoid mismatches between the functions
 // defined and functions called. Macros need to be added to this list in those
 // cases where it is easier to have the macro defined everywhere rather than

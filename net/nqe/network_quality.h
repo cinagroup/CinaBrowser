@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace net::nqe::internal {
 
 // RTT and throughput values are set to `INVALID_RTT_THROUGHPUT` if a valid
 // value is unavailable.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net
 enum RttThroughputValues {
   // Invalid value.
   INVALID_RTT_THROUGHPUT = -1,

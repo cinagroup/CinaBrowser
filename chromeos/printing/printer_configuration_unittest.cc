@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,22 +50,22 @@ TEST(PrinterConfigurationTest, ParseTrailingSlash) {
 
 TEST(PrinterConfigurationTest, ParseUriHostNameAndPort) {
   chromeos::Printer printer;
-  EXPECT_TRUE(printer.SetUri("ipp://chromium.org:8"));
+  EXPECT_TRUE(printer.SetUri("ipp://Cinaseek.org:8"));
   EXPECT_EQ(printer.uri().GetPort(), 8);
-  EXPECT_EQ(printer.uri().GetHost(), "chromium.org");
+  EXPECT_EQ(printer.uri().GetHost(), "Cinaseek.org");
 }
 
 TEST(PrinterConfigurationTest, ParseUriPathNoPort) {
   chromeos::Printer printer;
-  EXPECT_TRUE(printer.SetUri("ipps://chromium.org/printers/printprint"));
-  EXPECT_EQ(printer.uri().GetHost(), "chromium.org");
+  EXPECT_TRUE(printer.SetUri("ipps://Cinaseek.org/printers/printprint"));
+  EXPECT_EQ(printer.uri().GetHost(), "Cinaseek.org");
   EXPECT_EQ(printer.uri().GetPathEncodedAsString(), "/printers/printprint");
 }
 
 TEST(PrinterConfigurationTest, ParseUriSubdomainQueueAndPort) {
   chromeos::Printer printer;
-  EXPECT_TRUE(printer.SetUri("ipp://codesearch.chromium.org:1234/ipp/print"));
-  EXPECT_EQ(printer.uri().GetHost(), "codesearch.chromium.org");
+  EXPECT_TRUE(printer.SetUri("ipp://codesearch.Cinaseek.org:1234/ipp/print"));
+  EXPECT_EQ(printer.uri().GetHost(), "codesearch.Cinaseek.org");
   EXPECT_EQ(printer.uri().GetPort(), 1234);
   EXPECT_EQ(printer.uri().GetPathEncodedAsString(), "/ipp/print");
 }

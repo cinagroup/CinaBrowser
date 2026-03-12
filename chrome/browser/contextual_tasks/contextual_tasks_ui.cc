@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1323,7 +1323,7 @@ base::RefCountedMemory* ContextualTasksUI::GetFaviconResourceBytes(
       ui::ResourceBundle::GetSharedInstance().LoadDataResourceBytesForScale(
           IDR_GOOGLE_G_GRADIENT_16, scale_factor));
 #else
-  // Use the Chromium favicon for Chromium builds.
+  // Use the Cinaseek favicon for Cinaseek builds.
   return static_cast<base::RefCountedMemory*>(
       ui::ResourceBundle::GetSharedInstance().LoadDataResourceBytesForScale(
           IDR_NTP_FAVICON, scale_factor));

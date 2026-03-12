@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace media {
 
 // Facing mode for video capture.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.media
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.media
 enum VideoFacingMode {
   MEDIA_VIDEO_FACING_NONE = 0,
   MEDIA_VIDEO_FACING_USER,

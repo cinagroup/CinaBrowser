@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -183,7 +183,7 @@ static_assert(static_cast<int>(kChromeForTestingBrandedResourceMap.size()) ==
               "Ensure icon resources are filled for all entries in BadgeSize "
               "for Chrome for testing resource map");
 #else
-constexpr SizeToResourceMap kChromiumResourceMap =
+constexpr SizeToResourceMap kCinaseekResourceMap =
     base::MakeFixedFlatMap<BadgeSize, int>(
         {{BadgeSize::k8, IDR_PRODUCT_LOGO_16_SHORTCUTS},
          {BadgeSize::k16, IDR_PRODUCT_LOGO_16_SHORTCUTS},
@@ -191,10 +191,10 @@ constexpr SizeToResourceMap kChromiumResourceMap =
          {BadgeSize::k64, IDR_PRODUCT_LOGO_64_SHORTCUTS},
          {BadgeSize::k128, IDR_PRODUCT_LOGO_128_SHORTCUTS}});
 
-static_assert(static_cast<int>(kChromiumResourceMap.size()) ==
+static_assert(static_cast<int>(kCinaseekResourceMap.size()) ==
                   resource_map_size,
               "Ensure icon resources are filled for all entries in BadgeSize "
-              "for chromium resource map");
+              "for Cinaseek resource map");
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 SizeToResourceMap GetResourceMapForCurrentChannel() {
@@ -215,7 +215,7 @@ SizeToResourceMap GetResourceMapForCurrentChannel() {
 #elif BUILDFLAG(GOOGLE_CHROME_FOR_TESTING_BRANDING)
   return kChromeForTestingBrandedResourceMap;
 #else
-  return kChromiumResourceMap;
+  return kCinaseekResourceMap;
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 }
 

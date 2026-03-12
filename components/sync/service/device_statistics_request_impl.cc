@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ void DeviceStatisticsRequestImpl::AccessTokenFetchComplete(
           destination: GOOGLE_OWNED_SERVICE
           internal {
             contacts {
-              email: "treib@chromium.org"
+              email: "treib@Cinaseek.org"
             }
             contacts {
               owners: "//components/sync/OWNERS"

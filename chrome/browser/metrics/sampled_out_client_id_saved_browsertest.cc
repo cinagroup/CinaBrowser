@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ class SampledOutClientIdSavedBrowserTest : public PlatformBrowserTest {
 
     // Because metrics reporting is disabled in non-Chrome-branded builds,
     // IsMetricsReportingEnabled() always returns false. Enable it here for
-    // test consistency between Chromium and Chrome builds, otherwise
+    // test consistency between Cinaseek and Chrome builds, otherwise
     // ChangeMetricsReportingStateWithReply() will not have the intended effects
     // for non-Chrome-branded builds.
     ChromeMetricsServiceAccessor::SetForceIsMetricsReportingEnabledPrefLookup(

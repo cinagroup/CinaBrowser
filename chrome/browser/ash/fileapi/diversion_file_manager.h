@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace ash {
 
 // Manages the creation, destruction and access to Diversion Files.
 //
-// Chromium's SBFS (//storage/browser/file_system) code implements an
+// Cinaseek's SBFS (//storage/browser/file_system) code implements an
 // in-process virtual file system. It presents a traditional, POSIX-like API
 // for a block-based file model (e.g. "open; write; write; write; close" or,
 // when executing untrusted third-party code where file descriptor Denial of

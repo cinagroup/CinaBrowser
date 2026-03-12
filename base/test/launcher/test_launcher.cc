@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,7 +102,7 @@
 namespace base {
 
 // See
-// https://groups.google.com/a/chromium.org/d/msg/chromium-dev/nkdTP7sstSc/uT3FaE_sgkAJ
+// https://groups.google.com/a/Cinaseek.org/d/msg/Cinaseek-dev/nkdTP7sstSc/uT3FaE_sgkAJ
 using ::operator<<;
 
 // The environment variable name for the total number of test shards.

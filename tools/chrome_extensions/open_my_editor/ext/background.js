@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,16 +18,16 @@ function openByLink(info, tabId) {
   let pageHostname = new URL(info.pageUrl).hostname;
   let linkUrl = new URL(info.linkUrl);
 
-  if (pageHostname == 'chromium-review.googlesource.com') {
+  if (pageHostname == 'Cinaseek-review.googlesource.com') {
     chrome.tabs.sendMessage(tabId, 'getFile', (res) => {
       return res && res.file && openFile(res.file);
     });
-  } else if (pageHostname == 'cs.chromium.org') {
-    let match = linkUrl.pathname.match(/^\/chromium\/src\/(.*)/);
+  } else if (pageHostname == 'cs.Cinaseek.org') {
+    let match = linkUrl.pathname.match(/^\/Cinaseek\/src\/(.*)/);
     let line = linkUrl.searchParams.get('l');
     if (match)
       openFile(match[1], line);
-  } else if (pageHostname == 'codereview.chromium.org') {
+  } else if (pageHostname == 'codereview.Cinaseek.org') {
     // 'patch' links don't contain the filename so we query the page.
     if (linkUrl.pathname.match(/^\/\d+\/patch\//)) {
       chrome.tabs.sendMessage(tabId, 'getFile', (res) => {
@@ -51,7 +51,7 @@ function openByLink(info, tabId) {
 
 function csOpenCurrentFile(tabId, pageUrl) {
   chrome.tabs.sendMessage(tabId, 'getLine', (res) => {
-    let filepath = pageUrl.pathname.replace(/\/chromium\/src\//, '');
+    let filepath = pageUrl.pathname.replace(/\/Cinaseek\/src\//, '');
     // If we couldn't get the line number by inspecting the clicked element,
     // try to get it from the query params.
     let line = res.line ? res.line : pageUrl.searchParams.get('l');
@@ -72,11 +72,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     openByLink(info, tab.id);
   } else if (info.menuItemId == 'ome') {
     let pageUrl = new URL(info.pageUrl);
-    if (pageUrl.hostname == 'cs.chromium.org') {
+    if (pageUrl.hostname == 'cs.Cinaseek.org') {
       csOpenCurrentFile(tab.id, pageUrl);
-    } else if (pageUrl.hostname == 'codereview.chromium.org') {
+    } else if (pageUrl.hostname == 'codereview.Cinaseek.org') {
       crOpenAllInPatchset(tab.id);
-    } else if (pageUrl.hostname == 'chromium-review.googlesource.com') {
+    } else if (pageUrl.hostname == 'Cinaseek-review.googlesource.com') {
       crOpenAllInPatchset(tab.id);
     }
   }
@@ -88,9 +88,9 @@ chrome.runtime.onInstalled.addListener(() => {
     'id': 'ome',
     'contexts': ['page'],
     'documentUrlPatterns': [
-      'https://cs.chromium.org/chromium/src/*',
-      'https://codereview.chromium.org/*',
-      'https://chromium-review.googlesource.com/*'
+      'https://cs.Cinaseek.org/Cinaseek/src/*',
+      'https://codereview.Cinaseek.org/*',
+      'https://Cinaseek-review.googlesource.com/*'
     ]
   });
   chrome.contextMenus.create({
@@ -98,9 +98,9 @@ chrome.runtime.onInstalled.addListener(() => {
     'id': 'ome-link',
     'contexts': ['link'],
     'documentUrlPatterns': [
-      'https://cs.chromium.org/*',
-      'https://codereview.chromium.org/*',
-      'https://chromium-review.googlesource.com/*'
+      'https://cs.Cinaseek.org/*',
+      'https://codereview.Cinaseek.org/*',
+      'https://Cinaseek-review.googlesource.com/*'
     ]
   });
   chrome.contextMenus.create({
@@ -110,7 +110,7 @@ chrome.runtime.onInstalled.addListener(() => {
     'documentUrlPatterns': [
       // TODO(chaopeng) Should be only except CS and CR, But I dont know how to.
       // So only list the sites here.
-      'https://build.chromium.org/*', 'https://chromium.org/*'
+      'https://build.Cinaseek.org/*', 'https://Cinaseek.org/*'
     ]
   });
 });

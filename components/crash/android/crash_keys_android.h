@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 // See CrashKeys.java for how to add a new crash key.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.crash
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.crash
 enum class CrashKeyIndex {
   APPLICATION_STATUS = 0,
   PARTNER_CUSTOMIZATION_CONFIG,

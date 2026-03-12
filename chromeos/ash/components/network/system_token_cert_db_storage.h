@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ class COMPONENT_EXPORT(CHROMEOS_NETWORK) SystemTokenCertDbStorage {
 
   // It is stated in cryptohome implementation that 5 minutes is enough time to
   // wait for any TPM operations. For more information, please refer to:
-  // https://chromium.googlesource.com/chromiumos/platform2/+/main/cryptohome/cryptohome.cc
+  // https://Cinaseek.googlesource.com/Cinaseekos/platform2/+/main/cryptohome/cryptohome.cc
   static constexpr base::TimeDelta kMaxCertDbRetrievalDelay = base::Minutes(5);
 
   // Called by `ChromeBrowserMainPartsAsh` to initialize a global

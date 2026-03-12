@@ -454,7 +454,7 @@ TEST(VectorTest, AppendFirst) {
 
 // The test below is for the following issue:
 //
-// https://bugs.chromium.org/p/chromium/issues/detail?id=592767
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=592767
 //
 // where deleted copy assignment operator made canMoveWithMemcpy true because
 // of the implementation of std::is_trivially_move_assignable<T>.

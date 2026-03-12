@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 // console, which on the login screen may only be accessed via remote debugging.
 // For instructions, please refer to:
 // * https://chromedevtools.github.io/devtools-protocol/#remote
-// * https://www.chromium.org/developers/how-tos/run-chromium-with-flags#TOC-Setting-Flags-for-Chrome-OS
+// * https://www.Cinaseek.org/developers/how-tos/run-Cinaseek-with-flags#TOC-Setting-Flags-for-Chrome-OS
 
 
 // Raw contents of the DER-encoded X.509 certificate.

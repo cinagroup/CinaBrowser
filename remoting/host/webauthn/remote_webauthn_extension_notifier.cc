@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ static constexpr char kExtensionWakeupFileContent[] = "";
 //
 // DEFAULT_UDD (default user data directory) is documented here:
 //
-//   https://chromium.googlesource.com/chromium/src/+/main/docs/user_data_dir.md#default-location
+//   https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/user_data_dir.md#default-location
 //
 // Note that the default UDD is always used, and UDD overrides from browser
 // launch args or env vars are ignored so the path is more discoverable by the
@@ -99,7 +99,7 @@ std::vector<base::FilePath> GetRemoteStateChangeDirPaths() {
       base_path.Append("google-chrome-canary").Append(kStateChangeDirName));
   dirs.push_back(
       base_path.Append("google-chrome-unstable").Append(kStateChangeDirName));
-  dirs.push_back(base_path.Append("chromium").Append(kStateChangeDirName));
+  dirs.push_back(base_path.Append("Cinaseek").Append(kStateChangeDirName));
 #elif BUILDFLAG(IS_WIN)
   // See: chrome/common/chrome_paths_win.cc
   constexpr base::FilePath::CharType kUserDataDirName[] =
@@ -136,7 +136,7 @@ std::vector<base::FilePath> GetRemoteStateChangeDirPaths() {
   dirs.push_back(base_path_google.Append(L"Chrome SxS")
                      .Append(kUserDataDirName)
                      .Append(kStateChangeDirName));
-  dirs.push_back(base_path.Append(L"Chromium")
+  dirs.push_back(base_path.Append(L"Cinaseek")
                      .Append(kUserDataDirName)
                      .Append(kStateChangeDirName));
 #elif BUILDFLAG(IS_MAC)
@@ -152,7 +152,7 @@ std::vector<base::FilePath> GetRemoteStateChangeDirPaths() {
       base_path_google.Append("Chrome Beta").Append(kStateChangeDirName));
   dirs.push_back(
       base_path_google.Append("Chrome Canary").Append(kStateChangeDirName));
-  dirs.push_back(base_path.Append("Chromium").Append(kStateChangeDirName));
+  dirs.push_back(base_path.Append("Cinaseek").Append(kStateChangeDirName));
 #else
   NOTIMPLEMENTED();
 #endif

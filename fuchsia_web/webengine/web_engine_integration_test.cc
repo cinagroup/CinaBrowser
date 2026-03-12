@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -592,7 +592,7 @@ TEST_F(WebEngineIntegrationMediaTest, PlayAudioToAudioConsumer) {
   // the expectation to 10s to reduce flakiness. The test shouldn't rely on the
   // speed of the emulator/test bot.
   // See the test history,
-  // https://ci.chromium.org/ui/test/chrome/ninja%3A%2F%2Ffuchsia_web%2Fwebengine%3Aweb_engine_integration_tests%2FWebEngineIntegrationMediaTest.PlayAudioToAudioConsumer
+  // https://ci.Cinaseek.org/ui/test/chrome/ninja%3A%2F%2Ffuchsia_web%2Fwebengine%3Aweb_engine_integration_tests%2FWebEngineIntegrationMediaTest.PlayAudioToAudioConsumer
   EXPECT_LT(pos, base::Seconds(10.0));
   #else
   EXPECT_LT(pos, base::Seconds(2.8));

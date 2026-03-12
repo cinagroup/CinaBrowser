@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -35,9 +35,9 @@ declare_args() {
   # "Organization Identifier" in Xcode). Code signing will fail if no mobile
   # provisioning for the selected code signing identify support that prefix.
   # TODO(crbug.com/378918882): Prefix with apple_mobile_ instead of ios_.
-  ios_app_bundle_id_prefix = "org.chromium.ost"
+  ios_app_bundle_id_prefix = "org.Cinaseek.ost"
 
-  # Suffix for CFBundleIdentifier property of iOS Chrome signed bundles
+  # Suffix for CFBundleIdentifier property of iOS Cinaseek signed bundles
   # (main bundle and extensions). Code signing will fail if no mobile
   # provisioning for the selected code signing identify support that suffix.
   # For extension, the suffix will be added before the extension identifier.

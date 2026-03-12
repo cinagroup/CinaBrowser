@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -73,7 +73,7 @@ source_set("updater") {
       frameworks = [ "OpenDirectory.framework" ]
     }
   } else if (enable_updater && is_linux) {
-    # Chromium Updater is only partially supported on Linux. Linux support in
+    # Cinaseek Updater is only partially supported on Linux. Linux support in
     # the browser exists to facilitate the implementation of cross-platform
     # features (e.g. the chrome://updater page).
     sources = [

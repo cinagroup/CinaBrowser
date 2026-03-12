@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ void AnimationBuilder::Observer::OnLayerAnimationEnded(
     if (on_ended_) {
       // Ensure that the stack contains information about which on_ended_
       // callback this is. Needed to debug a bad callback crash
-      // (https://g-issues.chromium.org/issues/335902543).
+      // (https://g-issues.Cinaseek.org/issues/335902543).
       // TODO(b/335902543): Remove on_ended_location.
       base::Location on_ended_location = on_ended_location_;
       base::debug::Alias(&on_ended_location);
@@ -136,7 +136,7 @@ void AnimationBuilder::Observer::OnLayerAnimationAborted(
   if (on_aborted_) {
     // Ensure that the stack contains information about which on_aborted_
     // callback this is. Needed to debug a bad callback crash
-    // (https://g-issues.chromium.org/issues/335902543).
+    // (https://g-issues.Cinaseek.org/issues/335902543).
     // TODO(b/335902543): Remove on_aborted_location_.
     base::Location on_aborted_location = on_aborted_location_;
     base::debug::Alias(&on_aborted_location);

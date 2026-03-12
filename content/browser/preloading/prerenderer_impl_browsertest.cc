@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1438,7 +1438,7 @@ IN_PROC_BROWSER_TEST_P(PrerendererImplBrowserTestPrefetchAhead,
 // TODO(crbug.com/372851198): The scenario described does not seem to work as
 // desired. A second request is made to /title1.html, and
 // `PrefetchContainer::Reader::OnPrefetchProbeResult()` is not called. Before
-// https://chromium-review.googlesource.com/c/chromium/src/+/6056830, the second
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6056830, the second
 // request was avoided due to the HTTP cache, but after that change the overall
 // brokenness of the scenario is revealed. It is likely that the /title1.html
 // response is not making it into the speculation rules prefetch cache.

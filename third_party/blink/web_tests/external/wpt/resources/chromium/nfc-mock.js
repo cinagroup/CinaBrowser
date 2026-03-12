@@ -400,7 +400,7 @@ self.WebNFCTest = (() => {
     mockNFC: null
   }
 
-  class NFCTestChromium {
+  class NFCTestCinaseek {
     constructor() {
       Object.freeze(this); // Makes it immutable.
     }
@@ -409,7 +409,7 @@ self.WebNFCTest = (() => {
       if (testInternal.initialized)
         throw new Error('Call reset() before initialize().');
 
-      // Grant nfc permissions for Chromium testdriver.
+      // Grant nfc permissions for Cinaseek testdriver.
       await test_driver.set_permission({ name: 'nfc' }, 'granted');
 
       if (testInternal.mockNFC == null) {
@@ -433,5 +433,5 @@ self.WebNFCTest = (() => {
     }
   }
 
-  return NFCTestChromium;
+  return NFCTestCinaseek;
 })();

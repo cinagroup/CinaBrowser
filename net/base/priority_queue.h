@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,7 +102,7 @@ class PriorityQueue {
     friend class PriorityQueue;
 
     // Note that we need iterator and not const_iterator to pass to
-    // List::erase.  When C++11 is turned on for Chromium, this could
+    // List::erase.  When C++11 is turned on for Cinaseek, this could
     // be changed to const_iterator and the const_casts in the rest of
     // the file can be removed.
     typedef typename PriorityQueue::List::iterator ListIterator;

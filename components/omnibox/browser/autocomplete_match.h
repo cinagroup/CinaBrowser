@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -202,7 +202,7 @@ struct AutocompleteMatch {
     // passing the values around, so the compiler doesn't complain.
     //
     // A Java counterpart will be generated for this enum.
-    // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.omnibox
+    // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.omnibox
     // GENERATED_JAVA_CLASS_NAME_OVERRIDE: MatchClassificationStyle
     // clang-format off
     enum Style {

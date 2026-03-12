@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ class PostProcessingPipelineImpl : public PostProcessingPipeline {
   double GetDelaySeconds() override;
 
  private:
-  // Note: typedef is used to silence chromium-style mandatory constructor in
+  // Note: typedef is used to silence Cinaseek-style mandatory constructor in
   // structs.
   typedef struct {
     std::unique_ptr<AudioPostProcessor2> ptr;

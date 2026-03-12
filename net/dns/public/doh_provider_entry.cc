@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -280,7 +280,7 @@ const DohProviderEntry::List& DohProviderEntry::GetList() {
                DohProviderNextDns, base::FEATURE_ENABLED_BY_DEFAULT),
            /*dns_over_53_server_ip_strs=*/{},
            /*dns_over_tls_hostnames=*/{},
-           "https://chromium.dns.nextdns.io",
+           "https://Cinaseek.dns.nextdns.io",
            /*ui_name=*/"NextDNS",
            /*privacy_policy=*/"https://nextdns.io/privacy",
            /*display_globally=*/false,

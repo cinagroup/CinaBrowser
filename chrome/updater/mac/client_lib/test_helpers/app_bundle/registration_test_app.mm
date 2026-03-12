@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ enum class Mode {
   kInstallAndRegister,
 };
 
-NSString* const kAppID = @"org.chromium.CRURegistration.testing.RegisterMe";
+NSString* const kAppID = @"org.Cinaseek.CRURegistration.testing.RegisterMe";
 constexpr int64_t kTimeoutNanos = 300L * NSEC_PER_SEC;
 
 }  // namespace

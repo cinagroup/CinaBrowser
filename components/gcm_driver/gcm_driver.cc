@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace gcm {
 namespace {
 
 // Copied from
-// https://source.chromium.org/chromium/chromium/src/+/main:components/invalidation/invalidation_listener.h;l=76;drc=16479132e8be0c0b5740b34ddfd62817ec490945.
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/invalidation/invalidation_listener.h;l=76;drc=16479132e8be0c0b5740b34ddfd62817ec490945.
 constexpr char kFcmInvalidationsApplicationName[] =
     "com.google.chrome.fcm.invalidations";
 // Copied from components/sync/invalidations/sync_invalidations_service_impl.cc.

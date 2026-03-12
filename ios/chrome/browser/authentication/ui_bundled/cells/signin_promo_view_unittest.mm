@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,15 +15,15 @@
 
 using SigninPromoViewTest = PlatformTest;
 
-TEST_F(SigninPromoViewTest, ChromiumLogoImage) {
+TEST_F(SigninPromoViewTest, CinaseekLogoImage) {
   UIWindow* currentWindow = GetAnyKeyWindow();
   SigninPromoView* view =
       [[SigninPromoView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
   [view configurePrimaryButtonWithTitle:@"Test"];
   view.mode = SigninPromoViewModeNoAccounts;
   [currentWindow.rootViewController.view addSubview:view];
-  UIImage* chromiumLogo = view.imageView.image;
-  EXPECT_NE(nil, chromiumLogo);
+  UIImage* CinaseekLogo = view.imageView.image;
+  EXPECT_NE(nil, CinaseekLogo);
   view.mode = SigninPromoViewModeSigninWithAccount;
   UIImage* customImage = ios::provider::GetSigninDefaultAvatar();
   CGSize size = GetSizeForIdentityAvatarSize(IdentityAvatarSize::SmallSize);
@@ -31,14 +31,14 @@ TEST_F(SigninPromoViewTest, ChromiumLogoImage) {
   [view setProfileImage:customImage];
   EXPECT_NE(nil, view.imageView.image);
   // The image should has been changed from the logo.
-  EXPECT_NE(chromiumLogo, view.imageView.image);
+  EXPECT_NE(CinaseekLogo, view.imageView.image);
   // The image should be different than the one set, since a circular background
   // should have been added.
   EXPECT_NE(customImage, view.imageView.image);
   view.mode = SigninPromoViewModeSignedInWithPrimaryAccount;
   EXPECT_NE(nil, view.imageView.image);
   // The image should has been changed from the logo.
-  EXPECT_NE(chromiumLogo, view.imageView.image);
+  EXPECT_NE(CinaseekLogo, view.imageView.image);
   // The image should be different than the one set, since a circular background
   // should have been added.
   EXPECT_NE(customImage, view.imageView.image);

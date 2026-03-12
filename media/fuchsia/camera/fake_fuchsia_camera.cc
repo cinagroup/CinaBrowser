@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -160,7 +160,7 @@ FakeCameraStream::FakeCameraStream()
                             ->Connect<fuchsia::sysmem2::Allocator>()) {
   sysmem_allocator_->SetDebugClientInfo(
       std::move(fuchsia::sysmem2::AllocatorSetDebugClientInfoRequest{}
-                    .set_name("ChromiumFakeCameraStream")
+                    .set_name("CinaseekFakeCameraStream")
                     .set_id(base::GetCurrentProcId())));
 }
 
@@ -280,7 +280,7 @@ void FakeCameraStream::WatchOrientation(WatchOrientationCallback callback) {
   SendOrientation();
 }
 
-// temporary until other chromium code switches to sysmem2 tokens only
+// temporary until other Cinaseek code switches to sysmem2 tokens only
 void FakeCameraStream::SetBufferCollection(
     fidl::InterfaceHandle<fuchsia::sysmem::BufferCollectionToken>
         token_handle) {
@@ -334,7 +334,7 @@ void FakeCameraStream::SetBufferCollection2(
       });
 }
 
-// temporary until other chromium code switches to sysmem2 tokens only
+// temporary until other Cinaseek code switches to sysmem2 tokens only
 void FakeCameraStream::WatchBufferCollection(
     WatchBufferCollectionCallback callback) {
   WatchBufferCollection2(

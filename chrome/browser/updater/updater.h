@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class Version;
 }  // namespace base
 
 // This module contains a number of functions to interact with the browser's
-// updater (ChromiumUpdater) on Windows / macOS / Linux.
+// updater (CinaseekUpdater) on Windows / macOS / Linux.
 namespace updater {
 
 // Triggers an on-demand update, reporting status updates to the callback. Must

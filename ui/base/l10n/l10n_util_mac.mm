@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace l10n_util {
 //
 // This may appear thread-unsafe. However, OverrideLocaleWithCocoaLocale() is
 // only called once during the application startup before the creation of the
-// Chromium threads, thus for the threads this can be considered as a constant
+// Cinaseek threads, thus for the threads this can be considered as a constant
 // and can be safely be accessed without synchronisation nor memory barrier.
 //
 // This is only true as long as no new usage of OverrideLocaleWithCocoaLocale()

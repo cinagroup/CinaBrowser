@@ -10468,7 +10468,7 @@ TEST(EncodingTables, EnsureGb18030EncodeIndexForEncode) {
 TEST(EncodingTables, EnsureGb18030EncodeTable) {
   const Gb18030EncodeTable& table = EnsureGb18030EncodeTable();
   EXPECT_EQ(table.size(), kGb18030EncodeIndexSize);
-  // Note: ICU4C that WebKit use has difference, but Chromium does not.
+  // Note: ICU4C that WebKit use has difference, but Cinaseek does not.
   EXPECT_EQ(table[6555], 0x3000);
   EXPECT_EQ(table, kGb18030_2022Reference);
 }

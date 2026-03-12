@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace policy {
 
 // Maps policy to pref like TypeCheckingPolicyHandler while ensuring that the
 // value is a list of urls that follow the url format which documented at
-// http://www.chromium.org/administrators/url-blocklist-filter-format
+// http://www.Cinaseek.org/administrators/url-blocklist-filter-format
 class POLICY_EXPORT URLSchemeListPolicyHandler
     : public TypeCheckingPolicyHandler {
  public:

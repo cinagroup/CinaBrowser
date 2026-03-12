@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,12 +45,12 @@
 #include "net/log/test_net_log.h"
 #include "net/log/test_net_log_util.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_crypto_client_config_handle.h"
 #include "net/quic/quic_http_utils.h"
@@ -168,8 +168,8 @@ class TestQuicConnection : public quic::QuicConnection {
   TestQuicConnection(const quic::ParsedQuicVersionVector& versions,
                      quic::QuicConnectionId connection_id,
                      IPEndPoint address,
-                     QuicChromiumConnectionHelper* helper,
-                     QuicChromiumAlarmFactory* alarm_factory,
+                     QuicCinaseekConnectionHelper* helper,
+                     QuicCinaseekAlarmFactory* alarm_factory,
                      quic::QuicPacketWriter* writer,
                      quic::ConnectionIdGeneratorInterface& generator)
       : quic::QuicConnection(connection_id,
@@ -249,7 +249,7 @@ class DeleteStreamCallback : public TestCompletionCallbackBase {
 
 class QuicHttpStreamPeer {
  public:
-  static QuicChromiumClientStream::Handle* GetQuicChromiumClientStream(
+  static QuicCinaseekClientStream::Handle* GetQuicCinaseekClientStream(
       QuicHttpStream* stream) {
     return stream->stream_.get();
   }
@@ -372,15 +372,15 @@ class QuicHttpStreamTest : public ::testing::TestWithParam<TestParams>,
     EXPECT_CALL(*send_algorithm_, OnApplicationLimited(_)).Times(AnyNumber());
     EXPECT_CALL(*send_algorithm_, GetCongestionControlType())
         .Times(AnyNumber());
-    helper_ = std::make_unique<QuicChromiumConnectionHelper>(
+    helper_ = std::make_unique<QuicCinaseekConnectionHelper>(
         &clock_, &random_generator_);
     alarm_factory_ =
-        std::make_unique<QuicChromiumAlarmFactory>(runner_.get(), &clock_);
+        std::make_unique<QuicCinaseekAlarmFactory>(runner_.get(), &clock_);
 
     connection_ = new TestQuicConnection(
         quic::test::SupportedVersions(version_), connection_id_, peer_addr_,
         helper_.get(), alarm_factory_.get(),
-        new QuicChromiumPacketWriter(
+        new QuicCinaseekPacketWriter(
             socket.get(),
             base::SingleThreadTaskRunner::GetCurrentDefault().get()),
         connection_id_generator_);
@@ -398,7 +398,7 @@ class QuicHttpStreamTest : public ::testing::TestWithParam<TestParams>,
 
     base::TimeTicks dns_end = base::TimeTicks::Now();
     base::TimeTicks dns_start = dns_end - base::Milliseconds(1);
-    session_ = std::make_unique<QuicChromiumClientSession>(
+    session_ = std::make_unique<QuicCinaseekClientSession>(
         connection_, std::move(socket),
         /*stream_factory=*/nullptr, &crypto_client_stream_factory_, &clock_,
         &transport_security_state_, &ssl_config_service_,
@@ -634,8 +634,8 @@ class QuicHttpStreamTest : public ::testing::TestWithParam<TestParams>,
   scoped_refptr<TestTaskRunner> runner_;
   std::vector<MockWrite> mock_writes_;
   quic::MockClock clock_;
-  std::unique_ptr<QuicChromiumConnectionHelper> helper_;
-  std::unique_ptr<QuicChromiumAlarmFactory> alarm_factory_;
+  std::unique_ptr<QuicCinaseekConnectionHelper> helper_;
+  std::unique_ptr<QuicCinaseekAlarmFactory> alarm_factory_;
   testing::StrictMock<quic::test::MockQuicConnectionVisitor> visitor_;
   std::unique_ptr<UploadDataStream> upload_data_stream_;
   std::unique_ptr<QuicHttpStream> stream_;
@@ -643,7 +643,7 @@ class QuicHttpStreamTest : public ::testing::TestWithParam<TestParams>,
   SSLConfigServiceDefaults ssl_config_service_;
 
   // Must outlive `send_algorithm_` and `connection_`.
-  std::unique_ptr<QuicChromiumClientSession> session_;
+  std::unique_ptr<QuicCinaseekClientSession> session_;
   raw_ptr<quic::test::MockSendAlgorithm> send_algorithm_;
   raw_ptr<TestQuicConnection> connection_;
 
@@ -666,7 +666,7 @@ class QuicHttpStreamTest : public ::testing::TestWithParam<TestParams>,
   IPEndPoint self_addr_;
   IPEndPoint peer_addr_;
   quic::test::MockRandom random_generator_{0};
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   MockCryptoClientStreamFactory crypto_client_stream_factory_;
   std::unique_ptr<StaticSocketDataProvider> socket_data_;
   QuicPacketPrinter printer_;
@@ -697,8 +697,8 @@ TEST_P(QuicHttpStreamTest, DisableConnectionMigrationForStream) {
   EXPECT_EQ(OK, stream_->InitializeStream(false, DEFAULT_PRIORITY,
                                           net_log_with_source_,
                                           callback_.callback()));
-  QuicChromiumClientStream::Handle* client_stream =
-      QuicHttpStreamPeer::GetQuicChromiumClientStream(stream_.get());
+  QuicCinaseekClientStream::Handle* client_stream =
+      QuicHttpStreamPeer::GetQuicCinaseekClientStream(stream_.get());
   EXPECT_FALSE(client_stream->can_migrate_to_cellular_network());
 }
 

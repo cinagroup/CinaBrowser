@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -69,23 +69,23 @@ group("unit_tests") {
 if (is_android) {
   android_library("java") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/notifications/ChromeNotificationWrapperCompatBuilder.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationBuilderBase.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationConstants.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationIntentInterceptor.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationSettingsBridge.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationSystemStatusUtil.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationUmaTracker.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationWrapperBuilderFactory.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/StandardNotificationBuilder.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/TrampolineActivityTracker.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/ChannelsUpdater.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/ChromeChannelDefinitions.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/LocaleChangedBroadcastReceiver.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/SiteChannelsManager.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionChangeReceiver.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionController.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionRationaleDialogController.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/CinaseekNotificationWrapperCompatBuilder.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationBuilderBase.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationConstants.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationIntentInterceptor.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationSettingsBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationSystemStatusUtil.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationUmaTracker.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationWrapperBuilderFactory.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/StandardNotificationBuilder.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/TrampolineActivityTracker.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/ChannelsUpdater.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/CinaseekChannelDefinitions.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/LocaleChangedBroadcastReceiver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/SiteChannelsManager.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionChangeReceiver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionController.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionRationaleDialogController.java",
     ]
 
     deps = [
@@ -116,7 +116,7 @@ if (is_android) {
       ":jni_headers",
       ":notifications_java_enum_srcjar",
     ]
-    resources_package = "org.chromium.chrome.browser.notifications"
+    resources_package = "org.Cinaseek.chrome.browser.notifications"
   }
 
   java_cpp_enum("notifications_java_enum_srcjar") {
@@ -125,29 +125,29 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationSettingsBridge.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationSystemStatusUtil.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationSettingsBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationSystemStatusUtil.java",
     ]
   }
 
   robolectric_library("junit_tests") {
-    resources_package = "org.chromium.chrome.browser.notifications"
+    resources_package = "org.Cinaseek.chrome.browser.notifications"
     sources = [
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationBuilderBaseTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationIntentInterceptorTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationSystemStatusUtilUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/NotificationTestUtil.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/PendingIntentProviderTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/StandardNotificationBuilderTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/ThrottlingNotificationSchedulerTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/TrampolineActivityTrackerTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/ChannelsInitializerTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/ChannelsUpdaterTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/channels/ChromeChannelDefinitionsTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionChangeReceiverTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionControllerTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/NotificationPermissionRationaleDialogControllerTest.java",
-      "android/java/src/org/chromium/chrome/browser/notifications/permissions/TestRationaleDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationBuilderBaseTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationIntentInterceptorTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationSystemStatusUtilUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationTestUtil.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/PendingIntentProviderTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/StandardNotificationBuilderTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/ThrottlingNotificationSchedulerTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/TrampolineActivityTrackerTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/ChannelsInitializerTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/ChannelsUpdaterTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/channels/CinaseekChannelDefinitionsTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionChangeReceiverTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionControllerTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/NotificationPermissionRationaleDialogControllerTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/notifications/permissions/TestRationaleDelegate.java",
     ]
 
     deps = [
@@ -182,9 +182,9 @@ if (is_android) {
 
   android_library("javatests") {
     testonly = true
-    resources_package = "org.chromium.chrome.browser.notifications"
+    resources_package = "org.Cinaseek.chrome.browser.notifications"
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/notifications/NotificationWrapperBuilderFactoryTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationWrapperBuilderFactoryTest.java" ]
 
     deps = [
       ":java",
@@ -213,7 +213,7 @@ if (is_android) {
   android_library("test_support_java") {
     testonly = true
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/notifications/NotificationTestUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/notifications/NotificationTestUtil.java" ]
 
     deps = [
       ":java",

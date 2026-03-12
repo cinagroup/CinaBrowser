@@ -1,7 +1,7 @@
 /* inffast_chunk.h -- header to use inffast_chunk.c
  * Copyright (C) 1995-2003, 2010 Mark Adler
  * Copyright (C) 2017 ARM, Inc.
- * Copyright 2023 The Chromium Authors
+ * Copyright 2023 The Cinaseek Authors
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 

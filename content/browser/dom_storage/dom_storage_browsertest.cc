@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -162,7 +162,7 @@ IN_PROC_BROWSER_TEST_P(DOMStorageBrowserTest, MAYBE_DeletePhysicalStorageKey) {
   EXPECT_EQ(0U, GetUsage().size());
 }
 
-// On Windows file://localhost/C:/src/chromium/src/content/test/data/title1.html
+// On Windows file://localhost/C:/src/Cinaseek/src/content/test/data/title1.html
 // doesn't work.
 #if !BUILDFLAG(IS_WIN)
 // Regression test for https://crbug.com/776160.  The test verifies that there

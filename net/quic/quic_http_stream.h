@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,8 +23,8 @@
 #include "net/http/http_response_info.h"
 #include "net/http/http_server_properties.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_stream.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_stream.h"
 #include "net/spdy/multiplexed_http_stream.h"
 #include "net/third_party/quiche/src/quiche/common/http/http_header_block.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_packets.h"
@@ -36,13 +36,13 @@ class QuicHttpStreamPeer;
 }  // namespace test
 
 // The QuicHttpStream is a QUIC-specific HttpStream subclass.  It holds a
-// handle of QuicChromiumClientStream which it uses to send and receive data.
+// handle of QuicCinaseekClientStream which it uses to send and receive data.
 // The handle hides the details of the underlying stream's lifetime and can be
 // used even after the underlying stream is destroyed.
 class NET_EXPORT_PRIVATE QuicHttpStream : public MultiplexedHttpStream {
  public:
   explicit QuicHttpStream(
-      std::unique_ptr<QuicChromiumClientSession::Handle> session,
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session,
       std::set<std::string> dns_aliases);
 
   QuicHttpStream(const QuicHttpStream&) = delete;
@@ -141,17 +141,17 @@ class NET_EXPORT_PRIVATE QuicHttpStream : public MultiplexedHttpStream {
   // |session_error|, |connection_error| and |stream_error|.
   int ComputeResponseStatus() const;
 
-  QuicChromiumClientSession::Handle* quic_session() {
-    return static_cast<QuicChromiumClientSession::Handle*>(session());
+  QuicCinaseekClientSession::Handle* quic_session() {
+    return static_cast<QuicCinaseekClientSession::Handle*>(session());
   }
 
-  const QuicChromiumClientSession::Handle* quic_session() const {
-    return static_cast<const QuicChromiumClientSession::Handle*>(session());
+  const QuicCinaseekClientSession::Handle* quic_session() const {
+    return static_cast<const QuicCinaseekClientSession::Handle*>(session());
   }
 
   State next_state_ = STATE_NONE;
 
-  std::unique_ptr<QuicChromiumClientStream::Handle> stream_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> stream_;
 
   // The following three fields are all owned by the caller and must
   // outlive this object, according to the HttpStream contract.

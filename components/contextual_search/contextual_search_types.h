@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ enum class MimeType;
 namespace contextual_search {
 
 // Upload status of a file.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.contextual_search
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.contextual_search
 enum class ContextUploadStatus {
   // Not uploaded.
   kNotUploaded = 0,

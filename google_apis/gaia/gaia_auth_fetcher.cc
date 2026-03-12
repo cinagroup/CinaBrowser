@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -163,24 +163,24 @@ std::string GaiaSource::ToString() {
       source_string = GaiaConstants::kChromeOSSource;
       break;
     case Type::kAccountReconcilorDice:
-      source_string = "ChromiumAccountReconcilorDice";
+      source_string = "CinaseekAccountReconcilorDice";
       break;
     case Type::kAccountReconcilorMirror:
-      source_string = "ChromiumAccountReconcilor";
+      source_string = "CinaseekAccountReconcilor";
       break;
     case Type::kPrimaryAccountManager:
-      // Even though this string refers to an old name from the Chromium POV, it
+      // Even though this string refers to an old name from the Cinaseek POV, it
       // should not be changed as it is passed server-side.
-      source_string = "ChromiumSigninManager";
+      source_string = "CinaseekSigninManager";
       break;
     case Type::kChromeGlic:
-      source_string = "ChromiumGlic";
+      source_string = "CinaseekGlic";
       break;
   }
 
-  // All sources should start with Chromium or chromeos for better server logs.
+  // All sources should start with Cinaseek or chromeos for better server logs.
   DCHECK(source_string == "chromeos" ||
-         base::StartsWith(source_string, "Chromium",
+         base::StartsWith(source_string, "Cinaseek",
                           base::CompareCase::SENSITIVE));
   return source_string + suffix_;
 }

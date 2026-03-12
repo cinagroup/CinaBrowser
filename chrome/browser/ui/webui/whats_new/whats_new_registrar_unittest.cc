@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,16 +26,16 @@ BASE_FEATURE(kTestEdition, "TestEdition", base::FEATURE_DISABLED_BY_DEFAULT);
 void RegisterWhatsNewModulesForTests(whats_new::WhatsNewRegistry* registry) {
   // Test Module
   registry->RegisterModule(
-      whats_new::WhatsNewModule(kTestModule, "mickeyburks@chromium.org"));
+      whats_new::WhatsNewModule(kTestModule, "mickeyburks@Cinaseek.org"));
   registry->RegisterModule(
-      whats_new::WhatsNewModule("TestDefaultModule", "mickeyburks@chromium.org",
+      whats_new::WhatsNewModule("TestDefaultModule", "mickeyburks@Cinaseek.org",
                                 BrowserCommand::kNoOpCommand));
 }
 
 void RegisterWhatsNewEditionsForTests(whats_new::WhatsNewRegistry* registry) {
   // Test Edition
   registry->RegisterEdition(
-      whats_new::WhatsNewEdition(kTestEdition, "mickeyburks@chromium.org"));
+      whats_new::WhatsNewEdition(kTestEdition, "mickeyburks@Cinaseek.org"));
 }
 
 }  // namespace

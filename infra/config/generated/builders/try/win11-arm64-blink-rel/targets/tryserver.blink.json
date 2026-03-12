@@ -26,7 +26,7 @@
             "os": "Windows-11"
           },
           "hard_timeout": 2400,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "blink_web_tests",
@@ -57,7 +57,7 @@
             "os": "Windows-11"
           },
           "hard_timeout": 2400,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "blink_wpt_tests",
@@ -87,7 +87,7 @@
             "os": "Windows-11"
           },
           "hard_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "chrome_wpt_tests",
         "test_id_prefix": "ninja://:chrome_wpt_tests/"
@@ -122,7 +122,7 @@
             "os": "Windows-11"
           },
           "hard_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 18
         },
         "test": "headless_shell_wpt",

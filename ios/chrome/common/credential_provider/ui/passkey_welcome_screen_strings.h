@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // Contains all the strings that need to be displayed in passkey welcome screen
 // for a specific `PasskeyWelcomeScreenPurpose`. Those strings cannot be
 // directly initialized in the view controller, because it needs to be displayed
-// in both Chromium and Credential Provider Extension, which have different
+// in both Cinaseek and Credential Provider Extension, which have different
 // logic for string localization.
 @interface PasskeyWelcomeScreenStrings : NSObject
 

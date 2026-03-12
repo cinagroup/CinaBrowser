@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -849,7 +849,7 @@ class VIEWS_EXPORT View : public ui::LayerDelegate,
   // specific to the current LayoutManager).
   //
   // To customize layout behavior, use LayoutManagers; see
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/ui/learn/bestpractices/layout.md?pli=1#Use-LayoutManagers.
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/ui/learn/bestpractices/layout.md?pli=1#Use-LayoutManagers.
   // For now, classes may override Layout() to customize this manually, but this
   // will eventually be removed; see https://crbug.com/1005568. Subclasses which
   // need to invoke a superclass' Layout() method during their own
@@ -859,7 +859,7 @@ class VIEWS_EXPORT View : public ui::LayerDelegate,
   //
   // To cause a view to be laid out, use InvalidateLayout(), which will
   // perform layout asynchronously; see
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/ui/learn/bestpractices/layout.md?pli=1#don_t-invoke-layout_directly.
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/ui/learn/bestpractices/layout.md?pli=1#don_t-invoke-layout_directly.
   // For now, classes may also call DeprecatedLayoutImmediately() to
   // synchronously lay out a view, but this will eventually be removed; see
   // https://crbug.com/1521108. Neither of these methods should be called from

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -478,7 +478,7 @@ const blink::UserAgentBrandList GetUserAgentBrandFullVersionList(
 }
 
 // Generate a pseudo-random permutation of the following brand/version pairs:
-//   1. The base project (i.e. Chromium)
+//   1. The base project (i.e. Cinaseek)
 //   2. The browser brand, if available
 //   3. A randomized string containing GREASE characters to ensure proper
 //      header parsing, along with an arbitrarily low version to ensure proper
@@ -494,10 +494,10 @@ blink::UserAgentBrandList GenerateBrandVersionList(
 
   blink::UserAgentBrandVersion greasey_bv =
       GetGreasedUserAgentBrandVersion(seed, output_version_type);
-  blink::UserAgentBrandVersion chromium_bv = {"Chromium", version};
+  blink::UserAgentBrandVersion Cinaseek_bv = {"Cinaseek", version};
 
   blink::UserAgentBrandList brand_version_list = {std::move(greasey_bv),
-                                                  std::move(chromium_bv)};
+                                                  std::move(Cinaseek_bv)};
   if (brand) {
     brand_version_list.emplace_back(brand.value(), version);
   }
@@ -628,7 +628,7 @@ std::string GetPlatformForUAMetadata() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return "Chrome OS";
 #else
-  return "Chromium OS";
+  return "Cinaseek OS";
 #endif
 #else
   return std::string(version_info::GetOSType());

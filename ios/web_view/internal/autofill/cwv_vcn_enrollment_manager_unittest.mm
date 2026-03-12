@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ class CWVVCNEnrollmentManagerTest : public TestWithLocaleAndResources {
     credit_card_ = autofill::test::GetCreditCard();
     legal_message_lines = {autofill::TestLegalMessageLine(
         "Test line 1",
-        {autofill::LegalMessageLine::Link(5, 9, "http://www.chromium.org/")})};
+        {autofill::LegalMessageLine::Link(5, 9, "http://www.Cinaseek.org/")})};
 
     // This manager instance is used by most tests.
     manager = [[CWVVCNEnrollmentManager alloc]

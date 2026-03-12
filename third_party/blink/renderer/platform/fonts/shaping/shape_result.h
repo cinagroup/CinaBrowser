@@ -110,7 +110,7 @@ struct PLATFORM_EXPORT OffsetWithSpacing {
 // a glyph when multiple graphemes share a glyph (for example, in a ligature)
 using BreakGlyphsOption = base::StrongAlias<class BreakGlyphsOptionTag, bool>;
 
-// std::function is forbidden in Chromium and base::RepeatingCallback is way too
+// std::function is forbidden in Cinaseek and base::RepeatingCallback is way too
 // expensive so we resort to a good old function pointer instead.
 typedef void (*GlyphCallback)(void* context,
                               unsigned character_index,

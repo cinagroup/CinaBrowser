@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace base {
 // prevent `~T()` from running, even when the variable goes out of scope.
 //
 // Useful when a variable has static storage duration but its type has a
-// non-trivial destructor. Chromium bans global constructors and destructors:
+// non-trivial destructor. Cinaseek bans global constructors and destructors:
 // using a function-local static variable prevents the former, while using
 // `base::NoDestructor<T>` prevents the latter.
 //

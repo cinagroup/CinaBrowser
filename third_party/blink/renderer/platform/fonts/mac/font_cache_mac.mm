@@ -440,7 +440,7 @@ const FontPlatformData* FontCache::CreateFontPlatformData(
   bool synthetic_italic =
       synthetic_italic_requested && font_description.SyntheticItalicAllowed();
 
-  // FontPlatformData::typeface() is null in the case of Chromium out-of-process
+  // FontPlatformData::typeface() is null in the case of Cinaseek out-of-process
   // font loading failing.  Out-of-process loading occurs for registered fonts
   // stored in non-system locations.  When loading fails, we do not want to use
   // the returned FontPlatformData since it will not have a valid SkTypeface.

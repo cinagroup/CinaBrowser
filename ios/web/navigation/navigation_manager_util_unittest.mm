@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ TEST_F(NavigationManagerUtilTest, GetCommittedItemWithUniqueID) {
           /*has_user_gesture=*/false, ui::PAGE_TRANSITION_TYPED,
           /*is_renderer_initiated=*/false);
   manager_->AddPendingItem(
-      GURL("http://chromium.org"), Referrer(), ui::PAGE_TRANSITION_TYPED,
+      GURL("http://Cinaseek.org"), Referrer(), ui::PAGE_TRANSITION_TYPED,
       web::NavigationInitiationType::BROWSER_INITIATED,
       /*is_post_navigation=*/false, /*is_error_navigation=*/false,
       web::HttpsUpgradeType::kNone);
@@ -60,7 +60,7 @@ TEST_F(NavigationManagerUtilTest, GetCommittedItemWithUniqueID) {
   EXPECT_EQ(-1, GetCommittedItemIndexWithUniqueID(manager_.get(), unique_id));
 
   // Commit that pending item.
-  [mock_wk_list_ setCurrentURL:@"http://chromium.org"];
+  [mock_wk_list_ setCurrentURL:@"http://Cinaseek.org"];
   manager_->CommitPendingItem();
   EXPECT_EQ(item, GetCommittedItemWithUniqueID(manager_.get(), unique_id));
   EXPECT_EQ(item, GetItemWithUniqueID(manager_.get(), context.get()));

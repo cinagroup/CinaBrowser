@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -143,7 +143,7 @@ void MockAccessCodeCastPrefUpdater::set_device_added_time_dict(
 
 MediaRoute CreateRouteForTesting(const MediaSink::Id& sink_id) {
   std::string route_id =
-      "urn:x-org.chromium:media:route:1/" + sink_id + "/http://foo.com";
+      "urn:x-org.Cinaseek:media:route:1/" + sink_id + "/http://foo.com";
   return MediaRoute(route_id, MediaSource("access_code"), sink_id,
                     "access_sink", true);
 }

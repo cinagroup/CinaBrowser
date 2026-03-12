@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,11 +8,11 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/wallet/BoardingPassBridge.java",
-    "java/src/org/chromium/chrome/browser/wallet/BoardingPassController.java",
+    "java/src/org/Cinaseek/chrome/browser/wallet/BoardingPassBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/wallet/BoardingPassController.java",
   ]
   srcjar_deps = [ ":jni_headers" ]
-  resources_package = "org.chromium.chrome.browser.wallet"
+  resources_package = "org.Cinaseek.chrome.browser.wallet"
   deps = [
     "//base:base_java",
     "//chrome/browser/flags:java",
@@ -25,11 +25,11 @@ android_library("java") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/wallet/BoardingPassBridge.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/wallet/BoardingPassBridge.java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "javatests/src/org/chromium/chrome/browser/wallet/BoardingPassControllerTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/chrome/browser/wallet/BoardingPassControllerTest.java" ]
   deps = [
     "//base:base_java",
     "//base:base_java_test_support",

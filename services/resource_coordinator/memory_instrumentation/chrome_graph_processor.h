@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace memory_instrumentation {
 
 // ChromeGraphProcessor is a wrapper for a GraphProcessor from Perfetto. This
 // class takes care of all required input and output parameter conversions and
-// could be used as a replacement for GraphProcessor class from Chromium.
+// could be used as a replacement for GraphProcessor class from Cinaseek.
 //
 // Example usage:
 // {

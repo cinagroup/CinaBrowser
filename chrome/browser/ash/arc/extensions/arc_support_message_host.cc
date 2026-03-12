@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,7 +66,7 @@ void ArcSupportMessageHost::OnMessage(const std::string& message_string) {
   // |message_string| comes from the ARC support extension via native messaging,
   // which on Chrome OS runs in the browser process.
   // Therefore this use of JSONReader does not violate
-  // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/rule-of-2.md.
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/security/rule-of-2.md.
   std::optional<base::DictValue> message = base::JSONReader::ReadDict(
       message_string, base::JSON_PARSE_CHROMIUM_EXTENSIONS);
   if (!message) {

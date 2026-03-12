@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1025,7 +1025,7 @@ bool WebViewGuest::Go(int relative_index) {
 
 void WebViewGuest::Reload() {
   // TODO(fsamuel): Don't check for repost because we don't want to show
-  // Chromium's repost warning. We might want to implement a separate API
+  // Cinaseek's repost warning. We might want to implement a separate API
   // for registering a callback if a repost is about to happen.
   GetController().Reload(content::ReloadType::NORMAL, false);
 }

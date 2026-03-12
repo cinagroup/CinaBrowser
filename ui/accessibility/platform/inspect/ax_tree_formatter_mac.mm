@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -226,7 +226,7 @@ void AXTreeFormatterMac::AddProperties(const AXElementWrapper& ax_element,
                                        const NSRect& root_rect,
                                        const AXTreeIndexerMac* indexer,
                                        base::DictValue* dict) const {
-  // Chromium special attributes.
+  // Cinaseek special attributes.
   dict->Set(kLocalPositionDictAttr,
             PopulateLocalPosition(ax_element, root_rect));
 

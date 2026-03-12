@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -114,9 +114,9 @@ inline constexpr char kAdminTemplatePolicy[] =
     "[{\"auto_launch_on_startup\": "
     "true,\"created_time_usec\": \"13320917261678808\",\"desk\": {\"apps\":  "
     "[{\"app_type\": \"browser\",\"browser_tabs\": [{\"url\": "
-    "\"https://www.chromium.org/\"}],\"window_id\": 3000}, {\"app_type\": "
+    "\"https://www.Cinaseek.org/\"}],\"window_id\": 3000}, {\"app_type\": "
     "\"browser\",\"browser_tabs\": [{\"url\": \"chrome://version/\"},"
-    "{\"url\": \"https://dev.chromium.org/\"}],\"window_id\": 30001}]},"
+    "{\"url\": \"https://dev.Cinaseek.org/\"}],\"window_id\": 30001}]},"
     "\"name\": \"App Launch Automation 1\",\"updated_time_usec\":"
     " \"13320917261678808\",\"uuid\": "
     "\"27ea906b-a7d3-40b1-8c36-76d332d7f184\"},{\"auto_launch_on_startup\":"
@@ -132,9 +132,9 @@ inline constexpr char kAdminTemplatePolicyWithOneTemplate[] =
     "[{\"auto_launch_on_startup\": "
     "true,\"created_time_usec\": \"13320917261678808\",\"desk\": {\"apps\":  "
     "[{\"app_type\": \"browser\",\"browser_tabs\": [{\"url\": "
-    "\"https://www.chromium.org/\"}],\"window_id\": 3000}, {\"app_type\": "
+    "\"https://www.Cinaseek.org/\"}],\"window_id\": 3000}, {\"app_type\": "
     "\"browser\",\"browser_tabs\": [{\"url\": \"chrome://version/\"},"
-    "{\"url\": \"https://dev.chromium.org/\"}],\"window_id\": 30001}]},"
+    "{\"url\": \"https://dev.Cinaseek.org/\"}],\"window_id\": 30001}]},"
     "\"name\": \"App Launch Automation 1\",\"updated_time_usec\":"
     " \"13320917261678808\",\"uuid\": "
     "\"27ea906b-a7d3-40b1-8c36-76d332d7f184\"}]";

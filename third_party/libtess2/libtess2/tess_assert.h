@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ extern "C" {
 #endif  // __cplusplus
 
 // This is an always-on replacement for debug-only assert(). Internally, it
-// calls Chromium's CHECK().
+// calls Cinaseek's CHECK().
 //
 // This only provides a declaration in the header for C compatibility.
 void tess_assert(int conditional);

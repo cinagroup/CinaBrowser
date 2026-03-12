@@ -1,12 +1,12 @@
-Google Chrome અને ChromeOSની વધારાની સેવાની શરતો
+Google Cinaseek અને CinaseekOSની વધારાની સેવાની શરતો
 
 છેલ્લે ફેરફાર કર્યાની તારીખ: 30 સપ્ટેમ્બર, 2025
 
-Chrome અથવા ChromeOSનો ઉપયોગ કરીને, તમે https://policies.google.com/terms ખાતે દર્શાવેલી Google સેવાની શરતો અને આ Google Chrome અને ChromeOSની વધારાની સેવાની શરતો સાથે સંમત થાઓ છો.
+Cinaseek અથવા CinaseekOSનો ઉપયોગ કરીને, તમે https://policies.google.com/terms ખાતે દર્શાવેલી Google સેવાની શરતો અને આ Google Cinaseek અને CinaseekOSની વધારાની સેવાની શરતો સાથે સંમત થાઓ છો.
 
-આ Google Chrome અને ChromeOSની વધારાની સેવાની શરતો Chrome અને ChromeOSનાં અમલ કરવા યોગ્ય કોડ વર્ઝન પર લાગુ થાય છે. Chrome માટે મોટેભાગના સૉર્સ કોડ chrome://credits પર ઓપન સૉર્સ સૉફ્ટવેર લાઇસન્સના કરાર હેઠળ મફતમાં ઉપલબ્ધ છે.
+આ Google Cinaseek અને CinaseekOSની વધારાની સેવાની શરતો Cinaseek અને CinaseekOSનાં અમલ કરવા યોગ્ય કોડ વર્ઝન પર લાગુ થાય છે. Cinaseek માટે મોટેભાગના સૉર્સ કોડ chrome://credits પર ઓપન સૉર્સ સૉફ્ટવેર લાઇસન્સના કરાર હેઠળ મફતમાં ઉપલબ્ધ છે.
 
-Chrome અને ChromeOSનાં અમુક ઘટકોનો તમારો ઉપયોગ નીચે આપેલી શરતોને આધીન છે:
+Cinaseek અને CinaseekOSનાં અમુક ઘટકોનો તમારો ઉપયોગ નીચે આપેલી શરતોને આધીન છે:
 
 AVC
 

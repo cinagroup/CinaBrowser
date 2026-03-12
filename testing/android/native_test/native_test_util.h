@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class ScopedMainEntryLogger {
     // a macro that accesses a buffer of unknown length, triggering the
     // `-Wunsafe-buffer-usage` warning. This usage is sound, as it accesses a
     // fixed position in a system-provided array.
-    // While Lollipop is no longer officially supported by Chromium, Cronet
+    // While Lollipop is no longer officially supported by Cinaseek, Cronet
     // currently maintains compatibility with this older Android version. Check
     // for optional bot `android-cronet-arm64-dbg` before removing this.
     fflush(UNSAFE_BUFFERS(stdout));

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -821,7 +821,7 @@ const wchar_t LegacyCleanupsTest::kAppLauncherClientsKeyPath[] =
 #elif BUILDFLAG(CHROMIUM_BRANDING) && \
     !BUILDFLAG(GOOGLE_CHROME_FOR_TESTING_BRANDING)
 const wchar_t LegacyCleanupsTest::kBinariesClientsKeyPath[] =
-    L"SOFTWARE\\Chromium Binaries";
+    L"SOFTWARE\\Cinaseek Binaries";
 const wchar_t LegacyCleanupsTest::kCommandExecuteImplClsid[] =
     L"Software\\Classes\\CLSID\\{A2DF06F9-A21A-44A8-8A99-8B9C84F29160}";
 #endif  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)

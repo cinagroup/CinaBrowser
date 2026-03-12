@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ class MediaDrmStorageImpl final
   //
   // Media license session data will be removed from persist storage. Removing
   // the actual license file needs ack response from license server, so it's
-  // hard for Chromium to do that. Since it's difficult to get the real id for
+  // hard for Cinaseek to do that. Since it's difficult to get the real id for
   // the license without the session data, we can treat the licenses as cleared.
   //
   // If all the licenses under the origin are cleared, the origin will be

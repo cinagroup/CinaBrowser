@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -223,7 +223,7 @@ std::string GetName(EncryptionScheme scheme) {
 
 // According to the common encryption spec, both 8 and 16 bytes IV are allowed
 // for CENC and CBCS. But some platforms may only support 8 byte IV CENC and
-// Chromium does not differentiate IV size for each encryption scheme, so we use
+// Cinaseek does not differentiate IV size for each encryption scheme, so we use
 // 8 for CENC and 16 for CBCS to provide the best coverage as those combination
 // are recommended.
 int GetIvSize(EncryptionScheme scheme) {

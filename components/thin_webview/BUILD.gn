@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,9 +18,9 @@ source_set("thin_webview") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/components/thinwebview/CompositorView.java",
-    "java/src/org/chromium/components/thinwebview/ThinWebView.java",
-    "java/src/org/chromium/components/thinwebview/ThinWebViewConstraints.java",
+    "java/src/org/Cinaseek/components/thinwebview/CompositorView.java",
+    "java/src/org/Cinaseek/components/thinwebview/ThinWebView.java",
+    "java/src/org/Cinaseek/components/thinwebview/ThinWebViewConstraints.java",
   ]
 
   deps = [
@@ -34,8 +34,8 @@ android_library("java") {
 
 android_library("factory_java") {
   sources = [
-    "java/src/org/chromium/components/thinwebview/CompositorViewFactory.java",
-    "java/src/org/chromium/components/thinwebview/ThinWebViewFactory.java",
+    "java/src/org/Cinaseek/components/thinwebview/CompositorViewFactory.java",
+    "java/src/org/Cinaseek/components/thinwebview/ThinWebViewFactory.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -244,7 +244,7 @@ if (!is_robolectric && enable_java_templates) {
   #     sources = [
   #       "src/foo_switches.cc",
   #     ]
-  #     class_name = "org.chromium.chrome.FooStrings"
+  #     class_name = "org.Cinaseek.chrome.FooStrings"
   #     # Or a custom template via: template = "FooSwitches.java.tmpl"
   #   }
   #
@@ -255,7 +255,7 @@ if (!is_robolectric && enable_java_templates) {
   #
   # FooSwitches.java.tmpl
   #
-  # // Copyright {YEAR} The Chromium Authors
+  # // Copyright {YEAR} The Cinaseek Authors
   # // Use of this source code is governed by a BSD-style license that can be
   # // found in the LICENSE file.
   #
@@ -323,7 +323,7 @@ if (!is_robolectric && enable_java_templates) {
   #     sources = [
   #       "src/foo_features.cc",
   #     ]
-  #     class_name = "org.chromium.chrome.FooFeatures"
+  #     class_name = "org.Cinaseek.chrome.FooFeatures"
   #     # Or a custom template via: template = "FooSwitches.java.tmpl"
   #   }
   #
@@ -335,7 +335,7 @@ if (!is_robolectric && enable_java_templates) {
   #
   # FooFeatures.java.tmpl
   #
-  # // Copyright $YEAR The Chromium Authors
+  # // Copyright $YEAR The Cinaseek Authors
   # // Use of this source code is governed by a BSD-style license that can be
   # // found in the LICENSE file.
   #
@@ -441,7 +441,7 @@ if (!is_robolectric && enable_java_templates) {
   #     libraries to write.
   #   version_number: (Optional) String of expected version of 'main' native
   #     library.
-  #   enable_chromium_linker: (Optional) Whether to use the Chromium linker.
+  #   enable_Cinaseek_linker: (Optional) Whether to use the Cinaseek linker.
   #   use_final_fields: True to use final fields. When false, all other
   #       variables must not be set.
   template("write_native_libraries_java") {
@@ -481,9 +481,9 @@ if (!is_robolectric && enable_java_templates) {
             rebase_path(depfile, root_build_dir),
           ]
         }
-        if (defined(invoker.enable_chromium_linker) &&
-            invoker.enable_chromium_linker) {
-          args += [ "--enable-chromium-linker" ]
+        if (defined(invoker.enable_Cinaseek_linker) &&
+            invoker.enable_Cinaseek_linker) {
+          args += [ "--enable-Cinaseek-linker" ]
         }
         if (defined(invoker.native_lib_32_bit) && invoker.native_lib_32_bit) {
           args += [ "--native-lib-32-bit" ]
@@ -729,7 +729,7 @@ if (!is_robolectric && enable_java_templates) {
   #       "res/drawable/foo1.xml",
   #       "res/drawable/foo2.xml",
   #     ]
-  #     custom_package = "org.chromium.foo"
+  #     custom_package = "org.Cinaseek.foo"
   #   }
   #
   #   android_resources("foo_resources_overrides") {
@@ -771,12 +771,12 @@ if (!is_robolectric && enable_java_templates) {
     _rebased_resource_files = rebase_path(_resource_files, root_build_dir)
     write_file(_res_sources_path, _rebased_resource_files)
 
-    # This is necessary so we only lint chromium resources.
-    if (defined(invoker.chromium_code)) {
-      _chromium_code = invoker.chromium_code
+    # This is necessary so we only lint Cinaseek resources.
+    if (defined(invoker.Cinaseek_code)) {
+      _Cinaseek_code = invoker.Cinaseek_code
     } else {
       # Default based on whether target is in third_party.
-      _chromium_code =
+      _Cinaseek_code =
           filter_exclude([ get_label_info(":$target_name", "dir") ],
                          [ "*\bthird_party\b*" ]) != []
     }
@@ -787,7 +787,7 @@ if (!is_robolectric && enable_java_templates) {
       build_config = _build_config
       resources_zip = _resources_zip
       res_sources_path = _res_sources_path
-      chromium_code = _chromium_code
+      Cinaseek_code = _Cinaseek_code
 
       forward_variables_from(invoker,
                              [
@@ -1056,15 +1056,15 @@ if (!is_robolectric && enable_java_templates) {
   #
   # Example
   #   java_binary("foo") {
-  #     sources = [ "org/chromium/foo/FooMain.java" ]
+  #     sources = [ "org/Cinaseek/foo/FooMain.java" ]
   #     deps = [ ":bar_java" ]
-  #     main_class = "org.chromium.foo.FooMain"
+  #     main_class = "org.Cinaseek.foo.FooMain"
   #   }
   #
   #   java_binary("foo") {
   #     jar_path = "lib/prebuilt.jar"
   #     deps = [ ":bar_java" ]
-  #     main_class = "org.chromium.foo.FooMain"
+  #     main_class = "org.Cinaseek.foo.FooMain"
   #   }
   template("java_binary") {
     java_library_impl(target_name) {
@@ -1084,14 +1084,14 @@ if (!is_robolectric && enable_java_templates) {
   #
   # Example
   #   java_annotation_processor("foo_processor") {
-  #     sources = [ "org/chromium/foo/FooProcessor.java" ]
+  #     sources = [ "org/Cinaseek/foo/FooProcessor.java" ]
   #     deps = [ ":bar_java" ]
-  #     main_class = "org.chromium.foo.FooProcessor"
+  #     main_class = "org.Cinaseek.foo.FooProcessor"
   #   }
   #
   #   java_annotation_processor("foo_processor") {
   #     jar_path = "lib/prebuilt.jar"
-  #     main_class = "org.chromium.foo.FooMain"
+  #     main_class = "org.Cinaseek.foo.FooMain"
   #   }
   #
   #   java_library("...") {
@@ -1120,13 +1120,13 @@ if (!is_robolectric && enable_java_templates) {
   #
   # Example
   #   robolectric_binary("foo") {
-  #     sources = [ "org/chromium/foo/FooTest.java" ]
+  #     sources = [ "org/Cinaseek/foo/FooTest.java" ]
   #     deps = [ ":bar_java" ]
   #   }
   template("robolectric_binary") {
     testonly = true
 
-    _main_class = "org.chromium.testing.local.JunitTestMain"
+    _main_class = "org.Cinaseek.testing.local.JunitTestMain"
     _build_config_target_name = "$target_name$build_config_target_suffix"
     _java_binary_target_name = "${target_name}__java_binary"
 
@@ -1261,7 +1261,7 @@ if (!is_robolectric && enable_java_templates) {
       }
       _native_libraries_target_name = "${target_name}__native_libraries"
       write_native_libraries_java(_native_libraries_target_name) {
-        enable_chromium_linker = false
+        enable_Cinaseek_linker = false
         use_final_fields = true
         if (defined(_shared_library_list_file)) {
           native_libraries_list_file = _shared_library_list_file
@@ -1367,7 +1367,7 @@ if (!is_robolectric && enable_java_templates) {
   #     in the compile-time classpath. These are in addition to library .jars
   #     that appear in deps.
   #
-  #   chromium_code: If true, extra analysis warning/errors will be enabled.
+  #   Cinaseek_code: If true, extra analysis warning/errors will be enabled.
   #   enable_errorprone: If true, enables the errorprone compiler.
   #
   #   jar_excluded_patterns: List of patterns of .class files to exclude.
@@ -1410,9 +1410,9 @@ if (!is_robolectric && enable_java_templates) {
   # Example
   #   java_library("foo_java") {
   #     sources = [
-  #       "org/chromium/foo/Foo.java",
-  #       "org/chromium/foo/FooInterface.java",
-  #       "org/chromium/foo/FooService.java",
+  #       "org/Cinaseek/foo/Foo.java",
+  #       "org/Cinaseek/foo/FooInterface.java",
+  #       "org/Cinaseek/foo/FooService.java",
   #     ]
   #     deps = [
   #       ":bar_java"
@@ -1421,7 +1421,7 @@ if (!is_robolectric && enable_java_templates) {
   #       ":foo_generated_enum"
   #     ]
   #     jar_excluded_patterns = [
-  #       "*/FooService.class", "org/chromium/FooService\$*.class"
+  #       "*/FooService.class", "org/Cinaseek/FooService\$*.class"
   #     ]
   #   }
   template("java_library") {
@@ -1830,9 +1830,9 @@ if (!is_robolectric && enable_java_templates) {
   # Example
   #   android_library("foo_java") {
   #     sources = [
-  #       "android/org/chromium/foo/Foo.java",
-  #       "android/org/chromium/foo/FooInterface.java",
-  #       "android/org/chromium/foo/FooService.java",
+  #       "android/org/Cinaseek/foo/Foo.java",
+  #       "android/org/Cinaseek/foo/FooInterface.java",
+  #       "android/org/Cinaseek/foo/FooService.java",
   #     ]
   #     deps = [
   #       ":bar_java"
@@ -1841,7 +1841,7 @@ if (!is_robolectric && enable_java_templates) {
   #       ":foo_generated_enum"
   #     ]
   #     jar_excluded_patterns = [
-  #       "*/FooService.class", "org/chromium/FooService\$*.class"
+  #       "*/FooService.class", "org/Cinaseek/FooService\$*.class"
   #     ]
   #   }
   template("android_library") {
@@ -1896,9 +1896,9 @@ if (!is_robolectric && enable_java_templates) {
   # Example
   #   robolectric_library("foo_junit") {
   #     sources = [
-  #       "android/org/chromium/foo/FooTest.java",
-  #       "android/org/chromium/foo/FooTestUtils.java",
-  #       "android/org/chromium/foo/FooMock.java",
+  #       "android/org/Cinaseek/foo/FooTest.java",
+  #       "android/org/Cinaseek/foo/FooTestUtils.java",
+  #       "android/org/Cinaseek/foo/FooMock.java",
   #     ]
   #     deps = [
   #       "//base:base_junit_test_support"
@@ -1907,7 +1907,7 @@ if (!is_robolectric && enable_java_templates) {
   #       ":foo_generated_enum"
   #     ]
   #     jar_excluded_patterns = [
-  #       "*/FooService.class", "org/chromium/FooService\$*.class"
+  #       "*/FooService.class", "org/Cinaseek/FooService\$*.class"
   #     ]
   #   }
   template("robolectric_library") {
@@ -1964,7 +1964,7 @@ if (!is_robolectric && enable_java_templates) {
     }
   }
 
-  # Creates org/chromium/build/BuildConfig.java
+  # Creates org/Cinaseek/build/BuildConfig.java
   template("generate_build_config_srcjar") {
     java_cpp_template(target_name) {
       forward_variables_from(invoker,
@@ -2068,13 +2068,13 @@ if (!is_robolectric && enable_java_templates) {
   # Variables:
   #   build_config: Path to build_config used for locale lists.
   #   java_package: Java package for the generated class.
-  #   use_chromium_linker:
+  #   use_Cinaseek_linker:
   template("generate_product_config_srcjar") {
     java_cpp_template(target_name) {
       defines = []
       _use_final =
           defined(invoker.build_config) ||
-          defined(invoker.use_chromium_linker) || defined(invoker.is_bundle)
+          defined(invoker.use_Cinaseek_linker) || defined(invoker.is_bundle)
       if (_use_final) {
         defines += [ "USE_FINAL" ]
       }
@@ -2082,9 +2082,9 @@ if (!is_robolectric && enable_java_templates) {
       sources = [ "//build/android/java/templates/ProductConfig.template" ]
       defines += [ "PACKAGE=${invoker.java_package}" ]
 
-      _use_chromium_linker =
-          defined(invoker.use_chromium_linker) && invoker.use_chromium_linker
-      defines += [ "USE_CHROMIUM_LINKER_VALUE=$_use_chromium_linker" ]
+      _use_Cinaseek_linker =
+          defined(invoker.use_Cinaseek_linker) && invoker.use_Cinaseek_linker
+      defines += [ "USE_CHROMIUM_LINKER_VALUE=$_use_Cinaseek_linker" ]
       if (defined(invoker.build_config)) {
         forward_variables_from(invoker, TESTONLY_AND_VISIBILITY + [ "deps" ])
         _rebased_build_config =
@@ -2126,7 +2126,7 @@ if (!is_robolectric && enable_java_templates) {
   #     the apk for the secondary ABI (optional).
   #   generate_buildconfig_java: If defined and false, skip generating the
   #     BuildConfig java class describing the build configuration. The default
-  #     is true when building with Chromium for non-test APKs.
+  #     is true when building with Cinaseek for non-test APKs.
   #   generate_native_libraries_java: If defined, whether NativeLibraries.java is
   #     generated is solely controlled by this flag. Otherwise, the default behavior
   #     is NativeLibraries.java will only be generated for the base module/apk when
@@ -2179,7 +2179,7 @@ if (!is_robolectric && enable_java_templates) {
   #   max_sdk_version: The maximum Android SDK version this target supports.
   #     Optional, default not set.
   #   require_native_mocks: Enforce that any native calls using
-  #     org.chromium.base.annotations.NativeMethods must have a mock set
+  #     org.Cinaseek.base.annotations.NativeMethods must have a mock set
   #     (optional).
   #   product_config_java_packages: Optional list of java packages. If given, a
   #     ProductConfig.java file will be generated for each package.
@@ -2294,12 +2294,12 @@ if (!is_robolectric && enable_java_templates) {
       _srcjar_deps = invoker.srcjar_deps
     }
 
-    _use_chromium_linker =
-        defined(invoker.use_chromium_linker) && invoker.use_chromium_linker
+    _use_Cinaseek_linker =
+        defined(invoker.use_Cinaseek_linker) && invoker.use_Cinaseek_linker
 
-    not_needed([ "_use_chromium_linker" ])
+    not_needed([ "_use_Cinaseek_linker" ])
 
-    # The dependency that makes the chromium linker, if any is needed.
+    # The dependency that makes the Cinaseek linker, if any is needed.
     _native_libs_deps = []
     _shared_libraries_is_valid =
         defined(invoker.shared_libraries) && invoker.shared_libraries != []
@@ -2723,7 +2723,7 @@ if (!is_robolectric && enable_java_templates) {
           }
         }
 
-        enable_chromium_linker = _use_chromium_linker
+        enable_Cinaseek_linker = _use_Cinaseek_linker
         use_final_fields = true
 
         # Do not add a dep on the generated_file target in order to avoid having
@@ -2775,7 +2775,7 @@ if (!is_robolectric && enable_java_templates) {
         if (defined(invoker.build_config_include_product_version_resource) &&
             invoker.build_config_include_product_version_resource) {
           resources_version_variable =
-              "org.chromium.base.R.string.product_version"
+              "org.Cinaseek.base.R.string.product_version"
         }
         if (defined(invoker.suffix_apk_assets_used_by)) {
           deps = [ ":$_build_config_target" ]
@@ -2796,7 +2796,7 @@ if (!is_robolectric && enable_java_templates) {
         generate_product_config_srcjar("$_locale_target_name") {
           build_config = _build_config
           java_package = _package
-          use_chromium_linker = _use_chromium_linker
+          use_Cinaseek_linker = _use_Cinaseek_linker
           deps = [ ":$_build_config_target" ]
         }
         _srcjar_deps += [ ":$_locale_target_name" ]
@@ -2825,7 +2825,7 @@ if (!is_robolectric && enable_java_templates) {
                                "asset_deps",
                                "base_module_target",
                                "bytecode_rewriter_target",
-                               "chromium_code",
+                               "Cinaseek_code",
                                "deps",
                                "errorprone_args",
                                "jacoco_never_instrument",
@@ -3355,8 +3355,8 @@ if (!is_robolectric && enable_java_templates) {
   #   android_apk("foo_apk") {
   #     android_manifest = "AndroidManifest.xml"
   #     sources = [
-  #       "android/org/chromium/foo/FooApplication.java",
-  #       "android/org/chromium/foo/FooActivity.java",
+  #       "android/org/Cinaseek/foo/FooApplication.java",
+  #       "android/org/Cinaseek/foo/FooActivity.java",
   #     ]
   #     deps = [
   #       ":foo_support_java"
@@ -3389,7 +3389,7 @@ if (!is_robolectric && enable_java_templates) {
             "build_config_include_product_version_resource",
             "bundles_supported",
             "bytecode_rewriter_target",
-            "chromium_code",
+            "Cinaseek_code",
             "command_line_flags_file",
             "create_apk_script",
             "custom_assertion_handler",
@@ -3463,7 +3463,7 @@ if (!is_robolectric && enable_java_templates) {
             "testonly",
             "uncompress_dex",
             "library_always_compress",
-            "use_chromium_linker",
+            "use_Cinaseek_linker",
             "version_code",
             "version_name",
             "visibility",
@@ -3547,7 +3547,7 @@ if (!is_robolectric && enable_java_templates) {
             "base_module_target",
             "build_config_include_product_version_resource",
             "bundle_target",
-            "chromium_code",
+            "Cinaseek_code",
             "custom_assertion_handler",
             "data",
             "data_deps",
@@ -3604,7 +3604,7 @@ if (!is_robolectric && enable_java_templates) {
             "target_sdk_version",
             "testonly",
             "library_always_compress",
-            "use_chromium_linker",
+            "use_Cinaseek_linker",
             "uses_split",
             "version_code",
             "version_name",
@@ -3777,8 +3777,8 @@ if (!is_robolectric && enable_java_templates) {
   #     apk_name = "FooTest"
   #     apk_under_test = "Foo"
   #     sources = [
-  #       "android/org/chromium/foo/FooTestCase.java",
-  #       "android/org/chromium/foo/FooExampleTest.java",
+  #       "android/org/Cinaseek/foo/FooTestCase.java",
+  #       "android/org/Cinaseek/foo/FooExampleTest.java",
   #     ]
   #     deps = [
   #       ":foo_test_support_java"
@@ -4226,7 +4226,7 @@ if (!is_robolectric && enable_java_templates) {
     }
 
     android_library(target_name) {
-      chromium_code = false
+      Cinaseek_code = false
       sources = []
       srcjar_deps = [ ":${_template_name}__protoc_java" ]
       deps = [ "//third_party/android_deps:protobuf_lite_runtime_java" ]
@@ -4301,7 +4301,7 @@ if (!is_robolectric && enable_java_templates) {
     }
 
     android_library(target_name) {
-      chromium_code = false
+      Cinaseek_code = false
       sources = []
       srcjar_deps = [ ":${_template_name}__flatc_java" ]
       deps = [ "//third_party/flatbuffers:flatbuffers_java" ]
@@ -4693,7 +4693,7 @@ if (!is_robolectric && enable_java_templates) {
   #    command_line_flags_file: Optional. If provided, named of the on-device
   #      file that will be used to store command-line arguments. The default
   #      is 'command_line_flags_file', but this is typically redefined to
-  #      something more specific for certain bundles (e.g. the Chromium based
+  #      something more specific for certain bundles (e.g. the Cinaseek based
   #      APKs use 'chrome-command-line', the WebView one uses
   #      'webview-command-line').
   #
@@ -5385,10 +5385,10 @@ if (!is_robolectric && enable_java_templates) {
   # Generate an Android resources target that contains localized strings
   # describing the current locale used by the Android framework to display
   # UI strings. These are used by
-  # org.chromium.chrome.browser.ChromeLocalizationUtils.
+  # org.Cinaseek.chrome.browser.CinaseekLocalizationUtils.
   #
   # Variables:
-  #    ui_locales: List of Chromium locale names to generate resources for.
+  #    ui_locales: List of Cinaseek locale names to generate resources for.
   #
   template("generate_ui_locale_resources") {
     _generating_target_name = "${target_name}__generate"

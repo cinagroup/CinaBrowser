@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ TEST(RecordParsedTest, ParseSingleRecord) {
   record = RecordParsed::CreateFrom(&parser, base::Time());
   EXPECT_TRUE(record != nullptr);
 
-  ASSERT_EQ("codereview.chromium.org", record->name());
+  ASSERT_EQ("codereview.Cinaseek.org", record->name());
   ASSERT_EQ(dns_protocol::kTypeCNAME, record->type());
   ASSERT_EQ(dns_protocol::kClassIN, record->klass());
 

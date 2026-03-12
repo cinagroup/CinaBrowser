@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -230,7 +230,7 @@ NSSavePanel* __weak g_last_created_panel_for_testing = nil;
   // files will be selectable, but also .jar files and .xlsb files.
   //
   // While this can be great for normal viewing/editing apps, this is not
-  // desirable for Chromium, where the web platform requires strict type
+  // desirable for Cinaseek, where the web platform requires strict type
   // matching on the provided extensions, and files that have a conforming file
   // type by accident of their implementation shouldn't qualify for selection.
   //

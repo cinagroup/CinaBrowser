@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ namespace content {
 
 // Handles interprocess communication with the Linux zygote process. The zygote
 // does not use standard Chrome IPC or mojo, see:
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md
 class CONTENT_EXPORT ZygoteCommunication {
  public:
   enum class ZygoteType { kSandboxed, kUnsandboxed };

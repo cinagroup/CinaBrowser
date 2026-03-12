@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,8 +33,8 @@ using base::test::ios::WaitUntilConditionOrTimeout;
 namespace {
 
 // Constants for configuring a fake download task.
-const char kTestUrl[] = "https://chromium.test/download.txt";
-const char kSameDomainURL[] = "https://chromium.test/page";
+const char kTestUrl[] = "https://Cinaseek.test/download.txt";
+const char kSameDomainURL[] = "https://Cinaseek.test/page";
 const char kCrossDomainURL[] = "https://otherdomain.test/page";
 const char kCrossDomainURL2[] = "https://yetanotherdomain.test/page";
 const char kTestMimeType[] = "text/html";

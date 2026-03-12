@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ using ::testing::_;
 using ::testing::Return;
 
 const char kTestUrl[] = "https://www.google.com";
-const char kCrossOriginTestUrl[] = "https://www.chromium.org";
+const char kCrossOriginTestUrl[] = "https://www.Cinaseek.org";
 
 class MockSerialServiceClient : public blink::mojom::SerialServiceClient {
  public:

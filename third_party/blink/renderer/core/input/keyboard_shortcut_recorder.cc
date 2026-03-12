@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace blink {
 void RecordKeyboardShortcutForAndroid(
     const KeyboardShortcut keyboard_shortcut) {
   // This call must be identical with the call in
-  // content/public/android/java/src/org/chromium/content_public/browser/KeyboardShortcutRecorder.java
+  // content/public/android/java/src/org/Cinaseek/content_public/browser/KeyboardShortcutRecorder.java
   UMA_HISTOGRAM_ENUMERATION("InputMethod.PhysicalKeyboard.KeyboardShortcut",
                             keyboard_shortcut);
 }

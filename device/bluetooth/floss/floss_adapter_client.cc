@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/bluetooth/floss/floss_adapter_client.h"
@@ -32,9 +32,9 @@ void HandleExported(const std::string& method_name,
 }  // namespace
 
 constexpr char FlossAdapterClient::kErrorUnknownAdapter[] =
-    "org.chromium.Error.UnknownAdapter";
+    "org.Cinaseek.Error.UnknownAdapter";
 constexpr char FlossAdapterClient::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/adapter/callback";
+    "/org/Cinaseek/bluetooth/adapter/callback";
 static uint32_t callback_path_index_ = 0;
 
 void FlossAdapterClient::SetName(ResponseCallback<Void> callback,

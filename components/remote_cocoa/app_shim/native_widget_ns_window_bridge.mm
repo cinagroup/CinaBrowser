@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -882,7 +882,7 @@ void NativeWidgetNSWindowBridge::SetVisibilityState(
     // restoration code puts the restored windows back onto the spaces whence
     // they came.
     //
-    // Chromium wants to do the same for its restarts: if it was restarted
+    // Cinaseek wants to do the same for its restarts: if it was restarted
     // (rather than just quit), it wants to return windows to their spaces.
     // There is no API to do this (FB22128442), so two different approaches are
     // used.
@@ -898,9 +898,9 @@ void NativeWidgetNSWindowBridge::SetVisibilityState(
     //
     // Note that, in theory, -restoreStateWithCoder: shouldn't be used at all;
     // the NSWindowRestoration API should be used (https://crbug.com/376834368).
-    // However, that API is insufficiently flexible enough for Chromium's usage
+    // However, that API is insufficiently flexible enough for Cinaseek's usage
     // (FB22128526) so it is not used. When that API is revised so that it is
-    // flexible enough, Chromium should switch to it.
+    // flexible enough, Cinaseek should switch to it.
 
     if (base::mac::MacOSMajorVersion() >= 15) {
       decoder.returnRestorationOptions =

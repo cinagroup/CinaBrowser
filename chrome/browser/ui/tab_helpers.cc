@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -305,7 +305,7 @@ std::optional<int64_t> GetPageContentAnnotationsTabId(
 // static
 // WARNING: Do not use this class for desktop chrome. Use TabFeatures instead.
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/docs/chrome_browser_design_principles.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/chrome_browser_design_principles.md
 void TabHelpers::AttachTabHelpers(WebContents* web_contents) {
   // If already adopted, nothing to be done.
   base::SupportsUserData::Data* adoption_tag =

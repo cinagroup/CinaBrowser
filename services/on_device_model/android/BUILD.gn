@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/android/config.gni")
@@ -69,27 +69,27 @@ source_set("unit_tests") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/on_device_model/AiCoreFactory.java",
-    "java/src/org/chromium/on_device_model/AiCoreModelDownloaderBackend.java",
-    "java/src/org/chromium/on_device_model/AiCoreModelDownloaderBackendUpstreamImpl.java",
-    "java/src/org/chromium/on_device_model/AiCoreModelDownloaderWrapper.java",
-    "java/src/org/chromium/on_device_model/AiCoreSessionBackend.java",
-    "java/src/org/chromium/on_device_model/AiCoreSessionBackendUpstreamImpl.java",
-    "java/src/org/chromium/on_device_model/AiCoreSessionWrapper.java",
-    "java/src/org/chromium/on_device_model/DownloaderResponder.java",
-    "java/src/org/chromium/on_device_model/GenerateOptionsHelper.java",
-    "java/src/org/chromium/on_device_model/InputPieceHelper.java",
-    "java/src/org/chromium/on_device_model/JniSafeCallback.java",
-    "java/src/org/chromium/on_device_model/OnDeviceModelBridge.java",
-    "java/src/org/chromium/on_device_model/SessionResponder.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreFactory.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreModelDownloaderBackend.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreModelDownloaderBackendUpstreamImpl.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreModelDownloaderWrapper.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreSessionBackend.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreSessionBackendUpstreamImpl.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreSessionWrapper.java",
+    "java/src/org/Cinaseek/on_device_model/DownloaderResponder.java",
+    "java/src/org/Cinaseek/on_device_model/GenerateOptionsHelper.java",
+    "java/src/org/Cinaseek/on_device_model/InputPieceHelper.java",
+    "java/src/org/Cinaseek/on_device_model/JniSafeCallback.java",
+    "java/src/org/Cinaseek/on_device_model/OnDeviceModelBridge.java",
+    "java/src/org/Cinaseek/on_device_model/SessionResponder.java",
   ]
 
-  # MLKit-based implementations for AICore backend for non-Chrome branded builds.
+  # MLKit-based implementations for AICore backend for non-Cinaseek branded builds.
   if (use_mlkit_for_aicore) {
     sources += [
-      "java/src/org/chromium/on_device_model/MlKitAiCoreFactoryImpl.java",
-      "java/src/org/chromium/on_device_model/MlKitAiCoreModelDownloaderBackendImpl.java",
-      "java/src/org/chromium/on_device_model/MlKitAiCoreSessionBackendImpl.java",
+      "java/src/org/Cinaseek/on_device_model/MlKitAiCoreFactoryImpl.java",
+      "java/src/org/Cinaseek/on_device_model/MlKitAiCoreModelDownloaderBackendImpl.java",
+      "java/src/org/Cinaseek/on_device_model/MlKitAiCoreSessionBackendImpl.java",
     ]
   }
 
@@ -121,7 +121,7 @@ android_library("java") {
 
 android_library("native_java_unittests_java") {
   testonly = true
-  sources = [ "native_java_unittests/src/org/chromium/on_device_model/OnDeviceModelBridgeNativeUnitTestHelper.java" ]
+  sources = [ "native_java_unittests/src/org/Cinaseek/on_device_model/OnDeviceModelBridgeNativeUnitTestHelper.java" ]
   deps = [
     ":java",
     ":mojom_java",
@@ -138,17 +138,17 @@ android_library("native_java_unittests_java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/on_device_model/AiCoreModelDownloaderWrapper.java",
-    "java/src/org/chromium/on_device_model/AiCoreSessionWrapper.java",
-    "java/src/org/chromium/on_device_model/GenerateOptionsHelper.java",
-    "java/src/org/chromium/on_device_model/InputPieceHelper.java",
-    "java/src/org/chromium/on_device_model/OnDeviceModelBridge.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreModelDownloaderWrapper.java",
+    "java/src/org/Cinaseek/on_device_model/AiCoreSessionWrapper.java",
+    "java/src/org/Cinaseek/on_device_model/GenerateOptionsHelper.java",
+    "java/src/org/Cinaseek/on_device_model/InputPieceHelper.java",
+    "java/src/org/Cinaseek/on_device_model/OnDeviceModelBridge.java",
   ]
 }
 
 generate_jni("native_j_unittests_jni_headers") {
   testonly = true
-  sources = [ "native_java_unittests/src/org/chromium/on_device_model/OnDeviceModelBridgeNativeUnitTestHelper.java" ]
+  sources = [ "native_java_unittests/src/org/Cinaseek/on_device_model/OnDeviceModelBridgeNativeUnitTestHelper.java" ]
 }
 
 java_cpp_enum("java_enum_srcjar") {
@@ -168,8 +168,8 @@ if (use_mlkit_for_aicore) {
   robolectric_library("junit") {
     testonly = true
     sources = [
-      "junit/src/org/chromium/on_device_model/MlKitAiCoreModelDownloaderBackendImplTest.java",
-      "junit/src/org/chromium/on_device_model/MlKitAiCoreSessionBackendImplTest.java",
+      "junit/src/org/Cinaseek/on_device_model/MlKitAiCoreModelDownloaderBackendImplTest.java",
+      "junit/src/org/Cinaseek/on_device_model/MlKitAiCoreSessionBackendImplTest.java",
     ]
     deps = [
       ":java",

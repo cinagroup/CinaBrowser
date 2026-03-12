@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace ui {
 
 using AppKitUtilsTest = testing::Test;
 
-// Note that Chromium currently only supports plain text for services, but test
+// Note that Cinaseek currently only supports plain text for services, but test
 // both plain text and RTF to ensure that these functions work in the general
 // case, not just the specific case.
 TEST_F(AppKitUtilsTest, UTTypeForServicesTypeTest) {
@@ -34,7 +34,7 @@ TEST_F(AppKitUtilsTest, UTTypeForServicesTypeTest) {
   EXPECT_NSEQ(UTTypeRTF, UTTypeForServicesType(NSPasteboardTypeRTF));
 
   // And these obsolete values are what are actually passed into the services
-  // APIs no matter what Chromium returns.
+  // APIs no matter what Cinaseek returns.
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
   EXPECT_NSEQ(UTTypeUTF8PlainText, UTTypeForServicesType(NSStringPboardType));

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -554,7 +554,7 @@ std::string GetProfileNameForChoice(ProfileChoice choice,
 
   [SetupDebugging setUpDebuggingOptions];
 
-  // Register all providers before calling any Chromium code.
+  // Register all providers before calling any Cinaseek code.
   [ProviderRegistration registerProviders];
 
   // Start dispatching for blocking UI commands.

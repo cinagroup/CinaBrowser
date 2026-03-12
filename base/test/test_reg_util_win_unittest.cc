@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace registry_util {
 
 namespace {
-const wchar_t kTestKeyPath[] = L"Software\\Chromium\\Foo\\Baz\\TestKey";
+const wchar_t kTestKeyPath[] = L"Software\\Cinaseek\\Foo\\Baz\\TestKey";
 const wchar_t kTestValueName[] = L"TestValue";
 }  // namespace
 

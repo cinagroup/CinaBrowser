@@ -15,7 +15,7 @@
 import("../build/crashpad_buildconfig.gni")
 import("../build/crashpad_fuzzer_test.gni")
 
-if (crashpad_is_in_chromium) {
+if (crashpad_is_in_Cinaseek) {
   import("//build/config/compiler/compiler.gni")
 }
 
@@ -246,7 +246,7 @@ crashpad_static_library("snapshot") {
   public_deps = [ ":context" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../client:common",
     "../compat",
     "../minidump:format",
@@ -270,7 +270,7 @@ static_library("context") {
   public_configs = [ "..:crashpad_config" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../util",
   ]
 
@@ -285,7 +285,7 @@ if (crashpad_is_linux) {
 
     deps = [
       ":snapshot",
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../util",
     ]
     seed_corpus = "elf/elf_image_reader_fuzzer_corpus"
@@ -319,7 +319,7 @@ static_library("test_support") {
   public_deps = [ ":snapshot" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../compat",
     "../util",
   ]
@@ -411,7 +411,7 @@ source_set("snapshot_test") {
   } else if (!crashpad_is_fuchsia) {
     # Timezones are currently non-functional on Fuchsia:
     # https://fuchsia.googlesource.com/zircon/+/master/third_party/ulib/musl/src/time/__tz.c#9
-    # https://crashpad.chromium.org/bug/196. Relevant upstream bugs are ZX-337
+    # https://crashpad.Cinaseek.org/bug/196. Relevant upstream bugs are ZX-337
     # and ZX-1731.
     sources += [ "posix/timezone_test.cc" ]
   }
@@ -431,7 +431,7 @@ source_set("snapshot_test") {
 
   deps = [
     ":test_support",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../client:common",
     "../compat",
     "../minidump:format",
@@ -503,7 +503,7 @@ crashpad_loadable_module("crashpad_snapshot_test_module") {
   testonly = true
   sources = [ "crashpad_info_client_options_test_module.cc" ]
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../client",
   ]
   if (crashpad_is_in_fuchsia) {
@@ -524,7 +524,7 @@ crashpad_loadable_module("crashpad_snapshot_test_module_large") {
   }
 
   defines = [ "CRASHPAD_INFO_SIZE_TEST_MODULE_LARGE" ]
-  deps += [ "$mini_chromium_source_parent:base" ]
+  deps += [ "$mini_Cinaseek_source_parent:base" ]
 
   if (crashpad_is_in_fuchsia) {
     # TODO(fxbug.dev/42059784): Remove this once the underlying issue is
@@ -544,7 +544,7 @@ crashpad_loadable_module("crashpad_snapshot_test_module_small") {
   }
 
   defines = [ "CRASHPAD_INFO_SIZE_TEST_MODULE_SMALL" ]
-  deps += [ "$mini_chromium_source_parent:base" ]
+  deps += [ "$mini_Cinaseek_source_parent:base" ]
 
   if (crashpad_is_in_fuchsia) {
     # TODO(fxbug.dev/42059784): Remove this once the underlying issue is
@@ -589,7 +589,7 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_annotations.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
     ]
@@ -599,7 +599,7 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_crashing_child.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
       "../util",
@@ -610,7 +610,7 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_dump_without_crashing.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
       "../util",
@@ -621,7 +621,7 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_extra_memory_ranges.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
     ]
@@ -631,12 +631,12 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_image_reader.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
       "../compat",
       "../util",
     ]
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       if (symbol_level == 0) {
         # The tests that use this executable rely on at least minimal debug
         # info.
@@ -650,10 +650,10 @@ if (crashpad_is_win) {
     testonly = true
     sources = [ "win/crashpad_snapshot_test_image_reader_module.cc" ]
     deps = [
-      "$mini_chromium_source_parent:base",
+      "$mini_Cinaseek_source_parent:base",
       "../client",
     ]
-    if (crashpad_is_in_chromium) {
+    if (crashpad_is_in_Cinaseek) {
       if (symbol_level == 0) {
         # The tests that use this module rely on at least minimal debug info.
         remove_configs = [ "//build/config/compiler:default_symbols" ]

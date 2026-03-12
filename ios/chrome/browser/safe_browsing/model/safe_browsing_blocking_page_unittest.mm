@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class SafeBrowsingBlockingPageTest : public PlatformTest {
  public:
   SafeBrowsingBlockingPageTest()
       : profile_(TestProfileIOS::Builder().Build()),
-        url_("http://www.chromium.test"),
+        url_("http://www.Cinaseek.test"),
         resource_(CreateResource(&web_state_, url_)) {
     auto navigation_manager = std::make_unique<web::FakeNavigationManager>();
     navigation_manager->SetBrowserState(profile_.get());

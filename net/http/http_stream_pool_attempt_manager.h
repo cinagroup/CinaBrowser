@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -329,7 +329,7 @@ class HttpStreamPool::AttemptManager
 
   // Returns an active QUIC session when there is an active QUIC session that
   // can be used for on-going jobs after service endpoint results have changed.
-  QuicChromiumClientSession* CanUseExistingQuicSessionAfterEndpointChanges();
+  QuicCinaseekClientSession* CanUseExistingQuicSessionAfterEndpointChanges();
 
   // Returns an active SPDY session when there is an active SPDY session that
   // can be used for on-going jobs after service endpoint results have changed.
@@ -451,7 +451,7 @@ class HttpStreamPool::AttemptManager
   void MaybeCreateSpdyStreamAndNotify(base::WeakPtr<SpdySession> spdy_session,
                                       SessionSource session_source);
 
-  void MaybeCreateQuicStreamAndNotify(QuicChromiumClientSession* quic_session,
+  void MaybeCreateQuicStreamAndNotify(QuicCinaseekClientSession* quic_session,
                                       SessionSource session_source);
 
   void NotifyStreamReady(std::unique_ptr<HttpStream> stream,
@@ -465,7 +465,7 @@ class HttpStreamPool::AttemptManager
 
   // Called when a QUIC session is ready to use. Cancels in-flight attempts.
   // Closes idle streams. Completes request/preconnect jobs.
-  void HandleQuicSessionReady(QuicChromiumClientSession* quic_session,
+  void HandleQuicSessionReady(QuicCinaseekClientSession* quic_session,
                               StreamSocketCloseReason refresh_group_reason);
 
   // Called when a job is done, due to success, failure, or cancellation. `job`

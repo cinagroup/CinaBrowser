@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol CWVUIDelegate;
 @class CWVSSLStatus;
 
-// A web view component (like WKWebView) which uses iOS Chromium's web view
+// A web view component (like WKWebView) which uses iOS Cinaseek's web view
 // implementation.
 //
 // In addition to WKWebView features, it allows Translate, Find In Page,
@@ -83,7 +83,7 @@ CWV_EXPORT
 // - Internationalized domain names (IDN) are presented in Unicode if they're
 //   regarded safe. Domain names with RTL characters will still be in
 //   ACE/punycode for now (crbug.com/650760). See
-//   https://dev.chromium.org/developers/design-documents/idn-in-google-chrome
+//   https://dev.Cinaseek.org/developers/design-documents/idn-in-google-chrome
 //   for details.
 // - Omits the path for standard schemes, excepting file and filesystem.
 // - Omits the port if it is the default for the scheme.

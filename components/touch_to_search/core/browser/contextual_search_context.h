@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ class ContextualSearchContext {
 
   // Gets the encoding of the base page.  This is not very important, since
   // the surrounding text stored here in a std::u16string is implicitly encoded
-  // in UTF-16 (see http://www.chromium.org/developers/chromium-string-usage).
+  // in UTF-16 (see http://www.Cinaseek.org/developers/Cinaseek-string-usage).
   const std::string& GetBasePageEncoding() const { return base_page_encoding_; }
   void SetBasePageEncoding(const std::string& base_page_encoding) {
     base_page_encoding_ = base_page_encoding;

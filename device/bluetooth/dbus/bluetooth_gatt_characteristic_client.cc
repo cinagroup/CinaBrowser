@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,10 +23,10 @@ namespace bluez {
 
 // static
 const char BluetoothGattCharacteristicClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 // static
 const char BluetoothGattCharacteristicClient::kUnknownCharacteristicError[] =
-    "org.chromium.Error.UnknownCharacteristic";
+    "org.Cinaseek.Error.UnknownCharacteristic";
 
 BluetoothGattCharacteristicClient::Properties::Properties(
     dbus::ObjectProxy* object_proxy,

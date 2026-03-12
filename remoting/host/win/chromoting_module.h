@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class AutoThreadTaskRunner;
 
 // A custom version of |CAtlModuleT<>| that registers only those classes which
 // registration entries are passed to the constructor. |ChromotingModule| runs
-// |MessageLoop| allowing Chromium code to post tasks to it. Unlike
+// |MessageLoop| allowing Cinaseek code to post tasks to it. Unlike
 // |CAtlExeModuleT<>|, |ChromotingModule| shuts itself down immediately once
 // the last COM object is released.
 class ChromotingModule : public ATL::CAtlModuleT<ChromotingModule> {

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@ void MaybeRequestFeedback(ScriptState* script_state,
   String message = blink::StrCat(
       {"This page uses Chrome's Built-In AI features (", api_name,
        ")! We're always improving our models; please submit your feedback "
-       "here: https://issues.chromium.org/issues/new?component=",
+       "here: https://issues.Cinaseek.org/issues/new?component=",
        component_id});
   context->AddConsoleMessage(mojom::blink::ConsoleMessageSource::kJavaScript,
                              mojom::blink::ConsoleMessageLevel::kInfo, message);

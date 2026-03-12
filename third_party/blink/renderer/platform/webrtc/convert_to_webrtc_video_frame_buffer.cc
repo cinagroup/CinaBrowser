@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -456,7 +456,7 @@ scoped_refptr<media::VideoFrame> ConvertFromMappedWebRtcVideoFrameBuffer(
           media::VideoFrame::PlaneSizeInSamples(
               pixel_format, media::VideoFrame::Plane::kU, size)
               .height();
-      // WebRTC defines I010 data as uint16 whereas Chromium uses uint8 for all
+      // WebRTC defines I010 data as uint16 whereas Cinaseek uses uint8 for all
       // video formats, so conversion and cast is needed.
       // TODO(crbug.com/338570700): webrtc::I010BufferInterface should expose
       // ArrayView instead of raw pointers.
@@ -486,7 +486,7 @@ scoped_refptr<media::VideoFrame> ConvertFromMappedWebRtcVideoFrameBuffer(
           media::VideoFrame::PlaneSizeInSamples(
               pixel_format, media::VideoFrame::Plane::kU, size)
               .height();
-      // WebRTC defines I210 data as uint16 whereas Chromium uses uint8 for all
+      // WebRTC defines I210 data as uint16 whereas Cinaseek uses uint8 for all
       // video formats, so conversion and cast is needed.
       // TODO(crbug.com/338570700): webrtc::I210BufferInterface should expose
       // ArrayView instead of raw pointers.
@@ -516,7 +516,7 @@ scoped_refptr<media::VideoFrame> ConvertFromMappedWebRtcVideoFrameBuffer(
           media::VideoFrame::PlaneSizeInSamples(
               pixel_format, media::VideoFrame::Plane::kU, size)
               .height();
-      // WebRTC defines I410 data as uint16 whereas Chromium uses uint8 for all
+      // WebRTC defines I410 data as uint16 whereas Cinaseek uses uint8 for all
       // video formats, so conversion and cast is needed.
       // TODO(crbug.com/338570700): webrtc::I410BufferInterface should expose
       // ArrayView instead of raw pointers.

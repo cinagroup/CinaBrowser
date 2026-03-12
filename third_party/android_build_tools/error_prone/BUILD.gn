@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ java_prebuilt("error_prone_java") {
   jar_path = "cipd/error_prone_core.jar"
 }
 
-# We use //tools/android/errorprone_plugin when build_with_chromium.
-if (!build_with_chromium) {
+# We use //tools/android/errorprone_plugin when build_with_Cinaseek.
+if (!build_with_Cinaseek) {
   java_binary("error_prone") {
     # main_class and wrapper script are not actually used.
     # This target is referenced directly from java_library_impl().

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -174,11 +174,11 @@ inline constexpr char kChromeSearchScheme[] = "chrome-search";
 inline constexpr char kChromeUIUntrustedNewTabPageUrl[] =
     "chrome-untrusted://new-tab-page/";
 
-// The URL for the Chromium project used in the About dialog.
-inline constexpr char16_t kChromiumProjectURL[] = u"https://www.chromium.org/";
+// The URL for the Cinaseek project used in the About dialog.
+inline constexpr char16_t kCinaseekProjectURL[] = u"https://www.Cinaseek.org/";
 #if BUILDFLAG(IS_CHROMEOS)
-static_assert(std::u16string_view(kChromiumProjectURL) ==
-              ash::chrome_external_urls::kChromiumProjectURL);
+static_assert(std::u16string_view(kCinaseekProjectURL) ==
+              ash::chrome_external_urls::kCinaseekProjectURL);
 #endif
 
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
@@ -258,7 +258,7 @@ inline constexpr char kRelatedWebsiteSetsLearnMoreURL[] =
 
 // Url to a blogpost about Flash deprecation.
 inline constexpr char kFlashDeprecationLearnMoreURL[] =
-    "https://blog.chromium.org/2017/07/so-long-and-thanks-for-all-flash.html";
+    "https://blog.Cinaseek.org/2017/07/so-long-and-thanks-for-all-flash.html";
 
 // URL of the 'Activity controls' section of the privacy settings page.
 inline constexpr char kGoogleAccountActivityControlsURL[] =

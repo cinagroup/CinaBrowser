@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace skia {
 void InitializeSkFontMgrForTest() {
   // Load font files in the resource folder.
   static const char* const kFontFileNames[] = {"Ahem.ttf",
-                                               "ChromiumAATTest.ttf"};
+                                               "CinaseekAATTest.ttf"};
 
   NSMutableArray* font_urls = [NSMutableArray array];
   for (auto* font_file_name : kFontFileNames) {

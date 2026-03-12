@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@ bool WindowSizerChromeOS::GetBrowserBounds(
       determined = true;
     } else if (state_provider()) {
       // Finally, prioritize the last saved |show_state|. If you have questions
-      // or comments about this behavior please contact oshima@chromium.org.
+      // or comments about this behavior please contact oshima@Cinaseek.org.
       gfx::Rect ignored_bounds, ignored_work_area;
       // TODO(ellyjones): This code shouldn't ignore the return value of
       // GetPersistentState()... we could end up using an undefined

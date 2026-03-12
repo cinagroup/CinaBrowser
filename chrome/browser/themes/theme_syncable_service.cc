@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -488,7 +488,7 @@ std::optional<syncer::ModelError> ThemeSyncableService::ProcessSyncChanges(
   // it should be an update.  However, the syncapi may occasionally
   // generates multiple changes.  When we fix syncapi to not do that,
   // we can remove the extra logic below.  See:
-  // http://code.google.com/p/chromium/issues/detail?id=41696 .
+  // http://code.google.com/p/Cinaseek/issues/detail?id=41696 .
   if (change_list.size() != 1) {
     return syncer::ModelError(FROM_HERE,
                               syncer::ModelError::Type::kThemeTooManyChanges);

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ class UI_TOUCH_SELECTION_EXPORT TouchSelectionDraggableClient {
 // Generic interface for entities that manipulate the selection via dragging.
 class UI_TOUCH_SELECTION_EXPORT TouchSelectionDraggable {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.touch_selection
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.touch_selection
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: TouchSelectionDraggableType
   enum class Type {
     kNone,

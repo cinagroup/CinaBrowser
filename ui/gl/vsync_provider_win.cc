@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ std::pair<base::TimeTicks, base::TimeDelta> TryGetVSyncParamsFromDwmCompInfo() {
   timing_info.cbSize = sizeof(timing_info);
   HRESULT result = ::DwmGetCompositionTimingInfo(NULL, &timing_info);
   // DwmGetCompositionTimingInfo returns qpcVBlank & qpcRefreshPeriod as type
-  // QPC_TIME, which is defined as ULONGLONG. In Chromium time, such as
+  // QPC_TIME, which is defined as ULONGLONG. In Cinaseek time, such as
   // base::TimeDelta, is stored as type LONGLONG. In normal operating conditions
   // we don't expect DwmGetCompositionTimingInfo to return values larger than
   // LLONG_MAX because it is built upon Windows APIs which also treat time as

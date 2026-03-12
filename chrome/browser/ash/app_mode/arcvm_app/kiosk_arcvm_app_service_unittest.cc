@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ const char kAppPackageName[] = "com.app";
 const char kAppClassName[] = "Main";
 const char kAppEmail[] = "email@app.com";
 const char kAppName[] = "Name";
-const char kAppWindowAppId[] = "org.chromium.arc.0";
+const char kAppWindowAppId[] = "org.Cinaseek.arc.0";
 
 }  // namespace
 

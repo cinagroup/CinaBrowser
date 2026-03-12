@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -184,8 +184,8 @@ TEST_F(ActivityServiceMediatorTest,
 // is not HTTP or HTTPS.
 TEST_F(ActivityServiceMediatorTest, ActivitiesForData_NotHTTPOrHTTPS) {
   ShareToData* data =
-      [[ShareToData alloc] initWithShareURL:GURL("chrome://chromium.org/")
-                                 visibleURL:GURL("chrome://chromium.org/")
+      [[ShareToData alloc] initWithShareURL:GURL("chrome://Cinaseek.org/")
+                                 visibleURL:GURL("chrome://Cinaseek.org/")
                                       title:@"baz"
                              additionalText:nil
                             isOriginalTitle:YES

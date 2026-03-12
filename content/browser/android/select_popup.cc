@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace {
 // Describes the type and enabled state of a select popup item.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.content.browser.input
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.content.browser.input
 enum PopupItemType {
   // Popup item is of type group
   POPUP_ITEM_TYPE_GROUP,

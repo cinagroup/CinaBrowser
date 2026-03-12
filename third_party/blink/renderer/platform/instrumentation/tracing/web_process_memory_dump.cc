@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ blink::WebMemoryAllocatorDump* WebProcessMemoryDump::GetMemoryAllocatorDump(
     return nullptr;
 
   // The only case of (memory_allocator_dump && !web_memory_allocator_dump)
-  // is something from blink trying to get a MAD that was created from chromium,
+  // is something from blink trying to get a MAD that was created from Cinaseek,
   // which is an odd use case.
   blink::WebMemoryAllocatorDump* web_memory_allocator_dump =
       memory_allocator_dumps_.at(memory_allocator_dump);

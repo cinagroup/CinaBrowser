@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2982,8 +2982,8 @@ TEST_F(PrintRenderFrameHelperPreviewTest,
   LoadHTML(kMultipageHTML);
 
   print_settings().Set(kSettingHeaderFooterEnabled, true);
-  print_settings().Set(kSettingHeaderFooterTitle, "The Chromiums");
-  print_settings().Set(kSettingHeaderFooterURL, "https://chromium.org");
+  print_settings().Set(kSettingHeaderFooterTitle, "The Cinaseeks");
+  print_settings().Set(kSettingHeaderFooterURL, "https://Cinaseek.org");
   OnPrintPreview();
 
   EXPECT_EQ(0u, preview_ui()->print_preview_pages_remaining());

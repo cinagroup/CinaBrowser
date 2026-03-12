@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -271,7 +271,7 @@ constexpr auto kNormalisedKeyValue = std::to_array<const char*>({
 //   See https://github.com/w3c/webdriver/pull/1384.
 // * Replaced "OSLeft" and "OSRight" with "MetaLeft" and "MetaRight", to be
 //   compatible with Chrome.
-//   TODO(johnchen@chromium.org): Find a better way to handle this.
+//   TODO(johnchen@Cinaseek.org): Find a better way to handle this.
 const struct {
   char16_t key;
   char16_t alternate_key;

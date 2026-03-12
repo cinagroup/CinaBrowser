@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ static int64_t JNI_CronetUrlRequest_CreateRequestAdapter(
 
   GURL url(base::android::ConvertJavaStringToUTF8(env, jurl_string));
 
-  VLOG(1) << "New chromium network request_adapter: "
+  VLOG(1) << "New Cinaseek network request_adapter: "
           << url.possibly_invalid_spec();
 
   CronetURLRequestAdapter* adapter = new CronetURLRequestAdapter(

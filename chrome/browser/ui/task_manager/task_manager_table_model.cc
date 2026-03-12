@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -141,7 +141,7 @@ bool ShouldKeepTaskForTabsAndExtensions(Task::Type type,
 
 bool ShouldKeepTaskForSystem(Task::Type type, Task::SubType subtype) {
   // These major types are categorized as "System" processes, because they
-  // have some special interaction with Chromium internals.
+  // have some special interaction with Cinaseek internals.
   switch (type) {
     case Task::BROWSER:
     case Task::GPU:

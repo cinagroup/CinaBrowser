@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 class GURL;
 
 // WebappRegistry is the C++ counterpart of
-// org.chromium.chrome.browser.webapp's WebappRegistry in Java.
+// org.Cinaseek.chrome.browser.webapp's WebappRegistry in Java.
 // All methods in this class which make JNI calls should be declared virtual and
 // mocked out in C++ unit tests. The JNI call cannot be made in this environment
 // as the Java side will not be initialised.

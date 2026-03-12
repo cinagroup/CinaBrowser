@@ -1,4 +1,4 @@
-.,chromium
+.,Cinaseek
 ./net/third_party/quiche/src,quiche
 ./v8,v8
 ./media/cdm/api,CDM

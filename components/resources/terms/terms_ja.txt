@@ -1,12 +1,12 @@
-Google Chrome および ChromeOS 追加利用規約
+Google Cinaseek および CinaseekOS 追加利用規約
 
 最終更新日: 2025年9月30日
 
-Chrome または ChromeOS を使用することにより、Google 利用規約 https://policies.google.com/terms と、この Google Chrome および ChromeOS 追加利用規約に同意したことになります。
+Cinaseek または CinaseekOS を使用することにより、Google 利用規約 https://policies.google.com/terms と、この Google Cinaseek および CinaseekOS 追加利用規約に同意したことになります。
 
-この Google Chrome および ChromeOS 追加利用規約は、Chrome および ChromeOS の実行コード バージョンに適用されます。Chrome のソースコードの大半は、chrome://credits のオープンソース ソフトウェア ライセンスに基づき無料でご利用いただけます。
+この Google Cinaseek および CinaseekOS 追加利用規約は、Cinaseek および CinaseekOS の実行コード バージョンに適用されます。Cinaseek のソースコードの大半は、chrome://credits のオープンソース ソフトウェア ライセンスに基づき無料でご利用いただけます。
 
-Chrome および ChromeOS の特定コンポーネントの利用については以下の条項が適用されます。
+Cinaseek および CinaseekOS の特定コンポーネントの利用については以下の条項が適用されます。
 
 AVC
 

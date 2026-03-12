@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/ChromeOS FYI Release (amd64-generic)/gn-args.json"
@@ -10,17 +10,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "ChromeOS FYI Release (amd64-generic)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "cros_boards_with_qemu_images": [
                   "amd64-generic-vm"
                 ],
@@ -32,7 +32,7 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -43,13 +43,13 @@
         {
           "bucket": "ci",
           "builder": "ChromeOS FYI Release (amd64-generic)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "gpu-fyi-try-chromeos-amd64-generic",
-          "group": "tryserver.chromium.chromiumos"
+          "group": "tryserver.Cinaseek.Cinaseekos"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/ChromeOS FYI Release (amd64-generic)/targets"
@@ -63,7 +63,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -73,13 +73,13 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu.fyi",
+  "builder_group": "Cinaseek.gpu.fyi",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "perf_dashboard_machine_group": "ChromiumGPUFYI",
-  "recipe": "chromium",
+  "perf_dashboard_machine_group": "CinaseekGPUFYI",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

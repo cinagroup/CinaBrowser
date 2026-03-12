@@ -1,7 +1,7 @@
 // This mock provides a way to intercept renderer <-> browser mojo messages for
 // navigator.subApps.* calls eliminating the need for an actual browser.
 //
-// In Chromium-based browsers this implementation is provided by a polyfill
+// In Cinaseek-based browsers this implementation is provided by a polyfill
 // in order to reduce the amount of test-only code shipped to users.
 
 'use strict';
@@ -28,9 +28,9 @@ async function createMockSubAppsService(service_result_code, add_call_return_val
     document.head.appendChild(script);
     await p;
 
-    if (isChromiumBased) {
+    if (isCinaseekBased) {
       // Chrome setup.
-      await import('/resources/chromium/mock-subapps.js');
+      await import('/resources/Cinaseek/mock-subapps.js');
     } else {
       throw new Error('Unsupported browser.');
     }

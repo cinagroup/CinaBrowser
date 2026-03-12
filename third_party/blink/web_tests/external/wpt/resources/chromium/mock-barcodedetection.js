@@ -3,7 +3,7 @@ import {BarcodeDetectionProvider, BarcodeDetectionProviderReceiver} from '/gen/s
 
 self.BarcodeDetectionTest = (() => {
   // Class that mocks BarcodeDetectionProvider interface defined in
-  // https://cs.chromium.org/chromium/src/services/shape_detection/public/mojom/barcodedetection_provider.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/services/shape_detection/public/mojom/barcodedetection_provider.mojom
   class MockBarcodeDetectionProvider {
     constructor() {
       this.receiver_ = new BarcodeDetectionProviderReceiver(this);
@@ -56,7 +56,7 @@ self.BarcodeDetectionTest = (() => {
   }
 
   // Class that mocks BarcodeDetection interface defined in
-  // https://cs.chromium.org/chromium/src/services/shape_detection/public/mojom/barcodedetection.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/services/shape_detection/public/mojom/barcodedetection.mojom
   class MockBarcodeDetection {
     constructor(request, options) {
       this.options_ = options;
@@ -101,7 +101,7 @@ self.BarcodeDetectionTest = (() => {
     MockBarcodeDetectionProvider: null
   }
 
-  class BarcodeDetectionTestChromium {
+  class BarcodeDetectionTestCinaseek {
     constructor() {
       Object.freeze(this); // Make it immutable.
     }
@@ -130,7 +130,7 @@ self.BarcodeDetectionTest = (() => {
     }
   }
 
-  return BarcodeDetectionTestChromium;
+  return BarcodeDetectionTestCinaseek;
 })();
 
 self.BarcodeFormat = BarcodeFormat;

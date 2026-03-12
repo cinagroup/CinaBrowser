@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace autofill {
 
 // The reason why payments bubbles, dialogs, or other UI are closed.
 // A java IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class PaymentsUiClosedReason {
   // UI closed reason not specified.
   kUnknown,

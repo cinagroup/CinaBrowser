@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ namespace android {
 
 namespace {
 
-const char kLogTag[] = "chromium";
+const char kLogTag[] = "Cinaseek";
 const char kCrashedMarker[] = "[ CRASHED      ]\n";
 
 // The list of signals which are considered to be crashes.

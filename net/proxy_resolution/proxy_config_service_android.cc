@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ bool GetProxyRules(const GetPropertyCallback& get_property,
                    ProxyConfig::ProxyRules* rules) {
   // See libcore/luni/src/main/java/java/net/ProxySelectorImpl.java for the
   // mostly equivalent Android implementation.  There is one intentional
-  // difference: by default Chromium uses the HTTP port (80) for HTTPS
+  // difference: by default Cinaseek uses the HTTP port (80) for HTTPS
   // connections via proxy.  This default is identical on other platforms.
   // On the opposite, Java spec suggests to use HTTPS port (443) by default (the
   // default value of https.proxyPort).

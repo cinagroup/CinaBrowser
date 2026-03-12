@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import("//tools/grit/grit_rule.gni")
 
 generate_jni("jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillBridge.java",
   ]
 }
 
@@ -55,16 +55,16 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillBridge.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillCoordinator.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillMediator.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillProperties.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillView.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillViewBinder.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillViewHolder.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillView.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillViewHolder.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.touch_to_fill"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill"
 }
 
 android_resources("java_resources") {

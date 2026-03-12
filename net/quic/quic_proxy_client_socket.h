@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,8 +14,8 @@
 #include "net/base/completion_once_callback.h"
 #include "net/base/proxy_chain.h"
 #include "net/http/proxy_client_socket.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_stream.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_stream.h"
 #include "net/spdy/spdy_read_queue.h"
 #include "net/third_party/quiche/src/quiche/common/http/http_header_block.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
@@ -26,7 +26,7 @@ class HttpAuthController;
 class ProxyDelegate;
 
 // QuicProxyClientSocket tunnels a stream socket over an underlying
-// QuicChromiumClientStream. Bytes written to/read from a QuicProxyClientSocket
+// QuicCinaseekClientStream. Bytes written to/read from a QuicProxyClientSocket
 // are sent/received via STREAM frames in the underlying QUIC stream.
 class NET_EXPORT_PRIVATE QuicProxyClientSocket : public ProxyClientSocket {
  public:
@@ -34,8 +34,8 @@ class NET_EXPORT_PRIVATE QuicProxyClientSocket : public ProxyClientSocket {
   // frame for |endpoint|.  After the response HEADERS frame is received, any
   // data read/written to the socket will be transferred in STREAM frames.
   QuicProxyClientSocket(
-      std::unique_ptr<QuicChromiumClientStream::Handle> stream,
-      std::unique_ptr<QuicChromiumClientSession::Handle> session,
+      std::unique_ptr<QuicCinaseekClientStream::Handle> stream,
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session,
       const ProxyChain& proxy_chain,
       size_t proxy_chain_index,
       const std::string& user_agent,
@@ -126,10 +126,10 @@ class NET_EXPORT_PRIVATE QuicProxyClientSocket : public ProxyClientSocket {
   State next_state_ = STATE_DISCONNECTED;
 
   // Handle to the QUIC Stream that this sits on top of.
-  std::unique_ptr<QuicChromiumClientStream::Handle> stream_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> stream_;
 
   // Handle to the session that |stream_| belongs to.
-  std::unique_ptr<QuicChromiumClientSession::Handle> session_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session_;
 
   // Stores the callback for Connect().
   CompletionOnceCallback connect_callback_;

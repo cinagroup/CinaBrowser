@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ class CallStackProfileMetadata {
       google::protobuf::RepeatedField<uint64_t>* metadata_name_hashes);
 
   // Set the value provided in |src_item| to |dest_item|, where |src_item| is
-  // in chromium format, and |dest_item| is in proto format. Intended for
+  // in Cinaseek format, and |dest_item| is in proto format. Intended for
   // setting profile-global metadata items. Setting per-sample metadata should
   // be done via the functions above.
   void SetMetadata(

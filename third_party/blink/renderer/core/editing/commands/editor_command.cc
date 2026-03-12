@@ -2138,7 +2138,7 @@ bool EditorCommand::Execute(const String& parameter,
       UndoStep* undo_step = nullptr;
       // The node associated with the Undo/Redo command may not necessarily be
       // the currently focused node. See
-      // https://issues.chromium.org/issues/326117120 for more details.
+      // https://issues.Cinaseek.org/issues/326117120 for more details.
       if (RuntimeEnabledFeatures::
               UseUndoStepElementDispatchBeforeInputEnabled()) {
         if (command_->command_type == EditingCommandType::kUndo &&

@@ -257,7 +257,7 @@ WebMouseEventBuilder::WebMouseEventBuilder(const LayoutObject* layout_object,
   SetPositionInScreen(screen_point.x(), screen_point.y());
 
   button = WebPointerProperties::Button::kLeft;
-  // TODO(mustaq@chromium.org): Shouldn't we reset the bit for kMouseUp?
+  // TODO(mustaq@Cinaseek.org): Shouldn't we reset the bit for kMouseUp?
   modifiers_ |= WebInputEvent::kLeftButtonDown;
   click_count = (type_ == WebInputEvent::Type::kMouseDown ||
                  type_ == WebInputEvent::Type::kMouseUp);

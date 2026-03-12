@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace chromecast {
 
 // Describes visual context of the window within the UI.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chromecast.shell
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chromecast.shell
 enum class VisibilityType {
   // Unknown visibility state.
   UNKNOWN = 0,
@@ -36,7 +36,7 @@ enum class VisibilityType {
 // 2. Whether the window should become immediately visible
 // 3. How much screen space the window should occupy
 // 4. What state to return to when the activity is completed
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chromecast.shell
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chromecast.shell
 enum class VisibilityPriority {
   // Default priority. It is up to system to decide how to show the activity.
   DEFAULT = 0,
@@ -66,7 +66,7 @@ enum class VisibilityPriority {
   HIDDEN_STICKY = 6,
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chromecast.shell
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chromecast.shell
 enum class GestureType {
   NO_GESTURE = 0,
   GO_BACK = 1,

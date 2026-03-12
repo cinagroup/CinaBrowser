@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ const char kExplanationMessage[] =
 // gnome-keyring-daemon has a bug that causes libsecret to deadlock on startup.
 // This function checks for the deadlock condition.  See [1] for a more detailed
 // explanation of the issue.
-// [1] https://chromium-review.googlesource.com/c/chromium/src/+/5787619
+// [1] https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5787619
 bool CanUseLibsecret() {
   constexpr char kSecretsName[] = "org.freedesktop.secrets";
   constexpr char kSecretsPath[] = "/org/freedesktop/secrets";

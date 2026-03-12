@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace device {
 
 const BluetoothUUID& GetSerialPortProfileUUID() {
   // The Serial Port Profile (SPP) UUID is 1101.
-  // https://chromium-review.googlesource.com/c/chromium/src/+/2334682/17..19
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2334682/17..19
   static const base::NoDestructor<BluetoothUUID> kValue("1101");
   return *kValue;
 }

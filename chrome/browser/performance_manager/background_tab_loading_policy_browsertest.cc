@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -138,7 +138,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTabLoadingBrowserTest, RestoreTab) {
   }
 }
 
-// TODO(crbug.com/335421977): Times out on "Linux ChromiumOS MSan Tests"
+// TODO(crbug.com/335421977): Times out on "Linux CinaseekOS MSan Tests"
 // TODO(crbug.com/438908221): Crashes/flaky on Linux dbg bots.
 IN_PROC_BROWSER_TEST_F(BackgroundTabLoadingBrowserTest,
                        DISABLED_RestoredTabsAreLoadedGradually) {

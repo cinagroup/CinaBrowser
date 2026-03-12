@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,9 +33,9 @@ bool FakeWebClient::IsAppSpecificURL(const GURL& url) const {
 
 std::string FakeWebClient::GetUserAgent(UserAgentType type) const {
   if (type == UserAgentType::DESKTOP) {
-    return "Chromium/66.0.3333.0 CFNetwork/893.14 Darwin/16.7.0 Desktop";
+    return "Cinaseek/66.0.3333.0 CFNetwork/893.14 Darwin/16.7.0 Desktop";
   }
-  return "Chromium/66.0.3333.0 CFNetwork/893.14 Darwin/16.7.0 Mobile";
+  return "Cinaseek/66.0.3333.0 CFNetwork/893.14 Darwin/16.7.0 Mobile";
 }
 
 base::RefCountedMemory* FakeWebClient::GetDataResourceBytes(

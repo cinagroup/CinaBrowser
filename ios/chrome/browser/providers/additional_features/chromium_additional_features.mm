@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace provider {
 namespace {
 
 // Public implementation for AdditionalFeaturesController.
-class ChromiumAdditionalFeaturesController final
+class CinaseekAdditionalFeaturesController final
     : public AdditionalFeaturesController {
  public:
   inline void RegisterFeatureList(base::FeatureList* featureList) final {}
@@ -23,7 +23,7 @@ class ChromiumAdditionalFeaturesController final
 
 std::unique_ptr<AdditionalFeaturesController>
 CreateAdditionalFeaturesController() {
-  return std::make_unique<ChromiumAdditionalFeaturesController>();
+  return std::make_unique<CinaseekAdditionalFeaturesController>();
 }
 
 }  // namespace provider

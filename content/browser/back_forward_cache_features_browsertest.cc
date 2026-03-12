@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@
 
 // This file contains back-/forward-cache tests for web-platform features and
 // APIs. It was forked from
-// https://source.chromium.org/chromium/chromium/src/+/main:content/browser/back_forward_cache_browsertest.cc;drc=1288c1bd6a81785cd85b965d61820a7cd87a0e9c
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/browser/back_forward_cache_browsertest.cc;drc=1288c1bd6a81785cd85b965d61820a7cd87a0e9c
 //
 // When adding tests for new features please also add WPTs. See
 // third_party/blink/web_tests/external/wpt/html/browsers/browsing-the-web/back-forward-cache/README.md

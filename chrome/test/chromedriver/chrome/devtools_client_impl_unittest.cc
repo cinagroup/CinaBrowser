@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -992,7 +992,7 @@ TEST(ParseInspectorMessage, CommandNoErrorOrResult) {
   InspectorEvent event;
   InspectorCommandResponse response;
   std::string session_id;
-  // As per Chromium issue 392577, DevTools does not necessarily return a
+  // As per Cinaseek issue 392577, DevTools does not necessarily return a
   // "result" dictionary for every valid response. If neither "error" nor
   // "result" keys are present, a blank result dictionary should be inferred.
   ASSERT_TRUE(

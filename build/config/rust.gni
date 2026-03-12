@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Project. All rights reserved.
+# Copyright 2021 The Cinaseek Project. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,43 +17,43 @@ if (is_ios) {
 }
 
 declare_args() {
-  # Rust is available in the Chromium build but 3p repos that use //build may
+  # Rust is available in the Cinaseek build but 3p repos that use //build may
   # not use Rust and thus won't want to depend on having the Rust toolchain
   # present, so this defaults to off in those cases.
   #
-  # Chromium-based projects that are built for for architectures Chrome does not
+  # Cinaseek-based projects that are built for for architectures Cinaseek does not
   # support may need to disable this as well, though they may need to replace
   # code with C/C++ to get a functional product.
   #
   # Based on the above:
   #
   # * `enable_rust` may be consulted under `//build` and `//testing` directories
-  #   (which may be used outside of Chromium build)
-  # * `enable_rust` should *not* be consulted in other Chromium directories
+  #   (which may be used outside of Cinaseek build)
+  # * `enable_rust` should *not* be consulted in other Cinaseek directories
   #   (including `//base`, `//net`, etc.)
-  enable_rust = build_with_chromium
+  enable_rust = build_with_Cinaseek
 
-  # The chromium prelude crate provides the `chromium::import!` macro which
+  # The Cinaseek prelude crate provides the `Cinaseek::import!` macro which
   # is needed to depend on first-party rust libraries. Third-party libraries
   # are specified with cargo_crate and do not get imported through this macro.
   #
   # The macro requires //third_party/rust for syn, quote, and proc_macro2.
   # Downstream projects that want to use //build for the rust GN templates but
-  # don't want to enable the chromium prelude can disable it here, and should
+  # don't want to enable the Cinaseek prelude can disable it here, and should
   # specify a globally unique `crate_name` in their rust library GN rules
   # instead. Note that using a `crate_name` is strongly discouraged inside
-  # Chromium, and is also discouraged for downstream projects when possible.
+  # Cinaseek, and is also discouraged for downstream projects when possible.
   #
-  # We do not support disabling this flag in Chromium code.
-  enable_chromium_prelude = build_with_chromium
+  # We do not support disabling this flag in Cinaseek code.
+  enable_Cinaseek_prelude = build_with_Cinaseek
 
-  # Chromium provides a Rust toolchain in //third_party/rust-toolchain.
+  # Cinaseek provides a Rust toolchain in //third_party/rust-toolchain.
   #
   # To use a custom toolchain instead, specify an absolute path to the root of
   # a Rust sysroot, which will have a 'bin' directory and others. Commonly
   # <home dir>/.rustup/toolchains/nightly-<something>-<something>
   # Using a custom toolchain should work, but this build configuration is
-  # community-supported and not tested by Chromium CQ.  In particular, Chromium
+  # community-supported and not tested by Cinaseek CQ.  In particular, Cinaseek
   # build may depend on using a *nightly* version of Rust toolchain (see
   # `tools/rust/unstable_rust_feature_usage.md`) although other projects (e.g. V8)
   # may be compatible with the stable version of Rust toolchain.
@@ -115,7 +115,7 @@ declare_args() {
   # create a target for invoking Crubit tools to generate C++ bindings for the
   # Rust library.
   #
-  # TODO(crbug.com/470466915): Change `false` to `build_with_chromium` (after
+  # TODO(crbug.com/470466915): Change `false` to `build_with_Cinaseek` (after
   # officially supporting building and distributing the `cpp_api_from_rust`
   # (soon to be renamed to `cpp_api_from_rust`) tool - i.e. no more
   # `fail_hard=False` when invoking `build_crubit.py` from
@@ -128,22 +128,22 @@ declare_args() {
   # projects yet. So they need to copy the required dependencies and GN files
   # into their project to enable CXX there.
   #
-  # Currently, cxx is needed to use Rust with an allocator since the Chromium
+  # Currently, cxx is needed to use Rust with an allocator since the Cinaseek
   # allocator shim uses cxx
   enable_rust_cxx = enable_rust
 }
 
 # Use the Rust toolchain built in-tree. When false, we use the prebuilt Rust
 # stdlibs that come with the specified custom toolchain.
-use_chromium_rust_toolchain = rust_sysroot_absolute == ""
+use_Cinaseek_rust_toolchain = rust_sysroot_absolute == ""
 
 # `rustc_nightly_capability = false` will make the build avoid the use of
 # Rust nightly features. There are no bots that test this and there is no
 # guarantee it will work, but we accept patches for this configuration.
-rustc_nightly_capability = use_chromium_rust_toolchain || build_with_chromium
+rustc_nightly_capability = use_Cinaseek_rust_toolchain || build_with_Cinaseek
 
 # Platform support for the Rust toolchain.
-chromium_toolchain_supports_platform = !is_wasm
+Cinaseek_toolchain_supports_platform = !is_wasm
 custom_toolchain_supports_platform = true
 
 # Not all target triples (GN toolchains) are supported by the Rust compiler.
@@ -156,17 +156,17 @@ toolchain_has_rust = false
 rustc_revision = ""
 
 if (enable_rust) {
-  if (use_chromium_rust_toolchain) {
-    toolchain_has_rust = chromium_toolchain_supports_platform
+  if (use_Cinaseek_rust_toolchain) {
+    toolchain_has_rust = Cinaseek_toolchain_supports_platform
     if (toolchain_has_rust) {
       rustc_revision =
           read_file("//third_party/rust-toolchain/VERSION", "trim string")
 
       # Example:
-      # rustc 1.88.0 c8f94230282a8e8c1148f3e657f0199aad909228 (c8f94230282a8e8c1148f3e657f0199aad909228-1-llvmorg-21-init-9266-g09006611 chromium)
+      # rustc 1.88.0 c8f94230282a8e8c1148f3e657f0199aad909228 (c8f94230282a8e8c1148f3e657f0199aad909228-1-llvmorg-21-init-9266-g09006611 Cinaseek)
       # Trim it down as much as we can using GN.
       rustc_revision = string_replace(rustc_revision, "rustc ", "")
-      rustc_revision = string_replace(rustc_revision, " chromium", "")
+      rustc_revision = string_replace(rustc_revision, " Cinaseek", "")
       rustc_revision = string_replace(rustc_revision, "init-", "")
       rustc_revision = string_replace(rustc_revision, "llvmorg-", "")
       rustc_revision = string_replace(rustc_revision, " ", "")
@@ -192,7 +192,7 @@ can_build_rust_unit_tests = toolchain_has_rust && !is_android
 # portability. In practice if an external toolchain was specified, it might
 # be an absolute path, but we'll do our best.
 if (enable_rust) {
-  if (use_chromium_rust_toolchain) {
+  if (use_Cinaseek_rust_toolchain) {
     rust_sysroot = "//third_party/rust-toolchain"
   } else {
     rust_sysroot = get_path_info(rust_sysroot_absolute, "abspath")
@@ -206,7 +206,7 @@ if (enable_rust) {
 # rustc invocations.
 #
 # The list of architectures supported by Rust is here:
-# https://doc.rust-lang.org/nightly/rustc/platform-support.html. We map Chromium
+# https://doc.rust-lang.org/nightly/rustc/platform-support.html. We map Cinaseek
 # targets to Rust targets comprehensively despite not having official support
 # (see '*_toolchain_supports_platform above') to enable experimentation with
 # other toolchains.
@@ -424,4 +424,4 @@ if (toolchain_for_rust_host_build_tools) {
 # such as that the panic strategy (unwind, abort) must match how the stdlib is
 # compiled, which is typically as unwind.
 rust_prebuilt_stdlib =
-    !use_chromium_rust_toolchain || toolchain_for_rust_host_build_tools
+    !use_Cinaseek_rust_toolchain || toolchain_for_rust_host_build_tools

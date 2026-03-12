@@ -141,7 +141,7 @@
     deleteAllCookies,
 
     async function nonUnicodeCookie() {
-      await setCookies([{name: 'cookie1', value: 'привет', domain: '.chromium.org', path: '/path' }]);
+      await setCookies([{name: 'cookie1', value: 'привет', domain: '.Cinaseek.org', path: '/path' }]);
     },
 
     deleteAllCookies,

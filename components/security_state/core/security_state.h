@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ namespace security_state {
 // LocationBarModelImpl::GetVectorIcon and GetIconForSecurityState.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.security_state
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.security_state
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ConnectionSecurityLevel
 enum SecurityLevel {
   // Neutral; neither positively secure nor insecure. Used for e.g. some types
@@ -93,7 +93,7 @@ enum ContentStatus {
 // malware or phishing attacks.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.security_state
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.security_state
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ConnectionMaliciousContentStatus
 enum MaliciousContentStatus {
   MALICIOUS_CONTENT_STATUS_NONE,
@@ -117,7 +117,7 @@ enum MaliciousContentStatus {
 //
 // Style note: this differs from other enums in this file to follow new
 // histogram enum naming conventions
-// (https://chromium.googlesource.com/chromium/src.git/+/HEAD/tools/metrics/histograms/README.md#usage).
+// (https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/tools/metrics/histograms/README.md#usage).
 enum class SafetyTipStatus {
   // Safety tip status is not applicable, e.g. there is no current navigation:
   kUnknown = 0,

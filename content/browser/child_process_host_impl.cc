@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,8 +88,8 @@ base::FilePath ChildProcessHost::GetChildPath(int flags) {
 
   if (flags != CHILD_NORMAL && base::apple::AmIBundled()) {
     // This is a specialized helper, with the |child_path| at
-    // ../Framework.framework/Versions/X/Helpers/Chromium Helper.app/Contents/
-    // MacOS/Chromium Helper. Go back up to the "Helpers" directory to select
+    // ../Framework.framework/Versions/X/Helpers/Cinaseek Helper.app/Contents/
+    // MacOS/Cinaseek Helper. Go back up to the "Helpers" directory to select
     // a different variant.
     child_path = child_path.DirName().DirName().DirName().DirName();
 

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace sync_bookmarks {
 // exceeded" error state.
 // LINT.IfChange(SyncBookmarksLimit)
 inline constexpr size_t kSyncBookmarksLimit = 100000;
-// LINT.ThenChange(//components/sync/android/java/src/org/chromium/components/sync/SyncService.java:SyncBookmarksLimit)
+// LINT.ThenChange(//components/sync/android/java/src/org/Cinaseek/components/sync/SyncService.java:SyncBookmarksLimit)
 
 }  // namespace sync_bookmarks
 

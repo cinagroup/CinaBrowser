@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,9 +48,9 @@ namespace {
 // have to be in sync with the ones used in ArcInputMethodManagerService.java on
 // the container side. Otherwise, the picker dialog might pop up unexpectedly.
 constexpr char kPackageForOpeningArcImeSettingsPage[] =
-    "org.chromium.arc.applauncher";
+    "org.Cinaseek.arc.applauncher";
 constexpr char kActivityForOpeningArcImeSettingsPage[] =
-    "org.chromium.arc.applauncher.InputMethodSettingsActivity";
+    "org.Cinaseek.arc.applauncher.InputMethodSettingsActivity";
 
 // Size of device icons in DIPs.
 constexpr int kDeviceIconSize = 16;
@@ -213,7 +213,7 @@ ArcIntentHelperMojoDelegate::IntentInfo CreateIntentInfo(const GURL& url,
   // Create an intent with action VIEW, the |url| we are redirecting the user to
   // and a flag that tells whether or not the user interacted with the picker UI
 
-  constexpr char kArcIntentActionView[] = "org.chromium.arc.intent.action.VIEW";
+  constexpr char kArcIntentActionView[] = "org.Cinaseek.arc.intent.action.VIEW";
   return ArcIntentHelperMojoDelegate::IntentInfo(
       kArcIntentActionView, /*categories=*/std::nullopt, url.spec(),
       /*type=*/std::nullopt, ui_bypassed, /*extras=*/std::nullopt);

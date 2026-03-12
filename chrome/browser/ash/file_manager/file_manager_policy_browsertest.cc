@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -865,7 +865,7 @@ class FileTransferConnectorFilesAppBrowserTestBase {
   std::unique_ptr<policy::MockCloudPolicyClient> cloud_policy_client_;
   std::unique_ptr<signin::IdentityTestEnvironment> identity_test_environment_;
   std::unique_ptr<enterprise_connectors::test::EventReportValidator> validator_;
-  static constexpr char kUserName[] = "test@chromium.org";
+  static constexpr char kUserName[] = "test@Cinaseek.org";
   static constexpr char kScanId[] = "scan id";
 
   // The saved scanning responses.

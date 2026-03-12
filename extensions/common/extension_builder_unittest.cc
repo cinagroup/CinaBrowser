@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -400,7 +400,7 @@ TEST(ExtensionBuilderTest, SetManifestKey) {
 TEST(ExtensionBuilderTest, AddContentScript) {
   constexpr char kScriptOne[] = "one.js";
   const std::vector<std::string> script_one_patterns = {
-      "https://example.com/*", "https://chromium.org/foo"};
+      "https://example.com/*", "https://Cinaseek.org/foo"};
   constexpr char kScriptTwo[] = "two.js";
   const std::vector<std::string> script_two_patterns = {"https://google.com/*"};
   scoped_refptr<const Extension> extension =

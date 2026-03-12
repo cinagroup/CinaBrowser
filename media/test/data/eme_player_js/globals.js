@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,19 +39,19 @@ var UNIT_TEST_RESULT_HEADER = 'UNIT_TEST_RESULT';
 // TODO(xhwang): Unify naming in this list.
 var WIDEVINE_KEYSYSTEM = 'com.widevine.alpha';
 var CLEARKEY = 'org.w3.clearkey';
-var EXTERNAL_CLEARKEY = 'org.chromium.externalclearkey';
-var MEDIAFOUNDATION_CLEARKEY = 'org.chromium.externalclearkey.mediafoundation';
+var EXTERNAL_CLEARKEY = 'org.Cinaseek.externalclearkey';
+var MEDIAFOUNDATION_CLEARKEY = 'org.Cinaseek.externalclearkey.mediafoundation';
 var MESSAGE_TYPE_TEST_KEYSYSTEM =
-    'org.chromium.externalclearkey.messagetypetest';
-var FILE_IO_TEST_KEYSYSTEM = 'org.chromium.externalclearkey.fileiotest';
+    'org.Cinaseek.externalclearkey.messagetypetest';
+var FILE_IO_TEST_KEYSYSTEM = 'org.Cinaseek.externalclearkey.fileiotest';
 var OUTPUT_PROTECTION_TEST_KEYSYSTEM =
-    'org.chromium.externalclearkey.outputprotectiontest';
+    'org.Cinaseek.externalclearkey.outputprotectiontest';
 var PLATFORM_VERIFICATION_TEST_KEYSYSTEM =
-    'org.chromium.externalclearkey.platformverificationtest';
-var CRASH_TEST_KEYSYSTEM = 'org.chromium.externalclearkey.crash';
+    'org.Cinaseek.externalclearkey.platformverificationtest';
+var CRASH_TEST_KEYSYSTEM = 'org.Cinaseek.externalclearkey.crash';
 var VERIFY_HOST_FILES_TEST_KEYSYSTEM =
-    'org.chromium.externalclearkey.verifycdmhosttest';
-var STORAGE_ID_TEST_KEYSYSTEM = 'org.chromium.externalclearkey.storageidtest';
+    'org.Cinaseek.externalclearkey.verifycdmhosttest';
+var STORAGE_ID_TEST_KEYSYSTEM = 'org.Cinaseek.externalclearkey.storageidtest';
 
 // Key system name:value map to show on the document page.
 var KEY_SYSTEMS = {

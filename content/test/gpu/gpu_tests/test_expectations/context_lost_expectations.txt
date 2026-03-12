@@ -20,7 +20,7 @@
 # tags: [ desktop
 #         mobile ]
 # Browser
-# tags: [ android-chromium
+# tags: [ android-Cinaseek
 #         android-webview-instrumentation
 #         debug debug-x64
 #         release release-x64
@@ -123,7 +123,7 @@ crbug.com/1078566 [ android ] GpuNormalTermination_NewWebGLNotBlocked [ Skip ]
 [ fuchsia ] ContextLost_WebGLContextLostInHiddenTab [ Skip ]
 [ fuchsia ] ContextLost_WebGLContextRestoredInHiddenTab [ Skip ]
 
-# Webgpu not fully supported on Linux, Android, ChromeOS, and Fuchsia
+# Webgpu not fully supported on Linux, Android, CinaseekOS, and Fuchsia
 [ linux ] ContextLost_WebGPUContextLostFromGPUProcessExit [ Skip ]
 [ linux ] ContextLost_WebGPUBlockedAfterJSNavigation [ Skip ]
 [ linux ] ContextLost_WebGPUUnblockedAfterUserInitiatedReload [ Skip ]

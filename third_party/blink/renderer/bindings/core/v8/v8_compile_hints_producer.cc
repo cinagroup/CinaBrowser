@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ constexpr float kProduceCompileHintsDataProductionLevel = 0.005;
 #endif  // BUILDFLAG(IS_WIN)
 
 bool RandomlySelectedToGenerateData() {
-  // Data collection is only enabled on Windows. TODO(chromium:1406506): enable
+  // Data collection is only enabled on Windows. TODO(Cinaseek:1406506): enable
   // on more platforms.
 #if BUILDFLAG(IS_WIN)
   // Decide whether we collect the data based on client-side randomization.

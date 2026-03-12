@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -563,7 +563,7 @@ void Navigator::DidNavigate(
   //    - The client allows non-activated cross origin paintholding, which is
   //      currently the case with webview.
   //
-  // See https://issues.chromium.org/40942531 for reasons we limit paint
+  // See https://issues.Cinaseek.org/40942531 for reasons we limit paint
   // holding.
   ContentBrowserClient* client = GetContentClient()->browser();
   const bool allow_main_frame_paint_holding =
@@ -670,7 +670,7 @@ void Navigator::DidNavigate(
   // determine whether or not to enable the encoding menu.
   // It's updated only for the main frame. For a subframe,
   // RenderView::UpdateURL does not set params.contents_mime_type.
-  // (see http://code.google.com/p/chromium/issues/detail?id=2929 )
+  // (see http://code.google.com/p/Cinaseek/issues/detail?id=2929 )
   // TODO(jungshik): Add a test for the encoding menu to avoid
   // regressing it again.
   // TODO(nasko): Verify the correctness of the above comment, since some of the

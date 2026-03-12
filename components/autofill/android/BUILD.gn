@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -190,7 +190,7 @@ android_resources("autofill_unbranded_browser_resources") {
   sources = [ "browser/internal/java/res/drawable/google_wallet_24dp.xml" ]
 }
 
-# This target is only used by the Chrome browser and not included into the
+# This target is only used by the Cinaseek browser and not included into the
 # WebView targets.
 android_resources("autofill_browser_resources") {
   sources = [
@@ -237,13 +237,13 @@ java_cpp_features("java_features_srcjar") {
     "//components/autofill/core/common/autofill_features.cc",
     "//components/autofill/core/common/autofill_payments_features.cc",
   ]
-  class_name = "org.chromium.components.autofill.AutofillFeatures"
+  class_name = "org.Cinaseek.components.autofill.AutofillFeatures"
 }
 
 java_cpp_strings("java_switches_srcjar") {
   visibility = [ ":*" ]
   sources = [ "//components/autofill/core/common/autofill_switches.cc" ]
-  class_name = "org.chromium.components.autofill.AutofillSwitches"
+  class_name = "org.Cinaseek.components.autofill.AutofillSwitches"
 }
 
 # We intentionally do not include :autofill_payments_java_resources not to
@@ -262,53 +262,53 @@ android_library("main_autofill_java") {
     "//url:gurl_java",
   ]
   sources = [
-    "java/src/org/chromium/components/autofill/AddressNormalizer.java",
-    "java/src/org/chromium/components/autofill/AutofillAddressEditorUiInfo.java",
-    "java/src/org/chromium/components/autofill/AutofillAddressUiComponent.java",
-    "java/src/org/chromium/components/autofill/AutofillDelegate.java",
-    "java/src/org/chromium/components/autofill/AutofillDropdownAdapter.java",
-    "java/src/org/chromium/components/autofill/AutofillPopup.java",
-    "java/src/org/chromium/components/autofill/AutofillProfile.java",
-    "java/src/org/chromium/components/autofill/AutofillProfilePayload.java",
-    "java/src/org/chromium/components/autofill/AutofillSuggestion.java",
-    "java/src/org/chromium/components/autofill/DropdownKeyValue.java",
-    "java/src/org/chromium/components/autofill/FillingProductBridge.java",
-    "java/src/org/chromium/components/autofill/LoyaltyCard.java",
-    "java/src/org/chromium/components/autofill/PaymentsPayload.java",
-    "java/src/org/chromium/components/autofill/SubKeyRequester.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/AttributeInstance.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/AttributeType.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityInstance.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityInstanceWithLabels.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityMetadata.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityType.java",
+    "java/src/org/Cinaseek/components/autofill/AddressNormalizer.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillAddressEditorUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillAddressUiComponent.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillDelegate.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillDropdownAdapter.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillPopup.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProfile.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProfilePayload.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillSuggestion.java",
+    "java/src/org/Cinaseek/components/autofill/DropdownKeyValue.java",
+    "java/src/org/Cinaseek/components/autofill/FillingProductBridge.java",
+    "java/src/org/Cinaseek/components/autofill/LoyaltyCard.java",
+    "java/src/org/Cinaseek/components/autofill/PaymentsPayload.java",
+    "java/src/org/Cinaseek/components/autofill/SubKeyRequester.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/AttributeInstance.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/AttributeType.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityInstance.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityInstanceWithLabels.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityMetadata.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityType.java",
   ]
   srcjar_deps = [
     ":autofill_core_browser_java_enums",
     ":main_autofill_jni_headers",
     "//components/autofill/core/browser:autofill_ai_core_browser_java_enums",
   ]
-  resources_package = "org.chromium.components.autofill"
+  resources_package = "org.Cinaseek.components.autofill"
 }
 
 generate_jni("main_autofill_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/autofill/AddressNormalizer.java",
-    "java/src/org/chromium/components/autofill/AutofillAddressEditorUiInfo.java",
-    "java/src/org/chromium/components/autofill/AutofillAddressUiComponent.java",
-    "java/src/org/chromium/components/autofill/AutofillProfile.java",
-    "java/src/org/chromium/components/autofill/AutofillProfilePayload.java",
-    "java/src/org/chromium/components/autofill/DropdownKeyValue.java",
-    "java/src/org/chromium/components/autofill/FillingProductBridge.java",
-    "java/src/org/chromium/components/autofill/LoyaltyCard.java",
-    "java/src/org/chromium/components/autofill/PaymentsPayload.java",
-    "java/src/org/chromium/components/autofill/SubKeyRequester.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/AttributeInstance.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/AttributeType.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityInstance.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityInstanceWithLabels.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityMetadata.java",
-    "java/src/org/chromium/components/autofill/autofill_ai/EntityType.java",
+    "java/src/org/Cinaseek/components/autofill/AddressNormalizer.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillAddressEditorUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillAddressUiComponent.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProfile.java",
+    "java/src/org/Cinaseek/components/autofill/AutofillProfilePayload.java",
+    "java/src/org/Cinaseek/components/autofill/DropdownKeyValue.java",
+    "java/src/org/Cinaseek/components/autofill/FillingProductBridge.java",
+    "java/src/org/Cinaseek/components/autofill/LoyaltyCard.java",
+    "java/src/org/Cinaseek/components/autofill/PaymentsPayload.java",
+    "java/src/org/Cinaseek/components/autofill/SubKeyRequester.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/AttributeInstance.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/AttributeType.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityInstance.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityInstanceWithLabels.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityMetadata.java",
+    "java/src/org/Cinaseek/components/autofill/autofill_ai/EntityType.java",
   ]
 }
 
@@ -324,8 +324,8 @@ android_library("autofill_switches_java") {
 
 android_library("payments_interfaces_java") {
   sources = [
-    "java/src/org/chromium/components/autofill/Completable.java",
-    "java/src/org/chromium/components/autofill/EditableOption.java",
+    "java/src/org/Cinaseek/components/autofill/Completable.java",
+    "java/src/org/Cinaseek/components/autofill/EditableOption.java",
   ]
   deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
 }
@@ -334,17 +334,17 @@ android_library("payments_interfaces_java") {
 # doesn't have to be pulled in.
 android_library("payments_autofill_java") {
   sources = [
-    "java/src/org/chromium/components/autofill/payments/AutofillSaveCardUiInfo.java",
-    "java/src/org/chromium/components/autofill/payments/AutofillSaveIbanUiInfo.java",
-    "java/src/org/chromium/components/autofill/payments/BankAccount.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerContext.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerForSettings.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerTosDetail.java",
-    "java/src/org/chromium/components/autofill/payments/CardDetail.java",
-    "java/src/org/chromium/components/autofill/payments/Ewallet.java",
-    "java/src/org/chromium/components/autofill/payments/LegalMessageLine.java",
-    "java/src/org/chromium/components/autofill/payments/PaymentInstrument.java",
-    "java/src/org/chromium/components/autofill/payments/TouchToFillDisplayOptions.java",
+    "java/src/org/Cinaseek/components/autofill/payments/AutofillSaveCardUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/payments/AutofillSaveIbanUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BankAccount.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerContext.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerForSettings.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerTosDetail.java",
+    "java/src/org/Cinaseek/components/autofill/payments/CardDetail.java",
+    "java/src/org/Cinaseek/components/autofill/payments/Ewallet.java",
+    "java/src/org/Cinaseek/components/autofill/payments/LegalMessageLine.java",
+    "java/src/org/Cinaseek/components/autofill/payments/PaymentInstrument.java",
+    "java/src/org/Cinaseek/components/autofill/payments/TouchToFillDisplayOptions.java",
   ]
   deps = [
     ":payments_interfaces_java",
@@ -360,19 +360,19 @@ android_library("payments_autofill_java") {
 }
 
 robolectric_library("payments_autofill_junit_tests") {
-  resources_package = "org.chromium.components.autofill"
+  resources_package = "org.Cinaseek.components.autofill"
 
   sources = [
-    "junit/src/org/chromium/components/autofill/payments/AutofillSaveCardUiInfoTest.java",
-    "junit/src/org/chromium/components/autofill/payments/AutofillSaveIbanUiInfoTest.java",
-    "junit/src/org/chromium/components/autofill/payments/BankAccountTest.java",
-    "junit/src/org/chromium/components/autofill/payments/BnplIssuerContextTest.java",
-    "junit/src/org/chromium/components/autofill/payments/BnplIssuerForSettingsTest.java",
-    "junit/src/org/chromium/components/autofill/payments/BnplIssuerTosDetailTest.java",
-    "junit/src/org/chromium/components/autofill/payments/CardDetailTest.java",
-    "junit/src/org/chromium/components/autofill/payments/EwalletTest.java",
-    "junit/src/org/chromium/components/autofill/payments/LegalMessageLineTest.java",
-    "junit/src/org/chromium/components/autofill/payments/PaymentInstrumentTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/AutofillSaveCardUiInfoTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/AutofillSaveIbanUiInfoTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/BankAccountTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/BnplIssuerContextTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/BnplIssuerForSettingsTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/BnplIssuerTosDetailTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/CardDetailTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/EwalletTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/LegalMessageLineTest.java",
+    "junit/src/org/Cinaseek/components/autofill/payments/PaymentInstrumentTest.java",
   ]
   deps = [
     ":autofill_payments_java_resources",
@@ -390,10 +390,10 @@ robolectric_library("payments_autofill_junit_tests") {
 }
 
 robolectric_library("main_autofill_junit_tests") {
-  resources_package = "org.chromium.components.autofill"
+  resources_package = "org.Cinaseek.components.autofill"
 
   sources =
-      [ "junit/src/org/chromium/components/autofill/LoyaltyCardTest.java" ]
+      [ "junit/src/org/Cinaseek/components/autofill/LoyaltyCardTest.java" ]
   deps = [
     ":main_autofill_java",
     "//base:base_java_test_support",
@@ -407,16 +407,16 @@ robolectric_library("main_autofill_junit_tests") {
 
 generate_jni("payments_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/autofill/payments/AutofillSaveCardUiInfo.java",
-    "java/src/org/chromium/components/autofill/payments/AutofillSaveIbanUiInfo.java",
-    "java/src/org/chromium/components/autofill/payments/BankAccount.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerContext.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerForSettings.java",
-    "java/src/org/chromium/components/autofill/payments/BnplIssuerTosDetail.java",
-    "java/src/org/chromium/components/autofill/payments/Ewallet.java",
-    "java/src/org/chromium/components/autofill/payments/LegalMessageLine.java",
-    "java/src/org/chromium/components/autofill/payments/PaymentInstrument.java",
-    "java/src/org/chromium/components/autofill/payments/TouchToFillDisplayOptions.java",
+    "java/src/org/Cinaseek/components/autofill/payments/AutofillSaveCardUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/payments/AutofillSaveIbanUiInfo.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BankAccount.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerContext.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerForSettings.java",
+    "java/src/org/Cinaseek/components/autofill/payments/BnplIssuerTosDetail.java",
+    "java/src/org/Cinaseek/components/autofill/payments/Ewallet.java",
+    "java/src/org/Cinaseek/components/autofill/payments/LegalMessageLine.java",
+    "java/src/org/Cinaseek/components/autofill/payments/PaymentInstrument.java",
+    "java/src/org/Cinaseek/components/autofill/payments/TouchToFillDisplayOptions.java",
   ]
 }
 
@@ -434,7 +434,7 @@ static_library("payments_autofill_cc") {
 
 android_library("autofill_ai_test_utils_java") {
   testonly = true
-  sources = [ "java/src/org/chromium/components/autofill/autofill_ai/utils/TestUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/components/autofill/autofill_ai/utils/TestUtils.java" ]
   deps = [
     ":main_autofill_java",
     "//third_party/androidx:androidx_annotation_annotation_java",

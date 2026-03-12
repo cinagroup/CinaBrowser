@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ class GestureNavTestWebContents : public TestWebContents {
 class GestureNavSimpleTest : public RenderViewHostImplTestHarness {
  public:
   GestureNavSimpleTest()
-      : first_("https://www.google.com"), second_("http://www.chromium.org") {}
+      : first_("https://www.google.com"), second_("http://www.Cinaseek.org") {}
 
   ~GestureNavSimpleTest() override = default;
   GestureNavSimpleTest(const GestureNavSimpleTest&) = delete;

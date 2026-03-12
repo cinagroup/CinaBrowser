@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ class WebrtcVideoEncoderGpu::Core
   void RunAnyPendingEncode();
 
 #if BUILDFLAG(IS_WIN)
-  // This object is required by Chromium to ensure proper init/uninit of COM on
+  // This object is required by Cinaseek to ensure proper init/uninit of COM on
   // this thread.  The guidance is to match the lifetime of this object to the
   // lifetime of the thread if possible.
   std::unique_ptr<base::win::ScopedCOMInitializer> scoped_com_initializer_;
@@ -417,7 +417,7 @@ std::unique_ptr<WebrtcVideoEncoder> WebrtcVideoEncoderGpu::CreateForH264() {
 // static
 bool WebrtcVideoEncoderGpu::IsSupportedByH264(const Profile& profile) {
 #if BUILDFLAG(IS_WIN)
-  // This object is required by Chromium to ensure proper init/uninit of COM on
+  // This object is required by Cinaseek to ensure proper init/uninit of COM on
   // this thread.  The guidance is to match the lifetime of this object to the
   // lifetime of the thread if possible.  Since we are still experimenting with
   // H.264 and run the encoder on a different thread, we use a locally scoped

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -409,7 +409,7 @@ NetworkSpeechRecognitionEngineImpl::ConnectBothStreams(const FSMEventArgs&) {
     upstream_args.push_back("maxAlternatives=" +
                             base::NumberToString(max_alternatives));
   }
-  upstream_args.push_back("app=chromium");
+  upstream_args.push_back("app=Cinaseek");
   for (const media::mojom::SpeechRecognitionGrammar& grammar :
        config_.grammars) {
     std::string grammar_value(base::NumberToString(grammar.weight) + ":" +

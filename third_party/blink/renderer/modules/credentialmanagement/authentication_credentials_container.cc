@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1234,7 +1234,7 @@ DOMException* AuthenticatorStatusToDOMException(
           "Public-key credentials are only available to HTTPS origins with "
           "valid certificates, HTTP origins that fall under 'localhost', or "
           "pages served from an extension. See "
-          "https://chromium.googlesource.com/chromium/src/+/main/content/"
+          "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/content/"
           "browser/webauth/origins.md for details");
     case AuthenticatorStatus::BAD_RELYING_PARTY_ID:
       return MakeGarbageCollected<DOMException>(
@@ -1907,7 +1907,7 @@ AuthenticationCredentialsContainer::create(
               "default algorithm identifiers: ES256 and RS256. This can "
               "result in registration failures on incompatible "
               "authenticators. See "
-              "https://chromium.googlesource.com/chromium/src/+/main/"
+              "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/"
               "content/browser/webauth/pub_key_cred_params.md for details"));
     }
   }

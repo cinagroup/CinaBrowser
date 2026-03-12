@@ -30,8 +30,8 @@ namespace crashpad {
 //!
 //! Each static function in this class will call a `UMA_*` from
 //! `base/metrics/histogram_macros.h`. When building Crashpad standalone,
-//! (against mini_chromium), these macros do nothing. When built against
-//! Chromium's base, they allow integration with its metrics system.
+//! (against mini_Cinaseek), these macros do nothing. When built against
+//! Cinaseek's base, they allow integration with its metrics system.
 class Metrics {
  public:
   Metrics() = delete;

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,9 +10,9 @@ android_library("aw_net_java_test_support") {
   testonly = true
   srcjar_deps = [ ":aw_net_jni_headers" ]
   sources = [
-    "java/src/org/chromium/android_webview/test/AwEmbeddedTestServer.java",
-    "java/src/org/chromium/android_webview/test/AwEmbeddedTestServerImpl.java",
-    "java/src/org/chromium/android_webview/test/AwEmbeddedTestServerService.java",
+    "java/src/org/Cinaseek/android_webview/test/AwEmbeddedTestServer.java",
+    "java/src/org/Cinaseek/android_webview/test/AwEmbeddedTestServerImpl.java",
+    "java/src/org/Cinaseek/android_webview/test/AwEmbeddedTestServerService.java",
   ]
   deps = [
     "//base:base_java_test_support",
@@ -27,7 +27,7 @@ android_library("aw_net_java_test_support") {
 generate_jni("aw_net_jni_headers") {
   testonly = true
   sources = [
-    "java/src/org/chromium/android_webview/test/AwEmbeddedTestServerImpl.java",
+    "java/src/org/Cinaseek/android_webview/test/AwEmbeddedTestServerImpl.java",
   ]
 }
 
@@ -68,7 +68,7 @@ android_apk("aw_net_test_support_apk") {
 
   deps = [ ":aw_net_java_test_support" ]
   android_manifest = "java/AndroidManifest.xml"
-  apk_name = "ChromiumNetTestAwSupport"
+  apk_name = "CinaseekNetTestAwSupport"
   shared_libraries = [ ":aw_net_java_test_native_support" ]
   srcjar_deps = [ ":aw_net_java_test_native_support__jni_registration" ]
 }

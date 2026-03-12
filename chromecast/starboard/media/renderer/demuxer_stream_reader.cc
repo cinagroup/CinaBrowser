@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #include "chromecast/starboard/chromecast/starboard_cast_api/cast_starboard_api_types.h"
 #include "chromecast/starboard/media/cdm/starboard_drm_key_tracker.h"
 #include "chromecast/starboard/media/media/starboard_resampler.h"
-#include "chromecast/starboard/media/renderer/chromium_starboard_conversions.h"
+#include "chromecast/starboard/media/renderer/Cinaseek_starboard_conversions.h"
 #include "media/base/video_decoder_config.h"
 #include "ui/gfx/geometry/size.h"
 
@@ -353,12 +353,12 @@ bool DemuxerStreamReader::UpdateAudioConfig() {
   CHECK(task_runner_->RunsTasksInCurrentSequence());
 
   CHECK(audio_stream_);
-  chromium_audio_config_ = audio_stream_->audio_decoder_config();
+  Cinaseek_audio_config_ = audio_stream_->audio_decoder_config();
   LOG(INFO) << "Audio config changed to "
-            << chromium_audio_config_.AsHumanReadableString();
+            << Cinaseek_audio_config_.AsHumanReadableString();
 
   std::optional<StarboardAudioSampleInfo> new_sample_info =
-      ToStarboardAudioSampleInfo(chromium_audio_config_);
+      ToStarboardAudioSampleInfo(Cinaseek_audio_config_);
 
   if (!new_sample_info) {
     LOG(ERROR) << "Audio config could not be converted to a starboard config.";
@@ -374,15 +374,15 @@ bool DemuxerStreamReader::UpdateAudioConfig() {
   }
 
   audio_sample_info_ = std::move(new_sample_info);
-  if (IsResamplingNecessary(chromium_audio_config_)) {
+  if (IsResamplingNecessary(Cinaseek_audio_config_)) {
     convert_audio_fn_ = base::BindRepeating(
-        &ConvertPcmAudioBufferToS16, chromium_audio_config_.codec(),
-        chromium_audio_config_.sample_format(),
-        chromium_audio_config_.channels());
+        &ConvertPcmAudioBufferToS16, Cinaseek_audio_config_.codec(),
+        Cinaseek_audio_config_.sample_format(),
+        Cinaseek_audio_config_.channels());
   } else {
     convert_audio_fn_ = base::BindRepeating(&DoNotConvertBuffer);
   }
-  client_->OnAudioConfigChange(chromium_audio_config_);
+  client_->OnAudioConfigChange(Cinaseek_audio_config_);
   return true;
 }
 

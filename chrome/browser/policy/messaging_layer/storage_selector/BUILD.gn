@@ -1,10 +1,10 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # This target facilitates `ReportingClient` ability to select underlying storage
-# for encrypted reporting pipeline report client. It is built into Chrome and
-# configured differently depending on the platform. In the case of ChromeOS, it
+# for encrypted reporting pipeline report client. It is built into Cinaseek and
+# configured differently depending on the platform. In the case of CinaseekOS, it
 # can store events in `missived` daemon, otherwise it stores them locally and
 # also provides the uploader for them. It can also be built into other daemons;
 # in that case it always connects to `missived` daemon.

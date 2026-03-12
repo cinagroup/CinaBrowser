@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,10 +33,10 @@ namespace update_client {
 class CrxCache;
 class CrxDownloaderFactory;
 class NetworkFetcherFactory;
-class PatchChromiumFactory;
+class PatchCinaseekFactory;
 class ProtocolHandlerFactory;
 class TestActivityDataService;
-class UnzipChromiumFactory;
+class UnzipCinaseekFactory;
 
 #define POST_INTERCEPT_SCHEME "https"
 #define POST_INTERCEPT_HOSTNAME "localhost2"
@@ -145,8 +145,8 @@ class TestConfigurator : public Configurator {
   raw_ptr<TestActivityDataService> activity_data_service_;
   std::vector<GURL> update_check_urls_;
   GURL ping_url_;
-  scoped_refptr<update_client::UnzipChromiumFactory> unzip_factory_;
-  scoped_refptr<update_client::PatchChromiumFactory> patch_factory_;
+  scoped_refptr<update_client::UnzipCinaseekFactory> unzip_factory_;
+  scoped_refptr<update_client::PatchCinaseekFactory> patch_factory_;
   scoped_refptr<network::SharedURLLoaderFactory> test_shared_loader_factory_;
   network::TestURLLoaderFactory test_url_loader_factory_;
   scoped_refptr<NetworkFetcherFactory> network_fetcher_factory_;

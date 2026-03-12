@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class BlobDataSnapshot;
 class ShareableBlobDataItem;
 
 // This class handles the logistics of blob storage within the browser process.
-// This class is not threadsafe, access on IO thread. In Chromium there is one
+// This class is not threadsafe, access on IO thread. In Cinaseek there is one
 // instance per profile.
 class COMPONENT_EXPORT(STORAGE_BROWSER) BlobStorageContext
     : public base::trace_event::MemoryDumpProvider,

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4785,7 +4785,7 @@ TEST_F(UpdateClientTest, ActionRun_NoUpdate) {
         "gjpmebpgbhcamgdgjcmnjfhggjpgcimm", "UpdateClientTest",
         std::vector<uint8_t>(std::begin(gjpm_hash), std::end(gjpm_hash)),
         GetTestFilePath("runaction_test_win.crx3"),
-        base::MakeRefCounted<UnzipChromiumFactory>(
+        base::MakeRefCounted<UnzipCinaseekFactory>(
             base::BindRepeating(&unzip::LaunchInProcessUnzipper))
             ->Create(),
         crx_file::VerifierFormat::CRX3,

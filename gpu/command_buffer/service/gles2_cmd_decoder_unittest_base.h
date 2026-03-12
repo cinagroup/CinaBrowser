@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -590,15 +590,15 @@ class GLES2DecoderTestBase : public ::testing::TestWithParam<bool>,
   static const GLuint kServiceVertexShaderId = 321;
   static const GLuint kServiceFragmentShaderId = 322;
 
-  static const GLuint kServiceCopyTextureChromiumShaderId = 701;
-  static const GLuint kServiceCopyTextureChromiumProgramId = 721;
+  static const GLuint kServiceCopyTextureCinaseekShaderId = 701;
+  static const GLuint kServiceCopyTextureCinaseekProgramId = 721;
 
-  static const GLuint kServiceCopyTextureChromiumTextureBufferId = 751;
-  static const GLuint kServiceCopyTextureChromiumVertexBufferId = 752;
-  static const GLuint kServiceCopyTextureChromiumFBOId = 753;
-  static const GLuint kServiceCopyTextureChromiumPositionAttrib = 761;
-  static const GLuint kServiceCopyTextureChromiumTexAttrib = 762;
-  static const GLuint kServiceCopyTextureChromiumSamplerLocation = 763;
+  static const GLuint kServiceCopyTextureCinaseekTextureBufferId = 751;
+  static const GLuint kServiceCopyTextureCinaseekVertexBufferId = 752;
+  static const GLuint kServiceCopyTextureCinaseekFBOId = 753;
+  static const GLuint kServiceCopyTextureCinaseekPositionAttrib = 761;
+  static const GLuint kServiceCopyTextureCinaseekTexAttrib = 762;
+  static const GLuint kServiceCopyTextureCinaseekSamplerLocation = 763;
 
   static const GLsizei kNumVertices = 100;
   static const GLsizei kNumIndices = 10;

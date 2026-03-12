@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,16 +7,16 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("subresource_filter_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/subresource_filter/AdsBlockedDialog.java",
-    "java/src/org/chromium/components/subresource_filter/SubresourceFilterFeatureMap.java",
+    "java/src/org/Cinaseek/components/subresource_filter/AdsBlockedDialog.java",
+    "java/src/org/Cinaseek/components/subresource_filter/SubresourceFilterFeatureMap.java",
   ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":subresource_filter_jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/subresource_filter/AdsBlockedDialog.java",
-    "java/src/org/chromium/components/subresource_filter/SubresourceFilterFeatureMap.java",
+    "java/src/org/Cinaseek/components/subresource_filter/AdsBlockedDialog.java",
+    "java/src/org/Cinaseek/components/subresource_filter/SubresourceFilterFeatureMap.java",
   ]
   deps = [
     ":java_resources",
@@ -30,12 +30,12 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.components.subresource_filter"
+  resources_package = "org.Cinaseek.components.subresource_filter"
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.components.subresource_filter"
-  sources = [ "java/src/org/chromium/components/subresource_filter/AdsBlockedDialogTest.java" ]
+  resources_package = "org.Cinaseek.components.subresource_filter"
+  sources = [ "java/src/org/Cinaseek/components/subresource_filter/AdsBlockedDialogTest.java" ]
 
   deps = [
     ":java",

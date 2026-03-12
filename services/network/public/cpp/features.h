@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -427,7 +427,7 @@ BASE_DECLARE_FEATURE_PARAM(int, kDurableMessagesGlobalBufferSize);
 // initiator origin is allowed to access the target URL via the security
 // policy's origin access lists.
 //
-// For example, this enables chromium extensions with appropriate host
+// For example, this enables Cinaseek extensions with appropriate host
 // permissions to override this header in fetch requests initiated from
 // background pages or extension service workers. It does not apply to requests
 // initiated from content scripts or user scripts.

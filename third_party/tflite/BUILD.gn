@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -83,7 +83,7 @@ config("tflite_config") {
 }
 
 # The config `tflite_config_no_undef` is used when compiling WebRTC outside the
-# Chromium environment.
+# Cinaseek environment.
 config("tflite_config_no_undef") {
   cflags = [ "-Wno-undef" ]
 }
@@ -185,9 +185,9 @@ static_library("tflite_builtin_op_resolver_internals") {
     "//third_party/neon_2_sse",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//third_party/eigen3:eigen_includes",
     ":tflite_flags",
   ]
@@ -259,9 +259,9 @@ tflite_static_library("tflite_builtin_op_resolver") {
     "//third_party/ruy",
   ]
 
-  configs_to_remove = [ "//build/config/compiler:chromium_code" ]
+  configs_to_remove = [ "//build/config/compiler:Cinaseek_code" ]
   configs_to_add = [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//third_party/eigen3:eigen_includes",
     ":tflite_flags",
   ]
@@ -739,12 +739,12 @@ if (!is_fuchsia) {
   }
 }
 
-# The two below TFLite logging targets are separate since the Chromium one
+# The two below TFLite logging targets are separate since the Cinaseek one
 # requires //base, which is not allowed to be embedded by non-libchrome shared
 # libraries.
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   source_set("tflite_logging") {
-    sources = [ "shims/minimal_logging_chromium.cc" ]
+    sources = [ "shims/minimal_logging_Cinaseek.cc" ]
     deps = [
       ":tflite_public_headers",
       "//base",
@@ -1405,9 +1405,9 @@ tflite_static_library("tflite") {
     "//third_party/ruy",
   ]
 
-  configs_to_remove = [ "//build/config/compiler:chromium_code" ]
+  configs_to_remove = [ "//build/config/compiler:Cinaseek_code" ]
   configs_to_add = [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/compiler:rtti",
     "//third_party/eigen3:eigen_includes",
     ":tflite_flags",
@@ -1432,7 +1432,7 @@ tflite_static_library("tflite") {
   public_deps_for_standalone = [ "//third_party/neon_2_sse" ]
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   executable("tflite_benchmark") {
     sources = [
       "src/tensorflow/lite/tools/benchmark/benchmark_main.cc",
@@ -1467,9 +1467,9 @@ if (build_with_chromium) {
 
     public_configs = [ ":tflite_config" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//third_party/eigen3:eigen_includes",
       ":tflite_flags",
     ]

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ class SystemTrustStore {
   // span if the certificate is not constrained.
   // (If the bssl::TrustAnchor is changed to also contain the root certificate,
   // this could be updated to take a TrustAnchor object instead. See this TODO:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/boringssl/src/pki/trust_store.h;l=207;drc=f359b2876732d31100187ef4ad0d462864b168c2)
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/boringssl/src/pki/trust_store.h;l=207;drc=f359b2876732d31100187ef4ad0d462864b168c2)
   virtual base::span<const ChromeRootCertConstraints> GetChromeRootConstraints(
       const bssl::CertPathBuilderResultPath* path) const = 0;
 

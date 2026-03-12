@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ class BorealisSecurityDelegateTest : public testing::Test {
 TEST_F(BorealisSecurityDelegateTest, MainAppCanSelfActivate) {
   CreateFakeMainApp(&profile_);
   std::unique_ptr<ScopedTestWindow> window = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.wmclass.Steam",
+      "org.Cinaseek.guest_os.borealis.wmclass.Steam",
       &BorealisServiceFactory::GetForProfile(&profile_)->WindowManager());
   EXPECT_TRUE(
       BorealisSecurityDelegate::MakeForTesting(&profile_)->CanSelfActivate(
@@ -37,7 +37,7 @@ TEST_F(BorealisSecurityDelegateTest, MainAppCanSelfActivate) {
 TEST_F(BorealisSecurityDelegateTest, NormalAppCanNotSelfActivate) {
   CreateFakeApp(&profile_, "not_steam", "borealis/123");
   std::unique_ptr<ScopedTestWindow> window = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.wmclass.not_steam",
+      "org.Cinaseek.guest_os.borealis.wmclass.not_steam",
       &BorealisServiceFactory::GetForProfile(&profile_)->WindowManager());
 
   ASSERT_FALSE(BorealisWindowManager::IsAnonymousAppId(
@@ -52,7 +52,7 @@ TEST_F(BorealisSecurityDelegateTest, NormalAppCanNotSelfActivate) {
 
 TEST_F(BorealisSecurityDelegateTest, AnonymousAppCanNotSelfActivate) {
   std::unique_ptr<ScopedTestWindow> window = MakeAndTrackWindow(
-      "org.chromium.guest_os.borealis.wmclass.anonymous",
+      "org.Cinaseek.guest_os.borealis.wmclass.anonymous",
       &BorealisServiceFactory::GetForProfile(&profile_)->WindowManager());
 
   ASSERT_TRUE(BorealisWindowManager::IsAnonymousAppId(

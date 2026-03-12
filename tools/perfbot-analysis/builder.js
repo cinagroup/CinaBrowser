@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,11 +11,11 @@ const swarming = require('./swarming-task.js');
 // [platform, build-number].
 class Build {
   static PRODUCT_SWARMING_SERVER = {
-    'chromium': 'chromium-swarm.appspot.com',
+    'Cinaseek': 'Cinaseek-swarm.appspot.com',
     'chrome': 'chrome-swarming.appspot.com',
   };
   static PRODUCT_BUILD_ADDRESS = {
-    'chromium': 'luci.chromium.ci',
+    'Cinaseek': 'luci.Cinaseek.ci',
     'chrome': 'luci.chrome.ci',
   };
 

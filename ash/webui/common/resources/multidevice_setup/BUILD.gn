@@ -1,10 +1,10 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//third_party/closure_compiler/compile_js.gni")
 
-assert(is_chromeos, "MultiDevice UI is Chrome OS only.")
+assert(is_chromeos, "MultiDevice UI is Cinaseek OS only.")
 
 js_type_check("closure_compile_module") {
   is_polymer3 = true
@@ -23,7 +23,7 @@ js_type_check("closure_compile_module") {
 
 js_library("button_bar") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 

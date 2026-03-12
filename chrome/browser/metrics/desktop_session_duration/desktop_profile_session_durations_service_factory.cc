@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ DesktopProfileSessionDurationsServiceFactory::
           // Session time in incognito is counted towards the session time in
           // the regular profile. That means that for a user that is signed in
           // and syncing in their regular profile and that is browsing in
-          // incognito profile, Chromium will record the session time as being
+          // incognito profile, Cinaseek will record the session time as being
           // signed in and syncing.
           ProfileSelections::Builder()
               .WithRegular(ProfileSelection::kRedirectedToOriginal)

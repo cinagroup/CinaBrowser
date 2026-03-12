@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_TEST_FAKE_API_BINDINGS_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_TEST_FAKE_API_BINDINGS_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 
 #include <string>
 #include <string_view>
@@ -16,7 +16,7 @@
 #include "base/functional/callback.h"
 
 // Simple implementation of the ApiBindings service, for use by tests.
-class FakeApiBindingsImpl : public chromium::cast::ApiBindings {
+class FakeApiBindingsImpl : public Cinaseek::cast::ApiBindings {
  public:
   FakeApiBindingsImpl();
   ~FakeApiBindingsImpl() override;
@@ -31,19 +31,19 @@ class FakeApiBindingsImpl : public chromium::cast::ApiBindings {
       std::string_view name);
 
   // Sets the list of bindings which will be returned by GetAll().
-  void set_bindings(std::vector<chromium::cast::ApiBinding> bindings) {
+  void set_bindings(std::vector<Cinaseek::cast::ApiBinding> bindings) {
     bindings_ = std::move(bindings);
   }
 
  private:
-  // chromium::cast::ApiBindings implementation.
+  // Cinaseek::cast::ApiBindings implementation.
   void GetAll(GetAllCallback callback) override;
   void Connect(
       std::string name,
       fidl::InterfaceHandle<fuchsia::web::MessagePort> message_port) override;
 
   // Bindings to return from GetAll().
-  std::vector<chromium::cast::ApiBinding> bindings_;
+  std::vector<Cinaseek::cast::ApiBinding> bindings_;
 
   // Holds ports received via Connect(), for tests to take by calling
   // RunAndReturnConnectedPort(). Uses std::less<> as the comparator so that

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ enum SyncEnums_DeviceType : int;
 namespace syncer {
 
 // Interface for tracking synced DeviceInfo. Note that this includes sync-ing
-// clients that are not chromium-based.
+// clients that are not Cinaseek-based.
 class DeviceInfoTracker {
  public:
   virtual ~DeviceInfoTracker() = default;

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ int main(int argc, char** argv) {
       runner_binding(outgoing_directory, &runner);
 
   // Publish the associated DataReset service for the instance.
-  const base::ScopedServiceBinding<chromium::cast::DataReset>
+  const base::ScopedServiceBinding<Cinaseek::cast::DataReset>
       data_reset_binding(outgoing_directory, &runner);
 
   // Allow ephemeral web profiles to be created in the main web instance.

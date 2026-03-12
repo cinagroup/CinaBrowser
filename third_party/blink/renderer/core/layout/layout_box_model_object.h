@@ -111,7 +111,7 @@ enum PaintLayerType {
 //   "LogicalLeft" and "LogicalRight".
 //
 // For more information, see the following doc about coordinate spaces:
-// https://chromium.googlesource.com/chromium/src.git/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
 class CORE_EXPORT LayoutBoxModelObject : public LayoutObject {
  public:
   LayoutBoxModelObject(ContainerNode*);

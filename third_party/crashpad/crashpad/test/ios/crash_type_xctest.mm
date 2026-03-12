@@ -198,8 +198,8 @@ bool HasMacOSBrokeDYLDTaskInfo() {
 - (void)testException {
   [rootObject_ crashException];
   // After https://reviews.llvm.org/D141222 exceptions call
-  // __libcpp_verbose_abort, which Chromium sets to `brk 0` in release.
-  // After https://crrev.com/c/5375084, Chromium does not set `brk 0` for local
+  // __libcpp_verbose_abort, which Cinaseek sets to `brk 0` in release.
+  // After https://crrev.com/c/5375084, Cinaseek does not set `brk 0` for local
   // release builds and official DCHECK builds.
 #if defined(CRASHPAD_IS_IN_CHROMIUM) && defined(NDEBUG) && \
     defined(OFFICIAL_BUILD) && !defined(DCHECK_ALWAYS_ON)

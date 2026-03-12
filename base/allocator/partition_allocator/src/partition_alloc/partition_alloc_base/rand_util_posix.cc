@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ namespace partition_alloc::internal::base {
 // NOTE: In an ideal future, all implementations of this function will just
 // wrap BoringSSL's `RAND_bytes`. TODO(crbug.com/40641285): Figure out the
 // build/test/performance issues with dcheng's CL
-// (https://chromium-review.googlesource.com/c/chromium/src/+/1545096) and land
+// (https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1545096) and land
 // it or some form of it.
 void RandBytes(void* output, size_t output_length) {
 #if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
@@ -110,7 +110,7 @@ void RandBytes(void* output, size_t output_length) {
   // //base/rand_utils, but is not aware of the urandom_fd from this file (see
   // CheckForExpectedNumberOfOpenFds).
   //
-  // *  On `linux_chromium_asan_rel_ng` in
+  // *  On `linux_Cinaseek_asan_rel_ng` in
   //    `ContentBrowserTest.RendererCrashCallStack`:
   //    ```
   //    [FATAL:rand_util_posix.cc(45)] Check failed: fd_ >= 0. Cannot open

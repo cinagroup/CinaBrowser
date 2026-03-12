@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,9 +27,9 @@
 namespace update_client {
 namespace {
 
-class CrxDownloaderFactoryChromium : public CrxDownloaderFactory {
+class CrxDownloaderFactoryCinaseek : public CrxDownloaderFactory {
  public:
-  explicit CrxDownloaderFactoryChromium(
+  explicit CrxDownloaderFactoryCinaseek(
       scoped_refptr<NetworkFetcherFactory> network_fetcher_factory,
       std::optional<base::FilePath> background_downloader_cache_path)
       : network_fetcher_factory_(network_fetcher_factory) {
@@ -50,7 +50,7 @@ class CrxDownloaderFactoryChromium : public CrxDownloaderFactory {
       bool background_download_enabled) const override;
 
  private:
-  ~CrxDownloaderFactoryChromium() override = default;
+  ~CrxDownloaderFactoryCinaseek() override = default;
 
   scoped_refptr<NetworkFetcherFactory> network_fetcher_factory_;
 #if BUILDFLAG(IS_MAC)
@@ -60,7 +60,7 @@ class CrxDownloaderFactoryChromium : public CrxDownloaderFactory {
 #endif
 };
 
-scoped_refptr<CrxDownloader> CrxDownloaderFactoryChromium::MakeCrxDownloader(
+scoped_refptr<CrxDownloader> CrxDownloaderFactoryCinaseek::MakeCrxDownloader(
     const std::string& prod_id,
     bool background_download_enabled) const {
   scoped_refptr<CrxDownloader> url_fetcher_downloader =
@@ -85,7 +85,7 @@ scoped_refptr<CrxDownloader> CrxDownloaderFactoryChromium::MakeCrxDownloader(
 scoped_refptr<CrxDownloaderFactory> MakeCrxDownloaderFactory(
     scoped_refptr<NetworkFetcherFactory> network_fetcher_factory,
     std::optional<base::FilePath> background_downloader_cache_path) {
-  return base::MakeRefCounted<CrxDownloaderFactoryChromium>(
+  return base::MakeRefCounted<CrxDownloaderFactoryCinaseek>(
       network_fetcher_factory, background_downloader_cache_path);
 }
 

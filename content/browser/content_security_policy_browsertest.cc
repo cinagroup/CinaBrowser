@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -110,7 +110,7 @@ IN_PROC_BROWSER_TEST_F(ContentSecurityPolicyBrowserTest,
   const char* page = R"(
     data:text/html,
     <meta http-equiv="Content-Security-Policy" content="frame-src *">
-    <iframe src="mailto:arthursonzogni@chromium.org"></iframe>
+    <iframe src="mailto:arthursonzogni@Cinaseek.org"></iframe>
   )";
 
   GURL url(page);
@@ -130,13 +130,13 @@ IN_PROC_BROWSER_TEST_F(ContentSecurityPolicyBrowserTest,
   const char* page = R"(
     data:text/html,
     <meta http-equiv="Content-Security-Policy" content="script-src *">
-    <script src="mailto:arthursonzogni@chromium.org"></script>
+    <script src="mailto:arthursonzogni@Cinaseek.org"></script>
   )";
 
   GURL url(page);
   WebContentsConsoleObserver console_observer(web_contents());
   console_observer.SetPattern(
-      "Loading the script 'mailto:arthursonzogni@chromium.org' violates the "
+      "Loading the script 'mailto:arthursonzogni@Cinaseek.org' violates the "
       "following Content Security Policy directive: "
       "\"script-src *\". Note that 'script-src-elem' was not explicitly set, "
       "so 'script-src' is used as a fallback. Note that '*' matches only URLs "

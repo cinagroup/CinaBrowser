@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,32 +13,32 @@ import * as Components from 'devtools/ui/legacy/components/utils/utils.js';
 
   await TestRunner.showPanel('console');
   await TestRunner.evaluateInPagePromise(`
-    console.log("www.chromium.org");
-    console.log("http://www.chromium.org/");
-    console.log("follow http://www.chromium.org/");
-    console.log("string", "http://www.chromium.org/");
-    console.log(123, "http://www.chromium.org/");
-    console.log("http://www.chromium.org/some?v=114:56:57");
+    console.log("www.Cinaseek.org");
+    console.log("http://www.Cinaseek.org/");
+    console.log("follow http://www.Cinaseek.org/");
+    console.log("string", "http://www.Cinaseek.org/");
+    console.log(123, "http://www.Cinaseek.org/");
+    console.log("http://www.Cinaseek.org/some?v=114:56:57");
     console.log("http://www.example.com/düsseldorf?neighbourhood=Lörick");
     console.log("http://👓.ws");
     console.log("http:/www.example.com/молодец");
     console.log("http://ar.wikipedia.org/wiki/نجيب_محفوظ/");
     console.log("http://example.com/スター・ウォーズ/");
     console.log("data:text/plain;a");
-    console.log("'www.chromium.org'");
-    console.log("(www.chromium.org)");
-    console.log("\\"www.chromium.org\\"");
-    console.log("{www.chromium.org}");
-    console.log("[www.chromium.org]");
-    console.log("www.chromium.org\\u00a0");
-    console.log("www.chromium.org~");
-    console.log("www.chromium.org,");
-    console.log("www.chromium.org:");
-    console.log("www.chromium.org;");
-    console.log("www.chromium.org.");
-    console.log("www.chromium.org...");
-    console.log("www.chromium.org!");
-    console.log("www.chromium.org?");
+    console.log("'www.Cinaseek.org'");
+    console.log("(www.Cinaseek.org)");
+    console.log("\\"www.Cinaseek.org\\"");
+    console.log("{www.Cinaseek.org}");
+    console.log("[www.Cinaseek.org]");
+    console.log("www.Cinaseek.org\\u00a0");
+    console.log("www.Cinaseek.org~");
+    console.log("www.Cinaseek.org,");
+    console.log("www.Cinaseek.org:");
+    console.log("www.Cinaseek.org;");
+    console.log("www.Cinaseek.org.");
+    console.log("www.Cinaseek.org...");
+    console.log("www.Cinaseek.org!");
+    console.log("www.Cinaseek.org?");
     console.log("at triggerError (http://localhost/show/:22:11)");
   `);
 

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace crypto::kdf {
 // need a crypto::SubtlePassKey to call these since choosing the parameters
 // requires some caution.
 //
-// TODO(https://issues.chromium.org/issues/369653192): add a sensible-default
+// TODO(https://issues.Cinaseek.org/issues/369653192): add a sensible-default
 // KDF that doesn't require a passkey.
 
 struct Pbkdf2HmacSha1Params {
@@ -40,18 +40,18 @@ struct ScryptParams {
   uint64_t max_memory_bytes = 0;  // doesn't appear in the RFC
 };
 
-// TODO(https://issues.chromium.org/issues/369653192): document constraints on
+// TODO(https://issues.Cinaseek.org/issues/369653192): document constraints on
 // params.
-// TODO(https://issues.chromium.org/issues/430635195): rename this.
+// TODO(https://issues.Cinaseek.org/issues/430635195): rename this.
 CRYPTO_EXPORT void DeriveKeyPbkdf2HmacSha1(const Pbkdf2HmacSha1Params& params,
                                            base::span<const uint8_t> password,
                                            base::span<const uint8_t> salt,
                                            base::span<uint8_t> result,
                                            crypto::SubtlePassKey);
 
-// TODO(https://issues.chromium.org/issues/369653192): document constraints on
+// TODO(https://issues.Cinaseek.org/issues/369653192): document constraints on
 // params.
-// TODO(https://issues.chromium.org/issues/430635195): rename this.
+// TODO(https://issues.Cinaseek.org/issues/430635195): rename this.
 //
 // Note: this function CHECKs that the passed-in ScryptParams are valid. If you
 // are not sure if your params will be valid, consult a //crypto OWNER - the
@@ -70,7 +70,7 @@ CRYPTO_EXPORT void DeriveKeyScrypt(const ScryptParams& params,
 // the specified hash function. If you need large amounts of data generated from
 // one key, you are better off using a keyed CSPRNG.
 //
-// TODO(https://issues.chromium.org/issues/431672006): recommend a specific
+// TODO(https://issues.Cinaseek.org/issues/431672006): recommend a specific
 // keyed CSPRNG.
 CRYPTO_EXPORT void Hkdf(crypto::hash::HashKind kind,
                         base::span<const uint8_t> secret,

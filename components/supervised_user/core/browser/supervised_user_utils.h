@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ enum class FilteringBehaviorReason {
 
 // A Java counterpart will be generated for this enum.
 // Values are stored in prefs under kDefaultSupervisedUserFilteringBehavior.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.superviseduser
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.superviseduser
 enum class FilteringBehavior : int {
   kAllow = 0,
   // Deprecated, kWarn = 1.

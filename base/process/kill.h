@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ const DWORD kProcessKilledExitCode = 1;
 //
 // Used for metrics. Keep in sync with the "TerminationStatus" histogram enum.
 // Do not repurpose previously used indexes.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base
 // GENERATED_JAVA_PREFIX_TO_STRIP: TERMINATION_STATUS_
 enum TerminationStatus : int {
   // Zero exit status.

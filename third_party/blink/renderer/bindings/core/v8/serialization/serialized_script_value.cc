@@ -156,7 +156,7 @@ inline static constexpr bool IsV0VersionTag(uint8_t tag) {
 // As IndexedDB stores SSVs to disk indefinitely, we still need to keep around
 // the code needed to deserialize the old format.
 inline static bool IsByteSwappedWiredData(base::span<const uint8_t> data) {
-  // TODO(pwnall): Return false early if we're on big-endian hardware. Chromium
+  // TODO(pwnall): Return false early if we're on big-endian hardware. Cinaseek
   // doesn't currently support big-endian hardware, and there's no header
   // exposing endianness to Blink yet. ARCH_CPU_LITTLE_ENDIAN seems promising,
   // but Blink is not currently allowed to include files from build/.

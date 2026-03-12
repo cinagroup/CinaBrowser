@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -137,8 +137,8 @@ namespace {
 // checks should be ran after this timeout.
 const base::TimeDelta kWebViewDecisionHandlingTimeout = base::Milliseconds(100);
 
-constexpr std::string_view kSecureUrl = "https://www.chromium.org";
-constexpr std::string_view kInsecureUrl = "http://www.chromium.org";
+constexpr std::string_view kSecureUrl = "https://www.Cinaseek.org";
+constexpr std::string_view kInsecureUrl = "http://www.Cinaseek.org";
 
 }  // namespace
 
@@ -529,7 +529,7 @@ TEST_F(PermissionsInttest, TestsThatCancelllingPrerenderDeniesPermission) {
   WKSecurityOrigin* mock_security_origin =
       OCMClassMock([WKSecurityOrigin class]);
   OCMStub([mock_security_origin protocol]).andReturn(@"https");
-  OCMStub([mock_security_origin host]).andReturn(@"chromium.test");
+  OCMStub([mock_security_origin host]).andReturn(@"Cinaseek.test");
   OCMStub([mock_security_origin port]).andReturn(0);
   WKFrameInfo* mock_frame_info = OCMClassMock([WKFrameInfo class]);
   OCMStub([mock_frame_info isMainFrame]).andReturn(YES);

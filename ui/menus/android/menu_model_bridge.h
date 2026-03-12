@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,9 +16,9 @@
 #include "ui/base/models/menu_model.h"
 
 // Used to translate
-// https://source.chromium.org/chromium/chromium/src/+/main:ui/base/models/menu_model.h;l=168
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/base/models/menu_model.h;l=168
 // to Java List<PropertyModel>. See
-// https://source.chromium.org/chromium/chromium/src/+/main:chrome/android/java/src/org/chromium/chrome/browser/contextmenu/MenuModelBridge.java
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/android/java/src/org/Cinaseek/chrome/browser/contextmenu/MenuModelBridge.java
 
 namespace ui {
 class COMPONENT_EXPORT(UI_MENUS) MenuModelBridge {

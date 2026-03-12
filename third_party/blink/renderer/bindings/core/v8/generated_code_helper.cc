@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -191,7 +191,7 @@ void SetupIDLIteratorTemplate(
   // before we replace it with another object. Despite that the following test
   // in V8 removes the existing one before setting a new one with a comment,
   // it's not yet crystal clear if RemovePrototype() is mandatory or not.
-  // https://source.chromium.org/chromium/chromium/src/+/main:v8/test/cctest/test-api.cc;l=25249;drc=00a341994fa5cc0b41ffa0e886eeef67fce0c804
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:v8/test/cctest/test-api.cc;l=25249;drc=00a341994fa5cc0b41ffa0e886eeef67fce0c804
   intrinsic_iterator_prototype_interface_template->RemovePrototype();
   intrinsic_iterator_prototype_interface_template->SetIntrinsicDataProperty(
       V8AtomicString(isolate, "prototype"), parent_intrinsic_prototype);

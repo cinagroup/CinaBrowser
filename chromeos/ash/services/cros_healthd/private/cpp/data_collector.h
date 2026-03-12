@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace ash::cros_healthd::internal {
 // TODO(b/249182240): Rename interface name to another one. The
 // SetPrivacyScreenState method is conflicted with the interface name.
 class DataCollector
-    : public mojom::ChromiumDataCollector,
+    : public mojom::CinaseekDataCollector,
       public chromeos::mojo_service_manager::mojom::ServiceProvider {
  public:
   // Delegate class to be replaced for testing.
@@ -44,10 +44,10 @@ class DataCollector
   ~DataCollector() override;
 
   // Binds new pipe and returns the mojo remote.
-  mojo::PendingRemote<mojom::ChromiumDataCollector> BindNewPipeAndPassRemote();
+  mojo::PendingRemote<mojom::CinaseekDataCollector> BindNewPipeAndPassRemote();
 
  private:
-  // mojom::ChromiumDataCollector overrides.
+  // mojom::CinaseekDataCollector overrides.
   void GetTouchscreenDevices(GetTouchscreenDevicesCallback callback) override;
   void GetTouchpadLibraryName(GetTouchpadLibraryNameCallback callback) override;
   void SetPrivacyScreenState(bool state,
@@ -67,7 +67,7 @@ class DataCollector
   mojo::Receiver<chromeos::mojo_service_manager::mojom::ServiceProvider>
       provider_receiver_{this};
   // The mojo receiver set of data collector.
-  mojo::ReceiverSet<mojom::ChromiumDataCollector> receiver_set_;
+  mojo::ReceiverSet<mojom::CinaseekDataCollector> receiver_set_;
 };
 
 }  // namespace ash::cros_healthd::internal

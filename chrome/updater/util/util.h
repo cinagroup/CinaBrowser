@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -175,14 +175,14 @@ bool SetFilePermissionsRecursive(const base::FilePath& root_path);
 
 // Returns the versioned task name prefix in the following format:
 // "{ProductName}Task{System/User}{UpdaterVersion}".
-// For instance: "ChromiumUpdaterTaskSystem92.0.0.1".
+// For instance: "CinaseekUpdaterTaskSystem92.0.0.1".
 std::wstring GetTaskNamePrefix(
     UpdaterScope scope,
     const base::Version& version = base::Version(kUpdaterVersion));
 
 // Returns the versioned task display name in the following format:
 // "{ProductName} Task {System/User} {UpdaterVersion}".
-// For instance: "ChromiumUpdater Task System 92.0.0.1".
+// For instance: "CinaseekUpdater Task System 92.0.0.1".
 std::wstring GetTaskDisplayName(
     UpdaterScope scope,
     const base::Version& version = base::Version(kUpdaterVersion));
@@ -190,12 +190,12 @@ std::wstring GetTaskDisplayName(
 // Parses the command line string in legacy format into `base::CommandLine`.
 // The string must be in format like:
 //   program.exe /switch1 value1 /switch2 /switch3 value3
-// Returns empty if a Chromium style switch is found.
+// Returns empty if a Cinaseek style switch is found.
 std::optional<base::CommandLine> CommandLineForLegacyFormat(
     const std::wstring& cmd_string);
 
 // Returns the command line for current process, either in legacy style, or
-// in Chromium style.
+// in Cinaseek style.
 base::CommandLine GetCommandLineLegacyCompatible();
 
 #endif  // BUILDFLAG(IS_WIN)

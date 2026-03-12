@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -63,8 +63,8 @@ group("deps") {
       deps += [ "//build/rust/tests/bindgen_cpp_test" ]
     }
 
-    if (enable_chromium_prelude) {
-      deps += [ "//build/rust/chromium_prelude:import_test" ]
+    if (enable_Cinaseek_prelude) {
+      deps += [ "//build/rust/Cinaseek_prelude:import_test" ]
     }
     if (enable_rust_cxx) {
       deps += [
@@ -74,7 +74,7 @@ group("deps") {
         "//build/rust/tests/test_rust_static_library",
       ]
     }
-    if (build_with_chromium) {
+    if (build_with_Cinaseek) {
       # This tests integration with a 3p library that downstream projects
       # don't need to have.
       deps += [ "//build/rust/tests/test_serde_json_lenient" ]

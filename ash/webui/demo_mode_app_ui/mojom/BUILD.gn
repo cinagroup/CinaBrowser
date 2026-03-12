@@ -1,10 +1,10 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//mojo/public/tools/bindings/mojom.gni")
 
-assert(is_chromeos, "Demo Mode App is ChromeOS only")
+assert(is_chromeos, "Demo Mode App is CinaseekOS only")
 
 mojom("mojom") {
   sources = [ "demo_mode_app_untrusted_ui.mojom" ]

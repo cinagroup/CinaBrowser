@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 // NOTE: The format of types has changed. 'FooType' is now
 //   'chrome.runtime.FooType'.
 // Please run the closure compiler before committing changes.
-// See https://chromium.googlesource.com/chromium/src/+/main/docs/closure_compilation.md
+// See https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/closure_compilation.md
 
 // TODO(crbug.com/543822): Disable automatic extern generation until fixed.
 // s/chrome.runtime.tabs.Tab/chrome.tabs.Tab/

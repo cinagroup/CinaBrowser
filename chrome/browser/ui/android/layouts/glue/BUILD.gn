@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,8 +13,8 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/layouts/LayoutManagerAppUtils.java",
-    "java/src/org/chromium/chrome/browser/layouts/ManagedLayoutManager.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/LayoutManagerAppUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/layouts/ManagedLayoutManager.java",
   ]
 
   deps = [

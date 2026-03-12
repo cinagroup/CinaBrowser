@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -15,7 +15,7 @@
 //
 // We also use token features.  These features have a unique name that is
 // constructed from the URL or page contents that we are classifying, for
-// example, "UrlDomain=chromium".  These features are also always set to 1.0
+// example, "UrlDomain=Cinaseek".  These features are also always set to 1.0
 // if they are present.
 //
 // The intermediate storage of the features for a URL is a FeatureMap, which is

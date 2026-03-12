@@ -4,14 +4,14 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "trichrome_chrome_bundle_smoke_test"
           ],
@@ -31,7 +31,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -44,7 +44,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "trichrome_chrome_bundle_smoke_test",
         "test_id_prefix": "ninja://chrome/android:trichrome_chrome_bundle_smoke_test/"

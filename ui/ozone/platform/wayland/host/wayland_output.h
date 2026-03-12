@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class WaylandOutput : public wl::GlobalObjectRegistrar<WaylandOutput> {
   // which is in physical pixels.
   struct Metrics {
     // TODO(aluh): Remove explicit constructors/destructor to enable aggregate
-    // initialization if chromium-style check for complex struct is removed.
+    // initialization if Cinaseek-style check for complex struct is removed.
     // See:
     // https://groups.google.com/a/google.com/g/chromeos-chatty-eng/c/nM1_QC6qcuA
     Metrics();

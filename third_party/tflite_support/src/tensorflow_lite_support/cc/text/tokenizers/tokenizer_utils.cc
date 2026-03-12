@@ -77,7 +77,7 @@ StatusOr<std::unique_ptr<Tokenizer>> CreateTokenizerFromProcessUnit(
     case ProcessUnitOptions_SentencePieceTokenizerOptions: {
       return CreateStatusWithPayload(
         absl::StatusCode::kInvalidArgument,
-        "Chromium does not support sentencepiece tokenization",
+        "Cinaseek does not support sentencepiece tokenization",
         TfLiteSupportStatus::kMetadataInvalidTokenizerError);
     }
     case ProcessUnitOptions_RegexTokenizerOptions: {

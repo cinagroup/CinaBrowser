@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -110,7 +110,7 @@ namespace {
 
 // The list of content settings types to display on the Page Info UI. THE
 // ORDER OF THESE ITEMS IS IMPORTANT and comes from https://crbug.com/610358. To
-// propose changing it, email security-dev@chromium.org.
+// propose changing it, email security-dev@Cinaseek.org.
 ContentSettingsType kPermissionType[] = {
     ContentSettingsType::GEOLOCATION,
     ContentSettingsType::GEOLOCATION_WITH_OPTIONS,
@@ -174,7 +174,7 @@ ContentSettingsType kPermissionType[] = {
 // The list of setting types which request permission for a pair of requesting
 // origin and top-level-origin that need to display entries in the Website
 // Settings UI. THE ORDER OF THESE ITEMS IS IMPORTANT. To propose changing it,
-// email security-dev@chromium.org.
+// email security-dev@Cinaseek.org.
 ContentSettingsType kTwoPatternPermissions[] = {
     ContentSettingsType::STORAGE_ACCESS,
 };
@@ -231,7 +231,7 @@ void ReportAnyInsecureContent(
 
 // The list of chooser types that need to display entries in the Website
 // Settings UI. THE ORDER OF THESE ITEMS IS IMPORTANT. To propose changing it,
-// email security-dev@chromium.org.
+// email security-dev@Cinaseek.org.
 const PageInfo::ChooserUIInfo kChooserUIInfo[] = {
     {ContentSettingsType::USB_CHOOSER_DATA,
      IDS_PAGE_INFO_USB_DEVICE_SECONDARY_LABEL,

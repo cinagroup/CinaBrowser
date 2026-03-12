@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -175,7 +175,7 @@ action("gen_structured_events_cpp") {
     "--output",
     rebase_path(outdir, root_build_dir),
     "--target",
-    "chromium",
+    "Cinaseek",
   ]
 }
 
@@ -252,7 +252,7 @@ action("gen_structured_metrics_validator") {
   ]
 
   if (is_chromeos) {
-    sources += [ "//tools/metrics/structured/sync/structured_chromiumos.xml" ]
+    sources += [ "//tools/metrics/structured/sync/structured_Cinaseekos.xml" ]
 
     args += [
       "--cros_input",

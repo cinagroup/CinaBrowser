@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class Iban {
   using InstrumentId = base::StrongAlias<class InstrumentIdTag, int64_t>;
 
   // A java IntDef@ is generated from this.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: IbanRecordType
   enum RecordType {
     // An IBAN extracted from a submitted form, whose record type is currently

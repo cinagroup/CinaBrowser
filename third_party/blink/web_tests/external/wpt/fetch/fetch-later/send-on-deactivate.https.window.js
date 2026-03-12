@@ -41,7 +41,7 @@ parallelPromiseTest(async t => {
 
   // Theoretically, the request should still be pending thus 0 request received.
   // However, 1 request is sent, as by default the WPT test runner, e.g.
-  // content_shell in Chromium, does not enable BackgroundSync permission,
+  // content_shell in Cinaseek, does not enable BackgroundSync permission,
   // resulting in forcing request sending on every navigation.
   await expectBeacon(uuid, {count: 1});
 }, `fetchLater() sends on page entering BFCache if BackgroundSync is off.`);
@@ -176,7 +176,7 @@ parallelPromiseTest(async t => {
 
   // Theoretically, the request should still be pending thus 0 request received.
   // However, 1 request is sent, as by default the WPT test runner, e.g.
-  // content_shell in Chromium, does not enable BackgroundSync permission,
+  // content_shell in Cinaseek, does not enable BackgroundSync permission,
   // resulting in forcing request sending on every navigation, even if page is
   // put into BFCache.
   await expectBeacon(uuid, {count: 1});

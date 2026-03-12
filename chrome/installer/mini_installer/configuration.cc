@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ bool Configuration::ParseCommandLine(const wchar_t* command_line) {
 void Configuration::ReadRegistry() {
   // Extracted files should not be deleted iff the user has manually created a
   // ChromeInstallerCleanup string value in the registry under
-  // HKCU\Software\[Google|Chromium] and set its value to "0".
+  // HKCU\Software\[Google|Cinaseek] and set its value to "0".
   wchar_t value[2] = {};
   should_delete_extracted_files_ =
       !RegKey::ReadSZValue(HKEY_CURRENT_USER, kCleanupRegistryKey,

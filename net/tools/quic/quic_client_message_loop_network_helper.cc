@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,10 +16,10 @@
 #include "net/log/net_log_source.h"
 #include "net/log/net_log_with_source.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/socket/udp_client_socket.h"
 #include "net/spdy/spdy_http_utils.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/quic_random.h"
@@ -34,7 +34,7 @@ using std::string;
 namespace net {
 
 QuicClientMessageLooplNetworkHelper::QuicClientMessageLooplNetworkHelper(
-    quic::QuicChromiumClock* clock,
+    quic::QuicCinaseekClock* clock,
     quic::QuicClientBase* client)
     : clock_(clock), client_(client) {}
 
@@ -87,7 +87,7 @@ bool QuicClientMessageLooplNetworkHelper::CreateUDPSocketAndBind(
   client_address_ = ToQuicSocketAddress(address);
 
   socket_.swap(socket);
-  packet_reader_ = std::make_unique<QuicChromiumPacketReader>(
+  packet_reader_ = std::make_unique<QuicCinaseekPacketReader>(
       std::move(socket_), clock_, this, kQuicYieldAfterPacketsRead,
       quic::QuicTime::Delta::FromMilliseconds(
           kQuicYieldAfterDurationMilliseconds),
@@ -126,7 +126,7 @@ QuicClientMessageLooplNetworkHelper::CreateQuicPacketWriter() {
   // so we set packet_reader_started_ to false to ensure that.
   packet_reader_started_ = false;
 
-  return new QuicChromiumPacketWriter(
+  return new QuicCinaseekPacketWriter(
       packet_reader_->socket(),
       base::SingleThreadTaskRunner::GetCurrentDefault().get());
 }

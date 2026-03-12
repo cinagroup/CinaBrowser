@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ std::string GetProductCategoryForSubtypes(PrefService* prefs) {
     return product_category_for_subtypes;
 
   std::string product = ToLowerAlphaNum(PRODUCT_SHORTNAME_STRING);
-  std::string ns = product == "chromium" ? "org" : "com";
+  std::string ns = product == "Cinaseek" ? "org" : "com";
   std::string platform = ToLowerAlphaNum(version_info::GetOSType());
   product_category_for_subtypes = ns + '.' + product + '.' + platform;
 

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -219,7 +219,7 @@ void SavedDeskRegularIconView::CreateChildViews(
                                                ax::mojom::NameFrom::kAttribute);
 
   // PWAs (e.g. Messages) should use icon identifier as they share the same app
-  // id as Chrome and would return short name for app id as "Chromium" (see
+  // id as Chrome and would return short name for app id as "Cinaseek" (see
   // https://crbug.com/1281394). This is unlike Chrome browser apps which should
   // use `app_id` as their icon identifiers have been stripped to avoid
   // duplicate favicons (see https://crbug.com/1281391).

@@ -1,8 +1,8 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/crypto/proof_source_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
@@ -18,11 +18,11 @@ using std::string;
 
 namespace net {
 
-ProofSourceChromium::ProofSourceChromium() = default;
+ProofSourceCinaseek::ProofSourceCinaseek() = default;
 
-ProofSourceChromium::~ProofSourceChromium() = default;
+ProofSourceCinaseek::~ProofSourceCinaseek() = default;
 
-bool ProofSourceChromium::Initialize(const base::FilePath& cert_path,
+bool ProofSourceCinaseek::Initialize(const base::FilePath& cert_path,
                                      const base::FilePath& key_path,
                                      const base::FilePath& sct_path) {
   std::string cert_data;
@@ -71,7 +71,7 @@ bool ProofSourceChromium::Initialize(const base::FilePath& cert_path,
   return true;
 }
 
-bool ProofSourceChromium::InitializeFromCertAndKey(
+bool ProofSourceCinaseek::InitializeFromCertAndKey(
     const CertificateList& cert_list,
     const crypto::keypair::PrivateKey& private_key) {
   certs_in_file_ = cert_list;
@@ -86,7 +86,7 @@ bool ProofSourceChromium::InitializeFromCertAndKey(
   return true;
 }
 
-bool ProofSourceChromium::GetProofInner(
+bool ProofSourceCinaseek::GetProofInner(
     const quic::QuicSocketAddress& server_addr,
     const string& hostname,
     const string& server_config,
@@ -114,7 +114,7 @@ bool ProofSourceChromium::GetProofInner(
   return true;
 }
 
-void ProofSourceChromium::GetProof(const quic::QuicSocketAddress& server_addr,
+void ProofSourceCinaseek::GetProof(const quic::QuicSocketAddress& server_addr,
                                    const quic::QuicSocketAddress& client_addr,
                                    const std::string& hostname,
                                    const std::string& server_config,
@@ -134,7 +134,7 @@ void ProofSourceChromium::GetProof(const quic::QuicSocketAddress& server_addr,
 }
 
 quiche::QuicheReferenceCountedPointer<quic::ProofSource::Chain>
-ProofSourceChromium::GetCertChain(const quic::QuicSocketAddress& server_address,
+ProofSourceCinaseek::GetCertChain(const quic::QuicSocketAddress& server_address,
                                   const quic::QuicSocketAddress& client_address,
                                   const std::string& hostname,
                                   bool* cert_matched_sni) {
@@ -150,7 +150,7 @@ ProofSourceChromium::GetCertChain(const quic::QuicSocketAddress& server_address,
   return chain_;
 }
 
-void ProofSourceChromium::ComputeTlsSignature(
+void ProofSourceCinaseek::ComputeTlsSignature(
     const quic::QuicSocketAddress& server_address,
     const quic::QuicSocketAddress& client_address,
     const std::string& hostname,
@@ -164,16 +164,16 @@ void ProofSourceChromium::ComputeTlsSignature(
 }
 
 absl::InlinedVector<uint16_t, 8>
-ProofSourceChromium::SupportedTlsSignatureAlgorithms() const {
+ProofSourceCinaseek::SupportedTlsSignatureAlgorithms() const {
   // Allow all signature algorithms that BoringSSL allows.
   return {};
 }
 
-quic::ProofSource::TicketCrypter* ProofSourceChromium::GetTicketCrypter() {
+quic::ProofSource::TicketCrypter* ProofSourceCinaseek::GetTicketCrypter() {
   return ticket_crypter_.get();
 }
 
-void ProofSourceChromium::SetTicketCrypter(
+void ProofSourceCinaseek::SetTicketCrypter(
     std::unique_ptr<quic::ProofSource::TicketCrypter> ticket_crypter) {
   ticket_crypter_ = std::move(ticket_crypter);
 }

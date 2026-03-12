@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -235,7 +235,7 @@ void TabUsageScenarioTracker::OnMediaDestroyed(
   // 6. Browser::IsFullscreenForTabOrPending() accesses a deleted
   //    `exclusive_access_manager_`.
   // According to a DCHECK in ~Browser
-  // (https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/ui/browser.cc;l=575;drc=60e7a86ffafb2aafa40cb00214d6b813b41c6f75),
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/browser/ui/browser.cc;l=575;drc=60e7a86ffafb2aafa40cb00214d6b813b41c6f75),
   // a Browser's WebContents should be deleted before the Browser itself is
   // deleted, but it looks like it's not always the case.
   if (web_contents->IsBeingDestroyed())

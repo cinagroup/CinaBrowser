@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -75,7 +75,7 @@ struct RootSpec {
 //     dup.mp4       video/mp4   dup3-id
 //     dup.mp4       video/mp4   dup4-id
 //   ro-dir/         dir         ro-dir-id     // Read-only directory
-constexpr char kAuthority[] = "org.chromium.test";
+constexpr char kAuthority[] = "org.Cinaseek.test";
 
 // DocumentSpecs
 constexpr DocumentSpec kRootSpec{
@@ -1558,7 +1558,7 @@ TEST_F(ArcDocumentsProviderRootTest, ResolveToContentUrl) {
       base::BindOnce(
           [](base::RunLoop* run_loop, const GURL& url) {
             run_loop->Quit();
-            EXPECT_EQ(GURL("content://org.chromium.test/document/photo-id"),
+            EXPECT_EQ(GURL("content://org.Cinaseek.test/document/photo-id"),
                       url);
           },
           &run_loop));
@@ -1572,7 +1572,7 @@ TEST_F(ArcDocumentsProviderRootTest, ResolveToContentUrlRoot) {
       base::BindOnce(
           [](base::RunLoop* run_loop, const GURL& url) {
             run_loop->Quit();
-            EXPECT_EQ(GURL("content://org.chromium.test/document/root-id"),
+            EXPECT_EQ(GURL("content://org.Cinaseek.test/document/root-id"),
                       url);
           },
           &run_loop));
@@ -1600,7 +1600,7 @@ TEST_F(ArcDocumentsProviderRootTest, ResolveToContentUrlDups) {
       base::BindOnce(
           [](base::RunLoop* run_loop, const GURL& url) {
             run_loop->Quit();
-            EXPECT_EQ(GURL("content://org.chromium.test/document/dup3-id"),
+            EXPECT_EQ(GURL("content://org.Cinaseek.test/document/dup3-id"),
                       url);
           },
           &run_loop));

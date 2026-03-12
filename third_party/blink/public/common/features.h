@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -767,7 +767,7 @@ BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kJXLImageFormat);
 
 // Kill-switch for the fetch keepalive request infra migration.
 // If enabled, all keepalive requests will be proxied via the browser process.
-// Design Doc: https://bit.ly/chromium-keepalive-migration
+// Design Doc: https://bit.ly/Cinaseek-keepalive-migration
 // Tracker: https://crbug.com/1356128
 BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kKeepAliveInBrowserMigration);
 
@@ -1217,9 +1217,9 @@ BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kLoadingTasksUnfreezable);
 BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(
     kLogUnexpectedIPCPostedToBackForwardCachedDocuments);
 
-BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kLowLatencyCanvas2dImageChromium);
+BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kLowLatencyCanvas2dImageCinaseek);
 
-BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kLowLatencyWebGLImageChromium);
+BLINK_COMMON_EXPORT BASE_DECLARE_FEATURE(kLowLatencyWebGLImageCinaseek);
 
 // If enabled, async scripts will be run on a lower priority task queue.
 // See https://crbug.com/1348467.

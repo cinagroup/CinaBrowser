@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ message of the policies value encoded in base64.
 The root dictionary also contains a "policy_user" key which indicates the
 current user.
 All the fields are described in the device_management_backend.proto
-(https://source.chromium.org/chromium/chromium/src/+/main:components/policy/proto/device_management_backend.proto;l=516?q=PolicyData)
+(https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:components/policy/proto/device_management_backend.proto;l=516?q=PolicyData)
 
 Example:
 {

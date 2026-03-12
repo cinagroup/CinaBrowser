@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ TEST_F(UnpackerTest, UnpackFullCrx) {
       "jebgalgnebhfojomionfpkfelancnnkf", "UnpackerTest",
       std::vector<uint8_t>(std::begin(jebg_hash), std::end(jebg_hash)),
       GetTestFilePath("jebgalgnebhfojomionfpkfelancnnkf.crx"),
-      base::MakeRefCounted<update_client::UnzipChromiumFactory>(
+      base::MakeRefCounted<update_client::UnzipCinaseekFactory>(
           base::BindRepeating(&unzip::LaunchInProcessUnzipper))
           ->Create(),
       crx_file::VerifierFormat::CRX3,
@@ -115,7 +115,7 @@ TEST_F(UnpackerTest, UnpackWithVerifiedContents) {
       "gndmhdcefbhlchkhipcnnbkcmicncehk", "UnpackerTest",
       std::vector<uint8_t>(),
       GetTestFilePath("gndmhdcefbhlchkhipcnnbkcmicncehk_22_314.crx3"),
-      base::MakeRefCounted<update_client::UnzipChromiumFactory>(
+      base::MakeRefCounted<update_client::UnzipCinaseekFactory>(
           base::BindRepeating(&unzip::LaunchInProcessUnzipper))
           ->Create(),
       crx_file::VerifierFormat::CRX3,

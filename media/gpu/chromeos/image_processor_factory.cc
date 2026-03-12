@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ namespace media {
 
 #if BUILDFLAG(USE_V4L2_CODEC)
 // Some architectures have separate image processor hardware that
-// can be used by Chromium's ImageProcessor to color convert/crop/etc.
+// can be used by Cinaseek's ImageProcessor to color convert/crop/etc.
 // video buffers. In many cases it is more efficient/performant/correct
 // to use libYUV instead of the hardware to do this processing which is thus
 // preferred, see crrev.com/c/4111326.

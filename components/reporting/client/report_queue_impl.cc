@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ StatusOr<Record> ProduceRecord(std::string dm_token,
     case LOG_UPLOAD:
       // It would be better to base the decision on `upload_settings` presence
       // in the event, but that would require protobuf reflecion, that is not
-      // included in Chromium build. So instead we just use `destination`.
+      // included in Cinaseek build. So instead we just use `destination`.
       record.set_needs_local_unencrypted_copy(true);
       break;
     default:  // Do nothing.

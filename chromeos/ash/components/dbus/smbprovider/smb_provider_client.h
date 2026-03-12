@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@
 
 namespace ash {
 
-// SmbProviderClient is used to communicate with the org.chromium.SmbProvider
+// SmbProviderClient is used to communicate with the org.Cinaseek.SmbProvider
 // service. All methods should be called from the origin thread (UI thread)
 // which initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(ASH_DBUS_SMBPROVIDER) SmbProviderClient

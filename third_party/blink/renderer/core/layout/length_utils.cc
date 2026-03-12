@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1044,7 +1044,7 @@ LogicalSize ComputeReplacedSizeInternal(const BlockNode& node,
     // Replaced elements in quirks-mode resolve their min/max block-sizes
     // against a different size than the main size. See:
     //  - https://www.w3.org/TR/CSS21/visudet.html#min-max-heights
-    //  - https://bugs.chromium.org/p/chromium/issues/detail?id=385877
+    //  - https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=385877
     // For the history on this behavior. Fortunately if this is the case we can
     // just use the given available size to resolve these sizes against.
     const LayoutUnit min_max_percentage_resolution_size =

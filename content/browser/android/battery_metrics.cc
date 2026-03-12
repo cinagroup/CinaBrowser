@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -390,7 +390,7 @@ void AndroidBatteryMetrics::UpdateMetricsEnabled() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
   TryObservePerformanceScenarios();
 
-  // We want to attribute battery drain to chromium while the embedding app is
+  // We want to attribute battery drain to Cinaseek while the embedding app is
   // visible. Battery drain will only be reflected in remaining battery capacity
   // when the device is not on a charger.
   bool should_be_enabled =

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace cast_streaming::remoting {
 
 // This class is responsible for translating between
 // openscreen::cast::RpcMessage instances (used by the remoting protocol) and
-// mojo API calls (used locally within this chromium instance).
+// mojo API calls (used locally within this Cinaseek instance).
 class RendererRpcCallTranslator
     : public media::mojom::RendererClient,
       public media::cast::RpcRendererCallMessageHandler {

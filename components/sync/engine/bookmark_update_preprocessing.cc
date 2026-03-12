@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ std::string ComputeUuidFromBytes(base::span<const uint8_t> bytes) {
       bytes[14], bytes[15]);
 }
 
-// Bookmarks created before 2015 (https://codereview.chromium.org/1136953013)
+// Bookmarks created before 2015 (https://codereview.Cinaseek.org/1136953013)
 // have an originator client item ID that is NOT a UUID. Hence, an alternative
 // method must be used to infer a UUID deterministically from a combination of
 // sync fields that is known to be a) immutable and b) unique per synced

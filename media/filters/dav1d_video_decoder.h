@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ class MEDIA_EXPORT Dav1dVideoDecoder : public OffloadableVideoDecoder {
 
   SEQUENCE_CHECKER(sequence_checker_);
 
-  // "Zero" filled UV data for monochrome images to use since Chromium doesn't
+  // "Zero" filled UV data for monochrome images to use since Cinaseek doesn't
   // have support for I400P(8|10|12) images.
   scoped_refptr<base::RefCountedMemory> fake_uv_data_;
 

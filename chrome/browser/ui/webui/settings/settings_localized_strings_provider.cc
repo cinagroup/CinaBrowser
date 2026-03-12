@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -342,7 +342,7 @@ void AddAboutStrings(content::WebUIDataSource* html_source, Profile* profile) {
           base::Time::Now()));
 
   std::u16string license = l10n_util::GetStringFUTF16(
-      IDS_VERSION_UI_LICENSE, chrome::kChromiumProjectURL,
+      IDS_VERSION_UI_LICENSE, chrome::kCinaseekProjectURL,
       chrome::kChromeUICreditsURL16,
       l10n_util::GetStringUTF16(IDS_SETTINGS_OPENS_IN_NEW_TAB));
   html_source->AddString("aboutProductLicense", license);

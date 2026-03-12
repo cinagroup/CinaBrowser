@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -537,7 +537,7 @@ void WidgetBase::UpdateVisualProperties(
   // browser windows (on Windows OS) and thus would be the same for all
   // RenderWidgets, so clobbering each other works out since only the HDR bit is
   // used. See https://crbug.com/803451 and
-  // https://chromium-review.googlesource.com/c/chromium/src/+/852912/15#message-68bbd3e25c3b421a79cd028b2533629527d21fee
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/852912/15#message-68bbd3e25c3b421a79cd028b2533629527d21fee
   Platform::Current()->SetRenderingColorSpace(
       screen_info.display_color_spaces.GetScreenInfoColorSpace());
 
@@ -1154,7 +1154,7 @@ void WidgetBase::UpdateTextInputStateInternal(bool show_virtual_keyboard,
   }
   ui::TextInputType new_type = GetTextInputType();
   if (IsDateTimeInput(new_type))
-    return;  // Not considered as a text input field in WebKit/Chromium.
+    return;  // Not considered as a text input field in WebKit/Cinaseek.
 
   FrameWidget* frame_widget = client_->FrameWidget();
 

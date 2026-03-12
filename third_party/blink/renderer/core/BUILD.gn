@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -491,7 +491,7 @@ blink_core_sources("core_hot") {
   defines = []
 
   # TODO(ajwong) this is of mirror
-  # https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/core.gni;l=26
+  # https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/master:third_party/blink/renderer/core/core.gni;l=26
   # to undo the configs which is fragile. Find a better way.
   #
   # 'Hot' code should always be compiled for speed in non-debug builds.

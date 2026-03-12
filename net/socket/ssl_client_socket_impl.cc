@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -232,7 +232,7 @@ class SSLClientSocketImpl::SSLContext {
     return socket->PrivateKeySignCallback(
         algorithm,
         // SAFETY:
-        // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#ssl_private_key_method_st
+        // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#ssl_private_key_method_st
         // `ssl_private_key_method_st::sign` implies that the value of `in_len`
         // is equal to the actual size of `in`.
         UNSAFE_BUFFERS(base::span(in, in_len)));
@@ -245,7 +245,7 @@ class SSLClientSocketImpl::SSLContext {
     SSLClientSocketImpl* socket = GetInstance()->GetClientSocketFromSSL(ssl);
     return socket->PrivateKeyCompleteCallback(
         // SAFETY:
-        // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#ssl_private_key_method_st
+        // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#ssl_private_key_method_st
         // The comment of `ssl_private_key_method_st::complete` indicates that
         // `max_out` is the actual size of the buffer.
         UNSAFE_BUFFERS(base::span(out, max_out)), out_len);
@@ -306,7 +306,7 @@ std::vector<uint8_t> SSLClientSocketImpl::GetECHRetryConfigs() {
   size_t retry_configs_len;
   SSL_get0_ech_retry_configs(ssl_.get(), &retry_configs, &retry_configs_len);
   // SAFETY:
-  // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_get0_ech_retry_configs
+  // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_get0_ech_retry_configs
   // says `retry_configs` and `retry_configs_len` define a buffer containing a
   // serialized ECHConfigList.
   return UNSAFE_BUFFERS(
@@ -320,7 +320,7 @@ SSLClientSocketImpl::GetServerTrustAnchorIDs() {
   SSL_get0_peer_available_trust_anchors(ssl_.get(), &available_trust_anchor_ids,
                                         &available_trust_anchor_ids_len);
   // SAFETY:
-  // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_get0_peer_available_trust_anchors
+  // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_get0_peer_available_trust_anchors
   // says `available_trust_anchor_ids` and `available_trust_anchor_ids_len`
   // define a buffer containing a list of Trust Anchor IDs in wire format
   // (length-prefixed non-empty strings);
@@ -1108,7 +1108,7 @@ ssl_verify_result_t SSLClientSocketImpl::VerifyCert() {
     // be interpreted as IP addresses. Distinguishing IPv4 literals from DNS
     // names varies by spec, however. BoringSSL internally checks for an LDH
     // string, and that the last component is non-numeric. This should be
-    // sufficient for the web, but check with Chromium's parser, in case they
+    // sufficient for the web, but check with Cinaseek's parser, in case they
     // diverge.
     //
     // See section 6.1.7 of draft-ietf-tls-esni-13.
@@ -1121,7 +1121,7 @@ ssl_verify_result_t SSLClientSocketImpl::VerifyCert() {
   size_t ocsp_response_len;
   SSL_get0_ocsp_response(ssl_.get(), &ocsp_response_raw, &ocsp_response_len);
   // SAFETY:
-  // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_get0_ocsp_response
+  // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_get0_ocsp_response
   // The comment of `SSL_get0_ocsp_response` says that `ocsp_response_raw` and
   // `ocsp_response_len` point to `ocsp_response_len` bytes of an OCSP response
   // from the server.
@@ -1132,7 +1132,7 @@ ssl_verify_result_t SSLClientSocketImpl::VerifyCert() {
   size_t sct_list_len;
   SSL_get0_signed_cert_timestamp_list(ssl_.get(), &sct_list_raw, &sct_list_len);
   // SAFETY:
-  // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_get0_signed_cert_timestamp_list
+  // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_get0_signed_cert_timestamp_list
   // The comment of `SSL_get0_signed_cert_timestamp_list` says that
   // `sct_list_raw` and `sct_list_len` point to `sct_list_len` bytes of SCT
   // information from the server.

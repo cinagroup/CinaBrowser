@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 #include "net/http/transport_security_state.h"
 #include "net/http/transport_security_state_test_util.h"
 #include "net/log/net_log.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
 #include "net/quic/mock_quic_data.h"
@@ -172,9 +172,9 @@ class QuicSessionPoolTestBase : public WithTaskEnvironment {
                     bool require_dns_https_alpn = false);
 
   // Get the pending, not activated session, if there is only one session alive.
-  QuicChromiumClientSession* GetPendingSession(
+  QuicCinaseekClientSession* GetPendingSession(
       const url::SchemeHostPort& scheme_host_port);
-  QuicChromiumClientSession* GetActiveSession(
+  QuicCinaseekClientSession* GetActiveSession(
       const url::SchemeHostPort& scheme_host_port,
       PrivacyMode privacy_mode = PRIVACY_MODE_DISABLED,
       const NetworkAnonymizationKey& network_anonymization_key =
@@ -189,9 +189,9 @@ class QuicSessionPoolTestBase : public WithTaskEnvironment {
   int GetSourcePortForNewSessionInner(const url::SchemeHostPort& destination,
                                       bool goaway_received);
 
-  static ProofVerifyDetailsChromium DefaultProofVerifyDetails();
+  static ProofVerifyDetailsCinaseek DefaultProofVerifyDetails();
 
-  static ProofVerifyDetailsChromium GoogleProofVerifyDetails();
+  static ProofVerifyDetailsCinaseek GoogleProofVerifyDetails();
 
   void NotifyIPAddressChanged();
 

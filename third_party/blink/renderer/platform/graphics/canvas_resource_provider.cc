@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 #include "components/viz/common/gpu/context_lost_observer.h"
 #include "components/viz/common/gpu/raster_context_provider.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/context_support.h"
 #include "gpu/command_buffer/client/raster_interface.h"
 #include "gpu/command_buffer/common/capabilities.h"
@@ -688,7 +688,7 @@ bool CanvasResourceProviderSharedImage::WritePixels(
   // the case of a subsequent CopyOnWrite.
   // TODO(crbug.com/352263194): Logically this bool must already be true
   // (see discussion here:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/7557841/comment/bb38e497_ef1efdbc/).
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/7557841/comment/bb38e497_ef1efdbc/).
   // Verify that this is the case and update the code here.
   must_preserve_content_on_copy_on_write_ = true;
 

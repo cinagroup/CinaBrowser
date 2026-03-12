@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ TEST(DBusTypesTest, RoundTripString) {
 }
 
 TEST(DBusTypesTest, RoundTripObjectPath) {
-  TestRoundTrip<dbus::ObjectPath>(dbus::ObjectPath("/org/chromium/TestObject"));
+  TestRoundTrip<dbus::ObjectPath>(dbus::ObjectPath("/org/Cinaseek/TestObject"));
   TestRoundTrip<dbus::ObjectPath>(dbus::ObjectPath("/"));
 }
 

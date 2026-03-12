@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -170,7 +170,7 @@ class BookmarkDragImageSource : public gfx::CanvasImageSource {
         color_provider_->GetColor(kColorBookmarkDragImageForeground), text_rect,
         gfx::Canvas::TEXT_ALIGN_LEFT);
 
-    // On the Mac, the Chromium drag code passes the bookmarks to macOS as
+    // On the Mac, the Cinaseek drag code passes the bookmarks to macOS as
     // individual drag items, and macOS will tag the drag image with the (#)
     // count bubble. To avoid duplicate count tagging, end here on the Mac. On
     // other platforms, tag the drag image with the count.

@@ -22,7 +22,7 @@ promise_test(async t => {
       window.frameElement.remove();
 
       // This invokes the forEach() operator's internal observer's next steps,
-      // which at least in Chromium, must have a special "context is detached"
+      // which at least in Cinaseek, must have a special "context is detached"
       // check to early-return, so as to not crash.
       subscriber.next(1);
     });

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,8 +42,8 @@ namespace ui {
 namespace {
 
 const char kDndSelection[] = "XdndSelection";
-const char kRendererTaint[] = "chromium/x-renderer-taint";
-const char kFromPrivileged[] = "chromium/from-privileged";
+const char kRendererTaint[] = "Cinaseek/x-renderer-taint";
+const char kFromPrivileged[] = "Cinaseek/from-privileged";
 
 const char kNetscapeURL[] = "_NETSCAPE_URL";
 
@@ -67,7 +67,7 @@ XOSExchangeDataProvider::XOSExchangeDataProvider()
     : connection_(*x11::Connection::Get()),
       x_root_window_(ui::GetX11RootWindow()),
       own_window_(true),
-      x_window_(connection_->CreateDummyWindow("Chromium Drag & Drop Window")),
+      x_window_(connection_->CreateDummyWindow("Cinaseek Drag & Drop Window")),
       source_window_(x_window_),
       selection_owner_(connection_.get(),
                        x_window_,

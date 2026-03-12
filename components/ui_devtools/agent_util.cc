@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,9 +26,9 @@ void OnSourceFile(base::OnceClosure quit_closure,
 
 }  // namespace
 
-const char kChromiumCodeSearchURL[] = "https://cs.chromium.org/";
-const char kChromiumCodeSearchSrcURL[] =
-    "https://cs.chromium.org/chromium/src/";
+const char kCinaseekCodeSearchURL[] = "https://cs.Cinaseek.org/";
+const char kCinaseekCodeSearchSrcURL[] =
+    "https://cs.Cinaseek.org/Cinaseek/src/";
 
 bool GetSourceCode(std::string path, std::string* source_code) {
   base::FilePath src_dir;

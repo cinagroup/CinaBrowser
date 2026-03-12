@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -32,8 +32,8 @@ template("ios_single_toolchain") {
       # Disable partition alloc for app extensions except for blink.
       if (ios_is_app_extension && !use_blink) {
         # As use_partition_alloc is defined outside of //build, check that
-        # the build is part of chromium before overriding the variable.
-        if (build_with_chromium) {
+        # the build is part of Cinaseek before overriding the variable.
+        if (build_with_Cinaseek) {
           use_partition_alloc = false
         }
       }

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -40,15 +40,15 @@ cargo_crate("addr2line") {
       "A cross-platform symbolication library written in Rust, using `gimli`"
   cargo_pkg_repository = "https://github.com/gimli-rs/addr2line"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -115,15 +115,15 @@ cargo_crate("adler2") {
       "A simple clean-room implementation of the Adler-32 checksum"
   cargo_pkg_repository = "https://github.com/oyvindln/adler2"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -251,15 +251,15 @@ cargo_crate("alloc") {
   cargo_pkg_description = "The Rust core allocation and collections library"
   cargo_pkg_repository = "https://github.com/rust-lang/rust.git"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":compiler_builtins",
     ":core",
@@ -303,15 +303,15 @@ cargo_crate("cfg_if") {
   cargo_pkg_description = "A macro to ergonomically define an item depending on a large number of #[cfg] parameters. Structured like an if-else chain, the first matching branch is the item that gets emitted."
   cargo_pkg_repository = "https://github.com/rust-lang/cfg-if"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     "//build/rust/std:profiler_builtins_group",
@@ -554,19 +554,19 @@ cargo_crate("compiler_builtins") {
   cargo_pkg_description = "Compiler intrinsics used by the Rust compiler."
   cargo_pkg_repository = "https://github.com/rust-lang/compiler-builtins"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
   library_configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":max_codegen_units",
   ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":core",
     "//build/rust/std:std_build_deps",
@@ -1119,19 +1119,19 @@ cargo_crate("core") {
   cargo_pkg_description = "The Rust Core Library"
   cargo_pkg_repository = "https://github.com/rust-lang/rust.git"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
   library_configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/rust:panic_immediate_abort",
   ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [ "//build/rust/std:std_build_deps" ]
   rustenv = [
     "CFG_DISABLE_UNSTABLE_FEATURES=0",
@@ -1169,15 +1169,15 @@ cargo_crate("getopts") {
   cargo_pkg_description = "getopts-like option parsing"
   cargo_pkg_repository = "https://github.com/rust-lang/getopts"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     ":rustc_std_workspace_std",
@@ -1277,15 +1277,15 @@ cargo_crate("gimli") {
       "A library for reading and writing the DWARF debugging format."
   cargo_pkg_repository = "https://github.com/gimli-rs/gimli"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -1374,15 +1374,15 @@ cargo_crate("hashbrown") {
   cargo_pkg_description = "A Rust port of Google's SwissTable hash map"
   cargo_pkg_repository = "https://github.com/rust-lang/hashbrown"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_alloc",
     ":rustc_std_workspace_core",
@@ -1750,16 +1750,16 @@ cargo_crate("libc") {
   cargo_pkg_description = "Raw FFI bindings to platform libraries like libc."
   cargo_pkg_repository = "https://github.com/rust-lang/libc"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [ "//build/rust/std:std_build_deps" ]
   if (!is_win) {
     deps += [ ":rustc_std_workspace_core" ]
@@ -1855,15 +1855,15 @@ cargo_crate("memchr") {
   cargo_pkg_description = "Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for 1, 2 or 3 byte search and single substring search."
   cargo_pkg_repository = "https://github.com/BurntSushi/memchr"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -1932,15 +1932,15 @@ cargo_crate("miniz_oxide") {
   cargo_pkg_repository =
       "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -2084,15 +2084,15 @@ cargo_crate("object") {
       "A unified interface for reading and writing object file formats."
   cargo_pkg_repository = "https://github.com/gimli-rs/object"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",
@@ -2167,15 +2167,15 @@ cargo_crate("panic_abort") {
   cargo_pkg_description = "Implementation of Rust panics via process aborts"
   cargo_pkg_repository = "https://github.com/rust-lang/rust.git"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     "//build/rust/std:profiler_builtins_group",
@@ -2244,15 +2244,15 @@ cargo_crate("proc_macro") {
   cargo_pkg_version = "0.0.0"
   cargo_pkg_name = "proc_macro"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":core",
     ":rustc_literal_escaper",
@@ -2299,16 +2299,16 @@ cargo_crate("profiler_builtins") {
   cargo_pkg_version = "0.0.0"
   cargo_pkg_name = "profiler_builtins"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [ "//build/rust/std:std_build_deps" ]
   rustenv = [
     "CFG_DISABLE_UNSTABLE_FEATURES=0",
@@ -2347,15 +2347,15 @@ cargo_crate("rustc_demangle") {
   cargo_pkg_description = "Rust compiler symbol demangling."
   cargo_pkg_repository = "https://github.com/rust-lang/rustc-demangle"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     "//build/rust/std:profiler_builtins_group",
@@ -2401,15 +2401,15 @@ cargo_crate("rustc_literal_escaper") {
   cargo_pkg_description = "Provides code to unescape string literals"
   cargo_pkg_repository = "https://github.com/rust-lang/literal-escaper"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     "//build/rust/std:profiler_builtins_group",
@@ -2451,16 +2451,16 @@ cargo_crate("rustc_std_workspace_alloc") {
   cargo_pkg_name = "rustc-std-workspace-alloc"
   cargo_pkg_description = "Hack for the compiler's own build system"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":alloc",
     "//build/rust/std:std_build_deps",
@@ -2497,16 +2497,16 @@ cargo_crate("rustc_std_workspace_core") {
   cargo_pkg_name = "rustc-std-workspace-core"
   cargo_pkg_description = "Hack for the compiler's own build system"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
     "//build/config/coverage:default_coverage",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":compiler_builtins",
     ":core",
@@ -2547,15 +2547,15 @@ cargo_crate("rustc_std_workspace_std") {
   cargo_pkg_name = "rustc-std-workspace-std"
   cargo_pkg_description = "Hack for the compiler's own build system"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":std",
     "//build/rust/std:profiler_builtins_group",
@@ -3332,18 +3332,18 @@ cargo_crate("std") {
   cargo_pkg_description = "The Rust Standard Library"
   cargo_pkg_repository = "https://github.com/rust-lang/rust.git"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
   library_configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/rust:panic_immediate_abort",
   ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":alloc",
     ":cfg_if",
@@ -3476,15 +3476,15 @@ cargo_crate("std_detect") {
   cargo_pkg_description =
       "`std::detect` - Rust's standard library run-time CPU feature detection."
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_alloc",
     ":rustc_std_workspace_core",
@@ -3535,15 +3535,15 @@ cargo_crate("sysroot") {
   cargo_pkg_version = "0.0.0"
   cargo_pkg_name = "sysroot"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":proc_macro",
     ":profiler_builtins",
@@ -3623,15 +3623,15 @@ cargo_crate("test") {
   cargo_pkg_version = "0.0.0"
   cargo_pkg_name = "test"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":core",
     ":getopts",
@@ -3691,15 +3691,15 @@ cargo_crate("unwind") {
   cargo_pkg_name = "unwind"
   cargo_pkg_repository = "https://github.com/rust-lang/rust.git"
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     ":rustc_std_workspace_core",
     "//build/rust/std:profiler_builtins_group",
@@ -3748,15 +3748,15 @@ cargo_crate("windows_link") {
   cargo_pkg_name = "windows-link"
   cargo_pkg_description = "A drop-in replacement for the real windows-link crate for use in std only."
   library_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   executable_configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/compiler:disallow_unstable_features",
   ]
-  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   deps = [
     "//build/rust/std:profiler_builtins_group",
     "//build/rust/std:std_build_deps",

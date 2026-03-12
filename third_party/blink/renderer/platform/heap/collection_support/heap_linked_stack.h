@@ -43,8 +43,8 @@ namespace blink {
 // of memory and heap fragmentation.
 //
 // The API was originally implemented on the call stack by LinkedStack<>
-// (now removed: https://codereview.chromium.org/2761853003/).
-// See https://codereview.chromium.org/17314010 for the original use-case.
+// (now removed: https://codereview.Cinaseek.org/2761853003/).
+// See https://codereview.Cinaseek.org/17314010 for the original use-case.
 template <typename T>
 class GCedHeapLinkedStack final
     : public GarbageCollected<GCedHeapLinkedStack<T>> {

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,9 +18,9 @@ source_set("android") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/installedapp/InstalledAppProviderImpl.java",
-    "java/src/org/chromium/components/installedapp/PackageHash.java",
-    "java/src/org/chromium/components/installedapp/PackageManagerDelegate.java",
+    "java/src/org/Cinaseek/components/installedapp/InstalledAppProviderImpl.java",
+    "java/src/org/Cinaseek/components/installedapp/PackageHash.java",
+    "java/src/org/Cinaseek/components/installedapp/PackageManagerDelegate.java",
   ]
 
   deps = [
@@ -39,15 +39,15 @@ android_library("java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/installedapp/InstalledAppProviderImpl.java",
-    "java/src/org/chromium/components/installedapp/PackageHash.java",
+    "java/src/org/Cinaseek/components/installedapp/InstalledAppProviderImpl.java",
+    "java/src/org/Cinaseek/components/installedapp/PackageHash.java",
   ]
 }
 
 android_library("unit_device_javatests") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/components/installedapp/InstalledAppProviderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/installedapp/InstalledAppProviderTest.java" ]
   deps = [
     ":java",
     "//base:base_java",
@@ -67,7 +67,7 @@ android_library("unit_device_javatests") {
 
 robolectric_library("junit") {
   sources =
-      [ "java/src/org/chromium/components/installedapp/PackageHashTest.java" ]
+      [ "java/src/org/Cinaseek/components/installedapp/PackageHashTest.java" ]
   deps = [
     ":java",
     "//base:base_java_test_support",

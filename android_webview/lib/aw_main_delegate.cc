@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -119,7 +119,7 @@ std::optional<int> AwMainDelegate::BasicStartupComplete() {
   // but it does support Web Speech Recognition API (crbug.com/487255).
   cl->AppendSwitch(switches::kDisableSpeechSynthesisAPI);
 
-  // WebView does not (yet) save Chromium data during shutdown, so add setting
+  // WebView does not (yet) save Cinaseek data during shutdown, so add setting
   // for Chrome to aggressively persist DOM Storage to minimize data loss.
   // http://crbug.com/479767
   cl->AppendSwitch(switches::kEnableAggressiveDOMStorageFlushing);

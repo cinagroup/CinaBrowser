@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -39,8 +39,8 @@ if (is_android) {
   import("//build_overrides/build.gni")
   import("abi.gni")
 
-  if (build_with_chromium) {
-    # Some non-chromium projects (e.g. WebRTC) use our build configs
+  if (build_with_Cinaseek) {
+    # Some non-Cinaseek projects (e.g. WebRTC) use our build configs
     # heavily but don't write gclient args files.
 
     import("//build/config/gclient_args.gni")
@@ -60,11 +60,11 @@ if (is_android) {
   # we can decide if we have to pull in definitions from the internal config
   # early.
   declare_args() {
-    # Enables using the internal Chrome for Android repository. The default
+    # Enables using the internal Cinaseek for Android repository. The default
     # is set from gclient vars, with target_os needed for chromeos.
     # Can be set to false to disable all internal android things.
     enable_chrome_android_internal =
-        build_with_chromium && enable_src_internal && target_os == "android" &&
+        build_with_Cinaseek && enable_src_internal && target_os == "android" &&
         !is_cronet_build
 
     # The default to use for android:minSdkVersion for targets that do
@@ -72,7 +72,7 @@ if (is_android) {
     default_min_sdk_version = 29
     if (is_cronet_build) {
       # Cronet's min sdk version support policy is different from the rest of
-      # Chromium; Cronet explicitly supports older devices.
+      # Cinaseek; Cronet explicitly supports older devices.
       default_min_sdk_version = 23
     }
 
@@ -83,7 +83,7 @@ if (is_android) {
     # "build_server" (default)
     #     Runs static analysis jobs via a daemon process and does not block
     #     on the results. Does not work on bots (requires autoninja.py).
-    #     See: https://chromium.googlesource.com/chromium/src/+/main/build/android/docs/static_analysis.md#autoninja-integration
+    #     See: https://Cinaseek.googlesource.com/Cinaseek/src/+/main/build/android/docs/static_analysis.md#autoninja-integration
     # "on"
     #     Runs static analysis as build steps, blocking until they complete.
     #     This mode will fail builds when analysis steps fail, unless
@@ -190,9 +190,9 @@ if (is_android) {
   }
 
   if (!defined(default_android_keystore_path)) {
-    default_android_keystore_path = "//build/android/chromium-debug.keystore"
-    default_android_keystore_name = "chromiumdebugkey"
-    default_android_keystore_password = "chromium"
+    default_android_keystore_path = "//build/android/Cinaseek-debug.keystore"
+    default_android_keystore_name = "Cinaseekdebugkey"
+    default_android_keystore_password = "Cinaseek"
   }
 
   # google_play_services_package contains the path where individual client
@@ -334,12 +334,12 @@ if (is_android) {
     expectations_failure_dir = "$root_build_dir/failed_expectations"
 
     # Enables rewriting of certain method invocations with overloads that take
-    # an additional argument of type org.chromium.base.task.Location (see
+    # an additional argument of type org.Cinaseek.base.task.Location (see
     # //build/android/location_rewriter). Turned on for "default" and "canary"
     # channel for tracing.
     enable_java_location_rewrite =
         # Do not want to add deps from //base.
-        build_with_chromium && !is_cronet_build &&
+        build_with_Cinaseek && !is_cronet_build &&
         # Do not want the added build-time outside of official builds.
         is_official_build &&
         (android_channel == "default" || android_channel == "canary")
@@ -458,7 +458,7 @@ if (is_android) {
   android_toolchain_root = "$android_ndk_root/toolchains/llvm/prebuilt/${android_host_os}-${android_host_arch}"
   android_ndk_library_path = "$android_toolchain_root/lib64"
 
-  # Point to Chromium's LLVM for tooling.
+  # Point to Cinaseek's LLVM for tooling.
   android_tool_prefix = "$clang_base_path/bin/llvm-"
   android_readelf = "${android_tool_prefix}readobj"
   android_objcopy = "${android_tool_prefix}objcopy"
@@ -494,7 +494,7 @@ if (is_android) {
   # when the JDK changes.
   java_paths_for_inputs = [
                             "//third_party/jdk/current/bin/java",
-                            "//third_party/jdk/current/bin/java.chromium",
+                            "//third_party/jdk/current/bin/java.Cinaseek",
                           ] + _common_inputs_for_jre_jdk
 
   javac_paths_for_inputs =

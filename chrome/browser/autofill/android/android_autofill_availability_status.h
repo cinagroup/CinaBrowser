@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace autofill {
 // is ordered by strength of the set (e.g. a policy prevents version checks).
 //
 // This metric is recorded in metrics. Don't reorder or reuse values.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.autofill
 enum class AndroidAutofillAvailabilityStatus {
 
   // Indicates that Android autofill can be used.

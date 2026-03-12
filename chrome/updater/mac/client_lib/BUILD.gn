@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@ apply_updater_branding("cruregistration_header_branding") {
   output = "$target_gen_dir/CRURegistration.h"
 }
 
-# CRURegistration is intended to be used outside of Chromium, so it imports
+# CRURegistration is intended to be used outside of Cinaseek, so it imports
 # headers by name only. However, the generated header (with brand substitution)
 # will not end up in the same directory as the sources that import it, so the
 # location it is generated into must be added as an include path.

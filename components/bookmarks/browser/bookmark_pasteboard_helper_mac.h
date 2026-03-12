@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ bool PasteboardContainsBookmarks(NSPasteboard* pb);
 
 // UTI for dictionary containing bookmark structure consisting of individual
 // bookmark nodes and/or bookmark folders.
-extern NSString* const kUTTypeChromiumBookmarkDictionaryList;
+extern NSString* const kUTTypeCinaseekBookmarkDictionaryList;
 
 }  // namespace bookmarks
 

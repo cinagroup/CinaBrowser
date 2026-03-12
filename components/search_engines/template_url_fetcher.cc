@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ const net::NetworkTrafficAnnotationTag kTrafficAnnotation =
         sender: "Omnibox"
         description:
           "Web pages can include an OpenSearch description doc in their HTML. "
-          "In this case Chromium downloads and parses the file. The "
+          "In this case Cinaseek downloads and parses the file. The "
           "corresponding search engine is added to the list in the browser "
           "settings (chrome://settings/searchEngines)."
         trigger:

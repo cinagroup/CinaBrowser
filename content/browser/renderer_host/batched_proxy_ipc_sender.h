@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ class RenderFrameProxyHost;
 // there are two cases: either (1) X is a new `SiteInstance`, in which case
 // all `FrameTreeNode`s will need a new proxy, and hence we'll start creating
 // proxies from the root; or (2) X is an existing `SiteInstance` that may
-// already have some frames in it, in which case Chromium guarantees that all
+// already have some frames in it, in which case Cinaseek guarantees that all
 // `FrameTreeNode`s on the page would either be actual frames in X or already
 // have proxies for X. In either case, there shouldn't be a need to create
 // additional proxies for just a part of a `FrameTree`, so this class can

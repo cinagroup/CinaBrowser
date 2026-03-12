@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace syncer {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
 // LINT.IfChange(UserSelectableType)
 enum class UserSelectableType {
   kBookmarks,

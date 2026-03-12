@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -140,7 +140,7 @@ TEST_F(ChromeDataExchangeDelegateTest, GetDataTransferEndpointType) {
       aura::test::CreateTestWindow(
           {.delegate = &delegate_, .parent = &container_window})
           .release();
-  exo::SetShellApplicationId(plugin_vm_toplevel, "org.chromium.plugin_vm_ui");
+  exo::SetShellApplicationId(plugin_vm_toplevel, "org.Cinaseek.plugin_vm_ui");
   ASSERT_TRUE(plugin_vm::IsPluginVmAppWindow(plugin_vm_toplevel));
   aura::Window* plugin_vm_window =
       aura::test::CreateTestWindow({.parent = plugin_vm_toplevel}).release();

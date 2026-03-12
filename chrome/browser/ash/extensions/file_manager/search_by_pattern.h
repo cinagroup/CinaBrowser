@@ -1,7 +1,7 @@
 #ifndef CHROME_BROWSER_ASH_EXTENSIONS_FILE_MANAGER_SEARCH_BY_PATTERN_H_
 #define CHROME_BROWSER_ASH_EXTENSIONS_FILE_MANAGER_SEARCH_BY_PATTERN_H_
 
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //

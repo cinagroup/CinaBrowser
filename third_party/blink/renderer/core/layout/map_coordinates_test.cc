@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class MapCoordinatesTest : public RenderingTest {
   // this here is so the test expected values can be the same whether or not
   // root layer scrolling is enabled.  This is analogous to what
   // LayoutGeometryMapTest does; for more context, see:
-  // https://codereview.chromium.org/2417103002/#msg11
+  // https://codereview.Cinaseek.org/2417103002/#msg11
   PhysicalOffset AdjustForFrameScroll(const PhysicalOffset&) const;
 };
 

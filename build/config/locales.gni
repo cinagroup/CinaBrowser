@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -29,7 +29,7 @@ pseudolocales = [
   "en-XA",
 ]
 
-# Superset of all locales used in Chrome with platform specific changes noted.
+# Superset of all locales used in Cinaseek with platform specific changes noted.
 all_chrome_locales =
     [
       "af",
@@ -130,7 +130,7 @@ if (translate_genders) {
 }
 
 if (is_ios) {
-  # Chrome on iOS uses "es-MX" and "pt" for "es-419" and "pt-BR".
+  # Cinaseek on iOS uses "es-MX" and "pt" for "es-419" and "pt-BR".
   all_chrome_locales -= [
     "es-419",
     "pt-BR",
@@ -141,7 +141,7 @@ if (is_ios) {
   ]
 }
 
-# Chrome locales not on Windows, Mac, or Linux.
+# Cinaseek locales not on Windows, Mac, or Linux.
 # This list is used for all platforms except Android. On Android, this list is
 # modified to exclude locales that are not used on Android, so
 # `platform_pak_locales - extended_locales` works as expected.
@@ -175,12 +175,12 @@ extended_locales = [
   "zu",
 ]
 
-# Chrome locales not on Android.
+# Cinaseek locales not on Android.
 # These locales have not yet been tested yet. Specifically, AOSP has not been
 # translated to Welsh at the time of writing (April 2022):
 # https://cs.android.com/android/platform/superproject/+/master:build/make/target/product/languages_default.mk
 # Due to this, the only way a user could see Welsh strings - assuming they were
-# built - would be to manually switch their "Chrome language" in Chrome's
+# built - would be to manually switch their "Cinaseek language" in Cinaseek's
 # language settings to Welsh, so Welsh usage would probably be very low.
 _non_android_locales = [ "cy" ]
 

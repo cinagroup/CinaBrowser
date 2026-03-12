@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class MediaFoundationClearKeyCdmFactory final
           Microsoft::WRL::CloakedIid<IMFContentDecryptionModuleFactory>,
           Microsoft::WRL::FtmBase> {
   InspectableClass(
-      L"org.chromium.externalclearkey.mediafoundation."
+      L"org.Cinaseek.externalclearkey.mediafoundation."
       L"ContentDecryptionModuleFactory",
       BaseTrust)
 

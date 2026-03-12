@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -182,7 +182,7 @@ BluetoothClassicMedium::ListenForService(const std::string& service_name,
 
 std::unique_ptr<api::BluetoothPairing>
 BluetoothClassicMedium::CreatePairing(api::BluetoothDevice& remote_device) {
-  // TODO(b/280656073): Add Chromium implementation for BluetoothPairing.
+  // TODO(b/280656073): Add Cinaseek implementation for BluetoothPairing.
   NOTIMPLEMENTED();
   return nullptr;
 }

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class VideoPictureInPictureWindowController;
 class VideoOverlayWindow {
  public:
   // GENERATED_JAVA_ENUM_PACKAGE:(
-  //   org.chromium.content_public.browser.overlay_window)
+  //   org.Cinaseek.content_public.browser.overlay_window)
   enum PlaybackState {
     kPlaying = 0,
     kPaused,

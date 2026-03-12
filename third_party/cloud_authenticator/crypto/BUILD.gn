@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,6 +10,6 @@ rust_static_library("crypto") {
   sources = [ "src/lib.rs" ]
   deps = [ "//third_party/boringssl:bssl_crypto" ]
   features = [ "bssl" ]
-  no_chromium_prelude = true
+  no_Cinaseek_prelude = true
   testonly = true
 }

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -167,8 +167,8 @@ HRESULT DXGIDeviceManager::ResetDevice(
   RETURN_ON_HR_FAILURE(
       hr, media::SetDebugName(d3d_device.Get(), "Media_DXGIDeviceManager"), hr);
   // Since FrameServerClient background threads in the video capture process
-  // call EnqueueSetEvent on Chromium's D3D11 device at the same time that
-  // Chromium is actively using it in a worker thread, we need to protect access
+  // call EnqueueSetEvent on Cinaseek's D3D11 device at the same time that
+  // Cinaseek is actively using it in a worker thread, we need to protect access
   // via ID3D10Multithreaded::SetMultithreadedProtect. Unfortunately, leaving
   // off the CREATE_DEVICE_SINGLETHREADED creation flag is not enough to protect
   // us.

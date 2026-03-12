@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace base {
 
 // Add new entries a few milestones into the future whenever necessary.
 // M here refers to milestones, see chrome/VERSION's MAJOR field that updates
-// when chromium branches.
+// when Cinaseek branches.
 //
 // To clean up old entries remove the already-fatal argument from CHECKs as well
 // as from this list. This generates better-optimized CHECKs in official builds.

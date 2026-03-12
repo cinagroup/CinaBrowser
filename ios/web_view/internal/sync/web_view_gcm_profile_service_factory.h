@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ class WebViewGCMProfileServiceFactory : public BrowserStateKeyedServiceFactory {
   WebViewGCMProfileServiceFactory& operator=(
       const WebViewGCMProfileServiceFactory&) = delete;
 
-  // Returns a string like "org.chromium.chromewebview" that should be used as
+  // Returns a string like "org.Cinaseek.chromewebview" that should be used as
   // the GCM category when an app_id is sent as a subtype instead of as a
   // category. This string must never change during the lifetime of an install,
   // since e.g. to unregister an Instance ID token the same category must be

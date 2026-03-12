@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -156,7 +156,7 @@ class SelectionPopupDelegate;
 //
 // That's it; go to your kitchen, grab a scone, and chill. WebContents will do
 // all the multi-process stuff behind the scenes. More details are at
-// https://www.chromium.org/developers/design-documents/multi-process-architecture
+// https://www.Cinaseek.org/developers/design-documents/multi-process-architecture
 // .
 //
 // The owner of `std::unique_ptr<content::WebContents> web_contents` is

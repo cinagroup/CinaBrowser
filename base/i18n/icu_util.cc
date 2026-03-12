@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,13 +100,13 @@ const char kIcuDataFileName[] = "icudtl.dat";
 const char kIcuTimeZoneEnvVariable[] = "ICU_TIMEZONE_FILES_DIR";
 
 // Up-to-date time zone data MUST be provided by the system as a
-// directory offered to Chromium components at /config/tzdata.  Chromium
+// directory offered to Cinaseek components at /config/tzdata.  Cinaseek
 // components "use" the `tzdata` directory capability, specifying the
-// "/config/tzdata" path. Chromium components will crash if this capability
+// "/config/tzdata" path. Cinaseek components will crash if this capability
 // is not available.
 //
 // TimeZoneDataTest.* tests verify that external timezone data is correctly
-// loaded from the system, to alert developers if the platform and Chromium
+// loaded from the system, to alert developers if the platform and Cinaseek
 // versions are no longer compatible versions.
 // LINT.IfChange(icu_time_zone_data_path)
 const char kIcuTimeZoneDataDir[] = "/config/tzdata/icu/44/le";

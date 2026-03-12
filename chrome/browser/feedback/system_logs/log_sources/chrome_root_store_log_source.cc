@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ constexpr char kChromeRootStoreKey[] = "chrome_root_store";
 // Process returned Chrome Root Store certs. Certs that are processed here are
 // (a) compiled into the Chrome binary or (b) from Component Updater, which
 // makes parsing these bytes not a Rule of 2 violation
-// (https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/rule-of-2.md).
+// (https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/security/rule-of-2.md).
 void PopulateChromeRootStoreLogsAsync(
     system_logs::SysLogsSourceCallback callback,
     cert_verifier::mojom::ChromeRootStoreInfoPtr info) {

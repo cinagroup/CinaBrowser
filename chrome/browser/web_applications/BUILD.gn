@@ -1,5 +1,5 @@
 # Use of this source code is governed by a BSD-style license that can be
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # found in the LICENSE file.
 
 import("//chrome/browser/buildflags.gni")
@@ -472,7 +472,7 @@ source_set("web_applications") {
   }
 
   if (is_linux) {
-    # Desktop linux, doesn't count ChromeOS.
+    # Desktop linux, doesn't count CinaseekOS.
     sources += [
       "os_integration/web_app_file_handler_registration_linux.cc",
       "os_integration/web_app_run_on_os_login_linux.cc",
@@ -1086,7 +1086,7 @@ source_set("web_applications_unit_tests") {
   }
 
   if (is_linux) {
-    # Desktop linux, doesn't count ChromeOS.
+    # Desktop linux, doesn't count CinaseekOS.
     sources += [
       "os_integration/web_app_run_on_os_login_linux_unittest.cc",
       "os_integration/web_app_shortcut_linux_unittest.cc",

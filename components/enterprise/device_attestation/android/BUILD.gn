@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("device_attestation_java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/enterprise/device_attestation/AttestationBlobGenerator.java",
-    "java/src/org/chromium/components/enterprise/device_attestation/AttestationBlobGeneratorDelegate.java",
-    "java/src/org/chromium/components/enterprise/device_attestation/BlobGenerationResult.java",
+    "java/src/org/Cinaseek/components/enterprise/device_attestation/AttestationBlobGenerator.java",
+    "java/src/org/Cinaseek/components/enterprise/device_attestation/AttestationBlobGeneratorDelegate.java",
+    "java/src/org/Cinaseek/components/enterprise/device_attestation/BlobGenerationResult.java",
   ]
 
   deps = [
@@ -24,13 +24,13 @@ android_library("device_attestation_java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/enterprise/device_attestation/AttestationBlobGenerator.java",
-    "java/src/org/chromium/components/enterprise/device_attestation/BlobGenerationResult.java",
+    "java/src/org/Cinaseek/components/enterprise/device_attestation/AttestationBlobGenerator.java",
+    "java/src/org/Cinaseek/components/enterprise/device_attestation/BlobGenerationResult.java",
   ]
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/components/enterprise/device_attestation/AttestationBlobGeneratorTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/enterprise/device_attestation/AttestationBlobGeneratorTest.java" ]
 
   deps = [
     ":device_attestation_java",

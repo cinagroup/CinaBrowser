@@ -1,8 +1,8 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# @generated from third_party/rust/chromium_crates_io/BUILD.gn.hbs by
+# @generated from third_party/rust/Cinaseek_crates_io/BUILD.gn.hbs by
 # tools/crates/gnrt.
 # Do not edit!
 
@@ -12,36 +12,36 @@ cargo_crate("lib") {
   crate_name = "xml"
   epoch = "1"
   crate_type = "rlib"
-  crate_root = "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/lib.rs"
+  crate_root = "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/lib.rs"
   sources = [
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/attribute.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/common.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/escape.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/lib.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/macros.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/name.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/namespace.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/config.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/error.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/events.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/indexset.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/lexer.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_cdata.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_closing_tag_name.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_comment.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_declaration.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_doctype.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_opening_tag.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_processing_instruction.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/inside_reference.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/reader/parser/outside_tag.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/util.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/writer.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/writer/config.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/writer/emitter.rs",
-    "//third_party/rust/chromium_crates_io/vendor/xml-v1/src/writer/events.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/attribute.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/common.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/escape.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/lib.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/macros.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/name.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/namespace.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/config.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/error.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/events.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/indexset.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/lexer.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_cdata.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_closing_tag_name.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_comment.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_declaration.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_doctype.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_opening_tag.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_processing_instruction.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/inside_reference.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/reader/parser/outside_tag.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/util.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/writer.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/writer/config.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/writer/emitter.rs",
+    "//third_party/rust/Cinaseek_crates_io/vendor/xml-v1/src/writer/events.rs",
   ]
   inputs = []
 
@@ -60,14 +60,14 @@ cargo_crate("lib") {
 
   # Config changes that apply to all `//third_party/rust` crates.
   _configs_to_remove = [
-    # We don't need code coverage data for any `chromium_crates_io` crates.
+    # We don't need code coverage data for any `Cinaseek_crates_io` crates.
     "//build/config/coverage:default_coverage",
 
-    # This is third-party code, so remove `chromium_code` config.  We are not
-    # at the same time adding `//build/config/compiler:no_chromium_code`,
+    # This is third-party code, so remove `Cinaseek_code` config.  We are not
+    # at the same time adding `//build/config/compiler:no_Cinaseek_code`,
     # because 1) we don't want to pull how warnings are handled by that config
     # and 2) that config doesn't have any non-warnings-related stuff.
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   _configs_to_add = []
 

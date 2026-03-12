@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ class MemoryPressureVoteAggregator {
   // bucket.
   // MEMORY_PRESSURE_LEVEL_CRITICAL + 1 is used in place of adding a kCount
   // value to the MemoryPressureLevel enum as adding another value would require
-  // changing every instance of switch(MemoryPressureLevel) in Chromium, and the
+  // changing every instance of switch(MemoryPressureLevel) in Cinaseek, and the
   // MemoryPressureLevel system will be changing soon regardless.
   std::array<size_t, base::MEMORY_PRESSURE_LEVEL_CRITICAL + 1> votes_ = {};
 

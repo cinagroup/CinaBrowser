@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 
 namespace base {
 
-// Chromium code style is to not use malloc'd strings; this is only for use
+// Cinaseek code style is to not use malloc'd strings; this is only for use
 // for interaction with APIs that require it.
 inline char* strdup(const char* str) {
   return UNSAFE_TODO(::strdup(str));

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ struct PurgeFlags {
 
 // Options struct used to configure PartitionRoot and PartitionAllocator.
 struct PartitionOptions {
-  // Marked inline so that the chromium style plugin doesn't complain that a
+  // Marked inline so that the Cinaseek style plugin doesn't complain that a
   // "complex constructor" has an inline body. This warning is disabled when
   // the constructor is explicitly marked "inline". Note that this is a false
   // positive of the plugin, since constexpr implies inline.
@@ -248,7 +248,7 @@ class alignas(64) PA_COMPONENT_EXPORT(PARTITION_ALLOC) PartitionRoot {
   // Careful! PartitionAlloc's performance is sensitive to its layout.  Please
   // put the fast-path objects in the struct below.
   struct alignas(internal::kPartitionCachelineSize) Settings {
-    // Chromium-style: Complex constructor needs an explicit out-of-line
+    // Cinaseek-style: Complex constructor needs an explicit out-of-line
     // constructor.
     Settings();
 

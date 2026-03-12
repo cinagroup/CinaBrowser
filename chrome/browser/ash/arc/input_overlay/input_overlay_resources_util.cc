@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace arc::input_overlay {
 
 std::optional<int> GetInputOverlayResourceId(const std::string& package_name) {
   std::map<std::string, int> resource_id_map = {
-      {"org.chromium.arc.testapp.inputoverlay",
+      {"org.Cinaseek.arc.testapp.inputoverlay",
        IDR_IO_ORG_CHROMIUM_ARC_TESTAPP_INPUTOVERLAY},
       {"com.blackpanther.ninjaarashi2", IDR_IO_COM_BLACKPANTHER_NINJAARASHI2},
       {"com.habby.archero", IDR_IO_COM_HABBY_ARCHERO},

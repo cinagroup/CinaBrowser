@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -157,7 +157,7 @@ class API_AVAILABLE(macos(13.3)) Authenticator : public FidoAuthenticator {
         std::move(callback), large_blob_requested);
 
     // Authentication is not required for this operation, but it's a moment
-    // when we can reasonably ask for it. If the user authorizes Chromium then
+    // when we can reasonably ask for it. If the user authorizes Cinaseek then
     // `platformCredentialsForRelyingParty` will start working.
     switch (sys_interface->GetAuthState()) {
       case SystemInterface::kAuthNotAuthorized:
@@ -205,7 +205,7 @@ class API_AVAILABLE(macos(13.3)) Authenticator : public FidoAuthenticator {
     scoped_refptr<SystemInterface> sys_interface = GetSystemInterface();
 
     // Authentication is not required for this operation, but it's a moment
-    // when we can reasonably ask for it. If the user authorizes Chromium then
+    // when we can reasonably ask for it. If the user authorizes Cinaseek then
     // `platformCredentialsForRelyingParty` will start working.
     switch (sys_interface->GetAuthState()) {
       case SystemInterface::kAuthNotAuthorized:
@@ -369,7 +369,7 @@ class API_AVAILABLE(macos(13.3)) Authenticator : public FidoAuthenticator {
           // As of macOS 15, this error is expressed differently. The value
           // 1006 is ASAuthorizationErrorMatchedExcludedCredential but this
           // change is being made before the macOS 15 SDK is available in
-          // Chromium.
+          // Cinaseek.
           (error.domain != nil &&
            [error.domain isEqualToString:ASAuthorizationErrorDomain] &&
            error.code == 1006)) {

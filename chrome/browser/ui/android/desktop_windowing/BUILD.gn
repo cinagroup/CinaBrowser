@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,10 +6,10 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/AppHeaderCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/AppHeaderUtils.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/BasicAppHeaderStateProvider.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/TopControlsLockCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/AppHeaderCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/AppHeaderUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/BasicAppHeaderStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/TopControlsLockCoordinator.java",
   ]
   deps = [
     "//base:base_java",
@@ -31,11 +31,11 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/AppHeaderCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/AppHeaderTestUtils.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/AppHeaderUtilsUnitTest.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/BasicAppHeaderStateProviderTest.java",
-    "java/src/org/chromium/chrome/browser/ui/desktop_windowing/TopControlsLockCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/AppHeaderCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/AppHeaderTestUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/AppHeaderUtilsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/BasicAppHeaderStateProviderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/desktop_windowing/TopControlsLockCoordinatorTest.java",
   ]
 
   deps = [

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace password_manager {
 // ManagePasswordsReferrer in enums.xml.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.password_manager
 enum class ManagePasswordsReferrer {
   // Corresponds to Chrome's settings page.
   kChromeSettings = 0,

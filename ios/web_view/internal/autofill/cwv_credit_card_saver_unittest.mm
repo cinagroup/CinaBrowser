@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ TEST_F(CWVCreditCardSaverTest, Initialization) {
   autofill::LegalMessageLines legal_message_lines = {
       autofill::TestLegalMessageLine("Test line 1",
                                      {autofill::LegalMessageLine::Link(
-                                         5, 9, "http://www.chromium.org/")})};
+                                         5, 9, "http://www.Cinaseek.org/")})};
   autofill::payments::PaymentsAutofillClient::UploadSaveCardPromptCallback
       callback;
 
@@ -58,7 +58,7 @@ TEST_F(CWVCreditCardSaverTest, Initialization) {
   id link = [legal_message attribute:NSLinkAttributeName
                              atIndex:5
                       effectiveRange:&range];
-  EXPECT_NSEQ([NSURL URLWithString:@"http://www.chromium.org/"], link);
+  EXPECT_NSEQ([NSURL URLWithString:@"http://www.Cinaseek.org/"], link);
   EXPECT_TRUE(NSEqualRanges(NSMakeRange(5, 4), range));
 }
 

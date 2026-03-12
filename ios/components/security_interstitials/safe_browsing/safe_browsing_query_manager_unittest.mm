@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -179,7 +179,7 @@ class SafeBrowsingQueryManagerTest : public PlatformTest {
 
 // Tests a query for a safe URL.
 TEST_F(SafeBrowsingQueryManagerTest, SafeURLQuery) {
-  GURL url("http://chromium.test");
+  GURL url("http://Cinaseek.test");
   EXPECT_CALL(observer_, SafeBrowsingSyncQueryFinished(_))
       .WillOnce(VerifySyncQueryFinished(url, http_method_,
                                         /*is_url_sync_safe=*/true,
@@ -400,7 +400,7 @@ class SafeBrowsingQueryManagerWebStateDestructionTest : public PlatformTest {
 
 // Tests that a query for a safe URL doesn't cause a crash.
 TEST_F(SafeBrowsingQueryManagerWebStateDestructionTest, SafeURLQuery) {
-  GURL url("http://chromium.test");
+  GURL url("http://Cinaseek.test");
   // Start a URL check query for the safe URL and run the runloop until the
   // result is received.
   manager()->StartQuery(SafeBrowsingQueryManager::Query(url, http_method_));

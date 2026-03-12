@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,8 +14,8 @@ android_resources("customtabs_benchmark_apk_resources") {
 
 android_apk("customtabs_benchmark_apk") {
   sources = [
-    "java/src/org/chromium/customtabs/test/MainActivity.java",
-    "java/src/org/chromium/customtabs/test/WebViewActivity.java",
+    "java/src/org/Cinaseek/customtabs/test/MainActivity.java",
+    "java/src/org/Cinaseek/customtabs/test/WebViewActivity.java",
   ]
   android_manifest = "java/AndroidManifest.xml"
   min_sdk_version = min_supported_sdk_version

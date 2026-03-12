@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,14 +40,14 @@
 // TODO(crbug.com/40281745): We can remove these weak attributes in M123 or
 // later. Until then, these need to be declared with the weak attribute
 // since older platforms may not provide these symbols.
-extern "C" CERTCertList* CERT_CreateSubjectCertListForChromium(
+extern "C" CERTCertList* CERT_CreateSubjectCertListForCinaseek(
     CERTCertList* certList,
     CERTCertDBHandle* handle,
     const SECItem* name,
     PRTime sorttime,
     PRBool validOnly,
     PRBool ignoreChaps) __attribute__((weak));
-extern "C" CERTCertificate* CERT_FindCertByDERCertForChromium(
+extern "C" CERTCertificate* CERT_FindCertByDERCertForCinaseek(
     CERTCertDBHandle* handle,
     SECItem* derCert,
     PRBool ignoreChaps) __attribute__((weak));
@@ -156,11 +156,11 @@ TrustStoreNSS::TrustStoreNSS(UserSlotTrustSetting user_slot_trust_setting)
           nullptr);
   }
 #if BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(IS_CHROMEOS_DEVICE)
-  if (!CERT_CreateSubjectCertListForChromium) {
-    LOG(WARNING) << "CERT_CreateSubjectCertListForChromium is not available";
+  if (!CERT_CreateSubjectCertListForCinaseek) {
+    LOG(WARNING) << "CERT_CreateSubjectCertListForCinaseek is not available";
   }
-  if (!CERT_FindCertByDERCertForChromium) {
-    LOG(WARNING) << "CERT_FindCertByDERCertForChromium is not available";
+  if (!CERT_FindCertByDERCertForCinaseek) {
+    LOG(WARNING) << "CERT_FindCertByDERCertForCinaseek is not available";
   }
 #endif  // BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(IS_CHROMEOS_DEVICE)
 }
@@ -187,9 +187,9 @@ void TrustStoreNSS::SyncGetIssuersOf(const bssl::ParsedCertificate* cert,
       PR_Now() /* sorttime */, PR_FALSE /* validOnly */));
 #else
   crypto::ScopedCERTCertList found_certs;
-  if (CERT_CreateSubjectCertListForChromium) {
+  if (CERT_CreateSubjectCertListForCinaseek) {
     found_certs =
-        crypto::ScopedCERTCertList(CERT_CreateSubjectCertListForChromium(
+        crypto::ScopedCERTCertList(CERT_CreateSubjectCertListForCinaseek(
             nullptr /* certList */, CERT_GetDefaultCertDB(), &name,
             PR_Now() /* sorttime */, PR_FALSE /* validOnly */,
             PR_TRUE /* ignoreChaps */));
@@ -290,8 +290,8 @@ bssl::CertificateTrust TrustStoreNSS::GetTrust(
       CERT_FindCertByDERCert(CERT_GetDefaultCertDB(), &der_cert));
 #else
   ScopedCERTCertificate nss_cert;
-  if (CERT_FindCertByDERCertForChromium) {
-    nss_cert = ScopedCERTCertificate(CERT_FindCertByDERCertForChromium(
+  if (CERT_FindCertByDERCertForCinaseek) {
+    nss_cert = ScopedCERTCertificate(CERT_FindCertByDERCertForCinaseek(
         CERT_GetDefaultCertDB(), &der_cert, /*ignoreChaps=*/PR_TRUE));
   } else {
     nss_cert = ScopedCERTCertificate(

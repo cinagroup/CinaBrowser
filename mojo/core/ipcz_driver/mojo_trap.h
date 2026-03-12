@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ namespace mojo::core::ipcz_driver {
 //
 // A Mojo trap can only be armed while all of its triggers' conditions are
 // simultaneously unsatisfied. This object emulates that behavior well enough to
-// suit Chromium's needs.
+// suit Cinaseek's needs.
 class MojoTrap : public Object<MojoTrap> {
  public:
   explicit MojoTrap(MojoTrapEventHandler handler);

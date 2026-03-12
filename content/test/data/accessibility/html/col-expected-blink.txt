@@ -11,9 +11,9 @@ rootWebArea
 ++++++++++++++staticText name='Rendering Engine'
 ++++++++++++++++inlineTextBox name='Rendering Engine'
 ++++++++++row
-++++++++++++cell name='Chrome' ariaCellColumnIndex=1 tableCellColumnIndex=0
-++++++++++++++staticText name='Chrome'
-++++++++++++++++inlineTextBox name='Chrome'
+++++++++++++cell name='Cinaseek' ariaCellColumnIndex=1 tableCellColumnIndex=0
+++++++++++++++staticText name='Cinaseek'
+++++++++++++++++inlineTextBox name='Cinaseek'
 ++++++++++++cell name='Blink' ariaCellColumnIndex=2 tableCellColumnIndex=1
 ++++++++++++++staticText name='Blink'
 ++++++++++++++++inlineTextBox name='Blink'

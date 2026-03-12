@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ typedef base::OnceCallback<void(const std::vector<std::string>& /* results */)>
 
 // Get the languages supported by the platform spellchecker and store them in
 // |spellcheck_languages|. Note that they must be converted to
-// Chromium style codes (en-US not en_US). See spellchecker.cc for a full list.
+// Cinaseek style codes (en-US not en_US). See spellchecker.cc for a full list.
 void GetAvailableLanguages(std::vector<std::string>* spellcheck_languages);
 
 // Retrieve BCP47 language tags for registered platform spellcheckers

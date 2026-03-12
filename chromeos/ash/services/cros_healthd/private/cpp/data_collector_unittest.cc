@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ class DataCollectorTest : public testing::Test {
   // The test environment.
   content::BrowserTaskEnvironment env_;
   // The mojo remote to the data collector.
-  mojo::Remote<mojom::ChromiumDataCollector> remote_;
+  mojo::Remote<mojom::CinaseekDataCollector> remote_;
   // The fake delegate for DataCollector.
   FakeDataCollectorDelegate delegate_;
   // The DataCollector.

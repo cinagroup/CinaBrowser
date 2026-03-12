@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -370,7 +370,7 @@ VISIT_PROTO_FIELDS(const sync_pb::BookmarkSpecifics& proto) {
   VISIT(last_used_time_us);
 }
 
-VISIT_PROTO_FIELDS(const sync_pb::ChromiumExtensionsActivity& proto) {
+VISIT_PROTO_FIELDS(const sync_pb::CinaseekExtensionsActivity& proto) {
   VISIT(extension_id);
   VISIT(bookmark_writes_since_last_commit);
 }
@@ -623,7 +623,7 @@ VISIT_PROTO_FIELDS(const sync_pb::DebugInfo& proto) {
 }
 
 VISIT_PROTO_FIELDS(const sync_pb::DeletionOrigin& proto) {
-  VISIT(chromium_version);
+  VISIT(Cinaseek_version);
   VISIT(google_play_services_apk_version_name);
   VISIT(file_name_hash);
   VISIT(file_line_number);

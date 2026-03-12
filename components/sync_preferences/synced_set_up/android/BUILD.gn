@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,11 +18,11 @@ source_set("android") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/sync_preferences/synced_set_up/PrefToValueMapBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/sync_preferences/synced_set_up/PrefToValueMapBridge.java" ]
 }
 
 android_library("java") {
-  sources = [ "java/src/org/chromium/components/sync_preferences/synced_set_up/PrefToValueMapBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/sync_preferences/synced_set_up/PrefToValueMapBridge.java" ]
   deps = [
     ":jni_headers_java",
     "//base:base_java",

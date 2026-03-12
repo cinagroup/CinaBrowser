@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ enum CustomTabsVisibilityHistogram {
 // Following enum should always be in sync with ChromeActivityType defined in
 // tools/metrics/histograms/metadata/android/enums.xml
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.flags
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.flags
 enum class ActivityType {
   // Chrome is running as the Chrome Android Browser App (i.e., traditional
   // Chrome).
@@ -46,7 +46,7 @@ enum class ActivityType {
   //
   // See
   //   -
-  //   https://chromium.googlesource.com/chromium/src/+/HEAD/docs/webapps/README.md
+  //   https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/webapps/README.md
   kWebapp,
 
   // Chrome is running as a WebAPK.
@@ -54,7 +54,7 @@ enum class ActivityType {
   // See:
   //   - https://web.dev/webapks/
   //   -
-  //   https://chromium.googlesource.com/chromium/src/+/refs/heads/main/chrome/android/webapk/README.md
+  //   https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/chrome/android/webapk/README.md
   kWebApk,
 
   // Chrome has started running, but no tab has yet become visible (for example:
@@ -72,7 +72,7 @@ enum class ActivityType {
   kMaxValue = kAuthTab,
 };
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.flags
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.flags
 enum class DarkModeState {
   kUnknown,
   // Both system and browser are in dark mode.
@@ -89,7 +89,7 @@ enum class DarkModeState {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. See MultipleUserProfilesState in
 // enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.flags
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.flags
 enum class MultipleUserProfilesState {
   kUnknown = 0,
   kSingleProfile = 1,
@@ -98,7 +98,7 @@ enum class MultipleUserProfilesState {
 };
 
 // The type of Profile and UI that is used by the custom tab.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.flags
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.flags
 enum class CustomTabProfileType {
   // The normal user profile.
   kRegular = 0,

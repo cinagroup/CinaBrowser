@@ -1,5 +1,5 @@
 {
-  "codesearch-gen-chromium-android": {
+  "codesearch-gen-Cinaseek-android": {
     "gn_args": {
       "android_static_analysis": "off",
       "blink_enable_generated_code_formatting": true,
@@ -17,7 +17,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-chromiumos": {
+  "codesearch-gen-Cinaseek-Cinaseekos": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,
@@ -33,7 +33,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-cronet": {
+  "codesearch-gen-Cinaseek-cronet": {
     "gn_args": {
       "android_static_analysis": "off",
       "clang_use_chrome_plugins": false,
@@ -51,7 +51,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-fuchsia": {
+  "codesearch-gen-Cinaseek-fuchsia": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,
@@ -66,7 +66,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-ios": {
+  "codesearch-gen-Cinaseek-ios": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,
@@ -82,7 +82,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-linux": {
+  "codesearch-gen-Cinaseek-linux": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,
@@ -96,7 +96,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-mac": {
+  "codesearch-gen-Cinaseek-mac": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,
@@ -111,7 +111,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-webview": {
+  "codesearch-gen-Cinaseek-webview": {
     "gn_args": {
       "android_static_analysis": "off",
       "blink_enable_generated_code_formatting": true,
@@ -129,7 +129,7 @@
       "use_remoteexec": true
     }
   },
-  "codesearch-gen-chromium-win": {
+  "codesearch-gen-Cinaseek-win": {
     "gn_args": {
       "blink_enable_generated_code_formatting": true,
       "clang_use_chrome_plugins": false,

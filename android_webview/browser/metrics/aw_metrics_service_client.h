@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -211,7 +211,7 @@ class AwMetricsServiceClient
     return metrics_state_manager_.get();
   }
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.metrics
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.metrics
   enum class InstallerPackageType {
     // App has been initially preinstalled in the system image.
     SYSTEM_APP,

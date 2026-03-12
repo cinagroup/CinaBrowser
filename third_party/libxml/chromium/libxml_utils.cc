@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/libxml/chromium/libxml_utils.h"
+#include "third_party/libxml/Cinaseek/libxml_utils.h"
 
 namespace internal {
 

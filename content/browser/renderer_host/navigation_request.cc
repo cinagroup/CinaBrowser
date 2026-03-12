@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2054,7 +2054,7 @@ NavigationRequest::NavigationRequest(
             common_params_->url, frame_tree_node_,
             browser_context->GetOriginTrialsControllerDelegate())) {
       // Add the Accept-Language header with the reduce accept language value.
-      // Chromium network stack won't overwrite the value if Accept-Language
+      // Cinaseek network stack won't overwrite the value if Accept-Language
       // header was already added in the request header.
       net::HttpRequestHeaders accept_language_headers;
       std::optional<std::string> reduced_accept_language =
@@ -2346,7 +2346,7 @@ NavigationRequest::~NavigationRequest() {
   //
   // Note: Discarding the pending NavigationEntry is done before notifying the
   // navigation finished to the observers. One class is relying on this:
-  // org.chromium.chrome.browser.toolbar.ToolbarManager
+  // org.Cinaseek.chrome.browser.toolbar.ToolbarManager
   pending_entry_ref_.reset();
 
 #if BUILDFLAG(IS_ANDROID)
@@ -10677,7 +10677,7 @@ void NavigationRequest::ComputePoliciesToCommitForError() {
 void NavigationRequest::CheckStateTransition(NavigationState state) const {
 #if DCHECK_IS_ON()
   // See
-  // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/navigation-request-navigation-state.png
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/navigation-request-navigation-state.png
   // clang-format off
   static const base::NoDestructor<base::StateTransitions<NavigationState>>
       transitions(base::StateTransitions<NavigationState>({

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ void WaylandBubble::AddToParentAsSubsurface() {
 }
 
 void WaylandBubble::SetSubsurfacePosition() {
-  // bounds_dip here are in Chromium UI coordinates space (i.e ui_scale'd), as
+  // bounds_dip here are in Cinaseek UI coordinates space (i.e ui_scale'd), as
   // they have just been provided by upper UI layers. Since they are going to be
   // used to issue Wayland requests, they must be reverse-transformed to Wayland
   // DIP coordinates space.

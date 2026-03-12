@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ using content::DOMStorageContext;
 namespace browsing_data {
 namespace {
 
-const char kOrigin1[] = "http://www.chromium.org";
+const char kOrigin1[] = "http://www.Cinaseek.org";
 const char kOrigin2[] = "http://www.google.com";
 // This is only here to test that state for non-web-storage schemes is not
 // listed by the helper. Web storage schemes are http, https, file, ftp, ws,

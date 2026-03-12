@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ TEST_P(UnexportableKeySigningTest, RoundTrip) {
       crypto::SignatureVerifier::SignatureAlgorithm::ECDSA_SHA256) {
     if (!key) {
       GTEST_SKIP()
-          << "Workaround for https://issues.chromium.org/issues/41494935";
+          << "Workaround for https://issues.Cinaseek.org/issues/41494935";
     }
   }
 
@@ -199,7 +199,7 @@ TEST_P(UnexportableKeySigningTest, DuplicatePlatformKeyHandleSucceeds) {
       crypto::SignatureVerifier::SignatureAlgorithm::ECDSA_SHA256) {
     if (!key) {
       GTEST_SKIP()
-          << "Workaround for https://issues.chromium.org/issues/41494935";
+          << "Workaround for https://issues.Cinaseek.org/issues/41494935";
     }
   }
 

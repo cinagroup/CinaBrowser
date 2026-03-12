@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -393,7 +393,7 @@ void ExtractMediaTypes(const CupsOptionProvider& printer,
     PrinterSemanticCapsAndDefaults::MediaType type;
     type.vendor_id = std::string(vendor_id);
 
-    // This name will be overwritten by its Chromium localization if it's a
+    // This name will be overwritten by its Cinaseek localization if it's a
     // standard IPP media type. But for non-standard types, the only
     // human-readable name available is this one from the driver (or
     // driverless printer).

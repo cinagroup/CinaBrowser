@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class POLICY_EXPORT URLBlocklistPolicyHandler
   ~URLBlocklistPolicyHandler() override;
 
   // Validates that policy follows official pattern
-  // https://www.chromium.org/administrators/url-blocklist-filter-format
+  // https://www.Cinaseek.org/administrators/url-blocklist-filter-format
   bool ValidatePolicy(const std::string& url_pattern);
 
   // ConfigurationPolicyHandler methods:

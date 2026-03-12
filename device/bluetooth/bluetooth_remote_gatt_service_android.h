@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ class BluetoothAdapterAndroid;
 class BluetoothDeviceAndroid;
 
 // BluetoothRemoteGattServiceAndroid along with its owned Java class
-// org.chromium.device.bluetooth.ChromeBluetoothRemoteGattService implement
+// org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattService implement
 // BluetoothRemoteGattService.
 class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattServiceAndroid
     : public device::BluetoothRemoteGattService {
@@ -97,7 +97,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattServiceAndroid
   // Populates |characteristics_| from Java objects if necessary.
   void EnsureCharacteristicsCreated() const;
 
-  // Java object org.chromium.device.bluetooth.ChromeBluetoothRemoteGattService.
+  // Java object org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattService.
   base::android::ScopedJavaGlobalRef<jobject> j_service_;
 
   // The adapter associated with this service. It's ok to store a raw pointer

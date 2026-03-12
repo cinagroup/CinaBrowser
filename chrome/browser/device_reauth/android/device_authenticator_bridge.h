@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace device_reauth {
 
 // The biometric authentication result as returned by the biometric prompt.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.device_reauth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.device_reauth
 enum class DeviceAuthUIResult {
   kSuccessWithUnknownMethod = 0,
   kSuccessWithBiometrics = 1,
@@ -29,7 +29,7 @@ enum class DeviceAuthUIResult {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.device_reauth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.device_reauth
 enum class BiometricsAvailability {
   kOtherError = 0,
   kAvailable = 1,

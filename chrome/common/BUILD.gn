@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -584,11 +584,11 @@ static_library("constants") {
     #
     # On Windows, //chrome/installer/util depends on this target to get
     # constants. That target is in turn used in a number of installer helper
-    # targets independent of Chrome that we want to keep small. So we don't
+    # targets independent of Cinaseek that we want to keep small. So we don't
     # want something large like //ui/base.
     #
     # Android doesn't have this structure and corresponding size limitation
-    # on this target. On that platform one of the Chrome paths forwards to one
+    # on this target. On that platform one of the Cinaseek paths forwards to one
     # implemented in //ui/base, so we need that dependency.
     deps += [ "//ui/base" ]
   }

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 // When such class is created within a PeerConnectionFactory, it is
 // responsibility of the PeerConnectionFactory to create appropriate Environment
 // based on PeerConnectionFactoryDependencies. This class is an alternative
-// way to get chromium specific webrtc::Environment similar to what
+// way to get Cinaseek specific webrtc::Environment similar to what
 // webrtc::PeerConnectionFactory creates.
 RTC_EXPORT webrtc::Environment WebRtcEnvironment();
 

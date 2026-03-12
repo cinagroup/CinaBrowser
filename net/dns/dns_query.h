@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,8 +107,8 @@ class NET_EXPORT_PRIVATE DnsQuery {
   bool ReadHeader(base::SpanReader<const uint8_t>* reader,
                   dns_protocol::Header* out);
   // After read, |out| is in the DNS format, e.g.
-  // "\x03""www""\x08""chromium""\x03""com""\x00". Use DNSDomainToString to
-  // convert to the dotted format "www.chromium.com" with no trailing dot.
+  // "\x03""www""\x08""Cinaseek""\x03""com""\x00". Use DNSDomainToString to
+  // convert to the dotted format "www.Cinaseek.com" with no trailing dot.
   bool ReadName(base::SpanReader<const uint8_t>* reader, std::string* out);
 
   // Returns the Header pointer into the `io_buffer_`. Only valid to call on a

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ static base::android::ScopedJavaLocalRef<jobject> ConvertUiInfoToJavaObject(
       base::android::ConvertUTF16ToJavaString(env, ui_info.description_text),
       base::android::ConvertUTF16ToJavaString(env, ui_info.loading_description),
       ui_info.is_chrome_branding_enabled);
-  // LINT.ThenChange(//components/autofill/android/java/src/org/chromium/components/autofill/payments/AutofillSaveCardUiInfo.java)
+  // LINT.ThenChange(//components/autofill/android/java/src/org/Cinaseek/components/autofill/payments/AutofillSaveCardUiInfo.java)
 }
 
 }  // namespace

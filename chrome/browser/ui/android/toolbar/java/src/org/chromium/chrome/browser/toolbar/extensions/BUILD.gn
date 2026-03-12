@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,7 +14,7 @@ android_library("java") {
     ":*",
     "//chrome/browser/ui/android/toolbar:*",
   ]
-  resources_package = "org.chromium.chrome.browser.toolbar"
+  resources_package = "org.Cinaseek.chrome.browser.toolbar"
   sources = [
     "ExtensionAccessControlButtonCoordinator.java",
     "ExtensionAccessControlButtonMediator.java",
@@ -69,7 +69,7 @@ android_library("java") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.toolbar"
+  resources_package = "org.Cinaseek.chrome.browser.toolbar"
   sources = [
     "ExtensionAccessControlButtonMediatorTest.java",
     "ExtensionActionDragHelperTest.java",
@@ -115,7 +115,7 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.toolbar"
+  resources_package = "org.Cinaseek.chrome.browser.toolbar"
   sources = [ "ExtensionToolbarTest.java" ]
   deps = [
     ":java",

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace {
 constexpr char kTestShelfGroupId[] = "test_shelf_group_id";
 constexpr char kTestAppId[] = "mconboelelhjpkbdhhiijkgcimoangdj";
 constexpr char kTestIntentWithShelfGroup[] =
-    "#Intent;S.org.chromium.arc.shelf_group_id=test_shelf_group_id;"
+    "#Intent;S.org.Cinaseek.arc.shelf_group_id=test_shelf_group_id;"
     "S.other=tmp;end";
 constexpr char kTestIntentWithoutShelfGroup[] = "#Intent;S.other=tmp;end";
 }  // namespace

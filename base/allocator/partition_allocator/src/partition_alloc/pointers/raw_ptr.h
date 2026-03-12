@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -295,14 +295,14 @@ constexpr inline auto kTypeTraits = RawPtrTraits::kEmpty;
 
 // `raw_ptr<T>` is a non-owning smart pointer that has improved memory-safety
 // over raw pointers. See the documentation for details:
-// https://source.chromium.org/chromium/chromium/src/+/main:base/memory/raw_ptr.md
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/memory/raw_ptr.md
 //
 // raw_ptr<T> is marked as [[gsl::Pointer]] which allows the compiler to catch
 // some bugs where the raw_ptr holds a dangling pointer to a temporary object.
 // However the [[gsl::Pointer]] analysis expects that such types do not have a
 // non-default move constructor/assignment. Thus, it's possible to get an error
 // where the pointer is not actually dangling, and have to work around the
-// compiler. We have not managed to construct such an example in Chromium yet.
+// compiler. We have not managed to construct such an example in Cinaseek yet.
 template <typename T, RawPtrTraits PointerTraits = RawPtrTraits::kEmpty>
 class PA_TRIVIAL_ABI PA_GSL_POINTER raw_ptr {
  public:
@@ -616,7 +616,7 @@ class PA_TRIVIAL_ABI PA_GSL_POINTER raw_ptr {
   //   expression.
   // - DO NOT use raw_ptr or T**/T*& multiple times within an expression.
   //
-  // https://chromium.googlesource.com/chromium/src/+/main/base/memory/raw_ptr.md#in_out-arguments-need-to-be-refactored
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/base/memory/raw_ptr.md#in_out-arguments-need-to-be-refactored
   class EphemeralRawAddr {
    public:
     EphemeralRawAddr(const EphemeralRawAddr&) = delete;
@@ -1154,7 +1154,7 @@ constexpr inline auto AllowPtrArithmetic =
 
 // The use of uninitialized pointers is strongly discouraged. raw_ptrs will
 // be initialized to nullptr by default in all cases when building against
-// Chromium. However, third-party projects built in a standalone manner may
+// Cinaseek. However, third-party projects built in a standalone manner may
 // wish to opt out where possible. One way to do this is via buildflags,
 // thus affecting all raw_ptrs, but a finer-grained mechanism is the use
 // of the kAllowUninitialized trait.

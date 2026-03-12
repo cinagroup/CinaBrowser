@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ class CORE_EXPORT Response final : public ScriptWrappable, public Body {
   // request URL per step 9 in Main Fetch
   // https://fetch.spec.whatwg.org/#main-fetch. Just fixing it might break the
   // logic in ResourceMultiBufferDataProvider, please see
-  // https://chromium-review.googlesource.com/c/1366464 for more details.
+  // https://Cinaseek-review.googlesource.com/c/1366464 for more details.
   mojom::blink::FetchAPIResponsePtr PopulateFetchAPIResponse(
       const KURL& request_url);
 

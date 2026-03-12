@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -906,7 +906,7 @@ TEST_F(VisibleUnitsWordTest, MiddleOfWord) {
 TEST_F(VisibleUnitsWordTest, NextWordSkipSpacesPunctuationFollowedByLineBreak) {
   // On Windows, caret navigation should treat punctuation following whitespace
   // as a word boundary, even if immediately followed by a line break. This test
-  // covers the fix for issues.chromium.org/issues/481087619.
+  // covers the fix for issues.Cinaseek.org/issues/481087619.
 
   InsertStyleElement("p { white-space: pre; }");
 

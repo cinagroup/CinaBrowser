@@ -9,13 +9,13 @@
     "gtest_tests": [
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_android_cma_backend_unittests"
           ],
@@ -35,22 +35,22 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_android_cma_backend_unittests",
         "test_id_prefix": "ninja://chromecast/media/cma/backend/android:cast_android_cma_backend_unittests/"
       },
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_audio_backend_unittests"
           ],
@@ -70,22 +70,22 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_audio_backend_unittests",
         "test_id_prefix": "ninja://chromecast/media/cma/backend:cast_audio_backend_unittests/"
       },
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_base_unittests"
           ],
@@ -105,22 +105,22 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_base_unittests",
         "test_id_prefix": "ninja://chromecast/base:cast_base_unittests/"
       },
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_cast_core_unittests"
           ],
@@ -140,22 +140,22 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_cast_core_unittests",
         "test_id_prefix": "ninja://chromecast/cast_core:cast_cast_core_unittests/"
       },
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_media_unittests"
           ],
@@ -175,22 +175,22 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_media_unittests",
         "test_id_prefix": "ninja://chromecast/media:cast_media_unittests/"
       },
       {
         "args": [
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "cast_unittests"
           ],
@@ -210,9 +210,9 @@
             "device_os_type": "userdebug",
             "device_type": "walleye",
             "os": "Android",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_unittests",
         "test_id_prefix": "ninja://media/cast:cast_unittests/"
@@ -235,9 +235,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_junit_tests",
         "test_id_prefix": "ninja://base:base_junit_tests/"
@@ -258,9 +258,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_base_junit_tests",
         "test_id_prefix": "ninja://chromecast/base:cast_base_junit_tests/"
@@ -281,9 +281,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_shell_junit_tests",
         "test_id_prefix": "ninja://chromecast/browser/android:cast_shell_junit_tests/"
@@ -304,9 +304,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_junit_tests",
         "test_id_prefix": "ninja://content/public/android:content_junit_tests/"
@@ -327,9 +327,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "net_junit_tests",
         "test_id_prefix": "ninja://net/android:net_junit_tests/"

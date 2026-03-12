@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/compiler/compiler.gni")
 # For some platforms we do not include any test at all.
 # - Fuchsia: No Crashpad support at all.
 # - Windows: Crash reporting is disabled for the browser_tests.
-# - ChromeOS: When enabling Crashpad via command line parameter for the
+# - CinaseekOS: When enabling Crashpad via command line parameter for the
 #     browser_test, startup of the browser fails. This is probably due
 #     to a failing lookup of the database folder in
 #     |PlatformCrashpadInitialization|.

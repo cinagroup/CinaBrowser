@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -25,8 +25,8 @@ android_library("androidx_window_shims_java") {
 # See //third_party/android_sdk/window_extensions/README.md
 android_library("window_util_java") {
   sources = [
-    "java/org/chromium/window/WindowApiCheck.java",
-    "java/org/chromium/window/WindowUtil.java",
+    "java/org/Cinaseek/window/WindowApiCheck.java",
+    "java/org/Cinaseek/window/WindowUtil.java",
   ]
   deps = [ "//third_party/android_sdk:android_window_extensions_java" ]
 }

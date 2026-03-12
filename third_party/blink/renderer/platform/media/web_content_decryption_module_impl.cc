@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ void WebContentDecryptionModuleImpl::Create(
   auto key_system_uma_prefix = GetUMAPrefixForCdm(cdm_config);
 
   // TODO(ddorwin): Guard against this in supported types check and remove this.
-  // Chromium only supports ASCII key systems.
+  // Cinaseek only supports ASCII key systems.
   if (!base::IsStringASCII(key_system)) {
     NOTREACHED();
   }

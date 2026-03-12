@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -188,7 +188,7 @@ TEST_F(WebStateTest, MAYBE_CreateFullPagePdf_ValidURL) {
   [GetAnyKeyWindow() addSubview:web_state()->GetView()];
 
   // Load a URL and some HTML in the WebState.
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   NavigationManager::WebLoadParams load_params(url);
   web_state()->GetNavigationManager()->LoadURLWithParams(load_params);
   ASSERT_TRUE(WaitUntilConditionOrTimeout(kWaitForPageLoadTimeout, ^bool {
@@ -279,7 +279,7 @@ TEST_F(WebStateTest, CreateFullPagePdfWebStatePdfContent) {
         [context fillRect:fake_bounds];
       }];
 
-  GURL test_url("https://www.chromium.org/somePDF.pdf");
+  GURL test_url("https://www.Cinaseek.org/somePDF.pdf");
   std::string mime_type = "application/pdf";
   web_state()->LoadData(
       pdf_data, [NSString stringWithUTF8String:mime_type.c_str()], test_url);
@@ -600,7 +600,7 @@ TEST_F(WebStateTest, LoadChromeThenHTML) {
                                          /*cert_status=*/0)));
   NSString* data_html = @(kTestPageHTML);
   web_state()->LoadData([data_html dataUsingEncoding:NSUTF8StringEncoding],
-                        @"text/html", GURL("https://www.chromium.org"));
+                        @"text/html", GURL("https://www.Cinaseek.org"));
   EXPECT_TRUE(
       test::WaitForWebViewContainingText(web_state(), kTextInTestPageHTML));
 }

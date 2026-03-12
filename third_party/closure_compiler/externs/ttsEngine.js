@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 //   'chrome.ttsEngine.FooType'.
 // Please run the closure compiler before committing changes.
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/docs/closure_compilation.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/closure_compilation.md
 
 /**
  * @fileoverview Externs generated from namespace: ttsEngine

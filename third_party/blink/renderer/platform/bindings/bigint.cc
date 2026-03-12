@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace blink {
 
 // This implementation is based on `v8::internal::BigInt::AsInt64`.
-// https://source.chromium.org/chromium/chromium/src/+/main:v8/src/objects/bigint.cc;drc=17252ebab8c8f8977b19616706fa98dcf4d9d7ae;l=1443
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:v8/src/objects/bigint.cc;drc=17252ebab8c8f8977b19616706fa98dcf4d9d7ae;l=1443
 std::optional<int64_t> BigInt::ToInt64() const {
   if (words_.empty()) {
     return 0;
@@ -34,7 +34,7 @@ std::optional<int64_t> BigInt::ToInt64() const {
 }
 
 // This implementation is based on `v8::Internal::BigInt::AsUint64`.
-// https://source.chromium.org/chromium/chromium/src/+/main:v8/src/objects/bigint.cc;drc=17252ebab8c8f8977b19616706fa98dcf4d9d7ae;l=1450
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:v8/src/objects/bigint.cc;drc=17252ebab8c8f8977b19616706fa98dcf4d9d7ae;l=1450
 std::optional<uint64_t> BigInt::ToUInt64() const {
   if (words_.empty()) {
     return 0;

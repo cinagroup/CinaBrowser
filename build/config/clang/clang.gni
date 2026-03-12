@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ import("//build/toolchain/siso.gni")
 import("//build/toolchain/toolchain.gni")
 import("//build_overrides/build.gni")
 
-# ChromeOS is the only OS for which we support clang modules with a custom
+# CinaseekOS is the only OS for which we support clang modules with a custom
 # sysroot. See http://crbug.com/443587270.
 # Android is here because on android, sysroot.gni would introduce a circular
 # dependency. We just assume that android is always safe to use clang modules
@@ -50,8 +50,8 @@ clang_modules_platform_supported =
     (is_win && current_cpu == "x64" && current_os != target_os)
 
 declare_args() {
-  # Indicates if the build should use the Chrome-specific plugins for enforcing
-  # coding guidelines, etc. Only used when compiling with Chromium's Clang.
+  # Indicates if the build should use the Cinaseek-specific plugins for enforcing
+  # coding guidelines, etc. Only used when compiling with Cinaseek's Clang.
   # Setting this enables all of the functionality of the plugin.
   clang_use_chrome_plugins = is_clang && current_os != "zos"
 
@@ -60,14 +60,14 @@ declare_args() {
   clang_use_raw_ptr_plugin = false
 
   enable_check_raw_ptr_fields =
-      build_with_chromium && !is_official_build &&
+      build_with_Cinaseek && !is_official_build &&
       ((is_linux && !is_castos) || (is_android && !is_cast_android) || is_mac ||
        is_ios || is_win || is_chromeos)
 
   # TODO(crbug.com/40268473): Merge with enable_check_raw_ptr_fields once both
   # checks are activated on the same set of platforms.
   enable_check_raw_ref_fields =
-      build_with_chromium && !is_official_build &&
+      build_with_Cinaseek && !is_official_build &&
       ((is_linux && !is_castos) || (is_android && !is_cast_android) || is_win ||
        is_mac || is_ios || is_chromeos)
 
@@ -78,11 +78,11 @@ declare_args() {
   clang_base_path = default_clang_base_path
 
   # Specifies whether or not bitcode should be embedded during compilation.
-  # This is used for creating a MLGO corpus from Chromium in the non-ThinLTO case.
+  # This is used for creating a MLGO corpus from Cinaseek in the non-ThinLTO case.
   clang_embed_bitcode = false
 
   # Set to true to enable output of ThinLTO index and import files used for
-  # creating a Chromium MLGO corpus in the ThinLTO case.
+  # creating a Cinaseek MLGO corpus in the ThinLTO case.
   lld_emit_indexes_and_imports = false
 }
 

@@ -35,7 +35,7 @@
 
 namespace blink {
 
-// Abstract interface to the Chromium audio system.
+// Abstract interface to the Cinaseek audio system.
 class WebAudioDevice {
  public:
   virtual ~WebAudioDevice() = default;

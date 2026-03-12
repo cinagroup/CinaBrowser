@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -50,7 +50,7 @@ template("define_override_androidx_targets") {
   }
 
   android_library("core_overrides_java") {
-    chromium_code = false
+    Cinaseek_code = false
     resources_package = "androidx.core"
     visibility = [
       ":*",
@@ -79,13 +79,13 @@ template("define_override_androidx_targets") {
   }
 
   android_library("androidx_recyclerview_recyclerview_overrides_java") {
-    chromium_code = false
+    Cinaseek_code = false
     resources_package = "androidx.recyclerview"
     sources = [
-      "local_modifications/recyclerview/java/org/chromium/ui/recyclerview/widget/ItemTouchHelper2.java",
+      "local_modifications/recyclerview/java/org/Cinaseek/ui/recyclerview/widget/ItemTouchHelper2.java",
 
       # Need to include this due to "internal" visibilty.
-      "local_modifications/recyclerview/java/org/chromium/ui/recyclerview/widget/ItemTouchUIUtilImpl2.java",
+      "local_modifications/recyclerview/java/org/Cinaseek/ui/recyclerview/widget/ItemTouchUIUtilImpl2.java",
     ]
     deps = [
       "//third_party/android_deps:org_jspecify_jspecify_java",
@@ -95,7 +95,7 @@ template("define_override_androidx_targets") {
     ]
   }
 
-  android_library("chromium_espresso_overrides_java") {
+  android_library("Cinaseek_espresso_overrides_java") {
     testonly = true
     sources = [ "local_modifications/espresso/java/androidx/test/espresso/base/ViewHierarchyExceptionHandler.java" ]
     deps = [

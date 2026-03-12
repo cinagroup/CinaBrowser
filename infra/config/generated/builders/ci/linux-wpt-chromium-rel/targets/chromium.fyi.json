@@ -1,5 +1,5 @@
 {
-  "linux-wpt-chromium-rel": {
+  "linux-wpt-Cinaseek-rel": {
     "isolated_scripts": [
       {
         "args": [
@@ -31,7 +31,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 5
         },
         "test": "headless_shell_wpt",

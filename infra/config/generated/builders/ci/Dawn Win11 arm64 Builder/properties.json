@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/Dawn Win11 arm64 Builder/gn-args.json"
@@ -10,17 +10,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Dawn Win11 arm64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dawn",
+              "builder_group": "Cinaseek.dawn",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "win"
@@ -29,7 +29,7 @@
                 "apply_configs": [
                   "dawn_top_of_tree"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -37,27 +37,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Dawn Win11 arm64 Release (Qualcomm Snapdragon X Elite)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dawn",
+              "builder_group": "Cinaseek.dawn",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "Dawn Win11 arm64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -68,24 +68,24 @@
         {
           "bucket": "ci",
           "builder": "Dawn Win11 arm64 Builder",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "Dawn Win11 arm64 Release (Qualcomm Snapdragon X Elite)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "dawn-try-win11-arm64-snapdragon-x-elite-rel",
-          "group": "tryserver.chromium.dawn"
+          "group": "tryserver.Cinaseek.dawn"
         },
         {
           "builder": "win11-arm64-dawn-rel",
-          "group": "tryserver.chromium.dawn"
+          "group": "tryserver.Cinaseek.dawn"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/Dawn Win11 arm64 Builder/targets"
@@ -99,7 +99,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -109,12 +109,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.dawn",
+  "builder_group": "Cinaseek.dawn",
   "dawn_ref": "refs/heads/main",
   "gardener_rotations": [
     "dawn"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
     "dawn"
   ]

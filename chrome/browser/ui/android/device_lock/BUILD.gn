@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,18 +6,18 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockMediator.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockUtils.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockView.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockViewBinder.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockLauncher.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockMediator.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockProperties.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockView.java",
-    "java/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockView.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockView.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockViewBinder.java",
   ]
   deps = [
     ":java_resources",
@@ -39,18 +39,18 @@ android_library("java") {
     "//third_party/androidx:androidx_appcompat_appcompat_resources_java",
     "//ui/android:ui_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ui.device_lock"
+  resources_package = "org.Cinaseek.chrome.browser.ui.device_lock"
 }
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.ui.device_lock"
+  resources_package = "org.Cinaseek.chrome.browser.ui.device_lock"
   sources = [
-    "javatests/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockCoordinatorTest.java",
-    "javatests/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockViewBinderTest.java",
-    "javatests/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockCoordinatorTest.java",
-    "javatests/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockLauncherTest.java",
-    "javatests/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockCoordinatorTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockViewBinderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockCoordinatorTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockLauncherTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockViewBinderTest.java",
   ]
   deps = [
     ":java",
@@ -86,10 +86,10 @@ android_library("javatests") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.ui.device_lock"
+  resources_package = "org.Cinaseek.chrome.browser.ui.device_lock"
   sources = [
-    "junit/src/org/chromium/chrome/browser/ui/device_lock/DeviceLockMediatorUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/ui/device_lock/MissingDeviceLockMediatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/ui/device_lock/DeviceLockMediatorUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/ui/device_lock/MissingDeviceLockMediatorUnitTest.java",
   ]
 
   deps = [

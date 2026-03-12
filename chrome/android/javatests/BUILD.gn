@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,40 +13,40 @@ testonly = true
 # Contain all source code that is used by tests in a different package.
 android_library("chrome_test_java_helper") {
   sources = [
-    "//chrome/android/feed/core/javatests/src/org/chromium/chrome/browser/feed/v2/FeedV2TestHelper.java",
-    "//chrome/android/feed/core/javatests/src/org/chromium/chrome/browser/feed/v2/TestFeedServer.java",
-    "src/org/chromium/chrome/browser/MockSafeBrowsingApiHandler.java",
-    "src/org/chromium/chrome/browser/ViewportTestUtils.java",
+    "//chrome/android/feed/core/javatests/src/org/Cinaseek/chrome/browser/feed/v2/FeedV2TestHelper.java",
+    "//chrome/android/feed/core/javatests/src/org/Cinaseek/chrome/browser/feed/v2/TestFeedServer.java",
+    "src/org/Cinaseek/chrome/browser/MockSafeBrowsingApiHandler.java",
+    "src/org/Cinaseek/chrome/browser/ViewportTestUtils.java",
 
     # TODO: This is a test file that's used by another test file
     # BookmarkEditTest.java which is in a different package.
     # We should try to remove this dependency if possible.
-    "//chrome/browser/bookmarks/android/javatests/src/org/chromium/chrome/browser/bookmarks/BookmarkModelTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityTestUtil.java",
-    "src/org/chromium/chrome/browser/compositor/layouts/MockLayoutHost.java",
-    "src/org/chromium/chrome/browser/customtabs/IncognitoCustomTabActivityTestRule.java",
-    "src/org/chromium/chrome/browser/download/DownloadTestHelper.java",
-    "src/org/chromium/chrome/browser/download/DownloadTestRule.java",
-    "src/org/chromium/chrome/browser/firstrun/DisableFirstRun.java",
-    "src/org/chromium/chrome/browser/fullscreen/FullscreenManagerTestUtils.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoDataTestUtils.java",
-    "src/org/chromium/chrome/browser/multiwindow/MultiWindowTestHelper.java",
-    "src/org/chromium/chrome/browser/notifications/NotificationTestRule.java",
-    "src/org/chromium/chrome/browser/ntp/HomeSurfaceTestUtils.java",
+    "//chrome/browser/bookmarks/android/javatests/src/org/Cinaseek/chrome/browser/bookmarks/BookmarkModelTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityTestUtil.java",
+    "src/org/Cinaseek/chrome/browser/compositor/layouts/MockLayoutHost.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/IncognitoCustomTabActivityTestRule.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadTestHelper.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadTestRule.java",
+    "src/org/Cinaseek/chrome/browser/firstrun/DisableFirstRun.java",
+    "src/org/Cinaseek/chrome/browser/fullscreen/FullscreenManagerTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoDataTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/multiwindow/MultiWindowTestHelper.java",
+    "src/org/Cinaseek/chrome/browser/notifications/NotificationTestRule.java",
+    "src/org/Cinaseek/chrome/browser/ntp/HomeSurfaceTestUtils.java",
 
     # TODO: This is a test file that's used by another test file
     # StartupLoadingMetricsTest.java which is in a different package.
     # We should try to remove this dependency if possible.
-    "src/org/chromium/chrome/browser/page_load_metrics/PageLoadMetricsTest.java",
-    "src/org/chromium/chrome/browser/partnercustomizations/BasePartnerBrowserCustomizationIntegrationTestRule.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionTestRule.java",
-    "src/org/chromium/chrome/browser/permissions/RuntimePermissionTestUtils.java",
-    "src/org/chromium/chrome/browser/search_engines/DefaultSearchEngineDialogHelperUtils.java",
-    "src/org/chromium/chrome/browser/site_settings/SiteSettingsTestUtils.java",
-    "src/org/chromium/chrome/browser/sync/SyncTestRule.java",
-    "src/org/chromium/chrome/browser/test/CommandLineInitRule.java",
-    "src/org/chromium/chrome/browser/test/ScreenShooter.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkActivityTestRule.java",
+    "src/org/Cinaseek/chrome/browser/page_load_metrics/PageLoadMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/partnercustomizations/BasePartnerBrowserCustomizationIntegrationTestRule.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionTestRule.java",
+    "src/org/Cinaseek/chrome/browser/permissions/RuntimePermissionTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/DefaultSearchEngineDialogHelperUtils.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/SiteSettingsTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/sync/SyncTestRule.java",
+    "src/org/Cinaseek/chrome/browser/test/CommandLineInitRule.java",
+    "src/org/Cinaseek/chrome/browser/test/ScreenShooter.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkActivityTestRule.java",
   ]
 
   public_deps = [
@@ -457,10 +457,10 @@ android_library("chrome_test_java_helper") {
   }
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.actor") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.actor") {
+  resources_package = "org.Cinaseek.chrome.test"
 
-  sources = [ "src/org/chromium/chrome/browser/actor/ActorOverlayPTTest.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/actor/ActorOverlayPTTest.java" ]
 
   deps = [
     ":chrome_test_java_helper",
@@ -470,184 +470,184 @@ android_library("chrome_test_java_org.chromium.chrome.browser.actor") {
 }
 
 # Partition tests into one target per-package to keep incremental build times down.
-android_library("chrome_test_java_org.chromium.chrome.browser") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/ActivityResultTrackerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/ActivityTabProviderTest.java",
-    "src/org/chromium/chrome/browser/AutofillOptionsLauncherTest.java",
-    "src/org/chromium/chrome/browser/ChromeActionModeHandlerTest.java",
-    "src/org/chromium/chrome/browser/ChromeTabbedActivityTest.java",
-    "src/org/chromium/chrome/browser/ContentViewFocusTest.java",
-    "src/org/chromium/chrome/browser/ContentWebFeatureUsageUtilsIntegrationTest.java",
-    "src/org/chromium/chrome/browser/ExampleAutoResetCtaTest.java",
-    "src/org/chromium/chrome/browser/ExampleFreshCtaTest.java",
-    "src/org/chromium/chrome/browser/ExampleReusedCtaTest.java",
-    "src/org/chromium/chrome/browser/ExampleUiCaptureTest.java",
-    "src/org/chromium/chrome/browser/FeaturesAnnotationsTest.java",
-    "src/org/chromium/chrome/browser/FocusedEditableTextFieldZoomTest.java",
-    "src/org/chromium/chrome/browser/HTTPSTabsOpenedFromExternalAppTest.java",
-    "src/org/chromium/chrome/browser/ImageFetcherIntegrationTest.java",
-    "src/org/chromium/chrome/browser/InputHintCheckerTest.java",
-    "src/org/chromium/chrome/browser/InstalledAppTest.java",
-    "src/org/chromium/chrome/browser/IntentHandlerBrowserTest.java",
-    "src/org/chromium/chrome/browser/JavaScriptEvalChromeTest.java",
-    "src/org/chromium/chrome/browser/KeyboardShortcutsTest.java",
-    "src/org/chromium/chrome/browser/LauncherShortcutTest.java",
-    "src/org/chromium/chrome/browser/MainActivityWithURLTest.java",
-    "src/org/chromium/chrome/browser/NavigateTest.java",
-    "src/org/chromium/chrome/browser/OmahaServiceStartDelayerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/PopularUrlsTest.java",
-    "src/org/chromium/chrome/browser/PopupMultiwindowPTTest.java",
-    "src/org/chromium/chrome/browser/PopupPTTest.java",
-    "src/org/chromium/chrome/browser/SafeBrowsingTest.java",
-    "src/org/chromium/chrome/browser/SelectFileDialogTest.java",
-    "src/org/chromium/chrome/browser/ShareIntentTest.java",
-    "src/org/chromium/chrome/browser/SmartClipProviderTest.java",
-    "src/org/chromium/chrome/browser/TabCountLabelTest.java",
-    "src/org/chromium/chrome/browser/TabObserverTest.java",
-    "src/org/chromium/chrome/browser/TabTest.java",
-    "src/org/chromium/chrome/browser/TabThemeTest.java",
-    "src/org/chromium/chrome/browser/TabsOpenedFromExternalAppTest.java",
-    "src/org/chromium/chrome/browser/TabsTest.java",
-    "src/org/chromium/chrome/browser/ToolbarSwipeTest.java",
-    "src/org/chromium/chrome/browser/UrlSchemeTest.java",
-    "src/org/chromium/chrome/browser/VideoFullscreenOrientationLockChromeTest.java",
-    "src/org/chromium/chrome/browser/ViewTransitionPixelTest.java",
-    "src/org/chromium/chrome/browser/VirtualKeyboardResizeTest.java",
-    "src/org/chromium/chrome/browser/WarmupManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/ActivityResultTrackerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/ActivityTabProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/AutofillOptionsLauncherTest.java",
+    "src/org/Cinaseek/chrome/browser/CinaseekActionModeHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/CinaseekTabbedActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/ContentViewFocusTest.java",
+    "src/org/Cinaseek/chrome/browser/ContentWebFeatureUsageUtilsIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/ExampleAutoResetCtaTest.java",
+    "src/org/Cinaseek/chrome/browser/ExampleFreshCtaTest.java",
+    "src/org/Cinaseek/chrome/browser/ExampleReusedCtaTest.java",
+    "src/org/Cinaseek/chrome/browser/ExampleUiCaptureTest.java",
+    "src/org/Cinaseek/chrome/browser/FeaturesAnnotationsTest.java",
+    "src/org/Cinaseek/chrome/browser/FocusedEditableTextFieldZoomTest.java",
+    "src/org/Cinaseek/chrome/browser/HTTPSTabsOpenedFromExternalAppTest.java",
+    "src/org/Cinaseek/chrome/browser/ImageFetcherIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/InputHintCheckerTest.java",
+    "src/org/Cinaseek/chrome/browser/InstalledAppTest.java",
+    "src/org/Cinaseek/chrome/browser/IntentHandlerBrowserTest.java",
+    "src/org/Cinaseek/chrome/browser/JavaScriptEvalCinaseekTest.java",
+    "src/org/Cinaseek/chrome/browser/KeyboardShortcutsTest.java",
+    "src/org/Cinaseek/chrome/browser/LauncherShortcutTest.java",
+    "src/org/Cinaseek/chrome/browser/MainActivityWithURLTest.java",
+    "src/org/Cinaseek/chrome/browser/NavigateTest.java",
+    "src/org/Cinaseek/chrome/browser/OmahaServiceStartDelayerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/PopularUrlsTest.java",
+    "src/org/Cinaseek/chrome/browser/PopupMultiwindowPTTest.java",
+    "src/org/Cinaseek/chrome/browser/PopupPTTest.java",
+    "src/org/Cinaseek/chrome/browser/SafeBrowsingTest.java",
+    "src/org/Cinaseek/chrome/browser/SelectFileDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/ShareIntentTest.java",
+    "src/org/Cinaseek/chrome/browser/SmartClipProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/TabCountLabelTest.java",
+    "src/org/Cinaseek/chrome/browser/TabObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/TabTest.java",
+    "src/org/Cinaseek/chrome/browser/TabThemeTest.java",
+    "src/org/Cinaseek/chrome/browser/TabsOpenedFromExternalAppTest.java",
+    "src/org/Cinaseek/chrome/browser/TabsTest.java",
+    "src/org/Cinaseek/chrome/browser/ToolbarSwipeTest.java",
+    "src/org/Cinaseek/chrome/browser/UrlSchemeTest.java",
+    "src/org/Cinaseek/chrome/browser/VideoFullscreenOrientationLockCinaseekTest.java",
+    "src/org/Cinaseek/chrome/browser/ViewTransitionPixelTest.java",
+    "src/org/Cinaseek/chrome/browser/VirtualKeyboardResizeTest.java",
+    "src/org/Cinaseek/chrome/browser/WarmupManagerTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.app") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.app") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/android/java/src/org/chromium/chrome/browser/app/feed/NavigationRecorderTest.java",
-    "src/org/chromium/chrome/browser/app/ContextMenuDragTest.java",
-    "src/org/chromium/chrome/browser/app/appmenu/MultiWindowAppMenuTest.java",
-    "src/org/chromium/chrome/browser/app/appmenu/OverviewAppMenuTest.java",
-    "src/org/chromium/chrome/browser/app/appmenu/TabbedAppMenuPTTest.java",
-    "src/org/chromium/chrome/browser/app/appmenu/TabbedAppMenuTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/BookmarkEditTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/BookmarkFolderPickerActivityTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/BookmarkTabletTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/BookmarkTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/PartnerBookmarkTest.java",
-    "src/org/chromium/chrome/browser/app/bookmarks/ReadingListTest.java",
-    "src/org/chromium/chrome/browser/app/edge_to_edge/EdgeToEdgeInstrumentationTest.java",
-    "src/org/chromium/chrome/browser/app/edge_to_edge/EdgeToEdgePTTest.java",
-    "src/org/chromium/chrome/browser/app/edge_to_edge/EdgeToEdgeStartupTest.java",
-    "src/org/chromium/chrome/browser/app/flags/ChromeCachedFlagsTest.java",
-    "src/org/chromium/chrome/browser/app/metrics/TabbedActivityLaunchCauseMetricsTest.java",
-    "src/org/chromium/chrome/browser/app/tab_activity_glue/TabletPhoneLayoutChangeTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/ActiveTabCacheTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/AllTabObserverTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/ArchivedTabModelOrchestratorTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/ArchivedTabsTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/ChromeNextTabPolicySupplierTest.java",
-    "src/org/chromium/chrome/browser/app/tabmodel/PersistentStoreCleanerTest.java",
+    "//chrome/android/java/src/org/Cinaseek/chrome/browser/app/feed/NavigationRecorderTest.java",
+    "src/org/Cinaseek/chrome/browser/app/ContextMenuDragTest.java",
+    "src/org/Cinaseek/chrome/browser/app/appmenu/MultiWindowAppMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/app/appmenu/OverviewAppMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/app/appmenu/TabbedAppMenuPTTest.java",
+    "src/org/Cinaseek/chrome/browser/app/appmenu/TabbedAppMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/BookmarkEditTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/BookmarkFolderPickerActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/BookmarkTabletTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/BookmarkTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/PartnerBookmarkTest.java",
+    "src/org/Cinaseek/chrome/browser/app/bookmarks/ReadingListTest.java",
+    "src/org/Cinaseek/chrome/browser/app/edge_to_edge/EdgeToEdgeInstrumentationTest.java",
+    "src/org/Cinaseek/chrome/browser/app/edge_to_edge/EdgeToEdgePTTest.java",
+    "src/org/Cinaseek/chrome/browser/app/edge_to_edge/EdgeToEdgeStartupTest.java",
+    "src/org/Cinaseek/chrome/browser/app/flags/CinaseekCachedFlagsTest.java",
+    "src/org/Cinaseek/chrome/browser/app/metrics/TabbedActivityLaunchCauseMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tab_activity_glue/TabletPhoneLayoutChangeTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/ActiveTabCacheTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/AllTabObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/ArchivedTabModelOrchestratorTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/ArchivedTabsTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/CinaseekNextTabPolicySupplierTest.java",
+    "src/org/Cinaseek/chrome/browser/app/tabmodel/PersistentStoreCleanerTest.java",
   ]
 
   deps = [
     ":chrome_test_java_helper",
-    ":chrome_test_java_org.chromium.chrome.browser.tabmodel",
+    ":chrome_test_java_org.Cinaseek.chrome.browser.tabmodel",
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.appearance") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.appearance") {
+  resources_package = "org.Cinaseek.chrome.test"
 
-  sources = [ "src/org/chromium/chrome/browser/appearance/settings/AppearanceSettingsFragmentTest.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/appearance/settings/AppearanceSettingsFragmentTest.java" ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.autofill") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.autofill") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/autofill/AutofillSnackbarControllerTest.java",
-    "src/org/chromium/chrome/browser/autofill/AutofillUpstreamTest.java",
-    "src/org/chromium/chrome/browser/autofill/TouchToFillCreditCardTest.java",
-    "src/org/chromium/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetRenderTest.java",
-    "src/org/chromium/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetViewBinderTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/AutofillCardBenefitsFragmentTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/AutofillPaymentMethodsFragmentCardBenefitsTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/AutofillPaymentMethodsFragmentTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/AutofillProfilesFragmentTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/AutofillTestRule.java",
-    "src/org/chromium/chrome/browser/autofill/settings/FinancialAccountsManagementFragmentTest.java",
-    "src/org/chromium/chrome/browser/autofill/settings/NonCardPaymentMethodsManagementFragmentTest.java",
-    "src/org/chromium/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetRenderTest.java",
-    "src/org/chromium/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetViewBinderTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/AutofillSnackbarControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/AutofillUpstreamTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/TouchToFillCreditCardTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetViewBinderTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/AutofillCardBenefitsFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/AutofillPaymentMethodsFragmentCardBenefitsTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/AutofillPaymentMethodsFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/AutofillProfilesFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/AutofillTestRule.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/FinancialAccountsManagementFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/settings/NonCardPaymentMethodsManagementFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetViewBinderTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.browser_controls") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.browser_controls") {
+  resources_package = "org.Cinaseek.chrome.test"
 
-  sources = [ "src/org/chromium/chrome/browser/browser_controls/BrowserControlsPTTest.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsPTTest.java" ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.browserservices") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.browserservices") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/browserservices/ManageTrustedWebActivityDataActivityTest.java",
-    "src/org/chromium/chrome/browser/browserservices/RunningInChromeTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityClientContactsDelegationTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityClientLocationDelegationTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityClientTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityOrientationTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityShareTargetTest.java",
-    "src/org/chromium/chrome/browser/browserservices/TrustedWebActivityTest.java",
-    "src/org/chromium/chrome/browser/browserservices/digitalgoods/DigitalGoodsTest.java",
-    "src/org/chromium/chrome/browser/browserservices/digitalgoods/FakeDigitalGoods.java",
-    "src/org/chromium/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityLocationDelegationTest.java",
-    "src/org/chromium/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityPermissionsTest.java",
-    "src/org/chromium/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityPreferencesUiTest.java",
-    "src/org/chromium/chrome/browser/browserservices/ui/controller/trustedwebactivity/TrustedWebActivityCurrentPageVerifierTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/ManageTrustedWebActivityDataActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/RunningInCinaseekTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityClientContactsDelegationTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityClientLocationDelegationTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityClientTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityOrientationTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityShareTargetTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/TrustedWebActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/digitalgoods/DigitalGoodsTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/digitalgoods/FakeDigitalGoods.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityLocationDelegationTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityPermissionsTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/permissiondelegation/TrustedWebActivityPreferencesUiTest.java",
+    "src/org/Cinaseek/chrome/browser/browserservices/ui/controller/trustedwebactivity/TrustedWebActivityCurrentPageVerifierTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.browsing_data") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.browsing_data") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/browsing_data/BrowsingDataBridgeTest.java",
-    "src/org/chromium/chrome/browser/browsing_data/BrowsingDataRemoverIntegrationTest.java",
-    "src/org/chromium/chrome/browser/browsing_data/BrowsingDataTest.java",
-    "src/org/chromium/chrome/browser/browsing_data/ClearBrowsingDataFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/browsing_data/BrowsingDataBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/browsing_data/BrowsingDataRemoverIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/browsing_data/BrowsingDataTest.java",
+    "src/org/Cinaseek/chrome/browser/browsing_data/ClearBrowsingDataFragmentTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.compositor") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.compositor") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/compositor/CompositorVisibilityTest.java",
-    "src/org/chromium/chrome/browser/compositor/PerformancePTTest.java",
-    "src/org/chromium/chrome/browser/compositor/layouts/LayoutManagerTest.java",
-    "src/org/chromium/chrome/browser/compositor/layouts/content/TabContentManagerTest.java",
-    "src/org/chromium/chrome/browser/compositor/overlays/strip/TabStripContextMenuTest.java",
-    "src/org/chromium/chrome/browser/compositor/overlays/strip/TabStripGroupContextMenuTest.java",
-    "src/org/chromium/chrome/browser/compositor/overlays/strip/TabStripPinUnpinTabsTest.java",
-    "src/org/chromium/chrome/browser/compositor/overlays/strip/TabStripTest.java",
-    "src/org/chromium/chrome/browser/compositor/overlays/strip/TabStripTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/compositor/CompositorVisibilityTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/PerformancePTTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/layouts/LayoutManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/layouts/content/TabContentManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/overlays/strip/TabStripContextMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/overlays/strip/TabStripGroupContextMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/overlays/strip/TabStripPinUnpinTabsTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/overlays/strip/TabStripTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/overlays/strip/TabStripTestUtils.java",
   ]
 
   deps = [
@@ -659,206 +659,206 @@ android_library("chrome_test_java_org.chromium.chrome.browser.compositor") {
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.contextualsearch") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.contextualsearch") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchCalloutTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchCriticalTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchFakeServer.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchHistogramTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchInstrumentationBase.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchInstrumentationTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchInternalStateControllerWrapper.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchManagerTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchObserverTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchPolicyTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchRelatedSearchesTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchRequestTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchSettingsFragmentTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchSystemTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchTriggerTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/ContextualSearchUnbatchedTest.java",
-    "src/org/chromium/chrome/browser/contextualsearch/MockContextualSearchPolicy.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchCalloutTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchCriticalTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchFakeServer.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchHistogramTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchInstrumentationBase.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchInstrumentationTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchInternalStateControllerWrapper.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchPolicyTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchRelatedSearchesTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchRequestTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchSettingsFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchSystemTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchTriggerTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchUnbatchedTest.java",
+    "src/org/Cinaseek/chrome/browser/contextualsearch/MockContextualSearchPolicy.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.customtabs") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.customtabs") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/customtabs/AuthTabTest.java",
-    "src/org/chromium/chrome/browser/customtabs/BlankAuthTabLauncherTestActivity.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityAppMenuTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityEphemeralTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityIncognitoMetricTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityIncognitoTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityRenderTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivitySecurityIndicatorTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabActivityTypeTestUtils.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabAutoplayUnmutedTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabDeferredStartupTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabExternalNavigationTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabFromChromeExternalNavigationTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabModalDialogTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabPostMessageTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabTabPersistenceIntegrationTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabTabPersistencePolicyTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabTaskDescriptionHelperTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabsConnectionTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabsFeatureUsageTest.java",
-    "src/org/chromium/chrome/browser/customtabs/DetachedResourceRequestTest.java",
-    "src/org/chromium/chrome/browser/customtabs/IncognitoCustomTabActivityRenderTest.java",
-    "src/org/chromium/chrome/browser/customtabs/MismatchNotificationControllerTest.java",
-    "src/org/chromium/chrome/browser/customtabs/TabReparentingTest.java",
-    "src/org/chromium/chrome/browser/customtabs/TrustedCdnPublisherUrlTest.java",
-    "src/org/chromium/chrome/browser/customtabs/content/TabObserverRegistrarTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/branding/CustomTabBrandingTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCustomTabsIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/AuthTabTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/BlankAuthTabLauncherTestActivity.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityAppMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityEphemeralTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityIncognitoMetricTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityIncognitoTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivitySecurityIndicatorTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityTypeTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabAutoplayUnmutedTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabDeferredStartupTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabExternalNavigationTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabFromCinaseekExternalNavigationTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabModalDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabPostMessageTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabTabPersistenceIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabTabPersistencePolicyTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabTaskDescriptionHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabsConnectionTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabsFeatureUsageTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/DetachedResourceRequestTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/IncognitoCustomTabActivityRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/MismatchNotificationControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/TabReparentingTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/TrustedCdnPublisherUrlTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/content/TabObserverRegistrarTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/branding/CustomTabBrandingTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCustomTabsIntegrationTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.device_dialog") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.device_dialog") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/device_dialog/BluetoothChooserDialogTest.java",
-    "src/org/chromium/chrome/browser/device_dialog/BluetoothScanningPermissionDialogTest.java",
-    "src/org/chromium/chrome/browser/device_dialog/ItemChooserDialogTest.java",
-    "src/org/chromium/chrome/browser/device_dialog/SerialChooserDialogTest.java",
-    "src/org/chromium/chrome/browser/device_dialog/UsbChooserDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/device_dialog/BluetoothChooserDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/device_dialog/BluetoothScanningPermissionDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/device_dialog/ItemChooserDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/device_dialog/SerialChooserDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/device_dialog/UsbChooserDialogTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.display_cutout") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.display_cutout") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/display_cutout/DisplayCutoutTest.java",
-    "src/org/chromium/chrome/browser/display_cutout/DisplayCutoutTestRule.java",
-    "src/org/chromium/chrome/browser/display_cutout/WebappDisplayCutoutTest.java",
-    "src/org/chromium/chrome/browser/display_cutout/WebappDisplayCutoutTestRule.java",
+    "src/org/Cinaseek/chrome/browser/display_cutout/DisplayCutoutTest.java",
+    "src/org/Cinaseek/chrome/browser/display_cutout/DisplayCutoutTestRule.java",
+    "src/org/Cinaseek/chrome/browser/display_cutout/WebappDisplayCutoutTest.java",
+    "src/org/Cinaseek/chrome/browser/display_cutout/WebappDisplayCutoutTestRule.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.dom_distiller") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.dom_distiller") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/dom_distiller/DistillabilityServiceTest.java",
-    "src/org/chromium/chrome/browser/dom_distiller/DistilledPagePrefsTest.java",
-    "src/org/chromium/chrome/browser/dom_distiller/ReaderModeBottomSheetRenderTest.java",
-    "src/org/chromium/chrome/browser/dom_distiller/ReaderModePrefsRenderTest.java",
-    "src/org/chromium/chrome/browser/dom_distiller/ReaderModeTest.java",
-  ]
-
-  deps = [ ":chrome_test_java_helper" ]
-}
-
-android_library(
-    "chrome_test_java_org.chromium.chrome.browser.chrome_item_picker") {
-  resources_package = "org.chromium.chrome.test"
-
-  sources = [ "src/org/chromium/chrome/browser/chrome_item_picker/ChromeItemPickerActivityTest.java" ]
-
-  deps = [ ":chrome_test_java_helper" ]
-}
-
-android_library("chrome_test_java_org.chromium.chrome.browser.download") {
-  resources_package = "org.chromium.chrome.test"
-
-  sources = [
-    "src/org/chromium/chrome/browser/download/AutoDownloadsTest.java",
-    "src/org/chromium/chrome/browser/download/ChromeDownloadDelegateTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadLocationChangeEnd2EndTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadManagerServiceTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadSettingsTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadTest.java",
-    "src/org/chromium/chrome/browser/download/OMADownloadHandlerTest.java",
-    "src/org/chromium/chrome/browser/download/ServicificationDownloadTest.java",
-    "src/org/chromium/chrome/browser/download/dialogs/DownloadDialogIncognitoTest.java",
-  ]
-
-  deps = [ ":chrome_test_java_helper" ]
-}
-
-android_library("chrome_test_java_org.chromium.chrome.browser.feedback") {
-  resources_package = "org.chromium.chrome.test"
-
-  sources = [
-    "src/org/chromium/chrome/browser/feedback/ChromeFeedbackCollectorTest.java",
-    "src/org/chromium/chrome/browser/feedback/ConnectivityCheckerTest.java",
-    "src/org/chromium/chrome/browser/feedback/ConnectivityCheckerTestRule.java",
-    "src/org/chromium/chrome/browser/feedback/ConnectivityTaskTest.java",
-  ]
-
-  deps = [ ":chrome_test_java_helper" ]
-}
-
-android_library("chrome_test_java_org.chromium.chrome.browser.firstrun") {
-  resources_package = "org.chromium.chrome.test"
-
-  sources = [
-    "src/org/chromium/chrome/browser/firstrun/FirstRunActivitySigninAndSyncTest.java",
-    "src/org/chromium/chrome/browser/firstrun/FirstRunActivityTestObserver.java",
-    "src/org/chromium/chrome/browser/firstrun/FirstRunIntegrationTest.java",
-  ]
-
-  deps = [ ":chrome_test_java_helper" ]
-}
-
-android_library("chrome_test_java_org.chromium.chrome.browser.gesturenav") {
-  resources_package = "org.chromium.chrome.test"
-
-  sources = [
-    "src/org/chromium/chrome/browser/gesturenav/GestureNavigationTestUtils.java",
-    "src/org/chromium/chrome/browser/gesturenav/NavigationHandlerTest.java",
-    "src/org/chromium/chrome/browser/gesturenav/NavigationSheetTest.java",
-    "src/org/chromium/chrome/browser/gesturenav/NavigationTransitionsTest.java",
-    "src/org/chromium/chrome/browser/gesturenav/ScreenshotCaptureTest.java",
+    "src/org/Cinaseek/chrome/browser/dom_distiller/DistillabilityServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/dom_distiller/DistilledPagePrefsTest.java",
+    "src/org/Cinaseek/chrome/browser/dom_distiller/ReaderModeBottomSheetRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/dom_distiller/ReaderModePrefsRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/dom_distiller/ReaderModeTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.hardware_acceleration") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.chrome_item_picker") {
+  resources_package = "org.Cinaseek.chrome.test"
+
+  sources = [ "src/org/Cinaseek/chrome/browser/chrome_item_picker/CinaseekItemPickerActivityTest.java" ]
+
+  deps = [ ":chrome_test_java_helper" ]
+}
+
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.download") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/hardware_acceleration/ChromeTabbedActivityHWATest.java",
-    "src/org/chromium/chrome/browser/hardware_acceleration/CustomTabActivityHWATest.java",
-    "src/org/chromium/chrome/browser/hardware_acceleration/ManifestHWATest.java",
-    "src/org/chromium/chrome/browser/hardware_acceleration/ToastHWATest.java",
-    "src/org/chromium/chrome/browser/hardware_acceleration/Utils.java",
-    "src/org/chromium/chrome/browser/hardware_acceleration/WebappActivityHWATest.java",
+    "src/org/Cinaseek/chrome/browser/download/AutoDownloadsTest.java",
+    "src/org/Cinaseek/chrome/browser/download/CinaseekDownloadDelegateTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadLocationChangeEnd2EndTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadManagerServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadTest.java",
+    "src/org/Cinaseek/chrome/browser/download/OMADownloadHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/download/ServicificationDownloadTest.java",
+    "src/org/Cinaseek/chrome/browser/download/dialogs/DownloadDialogIncognitoTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.incognito") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.feedback") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/incognito/IncognitoCookieLeakageTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoDownloadLeakageTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoHistoryLeakageTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoNotificationServiceTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoPermissionLeakageTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoProfileDestroyerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoStorageLeakageTest.java",
-    "src/org/chromium/chrome/browser/incognito/IncognitoTabLauncherTest.java",
+    "src/org/Cinaseek/chrome/browser/feedback/CinaseekFeedbackCollectorTest.java",
+    "src/org/Cinaseek/chrome/browser/feedback/ConnectivityCheckerTest.java",
+    "src/org/Cinaseek/chrome/browser/feedback/ConnectivityCheckerTestRule.java",
+    "src/org/Cinaseek/chrome/browser/feedback/ConnectivityTaskTest.java",
+  ]
+
+  deps = [ ":chrome_test_java_helper" ]
+}
+
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.firstrun") {
+  resources_package = "org.Cinaseek.chrome.test"
+
+  sources = [
+    "src/org/Cinaseek/chrome/browser/firstrun/FirstRunActivitySigninAndSyncTest.java",
+    "src/org/Cinaseek/chrome/browser/firstrun/FirstRunActivityTestObserver.java",
+    "src/org/Cinaseek/chrome/browser/firstrun/FirstRunIntegrationTest.java",
+  ]
+
+  deps = [ ":chrome_test_java_helper" ]
+}
+
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.gesturenav") {
+  resources_package = "org.Cinaseek.chrome.test"
+
+  sources = [
+    "src/org/Cinaseek/chrome/browser/gesturenav/GestureNavigationTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/gesturenav/NavigationHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/gesturenav/NavigationSheetTest.java",
+    "src/org/Cinaseek/chrome/browser/gesturenav/NavigationTransitionsTest.java",
+    "src/org/Cinaseek/chrome/browser/gesturenav/ScreenshotCaptureTest.java",
+  ]
+
+  deps = [ ":chrome_test_java_helper" ]
+}
+
+android_library(
+    "chrome_test_java_org.Cinaseek.chrome.browser.hardware_acceleration") {
+  resources_package = "org.Cinaseek.chrome.test"
+
+  sources = [
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/CinaseekTabbedActivityHWATest.java",
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/CustomTabActivityHWATest.java",
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/ManifestHWATest.java",
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/ToastHWATest.java",
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/Utils.java",
+    "src/org/Cinaseek/chrome/browser/hardware_acceleration/WebappActivityHWATest.java",
+  ]
+
+  deps = [ ":chrome_test_java_helper" ]
+}
+
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.incognito") {
+  resources_package = "org.Cinaseek.chrome.test"
+
+  sources = [
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoCookieLeakageTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoDownloadLeakageTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoHistoryLeakageTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoNotificationServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoPermissionLeakageTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoProfileDestroyerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoStorageLeakageTest.java",
+    "src/org/Cinaseek/chrome/browser/incognito/IncognitoTabLauncherTest.java",
   ]
 
   deps = [
@@ -867,20 +867,20 @@ android_library("chrome_test_java_org.chromium.chrome.browser.incognito") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.media") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.media") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/media/AutoPipPermissionDialogViewRenderTest.java",
-    "src/org/chromium/chrome/browser/media/DocumentPictureInPictureActivityTest.java",
-    "src/org/chromium/chrome/browser/media/MediaLauncherActivityTest.java",
-    "src/org/chromium/chrome/browser/media/MediaViewerUtilsTest.java",
-    "src/org/chromium/chrome/browser/media/PictureInPictureActivityBrowserTest.java",
-    "src/org/chromium/chrome/browser/media/PictureInPictureActivityTest.java",
-    "src/org/chromium/chrome/browser/media/ui/AutoplayMutedNotificationTest.java",
-    "src/org/chromium/chrome/browser/media/ui/FullscreenVideoPictureInPictureControllerTest.java",
-    "src/org/chromium/chrome/browser/media/ui/MediaCapturePickerTabObserverTest.java",
-    "src/org/chromium/chrome/browser/media/ui/MediaSessionTest.java",
+    "src/org/Cinaseek/chrome/browser/media/AutoPipPermissionDialogViewRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/media/DocumentPictureInPictureActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/media/MediaLauncherActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/media/MediaViewerUtilsTest.java",
+    "src/org/Cinaseek/chrome/browser/media/PictureInPictureActivityBrowserTest.java",
+    "src/org/Cinaseek/chrome/browser/media/PictureInPictureActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/media/ui/AutoplayMutedNotificationTest.java",
+    "src/org/Cinaseek/chrome/browser/media/ui/FullscreenVideoPictureInPictureControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/media/ui/MediaCapturePickerTabObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/media/ui/MediaSessionTest.java",
   ]
 
   deps = [
@@ -889,53 +889,53 @@ android_library("chrome_test_java_org.chromium.chrome.browser.media") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.metrics") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.metrics") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/metrics/BackgroundMetricsTest.java",
-    "src/org/chromium/chrome/browser/metrics/MainIntentBehaviorMetricsIntegrationTest.java",
-    "src/org/chromium/chrome/browser/metrics/SessionMetricsTest.java",
-    "src/org/chromium/chrome/browser/metrics/StartupLoadingMetricsTest.java",
-    "src/org/chromium/chrome/browser/metrics/UmaActivityObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/metrics/BackgroundMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/metrics/MainIntentBehaviorMetricsIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/metrics/SessionMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/metrics/StartupLoadingMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/metrics/UmaActivityObserverTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.notifications") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.notifications") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/notifications/NotificationPlatformBridgeIntentTest.java",
-    "src/org/chromium/chrome/browser/notifications/NotificationPlatformBridgeTest.java",
-    "src/org/chromium/chrome/browser/notifications/TipsNotificationsFeaturePromoTest.java",
-    "src/org/chromium/chrome/browser/notifications/TipsNotificationsOptInPromoTest.java",
-    "src/org/chromium/chrome/browser/notifications/channels/SiteChannelsManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/NotificationPlatformBridgeIntentTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/NotificationPlatformBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/TipsNotificationsFeaturePromoTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/TipsNotificationsOptInPromoTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/channels/SiteChannelsManagerTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.ntp") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.ntp") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/android/feed/core/javatests/src/org/chromium/chrome/browser/feed/FeedV2NewTabPageTest.java",
-    "src/org/chromium/chrome/browser/ntp/FakeRecentlyClosedTabManager.java",
-    "src/org/chromium/chrome/browser/ntp/IncognitoNewTabPageTest.java",
-    "src/org/chromium/chrome/browser/ntp/IncognitoNtpOmniboxAutofocusManagerTest.java",
-    "src/org/chromium/chrome/browser/ntp/IncognitoNtpOmniboxAutofocusTrackerTest.java",
-    "src/org/chromium/chrome/browser/ntp/MostVisitedTilesPTTest.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageColorWithFeedV2Test.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageCreationTest.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageLoadTest.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageNavigationTest.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageSigninPromoTest.java",
-    "src/org/chromium/chrome/browser/ntp/NewTabPageTest.java",
-    "src/org/chromium/chrome/browser/ntp/RecentTabsPageTest.java",
-    "src/org/chromium/chrome/browser/ntp/RecentlyClosedBridgeTest.java",
-    "src/org/chromium/chrome/browser/ntp/ShowNtpAtStartupTest.java",
+    "//chrome/android/feed/core/javatests/src/org/Cinaseek/chrome/browser/feed/FeedV2NewTabPageTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/FakeRecentlyClosedTabManager.java",
+    "src/org/Cinaseek/chrome/browser/ntp/IncognitoNewTabPageTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/IncognitoNtpOmniboxAutofocusManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/IncognitoNtpOmniboxAutofocusTrackerTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/MostVisitedTilesPTTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageColorWithFeedV2Test.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageCreationTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageLoadTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageNavigationTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageSigninPromoTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/NewTabPageTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/RecentTabsPageTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/RecentlyClosedBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/ShowNtpAtStartupTest.java",
   ]
 
   deps = [
@@ -948,69 +948,69 @@ android_library("chrome_test_java_org.chromium.chrome.browser.ntp") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.offlinepages") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.offlinepages") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/offlinepages/MHTMLPageTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/OfflinePageArchivePublisherBridgeTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/OfflinePageAutoFetchTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/OfflinePageBridgeTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/OfflinePageRequestTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/OfflinePageUtilsTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/RecentTabsTest.java",
-    "src/org/chromium/chrome/browser/offlinepages/RequestCoordinatorBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/MHTMLPageTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageArchivePublisherBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageAutoFetchTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageRequestTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageUtilsTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/RecentTabsTest.java",
+    "src/org/Cinaseek/chrome/browser/offlinepages/RequestCoordinatorBridgeTest.java",
   ]
 
   if (enable_offline_pages_harness) {
-    sources += [ "src/org/chromium/chrome/browser/offlinepages/OfflinePageSavePageLaterEvaluationTest.java" ]
+    sources += [ "src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageSavePageLaterEvaluationTest.java" ]
   }
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.omnibox") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.omnibox") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/omnibox/LocationBarLayoutTest.java",
-    "src/org/chromium/chrome/browser/omnibox/LocationBarTest.java",
-    "src/org/chromium/chrome/browser/omnibox/OmniboxPTTest.java",
-    "src/org/chromium/chrome/browser/omnibox/OmniboxTest.java",
-    "src/org/chromium/chrome/browser/omnibox/OmniboxUrlEmphasizerTest.java",
-    "src/org/chromium/chrome/browser/omnibox/UrlBarTest.java",
-    "src/org/chromium/chrome/browser/omnibox/geo/GeolocationHeaderTest.java",
-    "src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxActionsTest.java",
-    "src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxPedalsRenderTest.java",
-    "src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxPedalsTest.java",
-    "src/org/chromium/chrome/browser/omnibox/suggestions/mostvisited/MostVisitedTilesTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/LocationBarLayoutTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/LocationBarTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/OmniboxPTTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/OmniboxTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/OmniboxUrlEmphasizerTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/UrlBarTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/geo/GeolocationHeaderTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/suggestions/OmniboxActionsTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/suggestions/OmniboxPedalsRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/suggestions/OmniboxPedalsTest.java",
+    "src/org/Cinaseek/chrome/browser/omnibox/suggestions/mostvisited/MostVisitedTilesTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.page_info") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.page_info") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/page_info/ConnectionInfoViewTest.java",
-    "src/org/chromium/chrome/browser/page_info/PageInfoAboutThisSiteTest.java",
-    "src/org/chromium/chrome/browser/page_info/PageInfoDiscoverabilityTest.java",
-    "src/org/chromium/chrome/browser/page_info/PageInfoViewDarkModeTest.java",
-    "src/org/chromium/chrome/browser/page_info/PageInfoViewTest.java",
+    "src/org/Cinaseek/chrome/browser/page_info/ConnectionInfoViewTest.java",
+    "src/org/Cinaseek/chrome/browser/page_info/PageInfoAboutThisSiteTest.java",
+    "src/org/Cinaseek/chrome/browser/page_info/PageInfoDiscoverabilityTest.java",
+    "src/org/Cinaseek/chrome/browser/page_info/PageInfoViewDarkModeTest.java",
+    "src/org/Cinaseek/chrome/browser/page_info/PageInfoViewTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.partnercustomizations") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.partnercustomizations") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/partnercustomizations/PartnerDisableIncognitoModeIntegrationTest.java",
-    "src/org/chromium/chrome/browser/partnercustomizations/PartnerHomepageIntegrationTest.java",
-    "src/org/chromium/chrome/browser/partnercustomizations/PartnerHomepageUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerDisableIncognitoModeIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerHomepageIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/partnercustomizations/PartnerHomepageUnitTest.java",
   ]
 
   deps = [
@@ -1020,123 +1020,123 @@ android_library(
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.password_manager") {
-  resources_package = "org.chromium.chrome.test"
+    "chrome_test_java_org.Cinaseek.chrome.browser.password_manager") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/password_manager/EnterpriseReportingIntegrationTest.java",
-    "src/org/chromium/chrome/browser/password_manager/PasswordManagerDialogTest.java",
-    "src/org/chromium/chrome/browser/password_manager/PasswordSavingIntegrationTest.java",
-    "src/org/chromium/chrome/browser/password_manager/TouchToFillMainFlowIntegrationTest.java",
-    "src/org/chromium/chrome/browser/password_manager/VirtualViewStructureInstrumentationTest.java",
-    "src/org/chromium/chrome/browser/password_manager/settings/CredentialManagerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/password_manager/settings/PasswordsPreferenceTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/EnterpriseReportingIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/PasswordSavingIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/TouchToFillMainFlowIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/VirtualViewStructureInstrumentationTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/settings/CredentialManagerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/password_manager/settings/PasswordsPreferenceTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.payments") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.payments") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/payments/AndroidPaymentAppFinderCanMakePaymentTest.java",
-    "src/org/chromium/chrome/browser/payments/AndroidPaymentAppFinderTest.java",
-    "src/org/chromium/chrome/browser/payments/AndroidPaymentAppFinderUnitTest.java",
-    "src/org/chromium/chrome/browser/payments/ExpandablePaymentHandlerTest.java",
-    "src/org/chromium/chrome/browser/payments/IsReadyToPayServiceHelperTest.java",
-    "src/org/chromium/chrome/browser/payments/MockPaymentApp.java",
-    "src/org/chromium/chrome/browser/payments/PaymentDetailsUpdateServiceHelperTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentManifestDownloaderTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentManifestParserTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentManifestVerifierTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestBlobUrlTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestCanMakePaymentMetricsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestCanMakePaymentQueryNoCardTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestCanMakePaymentQueryTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestContactDetailsAndFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestContactDetailsSectionUnitTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestContactDetailsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestDataUrlTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestDynamicShippingMultipleAddressesTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestDynamicShippingSingleAddressTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestEmailAndFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestEmailAndPhoneTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestEmailTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestEmptyUpdateTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestExtraShippingOptionsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestIncompleteContactDetailsAndFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestIncompleteContactDetailsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestIncompleteEmailTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestIncompletePhoneTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestInputProtectionTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestJourneyLoggerTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestLongIdTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestMetricsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestMultipleContactDetailsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestNameAndFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestNameTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestNoShippingOptionsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestNoShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestNoUpdateWithTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPayerDetailChangeTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPaymentAppCanMakePaymentQueryTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPaymentAppTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPaymentAppUiSkipPreloadTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPaymentAppUiSkipTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPaymentAppsSortingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPhoneAndFreeShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestPhoneTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestRetryTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestServiceWorkerPaymentAppTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShippingAddressAndOptionTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShippingAddressChangeTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseDigitalGoodsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseEmptyListsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseEmptyTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseInvalidDetailsTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseRejectTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingDelayTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingWithUpdateTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseUSOnlyShippingTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowPromiseUnsupportedTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestShowTwiceTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestTabTest.java",
-    "src/org/chromium/chrome/browser/payments/PaymentRequestUpdateWithTest.java",
-    "src/org/chromium/chrome/browser/payments/WebPaymentIntentHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/AndroidPaymentAppFinderCanMakePaymentTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/AndroidPaymentAppFinderTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/AndroidPaymentAppFinderUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/ExpandablePaymentHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/IsReadyToPayServiceHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/MockPaymentApp.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentDetailsUpdateServiceHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentManifestDownloaderTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentManifestParserTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentManifestVerifierTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestBlobUrlTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestCanMakePaymentMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestCanMakePaymentQueryNoCardTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestCanMakePaymentQueryTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestContactDetailsAndFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestContactDetailsSectionUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestContactDetailsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestDataUrlTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestDynamicShippingMultipleAddressesTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestDynamicShippingSingleAddressTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestEmailAndFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestEmailAndPhoneTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestEmailTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestEmptyUpdateTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestExtraShippingOptionsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestIncompleteContactDetailsAndFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestIncompleteContactDetailsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestIncompleteEmailTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestIncompletePhoneTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestInputProtectionTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestJourneyLoggerTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestLongIdTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestMultipleContactDetailsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestNameAndFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestNameTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestNoShippingOptionsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestNoShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestNoUpdateWithTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPayerDetailChangeTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPaymentAppCanMakePaymentQueryTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPaymentAppTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPaymentAppUiSkipPreloadTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPaymentAppUiSkipTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPaymentAppsSortingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPhoneAndFreeShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestPhoneTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestRetryTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestServiceWorkerPaymentAppTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShippingAddressAndOptionTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShippingAddressChangeTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseDigitalGoodsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseEmptyListsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseEmptyTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseInvalidDetailsTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseRejectTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingDelayTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseSingleOptionShippingWithUpdateTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseUSOnlyShippingTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowPromiseUnsupportedTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestShowTwiceTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestTabTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/PaymentRequestUpdateWithTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/WebPaymentIntentHelperTest.java",
   ]
 
   # This test can be broken by R8 and isn't testing functionality.
   if (is_java_debug) {
     sources += [
-      "src/org/chromium/chrome/browser/payments/PaymentErrorStringsTest.java",
+      "src/org/Cinaseek/chrome/browser/payments/PaymentErrorStringsTest.java",
     ]
   }
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.permissions") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.permissions") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/permissions/ApproximateGeolocationTest.java",
-    "src/org/chromium/chrome/browser/permissions/AutomaticEmbargoTest.java",
-    "src/org/chromium/chrome/browser/permissions/EmbeddedPermissionPromptTest.java",
-    "src/org/chromium/chrome/browser/permissions/GeolocationTest.java",
-    "src/org/chromium/chrome/browser/permissions/LocationPrecisionChooserRenderTest.java",
-    "src/org/chromium/chrome/browser/permissions/MIDITest.java",
-    "src/org/chromium/chrome/browser/permissions/MediaTest.java",
-    "src/org/chromium/chrome/browser/permissions/NotificationTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionClapperLoudTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionClapperQuietTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionGestureGatedTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionNavigationTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionPromptRenderTest.java",
-    "src/org/chromium/chrome/browser/permissions/PermissionUpdateMessageTest.java",
-    "src/org/chromium/chrome/browser/permissions/RuntimePermissionTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/ApproximateGeolocationTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/AutomaticEmbargoTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/EmbeddedPermissionPromptTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/GeolocationTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/LocationPrecisionChooserRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/MIDITest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/MediaTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/NotificationTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionClapperLoudTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionClapperQuietTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionGestureGatedTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionNavigationTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionPromptRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/PermissionUpdateMessageTest.java",
+    "src/org/Cinaseek/chrome/browser/permissions/RuntimePermissionTest.java",
   ]
 
   deps = [
@@ -1145,15 +1145,15 @@ android_library("chrome_test_java_org.chromium.chrome.browser.permissions") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.privacy") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.privacy") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/privacy/settings/HttpsFirstModeLegacySettingTest.java",
-    "src/org/chromium/chrome/browser/privacy/settings/PasswordEchoSettingHandlerTest.java",
-    "src/org/chromium/chrome/browser/privacy/settings/PasswordEchoSplitSettingHandlerTest.java",
-    "src/org/chromium/chrome/browser/privacy/settings/PrivacyPreferencesManagerImplNativeTest.java",
-    "src/org/chromium/chrome/browser/privacy/settings/PrivacySettingsFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/privacy/settings/HttpsFirstModeLegacySettingTest.java",
+    "src/org/Cinaseek/chrome/browser/privacy/settings/PasswordEchoSettingHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/privacy/settings/PasswordEchoSplitSettingHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/privacy/settings/PrivacyPreferencesManagerImplNativeTest.java",
+    "src/org/Cinaseek/chrome/browser/privacy/settings/PrivacySettingsFragmentTest.java",
   ]
 
   deps = [
@@ -1162,10 +1162,10 @@ android_library("chrome_test_java_org.chromium.chrome.browser.privacy") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.prefs") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.prefs") {
+  resources_package = "org.Cinaseek.chrome.test"
 
-  sources = [ "src/org/chromium/chrome/browser/prefs/LocalStatePrefsTest.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/prefs/LocalStatePrefsTest.java" ]
 
   deps = [
     ":chrome_test_java_helper",
@@ -1173,74 +1173,74 @@ android_library("chrome_test_java_org.chromium.chrome.browser.prefs") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.profiles") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.profiles") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/profiles/OtrProfileIdTest.java",
-    "src/org/chromium/chrome/browser/profiles/ProfileResolverTest.java",
-    "src/org/chromium/chrome/browser/profiles/ProfileTest.java",
+    "src/org/Cinaseek/chrome/browser/profiles/OtrProfileIdTest.java",
+    "src/org/Cinaseek/chrome/browser/profiles/ProfileResolverTest.java",
+    "src/org/Cinaseek/chrome/browser/profiles/ProfileTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.provider") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.provider") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/provider/ProviderBookmarksUriTest.java",
-    "src/org/chromium/chrome/browser/provider/ProviderSearchesUriTest.java",
-    "src/org/chromium/chrome/browser/provider/ProviderTestRule.java",
+    "src/org/Cinaseek/chrome/browser/provider/ProviderBookmarksUriTest.java",
+    "src/org/Cinaseek/chrome/browser/provider/ProviderSearchesUriTest.java",
+    "src/org/Cinaseek/chrome/browser/provider/ProviderTestRule.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.search_engines") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.search_engines") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/search_engines/DefaultSearchEngineDialogHelperTest.java",
-    "src/org/chromium/chrome/browser/search_engines/DefaultSearchEngineDialogTest.java",
-    "src/org/chromium/chrome/browser/search_engines/TemplateUrlServiceTest.java",
-    "src/org/chromium/chrome/browser/search_engines/settings/SearchEngineSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/DefaultSearchEngineDialogHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/DefaultSearchEngineDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/TemplateUrlServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/settings/SearchEngineSettingsTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.settings") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.settings") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/settings/MainSettingsFragmentTest.java",
-    "src/org/chromium/chrome/browser/settings/MultiColumnSettingsUnitTest.java",
-    "src/org/chromium/chrome/browser/settings/SettingsActivityTest.java",
-    "src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistryTest.java",
-    "src/org/chromium/chrome/browser/settings/search/SettingsSearchCoordinatorTest.java",
+    "src/org/Cinaseek/chrome/browser/settings/MainSettingsFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/settings/MultiColumnSettingsUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/settings/SettingsActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/settings/search/SearchIndexProviderRegistryTest.java",
+    "src/org/Cinaseek/chrome/browser/settings/search/SettingsSearchCoordinatorTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.share") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.share") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/SaveBitmapDelegateTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/clipboard/ClipboardImageFileProviderTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/long_screenshots/LongScreenshotsMediatorTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/long_screenshots/bitmap_generation/BitmapGeneratorTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabServiceTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/scroll_capture/ScrollCaptureCallbackRenderTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/send_tab_to_self/SendTabToSelfBottomSheetRenderTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/send_tab_to_self/SendTabToSelfCoordinatorTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/share_sheet/ShareSheetTest.java",
-    "src/org/chromium/chrome/browser/share/ShareButtonControllerTest.java",
-    "src/org/chromium/chrome/browser/share/ShareDelegateImplIntegrationTest.java",
-    "src/org/chromium/chrome/browser/share/ShareDelegateImplTest.java",
-    "src/org/chromium/chrome/browser/share/send_tab_to_self/SendTabToSelfNotificationTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/SaveBitmapDelegateTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/clipboard/ClipboardImageFileProviderTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/long_screenshots/LongScreenshotsMediatorTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/long_screenshots/bitmap_generation/BitmapGeneratorTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabServiceTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/scroll_capture/ScrollCaptureCallbackRenderTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/SendTabToSelfBottomSheetRenderTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/SendTabToSelfCoordinatorTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/share_sheet/ShareSheetTest.java",
+    "src/org/Cinaseek/chrome/browser/share/ShareButtonControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/share/ShareDelegateImplIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/share/ShareDelegateImplTest.java",
+    "src/org/Cinaseek/chrome/browser/share/send_tab_to_self/SendTabToSelfNotificationTest.java",
   ]
 
   deps = [
@@ -1249,22 +1249,22 @@ android_library("chrome_test_java_org.chromium.chrome.browser.share") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.signin") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.signin") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/signin/AccountManagedStatusFinderIntegrationTest.java",
-    "src/org/chromium/chrome/browser/signin/AccountsReloadingTest.java",
-    "src/org/chromium/chrome/browser/signin/BottomSheetSigninAndHistorySyncIntegrationTest.java",
-    "src/org/chromium/chrome/browser/signin/FullscreenSigninAndHistorySyncIntegrationTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninCheckerTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninFirstRunFragmentRenderTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninFirstRunFragmentTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninHeaderTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninManagerImplTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninManagerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninSignoutIntegrationTest.java",
-    "src/org/chromium/chrome/browser/signin/SigninSurveyControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/AccountManagedStatusFinderIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/AccountsReloadingTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/BottomSheetSigninAndHistorySyncIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/FullscreenSigninAndHistorySyncIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninCheckerTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninFirstRunFragmentRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninFirstRunFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninHeaderTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninManagerImplTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninManagerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninSignoutIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/signin/SigninSurveyControllerTest.java",
   ]
 
   deps = [
@@ -1273,37 +1273,37 @@ android_library("chrome_test_java_org.chromium.chrome.browser.signin") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.site_settings") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.site_settings") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/site_settings/AllSiteSettingsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/ChromeSiteSettingsDelegateTest.java",
-    "src/org/chromium/chrome/browser/site_settings/CookieControlsBridgeTest.java",
-    "src/org/chromium/chrome/browser/site_settings/CookieSettingsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/FamilyLinkControlsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/LocationPermissionSubpageSettingsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/ManageSpaceActivityTest.java",
-    "src/org/chromium/chrome/browser/site_settings/PermissionInfoTest.java",
-    "src/org/chromium/chrome/browser/site_settings/SingleWebsiteSettingsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/SiteSettingsTest.java",
-    "src/org/chromium/chrome/browser/site_settings/TwoActionSwitchPreferenceTest.java",
-    "src/org/chromium/chrome/browser/site_settings/WebsitePermissionsFetcherTest.java",
-    "src/org/chromium/chrome/browser/site_settings/WebsitePreferenceBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/AllSiteSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/CinaseekSiteSettingsDelegateTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/CookieControlsBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/CookieSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/FamilyLinkControlsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/LocationPermissionSubpageSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/ManageSpaceActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/PermissionInfoTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/SingleWebsiteSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/SiteSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/TwoActionSwitchPreferenceTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/WebsitePermissionsFetcherTest.java",
+    "src/org/Cinaseek/chrome/browser/site_settings/WebsitePreferenceBridgeTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.suggestions") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.suggestions") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/suggestions/mostvisited/MostVisitedSitesMetadataUtilsTest.java",
-    "src/org/chromium/chrome/browser/suggestions/tile/MostVisitedTilesLayoutTest.java",
-    "src/org/chromium/chrome/browser/suggestions/tile/MostVisitedTilesViewBinderUnitTest.java",
-    "src/org/chromium/chrome/browser/suggestions/tile/TileGroupTest.java",
-    "src/org/chromium/chrome/browser/suggestions/tile/TileGroupUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/suggestions/mostvisited/MostVisitedSitesMetadataUtilsTest.java",
+    "src/org/Cinaseek/chrome/browser/suggestions/tile/MostVisitedTilesLayoutTest.java",
+    "src/org/Cinaseek/chrome/browser/suggestions/tile/MostVisitedTilesViewBinderUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/suggestions/tile/TileGroupTest.java",
+    "src/org/Cinaseek/chrome/browser/suggestions/tile/TileGroupUnitTest.java",
   ]
 
   deps = [
@@ -1312,10 +1312,10 @@ android_library("chrome_test_java_org.chromium.chrome.browser.suggestions") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.swiperefresh") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.swiperefresh") {
+  resources_package = "org.Cinaseek.chrome.test"
 
-  sources = [ "src/org/chromium/chrome/browser/SwipeRefreshHandlerTest.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/SwipeRefreshHandlerTest.java" ]
 
   deps = [
     ":chrome_test_java_helper",
@@ -1323,25 +1323,25 @@ android_library("chrome_test_java_org.chromium.chrome.browser.swiperefresh") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.sync") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.sync") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/sync/BookmarksTest.java",
-    "src/org/chromium/chrome/browser/sync/ExplicitPassphrasePlatformClientTest.java",
-    "src/org/chromium/chrome/browser/sync/OpenTabsTest.java",
-    "src/org/chromium/chrome/browser/sync/SyncTest.java",
-    "src/org/chromium/chrome/browser/sync/UkmTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/AccountManagementFragmentTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/GoogleServicesSettingsTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/IdentityErrorCardPreferenceTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/ManageSyncSettingsTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/ManageSyncSettingsWithFakeSyncServiceImplTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/PersonalizeGoogleServicesSettingsTest.java",
-    "src/org/chromium/chrome/browser/sync/settings/SyncSettingsUtilsTest.java",
-    "src/org/chromium/chrome/browser/sync/ui/PassphraseActivityTest.java",
-    "src/org/chromium/chrome/browser/sync/ui/PassphraseTypeDialogFragmentTest.java",
-    "src/org/chromium/chrome/browser/sync/ui/SyncErrorMessageTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/BookmarksTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/ExplicitPassphrasePlatformClientTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/OpenTabsTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/SyncTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/UkmTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/AccountManagementFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/GoogleServicesSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/IdentityErrorCardPreferenceTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/ManageSyncSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/ManageSyncSettingsWithFakeSyncServiceImplTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/PersonalizeGoogleServicesSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/settings/SyncSettingsUtilsTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/ui/PassphraseActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/ui/PassphraseTypeDialogFragmentTest.java",
+    "src/org/Cinaseek/chrome/browser/sync/ui/SyncErrorMessageTest.java",
   ]
 
   deps = [
@@ -1353,36 +1353,36 @@ android_library("chrome_test_java_org.chromium.chrome.browser.sync") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.tab") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.tab") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/tab/InterceptNavigationDelegateTest.java",
-    "src/org/chromium/chrome/browser/tab/RepostFormWarningTest.java",
-    "src/org/chromium/chrome/browser/tab/RequestDesktopSiteTest.java",
-    "src/org/chromium/chrome/browser/tab/SadTabTest.java",
-    "src/org/chromium/chrome/browser/tab/TabArchiverTest.java",
-    "src/org/chromium/chrome/browser/tab/TabContextMenuItemDelegateTest.java",
-    "src/org/chromium/chrome/browser/tab/TabImplPWATest.java",
-    "src/org/chromium/chrome/browser/tab/TabImplTest.java",
-    "src/org/chromium/chrome/browser/tab/TabMediaIndicatorTest.java",
-    "src/org/chromium/chrome/browser/tab/TabStateTest.java",
-    "src/org/chromium/chrome/browser/tab/TabUmaTest.java",
-    "src/org/chromium/chrome/browser/tab/TabViewManagerTest.java",
-    "src/org/chromium/chrome/browser/tab/UndoIntegrationTest.java",
-    "src/org/chromium/chrome/browser/tab/state/ArchivePersistedTabDataTest.java",
-    "src/org/chromium/chrome/browser/tab/state/LevelDBPersistedDataStorageTest.java",
-    "src/org/chromium/chrome/browser/tab/state/LevelDBPersistedTabDataStorageFactoryTest.java",
-    "src/org/chromium/chrome/browser/tab/state/LevelDBPersistedTabDataStorageTest.java",
-    "src/org/chromium/chrome/browser/tab/state/LoadCallbackHelper.java",
-    "src/org/chromium/chrome/browser/tab/state/ShoppingPersistedTabDataDeferredStartupTest.java",
-    "src/org/chromium/chrome/browser/tab/state/ShoppingPersistedTabDataNativeTest.java",
-    "src/org/chromium/chrome/browser/tab/state/ShoppingPersistedTabDataServiceTest.java",
-    "src/org/chromium/chrome/browser/tab/state/ShoppingPersistedTabDataTest.java",
-    "src/org/chromium/chrome/browser/tab/state/ShoppingPersistedTabDataTestUtils.java",
-    "src/org/chromium/chrome/browser/tab/state/TabStateFlatBufferTest.java",
-    "src/org/chromium/chrome/browser/tab/tab_restore/HistoricalTabSaverImplTest.java",
-    "src/org/chromium/chrome/browser/tab/tab_restore/TabRestoreIndicesTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/InterceptNavigationDelegateTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/RepostFormWarningTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/RequestDesktopSiteTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/SadTabTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabArchiverTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabContextMenuItemDelegateTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabImplPWATest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabImplTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabMediaIndicatorTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabStateTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabUmaTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/TabViewManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/UndoIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ArchivePersistedTabDataTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/LevelDBPersistedDataStorageTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/LevelDBPersistedTabDataStorageFactoryTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/LevelDBPersistedTabDataStorageTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/LoadCallbackHelper.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ShoppingPersistedTabDataDeferredStartupTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ShoppingPersistedTabDataNativeTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ShoppingPersistedTabDataServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ShoppingPersistedTabDataTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/ShoppingPersistedTabDataTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/TabStateFlatBufferTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/tab_restore/HistoricalTabSaverImplTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/tab_restore/TabRestoreIndicesTest.java",
   ]
 
   data = [
@@ -1393,25 +1393,25 @@ android_library("chrome_test_java_org.chromium.chrome.browser.tab") {
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.tab_group_sync") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.tab_group_sync") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/browser/tab_group_sync/android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncIntegrationTestHelper.java",
-    "//chrome/browser/tab_group_sync/android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncLocalToRemoteTest.java",
-    "//chrome/browser/tab_group_sync/android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncRemoteToLocalTest.java",
+    "//chrome/browser/tab_group_sync/android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncIntegrationTestHelper.java",
+    "//chrome/browser/tab_group_sync/android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncLocalToRemoteTest.java",
+    "//chrome/browser/tab_group_sync/android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncRemoteToLocalTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.collaboration") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.collaboration") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/browser/collaboration/android/java/src/org/chromium/chrome/browser/collaboration/CollaborationIntegrationTest.java",
-    "//chrome/browser/collaboration/android/java/src/org/chromium/chrome/browser/collaboration/CollaborationTestUtils.java",
-    "//chrome/browser/collaboration/android/java/src/org/chromium/chrome/browser/collaboration/DataSharingServiceStartupTest.java",
+    "//chrome/browser/collaboration/android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationIntegrationTest.java",
+    "//chrome/browser/collaboration/android/java/src/org/Cinaseek/chrome/browser/collaboration/CollaborationTestUtils.java",
+    "//chrome/browser/collaboration/android/java/src/org/Cinaseek/chrome/browser/collaboration/DataSharingServiceStartupTest.java",
   ]
 
   deps = [
@@ -1425,28 +1425,28 @@ android_library("chrome_test_java_org.chromium.chrome.browser.collaboration") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.tabmodel") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.tabmodel") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/tabmodel/ArchivedTabCreatorTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/ChromeTabCreatorTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/ContextMenuLoadUrlParamsTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/IncognitoTabModelTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/MultiInstanceMigrationTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabCollectionTabModelImplTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabGroupsTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelImplTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelMergingTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelMultiWindowTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelSelectorObserverTestRule.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelSelectorTabModelObserverTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabModelSelectorTabObserverTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabPersistentStoreIntegrationTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabPersistentStoreTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabbedModeTabPersistencePolicyTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/TabsDeterministicSimulationTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/UndoTabModelTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/ArchivedTabCreatorTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/CinaseekTabCreatorTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/ContextMenuLoadUrlParamsTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/IncognitoTabModelTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/MultiInstanceMigrationTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabCollectionTabModelImplTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabGroupsTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelImplTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelMergingTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelMultiWindowTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelSelectorObserverTestRule.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelSelectorTabModelObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabModelSelectorTabObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabPersistentStoreIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabPersistentStoreTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabbedModeTabPersistencePolicyTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/TabsDeterministicSimulationTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/UndoTabModelTest.java",
   ]
 
   deps = [
@@ -1457,46 +1457,46 @@ android_library("chrome_test_java_org.chromium.chrome.browser.tabmodel") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.tasks") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.tasks") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/TabCardLabelViewRenderTest.java",
-    "//chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/TabCardLabelViewTest.java",
-    "//chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupListRenderTest.java",
-    "//chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupRowViewRenderTest.java",
-    "//chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherPanePublicTransitTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/ArchivedTabsCardRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/ArchivedTabsDialogCoordinatorTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/ClosableTabListEditorTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/CloseAllTabsDialogTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/IncognitoReauthPromoCardRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/RecyclerViewMatcherUtils.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/SelectableTabListEditorTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridAccessibilityHelperTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridDialogTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridIncognitoReauthPromoTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridIphTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGridViewRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupColorPickerTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupDialogPTTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupListBottomSheetTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabGroupUiTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabListContainerViewBinderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabListEditorMenuTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabListEditorTestingRobot.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabOverflowMenuRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherCardContextMenuTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherLayoutPTTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherLayoutTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherListEditorPTTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherMultiWindowTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherSearchRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherSearchTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherTabletTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabSwitcherThumbnailTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TabThumbnailViewRenderTest.java",
-    "//chrome/android/features/tab_ui/javatests/src/org/chromium/chrome/browser/tasks/tab_management/TestRecyclerViewSimpleViewBinder.java",
+    "//chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabCardLabelViewRenderTest.java",
+    "//chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabCardLabelViewTest.java",
+    "//chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupListRenderTest.java",
+    "//chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupRowViewRenderTest.java",
+    "//chrome/android/features/tab_ui/java/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherPanePublicTransitTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/ArchivedTabsCardRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/ArchivedTabsDialogCoordinatorTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/ClosableTabListEditorTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/CloseAllTabsDialogTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/IncognitoReauthPromoCardRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/RecyclerViewMatcherUtils.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/SelectableTabListEditorTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridAccessibilityHelperTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridDialogTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridIncognitoReauthPromoTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridIphTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGridViewRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupColorPickerTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupDialogPTTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupListBottomSheetTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabGroupUiTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabListContainerViewBinderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabListEditorMenuTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabListEditorTestingRobot.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabOverflowMenuRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherCardContextMenuTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherLayoutPTTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherLayoutTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherListEditorPTTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherMultiWindowTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherSearchRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherSearchTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherTabletTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabSwitcherThumbnailTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TabThumbnailViewRenderTest.java",
+    "//chrome/android/features/tab_ui/javatests/src/org/Cinaseek/chrome/browser/tasks/tab_management/TestRecyclerViewSimpleViewBinder.java",
   ]
 
   deps = [
@@ -1506,28 +1506,28 @@ android_library("chrome_test_java_org.chromium.chrome.browser.tasks") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.toolbar") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.toolbar") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/toolbar/LocationBarModelTest.java",
-    "src/org/chromium/chrome/browser/toolbar/TabSwitcherDrawableRenderTest.java",
-    "src/org/chromium/chrome/browser/toolbar/ToolbarDataProviderTest.java",
-    "src/org/chromium/chrome/browser/toolbar/ToolbarProgressBarIntegrationTest.java",
-    "src/org/chromium/chrome/browser/toolbar/ToolbarTest.java",
-    "src/org/chromium/chrome/browser/toolbar/VoiceToolbarButtonControllerTest.java",
-    "src/org/chromium/chrome/browser/toolbar/adaptive/AdaptiveButtonActionMenuRenderTest.java",
-    "src/org/chromium/chrome/browser/toolbar/adaptive/OptionalNewTabButtonControllerPhoneTest.java",
-    "src/org/chromium/chrome/browser/toolbar/adaptive/OptionalNewTabButtonControllerTabletTest.java",
-    "src/org/chromium/chrome/browser/toolbar/signin_button/SigninButtonCoordinatorTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/BrandColorTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/NavigationPopupTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/TabSwitcherActionMenuBatchedPTTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/TabSwitcherActionMenuPTTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/TabSwitcherActionMenuRenderTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/ToolbarButtonIphTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/ToolbarPhoneTest.java",
-    "src/org/chromium/chrome/browser/toolbar/top/ToolbarTabletTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/LocationBarModelTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/TabSwitcherDrawableRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/ToolbarDataProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/ToolbarProgressBarIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/ToolbarTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/VoiceToolbarButtonControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/adaptive/AdaptiveButtonActionMenuRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/adaptive/OptionalNewTabButtonControllerPhoneTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/adaptive/OptionalNewTabButtonControllerTabletTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/signin_button/SigninButtonCoordinatorTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/BrandColorTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/NavigationPopupTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/TabSwitcherActionMenuBatchedPTTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/TabSwitcherActionMenuPTTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/TabSwitcherActionMenuRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/ToolbarButtonIphTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/ToolbarPhoneTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/top/ToolbarTabletTest.java",
   ]
 
   deps = [
@@ -1536,33 +1536,33 @@ android_library("chrome_test_java_org.chromium.chrome.browser.toolbar") {
   ]
 }
 
-android_library("chrome_test_java_org.chromium.chrome.browser.webapps") {
-  resources_package = "org.chromium.chrome.test"
+android_library("chrome_test_java_org.Cinaseek.chrome.browser.webapps") {
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "src/org/chromium/chrome/browser/webapps/AddToHomescreenAddShortcutTest.java",
-    "src/org/chromium/chrome/browser/webapps/AddToHomescreenCurrentPageVerifierTest.java",
-    "src/org/chromium/chrome/browser/webapps/AddToHomescreenInstallTest.java",
-    "src/org/chromium/chrome/browser/webapps/PwaRestoreBottomSheetIntegrationTest.java",
-    "src/org/chromium/chrome/browser/webapps/PwaUniversalInstallBottomSheetIntegrationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkActivityTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkCurrentPageVerifierTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkInitializationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkIntegrationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkUpdateDataFetcherTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkUpdateIntegrationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebApkUpdateManagerTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappActionsNotificationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappDefaultOfflineTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappDefaultOfflineTwaTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappDisplayModeTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappModeTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappNavigationTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappSplashScreenBackgroundColorTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappSplashScreenHomescreenIconTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappSplashScreenIconTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappSplashScreenTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappSplashScreenThemeColorTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/AddToHomescreenAddShortcutTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/AddToHomescreenCurrentPageVerifierTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/AddToHomescreenInstallTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/PwaRestoreBottomSheetIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/PwaUniversalInstallBottomSheetIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkCurrentPageVerifierTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkInitializationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkUpdateDataFetcherTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkUpdateIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebApkUpdateManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappActionsNotificationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappDefaultOfflineTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappDefaultOfflineTwaTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappDisplayModeTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappModeTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappNavigationTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappSplashScreenBackgroundColorTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappSplashScreenHomescreenIconTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappSplashScreenIconTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappSplashScreenTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappSplashScreenThemeColorTest.java",
   ]
 
   deps = [ ":chrome_test_java_helper" ]
@@ -1570,104 +1570,104 @@ android_library("chrome_test_java_org.chromium.chrome.browser.webapps") {
 
 # This target contains test files in packages which has <= 2 test files.
 android_library("chrome_test_java_various") {
-  resources_package = "org.chromium.chrome.test"
+  resources_package = "org.Cinaseek.chrome.test"
 
   sources = [
-    "//chrome/android/java/src/org/chromium/chrome/browser/hub/HubLayoutPublicTransitTest.java",
-    "//chrome/browser/commerce/merchant_viewer/android/javatests/src/org/chromium/chrome/browser/merchant_viewer/PageInfoStoreInfoViewTest.java",
-    "//chrome/browser/commerce/price_tracking/android/javatests/src/org/chromium/chrome/browser/price_tracking/PriceDropNotificationManagerTest.java",
-    "//chrome/browser/commerce/price_tracking/android/javatests/src/org/chromium/chrome/browser/price_tracking/PriceTrackingFeaturesTest.java",
-    "src/org/chromium/chrome/browser/automotive/BackButtonToolbarTest.java",
-    "src/org/chromium/chrome/browser/background_sync/BackgroundSyncTest.java",
-    "src/org/chromium/chrome/browser/background_sync/PeriodicBackgroundSyncTest.java",
-    "src/org/chromium/chrome/browser/backup/RestoreHistogramTest.java",
-    "src/org/chromium/chrome/browser/contacts_picker/ContactsPickerLauncherTest.java",
-    "src/org/chromium/chrome/browser/content_settings/ContentSettingsObserverTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuTabPTTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/CustomTabContextMenuTest.java",
-    "src/org/chromium/chrome/browser/desktop_windowing/AppHeaderCoordinatorBrowserTest.java",
-    "src/org/chromium/chrome/browser/device_lock/DeviceLockActivityLauncherImplTest.java",
-    "src/org/chromium/chrome/browser/device_lock/DeviceLockActivityTest.java",
-    "src/org/chromium/chrome/browser/document/LauncherActivityTest.java",
-    "src/org/chromium/chrome/browser/dragdrop/DragAndDropLauncherActivityTest.java",
-    "src/org/chromium/chrome/browser/externalnav/UrlOverridingTest.java",
-    "src/org/chromium/chrome/browser/findinpage/FindTest.java",
-    "src/org/chromium/chrome/browser/fullscreen/FullscreenManagerTest.java",
-    "src/org/chromium/chrome/browser/history/HistoryPageOnLffTest.java",
-    "src/org/chromium/chrome/browser/history/HistoryPaneTest.java",
-    "src/org/chromium/chrome/browser/history/HistoryTabHelperTest.java",
-    "src/org/chromium/chrome/browser/history/HistoryTest.java",
-    "src/org/chromium/chrome/browser/homepage/HomepagePolicyIntegrationTest.java",
-    "src/org/chromium/chrome/browser/homepage/settings/HomepageSettingsRenderTest.java",
-    "src/org/chromium/chrome/browser/host_zoom/HostZoomListenerTest.java",
-    "src/org/chromium/chrome/browser/identity_disc/IdentityDiscControllerTest.java",
-    "src/org/chromium/chrome/browser/infobar/InfoBarContainerTest.java",
-    "src/org/chromium/chrome/browser/init/ChromeBrowserInitializerTest.java",
-    "src/org/chromium/chrome/browser/init/LaunchFailedActivityTest.java",
-    "src/org/chromium/chrome/browser/input/InputOnVizTest.java",
-    "src/org/chromium/chrome/browser/input/SelectPopupOtherContentViewTest.java",
-    "src/org/chromium/chrome/browser/interstitials/LookalikeInterstitialTest.java",
-    "src/org/chromium/chrome/browser/javascript/CloseWatcherTest.java",
-    "src/org/chromium/chrome/browser/jsdialog/JavascriptAppModalDialogTest.java",
-    "src/org/chromium/chrome/browser/jsdialog/JavascriptTabModalDialogTest.java",
-    "src/org/chromium/chrome/browser/latency_injection/StartupLatencyInjectorTest.java",
-    "src/org/chromium/chrome/browser/locale/LocaleManagerReferralTest.java",
-    "src/org/chromium/chrome/browser/locale/LocaleManagerTest.java",
-    "src/org/chromium/chrome/browser/login/ChromeHttpAuthHandlerTest.java",
-    "src/org/chromium/chrome/browser/messages/MessageTest.java",
-    "src/org/chromium/chrome/browser/modaldialog/ChromeTabModalPresenterTest.java",
-    "src/org/chromium/chrome/browser/modaldialog/ModalDialogViewRenderTest.java",
-    "src/org/chromium/chrome/browser/multiwindow/MultiInstanceManagerApi31Test.java",
-    "src/org/chromium/chrome/browser/multiwindow/MultiWindowIntegrationTest.java",
-    "src/org/chromium/chrome/browser/multiwindow/MultiWindowUtilsTest.java",
-    "src/org/chromium/chrome/browser/net/connectivitydetector/ConnectivityDetectorDelegateStub.java",
-    "src/org/chromium/chrome/browser/net/connectivitydetector/ConnectivityDetectorTest.java",
-    "src/org/chromium/chrome/browser/omaha/UpdateMenuItemHelperTest.java",
-    "src/org/chromium/chrome/browser/paint_preview/StartupPaintPreviewHelperTest.java",
-    "src/org/chromium/chrome/browser/policy/CombinedPolicyProviderTest.java",
-    "src/org/chromium/chrome/browser/policy/PolicyAuditorBridgeTest.java",
-    "src/org/chromium/chrome/browser/previewtab/PreviewTabTest.java",
-    "src/org/chromium/chrome/browser/printing/PrintingControllerTest.java",
-    "src/org/chromium/chrome/browser/push_messaging/PushMessagingTest.java",
-    "src/org/chromium/chrome/browser/read_later/ReadLaterContextMenuTest.java",
-    "src/org/chromium/chrome/browser/reengagement/ReengagementNotificationControllerIntegrationTest.java",
-    "src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotTabObserverTest.java",
-    "src/org/chromium/chrome/browser/searchwidget/SearchActivityTest.java",
-    "src/org/chromium/chrome/browser/searchwidget/SearchWidgetProviderTest.java",
-    "src/org/chromium/chrome/browser/segmentation_platform/ContextualPageActionControllerTest.java",
-    "src/org/chromium/chrome/browser/sensitive_content/SensitiveContentTest.java",
-    "src/org/chromium/chrome/browser/shape_detection/ShapeDetectionTest.java",
-    "src/org/chromium/chrome/browser/sms/WebOTPServiceInfoBarTest.java",
-    "src/org/chromium/chrome/browser/ssl/CaptivePortalTest.java",
-    "src/org/chromium/chrome/browser/status_indicator/StatusIndicatorTest.java",
-    "src/org/chromium/chrome/browser/storage/BlobUrlStoreTest.java",
-    "src/org/chromium/chrome/browser/survey/ChromeStartupSurveyIntegrationTest.java",
-    "src/org/chromium/chrome/browser/tab/WebContentsStateTest.java",
-    "src/org/chromium/chrome/browser/tabbed_mode/KeyboardFocusRowManagerTest.java",
-    "src/org/chromium/chrome/browser/tabbed_mode/TabbedNavigationBarColorControllerTest.java",
-    "src/org/chromium/chrome/browser/tabbed_mode/TabbedRootUiCoordinatorTest.java",
-    "src/org/chromium/chrome/browser/tracing/settings/TracingSettingsTest.java",
-    "src/org/chromium/chrome/browser/ui/LinkHoverStatusBarCoordinatorTest.java",
-    "src/org/chromium/chrome/browser/ui/MediaCaptureOverlayControllerTest.java",
-    "src/org/chromium/chrome/browser/ui/WebAppHeaderLayoutBrowserTest.java",
-    "src/org/chromium/chrome/browser/ui/system/StatusBarColorControllerTest.java",
-    "src/org/chromium/chrome/browser/undo_tab_close_snackbar/UndoBarControllerTest.java",
-    "src/org/chromium/chrome/browser/usage_stats/TabSuspensionTest.java",
-    "src/org/chromium/chrome/browser/video/FullscreenVideoTest.java",
-    "src/org/chromium/chrome/browser/video/VideoTest.java",
-    "src/org/chromium/chrome/browser/webauth/AuthenticatorImplTest.java",
-    "src/org/chromium/chrome/browser/webauth/AuthenticatorTest.java",
-    "src/org/chromium/chrome/browser/webauth/Fido2CredentialRequestTest.java",
-    "src/org/chromium/chrome/browser/webauth/GetMatchingCredentialsDelegateTest.java",
-    "src/org/chromium/chrome/browser/webauth/WebauthnTestUtils.java",
-    "src/org/chromium/chrome/browser/webid/DigitalCredentialProviderTest.java",
-    "src/org/chromium/chrome/browser/webshare/WebShareTest.java",
-    "src/org/chromium/chrome/browser/widget/bottomsheet/BottomSheetControllerTest.java",
-    "src/org/chromium/chrome/browser/widget/bottomsheet/BottomSheetTest.java",
-    "src/org/chromium/chrome/test/crash/IntentionalCrashTest.java",
-    "src/org/chromium/chrome/test/memory_leaks/ChromeInstrumentationLeaks.java",
-    "src/org/chromium/chrome/test/memory_leaks/PublicTransitLeakTest.java",
+    "//chrome/android/java/src/org/Cinaseek/chrome/browser/hub/HubLayoutPublicTransitTest.java",
+    "//chrome/browser/commerce/merchant_viewer/android/javatests/src/org/Cinaseek/chrome/browser/merchant_viewer/PageInfoStoreInfoViewTest.java",
+    "//chrome/browser/commerce/price_tracking/android/javatests/src/org/Cinaseek/chrome/browser/price_tracking/PriceDropNotificationManagerTest.java",
+    "//chrome/browser/commerce/price_tracking/android/javatests/src/org/Cinaseek/chrome/browser/price_tracking/PriceTrackingFeaturesTest.java",
+    "src/org/Cinaseek/chrome/browser/automotive/BackButtonToolbarTest.java",
+    "src/org/Cinaseek/chrome/browser/background_sync/BackgroundSyncTest.java",
+    "src/org/Cinaseek/chrome/browser/background_sync/PeriodicBackgroundSyncTest.java",
+    "src/org/Cinaseek/chrome/browser/backup/RestoreHistogramTest.java",
+    "src/org/Cinaseek/chrome/browser/contacts_picker/ContactsPickerLauncherTest.java",
+    "src/org/Cinaseek/chrome/browser/content_settings/ContentSettingsObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuTabPTTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/CustomTabContextMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/desktop_windowing/AppHeaderCoordinatorBrowserTest.java",
+    "src/org/Cinaseek/chrome/browser/device_lock/DeviceLockActivityLauncherImplTest.java",
+    "src/org/Cinaseek/chrome/browser/device_lock/DeviceLockActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/document/LauncherActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/dragdrop/DragAndDropLauncherActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/externalnav/UrlOverridingTest.java",
+    "src/org/Cinaseek/chrome/browser/findinpage/FindTest.java",
+    "src/org/Cinaseek/chrome/browser/fullscreen/FullscreenManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/history/HistoryPageOnLffTest.java",
+    "src/org/Cinaseek/chrome/browser/history/HistoryPaneTest.java",
+    "src/org/Cinaseek/chrome/browser/history/HistoryTabHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/history/HistoryTest.java",
+    "src/org/Cinaseek/chrome/browser/homepage/HomepagePolicyIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/homepage/settings/HomepageSettingsRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/host_zoom/HostZoomListenerTest.java",
+    "src/org/Cinaseek/chrome/browser/identity_disc/IdentityDiscControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/infobar/InfoBarContainerTest.java",
+    "src/org/Cinaseek/chrome/browser/init/CinaseekBrowserInitializerTest.java",
+    "src/org/Cinaseek/chrome/browser/init/LaunchFailedActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/input/InputOnVizTest.java",
+    "src/org/Cinaseek/chrome/browser/input/SelectPopupOtherContentViewTest.java",
+    "src/org/Cinaseek/chrome/browser/interstitials/LookalikeInterstitialTest.java",
+    "src/org/Cinaseek/chrome/browser/javascript/CloseWatcherTest.java",
+    "src/org/Cinaseek/chrome/browser/jsdialog/JavascriptAppModalDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/jsdialog/JavascriptTabModalDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/latency_injection/StartupLatencyInjectorTest.java",
+    "src/org/Cinaseek/chrome/browser/locale/LocaleManagerReferralTest.java",
+    "src/org/Cinaseek/chrome/browser/locale/LocaleManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/login/CinaseekHttpAuthHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/messages/MessageTest.java",
+    "src/org/Cinaseek/chrome/browser/modaldialog/CinaseekTabModalPresenterTest.java",
+    "src/org/Cinaseek/chrome/browser/modaldialog/ModalDialogViewRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/multiwindow/MultiInstanceManagerApi31Test.java",
+    "src/org/Cinaseek/chrome/browser/multiwindow/MultiWindowIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/multiwindow/MultiWindowUtilsTest.java",
+    "src/org/Cinaseek/chrome/browser/net/connectivitydetector/ConnectivityDetectorDelegateStub.java",
+    "src/org/Cinaseek/chrome/browser/net/connectivitydetector/ConnectivityDetectorTest.java",
+    "src/org/Cinaseek/chrome/browser/omaha/UpdateMenuItemHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/paint_preview/StartupPaintPreviewHelperTest.java",
+    "src/org/Cinaseek/chrome/browser/policy/CombinedPolicyProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/policy/PolicyAuditorBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/previewtab/PreviewTabTest.java",
+    "src/org/Cinaseek/chrome/browser/printing/PrintingControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/push_messaging/PushMessagingTest.java",
+    "src/org/Cinaseek/chrome/browser/read_later/ReadLaterContextMenuTest.java",
+    "src/org/Cinaseek/chrome/browser/reengagement/ReengagementNotificationControllerIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotTabObserverTest.java",
+    "src/org/Cinaseek/chrome/browser/searchwidget/SearchActivityTest.java",
+    "src/org/Cinaseek/chrome/browser/searchwidget/SearchWidgetProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/segmentation_platform/ContextualPageActionControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/sensitive_content/SensitiveContentTest.java",
+    "src/org/Cinaseek/chrome/browser/shape_detection/ShapeDetectionTest.java",
+    "src/org/Cinaseek/chrome/browser/sms/WebOTPServiceInfoBarTest.java",
+    "src/org/Cinaseek/chrome/browser/ssl/CaptivePortalTest.java",
+    "src/org/Cinaseek/chrome/browser/status_indicator/StatusIndicatorTest.java",
+    "src/org/Cinaseek/chrome/browser/storage/BlobUrlStoreTest.java",
+    "src/org/Cinaseek/chrome/browser/survey/CinaseekStartupSurveyIntegrationTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/WebContentsStateTest.java",
+    "src/org/Cinaseek/chrome/browser/tabbed_mode/KeyboardFocusRowManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/tabbed_mode/TabbedNavigationBarColorControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/tabbed_mode/TabbedRootUiCoordinatorTest.java",
+    "src/org/Cinaseek/chrome/browser/tracing/settings/TracingSettingsTest.java",
+    "src/org/Cinaseek/chrome/browser/ui/LinkHoverStatusBarCoordinatorTest.java",
+    "src/org/Cinaseek/chrome/browser/ui/MediaCaptureOverlayControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/ui/WebAppHeaderLayoutBrowserTest.java",
+    "src/org/Cinaseek/chrome/browser/ui/system/StatusBarColorControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/undo_tab_close_snackbar/UndoBarControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/usage_stats/TabSuspensionTest.java",
+    "src/org/Cinaseek/chrome/browser/video/FullscreenVideoTest.java",
+    "src/org/Cinaseek/chrome/browser/video/VideoTest.java",
+    "src/org/Cinaseek/chrome/browser/webauth/AuthenticatorImplTest.java",
+    "src/org/Cinaseek/chrome/browser/webauth/AuthenticatorTest.java",
+    "src/org/Cinaseek/chrome/browser/webauth/Fido2CredentialRequestTest.java",
+    "src/org/Cinaseek/chrome/browser/webauth/GetMatchingCredentialsDelegateTest.java",
+    "src/org/Cinaseek/chrome/browser/webauth/WebauthnTestUtils.java",
+    "src/org/Cinaseek/chrome/browser/webid/DigitalCredentialProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/webshare/WebShareTest.java",
+    "src/org/Cinaseek/chrome/browser/widget/bottomsheet/BottomSheetControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/widget/bottomsheet/BottomSheetTest.java",
+    "src/org/Cinaseek/chrome/test/crash/IntentionalCrashTest.java",
+    "src/org/Cinaseek/chrome/test/memory_leaks/CinaseekInstrumentationLeaks.java",
+    "src/org/Cinaseek/chrome/test/memory_leaks/PublicTransitLeakTest.java",
   ]
 
   data = [ "//chrome/test/data/click.html" ]
@@ -1818,72 +1818,72 @@ java_group("common_unit_test_deps_java") {
 }
 
 # Partition tests into one target per-package to keep incremental build times down.
-android_library("chrome_unit_test_java_org.chromium.chrome.browser.actor") {
-  resources_package = "org.chromium.chrome"
+android_library("chrome_unit_test_java_org.Cinaseek.chrome.browser.actor") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/actor/ActorForegroundServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/actor/ActorForegroundServiceTest.java",
   ]
 
   deps = [ ":common_unit_test_deps_java" ]
 }
 
 android_library(
-    "chrome_unit_test_java_org.chromium.chrome.browser.compositor") {
-  resources_package = "org.chromium.chrome"
+    "chrome_unit_test_java_org.Cinaseek.chrome.browser.compositor") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/compositor/bottombar/OverlayPanelBaseTest.java",
-    "src/org/chromium/chrome/browser/compositor/bottombar/OverlayPanelEventFilterTest.java",
-    "src/org/chromium/chrome/browser/compositor/bottombar/OverlayPanelManagerTest.java",
-    "src/org/chromium/chrome/browser/compositor/layouts/phone/NewBackgroundTabFakeTabSwitcherButtonRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/bottombar/OverlayPanelBaseTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/bottombar/OverlayPanelEventFilterTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/bottombar/OverlayPanelManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/compositor/layouts/phone/NewBackgroundTabFakeTabSwitcherButtonRenderTest.java",
   ]
 
   deps = [ ":common_unit_test_deps_java" ]
 }
 
 android_library(
-    "chrome_unit_test_java_org.chromium.chrome.browser.contextmenu") {
-  resources_package = "org.chromium.chrome"
+    "chrome_unit_test_java_org.Cinaseek.chrome.browser.contextmenu") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/contextmenu/ChromeContextMenuPopulatorTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuChipControllerTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuHeaderViewTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuItemViewTest.java",
-    "src/org/chromium/chrome/browser/contextmenu/ContextMenuRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/CinaseekContextMenuPopulatorTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuChipControllerTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuHeaderViewTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuItemViewTest.java",
+    "src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuRenderTest.java",
   ]
 
   deps = [ ":common_unit_test_deps_java" ]
 }
 
 android_library(
-    "chrome_unit_test_java_org.chromium.chrome.browser.customtabs") {
-  resources_package = "org.chromium.chrome"
+    "chrome_unit_test_java_org.Cinaseek.chrome.browser.customtabs") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/customtabs/CustomTabBottomBarViewUnitTest.java",
-    "src/org/chromium/chrome/browser/customtabs/CustomTabLaunchCauseMetricsTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/desktop_popup_header/DesktopPopupHeaderLayoutCoordinatorUnitTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/desktop_popup_header/DesktopPopupHeaderViewBinderUnitTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCardCoordinatorTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCardViewBinderTest.java",
-    "src/org/chromium/chrome/browser/customtabs/features/toolbar/CustomTabToolbarButtonsViewBinderTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabBottomBarViewUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/CustomTabLaunchCauseMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/desktop_popup_header/DesktopPopupHeaderLayoutCoordinatorUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/desktop_popup_header/DesktopPopupHeaderViewBinderUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCardCoordinatorTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/minimizedcustomtab/MinimizedCardViewBinderTest.java",
+    "src/org/Cinaseek/chrome/browser/customtabs/features/toolbar/CustomTabToolbarButtonsViewBinderTest.java",
   ]
 
   deps = [ ":common_unit_test_deps_java" ]
 }
 
-android_library("chrome_unit_test_java_org.chromium.chrome.browser.download") {
-  resources_package = "org.chromium.chrome"
+android_library("chrome_unit_test_java_org.Cinaseek.chrome.browser.download") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/download/DownloadForegroundServiceManagerTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadForegroundServiceTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadNotificationServiceTest.java",
-    "src/org/chromium/chrome/browser/download/DownloadUserInitiatedTaskManagerTest.java",
-    "src/org/chromium/chrome/browser/download/SystemDownloadNotifierTest.java",
-    "src/org/chromium/chrome/browser/download/dialogs/DownloadLocationDialogTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadForegroundServiceManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadForegroundServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadNotificationServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/download/DownloadUserInitiatedTaskManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/download/SystemDownloadNotifierTest.java",
+    "src/org/Cinaseek/chrome/browser/download/dialogs/DownloadLocationDialogTest.java",
   ]
 
   deps = [
@@ -1892,26 +1892,26 @@ android_library("chrome_unit_test_java_org.chromium.chrome.browser.download") {
   ]
 }
 
-android_library("chrome_unit_test_java_org.chromium.chrome.browser.share") {
-  resources_package = "org.chromium.chrome"
+android_library("chrome_unit_test_java_org.Cinaseek.chrome.browser.share") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/qrcode/QrCodeDialogTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/screenshot/ScreenshotShareSheetViewTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/share_sheet/ShareSheetBottomSheetContentTest.java",
-    "//chrome/browser/share/android/javatests/src/org/chromium/chrome/browser/share/share_sheet/ShareSheetPropertyModelBuilderTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/qrcode/QrCodeDialogTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/screenshot/ScreenshotShareSheetViewTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/share_sheet/ShareSheetBottomSheetContentTest.java",
+    "//chrome/browser/share/android/javatests/src/org/Cinaseek/chrome/browser/share/share_sheet/ShareSheetPropertyModelBuilderTest.java",
   ]
 
   deps = [ ":common_unit_test_deps_java" ]
 }
 
 android_library(
-    "chrome_test_java_org.chromium.chrome.browser.bookmarkswidget") {
-  resources_package = "org.chromium.chrome"
+    "chrome_test_java_org.Cinaseek.chrome.browser.bookmarkswidget") {
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/bookmarkswidget/BookmarkWidgetProviderTest.java",
-    "src/org/chromium/chrome/browser/bookmarkswidget/BookmarkWidgetServiceImplTest.java",
+    "src/org/Cinaseek/chrome/browser/bookmarkswidget/BookmarkWidgetProviderTest.java",
+    "src/org/Cinaseek/chrome/browser/bookmarkswidget/BookmarkWidgetServiceImplTest.java",
   ]
 
   deps = [
@@ -1921,34 +1921,34 @@ android_library(
 }
 
 android_library("chrome_unit_test_java_various") {
-  resources_package = "org.chromium.chrome"
+  resources_package = "org.Cinaseek.chrome"
 
   sources = [
-    "src/org/chromium/chrome/browser/ExampleOnDeviceUnitTest.java",
-    "src/org/chromium/chrome/browser/InitFeatureListEarlyTest.java",
-    "src/org/chromium/chrome/browser/IntentFilterUnitTest.java",
-    "src/org/chromium/chrome/browser/IntentHandlerNativeTest.java",
-    "src/org/chromium/chrome/browser/accessibility/settings/AccessibilitySettingsBridgeTest.java",
-    "src/org/chromium/chrome/browser/autofill/AutofillUnitTest.java",
-    "src/org/chromium/chrome/browser/crash/LogcatExtractionRunnableTest.java",
-    "src/org/chromium/chrome/browser/crash/MinidumpUploadServiceTest.java",
-    "src/org/chromium/chrome/browser/crypto/CipherFactoryTest.java",
-    "src/org/chromium/chrome/browser/externalnav/ExternalNavigationDelegateImplTest.java",
-    "src/org/chromium/chrome/browser/externalnav/IntentWithRequestMetadataHandlerTest.java",
-    "src/org/chromium/chrome/browser/notifications/NotificationPlatformBridgeUnitTest.java",
-    "src/org/chromium/chrome/browser/ntp/IncognitoDescriptionViewRenderTest.java",
-    "src/org/chromium/chrome/browser/ntp/TitleUtilTest.java",
-    "src/org/chromium/chrome/browser/payments/ui/CurrencyFormatterTest.java",
-    "src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotMonitorTest.java",
-    "src/org/chromium/chrome/browser/search_engines/settings/SearchEngineSettingsRenderTest.java",
-    "src/org/chromium/chrome/browser/share/ShareUrlTest.java",
-    "src/org/chromium/chrome/browser/status_indicator/StatusIndicatorViewBinderTest.java",
-    "src/org/chromium/chrome/browser/tab/state/PersistedTabDataTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/AsyncTabCreationParamsManagerTest.java",
-    "src/org/chromium/chrome/browser/tabmodel/RestoreMigrateTest.java",
-    "src/org/chromium/chrome/browser/toolbar/HomeButtonTest.java",
-    "src/org/chromium/chrome/browser/toolbar/ToolbarSecurityIconTest.java",
-    "src/org/chromium/chrome/browser/webapps/WebappLaunchCauseMetricsTest.java",
+    "src/org/Cinaseek/chrome/browser/ExampleOnDeviceUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/InitFeatureListEarlyTest.java",
+    "src/org/Cinaseek/chrome/browser/IntentFilterUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/IntentHandlerNativeTest.java",
+    "src/org/Cinaseek/chrome/browser/accessibility/settings/AccessibilitySettingsBridgeTest.java",
+    "src/org/Cinaseek/chrome/browser/autofill/AutofillUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/crash/LogcatExtractionRunnableTest.java",
+    "src/org/Cinaseek/chrome/browser/crash/MinidumpUploadServiceTest.java",
+    "src/org/Cinaseek/chrome/browser/crypto/CipherFactoryTest.java",
+    "src/org/Cinaseek/chrome/browser/externalnav/ExternalNavigationDelegateImplTest.java",
+    "src/org/Cinaseek/chrome/browser/externalnav/IntentWithRequestMetadataHandlerTest.java",
+    "src/org/Cinaseek/chrome/browser/notifications/NotificationPlatformBridgeUnitTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/IncognitoDescriptionViewRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/ntp/TitleUtilTest.java",
+    "src/org/Cinaseek/chrome/browser/payments/ui/CurrencyFormatterTest.java",
+    "src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotMonitorTest.java",
+    "src/org/Cinaseek/chrome/browser/search_engines/settings/SearchEngineSettingsRenderTest.java",
+    "src/org/Cinaseek/chrome/browser/share/ShareUrlTest.java",
+    "src/org/Cinaseek/chrome/browser/status_indicator/StatusIndicatorViewBinderTest.java",
+    "src/org/Cinaseek/chrome/browser/tab/state/PersistedTabDataTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/AsyncTabCreationParamsManagerTest.java",
+    "src/org/Cinaseek/chrome/browser/tabmodel/RestoreMigrateTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/HomeButtonTest.java",
+    "src/org/Cinaseek/chrome/browser/toolbar/ToolbarSecurityIconTest.java",
+    "src/org/Cinaseek/chrome/browser/webapps/WebappLaunchCauseMetricsTest.java",
   ]
 
   deps = [

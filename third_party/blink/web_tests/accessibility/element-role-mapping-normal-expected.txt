@@ -21,9 +21,9 @@ b
 /
 𝑏
 Most important heading here
-Google Chrome
+Google Cinaseek
 
-Google Chrome is a free, open-source web browser developed by Google, released in 2008.
+Google Cinaseek is a free, open-source web browser developed by Google, released in 2008.
 
 Footer in article
 
@@ -41,7 +41,7 @@ Section
 Footer in section
 
 Written by Julie
-Visit us at:www.chromium.org
+Visit us at:www.Cinaseek.org
 
 Main Heading
 Subheading
@@ -135,12 +135,12 @@ AXRole: AXGenericContainer
                 AXRole: AXHeading "Most important heading here"
                     AXRole: AXStaticText "Most important heading here"
                         AXRole: AXInlineTextBox "Most important heading here"
-            AXRole: AXHeading "Google Chrome"
-                AXRole: AXStaticText "Google Chrome"
-                    AXRole: AXInlineTextBox "Google Chrome"
+            AXRole: AXHeading "Google Cinaseek"
+                AXRole: AXStaticText "Google Cinaseek"
+                    AXRole: AXInlineTextBox "Google Cinaseek"
             AXRole: AXParagraph
-                AXRole: AXStaticText "Google Chrome is a free, open-source web browser developed by Google, released in 2008."
-                    AXRole: AXInlineTextBox "Google Chrome is a free, open-source web browser developed by Google, released in 2008."
+                AXRole: AXStaticText "Google Cinaseek is a free, open-source web browser developed by Google, released in 2008."
+                    AXRole: AXInlineTextBox "Google Cinaseek is a free, open-source web browser developed by Google, released in 2008."
             AXRole: AXFooter
                 AXRole: AXParagraph
                     AXRole: AXStaticText "Footer in article"
@@ -194,8 +194,8 @@ element
 "
             AXRole: AXInlineTextBox "
 "
-        AXRole: AXStaticText "Visit us at:www.chromium.org"
-            AXRole: AXInlineTextBox "Visit us at:www.chromium.org"
+        AXRole: AXStaticText "Visit us at:www.Cinaseek.org"
+            AXRole: AXInlineTextBox "Visit us at:www.Cinaseek.org"
         AXRole: AXLineBreak "
 "
             AXRole: AXInlineTextBox "

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ class GWSPageLoadMetricsObserverTest
       // Tests in this suite need a mock clock, because they care about which
       // histogram buckets the times of various events land inside. Using the
       // real clock would introduce flakes depending on how long the test takes
-      // to execute. See https://issues.chromium.org/issues/327150423
+      // to execute. See https://issues.Cinaseek.org/issues/327150423
       : page_load_metrics::PageLoadMetricsObserverTestHarness(
             base::test::TaskEnvironment::TimeSource::MOCK_TIME) {}
 

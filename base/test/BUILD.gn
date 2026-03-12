@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -494,18 +494,18 @@ if (is_android) {
   generate_jni("base_unittests_jni_headers") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/base/ContentUriTestUtils.java",
-      "android/java/src/org/chromium/base/JavaHandlerThreadHelpers.java",
+      "android/java/src/org/Cinaseek/base/ContentUriTestUtils.java",
+      "android/java/src/org/Cinaseek/base/JavaHandlerThreadHelpers.java",
     ]
   }
 
   generate_jni("test_support_jni_headers") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/base/MainReturnCodeResult.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientLauncher.java",
-      "android/javatests/src/org/chromium/base/test/task/ThreadPoolTestHelpers.java",
-      "android/javatests/src/org/chromium/base/test/util/UrlUtils.java",
+      "android/java/src/org/Cinaseek/base/MainReturnCodeResult.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientLauncher.java",
+      "android/javatests/src/org/Cinaseek/base/test/task/ThreadPoolTestHelpers.java",
+      "android/javatests/src/org/Cinaseek/base/test/util/UrlUtils.java",
     ]
   }
 
@@ -529,23 +529,23 @@ if (is_android) {
 
     srcjar_deps = [ ":test_support_java_aidl" ]
     sources = [
-      "android/java/src/org/chromium/base/GarbageCollectionTestUtils.java",
-      "android/java/src/org/chromium/base/InMemoryContentProvider.java",
-      "android/java/src/org/chromium/base/MainReturnCodeResult.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientLauncher.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService0.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService1.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService2.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService3.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService4.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService5.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService6.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService7.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService8.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientService9.java",
-      "android/java/src/org/chromium/base/MultiprocessTestClientServiceDelegate.java",
-      "android/java/src/org/chromium/base/TestDocumentsProvider.java",
+      "android/java/src/org/Cinaseek/base/GarbageCollectionTestUtils.java",
+      "android/java/src/org/Cinaseek/base/InMemoryContentProvider.java",
+      "android/java/src/org/Cinaseek/base/MainReturnCodeResult.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientLauncher.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService0.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService1.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService2.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService3.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService4.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService5.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService6.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService7.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService8.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientService9.java",
+      "android/java/src/org/Cinaseek/base/MultiprocessTestClientServiceDelegate.java",
+      "android/java/src/org/Cinaseek/base/TestDocumentsProvider.java",
     ]
   }
 
@@ -556,8 +556,8 @@ if (is_android) {
       "//base/android/java/src",
     ]
     sources = [
-      "android/java/src/org/chromium/base/ITestCallback.aidl",
-      "android/java/src/org/chromium/base/ITestController.aidl",
+      "android/java/src/org/Cinaseek/base/ITestCallback.aidl",
+      "android/java/src/org/Cinaseek/base/ITestController.aidl",
     ]
   }
 
@@ -577,8 +577,8 @@ if (is_android) {
   android_library("leak_canary_java") {
     testonly = true
     sources = [
-      "android/javatests/src/org/chromium/base/test/util/CommonLeaks.java",
-      "android/javatests/src/org/chromium/base/test/util/LeakCanaryChecker.java",
+      "android/javatests/src/org/Cinaseek/base/test/util/CommonLeaks.java",
+      "android/javatests/src/org/Cinaseek/base/test/util/LeakCanaryChecker.java",
     ]
     deps = [
       ":leak_canary_test_resources",
@@ -638,10 +638,10 @@ action("amalgamated_perfetto_sql_stdlib") {
 }
 
 # We encapsulate the trace processor in a separate shared library to prevent
-# any duplicate symbol issues. Perfetto symbols are exported by chromium’s
+# any duplicate symbol issues. Perfetto symbols are exported by Cinaseek’s
 # base via a public_dep on libperfetto; libtrace_processor also depends on
 # these symbols. So we “hide” the perfetto symbols exported from this
-# interface. Also, chrome targets depend on chromium_sqlite and the trace
+# interface. Also, chrome targets depend on Cinaseek_sqlite and the trace
 # processor depends on dev_sqlite. The two share the same symbols but have
 # different implementations, so we need to hide dev_sqlite in this shared
 # library even in non-component builds to prevent duplicate symbols.
@@ -720,56 +720,56 @@ if (is_android) {
     ]
 
     sources = [
-      "android/javatests/src/org/chromium/base/test/transit/ActivityElement.java",
-      "android/javatests/src/org/chromium/base/test/transit/BaseElements.java",
-      "android/javatests/src/org/chromium/base/test/transit/BatchedPublicTransitRule.java",
-      "android/javatests/src/org/chromium/base/test/transit/CallbackCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/Condition.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionChecker.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionStatus.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionStatusWithResult.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionWaiter.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionWithResult.java",
-      "android/javatests/src/org/chromium/base/test/transit/ConditionalState.java",
-      "android/javatests/src/org/chromium/base/test/transit/DisplayedCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/DisplayedPortion.java",
-      "android/javatests/src/org/chromium/base/test/transit/Element.java",
-      "android/javatests/src/org/chromium/base/test/transit/ElementFactory.java",
-      "android/javatests/src/org/chromium/base/test/transit/Elements.java",
-      "android/javatests/src/org/chromium/base/test/transit/EntryPointSentinelStation.java",
-      "android/javatests/src/org/chromium/base/test/transit/Facility.java",
-      "android/javatests/src/org/chromium/base/test/transit/FragmentElement.java",
-      "android/javatests/src/org/chromium/base/test/transit/InstrumentationThreadCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/InternalViewFinder.java",
-      "android/javatests/src/org/chromium/base/test/transit/LogicalElement.java",
-      "android/javatests/src/org/chromium/base/test/transit/MoreViewConditions.java",
-      "android/javatests/src/org/chromium/base/test/transit/NotDisplayedAnymoreCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/OptionalViewElement.java",
-      "android/javatests/src/org/chromium/base/test/transit/PayloadCallbackCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/PublicTransitConfig.java",
-      "android/javatests/src/org/chromium/base/test/transit/RootSpec.java",
-      "android/javatests/src/org/chromium/base/test/transit/ScrollableFacility.java",
-      "android/javatests/src/org/chromium/base/test/transit/SimpleConditions.java",
-      "android/javatests/src/org/chromium/base/test/transit/State.java",
-      "android/javatests/src/org/chromium/base/test/transit/Station.java",
-      "android/javatests/src/org/chromium/base/test/transit/StatusStore.java",
-      "android/javatests/src/org/chromium/base/test/transit/TrafficControl.java",
-      "android/javatests/src/org/chromium/base/test/transit/TransitAsserts.java",
-      "android/javatests/src/org/chromium/base/test/transit/Transition.java",
-      "android/javatests/src/org/chromium/base/test/transit/TravelException.java",
-      "android/javatests/src/org/chromium/base/test/transit/Triggers.java",
-      "android/javatests/src/org/chromium/base/test/transit/Trip.java",
-      "android/javatests/src/org/chromium/base/test/transit/TripBuilder.java",
-      "android/javatests/src/org/chromium/base/test/transit/UiThreadCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewAndRoot.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewConditions.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewElement.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewElementMatchesCondition.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewFinder.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewInterface.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewPresence.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewSettled.java",
-      "android/javatests/src/org/chromium/base/test/transit/ViewSpec.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ActivityElement.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/BaseElements.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/BatchedPublicTransitRule.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/CallbackCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Condition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionChecker.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionStatus.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionStatusWithResult.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionWaiter.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionWithResult.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ConditionalState.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/DisplayedCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/DisplayedPortion.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Element.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ElementFactory.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Elements.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/EntryPointSentinelStation.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Facility.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/FragmentElement.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/InstrumentationThreadCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/InternalViewFinder.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/LogicalElement.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/MoreViewConditions.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/NotDisplayedAnymoreCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/OptionalViewElement.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/PayloadCallbackCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/PublicTransitConfig.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/RootSpec.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ScrollableFacility.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/SimpleConditions.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/State.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Station.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/StatusStore.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/TrafficControl.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/TransitAsserts.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Transition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/TravelException.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Triggers.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/Trip.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/TripBuilder.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/UiThreadCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewAndRoot.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewConditions.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewElement.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewElementMatchesCondition.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewFinder.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewInterface.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewPresence.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewSettled.java",
+      "android/javatests/src/org/Cinaseek/base/test/transit/ViewSpec.java",
     ]
   }
 
@@ -783,7 +783,7 @@ if (is_android) {
       "//third_party/junit",
     ]
 
-    sources = [ "android/javatests/src/org/chromium/base/test/transit/ElementFactoryUnitTest.java" ]
+    sources = [ "android/javatests/src/org/Cinaseek/base/test/transit/ElementFactoryUnitTest.java" ]
   }
 }
 

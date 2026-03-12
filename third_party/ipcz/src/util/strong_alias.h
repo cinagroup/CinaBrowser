@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 namespace ipcz {
 
-// Type-safe alternative for C++ type aliases. This is derived from Chromium's
+// Type-safe alternative for C++ type aliases. This is derived from Cinaseek's
 // base::StrongAlias, with minimal features as needed by ipcz implementation.
 template <typename TagType, typename UnderlyingType>
 class StrongAlias {

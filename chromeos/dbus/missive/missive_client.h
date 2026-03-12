@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ class COMPONENT_EXPORT(MISSIVE) MissiveClient {
       bool force_confirm) = 0;
   virtual base::WeakPtr<MissiveClient> GetWeakPtr() = 0;
 
-  // Returns `true` is Chromium has a valid API KEY to communicate to the
+  // Returns `true` is Cinaseek has a valid API KEY to communicate to the
   // reporting server.
   bool has_valid_api_key() const;
 
@@ -105,7 +105,7 @@ class COMPONENT_EXPORT(MISSIVE) MissiveClient {
   scoped_refptr<base::SequencedTaskRunner> origin_task_runner_;
   SEQUENCE_CHECKER(origin_checker_);
 
-  // Flag indicating that Chromium has a valid API key. Assumed to be `true`
+  // Flag indicating that Cinaseek has a valid API key. Assumed to be `true`
   // initially, can be reset to `false` once, by `Init()`.
   bool has_valid_api_key_ = true;
 

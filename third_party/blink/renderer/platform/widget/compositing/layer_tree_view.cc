@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -389,7 +389,7 @@ void LayerTreeView::DidFailToInitializeLayerTreeFrameSink() {
   // calling RequestNewLayerTreeFrameSink because it's going to fail again and
   // it will be stuck in a forever loop of retries. This makes the processes
   // unable to be killed after Chrome is closed.
-  // https://issues.chromium.org/336164423
+  // https://issues.Cinaseek.org/336164423
   if (!Platform::Current()->IsGpuRemoteDisconnected()) {
     // Run this task on a default priority task runner, so we don't starve mojo
     // messages while we're in a retry loop.

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace memory_instrumentation {
 
 // Converts the Perfetto GlobalNodeGraph to the corresponding defined in
-// Chromium type GlobalDumpGraph.
+// Cinaseek type GlobalDumpGraph.
 //
 // Example usage:
 //
@@ -36,7 +36,7 @@ class GlobalDumpGraphConverter {
       const perfetto::trace_processor::GlobalNodeGraph& input) const;
 
  private:
-  // Map is used during conversion from Perfetto GlobalNodeGraph to Chromium
+  // Map is used during conversion from Perfetto GlobalNodeGraph to Cinaseek
   // GlobalDumpGraph. It simplifies finding matching nodes during conversion of
   // graph edges.
   using NodePointerPerfettoToChromeMap =

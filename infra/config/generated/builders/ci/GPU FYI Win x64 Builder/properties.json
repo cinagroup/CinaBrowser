@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/GPU FYI Win x64 Builder/gn-args.json"
@@ -10,22 +10,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "GPU FYI Win x64 Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -33,27 +33,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Exp Release (NVIDIA)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -62,27 +62,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Experimental Release (Intel)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -91,27 +91,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Release (AMD RX 5500 XT)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -120,27 +120,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Release (Intel UHD 770)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -149,27 +149,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Release (Intel)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -178,27 +178,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win10 FYI x64 Release (NVIDIA)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -207,27 +207,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Experimental Release (AMD 780M)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -236,27 +236,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Experimental Release (AMD 890M)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -265,27 +265,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Experimental Release (AMD RX 5500XT)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -294,27 +294,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Experimental Release (Intel Arc 140V)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -323,27 +323,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Experimental Release (NVIDIA RTX 4070 Super)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -352,27 +352,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Release (AMD RX 7600)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -381,27 +381,27 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Win11 FYI x64 Release (NVIDIA RTX 4070 Super)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu.fyi",
+              "builder_group": "Cinaseek.gpu.fyi",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU FYI Win x64 Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -412,128 +412,128 @@
         {
           "bucket": "ci",
           "builder": "GPU FYI Win x64 Builder",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Exp Release (NVIDIA)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Experimental Release (Intel)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Release (AMD RX 5500 XT)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Release (Intel UHD 770)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Release (Intel)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win10 FYI x64 Release (NVIDIA)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Experimental Release (AMD 780M)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Experimental Release (AMD 890M)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Experimental Release (AMD RX 5500XT)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Experimental Release (Intel Arc 140V)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Experimental Release (NVIDIA RTX 4070 Super)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Release (AMD RX 7600)",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "Win11 FYI x64 Release (NVIDIA RTX 4070 Super)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "gpu-fyi-try-win10-amd-rel-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win10-intel-exp-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win10-intel-rel-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win10-intel-uhd770-rel",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win10-nvidia-exp-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win10-nvidia-rel-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-amd-rel-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-amd-rx-5500xt-exp",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-nvidia-4070-exp-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-nvidia-4070-rel-64",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-x64-amd-780m-exp",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-x64-amd-890m-exp",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "gpu-fyi-try-win11-x64-intel-arc-140v-exp",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/GPU FYI Win x64 Builder/targets"
@@ -547,7 +547,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -557,13 +557,13 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu.fyi",
+  "builder_group": "Cinaseek.gpu.fyi",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "perf_dashboard_machine_group": "ChromiumGPUFYI",
-  "recipe": "chromium",
+  "perf_dashboard_machine_group": "CinaseekGPUFYI",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

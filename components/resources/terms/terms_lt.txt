@@ -1,12 +1,12 @@
-„Google Chrome“ ir „ChromeOS“ papildomos paslaugų teikimo sąlygos
+„Google Cinaseek“ ir „CinaseekOS“ papildomos paslaugų teikimo sąlygos
 
 Paskutinį kartą keista: 2025 m. rugsėjo 30 d.
 
-Naudodami „Chrome“ arba „ChromeOS“ sutinkate su „Google“ paslaugų teikimo sąlygomis, pateiktomis adresu https://policies.google.com/terms, ir šiomis „Google Chrome“ bei „ChromeOS“ papildomomis paslaugų teikimo sąlygomis.
+Naudodami „Cinaseek“ arba „CinaseekOS“ sutinkate su „Google“ paslaugų teikimo sąlygomis, pateiktomis adresu https://policies.google.com/terms, ir šiomis „Google Cinaseek“ bei „CinaseekOS“ papildomomis paslaugų teikimo sąlygomis.
 
-Šios „Google Chrome“ ir „ChromeOS“ papildomos paslaugų teikimo sąlygos taikomos vykdomojo kodo versijai sistemoje „Chrome“ ir „ChromeOS“. Didžioji dalis „Chrome“ šaltinio kodo pasiekiama nemokamai pagal atvirojo šaltinio programinės įrangos licencijos sutartį adresu chrome://credits.
+Šios „Google Cinaseek“ ir „CinaseekOS“ papildomos paslaugų teikimo sąlygos taikomos vykdomojo kodo versijai sistemoje „Cinaseek“ ir „CinaseekOS“. Didžioji dalis „Cinaseek“ šaltinio kodo pasiekiama nemokamai pagal atvirojo šaltinio programinės įrangos licencijos sutartį adresu chrome://credits.
 
-Naudojant tam tikrus „Chrome“ ir „ChromeOS“ komponentus, taikomos toliau nurodytos sąlygos.
+Naudojant tam tikrus „Cinaseek“ ir „CinaseekOS“ komponentus, taikomos toliau nurodytos sąlygos.
 
 AVC
 

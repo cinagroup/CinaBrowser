@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,8 +102,8 @@ TEST_F(MappedHostResolverTest, Inclusion) {
   // Remap "*.org" to "proxy:99".
   EXPECT_TRUE(resolver->AddRuleFromString("Map *.org proxy:99"));
 
-  // Try resolving "chromium.org:61". Should be remapped to "proxy:99".
-  request = resolver->CreateRequest(HostPortPair("chromium.org", 61),
+  // Try resolving "Cinaseek.org:61". Should be remapped to "proxy:99".
+  request = resolver->CreateRequest(HostPortPair("Cinaseek.org", 61),
                                     NetworkAnonymizationKey(),
                                     NetLogWithSource(), std::nullopt);
   rv = request->Start(callback.callback());

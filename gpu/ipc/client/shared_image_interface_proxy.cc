@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -138,7 +138,7 @@ Mailbox SharedImageInterfaceProxy::CreateSharedImage(
   // Clear the external sampler prefs for shared memory case if it is set. Note
   // that the |si_info.meta.format| is a reference, so any modifications to it
   // will also be reflected at the place from which this method is called from.
-  // https://issues.chromium.org/339546249.
+  // https://issues.Cinaseek.org/339546249.
   if (si_info.meta.format.PrefersExternalSampler() &&
       (handle_to_populate->type ==
        gfx::GpuMemoryBufferType::SHARED_MEMORY_BUFFER)) {

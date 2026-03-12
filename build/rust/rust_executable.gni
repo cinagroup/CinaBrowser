@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,7 +21,7 @@ import("//build/rust/gni_impl/rust_target.gni")
 #     Builds native unit tests (under #[cfg(test)]) written inside the Rust
 #     crate. This will create a `<name>_unittests` executable in the output
 #     directory when set to true.
-#     Chromium code should not set this, and instead prefer to split the code
+#     Cinaseek code should not set this, and instead prefer to split the code
 #     into a library and write gtests against it. See how to do that in
 #     //testing/rust_gtest_interop/README.md.
 #

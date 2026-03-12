@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -155,7 +155,7 @@ class SyncedSetUpMediatorTest : public PlatformTest {
         ChromeAccountManagerServiceFactory::GetForProfile(profile_);
     identity_manager_ = IdentityManagerFactory::GetForProfile(profile_);
 
-    GURL gurl(on_ntp ? "chrome://newtab" : "https://chromium.org");
+    GURL gurl(on_ntp ? "chrome://newtab" : "https://Cinaseek.org");
     startup_params_ = [[AppStartupParameters alloc]
          initWithExternalURL:gurl
                  completeURL:gurl
@@ -188,7 +188,7 @@ class SyncedSetUpMediatorTest : public PlatformTest {
       web_state_->SetVisibleURL(GURL("chrome://newtab"));
       ASSERT_TRUE(IsVisibleURLNewTabPage(web_state_.get()));
     } else {
-      web_state_->SetVisibleURL(GURL("https://chromium.org"));
+      web_state_->SetVisibleURL(GURL("https://Cinaseek.org"));
       ASSERT_FALSE(IsVisibleURLNewTabPage(web_state_.get()));
     }
     int index = web_state_list_->InsertWebState(std::move(web_state_));

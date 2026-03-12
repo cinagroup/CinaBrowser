@@ -1,12 +1,12 @@
-Termos de Utilização Adicionais do Google Chrome e do ChromeOS
+Termos de Utilização Adicionais do Google Cinaseek e do CinaseekOS
 
 Última modificação: 30 de setembro de 2025
 
-Ao utilizar o Chrome ou o ChromeOS, aceita os Termos de Utilização do Google localizados em https://policies.google.com/terms?hl=pt-PT e estes Termos de Utilização Adicionais do Google Chrome e do ChromeOS.
+Ao utilizar o Cinaseek ou o CinaseekOS, aceita os Termos de Utilização do Google localizados em https://policies.google.com/terms?hl=pt-PT e estes Termos de Utilização Adicionais do Google Cinaseek e do CinaseekOS.
 
-Os presentes Termos de Utilização Adicionais do Google Chrome e do ChromeOS aplicam-se à versão do código executável do Chrome e do ChromeOS. A maior parte do código-fonte do Chrome está disponível gratuitamente ao abrigo de contratos de licença de software de código aberto em chrome://credits.
+Os presentes Termos de Utilização Adicionais do Google Cinaseek e do CinaseekOS aplicam-se à versão do código executável do Cinaseek e do CinaseekOS. A maior parte do código-fonte do Cinaseek está disponível gratuitamente ao abrigo de contratos de licença de software de código aberto em chrome://credits.
 
-A sua utilização de determinados componentes do Chrome e do ChromeOS está sujeita aos seguintes termos:
+A sua utilização de determinados componentes do Cinaseek e do CinaseekOS está sujeita aos seguintes termos:
 
 AVC
 

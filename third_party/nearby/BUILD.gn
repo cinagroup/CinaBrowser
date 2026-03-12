@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/util/process_version.gni")
@@ -48,8 +48,8 @@ source_set("connections") {
     ":v3_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("connections_types") {
   public_configs = [
@@ -86,8 +86,8 @@ source_set("connections_types") {
     ":platform_public_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/connections/implementation
@@ -100,8 +100,8 @@ source_set("connections_implementation_types") {
     "src/connections/implementation/pcp.h",
     "src/connections/implementation/webrtc_state.h",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("connections_implementation_ble_advertisement") {
@@ -121,8 +121,8 @@ source_set("connections_implementation_ble_advertisement") {
     ":platform_public_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 config("connections_implementation_temporary_unused_result_suppression") {
@@ -252,10 +252,10 @@ source_set("connections_implementation") {
     "//third_party/protobuf:protobuf_lite",
     "//third_party/ukey2",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     "//build/config/compiler:unnecessary_virtual_specifier_warning",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":connections_implementation_temporary_unused_result_suppression",
   ]
 }
@@ -300,8 +300,8 @@ source_set("connections_implementation_analytics") {
     ":platform_public_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/connections/implementation/flags
@@ -318,8 +318,8 @@ source_set("connections_implementation_flags") {
     ":platform_base",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/connections/implementation/mediums
@@ -405,8 +405,8 @@ source_set("connections_implementation_mediums") {
     "//third_party/smhasher:murmurhash3",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("connections_implementation_mediums_utils") {
@@ -430,8 +430,8 @@ source_set("connections_implementation_mediums_utils") {
     ":platform_base",
     ":platform_public_types",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("connections_implementation_mediums_webrtc_data_types") {
@@ -449,8 +449,8 @@ source_set("connections_implementation_mediums_webrtc_data_types") {
     ":platform_public_types",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("connections_implementation_mediums_webrtc") {
@@ -481,8 +481,8 @@ source_set("connections_implementation_mediums_webrtc") {
     "//third_party/abseil-cpp:absl",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/connections/v3
@@ -510,8 +510,8 @@ source_set("v3_types") {
     ":platform_public_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 ###############################################################################
@@ -524,8 +524,8 @@ source_set("analytics_event_logger") {
     ":nearby_defines",
   ]
   public = [ "src/internal/analytics/event_logger.h" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   public_deps = [
     ":connections_log_proto",
     ":fast_pair_log_proto",
@@ -547,8 +547,8 @@ source_set("nearby_crypto") {
     "//third_party/abseil-cpp:absl",
     "//third_party/boringssl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/crypto_cros
@@ -599,8 +599,8 @@ source_set("crypto_cros") {
     "//third_party/abseil-cpp:absl",
     "//third_party/boringssl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/flags
@@ -620,8 +620,8 @@ source_set("flags") {
     ":platform_mutex",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/interop
@@ -632,8 +632,8 @@ source_set("interop_authentication_transport_interface") {
   ]
   public = [ "src/internal/interop/authentication_transport.h" ]
   public_deps = [ "//third_party/abseil-cpp:absl" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("interop_device") {
@@ -651,8 +651,8 @@ source_set("interop_device") {
     ":platform_base_connection_info",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("interop_authentication_status") {
@@ -661,8 +661,8 @@ source_set("interop_authentication_status") {
     ":nearby_defines",
   ]
   public = [ "src/internal/interop/authentication_status.h" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 ###############################################################################
@@ -700,8 +700,8 @@ source_set("platform_api_comm") {
     "//third_party/abseil-cpp:absl",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("platform_wifi_utils") {
@@ -715,8 +715,8 @@ source_set("platform_wifi_utils") {
     "src/internal/platform/implementation/wifi_utils.h",
   ]
   public_deps = [ "//third_party/abseil-cpp:absl" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("platform_api_types") {
@@ -751,8 +751,8 @@ source_set("platform_api_types") {
     "//crypto",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_api_platform") {
   public_configs = [
@@ -766,8 +766,8 @@ source_set("platform_api_platform") {
     ":platform_base",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/platform
@@ -807,8 +807,8 @@ source_set("platform_base") {
     ":connections_enums_proto",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_error_code_recorder") {
   public_configs = [
@@ -825,8 +825,8 @@ source_set("platform_base_error_code_recorder") {
     ":error_code_enums_proto",
     ":platform_public_logging",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_uuid") {
   public_configs = [
@@ -840,8 +840,8 @@ source_set("platform_base_uuid") {
     "//third_party/abseil-cpp:absl",
     "//third_party/boringssl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_util") {
   public_configs = [
@@ -862,8 +862,8 @@ source_set("platform_base_util") {
     ":platform_base",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_logging") {
   public_configs = [
@@ -876,8 +876,8 @@ source_set("platform_base_logging") {
     ":platform_api_types",
     "//base",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_cancellation_flag") {
   public_configs = [
@@ -891,8 +891,8 @@ source_set("platform_base_cancellation_flag") {
     ":platform_base_util",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_base_connection_info") {
   public_configs = [
@@ -916,8 +916,8 @@ source_set("platform_base_connection_info") {
     ":platform_base_logging",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/platform/implementation/shared
@@ -933,8 +933,8 @@ source_set("platform_impl_shared_file") {
     ":platform_public_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/internal/platform
@@ -956,8 +956,8 @@ source_set("platform_mutex") {
     "//third_party/abseil-cpp:absl",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("platform_public_types") {
@@ -1016,8 +1016,8 @@ source_set("platform_public_types") {
     "//crypto",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_public_comm") {
   public_configs = [
@@ -1058,8 +1058,8 @@ source_set("platform_public_comm") {
     "//third_party/abseil-cpp:absl",
     "//third_party/webrtc_overrides:webrtc_component",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("platform_public_logging") {
   public_configs = [
@@ -1068,8 +1068,8 @@ source_set("platform_public_logging") {
   ]
   public = [ "src/internal/platform/logging.h" ]
   public_deps = [ ":platform_base_logging" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 ###############################################################################
@@ -1110,8 +1110,8 @@ source_set("presence") {
     ":presence_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 source_set("presence_test") {
   testonly = true
@@ -1168,8 +1168,8 @@ source_set("presence_types") {
     ":platform_public_logging",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/presence/implementation
@@ -1226,8 +1226,8 @@ source_set("presence_internal") {
     "//third_party/abseil-cpp:absl",
     "//third_party/boringssl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("presence_sensor_fusion") {
@@ -1240,8 +1240,8 @@ source_set("presence_sensor_fusion") {
     ":presence_types",
     "//third_party/abseil-cpp:absl",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 # src/presence/implementation/mediums
@@ -1260,8 +1260,8 @@ source_set("presence_mediums") {
     ":platform_public_comm",
     ":presence_types",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 ###############################################################################
@@ -1460,14 +1460,14 @@ proto_library("web_rtc_signaling_frames_proto") {
 
 # The following definitions only apply when building for a CrOS board
 if (is_chromeos_device) {
-  # Test target is for running Skylab tests from Chrome builder.
+  # Test target is for running Skylab tests from Cinaseek builder.
   tast_test("nearby_share_tast_tests") {
     tast_attr_expr = "\"group:nearby-share-remote\""
   }
 }
 
 ###############################################################################
-# Chromium platform implementations. These are not third-party code.
+# Cinaseek platform implementations. These are not third-party code.
 ###############################################################################
 source_set("platform_impl_crypto") {
   sources = [ "platform_impl/crypto.cc" ]

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ const char kURLVisitDismissedEventName[] =
 // An action performed by the user on a `URLVisit` through a UI surface.
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.visited_url_ranking
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.visited_url_ranking
 // LINT.IfChange(ScoredURLUserAction)
 enum ScoredURLUserAction {
   kUnknown = 0,

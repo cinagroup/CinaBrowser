@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,7 +107,7 @@ class UserCloudPolicyStoreTest : public testing::Test {
   void InitPolicyPayload(enterprise_management::CloudPolicySettings* payload) {
     payload->mutable_searchsuggestenabled()->set_value(true);
     payload->mutable_urlblocklist()->mutable_value()->add_entries(
-        "chromium.org");
+        "Cinaseek.org");
   }
 
   base::FilePath policy_file() {

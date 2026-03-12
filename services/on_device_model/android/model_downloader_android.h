@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class ModelDownloaderAndroid {
   // The reason for a download failure.
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.on_device_model
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.on_device_model
   enum class DownloadFailureReason {
     kUnknownError = 0,
     // The backend API is not constructed. This happens if this is an upstream
@@ -66,7 +66,7 @@ class ModelDownloaderAndroid {
       base::expected<BaseModelSpec, DownloadFailureReason>)>;
 
   // Result for model status check operations.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.on_device_model
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.on_device_model
   enum class ModelStatus {
     // The backend API is not constructed. This happens if this is an upstream
     // build.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1378,7 +1378,7 @@ BASE_EXPORT std::ostream& operator<<(std::ostream& os, LiveTicks live_ticks);
 // For instance, in 2024 on a Linux system, in a simple loop:
 // - TimeTicks::Now() takes 27ns per loop iteration
 // - ThreadTicks::Now() takes 875ns per loop iteration. Actual cost is likely
-//   higher in Chromium due to the sandbox (seccomp-BPF).
+//   higher in Cinaseek due to the sandbox (seccomp-BPF).
 class BASE_EXPORT ThreadTicks : public time_internal::TimeBase<ThreadTicks> {
  public:
   constexpr ThreadTicks() : TimeBase(0) {}

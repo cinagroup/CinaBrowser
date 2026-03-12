@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ namespace network {
 namespace internal {
 
 // MaxValue() finds the max value of an enum, compensating for the variety of
-// conventions used in Chromium. Returns the maximum size_t value if no max
+// conventions used in Cinaseek. Returns the maximum size_t value if no max
 // could be found. May also return a ridiculously large value if the max is
 // actually negative, but by limiting the maximum value we accept we can protect
 // ourselves and avoid generating an enormous table.
@@ -239,7 +239,7 @@ struct UnwantedConversion {};
 // allowing us to detect if one of these would be used. These need to be inside
 // their own namespace so they are only seen by the concepts here. These should
 // match exactly the types specified by the standard. This includes types not
-// normally permitted in Chromium code, so they need "NOLINT" annotations.
+// normally permitted in Cinaseek code, so they need "NOLINT" annotations.
 UnwantedConversion operator<<(std::ostream&, char);
 UnwantedConversion operator<<(std::ostream&, signed char);           // NOLINT
 UnwantedConversion operator<<(std::ostream&, unsigned char);         // NOLINT

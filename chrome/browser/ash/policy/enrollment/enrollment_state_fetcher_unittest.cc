@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1381,7 +1381,7 @@ TEST_F(EnrollmentStateFetcherTest,
 
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
-// An enum for the kind of Chromium OS running on the device.
+// An enum for the kind of Cinaseek OS running on the device.
 enum class DeviceOs { Chrome = 0, Flex = 1 };
 
 // This is parameterized by device OS.

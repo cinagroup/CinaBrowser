@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #include <charconv>
 #include <set>
 
-#include "aidl/org/chromium/base/process_launcher/BnChildProcessService.h"
+#include "aidl/org/Cinaseek/base/process_launcher/BnChildProcessService.h"
 #include "base/android/android_info.h"
 #include "base/android/apk_info.h"
 #include "base/android/child_process_service.h"
@@ -41,10 +41,10 @@
 #include "content/public/common/content_switches.h"
 #include "third_party/android_toolchain/native_service.h"
 
-using aidl::org::chromium::base::library_loader::IRelroLibInfo;
-using aidl::org::chromium::base::process_launcher::BnChildProcessService;
-using aidl::org::chromium::base::process_launcher::IChildProcessArgs;
-using aidl::org::chromium::base::process_launcher::IParentProcess;
+using aidl::org::Cinaseek::base::library_loader::IRelroLibInfo;
+using aidl::org::Cinaseek::base::process_launcher::BnChildProcessService;
+using aidl::org::Cinaseek::base::process_launcher::IChildProcessArgs;
+using aidl::org::Cinaseek::base::process_launcher::IParentProcess;
 using ndk::ScopedAStatus;
 using ndk::ScopedFileDescriptor;
 using ndk::SpAIBinder;
@@ -180,7 +180,7 @@ void ChildProcessService::SpawnMainThread() {
 #else
   size_t stack_size = 4 * 1024 * 1024;
 #endif
-  // LINT.ThenChange(//base/android/java/src/org/chromium/base/process_launcher/ChildProcessService.java)
+  // LINT.ThenChange(//base/android/java/src/org/Cinaseek/base/process_launcher/ChildProcessService.java)
   // Set up stack size to match Java.
   base::SimpleThread::Options options;
   options.stack_size = stack_size;

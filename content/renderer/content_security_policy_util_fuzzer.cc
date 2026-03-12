@@ -1,16 +1,16 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Configure:
-// # tools/mb/mb.py gen -m chromium.fuzz -b 'Libfuzzer Upload Linux ASan'  out/libfuzzer
+// # tools/mb/mb.py gen -m Cinaseek.fuzz -b 'Libfuzzer Upload Linux ASan'  out/libfuzzer
 // Build:
 // # autoninja -C out/libfuzzer content_security_policy_util_fuzzer
 // Run:
 // # ./out/libfuzzer/content_security_policy_util_fuzzer
 //
 // For more details, see
-// https://chromium.googlesource.com/chromium/src/+/main/testing/libfuzzer/README.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/testing/libfuzzer/README.md
 
 #include "content/renderer/content_security_policy_util.h"
 

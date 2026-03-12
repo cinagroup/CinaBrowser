@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,12 +64,12 @@ TEST_F(ContextMenuJavaScriptFeatureTest, FetchImageElement) {
        "<meta name=\"viewport\" content=\"user-scalable=no, width=100\">"
        "</head><body><p><a href=\"http://destination/\"><img title=\"MyTitle\" "
        "alt=\"alt text\" height=100 width=100 "
-       "src=\"chromium_logo.png\"/></a></p></body></html>";
+       "src=\"Cinaseek_logo.png\"/></a></p></body></html>";
   LoadHtml(html, test_server.base_url());
 
   std::string request_id("123");
   std::string expected_src_url =
-      test_server.GetURL("/chromium_logo.png").spec();
+      test_server.GetURL("/Cinaseek_logo.png").spec();
 
   __block bool callback_called = false;
   ContextMenuJavaScriptFeature::FromBrowserState(GetBrowserState())

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1722,7 +1722,7 @@ TEST_F(GestureProviderTest, NoStylusScrollWithinSlop) {
 // ignores any orthogonal move actions even when they are outside the stylus
 // slop.
 //
-// TODO(mustaq@chromium.org): Refactor SnapScrollController states to fix this.
+// TODO(mustaq@Cinaseek.org): Refactor SnapScrollController states to fix this.
 TEST_F(GestureProviderTest, SnapScrollWithStylusSlop) {
   const MotionEvent::ToolType tool_type = MotionEvent::ToolType::STYLUS;
   const float tap_slop = GetTapSlop(tool_type);

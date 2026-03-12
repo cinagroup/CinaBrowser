@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/feedback/FamilyInfoFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/ProcessIdFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/SystemInfoFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FamilyInfoFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/ProcessIdFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/SystemInfoFeedbackSource.java",
   ]
 }
 
@@ -34,7 +34,7 @@ android_library_factory("factory_java") {
     "//chrome/browser/profiles/android:java",
   ]
 
-  sources = [ "java/src/org/chromium/chrome/browser/feedback/HelpAndFeedbackLauncherFactory.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/feedback/HelpAndFeedbackLauncherFactory.java" ]
 }
 
 android_library("internal_java") {
@@ -47,30 +47,30 @@ android_library("internal_java") {
     "//chrome/browser/profiles/android:java",
   ]
 
-  sources = [ "java/src/org/chromium/chrome/browser/feedback/HelpAndFeedbackLauncherFactory.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/feedback/HelpAndFeedbackLauncherFactory.java" ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/feedback/AsyncFeedbackSourceAdapter.java",
-    "java/src/org/chromium/chrome/browser/feedback/DeviceInfoFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/FallbackHelpAndFeedbackLauncherDelegate.java",
-    "java/src/org/chromium/chrome/browser/feedback/FamilyInfoFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/FeedbackContextFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/HelpAndFeedbackLauncher.java",
-    "java/src/org/chromium/chrome/browser/feedback/HelpAndFeedbackLauncherDelegate.java",
-    "java/src/org/chromium/chrome/browser/feedback/IMEFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/InterestFeedFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/LowEndDeviceFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/OmniboxFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/PermissionFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/ProcessIdFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/SystemInfoFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/UploadedCrashIdsFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/UrlFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/VariationsFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/VariationsStateFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/AsyncFeedbackSourceAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/DeviceInfoFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FallbackHelpAndFeedbackLauncherDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FamilyInfoFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FeedbackContextFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/HelpAndFeedbackLauncher.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/HelpAndFeedbackLauncherDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/IMEFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/InterestFeedFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/LowEndDeviceFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/OmniboxFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/PermissionFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/ProcessIdFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/SystemInfoFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/UploadedCrashIdsFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/UrlFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/VariationsFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/VariationsStateFeedbackSource.java",
   ]
   deps = [
     ":feedback_collector_java",
@@ -91,17 +91,17 @@ android_library("java") {
   ]
   public_deps = [ ":feedback_collector_java" ]
 
-  resources_package = "org.chromium.chrome.browser.feedback"
+  resources_package = "org.Cinaseek.chrome.browser.feedback"
 }
 
 android_library("feedback_collector_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/feedback/AsyncFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/FeedbackCollector.java",
-    "java/src/org/chromium/chrome/browser/feedback/FeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/HistogramFeedbackSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/ScreenshotSource.java",
-    "java/src/org/chromium/chrome/browser/feedback/StaticScreenshotSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/AsyncFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FeedbackCollector.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/FeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/HistogramFeedbackSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/ScreenshotSource.java",
+    "java/src/org/Cinaseek/chrome/browser/feedback/StaticScreenshotSource.java",
   ]
   deps = [
     "//base:base_java",

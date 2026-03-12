@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@ window['chrome'] = window['chrome'] || {};
 
 /**
  * Sends messages to the browser. See
- * https://chromium.googlesource.com/chromium/src/+/main/docs/webui/webui_explainer.md#chrome_send
+ * https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/webui/webui_explainer.md#chrome_send
  *
  * @param {string} message name to be passed to the browser.
  * @param {Array=} args optional.

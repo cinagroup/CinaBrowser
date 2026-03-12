@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/clang/clang.gni")
 import("//build/config/sanitizers/sanitizers.gni")
 import("//build/config/win/manifest.gni")
 
-# Depending on this target will cause the manifests for Chrome's default
+# Depending on this target will cause the manifests for Cinaseek's default
 # Windows and common control compatibility and elevation for executables.
 windows_manifest("default_exe_manifest") {
   sources = [

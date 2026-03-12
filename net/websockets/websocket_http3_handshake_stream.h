@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 #include "net/base/net_export.h"
 #include "net/base/request_priority.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_session_pool.h"
 #include "net/third_party/quiche/src/quiche/common/http/http_header_block.h"
 #include "net/websockets/websocket_basic_stream_adapters.h"
@@ -49,7 +49,7 @@ class NET_EXPORT_PRIVATE WebSocketHttp3HandshakeStream final
       public WebSocketQuicStreamAdapter::Delegate {
  public:
   WebSocketHttp3HandshakeStream(
-      std::unique_ptr<QuicChromiumClientSession::Handle> session,
+      std::unique_ptr<QuicCinaseekClientSession::Handle> session,
       WebSocketStream::ConnectDelegate* connect_delegate,
       std::vector<std::string> requested_sub_protocols,
       std::vector<std::string> requested_extensions,
@@ -144,7 +144,7 @@ class NET_EXPORT_PRIVATE WebSocketHttp3HandshakeStream final
   // Time the request was issued.
   base::Time request_time_;
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> session_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session_;
   // Owned by another object.
   // `connect_delegate` will live during the lifetime of this object.
   const raw_ptr<WebSocketStream::ConnectDelegate> connect_delegate_;

@@ -1,8 +1,8 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# This exposes the Chrome version as GN variables for use in build files.
+# This exposes the Cinaseek version as GN variables for use in build files.
 # This also generates the various version codes used for builds of chrome for
 # android.
 #
@@ -21,7 +21,7 @@ _version_dictionary_template = "full = \"@MAJOR@.@MINOR@.@BUILD@.@PATCH@\" " +
                                "major = \"@MAJOR@\" minor = \"@MINOR@\" " +
                                "build = \"@BUILD@\" patch = \"@PATCH@\" "
 
-# The file containing the Chrome version number.
+# The file containing the Cinaseek version number.
 chrome_version_file = "//chrome/VERSION"
 
 _script_arguments = []
@@ -246,12 +246,12 @@ if (is_mac) {
 if (is_android && current_toolchain == default_toolchain) {
   lines_to_write = [
     "VersionName: $chrome_version_name",
-    "Chrome: $chrome_version_code",
-    "ChromeOpenBeta: $chrome_beta_version_code",
-    "ChromeAuto: $chrome_auto_version_code",
-    "TrichromeChrome: $trichrome_version_code",
-    "TrichromeChromeOpenBeta: $trichrome_beta_version_code",
-    "TrichromeChromeAuto: $trichrome_auto_version_code",
+    "Cinaseek: $chrome_version_code",
+    "CinaseekOpenBeta: $chrome_beta_version_code",
+    "CinaseekAuto: $chrome_auto_version_code",
+    "TrichromeCinaseek: $trichrome_version_code",
+    "TrichromeCinaseekOpenBeta: $trichrome_beta_version_code",
+    "TrichromeCinaseekAuto: $trichrome_auto_version_code",
     "AndroidWebview: $webview_stable_version_code",
     "AndroidWebviewOpenBeta: $webview_beta_version_code",
     "AndroidWebviewStable: $webview_stable_version_code",
@@ -261,15 +261,15 @@ if (is_android && current_toolchain == default_toolchain) {
 
   if (defined(chrome_desktop_version_code)) {
     lines_to_write += [
-      "ChromeDesktop: $chrome_desktop_version_code",
-      "ChromeDesktopOpenBeta: $chrome_desktop_beta_version_code",
+      "CinaseekDesktop: $chrome_desktop_version_code",
+      "CinaseekDesktopOpenBeta: $chrome_desktop_beta_version_code",
     ]
   }
 
   if (target_cpu == "arm64") {
     lines_to_write += [
-      "ChromeHigh: $chrome_high_version_code",
-      "ChromeHighOpenBeta: $chrome_high_beta_version_code",
+      "CinaseekHigh: $chrome_high_version_code",
+      "CinaseekHighOpenBeta: $chrome_high_beta_version_code",
     ]
   }
 
@@ -279,15 +279,15 @@ if (is_android && current_toolchain == default_toolchain) {
       "Monochrome3264: $monochrome_32_64_version_code",
       "Monochrome6432: $monochrome_64_32_version_code",
       "Monochrome64: $monochrome_64_version_code",
-      "TrichromeChrome32: $trichrome_32_version_code",
-      "TrichromeChrome3264: $trichrome_32_64_version_code",
-      "TrichromeChrome6432: $trichrome_64_32_version_code",
-      "TrichromeChrome64: $trichrome_64_version_code",
-      "TrichromeChromeAuto32: $trichrome_auto_32_version_code",
-      "TrichromeChromeAuto3264: $trichrome_auto_32_64_version_code",
-      "TrichromeChromeAuto64: $trichrome_auto_64_version_code",
-      "TrichromeChromeAuto6432: $trichrome_auto_64_32_version_code",
-      "TrichromeChromeDesktop64: $trichrome_desktop_64_version_code",
+      "TrichromeCinaseek32: $trichrome_32_version_code",
+      "TrichromeCinaseek3264: $trichrome_32_64_version_code",
+      "TrichromeCinaseek6432: $trichrome_64_32_version_code",
+      "TrichromeCinaseek64: $trichrome_64_version_code",
+      "TrichromeCinaseekAuto32: $trichrome_auto_32_version_code",
+      "TrichromeCinaseekAuto3264: $trichrome_auto_32_64_version_code",
+      "TrichromeCinaseekAuto64: $trichrome_auto_64_version_code",
+      "TrichromeCinaseekAuto6432: $trichrome_auto_64_32_version_code",
+      "TrichromeCinaseekDesktop64: $trichrome_desktop_64_version_code",
       "AndroidWebview3264: $webview_32_64_stable_version_code",
       "AndroidWebview64: $webview_64_stable_version_code",
       "AndroidWebview6432: $webview_64_32_stable_version_code",
@@ -299,17 +299,17 @@ if (is_android && current_toolchain == default_toolchain) {
     ]
     if (target_cpu == "arm64") {
       lines_to_write += [
-        "TrichromeChrome6432High: $trichrome_64_32_high_version_code",
-        "TrichromeChromeAuto6432High: $trichrome_auto_64_32_high_version_code",
+        "TrichromeCinaseek6432High: $trichrome_64_32_high_version_code",
+        "TrichromeCinaseekAuto6432High: $trichrome_auto_64_32_high_version_code",
         "AndroidWebview6432High: $webview_64_32_high_stable_version_code",
         "AndroidWebviewAuto6432High: $webview_auto_64_32_high_version_code",
       ]
     }
     lines_to_write += [
-      "TrichromeChrome32OpenBeta: $trichrome_32_beta_version_code",
-      "TrichromeChrome3264OpenBeta: $trichrome_32_64_beta_version_code",
-      "TrichromeChrome6432OpenBeta: $trichrome_64_32_beta_version_code",
-      "TrichromeChrome64OpenBeta: $trichrome_64_beta_version_code",
+      "TrichromeCinaseek32OpenBeta: $trichrome_32_beta_version_code",
+      "TrichromeCinaseek3264OpenBeta: $trichrome_32_64_beta_version_code",
+      "TrichromeCinaseek6432OpenBeta: $trichrome_64_32_beta_version_code",
+      "TrichromeCinaseek64OpenBeta: $trichrome_64_beta_version_code",
       "AndroidWebview32OpenBeta: $webview_32_beta_version_code",
       "AndroidWebview3264OpenBeta: $webview_32_64_beta_version_code",
       "AndroidWebview6432OpenBeta: $webview_64_32_beta_version_code",
@@ -317,7 +317,7 @@ if (is_android && current_toolchain == default_toolchain) {
     ]
     if (target_cpu == "arm64") {
       lines_to_write += [
-        "TrichromeChrome6432HighOpenBeta: $trichrome_64_32_high_beta_version_code",
+        "TrichromeCinaseek6432HighOpenBeta: $trichrome_64_32_high_beta_version_code",
         "AndroidWebview6432HighOpenBeta: $webview_64_32_high_beta_version_code",
       ]
     }
@@ -358,7 +358,7 @@ if (is_android) {
 
   # Lookup tables for version codes.
   # For the list of configurations that exist, see:
-  #     https://chromium.googlesource.com/chromium/src/+/main/docs/android_native_libraries.md#build-variants-eg_monochrome_64_32_apk
+  #     https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/android_native_libraries.md#build-variants-eg_monochrome_64_32_apk
   #
   # For how version codes are computed, see:
   #     //build/util/android_chrome_version.py

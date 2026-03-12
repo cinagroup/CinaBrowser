@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,10 +20,10 @@ namespace {
 //
 // The existence of this object simplify SystemIdentityManager usage as the
 // client code does not have to check that the object exists.
-class ChromiumSystemIdentityManager final : public SystemIdentityManager {
+class CinaseekSystemIdentityManager final : public SystemIdentityManager {
  public:
-  ChromiumSystemIdentityManager();
-  ~ChromiumSystemIdentityManager() final;
+  CinaseekSystemIdentityManager();
+  ~CinaseekSystemIdentityManager() final;
 
   // SystemIdentityManager implementation.
   bool IsSigninSupported() final;
@@ -74,16 +74,16 @@ class ChromiumSystemIdentityManager final : public SystemIdentityManager {
                          AuthenticatedURLCallback callback) final;
 };
 
-ChromiumSystemIdentityManager::ChromiumSystemIdentityManager() = default;
+CinaseekSystemIdentityManager::CinaseekSystemIdentityManager() = default;
 
-ChromiumSystemIdentityManager::~ChromiumSystemIdentityManager() = default;
+CinaseekSystemIdentityManager::~CinaseekSystemIdentityManager() = default;
 
-bool ChromiumSystemIdentityManager::IsSigninSupported() {
+bool CinaseekSystemIdentityManager::IsSigninSupported() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
   return false;
 }
 
-bool ChromiumSystemIdentityManager::HandleSessionOpenURLContexts(
+bool CinaseekSystemIdentityManager::HandleSessionOpenURLContexts(
     UIScene* scene,
     NSSet<UIOpenURLContext*>* url_contexts) {
   // Nothing to do.
@@ -91,66 +91,66 @@ bool ChromiumSystemIdentityManager::HandleSessionOpenURLContexts(
   return false;
 }
 
-void ChromiumSystemIdentityManager::ApplicationDidDiscardSceneSessions(
+void CinaseekSystemIdentityManager::ApplicationDidDiscardSceneSessions(
     NSSet<UISceneSession*>* scene_sessions) {
   // Nothing to do.
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 }
 
-void ChromiumSystemIdentityManager::DismissDialogs() {
+void CinaseekSystemIdentityManager::DismissDialogs() {
   // Nothing to do.
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 }
 
 SystemIdentityManager::DismissViewCallback
-ChromiumSystemIdentityManager::PresentAccountDetailsController(
+CinaseekSystemIdentityManager::PresentAccountDetailsController(
     PresentDialogConfiguration configuration) {
   NOTREACHED();
 }
 
 SystemIdentityManager::DismissViewCallback
-ChromiumSystemIdentityManager::PresentWebAndAppSettingDetailsController(
+CinaseekSystemIdentityManager::PresentWebAndAppSettingDetailsController(
     PresentDialogConfiguration configuration) {
   NOTREACHED();
 }
 
 SystemIdentityManager::DismissViewCallback
-ChromiumSystemIdentityManager::PresentLinkedServicesSettingsDetailsController(
+CinaseekSystemIdentityManager::PresentLinkedServicesSettingsDetailsController(
     PresentDialogConfiguration configuration) {
   NOTREACHED();
 }
 
 id<SystemIdentityInteractionManager>
-ChromiumSystemIdentityManager::CreateInteractionManager() {
+CinaseekSystemIdentityManager::CreateInteractionManager() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
   return nil;
 }
 
-void ChromiumSystemIdentityManager::IterateOverIdentities(
+void CinaseekSystemIdentityManager::IterateOverIdentities(
     IdentityIteratorCallback callback) {
   // Nothing to do, there is no identities.
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 }
 
-void ChromiumSystemIdentityManager::ForgetIdentity(
+void CinaseekSystemIdentityManager::ForgetIdentity(
     id<SystemIdentity> identity,
     ForgetIdentityCallback callback) {
   NOTREACHED();
 }
 
-bool ChromiumSystemIdentityManager::IdentityRemovedByUser(
+bool CinaseekSystemIdentityManager::IdentityRemovedByUser(
     const GaiaId& gaia_id) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::GetAccessToken(
+void CinaseekSystemIdentityManager::GetAccessToken(
     id<SystemIdentity> identity,
     const std::set<std::string>& scopes,
     AccessTokenCallback callback) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::GetAccessToken(
+void CinaseekSystemIdentityManager::GetAccessToken(
     id<SystemIdentity> identity,
     const std::string& client_id,
     const std::set<std::string>& scopes,
@@ -158,42 +158,42 @@ void ChromiumSystemIdentityManager::GetAccessToken(
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::FetchAvatarForIdentity(
+void CinaseekSystemIdentityManager::FetchAvatarForIdentity(
     id<SystemIdentity> identity) {
   NOTREACHED();
 }
 
-UIImage* ChromiumSystemIdentityManager::GetCachedAvatarForIdentity(
+UIImage* CinaseekSystemIdentityManager::GetCachedAvatarForIdentity(
     id<SystemIdentity> identity) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::GetHostedDomain(
+void CinaseekSystemIdentityManager::GetHostedDomain(
     id<SystemIdentity> identity,
     HostedDomainCallback callback) {
   NOTREACHED();
 }
 
-NSString* ChromiumSystemIdentityManager::GetCachedHostedDomainForIdentity(
+NSString* CinaseekSystemIdentityManager::GetCachedHostedDomainForIdentity(
     id<SystemIdentity> identity) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::FetchCapabilities(
+void CinaseekSystemIdentityManager::FetchCapabilities(
     id<SystemIdentity> identity,
     const std::vector<std::string>& names,
     FetchCapabilitiesCallback callback) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::BuildExternalPrivacyContext(
+void CinaseekSystemIdentityManager::BuildExternalPrivacyContext(
     id<SystemIdentity> identity,
     UIViewController* view_controller,
     BuildExternalPrivacyContextCallback callback) {
   NOTREACHED();
 }
 
-bool ChromiumSystemIdentityManager::HandleMDMNotification(
+bool CinaseekSystemIdentityManager::HandleMDMNotification(
     id<SystemIdentity> identity,
     NSArray<id<SystemIdentity>>* active_identities,
     id<RefreshAccessTokenError> error,
@@ -201,17 +201,17 @@ bool ChromiumSystemIdentityManager::HandleMDMNotification(
   NOTREACHED();
 }
 
-bool ChromiumSystemIdentityManager::IsScopeLimitedError(
+bool CinaseekSystemIdentityManager::IsScopeLimitedError(
     id<RefreshAccessTokenError> error) {
   NOTREACHED();
 }
 
-bool ChromiumSystemIdentityManager::IsMDMError(id<SystemIdentity> identity,
+bool CinaseekSystemIdentityManager::IsMDMError(id<SystemIdentity> identity,
                                                NSError* error) {
   NOTREACHED();
 }
 
-void ChromiumSystemIdentityManager::FetchTokenAuthURL(
+void CinaseekSystemIdentityManager::FetchTokenAuthURL(
     id<SystemIdentity> identity,
     NSURL* target_url,
     AuthenticatedURLCallback callback) {
@@ -222,8 +222,8 @@ void ChromiumSystemIdentityManager::FetchTokenAuthURL(
 
 std::unique_ptr<SystemIdentityManager> CreateSystemIdentityManager(
     id<SingleSignOnService> sso_service) {
-  // Signin is not supported in Chromium, return a null object.
-  return std::make_unique<ChromiumSystemIdentityManager>();
+  // Signin is not supported in Cinaseek, return a null object.
+  return std::make_unique<CinaseekSystemIdentityManager>();
 }
 
 }  // namespace provider

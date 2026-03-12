@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -186,7 +186,7 @@ bool SelectMediaCodec(const VideoDecoderConfig& config,
 
   // Allow software decoder if either:
   // 1. the stream is encrypted.
-  // 2. No software decoder is bundled into Chromium.
+  // 2. No software decoder is bundled into Cinaseek.
   if (!(config.is_encrypted()
 #if BUILDFLAG(USE_PROPRIETARY_CODECS)
         || config.codec() == VideoCodec::kH264

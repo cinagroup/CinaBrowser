@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -388,7 +388,7 @@ class RASTER_EXPORT RasterImplementation : public RasterInterface,
   cc::SkottieSerializationHistory skottie_serialization_history_;
 
   // Tracing helpers.
-  int raster_chromium_id_ = 0;
+  int raster_Cinaseek_id_ = 0;
 };
 
 }  // namespace raster

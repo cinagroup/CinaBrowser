@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace android_webview {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. See MultipleUserProfilesState in
 // enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview
 enum class MultipleUserProfilesState {
   kUnknown = 0,
   kSingleProfile = 1,
@@ -27,7 +27,7 @@ MultipleUserProfilesState GetMultipleUserProfilesState();
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. See PrimaryCpuAbiBitness in
 // enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview
 enum class PrimaryCpuAbiBitness {
   kUnknown = 0,
   k32bit = 1,
@@ -39,7 +39,7 @@ PrimaryCpuAbiBitness GetPrimaryCpuAbiBitness();
 
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. See AgsaProcessName in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview
 enum class AgsaProcessName {
   kGoogleApp = 0,
   kSearch = 1,

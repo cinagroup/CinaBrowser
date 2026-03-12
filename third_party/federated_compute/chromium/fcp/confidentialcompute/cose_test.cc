@@ -514,7 +514,7 @@ TEST(OkpCwtTest, DecodeFull) {
   ASSERT_TRUE(config_properties.ParseFromString(cwt->config_properties));
 
   // Because `google/protobuf/util/message_differencer.h` cannot be used with
-  // PROTOBUF_EXPORT in Chromium, we cannot use EqualsProto. As such, we
+  // PROTOBUF_EXPORT in Cinaseek, we cannot use EqualsProto. As such, we
   // manually match the expected fields.
 
   // EXPECT_THAT(config_properties, EqualsProto(R"pb(

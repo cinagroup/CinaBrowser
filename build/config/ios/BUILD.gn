@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -73,7 +73,7 @@ config("compiler") {
     # because Objective-C code uses this to detect whether `@import` can be
     # used (this feature is also named modules).
     #
-    # Since Chromium does not yet enable cxx modules, nor clang modules,
+    # Since Cinaseek does not yet enable cxx modules, nor clang modules,
     # force disable the cxx modules, which cause `__has_features(modules)`
     # to return false unless clang modules are explicitly enabled.
     "-Xclang",

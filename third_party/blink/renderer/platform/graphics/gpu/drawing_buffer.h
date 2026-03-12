@@ -41,7 +41,7 @@
 #include "base/memory/raw_ptr.h"
 #include "cc/layers/texture_layer_client.h"
 #include "components/viz/common/resources/shared_image_format.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
 #include "gpu/command_buffer/client/gles2_interface.h"
 #include "gpu/command_buffer/client/raster_interface.h"
@@ -562,10 +562,10 @@ class PLATFORM_EXPORT DrawingBuffer : public cc::TextureLayerClient,
   // If RGB emulation is required, then the CHROMIUM image's alpha channel
   // must be immediately cleared after it is bound to a texture. Nothing
   // should be allowed to change the alpha channel after this.
-  void ClearChromiumImageAlpha(const ColorBuffer&);
+  void ClearCinaseekImageAlpha(const ColorBuffer&);
 
   // Tries to create a CHROMIUM_image backed texture if
-  // SharedGpuContext::WebGLImageChromiumEnabled() is true. On failure,
+  // SharedGpuContext::WebGLImageCinaseekEnabled() is true. On failure,
   // or if the flag is false, creates a default texture. Always returns a valid
   // ColorBuffer.
   scoped_refptr<ColorBuffer> CreateColorBuffer(const gfx::Size&);

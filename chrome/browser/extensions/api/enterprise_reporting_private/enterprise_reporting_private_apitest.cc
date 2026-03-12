@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -556,14 +556,14 @@ IN_PROC_BROWSER_TEST_F(EnterpriseReportingPrivateApiTest,
 
   std::string kOptions = "";
 
-  std::string registry_path = "SOFTWARE\\\\Chromium\\\\DeviceTrust\\\\Test";
+  std::string registry_path = "SOFTWARE\\\\Cinaseek\\\\DeviceTrust\\\\Test";
   std::string valid_key = "test_key";
 
   kOptions = base::StringPrintf(
       R"(
     const test_hive = 'HKEY_CURRENT_USER';
     const registry_path = '%s';
-    const invalid_path = 'SOFTWARE\\Chromium\\DeviceTrust\\Invalid';
+    const invalid_path = 'SOFTWARE\\Cinaseek\\DeviceTrust\\Invalid';
     const valid_key = '%s';
     const invalid_key = 'invalid_key';
 
@@ -1159,7 +1159,7 @@ IN_PROC_BROWSER_TEST_P(EnterpriseReportDataMaskingEventTest,
     expected_event.set_url("https://foo.com");
     expected_event.set_tab_url("https://foo.com");
     expected_event.set_profile_identifier(profile()->GetPath().AsUTF8Unsafe());
-    expected_event.set_profile_user_name("test-user@chromium.org");
+    expected_event.set_profile_user_name("test-user@Cinaseek.org");
     *expected_event.mutable_triggered_rule_info()->Add() = info;
 
     event_validator.ExpectSensitiveDataEvent(std::move(expected_event));
@@ -1179,7 +1179,7 @@ IN_PROC_BROWSER_TEST_P(EnterpriseReportDataMaskingEventTest,
     event.url = "https://foo.com";
     event.triggered_rule_info.push_back(std::move(rule_info));
 
-    event_validator.ExpectDataMaskingEvent("test-user@chromium.org",
+    event_validator.ExpectDataMaskingEvent("test-user@Cinaseek.org",
                                            profile()->GetPath().AsUTF8Unsafe(),
                                            std::move(event));
   }

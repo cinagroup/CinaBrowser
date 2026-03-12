@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ class COMPONENT_EXPORT(UI_BASE) ResourceBundle {
   static const int kLargeFontDelta = 8;
 
   // The constant added during the compression to the front of Brotli-compressed
-  // resources in Chromium. Compression occurs at tools/grit/grit/node/base.py.
+  // resources in Cinaseek. Compression occurs at tools/grit/grit/node/base.py.
   static constexpr uint8_t kBrotliConst[] = {0x1e, 0x9b};
   static const size_t kBrotliHeaderSize = 8;
 
@@ -70,7 +70,7 @@ class COMPONENT_EXPORT(UI_BASE) ResourceBundle {
 
   // The gender to use for languages that are grammatically gendered. kOther is
   // the default.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
   enum class Gender {
     kOther = 0,
     kFeminine,
@@ -375,7 +375,7 @@ class COMPONENT_EXPORT(UI_BASE) ResourceBundle {
   // Return the contents of a scale independent resource, decompressed
   // into a newly allocated string given the resource id. Todo: Look into
   // introducing an Async version of this function in the future.
-  // Bug: https://bugs.chromium.org/p/chromium/issues/detail?id=973417
+  // Bug: https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=973417
   std::string LoadDataResourceString(int resource_id) const;
 
   // Return the contents of a scale dependent resource, decompressed into

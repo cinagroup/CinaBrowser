@@ -11,7 +11,7 @@ supervised_user_refresh_token_fetcher
               "User Sync scope and tied to the given Supervised User ID, "
               "identifying the Supervised User Profile to be created."
             trigger:
-              "Called when creating a new Supervised User profile in Chromium "
+              "Called when creating a new Supervised User profile in Cinaseek "
               "to fetch OAuth credentials for using Sync with the new profile."
             data:
               "The request is authenticated with an OAuth2 access token "
@@ -22,7 +22,7 @@ supervised_user_refresh_token_fetcher
             destination: GOOGLE_OWNED_SERVICE
             internal {
               contacts {
-                email: "chromium-dev@google.com"
+                email: "Cinaseek-dev@google.com"
               }
             }
             user_data {
@@ -34,7 +34,7 @@ supervised_user_refresh_token_fetcher
             cookies_allowed: NO
             setting:
               "Users can disable this feature by toggling 'Let anyone add a "
-              "person to Chrome' in Chromium settings, under People."
+              "person to Cinaseek' in Cinaseek settings, under People."
             chrome_policy {
               SupervisedUserCreationEnabled {
                 policy_options {mode: MANDATORY}

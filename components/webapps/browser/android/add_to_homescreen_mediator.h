@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class AddToHomescreenInstaller;
 using AppType = AddToHomescreenParams::AppType;
 
 // AddToHomescreenMediator is the C++ counterpart of
-// org.chromium.components.webapps.addtohomescreen.AddToHomescreenMediator
+// org.Cinaseek.components.webapps.addtohomescreen.AddToHomescreenMediator
 // in Java. It uses AddToHomescreenInstaller for installing the current app.
 // This class is owned, constructed, and destroyed by its Java counter-part.
 class AddToHomescreenMediator {

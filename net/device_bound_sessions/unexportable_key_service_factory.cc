@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ crypto::UnexportableKeyProvider::Config GetConfig() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
           "EQHXZ8M8AV.com.google.Chrome"
 #else
-          ".org.chromium.Chromium"
+          ".org.Cinaseek.Cinaseek"
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
           ".unexportable-keys",
 #endif  // BUILDFLAG(IS_MAC)
@@ -67,7 +67,7 @@ namespace net::device_bound_sessions {
 // Currently there is another UnexportableKeyServiceFactory in the
 // chrome/browser/signin code in the browser process. They do not share code,
 // currently code for other factory is here:
-// https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/signin/bound_session_credentials/unexportable_key_service_factory.cc
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/browser/signin/bound_session_credentials/unexportable_key_service_factory.cc
 // It is not an issue if both factories are hosted in the browser process.
 // static
 UnexportableKeyServiceFactory* UnexportableKeyServiceFactory::GetInstance() {

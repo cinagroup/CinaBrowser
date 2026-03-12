@@ -58,7 +58,7 @@ window.insertIframe = (t, url, name) => {
   const iframe = document.createElement("iframe");
   iframe.src = url;
 
-  // In at least Chromium, window name targeting for form submission doesn't work if the name is set
+  // In at least Cinaseek, window name targeting for form submission doesn't work if the name is set
   // after the iframe is inserted into the DOM. So we can't just have callers do this themselves.
   if (name) {
     iframe.name = name;

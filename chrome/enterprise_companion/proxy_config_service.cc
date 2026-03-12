@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ constexpr net::NetworkTrafficAnnotationTag kPolicyProxyConfigTrafficAnnotation =
             email: "noahrose@google.com"
           }
           contacts {
-            email: "chrome-updates-dev@chromium.org"
+            email: "chrome-updates-dev@Cinaseek.org"
           }
         }
         last_reviewed: "2024-09-24"

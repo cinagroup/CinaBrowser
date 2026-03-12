@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -224,7 +224,7 @@ NoteTakingHelper::LaunchResult LaunchWebAppInternal(const std::string& app_id,
 }  // namespace
 
 const char NoteTakingHelper::kIntentAction[] =
-    "org.chromium.arc.intent.action.CREATE_NOTE";
+    "org.Cinaseek.arc.intent.action.CREATE_NOTE";
 // ID of a Keep Chrome App used for dev and testing.
 const char NoteTakingHelper::kDevKeepExtensionId[] =
     "ogfjaccbdfhecploibfbhighmebiffla";

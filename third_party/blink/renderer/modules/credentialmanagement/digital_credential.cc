@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ void DigitalCredential::Trace(Visitor* visitor) const {
 
 // static
 bool DigitalCredential::userAgentAllowsProtocol(const String& protocol) {
-  // Since Chromium allows all protocols to reach the underlying platform, this
+  // Since Cinaseek allows all protocols to reach the underlying platform, this
   // method only validates the protocol identifier, but doesn't do any further
   // checks. In other words, any protocol with a valid identifier is allowed.
   if (protocol.empty()) {

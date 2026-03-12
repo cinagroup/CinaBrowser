@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 
 // Try to adhere to [1] when adding and using logging.
 // [1]
-// https://chromium.googlesource.com/chromium/src/+/main/media/README.md#dvlog
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/media/README.md#dvlog
 
 #define DVLOGF(level) DVLOG(level) << __func__ << "(): "
 #define DVLOGF_IF(level, condition) \

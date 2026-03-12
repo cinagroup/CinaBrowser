@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -168,7 +168,7 @@ class WebFeedPageInformation {
 };
 std::ostream& operator<<(std::ostream& os, const WebFeedPageInformation& value);
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.webfeed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.webfeed
 enum class WebFeedSubscriptionStatus {
   kUnknown = 0,
   kSubscribed = 1,
@@ -178,7 +178,7 @@ enum class WebFeedSubscriptionStatus {
 };
 std::ostream& operator<<(std::ostream& out, WebFeedSubscriptionStatus value);
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.webfeed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.webfeed
 enum class WebFeedAvailabilityStatus {
   kStateUnspecified = 0,
   kInactive = 1,
@@ -214,7 +214,7 @@ std::ostream& operator<<(std::ostream& out, const WebFeedMetadata& value);
 // This must be kept in sync with WebFeedSubscriptionRequestStatus in
 // enums.xml. These values are persisted to logs. Entries should not be
 // renumbered and numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.webfeed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.webfeed
 enum class WebFeedSubscriptionRequestStatus {
   kUnknown = 0,
   kSuccess = 1,
@@ -230,7 +230,7 @@ std::ostream& operator<<(std::ostream& out,
 // This must be kept in sync with WebFeedQueryRequestStatus in
 // enums.xml. These values are persisted to logs. Entries should not be
 // renumbered and numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.webfeed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.webfeed
 enum class WebFeedQueryRequestStatus {
   kUnknown = 0,
   kSuccess = 1,
@@ -249,7 +249,7 @@ using NetworkRequestId = base::IdTypeU32<class NetworkRequestIdClass>;
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. This must be kept in sync with
 // WebFeedPageInformationRequestReason in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed.webfeed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed.webfeed
 enum class WebFeedPageInformationRequestReason : int {
   // The user requested to Follow the current web page.
   kUserRequestedFollow = 0,
@@ -262,7 +262,7 @@ enum class WebFeedPageInformationRequestReason : int {
 };
 
 // Values for feed type
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed
 enum class StreamKind : int {
   // Stream type is unknown.
   kUnknown = 0,
@@ -277,7 +277,7 @@ enum class StreamKind : int {
 };
 
 // Singe Web entry points
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed
 enum class SingleWebFeedEntryPoint : int {
   // Three dot menu
   kMenu = 0,
@@ -299,7 +299,7 @@ std::ostream& operator<<(std::ostream& out,
                          WebFeedPageInformationRequestReason value);
 
 // Used to tell how to open an URL.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed
 enum class OpenActionType : int {
   // The default open action.
   kDefault = 0,
@@ -310,7 +310,7 @@ enum class OpenActionType : int {
 };
 
 // Describes how tab group feature is enabled.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feed
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feed
 enum class TabGroupEnabledState : int {
   // No tab group is enabled.
   kNone = 0,

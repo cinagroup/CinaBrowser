@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace {
 
 // URL string passed from ios/web layer to ios/chrome and rendered on the error
 // page.
-NSString* const kTestUrl = @"https://chromium.test/";
+NSString* const kTestUrl = @"https://Cinaseek.test/";
 
 // Returns string for the given error code.
 NSString* ErrorAsString(int net_error) {

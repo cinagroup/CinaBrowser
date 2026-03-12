@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class COMPONENT_EXPORT(MIRRORING_SERVICE) RemotingSender final
 
  private:
   // Ctor that takes a media::cast::FrameSender for unit tests.
-  // TODO(issues.chromium.org/329781397): Remove unnecessary wrapper objects in
+  // TODO(issues.Cinaseek.org/329781397): Remove unnecessary wrapper objects in
   // Chrome's implementation of the Cast sender.
   RemotingSender(scoped_refptr<media::cast::CastEnvironment> cast_environment,
                  std::unique_ptr<media::cast::FrameSender> sender,

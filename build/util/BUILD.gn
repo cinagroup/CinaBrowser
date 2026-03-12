@@ -1,13 +1,13 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/util/lastchange.gni")
 
-action("chromium_git_revision") {
+action("Cinaseek_git_revision") {
   script = "version.py"
 
-  template_file = "chromium_git_revision.h.in"
+  template_file = "Cinaseek_git_revision.h.in"
   inputs = [ "android_chrome_version.py" ]
 
   sources = [
@@ -15,7 +15,7 @@ action("chromium_git_revision") {
     template_file,
   ]
 
-  output_file = "$target_gen_dir/chromium_git_revision.h"
+  output_file = "$target_gen_dir/Cinaseek_git_revision.h"
   outputs = [ output_file ]
 
   args = []

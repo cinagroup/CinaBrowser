@@ -1,5 +1,5 @@
 # File that lists fields that should be ignored when running the
-# rewrite_raw_ptr_fields tool on Chromium sources.
+# rewrite_raw_ptr_fields tool on Cinaseek sources.
 #
 # Each non-comment, non-empty line should specify a fully-namespace qualified
 # field like:
@@ -110,8 +110,8 @@ content::ScopedNotifyNativeEventProcessorObserver::event_
 device::fido::mac::TouchIdCredentialStore::authentication_context_
 
 # The struct is part of separate binary and must be a POD
-# https://source.chromium.org/chromium/chromium/src/+/main:chrome/common/mac/app_mode_common.mm;l=64
-app_mode::ChromeAppModeInfo::argv
+# https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/common/mac/app_mode_common.mm;l=64
+app_mode::CinaseekAppModeInfo::argv
 
 # Requires @property rewrite.
 # In Objective-C the instance variable type and property type must be the same.

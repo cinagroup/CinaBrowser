@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -20,7 +20,7 @@ declare_args() {
   # builds. Requires debug info.
   enable_resource_allowlist_generation =
       is_official_build &&
-      # Don't enable for Android-on-Chrome OS.
+      # Don't enable for Android-on-Cinaseek OS.
       (target_os == "android" || target_os == "win") &&
       # TODO(https://crbug.com/445896263): Consider whether Cronet should enable
       # this.
@@ -164,7 +164,7 @@ template("single_gcc_toolchain") {
     # toolchain args, use those values, otherwise default to the global one.
     # This works because the only reasonable override that toolchains might
     # supply for these values are to force-disable them.
-    # But if needs_rewrapper_path_arg is set in a Chrome OS build, the
+    # But if needs_rewrapper_path_arg is set in a Cinaseek OS build, the
     # toolchain wrapper will have picked up rewrapper via cmd-line arg. So
     # need to prepend rewrapper in that case.
     if (toolchain_uses_reclient &&
@@ -677,7 +677,7 @@ template("single_gcc_toolchain") {
       rustc = "$rust_compiler_prefix${rustc_bin}"
       rustc_wrapper += " --rustc=$rustc"
 
-      # RSP manipulation due to https://bugs.chromium.org/p/gn/issues/detail?id=249
+      # RSP manipulation due to https://bugs.Cinaseek.org/p/gn/issues/detail?id=249
       tool("rust_staticlib") {
         libname = "{{output_dir}}/{{target_output_name}}{{output_extension}}"
         rspfile = rustc_rsp_path
@@ -827,7 +827,7 @@ template("gcc_rust_host_build_tools_toolchain") {
       forward_variables_from(invoker.toolchain_args, "*")
       toolchain_for_rust_host_build_tools = true
 
-      # The host build tools are static release builds to make the Chromium
+      # The host build tools are static release builds to make the Cinaseek
       # build faster.
       is_debug = false
       is_component_build = false
@@ -847,7 +847,7 @@ template("gcc_rust_host_build_tools_toolchain") {
 # If PartitionAlloc is part of the build (even as a transitive dependency), then
 # it replaces the system allocator. If this toolchain is used, that will be
 # overridden and the system allocator will be used regardless. This is important
-# in some third-party binaries outside of Chrome.
+# in some third-party binaries outside of Cinaseek.
 template("gcc_system_allocator_toolchain") {
   single_gcc_toolchain(target_name) {
     assert(defined(invoker.toolchain_args),
@@ -905,7 +905,7 @@ template("gcc_toolchain") {
   }
 }
 
-# This is a shorthand for gcc_toolchain instances based on the Chromium-built
+# This is a shorthand for gcc_toolchain instances based on the Cinaseek-built
 # version of Clang. Only the toolchain_cpu and toolchain_os variables need to
 # be specified by the invoker, and optionally toolprefix if it's a
 # cross-compile case. Note that for a cross-compile case this toolchain

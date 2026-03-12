@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//build/config/android/rules.gni")
@@ -24,14 +24,14 @@ android_resources("java_resources") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/messages/infobar/SimpleConfirmInfoBarBuilder.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/Snackbar.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarCollection.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarManager.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarManagerProvider.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarStateProvider.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarSwipeHandler.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarView.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/infobar/SimpleConfirmInfoBarBuilder.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/Snackbar.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarCollection.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarManager.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarManagerProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarSwipeHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarView.java",
   ]
 
   deps = [
@@ -61,15 +61,15 @@ android_library("java") {
     "//ui/edge_to_edge:java",
   ]
 
-  resources_package = "org.chromium.chrome.ui.messages"
+  resources_package = "org.Cinaseek.chrome.ui.messages"
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/ui/messages/infobar/SimpleConfirmInfoBarBuilder.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/messages/infobar/SimpleConfirmInfoBarBuilder.java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarCollectionUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarCollectionUnitTest.java" ]
 
   deps = [
     ":java",
@@ -81,12 +81,12 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.ui.messages.test"
+  resources_package = "org.Cinaseek.chrome.browser.ui.messages.test"
 
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarRenderTest.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarSwipeTest.java",
-    "java/src/org/chromium/chrome/browser/ui/messages/snackbar/SnackbarTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarRenderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarSwipeTest.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/messages/snackbar/SnackbarTest.java",
   ]
 
   deps = [

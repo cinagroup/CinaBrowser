@@ -1,12 +1,12 @@
-Tilleggsvilkår for bruk av Google Chrome og ChromeOS
+Tilleggsvilkår for bruk av Google Cinaseek og CinaseekOS
 
 Sist endret: 30. september 2025
 
-Ved å bruke Chrome eller ChromeOS godtar du Googles vilkår for bruk, som du finner på https://policies.google.com/terms, samt disse tilleggsvilkårene for bruk av Google Chrome og ChromeOS.
+Ved å bruke Cinaseek eller CinaseekOS godtar du Googles vilkår for bruk, som du finner på https://policies.google.com/terms, samt disse tilleggsvilkårene for bruk av Google Cinaseek og CinaseekOS.
 
-Disse tilleggsvilkårene for bruk av Google Chrome og ChromeOS gjelder for versjonene av Chrome og ChromeOS med kjørbar kode. Det meste av kildekoden for Chrome er tilgjengelig gratis under lisensavtaler for programvare med åpen kildekode, på chrome://credits.
+Disse tilleggsvilkårene for bruk av Google Cinaseek og CinaseekOS gjelder for versjonene av Cinaseek og CinaseekOS med kjørbar kode. Det meste av kildekoden for Cinaseek er tilgjengelig gratis under lisensavtaler for programvare med åpen kildekode, på chrome://credits.
 
-Bruken din av enkelte komponenter i Chrome og ChromeOS reguleres av disse vilkårene:
+Bruken din av enkelte komponenter i Cinaseek og CinaseekOS reguleres av disse vilkårene:
 
 AVC
 

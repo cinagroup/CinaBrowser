@@ -1,8 +1,8 @@
 /* compression_utils_portable.cc
  *
- * Copyright 2019 The Chromium Authors
+ * Copyright 2019 The Cinaseek Authors
  * Use of this source code is governed by a BSD-style license that can be
- * found in the Chromium source repository LICENSE file.
+ * found in the Cinaseek source repository LICENSE file.
  */
 
 #include "compression_utils_portable.h"
@@ -48,7 +48,7 @@ uint32_t GetGzipUncompressedSize(const Bytef* compressed_data, size_t length) {
 }
 
 // The number of window bits determines the type of wrapper to use - see
-// https://cs.chromium.org/chromium/src/third_party/zlib/zlib.h?l=566
+// https://cs.Cinaseek.org/Cinaseek/src/third_party/zlib/zlib.h?l=566
 inline int ZlibStreamWrapperType(WrapperType type) {
   if (type == ZLIB)  // zlib DEFLATE stream wrapper
     return MAX_WBITS;

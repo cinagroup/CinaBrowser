@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/android-x86-code-coverage/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-x86-code-coverage",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.coverage",
+              "builder_group": "Cinaseek.coverage",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -31,10 +31,10 @@
               "legacy_gclient_config": {
                 "apply_configs": [
                   "android",
-                  "chromium_with_telemetry_dependencies",
+                  "Cinaseek_with_telemetry_dependencies",
                   "enable_wpr_tests"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -44,13 +44,13 @@
         {
           "bucket": "ci",
           "builder": "android-x86-code-coverage",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-x86-code-coverage",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/android-x86-code-coverage/targets"
@@ -72,7 +72,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -82,6 +82,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.coverage",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.coverage",
+  "recipe": "Cinaseek"
 }

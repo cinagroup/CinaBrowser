@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -36,7 +36,7 @@ source_set("feedback") {
   } else {
     # The non-android feed code has circular dependencies and the easiest way to
     # decouple is to separate between the interface and the implementation. Many
-    # parts of Chrome want to call a method "ShowFeedback" to show the feedback
+    # parts of Cinaseek want to call a method "ShowFeedback" to show the feedback
     # page (the interface). The implementation of the feedback uploader requires
     # fetching data from many different components (the implementation).
     sources += [

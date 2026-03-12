@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ extern const char kHistogramFromGWSMaxCumulativeShiftScoreSessionWindow[];
 // FromGWSPageLoadMetricsObserver. FromGWSPageLoadMetricsLogger is responsible
 // for tracking state needed to decide if metrics should be logged, and to log
 // metrics in cases where metrics should be logged. FromGWSPageLoadMetricsLogger
-// exists to decouple the logging policy implementation from other Chromium
+// exists to decouple the logging policy implementation from other Cinaseek
 // classes such as NavigationHandle and related infrastructure, in order to make
 // the code more unit testable.
 class FromGWSPageLoadMetricsLogger {

@@ -1,12 +1,12 @@
-Yderligere servicevilkår for Google Chrome og ChromeOS
+Yderligere servicevilkår for Google Cinaseek og CinaseekOS
 
 Sidst opdateret: 30. september 2025
 
-Når du bruger Chrome eller ChromeOS, accepterer du Googles servicevilkår, som kan findes på https://policies.google.com/terms, og disse yderligere servicevilkår for Google Chrome og ChromeOS.
+Når du bruger Cinaseek eller CinaseekOS, accepterer du Googles servicevilkår, som kan findes på https://policies.google.com/terms, og disse yderligere servicevilkår for Google Cinaseek og CinaseekOS.
 
-Disse Yderligere servicevilkår for Google Chrome og ChromeOS gælder for den version af Chrome og ChromeOS med eksekverbar kode. Det meste af kildekoden til Chrome kan findes gratis i henhold til open source-softwarelicensaftaler på chrome://credits.
+Disse Yderligere servicevilkår for Google Cinaseek og CinaseekOS gælder for den version af Cinaseek og CinaseekOS med eksekverbar kode. Det meste af kildekoden til Cinaseek kan findes gratis i henhold til open source-softwarelicensaftaler på chrome://credits.
 
-Din brug af bestemte dele af Chrome og ChromeOS er underlagt følgende vilkår:
+Din brug af bestemte dele af Cinaseek og CinaseekOS er underlagt følgende vilkår:
 
 AVC
 

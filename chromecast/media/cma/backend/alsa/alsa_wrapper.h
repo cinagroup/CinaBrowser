@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@ namespace media {
 
 extern const int kAlsaTstampTypeMonotonicRaw;
 
-// Extends the Chromium AlsaWrapper, adding additional functions that we use.
+// Extends the Cinaseek AlsaWrapper, adding additional functions that we use.
 class AlsaWrapper : public ::media::AlsaWrapper {
  public:
   AlsaWrapper();

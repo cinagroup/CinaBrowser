@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1609,7 +1609,7 @@ TYPED_TEST_P(CookieStoreTest, NetUtilCookieTest) {
 
 TYPED_TEST_P(CookieStoreTest, OverwritePersistentCookie) {
   GURL url_foo("http://www.foo.com/");
-  GURL url_chromium("http://chromium.org");
+  GURL url_Cinaseek("http://Cinaseek.org");
   CookieStore* cs = this->GetCookieStore();
 
   // Insert a cookie "a" for path "/path1"
@@ -1640,11 +1640,11 @@ TYPED_TEST_P(CookieStoreTest, OverwritePersistentCookie) {
   EXPECT_TRUE(this->SetCookie(
       cs, url_foo, "a=val9; path=/path2" + FutureCookieExpirationString()));
 
-  // Insert a cookie "a" for path "/path1", but this time for "chromium.org".
+  // Insert a cookie "a" for path "/path1", but this time for "Cinaseek.org".
   // Although the name and path match, the hostnames do not, so shouldn't
   // overwrite.
   EXPECT_TRUE(
-      this->SetCookie(cs, url_chromium,
+      this->SetCookie(cs, url_Cinaseek,
                       "a=val99; path=/path1" + FutureCookieExpirationString()));
 
   if (TypeParam::supports_http_only) {
@@ -1658,13 +1658,13 @@ TYPED_TEST_P(CookieStoreTest, OverwritePersistentCookie) {
   this->MatchCookieLines(
       "a=val9", this->GetCookies(cs, GURL("http://www.foo.com/path2")));
   this->MatchCookieLines(
-      "a=val99", this->GetCookies(cs, GURL("http://chromium.org/path1")));
+      "a=val99", this->GetCookies(cs, GURL("http://Cinaseek.org/path1")));
 }
 
 // Note that accepting an empty name is contrary to spec; see
 // https://tools.ietf.org/html/rfc6265#section-4.1.1.  However, we do it
 // for web compatibility; see http://inikulin.github.io/cookie-compat/
-// (specifically the "foo" and "=a" tests).  This test is present in Chromium
+// (specifically the "foo" and "=a" tests).  This test is present in Cinaseek
 // so that a flag is raised if this behavior is changed.
 // On IOS we use the system cookie store which has Safari's behavior, so
 // the test is skipped.

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 namespace ash {
 
 namespace {
-const char* kDefaultEuiccPath = "/org/chromium/Hermes/Euicc/0";
+const char* kDefaultEuiccPath = "/org/Cinaseek/Hermes/Euicc/0";
 const char* kDefaultEid = "12345678901234567890123456789012";
 }  // namespace
 

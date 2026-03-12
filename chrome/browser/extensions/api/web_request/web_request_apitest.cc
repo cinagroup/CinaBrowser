@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1528,7 +1528,7 @@ IN_PROC_BROWSER_TEST_P(ExtensionWebRequestApiTestWithContextType,
 }
 
 // This test times out regularly on win_rel trybots. See crbug.com/40773655
-// Also on Linux/ChromiumOS debug, ASAN and MSAN builds.
+// Also on Linux/CinaseekOS debug, ASAN and MSAN builds.
 // https://crbug.com/40496163
 // Slower and flaky tests should be isolated in the "slow" group of tests in
 // the JS file. This prevents losing test coverage for those tests that are

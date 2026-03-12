@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,5 +9,5 @@ declare_args() {
 }
 
 # THIS WHOLE FILE WILL BE DELETED.
-# Lacros is gone. There is only one kind of ChromeOS build. Use is_chromeos.
+# Lacros is gone. There is only one kind of CinaseekOS build. Use is_chromeos.
 is_chromeos_ash = is_chromeos && !chromeos_is_browser_only

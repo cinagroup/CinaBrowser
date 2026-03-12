@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -194,7 +194,7 @@ class OverflowMenuMediatorTest : public PlatformTest {
     auto navigation_manager = std::make_unique<ToolbarTestNavigationManager>();
 
     navigation_item_ = web::NavigationItem::Create();
-    GURL url = GURL("http://chromium.org");
+    GURL url = GURL("http://Cinaseek.org");
     navigation_item_->SetURL(url);
     navigation_item_->SetUserAgentType(web::UserAgentType::MOBILE);
     navigation_manager->SetVisibleItem(navigation_item_.get());
@@ -584,7 +584,7 @@ TEST_F(OverflowMenuMediatorTest, TestItemsStatusOnNTP) {
 // Tests that the "Add to Reading List" button is disabled while overlay UI is
 // displayed in OverlayModality::kWebContentArea.
 TEST_F(OverflowMenuMediatorTest, TestReadLaterDisabled) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   web_state_->SetCurrentURL(kUrl);
   CreateMediator(/*incognito=*/NO);
   SetUpActiveWebState();
@@ -783,7 +783,7 @@ TEST_F(OverflowMenuMediatorTest, TestBookmarksToolsMenuButtons) {
 // Tests that the bookmark button is disabled when EditBookmarksEnabled pref is
 // changed to false.
 TEST_F(OverflowMenuMediatorTest, TestDisableBookmarksButton) {
-  const GURL url("https://chromium.test");
+  const GURL url("https://Cinaseek.test");
   web_state_->SetCurrentURL(url);
   SetUpActiveWebState();
 
@@ -802,7 +802,7 @@ TEST_F(OverflowMenuMediatorTest, TestDisableBookmarksButton) {
 // Tests that WhatsNew destination was added to the OverflowMenuModel when
 // What's New is enabled.
 TEST_F(OverflowMenuMediatorTest, TestWhatsNewEnabled) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   web_state_->SetCurrentURL(kUrl);
   CreateMediator(/*incognito=*/NO);
   SetUpActiveWebState();
@@ -974,7 +974,7 @@ TEST_F(OverflowMenuMediatorTest, TestNoIdentityError) {
 // Tests that the Settings destination that has an error cue has predence over
 // the promoted What's New destination.
 TEST_F(OverflowMenuMediatorTest, TestIdentityErrorWithWhatsNewPromo) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   web_state_->SetCurrentURL(kUrl);
   CreateMediator(/*incognito=*/NO);
   // Show the new label badge for What's New.
@@ -1184,7 +1184,7 @@ TEST_F(OverflowMenuMediatorTest, OpenPasswordsMetricLogged) {
 
 // Tests that items are disabled in RM
 TEST_F(OverflowMenuMediatorTest, TestReadingModeMenu) {
-  const GURL kUrl("https://chromium.test");
+  const GURL kUrl("https://Cinaseek.test");
   web_state_->SetCurrentURL(kUrl);
   // Enable FontSize entry
   web_state_->SetWebFramesManager(

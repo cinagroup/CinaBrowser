@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class DeviceAuthParams {
 };
 
 #if BUILDFLAG(IS_ANDROID)
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.device_reauth
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.device_reauth
 enum class BiometricStatus {
   kBiometricsAvailable,
   kOnlyLskfAvailable,

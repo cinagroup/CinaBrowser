@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,17 +44,17 @@ TEST(RtcRtpSource, BasicPropertiesAreSetAndReturned) {
 // The Timestamp() function relies on the fact that Base::TimeTicks() and
 // webrtc::TimeMicros() share the same implementation.
 TEST(RtcRtpSource, BaseTimeTicksAndRtcMicrosAreTheSame) {
-  base::TimeTicks first_chromium_timestamp = base::TimeTicks::Now();
+  base::TimeTicks first_Cinaseek_timestamp = base::TimeTicks::Now();
   base::TimeTicks webrtc_timestamp =
       ConvertToBaseTimeTicks(webrtc::Timestamp::Micros(webrtc::TimeMicros()));
-  base::TimeTicks second_chromium_timestamp = base::TimeTicks::Now();
+  base::TimeTicks second_Cinaseek_timestamp = base::TimeTicks::Now();
 
   // Test that the timestamps are correctly ordered, which they can only be if
   // the clocks are the same (assuming at least one of the clocks is functioning
   // correctly).
-  EXPECT_GE((webrtc_timestamp - first_chromium_timestamp).InMillisecondsF(),
+  EXPECT_GE((webrtc_timestamp - first_Cinaseek_timestamp).InMillisecondsF(),
             0.0f);
-  EXPECT_GE((second_chromium_timestamp - webrtc_timestamp).InMillisecondsF(),
+  EXPECT_GE((second_Cinaseek_timestamp - webrtc_timestamp).InMillisecondsF(),
             0.0f);
 }
 

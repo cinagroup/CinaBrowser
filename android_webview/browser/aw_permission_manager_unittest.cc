@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ constexpr int kRenderProcessIDForTesting = 8;
 constexpr int kRenderFrameIDForTesting = 19;
 const char kEmbeddingOrigin[] = "https://www.google.com/";
 const char kRequestingOrigin1[] = "https://www.google.com/";
-const char kRequestingOrigin2[] = "https://www.chromium.org/";
+const char kRequestingOrigin2[] = "https://www.Cinaseek.org/";
 
 class AwBrowserPermissionRequestDelegateForTesting final
     : public AwBrowserPermissionRequestDelegate {

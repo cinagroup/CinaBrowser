@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -32,13 +32,13 @@ source_set("android") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/data/Credential.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/data/WebauthnCredential.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/data/Credential.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/data/WebauthnCredential.java",
   ]
 }
 
 android_library("public_java") {
-  resources_package = "org.chromium.chrome.browser.touch_to_fill"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill"
   deps = [
     "//chrome/browser/profiles/android:java",
     "//chrome/browser/touch_to_fill/common/android:java",
@@ -51,20 +51,20 @@ android_library("public_java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillComponent.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/data/Credential.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/data/CredentialBase.java",
-    "java/src/org/chromium/chrome/browser/touch_to_fill/data/WebauthnCredential.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillComponent.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/data/Credential.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/data/CredentialBase.java",
+    "java/src/org/Cinaseek/chrome/browser/touch_to_fill/data/WebauthnCredential.java",
   ]
 }
 
 robolectric_binary("touch_to_fill_junit_tests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.touch_to_fill"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill"
   shared_libraries =
       [ "//chrome/android/junit:libchrome_junit_tests($robolectric_toolchain)" ]
 
-  sources = [ "junit/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillControllerTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillControllerTest.java" ]
 
   deps = [
     "//base:base_java",
@@ -101,12 +101,12 @@ robolectric_binary("touch_to_fill_junit_tests") {
 
 android_library("test_java") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.touch_to_fill"
+  resources_package = "org.Cinaseek.chrome.browser.touch_to_fill"
 
   sources = [
-    "javatests/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillIntegrationTest.java",
-    "javatests/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillRenderTest.java",
-    "javatests/src/org/chromium/chrome/browser/touch_to_fill/TouchToFillViewTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillIntegrationTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillRenderTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/touch_to_fill/TouchToFillViewTest.java",
   ]
 
   deps = [

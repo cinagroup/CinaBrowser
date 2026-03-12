@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@
 #include "net/base/net_export.h"
 #include "net/http/http_raw_request_headers.h"
 #include "net/http/http_stream.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/websockets/websocket_deflate_parameters.h"
 #include "net/websockets/websocket_stream.h"
 
@@ -136,7 +136,7 @@ class NET_EXPORT WebSocketHandshakeStreamBase : public HttpStream {
     // underlying HTTP/3 connection has been established but before the stream
     // has been opened.  This cannot be called more than once.
     virtual std::unique_ptr<WebSocketHandshakeStreamBase> CreateHttp3Stream(
-        std::unique_ptr<QuicChromiumClientSession::Handle> session,
+        std::unique_ptr<QuicCinaseekClientSession::Handle> session,
         std::set<std::string> dns_aliases) = 0;
   };
 

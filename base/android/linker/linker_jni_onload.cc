@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 // Must come after all headers that specialize FromJniType() / ToJniType().
 #include "base/android/linker/linker_jni.h"
 
-namespace chromium_android_linker {
+namespace Cinaseek_android_linker {
 
 // JNI_OnLoad() is called when the linker library is loaded through the regular
 // System.LoadLibrary) API. This shall save the Java VM handle and initialize
@@ -31,8 +31,8 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved) {
   return JNI_VERSION_1_4;
 }
 
-}  // namespace chromium_android_linker
+}  // namespace Cinaseek_android_linker
 
 jint JNI_OnLoad(JavaVM* vm, void* reserved) {
-  return chromium_android_linker::JNI_OnLoad(vm, reserved);
+  return Cinaseek_android_linker::JNI_OnLoad(vm, reserved);
 }

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1260,7 +1260,7 @@ Status DatabaseConnection::Init(std::optional<std::u16string_view> name) {
 
   // There should be no active blobs in this database at this point, so we can
   // remove blob references that were associated with active blobs. These may
-  // have been left behind if Chromium crashed. Deleting the blob references
+  // have been left behind if Cinaseek crashed. Deleting the blob references
   // should also delete the blob if appropriate.
   sql::Statement statement(db_->GetCachedStatement(
       SQL_FROM_HERE,

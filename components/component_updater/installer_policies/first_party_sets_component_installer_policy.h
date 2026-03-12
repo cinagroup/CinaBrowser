@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ class FirstPartySetsComponentInstallerPolicy : public ComponentInstallerPolicy {
   static base::FilePath GetInstalledPath(const base::FilePath& base);
 
   // We use a OnceCallback to ensure we only pass along the sets file once
-  // during Chromium's lifetime.
+  // during Cinaseek's lifetime.
   SetsReadyOnceCallback on_sets_ready_;
 
   base::TaskPriority priority_;

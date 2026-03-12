@@ -1,10 +1,10 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//mojo/public/tools/bindings/mojom.gni")
 
-assert(is_chromeos, "Launcher internals is ChromeOS only.")
+assert(is_chromeos, "Launcher internals is CinaseekOS only.")
 
 mojom("mojo_bindings") {
   sources = [ "launcher_internals.mojom" ]

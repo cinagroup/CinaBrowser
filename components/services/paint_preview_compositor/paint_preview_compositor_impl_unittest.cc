@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -295,7 +295,7 @@ class PaintPreviewCompositorBeginCompositeTest
 
   base::ScopedTempDir temp_dir_;
 
-  GURL url_{"https://www.chromium.org"};
+  GURL url_{"https://www.Cinaseek.org"};
 
  protected:
   base::test::TaskEnvironment task_environment_;
@@ -591,7 +591,7 @@ class PaintPreviewCompositorTest : public testing::Test {
 };
 
 TEST_F(PaintPreviewCompositorTest, TestComposite) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(100, 200);
   PaintPreviewProto proto;
@@ -633,7 +633,7 @@ TEST_F(PaintPreviewCompositorTest, TestComposite) {
 }
 
 TEST_F(PaintPreviewCompositorTest, TestCompositeWithMemoryBuffer) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(100, 200);
   PaintPreviewProto proto;
@@ -700,7 +700,7 @@ TEST_F(PaintPreviewCompositorTest, TestCompositeWithMemoryBuffer) {
 }
 
 TEST_F(PaintPreviewCompositorTest, TestCompositeMainFrameNoDependencies) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(100, 200);
   PaintPreviewProto proto;
@@ -736,7 +736,7 @@ TEST_F(PaintPreviewCompositorTest, TestCompositeMainFrameNoDependencies) {
 }
 
 TEST_F(PaintPreviewCompositorTest, TestCompositeMainFrameOneDependency) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(100, 200);
   const base::UnguessableToken kSubframe_0_ID =
@@ -789,7 +789,7 @@ TEST_F(PaintPreviewCompositorTest, TestCompositeMainFrameOneDependency) {
 
 TEST_F(PaintPreviewCompositorTest,
        TestCompositeMainFrameOneDependencyScrolled) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(100, 200);
   const base::UnguessableToken kSubframe_0_ID =
@@ -843,7 +843,7 @@ TEST_F(PaintPreviewCompositorTest,
 
 TEST_F(PaintPreviewCompositorTest,
        TestCompositeMainFrameOneDependencyWithRootFrameScrolled) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(110, 215);
   gfx::Size root_frame_scroll_offsets(10, 15);
@@ -901,7 +901,7 @@ TEST_F(PaintPreviewCompositorTest,
 
 TEST_F(PaintPreviewCompositorTest,
        TestCompositeMainFrameOneDependencyWithRootFrameScrolledWithClamp) {
-  GURL url("https://www.chromium.org");
+  GURL url("https://www.Cinaseek.org");
   const base::UnguessableToken kRootFrameID = base::UnguessableToken::Create();
   gfx::Size root_frame_scroll_extent(110, 215);
   gfx::Size root_frame_scroll_offsets(50, 20);

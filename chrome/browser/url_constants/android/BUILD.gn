@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/url_constants/ExtensionsUrlOverrideRegistry.java",
-    "java/src/org/chromium/chrome/browser/url_constants/PolicyUrlOverrideRegistry.java",
-    "java/src/org/chromium/chrome/browser/url_constants/UrlConstantResolver.java",
-    "java/src/org/chromium/chrome/browser/url_constants/UrlConstantResolverFactory.java",
-    "java/src/org/chromium/chrome/browser/url_constants/UrlOverrideUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/ExtensionsUrlOverrideRegistry.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/PolicyUrlOverrideRegistry.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/UrlConstantResolver.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/UrlConstantResolverFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/UrlOverrideUtils.java",
   ]
   deps = [
     "//base:base_shared_preferences_java",
@@ -31,8 +31,8 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/url_constants/UrlConstantResolverFactoryUnitTest.java",
-    "java/src/org/chromium/chrome/browser/url_constants/UrlConstantResolverUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/UrlConstantResolverFactoryUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/url_constants/UrlConstantResolverUnitTest.java",
   ]
   deps = [
     ":java",

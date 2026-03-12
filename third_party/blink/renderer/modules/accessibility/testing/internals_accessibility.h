@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@
 // [1]
 // https://web-platform-tests.org/writing-tests/testdriver.html#accessibility
 // [2]
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/web_tests/resources/testdriver-vendor.js
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/web_tests/resources/testdriver-vendor.js
 // [3]
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/web_tests/external/wpt/accname/basic.html
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/web_tests/external/wpt/accname/basic.html
 
 namespace blink {
 

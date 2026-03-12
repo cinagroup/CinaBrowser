@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -109,7 +109,7 @@ PDFiumTestBase::InitializeEngineWithoutLoadingImpl(
   result.engine->SetDocumentLoaderForTesting(std::move(document_loader));
 
   if (!result.engine->HandleDocumentLoad(nullptr,
-                                         "https://chromium.org/dummy.pdf")) {
+                                         "https://Cinaseek.org/dummy.pdf")) {
     client->set_engine(nullptr);
     result.engine = nullptr;
     result.document_loader = nullptr;

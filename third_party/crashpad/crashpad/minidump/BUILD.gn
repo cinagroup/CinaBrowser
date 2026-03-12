@@ -76,7 +76,7 @@ crashpad_static_library("minidump") {
   ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../snapshot",
     "../util",
   ]
@@ -102,7 +102,7 @@ static_library("format") {
   public_deps = [ "../compat" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../snapshot:context",
     "../util",
   ]
@@ -135,7 +135,7 @@ static_library("test_support") {
   public_deps = [ ":minidump" ]
 
   deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../snapshot:test_support",
     "../test",
     "../third_party/googletest",
@@ -179,7 +179,7 @@ source_set("minidump_test") {
 
   deps = [
     ":test_support",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../snapshot:test_support",
     "../test",
     "../third_party/googletest",

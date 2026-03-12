@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,8 +57,8 @@
 // And it's important to keep any unnecessary information out of this header.
 
 // Forward declare MojoSystemThunks to keep this file free of direct
-// dependencies on Chromium, making it easier to use this file outside of the
-// Chromium repo. When using this file, consumers should also #include their own
+// dependencies on Cinaseek, making it easier to use this file outside of the
+// Cinaseek repo. When using this file, consumers should also #include their own
 // copy of the MojoSystemThunks struct definition.
 struct MojoSystemThunks2;
 
@@ -124,7 +124,7 @@ class ImeCrosPlatform {
   // Returns whether a CrOS experimental feature is enabled. Only a subset of
   // CrOS features are considered (features not considered appear as disabled).
   // |feature_name| corresponds to base::Feature::name of the CrOS feature as
-  // defined in ash/constants/ash_features.cc in the Chromium repo.
+  // defined in ash/constants/ash_features.cc in the Cinaseek repo.
   virtual bool IsFeatureEnabled(const char* feature_name) = 0;
 
   // Start a download using |SimpleURLLoader|. Each SimpleDownloadToFileV2 can

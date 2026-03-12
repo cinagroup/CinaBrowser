@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -278,7 +278,7 @@ GattService::GattService(const GattService&) = default;
 GattService::~GattService() = default;
 
 const char FlossGattManagerClient::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/gatt/callback";
+    "/org/Cinaseek/bluetooth/gatt/callback";
 
 // static
 std::unique_ptr<FlossGattManagerClient> FlossGattManagerClient::Create() {

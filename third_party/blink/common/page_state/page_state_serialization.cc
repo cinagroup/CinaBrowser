@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -202,7 +202,7 @@ struct DeserializeObject {
 
 // IMPORTANT: When making updates to the PageState serialization code, be sure
 // to first read
-// https://chromium.googlesource.com/chromium/src/+/main/docs/modifying_session_history_serialization.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/modifying_session_history_serialization.md
 
 // Version ID of serialized format.
 // 11: Min version

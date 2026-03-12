@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -642,7 +642,7 @@ HashRealTimeService::GetTrafficAnnotationTagForOhttp() const {
     destination: PROXIED_GOOGLE_OWNED_SERVICE
     internal {
       contacts {
-        email: "thefrog@chromium.org"
+        email: "thefrog@Cinaseek.org"
       }
       contacts {
         email: "chrome-counter-abuse-alerts@google.com"
@@ -656,7 +656,7 @@ HashRealTimeService::GetTrafficAnnotationTagForOhttp() const {
   policy {
     cookies_allowed: NO
     setting:
-      "Users can disable Safe Browsing by checking 'No protection' in Chromium "
+      "Users can disable Safe Browsing by checking 'No protection' in Cinaseek "
       "settings under Security > Safe Browsing. The feature is enabled by "
       "default."
     chrome_policy {

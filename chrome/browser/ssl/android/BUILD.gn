@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,14 +7,14 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/ssl/HttpsFirstModeBridge.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeBridge.java" ]
 }
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ssl/HttpsFirstModeBridge.java",
-    "java/src/org/chromium/chrome/browser/ssl/HttpsFirstModeSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/ssl/HttpsFirstModeVariantPreference.java",
+    "java/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeVariantPreference.java",
   ]
   deps = [
     ":java_resources",
@@ -43,7 +43,7 @@ android_library("java") {
     ":https_first_mode_enums",
     ":jni_headers",
   ]
-  resources_package = "org.chromium.chrome.browser.ssl"
+  resources_package = "org.Cinaseek.chrome.browser.ssl"
 }
 
 android_resources("java_resources") {
@@ -63,10 +63,10 @@ java_cpp_enum("https_first_mode_enums") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.ssl"
+  resources_package = "org.Cinaseek.chrome.browser.ssl"
   sources = [
-    "javatests/src/org/chromium/chrome/browser/ssl/HttpsFirstModeSettingTest.java",
-    "javatests/src/org/chromium/chrome/browser/ssl/HttpsFirstModeSettingsFragmentTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeSettingTest.java",
+    "javatests/src/org/Cinaseek/chrome/browser/ssl/HttpsFirstModeSettingsFragmentTest.java",
   ]
   deps = [
     ":java",

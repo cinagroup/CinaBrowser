@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2887,6 +2887,6 @@ IN_PROC_BROWSER_TEST_F(ChromeWebPlatformSecurityMetricsBrowserTest,
 // [X] CoopAndCoepIsolated
 //
 // Added by:
-// https://chromium-review.googlesource.com/c/chromium/src/+/2122140
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2122140
 
 }  // namespace

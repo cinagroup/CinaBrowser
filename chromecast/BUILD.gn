@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,7 +27,7 @@ declare_args() {
 
 assert(!is_cronet_build)
 
-# Depends on all non-test targets that should be built by the Chromecast
+# Depends on all non-test targets that should be built by the Cinaseekcast
 # internal build infrastructure.
 group("all") {
   data_deps = []
@@ -48,7 +48,7 @@ group("all") {
   }
 
   # No other targets should depend on this target, since it's just a convenience
-  # target for the Chromecast internal build infrastructure.
+  # target for the Cinaseekcast internal build infrastructure.
   visibility = []
   testonly = true
 }
@@ -208,7 +208,7 @@ cast_test_group("cast_tests") {
         if (!is_cast_desktop_build) {
           args += [ "--use-gpu-in-tests" ]
 
-          # TODO(derekjchow): Make these tests pass on Chromecast devices.
+          # TODO(derekjchow): Make these tests pass on Cinaseekcast devices.
           #    Once all of the CastMediaBlockerTest.* have been un-DISABLEd and
           #    are running successfully, revisit these tests and see if they pass
           #    on devices. (crbug/665118, internal b/32023194)
@@ -414,7 +414,7 @@ cast_test_group("cast_tests") {
       # TODO(mbjorge): net_unittests do not complete when run with sanitizers,
       # (in particular, TSAN and UBSAN), resulting in build machines getting stuck
       # for many hours. Disable them for now, since these are getting run on
-      # Chromium bots anyway. (internal b/31279943)
+      # Cinaseek bots anyway. (internal b/31279943)
       gtest_excludes = [ "*" ]
     } else if (target_os == "linux" && !is_cast_desktop_build) {
       # Run net_unittests first to avoid random failures due to slow python startup
@@ -620,7 +620,7 @@ buildflag_header("chromecast_buildflags") {
     "IS_CAST_DESKTOP_BUILD=$is_cast_desktop_build",
     "USE_ANDROID_USER_AGENT=$use_android_user_agent",
     "USE_CHROMECAST_CDMS=$use_chromecast_cdms",
-    "ENABLE_CHROMIUM_RUNTIME_CAST_RENDERER=$enable_chromium_runtime_cast_renderer",
+    "ENABLE_CHROMIUM_RUNTIME_CAST_RENDERER=$enable_Cinaseek_runtime_cast_renderer",
   ]
 }
 
@@ -686,7 +686,7 @@ if (is_android) {
 
     command_line_flags_file = "castshell-command-line"
 
-    product_config_java_packages = [ "org.chromium.chromecast.shell" ]
+    product_config_java_packages = [ "org.Cinaseek.chromecast.shell" ]
   }
 
   generate_jni_registration("cast_browser_jni_registration") {
@@ -708,7 +708,7 @@ if (is_android) {
       ":cast_browser_apk__build_config_srcjar",
       ":cast_browser_apk__compile_resources",
       ":cast_browser_apk__native_libraries",
-      ":cast_browser_apk_org.chromium.chromecast.shell__product_config_srcjar",
+      ":cast_browser_apk_org.Cinaseek.chromecast.shell__product_config_srcjar",
       ":cast_browser_jni_registration",
     ]
   }

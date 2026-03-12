@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ class SkiaGoldPixelDiff final {
 
   // golden_image_name
   //   For every screenshot you take, it should have a unique name across
-  //   Chromium. This is because Skia Gold primarily uses the image name to
+  //   Cinaseek. This is because Skia Gold primarily uses the image name to
   //   determine which golden images to compare against. The standard convention
   //   is to use the test suite name and test name, e.g.
   //   `ToolbarTest_BackButtonHover`. See |GetGoldenImageName|.
@@ -167,7 +167,7 @@ class SkiaGoldPixelDiff final {
   std::string patchset_;
   // Buildbucket build id.
   std::string job_id_;
-  // Which code review system is being used, typically "gerrit" for Chromium
+  // Which code review system is being used, typically "gerrit" for Cinaseek
   // and "gerrit-internal" for Chrome.
   std::string code_review_system_;
   // The working dir for goldctl. It's the dir for storing temporary files.

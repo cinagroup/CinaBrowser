@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/android/httpclient/AnnotatedSimpleHttpClient.java",
-    "java/src/org/chromium/chrome/browser/android/httpclient/SimpleHttpClient.java",
+    "java/src/org/Cinaseek/chrome/browser/android/httpclient/AnnotatedSimpleHttpClient.java",
+    "java/src/org/Cinaseek/chrome/browser/android/httpclient/SimpleHttpClient.java",
   ]
   deps = [
     "//base:base_java",
@@ -25,7 +25,7 @@ android_library("java") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/android/httpclient/SimpleHttpClient.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/android/httpclient/SimpleHttpClient.java" ]
 }
 
 source_set("android") {
@@ -70,7 +70,7 @@ source_set("unittests") {
 
 android_library("javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/android/httpclient/SimpleHttpClientTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/android/httpclient/SimpleHttpClientTest.java" ]
   deps = [
     ":java",
     "//base:base_java",
@@ -89,7 +89,7 @@ android_library("javatests") {
 java_library("junit_tests") {
   bypass_platform_checks = true
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/android/httpclient/SimpleHttpClientUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/android/httpclient/SimpleHttpClientUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

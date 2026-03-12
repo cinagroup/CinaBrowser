@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ declare_args() {
   zlib_symbols_visible = false
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   import("//testing/test.gni")
 }
 
@@ -210,8 +210,8 @@ source_set("zlib_data_chunk_simd") {
 
   # Needed for MSVC, which is still supported by V8 and PDFium. zlib uses K&R C
   # style function declarations, which triggers warning C4131.
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":zlib_warnings" ]
 
   public_configs = [ ":zlib_data_chunk_simd_config" ]
@@ -359,8 +359,8 @@ component("zlib") {
     }
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   if (is_posix && zlib_symbols_visible) {
     configs -= [ "//build/config/gcc:symbol_visibility_hidden" ]
@@ -372,7 +372,7 @@ component("zlib") {
   configs += [
     ":zlib_internal_config",
 
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":zlib_warnings",
   ]
 
@@ -422,13 +422,13 @@ static_library("minizip") {
 
   deps = [ ":zlib" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":zlib_config" ]
 
   configs += [
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":minizip_warnings",
   ]
 }
@@ -444,8 +444,8 @@ executable("zlib_bench") {
 
   deps = [ ":zlib" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 executable("minigzip") {
@@ -459,8 +459,8 @@ executable("minigzip") {
 
   deps = [ ":zlib" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 executable("zpipe") {
@@ -474,8 +474,8 @@ executable("zpipe") {
 
   deps = [ ":zlib" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 if (!is_win || target_os != "winuwp") {
@@ -495,8 +495,8 @@ if (!is_win || target_os != "winuwp") {
 
     deps = [ ":minizip" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   }
 
   executable("miniunz_bin") {
@@ -515,12 +515,12 @@ if (!is_win || target_os != "winuwp") {
 
     deps = [ ":minizip" ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   }
 }
 
-if (build_with_chromium) {
+if (build_with_Cinaseek) {
   test("zlib_unittests") {
     testonly = true
 
@@ -550,8 +550,8 @@ if (build_with_chromium) {
       "//testing/gtest",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     include_dirs = [
       "//third_party/googletest/src/googletest/include/gtest",

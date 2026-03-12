@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ class SafeBrowsingUnsafeResourceContainerTest : public PlatformTest {
 
   UnsafeResource MakePendingUnsafeResource() {
     UnsafeResource resource;
-    resource.url = GURL("http://www.chromium.test");
+    resource.url = GURL("http://www.Cinaseek.test");
     resource.navigation_url = resource.url;
     resource.threat_type =
         safe_browsing::SBThreatType::SB_THREAT_TYPE_URL_PHISHING;

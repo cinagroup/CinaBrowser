@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,8 +52,8 @@ constexpr CGFloat kFakeLeftInset = 50;
 constexpr CGFloat kFakeTopInset = 100;
 constexpr char kTestQuote[] = "some selected text on a page";
 constexpr char kTestHighlightURL[] =
-    "https://www.chromium.org/#:~:text=selected%20text";
-constexpr char kTestBaseURL[] = "https://www.chromium.org/";
+    "https://www.Cinaseek.org/#:~:text=selected%20text";
+constexpr char kTestBaseURL[] = "https://www.Cinaseek.org/";
 constexpr char kTestTextFragment[] = "selected text";
 
 constexpr char kSuccessUkmMetric[] = "Success";
@@ -104,7 +104,7 @@ class LinkToTextMediatorTest : public PlatformTest {
     web_state_->SetWebFramesManager(std::move(web_frames_manager));
 
     auto main_frame = web::FakeWebFrame::Create(web::kMainFakeFrameId, true,
-                                                GURL("https://chromium.org/"));
+                                                GURL("https://Cinaseek.org/"));
     main_frame_ = main_frame.get();
     web_frames_manager_->AddWebFrame(std::move(main_frame));
 
@@ -567,7 +567,7 @@ TEST_F(LinkToTextMediatorTest, NotHttpsAndCanonicalUrl) {
   CGRect selection_rect = CGRectMake(100, 150, 250, 250);
 
   // Set WebState's URL to something not HTTPS.
-  GURL new_base_url("http://chromium.org");
+  GURL new_base_url("http://Cinaseek.org");
   web_state_->SetCurrentURL(new_base_url);
 
   std::unique_ptr<base::Value> fake_response =

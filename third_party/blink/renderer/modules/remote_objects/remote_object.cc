@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -121,7 +121,7 @@ mojom::blink::RemoteInvocationArgumentPtr JSValueToMojom(
         // zero;
         // - for string arrays, the null value will be converted to a null
         // string. See RemoteObjectImpl.convertArgument() in
-        // content/public/android/java/src/org/chromium/content/browser/remoteobjects/RemoteObjectImpl.java
+        // content/public/android/java/src/org/Cinaseek/content/browser/remoteobjects/RemoteObjectImpl.java
         if (element_v8->IsObject()) {
           nested_argument =
               mojom::blink::RemoteInvocationArgument::NewSingletonValue(

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -182,7 +182,7 @@ GzippedMessagesPermission GetGzippedMessagesPermissionForExtension(
 
 GzippedMessagesPermission GetGzippedMessagesPermissionForLocation(
     extensions::mojom::ManifestLocation location) {
-  // Component extensions are part of the chromium or chromium OS source and
+  // Component extensions are part of the Cinaseek or Cinaseek OS source and
   // as such are considered a trusted source.
   return location == extensions::mojom::ManifestLocation::kComponent
              ? GzippedMessagesPermission::kAllowForTrustedSource

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ constexpr char kChromeLensOverlayLocationBar[] = "crmntob";
 
 constexpr char kSurfaceQueryParameter[] = "s";
 // The value of Surface.CHROMIUM expected by Lens Web
-constexpr char kChromiumSurfaceProtoValue[] = "4";
+constexpr char kCinaseekSurfaceProtoValue[] = "4";
 
 constexpr char kStartTimeQueryParameter[] = "st";
 constexpr char kLensMetadataParameter[] = "lm";
@@ -98,7 +98,7 @@ std::map<std::string, std::string> GetLensQueryParametersMap(
   query_parameters.insert(
       {kRenderingEnvironmentQueryParameter, kOneLensDesktopWebFullscreen});
 
-  query_parameters.insert({kSurfaceQueryParameter, kChromiumSurfaceProtoValue});
+  query_parameters.insert({kSurfaceQueryParameter, kCinaseekSurfaceProtoValue});
   int64_t current_time_ms = base::Time::Now().InMillisecondsSinceUnixEpoch();
   query_parameters.insert(
       {kStartTimeQueryParameter, base::NumberToString(current_time_ms)});

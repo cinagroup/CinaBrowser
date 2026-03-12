@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -450,7 +450,7 @@ TEST_F(BlobStorageContextTest, AddFinishedBlob) {
 
 TEST_F(BlobStorageContextTest, AddFinishedBlob_LargeOffset) {
   // A value which does not fit in a 4-byte data type. Used to confirm that
-  // large values are supported on 32-bit Chromium builds. Regression test for:
+  // large values are supported on 32-bit Cinaseek builds. Regression test for:
   // crbug.com/458122.
   const uint64_t kLargeSize = std::numeric_limits<uint64_t>::max() - 1;
 

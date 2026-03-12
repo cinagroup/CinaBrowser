@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ namespace extensions {
 // =============================================================================
 //
 // ADDING NEW EXTENSIONS REQUIRES APPROVAL from Extensions Tech Lead:
-// rdevlin.cronin@chromium.org
+// rdevlin.cronin@Cinaseek.org
 //
 // The main acceptable use of extensions in the default Chrome experience (i.e.
 // not installed explicitly by the user) are to implement things like the

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@
 // off the availability warning that would normally be thrown by LLVM when the
 // header's function declarations with different availability annotations were
 // added. See the discussion in
-// https://chromium-review.googlesource.com/c/chromium/src/+/6687371/comment/6baf4b4c_8a60d02a/
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6687371/comment/6baf4b4c_8a60d02a/
 #include <Availability.h>
 #include <inttypes.h>
 #include <sys/types.h>

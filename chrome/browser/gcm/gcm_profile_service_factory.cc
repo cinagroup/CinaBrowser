@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -186,7 +186,7 @@ GCMProfileServiceFactory::BuildServiceInstanceForBrowserContext(
 #endif
 #if BUILDFLAG(ENABLE_OFFLINE_PAGES)
   // TODO(crbug.com/40260641): Removing image fetcher references here breaks
-  // tests: org.chromium.chrome.browser.ImageFetcherIntegrationTest Users of
+  // tests: org.Cinaseek.chrome.browser.ImageFetcherIntegrationTest Users of
   // image fetcher may be depending on this service to initialize the image
   // fetcher factory. [FATAL:scoped_refptr.h(291)] Check failed: ptr_.
   // ...

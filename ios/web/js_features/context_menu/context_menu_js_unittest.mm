@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,10 +36,10 @@ namespace {
 const char kRequestId[] = "UNIQUE_IDENTIFIER";
 
 // The base url for loaded web pages.
-const char kTestUrl[] = "https://chromium.test/";
+const char kTestUrl[] = "https://Cinaseek.test/";
 
 // The path pointing to a sample image.
-const char kImagePath[] = "/chromium_logo.png";
+const char kImagePath[] = "/Cinaseek_logo.png";
 
 // A point in the web view's coordinate space on the image returned by
 // `GetHtmlForImage()`.

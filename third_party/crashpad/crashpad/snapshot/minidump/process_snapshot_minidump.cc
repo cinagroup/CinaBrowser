@@ -135,7 +135,7 @@ crashpad::ProcessID ProcessSnapshotMinidump::ProcessID() const {
 
 crashpad::ProcessID ProcessSnapshotMinidump::ParentProcessID() const {
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
-  NOTREACHED();  // https://crashpad.chromium.org/bug/10
+  NOTREACHED();  // https://crashpad.Cinaseek.org/bug/10
 }
 
 void ProcessSnapshotMinidump::SnapshotTime(timeval* snapshot_time) const {
@@ -176,7 +176,7 @@ ProcessSnapshotMinidump::AnnotationsSimpleMap() const {
   // annotations_simple_map_ to be lazily constructed: InitializeCrashpadInfo()
   // could be called here, and from other locations that require it, rather than
   // calling it from Initialize().
-  // https://crashpad.chromium.org/bug/9
+  // https://crashpad.Cinaseek.org/bug/9
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
   return annotations_simple_map_;
 }
@@ -207,7 +207,7 @@ std::vector<const ModuleSnapshot*> ProcessSnapshotMinidump::Modules() const {
 std::vector<UnloadedModuleSnapshot> ProcessSnapshotMinidump::UnloadedModules()
     const {
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
-  NOTREACHED();  // https://crashpad.chromium.org/bug/10
+  NOTREACHED();  // https://crashpad.Cinaseek.org/bug/10
 }
 
 const ExceptionSnapshot* ProcessSnapshotMinidump::Exception() const {
@@ -227,7 +227,7 @@ std::vector<const MemoryMapRegionSnapshot*> ProcessSnapshotMinidump::MemoryMap()
 
 std::vector<HandleSnapshot> ProcessSnapshotMinidump::Handles() const {
   INITIALIZATION_STATE_DCHECK_VALID(initialized_);
-  NOTREACHED();  // https://crashpad.chromium.org/bug/10
+  NOTREACHED();  // https://crashpad.Cinaseek.org/bug/10
 }
 
 std::vector<const MemorySnapshot*> ProcessSnapshotMinidump::ExtraMemory()
@@ -354,7 +354,7 @@ bool ProcessSnapshotMinidump::InitializeMiscInfo() {
     case sizeof(MINIDUMP_MISC_INFO_2):
     case sizeof(MINIDUMP_MISC_INFO):
       // TODO(jperaza): Save the remaining misc info.
-      // https://crashpad.chromium.org/bug/10
+      // https://crashpad.Cinaseek.org/bug/10
       process_id_ = info.ProcessId;
       create_time_ = info.ProcessCreateTime;
       user_time_ = info.ProcessUserTime;

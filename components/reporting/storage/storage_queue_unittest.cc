@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -603,7 +603,7 @@ class StorageQueueTest
     // These dangling raw_ptr occurred in:
     // components_unittests:
     // VaryingFileSize/StorageQueueTest.WriteAndRepeatedlyImmediateUpload/4
-    // https://ci.chromium.org/ui/p/chromium/builders/try/linux-rel/1425477/test-results?q=ExactID%3Aninja%3A%2F%2Fcomponents%3Acomponents_unittests%2FStorageQueueTest.WriteAndRepeatedlyImmediateUpload%2FVaryingFileSize.4+VHash%3A54d84870d628118f
+    // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/linux-rel/1425477/test-results?q=ExactID%3Aninja%3A%2F%2Fcomponents%3Acomponents_unittests%2FStorageQueueTest.WriteAndRepeatedlyImmediateUpload%2FVaryingFileSize.4+VHash%3A54d84870d628118f
     const raw_ptr<std::optional<int64_t>, FlakyDanglingUntriaged>
         last_upload_generation_id_;
     const raw_ptr<LastRecordDigestMap, FlakyDanglingUntriaged>

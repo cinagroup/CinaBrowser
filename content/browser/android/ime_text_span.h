@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace content {
 
 // Converts Mojo ImeTextSpanPtrs to JNI equivalent
-// org.chromium.content.browser.input.ImeTextSpan
+// org.Cinaseek.content.browser.input.ImeTextSpan
 base::android::ScopedJavaLocalRef<jobjectArray> ToImeTextSpanJniArray(
     JNIEnv* env,
     const std::vector<ui::mojom::ImeTextSpanInfoPtr>& mojo_spans);

@@ -1,8 +1,8 @@
 // libpng_read_fuzzer.cc
 // Copyright 2017-2018 Glenn Randers-Pehrson
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// Copyright 2015 The Cinaseek Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that may
-// be found in the LICENSE file https://cs.chromium.org/chromium/src/LICENSE
+// be found in the LICENSE file https://cs.Cinaseek.org/Cinaseek/src/LICENSE
 
 // The modifications in 2017 by Glenn Randers-Pehrson include
 // 1. addition of a PNG_CLEANUP macro,
@@ -81,7 +81,7 @@ void user_read_data(png_structp png_ptr, png_bytep data, size_t length) {
 void* limited_malloc(png_structp, png_alloc_size_t size) {
   // libpng may allocate large amounts of memory that the fuzzer reports as
   // an error. In order to silence these errors, make libpng fail when trying
-  // to allocate a large amount. This allocator used to be in the Chromium
+  // to allocate a large amount. This allocator used to be in the Cinaseek
   // version of this fuzzer.
   // This number is chosen to match the default png_user_chunk_malloc_max.
   if (size > 8000000)

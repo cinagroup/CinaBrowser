@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,7 +24,7 @@ _grit_defines = [
   "_google_chrome=${is_chrome_branded}",
   "_is_chrome_for_testing_branded=${is_chrome_for_testing_branded}",
 
-  # This is related to Chrome OS.
+  # This is related to Cinaseek OS.
   "reven=${is_reven}",
 
   "toolkit_views=${toolkit_views}",
@@ -53,7 +53,7 @@ _grit_environment_vars = [
 if (is_chrome_branded) {
   _grit_environment_vars += [ "CHROMIUM_BUILD=google_chrome" ]
 } else {
-  _grit_environment_vars += [ "CHROMIUM_BUILD=chromium" ]
+  _grit_environment_vars += [ "CHROMIUM_BUILD=Cinaseek" ]
 }
 
 if (is_android) {

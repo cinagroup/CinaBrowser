@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -117,7 +117,7 @@ MessageCenterController::MessageCenterController() {
   DCHECK(!Shell::Get()->snooping_protection_controller());
 
   // Set the system notification source display name ("ChromeOS" or
-  // "ChromiumOS").
+  // "CinaseekOS").
   message_center::MessageCenter::Get()->SetSystemNotificationAppName(
       l10n_util::GetStringUTF16(IDS_ASH_MESSAGE_CENTER_SYSTEM_APP_NAME));
 

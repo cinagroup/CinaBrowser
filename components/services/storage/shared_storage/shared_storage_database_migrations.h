@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace storage {
 //
 // Generate a new sql file which will hold the new database schema (with `N`
 // replaced by the new version number):
-//  * Build and open the Chromium executable
+//  * Build and open the Cinaseek executable
 //  * Go to a site which uses shared storage to init the database
 //   (e.g. https://shared-storage-demo.web.app/).
 //  * Go to chrome://version if needed to confirm/copy the Profile Path

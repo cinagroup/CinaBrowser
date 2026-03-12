@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class LimitingAudioQueue;
 class MediaLog;
 
 // Audio decoder based on macOS's AudioToolbox API. The AudioToolbox
-// API is required to decode codecs that aren't supported by Chromium.
+// API is required to decode codecs that aren't supported by Cinaseek.
 class MEDIA_EXPORT AudioToolboxAudioDecoder : public AudioDecoder {
  public:
   explicit AudioToolboxAudioDecoder(std::unique_ptr<MediaLog> media_log);

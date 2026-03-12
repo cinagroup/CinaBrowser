@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -99,7 +99,7 @@ class InlineNodeTest : public RenderingTest {
 
   void UseLayoutObjectAndAhem() {
     // Get Ahem from document. Loading "Ahem.woff" using |createTestFont| fails
-    // on linux_chromium_asan_rel_ng.
+    // on linux_Cinaseek_asan_rel_ng.
     LoadAhem();
     SetupHtml("t", "<div id=t style='font:10px Ahem'>test</div>");
   }

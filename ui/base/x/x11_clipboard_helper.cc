@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ XClipboardHelper::XClipboardHelper(
     SelectionChangeCallback selection_change_callback)
     : connection_(*x11::Connection::Get()),
       x_root_window_(ui::GetX11RootWindow()),
-      x_window_(connection_->CreateDummyWindow("Chromium Clipboard Window")),
+      x_window_(connection_->CreateDummyWindow("Cinaseek Clipboard Window")),
       selection_requestor_(
           std::make_unique<SelectionRequestor>(x_window_, this)),
       clipboard_owner_(connection_.get(), x_window_, x11::GetAtom(kClipboard)),
@@ -144,7 +144,7 @@ XClipboardHelper::XClipboardHelper(
   DCHECK(selection_requestor_);
 
   connection_->SetStringProperty(x_window_, x11::Atom::WM_NAME,
-                                 x11::Atom::STRING, "Chromium clipboard");
+                                 x11::Atom::STRING, "Cinaseek clipboard");
   x_window_events_ =
       connection_->ScopedSelectEvent(x_window_, x11::EventMask::PropertyChange);
   connection_->AddEventObserver(this);

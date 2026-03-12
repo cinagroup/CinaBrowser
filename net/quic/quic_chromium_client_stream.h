@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -39,7 +39,7 @@ namespace net {
 
 // A client-initiated ReliableQuicStream.  Instances of this class
 // are owned by the QuicClientSession which created them.
-class NET_EXPORT_PRIVATE QuicChromiumClientStream
+class NET_EXPORT_PRIVATE QuicCinaseekClientStream
     : public quic::QuicSpdyStream {
  public:
   // Wrapper for interacting with the session in a restricted fashion.
@@ -175,10 +175,10 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
     }
 
    private:
-    friend class QuicChromiumClientStream;
+    friend class QuicCinaseekClientStream;
 
     // Constucts a new Handle for |stream|.
-    explicit Handle(QuicChromiumClientStream* stream);
+    explicit Handle(QuicCinaseekClientStream* stream);
 
     // Methods invoked by the stream.
     void OnEarlyHintsAvailable();
@@ -202,7 +202,7 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
 
     int HandleIOComplete(int rv);
 
-    raw_ptr<QuicChromiumClientStream> stream_;  // Unowned.
+    raw_ptr<QuicCinaseekClientStream> stream_;  // Unowned.
 
     bool may_invoke_callbacks_ = true;  // True when callbacks may be invoked.
 
@@ -246,24 +246,24 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
     base::WeakPtrFactory<Handle> weak_factory_{this};
   };
 
-  QuicChromiumClientStream(
+  QuicCinaseekClientStream(
       quic::QuicStreamId id,
       quic::QuicSpdyClientSessionBase* session,
       quic::QuicServerId server_id,
       quic::StreamType type,
       const NetLogWithSource& net_log,
       const NetworkTrafficAnnotationTag& traffic_annotation);
-  QuicChromiumClientStream(
+  QuicCinaseekClientStream(
       quic::PendingStream* pending,
       quic::QuicSpdyClientSessionBase* session,
       quic::QuicServerId server_id,
       const NetLogWithSource& net_log,
       const NetworkTrafficAnnotationTag& traffic_annotation);
 
-  QuicChromiumClientStream(const QuicChromiumClientStream&) = delete;
-  QuicChromiumClientStream& operator=(const QuicChromiumClientStream&) = delete;
+  QuicCinaseekClientStream(const QuicCinaseekClientStream&) = delete;
+  QuicCinaseekClientStream& operator=(const QuicCinaseekClientStream&) = delete;
 
-  ~QuicChromiumClientStream() override;
+  ~QuicCinaseekClientStream() override;
 
   // quic::QuicSpdyStream
   void OnInitialHeadersComplete(
@@ -298,7 +298,7 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
                         bool fin);
 
   // Creates a new Handle for this stream. Must only be called once.
-  std::unique_ptr<QuicChromiumClientStream::Handle> CreateHandle();
+  std::unique_ptr<QuicCinaseekClientStream::Handle> CreateHandle();
 
   // Clears |handle_| from this stream.
   void ClearHandle();
@@ -339,7 +339,7 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
                               int* frame_len);
 
   static constexpr char kHttp3DatagramDroppedHistogram[] =
-      "Net.QuicChromiumClientStream."
+      "Net.QuicCinaseekClientStream."
       "Http3DatagramDroppedOnWriteConnectUdpPayload";
 
   using quic::QuicSpdyStream::HasBufferedData;
@@ -393,7 +393,7 @@ class NET_EXPORT_PRIVATE QuicChromiumClientStream
   };
   base::circular_deque<EarlyHints> early_hints_;
 
-  base::WeakPtrFactory<QuicChromiumClientStream> weak_factory_{this};
+  base::WeakPtrFactory<QuicCinaseekClientStream> weak_factory_{this};
 };
 
 }  // namespace net

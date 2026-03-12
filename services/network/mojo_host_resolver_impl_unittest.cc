@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,7 +107,7 @@ class MojoHostResolverImplTest : public testing::Test {
   const net::IPAddress kExampleComAddress{1, 2, 3, 4};
   const net::IPAddress kExampleComAddressIpv6{1, 2,  3,  4,  5,  6,  7,  8,
                                               9, 10, 11, 12, 13, 14, 15, 16};
-  const net::IPAddress kChromiumOrgAddress{8, 8, 8, 8};
+  const net::IPAddress kCinaseekOrgAddress{8, 8, 8, 8};
 
   void SetUp() override {
     net::HostResolverEndpointResults example_com_endpoints(1);
@@ -117,8 +117,8 @@ class MojoHostResolverImplTest : public testing::Test {
     mock_host_resolver_.rules()->AddRule(
         "example.com", net::MockHostResolverBase::RuleResolver::RuleResult(
                            std::move(example_com_endpoints)));
-    mock_host_resolver_.rules()->AddRule("chromium.org",
-                                         kChromiumOrgAddress.ToString());
+    mock_host_resolver_.rules()->AddRule("Cinaseek.org",
+                                         kCinaseekOrgAddress.ToString());
     mock_host_resolver_.rules()->AddRule("failure.fail",
                                          net::ERR_NAME_NOT_RESOLVED);
 
@@ -180,7 +180,7 @@ TEST_F(MojoHostResolverImplTest, ResolveMultiple) {
 
   resolver_service_->Resolve("example.com", net::NetworkAnonymizationKey(),
                              false /* is_ex */, std::move(client1_remote));
-  resolver_service_->Resolve("chromium.org", net::NetworkAnonymizationKey(),
+  resolver_service_->Resolve("Cinaseek.org", net::NetworkAnonymizationKey(),
                              false /* is_ex */, std::move(client2_remote));
   WaitForRequests(2);
   mock_host_resolver_.ResolveAllPending();
@@ -191,7 +191,7 @@ TEST_F(MojoHostResolverImplTest, ResolveMultiple) {
   EXPECT_THAT(client1.error_, IsOk());
   EXPECT_THAT(client1.results_, testing::ElementsAre(kExampleComAddress));
   EXPECT_THAT(client2.error_, IsOk());
-  EXPECT_THAT(client2.results_, testing::ElementsAre(kChromiumOrgAddress));
+  EXPECT_THAT(client2.results_, testing::ElementsAre(kCinaseekOrgAddress));
 }
 
 TEST_F(MojoHostResolverImplTest, ResolveDuplicate) {

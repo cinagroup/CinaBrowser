@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ COMPONENT_EXPORT(UI_BASE) int MaxTouchPoints();
 // Bit field values indicating available pointer types. Identical to
 // blink::PointerType enums, enforced by compile-time assertions in
 // third_party/blink/public/common/web_preferences/web_preferences.cc.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
 // GENERATED_JAVA_PREFIX_TO_STRIP: POINTER_TYPE_
 enum PointerType {
   POINTER_TYPE_NONE = 1 << 0,
@@ -58,7 +58,7 @@ enum PointerType {
 // Bit field values indicating available hover types. Identical to
 // blink::HoverType enums, enforced by compile-time assertions in
 // third_party/blink/public/common/web_preferences/web_preferences.cc.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
 // GENERATED_JAVA_PREFIX_TO_STRIP: HOVER_TYPE_
 enum HoverType {
   HOVER_TYPE_NONE = 1 << 0,

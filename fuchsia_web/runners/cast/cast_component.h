@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_CAST_COMPONENT_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_CAST_COMPONENT_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl.h>
 
 #include <memory>
@@ -47,13 +47,13 @@ class CastComponent final
         controller_request;
 
     // Parameters initialized synchronously.
-    chromium::cast::UrlRequestRewriteRulesProviderPtr
+    Cinaseek::cast::UrlRequestRewriteRulesProviderPtr
         url_rewrite_rules_provider;
 
     // Parameters asynchronously initialized by PendingCastComponent.
     std::unique_ptr<ApiBindingsClient> api_bindings_client;
-    chromium::cast::ApplicationConfig application_config;
-    fidl::ClientEnd<chromium_cast::ApplicationContext> application_context;
+    Cinaseek::cast::ApplicationConfig application_config;
+    fidl::ClientEnd<Cinaseek_cast::ApplicationContext> application_context;
     std::optional<std::vector<fuchsia::web::UrlRequestRewriteRule>>
         initial_url_rewrite_rules;
     std::optional<fuchsia::web::FrameMediaSettings> media_settings;
@@ -113,15 +113,15 @@ class CastComponent final
 
   const bool is_headless_;
 
-  chromium::cast::ApplicationConfig application_config_;
-  chromium::cast::UrlRequestRewriteRulesProviderPtr url_rewrite_rules_provider_;
+  Cinaseek::cast::ApplicationConfig application_config_;
+  Cinaseek::cast::UrlRequestRewriteRulesProviderPtr url_rewrite_rules_provider_;
   std::vector<fuchsia::web::UrlRequestRewriteRule> initial_url_rewrite_rules_;
 
   bool constructor_active_ = false;
   std::unique_ptr<NamedMessagePortConnectorFuchsia> connector_;
   std::unique_ptr<ApiBindingsClient> api_bindings_client_;
   std::unique_ptr<ApplicationControllerImpl> application_controller_;
-  fidl::Client<chromium_cast::ApplicationContext> application_context_;
+  fidl::Client<Cinaseek_cast::ApplicationContext> application_context_;
   fuchsia::web::FrameMediaSettings media_settings_;
   zx::eventpair headless_view_token_;
 

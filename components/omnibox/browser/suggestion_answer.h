@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace omnibox::answer_data_parser {
 // The values are only used for answer results.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.omnibox
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.omnibox
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AnswerTextType
 enum TextType {
   // Deprecated: ANSWER = 1,

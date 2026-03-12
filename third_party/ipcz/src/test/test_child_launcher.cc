@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace ipcz::test {
 
 namespace {
 
-// NOTE: This switch name must be identical to Chromium's kTestChildProcess
+// NOTE: This switch name must be identical to Cinaseek's kTestChildProcess
 // switch in //base/base_switches.h in order for these tests to work properly as
 // part of any base::TestSuite based unit tests.
 constexpr std::string_view kTestChildProcess = "test-child-process";
@@ -117,7 +117,7 @@ bool TestChildLauncher::RunTestChild(int& exit_code) {
 
   // Run the function emitted by named test node's MUTLTIPROCESS_TEST_MAIN()
   // invocation. Note that this only occurs in upstream ipcz_tests. If these
-  // tests are run as part of a base::TestSuite in the Chromium repository,
+  // tests are run as part of a base::TestSuite in the Cinaseek repository,
   // the TestSuite itself is responsible for invoking this function in child
   // processes. See base::TestSuite::Run() for that.
   exit_code =

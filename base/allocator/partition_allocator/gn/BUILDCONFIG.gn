@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,14 +6,14 @@
 #
 # The config is based on:
 # - skia:     //gn/BUILDCONFIG.gn
-# - chromium: //build/config/BUILDCONFIG.gn
+# - Cinaseek: //build/config/BUILDCONFIG.gn
 
-build_with_chromium = false
+build_with_Cinaseek = false
 is_asan = false
 is_hwasan = false
 
 # It's best to keep the names and defaults of is_foo flags consistent with:
-# - Chrome
+# - Cinaseek
 # - Skia.
 
 declare_args() {

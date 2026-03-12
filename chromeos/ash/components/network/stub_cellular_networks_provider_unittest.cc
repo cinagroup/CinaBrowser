@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace ash {
 namespace {
 
 const char kDefaultCellularDevicePath[] = "stub_cellular_device";
-const char kTestEuiccBasePath[] = "/org/chromium/Hermes/Euicc/";
+const char kTestEuiccBasePath[] = "/org/Cinaseek/Hermes/Euicc/";
 const char kTestBaseEid[] = "12345678901234567890123456789012";
 const char kTestPSimIccid[] = "1234567890";
 const char kTestCellularServicePath[] = "/service/cellular";

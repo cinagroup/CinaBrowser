@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/chromeos-amd64-generic-dbg/gn-args.json"
@@ -10,17 +10,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "chromeos-amd64-generic-dbg",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.chromiumos",
+              "builder_group": "Cinaseek.Cinaseekos",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "intel",
                 "target_bits": 64,
                 "target_cros_boards": [
@@ -32,7 +32,7 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -42,7 +42,7 @@
         {
           "bucket": "ci",
           "builder": "chromeos-amd64-generic-dbg",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/chromeos-amd64-generic-dbg/targets"
@@ -63,7 +63,7 @@
     "keep_going": 3,
     "output_local_strategy": "minimum",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -73,7 +73,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.chromiumos",
+  "builder_group": "tryserver.Cinaseek.Cinaseekos",
   "cq": "path-based",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

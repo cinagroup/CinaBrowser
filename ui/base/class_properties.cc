@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,6 +19,6 @@ DEFINE_EXPORTED_UI_CLASS_PROPERTY_TYPE(COMPONENT_EXPORT(UI_BASE),
                                        std::u16string*)
 
 // Some classes store `int32_t` properties. This specialization is not defined
-// above because `int32_t` is a type alias for `int` on the platforms Chromium
+// above because `int32_t` is a type alias for `int` on the platforms Cinaseek
 // supports.
 static_assert(std::same_as<int, int32_t>);

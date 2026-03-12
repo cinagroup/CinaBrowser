@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/tvos-rel-fyi/gn-args.json"
@@ -10,17 +10,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "tvos-rel-fyi",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fyi",
+              "builder_group": "Cinaseek.fyi",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_tvos",
+                "config": "Cinaseek_tvos",
                 "host_platform": "mac",
                 "target_bits": 64,
                 "target_platform": "ios"
@@ -36,7 +36,7 @@
         {
           "bucket": "ci",
           "builder": "tvos-rel-fyi",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/tvos-rel-fyi/targets"
@@ -51,7 +51,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted"
+    "project": "rbe-Cinaseek-untrusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -60,7 +60,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.mac",
-  "recipe": "chromium_trybot",
+  "builder_group": "tryserver.Cinaseek.mac",
+  "recipe": "Cinaseek_trybot",
   "xcode_build_version": "17a400"
 }

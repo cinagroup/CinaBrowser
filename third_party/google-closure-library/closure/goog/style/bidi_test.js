@@ -160,7 +160,7 @@ testSuite({
     // with non-deterministic scroll positioning. Maybe it recalculates the
     // layout on accessing those properties?
     // TODO(joeltine): Remove this comment when
-    // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
+    // https://code.google.com/p/Cinaseek/issues/detail?id=568706 is resolved.
     scrollLeftDiv.style.overflow = 'auto';
     assertEquals(0, bidi.getScrollLeft(scrollLeftDiv));
     scrollLeftDiv.style.overflow = 'scroll';

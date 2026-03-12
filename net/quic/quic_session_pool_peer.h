@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class QuicConfig;
 namespace net {
 
 class NetLogWithSource;
-class QuicChromiumClientSession;
+class QuicCinaseekClientSession;
 class QuicCryptoClientConfigHandle;
 
 namespace test {
@@ -62,13 +62,13 @@ class QuicSessionPoolPeer {
                            PrivacyMode privacy_mode,
                            bool require_dns_https_alpn = false);
 
-  static QuicChromiumClientSession* GetPendingSession(
+  static QuicCinaseekClientSession* GetPendingSession(
       QuicSessionPool* pool,
       const quic::QuicServerId& server_id,
       PrivacyMode privacy_mode,
       url::SchemeHostPort destination);
 
-  static QuicChromiumClientSession* GetActiveSession(
+  static QuicCinaseekClientSession* GetActiveSession(
       QuicSessionPool* pool,
       const quic::QuicServerId& server_id,
       PrivacyMode privacy_mode,
@@ -80,7 +80,7 @@ class QuicSessionPoolPeer {
       bool disable_cert_verification_network_fetches = false);
 
   static bool IsLiveSession(QuicSessionPool* pool,
-                            QuicChromiumClientSession* session);
+                            QuicCinaseekClientSession* session);
 
   static void SetTickClock(QuicSessionPool* pool,
                            const base::TickClock* tick_clock);

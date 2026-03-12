@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class PlatformSensorProviderAndroid : public PlatformSensorProvider {
       JNIEnv* env,
       CreateSensorCallback callback);
 
-  // Java object org.chromium.device.sensors.PlatformSensorProvider
+  // Java object org.Cinaseek.device.sensors.PlatformSensorProvider
   base::android::ScopedJavaGlobalRef<jobject> j_object_;
 
   base::WeakPtrFactory<PlatformSensorProviderAndroid> weak_factory_{this};

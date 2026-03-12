@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ class ChromeBrowserPolicyConnector : public BrowserPolicyConnector {
       PrefService* local_state,
       scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory);
 
-  // TODO(chromium:1502062): MachineLevelUserCloudPolicyManager is CBCM's policy
+  // TODO(Cinaseek:1502062): MachineLevelUserCloudPolicyManager is CBCM's policy
   // provider. Refactor the code accordingly.
   MachineLevelUserCloudPolicyManager*
   machine_level_user_cloud_policy_manager() {

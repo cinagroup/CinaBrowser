@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ void VerifyColorsForFrameType(const Browser* browser, bool use_custom_frame) {
           [&initialized_color_provider_for_custom_frame](
               ui::ColorProvider* provider, const ui::ColorProviderKey& key) {
             initialized_color_provider_for_custom_frame =
-                key.frame_type == ui::ColorProviderKey::FrameType::kChromium;
+                key.frame_type == ui::ColorProviderKey::FrameType::kCinaseek;
           }));
   ASSERT_NE(nullptr,
             BrowserView::GetBrowserViewForBrowser(browser)->GetColorProvider());

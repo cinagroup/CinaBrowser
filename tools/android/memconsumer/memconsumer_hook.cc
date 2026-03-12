@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 
 extern "C" {
 JNIEXPORT void JNICALL
-Java_org_chromium_memconsumer_ResidentService_nativeUseMemory(JNIEnv* env,
+Java_org_Cinaseek_memconsumer_ResidentService_nativeUseMemory(JNIEnv* env,
                                                               jobject clazz,
                                                               int64_t memory);
 }
@@ -28,7 +28,7 @@ uint32_t get_random() {
 }  // namespace
 
 JNIEXPORT void JNICALL
-Java_org_chromium_memconsumer_ResidentService_nativeUseMemory(JNIEnv* env,
+Java_org_Cinaseek_memconsumer_ResidentService_nativeUseMemory(JNIEnv* env,
                                                               jobject clazz,
                                                               int64_t memory) {
   static uint32_t* g_memory = NULL;

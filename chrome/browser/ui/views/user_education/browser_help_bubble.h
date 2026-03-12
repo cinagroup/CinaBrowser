@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 // This file provides support classes required to create browser-specific help
 // bubbles.
 
-// Implementation of the help bubble delegate for chromium; uses browser theme,
+// Implementation of the help bubble delegate for Cinaseek; uses browser theme,
 // color, and accelerator mappings.
 class BrowserHelpBubbleDelegate : public user_education::HelpBubbleDelegate {
  public:

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -440,7 +440,7 @@ IN_PROC_BROWSER_TEST_F(SystemTrayTrayCastAccessCodeChromeOSTest,
   // requests which are unnecessary for the complexity of this browsertest. We
   // are just passing in a hardcoded magic string instead.
   ExpectStartRouteCallFromTabMirroring(
-      "cast:<1234>", "urn:x-org.chromium.media:source:desktop", nullptr,
+      "cast:<1234>", "urn:x-org.Cinaseek.media:source:desktop", nullptr,
       base::Seconds(120), media_router_);
 
   PressSubmitAndWaitForClose(dialog_contents);
@@ -500,7 +500,7 @@ IN_PROC_BROWSER_TEST_F(SystemTrayTrayCastAccessCodeChromeOSTest,
   // requests which are unnecessary for the complexity of this browsertest. We
   // are just passing in a hardcoded magic string instead.
   ExpectStartRouteCallFromTabMirroring(
-      "cast:<1234>", "urn:x-org.chromium.media:source:desktop", nullptr,
+      "cast:<1234>", "urn:x-org.Cinaseek.media:source:desktop", nullptr,
       base::Seconds(120), media_router_);
 
   PressSubmitAndWaitForClose(dialog_contents);

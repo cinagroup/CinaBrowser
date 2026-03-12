@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,40 +8,40 @@ import("//third_party/jni_zero/jni_zero.gni")
 import("//tools/grit/grit_rule.gni")
 
 android_library("java") {
-  resources_package = "org.chromium.components.webapps"
+  resources_package = "org.Cinaseek.components.webapps"
   sources = [
-    "java/src/org/chromium/components/webapps/AddToHomescreenCoordinator.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenDialogView.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenInstaller.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenMediator.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenProperties.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenViewBinder.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenViewDelegate.java",
-    "java/src/org/chromium/components/webapps/AppBannerManager.java",
-    "java/src/org/chromium/components/webapps/AppData.java",
-    "java/src/org/chromium/components/webapps/AppDetailsDelegate.java",
-    "java/src/org/chromium/components/webapps/TwaInstaller.java",
-    "java/src/org/chromium/components/webapps/WebappsIconUtils.java",
-    "java/src/org/chromium/components/webapps/WebappsUtils.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/AddToHomescreenBottomSheetViewBinder.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/ImageZoomView.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaBottomSheetController.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaBottomSheetControllerFactory.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaBottomSheetControllerProvider.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaInstallBottomSheetContent.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaInstallBottomSheetView.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetContent.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetCoordinator.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetMediator.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetView.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetViewBinder.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreProperties.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetContent.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinator.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetMediator.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetView.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetViewBinder.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallProperties.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenCoordinator.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenDialogView.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenInstaller.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenMediator.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenProperties.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenViewBinder.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenViewDelegate.java",
+    "java/src/org/Cinaseek/components/webapps/AppBannerManager.java",
+    "java/src/org/Cinaseek/components/webapps/AppData.java",
+    "java/src/org/Cinaseek/components/webapps/AppDetailsDelegate.java",
+    "java/src/org/Cinaseek/components/webapps/TwaInstaller.java",
+    "java/src/org/Cinaseek/components/webapps/WebappsIconUtils.java",
+    "java/src/org/Cinaseek/components/webapps/WebappsUtils.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/AddToHomescreenBottomSheetViewBinder.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/ImageZoomView.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaBottomSheetController.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaBottomSheetControllerFactory.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaBottomSheetControllerProvider.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaInstallBottomSheetContent.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaInstallBottomSheetView.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetContent.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetMediator.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetView.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetViewBinder.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreProperties.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetContent.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetMediator.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetView.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetViewBinder.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallProperties.java",
   ]
   deps = [
     ":java_resources",
@@ -72,21 +72,21 @@ android_library("java") {
 
 generate_jni("webapps_jni_headers") {
   sources = [
-    "java/src/org/chromium/components/webapps/AddToHomescreenCoordinator.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenInstaller.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenMediator.java",
-    "java/src/org/chromium/components/webapps/AppBannerManager.java",
-    "java/src/org/chromium/components/webapps/TwaInstaller.java",
-    "java/src/org/chromium/components/webapps/WebappsIconUtils.java",
-    "java/src/org/chromium/components/webapps/WebappsUtils.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaBottomSheetController.java",
-    "java/src/org/chromium/components/webapps/bottomsheet/PwaBottomSheetControllerProvider.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenCoordinator.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenInstaller.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenMediator.java",
+    "java/src/org/Cinaseek/components/webapps/AppBannerManager.java",
+    "java/src/org/Cinaseek/components/webapps/TwaInstaller.java",
+    "java/src/org/Cinaseek/components/webapps/WebappsIconUtils.java",
+    "java/src/org/Cinaseek/components/webapps/WebappsUtils.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaBottomSheetController.java",
+    "java/src/org/Cinaseek/components/webapps/bottomsheet/PwaBottomSheetControllerProvider.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinator.java",
   ]
 }
 
 generate_jni("pwa_restore_bottom_sheet_mediator_jni_headers") {
-  sources = [ "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetMediator.java" ]
+  sources = [ "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetMediator.java" ]
 }
 
 java_cpp_enum("webapps_java_enums_srcjar") {
@@ -200,15 +200,15 @@ source_set("unit_tests") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.components.webapps"
+  resources_package = "org.Cinaseek.components.webapps"
   sources = [
-    "java/src/org/chromium/components/webapps/AddToHomescreenDialogViewTest.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenMediatorTest.java",
-    "java/src/org/chromium/components/webapps/AddToHomescreenViewBinderTest.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetContentTest.java",
-    "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetCoordinatorTest.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetContentTest.java",
-    "java/src/org/chromium/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinatorTest.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenDialogViewTest.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenMediatorTest.java",
+    "java/src/org/Cinaseek/components/webapps/AddToHomescreenViewBinderTest.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetContentTest.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetCoordinatorTest.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetContentTest.java",
+    "java/src/org/Cinaseek/components/webapps/pwa_universal_install/PwaUniversalInstallBottomSheetCoordinatorTest.java",
   ]
   deps = [
     ":java",
@@ -240,9 +240,9 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.components.webapps"
+  resources_package = "org.Cinaseek.components.webapps"
 
-  sources = [ "java/src/org/chromium/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetViewRenderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/webapps/pwa_restore_ui/PwaRestoreBottomSheetViewRenderTest.java" ]
   deps = [
     ":java",
     ":pwa_restore_bottom_sheet_mediator_jni_headers_java",

@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ assert(use_ozone && (is_linux || is_chromeos))
 visibility = [ ":*" ]
 
 declare_args() {
-  # Support ChromeOS touchpad gestures with ozone.
+  # Support CinaseekOS touchpad gestures with ozone.
   use_evdev_gestures = is_chromeos_device
 }
 

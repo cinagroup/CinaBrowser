@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ void ProxyOverrideChanged(const JavaRef<jobject>& obj,
   JNIEnv* env = AttachCurrentThread();
   Java_AwProxyController_proxyOverrideChanged(env, obj, listener, executor);
   if (HasException(env)) {
-    // Tell the chromium message loop to not perform any tasks after the current
+    // Tell the Cinaseek message loop to not perform any tasks after the current
     // one - we want to make sure we return to Java cleanly without first making
     // any new JNI calls.
     base::CurrentUIThread::Get()->Abort();

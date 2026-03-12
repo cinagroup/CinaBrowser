@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -35,7 +35,7 @@ template("_androidx_prebuilt") {
 
       # Manifest and proguard config have just one entry: Adding (and -keep'ing
       # android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-      # Chrome does not use this feature and it causes a scary stack trace to be
+      # Cinaseek does not use this feature and it causes a scary stack trace to be
       # shown when incremental_install=true.
       ignore_manifest = true
       ignore_proguard_configs = true
@@ -132,7 +132,7 @@ template("_androidx_prebuilt") {
       ignore_proguard_configs = true
       proguard_configs = [ "androidx_xr.flags" ]
 
-      # ChromeXR uses APIs that require the native code.
+      # CinaseekXR uses APIs that require the native code.
       extract_native_libraries = true
 
       # It adds:

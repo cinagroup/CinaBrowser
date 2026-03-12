@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -16,24 +16,24 @@ java_strings_grd("java_strings_grd") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/tab_ui/ActionConfirmationManager.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/InvalidationAwareThumbnailProvider.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/OnTabSelectingListener.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/RecyclerViewPosition.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/SuggestionLifecycleObserverHandler.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabCardThemeUtil.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabContentManager.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabContentManagerThumbnailProvider.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabGridIphDialogCoordinator.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabListFaviconProvider.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabModelDotInfo.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabSwitcher.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabSwitcherCustomViewManager.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabSwitcherGroupSuggestionService.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabSwitcherIphController.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabSwitcherUtils.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/TabThumbnailView.java",
-    "java/src/org/chromium/chrome/browser/tab_ui/ThumbnailProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/ActionConfirmationManager.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/InvalidationAwareThumbnailProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/OnTabSelectingListener.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/RecyclerViewPosition.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/SuggestionLifecycleObserverHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabCardThemeUtil.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabContentManager.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabContentManagerThumbnailProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabGridIphDialogCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabListFaviconProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabModelDotInfo.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcher.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherCustomViewManager.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherGroupSuggestionService.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherIphController.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/TabThumbnailView.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_ui/ThumbnailProvider.java",
   ]
   deps = [
     ":java_resources",
@@ -80,7 +80,7 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.tab_ui"
+  resources_package = "org.Cinaseek.chrome.browser.tab_ui"
 }
 
 android_resources("java_resources") {
@@ -105,21 +105,21 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/tab_ui/TabContentManager.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/tab_ui/TabContentManager.java" ]
 }
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.tab_ui"
+  resources_package = "org.Cinaseek.chrome.browser.tab_ui"
 
   sources = [
-    "junit/src/org/chromium/chrome/browser/tab_ui/ActionConfirmationManagerUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/SuggestionLifecycleObserverHandlerUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/TabCardThemeUtilUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/TabListFaviconProviderTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/TabSwitcherCustomViewManagerUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/TabSwitcherGroupSuggestionServiceUnitTest.java",
-    "junit/src/org/chromium/chrome/browser/tab_ui/TabSwitcherUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/ActionConfirmationManagerUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/SuggestionLifecycleObserverHandlerUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/TabCardThemeUtilUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/TabListFaviconProviderTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherCustomViewManagerUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherGroupSuggestionServiceUnitTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/tab_ui/TabSwitcherUtilsUnitTest.java",
   ]
 
   deps = [

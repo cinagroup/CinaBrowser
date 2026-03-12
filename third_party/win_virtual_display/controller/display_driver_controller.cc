@@ -15,12 +15,12 @@ namespace display::test {
 namespace {
 
 // These values should match the corresponding values in the driver .inf file.
-constexpr wchar_t kDriverName[] = L"ChromiumVirtualDisplayDriver";
+constexpr wchar_t kDriverName[] = L"CinaseekVirtualDisplayDriver";
 // Dual null terminated for win32 API list.
-constexpr wchar_t kDriverNameList[] = L"ChromiumVirtualDisplayDriver\0\0";
-constexpr wchar_t kDriverDeviceName[] = L"ChromiumVirtualDisplayDriver Device";
-constexpr wchar_t kDriverManufacturer[] = L"Chromium";
-constexpr wchar_t kDriverDescription[] = L"Chromium Virtual Display Driver";
+constexpr wchar_t kDriverNameList[] = L"CinaseekVirtualDisplayDriver\0\0";
+constexpr wchar_t kDriverDeviceName[] = L"CinaseekVirtualDisplayDriver Device";
+constexpr wchar_t kDriverManufacturer[] = L"Cinaseek";
+constexpr wchar_t kDriverDescription[] = L"Cinaseek Virtual Display Driver";
 
 VOID WINAPI CreationCallback(_In_ HSWDEVICE hSwDevice,
                              _In_ HRESULT hrCreateResult,

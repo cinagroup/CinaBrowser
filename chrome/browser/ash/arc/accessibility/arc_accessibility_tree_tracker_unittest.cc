@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, TaskAndAXTreeLifecycle) {
   ASSERT_EQ(0U, key_to_tree.size());
 
   // Let's set task id to the window.
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
   tree = tree_tracker.OnAccessibilityEvent(event1.Clone().get());
   ASSERT_NE(nullptr, tree);
   ASSERT_EQ(1U, key_to_tree.size());
@@ -119,7 +119,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, TaskAndAXTreeLifecycle) {
   std::unique_ptr<aura::Window> test_window2 = CreateWindow();
   tree_tracker.TrackWindow(test_window2.get());
 
-  exo::SetShellApplicationId(test_window2.get(), "org.chromium.arc.2");
+  exo::SetShellApplicationId(test_window2.get(), "org.Cinaseek.arc.2");
   tree = tree_tracker.OnAccessibilityEvent(event2.Clone().get());
   ASSERT_NE(nullptr, tree);
   ASSERT_EQ(2U, key_to_tree.size());
@@ -145,7 +145,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, ReEnableTree) {
       ax::android::mojom::AccessibilityFilterType::ALL);
 
   std::unique_ptr<aura::Window> test_window = CreateWindow();
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
   tree_tracker.TrackWindow(test_window.get());
 
   std::unique_ptr<aura::Window> child_window =
@@ -204,7 +204,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, WindowIdTaskIdMapping) {
   // Set task ID 1 to the window.
   // Also, set a11y window id to a child window.
   tree_tracker.TrackWindow(test_window.get());
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
 
   std::unique_ptr<aura::Window> child_window1 =
       CreateWindow(chromeos::AppType::NON_APP);
@@ -247,7 +247,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, WindowIdTaskIdMapping) {
   event2->window_id = 20;
 
   std::unique_ptr<aura::Window> another_window = CreateWindow();
-  exo::SetShellApplicationId(another_window.get(), "org.chromium.arc.2");
+  exo::SetShellApplicationId(another_window.get(), "org.Cinaseek.arc.2");
   std::unique_ptr<aura::Window> another_child_window =
       CreateWindow(chromeos::AppType::NON_APP);
   exo::SetShellClientAccessibilityId(another_child_window.get(), 20);
@@ -271,7 +271,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, TrackArcGhostWindow) {
   // Simulate a ghost window. Apply NON_APP type and session ID.
   std::unique_ptr<aura::Window> test_window =
       CreateWindow(chromeos::AppType::NON_APP);
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.session.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.session.1");
   tree_tracker.TrackWindow(test_window.get());
 
   const auto& key_to_tree = tree_tracker.trees_for_test();
@@ -287,7 +287,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, TrackArcGhostWindow) {
   ASSERT_EQ(0U, key_to_tree.size());
 
   // A ghost window is replaced with an actual ARC window.
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
   test_window->SetProperty(chromeos::kAppTypeKey, chromeos::AppType::ARC_APP);
 
   std::unique_ptr<aura::Window> child_window =
@@ -305,7 +305,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, FilterTypeChange) {
   auto& tree_tracker = accessibility_tree_tracker();
 
   std::unique_ptr<aura::Window> test_window = CreateWindow();
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
   exo::SetShellClientAccessibilityId(test_window.get(), 10);
 
   const auto& key_to_tree = tree_tracker.trees_for_test();
@@ -338,7 +338,7 @@ TEST_F(ArcAccessibilityTreeTrackerTest, ToggleTalkBack) {
 
   std::unique_ptr<aura::Window> test_window = CreateWindow();
   tree_tracker.focused_window_ = test_window.get();
-  exo::SetShellApplicationId(test_window.get(), "org.chromium.arc.1");
+  exo::SetShellApplicationId(test_window.get(), "org.Cinaseek.arc.1");
 
   std::optional<bool>& last_state =
       tree_tracker.last_dispatched_talkback_state_;

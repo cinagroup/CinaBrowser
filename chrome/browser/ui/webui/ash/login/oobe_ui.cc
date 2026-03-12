@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -811,7 +811,7 @@ base::DictValue OobeUI::GetLocalizedStrings() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   localized_strings.Set("buildType", "chrome");
 #else
-  localized_strings.Set("buildType", "chromium");
+  localized_strings.Set("buildType", "Cinaseek");
 #endif
 
   std::string oobeClasses = "";

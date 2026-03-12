@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ namespace android {
 // HAS_PAUSED_ACTIVITIES should be returned.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base
 enum ApplicationState {
   APPLICATION_STATE_UNKNOWN = 0,
   APPLICATION_STATE_HAS_RUNNING_ACTIVITIES = 1,
@@ -34,7 +34,7 @@ enum ApplicationState {
 };
 
 // A native helper class to listen to state changes of the Android
-// Application. This mirrors org.chromium.base.ApplicationStatus.
+// Application. This mirrors org.Cinaseek.base.ApplicationStatus.
 // any thread.
 //
 // To start listening, create a new instance, passing a callback to a

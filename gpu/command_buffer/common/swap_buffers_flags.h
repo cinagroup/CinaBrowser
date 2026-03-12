@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 namespace gpu {
 
-// Flags for calling glSwapBuffers with Chromium GLES2 command buffer.
+// Flags for calling glSwapBuffers with Cinaseek GLES2 command buffer.
 class SwapBuffersFlags {
  public:
   enum : uint32_t {

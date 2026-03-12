@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,9 +25,9 @@ constexpr char kActionMain[] = "android.intent.action.MAIN";
 
 constexpr char kInitialStartParam[] = "initialStart";
 constexpr char kCategoryLauncher[] = "android.intent.category.LAUNCHER";
-constexpr char kRequestStartTimeParamKey[] = "S.org.chromium.arc.request.start";
+constexpr char kRequestStartTimeParamKey[] = "S.org.Cinaseek.arc.request.start";
 constexpr char kRequestDeferredStartTimeParamKey[] =
-    "S.org.chromium.arc.request.deferred.start";
+    "S.org.Cinaseek.arc.request.deferred.start";
 // Intent labels, kept in sorted order.
 constexpr char kAction[] = "action";
 constexpr char kCategory[] = "category";

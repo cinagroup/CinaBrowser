@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 #include "base/containers/queue.h"
 #include "base/memory/raw_ptr.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream.h"
 #include "net/quic/quic_crypto_client_stream_factory.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_server_id.h"
@@ -39,7 +39,7 @@ class MockCryptoClientStreamFactory : public QuicCryptoClientStreamFactory {
 
   std::unique_ptr<quic::QuicCryptoClientStream> CreateQuicCryptoClientStream(
       const quic::QuicServerId& server_id,
-      QuicChromiumClientSession* session,
+      QuicCinaseekClientSession* session,
       std::unique_ptr<quic::ProofVerifyContext> proof_verify_context,
       quic::QuicCryptoClientConfig* crypto_config) override;
 
@@ -54,7 +54,7 @@ class MockCryptoClientStreamFactory : public QuicCryptoClientStreamFactory {
 
   // The caller keeps ownership of |proof_verify_details|.
   void AddProofVerifyDetails(
-      const ProofVerifyDetailsChromium* proof_verify_details) {
+      const ProofVerifyDetailsCinaseek* proof_verify_details) {
     proof_verify_details_queue_.push(proof_verify_details);
   }
 
@@ -78,7 +78,7 @@ class MockCryptoClientStreamFactory : public QuicCryptoClientStreamFactory {
   MockCryptoClientStream::HandshakeMode handshake_mode_ =
       MockCryptoClientStream::CONFIRM_HANDSHAKE;
   std::vector<base::WeakPtr<MockCryptoClientStream>> streams_;
-  base::queue<raw_ptr<const ProofVerifyDetailsChromium, CtnExperimental>>
+  base::queue<raw_ptr<const ProofVerifyDetailsCinaseek, CtnExperimental>>
       proof_verify_details_queue_;
   std::unique_ptr<quic::QuicConfig> config_;
   std::map<quic::QuicServerId, std::unique_ptr<quic::QuicConfig>>

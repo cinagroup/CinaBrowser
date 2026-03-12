@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ class ProtoFetcherMetrics {
                                    ProtoFetcherStatus status) const;
 
   // The returned value must match one of the labels in
-  // chromium/src/tools/metrics/histograms/enums.xml://enum[@name='ProtoFetcherStatus'],
+  // Cinaseek/src/tools/metrics/histograms/enums.xml://enum[@name='ProtoFetcherStatus'],
   // and should be reflected in tokens in histogram defined for this fetcher.
   // See example at
   // tools/metrics/histograms/metadata/signin/histograms.xml://histogram[@name='Signin.ListFamilyMembersRequest.{Status}.*']

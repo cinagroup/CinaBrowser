@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 namespace ui {
 
 // Indicates the edge of the screen where the gesture started.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.ui.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.ui.base
 enum class BackGestureEventSwipeEdge { LEFT, RIGHT };
 
 // This event provides information about gestures which start at the edge of a

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -496,9 +496,9 @@ GtkCssContext AppendCssNodeToStyleContext(GtkCssContext context,
     }
   }
 
-  // Always add a "chromium" class so that themes can style chromium
+  // Always add a "Cinaseek" class so that themes can style Cinaseek
   // widgets specially if they want to.
-  classes.push_back("chromium");
+  classes.push_back("Cinaseek");
 
   float scale = std::round(GetDeviceScaleFactor());
 
@@ -521,7 +521,7 @@ GtkCssContext GetStyleContextFromCss(const std::string& css_selector) {
 
 SkColor GetBgColorFromStyleContext(GtkCssContext context) {
   // Backgrounds are more general than solid colors (eg. gradients),
-  // but chromium requires us to boil this down to one color.  We
+  // but Cinaseek requires us to boil this down to one color.  We
   // cannot use the background-color here because some themes leave it
   // set to a garbage color because a background-image will cover it
   // anyway.  So we instead render the background into a 24x24 bitmap,

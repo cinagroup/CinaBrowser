@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ extern void (*initialization_function)(int argc, char const* const* argv);
 // the above function pointer will have been populated with
 // a function that knows how to initialize FuzzTests. Otherwise,
 // it won't, to avoid bringing all of FuzzTests's dependencies
-// into all the other Chromium test suites.
+// into all the other Cinaseek test suites.
 inline void MaybeInitFuzztest(int argc, char const* const* argv) {
   if (fuzztest_init_helper::initialization_function) {
     fuzztest_init_helper::initialization_function(argc, argv);

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,13 +34,13 @@ namespace {
 bool g_have_localized_app_dir_name = false;
 
 base::FilePath GetLocalizableAppShortcutsSubdirName() {
-  static const char kChromiumAppDirName[] = "Chromium Apps.localized";
+  static const char kCinaseekAppDirName[] = "Cinaseek Apps.localized";
   static const char kChromeAppDirName[] = "Chrome Apps.localized";
   static const char kChromeCanaryAppDirName[] = "Chrome Canary Apps.localized";
 
   switch (chrome::GetChannel()) {
     case version_info::Channel::UNKNOWN:
-      return base::FilePath(kChromiumAppDirName);
+      return base::FilePath(kCinaseekAppDirName);
 
     case version_info::Channel::CANARY:
       return base::FilePath(kChromeCanaryAppDirName);

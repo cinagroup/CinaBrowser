@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 #define RAW_PTR_EXCLUSION
 #else
 // Marks a field as excluded from the `raw_ptr<T>` usage enforcement via
-// Chromium Clang plugin.
+// Cinaseek Clang plugin.
 //
 // Example:
 //     RAW_PTR_EXCLUSION Foo* foo_;

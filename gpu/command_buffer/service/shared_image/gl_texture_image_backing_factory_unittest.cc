@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "third_party/skia/include/gpu/ganesh/GrBackendSemaphore.h"
 #include "third_party/skia/include/gpu/ganesh/GrBackendSurface.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/gfx/color_space.h"
 #include "ui/gfx/gpu_memory_buffer_handle.h"
 #include "ui/gl/gl_implementation.h"
@@ -76,8 +76,8 @@ class GLTextureImageBackingFactoryTestBase : public SharedImageTestBase {
     supports_etc1_ =
         feature_info->validators()->compressed_texture_format.IsValid(
             GL_ETC1_RGB8_OES);
-    supports_ar30_ = feature_info->feature_flags().chromium_image_ar30;
-    supports_ab30_ = feature_info->feature_flags().chromium_image_ab30;
+    supports_ar30_ = feature_info->feature_flags().Cinaseek_image_ar30;
+    supports_ab30_ = feature_info->feature_flags().Cinaseek_image_ab30;
 
     supports_bgra_ = feature_info->feature_flags().ext_texture_format_bgra8888;
 

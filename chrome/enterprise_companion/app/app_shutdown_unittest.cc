@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ class AppShutdownTest : public ::testing::Test {
  private:
   static mojo::NamedPlatformChannel::ServerName GetTestServerName() {
 #if BUILDFLAG(IS_MAC)
-    return base::StrCat({"org.chromium.ChromeEnterpriseCompanionTest",
+    return base::StrCat({"org.Cinaseek.ChromeEnterpriseCompanionTest",
                          base::UnguessableToken::Create().ToString(),
                          ".service"});
 #elif BUILDFLAG(IS_LINUX)
@@ -91,7 +91,7 @@ class AppShutdownTest : public ::testing::Test {
         .AsUTF8Unsafe();
 #elif BUILDFLAG(IS_WIN)
     return base::UTF8ToWide(
-        base::StrCat({"org.chromium.ChromeEnterpriseCompanionTest",
+        base::StrCat({"org.Cinaseek.ChromeEnterpriseCompanionTest",
                       base::UnguessableToken::Create().ToString()}));
 #endif
   }

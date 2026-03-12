@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/vr/openxr/android/openxr_graphics_binding_open_gles.h"
@@ -113,7 +113,7 @@ bool OpenXrGraphicsBindingOpenGLES::InitializeGl() {
   // Any mismatches result in a EGL_BAD_MATCH error, including different reset
   // notification behavior according to
   // https://www.khronos.org/registry/EGL/specs/eglspec.1.5.pdf page 56.
-  // Chromium defaults to lose context on reset when the robustness extension is
+  // Cinaseek defaults to lose context on reset when the robustness extension is
   // present, even if robustness features are not requested specifically.
   context_attribs.lose_context_on_reset = false;
 

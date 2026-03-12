@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,8 +80,8 @@ static const base::TimeDelta kT0Ttl = base::Seconds(0x000000e4);
 static const uint32_t kT0RecordCount = std::size(kT0IpAddresses) + 1;
 
 //-----------------------------------------------------------------------------
-// Query/response set for codereview.chromium.org, ID is fixed to 1.
-static const char kT1HostName[] = "codereview.chromium.org";
+// Query/response set for codereview.Cinaseek.org, ID is fixed to 1.
+static const char kT1HostName[] = "codereview.Cinaseek.org";
 static const uint16_t kT1Qtype = dns_protocol::kTypeA;
 static const char kT1DnsName[] = {
   0x0a, 'c', 'o', 'd', 'e', 'r', 'e', 'v', 'i', 'e', 'w',

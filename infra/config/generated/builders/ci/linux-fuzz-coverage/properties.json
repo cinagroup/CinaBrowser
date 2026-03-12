@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/linux-fuzz-coverage/gn-args.json"
@@ -10,18 +10,18 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-fuzz-coverage",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.coverage",
+              "builder_group": "Cinaseek.coverage",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "clobber",
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_clang",
+                "config": "Cinaseek_clang",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
@@ -29,7 +29,7 @@
                 "apply_configs": [
                   "use_clang_coverage"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -39,7 +39,7 @@
         {
           "bucket": "ci",
           "builder": "linux-fuzz-coverage",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -52,7 +52,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -62,8 +62,8 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.coverage",
+  "builder_group": "Cinaseek.coverage",
   "collect_fuzz_coverage": true,
   "fuzz_engine": "libfuzzer",
-  "recipe": "chromium/fuzz"
+  "recipe": "Cinaseek/fuzz"
 }

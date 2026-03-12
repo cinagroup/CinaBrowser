@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace cronet {
 // Error codes for the most popular network stack error codes.
 // For descriptions see corresponding constants in UrlRequestException.java.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.impl
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.impl
 enum UrlRequestError {
   LISTENER_EXCEPTION_THROWN,
   HOSTNAME_NOT_RESOLVED,

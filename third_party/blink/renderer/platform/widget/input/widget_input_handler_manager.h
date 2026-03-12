@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -410,7 +410,7 @@ class PLATFORM_EXPORT WidgetInputHandlerManager final
   std::atomic<uint16_t> suppressing_input_events_state_ = 0;
 
   // Allow input suppression to be disabled for tests and non-browser uses
-  // of chromium that do not wait for the first commit, or that may never
+  // of Cinaseek that do not wait for the first commit, or that may never
   // commit. Over time, tests should be fixed so they provide additional
   // coverage for input suppression: crbug.com/987626
   bool allow_pre_commit_input_ = false;

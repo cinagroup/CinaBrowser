@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace ui {
 namespace {
 
 constexpr wchar_t kChromeTitle[] = L"Google Chrome";
-constexpr wchar_t kChromiumTitle[] = L"Chromium";
+constexpr wchar_t kCinaseekTitle[] = L"Cinaseek";
 constexpr wchar_t kEdgeTitle[] = L"Edge";
 constexpr wchar_t kFirefoxTitle[] = L"Mozilla Firefox";
 
@@ -745,8 +745,8 @@ HWND GetHWNDBySelector(const AXTreeSelector& selector) {
   HWNDSearchInfo info;
   if (selector.types & AXTreeSelector::Chrome) {
     info.title = kChromeTitle;
-  } else if (selector.types & AXTreeSelector::Chromium) {
-    info.title = kChromiumTitle;
+  } else if (selector.types & AXTreeSelector::Cinaseek) {
+    info.title = kCinaseekTitle;
   } else if (selector.types & AXTreeSelector::Edge) {
     info.title = kEdgeTitle;
   } else if (selector.types & AXTreeSelector::Firefox) {

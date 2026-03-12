@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -220,7 +220,7 @@ class SigninPromoViewMediatorTest : public PlatformTest {
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
       UIImage* logo = [UIImage imageNamed:kChromeSigninPromoLogoImage];
 #else
-      UIImage* logo = [UIImage imageNamed:kChromiumSigninPromoLogoImage];
+      UIImage* logo = [UIImage imageNamed:kCinaseekSigninPromoLogoImage];
 #endif  // BUILDFLAG(IOS_USE_BRANDED_ASSETS)
       OCMExpect([signin_promo_view_ setNonProfileImage:logo]);
     }

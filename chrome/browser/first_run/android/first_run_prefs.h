@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace first_run {
 
 // Must also match definition in policy_templates.json.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.firstrun
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.firstrun
 enum class TosDialogBehavior { UNSET = 0, STANDARD = 1, SKIP = 2 };
 
 extern const char kTosDialogBehavior[];

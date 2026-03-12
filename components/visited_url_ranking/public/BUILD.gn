@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -97,11 +97,11 @@ if (is_android) {
     srcjar_deps = [ ":group_suggestions_generated_enums" ]
 
     sources = [
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/CachedSuggestions.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestion.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestions.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestionsService.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/UserResponseMetadata.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/CachedSuggestions.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestion.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestions.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestionsService.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/UserResponseMetadata.java",
     ]
 
     deps = [
@@ -116,10 +116,10 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/CachedSuggestions.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestion.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/GroupSuggestions.java",
-      "url_grouping/android/java/src/org/chromium/components/visited_url_ranking/url_grouping/UserResponseMetadata.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/CachedSuggestions.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestion.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/GroupSuggestions.java",
+      "url_grouping/android/java/src/org/Cinaseek/components/visited_url_ranking/url_grouping/UserResponseMetadata.java",
     ]
   }
 

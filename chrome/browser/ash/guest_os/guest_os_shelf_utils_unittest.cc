@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,12 +48,12 @@ std::string GenAppId(const App& app) {
 std::string TestWaylandWindowIdWithToken(
     const std::string& app_suffix,
     const std::string& token = container_token) {
-  return "org.chromium.guest_os." + token + ".wayland." + app_suffix;
+  return "org.Cinaseek.guest_os." + token + ".wayland." + app_suffix;
 }
 
 std::string TestXWindowIdWithToken(const std::string& app_suffix,
                                    const std::string& token = container_token) {
-  return "org.chromium.guest_os." + token + ".wmclass." + app_suffix;
+  return "org.Cinaseek.guest_os." + token + ".wmclass." + app_suffix;
 }
 }  // namespace
 
@@ -210,21 +210,21 @@ TEST_F(GuestOsShelfUtilsTest,
        GetGuestOsShelfAppIdDoesntFindAppWhenGivenUnregisteredAppIds) {
   SetGuestOsRegistry({});
 
-  EXPECT_EQ(GetShelfAppId({.app_id = "org.chromium.guest_os.test_container_"
+  EXPECT_EQ(GetShelfAppId({.app_id = "org.Cinaseek.guest_os.test_container_"
                                      "token.wmclientleader.1234"}),
-            "crostini:org.chromium.guest_os.test_container_token."
+            "crostini:org.Cinaseek.guest_os.test_container_token."
             "wmclientleader.1234");
 
   EXPECT_EQ(
       GetShelfAppId(
-          {.app_id = "org.chromium.guest_os.test_container_token.xid.654321"}),
-      "crostini:org.chromium.guest_os.test_container_token.xid.654321");
+          {.app_id = "org.Cinaseek.guest_os.test_container_token.xid.654321"}),
+      "crostini:org.Cinaseek.guest_os.test_container_token.xid.654321");
 
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wayland.fancy.app"}),
-      "crostini:org.chromium.guest_os.test_container_token.wayland.fancy.app");
+               "org.Cinaseek.guest_os.test_container_token.wayland.fancy.app"}),
+      "crostini:org.Cinaseek.guest_os.test_container_token.wayland.fancy.app");
 }
 
 TEST_F(GuestOsShelfUtilsTest,
@@ -232,15 +232,15 @@ TEST_F(GuestOsShelfUtilsTest,
   SetGuestOsRegistry({});
 
   EXPECT_EQ(
-      GetShelfAppId({.app_id = "org.chromium.guest_os.termina.wmclass.1"}),
-      "crostini:org.chromium.guest_os.termina.wmclass.1");
+      GetShelfAppId({.app_id = "org.Cinaseek.guest_os.termina.wmclass.1"}),
+      "crostini:org.Cinaseek.guest_os.termina.wmclass.1");
 
   EXPECT_EQ(GetShelfAppId({.app_id = "unregistered_app"}),
             "crostini:unregistered_app");
 
-  EXPECT_EQ(GetShelfAppId({.app_id = "org.chromium.guest_os.borealis"
+  EXPECT_EQ(GetShelfAppId({.app_id = "org.Cinaseek.guest_os.borealis"
                                      ".xid.1"}),
-            "borealis_anon:org.chromium.guest_os.borealis.xid.1");
+            "borealis_anon:org.Cinaseek.guest_os.borealis.xid.1");
 }
 
 TEST_F(GuestOsShelfUtilsTest,
@@ -253,7 +253,7 @@ TEST_F(GuestOsShelfUtilsTest,
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wmclass.app_start"}),
+               "org.Cinaseek.guest_os.test_container_token.wmclass.app_start"}),
       GenAppId({.desktop_file_id = "app"}));
 }
 
@@ -269,8 +269,8 @@ TEST_F(
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wmclass.app2"}),
-      "crostini:org.chromium.guest_os.test_container_token.wmclass.app2");
+               "org.Cinaseek.guest_os.test_container_token.wmclass.app2"}),
+      "crostini:org.Cinaseek.guest_os.test_container_token.wmclass.app2");
 }
 
 TEST_F(GuestOsShelfUtilsTest,
@@ -319,7 +319,7 @@ TEST_F(GuestOsShelfUtilsTest, GetGuestOsShelfAppIdCanFindAppsByName) {
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wmclass.name"}),
+               "org.Cinaseek.guest_os.test_container_token.wmclass.name"}),
       GenAppId({.desktop_file_id = "app"}));
 }
 
@@ -336,8 +336,8 @@ TEST_F(GuestOsShelfUtilsTest,
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wmclass.name"}),
-      "crostini:org.chromium.guest_os.test_container_token.wmclass.name");
+               "org.Cinaseek.guest_os.test_container_token.wmclass.name"}),
+      "crostini:org.Cinaseek.guest_os.test_container_token.wmclass.name");
 
   // Two apps with the same name, where one is no_display.
   SetGuestOsRegistry({
@@ -351,7 +351,7 @@ TEST_F(GuestOsShelfUtilsTest,
   EXPECT_EQ(
       GetShelfAppId(
           {.app_id =
-               "org.chromium.guest_os.test_container_token.wmclass.name"}),
+               "org.Cinaseek.guest_os.test_container_token.wmclass.name"}),
       GenAppId({.desktop_file_id = "app"}));
 }
 

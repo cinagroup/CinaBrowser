@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -639,7 +639,7 @@ void ExtensionService::CheckManagementPolicy() {
       // Extensions installed from the Windows Registry should re-enable when
       // they become force-installed. Normally this is handled in
       // OnExternalExtensionUpdateUrlFound(), but already-broken browsers (from
-      // previous Chromium versions) also need to be fixed here.
+      // previous Cinaseek versions) also need to be fixed here.
       //
       // TODO(crbug.com/40144051): This won't be needed after a few milestones.
       // It should be safe to remove in M107.

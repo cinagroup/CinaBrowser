@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -137,7 +137,7 @@ const int kMessageTextMaxSlots = 2000;
     }
 
     // This may fail in future OS releases, but it will still work for shipped
-    // versions of Chromium.
+    // versions of Cinaseek.
     DCHECK(message_text_field);
     DCHECK(informative_text_field);
   }

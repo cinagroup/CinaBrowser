@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -203,11 +203,11 @@ IN_PROC_BROWSER_TEST_F(OneDrivePrefObserverBrowserTest,
   ASSERT_EQ(0u, observer.events().size());
 
   SetOneDriveAccountRestrictions(
-      {"https://www.google.com", "https://chromium.org"});
+      {"https://www.google.com", "https://Cinaseek.org"});
   ASSERT_EQ(1u, observer.events().size());
   CheckRestrictionChangedEvent(
       *observer.events().begin()->second,
-      {"https://www.google.com", "https://chromium.org"});
+      {"https://www.google.com", "https://Cinaseek.org"});
   observer.ClearEvents();
 
   SetOneDriveAccountRestrictions({"common"});

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ class WebIDLInProcessFuzzer
   void SetUpOnMainThread() override;
 
   int Fuzz(const FuzzCase& fuzz_case) override;
-  base::CommandLine::StringVector GetChromiumCommandLineArguments() override {
+  base::CommandLine::StringVector GetCinaseekCommandLineArguments() override {
     return {
         FILE_PATH_LITERAL("--enable-blink-test-features"),
         FILE_PATH_LITERAL("--enable-experimental-web-platform-features"),

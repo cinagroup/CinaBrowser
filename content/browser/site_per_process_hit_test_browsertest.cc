@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4703,7 +4703,7 @@ IN_PROC_BROWSER_TEST_F(SitePerProcessMouseWheelHitTestBrowserTest,
 
   GURL frame_url(embedded_test_server()->GetURL(
       "b.com", "/page_with_scrollable_div.html"));
-  // To test for https://bugs.chromium.org/p/chromium/issues/detail?id=820232
+  // To test for https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=820232
   // it's important that both subframes are in the same renderer process, so
   // we load the same URL in each case.
   EXPECT_TRUE(NavigateToURLFromRenderer(root->child_at(0), frame_url));

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ using StatusCallback = base::OnceCallback<void(base::File::Error result)>;
 // error (if any) encountered in accessing it.
 //
 // The underlying file (in the kernel sense) is an O_TMPFILE file (and so does
-// not need any further Chromium code for garbage collecting used files),
+// not need any further Cinaseek code for garbage collecting used files),
 // created under kChronosHomeDir (not /tmp) so that it is disk-backed instead
 // of memory-backed, as disk is more plentiful than RAM.
 //

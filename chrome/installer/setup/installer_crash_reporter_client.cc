@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ bool InstallerCrashReporterClient::ReportingIsEnforcedByPolicy(bool* enabled) {
       L"SOFTWARE\\Policies\\Google\\Chrome";
 #else
   static const wchar_t kRegistryChromePolicyKey[] =
-      L"SOFTWARE\\Policies\\Chromium";
+      L"SOFTWARE\\Policies\\Cinaseek";
 #endif
   static const wchar_t kMetricsReportingEnabled[] = L"MetricsReportingEnabled";
 

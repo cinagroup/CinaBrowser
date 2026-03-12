@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@
 //
 // This class is generally written to be independent of Blink, for slightly
 // more general reuse (though the test is part of blink_unittests). It is
-// not intended to be part of the main Chromium build, only used in
+// not intended to be part of the main Cinaseek build, only used in
 // auxiliary utilities.
 
 #include <stdint.h>
@@ -147,7 +147,7 @@ class RatioBootstrapEstimator {
 
   // mt19937 isn't a great PRNG (for one, it has huge state), but
   //
-  //   a) It makes it easier to port this code to a non-Chromium context, and
+  //   a) It makes it easier to port this code to a non-Cinaseek context, and
   //   b) We need the determinism for unit testing purposes (otherwise,
   //      we are almost certain to make a test that is flaky to some degree),
   //      and e.g. base::RandomBitGenerator does not support seeding.

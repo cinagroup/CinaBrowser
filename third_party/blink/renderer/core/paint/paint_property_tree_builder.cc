@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -899,7 +899,7 @@ void FragmentPaintPropertyTreeBuilder::UpdateStickyTranslation(
           // gfx::Vector2dF rounds differently than PhysicalOffset at
           // half-integral negative values. This hack works around that
           // situation.
-          // See https://issues.chromium.org/issues/401693546#comment6
+          // See https://issues.Cinaseek.org/issues/401693546#comment6
           //
           // TODO(crbug.com/404418768 ): Remove this in favor of applying the
           // same rounding logic (round up instead of away from 0) for our

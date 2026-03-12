@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,10 +27,10 @@ inline const uint8_t kClearKeyUuid[16] = {
 };
 #endif
 
-// External Clear Key key system ("org.chromium.externalclearkey" and variants)
+// External Clear Key key system ("org.Cinaseek.externalclearkey" and variants)
 // only for testing.
 inline constexpr char kExternalClearKeyKeySystem[] =
-    "org.chromium.externalclearkey";
+    "org.Cinaseek.externalclearkey";
 
 // Variants of External Clear Key key system to test different scenarios.
 // To add a new variant, make sure you also update:
@@ -41,51 +41,51 @@ inline constexpr char kExternalClearKeyKeySystem[] =
 #if BUILDFLAG(IS_WIN)
 // MediaFoundation Clear Key key system only for testing.
 inline constexpr char kMediaFoundationClearKeyKeySystem[] =
-    "org.chromium.externalclearkey.mediafoundation";
+    "org.Cinaseek.externalclearkey.mediafoundation";
 
 inline constexpr wchar_t kMediaFoundationClearKeyKeySystemWideString[] =
-    L"org.chromium.externalclearkey.mediafoundation";
+    L"org.Cinaseek.externalclearkey.mediafoundation";
 #endif  // BUILDFLAG(IS_WIN)
 
 // A sub key system that is invalid for testing purpose.
 inline constexpr char kExternalClearKeyInvalidKeySystem[] =
-    "org.chromium.externalclearkey.invalid";
+    "org.Cinaseek.externalclearkey.invalid";
 
 // A sub key system that supports decrypt-only mode.
 inline constexpr char kExternalClearKeyDecryptOnlyKeySystem[] =
-    "org.chromium.externalclearkey.decryptonly";
+    "org.Cinaseek.externalclearkey.decryptonly";
 
 // A sub key system that triggers various types of messages.
 inline constexpr char kExternalClearKeyMessageTypeTestKeySystem[] =
-    "org.chromium.externalclearkey.messagetypetest";
+    "org.Cinaseek.externalclearkey.messagetypetest";
 
 // A sub key system that triggers the FileIO test.
 inline constexpr char kExternalClearKeyFileIOTestKeySystem[] =
-    "org.chromium.externalclearkey.fileiotest";
+    "org.Cinaseek.externalclearkey.fileiotest";
 
 // A sub key system that triggers the output protection test.
 inline constexpr char kExternalClearKeyOutputProtectionTestKeySystem[] =
-    "org.chromium.externalclearkey.outputprotectiontest";
+    "org.Cinaseek.externalclearkey.outputprotectiontest";
 
 // A sub key system that triggers the platform verification test.
 inline constexpr char kExternalClearKeyPlatformVerificationTestKeySystem[] =
-    "org.chromium.externalclearkey.platformverificationtest";
+    "org.Cinaseek.externalclearkey.platformverificationtest";
 
 // A sub key system that triggers a crash.
 inline constexpr char kExternalClearKeyCrashKeySystem[] =
-    "org.chromium.externalclearkey.crash";
+    "org.Cinaseek.externalclearkey.crash";
 
 // A sub key system that triggers the verify host files test.
 inline constexpr char kExternalClearKeyVerifyCdmHostTestKeySystem[] =
-    "org.chromium.externalclearkey.verifycdmhosttest";
+    "org.Cinaseek.externalclearkey.verifycdmhosttest";
 
 // A sub key system that fetches the Storage ID.
 inline constexpr char kExternalClearKeyStorageIdTestKeySystem[] =
-    "org.chromium.externalclearkey.storageidtest";
+    "org.Cinaseek.externalclearkey.storageidtest";
 
 // A sub key system that is registered with a different CDM type.
 inline constexpr char kExternalClearKeyDifferentCdmTypeTestKeySystem[] =
-    "org.chromium.externalclearkey.differentcdmtype";
+    "org.Cinaseek.externalclearkey.differentcdmtype";
 
 #if BUILDFLAG(ENABLE_LIBRARY_CDMS)
 // Name of the ClearKey CDM library.

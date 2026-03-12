@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -147,7 +147,7 @@ void ClipboardIOS::ReadAvailableTypes(
              std::vector<std::u16string> types) {
             NSData* data = GetDataWithTypeFromPasteboard(
                 GetPasteboard(),
-                (NSString*)kUTTypeChromiumDataTransferCustomData);
+                (NSString*)kUTTypeCinaseekDataTransferCustomData);
             if (data) {
               ReadCustomDataTypes(base::apple::NSDataToSpan(data), &types);
             }
@@ -292,7 +292,7 @@ void ClipboardIOS::ReadDataTransferCustomData(
 
   std::u16string result;
   NSData* data = GetDataWithTypeFromPasteboard(
-      GetPasteboard(), (NSString*)kUTTypeChromiumDataTransferCustomData);
+      GetPasteboard(), (NSString*)kUTTypeCinaseekDataTransferCustomData);
   if (data) {
     if (std::optional<std::u16string> maybe_result =
             ReadCustomDataForType(base::apple::NSDataToSpan(data), type);

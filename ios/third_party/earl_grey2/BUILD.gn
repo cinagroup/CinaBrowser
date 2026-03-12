@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -169,10 +169,10 @@ source_set("common_lib") {
 
   configs -= [
     "//build/config/gcc:symbol_visibility_hidden",
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/gcc:symbol_visibility_default",
   ]
 }
@@ -243,10 +243,10 @@ source_set("ui_lib") {
 
   configs -= [
     "//build/config/gcc:symbol_visibility_hidden",
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/gcc:symbol_visibility_default",
   ]
 }
@@ -450,10 +450,10 @@ ios_framework_bundle("app_framework") {
 
   configs -= [
     "//build/config/gcc:symbol_visibility_hidden",
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/gcc:symbol_visibility_default",
   ]
 }
@@ -544,10 +544,10 @@ source_set("test_lib") {
 
   configs -= [
     "//build/config/gcc:symbol_visibility_hidden",
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/gcc:symbol_visibility_default",
   ]
 }

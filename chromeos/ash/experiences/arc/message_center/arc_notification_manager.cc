@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,8 +44,8 @@ namespace ash {
 namespace {
 
 constexpr char kPlayStorePackageName[] = "com.android.vending";
-constexpr char kArcGmsPackageName[] = "org.chromium.arc.gms";
-constexpr char kArcHostVpnPackageName[] = "org.chromium.arc.hostvpn";
+constexpr char kArcGmsPackageName[] = "org.Cinaseek.arc.gms";
+constexpr char kArcHostVpnPackageName[] = "org.Cinaseek.arc.hostvpn";
 
 constexpr char kManagedProvisioningPackageName[] =
     "com.android.managedprovisioning";

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -218,7 +218,7 @@ bool ChromePageInfoUiDelegate::ShouldShowSettingsLinkForPermission(
       // This can be extracted into
       // SystemPermissionSettings::IsPermissionDenied() in a similar way as it
       // is done for camera and mic. I attempted to do this (see
-      // https://chromium-review.googlesource.com/c/chromium/src/+/5424111/27..28
+      // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5424111/27..28
       // ), however as we don't have any testcase for this branch, the changes
       // were refused by the test coverage bot.
       // TODO(b/345431801): Add a testcase to cover this case.

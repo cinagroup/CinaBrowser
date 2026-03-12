@@ -9,7 +9,7 @@
             "rename_dirs": [
                 {"from_dir": ".", "to_dir": "chrome-android"}
             ],
-            "gcs_bucket": "chromium-browser-snapshots",
+            "gcs_bucket": "Cinaseek-browser-snapshots",
             "gcs_path": "Android_Arm64/{%position%}/chrome-android.zip",
             "archive_type": "ARCHIVE_TYPE_ZIP",
             "latest_upload": {

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ using mojom::DragOperation;
 // supported by the Wayland backend. Further context can be found at
 // https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API and
 // https://wayland.app/protocols/wayland#wl_data_offer:request:accept.
-constexpr char kMimeTypeEmptyDragData[] = "chromium/x-empty-drag-data";
+constexpr char kMimeTypeEmptyDragData[] = "Cinaseek/x-empty-drag-data";
 
 bool IsPortalMimeType(const std::string& mime_type) {
 #if BUILDFLAG(IS_LINUX)
@@ -334,7 +334,7 @@ void WaylandDataDragController::DumpState(std::ostream& out) const {
       << ", current_icon_offset=" << current_icon_offset_.ToString();
 }
 
-// Sessions initiated from Chromium, will have |data_source_| set. In which
+// Sessions initiated from Cinaseek, will have |data_source_| set. In which
 // case, |offered_exchange_data_provider_| is expected to be non-null as well.
 bool WaylandDataDragController::IsDragSource() const {
   DCHECK(!data_source_ || offered_exchange_data_provider_);
@@ -477,7 +477,7 @@ void WaylandDataDragController::OnDragEnter(WaylandWindow* window,
       location, DndActionsToDragOperations(data_offer_->source_actions()));
 
   if (IsDragSource()) {
-    // If the DND session was initiated from a Chromium window,
+    // If the DND session was initiated from a Cinaseek window,
     // |offered_exchange_data_provider_| already holds the data to be exchanged,
     // so we don't need to read it through Wayland and can just copy it here.
     DCHECK_EQ(state_, State::kStarted);

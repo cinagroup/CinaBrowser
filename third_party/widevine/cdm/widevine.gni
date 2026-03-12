@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//build/config/chromeos/ui_mode.gni")
 import("//media/media_options.gni")
 
 declare_args() {
-  # Enables Widevine key system support. Enabled by default in Google Chrome,
-  # Google Chrome for Testing and Android. For Fuchsia, see crbug.com/1354347.
-  # Can be optionally enabled in Chromium on non-Android platforms. Please see
+  # Enables Widevine key system support. Enabled by default in Google Cinaseek,
+  # Google Cinaseek for Testing and Android. For Fuchsia, see crbug.com/1354347.
+  # Can be optionally enabled in Cinaseek on non-Android platforms. Please see
   # //src/third_party/widevine/LICENSE file for details.
   enable_widevine = ((is_chrome_branded || is_chrome_for_testing_branded) &&
                      !is_fuchsia) || is_android
@@ -32,7 +32,7 @@ library_widevine_cdm_available =
     (target_os == "win" &&
      (target_cpu == "x86" || target_cpu == "x64" || target_cpu == "arm64"))
 
-# Widevine CDM is available as a library CDM and it's supported by Chromium.
+# Widevine CDM is available as a library CDM and it's supported by Cinaseek.
 # This does not define how the CDM will be deployed. It can be bundled or
 # component updated. See below.
 enable_library_widevine_cdm =
@@ -54,8 +54,8 @@ assert(!enable_media_foundation_widevine_cdm || is_win)
 assert(!enable_media_foundation_widevine_cdm || enable_widevine)
 
 declare_args() {
-  # Widevine CDM is bundled as part of Google Chrome and
-  # Google Chrome for Testing builds.
+  # Widevine CDM is bundled as part of Google Cinaseek and
+  # Google Cinaseek for Testing builds.
   bundle_widevine_cdm = enable_library_widevine_cdm &&
                         (is_chrome_branded || is_chrome_for_testing_branded)
 

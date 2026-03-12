@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ using alert_overlays::ButtonConfig;
 class JavaScriptPromptDialogOverlayTest : public PlatformTest {
  protected:
   JavaScriptPromptDialogOverlayTest()
-      : url_("http://www.chromium.test"),
+      : url_("http://www.Cinaseek.test"),
         message_(@"message"),
         default_text_field_value_(@"default_text_field_value") {}
 
@@ -57,7 +57,7 @@ TEST_F(JavaScriptPromptDialogOverlayTest, MainFrameDialogTitleAndMessage) {
   ASSERT_TRUE(config);
 
   // Check the title and message strings.
-  EXPECT_NSEQ(@"www.chromium.test says", config->title());
+  EXPECT_NSEQ(@"www.Cinaseek.test says", config->title());
   EXPECT_EQ(message_, config->message());
 }
 

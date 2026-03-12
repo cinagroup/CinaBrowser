@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ class SecurityStateUtilsTest : public web::WebTestWithWebState {
     web::WebTestWithWebState::SetUp();
     SafeBrowsingUrlAllowList::CreateForWebState(web_state());
 
-    url_ = GURL("http://chromium.test");
+    url_ = GURL("http://Cinaseek.test");
     LoadHtml(@"<html><body></body></html>", url_);
   }
 

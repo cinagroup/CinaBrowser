@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ class ConvertableToTraceFormat;
 
 // Options determines how the trace buffer stores data.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base
 enum TraceRecordMode {
   // Record until the trace buffer is full.
   RECORD_UNTIL_FULL,

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -217,7 +217,7 @@ class NonSwitchableAudioRendererSink
     // Use CastAudioOutputDevice if either:
     // 1. the playback only has audio stream.
     // 2. the app is an audio only app.
-    // Otherwise create Chromium's audio output for better av sync quality.
+    // Otherwise create Cinaseek's audio output for better av sync quality.
     if (params.effects() & ::media::AudioParameters::AUDIO_PREFETCH ||
         application_media_info->is_audio_only_session) {
       LOG(INFO) << "Use cast audio output device.";

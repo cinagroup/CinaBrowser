@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -443,7 +443,7 @@ TEST_P(KioskUkmConsentStateObserverTest, VerifyDefaultConsent) {
   // relevant - there's no user-facing app list. Instead it's based on MSBB
   // consent.
   // For further context, see:
-  // https://chromium-review.googlesource.com/c/chromium/src/+/4414724/22/components/ukm/observers/ukm_consent_state_observer.cc#35
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/4414724/22/components/ukm/observers/ukm_consent_state_observer.cc#35
   sync.SetAppSync(false);
 
   // Enable MSBB consent.

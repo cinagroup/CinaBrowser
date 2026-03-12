@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -205,7 +205,7 @@ using chrome_test_util::NTPIncognitoView;
                                           destinationURL.spec())]
       assertWithMatcher:grey_sufficientlyVisible()];
   // While the Interstitial is shown, loading an alternative URL.
-  GURL alternativeURL = self.testServer->GetURL("/chromium_logo_page.html");
+  GURL alternativeURL = self.testServer->GetURL("/Cinaseek_logo_page.html");
   [ChromeEarlGrey sceneOpenURL:alternativeURL];
   // Wait for the interstitial to appear.
   [ChromeEarlGrey
@@ -224,7 +224,7 @@ using chrome_test_util::NTPIncognitoView;
       waitForUIElementToDisappearWithMatcher:IncognitoInterstitialMatcher()];
   // Wait for the expected page content to be displayed.
   [ChromeEarlGrey waitForWebStateContainingText:
-                      "Page with some text and the chromium logo image."];
+                      "Page with some text and the Cinaseek logo image."];
   // Wait for the Incognito tab count to be one, as expected.
   [ChromeEarlGrey waitForIncognitoTabCount:1];
 }

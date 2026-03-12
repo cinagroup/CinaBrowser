@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ TEST(ImageNavigationThrottleTest, RegistersForImageUrlsOnly) {
   EXPECT_FALSE(registers_for("chrome://other"));
   EXPECT_FALSE(registers_for("chrome-untrusted://image"));
   EXPECT_FALSE(registers_for("other://image"));
-  EXPECT_FALSE(registers_for("https://www.chromium.org"));
+  EXPECT_FALSE(registers_for("https://www.Cinaseek.org"));
 }
 
 TEST(ImageNavigationThrottleTest, BlocksRequests) {

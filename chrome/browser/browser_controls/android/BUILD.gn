@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,18 +6,18 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/browser_controls/BottomControlsLayer.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BottomControlsStacker.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BottomOverscrollHandler.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsMarginAdapter.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsOffsetTagsInfo.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsSizer.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsStateProvider.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsUtils.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserControlsVisibilityManager.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserStateBrowserControlsVisibilityDelegate.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/TopControlLayer.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/TopControlsStacker.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BottomControlsLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BottomControlsStacker.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BottomOverscrollHandler.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsMarginAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsOffsetTagsInfo.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsSizer.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsStateProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserControlsVisibilityManager.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserStateBrowserControlsVisibilityDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/TopControlLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/TopControlsStacker.java",
   ]
 
   deps = [
@@ -34,10 +34,10 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/browser_controls/BottomControlsStackerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BottomOverscrollHandlerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/BrowserStateBrowserControlsVisibilityDelegateTest.java",
-    "java/src/org/chromium/chrome/browser/browser_controls/TopControlsStackerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BottomControlsStackerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BottomOverscrollHandlerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/BrowserStateBrowserControlsVisibilityDelegateTest.java",
+    "java/src/org/Cinaseek/chrome/browser/browser_controls/TopControlsStackerUnitTest.java",
   ]
   deps = [
     ":java",

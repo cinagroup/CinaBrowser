@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ class SessionStartupPrefTest : public testing::Test {
 TEST_F(SessionStartupPrefTest, URLListIsFixedUp) {
   base::ListValue url_pref_list;
   url_pref_list.Append("google.com");
-  url_pref_list.Append("chromium.org");
+  url_pref_list.Append("Cinaseek.org");
   pref_service_->SetUserPref(prefs::kURLsToRestoreOnStartup,
                              std::move(url_pref_list));
 
@@ -40,19 +40,19 @@ TEST_F(SessionStartupPrefTest, URLListIsFixedUp) {
       SessionStartupPref::GetStartupPref(pref_service_.get());
   EXPECT_EQ(2u, result.urls.size());
   EXPECT_EQ("http://google.com/", result.urls[0].spec());
-  EXPECT_EQ("http://chromium.org/", result.urls[1].spec());
+  EXPECT_EQ("http://Cinaseek.org/", result.urls[1].spec());
 }
 
 TEST_F(SessionStartupPrefTest, URLListManagedOverridesUser) {
   base::ListValue url_pref_list1;
-  url_pref_list1.Append("chromium.org");
+  url_pref_list1.Append("Cinaseek.org");
   pref_service_->SetUserPref(prefs::kURLsToRestoreOnStartup,
                              std::move(url_pref_list1));
 
   base::ListValue url_pref_list2;
-  url_pref_list2.Append("chromium.org");
-  url_pref_list2.Append("chromium.org");
-  url_pref_list2.Append("chromium.org");
+  url_pref_list2.Append("Cinaseek.org");
+  url_pref_list2.Append("Cinaseek.org");
+  url_pref_list2.Append("Cinaseek.org");
   pref_service_->SetManagedPref(prefs::kURLsToRestoreOnStartup,
                                 std::move(url_pref_list2));
 
@@ -62,7 +62,7 @@ TEST_F(SessionStartupPrefTest, URLListManagedOverridesUser) {
 
   SessionStartupPref override_test =
       SessionStartupPref(SessionStartupPref::URLS);
-  override_test.urls.push_back(GURL("dev.chromium.org"));
+  override_test.urls.push_back(GURL("dev.Cinaseek.org"));
   SessionStartupPref::SetStartupPref(pref_service_.get(), override_test);
 
   result = SessionStartupPref::GetStartupPref(pref_service_.get());

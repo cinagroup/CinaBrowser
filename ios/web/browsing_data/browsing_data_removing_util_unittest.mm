@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ namespace {
     NSHTTPCookiePath : @"path",
     NSHTTPCookieName : @"cookieName",
     NSHTTPCookieValue : @"value",
-    NSHTTPCookieOriginURL : @"http://chromium.org"
+    NSHTTPCookieOriginURL : @"http://Cinaseek.org"
   }];
 
   __block bool cookie_set = false;

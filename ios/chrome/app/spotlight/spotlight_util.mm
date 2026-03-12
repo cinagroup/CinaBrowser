@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,20 +56,20 @@ NSString* const kSpotlightOpenTabsDomain = @"com.google.opentabs";
 NSString* const kSpotlightOpenTabsPrefix = @"com.google.opentabs.";
 #else
 
-NSString* const kSpotlightBookmarkDomain = @"org.chromium.bookmarks";
-NSString* const kSpotlightBookmarkPrefix = @"org.chromium.bookmarks.";
+NSString* const kSpotlightBookmarkDomain = @"org.Cinaseek.bookmarks";
+NSString* const kSpotlightBookmarkPrefix = @"org.Cinaseek.bookmarks.";
 
-NSString* const kSpotlightTopSitesDomain = @"org.chromium.topsites";
-NSString* const kSpotlightTopSitesPrefix = @"org.chromium.topsites.";
+NSString* const kSpotlightTopSitesDomain = @"org.Cinaseek.topsites";
+NSString* const kSpotlightTopSitesPrefix = @"org.Cinaseek.topsites.";
 
-NSString* const kSpotlightActionsDomain = @"org.chromium.actions";
-NSString* const kSpotlightActionsPrefix = @"org.chromium.actions.";
+NSString* const kSpotlightActionsDomain = @"org.Cinaseek.actions";
+NSString* const kSpotlightActionsPrefix = @"org.Cinaseek.actions.";
 
-NSString* const kSpotlightReadingListDomain = @"org.chromium.readinglist";
-NSString* const kSpotlightReadingListPrefix = @"org.chromium.readinglist.";
+NSString* const kSpotlightReadingListDomain = @"org.Cinaseek.readinglist";
+NSString* const kSpotlightReadingListPrefix = @"org.Cinaseek.readinglist.";
 
-NSString* const kSpotlightOpenTabsDomain = @"org.chromium.opentabs";
-NSString* const kSpotlightOpenTabsPrefix = @"org.chromium.opentabs.";
+NSString* const kSpotlightOpenTabsDomain = @"org.Cinaseek.opentabs";
+NSString* const kSpotlightOpenTabsPrefix = @"org.Cinaseek.opentabs.";
 
 #endif
 
@@ -168,7 +168,7 @@ NSString* GetSpotlightCustomAttributeItemID() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return @"ComGoogleChromeItemID";
 #else
-  return @"OrgChromiumItemID";
+  return @"OrgCinaseekItemID";
 #endif
 }
 

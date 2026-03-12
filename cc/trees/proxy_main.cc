@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -526,7 +526,7 @@ void ProxyMain::BeginMainFrame(
   }
 
   // For Blink implementations, this is the typical hook that will deliver
-  // intersection observer events for chromium-internal customers, see:
+  // intersection observer events for Cinaseek-internal customers, see:
   // blink::LocalFrameView::RunPostLifecycleSteps.
   // Canvas.onpaint requires running post lifecycle steps before the commit, so
   // there are some scenarios where the post lifecycle steps are run above, via

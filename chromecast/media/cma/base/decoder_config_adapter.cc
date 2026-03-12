@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -244,7 +244,7 @@ AudioConfig DecoderConfigAdapter::ToCastAudioConfig(
       ToEncryptionScheme(config.encryption_scheme());
 
 #if BUILDFLAG(IS_ANDROID)
-  // On Android, Chromium's mp4 parser adds extra data for AAC, but we don't
+  // On Android, Cinaseek's mp4 parser adds extra data for AAC, but we don't
   // need this with CMA.
   if (audio_config.codec == kCodecAAC) {
     audio_config.extra_data.clear();
@@ -267,10 +267,10 @@ AudioConfig DecoderConfigAdapter::ToCastAudioConfig(
 }
 
 // static
-#define STATIC_ASSERT_MATCHING_ENUM(chromium_name, chromecast_name)          \
-  static_assert(static_cast<int>(::media::VideoColorSpace::chromium_name) == \
+#define STATIC_ASSERT_MATCHING_ENUM(Cinaseek_name, chromecast_name)          \
+  static_assert(static_cast<int>(::media::VideoColorSpace::Cinaseek_name) == \
                     static_cast<int>(::chromecast::media::chromecast_name),  \
-                "mismatching status enum values: " #chromium_name)
+                "mismatching status enum values: " #Cinaseek_name)
 
 STATIC_ASSERT_MATCHING_ENUM(PrimaryID::BT709, PrimaryID::BT709);
 STATIC_ASSERT_MATCHING_ENUM(PrimaryID::UNSPECIFIED, PrimaryID::UNSPECIFIED);
@@ -316,10 +316,10 @@ STATIC_ASSERT_MATCHING_ENUM(MatrixID::BT2020_CL, MatrixID::BT2020_CL);
 STATIC_ASSERT_MATCHING_ENUM(MatrixID::YDZDX, MatrixID::YDZDX);
 #undef STATIC_ASSERT_MATCHING_ENUM
 
-#define STATIC_ASSERT_MATCHING_ENUM(chromium_name, chromecast_name)        \
-  static_assert(static_cast<int>(::gfx::ColorSpace::chromium_name) ==       \
+#define STATIC_ASSERT_MATCHING_ENUM(Cinaseek_name, chromecast_name)        \
+  static_assert(static_cast<int>(::gfx::ColorSpace::Cinaseek_name) ==       \
                     static_cast<int>(::chromecast::media::chromecast_name), \
-                "mismatching status enum values: " #chromium_name)
+                "mismatching status enum values: " #Cinaseek_name)
 
 STATIC_ASSERT_MATCHING_ENUM(RangeID::INVALID, RangeID::INVALID);
 STATIC_ASSERT_MATCHING_ENUM(RangeID::LIMITED, RangeID::LIMITED);

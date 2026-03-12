@@ -18,7 +18,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_audio_backend_unittests",
         "test_id_prefix": "ninja://chromecast/media/cma/backend:cast_audio_backend_unittests/"
@@ -34,7 +34,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_base_unittests",
         "test_id_prefix": "ninja://chromecast/base:cast_base_unittests/"
@@ -50,7 +50,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_cast_core_unittests",
         "test_id_prefix": "ninja://chromecast/cast_core:cast_cast_core_unittests/"
@@ -66,7 +66,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_crash_unittests",
         "test_id_prefix": "ninja://chromecast/crash:cast_crash_unittests/"
@@ -82,7 +82,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_display_settings_unittests",
         "test_id_prefix": "ninja://chromecast/ui/display_settings:cast_display_settings_unittests/"
@@ -98,7 +98,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_graphics_unittests",
         "test_id_prefix": "ninja://chromecast/graphics:cast_graphics_unittests/"
@@ -114,7 +114,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_media_unittests",
         "test_id_prefix": "ninja://chromecast/media:cast_media_unittests/"
@@ -130,7 +130,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_shell_browsertests",
         "test_id_prefix": "ninja://chromecast:cast_shell_browsertests/"
@@ -146,7 +146,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_shell_unittests",
         "test_id_prefix": "ninja://chromecast:cast_shell_unittests/"
@@ -162,7 +162,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "cast_unittests",
         "test_id_prefix": "ninja://media/cast:cast_unittests/"
@@ -178,7 +178,7 @@
           "dimensions": {
             "os": "Ubuntu-22.04"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "sandbox_linux_unittests",
         "test_id_prefix": "ninja://sandbox/linux:sandbox_linux_unittests/"

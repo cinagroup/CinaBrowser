@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,7 +94,7 @@ QuicSessionAttempt::QuicSessionAttempt(
     IPEndPoint proxy_peer_endpoint,
     quic::ParsedQuicVersion quic_version,
     int cert_verify_flags,
-    std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream,
+    std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream,
     const HttpUserAgentSettings* http_user_agent_settings,
     MultiplexedSessionCreationInitiator session_creation_initiator,
     std::optional<ConnectionManagementConfig> connection_management_config)
@@ -355,7 +355,7 @@ int QuicSessionAttempt::DoConfirmConnection(int rv) {
 
   // There may well now be an active session for this IP.  If so, use the
   // existing session instead.
-  if (QuicChromiumClientSession* matching_session =
+  if (QuicCinaseekClientSession* matching_session =
           pool()->HasMatchingIpSession(
               key(), {ToIPEndPoint(session_->connection()->peer_address())},
               /*aliases=*/{}, use_dns_aliases_)) {

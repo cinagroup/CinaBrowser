@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/ios-catalyst/gn-args.json"
@@ -10,18 +10,18 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "ios-catalyst",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.mac",
+              "builder_group": "Cinaseek.mac",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "mac_toolchain"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "ios"
               },
@@ -36,13 +36,13 @@
         {
           "bucket": "ci",
           "builder": "ios-catalyst",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "ios-catalyst",
-          "group": "tryserver.chromium.mac"
+          "group": "tryserver.Cinaseek.mac"
         }
       ],
       "retry_failed_shards": true,
@@ -57,7 +57,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -67,14 +67,14 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.mac",
+  "builder_group": "Cinaseek.mac",
   "gardener_rotations": [
-    "chromium",
+    "Cinaseek",
     "ios"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium",
+    "Cinaseek",
     "ios"
   ],
   "xcode_build_version": "17a400"

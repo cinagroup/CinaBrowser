@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -267,7 +267,7 @@ CGFloat GetSubtitleMarginDistance() {
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   UIImage* logoImage = [UIImage imageNamed:kChromeSearchEngineChoiceIcon];
 #else
-  UIImage* logoImage = [UIImage imageNamed:kChromiumSearchEngineChoiceIcon];
+  UIImage* logoImage = [UIImage imageNamed:kCinaseekSearchEngineChoiceIcon];
 #endif
   UIImageView* logoImageView = [[UIImageView alloc] initWithImage:logoImage];
   [scrollContentView addSubview:logoImageView];

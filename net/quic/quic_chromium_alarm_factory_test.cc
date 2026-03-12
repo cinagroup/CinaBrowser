@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
 
 #include "net/quic/test_task_runner.h"
 #include "net/third_party/quiche/src/quiche/quic/test_tools/mock_clock.h"
@@ -24,18 +24,18 @@ class TestDelegate : public quic::QuicAlarm::DelegateWithoutContext {
   bool fired_ = false;
 };
 
-class QuicChromiumAlarmFactoryTest : public ::testing::Test {
+class QuicCinaseekAlarmFactoryTest : public ::testing::Test {
  protected:
-  QuicChromiumAlarmFactoryTest()
+  QuicCinaseekAlarmFactoryTest()
       : runner_(base::MakeRefCounted<TestTaskRunner>(&clock_)),
         alarm_factory_(runner_.get(), &clock_) {}
 
   scoped_refptr<TestTaskRunner> runner_;
-  QuicChromiumAlarmFactory alarm_factory_;
+  QuicCinaseekAlarmFactory alarm_factory_;
   quic::MockClock clock_;
 };
 
-TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarm) {
+TEST_F(QuicCinaseekAlarmFactoryTest, CreateAlarm) {
   TestDelegate* delegate = new TestDelegate();
   std::unique_ptr<quic::QuicAlarm> alarm(alarm_factory_.CreateAlarm(delegate));
 
@@ -55,7 +55,7 @@ TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarm) {
   EXPECT_TRUE(delegate->fired());
 }
 
-TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndCancel) {
+TEST_F(QuicCinaseekAlarmFactoryTest, CreateAlarmAndCancel) {
   TestDelegate* delegate = new TestDelegate();
   std::unique_ptr<quic::QuicAlarm> alarm(alarm_factory_.CreateAlarm(delegate));
 
@@ -80,7 +80,7 @@ TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndCancel) {
   EXPECT_FALSE(delegate->fired());
 }
 
-TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndReset) {
+TEST_F(QuicCinaseekAlarmFactoryTest, CreateAlarmAndReset) {
   TestDelegate* delegate = new TestDelegate();
   std::unique_ptr<quic::QuicAlarm> alarm(alarm_factory_.CreateAlarm(delegate));
 
@@ -122,7 +122,7 @@ TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndReset) {
   EXPECT_TRUE(delegate->fired());
 }
 
-TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndResetEarlier) {
+TEST_F(QuicCinaseekAlarmFactoryTest, CreateAlarmAndResetEarlier) {
   TestDelegate* delegate = new TestDelegate();
   std::unique_ptr<quic::QuicAlarm> alarm(alarm_factory_.CreateAlarm(delegate));
 
@@ -168,7 +168,7 @@ TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndResetEarlier) {
   EXPECT_FALSE(delegate->fired());
 }
 
-TEST_F(QuicChromiumAlarmFactoryTest, CreateAlarmAndUpdate) {
+TEST_F(QuicCinaseekAlarmFactoryTest, CreateAlarmAndUpdate) {
   TestDelegate* delegate = new TestDelegate();
   std::unique_ptr<quic::QuicAlarm> alarm(alarm_factory_.CreateAlarm(delegate));
 

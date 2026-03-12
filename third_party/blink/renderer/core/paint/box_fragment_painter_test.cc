@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ TEST_P(BoxFragmentPainterTest, AddUrlRects) {
     <!DOCTYPE html>
     <div>
       <p>
-        <a href="https://www.chromium.org">Chromium</a>
+        <a href="https://www.Cinaseek.org">Cinaseek</a>
       </p>
       <p>
         <a href="https://www.wikipedia.org">Wikipedia</a>
@@ -128,7 +128,7 @@ TEST_P(BoxFragmentPainterTest, AddUrlRects) {
   std::vector<GURL> links;
   ExtractLinks(record, &links);
   ASSERT_EQ(links.size(), 2U);
-  EXPECT_EQ(links[0].spec(), "https://www.chromium.org/");
+  EXPECT_EQ(links[0].spec(), "https://www.Cinaseek.org/");
   EXPECT_EQ(links[1].spec(), "https://www.wikipedia.org/");
 }
 

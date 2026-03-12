@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -225,7 +225,7 @@ class AuthenticatorRequestDialogController
 
   // To be called when there are no passkeys from an internal authenticator.
   // This is a rare case but can happen when the user grants passkeys permission
-  // on macOS as part of a request flow and then Chromium realises that the
+  // on macOS as part of a request flow and then Cinaseek realises that the
   // request should never have been sent to iCloud Keychain in the first place.
   bool OnNoPasskeys();
 

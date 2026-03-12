@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 namespace optimization_guide {
 
 // This class maintains all the currently supported TFLite
-// operations for the Chromium build of TFLite and registers them for use.
+// operations for the Cinaseek build of TFLite and registers them for use.
 class TFLiteOpResolver : public tflite::MutableOpResolver {
  public:
   TFLiteOpResolver();

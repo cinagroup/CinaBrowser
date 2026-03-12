@@ -1,9 +1,9 @@
 {
-  "$build/chromium_orchestrator": {
+  "$build/Cinaseek_orchestrator": {
     "compilator": "fuchsia-x64-cast-receiver-rel-compilator",
     "compilator_watcher_git_revision": "27c191f304c8d7329a393d8a69020fc14032c3c3"
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/fuchsia-x64-cast-receiver-rel/gn-args.json"
@@ -14,17 +14,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "fuchsia-x64-cast-receiver-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.fuchsia",
+              "builder_group": "Cinaseek.fuchsia",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "fuchsia"
               },
@@ -32,7 +32,7 @@
                 "apply_configs": [
                   "fuchsia_x64"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -42,7 +42,7 @@
         {
           "bucket": "ci",
           "builder": "fuchsia-x64-cast-receiver-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "retry_without_patch": false,
@@ -71,7 +71,7 @@
     "keep_going": 3,
     "output_local_strategy": "greedy",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": -1
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -81,7 +81,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.fuchsia",
+  "builder_group": "tryserver.Cinaseek.fuchsia",
   "cq": "required",
-  "recipe": "chromium/orchestrator"
+  "recipe": "Cinaseek/orchestrator"
 }

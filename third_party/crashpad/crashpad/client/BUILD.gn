@@ -89,7 +89,7 @@ crashpad_static_library("client") {
 
   public_deps = [
     ":common",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../util",
   ]
 
@@ -157,7 +157,7 @@ static_library("common") {
 
   public_configs = [ "..:crashpad_config" ]
   public_deps = [
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../util",
   ]
   deps = [ "../util" ]
@@ -173,7 +173,7 @@ crashpad_executable("ring_buffer_annotation_load_test") {
   sources = [ "ring_buffer_annotation_load_test_main.cc" ]
   deps = [
     ":client",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../tools:tool_support",
   ]
 }
@@ -217,7 +217,7 @@ source_set("client_test") {
 
   deps = [
     ":client",
-    "$mini_chromium_source_parent:base",
+    "$mini_Cinaseek_source_parent:base",
     "../compat",
     "../snapshot",
     "../test",

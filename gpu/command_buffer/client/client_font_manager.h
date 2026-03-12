@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #include "base/memory/raw_ptr.h"
 #include "gpu/command_buffer/client/client_discardable_manager.h"
 #include "gpu/raster_export.h"
-#include "third_party/skia/include/private/chromium/SkChromeRemoteGlyphCache.h"
+#include "third_party/skia/include/private/Cinaseek/SkChromeRemoteGlyphCache.h"
 
 namespace gpu {
 class CommandBuffer;

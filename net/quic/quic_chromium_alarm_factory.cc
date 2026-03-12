@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
 
 #include "base/check.h"
 #include "base/functional/bind.h"
@@ -12,7 +12,7 @@
 #include "base/time/tick_clock.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
 
 namespace net {
 
@@ -64,7 +64,7 @@ class QuicChromeAlarm : public quic::QuicAlarm, public base::TickClock {
 
   // base::TickClock:
   base::TimeTicks NowTicks() const override {
-    return quic::QuicChromiumClock::QuicTimeToTimeTicks(clock_->Now());
+    return quic::QuicCinaseekClock::QuicTimeToTimeTicks(clock_->Now());
   }
 
   const raw_ptr<const quic::QuicClock> clock_;
@@ -74,14 +74,14 @@ class QuicChromeAlarm : public quic::QuicAlarm, public base::TickClock {
 
 }  // namespace
 
-QuicChromiumAlarmFactory::QuicChromiumAlarmFactory(
+QuicCinaseekAlarmFactory::QuicCinaseekAlarmFactory(
     base::SequencedTaskRunner* task_runner,
     const quic::QuicClock* clock)
     : task_runner_(task_runner), clock_(clock) {}
 
-QuicChromiumAlarmFactory::~QuicChromiumAlarmFactory() = default;
+QuicCinaseekAlarmFactory::~QuicCinaseekAlarmFactory() = default;
 
-quic::QuicArenaScopedPtr<quic::QuicAlarm> QuicChromiumAlarmFactory::CreateAlarm(
+quic::QuicArenaScopedPtr<quic::QuicAlarm> QuicCinaseekAlarmFactory::CreateAlarm(
     quic::QuicArenaScopedPtr<quic::QuicAlarm::Delegate> delegate,
     quic::QuicConnectionArena* arena) {
   if (arena != nullptr) {
@@ -93,7 +93,7 @@ quic::QuicArenaScopedPtr<quic::QuicAlarm> QuicChromiumAlarmFactory::CreateAlarm(
   }
 }
 
-quic::QuicAlarm* QuicChromiumAlarmFactory::CreateAlarm(
+quic::QuicAlarm* QuicCinaseekAlarmFactory::CreateAlarm(
     quic::QuicAlarm::Delegate* delegate) {
   return new QuicChromeAlarm(
       clock_, task_runner_,

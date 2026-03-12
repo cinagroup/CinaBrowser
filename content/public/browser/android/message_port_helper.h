@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace content::android {
 // in Java).
 
 // Take the ownership of `MessagePortDescriptor`s, and create a java array of
-// `org.chromium.content_public.browser.MessagePort` to wrap them.
+// `org.Cinaseek.content_public.browser.MessagePort` to wrap them.
 CONTENT_EXPORT base::android::ScopedJavaLocalRef<jobjectArray>
     CreateJavaMessagePort(std::vector<blink::MessagePortDescriptor>);
 

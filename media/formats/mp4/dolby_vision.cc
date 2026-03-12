@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -106,7 +106,7 @@ VideoColorSpace ParseDolbyVisionColorSpace(VideoCodecProfile profile,
                                            uint8_t compatibility_id) {
   switch (profile) {
     case VideoCodecProfile::DOLBYVISION_PROFILE5:
-      // Dolby Vision use IPT-PQ-C2 as matrix, but chromium has no definition
+      // Dolby Vision use IPT-PQ-C2 as matrix, but Cinaseek has no definition
       // for it, so use BT.2020 NCL as a close approximation.
       return VideoColorSpace(VideoColorSpace::PrimaryID::BT2020,
                              VideoColorSpace::TransferID::SMPTEST2084,

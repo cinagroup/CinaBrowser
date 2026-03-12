@@ -23,7 +23,7 @@
           },
           "expiration": 18000,
           "hard_timeout": 14400,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 46
         },
         "test": "browser_tests",
@@ -49,7 +49,7 @@
           },
           "expiration": 18000,
           "hard_timeout": 14400,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 8
         },
         "test": "content_browsertests",
@@ -75,7 +75,7 @@
           },
           "expiration": 18000,
           "hard_timeout": 14400,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "interactive_ui_tests",

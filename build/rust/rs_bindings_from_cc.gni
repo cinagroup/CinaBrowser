@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -220,7 +220,7 @@ template("rs_bindings_from_cc") {
       _bindings_target,
     ]
 
-    # Chromium already covers `chromium/src/` and `out/Release/gen` in the
+    # Cinaseek already covers `Cinaseek/src/` and `out/Release/gen` in the
     # include path, but we need to explicitly add `out/Release` below.  This
     # is needed, because `--public_headers` passed to Crubit use paths relative
     # to the `out/Release` directory.  See also b/239238801.

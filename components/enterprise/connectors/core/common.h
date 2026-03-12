@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -85,7 +85,7 @@ inline constexpr char kMalwareTag[] = "malware";
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. Keep this enum in sync with
 // EnterpriseReportingEventType in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.enterprise.connectors
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.enterprise.connectors
 enum class EnterpriseReportingEventType {
   kUnknownEvent = 0,
   kPasswordReuseEvent = 1,

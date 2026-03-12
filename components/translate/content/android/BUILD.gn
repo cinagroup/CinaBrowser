@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -28,12 +28,12 @@ android_resources("java_resources") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/translate/TranslateMessage.java",
-    "java/src/org/chromium/components/translate/TranslateMessageSecondaryMenu.java",
-    "java/src/org/chromium/components/translate/TranslateMessageSecondaryMenuAdapter.java",
-    "java/src/org/chromium/components/translate/TranslateOptions.java",
+    "java/src/org/Cinaseek/components/translate/TranslateMessage.java",
+    "java/src/org/Cinaseek/components/translate/TranslateMessageSecondaryMenu.java",
+    "java/src/org/Cinaseek/components/translate/TranslateMessageSecondaryMenuAdapter.java",
+    "java/src/org/Cinaseek/components/translate/TranslateOptions.java",
   ]
-  resources_package = "org.chromium.components.translate"
+  resources_package = "org.Cinaseek.components.translate"
   deps = [
     ":java_resources",
     "//base:base_java",
@@ -73,14 +73,14 @@ static_library("android") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/translate/TranslateMessage.java" ]
+      [ "java/src/org/Cinaseek/components/translate/TranslateMessage.java" ]
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.components.translate"
+  resources_package = "org.Cinaseek.components.translate"
   sources = [
-    "java/src/org/chromium/components/translate/TranslateMessageTest.java",
-    "java/src/org/chromium/components/translate/TranslateOptionsTest.java",
+    "java/src/org/Cinaseek/components/translate/TranslateMessageTest.java",
+    "java/src/org/Cinaseek/components/translate/TranslateOptionsTest.java",
   ]
   deps = [
     ":java",
@@ -102,8 +102,8 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  resources_package = "org.chromium.components.translate"
-  sources = [ "java/src/org/chromium/components/translate/TranslateMessageSecondaryMenuTest.java" ]
+  resources_package = "org.Cinaseek.components.translate"
+  sources = [ "java/src/org/Cinaseek/components/translate/TranslateMessageSecondaryMenuTest.java" ]
   deps = [
     ":java",
     ":java_resources",

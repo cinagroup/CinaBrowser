@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -130,7 +130,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
     const FourCharCode fourcc =
         CMFormatDescriptionGetMediaSubType(captureFormat.formatDescription);
     VideoPixelFormat pixelFormat =
-        [VideoCaptureDeviceAVFoundation FourCCToChromiumPixelFormat:fourcc];
+        [VideoCaptureDeviceAVFoundation FourCCToCinaseekPixelFormat:fourcc];
     CMVideoDimensions dimensions =
         CMVideoFormatDescriptionGetDimensions(captureFormat.formatDescription);
 
@@ -187,7 +187,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
       }
     }
 
-    // Finally, compare according to Chromium preference.
+    // Finally, compare according to Cinaseek preference.
     if (bestCaptureFormat) {
       if (VideoCaptureFormat::ComparePixelFormatPreference(bestPixelFormat,
                                                            pixelFormat)) {
@@ -287,7 +287,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
 
 #pragma mark Class methods
 
-+ (media::VideoPixelFormat)FourCCToChromiumPixelFormat:(FourCharCode)code {
++ (media::VideoPixelFormat)FourCCToCinaseekPixelFormat:(FourCharCode)code {
   switch (code) {
     // Mac fourcc: "420f".
     case kCVPixelFormatType_420YpCbCr8BiPlanarFullRange:
@@ -319,7 +319,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
   if ((self = [super init])) {
     _mainThreadTaskRunner = base::SingleThreadTaskRunner::GetCurrentDefault();
     _sampleQueue =
-        dispatch_queue_create("org.chromium.VideoCaptureDeviceAVFoundation."
+        dispatch_queue_create("org.Cinaseek.VideoCaptureDeviceAVFoundation."
                               "SampleDeliveryDispatchQueue",
                               DISPATCH_QUEUE_SERIAL);
     DCHECK(frameReceiver);
@@ -1071,7 +1071,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
     } else {
       [self logMessage:
                 "Capture appears to have stalled, restarting may have helped "
-                "but is disabled. See https://issues.chromium.org/335210401."];
+                "but is disabled. See https://issues.Cinaseek.org/335210401."];
     }
   }
 }
@@ -1209,7 +1209,7 @@ AVCaptureDeviceFormat* FindBestCaptureFormat(
   OSType sampleBufferPixelFormat =
       CMFormatDescriptionGetMediaSubType(formatDescription);
   media::VideoPixelFormat videoPixelFormat = [VideoCaptureDeviceAVFoundation
-      FourCCToChromiumPixelFormat:sampleBufferPixelFormat];
+      FourCCToCinaseekPixelFormat:sampleBufferPixelFormat];
 
   const media::VideoCaptureFormat captureFormat(
       gfx::Size(dimensions.width, dimensions.height), _frameRate,

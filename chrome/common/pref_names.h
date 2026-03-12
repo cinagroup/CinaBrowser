@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3761,7 +3761,7 @@ inline constexpr char kCorsNonWildcardRequestHeadersSupport[] =
 
 // A boolean indicating whether documents are allowed to be assigned to
 // origin-keyed agent clusters by default (i.e., when the Origin-Agent-Cluster
-// header is absent). When true, Chromium may enable this behavior based on
+// header is absent). When true, Cinaseek may enable this behavior based on
 // feature settings. When false, site-keyed agent clusters will continue to be
 // used by default.
 inline constexpr char kOriginAgentClusterDefaultEnabled[] =
@@ -4074,7 +4074,7 @@ inline constexpr char kAndroidTipNotificationShownCustomizeMVT[] =
     "android.tips.notifications.customize_mvt_shown";
 inline constexpr char kAndroidTipNotificationShownRecentTabs[] =
     "android.tips.notifications.recent_tabs_shown";
-// LINT.ThenChange(//chrome/android/java/src/org/chromium/chrome/browser/notifications/tips/TipsUtils.java:TipsShownPrefs)
+// LINT.ThenChange(//chrome/android/java/src/org/Cinaseek/chrome/browser/notifications/tips/TipsUtils.java:TipsShownPrefs)
 #endif  // BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(IS_ANDROID)

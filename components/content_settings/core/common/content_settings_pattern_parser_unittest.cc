@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -436,7 +436,7 @@ TEST(ContentSettingsPatternParserTest, SerializePatterns) {
 TEST(ContentSettingsPatternParserTest, IdempotencyOfCanonicalization) {
   const std::string pattern_specs[] = {
       "abc",
-      "https://chromium.org",
+      "https://Cinaseek.org",
       "file:///foo/",
       "file:///foo/:/bar/:/baz",
       "https://foo/:/bar/:/baz",

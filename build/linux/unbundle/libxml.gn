@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -24,8 +24,8 @@ static_library("libxml_utils") {
     "//services/data_decoder:xml_parser_fuzzer_deps",
   ]
   sources = [
-    "chromium/libxml_utils.cc",
-    "chromium/libxml_utils.h",
+    "Cinaseek/libxml_utils.cc",
+    "Cinaseek/libxml_utils.h",
   ]
   public_configs = [ ":system_libxml" ]
 }
@@ -41,8 +41,8 @@ static_library("xml_reader") {
     "//services/data_decoder:*",
   ]
   sources = [
-    "chromium/xml_reader.cc",
-    "chromium/xml_reader.h",
+    "Cinaseek/xml_reader.cc",
+    "Cinaseek/xml_reader.h",
   ]
   deps = [ ":libxml_utils" ]
 }
@@ -52,8 +52,8 @@ static_library("xml_writer") {
   # The XmlWriter is considered safe to use from any target.
   visibility = [ "*" ]
   sources = [
-    "chromium/xml_writer.cc",
-    "chromium/xml_writer.h",
+    "Cinaseek/xml_writer.cc",
+    "Cinaseek/xml_writer.h",
   ]
   deps = [ ":libxml_utils" ]
 }

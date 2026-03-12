@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@
 #import "components/update_client/activity_data_service.h"
 #import "components/update_client/crx_cache.h"
 #import "components/update_client/crx_downloader_factory.h"
-#import "components/update_client/net/network_chromium.h"
+#import "components/update_client/net/network_Cinaseek.h"
 #import "components/update_client/patch/patch_impl.h"
 #import "components/update_client/patcher.h"
 #import "components/update_client/persisted_data.h"
@@ -167,7 +167,7 @@ scoped_refptr<update_client::NetworkFetcherFactory>
 IOSConfigurator::GetNetworkFetcherFactory() {
   if (!network_fetcher_factory_) {
     network_fetcher_factory_ =
-        base::MakeRefCounted<update_client::NetworkFetcherChromiumFactory>(
+        base::MakeRefCounted<update_client::NetworkFetcherCinaseekFactory>(
             GetApplicationContext()->GetSharedURLLoaderFactory(),
             // Never send cookies for component update downloads.
             base::BindRepeating([](const GURL& url) { return false; }));
@@ -187,7 +187,7 @@ IOSConfigurator::GetCrxDownloaderFactory() {
 scoped_refptr<update_client::UnzipperFactory>
 IOSConfigurator::GetUnzipperFactory() {
   if (!unzip_factory_) {
-    unzip_factory_ = base::MakeRefCounted<update_client::UnzipChromiumFactory>(
+    unzip_factory_ = base::MakeRefCounted<update_client::UnzipCinaseekFactory>(
         base::BindRepeating(&unzip::LaunchInProcessUnzipper));
   }
   return unzip_factory_;
@@ -196,7 +196,7 @@ IOSConfigurator::GetUnzipperFactory() {
 scoped_refptr<update_client::PatcherFactory>
 IOSConfigurator::GetPatcherFactory() {
   if (!patch_factory_) {
-    patch_factory_ = base::MakeRefCounted<update_client::PatchChromiumFactory>(
+    patch_factory_ = base::MakeRefCounted<update_client::PatchCinaseekFactory>(
         base::BindRepeating(&patch::LaunchInProcessFilePatcher));
   }
   return patch_factory_;

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ class ViewSkiaGoldPixelDiff {
   // remote golden image. Returns true if the screenshot is the same as the
   // golden image (compared with hashcode).
   // `screenshot_name` specifies the name of the screenshot to be taken. For
-  // every screenshot you take, it should have a unique name across Chromium,
+  // every screenshot you take, it should have a unique name across Cinaseek,
   // because all screenshots (aka golden images) stores in one bucket on GCS.
   // The standard convention is to use the browser test class name as the
   // prefix. The name will be `screenshot_prefix` + "_" + `screenshot_name`.

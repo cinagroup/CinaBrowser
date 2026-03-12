@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ NET_EXPORT_PRIVATE bool IfaddrsToNetworkInterfaceList(
 // A version of GetNetworkList() that uses getifaddrs(). Only callable on
 // Android N+ where getifaddrs() was available.
 // Also, some devices are with buggy getifaddrs(). To work around,
-// Use Chromium's own getifaddrs() implementation if
+// Use Cinaseek's own getifaddrs() implementation if
 // use_alternative_getifaddrs is true.
 REQUIRES_ANDROID_API(GETIFADDRS_MIN_API)
 bool GetNetworkListUsingGetifaddrs(NetworkInterfaceList* networks,

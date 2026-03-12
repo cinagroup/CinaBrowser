@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ class H264Picture : public base::RefCountedThreadSafe<H264Picture> {
 
   // Values calculated per H.264 specification or taken from slice header.
   // See spec for more details on each (some names have been converted from
-  // CamelCase in spec to Chromium-style names).
+  // CamelCase in spec to Cinaseek-style names).
   int pic_order_cnt_type = 0;
   int top_field_order_cnt = 0;
   int bottom_field_order_cnt = 0;

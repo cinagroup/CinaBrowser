@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -264,7 +264,7 @@ perfetto::protos::gen::ChromeFieldTracingConfig CreateSimpleScenarioConfig() {
             }
           }
         }
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -286,7 +286,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
         manual_trigger_name: "upload_trigger"
       }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -334,7 +334,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
         manual_trigger_name: "start_trigger"
       }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -373,7 +373,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
         manual_trigger_name: "upload_trigger"
       }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -490,7 +490,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
       }
       stop_rules: { name: "stop_trigger" manual_trigger_name: "stop_trigger" }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
     scenarios: {
@@ -500,7 +500,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
         manual_trigger_name: "other_start_trigger"
       }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -530,7 +530,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
       start_rules: { manual_trigger_name: "start_trigger" }
       stop_rules: { manual_trigger_name: "stop_trigger" }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
       nested_scenarios: {
         scenario_name: "nested_scenario"
@@ -758,7 +758,7 @@ IN_PROC_BROWSER_TEST_F(BackgroundTracingManagerBrowserTest,
       start_rules: { manual_trigger_name: "start_trigger" }
       upload_rules: { histogram: { histogram_name: "fake" min_value: 1 } }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";
@@ -961,7 +961,7 @@ IN_PROC_BROWSER_TEST_F(ProtoBackgroundTracingTest,
       scenario_name: "test_scenario"
       start_rules: { manual_trigger_name: "start_trigger" }
       trace_config: {
-        data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+        data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
       }
     }
   )pb";

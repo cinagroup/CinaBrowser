@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,12 +24,12 @@
 #include "net/http/transport_security_state.h"
 #include "net/log/test_net_log.h"
 #include "net/log/test_net_log_util.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_crypto_client_config_handle.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/quic/quic_session_alias_key.h"
@@ -137,12 +137,12 @@ void QuicProxyClientSocketTestBase::InitializeSession() {
   EXPECT_CALL(*send_algorithm_, OnApplicationLimited(_)).Times(AnyNumber());
   EXPECT_CALL(*send_algorithm_, GetCongestionControlType()).Times(AnyNumber());
   EXPECT_CALL(*send_algorithm_, PopulateConnectionStats(_)).Times(AnyNumber());
-  helper_ = std::make_unique<QuicChromiumConnectionHelper>(&clock_,
+  helper_ = std::make_unique<QuicCinaseekConnectionHelper>(&clock_,
                                                            &random_generator_);
   alarm_factory_ =
-      std::make_unique<QuicChromiumAlarmFactory>(runner_.get(), &clock_);
+      std::make_unique<QuicCinaseekAlarmFactory>(runner_.get(), &clock_);
 
-  QuicChromiumPacketWriter* writer = new QuicChromiumPacketWriter(
+  QuicCinaseekPacketWriter* writer = new QuicCinaseekPacketWriter(
       socket.get(), base::SingleThreadTaskRunner::GetCurrentDefault().get());
   quic::QuicConnection* connection = new quic::QuicConnection(
       connection_id_, quic::QuicSocketAddress(),
@@ -167,7 +167,7 @@ void QuicProxyClientSocketTestBase::InitializeSession() {
   base::TimeTicks dns_end = base::TimeTicks::Now();
   base::TimeTicks dns_start = dns_end - base::Milliseconds(1);
 
-  session_ = std::make_unique<QuicChromiumClientSession>(
+  session_ = std::make_unique<QuicCinaseekClientSession>(
       connection, std::move(socket),
       /*stream_factory=*/nullptr, &crypto_client_stream_factory_, &clock_,
       &transport_security_state_, &ssl_config_service_,

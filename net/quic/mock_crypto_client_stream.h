@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/crypto_handshake.h"
 #include "net/third_party/quiche/src/quiche/quic/core/crypto/crypto_protocol.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/quic_spdy_client_session_base.h"
@@ -55,7 +55,7 @@ class MockCryptoClientStream : public quic::QuicCryptoClientStream,
       const quic::QuicConfig& config,
       quic::QuicCryptoClientConfig* crypto_config,
       HandshakeMode handshake_mode,
-      const net::ProofVerifyDetailsChromium* proof_verify_details_,
+      const net::ProofVerifyDetailsCinaseek* proof_verify_details_,
       bool use_mock_crypter);
 
   MockCryptoClientStream(const MockCryptoClientStream&) = delete;
@@ -119,7 +119,7 @@ class MockCryptoClientStream : public quic::QuicCryptoClientStream,
   bool use_mock_crypter_;
 
   const quic::QuicServerId server_id_;
-  raw_ptr<const net::ProofVerifyDetailsChromium> proof_verify_details_;
+  raw_ptr<const net::ProofVerifyDetailsCinaseek> proof_verify_details_;
   const quic::QuicConfig config_;
   std::unique_ptr<quic::QuicConfig> negotiated_config_;
   bool config_negotiated_ = false;

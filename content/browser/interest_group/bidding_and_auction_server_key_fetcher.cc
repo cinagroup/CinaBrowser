@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ constexpr net::NetworkTrafficAnnotationTag
       destination: GOOGLE_OWNED_SERVICE
       internal {
         contacts {
-          email: "privacy-sandbox-dev@chromium.org"
+          email: "privacy-sandbox-dev@Cinaseek.org"
         }
       }
     }

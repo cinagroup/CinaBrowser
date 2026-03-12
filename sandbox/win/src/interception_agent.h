@@ -1,10 +1,10 @@
-// Copyright 2006-2008 The Chromium Authors
+// Copyright 2006-2008 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Defines InterceptionAgent, the class in charge of setting up interceptions
 // from the inside of the sandboxed process. For more details see
-// http://dev.chromium.org/developers/design-documents/sandbox .
+// http://dev.Cinaseek.org/developers/design-documents/sandbox .
 
 #ifndef SANDBOX_WIN_SRC_INTERCEPTION_AGENT_H_
 #define SANDBOX_WIN_SRC_INTERCEPTION_AGENT_H_

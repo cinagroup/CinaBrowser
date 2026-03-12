@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,17 +6,17 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingChecker.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingController.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingDecision.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingInfo.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/MismatchNotificationChecker.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/MismatchNotificationData.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/SharedPreferencesBrandingTimeStorage.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingDelegate.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayCoordinator.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayProperties.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingChecker.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingController.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingDecision.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingInfo.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/MismatchNotificationChecker.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/MismatchNotificationData.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/SharedPreferencesBrandingTimeStorage.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayViewBinder.java",
   ]
 
   deps = [
@@ -46,7 +46,7 @@ android_library("java") {
   ]
 
   public_deps = [ ":proto_java" ]
-  resources_package = "org.chromium.chrome"
+  resources_package = "org.Cinaseek.chrome"
 }
 
 android_resources("java_resources") {
@@ -62,19 +62,19 @@ android_resources("java_resources") {
 
 proto_java_library("proto_java") {
   proto_path =
-      "java/src/org/chromium/chrome/browser/customtabs/features/branding/proto"
+      "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/proto"
   sources = [ "$proto_path/account_mismatch_data.proto" ]
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.customtabs.features.branding"
+  resources_package = "org.Cinaseek.chrome.browser.customtabs.features.branding"
   sources = [
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingCheckerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/BrandingControllerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/MismatchNotificationCheckerUnitTest.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/MismatchNotificationDataUnitTest.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/SharedPreferencesBrandingTimeStorageUnitTest.java",
-    "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingCheckerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/BrandingControllerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/MismatchNotificationCheckerUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/MismatchNotificationDataUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/SharedPreferencesBrandingTimeStorageUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayCoordinatorUnitTest.java",
   ]
 
   deps = [
@@ -114,9 +114,9 @@ robolectric_library("junit") {
 }
 
 android_library("unit_device_javatests") {
-  resources_package = "org.chromium.chrome.browser.customtabs.features.branding"
+  resources_package = "org.Cinaseek.chrome.browser.customtabs.features.branding"
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayViewBinderUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/customtabs/features/branding/ToolbarBrandingOverlayViewBinderUnitTest.java" ]
 
   deps = [
     ":java",

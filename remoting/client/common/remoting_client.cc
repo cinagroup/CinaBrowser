@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@
 #include "remoting/proto/control.pb.h"
 #include "remoting/proto/remoting/v1/host_info.pb.h"
 #include "remoting/proto/remoting/v1/remote_support_host_messages.pb.h"
-#include "remoting/protocol/chromium_port_allocator_factory.h"
-#include "remoting/protocol/chromium_socket_factory.h"
+#include "remoting/protocol/Cinaseek_port_allocator_factory.h"
+#include "remoting/protocol/Cinaseek_socket_factory.h"
 #include "remoting/protocol/client_authentication_config.h"
 #include "remoting/protocol/connection_to_host.h"
 #include "remoting/protocol/errors.h"
@@ -142,7 +142,7 @@ void RemotingClient::StartConnection() {
   webrtc::ThreadWrapper::EnsureForCurrentMessageLoop();
   scoped_refptr<protocol::TransportContext> transport_context =
       new protocol::TransportContext(
-          std::make_unique<protocol::ChromiumPortAllocatorFactory>(),
+          std::make_unique<protocol::CinaseekPortAllocatorFactory>(),
           webrtc::ThreadWrapper::current()->SocketServer(),
           std::make_unique<protocol::IceConfigFetcherDefault>(
               url_loader_factory_, oauth_token_getter_.get()),

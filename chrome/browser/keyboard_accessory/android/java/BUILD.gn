@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni") {
-  sources = [ "src/org/chromium/chrome/browser/keyboard_accessory/data/UserInfoField.java" ]
+  sources = [ "src/org/Cinaseek/chrome/browser/keyboard_accessory/data/UserInfoField.java" ]
 }
 
 android_library("java") {
@@ -25,14 +25,14 @@ android_library("java") {
     "//url:gurl_java",
   ]
   sources = [
-    "src/org/chromium/chrome/browser/keyboard_accessory/AccessorySheetVisualStateProvider.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/KeyboardAccessoryVisualStateProvider.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingComponent.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingComponentSupplier.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/data/CachedProviderAdapter.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/data/KeyboardAccessoryData.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/data/Provider.java",
-    "src/org/chromium/chrome/browser/keyboard_accessory/data/UserInfoField.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/AccessorySheetVisualStateProvider.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/KeyboardAccessoryVisualStateProvider.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingComponent.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingComponentSupplier.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/data/CachedProviderAdapter.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/data/KeyboardAccessoryData.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/data/Provider.java",
+    "src/org/Cinaseek/chrome/browser/keyboard_accessory/data/UserInfoField.java",
   ]
   srcjar_deps = [
     ":java_enums_srcjar",

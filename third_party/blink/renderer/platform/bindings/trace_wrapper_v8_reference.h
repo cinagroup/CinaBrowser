@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ struct VectorTraits<TraceWrapperV8Reference<T>>
   // v8::TracedReference assumes that references uniquely point to an internal
   // node.
   static constexpr bool kCanCopyWithMemcpy = false;
-  // TODO(chromium:1322114): Temporarily disable move with memcpy to evaluate
+  // TODO(Cinaseek:1322114): Temporarily disable move with memcpy to evaluate
   // impact on crashers. Move should always be followed by a clear (non-dtor).
   static constexpr bool kCanMoveWithMemcpy = false;
 

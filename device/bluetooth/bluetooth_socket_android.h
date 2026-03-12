@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothSocketAndroid : public BluetoothSocket {
   // InputStream which requires a dedicated thread to listen to data.
   std::unique_ptr<base::Thread> receiving_thread_;
 
-  // Java object org.chromium.device.bluetooth.ChromeBluetoothSocket.
+  // Java object org.Cinaseek.device.bluetooth.ChromeBluetoothSocket.
   base::android::ScopedJavaGlobalRef<jobject> j_socket_;
 };
 

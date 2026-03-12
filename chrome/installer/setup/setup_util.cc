@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -98,8 +98,8 @@ void RemoveBinariesVersionKey(const InstallerState& installer_state) {
   std::wstring path(install_static::GetClientsKeyPath(
       L"{4DC8B4CA-1BDA-483e-B5FA-D3C12E15B62D}"));
 #else
-  // Assume that non-Google is Chromium branding.
-  std::wstring path(L"Software\\Chromium Binaries");
+  // Assume that non-Google is Cinaseek branding.
+  std::wstring path(L"Software\\Cinaseek Binaries");
 #endif
   installer::DeleteRegistryKey(installer_state.root_key(), path,
                                KEY_WOW64_32KEY);

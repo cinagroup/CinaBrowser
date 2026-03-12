@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ ScopedJavaLocalRef<jobjectArray> MediaImage::ToJavaArray(
     JNIEnv* env,
     const std::vector<MediaImage>& images) {
   ScopedJavaLocalRef<jclass> string_clazz = base::android::GetClass(
-      env, "org/chromium/services/media_session/MediaImage");
+      env, "org/Cinaseek/services/media_session/MediaImage");
   jobjectArray joa =
       env->NewObjectArray(images.size(), string_clazz.obj(), NULL);
   base::android::CheckException(env);

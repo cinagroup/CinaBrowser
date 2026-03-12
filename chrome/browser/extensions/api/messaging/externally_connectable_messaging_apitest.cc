@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -191,26 +191,26 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
     return embedded_test_server()->GetURL(path).ReplaceComponents(replacements);
   }
 
-  GURL chromium_org_url() {
-    return GetURLForPath("www.chromium.org", "/chromium.org.html");
+  GURL Cinaseek_org_url() {
+    return GetURLForPath("www.Cinaseek.org", "/Cinaseek.org.html");
   }
 
   GURL popup_opener_url() {
-    return GetURLForPath("www.chromium.org", "/popup_opener.html");
+    return GetURLForPath("www.Cinaseek.org", "/popup_opener.html");
   }
 
   GURL google_com_url() {
     return GetURLForPath("www.google.com", "/google.com.html");
   }
 
-  scoped_refptr<const Extension> LoadChromiumConnectableExtension() {
+  scoped_refptr<const Extension> LoadCinaseekConnectableExtension() {
     scoped_refptr<const Extension> extension = LoadExtensionIntoDir(
         &web_connectable_dir_extension_,
         base::StringPrintf("{"
-                           "  \"name\": \"chromium_connectable\","
+                           "  \"name\": \"Cinaseek_connectable\","
                            "  %s,"
                            "  \"externally_connectable\": {"
-                           "    \"matches\": [\"*://*.chromium.org:*/*\"]"
+                           "    \"matches\": [\"*://*.Cinaseek.org:*/*\"]"
                            "  }"
                            "}",
                            common_manifest()));
@@ -219,7 +219,7 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
   }
 
 #if BUILDFLAG(ENABLE_PLATFORM_APPS)
-  scoped_refptr<const Extension> LoadChromiumConnectableApp(
+  scoped_refptr<const Extension> LoadCinaseekConnectableApp(
       bool with_event_handlers = true) {
     scoped_refptr<const Extension> extension =
         LoadExtensionIntoDir(&web_connectable_dir_app_,
@@ -230,7 +230,7 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
                              "    }"
                              "  },"
                              "  \"externally_connectable\": {"
-                             "    \"matches\": [\"*://*.chromium.org:*/*\"]"
+                             "    \"matches\": [\"*://*.Cinaseek.org:*/*\"]"
                              "  },"
                              "  \"manifest_version\": 2,"
                              "  \"name\": \"app_connectable\","
@@ -255,18 +255,18 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
   }
 
   scoped_refptr<const Extension>
-  LoadChromiumConnectableExtensionWithTlsChannelId() {
+  LoadCinaseekConnectableExtensionWithTlsChannelId() {
     return LoadExtensionIntoDir(&tls_channel_id_connectable_dir_,
                                 connectable_with_tls_channel_id_manifest());
   }
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   // Note: Desktop Android does not support hosted apps.
-  scoped_refptr<const Extension> LoadChromiumHostedApp() {
+  scoped_refptr<const Extension> LoadCinaseekHostedApp() {
     scoped_refptr<const Extension> hosted_app = LoadExtensionIntoDir(
         &hosted_app_dir_,
         base::StringPrintf("{"
-                           "  \"name\": \"chromium_hosted_app\","
+                           "  \"name\": \"Cinaseek_hosted_app\","
                            "  \"version\": \"1.0\","
                            "  \"manifest_version\": 2,"
                            "  \"app\": {"
@@ -276,8 +276,8 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
                            "    }\n"
                            "  }\n"
                            "}",
-                           chromium_org_url().spec().c_str(),
-                           chromium_org_url().spec().c_str()));
+                           Cinaseek_org_url().spec().c_str(),
+                           Cinaseek_org_url().spec().c_str()));
     CHECK(hosted_app.get());
     return hosted_app;
   }
@@ -341,10 +341,10 @@ class ExternallyConnectableMessagingTest : public ExtensionApiTest {
   std::string connectable_with_tls_channel_id_manifest() {
     return base::StringPrintf(
         "{"
-        "  \"name\": \"chromium_connectable_with_tls_channel_id\","
+        "  \"name\": \"Cinaseek_connectable_with_tls_channel_id\","
         "  %s,"
         "  \"externally_connectable\": {"
-        "    \"matches\": [\"*://*.chromium.org:*/*\"],"
+        "    \"matches\": [\"*://*.Cinaseek.org:*/*\"],"
         "    \"accepts_tls_channel_id\": true"
         "  }"
         "}",
@@ -386,7 +386,7 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, NotInstalled) {
           .Build();
 
   auto* web_contents = GetActiveWebContents();
-  ASSERT_TRUE(NavigateToURL(web_contents, chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(web_contents, Cinaseek_org_url()));
   EXPECT_EQ(NAMESPACE_NOT_DEFINED,
             CanConnectAndSendMessagesToMainFrame(extension.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
@@ -404,28 +404,28 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, NotInstalled) {
 // Tests two extensions on the same sites: one web connectable, one not.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        WebConnectableAndNotConnectable) {
-  // Install the web connectable extension. chromium.org can connect to it,
+  // Install the web connectable extension. Cinaseek.org can connect to it,
   // google.com can't.
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtension();
 
   auto* web_contents = GetActiveWebContents();
-  ASSERT_TRUE(NavigateToURL(web_contents, chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(web_contents, Cinaseek_org_url()));
   EXPECT_EQ(OK,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 
   ASSERT_TRUE(NavigateToURL(web_contents, google_com_url()));
   EXPECT_EQ(NAMESPACE_NOT_DEFINED,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 
   // Install the non-connectable extension. Nothing can connect to it.
   scoped_refptr<const Extension> not_connectable =
       LoadNotConnectableExtension();
 
-  ASSERT_TRUE(NavigateToURL(web_contents, chromium_org_url()));
-  // Namespace will be defined here because |chromium_connectable| can connect
+  ASSERT_TRUE(NavigateToURL(web_contents, Cinaseek_org_url()));
+  // Namespace will be defined here because |Cinaseek_connectable| can connect
   // to it - so this will be the "cannot establish connection" error.
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
             CanConnectAndSendMessagesToMainFrame(not_connectable.get()));
@@ -442,92 +442,92 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        SendMessagePromiseSignatureExposed) {
   // Install the web connectable extension.
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtension();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
-  EXPECT_EQ(OK, CanUseSendMessagePromise(chromium_connectable.get()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
+  EXPECT_EQ(OK, CanUseSendMessagePromise(Cinaseek_connectable.get()));
 }
 
 // See http://crbug.com/41057835
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        DISABLED_BackgroundPageClosesOnMessageReceipt) {
   // Install the web connectable extension.
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtension();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   // If the background page closes after receipt of the message, it will still
   // reply to this message...
   EXPECT_EQ(OK, CanConnectAndSendMessagesToMainFrame(
-                    chromium_connectable.get(), close_background_message()));
+                    Cinaseek_connectable.get(), close_background_message()));
   // and be re-opened by receipt of a subsequent message.
   EXPECT_EQ(OK,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
 }
 
 // Tests a web connectable extension that doesn't receive TLS channel id.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        WebConnectableWithoutTlsChannelId) {
-  // Install the web connectable extension. chromium.org can connect to it,
+  // Install the web connectable extension. Cinaseek.org can connect to it,
   // google.com can't.
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtension();
-  ASSERT_TRUE(chromium_connectable.get());
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtension();
+  ASSERT_TRUE(Cinaseek_connectable.get());
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   // The web connectable extension doesn't request the TLS channel ID, so it
   // doesn't get it, whether or not the page asks for it.
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromPortConnect(chromium_connectable.get(), false));
+            GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), false));
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromSendMessage(chromium_connectable.get(), true));
+            GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), true));
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromPortConnect(chromium_connectable.get(), false));
+            GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), false));
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromSendMessage(chromium_connectable.get(), true));
+            GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), true));
 }
 
 // Tests a web connectable extension that receives TLS channel id with a site
 // that can't connect to it.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        WebConnectableWithTlsChannelIdWithNonMatchingSite) {
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtensionWithTlsChannelId();
-  ASSERT_TRUE(chromium_connectable.get());
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtensionWithTlsChannelId();
+  ASSERT_TRUE(Cinaseek_connectable.get());
 
   ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), google_com_url()));
   // The extension requests the TLS channel ID, but it doesn't get it for a
   // site that can't connect to it, regardless of whether the page asks for it.
   EXPECT_EQ(base::NumberToString(NAMESPACE_NOT_DEFINED),
-            GetTlsChannelIdFromPortConnect(chromium_connectable.get(), false));
+            GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), false));
   EXPECT_EQ(base::NumberToString(NAMESPACE_NOT_DEFINED),
-            GetTlsChannelIdFromSendMessage(chromium_connectable.get(), true));
+            GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), true));
   EXPECT_EQ(base::NumberToString(NAMESPACE_NOT_DEFINED),
-            GetTlsChannelIdFromPortConnect(chromium_connectable.get(), false));
+            GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), false));
   EXPECT_EQ(base::NumberToString(NAMESPACE_NOT_DEFINED),
-            GetTlsChannelIdFromSendMessage(chromium_connectable.get(), true));
+            GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), true));
 }
 
 // Tests a web connectable extension that receives TLS channel id on a site
 // that can connect to it, but with no TLS channel ID having been generated.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        WebConnectableWithTlsChannelIdWithEmptyTlsChannelId) {
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtensionWithTlsChannelId();
-  ASSERT_TRUE(chromium_connectable.get());
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtensionWithTlsChannelId();
+  ASSERT_TRUE(Cinaseek_connectable.get());
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
 
   // Since the extension requests the TLS channel ID, it gets it for a site that
   // can connect to it, but only if the page also asks to include it.
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromPortConnect(chromium_connectable.get(), false));
+            GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), false));
   EXPECT_EQ(std::string(),
-            GetTlsChannelIdFromSendMessage(chromium_connectable.get(), false));
+            GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), false));
   // If the page does ask for it, it isn't empty.
   std::string tls_channel_id =
-      GetTlsChannelIdFromPortConnect(chromium_connectable.get(), true);
+      GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), true);
   // Because the TLS channel ID has never been generated for this domain,
   // no TLS channel ID is reported.
   EXPECT_EQ(std::string(), tls_channel_id);
@@ -539,21 +539,21 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(
     ExternallyConnectableMessagingTest,
     DISABLED_WebConnectableWithEmptyTlsChannelIdAndClosedBackgroundPage) {
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtensionWithTlsChannelId();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtensionWithTlsChannelId();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   // If the page does ask for it, it isn't empty, even if the background page
   // closes upon receipt of the connect.
   std::string tls_channel_id = GetTlsChannelIdFromPortConnect(
-      chromium_connectable.get(), true, close_background_message());
+      Cinaseek_connectable.get(), true, close_background_message());
   // Because the TLS channel ID has never been generated for this domain,
   // no TLS channel ID is reported.
   EXPECT_EQ(std::string(), tls_channel_id);
   // A subsequent connect will still succeed, even if the background page was
   // previously closed.
   tls_channel_id =
-      GetTlsChannelIdFromPortConnect(chromium_connectable.get(), true);
+      GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), true);
   // And the empty value is still retrieved.
   EXPECT_EQ(std::string(), tls_channel_id);
 }
@@ -565,24 +565,24 @@ IN_PROC_BROWSER_TEST_F(
 // host.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        EnablingAndDisabling) {
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtension();
   scoped_refptr<const Extension> not_connectable =
       LoadNotConnectableExtension();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   EXPECT_EQ(OK,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
             CanConnectAndSendMessagesToMainFrame(not_connectable.get()));
 
-  DisableExtension(chromium_connectable->id());
+  DisableExtension(Cinaseek_connectable->id());
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
 
-  EnableExtension(chromium_connectable->id());
+  EnableExtension(Cinaseek_connectable->id());
   EXPECT_EQ(OK,
-            CanConnectAndSendMessagesToMainFrame(chromium_connectable.get()));
+            CanConnectAndSendMessagesToMainFrame(Cinaseek_connectable.get()));
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
             CanConnectAndSendMessagesToMainFrame(not_connectable.get()));
 }
@@ -599,15 +599,15 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIncognitoDenyApp) {
   // TODO(crbug.com/40937027): Convert test to use HTTPS and then remove.
-  ScopedAllowHttpForHostnamesForTesting allow_http({"www.chromium.org"},
+  ScopedAllowHttpForHostnamesForTesting allow_http({"www.Cinaseek.org"},
                                                    profile()->GetPrefs());
 
-  scoped_refptr<const Extension> app = LoadChromiumConnectableApp();
+  scoped_refptr<const Extension> app = LoadCinaseekConnectableApp();
   ASSERT_TRUE(app->is_platform_app());
 
   Browser* incognito_browser = OpenURLOffTheRecord(
       profile()->GetPrimaryOTRProfile(/*create_if_needed=*/true),
-      chromium_org_url());
+      Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame =
       incognito_browser->tab_strip_model()
           ->GetActiveWebContents()
@@ -642,14 +642,14 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIncognitoDenyExtensionAndApp) {
   // TODO(crbug.com/40937027): Convert test to use HTTPS and then remove.
-  ScopedAllowHttpForHostnamesForTesting allow_http({"www.chromium.org"},
+  ScopedAllowHttpForHostnamesForTesting allow_http({"www.Cinaseek.org"},
                                                    profile()->GetPrefs());
 
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
   EXPECT_FALSE(util::IsIncognitoEnabled(extension->id(), profile()));
 
   content::WebContents* incognito_contents =
-      PlatformOpenURLOffTheRecord(profile(), chromium_org_url());
+      PlatformOpenURLOffTheRecord(profile(), Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame =
       incognito_contents->GetPrimaryMainFrame();
 
@@ -668,7 +668,7 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
   // Loading a platform app in the renderer should cause the chrome.runtime
   // bindings to be generated in the renderer. A platform app is always loaded
   // in the incognito renderer.
-  LoadChromiumConnectableApp();
+  LoadCinaseekConnectableApp();
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
             CanConnectAndSendMessagesToFrame(incognito_frame, extension.get(),
                                              nullptr));
@@ -699,15 +699,15 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIncognitoNoEventHandlerInApp) {
   // TODO(crbug.com/40937027): Convert test to use HTTPS and then remove.
-  ScopedAllowHttpForHostnamesForTesting allow_http({"www.chromium.org"},
+  ScopedAllowHttpForHostnamesForTesting allow_http({"www.Cinaseek.org"},
                                                    profile()->GetPrefs());
 
-  scoped_refptr<const Extension> app = LoadChromiumConnectableApp(false);
+  scoped_refptr<const Extension> app = LoadCinaseekConnectableApp(false);
   ASSERT_TRUE(app->is_platform_app());
 
   Browser* incognito_browser = OpenURLOffTheRecord(
       profile()->GetPrimaryOTRProfile(/*create_if_needed=*/true),
-      chromium_org_url());
+      Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame =
       incognito_browser->tab_strip_model()
           ->GetActiveWebContents()
@@ -734,15 +734,15 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIncognitoAllowApp) {
   // TODO(crbug.com/40937027): Convert test to use HTTPS and then remove.
-  ScopedAllowHttpForHostnamesForTesting allow_http({"www.chromium.org"},
+  ScopedAllowHttpForHostnamesForTesting allow_http({"www.Cinaseek.org"},
                                                    profile()->GetPrefs());
 
-  scoped_refptr<const Extension> app = LoadChromiumConnectableApp();
+  scoped_refptr<const Extension> app = LoadCinaseekConnectableApp();
   ASSERT_TRUE(app->is_platform_app());
 
   Browser* incognito_browser = OpenURLOffTheRecord(
       profile()->GetPrimaryOTRProfile(/*create_if_needed=*/true),
-      chromium_org_url());
+      Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame =
       incognito_browser->tab_strip_model()
           ->GetActiveWebContents()
@@ -776,13 +776,13 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 // Flaky: https://crbug.com/41446351.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        DISABLED_FromIncognitoPromptApp) {
-  scoped_refptr<const Extension> app = LoadChromiumConnectableApp();
+  scoped_refptr<const Extension> app = LoadCinaseekConnectableApp();
   ASSERT_TRUE(app->is_platform_app());
 
-  // Open an incognito browser with two tabs displaying "chromium.org".
+  // Open an incognito browser with two tabs displaying "Cinaseek.org".
   Browser* incognito_browser = OpenURLOffTheRecord(
       profile()->GetPrimaryOTRProfile(/*create_if_needed=*/true),
-      chromium_org_url());
+      Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame1 =
       incognito_browser->tab_strip_model()
           ->GetActiveWebContents()
@@ -793,7 +793,7 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 
   CHECK(OpenURLOffTheRecord(
             profile()->GetPrimaryOTRProfile(/*create_if_needed=*/true),
-            chromium_org_url()) == incognito_browser);
+            Cinaseek_org_url()) == incognito_browser);
   content::RenderFrameHost* incognito_frame2 =
       incognito_browser->tab_strip_model()
           ->GetActiveWebContents()
@@ -824,7 +824,7 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
         IncognitoConnectability::ScopedAlertTracker::ALWAYS_ALLOW);
 
     ASSERT_TRUE(
-        ui_test_utils::NavigateToURL(incognito_browser, chromium_org_url()));
+        ui_test_utils::NavigateToURL(incognito_browser, Cinaseek_org_url()));
     incognito_frame2 = incognito_browser->tab_strip_model()
                            ->GetActiveWebContents()
                            ->GetPrimaryMainFrame();
@@ -842,9 +842,9 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, IllegalArguments) {
   // Tests that malformed arguments to connect() don't crash.
   // Regression test for crbug.com/40412063.
-  LoadChromiumConnectableExtension();
+  LoadCinaseekConnectableExtension();
   auto* web_contents = GetActiveWebContents();
-  ASSERT_TRUE(NavigateToURL(web_contents, chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(web_contents, Cinaseek_org_url()));
   EXPECT_EQ(true,
             content::EvalJs(web_contents, "assertions.tryIllegalArguments()"));
 }
@@ -852,14 +852,14 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, IllegalArguments) {
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIncognitoAllowExtension) {
   // TODO(crbug.com/40937027): Convert test to use HTTPS and then remove.
-  ScopedAllowHttpForHostnamesForTesting allow_http({"www.chromium.org"},
+  ScopedAllowHttpForHostnamesForTesting allow_http({"www.Cinaseek.org"},
                                                    profile()->GetPrefs());
 
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
   EXPECT_FALSE(util::IsIncognitoEnabled(extension->id(), profile()));
 
   content::WebContents* incognito_contents =
-      PlatformOpenURLOffTheRecord(profile(), chromium_org_url());
+      PlatformOpenURLOffTheRecord(profile(), Cinaseek_org_url());
   content::RenderFrameHost* incognito_frame =
       incognito_contents->GetPrimaryMainFrame();
 
@@ -898,14 +898,14 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 // permission. Iframe should work.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIframeWithPermission) {
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
 
   ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), google_com_url()));
   EXPECT_EQ(NAMESPACE_NOT_DEFINED,
             CanConnectAndSendMessagesToMainFrame(extension.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 
-  ASSERT_TRUE(AppendIframe(chromium_org_url()));
+  ASSERT_TRUE(AppendIframe(Cinaseek_org_url()));
 
   EXPECT_EQ(OK, CanConnectAndSendMessagesToIFrame(extension.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForIFrame());
@@ -915,9 +915,9 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
 // Iframe shouldn't work.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        FromIframeWithoutPermission) {
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   EXPECT_EQ(OK, CanConnectAndSendMessagesToMainFrame(extension.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 
@@ -935,12 +935,12 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, FromPopup) {
   base::CommandLine::ForCurrentProcess()->AppendSwitch(
       embedder_support::kDisablePopupBlocking);
 
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
 
-  // This will let us wait for the chromium.org.html page to load in a popup.
-  ui_test_utils::UrlLoadObserver url_observer(chromium_org_url());
+  // This will let us wait for the Cinaseek.org.html page to load in a popup.
+  ui_test_utils::UrlLoadObserver url_observer(Cinaseek_org_url());
 
-  // The page at popup_opener_url() should open chromium_org_url() as a popup.
+  // The page at popup_opener_url() should open Cinaseek_org_url() as a popup.
   ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), popup_opener_url()));
   url_observer.Wait();
 
@@ -960,19 +960,19 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        TlsChannelIdEmptyWhenDisabled) {
   std::string expected_tls_channel_id_value;
 
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtensionWithTlsChannelId();
-  ASSERT_TRUE(chromium_connectable.get());
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtensionWithTlsChannelId();
+  ASSERT_TRUE(Cinaseek_connectable.get());
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
 
   // Check that both connect and sendMessage don't report a Channel ID.
   std::string tls_channel_id_from_port_connect =
-      GetTlsChannelIdFromPortConnect(chromium_connectable.get(), true);
+      GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), true);
   EXPECT_EQ(0u, tls_channel_id_from_port_connect.size());
 
   std::string tls_channel_id_from_send_message =
-      GetTlsChannelIdFromSendMessage(chromium_connectable.get(), true);
+      GetTlsChannelIdFromSendMessage(Cinaseek_connectable.get(), true);
   EXPECT_EQ(0u, tls_channel_id_from_send_message.size());
 }
 
@@ -984,19 +984,19 @@ IN_PROC_BROWSER_TEST_F(
     DISABLED_WebConnectableWithNonEmptyTlsChannelIdAndClosedBackgroundPage) {
   std::string expected_tls_channel_id_value;
 
-  scoped_refptr<const Extension> chromium_connectable =
-      LoadChromiumConnectableExtensionWithTlsChannelId();
+  scoped_refptr<const Extension> Cinaseek_connectable =
+      LoadCinaseekConnectableExtensionWithTlsChannelId();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   // If the page does ask for it, it isn't empty, even if the background page
   // closes upon receipt of the connect.
   std::string tls_channel_id = GetTlsChannelIdFromPortConnect(
-      chromium_connectable.get(), true, close_background_message());
+      Cinaseek_connectable.get(), true, close_background_message());
   EXPECT_EQ(expected_tls_channel_id_value, tls_channel_id);
   // A subsequent connect will still succeed, even if the background page was
   // previously closed.
   tls_channel_id =
-      GetTlsChannelIdFromPortConnect(chromium_connectable.get(), true);
+      GetTlsChannelIdFromPortConnect(Cinaseek_connectable.get(), true);
   // And the expected value is still retrieved.
   EXPECT_EQ(expected_tls_channel_id_value, tls_channel_id);
 }
@@ -1006,16 +1006,16 @@ IN_PROC_BROWSER_TEST_F(
 // connectability of that site.
 // Note: Desktop Android does not support hosted apps.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, HostedAppOnWebsite) {
-  scoped_refptr<const Extension> app = LoadChromiumHostedApp();
+  scoped_refptr<const Extension> app = LoadCinaseekHostedApp();
 
   // The presence of the hosted app shouldn't give the ability to send messages.
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   EXPECT_EQ(NAMESPACE_NOT_DEFINED,
             CanConnectAndSendMessagesToMainFrame(app.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 
   // Once a connectable extension is installed, it should.
-  scoped_refptr<const Extension> extension = LoadChromiumConnectableExtension();
+  scoped_refptr<const Extension> extension = LoadCinaseekConnectableExtension();
   EXPECT_EQ(OK, CanConnectAndSendMessagesToMainFrame(extension.get()));
   EXPECT_FALSE(AreAnyNonWebApisDefinedForMainFrame());
 }
@@ -1026,10 +1026,10 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest, HostedAppOnWebsite) {
 // This is a regression test for http://crbug.com/40343914#c12.
 IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                        InvalidExtensionIDFromHostedApp) {
-  // The presence of the chromium hosted app triggers this bug. The chromium
+  // The presence of the Cinaseek hosted app triggers this bug. The Cinaseek
   // connectable extension needs to be installed to set up the runtime bindings.
-  LoadChromiumHostedApp();
-  LoadChromiumConnectableExtension();
+  LoadCinaseekHostedApp();
+  LoadCinaseekConnectableExtension();
 
   scoped_refptr<const Extension> invalid =
       ExtensionBuilder()
@@ -1040,7 +1040,7 @@ IN_PROC_BROWSER_TEST_F(ExternallyConnectableMessagingTest,
                            .Set("manifest_version", 2))
           .Build();
 
-  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), chromium_org_url()));
+  ASSERT_TRUE(NavigateToURL(GetActiveWebContents(), Cinaseek_org_url()));
   EXPECT_EQ(COULD_NOT_ESTABLISH_CONNECTION_ERROR,
             CanConnectAndSendMessagesToMainFrame(invalid.get()));
 }

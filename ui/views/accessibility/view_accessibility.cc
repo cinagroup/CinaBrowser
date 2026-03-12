@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1044,7 +1044,7 @@ void ViewAccessibility::OnViewAddedToWidget() {
 #if BUILDFLAG(IS_WIN)
   // On Windows, Narrator restricts focus to web content in Scan Mode only when
   // the root web area’s parent has class name "Chrome_WidgetWin_1". This is a
-  // hardcoded behavior. It worked before Chromium enabled UIA by default, since
+  // hardcoded behavior. It worked before Cinaseek enabled UIA by default, since
   // the MSAA Proxy added the root web area under a window with that class name.
   // We’re collaborating with the Narrator team to update their tab detection
   // logic, but rollout will take time. This is a temporary mitigation. See

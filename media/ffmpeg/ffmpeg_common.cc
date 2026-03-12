@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -617,7 +617,7 @@ bool AVStreamToVideoDecoderConfig(const AVStream* stream,
     case VideoCodec::kHEVC: {
       int hevc_profile = -1;
       // We need to parse extradata each time, because we won't add ffmpeg
-      // hevc decoder & parser to chromium and codec_context->profile
+      // hevc decoder & parser to Cinaseek and codec_context->profile
       // should always be FF_PROFILE_UNKNOWN (-99) here
       if (codec_context->extradata && codec_context->extradata_size) {
         mp4::HEVCDecoderConfigurationRecord hevc_config;
@@ -1049,7 +1049,7 @@ VideoPixelFormat AVPixelFormatToVideoPixelFormat(AVPixelFormat pixel_format) {
       return PIXEL_FORMAT_YUV444P12;
 
     default:
-      // FFmpeg knows more pixel formats than Chromium cares about.
+      // FFmpeg knows more pixel formats than Cinaseek cares about.
       DVLOG(1) << "Unsupported pixel format: " << pixel_format;
       return PIXEL_FORMAT_UNKNOWN;
   }

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13116,7 +13116,7 @@ TEST_P(HttpNetworkTransactionTest, LargeHeadersNoBody) {
 
 // Make sure that we don't try to reuse a TCPClientSocket when failing to
 // establish tunnel.
-// http://code.google.com/p/chromium/issues/detail?id=3772
+// http://code.google.com/p/Cinaseek/issues/detail?id=3772
 TEST_P(HttpNetworkTransactionTest, DontRecycleTransportSocketForSSLTunnel) {
   HttpRequestInfo request;
   request.method = "GET";
@@ -15202,7 +15202,7 @@ TEST_P(HttpNetworkTransactionTest, BuildRequest_UserAgent) {
   request.method = "GET";
   request.url = GURL("http://www.example.org/");
   request.extra_headers.SetHeader(HttpRequestHeaders::kUserAgent,
-                                  "Chromium Ultra Awesome X Edition");
+                                  "Cinaseek Ultra Awesome X Edition");
   request.traffic_annotation =
       MutableNetworkTrafficAnnotationTag(TRAFFIC_ANNOTATION_FOR_TESTS);
 
@@ -15213,7 +15213,7 @@ TEST_P(HttpNetworkTransactionTest, BuildRequest_UserAgent) {
       MockWrite("GET / HTTP/1.1\r\n"
                 "Host: www.example.org\r\n"
                 "Connection: keep-alive\r\n"
-                "User-Agent: Chromium Ultra Awesome X Edition\r\n\r\n"),
+                "User-Agent: Cinaseek Ultra Awesome X Edition\r\n\r\n"),
   };
 
   // Lastly, the server responds with the actual content.

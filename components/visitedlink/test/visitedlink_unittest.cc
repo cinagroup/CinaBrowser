@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1384,7 +1384,7 @@ TEST_F(VisitedLinkEventsTest, Coalescence) {
   // Add a few URLs.
   writer()->AddURL(GURL("http://acidtests.org/"));
   writer()->AddURL(GURL("http://google.com/"));
-  writer()->AddURL(GURL("http://chromium.org/"));
+  writer()->AddURL(GURL("http://Cinaseek.org/"));
   // Just for kicks, add a duplicate URL. This shouldn't increase the resulting
   writer()->AddURL(GURL("http://acidtests.org/"));
   ASSERT_TRUE(timer_->IsRunning());
@@ -1419,7 +1419,7 @@ TEST_F(VisitedLinkEventsTest, Coalescence) {
   EXPECT_EQ(2, context()->add_event_count());
 
   // Ensure that the coalescing does not resume after resetting.
-  writer()->AddURL(GURL("http://build.chromium.org/"));
+  writer()->AddURL(GURL("http://build.Cinaseek.org/"));
   EXPECT_TRUE(timer_->IsRunning());
   writer()->DeleteAllURLs();
   EXPECT_FALSE(timer_->IsRunning());
@@ -1443,7 +1443,7 @@ TEST_F(VisitedLinkEventsTest, Basics) {
   // Add a few URLs.
   writer()->AddURL(GURL("http://acidtests.org/"));
   writer()->AddURL(GURL("http://google.com/"));
-  writer()->AddURL(GURL("http://chromium.org/"));
+  writer()->AddURL(GURL("http://Cinaseek.org/"));
   ASSERT_TRUE(timer_->IsRunning());
   timer_->Fire();
   context()->WaitForUpdate();
@@ -1477,7 +1477,7 @@ TEST_F(VisitedLinkEventsTest, TabVisibility) {
   // Add a few URLs.
   writer()->AddURL(GURL("http://acidtests.org/"));
   writer()->AddURL(GURL("http://google.com/"));
-  writer()->AddURL(GURL("http://chromium.org/"));
+  writer()->AddURL(GURL("http://Cinaseek.org/"));
   ASSERT_TRUE(timer_->IsRunning());
   timer_->Fire();
   context()->WaitForNoUpdate();

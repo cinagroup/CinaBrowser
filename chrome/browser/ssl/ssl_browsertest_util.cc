@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -143,7 +143,7 @@ bool SystemSupportsHardFailRevocationChecking() {
   return UsingBuiltinCertVerifier();
 }
 
-bool SystemUsesChromiumEVMetadata() {
+bool SystemUsesCinaseekEVMetadata() {
 #if defined(PLATFORM_USES_CHROMIUM_EV_METADATA)
   return true;
 #else

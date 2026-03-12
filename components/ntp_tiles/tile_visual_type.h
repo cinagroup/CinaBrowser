@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace ntp_tiles {
 // histograms/enums.xml.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.suggestions.tile
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.suggestions.tile
 enum TileVisualType {
   // The icon or thumbnail hasn't loaded yet.
   NONE = 0,

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ const base::FilePath::CharType kFilepathSinglePrefExtensions[] =
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
     FILE_PATH_LITERAL("/usr/share/google-chrome/extensions");
 #else
-    FILE_PATH_LITERAL("/usr/share/chromium/extensions");
+    FILE_PATH_LITERAL("/usr/share/Cinaseek/extensions");
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -471,7 +471,7 @@ bool PathProvider(int key, base::FilePath* result) {
           "/Library/Google/ChromeForTesting/NativeMessagingHosts"));
 #else
       cur = base::FilePath(FILE_PATH_LITERAL(
-          "/Library/Application Support/Chromium/NativeMessagingHosts"));
+          "/Library/Application Support/Cinaseek/NativeMessagingHosts"));
 #endif
 #else  // BUILDFLAG(IS_MAC)
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
@@ -482,7 +482,7 @@ bool PathProvider(int key, base::FilePath* result) {
           "/etc/opt/chrome_for_testing/native-messaging-hosts"));
 #else
       cur = base::FilePath(
-          FILE_PATH_LITERAL("/etc/chromium/native-messaging-hosts"));
+          FILE_PATH_LITERAL("/etc/Cinaseek/native-messaging-hosts"));
 #endif
 #endif  // !BUILDFLAG(IS_MAC)
       break;

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ using base::test::ios::kWaitForJSCompletionTimeout;
 using base::test::ios::WaitUntilConditionOrTimeout;
 
 namespace {
-const char kHttpsTestUrl[] = "https://chromium.test/";
+const char kHttpsTestUrl[] = "https://Cinaseek.test/";
 }  // namespace
 
 namespace web {

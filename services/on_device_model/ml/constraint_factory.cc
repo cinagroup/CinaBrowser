@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #include "base/trace_event/trace_event.h"
 #include "services/on_device_model/ml/chrome_ml.h"
 #include "services/on_device_model/public/mojom/on_device_model.mojom.h"
-#include "third_party/rust/chromium_crates_io/vendor/llguidance-v1/llguidance.h"
+#include "third_party/rust/Cinaseek_crates_io/vendor/llguidance-v1/llguidance.h"
 
 namespace ml {
 

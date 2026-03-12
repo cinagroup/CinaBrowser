@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ TEST_F(BrowserFinderTest, ScheduledForDeletion) {
   // Add a tab as the tabstrip starts empty and CloseAllTabs() effectively
   // does nothing if there are no tabs (meaning Browser deletion isn't
   // scheduled).
-  AddTab(browser(), GURL("http://foo.chromium.org"));
+  AddTab(browser(), GURL("http://foo.Cinaseek.org"));
   std::unique_ptr<Browser> browser = release_browser();
   browser->tab_strip_model()->CloseAllTabs();
   // This is normally invoked when the tab strip is empty (specifically from

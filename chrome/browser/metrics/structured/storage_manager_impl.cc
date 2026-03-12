@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,10 +35,10 @@ StorageManagerImpl::FlushedEvents ReadEventsOnBackgroundThread(
 
 // Default paths for Storage Manager on ChromeOS.
 constexpr char kArenaProtoDefaultPath[] =
-    "/var/lib/metrics/structured/chromium/storage/initial-events";
+    "/var/lib/metrics/structured/Cinaseek/storage/initial-events";
 
 constexpr char kFlushedEventsDefaultDir[] =
-    "/var/lib/metrics/structured/chromium/storage/flushed";
+    "/var/lib/metrics/structured/Cinaseek/storage/flushed";
 
 // Path of the partition used to store flushed events.
 constexpr char kRootPartitionPath[] = "/var/lib/metrics/structured/";

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ const wchar_t PlatformStateStoreWinTest::kStoreKeyName_[] =
     L"Software\\Google\\Chrome for Testing\\IncidentsSent";
 #else
 const wchar_t PlatformStateStoreWinTest::kStoreKeyName_[] =
-    L"Software\\Chromium\\IncidentsSent";
+    L"Software\\Cinaseek\\IncidentsSent";
 #endif
 
 // Tests that store data is written correctly to the proper location.

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ BASE_DECLARE_FEATURE(kMacAppCodeSignCloneRenameAsBundle);
 // https://crbug.com/381199182 for more details.
 //
 // Example path to the cloned app bundle:
-//   /private/var/folders/c4/ygf_t4gn0tx0k1y1hm32hh6w00b_4p/X/org.chromium.Chromium.code_sign_clone/code_sign_clone.tKdILk/Chromium.app.bundle
+//   /private/var/folders/c4/ygf_t4gn0tx0k1y1hm32hh6w00b_4p/X/org.Cinaseek.Cinaseek.code_sign_clone/code_sign_clone.tKdILk/Cinaseek.app.bundle
 //
 // Each clone contains an instance-specific snapshot of an on-disk
 // representation of Chrome. The bundles are verifiable by both dynamic and

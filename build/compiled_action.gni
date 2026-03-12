@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -125,11 +125,11 @@ template("compiled_action") {
     # crbug.com/464092154
     #
     # //build is hermetic, so guard //third_party/instrumented_libs
-    # dependencies by build_with_chromium.
+    # dependencies by build_with_Cinaseek.
     # maybe, projects that use //build with msan would need
-    # //third_party/instrumented_libs, so build_with_chromium guard might
+    # //third_party/instrumented_libs, so build_with_Cinaseek guard might
     # not be needed here.
-    if (build_with_chromium && host_toolchain_is_msan) {
+    if (build_with_Cinaseek && host_toolchain_is_msan) {
       configs = [
         "//third_party/instrumented_libs:msan_runtime_libs($host_toolchain)",
       ]

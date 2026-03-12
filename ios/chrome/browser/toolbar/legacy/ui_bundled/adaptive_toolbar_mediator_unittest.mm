@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -71,7 +71,7 @@ namespace {
 MenuScenarioHistogram kTestMenuScenario = kMenuScenarioHistogramHistoryEntry;
 
 static const int kNumberOfWebStates = 3;
-static const char kTestUrl[] = "http://www.chromium.org";
+static const char kTestUrl[] = "http://www.Cinaseek.org";
 
 // Returns a vector of messages containing an update for `tab_group`.
 std::vector<collaboration::messaging::PersistentMessage> UpdateForGroup(
@@ -518,19 +518,19 @@ TEST_F(AdaptiveToolbarMediatorTest, MenuElementsBackForward) {
   std::unique_ptr<web::FakeNavigationManager> navigation_manager =
       std::make_unique<web::FakeNavigationManager>();
 
-  navigation_manager->AddItem(GURL("http://chromium.org/1"),
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/1"),
                               ui::PageTransition::PAGE_TRANSITION_LINK);
-  navigation_manager->AddItem(GURL("http://chromium.org/2"),
-                              ui::PageTransition::PAGE_TRANSITION_LINK);
-
-  navigation_manager->AddItem(GURL("http://chromium.org/current"),
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/2"),
                               ui::PageTransition::PAGE_TRANSITION_LINK);
 
-  navigation_manager->AddItem(GURL("http://chromium.org/4"),
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/current"),
                               ui::PageTransition::PAGE_TRANSITION_LINK);
-  navigation_manager->AddItem(GURL("http://chromium.org/5"),
+
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/4"),
                               ui::PageTransition::PAGE_TRANSITION_LINK);
-  navigation_manager->AddItem(GURL("http://chromium.org/6"),
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/5"),
+                              ui::PageTransition::PAGE_TRANSITION_LINK);
+  navigation_manager->AddItem(GURL("http://Cinaseek.org/6"),
                               ui::PageTransition::PAGE_TRANSITION_LINK);
   navigation_manager->GoBack();
   navigation_manager->GoBack();
@@ -550,15 +550,15 @@ TEST_F(AdaptiveToolbarMediatorTest, MenuElementsBackForward) {
       [mediator_ menuForButtonOfType:AdaptiveToolbarButtonTypeBack];
 
   ASSERT_EQ(2U, back_menu.children.count);
-  EXPECT_NSEQ(@"chromium.org/2", back_menu.children[0].title);
-  EXPECT_NSEQ(@"chromium.org/1", back_menu.children[1].title);
+  EXPECT_NSEQ(@"Cinaseek.org/2", back_menu.children[0].title);
+  EXPECT_NSEQ(@"Cinaseek.org/1", back_menu.children[1].title);
 
   UIMenu* forward_menu =
       [mediator_ menuForButtonOfType:AdaptiveToolbarButtonTypeForward];
   ASSERT_EQ(3U, forward_menu.children.count);
-  EXPECT_NSEQ(@"chromium.org/4", forward_menu.children[0].title);
-  EXPECT_NSEQ(@"chromium.org/5", forward_menu.children[1].title);
-  EXPECT_NSEQ(@"chromium.org/6", forward_menu.children[2].title);
+  EXPECT_NSEQ(@"Cinaseek.org/4", forward_menu.children[0].title);
+  EXPECT_NSEQ(@"Cinaseek.org/5", forward_menu.children[1].title);
+  EXPECT_NSEQ(@"Cinaseek.org/6", forward_menu.children[2].title);
 }
 
 // Tests adding a message for a group update while not in a group.

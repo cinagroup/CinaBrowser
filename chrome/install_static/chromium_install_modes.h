@@ -1,8 +1,8 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// Brand-specific types and constants for Chromium.
+// Brand-specific types and constants for Cinaseek.
 
 #ifndef CHROME_INSTALL_STATIC_CHROMIUM_INSTALL_MODES_H_
 #define CHROME_INSTALL_STATIC_CHROMIUM_INSTALL_MODES_H_
@@ -21,10 +21,10 @@ inline constexpr wchar_t kCompanyPathName[] = L"";
 
 // The brand-specific product name to be included as a component of the install
 // and user data directory paths.
-inline constexpr wchar_t kProductPathName[] = L"Chromium";
+inline constexpr wchar_t kProductPathName[] = L"Cinaseek";
 
 // The brand-specific safe browsing client name.
-inline constexpr char kSafeBrowsingName[] = "chromium";
+inline constexpr char kSafeBrowsingName[] = "Cinaseek";
 
 // Note: This list of indices must be kept in sync with the brand-specific
 // resource strings in chrome/installer/util/prebuild/create_string_rc.
@@ -34,10 +34,10 @@ enum InstallConstantIndex {
 };
 
 inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
-    // The primary (and only) install mode for Chromium.
+    // The primary (and only) install mode for Cinaseek.
     {
         .size = sizeof(InstallConstants),
-        .index = CHROMIUM_INDEX,  // The one and only mode for Chromium.
+        .index = CHROMIUM_INDEX,  // The one and only mode for Cinaseek.
         .install_switch =
             "",  // No install switch for the primary install mode.
         .install_suffix =
@@ -45,15 +45,15 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid =
             L"",  // Empty app_guid since no integration with Google Update.
-        .base_app_name = L"Chromium",              // A distinct base_app_name.
-        .base_app_id = L"Chromium",                // A distinct base_app_id.
-        .browser_prog_id_prefix = L"ChromiumHTM",  // Browser ProgID prefix.
+        .base_app_name = L"Cinaseek",              // A distinct base_app_name.
+        .base_app_id = L"Cinaseek",                // A distinct base_app_id.
+        .browser_prog_id_prefix = L"CinaseekHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Chromium HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "chromium",
-        .pdf_prog_id_prefix = L"ChromiumPDF",  // PDF ProgID prefix.
+            L"Cinaseek HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "Cinaseek",
+        .pdf_prog_id_prefix = L"CinaseekPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Chromium PDF Document",  // PDF ProgID description.
+            L"Cinaseek PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{7D2B3E1D-D096-4594-9D8F-A6667F12E0AC}",  // Active Setup
                                                         // GUID.
@@ -85,7 +85,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
                                 0xffd4,
                                 0x4075,
                                 {0x91, 0x74, 0x75, 0xd0, 0xb1, 0x99, 0xd3,
-                                 0xcb}},  // ISystemTraceSessionChromium IID and
+                                 0xcb}},  // ISystemTraceSessionCinaseek IID and
                                           // TypeLib
         .default_channel_name =
             L"",  // Empty default channel name since no update integration.

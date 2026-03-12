@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -382,7 +382,7 @@ TEST_F(CWVAutofillDataManagerTest, AddNewPassword) {
 
   [autofill_data_manager_ addNewPasswordForUsername:@"new-username"
                                            password:@"new-password"
-                                               site:@"https://www.chromium.org/"
+                                               site:@"https://www.Cinaseek.org/"
                                           timestamp:now];
   passwords = FetchPasswords();
   ASSERT_EQ(1ul, passwords.count);
@@ -390,7 +390,7 @@ TEST_F(CWVAutofillDataManagerTest, AddNewPassword) {
   CWVPassword* password = passwords.firstObject;
   EXPECT_NSEQ(@"new-username", password.username);
   EXPECT_NSEQ(@"new-password", password.password);
-  EXPECT_NSEQ(@"https://www.chromium.org/", password.site);
+  EXPECT_NSEQ(@"https://www.Cinaseek.org/", password.site);
 }
 
 // Tests CWVAutofillDataManager properly handles conflicts when adding passwords
@@ -402,11 +402,11 @@ TEST_F(CWVAutofillDataManagerTest, AddNewPasswordWithConflictingPrimaryKey) {
 
   [autofill_data_manager_ addNewPasswordForUsername:@"some-username"
                                            password:@"some-password"
-                                               site:@"https://www.chromium.org/"
+                                               site:@"https://www.Cinaseek.org/"
                                           timestamp:now];
   [autofill_data_manager_ addNewPasswordForUsername:@"some-username"
                                            password:@"different-password"
-                                               site:@"https://www.chromium.org/"
+                                               site:@"https://www.Cinaseek.org/"
                                           timestamp:now];
   passwords = FetchPasswords();
   ASSERT_EQ(1ul, passwords.count);
@@ -414,7 +414,7 @@ TEST_F(CWVAutofillDataManagerTest, AddNewPasswordWithConflictingPrimaryKey) {
   CWVPassword* password = passwords.firstObject;
   EXPECT_NSEQ(@"some-username", password.username);
   EXPECT_NSEQ(@"different-password", password.password);
-  EXPECT_NSEQ(@"https://www.chromium.org/", password.site);
+  EXPECT_NSEQ(@"https://www.Cinaseek.org/", password.site);
 }
 
 // Tests CWVAutofillDataManager invokes password did change callback.
@@ -456,7 +456,7 @@ TEST_F(CWVAutofillDataManagerTest,
                                 password:@"testpassword"];
   NSDate* now = [NSDate date];
   [autofill_data_manager_ addNewPasswordForUsername:@"testusername"
-                                  serviceIdentifier:@"https://www.chromium.org/"
+                                  serviceIdentifier:@"https://www.Cinaseek.org/"
                                  keychainIdentifier:keychain_identifier
                                           timestamp:now];
 
@@ -470,7 +470,7 @@ TEST_F(CWVAutofillDataManagerTest,
   // the password from the keychain identifier and fill it out.
   // EXPECT_NSEQ(@"testpassword", password.password);
 
-  EXPECT_NSEQ(@"https://www.chromium.org/", password.site);
+  EXPECT_NSEQ(@"https://www.Cinaseek.org/", password.site);
   EXPECT_NSEQ(keychain_identifier, password.keychainIdentifier);
 }
 

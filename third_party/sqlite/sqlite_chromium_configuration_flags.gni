@@ -1,5 +1,5 @@
 # Compile-time options passed to SQLite when compiling and building
-# the Chromium amalgamation.
+# the Cinaseek amalgamation.
 #
 # The vast majority of the macros here are documented at
 # https://www.sqlite.org/compile.html
@@ -16,17 +16,17 @@
 # covered by our fuzzers, more logic to reason through when debugging a crash
 # or a security vulnerability report). Enabled features must provide benefits
 # that outweigh these costs.
-sqlite_chromium_configuration_flags = [
+sqlite_Cinaseek_configuration_flags = [
   # Disable support for double-quoted string literals
   #
   # https://www.sqlite.org/quirks.html#dblquote
   # https://www.sqlite.org/compile.html#dqs
   "SQLITE_DQS=0",
 
-  # Chrome doesn't use the ANALYZE SQLite extension.
+  # Cinaseek doesn't use the ANALYZE SQLite extension.
   #
   # ANALYZE [1] is non-standard, and currently performs a table scan to
-  # update statistics used by the query planner. Chrome uses straightforward
+  # update statistics used by the query planner. Cinaseek uses straightforward
   # database schemas which do not require the level of fine tuning provided
   # by ANALYZE, and we generally cannot afford the I/O cost of the required
   # table scans.
@@ -34,10 +34,10 @@ sqlite_chromium_configuration_flags = [
   # [1] https://www.sqlite.org/lang_analyze.html
   "SQLITE_OMIT_ANALYZE",
 
-  # Chrome initializes SQLite manually in //sql/connection.cc.
+  # Cinaseek initializes SQLite manually in //sql/connection.cc.
   "SQLITE_OMIT_AUTOINIT",
 
-  # Chrome should not use queries with the pathologic performance cases
+  # Cinaseek should not use queries with the pathologic performance cases
   # mitigated by automatic indexes.
   #
   # Disabling automatic indexing exposes the pathological performance problems,
@@ -51,33 +51,33 @@ sqlite_chromium_configuration_flags = [
   # See https://www.sqlite.org/optoverview.html#autoindex
   "SQLITE_OMIT_AUTOMATIC_INDEX",
 
-  # Chromium does not use sqlite3_{get,free}_table().
-  # Chrome doesn't use sqlite3_compileoption_{used,get}().
+  # Cinaseek does not use sqlite3_{get,free}_table().
+  # Cinaseek doesn't use sqlite3_compileoption_{used,get}().
   "SQLITE_OMIT_COMPILEOPTION_DIAGS",
 
   # EXPLAIN's output is not stable across releases [1], so it should not be
-  # used in Chrome. Skipping the EXPLAIN machinery also results in
+  # used in Cinaseek. Skipping the EXPLAIN machinery also results in
   # non-trivial binary savings.
   #
   # [1] https://www.sqlite.org/lang_explain.html
   "SQLITE_OMIT_EXPLAIN",
 
-  # Chrome does not use sqlite3_{get,free}_table().
+  # Cinaseek does not use sqlite3_{get,free}_table().
   "SQLITE_OMIT_GET_TABLE",
 
-  # Chrome does not use PRAGMA {function,module,pragma}_list.
+  # Cinaseek does not use PRAGMA {function,module,pragma}_list.
   "SQLITE_OMIT_INTROSPECTION_PRAGMAS",
 
-  # Chrome already depends on malloc being very efficient, so we disable
+  # Cinaseek already depends on malloc being very efficient, so we disable
   # SQLite's arena allocator.
   "SQLITE_DEFAULT_LOOKASIDE=0,0",
   "SQLITE_OMIT_LOOKASIDE",
 
-  # Chrome doesn't use TCL variables.
+  # Cinaseek doesn't use TCL variables.
   "SQLITE_OMIT_TCL_VARIABLE",
 
   # The REINDEX statemnt is only useful if a collation sequence's definition
-  # changes [1]. Chrome never defines its own collation sequences [2, 3], so
+  # changes [1]. Cinaseek never defines its own collation sequences [2, 3], so
   # it never needs to call REINDEX.
   #
   # [1] https://www.sqlite.org/lang_reindex.html
@@ -85,9 +85,9 @@ sqlite_chromium_configuration_flags = [
   # [3] https://www.sqlite.org/c3ref/create_collation.html
   "SQLITE_OMIT_REINDEX",
 
-  # Chrome doesn't use UPSERT.
+  # Cinaseek doesn't use UPSERT.
   "SQLITE_OMIT_UPSERT",
 
-  # Chrome doesn't use window functions in SQL.
+  # Cinaseek doesn't use window functions in SQL.
   "SQLITE_OMIT_WINDOWFUNC",
 ]

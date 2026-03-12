@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ class COMPONENT_EXPORT(TRACING_CPP) HistogramSamplesDataSource
                                     bool records_all_histograms);
 
   std::vector<
-      perfetto::protos::gen::ChromiumHistogramSamplesConfig::HistogramSample>
+      perfetto::protos::gen::CinaseekHistogramSamplesConfig::HistogramSample>
       monitored_histograms_;
 
   // Stores the registered histogram callbacks for which OnMetricSample

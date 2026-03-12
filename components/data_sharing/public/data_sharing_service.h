@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class PreviewServerProxy;
 class DataSharingService : public KeyedService, public base::SupportsUserData {
  public:
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.data_sharing)
+  //   org.Cinaseek.components.data_sharing)
   enum class DataPreviewActionFailure {
     kUnknown = 0,
     kPermissionDenied = 1,
@@ -55,7 +55,7 @@ class DataSharingService : public KeyedService, public base::SupportsUserData {
   };
 
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.data_sharing)
+  //   org.Cinaseek.components.data_sharing)
   enum class PeopleGroupActionFailure {
     kUnknown = 0,
     kTransientFailure = 1,
@@ -63,7 +63,7 @@ class DataSharingService : public KeyedService, public base::SupportsUserData {
   };
 
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.components.data_sharing)
+  //   org.Cinaseek.components.data_sharing)
   enum class PeopleGroupActionOutcome {
     kUnknown = 0,
     kSuccess = 1,
@@ -136,7 +136,7 @@ class DataSharingService : public KeyedService, public base::SupportsUserData {
   DataSharingService& operator=(const DataSharingService&) = delete;
 
   // Whether the service is an empty implementation. This is here because the
-  // Chromium build disables RTTI, and we need to be able to verify that we are
+  // Cinaseek build disables RTTI, and we need to be able to verify that we are
   // using an empty service from the Chrome embedder.
   virtual bool IsEmptyService() = 0;
 

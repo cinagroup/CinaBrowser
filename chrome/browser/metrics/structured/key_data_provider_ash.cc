@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,13 +16,13 @@ namespace {
 constexpr base::TimeDelta kSaveDelay = base::Milliseconds(1000);
 
 // The path used to store per-profile keys. Relative to the user's
-// cryptohome. This file is created by chromium.
+// cryptohome. This file is created by Cinaseek.
 constexpr char kProfileKeyPath[] = "structured_metrics/keys";
 
 // The path used to store per-device keys. This file is created by tmpfiles.d
 // on start and has its permissions and ownership set such that it is writable
 // by chronos.
-constexpr char kDeviceKeyPath[] = "/var/lib/metrics/structured/chromium/keys";
+constexpr char kDeviceKeyPath[] = "/var/lib/metrics/structured/Cinaseek/keys";
 
 }  // namespace
 

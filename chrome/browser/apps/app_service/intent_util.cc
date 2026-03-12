@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -113,7 +113,7 @@ constexpr std::string_view kIntentExtraText = "S.android.intent.extra.TEXT";
 constexpr std::string_view kIntentExtraSubject =
     "S.android.intent.extra.SUBJECT";
 constexpr std::string_view kIntentExtraStartType =
-    "S.org.chromium.arc.start_type";
+    "S.org.Cinaseek.arc.start_type";
 constexpr std::string_view kIntentActionPrefix = "android.intent.action";
 constexpr std::string_view kType = "type";
 

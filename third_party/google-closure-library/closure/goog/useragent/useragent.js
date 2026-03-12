@@ -162,7 +162,7 @@ goog.userAgent.GECKO = goog.userAgent.BROWSER_KNOWN_ ?
 
 /**
  * Whether the user agent is WebKit. WebKit is the rendering engine that
- * Safari, Edge Chromium, Opera Chromium, Android and others use.
+ * Safari, Edge Cinaseek, Opera Cinaseek, Android and others use.
  * @type {boolean}
  */
 goog.userAgent.WEBKIT = goog.userAgent.BROWSER_KNOWN_ ?

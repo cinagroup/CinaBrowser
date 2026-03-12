@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1281,8 +1281,8 @@ TEST_F(TemplateURLTest, SearchTermKeyLocation) {
        "", ""},
       {"http://blah/?foo=bar#x={searchTerms}&b=x", url::Parsed::REF, "/", "x",
        "", ""},
-      {"http://www.example.com/?q=chromium-{searchTerms}@chromium.org/info",
-       url::Parsed::QUERY, "/", "q", "chromium-", "@chromium.org/info"},
+      {"http://www.example.com/?q=Cinaseek-{searchTerms}@Cinaseek.org/info",
+       url::Parsed::QUERY, "/", "q", "Cinaseek-", "@Cinaseek.org/info"},
 
       // searchTerms is a key, not a value, so this should result in an empty
       // value.
@@ -1889,19 +1889,19 @@ TEST_F(TemplateURLTest, ExtractSearchTermsFromNonUTF8URL) {
 TEST_F(TemplateURLTest, ExtractSearchTermsWithPrefixAndSuffix) {
   TemplateURLData data;
   data.alternate_urls.push_back(
-      "http://www.example.com/?q=chromium-{searchTerms}@chromium.org");
+      "http://www.example.com/?q=Cinaseek-{searchTerms}@Cinaseek.org");
   data.alternate_urls.push_back(
-      "http://www.example.com/chromium-{searchTerms}@chromium.org/info");
+      "http://www.example.com/Cinaseek-{searchTerms}@Cinaseek.org/info");
   TemplateURL url(data);
   std::u16string result;
 
   EXPECT_TRUE(url.ExtractSearchTermsFromURL(
-      GURL("http://www.example.com/?q=chromium-dev@chromium.org"),
+      GURL("http://www.example.com/?q=Cinaseek-dev@Cinaseek.org"),
       search_terms_data_, &result));
   EXPECT_EQ(u"dev", result);
 
   EXPECT_TRUE(url.ExtractSearchTermsFromURL(
-      GURL("http://www.example.com/chromium-dev@chromium.org/info"),
+      GURL("http://www.example.com/Cinaseek-dev@Cinaseek.org/info"),
       search_terms_data_, &result));
   EXPECT_EQ(u"dev", result);
 

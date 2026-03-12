@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ class CreditCard : public FormGroup {
   // Whether the card has been enrolled in the virtual card feature. This must
   // stay in sync with the proto enum in autofill_specifics.proto. A java
   // IntDef@ is generated from this.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   enum class VirtualCardEnrollmentState {
     // State unspecified. This is the default value of this enum. Should not be
     // ever used with cards.
@@ -140,7 +140,7 @@ class CreditCard : public FormGroup {
   //
   // This must stay in sync with the proto enum in autofill_specifics.proto.
   // A java IntDef@ is generated from this.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   enum class CardInfoRetrievalEnrollmentState {
     // State unspecified. This is the default value of this enum.
     kRetrievalUnspecified = 0,

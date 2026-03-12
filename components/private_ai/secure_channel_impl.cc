@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@
 #include "components/private_ai/transport.h"
 #include "components/private_ai/websocket_client.h"
 #include "services/network/public/mojom/network_context.mojom.h"
-#include "third_party/oak/chromium/proto/session/session.pb.h"
+#include "third_party/oak/Cinaseek/proto/session/session.pb.h"
 #include "url/gurl.h"
 
 namespace private_ai {

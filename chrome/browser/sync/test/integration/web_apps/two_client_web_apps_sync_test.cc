@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -144,11 +144,11 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, Basic) {
   install_observer.BeginListening();
 
   std::u16string app_name = u"Test name";
-  auto start_url = GURL("http://www.chromium.org/path");
+  auto start_url = GURL("http://www.Cinaseek.org/path");
   auto info = WebAppInstallInfo::CreateWithStartUrlForTesting(start_url);
   info->title = app_name;
   info->description = u"Test description";
-  info->scope = GURL("http://www.chromium.org/");
+  info->scope = GURL("http://www.Cinaseek.org/");
   webapps::AppId app_id =
       apps_helper::InstallWebApp(GetProfile(0), std::move(info));
 
@@ -156,7 +156,7 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, Basic) {
   const WebAppRegistrar& registrar = GetRegistrar(GetProfile(1));
   EXPECT_EQ(base::UTF8ToUTF16(registrar.GetAppShortName(app_id)), app_name);
   EXPECT_EQ(registrar.GetAppStartUrl(app_id), start_url);
-  EXPECT_EQ(registrar.GetAppScope(app_id), GURL("http://www.chromium.org/"));
+  EXPECT_EQ(registrar.GetAppScope(app_id), GURL("http://www.Cinaseek.org/"));
 
   EXPECT_TRUE(AllProfilesHaveSameWebAppIds());
 }
@@ -164,15 +164,15 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, Basic) {
 IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, MigratingAppsDoNotSync) {
   WebAppProvider* provider1 = WebAppProvider::GetForTest(GetProfile(0));
 
-  auto start_url = GURL("http://www.chromium.org/path");
+  auto start_url = GURL("http://www.Cinaseek.org/path");
   auto info = WebAppInstallInfo::CreateWithStartUrlForTesting(start_url);
   info->title = u"Test name";
   info->description = u"Test description";
-  info->scope = GURL("http://www.chromium.org/");
+  info->scope = GURL("http://www.Cinaseek.org/");
   info->user_display_mode = mojom::UserDisplayMode::kStandalone;
 
   info->migration_sources.emplace_back(
-      webapps::ManifestId(GURL("http://migration.chromium.org/start.html")),
+      webapps::ManifestId(GURL("http://migration.Cinaseek.org/start.html")),
       MigrationBehavior::kSuggest);
 
   // Install app on first profile, mark it suggested for migration.
@@ -205,12 +205,12 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, Minimal) {
   install_observer.BeginListening();
 
   webapps::AppId app_id = web_app::test::InstallDummyWebApp(
-      GetProfile(0), "Test name", GURL("http://www.chromium.org/"));
+      GetProfile(0), "Test name", GURL("http://www.Cinaseek.org/"));
 
   EXPECT_EQ(install_observer.Wait(), app_id);
   const WebAppRegistrar& registrar = GetRegistrar(GetProfile(1));
   EXPECT_EQ(registrar.GetAppShortName(app_id), "Test name");
-  EXPECT_EQ(registrar.GetAppStartUrl(app_id), GURL("http://www.chromium.org/"));
+  EXPECT_EQ(registrar.GetAppStartUrl(app_id), GURL("http://www.Cinaseek.org/"));
 
   EXPECT_TRUE(AllProfilesHaveSameWebAppIds());
 }
@@ -219,11 +219,11 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, ThemeColor) {
   WebAppTestInstallObserver install_observer(GetProfile(1));
   install_observer.BeginListening();
 
-  auto start_url = GURL("http://www.chromium.org/");
+  auto start_url = GURL("http://www.Cinaseek.org/");
   SkColor theme_color = SK_ColorBLUE;
   std::u16string app_name = u"Test name";
   auto info = WebAppInstallInfo::CreateWithStartUrlForTesting(
-      GURL("http://www.chromium.org/"));
+      GURL("http://www.Cinaseek.org/"));
   info->title = app_name;
   info->theme_color = theme_color;
   webapps::AppId app_id =
@@ -244,7 +244,7 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, IsLocallyInstalled) {
   install_observer.BeginListening();
 
   webapps::AppId app_id = web_app::test::InstallDummyWebApp(
-      GetProfile(0), "Test name", GURL("http://www.chromium.org/"));
+      GetProfile(0), "Test name", GURL("http://www.Cinaseek.org/"));
   EXPECT_TRUE(
       GetRegistrar(GetProfile(0))
           .AppMatches(app_id,
@@ -276,9 +276,9 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest,
   const WebAppRegistrar& registrar1 = GetRegistrar(GetProfile(1));
 
   std::u16string title_a = u"Test name A";
-  auto scope_a = GURL("http://www.chromium.org/path/to/");
+  auto scope_a = GURL("http://www.Cinaseek.org/path/to/");
   SkColor theme_color_a = SK_ColorBLUE;
-  auto start_url = GURL("http://www.chromium.org/path/to/start_url");
+  auto start_url = GURL("http://www.Cinaseek.org/path/to/start_url");
   auto info_a = WebAppInstallInfo::CreateWithStartUrlForTesting(start_url);
   info_a->title = title_a;
   info_a->description = u"Description A";
@@ -298,7 +298,7 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest,
 
   std::u16string title_b = u"Test name B";
   std::u16string description_b = u"Description B";
-  auto scope_b = GURL("http://www.chromium.org/path/to/");
+  auto scope_b = GURL("http://www.Cinaseek.org/path/to/");
   SkColor theme_color_b = SK_ColorRED;
   // Reinstall same app in Profile 0 with a different metadata aside from the
   // start_url.
@@ -320,7 +320,7 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest,
   // sync has propagated to the other profile.
   webapps::AppId app_id_c =
       web_app::test::InstallDummyWebApp(GetProfile(0), "Different test name",
-                                        GURL("http://www.notchromium.org/"));
+                                        GURL("http://www.notCinaseek.org/"));
   EXPECT_NE(app_id_a, app_id_c);
   EXPECT_EQ(WebAppTestInstallObserver(GetProfile(1)).BeginListeningAndWait(),
             app_id_c);
@@ -525,10 +525,10 @@ IN_PROC_BROWSER_TEST_P(TwoClientWebAppsSyncTest, SyncUserDisplayModeChange) {
   install_observer.BeginListening();
 
   auto info = WebAppInstallInfo::CreateWithStartUrlForTesting(
-      GURL("http://www.chromium.org/path"));
+      GURL("http://www.Cinaseek.org/path"));
   info->title = u"Test name";
   info->description = u"Test description";
-  info->scope = GURL("http://www.chromium.org/");
+  info->scope = GURL("http://www.Cinaseek.org/");
   info->user_display_mode = mojom::UserDisplayMode::kStandalone;
   webapps::AppId app_id =
       apps_helper::InstallWebApp(GetProfile(0), std::move(info));

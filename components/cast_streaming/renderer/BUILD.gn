@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -29,8 +29,8 @@ source_set("renderer") {
 }
 
 # Public target used by the //content code to inject the Renderer used for
-# cast_streaming operations. This target is included in ALL chromium builds
-# that use the Chromium media pipeline, so be careful when adding new
+# cast_streaming operations. This target is included in ALL Cinaseek builds
+# that use the Cinaseek media pipeline, so be careful when adding new
 # dependencies here.
 source_set("resource_provider") {
   visibility += [

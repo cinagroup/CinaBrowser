@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ class CONTENT_EXPORT PseudonymizationUtil {
   //
   // The same input `string` value will be translated into the same
   // pseudonymized uint32_t value, as long as PseudonymizeString is called
-  // within the same Chromium session.  This is true even across processes (e.g.
+  // within the same Cinaseek session.  This is true even across processes (e.g.
   // the same pseudonymization result will be produced in the Browser process
   // and Renderer processes).
   //

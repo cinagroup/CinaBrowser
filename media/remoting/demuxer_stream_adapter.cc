@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -251,7 +251,7 @@ void DemuxerStreamAdapter::EnableBitstreamConverter() {
 #else
   is_command_sent = false;
   DEMUXER_VLOG(1) << "Ignoring EnableBitstreamConverter() RPC: Proprietary "
-                     "codecs not enabled in this Chromium build.";
+                     "codecs not enabled in this Cinaseek build.";
 #endif
 
   if (remote_callback_handle_ != RpcMessenger::kInvalidHandle) {

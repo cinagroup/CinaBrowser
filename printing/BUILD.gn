@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -491,7 +491,7 @@ if (use_cups) {
 
 if (is_android) {
   generate_jni("printing_jni_headers") {
-    sources = [ "android/java/src/org/chromium/printing/PrintingContext.java" ]
+    sources = [ "android/java/src/org/Cinaseek/printing/PrintingContext.java" ]
   }
 
   android_library("printing_java") {
@@ -505,13 +505,13 @@ if (is_android) {
     ]
     srcjar_deps = [ ":printing_jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/printing/PrintDocumentAdapterWrapper.java",
-      "android/java/src/org/chromium/printing/PrintManagerDelegate.java",
-      "android/java/src/org/chromium/printing/PrintManagerDelegateImpl.java",
-      "android/java/src/org/chromium/printing/Printable.java",
-      "android/java/src/org/chromium/printing/PrintingContext.java",
-      "android/java/src/org/chromium/printing/PrintingController.java",
-      "android/java/src/org/chromium/printing/PrintingControllerImpl.java",
+      "android/java/src/org/Cinaseek/printing/PrintDocumentAdapterWrapper.java",
+      "android/java/src/org/Cinaseek/printing/PrintManagerDelegate.java",
+      "android/java/src/org/Cinaseek/printing/PrintManagerDelegateImpl.java",
+      "android/java/src/org/Cinaseek/printing/Printable.java",
+      "android/java/src/org/Cinaseek/printing/PrintingContext.java",
+      "android/java/src/org/Cinaseek/printing/PrintingController.java",
+      "android/java/src/org/Cinaseek/printing/PrintingControllerImpl.java",
     ]
   }
 }

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -5282,7 +5282,7 @@ void InternalVisitedColor::ApplyValue(StyleResolverState& state,
     // Unresolved color functions are a special case for this property.
     // See Color::ApplyValue.
     // Using Color instead of InternalVisitedColor here, see
-    // https://bugs.chromium.org/p/chromium/issues/detail?id=1236297#c5.
+    // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1236297#c5.
     StyleColor color =
         StyleBuilderConverter::ConvertStyleColor(state, value, true);
     if (color.IsUnresolvedColorFunction()) {

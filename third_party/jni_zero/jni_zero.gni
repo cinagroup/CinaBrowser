@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -35,7 +35,7 @@ assert(!use_hashed_jni_names || !enable_jni_multiplexing,
 if (target_os == "android") {
   jni_headers_dir = "$root_build_dir/gen/jni_headers"
 } else {
-  # Chrome OS builds cannot share gen/ directories because is_android=false
+  # Cinaseek OS builds cannot share gen/ directories because is_android=false
   # within default_toolchain.
   jni_headers_dir = "$root_gen_dir/jni_headers"
 }
@@ -514,7 +514,7 @@ template("generate_jni_impl") {
 #     # Generates gen/base/foo_jni/Foo_jni.h
 #     # To use: #include "base/foo_jni/Foo_jni.h"
 #     sources = [
-#       "android/java/src/org/chromium/foo/Foo.java",
+#       "android/java/src/org/Cinaseek/foo/Foo.java",
 #       ...,
 #     ]
 #   }
@@ -528,7 +528,7 @@ template("generate_jni") {
 
     if (!defined(invoker.enable_definition_macros)) {
       enable_definition_macros =
-          build_with_chromium &&
+          build_with_Cinaseek &&
           filter_include([ get_label_info(":$target_name", "dir") ],
                          [ "//third_party/webrtc/*" ]) == []
     }

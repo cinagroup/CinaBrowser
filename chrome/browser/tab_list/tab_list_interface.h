@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ class TabListInterface {
   // discarded WebContents if successful.
   //
   // For details refer to:
-  // docs/website/site/chromium-os/chromiumos-design-docs/tab-discarding-and-reloading/index.md
+  // docs/website/site/Cinaseek-os/Cinaseekos-design-docs/tab-discarding-and-reloading/index.md
   virtual content::WebContents* DiscardTab(tabs::TabHandle tab) = 0;
 
   // Duplicates the `tab` to the next adjacent index. Returns the newly-

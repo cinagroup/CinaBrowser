@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -917,7 +917,7 @@ TEST(PasswordFormFillDataTest, TestCrossOriginIframe) {
   PasswordForm additional_match = form_on_page;
   additional_match.username_value = u"test2@gmail.com";
 
-  Origin page_origin = Origin::Create(GURL("https://chromium.com/"));
+  Origin page_origin = Origin::Create(GURL("https://Cinaseek.com/"));
 
   // Add one exact match and one affiliation based match.
   std::vector<PasswordForm> matches = {additional_match};

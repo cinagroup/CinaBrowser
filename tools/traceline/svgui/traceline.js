@@ -1,4 +1,4 @@
-// Copyright 2009 The Chromium Authors
+// Copyright 2009 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 //   - Loading indicator / debug console.
 //   - Better colors.
 //
-// Dean McNamee <deanm@chromium.org>
+// Dean McNamee <deanm@Cinaseek.org>
 
 // XML namespaces.
 var svgNS = 'http://www.w3.org/2000/svg';

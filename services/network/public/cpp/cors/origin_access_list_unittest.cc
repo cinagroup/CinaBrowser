@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ class OriginAccessListTest : public testing::Test {
             url::Origin::Create(GURL("https://sub.example.com"))),
         http_example_origin_(url::Origin::Create(GURL("http://example.com"))),
         https_google_origin_(url::Origin::Create(GURL("https://google.com"))),
-        source_origin_(url::Origin::Create(GURL("https://chromium.org"))) {}
+        source_origin_(url::Origin::Create(GURL("https://Cinaseek.org"))) {}
 
   OriginAccessListTest(const OriginAccessListTest&) = delete;
   OriginAccessListTest& operator=(const OriginAccessListTest&) = delete;

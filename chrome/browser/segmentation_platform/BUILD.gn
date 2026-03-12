@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ if (is_android) {
 if (is_android) {
   android_library("factory_java") {
     srcjar_deps = [ ":jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactory.java" ]
 
     deps = [
       "//base:base_java",
@@ -26,7 +26,7 @@ if (is_android) {
   android_library("javatests") {
     testonly = true
 
-    sources = [ "android/javatests/src/org/chromium/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactoryTest.java" ]
+    sources = [ "android/javatests/src/org/Cinaseek/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactoryTest.java" ]
     deps = [
       "//base:base_java",
       "//base:base_java_test_support",
@@ -45,12 +45,12 @@ if (is_android) {
   }
 
   generate_jni("jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/segmentation_platform/SegmentationPlatformServiceFactory.java" ]
   }
 
   android_library("client_util_java") {
     srcjar_deps = [ ":client_util_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/segmentation_platform/client_util/HomeModulesRankingHelper.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/segmentation_platform/client_util/HomeModulesRankingHelper.java" ]
 
     deps = [
       ":factory_java",
@@ -64,7 +64,7 @@ if (is_android) {
     ]
   }
   generate_jni("client_util_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/segmentation_platform/client_util/HomeModulesRankingHelper.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/segmentation_platform/client_util/HomeModulesRankingHelper.java" ]
   }
 }
 

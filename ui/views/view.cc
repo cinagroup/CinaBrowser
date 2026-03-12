@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1548,7 +1548,7 @@ const ui::NativeTheme* View::GetNativeTheme() const {
 
   static bool has_crashed_reported = false;
   // Crash on debug builds and dump without crashing on release builds to ensure
-  // we catch fallthrough to the global NativeTheme instance on all Chromium
+  // we catch fallthrough to the global NativeTheme instance on all Cinaseek
   // builds (crbug.com/1056756).
   if (!has_crashed_reported) {
     DCHECK(false);

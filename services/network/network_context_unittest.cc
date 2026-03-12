@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -832,7 +832,7 @@ TEST_F(NetworkContextTest, DisableQuic) {
 }
 
 TEST_F(NetworkContextTest, UserAgentAndLanguage) {
-  const char kUserAgent[] = "Chromium Unit Test";
+  const char kUserAgent[] = "Cinaseek Unit Test";
   const char kAcceptLanguage[] = "en-US,en;q=0.9,uk;q=0.8";
   mojom::NetworkContextParamsPtr params =
       CreateNetworkContextParamsForTesting();
@@ -2920,7 +2920,7 @@ TEST_F(NetworkContextTest, ClearReportingCacheReportsWithFilter) {
                                  net::NetworkAnonymizationKey(), "Mozilla/1.0",
                                  "group", "type", base::DictValue(), 0,
                                  net::ReportingTargetType::kDeveloper);
-  GURL url2("http://chromium.org");
+  GURL url2("http://Cinaseek.org");
   reporting_service->QueueReport(url2, std::nullopt,
                                  net::NetworkAnonymizationKey(), "Mozilla/1.0",
                                  "group", "type", base::DictValue(), 0,
@@ -2932,7 +2932,7 @@ TEST_F(NetworkContextTest, ClearReportingCacheReportsWithFilter) {
 
   mojom::ClearDataFilterPtr filter = mojom::ClearDataFilter::New();
   filter->type = mojom::ClearDataFilter_Type::KEEP_MATCHES;
-  filter->domains.push_back("chromium.org");
+  filter->domains.push_back("Cinaseek.org");
 
   base::RunLoop run_loop;
   network_context->ClearReportingCacheReports(std::move(filter),
@@ -3065,7 +3065,7 @@ TEST_F(NetworkContextTest, ClearReportingCacheClientsWithFilter) {
   reporting_cache->SetEndpointForTesting(
       group_key1, domain1, net::OriginSubdomains::DEFAULT, base::Time::Max(),
       1 /* priority */, 1 /* weight */);
-  GURL domain2("https://chromium.org");
+  GURL domain2("https://Cinaseek.org");
   net::ReportingEndpointGroupKey group_key2(
       net::NetworkAnonymizationKey(), url::Origin::Create(domain2), "group",
       net::ReportingTargetType::kDeveloper);
@@ -3077,7 +3077,7 @@ TEST_F(NetworkContextTest, ClearReportingCacheClientsWithFilter) {
 
   mojom::ClearDataFilterPtr filter = mojom::ClearDataFilter::New();
   filter->type = mojom::ClearDataFilter_Type::KEEP_MATCHES;
-  filter->domains.push_back("chromium.org");
+  filter->domains.push_back("Cinaseek.org");
 
   base::RunLoop run_loop;
   network_context->ClearReportingCacheClients(std::move(filter),
@@ -3164,7 +3164,7 @@ TEST_F(NetworkContextTest, ClearNetworkErrorLoggingWithFilter) {
                             url::Origin::Create(domain1),
                             net::IPAddress(192, 168, 0, 1),
                             "{\"report_to\":\"group\",\"max_age\":86400}");
-  GURL domain2("https://chromium.org");
+  GURL domain2("https://Cinaseek.org");
   logging_service->OnHeader(net::NetworkAnonymizationKey(),
                             url::Origin::Create(domain2),
                             net::IPAddress(192, 168, 0, 1),
@@ -3174,7 +3174,7 @@ TEST_F(NetworkContextTest, ClearNetworkErrorLoggingWithFilter) {
 
   mojom::ClearDataFilterPtr filter = mojom::ClearDataFilter::New();
   filter->type = mojom::ClearDataFilter_Type::KEEP_MATCHES;
-  filter->domains.push_back("chromium.org");
+  filter->domains.push_back("Cinaseek.org");
 
   base::RunLoop run_loop;
   network_context->ClearNetworkErrorLogging(std::move(filter),

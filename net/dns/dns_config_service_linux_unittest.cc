@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -75,12 +75,12 @@ void InitializeResState(res_state res) {
   res->retry = 7;
 
   const char kDnsrch[] =
-      "chromium.org"
+      "Cinaseek.org"
       "\0"
       "example.com";
   UNSAFE_TODO(memcpy(res->defdname, kDnsrch, sizeof(kDnsrch)));
   res->dnsrch[0] = res->defdname;
-  res->dnsrch[1] = UNSAFE_TODO(res->defdname + sizeof("chromium.org"));
+  res->dnsrch[1] = UNSAFE_TODO(res->defdname + sizeof("Cinaseek.org"));
 
   for (unsigned i = 0; i < std::size(kNameserversIPv4) && i < MAXNS; ++i) {
     struct sockaddr_in sa;
@@ -118,7 +118,7 @@ void InitializeExpectedConfig(DnsConfig* config) {
   config->rotate = true;
   config->append_to_multi_label_name = true;
   config->search.clear();
-  config->search.push_back("chromium.org");
+  config->search.push_back("Cinaseek.org");
   config->search.push_back("example.com");
 
   config->nameservers.clear();
@@ -359,7 +359,7 @@ TEST_F(DnsConfigServiceLinuxTest, ConvertResStateToDnsConfig) {
 TEST_F(DnsConfigServiceLinuxTest, RejectEmptyNameserver) {
   auto res = std::make_unique<struct __res_state>();
   res->options = RES_INIT | RES_RECURSE | RES_DEFNAMES | RES_DNSRCH;
-  const char kDnsrch[] = "chromium.org";
+  const char kDnsrch[] = "Cinaseek.org";
   UNSAFE_TODO(memcpy(res->defdname, kDnsrch, sizeof(kDnsrch)));
   res->dnsrch[0] = res->defdname;
 
@@ -387,7 +387,7 @@ TEST_F(DnsConfigServiceLinuxTest, RejectEmptyNameserver) {
 TEST_F(DnsConfigServiceLinuxTest, AcceptNonEmptyNameserver) {
   auto res = std::make_unique<struct __res_state>();
   res->options = RES_INIT | RES_RECURSE | RES_DEFNAMES | RES_DNSRCH;
-  const char kDnsrch[] = "chromium.org";
+  const char kDnsrch[] = "Cinaseek.org";
   UNSAFE_TODO(memcpy(res->defdname, kDnsrch, sizeof(kDnsrch)));
   res->dnsrch[0] = res->defdname;
 

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -105,7 +105,7 @@ buildflag_header("buildflags") {
     flags += [ "ENABLE_SEGMENT_HEAP=$enable_segment_heap" ]
   }
 
-  # Android and ChromeOS don't support multiple browser processes, so they don't
+  # Android and CinaseekOS don't support multiple browser processes, so they don't
   # employ ProcessSingleton.
   if (is_android || is_chromeos) {
     flags += [ "ENABLE_PROCESS_SINGLETON=false" ]

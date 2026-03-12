@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6650,7 +6650,7 @@ TEST_P(SSLClientSocketAlpsTest, UnusedProtocols) {
             std::to_array<uint8_t>({0x00, 0x03, 0x02, 'h', '2'});
         EXPECT_EQ(
             // SAFETY:
-            // https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#SSL_early_callback_ctx_extension_get
+            // https://commondatastorage.googleapis.com/Cinaseek-boringssl-docs/ssl.h.html#SSL_early_callback_ctx_extension_get
             // The comment of `SSL_early_callback_ctx_extension_get` says that
             // `data` is set to extension contents, and `len` is the
             // length of the extension contents.

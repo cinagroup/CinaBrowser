@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "device/bluetooth/floss/floss_lescan_client.h"
@@ -21,7 +21,7 @@
 namespace floss {
 
 const char kNoCallbackRegistered[] =
-    "org.chromium.bluetooth.Error.NoCallbackRegistered";
+    "org.Cinaseek.bluetooth.Error.NoCallbackRegistered";
 
 ScanFilterPattern::ScanFilterPattern() = default;
 ScanFilterPattern::ScanFilterPattern(const ScanFilterPattern&) = default;

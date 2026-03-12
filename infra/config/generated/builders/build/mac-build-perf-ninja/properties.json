@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/build/mac-build-perf-ninja/gn-args.json"
@@ -10,17 +10,17 @@
             "builder_id": {
               "bucket": "build",
               "builder": "mac-build-perf-ninja",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build",
+              "builder_group": "Cinaseek.build",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
@@ -28,7 +28,7 @@
                 "apply_configs": [
                   "ninja_staging"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -38,7 +38,7 @@
         {
           "bucket": "build",
           "builder": "mac-build-perf-ninja",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -47,9 +47,9 @@
     "use_clang_coverage": true
   },
   "$build/reclient": {
-    "instance": "rbe-chromium-untrusted",
+    "instance": "rbe-Cinaseek-untrusted",
     "jobs": 500,
-    "metrics_project": "chromium-reclient-metrics",
+    "metrics_project": "Cinaseek-reclient-metrics",
     "scandeps_server": true
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -59,6 +59,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.build",
+  "builder_group": "Cinaseek.build",
   "recipe": "chrome_build/build_perf"
 }

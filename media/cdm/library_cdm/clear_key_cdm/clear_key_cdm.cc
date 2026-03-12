@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -236,7 +236,7 @@ static bool g_verify_host_files_result = false;
 bool VerifyCdmHost_0(const cdm::HostFile* host_files, uint32_t num_files) {
   LOG(WARNING) << __func__ << ": " << num_files;
   // SAFETY: This is a C API, can't have spans:
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/cdm/api/content_decryption_module_ext.h;l=56;drc=33685ef0a89c1eb9c61f1819dc0029594a53cefb.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/cdm/api/content_decryption_module_ext.h;l=56;drc=33685ef0a89c1eb9c61f1819dc0029594a53cefb.
   auto host_files_span = UNSAFE_BUFFERS(base::span(host_files, num_files));
 
   // We should always have the CDM and at least one common file.
@@ -395,7 +395,7 @@ void ClearKeyCdm::CreateSessionAndGenerateRequest(
     return;
   }
   // SAFETY: These are defined from a vector here:
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/cdm/cdm_adapter.cc;l=384;drc=8bd3d24cc3bdbffe564eeeca112a6744e6766b17
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/cdm/cdm_adapter.cc;l=384;drc=8bd3d24cc3bdbffe564eeeca112a6744e6766b17
   auto init_data_vector = UNSAFE_BUFFERS(
       std::vector<uint8_t>(init_data, init_data + init_data_size));
   auto promise = std::make_unique<CdmCallbackPromise<std::string>>(

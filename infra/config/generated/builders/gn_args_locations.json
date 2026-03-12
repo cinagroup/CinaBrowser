@@ -1,5 +1,5 @@
 {
-  "chromium": {
+  "Cinaseek": {
     "android-archive-rel": "ci/android-archive-rel/gn-args.json",
     "android-arm64-archive-rel": "ci/android-arm64-archive-rel/gn-args.json",
     "android-desktop-arm64-archive-rel": "ci/android-desktop-arm64-archive-rel/gn-args.json",
@@ -19,11 +19,11 @@
     "win32-archive-rel": "ci/win32-archive-rel/gn-args.json",
     "win32-official": "ci/win32-official/gn-args.json"
   },
-  "chromium.accessibility": {
+  "Cinaseek.accessibility": {
     "fuchsia-x64-accessibility-rel": "ci/fuchsia-x64-accessibility-rel/gn-args.json",
     "linux-blink-web-tests-force-accessibility-rel": "ci/linux-blink-web-tests-force-accessibility-rel/gn-args.json"
   },
-  "chromium.android": {
+  "Cinaseek.android": {
     "Android arm Builder (dbg)": "ci/Android arm Builder (dbg)/gn-args.json",
     "Android arm64 Builder (dbg)": "ci/Android arm64 Builder (dbg)/gn-args.json",
     "Android arm64 Builder All Targets (dbg)": "ci/Android arm64 Builder All Targets (dbg)/gn-args.json",
@@ -68,7 +68,7 @@
     "android-webview-13-x64-hostside-rel": "ci/android-webview-13-x64-hostside-rel/gn-args.json",
     "android-x86-rel": "ci/android-x86-rel/gn-args.json"
   },
-  "chromium.android.desktop": {
+  "Cinaseek.android.desktop": {
     "android-desktop-arm64-compile-dbg": "ci/android-desktop-arm64-compile-dbg/gn-args.json",
     "android-desktop-arm64-compile-rel": "ci/android-desktop-arm64-compile-rel/gn-args.json",
     "android-desktop-arm64-deterministic-dbg": "ci/android-desktop-arm64-deterministic-dbg/gn-args.json",
@@ -78,10 +78,10 @@
     "android-desktop-x64-deterministic-dbg": "ci/android-desktop-x64-deterministic-dbg/gn-args.json",
     "android-desktop-x64-deterministic-rel": "ci/android-desktop-x64-deterministic-rel/gn-args.json"
   },
-  "chromium.android.desktop.fyi": {
+  "Cinaseek.android.desktop.fyi": {
     "android-desktop-15-x64-fyi-rel": "ci/android-desktop-15-x64-fyi-rel/gn-args.json"
   },
-  "chromium.android.fyi": {
+  "Cinaseek.android.fyi": {
     "android-10-x86-fyi-rel": "ci/android-10-x86-fyi-rel/gn-args.json",
     "android-11-x86-fyi-rel": "ci/android-11-x86-fyi-rel/gn-args.json",
     "android-12l-x64-fyi-dbg": "ci/android-12l-x64-fyi-dbg/gn-args.json",
@@ -98,19 +98,19 @@
     "android-cronet-asan-x86-rel": "ci/android-cronet-asan-x86-rel/gn-args.json",
     "android-structured-test-ids-16-x64-rel-fyi": "ci/android-structured-test-ids-16-x64-rel-fyi/gn-args.json"
   },
-  "chromium.angle": {
-    "android-angle-chromium-arm64-builder": "ci/android-angle-chromium-arm64-builder/gn-args.json",
+  "Cinaseek.angle": {
+    "android-angle-Cinaseek-arm64-builder": "ci/android-angle-Cinaseek-arm64-builder/gn-args.json",
     "fuchsia-angle-builder": "ci/fuchsia-angle-builder/gn-args.json",
     "ios-angle-builder": "ci/ios-angle-builder/gn-args.json",
-    "linux-angle-chromium-builder": "ci/linux-angle-chromium-builder/gn-args.json",
-    "mac-angle-chromium-builder": "ci/mac-angle-chromium-builder/gn-args.json",
-    "win-angle-chromium-x64-builder": "ci/win-angle-chromium-x64-builder/gn-args.json",
-    "win-angle-chromium-x86-builder": "ci/win-angle-chromium-x86-builder/gn-args.json"
+    "linux-angle-Cinaseek-builder": "ci/linux-angle-Cinaseek-builder/gn-args.json",
+    "mac-angle-Cinaseek-builder": "ci/mac-angle-Cinaseek-builder/gn-args.json",
+    "win-angle-Cinaseek-x64-builder": "ci/win-angle-Cinaseek-x64-builder/gn-args.json",
+    "win-angle-Cinaseek-x86-builder": "ci/win-angle-Cinaseek-x86-builder/gn-args.json"
   },
-  "chromium.bedrock": {
+  "Cinaseek.bedrock": {
     "linux-bedrock-browser-metrics": "ci/linux-bedrock-browser-metrics/gn-args.json"
   },
-  "chromium.build": {
+  "Cinaseek.build": {
     "android-build-perf-developer": "build/android-build-perf-developer/gn-args.json",
     "android-build-perf-ninja": "build/android-build-perf-ninja/gn-args.json",
     "android-build-perf-siso": "build/android-build-perf-siso/gn-args.json",
@@ -135,15 +135,15 @@
     "win-rbe-trusted-test": "build/win-rbe-trusted-test/gn-args.json",
     "win-rbe-untrusted-test": "build/win-rbe-untrusted-test/gn-args.json"
   },
-  "chromium.build.fyi": {
+  "Cinaseek.build.fyi": {
     "Mac Builder Siso FYI": "build/Mac Builder Siso FYI/gn-args.json"
   },
-  "chromium.cft": {
+  "Cinaseek.cft": {
     "linux-rel-cft": "ci/linux-rel-cft/gn-args.json",
     "mac-rel-cft": "ci/mac-rel-cft/gn-args.json",
     "win-rel-cft": "ci/win-rel-cft/gn-args.json"
   },
-  "chromium.chromiumos": {
+  "Cinaseek.Cinaseekos": {
     "chromeos-amd64-generic-asan-rel": "ci/chromeos-amd64-generic-asan-rel/gn-args.json",
     "chromeos-amd64-generic-cfi-thin-lto-rel": "ci/chromeos-amd64-generic-cfi-thin-lto-rel/gn-args.json",
     "chromeos-amd64-generic-dbg": "ci/chromeos-amd64-generic-dbg/gn-args.json",
@@ -155,7 +155,7 @@
     "linux-chromeos-dbg": "ci/linux-chromeos-dbg/gn-args.json",
     "linux-chromeos-rel": "ci/linux-chromeos-rel/gn-args.json"
   },
-  "chromium.clang": {
+  "Cinaseek.clang": {
     "CFI Linux CF": "ci/CFI Linux CF/gn-args.json",
     "CFI Linux ToT": "ci/CFI Linux ToT/gn-args.json",
     "CrWinAsan": "ci/CrWinAsan/gn-args.json",
@@ -204,7 +204,7 @@
     "ToTiOSDevice": "ci/ToTiOSDevice/gn-args.json",
     "linux-win-cross-clang-tot-rel": "ci/linux-win-cross-clang-tot-rel/gn-args.json"
   },
-  "chromium.coverage": {
+  "Cinaseek.coverage": {
     "android-code-coverage": "ci/android-code-coverage/gn-args.json",
     "android-code-coverage-native": "ci/android-code-coverage-native/gn-args.json",
     "android-cronet-code-coverage-java": "ci/android-cronet-code-coverage-java/gn-args.json",
@@ -224,12 +224,12 @@
     "mac-code-coverage": "ci/mac-code-coverage/gn-args.json",
     "win10-code-coverage": "ci/win10-code-coverage/gn-args.json"
   },
-  "chromium.dawn": {
+  "Cinaseek.dawn": {
     "Dawn Android arm Builder": "ci/Dawn Android arm Builder/gn-args.json",
     "Dawn Android arm DEPS Builder": "ci/Dawn Android arm DEPS Builder/gn-args.json",
     "Dawn Android arm64 Builder": "ci/Dawn Android arm64 Builder/gn-args.json",
     "Dawn Android arm64 DEPS Builder": "ci/Dawn Android arm64 DEPS Builder/gn-args.json",
-    "Dawn Chromium Presubmit": "ci/Dawn Chromium Presubmit/gn-args.json",
+    "Dawn Cinaseek Presubmit": "ci/Dawn Cinaseek Presubmit/gn-args.json",
     "Dawn Linux x64 Builder": "ci/Dawn Linux x64 Builder/gn-args.json",
     "Dawn Linux x64 DEPS Builder": "ci/Dawn Linux x64 DEPS Builder/gn-args.json",
     "Dawn Mac arm64 Builder": "ci/Dawn Mac arm64 Builder/gn-args.json",
@@ -244,7 +244,7 @@
     "Dawn Win11 arm64 Builder": "ci/Dawn Win11 arm64 Builder/gn-args.json",
     "Dawn Win11 arm64 DEPS Builder": "ci/Dawn Win11 arm64 DEPS Builder/gn-args.json"
   },
-  "chromium.enterprise_companion": {
+  "Cinaseek.enterprise_companion": {
     "linux-enterprise-companion-builder-dbg": "ci/linux-enterprise-companion-builder-dbg/gn-args.json",
     "linux-enterprise-companion-builder-rel": "ci/linux-enterprise-companion-builder-rel/gn-args.json",
     "mac-enterprise-companion-builder-arm64-dbg": "ci/mac-enterprise-companion-builder-arm64-dbg/gn-args.json",
@@ -257,20 +257,20 @@
     "win32-enterprise-companion-builder-dbg": "ci/win32-enterprise-companion-builder-dbg/gn-args.json",
     "win32-enterprise-companion-builder-rel": "ci/win32-enterprise-companion-builder-rel/gn-args.json"
   },
-  "chromium.fuchsia": {
+  "Cinaseek.fuchsia": {
     "Deterministic Fuchsia (dbg)": "ci/Deterministic Fuchsia (dbg)/gn-args.json",
     "fuchsia-arm64-cast-receiver-rel": "ci/fuchsia-arm64-cast-receiver-rel/gn-args.json",
     "fuchsia-x64-cast-receiver-dbg": "ci/fuchsia-x64-cast-receiver-dbg/gn-args.json",
     "fuchsia-x64-cast-receiver-rel": "ci/fuchsia-x64-cast-receiver-rel/gn-args.json"
   },
-  "chromium.fuchsia.fyi": {
+  "Cinaseek.fuchsia.fyi": {
     "fuchsia-fyi-arm64-dbg": "ci/fuchsia-fyi-arm64-dbg/gn-args.json",
     "fuchsia-fyi-x64-asan": "ci/fuchsia-fyi-x64-asan/gn-args.json",
     "fuchsia-fyi-x64-dbg-persistent-emulator": "ci/fuchsia-fyi-x64-dbg-persistent-emulator/gn-args.json",
     "fuchsia-netstack2-x64-cast-receiver-rel": "ci/fuchsia-netstack2-x64-cast-receiver-rel/gn-args.json",
     "fuchsia-x64-perf-cast-receiver-rel": "ci/fuchsia-x64-perf-cast-receiver-rel/gn-args.json"
   },
-  "chromium.fuzz": {
+  "Cinaseek.fuzz": {
     "ASAN Debug": "ci/ASAN Debug/gn-args.json",
     "ASAN Release": "ci/ASAN Release/gn-args.json",
     "ASAN Release Media": "ci/ASAN Release Media/gn-args.json",
@@ -281,7 +281,7 @@
     "Centipede High End Upload Linux ASan": "ci/Centipede High End Upload Linux ASan/gn-args.json",
     "Centipede High End Upload Linux ASan DCheck": "ci/Centipede High End Upload Linux ASan DCheck/gn-args.json",
     "Centipede Upload Linux ASan": "ci/Centipede Upload Linux ASan/gn-args.json",
-    "ChromiumOS ASAN Release": "ci/ChromiumOS ASAN Release/gn-args.json",
+    "CinaseekOS ASAN Release": "ci/CinaseekOS ASAN Release/gn-args.json",
     "Libfuzzer High End Upload Linux ASan": "ci/Libfuzzer High End Upload Linux ASan/gn-args.json",
     "Libfuzzer High End Upload Linux ASan Debug": "ci/Libfuzzer High End Upload Linux ASan Debug/gn-args.json",
     "Libfuzzer Upload Chrome OS ASan": "ci/Libfuzzer Upload Chrome OS ASan/gn-args.json",
@@ -320,7 +320,7 @@
     "mac-arm64-libfuzzer-asan-rel-tests": "ci/mac-arm64-libfuzzer-asan-rel-tests/gn-args.json",
     "win-x64-libfuzzer-asan-rel-tests": "ci/win-x64-libfuzzer-asan-rel-tests/gn-args.json"
   },
-  "chromium.fyi": {
+  "Cinaseek.fyi": {
     "Linux Viz": "ci/Linux Viz/gn-args.json",
     "Mac Builder Next": "ci/Mac Builder Next/gn-args.json",
     "Mac deterministic": "ci/Mac deterministic/gn-args.json",
@@ -356,12 +356,12 @@
     "linux-structured-test-ids-rel-fyi": "ci/linux-structured-test-ids-rel-fyi/gn-args.json",
     "linux-treesinviz-disabled-rel": "ci/linux-treesinviz-disabled-rel/gn-args.json",
     "linux-upload-perfetto": "ci/linux-upload-perfetto/gn-args.json",
-    "linux-wpt-chromium-rel": "ci/linux-wpt-chromium-rel/gn-args.json",
+    "linux-wpt-Cinaseek-rel": "ci/linux-wpt-Cinaseek-rel/gn-args.json",
     "mac-osxbeta-rel": "ci/mac-osxbeta-rel/gn-args.json",
     "mac-perfetto-rel": "ci/mac-perfetto-rel/gn-args.json",
     "mac-treesinviz-enabled-rel": "ci/mac-treesinviz-enabled-rel/gn-args.json",
     "mac-vm": "ci/mac-vm/gn-args.json",
-    "mac13-wpt-chromium-rel": "ci/mac13-wpt-chromium-rel/gn-args.json",
+    "mac13-wpt-Cinaseek-rel": "ci/mac13-wpt-Cinaseek-rel/gn-args.json",
     "tvos-rel-fyi": "ci/tvos-rel-fyi/gn-args.json",
     "win-annotator-rel": "ci/win-annotator-rel/gn-args.json",
     "win-fieldtrial-rel": "ci/win-fieldtrial-rel/gn-args.json",
@@ -370,10 +370,10 @@
     "win-treesinviz-enabled-rel": "ci/win-treesinviz-enabled-rel/gn-args.json",
     "win-upload-perfetto": "ci/win-upload-perfetto/gn-args.json",
     "win10-rel-no-external-ip": "ci/win10-rel-no-external-ip/gn-args.json",
-    "win10-wpt-chromium-rel": "ci/win10-wpt-chromium-rel/gn-args.json",
+    "win10-wpt-Cinaseek-rel": "ci/win10-wpt-Cinaseek-rel/gn-args.json",
     "win32-arm64-rel": "ci/win32-arm64-rel/gn-args.json"
   },
-  "chromium.gpu": {
+  "Cinaseek.gpu": {
     "Android Release (Pixel 2)": "ci/Android Release (Pixel 2)/gn-args.json",
     "GPU Linux Builder": "ci/GPU Linux Builder/gn-args.json",
     "GPU Linux Builder (dbg)": "ci/GPU Linux Builder (dbg)/gn-args.json",
@@ -382,7 +382,7 @@
     "GPU Win x64 Builder": "ci/GPU Win x64 Builder/gn-args.json",
     "GPU Win x64 Builder (dbg)": "ci/GPU Win x64 Builder (dbg)/gn-args.json"
   },
-  "chromium.gpu.fyi": {
+  "Cinaseek.gpu.fyi": {
     "ChromeOS FYI Release (amd64-generic)": "ci/ChromeOS FYI Release (amd64-generic)/gn-args.json",
     "GPU FYI Android arm Builder": "ci/GPU FYI Android arm Builder/gn-args.json",
     "GPU FYI Android arm64 Builder": "ci/GPU FYI Android arm64 Builder/gn-args.json",
@@ -402,7 +402,7 @@
     "GPU FYI XR Win x64 Builder": "ci/GPU FYI XR Win x64 Builder/gn-args.json",
     "Linux FYI GPU TSAN Release": "ci/Linux FYI GPU TSAN Release/gn-args.json"
   },
-  "chromium.linux": {
+  "Cinaseek.linux": {
     "Deterministic Linux": "ci/Deterministic Linux/gn-args.json",
     "Deterministic Linux (dbg)": "ci/Deterministic Linux (dbg)/gn-args.json",
     "Leak Detection Linux": "ci/Leak Detection Linux/gn-args.json",
@@ -420,7 +420,7 @@
     "linux-no-modules-compile-rel": "ci/linux-no-modules-compile-rel/gn-args.json",
     "linux-v4l2-codec-rel": "ci/linux-v4l2-codec-rel/gn-args.json"
   },
-  "chromium.mac": {
+  "Cinaseek.mac": {
     "Mac Builder": "ci/Mac Builder/gn-args.json",
     "Mac Builder (dbg)": "ci/Mac Builder (dbg)/gn-args.json",
     "ios-catalyst": "ci/ios-catalyst/gn-args.json",
@@ -433,11 +433,11 @@
     "mac-arm64-rel": "ci/mac-arm64-rel/gn-args.json",
     "mac-intel-on-arm64-rel": "ci/mac-intel-on-arm64-rel/gn-args.json"
   },
-  "chromium.memory": {
+  "Cinaseek.memory": {
     "Linux ASan LSan Builder": "ci/Linux ASan LSan Builder/gn-args.json",
     "Linux CFI": "ci/Linux CFI/gn-args.json",
-    "Linux Chromium OS ASan LSan Builder": "ci/Linux Chromium OS ASan LSan Builder/gn-args.json",
-    "Linux ChromiumOS MSan Builder": "ci/Linux ChromiumOS MSan Builder/gn-args.json",
+    "Linux Cinaseek OS ASan LSan Builder": "ci/Linux Cinaseek OS ASan LSan Builder/gn-args.json",
+    "Linux CinaseekOS MSan Builder": "ci/Linux CinaseekOS MSan Builder/gn-args.json",
     "Linux MSan Builder": "ci/Linux MSan Builder/gn-args.json",
     "Linux TSan Builder": "ci/Linux TSan Builder/gn-args.json",
     "Linux UBSan Builder": "ci/Linux UBSan Builder/gn-args.json",
@@ -448,11 +448,11 @@
     "linux-blink-msan-rel": "ci/linux-blink-msan-rel/gn-args.json",
     "win-asan": "ci/win-asan/gn-args.json"
   },
-  "chromium.memory.fyi": {
+  "Cinaseek.memory.fyi": {
     "mac-lsan-fyi-rel": "ci/mac-lsan-fyi-rel/gn-args.json",
     "mac-ubsan-fyi-rel": "ci/mac-ubsan-fyi-rel/gn-args.json"
   },
-  "chromium.rust": {
+  "Cinaseek.rust": {
     "android-rust-arm32-rel": "ci/android-rust-arm32-rel/gn-args.json",
     "android-rust-arm64-dbg": "ci/android-rust-arm64-dbg/gn-args.json",
     "android-rust-arm64-rel": "ci/android-rust-arm64-rel/gn-args.json",
@@ -462,20 +462,20 @@
     "win-rust-x64-dbg": "ci/win-rust-x64-dbg/gn-args.json",
     "win-rust-x64-rel": "ci/win-rust-x64-rel/gn-args.json"
   },
-  "chromium.swangle": {
-    "linux-swangle-chromium-x64": "ci/linux-swangle-chromium-x64/gn-args.json",
-    "linux-swangle-chromium-x64-exp": "ci/linux-swangle-chromium-x64-exp/gn-args.json",
+  "Cinaseek.swangle": {
+    "linux-swangle-Cinaseek-x64": "ci/linux-swangle-Cinaseek-x64/gn-args.json",
+    "linux-swangle-Cinaseek-x64-exp": "ci/linux-swangle-Cinaseek-x64-exp/gn-args.json",
     "linux-swangle-tot-swiftshader-x64": "ci/linux-swangle-tot-swiftshader-x64/gn-args.json",
     "linux-swangle-x64": "ci/linux-swangle-x64/gn-args.json",
     "linux-swangle-x64-exp": "ci/linux-swangle-x64-exp/gn-args.json",
-    "mac-swangle-chromium-x64": "ci/mac-swangle-chromium-x64/gn-args.json",
-    "win-swangle-chromium-x86": "ci/win-swangle-chromium-x86/gn-args.json",
+    "mac-swangle-Cinaseek-x64": "ci/mac-swangle-Cinaseek-x64/gn-args.json",
+    "win-swangle-Cinaseek-x86": "ci/win-swangle-Cinaseek-x86/gn-args.json",
     "win-swangle-tot-swiftshader-x64": "ci/win-swangle-tot-swiftshader-x64/gn-args.json",
     "win-swangle-tot-swiftshader-x86": "ci/win-swangle-tot-swiftshader-x86/gn-args.json",
     "win-swangle-x64": "ci/win-swangle-x64/gn-args.json",
     "win-swangle-x86": "ci/win-swangle-x86/gn-args.json"
   },
-  "chromium.updater": {
+  "Cinaseek.updater": {
     "linux-updater-builder-dbg": "ci/linux-updater-builder-dbg/gn-args.json",
     "linux-updater-builder-rel": "ci/linux-updater-builder-rel/gn-args.json",
     "mac-updater-builder-arm64-dbg": "ci/mac-updater-builder-arm64-dbg/gn-args.json",
@@ -490,25 +490,25 @@
     "win32-updater-builder-dbg": "ci/win32-updater-builder-dbg/gn-args.json",
     "win32-updater-builder-rel": "ci/win32-updater-builder-rel/gn-args.json"
   },
-  "chromium.webrtc": {
-    "WebRTC Chromium Android Builder": "webrtc/WebRTC Chromium Android Builder/gn-args.json",
-    "WebRTC Chromium Linux Builder": "webrtc/WebRTC Chromium Linux Builder/gn-args.json",
-    "WebRTC Chromium Mac Builder": "webrtc/WebRTC Chromium Mac Builder/gn-args.json",
-    "WebRTC Chromium Win Builder": "webrtc/WebRTC Chromium Win Builder/gn-args.json"
+  "Cinaseek.webrtc": {
+    "WebRTC Cinaseek Android Builder": "webrtc/WebRTC Cinaseek Android Builder/gn-args.json",
+    "WebRTC Cinaseek Linux Builder": "webrtc/WebRTC Cinaseek Linux Builder/gn-args.json",
+    "WebRTC Cinaseek Mac Builder": "webrtc/WebRTC Cinaseek Mac Builder/gn-args.json",
+    "WebRTC Cinaseek Win Builder": "webrtc/WebRTC Cinaseek Win Builder/gn-args.json"
   },
-  "chromium.webrtc.fyi": {
-    "WebRTC Chromium FYI Android Builder": "webrtc.fyi/WebRTC Chromium FYI Android Builder/gn-args.json",
-    "WebRTC Chromium FYI Android Builder (dbg)": "webrtc.fyi/WebRTC Chromium FYI Android Builder (dbg)/gn-args.json",
-    "WebRTC Chromium FYI Linux Builder": "webrtc.fyi/WebRTC Chromium FYI Linux Builder/gn-args.json",
-    "WebRTC Chromium FYI Linux Builder (dbg)": "webrtc.fyi/WebRTC Chromium FYI Linux Builder (dbg)/gn-args.json",
-    "WebRTC Chromium FYI Mac Builder": "webrtc.fyi/WebRTC Chromium FYI Mac Builder/gn-args.json",
-    "WebRTC Chromium FYI Mac Builder (dbg)": "webrtc.fyi/WebRTC Chromium FYI Mac Builder (dbg)/gn-args.json",
-    "WebRTC Chromium FYI Win Builder": "webrtc.fyi/WebRTC Chromium FYI Win Builder/gn-args.json",
-    "WebRTC Chromium FYI Win Builder (dbg)": "webrtc.fyi/WebRTC Chromium FYI Win Builder (dbg)/gn-args.json",
-    "WebRTC Chromium FYI ios-device": "webrtc.fyi/WebRTC Chromium FYI ios-device/gn-args.json",
-    "WebRTC Chromium FYI ios-simulator": "webrtc.fyi/WebRTC Chromium FYI ios-simulator/gn-args.json"
+  "Cinaseek.webrtc.fyi": {
+    "WebRTC Cinaseek FYI Android Builder": "webrtc.fyi/WebRTC Cinaseek FYI Android Builder/gn-args.json",
+    "WebRTC Cinaseek FYI Android Builder (dbg)": "webrtc.fyi/WebRTC Cinaseek FYI Android Builder (dbg)/gn-args.json",
+    "WebRTC Cinaseek FYI Linux Builder": "webrtc.fyi/WebRTC Cinaseek FYI Linux Builder/gn-args.json",
+    "WebRTC Cinaseek FYI Linux Builder (dbg)": "webrtc.fyi/WebRTC Cinaseek FYI Linux Builder (dbg)/gn-args.json",
+    "WebRTC Cinaseek FYI Mac Builder": "webrtc.fyi/WebRTC Cinaseek FYI Mac Builder/gn-args.json",
+    "WebRTC Cinaseek FYI Mac Builder (dbg)": "webrtc.fyi/WebRTC Cinaseek FYI Mac Builder (dbg)/gn-args.json",
+    "WebRTC Cinaseek FYI Win Builder": "webrtc.fyi/WebRTC Cinaseek FYI Win Builder/gn-args.json",
+    "WebRTC Cinaseek FYI Win Builder (dbg)": "webrtc.fyi/WebRTC Cinaseek FYI Win Builder (dbg)/gn-args.json",
+    "WebRTC Cinaseek FYI ios-device": "webrtc.fyi/WebRTC Cinaseek FYI ios-device/gn-args.json",
+    "WebRTC Cinaseek FYI ios-simulator": "webrtc.fyi/WebRTC Cinaseek FYI ios-simulator/gn-args.json"
   },
-  "chromium.win": {
+  "Cinaseek.win": {
     "Win Builder": "ci/Win Builder/gn-args.json",
     "Win Builder (dbg)": "ci/Win Builder (dbg)/gn-args.json",
     "Win x64 Builder": "ci/Win x64 Builder/gn-args.json",
@@ -525,23 +525,23 @@
     "android-15-chrome-blink-rel": "try/android-15-chrome-blink-rel/gn-args.json",
     "linux-blink-rel": "try/linux-blink-rel/gn-args.json",
     "linux-blink-tracing-rel": "try/linux-blink-tracing-rel/gn-args.json",
-    "linux-wpt-chromium-rel": "try/linux-wpt-chromium-rel/gn-args.json",
+    "linux-wpt-Cinaseek-rel": "try/linux-wpt-Cinaseek-rel/gn-args.json",
     "mac-skia-alt-arm64-blink-rel": "try/mac-skia-alt-arm64-blink-rel/gn-args.json",
     "mac12.0-blink-rel": "try/mac12.0-blink-rel/gn-args.json",
     "mac12.0.arm64-blink-rel": "try/mac12.0.arm64-blink-rel/gn-args.json",
     "mac13-blink-rel": "try/mac13-blink-rel/gn-args.json",
-    "mac13-wpt-chromium-rel": "try/mac13-wpt-chromium-rel/gn-args.json",
+    "mac13-wpt-Cinaseek-rel": "try/mac13-wpt-Cinaseek-rel/gn-args.json",
     "mac13.arm64-blink-rel": "try/mac13.arm64-blink-rel/gn-args.json",
     "mac14-blink-rel": "try/mac14-blink-rel/gn-args.json",
     "mac14.arm64-blink-rel": "try/mac14.arm64-blink-rel/gn-args.json",
     "mac15-blink-rel": "try/mac15-blink-rel/gn-args.json",
     "mac15.arm64-blink-rel": "try/mac15.arm64-blink-rel/gn-args.json",
-    "win10-wpt-chromium-rel": "try/win10-wpt-chromium-rel/gn-args.json",
+    "win10-wpt-Cinaseek-rel": "try/win10-wpt-Cinaseek-rel/gn-args.json",
     "win10.20h2-blink-rel": "try/win10.20h2-blink-rel/gn-args.json",
     "win11-arm64-blink-rel": "try/win11-arm64-blink-rel/gn-args.json",
     "win11-blink-rel": "try/win11-blink-rel/gn-args.json"
   },
-  "tryserver.chromium": {
+  "tryserver.Cinaseek": {
     "android-desktop-arm64-official": "try/android-desktop-arm64-official/gn-args.json",
     "android-desktop-x64-official": "try/android-desktop-x64-official/gn-args.json",
     "android-official": "try/android-official/gn-args.json",
@@ -550,11 +550,11 @@
     "win-official": "try/win-official/gn-args.json",
     "win32-official": "try/win32-official/gn-args.json"
   },
-  "tryserver.chromium.accessibility": {
+  "tryserver.Cinaseek.accessibility": {
     "fuchsia-x64-accessibility-rel": "try/fuchsia-x64-accessibility-rel/gn-args.json",
     "linux-blink-web-tests-force-accessibility-rel": "try/linux-blink-web-tests-force-accessibility-rel/gn-args.json"
   },
-  "tryserver.chromium.android": {
+  "tryserver.Cinaseek.android": {
     "android-10-arm64-rel": "try/android-10-arm64-rel/gn-args.json",
     "android-10-x86-fyi-rel": "try/android-10-x86-fyi-rel/gn-args.json",
     "android-10-x86-nofieldtrial-rel": "try/android-10-x86-nofieldtrial-rel/gn-args.json",
@@ -662,21 +662,21 @@
     "gpu-fyi-try-android-s23-64": "try/gpu-fyi-try-android-s23-64/gn-args.json",
     "gpu-try-android-pixel-2-64": "try/gpu-try-android-pixel-2-64/gn-args.json"
   },
-  "tryserver.chromium.angle": {
-    "android-angle-chromium-try": "try/android-angle-chromium-try/gn-args.json",
+  "tryserver.Cinaseek.angle": {
+    "android-angle-Cinaseek-try": "try/android-angle-Cinaseek-try/gn-args.json",
     "fuchsia-angle-try": "try/fuchsia-angle-try/gn-args.json",
     "ios-angle-try-intel": "try/ios-angle-try-intel/gn-args.json",
-    "linux-angle-chromium-try": "try/linux-angle-chromium-try/gn-args.json",
-    "mac-angle-chromium-try": "try/mac-angle-chromium-try/gn-args.json",
-    "win-angle-chromium-x64-try": "try/win-angle-chromium-x64-try/gn-args.json",
-    "win-angle-chromium-x86-try": "try/win-angle-chromium-x86-try/gn-args.json"
+    "linux-angle-Cinaseek-try": "try/linux-angle-Cinaseek-try/gn-args.json",
+    "mac-angle-Cinaseek-try": "try/mac-angle-Cinaseek-try/gn-args.json",
+    "win-angle-Cinaseek-x64-try": "try/win-angle-Cinaseek-x64-try/gn-args.json",
+    "win-angle-Cinaseek-x86-try": "try/win-angle-Cinaseek-x86-try/gn-args.json"
   },
-  "tryserver.chromium.cft": {
+  "tryserver.Cinaseek.cft": {
     "linux-rel-cft": "try/linux-rel-cft/gn-args.json",
     "mac-rel-cft": "try/mac-rel-cft/gn-args.json",
     "win-rel-cft": "try/win-rel-cft/gn-args.json"
   },
-  "tryserver.chromium.chromiumos": {
+  "tryserver.Cinaseek.Cinaseekos": {
     "chromeos-amd64-generic-asan-rel": "try/chromeos-amd64-generic-asan-rel/gn-args.json",
     "chromeos-amd64-generic-cfi-thin-lto-rel": "try/chromeos-amd64-generic-cfi-thin-lto-rel/gn-args.json",
     "chromeos-amd64-generic-dbg": "try/chromeos-amd64-generic-dbg/gn-args.json",
@@ -696,9 +696,9 @@
     "linux-chromeos-rel": "try/linux-chromeos-rel/gn-args.json",
     "linux-chromeos-treesinviz-enabled-rel": "try/linux-chromeos-treesinviz-enabled-rel/gn-args.json"
   },
-  "tryserver.chromium.codesearch": {
+  "tryserver.Cinaseek.codesearch": {
     "gen-android-try": "codesearch/gen-android-try/gn-args.json",
-    "gen-chromiumos-try": "codesearch/gen-chromiumos-try/gn-args.json",
+    "gen-Cinaseekos-try": "codesearch/gen-Cinaseekos-try/gn-args.json",
     "gen-fuchsia-try": "codesearch/gen-fuchsia-try/gn-args.json",
     "gen-ios-try": "codesearch/gen-ios-try/gn-args.json",
     "gen-linux-try": "codesearch/gen-linux-try/gn-args.json",
@@ -706,7 +706,7 @@
     "gen-webview-try": "codesearch/gen-webview-try/gn-args.json",
     "gen-win-try": "codesearch/gen-win-try/gn-args.json"
   },
-  "tryserver.chromium.dawn": {
+  "tryserver.Cinaseek.dawn": {
     "android-dawn-arm-rel": "try/android-dawn-arm-rel/gn-args.json",
     "android-dawn-arm64-exp-rel": "try/android-dawn-arm64-exp-rel/gn-args.json",
     "android-dawn-arm64-p10-rel": "try/android-dawn-arm64-p10-rel/gn-args.json",
@@ -714,7 +714,7 @@
     "android-dawn-arm64-s24-rel": "try/android-dawn-arm64-s24-rel/gn-args.json",
     "dawn-android-arm-deps-rel": "try/dawn-android-arm-deps-rel/gn-args.json",
     "dawn-android-arm64-deps-rel": "try/dawn-android-arm64-deps-rel/gn-args.json",
-    "dawn-chromium-presubmit": "try/dawn-chromium-presubmit/gn-args.json",
+    "dawn-Cinaseek-presubmit": "try/dawn-Cinaseek-presubmit/gn-args.json",
     "dawn-linux-x64-deps-rel": "try/dawn-linux-x64-deps-rel/gn-args.json",
     "dawn-mac-arm64-deps-rel": "try/dawn-mac-arm64-deps-rel/gn-args.json",
     "dawn-mac-x64-deps-rel": "try/dawn-mac-x64-deps-rel/gn-args.json",
@@ -746,7 +746,7 @@
     "win-dawn-rel": "try/win-dawn-rel/gn-args.json",
     "win11-arm64-dawn-rel": "try/win11-arm64-dawn-rel/gn-args.json"
   },
-  "tryserver.chromium.enterprise_companion": {
+  "tryserver.Cinaseek.enterprise_companion": {
     "linux-enterprise-companion-try-builder-dbg": "try/linux-enterprise-companion-try-builder-dbg/gn-args.json",
     "linux-enterprise-companion-try-builder-rel": "try/linux-enterprise-companion-try-builder-rel/gn-args.json",
     "mac-enterprise-companion-try-builder-dbg": "try/mac-enterprise-companion-try-builder-dbg/gn-args.json",
@@ -754,7 +754,7 @@
     "win-enterprise-companion-try-builder-dbg": "try/win-enterprise-companion-try-builder-dbg/gn-args.json",
     "win-enterprise-companion-try-builder-rel": "try/win-enterprise-companion-try-builder-rel/gn-args.json"
   },
-  "tryserver.chromium.fuchsia": {
+  "tryserver.Cinaseek.fuchsia": {
     "fuchsia-arm64-cast-receiver-rel": "try/fuchsia-arm64-cast-receiver-rel/gn-args.json",
     "fuchsia-binary-size": "try/fuchsia-binary-size/gn-args.json",
     "fuchsia-code-coverage": "try/fuchsia-code-coverage/gn-args.json",
@@ -768,7 +768,7 @@
     "fuchsia-x64-cast-receiver-rel": "try/fuchsia-x64-cast-receiver-rel/gn-args.json",
     "fuchsia-x64-perf-cast-receiver-rel": "try/fuchsia-x64-perf-cast-receiver-rel/gn-args.json"
   },
-  "tryserver.chromium.fuzz": {
+  "tryserver.Cinaseek.fuzz": {
     "android-arm64-libfuzzer-hwasan": "try/android-arm64-libfuzzer-hwasan/gn-args.json",
     "android-desktop-x64-libfuzzer-asan": "try/android-desktop-x64-libfuzzer-asan/gn-args.json",
     "chromeos-x64-libfuzzer-asan-rel-tests": "try/chromeos-x64-libfuzzer-asan-rel-tests/gn-args.json",
@@ -803,7 +803,7 @@
     "win-asan-rel": "try/win-asan-rel/gn-args.json",
     "win-x64-libfuzzer-asan-rel-tests": "try/win-x64-libfuzzer-asan-rel-tests/gn-args.json"
   },
-  "tryserver.chromium.linux": {
+  "tryserver.Cinaseek.linux": {
     "chromeos-js-code-coverage": "try/chromeos-js-code-coverage/gn-args.json",
     "chromeos-js-coverage-rel": "try/chromeos-js-coverage-rel/gn-args.json",
     "compile-size": "try/compile-size/gn-args.json",
@@ -861,23 +861,23 @@
     "linux-wayland-mutter-rel": "try/linux-wayland-mutter-rel/gn-args.json",
     "linux-wayland-weston-rel": "try/linux-wayland-weston-rel/gn-args.json",
     "linux-webium-product-rel": "try/linux-webium-product-rel/gn-args.json",
-    "linux_chromium_archive_rel_ng": "try/linux_chromium_archive_rel_ng/gn-args.json",
-    "linux_chromium_asan_rel_ng": "try/linux_chromium_asan_rel_ng/gn-args.json",
-    "linux_chromium_cfi_rel_ng": "try/linux_chromium_cfi_rel_ng/gn-args.json",
-    "linux_chromium_chromeos_asan_rel_ng": "try/linux_chromium_chromeos_asan_rel_ng/gn-args.json",
-    "linux_chromium_chromeos_msan_rel_ng": "try/linux_chromium_chromeos_msan_rel_ng/gn-args.json",
-    "linux_chromium_clobber_deterministic": "try/linux_chromium_clobber_deterministic/gn-args.json",
-    "linux_chromium_compile_dbg_ng": "try/linux_chromium_compile_dbg_ng/gn-args.json",
-    "linux_chromium_compile_rel_ng": "try/linux_chromium_compile_rel_ng/gn-args.json",
-    "linux_chromium_dbg_ng": "try/linux_chromium_dbg_ng/gn-args.json",
-    "linux_chromium_msan_rel_ng": "try/linux_chromium_msan_rel_ng/gn-args.json",
-    "linux_chromium_tsan_rel_ng": "try/linux_chromium_tsan_rel_ng/gn-args.json",
-    "linux_chromium_ubsan_rel_ng": "try/linux_chromium_ubsan_rel_ng/gn-args.json",
+    "linux_Cinaseek_archive_rel_ng": "try/linux_Cinaseek_archive_rel_ng/gn-args.json",
+    "linux_Cinaseek_asan_rel_ng": "try/linux_Cinaseek_asan_rel_ng/gn-args.json",
+    "linux_Cinaseek_cfi_rel_ng": "try/linux_Cinaseek_cfi_rel_ng/gn-args.json",
+    "linux_Cinaseek_chromeos_asan_rel_ng": "try/linux_Cinaseek_chromeos_asan_rel_ng/gn-args.json",
+    "linux_Cinaseek_chromeos_msan_rel_ng": "try/linux_Cinaseek_chromeos_msan_rel_ng/gn-args.json",
+    "linux_Cinaseek_clobber_deterministic": "try/linux_Cinaseek_clobber_deterministic/gn-args.json",
+    "linux_Cinaseek_compile_dbg_ng": "try/linux_Cinaseek_compile_dbg_ng/gn-args.json",
+    "linux_Cinaseek_compile_rel_ng": "try/linux_Cinaseek_compile_rel_ng/gn-args.json",
+    "linux_Cinaseek_dbg_ng": "try/linux_Cinaseek_dbg_ng/gn-args.json",
+    "linux_Cinaseek_msan_rel_ng": "try/linux_Cinaseek_msan_rel_ng/gn-args.json",
+    "linux_Cinaseek_tsan_rel_ng": "try/linux_Cinaseek_tsan_rel_ng/gn-args.json",
+    "linux_Cinaseek_ubsan_rel_ng": "try/linux_Cinaseek_ubsan_rel_ng/gn-args.json",
     "linux_optional_gpu_tests_rel": "try/linux_optional_gpu_tests_rel/gn-args.json",
     "linux_upload_clang": "try/linux_upload_clang/gn-args.json",
     "network_service_linux": "try/network_service_linux/gn-args.json"
   },
-  "tryserver.chromium.mac": {
+  "tryserver.Cinaseek.mac": {
     "gpu-fyi-cq-mac-arm64": "try/gpu-fyi-cq-mac-arm64/gn-args.json",
     "gpu-fyi-try-mac-amd-pro-rel": "try/gpu-fyi-try-mac-amd-pro-rel/gn-args.json",
     "gpu-fyi-try-mac-amd-retina-555x-rel": "try/gpu-fyi-try-mac-amd-retina-555x-rel/gn-args.json",
@@ -938,14 +938,14 @@
     "mac14-tests": "try/mac14-tests/gn-args.json",
     "mac15-arm64-rel": "try/mac15-arm64-rel/gn-args.json",
     "mac15-x64-rel-tests": "try/mac15-x64-rel-tests/gn-args.json",
-    "mac_chromium_asan_rel_ng": "try/mac_chromium_asan_rel_ng/gn-args.json",
-    "mac_chromium_compile_dbg_ng": "try/mac_chromium_compile_dbg_ng/gn-args.json",
-    "mac_chromium_compile_rel_ng": "try/mac_chromium_compile_rel_ng/gn-args.json",
-    "mac_chromium_dbg_ng": "try/mac_chromium_dbg_ng/gn-args.json",
+    "mac_Cinaseek_asan_rel_ng": "try/mac_Cinaseek_asan_rel_ng/gn-args.json",
+    "mac_Cinaseek_compile_dbg_ng": "try/mac_Cinaseek_compile_dbg_ng/gn-args.json",
+    "mac_Cinaseek_compile_rel_ng": "try/mac_Cinaseek_compile_rel_ng/gn-args.json",
+    "mac_Cinaseek_dbg_ng": "try/mac_Cinaseek_dbg_ng/gn-args.json",
     "mac_optional_gpu_tests_rel": "try/mac_optional_gpu_tests_rel/gn-args.json",
     "tvos-rel-fyi": "try/tvos-rel-fyi/gn-args.json"
   },
-  "tryserver.chromium.rust": {
+  "tryserver.Cinaseek.rust": {
     "android-rust-arm32-rel": "try/android-rust-arm32-rel/gn-args.json",
     "android-rust-arm64-dbg": "try/android-rust-arm64-dbg/gn-args.json",
     "android-rust-arm64-rel": "try/android-rust-arm64-rel/gn-args.json",
@@ -955,20 +955,20 @@
     "win-rust-x64-dbg": "try/win-rust-x64-dbg/gn-args.json",
     "win-rust-x64-rel": "try/win-rust-x64-rel/gn-args.json"
   },
-  "tryserver.chromium.swangle": {
-    "linux-swangle-chromium-try-x64": "try/linux-swangle-chromium-try-x64/gn-args.json",
-    "linux-swangle-chromium-try-x64-exp": "try/linux-swangle-chromium-try-x64-exp/gn-args.json",
+  "tryserver.Cinaseek.swangle": {
+    "linux-swangle-Cinaseek-try-x64": "try/linux-swangle-Cinaseek-try-x64/gn-args.json",
+    "linux-swangle-Cinaseek-try-x64-exp": "try/linux-swangle-Cinaseek-try-x64-exp/gn-args.json",
     "linux-swangle-try-tot-swiftshader-x64": "try/linux-swangle-try-tot-swiftshader-x64/gn-args.json",
     "linux-swangle-try-x64": "try/linux-swangle-try-x64/gn-args.json",
     "linux-swangle-try-x64-exp": "try/linux-swangle-try-x64-exp/gn-args.json",
-    "mac-swangle-chromium-try-x64": "try/mac-swangle-chromium-try-x64/gn-args.json",
-    "win-swangle-chromium-try-x86": "try/win-swangle-chromium-try-x86/gn-args.json",
+    "mac-swangle-Cinaseek-try-x64": "try/mac-swangle-Cinaseek-try-x64/gn-args.json",
+    "win-swangle-Cinaseek-try-x86": "try/win-swangle-Cinaseek-try-x86/gn-args.json",
     "win-swangle-try-tot-swiftshader-x64": "try/win-swangle-try-tot-swiftshader-x64/gn-args.json",
     "win-swangle-try-tot-swiftshader-x86": "try/win-swangle-try-tot-swiftshader-x86/gn-args.json",
     "win-swangle-try-x64": "try/win-swangle-try-x64/gn-args.json",
     "win-swangle-try-x86": "try/win-swangle-try-x86/gn-args.json"
   },
-  "tryserver.chromium.tricium": {
+  "tryserver.Cinaseek.tricium": {
     "android-clang-tidy-rel": "try/android-clang-tidy-rel/gn-args.json",
     "fuchsia-clang-tidy-rel": "try/fuchsia-clang-tidy-rel/gn-args.json",
     "linux-chromeos-clang-tidy-rel": "try/linux-chromeos-clang-tidy-rel/gn-args.json",
@@ -976,7 +976,7 @@
     "mac-clang-tidy-rel": "try/mac-clang-tidy-rel/gn-args.json",
     "win10-clang-tidy-rel": "try/win10-clang-tidy-rel/gn-args.json"
   },
-  "tryserver.chromium.updater": {
+  "tryserver.Cinaseek.updater": {
     "linux-updater-try-builder-dbg": "try/linux-updater-try-builder-dbg/gn-args.json",
     "linux-updater-try-builder-rel": "try/linux-updater-try-builder-rel/gn-args.json",
     "mac-updater-try-builder-dbg": "try/mac-updater-try-builder-dbg/gn-args.json",
@@ -985,7 +985,7 @@
     "win-updater-try-builder-dbg": "try/win-updater-try-builder-dbg/gn-args.json",
     "win-updater-try-builder-rel": "try/win-updater-try-builder-rel/gn-args.json"
   },
-  "tryserver.chromium.win": {
+  "tryserver.Cinaseek.win": {
     "gpu-fyi-try-win10-amd-rel-64": "try/gpu-fyi-try-win10-amd-rel-64/gn-args.json",
     "gpu-fyi-try-win10-intel-exp-64": "try/gpu-fyi-try-win10-intel-exp-64/gn-args.json",
     "gpu-fyi-try-win10-intel-rel-64": "try/gpu-fyi-try-win10-intel-rel-64/gn-args.json",
@@ -1025,9 +1025,9 @@
     "win10-dbg": "try/win10-dbg/gn-args.json",
     "win11-rel": "try/win11-rel/gn-args.json",
     "win32-clobber-rel": "try/win32-clobber-rel/gn-args.json",
-    "win_chromium_compile_dbg_ng": "try/win_chromium_compile_dbg_ng/gn-args.json",
-    "win_chromium_compile_rel_ng": "try/win_chromium_compile_rel_ng/gn-args.json",
-    "win_chromium_x64_rel_ng": "try/win_chromium_x64_rel_ng/gn-args.json",
+    "win_Cinaseek_compile_dbg_ng": "try/win_Cinaseek_compile_dbg_ng/gn-args.json",
+    "win_Cinaseek_compile_rel_ng": "try/win_Cinaseek_compile_rel_ng/gn-args.json",
+    "win_Cinaseek_x64_rel_ng": "try/win_Cinaseek_x64_rel_ng/gn-args.json",
     "win_optional_gpu_tests_rel": "try/win_optional_gpu_tests_rel/gn-args.json"
   },
   "tryserver.crossbench": {

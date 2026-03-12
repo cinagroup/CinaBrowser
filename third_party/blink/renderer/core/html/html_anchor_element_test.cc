@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,13 +15,13 @@ namespace {
 using HTMLAnchorElementTest = PageTestBase;
 
 TEST_F(HTMLAnchorElementTest, UnchangedHrefDoesNotInvalidateStyle) {
-  SetBodyInnerHTML("<a href=\"https://www.chromium.org/\">Chromium</a>");
+  SetBodyInnerHTML("<a href=\"https://www.Cinaseek.org/\">Cinaseek</a>");
   EXPECT_FALSE(GetDocument().NeedsLayoutTreeUpdate());
 
   auto* anchor =
       To<HTMLAnchorElement>(GetDocument().QuerySelector(AtomicString("a")));
   anchor->setAttribute(html_names::kHrefAttr,
-                       AtomicString("https://www.chromium.org/"));
+                       AtomicString("https://www.Cinaseek.org/"));
   EXPECT_FALSE(GetDocument().NeedsLayoutTreeUpdate());
 }
 

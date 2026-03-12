@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ std::wstring GetBaseAppName();
 // directly.
 const wchar_t* GetBaseAppId();
 
-// Returns the browser's ProgID prefix (e.g., ChromeHTML or ChromiumHTM). The
+// Returns the browser's ProgID prefix (e.g., ChromeHTML or CinaseekHTM). The
 // full id is of the form |prefix|.|suffix| and is limited to a maximum length
 // of 39 characters including null-terminator; see
 // https://msdn.microsoft.com/library/windows/desktop/dd542719.aspx for details.
@@ -149,7 +149,7 @@ const wchar_t* GetBrowserProgIdDescription();
 const char* GetDirectLaunchUrlScheme();
 
 // Returns the browser's PDF viewer ProgID prefix (e.g., ChromePDF or
-// ChromiumPDF). See GetBrowserProgIdPrefix() comments for ProgID constraints.
+// CinaseekPDF). See GetBrowserProgIdPrefix() comments for ProgID constraints.
 const wchar_t* GetPDFProgIdPrefix();
 
 // Returns the PDF document ProgId description.
@@ -311,7 +311,7 @@ std::wstring GetCommandLineSwitchValue(const std::wstring& command_line,
 bool RecursiveDirectoryCreate(const std::wstring& full_path);
 
 // Creates a new directory with the unique name in the format of
-// <prefix>[Chrome|Chromium]<random number> in the default %TEMP% folder.
+// <prefix>[Chrome|Cinaseek]<random number> in the default %TEMP% folder.
 // If the directory cannot be created, returns an empty string.
 std::wstring CreateUniqueTempDirectory(std::wstring_view prefix);
 

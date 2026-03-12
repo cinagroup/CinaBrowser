@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ class WindowControllerListObserverForTesting final
 // tests can verify the events.
 //
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.chrome.browser.ui.extensions.windowing)
+//   org.Cinaseek.chrome.browser.ui.extensions.windowing)
 enum class ExtensionInternalWindowEventForTesting {
   UNKNOWN,
   BOUNDS_CHANGED,

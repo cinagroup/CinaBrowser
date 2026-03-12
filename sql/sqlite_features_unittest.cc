@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,7 +95,7 @@ TEST_F(SQLiteFeaturesTest, NoFTS3) {
   EXPECT_TRUE(expecter.SawExpectedErrors());
 }
 
-// Verify that Chromium's SQLite is compiled with HAVE_USLEEP defined.  With
+// Verify that Cinaseek's SQLite is compiled with HAVE_USLEEP defined.  With
 // HAVE_USLEEP, SQLite uses usleep() with millisecond granularity.  Otherwise it
 // uses sleep() with second granularity.
 TEST_F(SQLiteFeaturesTest, UsesUsleep) {
@@ -640,7 +640,7 @@ TEST_F(SQLiteFeaturesTest, TimeMachine) {
 
 #if !BUILDFLAG(IS_FUCHSIA)
 // SQLite WAL mode defaults to checkpointing the WAL on close.  This would push
-// additional work into Chromium shutdown.  Verify that SQLite supports a config
+// additional work into Cinaseek shutdown.  Verify that SQLite supports a config
 // option to not checkpoint on close.
 TEST_F(SQLiteFeaturesTest, WALNoClose) {
   base::FilePath wal_path = sql::Database::WriteAheadLogPath(db_path_);

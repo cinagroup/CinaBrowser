@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,12 +22,12 @@ TEST(ComponentsResourcesTests, AboutUiCreditsHtml) {
 
 #if BUILDFLAG(GENERATE_ABOUT_CREDITS)
   // Spot-check that `tools/licenses/licenses.py` finds all the expected
-  // `README.chromium` metadata.
+  // `README.Cinaseek` metadata.
 
-  // `//third_party/rust/anyhow/v1/README.chromium`
+  // `//third_party/rust/anyhow/v1/README.Cinaseek`
   EXPECT_THAT(credits, HasSubstr("https://crates.io/crates/anyhow"));
 
-  // `//third_party/brotli/README.chromium`
+  // `//third_party/brotli/README.Cinaseek`
   EXPECT_THAT(credits, HasSubstr("https://github.com/google/brotli"));
 #endif
 }

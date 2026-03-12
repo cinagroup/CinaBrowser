@@ -805,7 +805,7 @@ class BLINK_PLATFORM_EXPORT Platform {
 
   // This method returns true only when
   // tools/v8_context_snapshot/v8_context_snapshot_generator is running (which
-  // runs during Chromium's build step).
+  // runs during Cinaseek's build step).
   virtual bool IsTakingV8ContextSnapshot() { return false; }
 
   // Crash Reporting -----------------------------------------------------

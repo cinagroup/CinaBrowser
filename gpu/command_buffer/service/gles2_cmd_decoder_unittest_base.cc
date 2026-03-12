@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@
 #include "gpu/command_buffer/common/gles2_cmd_utils.h"
 #include "gpu/command_buffer/service/context_group.h"
 #include "gpu/command_buffer/service/context_state_test_helpers.h"
-#include "gpu/command_buffer/service/copy_texture_chromium_mock.h"
+#include "gpu/command_buffer/service/copy_texture_Cinaseek_mock.h"
 #include "gpu/command_buffer/service/gpu_switches.h"
 #include "gpu/command_buffer/service/logger.h"
 #include "gpu/command_buffer/service/program_manager.h"
@@ -1772,15 +1772,15 @@ const uint32_t GLES2DecoderTestBase::kInvalidClientId;
 const GLuint GLES2DecoderTestBase::kServiceVertexShaderId;
 const GLuint GLES2DecoderTestBase::kServiceFragmentShaderId;
 
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumShaderId;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumProgramId;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekShaderId;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekProgramId;
 
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumTextureBufferId;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumVertexBufferId;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumFBOId;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumPositionAttrib;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumTexAttrib;
-const GLuint GLES2DecoderTestBase::kServiceCopyTextureChromiumSamplerLocation;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekTextureBufferId;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekVertexBufferId;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekFBOId;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekPositionAttrib;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekTexAttrib;
+const GLuint GLES2DecoderTestBase::kServiceCopyTextureCinaseekSamplerLocation;
 
 const GLsizei GLES2DecoderTestBase::kNumVertices;
 const GLsizei GLES2DecoderTestBase::kNumIndices;

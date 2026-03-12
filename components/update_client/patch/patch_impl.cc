@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ int CheckFiles(bool old_valid, bool patch_valid, bool destination_valid) {
 
 class PatcherImpl : public Patcher {
  public:
-  explicit PatcherImpl(PatchChromiumFactory::Callback callback)
+  explicit PatcherImpl(PatchCinaseekFactory::Callback callback)
       : callback_(std::move(callback)) {}
 
   void PatchPuffPatch(base::File old_file,
@@ -74,18 +74,18 @@ class PatcherImpl : public Patcher {
   ~PatcherImpl() override = default;
 
  private:
-  const PatchChromiumFactory::Callback callback_;
+  const PatchCinaseekFactory::Callback callback_;
 };
 
 }  // namespace
 
-PatchChromiumFactory::PatchChromiumFactory(Callback callback)
+PatchCinaseekFactory::PatchCinaseekFactory(Callback callback)
     : callback_(std::move(callback)) {}
 
-scoped_refptr<Patcher> PatchChromiumFactory::Create() const {
+scoped_refptr<Patcher> PatchCinaseekFactory::Create() const {
   return base::MakeRefCounted<PatcherImpl>(callback_);
 }
 
-PatchChromiumFactory::~PatchChromiumFactory() = default;
+PatchCinaseekFactory::~PatchCinaseekFactory() = default;
 
 }  // namespace update_client

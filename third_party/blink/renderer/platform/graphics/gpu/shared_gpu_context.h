@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,29 +54,29 @@ class PLATFORM_EXPORT SharedGpuContext {
   static WebGraphicsSharedImageInterfaceProvider*
   SharedImageInterfaceProvider();
 
-  // "ImageChromium" refers to putting a canvas into a hardware layer which is
-  // directly scanned out of display, bypassing chromium's own GPU composite.
-  // It is the same "ImageChromium" referenced by
-  // `WebGLImageChromiumEnabled` for example.
+  // "ImageCinaseek" refers to putting a canvas into a hardware layer which is
+  // directly scanned out of display, bypassing Cinaseek's own GPU composite.
+  // It is the same "ImageCinaseek" referenced by
+  // `WebGLImageCinaseekEnabled` for example.
   // The name is out of date and refers to the system that morphed into
   // SharedImage.
   // This method performs context-specific check that's not available when
   // RuntimeEnabledFeatures is set.
 #if BUILDFLAG(IS_ANDROID)
-  static bool MaySupportWebGLImageChromium();
+  static bool MaySupportWebGLImageCinaseek();
 #else
-  static bool MaySupportWebGLImageChromium() { return true; }
+  static bool MaySupportWebGLImageCinaseek() { return true; }
 #endif
 
-  static bool WebGLImageChromiumEnabled();
+  static bool WebGLImageCinaseekEnabled();
 
   // Whether WebGL content should be placed into overlays.
   static bool UseOverlaysForWebGL();
 
-  // Forces MaySupportWebGLImageChromium() and WebGLImageChromiumEnabled() to
+  // Forces MaySupportWebGLImageCinaseek() and WebGLImageCinaseekEnabled() to
   // return the passed-in value.
   // Cleared on the next invocation of Reset() of the global context.
-  static void SetWebGLImageChromiumEnabledForTesting(bool enable);
+  static void SetWebGLImageCinaseekEnabledForTesting(bool enable);
 
   // Whether mappable SharedImages should be used for canvas2d content with CPU
   // raster.

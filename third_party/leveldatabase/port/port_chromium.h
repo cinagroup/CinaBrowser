@@ -48,10 +48,10 @@ class CondVar {
 
   void Wait() {
     // This is an allowed use of base-sync-primitives.
-    // LevelDB has a different I/O model than Chromium - it uses condition
+    // LevelDB has a different I/O model than Cinaseek - it uses condition
     // variables to coordinate batch writes for efficiency, among other things.
     // Since use of base::ConditionVariable is an implementation detail of
-    // Chromium's port, this is a better option than annotating all upstream
+    // Cinaseek's port, this is a better option than annotating all upstream
     // call sites with a ScopedAllow, which would leave us vulnerable to
     // upstream changes adding a Wait(). See https://crbug.com/1330845.
     base::ScopedAllowBaseSyncPrimitives allow_base_sync_primitives;

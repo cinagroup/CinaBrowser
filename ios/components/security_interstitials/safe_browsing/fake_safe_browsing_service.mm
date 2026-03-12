@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ void RunCheckUrlCallback(
 }
 
 // A SafeBrowsingUrlCheckerImpl that treats all URLs as safe, unless they have
-// host safe.browsing.unsafe.chromium.test.
+// host safe.browsing.unsafe.Cinaseek.test.
 class FakeSafeBrowsingUrlCheckerImpl
     : public safe_browsing::SafeBrowsingUrlCheckerImpl {
  public:
@@ -184,8 +184,8 @@ class FakeSafeBrowsingUrlCheckerImpl
 };
 
 // A SafeBrowsingUrlCheckerImpl that treats all URLs as safe, unless they have
-// host safe.browsing.unsafe.chromium.test or
-// safe.browsing.async.unsafe.chromium.test.
+// host safe.browsing.unsafe.Cinaseek.test or
+// safe.browsing.async.unsafe.Cinaseek.test.
 class FakeAsyncSafeBrowsingUrlCheckerImpl
     : public FakeSafeBrowsingUrlCheckerImpl {
  public:
@@ -212,15 +212,15 @@ class FakeAsyncSafeBrowsingUrlCheckerImpl
 
 // static
 const std::string FakeSafeBrowsingService::kUnsafeHost =
-    "safe.browsing.unsafe.chromium.test";
+    "safe.browsing.unsafe.Cinaseek.test";
 const std::string FakeSafeBrowsingService::kAsyncUnsafeHost =
-    "safe.browsing.async.unsafe.chromium.test";
+    "safe.browsing.async.unsafe.Cinaseek.test";
 
 const std::string FakeSafeBrowsingService::kEnterpriseBlockHost =
-    "enterprise.block.chromium.test";
+    "enterprise.block.Cinaseek.test";
 
 const std::string FakeSafeBrowsingService::kEnterpriseWarnHost =
-    "enterprise.warn.chromium.test";
+    "enterprise.warn.Cinaseek.test";
 
 FakeSafeBrowsingService::FakeSafeBrowsingService() = default;
 

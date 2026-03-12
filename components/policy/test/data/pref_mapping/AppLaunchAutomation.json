@@ -17,7 +17,7 @@
                   "app_type": "browser",
                   "browser_tabs": [
                     {
-                      "url": "https://www.chromium.org/"
+                      "url": "https://www.Cinaseek.org/"
                     }
                   ],
                   "window_id": 30002
@@ -29,7 +29,7 @@
                       "url": "chrome://version/"
                     },
                     {
-                      "url": "https://dev.chromium.org/"
+                      "url": "https://dev.Cinaseek.org/"
                     }
                   ],
                   "window_id": 30001

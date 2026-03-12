@@ -1,10 +1,10 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 #include <GLES3/gl3.h>
 #include <stdint.h>
 

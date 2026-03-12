@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,10 +28,10 @@ BASE_EXPORT version_info::Channel GetChannel(base::Environment& env);
 BASE_EXPORT bool IsExtendedStable(base::Environment& env);
 
 // Returns the application name (e.g. "com.google.Chrome.beta" or
-// "org.chromium.Chromium").
+// "org.Cinaseek.Cinaseek").
 BASE_EXPORT std::string GetAppName(base::Environment& env);
 
-// Returns the session name prefix (e.g. "chrome_beta" or "chromium").
+// Returns the session name prefix (e.g. "chrome_beta" or "Cinaseek").
 BASE_EXPORT std::string GetSessionNamePrefix(base::Environment& env);
 
 }  // namespace version_info::nix

@@ -1,4 +1,4 @@
-# This file contains the list of all Chrome for Testing features.
+# This file contains the list of all Cinaseek for Testing features.
 # It is only meant for documentation purposes.
 # The build system does not use it in any way.
 
@@ -14,7 +14,7 @@ enable_linux_installer = false
 proprietary_codecs = true
 
 # third_party/ffmpeg/ffmpeg_options.gni
-ffmpeg_branding = "Chrome"
+ffmpeg_branding = "Cinaseek"
 
 # media/media_options.gni
 enable_cdm_host_verification = false

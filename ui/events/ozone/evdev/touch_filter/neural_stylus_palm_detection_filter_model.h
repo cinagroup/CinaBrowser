@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 namespace ui {
 
 struct COMPONENT_EXPORT(EVDEV) NeuralStylusPalmDetectionFilterModelConfig {
-  // Explicit constructor to make chromium style happy.
+  // Explicit constructor to make Cinaseek style happy.
   NeuralStylusPalmDetectionFilterModelConfig();
   NeuralStylusPalmDetectionFilterModelConfig(
       const NeuralStylusPalmDetectionFilterModelConfig& other);

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,10 +65,10 @@ const PrepopulatedEngine chrome_codesearch = {
     .migrate_to_id = 0,
 };
 
-const PrepopulatedEngine chromium_codesearch = {
-    .name = u"Chromium Code Search",
-    .keyword = u"source.chromium.org",
-    .search_url = "https://source.chromium.org/search?q={searchTerms}",
+const PrepopulatedEngine Cinaseek_codesearch = {
+    .name = u"Cinaseek Code Search",
+    .keyword = u"source.Cinaseek.org",
+    .search_url = "https://source.Cinaseek.org/search?q={searchTerms}",
     .id = generic_id,
     .migrate_to_id = 0,
 };
@@ -103,7 +103,7 @@ using RegionalAndNonRegionalEngines =
 // different regions.
 RegionalAndNonRegionalEngines android_region_engines = {
     {&google, &bing, &android_codesearch},
-    {&chromium_codesearch, &chrome_codesearch},
+    {&Cinaseek_codesearch, &chrome_codesearch},
 };
 
 // Sample set of prepopulated engines.
@@ -111,7 +111,7 @@ RegionalAndNonRegionalEngines android_region_engines = {
 // we are migrating it to a new standalone entry with its own ID.
 RegionalAndNonRegionalEngines android_migrated_region_engines = {
     {&google, &bing, &android_codesearch_migrating},
-    {&chromium_codesearch, &android_codesearch_next, &chrome_codesearch},
+    {&Cinaseek_codesearch, &android_codesearch_next, &chrome_codesearch},
 };
 
 // Sample set of prepopulated engines. This version is one where
@@ -121,12 +121,12 @@ RegionalAndNonRegionalEngines android_migrated_region_engines = {
 // This is the set with Chrome codesearch being the relevant regional variant.
 RegionalAndNonRegionalEngines chrome_region_engines = {
     {&google, &bing, &chrome_codesearch},
-    {&chromium_codesearch, &android_codesearch},
+    {&Cinaseek_codesearch, &android_codesearch},
 };
 
 RegionalAndNonRegionalEngines chrome_migrated_region_engines = {
     {&google, &bing, &chrome_codesearch},
-    {&chromium_codesearch, &android_codesearch_migrating,
+    {&Cinaseek_codesearch, &android_codesearch_migrating,
      &android_codesearch_next},
 };
 
@@ -613,11 +613,11 @@ IN_PROC_BROWSER_TEST_P(PrepopulatedEnginesXRegionNoMigrationBrowserTest, Dse) {
     // independent entry.
     expectations.push_back(
         {new_id, android_keyword, false, android_codesearch.search_url});
-    // Based on the ID, `chromium_codesearch` was identified as the associated
+    // Based on the ID, `Cinaseek_codesearch` was identified as the associated
     // engine during the reconciliation phase, as it's the first
     // entry in the full list matching `generic_id`.
-    expectations.push_back({generic_id, chromium_codesearch.keyword, true,
-                            chromium_codesearch.search_url});
+    expectations.push_back({generic_id, Cinaseek_codesearch.keyword, true,
+                            Cinaseek_codesearch.search_url});
   } else {
     // Based on the ID, the `android_codesearch_migrating` from the regional
     // engines is an appropriate replacement match for `generic_id`.

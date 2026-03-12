@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@
 #include "net/base/net_export.h"
 #include "net/log/net_log.h"
 #include "net/log/net_log_with_source.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_stream.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_stream.h"
 #include "net/socket/datagram_client_socket.h"
 #include "net/socket/udp_socket.h"
 #include "net/spdy/spdy_http_utils.h"
@@ -68,7 +68,7 @@ class NET_EXPORT_PRIVATE QuicProxyDatagramClientSocket
   // The passed stream is a connection to the last proxy in `proxy_chain`.
   int ConnectViaStream(const IPEndPoint& local_address,
                        const IPEndPoint& proxy_peer_address,
-                       std::unique_ptr<QuicChromiumClientStream::Handle> stream,
+                       std::unique_ptr<QuicCinaseekClientStream::Handle> stream,
                        CompletionOnceCallback callback);
 
   // DatagramClientSocket implementation.
@@ -184,7 +184,7 @@ class NET_EXPORT_PRIVATE QuicProxyDatagramClientSocket
   int read_buf_len_ = 0;
 
   // Handle to the QUIC Stream that this sits on top of.
-  std::unique_ptr<QuicChromiumClientStream::Handle> stream_handle_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> stream_handle_;
 
   // Queue for storing incoming datagrams received over QUIC. This queue acts as
   // a buffer, allowing datagrams to be stored when received and processed

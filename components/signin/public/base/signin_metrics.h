@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace signin_metrics {
 
 // Track all the ways a profile can become signed out as a histogram.
 // Enum SigninSignoutProfile.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: SignoutReason
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
@@ -154,7 +154,7 @@ enum class ProfileSignout {
 // Enum values which enumerates all access points where sign in could be
 // initiated. Not all of them exist on all platforms.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: SigninAccessPoint
 // LINT.IfChange
 enum class AccessPoint : int {
@@ -340,7 +340,7 @@ enum class AccessPoint : int {
 // LINT.ThenChange(/tools/metrics/histograms/metadata/signin/enums.xml)
 
 // Enum values which enumerates all user actions on the sign-in promo.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: SigninPromoAction
 // GENERATED_JAVA_PREFIX_TO_STRIP: PROMO_ACTION_
 enum class PromoAction : int {
@@ -362,7 +362,7 @@ enum class PromoAction : int {
 #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
 // This class is used to record user action that was taken after
 // receiving the header from Gaia in the web sign-in flow.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AccountConsistencyPromoAction
 enum class AccountConsistencyPromoAction : int {
   // Promo is not shown as there are no accounts on device.
@@ -562,7 +562,7 @@ enum class ReportingType { PERIODIC, ON_CHANGE };
 //
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 enum class FetchAccountCapabilitiesFromSystemLibraryResult {
   // Errors common to iOS and Android.
   kSuccess = 0,
@@ -584,7 +584,7 @@ enum class FetchAccountCapabilitiesFromSystemLibraryResult {
 };
 
 // Tracks type of the button that was presented to the user.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.signin.metrics
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.signin.metrics
 enum class SyncButtonsType : int {
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -148,7 +148,7 @@ const LayoutResult* PageContainerLayoutAlgorithm::Layout() {
   // When the page size computed from @page properties is larger than the actual
   // paper, it needs to be scaled down before it can be centered. Since it's the
   // page container (and not the page area) that is being scaled down (this is
-  // how it's "always" been in Chromium, and it does make sense in a way, since
+  // how it's "always" been in Cinaseek, and it does make sense in a way, since
   // it reduces the amount of shrinking needed), the margins may also need to be
   // shrunk. Example: The paper size is 816x1056 (US Letter). Margins are
   // specified as 50px on each side (from print settings or from @page - doesn't

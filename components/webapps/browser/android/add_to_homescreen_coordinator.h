@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace webapps {
 struct AddToHomescreenParams;
 class AppBannerManager;
 
-// AddToHomescreenCoordinator is the C++ counterpart of org.chromium.chrome.
+// AddToHomescreenCoordinator is the C++ counterpart of org.Cinaseek.chrome.
 // browser.webapps.addtohomescreen.AddToHomescreenCoordinator in Java.
 class AddToHomescreenCoordinator : public AddToHomescreenDataFetcher::Observer {
  public:

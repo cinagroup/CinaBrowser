@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ BluetoothAdvertisementBlueZ::BluetoothAdvertisementBlueZ(
   std::string GuidString = base::Uuid::GenerateRandomV4().AsLowercaseString();
   base::RemoveChars(GuidString, "-", &GuidString);
   dbus::ObjectPath advertisement_object_path =
-      dbus::ObjectPath("/org/chromium/bluetooth_advertisement/" + GuidString);
+      dbus::ObjectPath("/org/Cinaseek/bluetooth_advertisement/" + GuidString);
 
   DCHECK(bluez::BluezDBusManager::Get());
   provider_ = bluez::BluetoothLEAdvertisementServiceProvider::Create(

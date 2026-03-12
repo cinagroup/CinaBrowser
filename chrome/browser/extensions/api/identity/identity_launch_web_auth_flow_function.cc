@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@ namespace extensions {
 
 namespace {
 
-static const char kChromiumDomainRedirectUrlPattern[] =
-    "https://%s.chromiumapp.org/";
+static const char kCinaseekDomainRedirectUrlPattern[] =
+    "https://%s.Cinaseekapp.org/";
 
 IdentityLaunchWebAuthFlowFunction::Error WebAuthFlowFailureToError(
     WebAuthFlow::Failure failure) {
@@ -218,7 +218,7 @@ void IdentityLaunchWebAuthFlowFunction::InitFinalRedirectURLDomains(
     return;
   }
   final_url_domains_.emplace_back(base::StringPrintf(
-      kChromiumDomainRedirectUrlPattern, extension_id.c_str()));
+      kCinaseekDomainRedirectUrlPattern, extension_id.c_str()));
   if (redirect_urls) {
     for (const auto& value : *redirect_urls) {
       GURL domain(value.GetString());

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ constexpr char kTranslateKitManifestName[] = "Chrome TranslateKit";
 // The installation path is under
 //    <UserDataDir>/TranslateKit/lib/<version>/TranslateKitFiles/libtranslatekit.xx
 // where <User Data Dir> can be determined by following the guide:
-// https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/user_data_dir.md#current-location
+// https://Cinaseek.googlesource.com/Cinaseek/src.git/+/HEAD/docs/user_data_dir.md#current-location
 base::FilePath GetInstalledPath(const base::FilePath& base) {
   return base.Append(kTranslateKitBinaryRelativePath);
 }

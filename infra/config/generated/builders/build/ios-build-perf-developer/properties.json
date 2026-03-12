@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/build/ios-build-perf-developer/gn-args.json"
@@ -10,18 +10,18 @@
             "builder_id": {
               "bucket": "build",
               "builder": "ios-build-perf-developer",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build",
+              "builder_group": "Cinaseek.build",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb",
                   "mac_toolchain"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "ios"
               },
@@ -39,15 +39,15 @@
         {
           "bucket": "build",
           "builder": "ios-build-perf-developer",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
   },
   "$build/reclient": {
-    "instance": "rbe-chromium-untrusted",
+    "instance": "rbe-Cinaseek-untrusted",
     "jobs": 640,
-    "metrics_project": "chromium-reclient-metrics",
+    "metrics_project": "Cinaseek-reclient-metrics",
     "scandeps_server": true
   },
   "$build/siso": {
@@ -59,7 +59,7 @@
       "no-fallback"
     ],
     "profile_mode": "local",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 5120
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -69,7 +69,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.build",
+  "builder_group": "Cinaseek.build",
   "recipe": "chrome_build/build_perf_developer",
   "xcode_build_version": "17a400"
 }

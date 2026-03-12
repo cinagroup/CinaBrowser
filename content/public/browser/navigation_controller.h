@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ class NavigationController {
   //
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.content_public.browser.navigation_controller)
+  //   org.Cinaseek.content_public.browser.navigation_controller)
   // GENERATED_JAVA_PREFIX_TO_STRIP: LOAD_TYPE_
   enum LoadURLType {
     // For loads that do not fall into any types below.
@@ -107,7 +107,7 @@ class NavigationController {
   //
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.content_public.browser.navigation_controller)
+  //   org.Cinaseek.content_public.browser.navigation_controller)
   // GENERATED_JAVA_PREFIX_TO_STRIP: UA_OVERRIDE_
   enum UserAgentOverrideOption {
     // Use the override value from the previous NavigationEntry in the
@@ -553,7 +553,7 @@ class NavigationController {
   // `CanGo*` will be false, and a direct click on the button will do nothing,
   // in order to prevent a poor user experience in the case of history
   // manipulation. See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/history_manipulation_intervention.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/history_manipulation_intervention.md
   // for more details.
   virtual bool ShouldEnableBackButton() = 0;
   virtual bool ShouldEnableForwardButton() = 0;

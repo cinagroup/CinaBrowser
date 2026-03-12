@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -271,7 +271,7 @@ struct DisplayData {
 // List of known ChromeOS display. Any new [diagonal size, resolution] entries
 // should also be added to the display list used for the ui.DisplayValidation
 // tast test.
-// https://source.chromium.org/chromiumos/chromiumos/codesearch/+/main:src/platform/tast-tests/src/go.chromium.org/tast-tests/cros/local/bundles/cros/ui/displayvalidation/utils.go
+// https://source.Cinaseek.org/Cinaseekos/Cinaseekos/codesearch/+/main:src/platform/tast-tests/src/go.Cinaseek.org/tast-tests/cros/local/bundles/cros/ui/displayvalidation/utils.go
 inline constexpr DisplayData lcd_display_configs[] = {
     // clang-format off
     // inch, resolution, DSF,        size in DP,  Bad range, size error

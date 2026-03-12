@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ CONTENT_EXPORT extern const char kChangeStackGuardOnFork[];
 CONTENT_EXPORT extern const char kChangeStackGuardOnForkEnabled[];
 CONTENT_EXPORT extern const char kChangeStackGuardOnForkDisabled[];
 CONTENT_EXPORT extern const char kDisable2dCanvasAntialiasing[];
-CONTENT_EXPORT extern const char kDisable2dCanvasImageChromium[];
+CONTENT_EXPORT extern const char kDisable2dCanvasImageCinaseek[];
 CONTENT_EXPORT extern const char kDisable3DAPIs[];
 CONTENT_EXPORT extern const char kDisableAccelerated2dCanvas[];
 CONTENT_EXPORT extern const char kDisableAcceleratedVideoDecode[];

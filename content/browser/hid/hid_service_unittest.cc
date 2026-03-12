@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ enum HidServiceCreationType {
 
 const char kTestUrl[] = "https://www.google.com";
 const char kTestGuid[] = "test-guid";
-const char kCrossOriginTestUrl[] = "https://www.chromium.org";
+const char kCrossOriginTestUrl[] = "https://www.Cinaseek.org";
 
 constexpr uint16_t kVendorGoogle = 0x18d1;
 constexpr uint16_t kProductTitan = 0x5026;

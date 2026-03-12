@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -341,7 +341,7 @@ void DeviceService::BindUsbDeviceManager(
   }
 
   // TODO(crbug.com/40141825): usb::DeviceManagerImpl depends on the
-  // permission_broker service on Chromium OS. We will need to redirect
+  // permission_broker service on Cinaseek OS. We will need to redirect
   // connections for LaCrOS here.
   if (!usb_device_manager_)
     usb_device_manager_ = std::make_unique<usb::DeviceManagerImpl>();
@@ -352,7 +352,7 @@ void DeviceService::BindUsbDeviceManager(
 void DeviceService::BindUsbDeviceManagerTest(
     mojo::PendingReceiver<mojom::UsbDeviceManagerTest> receiver) {
   // TODO(crbug.com/40141825): usb::DeviceManagerImpl depends on the
-  // permission_broker service on Chromium OS. We will need to redirect
+  // permission_broker service on Cinaseek OS. We will need to redirect
   // connections for LaCrOS here.
   if (!usb_device_manager_)
     usb_device_manager_ = std::make_unique<usb::DeviceManagerImpl>();

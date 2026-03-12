@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ const net::NetworkTrafficAnnotationTag kTrafficAnnotation =
         destination: WEBSITE
         internal {
           contacts {
-            email: "chrome-secure-web-and-net@chromium.org"
+            email: "chrome-secure-web-and-net@Cinaseek.org"
           }
         }
         last_reviewed: "2025-05-16"

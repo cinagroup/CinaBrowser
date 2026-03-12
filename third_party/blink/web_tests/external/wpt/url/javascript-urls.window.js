@@ -1,7 +1,7 @@
 // The results of this test are all over the map due to browsers behaving very differently for
 // javascript: URLs.
 //
-// Chromium is pretty close execution-wise, but it parses javascript: URLs incorrectly.
+// Cinaseek is pretty close execution-wise, but it parses javascript: URLs incorrectly.
 // Gecko navigates to non-string return values of the result of executing a javascript: URL.
 // WebKit executes javascript: URLs too early and has a harness error due to URL parsing.
 //

@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,23 +7,23 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "win-arm64-dbg",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.win",
+              "builder_group": "Cinaseek.win",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -31,28 +31,28 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "win11-arm64-dbg-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.win",
+              "builder_group": "Cinaseek.win",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Debug",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "arm",
                 "target_bits": 64,
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "win-arm64-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -62,17 +62,17 @@
         {
           "bucket": "ci",
           "builder": "win11-arm64-dbg-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "win-arm64-compile-dbg",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         },
         {
           "builder": "win-arm64-dbg",
-          "group": "tryserver.chromium.win"
+          "group": "tryserver.Cinaseek.win"
         }
       ],
       "retry_failed_shards": true,
@@ -86,6 +86,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.win",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.win",
+  "recipe": "Cinaseek"
 }

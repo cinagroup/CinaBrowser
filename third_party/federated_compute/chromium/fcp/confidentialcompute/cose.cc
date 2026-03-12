@@ -1029,7 +1029,7 @@ template struct cose_internal::BaseCwt<Ec2Key>;
 
 absl::StatusOr<std::string> SymmetricKey::Encode(
     bool _encode_without_libcppbor) const {
-  // Note: we're not using libcppbor in Chromium anyway, so just use cbor.
+  // Note: we're not using libcppbor in Cinaseek anyway, so just use cbor.
 
   cbor::Value::MapValue map;
   map.emplace(cbor::Value(CoseKeyParameter::kKty),

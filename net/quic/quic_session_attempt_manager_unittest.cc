@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,9 +23,9 @@
 #include "net/base/session_usage.h"
 #include "net/dns/public/secure_dns_policy.h"
 #include "net/log/net_log_source_type.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_endpoint.h"
 #include "net/quic/quic_session_alias_key.h"
 #include "net/quic/quic_session_attempt_request.h"
@@ -116,8 +116,8 @@ class SessionRequester {
 
   std::optional<int> result() const { return result_; }
 
-  QuicChromiumClientSession* session() { return session_; }
-  const QuicChromiumClientSession* session() const { return session_; }
+  QuicCinaseekClientSession* session() { return session_; }
+  const QuicCinaseekClientSession* session() const { return session_; }
   const NetErrorDetails& error_details() const { return error_details_; }
 
   const url::SchemeHostPort& destination() const { return destination_; }
@@ -176,7 +176,7 @@ class SessionRequester {
   base::OnceClosure wait_for_result_closure_;
 
   std::optional<int> result_;
-  raw_ptr<QuicChromiumClientSession> session_ = nullptr;
+  raw_ptr<QuicCinaseekClientSession> session_ = nullptr;
   NetErrorDetails error_details_;
 };
 
@@ -203,7 +203,7 @@ class QuicSessionAttemptManagerTest
   }
 
  private:
-  ProofVerifyDetailsChromium default_verify_details_ =
+  ProofVerifyDetailsCinaseek default_verify_details_ =
       DefaultProofVerifyDetails();
 };
 
@@ -532,7 +532,7 @@ TEST_P(QuicSessionAttemptManagerTest, OnOriginFrame) {
   requester2.SetIPEndPoint(MakeIPEndPoint("192.0.2.2"));
   EXPECT_THAT(requester2.Request(), IsError(ERR_IO_PENDING));
   EXPECT_THAT(requester2.WaitForResult(), IsOk());
-  QuicChromiumClientSession* session2 = requester2.session();
+  QuicCinaseekClientSession* session2 = requester2.session();
   EXPECT_TRUE(session2);
 
   // 3. Simulate an Origin Frame reception.

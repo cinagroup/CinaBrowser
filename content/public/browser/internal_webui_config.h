@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ CONTENT_EXPORT bool IsInternalWebUI(const GURL& url);
 
 // This subclass of WebUIConfig registers the URL as belonging to an internal
 // debugging WebUI. This class should be extended by internal debugging UIs
-// that are intended for use by Chromium developer teams only, so that embedders
+// that are intended for use by Cinaseek developer teams only, so that embedders
 // can choose to control access to such UIs (e.g., by rewriting URLs) for end
 // users.
 class CONTENT_EXPORT InternalWebUIConfig : public WebUIConfig {

@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -20,7 +20,7 @@ if (host_os == "win") {
 # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
 # ../lib.
 _libclang_path = rust_bindgen_root
-if (!use_chromium_rust_toolchain &&
+if (!use_Cinaseek_rust_toolchain &&
     (current_cpu == "ppc64" || current_cpu == "s390x")) {
   _libclang_path = rust_sysroot_absolute + "/lib64"
 } else if (host_os == "win") {
@@ -64,9 +64,9 @@ if (!use_chromium_rust_toolchain &&
 #
 # crate_name: (optional)
 #   If set, then specified the name of the auto-generated crate, so that it
-#   doesn't need to be imported using `chromium::import!` macro.  This should
+#   doesn't need to be imported using `Cinaseek::import!` macro.  This should
 #   be used sparingly - typically only in low-level, foundational libraries
-#   that cannot depend on Chromium prelude (such as `//build/rust/allocator`).
+#   that cannot depend on Cinaseek prelude (such as `//build/rust/allocator`).
 #
 # For a small, self-contained example please see:
 # * C header: //build/rust/tests/bindgen_test
@@ -148,7 +148,7 @@ template("rust_bindgen") {
     # The generated crate doesn't need these dependencies.
     # And avoiding them avoids dependency cycles.
     no_allocator_crate = true
-    no_chromium_prelude = true
+    no_Cinaseek_prelude = true
     no_clippy = true
   }
 }

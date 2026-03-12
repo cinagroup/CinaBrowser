@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -720,7 +720,7 @@ constexpr CGFloat kNonProfileBackgroundImageCompactHeightWidth = 54.0;
 #if BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   UIImage* logo = [UIImage imageNamed:kChromeSigninPromoLogoImage];
 #else
-  UIImage* logo = [UIImage imageNamed:kChromiumSigninPromoLogoImage];
+  UIImage* logo = [UIImage imageNamed:kCinaseekSigninPromoLogoImage];
 #endif  // BUILDFLAG(IOS_USE_BRANDED_ASSETS)
   DCHECK(logo);
   self.imageView.image = logo;

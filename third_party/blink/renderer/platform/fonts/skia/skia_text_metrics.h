@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class SkFont;
 namespace blink {
 
 // TODO: Width functions are affected by issue
-// https://bugs.chromium.org/p/skia/issues/detail?id=10123 in Skia, which
+// https://bugs.Cinaseek.org/p/skia/issues/detail?id=10123 in Skia, which
 // currently does not return trak-free advances on Mac OS 10.15.
 
 void SkFontGetGlyphWidthForHarfBuzz(const SkFont&,

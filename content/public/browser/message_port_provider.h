@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,15 +47,15 @@ class CONTENT_EXPORT MessagePortProvider {
 
 #if BUILDFLAG(IS_ANDROID)
   // TODO(449581913): Rather than processing serialized strings here, we should
-  // to teach the Android side of the house to use `org.chromium.url.Origin`
+  // to teach the Android side of the house to use `org.Cinaseek.url.Origin`
   // and to pass those across the JNI boundary (in e.g.
-  // `org.chromium.content_public.browser.WebContents.postMessageToMainFrame`).
+  // `org.Cinaseek.content_public.browser.WebContents.postMessageToMainFrame`).
   static void PostMessageToFrame(
       Page& page,
       JNIEnv* env,
       const base::android::JavaRef<jstring>& source_origin,
       const base::android::JavaRef<jstring>& target_origin,
-      /* org.chromium.content_public.browser.MessagePayload */
+      /* org.Cinaseek.content_public.browser.MessagePayload */
       const base::android::JavaRef<jobject>& payload,
       const base::android::JavaRef<jobjectArray>& ports);
 #endif  // BUILDFLAG(IS_ANDROID)

@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,13 +8,13 @@ import("//chrome/android/features/android_library_factory_tmpl.gni")
 android_library_factory("factory_java") {
   deps = [ "//components/browser_ui/settings/android:java" ]
 
-  sources = [ "android/java/src/org/chromium/chrome/browser/settings/SettingsNavigationFactory.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/settings/SettingsNavigationFactory.java" ]
 }
 
 android_library("search_java") {
   sources = [
-    "search/java/src/org/chromium/chrome/browser/settings/search/ChromeBaseSearchIndexProvider.java",
-    "search/java/src/org/chromium/chrome/browser/settings/search/ChromeSearchIndexProvider.java",
+    "search/java/src/org/Cinaseek/chrome/browser/settings/search/CinaseekBaseSearchIndexProvider.java",
+    "search/java/src/org/Cinaseek/chrome/browser/settings/search/CinaseekSearchIndexProvider.java",
   ]
 
   deps = [
@@ -36,15 +36,15 @@ android_library("internal_java") {
     "//components/browser_ui/settings/android:java",
   ]
 
-  sources = [ "android/java/src/org/chromium/chrome/browser/settings/SettingsNavigationFactory.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/settings/SettingsNavigationFactory.java" ]
 }
 
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/settings/ChromeBaseSettingsFragment.java",
-    "android/java/src/org/chromium/chrome/browser/settings/ChromeManagedPreferenceDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/settings/FaviconLoader.java",
-    "android/java/src/org/chromium/chrome/browser/settings/ProfileDependentSetting.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/CinaseekBaseSettingsFragment.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/CinaseekManagedPreferenceDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/FaviconLoader.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/ProfileDependentSetting.java",
   ]
   public_deps = [
     ":factory_java",
@@ -72,13 +72,13 @@ android_library("java") {
     "//third_party/androidx:androidx_preference_preference_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.settings"
+  resources_package = "org.Cinaseek.chrome.browser.settings"
 }
 
 android_library("test_support_java") {
   testonly = true
 
-  sources = [ "android/java/src/org/chromium/chrome/browser/settings/SettingsActivityTestRule.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/settings/SettingsActivityTestRule.java" ]
 
   deps = [
     "//base:base_java_test_support",
@@ -99,8 +99,8 @@ android_library("test_support_java") {
 android_library("junit_test_support") {
   testonly = true
   sources = [
-    "android/java/src/org/chromium/chrome/browser/settings/TestEmbeddableFragment.java",
-    "android/java/src/org/chromium/chrome/browser/settings/TestStandaloneFragment.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/TestEmbeddableFragment.java",
+    "android/java/src/org/Cinaseek/chrome/browser/settings/TestStandaloneFragment.java",
   ]
   deps = [
     ":junit_test_resources",
@@ -112,7 +112,7 @@ android_library("junit_test_support") {
     "//third_party/androidx:androidx_fragment_fragment_java",
     "//third_party/androidx:androidx_preference_preference_java",
   ]
-  resources_package = "org.chromium.chrome.browser.settings"
+  resources_package = "org.Cinaseek.chrome.browser.settings"
 }
 
 android_resources("junit_test_resources") {

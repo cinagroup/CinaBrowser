@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef FUCHSIA_WEB_RUNNERS_CAST_API_BINDINGS_CLIENT_H_
 #define FUCHSIA_WEB_RUNNERS_CAST_API_BINDINGS_CLIENT_H_
 
-#include <chromium/cast/cpp/fidl.h>
+#include <Cinaseek/cast/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl.h>
 
 #include <optional>
@@ -26,7 +26,7 @@ class ApiBindingsClient {
   // have been received, or on failure. The caller should use HasBindings()
   // to verify that bindings were received, and may then use AttachToFrame().
   ApiBindingsClient(
-      fidl::InterfaceHandle<chromium::cast::ApiBindings> bindings_service,
+      fidl::InterfaceHandle<Cinaseek::cast::ApiBindings> bindings_service,
       base::OnceClosure on_initialization_complete);
 
   ApiBindingsClient(const ApiBindingsClient&) = delete;
@@ -58,15 +58,15 @@ class ApiBindingsClient {
 
  private:
   // Called when ApiBindings::GetAll() has responded.
-  void OnBindingsReceived(std::vector<chromium::cast::ApiBinding> bindings);
+  void OnBindingsReceived(std::vector<Cinaseek::cast::ApiBinding> bindings);
 
   // Used by AttachToFrame() to invoke `on_error_callback` asynchronously.
   void CallOnErrorCallback(base::OnceClosure on_error_callback);
 
-  std::optional<std::vector<chromium::cast::ApiBinding>> bindings_;
+  std::optional<std::vector<Cinaseek::cast::ApiBinding>> bindings_;
   raw_ptr<fuchsia::web::Frame> frame_ = nullptr;
   raw_ptr<cast_api_bindings::NamedMessagePortConnector> connector_ = nullptr;
-  chromium::cast::ApiBindingsPtr bindings_service_;
+  Cinaseek::cast::ApiBindingsPtr bindings_service_;
   base::OnceClosure on_initialization_complete_;
 
   base::WeakPtrFactory<ApiBindingsClient> weak_ptr_factory_{this};

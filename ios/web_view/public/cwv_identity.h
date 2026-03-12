@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ CWV_EXPORT
 
 - (instancetype)init NS_UNAVAILABLE;
 
-// The user's email address. e.g. john.doe@chromium.org.
+// The user's email address. e.g. john.doe@Cinaseek.org.
 @property(nonatomic, copy, readonly, nullable) NSString* email;
 
 // The user's full name. e.g. John Doe.

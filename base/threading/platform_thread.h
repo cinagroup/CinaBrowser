@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -506,7 +506,7 @@ class BASE_EXPORT ThreadTypeManager {
   // where neither SetDefault has been used, nor any leases have been created.
   // In this state, the thread's type isn't managed by ThreadTypeManager but is
   // what the OS has assigned for the thread (which may not be expressible as a
-  // Chromium ThreadType). From this state, the first lease or SetDefault call
+  // Cinaseek ThreadType). From this state, the first lease or SetDefault call
   // will apply the thread's initial type.
   std::optional<ThreadType> default_thread_type_;
 

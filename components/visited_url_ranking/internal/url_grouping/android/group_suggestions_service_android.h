@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ class GroupSuggestionsServiceAndroid : public base::SupportsUserData::Data {
 
   // Returns the delegate that routes the events to Java delegates. The
   // returned object is of type:
-  // org.chromium.components.visited_url_ranking.url_grouping.DelegateBridge.
+  // org.Cinaseek.components.visited_url_ranking.url_grouping.DelegateBridge.
   base::android::ScopedJavaLocalRef<jobject> GetJavaDelegateBridge();
 
  private:

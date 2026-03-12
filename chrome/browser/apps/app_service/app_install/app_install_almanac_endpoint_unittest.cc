@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ TEST_F(AppInstallAlmanacEndpointTest, GetAppInstallInfoSuccessfulResponse) {
   web_app_extras.set_document_url("https://example.com/start.html");
   web_app_extras.set_original_manifest_url("https://example.com/manifest.json");
   web_app_extras.set_scs_url(
-      "https://almanac.chromium.org/example_manifest.json");
+      "https://almanac.Cinaseek.org/example_manifest.json");
   web_app_extras.set_open_as_window(true);
 
   test_url_loader_factory_.AddResponse(
@@ -162,7 +162,7 @@ TEST_F(AppInstallAlmanacEndpointTest, GetAppInstallInfoSuccessfulResponse) {
   web_app_data.original_manifest_url =
       GURL("https://example.com/manifest.json");
   web_app_data.proxied_manifest_url =
-      GURL("https://almanac.chromium.org/example_manifest.json");
+      GURL("https://almanac.Cinaseek.org/example_manifest.json");
   web_app_data.document_url = GURL("https://example.com/start.html");
   web_app_data.open_as_window = true;
   EXPECT_EQ(base::ToString(response_future.Get().value()),

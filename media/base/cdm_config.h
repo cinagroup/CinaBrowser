@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace media {
 
 // The runtime configuration for new CDM instances as computed by
-// `requestMediaKeySystemAccess()`. This is in some sense the Chromium-side
+// `requestMediaKeySystemAccess()`. This is in some sense the Cinaseek-side
 // counterpart of Blink's `WebMediaKeySystemConfiguration`.
 struct MEDIA_EXPORT CdmConfig {
   // The key system used for creating the CDM.

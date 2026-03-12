@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -858,7 +858,7 @@ void FileNetLogObserver::FileWriter::CreateInprogressDirectory() {
       "If logging was interrupted, you can stitch a NetLog file out of the\n"
       ".inprogress directory manually using:\n"
       "\n"
-      "https://chromium.googlesource.com/chromium/src/+/main/net/tools/"
+      "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/net/tools/"
       "stitch_net_log_files.py\n");
 }
 

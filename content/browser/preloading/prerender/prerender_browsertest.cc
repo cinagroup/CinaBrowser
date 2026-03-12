@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10524,7 +10524,7 @@ IN_PROC_BROWSER_TEST_F(PrerenderBrowserTest,
 // Test that a main frame navigation after the initial prerender navigation and
 // the activation is resumed cancels prerendering. This is the edge case that
 // PrerenderCommitDeferringCondition posts a task to resume activation
-// (https://source.chromium.org/chromium/chromium/src/+/main:content/browser/preloading/prerender/prerender_commit_deferring_condition.cc;l=105-106;drc=86ba45ef0be48fc81656da31dd4952857963485c)
+// (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/browser/preloading/prerender/prerender_commit_deferring_condition.cc;l=105-106;drc=86ba45ef0be48fc81656da31dd4952857963485c)
 // and a main frame navigation starts before activation is completed.
 // 1. prerender navigation starts/finishes
 // 2. activation starts and suspends on CommitDeferringCondition

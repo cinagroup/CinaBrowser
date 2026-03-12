@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class FakeWebState : public web::FakeWebState {
 // Test fixture for HttpsOnlyModeBlockingPage.
 class HttpsOnlyModeBlockingPageTest : public PlatformTest {
  public:
-  HttpsOnlyModeBlockingPageTest() : url_("http://www.chromium.test") {
+  HttpsOnlyModeBlockingPageTest() : url_("http://www.Cinaseek.test") {
     auto navigation_manager = std::make_unique<web::FakeNavigationManager>();
     navigation_manager_ = navigation_manager.get();
     web_state_.SetNavigationManager(std::move(navigation_manager));

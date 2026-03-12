@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ class VisitedURLRankingService;
 
 class TabAndroid;
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.auxiliary_search
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.auxiliary_search
 enum class AuxiliarySearchEntryType {
   kTab = 0,
   kCustomTab = 1,

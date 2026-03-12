@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ TEST_F(WebAccessibleResourcesManifestTest, WebAccessibleResourcesV3Valid) {
        R"([
             {
               "resources": ["test"],
-              "matches": ["https://chromium.org/*"],
+              "matches": ["https://Cinaseek.org/*"],
               "extension_ids": ["abcdefghijklmnopabcdefghijklmnop"],
               "unexpected_key": ["allowed"]
             }

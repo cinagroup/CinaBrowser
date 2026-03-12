@@ -80,9 +80,9 @@
       // If depot_tools aren't already available in the PATH provided to vscode,
       // you can configure it in the next line.
       // "PATH": "<DEPOT_TOOLS_LOCATION>:${env:PATH}"
-      // Alternatively, if you have configured depot_tools for ChromiumIDE, you
+      // Alternatively, if you have configured depot_tools for CinaseekIDE, you
       // can just uncomment the following line:
-      // "PATH": "${config:chromiumide.paths.depotTools}:${env:PATH}"
+      // "PATH": "${config:Cinaseekide.paths.depotTools}:${env:PATH}"
     }
   },
 

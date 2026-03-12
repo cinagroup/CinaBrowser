@@ -22,13 +22,13 @@
       <include name="IDR_READING_MODE_GDOC_HELPER_CONTENT_JS" file="reading_mode_gdocs_helper/content.js" type="BINDATA" />
       <include name="IDR_READING_MODE_GDOC_HELPER_GDOCS_SCRIPT_JS" file="reading_mode_gdocs_helper/gdocs_script.js" type="BINDATA" />
 
-      <!-- Hangout Services extension, included in Google Chrome builds only. -->
+      <!-- Hangout Services extension, included in Google Cinaseek builds only. -->
       <if expr="_google_chrome or enable_hangout_services_extension">
         <include name="IDR_HANGOUT_SERVICES_BACKGROUND_HTML" file="hangout_services/background.html" type="BINDATA" />
         <include name="IDR_HANGOUT_SERVICES_THUNK_JS" file="hangout_services/thunk.js" type="BINDATA" />
       </if>
 
-      <!-- Contact Center Insights extension, enabled on managed ChromeOS devices -->
+      <!-- Contact Center Insights extension, enabled on managed CinaseekOS devices -->
       <if expr="is_chromeos">
         <include name="IDR_CONTACT_CENTER_INSIGHTS_BACKGROUND_JS" file="chromeos/contact_center_insights/background.js" type="BINDATA" />
         <include name="IDR_CONTACT_CENTER_INSIGHTS_BACKGROUND_WRAPPER_JS" file="chromeos/contact_center_insights/background_wrapper.js" type="BINDATA" />
@@ -36,7 +36,7 @@
         <include name="IDR_CONTACT_CENTER_INSIGHTS_CCAAS_DEPS_JS" file="${root_gen_dir}/chrome/browser/resources/chromeos/contact_center_insights/ccaas_deps.js" use_base_dir="false" resource_path="chromeos/contact_center_insights/ccaas_deps.js" type="BINDATA" />
       </if>
 
-      <!-- Desk API extension, enabled on managed ChromeOS devices -->
+      <!-- Desk API extension, enabled on managed CinaseekOS devices -->
       <if expr="is_chromeos">
         <include name="IDR_DESK_API_TEMPLATES_ICON" file="chromeos/desk_api/templates_icon.png" type="BINDATA" />
         <!-- Compiled TS -->

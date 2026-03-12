@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -213,34 +213,34 @@ static_library("dbus") {
 
 action("dbus_service_files") {
   sources = [
-    "org.chromium.ArcCroshServiceProvider.conf",
-    "org.chromium.ArcTracing.conf",
-    "org.chromium.ChromeFeaturesService.conf",
-    "org.chromium.ComponentUpdaterService.conf",
-    "org.chromium.CryptohomeKeyDelegate.conf",
-    "org.chromium.DlpFilesPolicyService.conf",
-    "org.chromium.DriveFileStreamService.conf",
-    "org.chromium.EncryptedReportingUploadService.conf",
-    "org.chromium.FjordOobeService.conf",
-    "org.chromium.FuseBoxService.conf",
-    "org.chromium.KioskAppService.conf",
-    "org.chromium.LibvdaService.conf",
-    "org.chromium.LockToSingleUser.conf",
-    "org.chromium.MachineLearningDecisionService.conf",
-    "org.chromium.MojoConnectionService.conf",
-    "org.chromium.NetworkProxyService.conf",
-    "org.chromium.PrintersService.conf",
-    "org.chromium.ProfilerStatusService.conf",
-    "org.chromium.ScreenLockService.conf",
-    "org.chromium.SmbFsService.conf",
-    "org.chromium.VirtualFileRequestService.conf",
-    "vm/org.chromium.PluginVmService.conf",
-    "vm/org.chromium.VmApplicationsService.conf",
-    "vm/org.chromium.VmLaunchService.conf",
-    "vm/org.chromium.VmManagementService.conf",
-    "vm/org.chromium.VmPermissionService.conf",
-    "vm/org.chromium.VmSKForwardingService.conf",
-    "vm/org.chromium.VmWlService.conf",
+    "org.Cinaseek.ArcCroshServiceProvider.conf",
+    "org.Cinaseek.ArcTracing.conf",
+    "org.Cinaseek.CinaseekFeaturesService.conf",
+    "org.Cinaseek.ComponentUpdaterService.conf",
+    "org.Cinaseek.CryptohomeKeyDelegate.conf",
+    "org.Cinaseek.DlpFilesPolicyService.conf",
+    "org.Cinaseek.DriveFileStreamService.conf",
+    "org.Cinaseek.EncryptedReportingUploadService.conf",
+    "org.Cinaseek.FjordOobeService.conf",
+    "org.Cinaseek.FuseBoxService.conf",
+    "org.Cinaseek.KioskAppService.conf",
+    "org.Cinaseek.LibvdaService.conf",
+    "org.Cinaseek.LockToSingleUser.conf",
+    "org.Cinaseek.MachineLearningDecisionService.conf",
+    "org.Cinaseek.MojoConnectionService.conf",
+    "org.Cinaseek.NetworkProxyService.conf",
+    "org.Cinaseek.PrintersService.conf",
+    "org.Cinaseek.ProfilerStatusService.conf",
+    "org.Cinaseek.ScreenLockService.conf",
+    "org.Cinaseek.SmbFsService.conf",
+    "org.Cinaseek.VirtualFileRequestService.conf",
+    "vm/org.Cinaseek.PluginVmService.conf",
+    "vm/org.Cinaseek.VmApplicationsService.conf",
+    "vm/org.Cinaseek.VmLaunchService.conf",
+    "vm/org.Cinaseek.VmManagementService.conf",
+    "vm/org.Cinaseek.VmPermissionService.conf",
+    "vm/org.Cinaseek.VmSKForwardingService.conf",
+    "vm/org.Cinaseek.VmWlService.conf",
   ]
   output_conf_file = "$root_out_dir/dbus/chrome_dbus_services.conf"
   outputs = [ output_conf_file ]

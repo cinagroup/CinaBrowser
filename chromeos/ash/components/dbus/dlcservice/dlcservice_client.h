@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace ash {
 // manages DLC (Downloadable Content) modules. DlcserviceClient will allow for
 // CrOS features to be installed and uninstalled at runtime of the system. If
 // more details about dlcservice are required, please consult
-// https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/dlcservice
+// https://Cinaseek.googlesource.com/Cinaseekos/platform2/+/HEAD/dlcservice
 class COMPONENT_EXPORT(DLCSERVICE_CLIENT) DlcserviceClient {
  public:
   // Observer class for objects that need to know the change in the state of

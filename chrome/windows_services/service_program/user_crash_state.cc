@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ base::win::RegKey GetClientStateMediumKey() {
       HKEY_LOCAL_MACHINE, install_static::GetClientStateMediumKeyPath().c_str(),
       KEY_NOTIFY | KEY_QUERY_VALUE | KEY_WOW64_32KEY);
 #else
-  return {};  // No consent state to monitor for Chromium builds.
+  return {};  // No consent state to monitor for Cinaseek builds.
 #endif
 }
 
@@ -50,7 +50,7 @@ base::win::RegKey GetClientStateKey() {
                            install_static::GetClientStateKeyPath().c_str(),
                            KEY_NOTIFY | KEY_QUERY_VALUE | KEY_WOW64_32KEY);
 #else
-  return {};  // No consent state to monitor for Chromium builds.
+  return {};  // No consent state to monitor for Cinaseek builds.
 #endif
 }
 
@@ -60,7 +60,7 @@ base::win::RegKey GetProductKey() {
                            install_static::GetRegistryPath().c_str(),
                            KEY_NOTIFY | KEY_QUERY_VALUE | KEY_WOW64_32KEY);
 #else
-  return {};  // No consent state to monitor for Chromium builds.
+  return {};  // No consent state to monitor for Cinaseek builds.
 #endif
 }
 

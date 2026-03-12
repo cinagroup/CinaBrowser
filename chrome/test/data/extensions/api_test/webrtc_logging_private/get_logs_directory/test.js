@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ function testGetsReadOnlyDirectoryEntry() {
   // Looks and quacks like a DirectoryEntry, since that type is implemented as
   // [NoInterfaceObject].
   // See:
-  // https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/_6Euwqv366U
+  // https://groups.google.com/a/Cinaseek.org/forum/#!topic/blink-dev/_6Euwqv366U
   chrome.webrtcLoggingPrivate.getLogsDirectory(function(directoryEntry) {
     chrome.test.assertTrue(!!directoryEntry);
     chrome.test.assertTrue(directoryEntry.isDirectory);

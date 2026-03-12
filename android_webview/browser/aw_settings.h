@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,21 +22,21 @@ class AwRenderViewHostExt;
 // Lifetime: WebView
 class AwSettings : public content::WebContentsObserver {
  public:
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.settings
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.settings
   enum ForceDarkMode {
     FORCE_DARK_OFF = 0,
     FORCE_DARK_AUTO = 1,
     FORCE_DARK_ON = 2,
   };
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.settings
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.settings
   enum ForceDarkBehavior {
     FORCE_DARK_ONLY = 0,
     MEDIA_QUERY_ONLY = 1,
     PREFER_MEDIA_QUERY_OVER_FORCE_DARK = 2,
   };
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.settings
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.settings
   enum SpeculativeLoadingAllowedFlags {
     SPECULATIVE_LOADING_DISABLED = 0,
     PRERENDER_ENABLED = 1,
@@ -57,7 +57,7 @@ class AwSettings : public content::WebContentsObserver {
 
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview.settings
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview.settings
   enum AttributionBehavior {
     DISABLED = 0,
     APP_SOURCE_AND_WEB_TRIGGER = 1,

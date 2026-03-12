@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 namespace blink {
 
 // Distinguish memory allocation failures from other errors.
-// https://groups.google.com/a/chromium.org/d/msg/platform-architecture-dev/MP0k9WGnCjA/zIBiJtilBwAJ
+// https://groups.google.com/a/Cinaseek.org/d/msg/platform-architecture-dev/MP0k9WGnCjA/zIBiJtilBwAJ
 NOINLINE static void ICUOutOfMemory() {
   OOM_CRASH(0);
 }

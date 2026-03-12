@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ class UrlCheckerDelegateImplTest : public PlatformTest {
   UnsafeResource CreateUnsafeResource(
       UnsafeResourceCallbackState* callback_state) {
     UnsafeResource resource;
-    resource.url = GURL("http://www.chromium.test");
+    resource.url = GURL("http://www.Cinaseek.test");
     resource.callback_sequence = task_environment_.GetMainThreadTaskRunner();
     resource.callback =
         base::BindRepeating(&PopulateCallbackState, callback_state);

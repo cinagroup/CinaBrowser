@@ -11,7 +11,7 @@ config("libpfm4_config") {
   }
 }
 
-# Only includes files relevant to Chromium's supported architectures:
+# Only includes files relevant to Cinaseek's supported architectures:
 #   x86, x64, arm, arm64
 #
 # Based on logic in src/lib/Makefile.
@@ -363,6 +363,6 @@ source_set("libpfm4") {
 
   public_configs = [ ":libpfm4_public_config" ]
   configs += [ ":libpfm4_config" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }

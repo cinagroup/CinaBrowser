@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ class MockGesturePropertiesService
                     SetPropertyCallback));
 };
 
-// Work around the compile error '[chromium-style] Complex class/struct needs an
+// Work around the compile error '[Cinaseek-style] Complex class/struct needs an
 // explicit out-of-line constructor.'
 inline MockGesturePropertiesService::MockGesturePropertiesService() = default;
 inline MockGesturePropertiesService::~MockGesturePropertiesService() = default;

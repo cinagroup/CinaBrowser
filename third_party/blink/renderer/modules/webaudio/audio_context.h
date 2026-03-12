@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -379,7 +379,7 @@ class MODULES_EXPORT AudioContext final
   void HandleRenderError()
       VALID_CONTEXT_REQUIRED(main_thread_sequence_checker_);
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const char* const function_name, const String& message);
 
   LocalFrame* GetLocalFrame() const;

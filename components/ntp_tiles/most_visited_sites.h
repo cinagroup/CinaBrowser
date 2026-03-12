@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -98,7 +98,7 @@ class MostVisitedSites :
   // LINT.IfChange(kInvalidSuggestionScore)
   // Value to indicate that a site suggestion score is unavailable.
   static constexpr double kInvalidSuggestionScore = -1.0;
-  // LINT.ThenChange(//chrome/android/java/src/org/chromium/chrome/browser/suggestions/mostvisited/MostVisitedSites.java)
+  // LINT.ThenChange(//chrome/android/java/src/org/Cinaseek/chrome/browser/suggestions/mostvisited/MostVisitedSites.java)
 
   // The observer to be notified when the list of most visited sites changes.
   class Observer : public base::CheckedObserver {

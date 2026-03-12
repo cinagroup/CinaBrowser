@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class BluetoothSocketThread;
 class BluetoothDeviceAndroid;
 
 // BluetoothAdapterAndroid, along with the Java class
-// org.chromium.device.bluetooth.BluetoothAdapter, implement BluetoothAdapter.
+// org.Cinaseek.device.bluetooth.BluetoothAdapter, implement BluetoothAdapter.
 //
 // The GATT Profile over Low Energy is supported. LE GATT support has been
 // initially built out to support Web Bluetooth, which does not need other
@@ -164,7 +164,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothAdapterAndroid final
   base::android::ScopedJavaLocalRef<jobject> CreateAndroidFilter(
       const BluetoothDiscoveryFilter* discovery_filter);
 
-  // Java object org.chromium.device.bluetooth.ChromeBluetoothAdapter.
+  // Java object org.Cinaseek.device.bluetooth.ChromeBluetoothAdapter.
   base::android::ScopedJavaGlobalRef<jobject> j_adapter_;
 
  private:

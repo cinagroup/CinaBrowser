@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,11 +6,11 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ephemeraltab/EphemeralTabCoordinator.java",
-    "java/src/org/chromium/chrome/browser/ephemeraltab/EphemeralTabCoordinatorSupplier.java",
-    "java/src/org/chromium/chrome/browser/ephemeraltab/EphemeralTabMediator.java",
-    "java/src/org/chromium/chrome/browser/ephemeraltab/EphemeralTabObserver.java",
-    "java/src/org/chromium/chrome/browser/ephemeraltab/EphemeralTabSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/ephemeraltab/EphemeralTabCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/ephemeraltab/EphemeralTabCoordinatorSupplier.java",
+    "java/src/org/Cinaseek/chrome/browser/ephemeraltab/EphemeralTabMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/ephemeraltab/EphemeralTabObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/ephemeraltab/EphemeralTabSheetContent.java",
   ]
   deps = [
     ":java_resources",
@@ -53,7 +53,7 @@ android_library("java") {
     "//ui/android:ui_utils_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.chrome.browser.ephemeraltab"
+  resources_package = "org.Cinaseek.chrome.browser.ephemeraltab"
 }
 
 android_resources("java_resources") {

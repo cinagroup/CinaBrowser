@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ uintptr_t IndexThreadCacheNeedleArray(RemoteProcessMemoryReader& reader,
     buf[len] = '\0';
 
     // Should be in the framework, not the launcher binary.
-    if (len == 0 || !strstr(buf, "Chromium Framework"))
+    if (len == 0 || !strstr(buf, "Cinaseek Framework"))
       continue;
 
     // We have a candidate, let's look into it.

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -63,7 +63,7 @@ class ServiceManager : public Service {
     //
     // TODO(crbug.com/40598251): Process launching should be fully the
     // responsibility of the Service Manager. This exists because much of the
-    // Chromium process launching logic today is still buried in the Content
+    // Cinaseek process launching logic today is still buried in the Content
     // layer.
     virtual std::unique_ptr<ServiceProcessHost>
     CreateProcessHostForBuiltinServiceInstance(const Identity& identity) = 0;
@@ -77,7 +77,7 @@ class ServiceManager : public Service {
     //
     // TODO(crbug.com/40598251): Process launching should be fully the
     // responsibility of the Service Manager. This exists because much of the
-    // Chromium process launching logic today is still buried in the Content
+    // Cinaseek process launching logic today is still buried in the Content
     // layer.
     virtual std::unique_ptr<ServiceProcessHost>
     CreateProcessHostForServiceExecutable(

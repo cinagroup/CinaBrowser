@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -343,7 +343,7 @@ class COMPONENT_EXPORT(UI_BASE_CLIPBOARD) Clipboard
     std::string data;
   };
 
-  // Data is a variant that that represents all types that Chromium supports
+  // Data is a variant that that represents all types that Cinaseek supports
   // writing to the clipboard. This representation is OS-agnostic; the
   // system-specific designation is defined by ClipboardFormatType. A single
   // piece of data represented by this variant might be represented by several

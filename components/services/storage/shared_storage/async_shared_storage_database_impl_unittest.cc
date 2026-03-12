@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -702,7 +702,7 @@ TEST_F(AsyncSharedStorageDatabaseImplFromFileTest,
     origins.push_back(info->storage_key.origin());
   EXPECT_THAT(
       origins,
-      ElementsAre(abc_xyz, url::Origin::Create(GURL("http://chromium.org")),
+      ElementsAre(abc_xyz, url::Origin::Create(GURL("http://Cinaseek.org")),
                   google_com, url::Origin::Create(GURL("http://google.org")),
                   url::Origin::Create(GURL("http://growwithgoogle.com")),
                   url::Origin::Create(GURL("http://gv.com")),
@@ -744,7 +744,7 @@ TEST_F(AsyncSharedStorageDatabaseImplFromFileV1NoBudgetTableTest,
     origins.push_back(info->storage_key.origin());
   EXPECT_THAT(
       origins,
-      ElementsAre(abc_xyz, url::Origin::Create(GURL("http://chromium.org")),
+      ElementsAre(abc_xyz, url::Origin::Create(GURL("http://Cinaseek.org")),
                   google_com, url::Origin::Create(GURL("http://google.org")),
                   url::Origin::Create(GURL("http://growwithgoogle.com")),
                   url::Origin::Create(GURL("http://gv.com")),

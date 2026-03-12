@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ BASE_FEATURE(kWebViewConfigurableLibraryPrefetch,
 BASE_FEATURE(kWebViewContentRestrictionSupport,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// When enabled, defers GMS calls to after Chromium startup.
+// When enabled, defers GMS calls to after Cinaseek startup.
 BASE_FEATURE(kWebViewDeferStartupGmsCalls, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enable JS FileSystemAccess API.
@@ -150,10 +150,10 @@ BASE_FEATURE(kWebViewWebauthn, base::FEATURE_ENABLED_BY_DEFAULT);
 // enabled.
 BASE_FEATURE(kWebViewRenderDocument, base::FEATURE_DISABLED_BY_DEFAULT);
 
-// When enabled, webview chromium initialization uses the startup tasks logic
+// When enabled, webview Cinaseek initialization uses the startup tasks logic
 // where it runs the startup tasks asynchronously if startup is triggered from a
 // background thread. Otherwise runs startup synchronously.
-// Also caches any chromium startup exception and rethrows it if startup is
+// Also caches any Cinaseek startup exception and rethrows it if startup is
 // retried without a restart.
 // Note: WebViewUseStartupTasksLogicP2 and kWebViewStartupTasksYieldToNative
 // also enable the same behaviour as this flag.
@@ -195,7 +195,7 @@ const base::FeatureParam<double> kWebViewCodeCacheSizeLimitMultiplier{
 BASE_FEATURE(kWebViewConnectToComponentProviderInBackground,
              base::FEATURE_ENABLED_BY_DEFAULT);
 
-// Enables phase 2 of using startup tasks logic for webview chromium
+// Enables phase 2 of using startup tasks logic for webview Cinaseek
 // initialization which starts browser process asynchronously, when starting
 // webview asynchronously.
 // Note: This also enables the same behaviour as WebViewUseStartupTasksLogic and
@@ -216,7 +216,7 @@ BASE_FEATURE(kWebViewStartupTasksYieldToNative,
 // This results in the metric logging being run on a separate thread and
 // blocking until the results are retrieved.
 // When this is disabled, logging is initiated on the main thread and a success
-// status is reported to the chromium metrics service immediately.
+// status is reported to the Cinaseek metrics service immediately.
 BASE_FEATURE(kAndroidMetricsAsyncMetricLogging,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -255,7 +255,7 @@ BASE_FEATURE(kWebViewOptInToGmsBindServiceOptimization,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Moves some of the work that is being run during
-// `startChromium` to be done beforehand during WebView provider
+// `startCinaseek` to be done beforehand during WebView provider
 // initialization. This is expected to improve startup performance especially
 // when async startup takes place.
 BASE_FEATURE(kWebViewMoveWorkToProviderInit, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -310,7 +310,7 @@ BASE_FEATURE(kWebViewUseNonembeddedLowEntropySource,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
 // When enabled, the default user agent string is fetched more quickly without
-// waiting for chromium startup to complete.
+// waiting for Cinaseek startup to complete.
 BASE_FEATURE(kWebViewFasterGetDefaultUserAgent,
              base::FEATURE_DISABLED_BY_DEFAULT);
 

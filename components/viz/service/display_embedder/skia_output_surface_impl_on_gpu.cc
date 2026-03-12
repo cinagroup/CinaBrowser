@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,8 +86,8 @@
 #include "third_party/skia/include/gpu/ganesh/gl/GrGLBackendSurface.h"
 #include "third_party/skia/include/gpu/graphite/Context.h"
 #include "third_party/skia/include/gpu/graphite/Surface.h"
-#include "third_party/skia/include/private/chromium/GrDeferredDisplayList.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrDeferredDisplayList.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/base/ozone_buildflags.h"
 #include "ui/gfx/color_space.h"
 #include "ui/gfx/geometry/skia_conversions.h"
@@ -848,7 +848,7 @@ void SkiaOutputSurfaceImplOnGpu::CopyOutputRGBAInMemory(
     dest_color_space = gfx::ColorSpace::CreateSRGB();
   }
 
-  // TODO(https://bugs.chromium.org/p/skia/issues/detail?id=14389):
+  // TODO(https://bugs.Cinaseek.org/p/skia/issues/detail?id=14389):
   // BGRA is not supported on iOS, so explicitly request RGBA here. This should
   // not prevent readback, however, so once that is fixed, this code could be
   // removed.

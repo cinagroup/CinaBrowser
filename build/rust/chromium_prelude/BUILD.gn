@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,15 +6,15 @@ import("//build/rust/rust_executable.gni")
 import("//build/rust/rust_macro.gni")
 import("//build/rust/rust_static_library.gni")
 
-if (enable_chromium_prelude) {
-  rust_static_library("chromium_prelude") {
-    crate_name = "chromium"
-    crate_root = "chromium_prelude.rs"
-    sources = [ "chromium_prelude.rs" ]
+if (enable_Cinaseek_prelude) {
+  rust_static_library("Cinaseek_prelude") {
+    crate_name = "Cinaseek"
+    crate_root = "Cinaseek_prelude.rs"
+    sources = [ "Cinaseek_prelude.rs" ]
     deps = [ ":import_attribute" ]
 
     # Don't depend on ourselves.
-    no_chromium_prelude = true
+    no_Cinaseek_prelude = true
   }
 
   rust_macro("import_attribute") {
@@ -30,7 +30,7 @@ if (enable_chromium_prelude) {
     visibility = [ ":*" ]
 
     # Don't depend on ourselves.
-    no_chromium_prelude = true
+    no_Cinaseek_prelude = true
   }
 
   rust_static_library("import_test_lib") {
@@ -44,7 +44,7 @@ if (enable_chromium_prelude) {
     crate_root = "import_test.rs"
     sources = [ "import_test.rs" ]
     deps = [
-      ":chromium_prelude",
+      ":Cinaseek_prelude",
       ":import_test_lib",
     ]
   }

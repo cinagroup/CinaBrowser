@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -346,7 +346,7 @@ void SyncTest::PostCreateThreads() {
       // tests.
       host_resolver()->AllowDirectLookup("*.googleapis.com");
 
-      // On Linux, we use Chromium's NSS implementation which uses the following
+      // On Linux, we use Cinaseek's NSS implementation which uses the following
       // hosts for certificate verification. Without these overrides, running
       // the integration tests on Linux causes error as we make external DNS
       // lookups.

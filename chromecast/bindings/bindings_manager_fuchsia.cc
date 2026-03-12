@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,9 +38,9 @@ void BindingsManagerFuchsia::AddBinding(std::string_view binding_name,
 
 void BindingsManagerFuchsia::GetAll(GetAllCallback callback) {
   // Build a list of binding scripts and send it to the client.
-  std::vector<chromium::cast::ApiBinding> bindings_vector;
+  std::vector<Cinaseek::cast::ApiBinding> bindings_vector;
   for (auto& entry : bindings_) {
-    chromium::cast::ApiBinding binding_cloned;
+    Cinaseek::cast::ApiBinding binding_cloned;
     zx_status_t status;
     status = entry.second.Clone(binding_cloned.mutable_before_load_script());
     ZX_CHECK(status == ZX_OK, status) << "vmo::clone";

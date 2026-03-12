@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace {
 
 std::vector<uint8_t> BuildEndpointInfo() {
   // Must be < 131:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/nearby/src/connections/implementation/bluetooth_device_name.h;l=70;drc=084f7ebd8847cfb68191f787dda192644377e6ad
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/nearby/src/connections/implementation/bluetooth_device_name.h;l=70;drc=084f7ebd8847cfb68191f787dda192644377e6ad
   static constexpr size_t kEndpointInfoLength = 64;
   // TODO(esum): Fill with real content and comment. Currently, endpoint info
   // is still not used/required.

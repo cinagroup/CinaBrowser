@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,11 +9,11 @@ namespace ios {
 namespace provider {
 namespace {
 
-// Domain for chromium signin error API.
-NSString* const kChromiumSigninErrorDomain = @"chromium_signin_error_domain";
+// Domain for Cinaseek signin error API.
+NSString* const kCinaseekSigninErrorDomain = @"Cinaseek_signin_error_domain";
 
-// Code for chromium signin error API.
-enum ChromiumSigninErrorCode {
+// Code for Cinaseek signin error API.
+enum CinaseekSigninErrorCode {
   kUserCancelled,
   kMissingIdentity,
 };
@@ -21,27 +21,27 @@ enum ChromiumSigninErrorCode {
 }  // anonymous namespace
 
 NSError* CreateUserCancelledSigninError() {
-  return [NSError errorWithDomain:kChromiumSigninErrorDomain
-                             code:ChromiumSigninErrorCode::kUserCancelled
+  return [NSError errorWithDomain:kCinaseekSigninErrorDomain
+                             code:CinaseekSigninErrorCode::kUserCancelled
                          userInfo:nil];
 }
 
 NSError* CreateMissingIdentitySigninError() {
-  return [NSError errorWithDomain:kChromiumSigninErrorDomain
-                             code:ChromiumSigninErrorCode::kMissingIdentity
+  return [NSError errorWithDomain:kCinaseekSigninErrorDomain
+                             code:CinaseekSigninErrorCode::kMissingIdentity
                          userInfo:nil];
 }
 
 SigninErrorCategory GetSigninErrorCategory(NSError* error) {
-  if (![error.domain isEqualToString:kChromiumSigninErrorDomain]) {
+  if (![error.domain isEqualToString:kCinaseekSigninErrorDomain]) {
     return SigninErrorCategory::kUnknownError;
   }
 
-  switch (static_cast<ChromiumSigninErrorCode>(error.code)) {
-    case ChromiumSigninErrorCode::kUserCancelled:
+  switch (static_cast<CinaseekSigninErrorCode>(error.code)) {
+    case CinaseekSigninErrorCode::kUserCancelled:
       return SigninErrorCategory::kUserCancellationError;
 
-    case ChromiumSigninErrorCode::kMissingIdentity:
+    case CinaseekSigninErrorCode::kMissingIdentity:
       return SigninErrorCategory::kNetworkError;
   }
 

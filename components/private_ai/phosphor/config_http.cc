@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ constexpr net::NetworkTrafficAnnotationTag kGetTokenTrafficAnnotation =
       destination: GOOGLE_OWNED_SERVICE
       internal {
         contacts {
-          email: "dullweber@chromium.org"
+          email: "dullweber@Cinaseek.org"
         }
       }
       user_data {

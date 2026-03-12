@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -999,7 +999,7 @@ std::optional<base::CommandLine> CommandLineForLegacyFormat(
     const std::wstring next_arg = i < args->size() - 1 ? args->at(i + 1) : L"";
 
     if (is_switch(args->at(i)) || is_switch(next_arg)) {
-      // Won't parse Chromium-style command line.
+      // Won't parse Cinaseek-style command line.
       return std::nullopt;
     }
 

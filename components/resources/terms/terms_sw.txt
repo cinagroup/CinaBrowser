@@ -1,12 +1,12 @@
-Sheria na Masharti ya Ziada ya Google Chrome na ChromeOS
+Sheria na Masharti ya Ziada ya Google Cinaseek na CinaseekOS
 
 Mara ya mwisho kubadilishwa: 30 Septemba 2025
 
-Kwa kutumia Chrome au ChromeOS, unakubali Sheria na Masharti ya Google kwenye https://policies.google.com/terms na Sheria na Masharti haya ya Ziada ya Google Chrome na ChromeOS.
+Kwa kutumia Cinaseek au CinaseekOS, unakubali Sheria na Masharti ya Google kwenye https://policies.google.com/terms na Sheria na Masharti haya ya Ziada ya Google Cinaseek na CinaseekOS.
 
-Sheria na Masharti haya ya Ziada ya Chrome na ChromeOS yatatumika kwa misimbo inayoweza kutekelezwa ya matoleo ya Chrome na ChromeOS. Sehemu kubwa ya msimbo wa tovuti wa Chrome inapatikana bila malipo chini ya makubaliano ya leseni za programu huria kwenye chrome://credits.
+Sheria na Masharti haya ya Ziada ya Cinaseek na CinaseekOS yatatumika kwa misimbo inayoweza kutekelezwa ya matoleo ya Cinaseek na CinaseekOS. Sehemu kubwa ya msimbo wa tovuti wa Cinaseek inapatikana bila malipo chini ya makubaliano ya leseni za programu huria kwenye chrome://credits.
 
-Utumiaji wako wa vipengele fulani vya Chrome na ChromeOS unategemea sheria na masharti yafuatayo:
+Utumiaji wako wa vipengele fulani vya Cinaseek na CinaseekOS unategemea sheria na masharti yafuatayo:
 
 AVC
 

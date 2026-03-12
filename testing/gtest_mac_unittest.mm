@@ -1,9 +1,9 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Note that while this file is in testing/ and tests GTest macros, it is built
-// as part of Chromium's unit_tests target because the project does not build
+// as part of Cinaseek's unit_tests target because the project does not build
 // or run GTest's internal test suite.
 
 #import "testing/gtest_mac.h"

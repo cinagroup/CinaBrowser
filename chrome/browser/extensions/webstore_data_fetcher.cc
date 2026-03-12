@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ void WebstoreDataFetcher::Start(
 
 // The endpoint does not require an API key, but one will be provided if it's
 // called from a branded build (i.e. Chrome) so the API can distinguish if it's
-// called from Chrome or another Chromium browser.
+// called from Chrome or another Cinaseek browser.
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   google_apis::AddAPIKeyToRequest(*resource_request, google_apis::GetAPIKey());
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)

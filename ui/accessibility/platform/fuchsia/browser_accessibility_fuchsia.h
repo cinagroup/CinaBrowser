@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,13 +73,13 @@ class COMPONENT_EXPORT(AX_PLATFORM) BrowserAccessibilityFuchsia : public Browser
   // Returns true if this AXNode has role AXRole::kList.
   // This may need to be expanded later to include more roles, maybe using
   // IsList
-  // (https://source.chromium.org/chromium/chromium/src/+/main:ui/accessibility/ax_role_properties.cc;l=399;drc=2c712b0d61f0788c0ed1b05176ae7430e8c705e5;bpv=1;bpt=1).
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/accessibility/ax_role_properties.cc;l=399;drc=2c712b0d61f0788c0ed1b05176ae7430e8c705e5;bpv=1;bpt=1).
   bool IsList() const;
 
   // Returns true if this AXNode has role AXRole::klistItem.
   // This may need to be expanded later to include more roles, maybe using
   // IsListItem
-  // (https://source.chromium.org/chromium/chromium/src/+/main:ui/accessibility/ax_role_properties.cc;drc=2c712b0d61f0788c0ed1b05176ae7430e8c705e5;l=413).
+  // (https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/accessibility/ax_role_properties.cc;drc=2c712b0d61f0788c0ed1b05176ae7430e8c705e5;l=413).
   bool IsListElement() const;
 
   // Returns true if this AXNode should be mapped to Fuchsia's Default action.

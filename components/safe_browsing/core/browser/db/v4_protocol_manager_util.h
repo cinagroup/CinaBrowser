@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,10 +72,10 @@ enum class CheckBrowseUrlType {
 };
 
 // Different types of threats that SafeBrowsing protects against. This is the
-// type that's returned to the clients of SafeBrowsing in Chromium.
+// type that's returned to the clients of SafeBrowsing in Cinaseek.
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.safe_browsing
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.safe_browsing
 // GENERATED_JAVA_PREFIX_TO_STRIP: SB_THREAT_TYPE_
 enum class SBThreatType {
   // This type can be used for lists that can be checked synchronously so a

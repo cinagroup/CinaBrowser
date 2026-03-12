@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ typedef NS_ERROR_ENUM(CRURegistrationErrorDomain, CRURegistrationError){
 };
 
 /**
- * CRURegistration interfaces with Chromium Updater to configure and retrieve
+ * CRURegistration interfaces with Cinaseek Updater to configure and retrieve
  * information about an app, or to install the updater for the current user. Its
  * methods can be invoked from any thread or queue.
  *
@@ -144,7 +144,7 @@ typedef NS_ERROR_ENUM(CRURegistrationErrorDomain, CRURegistrationError){
 @interface CRURegistration : NSObject
 
 /**
- * Initializes a CRURegistration instance to manage Chromium Updater's
+ * Initializes a CRURegistration instance to manage Cinaseek Updater's
  * information about the app with the provided ID, using a specified queue
  * for execution and callbacks. This queue can be serial or concurrent, but
  * typically should not be the main queue.
@@ -162,7 +162,7 @@ typedef NS_ERROR_ENUM(CRURegistrationErrorDomain, CRURegistrationError){
     NS_DESIGNATED_INITIALIZER;
 
 /**
- * Initializes a CRURegistration instance to manage Chromium Updater's
+ * Initializes a CRURegistration instance to manage Cinaseek Updater's
  * information about the app with the provided ID, using a global concurrent
  * queue for execution (with the specified quality of service).
  *
@@ -180,7 +180,7 @@ typedef NS_ERROR_ENUM(CRURegistrationErrorDomain, CRURegistrationError){
                           qos:(dispatch_qos_class_t)qos;
 
 /**
- * Initializes a CRURegistration instance to manage Chromium Updater's
+ * Initializes a CRURegistration instance to manage Cinaseek Updater's
  * information about the app with the provided ID, using the `QOS_CLASS_UTILITY`
  * global concurrent queue for execution.
  *

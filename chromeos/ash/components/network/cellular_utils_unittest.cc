@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@ namespace ash {
 
 namespace {
 
-const char kTestEuiccPath[] = "/org/chromium/Hermes/Euicc/0";
-const char kTestEuiccPath2[] = "/org/chromium/Hermes/Euicc/0";
+const char kTestEuiccPath[] = "/org/Cinaseek/Hermes/Euicc/0";
+const char kTestEuiccPath2[] = "/org/Cinaseek/Hermes/Euicc/0";
 const char kTestEid[] = "12345678901234567890123456789012";
 const char kTestEid2[] = "12345678901234567890123456789000";
 

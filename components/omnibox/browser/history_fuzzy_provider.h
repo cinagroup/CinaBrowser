@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -158,7 +158,7 @@ struct Node {
 
   // Note: Some C++ implementations of unordered_map support using the
   // containing struct (Node) as the element type, but some do not. To avoid
-  // potential build issues in downstream projects that use Chromium code,
+  // potential build issues in downstream projects that use Cinaseek code,
   // ensure the element type is of known size (a fully declared type).
   std::unordered_map<char16_t, std::unique_ptr<Node>> next;
 };

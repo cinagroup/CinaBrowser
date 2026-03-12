@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -429,7 +429,7 @@ class FakeRecoveryKeyStoreImpl : public FakeRecoveryKeyStore {
     sig_xml_ = base::ReplaceStringPlaceholders(
         R"(<?xml version="1.0" encoding="UTF-8"?>
 <signature>
-  <chromium-test>true</chromium-test>
+  <Cinaseek-test>true</Cinaseek-test>
   <intermediates>
   </intermediates>
   <certificate>$1</certificate>

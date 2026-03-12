@@ -989,7 +989,7 @@ constexpr unsigned kMinHeadingOffset = 0u;
 // 9 is the maximum heading level recommended by the ARIA
 // specification. See https://w3c.github.io/aria/#aria-level
 // See also AXNodeObject::HeadingLevel():
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/accessibility/ax_node_object.cc;l=3225;drc=d99d45a2124f7075b201e6bf5db39fec8971d583
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/renderer/modules/accessibility/ax_node_object.cc;l=3225;drc=d99d45a2124f7075b201e6bf5db39fec8971d583
 constexpr unsigned kMaxHeadingOffset = 9u;
 
 void Element::setHeadingOffset(int value) {
@@ -6634,7 +6634,7 @@ void Element::setEditContext(EditContext* edit_context,
   data_ = EnsureRareData().SetEditContext(edit_context);
 
   // EditContext affects the -webkit-user-modify CSS property of the element
-  // (which is what Chromium uses internally to determine editability) so
+  // (which is what Cinaseek uses internally to determine editability) so
   // we need to recalc styles. This is an inherited property, so we invalidate
   // the subtree rather than just the node itself.
   SetNeedsStyleRecalc(
@@ -10752,7 +10752,7 @@ const ComputedStyle* Element::StyleForPseudoElement(
 
     const ComputedStyle* layout_parent_style = request.parent_override;
     if (layout_parent_style->Display() == EDisplay::kContents) {
-      // TODO(futhark@chromium.org): Calling getComputedStyle for elements
+      // TODO(futhark@Cinaseek.org): Calling getComputedStyle for elements
       // outside the flat tree should return empty styles, but currently we do
       // not. See issue https://crbug.com/831568. We can replace the if-test
       // with DCHECK(layout_parent) when that issue is fixed.

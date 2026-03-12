@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -28,7 +28,7 @@ if (fuchsia_cipd_package_base_path == "") {
   if (is_chrome_branded) {
     package_base_path = "chrome_internal/fuchsia"
   } else {
-    package_base_path = "chromium/fuchsia"
+    package_base_path = "Cinaseek/fuchsia"
   }
 } else {
   package_base_path = fuchsia_cipd_package_base_path
@@ -48,7 +48,7 @@ _archive_suffix = "_archive"
 # from the WebEngine package, see `fuchsia_web/common/swiftshader_exclude.gni`.
 _license_exclude_list = [ "third_party/swiftshader" ]
 
-# Extracts the numeric Chrome version and writes it to a file in the output
+# Extracts the numeric Cinaseek version and writes it to a file in the output
 # directory.
 #
 # To check out the repository on the commit where the version was generated,
@@ -295,7 +295,7 @@ action("strip_chromedriver_binary") {
 
 cipd_archive("chromedriver") {
   package_subdirectory = "${_host_tools_directory}/\${os}"
-  description = "Prebuilt Chromedriver binary for Fuchsia host."
+  description = "Prebuilt Cinaseekdriver binary for Fuchsia host."
   install_mode = "copy"
   testonly = true
 
@@ -305,7 +305,7 @@ cipd_archive("chromedriver") {
 
 cipd_test_archive("tests") {
   package_subdirectory = _web_engine_directory
-  description = "Prebuilt Chromium tests for Fuchsia."
+  description = "Prebuilt Cinaseek tests for Fuchsia."
   testonly = true
 
   _common_tests = [
@@ -371,7 +371,7 @@ fuchsia_cipd_package(_web_engine_debug_symbols_archive_name) {
   package_root = _web_engine_debug_symbols_outdir
   package_definition_name = "${target_name}.yaml"
   package_definition_dir = "${target_gen_dir}/${target_name}"
-  description = "Debugging symbols for prebuilt binaries from Chromium."
+  description = "Debugging symbols for prebuilt binaries from Cinaseek."
   use_absolute_root_path = true
 
   directories = [ "." ]

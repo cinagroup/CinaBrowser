@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -31,12 +31,12 @@ if (is_android) {
   android_library("java") {
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "java/src/org/chromium/chrome/browser/history/AppFilterCoordinator.java",
-      "java/src/org/chromium/chrome/browser/history/AppFilterMediator.java",
-      "java/src/org/chromium/chrome/browser/history/AppFilterProperties.java",
-      "java/src/org/chromium/chrome/browser/history/AppFilterSheetContent.java",
-      "java/src/org/chromium/chrome/browser/history/AppFilterViewBinder.java",
-      "java/src/org/chromium/chrome/browser/history/HistoryTabHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/history/AppFilterCoordinator.java",
+      "java/src/org/Cinaseek/chrome/browser/history/AppFilterMediator.java",
+      "java/src/org/Cinaseek/chrome/browser/history/AppFilterProperties.java",
+      "java/src/org/Cinaseek/chrome/browser/history/AppFilterSheetContent.java",
+      "java/src/org/Cinaseek/chrome/browser/history/AppFilterViewBinder.java",
+      "java/src/org/Cinaseek/chrome/browser/history/HistoryTabHelper.java",
     ]
 
     deps = [
@@ -50,12 +50,12 @@ if (is_android) {
       "//third_party/jni_zero:jni_zero_java",
       "//ui/android:ui_full_java",
     ]
-    resources_package = "org.chromium.chrome.browser.history"
+    resources_package = "org.Cinaseek.chrome.browser.history"
   }
 
   generate_jni("jni_headers") {
     sources =
-        [ "java/src/org/chromium/chrome/browser/history/HistoryTabHelper.java" ]
+        [ "java/src/org/Cinaseek/chrome/browser/history/HistoryTabHelper.java" ]
   }
 
   android_resources("java_resources") {
@@ -71,9 +71,9 @@ if (is_android) {
 
   android_library("unit_device_javatests") {
     testonly = true
-    resources_package = "org.chromium.chrome.browser.history"
+    resources_package = "org.Cinaseek.chrome.browser.history"
 
-    sources = [ "java/src/org/chromium/chrome/browser/history/AppFilterCoordinatorTest.java" ]
+    sources = [ "java/src/org/Cinaseek/chrome/browser/history/AppFilterCoordinatorTest.java" ]
 
     deps = [
       ":java",

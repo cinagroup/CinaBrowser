@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 #define _Static_assert(predicate, message) static_assert(predicate, message)
 #endif
 
-// pthreadpool's internal headers include <stdatomic.h>, and Chromium's headers
+// pthreadpool's internal headers include <stdatomic.h>, and Cinaseek's headers
 // include <atomic>. These are incompatible before C++23 (e.g.
 // atomic_is_lock_free is a macro in the C header and a template in the C++
 // one). To resolve this, use the types/functions from the C++ header only and
@@ -89,7 +89,7 @@ PTHREADPOOL_INTERNAL void pthreadpool_parallelize(
     uint32_t flags);
 }
 
-// Chromium headers.
+// Cinaseek headers.
 #include "base/functional/bind.h"
 #include "base/synchronization/lock.h"
 #include "base/system/sys_info.h"
@@ -155,7 +155,7 @@ class PthreadPoolJob {
     // computation is complete.
     //
     // See pthreadpool document for more details:
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/pthreadpool/src/include/pthreadpool.h;l=51
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/pthreadpool/src/include/pthreadpool.h;l=51
     struct fpu_state saved_fpu_state = {0};
     if (flags & PTHREADPOOL_FLAG_DISABLE_DENORMALS) {
       saved_fpu_state = get_fpu_state();

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace mojo {
 // a mojom union. |DataViewType| is the corresponding data view type of the
 // mojom union. For example, if the mojom union is example.Foo, |DataViewType|
 // will be example::FooDataView, which can also be referred to by
-// example::Foo::DataView (in chromium) and example::blink::Foo::DataView (in
+// example::Foo::DataView (in Cinaseek) and example::blink::Foo::DataView (in
 // blink).
 //
 // Similar to StructTraits, each specialization of UnionTraits implements the

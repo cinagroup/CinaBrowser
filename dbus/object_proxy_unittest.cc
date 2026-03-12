@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ TEST_F(ObjectProxyTest, WaitForServiceToBeAvailableRunOnce) {
   TestService::Options options;
   TestService test_service(options);
   ObjectProxy* object_proxy = bus_->GetObjectProxy(
-      test_service.service_name(), ObjectPath("/org/chromium/TestObject"));
+      test_service.service_name(), ObjectPath("/org/Cinaseek/TestObject"));
 
   // The callback is not yet called because the service is not available.
   int num_calls = 0;
@@ -93,7 +93,7 @@ TEST_F(ObjectProxyTest, WaitForServiceToBeAvailableAlreadyRunning) {
   TestService::Options options;
   TestService test_service(options);
   ObjectProxy* object_proxy = bus_->GetObjectProxy(
-      test_service.service_name(), ObjectPath("/org/chromium/TestObject"));
+      test_service.service_name(), ObjectPath("/org/Cinaseek/TestObject"));
 
   ASSERT_TRUE(test_service.StartService());
   test_service.WaitUntilServiceIsStarted();
@@ -117,7 +117,7 @@ TEST_F(ObjectProxyTest, WaitForServiceToBeAvailableMultipleCallbacks) {
   TestService::Options options;
   TestService test_service(options);
   ObjectProxy* object_proxy = bus_->GetObjectProxy(
-      test_service.service_name(), ObjectPath("/org/chromium/TestObject"));
+      test_service.service_name(), ObjectPath("/org/Cinaseek/TestObject"));
 
   // Register two callbacks.
   int num_calls_1 = 0, num_calls_2 = 0;

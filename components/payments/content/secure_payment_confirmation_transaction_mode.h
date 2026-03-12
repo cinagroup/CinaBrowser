@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace payments {
 // Represents the WebDriver automation 'modes' that the SPC UX can be put into.
 // See https://w3c.github.io/secure-payment-confirmation/#sctn-automation
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: SPCTransactionMode
 enum class SPCTransactionMode {
   kNone,

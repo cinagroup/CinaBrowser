@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 # into BUILD.gn format.
 #
 # It contains support for both:
-# - centipede, a way of building and running Chromium's existing fuzzing
+# - centipede, a way of building and running Cinaseek's existing fuzzing
 #   targets using an out-of-process runner.
 # - fuzztest, a way of building new fuzzing targets using simpler macros.
 
@@ -45,14 +45,14 @@ config("fuzztest_public_config") {
 
   defines = [
     # Riegeli is a library which centipede can use to store data more
-    # efficiently. It's not yet available in Chromium, so disable
+    # efficiently. It's not yet available in Cinaseek, so disable
     # for now.
     "CENTIPEDE_DISABLE_RIEGELI",
   ]
   if (!enable_fuzztest_fuzz) {
     defines += [
       # In fuzztest's unit-test mode, coverage collection doesn't work
-      # with multiple DSOs, which Chromium needs even in non-component
+      # with multiple DSOs, which Cinaseek needs even in non-component
       # builds. Note that this doesn't impact actual fuzzing mode e.g.
       # centipede.
       "FUZZTEST_NO_LEGACY_COVERAGE",
@@ -64,7 +64,7 @@ config("fuzztest_public_config") {
     defines += [ "FUZZTEST_COMPATIBILITY_MODE" ]
   }
 
-  # These flags will be applied to Chrome test code, so keep to the minimum
+  # These flags will be applied to Cinaseek test code, so keep to the minimum
   # set required to compile fuzztest's headers. Those required to compile
   # fuzztest .cc files should go into fuzztest_internal_config
   cflags = [

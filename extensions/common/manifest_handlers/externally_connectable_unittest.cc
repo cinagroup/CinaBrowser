@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,14 +62,14 @@ TEST_F(ExternallyConnectableTest, IDsAndMatches) {
   EXPECT_TRUE(info->matches.MatchesURL(GURL("https://google.com")));
   EXPECT_TRUE(info->matches.MatchesURL(GURL("https://google.com/")));
 
-  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.chromium.org")));
-  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.chromium.org/")));
+  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.Cinaseek.org")));
+  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.Cinaseek.org/")));
   EXPECT_TRUE(
-      info->matches.MatchesURL(GURL("http://build.chromium.org/index.html")));
-  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.chromium.org")));
-  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.chromium.org/")));
+      info->matches.MatchesURL(GURL("http://build.Cinaseek.org/index.html")));
+  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.Cinaseek.org")));
+  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.Cinaseek.org/")));
   EXPECT_FALSE(
-      info->matches.MatchesURL(GURL("http://foo.chromium.org/index.html")));
+      info->matches.MatchesURL(GURL("http://foo.Cinaseek.org/index.html")));
 
   EXPECT_FALSE(info->matches.MatchesURL(GURL("http://yahoo.com")));
   EXPECT_FALSE(info->matches.MatchesURL(GURL("http://yahoo.com/")));
@@ -83,7 +83,7 @@ TEST_F(ExternallyConnectableTest, IDsAndMatches) {
   EXPECT_FALSE(
       info->matches.MatchesURL(GURL("http://codereview.appspot.com/foo.html")));
   EXPECT_FALSE(
-      info->matches.MatchesURL(GURL("http://chromium.com/index.html")));
+      info->matches.MatchesURL(GURL("http://Cinaseek.com/index.html")));
   EXPECT_FALSE(info->matches.MatchesURL(GURL("http://here.go/somewhere")));
 
   // Paths that don't have any wildcards should match the exact domain, but
@@ -139,14 +139,14 @@ TEST_F(ExternallyConnectableTest, Matches) {
   EXPECT_TRUE(info->matches.MatchesURL(GURL("https://google.com")));
   EXPECT_TRUE(info->matches.MatchesURL(GURL("https://google.com/")));
 
-  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.chromium.org")));
-  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.chromium.org/")));
+  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.Cinaseek.org")));
+  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.Cinaseek.org/")));
   EXPECT_TRUE(
-      info->matches.MatchesURL(GURL("http://build.chromium.org/index.html")));
-  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.chromium.org")));
-  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.chromium.org/")));
+      info->matches.MatchesURL(GURL("http://build.Cinaseek.org/index.html")));
+  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.Cinaseek.org")));
+  EXPECT_FALSE(info->matches.MatchesURL(GURL("https://build.Cinaseek.org/")));
   EXPECT_FALSE(
-      info->matches.MatchesURL(GURL("http://foo.chromium.org/index.html")));
+      info->matches.MatchesURL(GURL("http://foo.Cinaseek.org/index.html")));
 
   EXPECT_FALSE(info->matches.MatchesURL(GURL("http://yahoo.com")));
   EXPECT_FALSE(info->matches.MatchesURL(GURL("http://yahoo.com/")));
@@ -250,7 +250,7 @@ TEST_F(ExternallyConnectableTest, AllURLs) {
   URLPattern pattern(URLPattern::SCHEME_ALL, "<all_urls>");
   EXPECT_TRUE(info->matches.ContainsPattern(pattern));
   EXPECT_TRUE(info->matches.MatchesURL(GURL("https://example.com")));
-  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.chromium.org")));
+  EXPECT_TRUE(info->matches.MatchesURL(GURL("http://build.Cinaseek.org")));
 }
 
 TEST_F(ExternallyConnectableTest, WildcardHost) {

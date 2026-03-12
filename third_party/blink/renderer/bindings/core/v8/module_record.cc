@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -76,7 +76,7 @@ v8::Local<v8::Module> ModuleRecord::Compile(
         ExecutionContext::GetCodeCacheHostFromContext(execution_context),
         params.GetSourceText());
   }
-  // TODO(chromium:1406506): Add a compile hints solution for module records.
+  // TODO(Cinaseek:1406506): Add a compile hints solution for module records.
   constexpr bool kMightGenerateCompileHints = false;
   constexpr bool kCanUseCrowdsourcedCompileHints = false;
   std::tie(compile_options, produce_cache_options, no_cache_reason) =

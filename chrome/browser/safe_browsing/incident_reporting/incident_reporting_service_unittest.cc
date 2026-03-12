@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ constinit thread_local TestIncidentReportingService* test_instance = nullptr;
 
 constexpr char kFakeOsName[] = "fakedows";
 constexpr char kFakeDownloadToken[] = "fakedlt";
-constexpr char kFakeDownloadHost[] = "chromium.org";
+constexpr char kFakeDownloadHost[] = "Cinaseek.org";
 constexpr char kTestTrackedPrefPath[] = "some_pref";
 constexpr char kFakeExtensionId[] = "fakeExtensionId";
 

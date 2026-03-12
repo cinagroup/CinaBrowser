@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace android {
 // because ChildBindingState is compared numerically in
 // ChildProcessRanking.java.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base
 enum class ChildBindingState {
   UNBOUND = 0,
   WAIVED,

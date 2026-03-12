@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -435,8 +435,8 @@ class ShaderTranslatorOutputVersionTest
 };
 
 // crbug.com/540543
-// https://bugs.chromium.org/p/angleproject/issues/detail?id=1276
-// https://bugs.chromium.org/p/angleproject/issues/detail?id=1277
+// https://bugs.Cinaseek.org/p/angleproject/issues/detail?id=1276
+// https://bugs.Cinaseek.org/p/angleproject/issues/detail?id=1277
 TEST_F(ShaderTranslatorOutputVersionTest, DISABLED_CompatibilityOutput) {
   ShBuiltInResources resources;
   sh::InitBuiltInResources(&resources);

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace segmentation_platform {
 
 // Various status for PredictionResult.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.components.segmentation_platform.prediction_status)
+//   org.Cinaseek.components.segmentation_platform.prediction_status)
 enum class PredictionStatus {
   kNotReady = 0,
   kFailed = 1,

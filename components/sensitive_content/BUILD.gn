@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -62,7 +62,7 @@ component("features") {
 
 if (is_android) {
   android_library("java") {
-    sources = [ "android/java/src/org/chromium/components/sensitive_content/SensitiveContentClient.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/sensitive_content/SensitiveContentClient.java" ]
     deps = [
       "//base:base_java",
       "//content/public/android:content_full_java",
@@ -75,11 +75,11 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     visibility = [ ":*" ]
-    sources = [ "android/java/src/org/chromium/components/sensitive_content/SensitiveContentClient.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/sensitive_content/SensitiveContentClient.java" ]
   }
 
   robolectric_library("junit") {
-    sources = [ "android/junit/src/org/chromium/components/sensitive_content/SensitiveContentClientUnitTest.java" ]
+    sources = [ "android/junit/src/org/Cinaseek/components/sensitive_content/SensitiveContentClientUnitTest.java" ]
     deps = [
       ":java",
       "//base:base_java",
@@ -96,7 +96,7 @@ if (is_android) {
     visibility = [ ":*" ]
     sources = [ "//components/sensitive_content/features.cc" ]
     class_name =
-        "org.chromium.components.sensitive_content.SensitiveContentFeatures"
+        "org.Cinaseek.components.sensitive_content.SensitiveContentFeatures"
   }
 
   # Used to expose the features to the WebView flag UI (the equivalent of

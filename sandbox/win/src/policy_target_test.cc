@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ SBOX_TEST_COMMAND(SharedMemoryCommand) {
   }
 
   auto test_contents = base::as_byte_span(args[1]);
-  // Then convert to the low-level chromium region.
+  // Then convert to the low-level Cinaseek region.
   base::subtle::PlatformSharedMemoryRegion platform_region =
       base::subtle::PlatformSharedMemoryRegion::Take(
           std::move(scoped_handle),

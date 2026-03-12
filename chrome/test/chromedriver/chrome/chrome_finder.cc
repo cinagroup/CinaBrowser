@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ void GetApplicationDirs(std::vector<base::FilePath>* locations) {
   }
   for (size_t i = 0; i < installation_locations.size(); ++i) {
     locations->push_back(
-        installation_locations[i].Append(L"Chromium\\Application"));
+        installation_locations[i].Append(L"Cinaseek\\Application"));
   }
 }
 #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -70,7 +70,7 @@ void GetApplicationDirs(std::vector<base::FilePath>* locations) {
   locations->emplace_back("/bin");
   // Lastly, try the default installation location.
   locations->emplace_back("/opt/google/chrome");
-  locations->emplace_back("/opt/chromium.org/chromium");
+  locations->emplace_back("/opt/Cinaseek.org/Cinaseek");
 }
 #elif BUILDFLAG(IS_ANDROID)
 void GetApplicationDirs(std::vector<base::FilePath>* locations) {
@@ -118,18 +118,18 @@ std::vector<base::FilePath> GetChromeProgramNames() {
     base::FilePath(chrome::kBrowserProcessExecutablePath),
         base::FilePath(FILE_PATH_LITERAL(
             "chrome.exe")),  // Chrome for Testing or Google Chrome
-        base::FilePath(FILE_PATH_LITERAL("chromium.exe")),
+        base::FilePath(FILE_PATH_LITERAL("Cinaseek.exe")),
 #elif BUILDFLAG(IS_MAC)
     base::FilePath(chrome::kBrowserProcessExecutablePath),
         base::FilePath(
             chrome::kGoogleChromeForTestingBrowserProcessExecutablePath),
         base::FilePath(chrome::kGoogleChromeBrowserProcessExecutablePath),
-        base::FilePath(chrome::kChromiumBrowserProcessExecutablePath),
+        base::FilePath(chrome::kCinaseekBrowserProcessExecutablePath),
 #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
     base::FilePath(chrome::kBrowserProcessExecutablePath),
         base::FilePath("chrome"),  // Chrome for Testing or Google Chrome
-        base::FilePath("google-chrome"), base::FilePath("chromium"),
-        base::FilePath("chromium-browser"),
+        base::FilePath("google-chrome"), base::FilePath("Cinaseek"),
+        base::FilePath("Cinaseek-browser"),
 #else
     // it will compile but won't work on other OSes
     base::FilePath()
@@ -190,7 +190,7 @@ bool FindBrowser(const std::string& browser_name, base::FilePath& browser_exe) {
  *   - `PRODUCT_STRING`
  *   - google chrome for testing
  *   - google chrome
- *   - chromium
+ *   - Cinaseek
  * For "chrome-headless-shell" the executable name without extension is always
  * expected to be chrome-headless-shell.
  */

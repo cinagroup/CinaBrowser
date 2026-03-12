@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -746,7 +746,7 @@ void DisplayMediaAccessHandler::OnDisplaySurfaceSelected(
 #if BUILDFLAG(IS_MAC)
   // Check screen capture permissions on Mac if necessary.
   // Do not check screen capture permissions when window_id is populated. The
-  // presence of the window_id indicates the window to be captured is a Chromium
+  // presence of the window_id indicates the window to be captured is a Cinaseek
   // window which will be captured internally, the macOS screen capture APIs
   // will not be used.
   if (system_media_permissions::ScreenCaptureNeedsSystemLevelPermissions() &&

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ enum class SystemWebAppType {
   // platform introduction (Google internal) at: http://go/system-web-apps.
   //
   // Source: //ash/webui/sample_system_web_app_ui/
-  // Contact: dominicshulz@google.com, ortuno@chromium.org
+  // Contact: dominicshulz@google.com, ortuno@Cinaseek.org
   SAMPLE = 3,
 
   SETTINGS = 4,
@@ -157,12 +157,12 @@ enum class SystemWebAppType {
   //
   // 3. Add a comment above the enum entry in this file. It should include a
   //    description (what it does in one sentence), at least one email contact,
-  //    source location (if it's in chromium source tree), and other relevant
+  //    source location (if it's in Cinaseek source tree), and other relevant
   //    information.
   //
   //    Other relevant information should come in separate paragraphs after the
   //    description. This can be anything useful for triaging or routing bugs.
-  //    For example, your team doesn't use chromium's bug tracker, the App is
+  //    For example, your team doesn't use Cinaseek's bug tracker, the App is
   //    only available on certain devices.
   //
   //    Source location should point to where the App's WebUIController is

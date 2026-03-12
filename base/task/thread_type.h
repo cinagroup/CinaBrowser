@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ namespace base {
 // the platform-specific implementations. Some implementations may treat
 // adjacent ThreadTypes in this enum as equivalent.
 //
-// Reach out to //base/task/OWNERS (scheduler-dev@chromium.org) before changing
+// Reach out to //base/task/OWNERS (scheduler-dev@Cinaseek.org) before changing
 // thread type assignments in your component, as such decisions affect the whole
 // of Chrome.
 //

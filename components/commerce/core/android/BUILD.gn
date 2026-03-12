@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,19 +7,19 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("core_jni") {
   sources = [
-    "java/src/org/chromium/components/commerce/core/CommerceFeatureUtils.java",
-    "java/src/org/chromium/components/commerce/core/DiscountInfo.java",
-    "java/src/org/chromium/components/commerce/core/ShoppingService.java",
+    "java/src/org/Cinaseek/components/commerce/core/CommerceFeatureUtils.java",
+    "java/src/org/Cinaseek/components/commerce/core/DiscountInfo.java",
+    "java/src/org/Cinaseek/components/commerce/core/ShoppingService.java",
   ]
 }
 
 android_library("core_java") {
   sources = [
-    "java/src/org/chromium/components/commerce/core/CommerceFeatureUtils.java",
-    "java/src/org/chromium/components/commerce/core/CommerceSubscription.java",
-    "java/src/org/chromium/components/commerce/core/DiscountInfo.java",
-    "java/src/org/chromium/components/commerce/core/ShoppingService.java",
-    "java/src/org/chromium/components/commerce/core/SubscriptionsObserver.java",
+    "java/src/org/Cinaseek/components/commerce/core/CommerceFeatureUtils.java",
+    "java/src/org/Cinaseek/components/commerce/core/CommerceSubscription.java",
+    "java/src/org/Cinaseek/components/commerce/core/DiscountInfo.java",
+    "java/src/org/Cinaseek/components/commerce/core/ShoppingService.java",
+    "java/src/org/Cinaseek/components/commerce/core/SubscriptionsObserver.java",
   ]
 
   deps = [
@@ -44,7 +44,7 @@ java_cpp_enum("java_enum_srcjar") {
 }
 
 robolectric_library("junit_tests") {
-  sources = [ "junit/src/org/chromium/components/commerce/core/CommerceSubscriptionTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/components/commerce/core/CommerceSubscriptionTest.java" ]
   deps = [
     ":core_java",
     "//base:base_java",

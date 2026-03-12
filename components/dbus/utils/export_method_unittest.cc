@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace dbus_utils {
 
 namespace {
 
-const char kInterface[] = "org.chromium.TestInterface";
+const char kInterface[] = "org.Cinaseek.TestInterface";
 const char kMethod[] = "TestMethod";
 
 class ExportMethodTest : public testing::Test {
@@ -43,7 +43,7 @@ class ExportMethodTest : public testing::Test {
   void SetUp() override {
     bus_ = base::MakeRefCounted<dbus::MockBus>(dbus::Bus::Options());
     exported_object_ = base::MakeRefCounted<dbus::MockExportedObject>(
-        bus_.get(), dbus::ObjectPath("/org/chromium/TestObject"));
+        bus_.get(), dbus::ObjectPath("/org/Cinaseek/TestObject"));
   }
 
  protected:
@@ -148,7 +148,7 @@ TEST_F(ExportMethodTest, Error) {
       base::BindRepeating(
           [](std::string s, int32_t i) -> ExportMethodResult<bool> {
             return base::unexpected(
-                ExportMethodError{"org.chromium.Error", "Failed"});
+                ExportMethodError{"org.Cinaseek.Error", "Failed"});
           }),
       base::DoNothing());
 
@@ -169,7 +169,7 @@ TEST_F(ExportMethodTest, Error) {
         EXPECT_EQ(response->GetReplySerial(), 123U);
         auto* error_response =
             static_cast<dbus::ErrorResponse*>(response.get());
-        EXPECT_EQ(error_response->GetErrorName(), "org.chromium.Error");
+        EXPECT_EQ(error_response->GetErrorName(), "org.Cinaseek.Error");
       }));
 
   EXPECT_TRUE(error_sent);

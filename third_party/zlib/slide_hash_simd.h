@@ -1,8 +1,8 @@
 /* slide_hash_simd.h
  *
- * Copyright 2022 The Chromium Authors
+ * Copyright 2022 The Cinaseek Authors
  * Use of this source code is governed by a BSD-style license that can be
- * found in the Chromium source repository LICENSE file.
+ * found in the Cinaseek source repository LICENSE file.
  */
 
 #ifndef SLIDE_HASH_SIMD_H

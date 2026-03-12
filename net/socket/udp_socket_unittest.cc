@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1073,7 +1073,7 @@ TEST_F(UDPSocketTest, VerifyDscpAndEcnExchangeDualStack) {
 
 #if BUILDFLAG(IS_WIN)
   // Windows requires a Mock QWave API to allow the client to set the DSCP. For
-  // efficiency reasons, Chromium windows UDP sockets do not provide access to
+  // efficiency reasons, Cinaseek windows UDP sockets do not provide access to
   // incoming DSCP anyway. To avoid all the mocking, don't set the DSCP at all
   // for Windows. RecvFromSocket() doesn't check the DSCP for Windows.
   EXPECT_EQ(client.SetTos(DSCP_NO_CHANGE, ECN_ECT1), 0);
@@ -1144,7 +1144,7 @@ TEST_F(UDPSocketTest, VerifyDscpAndEcnExchangeDualStackV4Mapped) {
 
 #if BUILDFLAG(IS_WIN)
   // Windows requires a Mock QWave API to allow the client to set the DSCP. For
-  // efficiency reasons, Chromium windows UDP sockets do not provide access to
+  // efficiency reasons, Cinaseek windows UDP sockets do not provide access to
   // incoming DSCP anyway. To avoid all the mocking, don't set the DSCP at all
   // for Windows. RecvFromSocket() doesn't check the DSCP for Windows.
   EXPECT_EQ(client.SetTos(DSCP_NO_CHANGE, ECN_ECT1), 0);

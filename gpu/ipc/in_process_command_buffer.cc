@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -970,7 +970,7 @@ void InProcessCommandBuffer::CreateGpuFenceOnGpuThread(
   DCHECK_CALLED_ON_VALID_SEQUENCE(gpu_sequence_checker_);
   UpdateActiveUrl();
 
-  if (!GetFeatureInfo()->feature_flags().chromium_gpu_fence) {
+  if (!GetFeatureInfo()->feature_flags().Cinaseek_gpu_fence) {
     DLOG(ERROR) << "CHROMIUM_gpu_fence unavailable";
     command_buffer_->SetParseError(error::kLostContext);
     return;
@@ -1002,7 +1002,7 @@ void InProcessCommandBuffer::GetGpuFenceOnGpuThread(
     uint32_t gpu_fence_id,
     base::OnceCallback<void(std::unique_ptr<gfx::GpuFence>)> callback) {
   DCHECK_CALLED_ON_VALID_SEQUENCE(gpu_sequence_checker_);
-  if (!GetFeatureInfo()->feature_flags().chromium_gpu_fence) {
+  if (!GetFeatureInfo()->feature_flags().Cinaseek_gpu_fence) {
     DLOG(ERROR) << "CHROMIUM_gpu_fence unavailable";
     command_buffer_->SetParseError(error::kLostContext);
     return;

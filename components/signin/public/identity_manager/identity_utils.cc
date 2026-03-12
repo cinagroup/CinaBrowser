@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ bool IsUsernameAllowedByPattern(std::string_view username,
     // break signin than to quietly allow users to sign in).
     return false;
   }
-  // The default encoding is UTF-8 in Chromium's ICU.
+  // The default encoding is UTF-8 in Cinaseek's ICU.
   icu::UnicodeString icu_input(username.data());
   matcher.reset(icu_input);
   status = U_ZERO_ERROR;

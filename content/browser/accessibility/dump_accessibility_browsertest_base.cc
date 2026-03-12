@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -792,7 +792,7 @@ void DumpAccessibilityTestBase::SetUpMaterialDesignRequestHandler() {
   base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &src_root);
   node_modules_dir_ = src_root.AppendASCII("third_party")
                           .AppendASCII("material_web_components")
-                          .AppendASCII("components-chromium")
+                          .AppendASCII("components-Cinaseek")
                           .AppendASCII("node_modules");
   embedded_test_server()->RegisterRequestHandler(base::BindRepeating(
       &DumpAccessibilityTestBase::HandleMaterialDesignRequest,

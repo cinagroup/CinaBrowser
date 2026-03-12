@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ PaintPreviewProto CreatePopulatedValidProto() {
   root_frame->set_file_path("/foo/bar");
 
   auto* link = root_frame->add_links();
-  link->set_url("https://www.chromium.org/");
+  link->set_url("https://www.Cinaseek.org/");
 
   auto* rect = link->mutable_rect();
   rect->set_x(1);

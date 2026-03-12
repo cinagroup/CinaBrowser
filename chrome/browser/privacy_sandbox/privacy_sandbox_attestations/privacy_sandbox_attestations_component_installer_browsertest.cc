@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@ IN_PROC_BROWSER_TEST_F(
   (*proto.mutable_site_attestations())[site] = site_attestation;
 
   // There is an existing pre-installed attestations component that is shipped
-  // with Chromium. Choose a version number that is sure to be higher. This
+  // with Cinaseek. Choose a version number that is sure to be higher. This
   // makes sure that the component installer will ignore the shipped
   // pre-installed attestations component.
   base::Version version("12345.0.0.0");
@@ -172,7 +172,7 @@ IN_PROC_BROWSER_TEST_F(PrivacySandboxAttestationsBrowserTestBase,
   // Register the privacy sandbox attestations component, which should parse
   // the pre-installed attestations file on disk if feature
   // "PrivacySandboxAttestationsLoadPreInstalledComponent" is enabled. This
-  // pre-installed file is shipped with Chromium.
+  // pre-installed file is shipped with Cinaseek.
   RegisterPrivacySandboxAttestationsComponent(
       g_browser_process->component_updater());
 
@@ -217,7 +217,7 @@ IN_PROC_BROWSER_TEST_F(
     PrivacySandboxAttestationPreInstallInteractionWithDownloadTest,
     BothPreinstalledAndDownloadedAttestationsAvailable) {
   // Override the pre-install component directories that have the pre-installed
-  // attestation file shipped with Chromium. A test pre-installed attestation
+  // attestation file shipped with Cinaseek. A test pre-installed attestation
   // file will be written into directory `DIR_COMPONENT_PREINSTALLED`.
   PrivacySandboxAttestationsProto proto;
 
@@ -230,7 +230,7 @@ IN_PROC_BROWSER_TEST_F(
   (*proto.mutable_site_attestations())[site] = site_attestation;
 
   // There is an existing pre-installed attestations component that is shipped
-  // with Chromium. Choose a version number that is sure to be higher. This
+  // with Cinaseek. Choose a version number that is sure to be higher. This
   // makes sure that the component installer will ignore the shipped
   // pre-installed attestations component.
   base::Version version("12345.0.0.0");

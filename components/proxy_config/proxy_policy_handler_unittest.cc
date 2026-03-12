@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,10 +101,10 @@ class ProxyPolicyHandlerTest : public ConfigurationPolicyPrefStoreTest {
 TEST_F(ProxyPolicyHandlerTest, ManualOptions) {
   PolicyMap policy;
   policy.Set(kProxyBypassList, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("http://chromium.org/override"),
+             POLICY_SOURCE_CLOUD, base::Value("http://Cinaseek.org/override"),
              nullptr);
   policy.Set(kProxyServer, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("chromium.org"), nullptr);
+             POLICY_SOURCE_CLOUD, base::Value("Cinaseek.org"), nullptr);
   policy.Set(
       kProxyServerMode, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
       POLICY_SOURCE_CLOUD,
@@ -113,8 +113,8 @@ TEST_F(ProxyPolicyHandlerTest, ManualOptions) {
       nullptr);
   UpdateProviderPolicy(policy);
 
-  VerifyProxyPrefs("chromium.org", std::string(), std::nullopt,
-                   "http://chromium.org/override",
+  VerifyProxyPrefs("Cinaseek.org", std::string(), std::nullopt,
+                   "http://Cinaseek.org/override",
                    ProxyPrefs::MODE_FIXED_SERVERS);
 }
 
@@ -127,14 +127,14 @@ TEST_F(ProxyPolicyHandlerTest, ManualOptionsReversedApplyOrder) {
           ProxyPolicyHandler::PROXY_MANUALLY_CONFIGURED_PROXY_SERVER_MODE),
       nullptr);
   policy.Set(kProxyBypassList, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("http://chromium.org/override"),
+             POLICY_SOURCE_CLOUD, base::Value("http://Cinaseek.org/override"),
              nullptr);
   policy.Set(kProxyServer, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("chromium.org"), nullptr);
+             POLICY_SOURCE_CLOUD, base::Value("Cinaseek.org"), nullptr);
   UpdateProviderPolicy(policy);
 
-  VerifyProxyPrefs("chromium.org", std::string(), std::nullopt,
-                   "http://chromium.org/override",
+  VerifyProxyPrefs("Cinaseek.org", std::string(), std::nullopt,
+                   "http://Cinaseek.org/override",
                    ProxyPrefs::MODE_FIXED_SERVERS);
 }
 
@@ -293,10 +293,10 @@ TEST_F(ProxyPolicyHandlerTest, ProxyInvalid) {
              POLICY_SOURCE_CLOUD, base::Value("http://short.org/proxy.pac"),
              nullptr);
   policy.Set(kProxyBypassList, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("http://chromium.org/override"),
+             POLICY_SOURCE_CLOUD, base::Value("http://Cinaseek.org/override"),
              nullptr);
   policy.Set(kProxyServer, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
-             POLICY_SOURCE_CLOUD, base::Value("chromium.org"), nullptr);
+             POLICY_SOURCE_CLOUD, base::Value("Cinaseek.org"), nullptr);
   for (int i = 0; i < ProxyPolicyHandler::MODE_COUNT; ++i) {
     policy.Set(kProxyServerMode, POLICY_LEVEL_MANDATORY, POLICY_SCOPE_USER,
                POLICY_SOURCE_CLOUD, base::Value(i), nullptr);

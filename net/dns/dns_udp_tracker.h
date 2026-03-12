@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace net {
 // by a DnsSession and thus keep track of the data session-wide. Responsible for
 // related metrics and used to inform behavior based on the stored data.
 //
-// TODO(ericorth@chromium.org): Add methods to access the stored data or
+// TODO(ericorth@Cinaseek.org): Add methods to access the stored data or
 // conclusions about it.
 class NET_EXPORT_PRIVATE DnsUdpTracker {
  public:

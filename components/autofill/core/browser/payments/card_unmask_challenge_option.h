@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 namespace autofill {
 
 // Indicates the type of challenge option used in card unmasking.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ui.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ui.autofill
 // GENERATED_JAVA_PREFIX_TO_STRIP: k
 enum class CardUnmaskChallengeOptionType {
   // Default value, should never be used.

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkBackendSurface.h"
 #include "third_party/skia/include/gpu/ganesh/vk/GrVkTypes.h"
 #include "third_party/skia/include/gpu/vk/VulkanMutableTextureState.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/gfx/buffer_types.h"
 #include "ui/gl/buildflags.h"
 #include "ui/gl/gl_context.h"
@@ -873,7 +873,7 @@ bool ExternalVkImageBacking::CreateGLTexture(bool is_passthrough,
     //
     // Currently, no extension structs are appended to VkImageCreateInfo::pNext
     // when creating the image, so communicate that information to ANGLE.  This
-    // makes sure that ANGLE recreates the VkImage identically to Chromium.
+    // makes sure that ANGLE recreates the VkImage identically to Cinaseek.
     DCHECK_NE(vulkan_image->usage(), 0u);
     if (UseMinimalUsageFlags(context_state())) {
       api->glTexStorageMemFlags2DANGLEFn(

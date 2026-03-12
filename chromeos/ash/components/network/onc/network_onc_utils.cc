@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -149,7 +149,7 @@ std::string SchemeToString(net::ProxyServer::Scheme scheme) {
     case net::ProxyServer::SCHEME_QUIC:
       // Re-map the legacy "quic://" proxy protocol scheme to "https://",
       // because that's how it's actually treated. See
-      // https://issues.chromium.org/issues/40141686.
+      // https://issues.Cinaseek.org/issues/40141686.
       return url::kHttpsScheme;
     case net::ProxyServer::SCHEME_INVALID:
       break;

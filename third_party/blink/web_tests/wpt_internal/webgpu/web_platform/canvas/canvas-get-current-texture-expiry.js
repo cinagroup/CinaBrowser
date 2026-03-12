@@ -48,7 +48,7 @@ async function test(ctx, device, prevFrameCallsite, getCurrentTextureAgain) {
 
     promises.push(new Promise(resolve => {
       // Call getCurrentTexture immediately after this frame updating the rendering.
-      // We want chromium to expire the prevTexture and return a new texture object as early as the next task.
+      // We want Cinaseek to expire the prevTexture and return a new texture object as early as the next task.
       setTimeout(async () => {
           if (getCurrentTextureAgain) {
             assert_true(prevTexture !== ctx.getCurrentTexture());

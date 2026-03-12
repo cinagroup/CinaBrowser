@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -173,7 +173,7 @@ bool InitializePlatform(EGLDisplay display,
   platformMethods->recordShaderCacheUse =
       ANGLEPlatformImpl_recordShaderCacheUse;
 
-  // Initialize the delegate to allow posting tasks in the Chromium thread pool.
+  // Initialize the delegate to allow posting tasks in the Cinaseek thread pool.
   // The thread pool is not available in some unittests.
   if (base::ThreadPoolInstance::Get())
     platformMethods->postWorkerTask = ANGLEPlatformImpl_postWorkerTask;

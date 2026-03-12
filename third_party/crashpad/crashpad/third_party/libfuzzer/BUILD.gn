@@ -42,7 +42,7 @@ source_set("libfuzzer") {
     ]
 
     configs -= [
-      "//third_party/mini_chromium/mini_chromium/build:Wexit_time_destructors",
+      "//third_party/mini_Cinaseek/mini_Cinaseek/build:Wexit_time_destructors",
       "//build:crashpad_fuzzer_flags",
     ]
   }

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace crdtp {
 namespace json {
 // These routines are implemented in json_platform.cc, or in a
 // platform-dependent (code-base dependent) custom replacement.
-// E.g., json_platform_chromium.cc, json_platform_v8.cc.
+// E.g., json_platform_Cinaseek.cc, json_platform_v8.cc.
 namespace platform {
 // Parses |str| into |result|. Returns false iff there are
 // leftover characters or parsing errors.

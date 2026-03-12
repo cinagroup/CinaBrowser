@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -364,7 +364,7 @@ TEST_F(DataSourceTest, OctetStreamWithQuotedName) {
 TEST_F(DataSourceTest, WebCustomDataMime) {
   TestDataSourceDelegate delegate;
   DataSource data_source(&delegate);
-  std::string web_custom_data_mime("chromium/x-web-custom-data");
+  std::string web_custom_data_mime("Cinaseek/x-web-custom-data");
   data_source.Offer(web_custom_data_mime);
 
   CheckMimeTypesReceived(&data_source, "", "", "", "", "", {},

@@ -33,7 +33,7 @@
 
 #define CONFIG_8BPC 1
 
-// #define CONFIG_LOG 1 -- Logging is controlled by Chromium
+// #define CONFIG_LOG 1 -- Logging is controlled by Cinaseek
 
 #define ENDIANNESS_BIG 0
 
@@ -103,7 +103,7 @@
 
 #define _UNICODE 1
 
-// #define _WIN32_WINNT 0x0601 -- Windows version is controlled by Chromium
+// #define _WIN32_WINNT 0x0601 -- Windows version is controlled by Cinaseek
 
 #define __USE_MINGW_ANSI_STDIO 1
 

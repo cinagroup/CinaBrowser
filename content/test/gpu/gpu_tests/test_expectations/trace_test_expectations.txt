@@ -20,7 +20,7 @@
 # tags: [ desktop
 #         mobile ]
 # Browser
-# tags: [ android-chromium
+# tags: [ android-Cinaseek
 #         android-webview-instrumentation
 #         debug debug-x64
 #         release release-x64
@@ -117,7 +117,7 @@ crbug.com/1096431 [ fuchsia fuchsia-board-qemu-x64 ] TraceTest_Video* [ Skip ]
 # Skip unaccelerated canvas test since we don't use swap chains without GPU compositing.
 crbug.com/1009860 [ win ] SwapChainTraceTest_CanvasUnacceleratedLowLatency2D [ Skip ]
 
-# Software compositing is not supported on Android/ChromeOS/Fuchsia: we skip the
+# Software compositing is not supported on Android/CinaseekOS/Fuchsia: we skip the
 # tests that disable GPU compositing (--disable-gpu-compositing).
 [ android ] TraceTest_RepeatedWebGLTo2D_SoftwareCompositing [ Skip ]
 [ android ] TraceTest_Canvas2DTabSwitch_SoftwareCompositing [ Skip ]
@@ -129,8 +129,8 @@ crbug.com/1009860 [ win ] SwapChainTraceTest_CanvasUnacceleratedLowLatency2D [ S
 [ fuchsia ] TraceTest_Canvas2DTabSwitch_SoftwareCompositing [ Skip ]
 [ fuchsia ] TraceTest_WebGLReadPixelsTabSwitch_SoftwareCompositing [ Skip ]
 
-# Cannot use file in Chromium checkout for fake video capture device on Android,
-# ChromeOS, or Fuchsia.
+# Cannot use file in Cinaseek checkout for fake video capture device on Android,
+# CinaseekOS, or Fuchsia.
 crbug.com/1129879 [ android ] TraceTest_Video_Media_Stream_Incompatible_Stride [ Skip ]
 crbug.com/1129879 [ chromeos ] TraceTest_Video_Media_Stream_Incompatible_Stride [ Skip ]
 crbug.com/1129879 [ fuchsia ] TraceTest_Video_Media_Stream_Incompatible_Stride [ Skip ]
@@ -153,7 +153,7 @@ crbug.com/852089 [ fuchsia ] WebGPUTraceTest_* [ Skip ]
 crbug.com/dawn/549 [ chromeos ] WebGPUCachingTraceTest_* [ Skip ]
 crbug.com/dawn/549 [ fuchsia ] WebGPUCachingTraceTest_* [ Skip ]
 
-# Linux, macOS < 11, and ChromeOS generic don't support HEVC decoding.
+# Linux, macOS < 11, and CinaseekOS generic don't support HEVC decoding.
 [ linux ] TraceTest_Video_HEVC [ Skip ]
 [ highsierra ] TraceTest_Video_HEVC [ Skip ]
 [ mojave ] TraceTest_Video_HEVC [ Skip ]
@@ -209,7 +209,7 @@ crbug.com/371949935 TraceTest_ViewTransitionsCapture [ Skip ]
 ###################
 # Non-"Skip" expectations go here to suppress regular flakes/failures.
 
-# WebGL's accelerated canvas capture is currently only supported on Win, Mac, ChromeOS.
+# WebGL's accelerated canvas capture is currently only supported on Win, Mac, CinaseekOS.
 crbug.com/1201009 [ fuchsia ] WebGLCanvasCaptureTraceTest_VideoStreamFromWebGLCanvas_OneCopy [ Failure ]
 crbug.com/1201009 [ fuchsia ] WebGLCanvasCaptureTraceTest_VideoStreamFromWebGLCanvas_TwoCopy_Accelerated [ Failure ]
 

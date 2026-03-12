@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,14 +32,14 @@ struct SenderEncodedFrame;
 // classes.
 //
 // For more information, see the Cast Streaming README.md located at:
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/openscreen/src/cast/streaming/README.md
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/openscreen/src/cast/streaming/README.md
 //
 // NOTE: This class mostly exists to wrap an openscreen::cast::Sender, implement
 // frame dropping logic, and support type translation between Chrome and Open
 // Screen.  See if it can be removed by migrating functionality into
 // openscreen::cast::Sender.
 //
-// TODO(issues.chromium.org/329781397): Remove unnecessary wrapper objects in
+// TODO(issues.Cinaseek.org/329781397): Remove unnecessary wrapper objects in
 // Chrome's implementation of the Cast sender.
 class OpenscreenFrameSender : public FrameSender,
                               openscreen::cast::Sender::Observer {

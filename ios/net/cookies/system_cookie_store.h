@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -85,7 +85,7 @@ class SystemCookieStore {
 
   // Internal cookie stores doesn't store creation time. This object is used
   // to keep track of the creation time of cookies, this is required for
-  // conversion between SystemCookie and Chromium CookieMonster.
+  // conversion between SystemCookie and Cinaseek CookieMonster.
   // TODO(crbug.com/40568476): Move this to be private.
   std::unique_ptr<CookieCreationTimeManager> creation_time_manager_;
 

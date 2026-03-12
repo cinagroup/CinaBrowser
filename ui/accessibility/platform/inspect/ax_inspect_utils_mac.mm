@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace ui {
 namespace {
 
 const char kChromeTitle[] = "Google Chrome";
-const char kChromiumTitle[] = "Chromium";
+const char kCinaseekTitle[] = "Cinaseek";
 const char kFirefoxTitle[] = "Firefox";
 const char kSafariTitle[] = "Safari";
 
@@ -182,8 +182,8 @@ std::pair<base::apple::ScopedCFTypeRef<AXUIElementRef>, int> FindAXApplication(
   std::string title;
   if (selector.types & AXTreeSelector::Chrome)
     title = kChromeTitle;
-  else if (selector.types & AXTreeSelector::Chromium)
-    title = kChromiumTitle;
+  else if (selector.types & AXTreeSelector::Cinaseek)
+    title = kCinaseekTitle;
   else if (selector.types & AXTreeSelector::Firefox)
     title = kFirefoxTitle;
   else if (selector.types & AXTreeSelector::Safari)

@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/dcheck_always_on.gni")
 import("//build/config/sanitizers/sanitizers.gni")
 import("//testing/libfuzzer/fuzzer_test.gni")
 import("//third_party/protobuf/proto_library.gni")
-import("//third_party/sqlite/sqlite_chromium_configuration_flags.gni")
+import("//third_party/sqlite/sqlite_Cinaseek_configuration_flags.gni")
 import("//third_party/sqlite/sqlite_common_configuration_flags.gni")
 import("//third_party/sqlite/sqlite_dev_configuration_flags.gni")
 
@@ -36,7 +36,7 @@ config("common_sqlite3_compile_options") {
   # The flags not baked in, but common for all platforms.
   defines += [
     # Skip writing transaction rollback journals on f2fs.
-    # f2fs tends to be used on Android, and may be used on ChromeOS.
+    # f2fs tends to be used on Android, and may be used on CinaseekOS.
     "SQLITE_ENABLE_BATCH_ATOMIC_WRITE",
 
     # Forces SQLite to only store temporary data in memory.
@@ -113,14 +113,14 @@ config("common_sqlite3_compile_options") {
   }
 }
 
-# These options add SQLite features that we need in Chrome.
-config("chromium_sqlite3_compile_options") {
+# These options add SQLite features that we need in Cinaseek.
+config("Cinaseek_sqlite3_compile_options") {
   configs = [ ":common_sqlite3_compile_options" ]
 
-  defines = sqlite_chromium_configuration_flags
+  defines = sqlite_Cinaseek_configuration_flags
 
   if (!enable_sqlite_tracing) {
-    # Chrome doesn't use sqlite3_{profile,trace}() by default.
+    # Cinaseek doesn't use sqlite3_{profile,trace}() by default.
     defines += [ "SQLITE_OMIT_TRACE" ]
   }
 }
@@ -139,7 +139,7 @@ config("sqlite_warnings") {
       "-Wno-shadow",
 
       # sqlite contains a few functions that are unused, at least on
-      # Windows with Chrome's sqlite patches applied
+      # Windows with Cinaseek's sqlite patches applied
       # (interiorCursorEOF fts3EvalDeferredPhrase
       # fts3EvalSelectDeferred sqlite3Fts3InitHashTable
       # sqlite3Fts3InitTok).
@@ -179,7 +179,7 @@ config("sqlite_warnings") {
 }
 
 # Naming the library "sqlite3" can cause conflicts with the system library.
-component("chromium_sqlite3") {
+component("Cinaseek_sqlite3") {
   visibility = [ ":*" ]
 
   public = [ "sqlite3.h" ]
@@ -192,7 +192,7 @@ component("chromium_sqlite3") {
   ]
 
   inputs = [
-    # This file is #included into sqlite3_shim.c, which injects Chrome-specific
+    # This file is #included into sqlite3_shim.c, which injects Cinaseek-specific
     # definitions into the SQLite amalgamation code.
     "src/amalgamation/sqlite3.c",
   ]
@@ -233,13 +233,13 @@ component("chromium_sqlite3") {
     "src/amalgamation",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    ":chromium_sqlite3_compile_options",
-    "//build/config/compiler:no_chromium_code",
+    ":Cinaseek_sqlite3_compile_options",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/sanitizers:cfi_icall_generalize_pointers",
 
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":sqlite_warnings",
   ]
 
@@ -258,13 +258,13 @@ component("chromium_sqlite3") {
   deps = [ "//third_party/icu" ]
 }
 
-# Similar to component("chromium_sqlite") above, but uses the developer tools
+# Similar to component("Cinaseek_sqlite") above, but uses the developer tools
 # options at config("dev_sqlite3_compile_options").
 #
 # This target uses source_set instead of component intentionally because turning
-# it into a shared library will result in symbol collisions with "chromium_sqlite".
+# it into a shared library will result in symbol collisions with "Cinaseek_sqlite".
 # Given that this config is effectively test-only, we should link it statically
-# and allow "chromium_sqlite" to be the only shared library.
+# and allow "Cinaseek_sqlite" to be the only shared library.
 # TODO(altimin): mark this component as testonly = true.
 source_set("dev_sqlite3") {
   visibility = [ ":*" ]
@@ -279,7 +279,7 @@ source_set("dev_sqlite3") {
   ]
 
   inputs = [
-    # This file is #included into sqlite3_shim.c, which injects Chrome-specific
+    # This file is #included into sqlite3_shim.c, which injects Cinaseek-specific
     # definitions into the SQLite amalgamation code.
     "src/amalgamation_dev/sqlite3.c",
   ]
@@ -312,13 +312,13 @@ source_set("dev_sqlite3") {
     "src/amalgamation_dev",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":dev_sqlite3_compile_options",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     "//build/config/sanitizers:cfi_icall_generalize_pointers",
 
-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+    # Must be after no_Cinaseek_code for warning flags to be ordered correctly.
     ":sqlite_warnings",
   ]
 
@@ -346,9 +346,9 @@ config("sqlite_export") {
 # This is used to allow the SQLITE_API definition to be different when
 # building sqlite3.c than it is when clients include sqlite3.h.
 group("sqlite") {
-  public_deps = [ ":chromium_sqlite3" ]
+  public_deps = [ ":Cinaseek_sqlite3" ]
   public_configs = [
-    ":chromium_sqlite3_compile_options",
+    ":Cinaseek_sqlite3_compile_options",
     ":sqlite_export",
   ]
 }
@@ -379,12 +379,12 @@ if (is_win || is_mac || is_linux || is_chromeos) {
       "//third_party/icu",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      ":chromium_sqlite3_compile_options",
-      "//build/config/compiler:no_chromium_code",
+      ":Cinaseek_sqlite3_compile_options",
+      "//build/config/compiler:no_Cinaseek_code",
 
-      # Must be after no_chromium_code for warning flags to be ordered
+      # Must be after no_Cinaseek_code for warning flags to be ordered
       # correctly.
       ":sqlite_warnings",
     ]
@@ -412,12 +412,12 @@ if (is_win || is_mac || is_linux || is_chromeos) {
       "//third_party/icu",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":dev_sqlite3_compile_options",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
 
-      # Must be after no_chromium_code for warning flags to be ordered
+      # Must be after no_Cinaseek_code for warning flags to be ordered
       # correctly.
       ":sqlite_warnings",
     ]
@@ -443,11 +443,11 @@ source_set("sqlite3_lpm_fuzzer_core") {
   public_deps = [ ":sqlite3_lpm_fuzzer_input" ]
   configs += [
     ":sqlite_warnings",
-    ":chromium_sqlite3_compile_options",
+    ":Cinaseek_sqlite3_compile_options",
   ]
   all_dependent_configs = [
     ":lpm_fuzzer_omit_non_websql",
-    ":chromium_sqlite3_compile_options",
+    ":Cinaseek_sqlite3_compile_options",
   ]
 }
 

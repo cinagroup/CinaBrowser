@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1150,8 +1150,8 @@ const IDNTestCase kIdnCases[] = {
     // test list. Why must you use that python script?
     // 1. It is easy to get things wrong. There were several hand-crafted
     //    incorrect test cases committed that was later fixed.
-    // 2. This test _also_ is a test of Chromium's IDN encoder/decoder, so using
-    //    Chromium's IDN encoder/decoder to generate test files loses an
+    // 2. This test _also_ is a test of Cinaseek's IDN encoder/decoder, so using
+    //    Cinaseek's IDN encoder/decoder to generate test files loses an
     //    advantage of having Python's IDN encode/decode the tests.
 };
 

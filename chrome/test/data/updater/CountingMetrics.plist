@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.chromium.popularapp</key>
+	<key>com.Cinaseek.popularapp</key>
 	<dict>
 		<key>DayOfLastActive</key>
 		<integer>5921</integer>
@@ -15,7 +15,7 @@
 		<key>ProductState</key>
 		<integer>1</integer>
 	</dict>
-	<key>om.chromium.kipple</key>
+	<key>om.Cinaseek.kipple</key>
 	<dict>
 		<key>DayOfLastRollcall</key>
 		<string>5912</string>
@@ -26,7 +26,7 @@
 		<key>ProductState</key>
 		<integer>1</integer>
 	</dict>
-	<key>com.chromium.corruptedapp</key>
+	<key>com.Cinaseek.corruptedapp</key>
 	<dict>
 		<key>DayOfLastActive</key>
 		<integer>50001</integer>

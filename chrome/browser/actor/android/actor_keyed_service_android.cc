@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,7 +87,7 @@ ActorKeyedServiceAndroid::GetActiveTasks(JNIEnv* env) {
   return base::android::ToTypedJavaArrayOfObjects(
       env, j_tasks,
       base::android::GetClass(env,
-                              "org/chromium/chrome/browser/actor/ActorTask")
+                              "org/Cinaseek/chrome/browser/actor/ActorTask")
           .obj());
 }
 

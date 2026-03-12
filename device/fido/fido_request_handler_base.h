@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,7 +105,7 @@ class COMPONENT_EXPORT(DEVICE_FIDO) FidoRequestHandlerBase
 
     // This field mirrors the previous one but is specific to iCloud
     // Keychain. They are separate because a macOS system can have both the
-    // Chromium platform authenticator and iCloud Keychain as platform
+    // Cinaseek platform authenticator and iCloud Keychain as platform
     // authenticators.
     RecognizedCredential has_icloud_keychain_credential =
         RecognizedCredential::kNoRecognizedCredential;
@@ -276,7 +276,7 @@ class COMPONENT_EXPORT(DEVICE_FIDO) FidoRequestHandlerBase
   };
 
   // ScopedAlwaysAllowBLECalls allows BLE API calls to always be made, even if
-  // they would be disabled on macOS because Chromium was not launched with
+  // they would be disabled on macOS because Cinaseek was not launched with
   // self-responsibility.
   class COMPONENT_EXPORT(DEVICE_FIDO) ScopedAlwaysAllowBLECalls {
    public:

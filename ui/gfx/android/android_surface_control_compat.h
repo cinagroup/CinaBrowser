@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ class COMPONENT_EXPORT(GFX) SurfaceControl {
   static COMPONENT_EXPORT(GFX) bool SupportsSetEnableBackPressure();
 
   // Applies transaction. Used to emulate webview functor interface, where we
-  // pass raw ASurfaceTransaction object. For use inside Chromium use
+  // pass raw ASurfaceTransaction object. For use inside Cinaseek use
   // Transaction class below instead.
   static void ApplyTransaction(ASurfaceTransaction* transaction);
 

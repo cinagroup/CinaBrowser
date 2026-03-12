@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,9 +67,9 @@ using CanHandleUrlCallback = base::RepeatingCallback<bool(const GURL&)>;
 // 3) Exo Window App Ids (window_app_id):
 //    - Retrieved from exo::GetShellApplicationId()
 //    - For Wayland apps, this is the surface class of the app
-//    - For X apps, this is of the form org.chromium.termina.wmclass.foo when
+//    - For X apps, this is of the form org.Cinaseek.termina.wmclass.foo when
 //    WM_CLASS is set to foo, or otherwise some string prefixed by
-//    "org.chromium.termina." when WM_CLASS is not set.
+//    "org.Cinaseek.termina." when WM_CLASS is not set.
 // 4) Shelf App Ids (shelf_app_id):
 //    - Used in ash::ShelfID::app_id
 //    - Either a Window App Id prefixed by "crostini:" or a Crostini App Id.

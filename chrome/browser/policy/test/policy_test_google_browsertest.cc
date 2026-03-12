@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -113,7 +113,7 @@ class PolicyTestGoogle : public SafeSearchPolicyTest,
   // Note for the google and youtube tests below, the throttles expect that
   // the URLs are to google.com or youtube.com. Networking code also
   // automatically upgrades http requests to these domains to https (see the
-  // preload list in https://www.chromium.org/hsts). So as a result we need
+  // preload list in https://www.Cinaseek.org/hsts). So as a result we need
   // to make the requests to an https server.
   net::EmbeddedTestServer https_server_;
   base::Lock lock_;

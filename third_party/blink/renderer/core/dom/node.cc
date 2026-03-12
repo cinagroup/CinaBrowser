@@ -501,7 +501,7 @@ Node* Node::PseudoAwarePreviousSibling() const {
     // The pseudos of the view transition subtree have a known structure and
     // cannot create other pseudos so these are handled separately of the above
     // fallthrough cases. For details on view-transition pseudo ordering, see
-    // https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/view_transition/README.md#pseudo-element-traversal
+    // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/third_party/blink/renderer/core/view_transition/README.md#pseudo-element-traversal
     case kPseudoIdViewTransitionNew:
       CHECK_EQ(parent->GetPseudoId(), kPseudoIdViewTransitionImagePair);
       return parent->GetPseudoElement(

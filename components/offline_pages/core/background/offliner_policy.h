@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ class OfflinerPolicy {
   }
 
   // The max number of times we will start a request.  Not all started attempts
-  // will complete.  This may be caused by background loader issues or chromium
+  // will complete.  This may be caused by background loader issues or Cinaseek
   // being swapped out of memory.
   int GetMaxStartedTries() const { return max_started_tries_; }
 

@@ -12,7 +12,7 @@ function observeScrolling(elements, callback) {
   });
   function tick(frames) {
     // We requestAnimationFrame either for 5000 frames or until 20 frames with
-    // no change have been observed. (In Chromium, frames may run as frequently
+    // no change have been observed. (In Cinaseek, frames may run as frequently
     // as once per millisecond when threaded compositing is disabled. The limit
     // of 5000 frames is chosen to be high enough to reasonably ensure any
     // scroll animation will run to completion.)

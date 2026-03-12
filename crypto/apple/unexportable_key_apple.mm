@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ namespace {
 // The value of the kSecAttrLabel when generating the key. The documentation
 // claims this should be a user-visible label, but there does not exist any UI
 // that shows this value. Therefore, it is left untranslated.
-constexpr char kAttrLabel[] = "Chromium unexportable key";
+constexpr char kAttrLabel[] = "Cinaseek unexportable key";
 
 // Logs `status` to an error histogram capturing that `operation` failed for a
 // key backed by Secure Enclave.

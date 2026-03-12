@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -384,7 +384,7 @@ void FeatureInfo::EnableEXTTextureFilterAnisotropic() {
 }
 
 void FeatureInfo::EnableCHROMIUMColorBufferFloatRGBA() {
-  if (!feature_flags_.chromium_color_buffer_float_rgba)
+  if (!feature_flags_.Cinaseek_color_buffer_float_rgba)
     return;
   validators_.texture_internal_format.AddValue(GL_RGBA32F);
   validators_.texture_sized_color_renderable_internal_format.AddValue(
@@ -393,7 +393,7 @@ void FeatureInfo::EnableCHROMIUMColorBufferFloatRGBA() {
 }
 
 void FeatureInfo::EnableCHROMIUMColorBufferFloatRGB() {
-  if (!feature_flags_.chromium_color_buffer_float_rgb)
+  if (!feature_flags_.Cinaseek_color_buffer_float_rgb)
     return;
   validators_.texture_internal_format.AddValue(GL_RGB32F);
   validators_.texture_sized_color_renderable_internal_format.AddValue(
@@ -999,7 +999,7 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
   InitializeFloatAndHalfFloatFeatures(extensions);
 
   // Check for multisample support
-  if (!workarounds_.disable_chromium_framebuffer_multisample) {
+  if (!workarounds_.disable_Cinaseek_framebuffer_multisample) {
     bool ext_has_multisample =
         (gfx::HasExtension(extensions, "GL_EXT_framebuffer_multisample") &&
          gfx::HasExtension(extensions, "GL_EXT_framebuffer_blit")) ||
@@ -1009,7 +1009,7 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
           gfx::HasExtension(extensions, "GL_ANGLE_framebuffer_multisample");
     }
     if (ext_has_multisample) {
-      feature_flags_.chromium_framebuffer_multisample = true;
+      feature_flags_.Cinaseek_framebuffer_multisample = true;
       validators_.framebuffer_target.AddValue(GL_READ_FRAMEBUFFER);
       validators_.framebuffer_target.AddValue(GL_DRAW_FRAMEBUFFER);
       validators_.g_l_state.AddValue(GL_READ_FRAMEBUFFER_BINDING);
@@ -1161,17 +1161,17 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
 #if BUILDFLAG(IS_APPLE)
   // Macs can create SharedImages out of AR30 IOSurfaces. iOS based devices seem
   // to handle well also.
-  feature_flags_.chromium_image_ar30 = true;
+  feature_flags_.Cinaseek_image_ar30 = true;
 #elif !BUILDFLAG(IS_WIN)
   // TODO(mcasas): connect in Windows, https://crbug.com/803451
   // XB30 support was introduced in GLES 3.0/ OpenGL 3.3, before that it was
   // signalled via a specific extension.
-  feature_flags_.chromium_image_ab30 =
+  feature_flags_.Cinaseek_image_ab30 =
       gl_version_info_->IsAtLeastGLES(3, 0) ||
       gfx::HasExtension(extensions, "GL_EXT_texture_type_2_10_10_10_REV");
 #endif
-  if (feature_flags_.chromium_image_ar30 ||
-      feature_flags_.chromium_image_ab30) {
+  if (feature_flags_.Cinaseek_image_ar30 ||
+      feature_flags_.Cinaseek_image_ab30) {
     validators_.texture_internal_format.AddValue(GL_RGB10_A2_EXT);
     validators_.render_buffer_format.AddValue(GL_RGB10_A2_EXT);
     validators_.texture_internal_format_storage.AddValue(GL_RGB10_A2_EXT);
@@ -1301,7 +1301,7 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
 
   if (ui_gl_fence_works) {
     AddExtensionString("GL_CHROMIUM_sync_query");
-    feature_flags_.chromium_sync_query = true;
+    feature_flags_.Cinaseek_sync_query = true;
   }
 
   if (!workarounds_.disable_blend_equation_advanced) {
@@ -1451,14 +1451,14 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
   feature_flags_.khr_debug = gl_version_info_->IsAtLeastGLES(3, 2) ||
                              gfx::HasExtension(extensions, "GL_KHR_debug");
 
-  feature_flags_.chromium_gpu_fence = gl::GLFence::IsGpuFenceSupported();
-  if (feature_flags_.chromium_gpu_fence)
+  feature_flags_.Cinaseek_gpu_fence = gl::GLFence::IsGpuFenceSupported();
+  if (feature_flags_.Cinaseek_gpu_fence)
     AddExtensionString("GL_CHROMIUM_gpu_fence");
 
-  feature_flags_.chromium_bind_generates_resource =
+  feature_flags_.Cinaseek_bind_generates_resource =
       gfx::HasExtension(extensions, "GL_CHROMIUM_bind_generates_resource");
   feature_flags_.angle_webgl_compatibility = is_webgl_compatibility_context;
-  feature_flags_.chromium_copy_texture =
+  feature_flags_.Cinaseek_copy_texture =
       gfx::HasExtension(extensions, "GL_CHROMIUM_copy_texture");
   feature_flags_.angle_client_arrays =
       gfx::HasExtension(extensions, "GL_ANGLE_client_arrays");
@@ -1487,7 +1487,7 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
 
   // Only supporting OVR_multiview in passthrough mode - not implemented in
   // validating command decoder. The extension is only available in ANGLE and in
-  // that case Chromium should be using passthrough by default.
+  // that case Cinaseek should be using passthrough by default.
   if (is_passthrough_cmd_decoder_ &&
       gfx::HasExtension(extensions, "GL_OVR_multiview2")) {
     AddExtensionString("GL_OVR_multiview2");
@@ -1505,7 +1505,7 @@ void FeatureInfo::InitializeFeatures(uint32_t complete_fbo_for_workarounds) {
     validators_.program_parameter.AddValue(GL_COMPLETION_STATUS_KHR);
 
     AddExtensionString("GL_CHROMIUM_completion_query");
-    feature_flags_.chromium_completion_query = true;
+    feature_flags_.Cinaseek_completion_query = true;
   }
 
   if (gfx::HasExtension(extensions, "GL_KHR_robust_buffer_access_behavior")) {
@@ -1677,7 +1677,7 @@ void FeatureInfo::InitializeFloatAndHalfFloatFeatures(
   bool enable_ext_color_buffer_float = false;
   bool enable_ext_color_buffer_half_float = false;
 
-  bool may_enable_chromium_color_buffer_float = false;
+  bool may_enable_Cinaseek_color_buffer_float = false;
 
   bool enable_es3 = IsWebGL2OrES3OrHigherContext();
 
@@ -1699,7 +1699,7 @@ void FeatureInfo::InitializeFloatAndHalfFloatFeatures(
   if (gfx::HasExtension(extensions, "GL_OES_texture_float")) {
     enable_texture_float = true;
     if (enable_ext_color_buffer_float) {
-      may_enable_chromium_color_buffer_float = true;
+      may_enable_Cinaseek_color_buffer_float = true;
     }
   }
 
@@ -1742,19 +1742,19 @@ void FeatureInfo::InitializeFloatAndHalfFloatFeatures(
       EnableOESTextureHalfFloatLinear();
   }
 
-  bool had_native_chromium_color_buffer_float_ext = false;
+  bool had_native_Cinaseek_color_buffer_float_ext = false;
   if (gfx::HasExtension(extensions, "GL_CHROMIUM_color_buffer_float_rgb")) {
-    had_native_chromium_color_buffer_float_ext = true;
-    feature_flags_.chromium_color_buffer_float_rgb = true;
-    if (!disallowed_features_.chromium_color_buffer_float_rgb) {
+    had_native_Cinaseek_color_buffer_float_ext = true;
+    feature_flags_.Cinaseek_color_buffer_float_rgb = true;
+    if (!disallowed_features_.Cinaseek_color_buffer_float_rgb) {
       EnableCHROMIUMColorBufferFloatRGB();
     }
   }
 
   if (gfx::HasExtension(extensions, "GL_CHROMIUM_color_buffer_float_rgba")) {
-    had_native_chromium_color_buffer_float_ext = true;
-    feature_flags_.chromium_color_buffer_float_rgba = true;
-    if (!disallowed_features_.chromium_color_buffer_float_rgba) {
+    had_native_Cinaseek_color_buffer_float_ext = true;
+    feature_flags_.Cinaseek_color_buffer_float_rgba = true;
+    if (!disallowed_features_.Cinaseek_color_buffer_float_rgba) {
       EnableCHROMIUMColorBufferFloatRGBA();
     }
   }
@@ -1767,18 +1767,18 @@ void FeatureInfo::InitializeFloatAndHalfFloatFeatures(
     }
   }
 
-  if (may_enable_chromium_color_buffer_float &&
-      !had_native_chromium_color_buffer_float_ext) {
+  if (may_enable_Cinaseek_color_buffer_float &&
+      !had_native_Cinaseek_color_buffer_float_ext) {
     if (workarounds_.force_enable_color_buffer_float ||
         workarounds_.force_enable_color_buffer_float_except_rgb32f) {
       if (enable_es3)
         enable_ext_color_buffer_float = true;
-      feature_flags_.chromium_color_buffer_float_rgba = true;
-      if (!disallowed_features_.chromium_color_buffer_float_rgba)
+      feature_flags_.Cinaseek_color_buffer_float_rgba = true;
+      if (!disallowed_features_.Cinaseek_color_buffer_float_rgba)
         EnableCHROMIUMColorBufferFloatRGBA();
       if (!workarounds_.force_enable_color_buffer_float_except_rgb32f) {
-        feature_flags_.chromium_color_buffer_float_rgb = true;
-        if (!disallowed_features_.chromium_color_buffer_float_rgb)
+        feature_flags_.Cinaseek_color_buffer_float_rgb = true;
+        if (!disallowed_features_.Cinaseek_color_buffer_float_rgb)
           EnableCHROMIUMColorBufferFloatRGB();
       }
     } else {
@@ -1872,13 +1872,13 @@ void FeatureInfo::InitializeFloatAndHalfFloatFeatures(
       DCHECK_EQ(glGetError(), static_cast<GLuint>(GL_NO_ERROR));
 
       if (status_rgba == GL_FRAMEBUFFER_COMPLETE) {
-        feature_flags_.chromium_color_buffer_float_rgba = true;
-        if (!disallowed_features_.chromium_color_buffer_float_rgba)
+        feature_flags_.Cinaseek_color_buffer_float_rgba = true;
+        if (!disallowed_features_.Cinaseek_color_buffer_float_rgba)
           EnableCHROMIUMColorBufferFloatRGBA();
       }
       if (status_rgb == GL_FRAMEBUFFER_COMPLETE) {
-        feature_flags_.chromium_color_buffer_float_rgb = true;
-        if (!disallowed_features_.chromium_color_buffer_float_rgb)
+        feature_flags_.Cinaseek_color_buffer_float_rgb = true;
+        if (!disallowed_features_.Cinaseek_color_buffer_float_rgb)
           EnableCHROMIUMColorBufferFloatRGB();
       }
     }

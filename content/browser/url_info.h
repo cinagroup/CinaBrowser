@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -79,7 +79,7 @@ struct CONTENT_EXPORT UrlInfo {
 
   // Returns whether this UrlInfo is requesting site isolation for its site in
   // response to the Cross-Origin-Opener-Policy header. See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/process_model_and_site_isolation.md#Partial-Site-Isolation
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/process_model_and_site_isolation.md#Partial-Site-Isolation
   // for details.
   bool requests_coop_isolation() const { return is_coop_isolation_requested; }
 

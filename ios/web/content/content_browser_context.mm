@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ ContentBrowserContext::ContentBrowserContext(web::BrowserState* browser_state)
   // refactored.
   browser_path_ =
       base::FilePath(base::SysNSStringToUTF8(NSTemporaryDirectory()))
-          .Append("Chromium");
+          .Append("Cinaseek");
 }
 
 ContentBrowserContext::~ContentBrowserContext() {

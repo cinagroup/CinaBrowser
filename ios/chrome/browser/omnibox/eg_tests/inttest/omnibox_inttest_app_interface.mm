@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 #import "base/apple/foundation_util.h"
 #import "ios/chrome/browser/autocomplete/test/fake_suggestions_builder.h"
 #import "ios/chrome/browser/omnibox/eg_tests/inttest/omnibox_inttest_coordinator.h"
-#import "ios/chrome/common/NSString+Chromium.h"
+#import "ios/chrome/common/NSString+Cinaseek.h"
 #import "ios/chrome/test/earl_grey/chrome_coordinator_app_interface.h"
 #import "net/base/apple/url_conversions.h"
 #import "url/gurl.h"

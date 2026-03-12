@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,8 +102,8 @@ class SessionChapsClientTest : public testing::Test {
     options.bus_type = dbus::Bus::SYSTEM;
     bus_ = base::MakeRefCounted<dbus::MockBus>(std::move(options));
 
-    std::string chaps_name = "org.chromium.Chaps";
-    dbus::ObjectPath chaps_path = dbus::ObjectPath("/org/chromium/Chaps");
+    std::string chaps_name = "org.Cinaseek.Chaps";
+    dbus::ObjectPath chaps_path = dbus::ObjectPath("/org/Cinaseek/Chaps");
     proxy_ = base::MakeRefCounted<dbus::MockObjectProxy>(bus_.get(), chaps_name,
                                                          chaps_path);
 

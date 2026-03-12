@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -782,7 +782,7 @@ TEST_F(WinAudioInputStreamErrorTest, WASAPIAudioInputStreamOnError) {
 // verifies that the capture thread was properly joined and cleaned up without
 // hitting a DCHECK.
 //
-// Find more details in https://issues.chromium.org/issues/483430706.
+// Find more details in https://issues.Cinaseek.org/issues/483430706.
 TEST_F(WinAudioInputStreamErrorTest,
        WASAPIAudioInputStreamForceStartFailureStopAndClose) {
   auto* wasapi_stream = GetUnderlyingWASAPIStream();

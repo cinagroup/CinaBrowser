@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 // of these parameters are not individually documented.
 //
 // For best practices on how to add new NetLog events see:
-// https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/net-log.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/net/docs/net-log.md
 
 // --------------------------------------------------------------------------
 // General pseudo-events
@@ -3067,7 +3067,7 @@ EVENT_TYPE(QUIC_SESSION_ORIGIN_FRAME_RECEIVED)
 EVENT_TYPE(HTTP_STREAM_REQUEST_BOUND_TO_QUIC_SESSION)
 
 // ------------------------------------------------------------------------
-// QuicChromiumClientStream
+// QuicCinaseekClientStream
 // ------------------------------------------------------------------------
 
 // The stream is sending the request headers.

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -53,13 +53,13 @@ process_version("remoting_version") {
   sources = [
     branding_path,
 
-    # This is the Chrome branding, which includes "MAC_TEAM_ID".
+    # This is the Cinaseek branding, which includes "MAC_TEAM_ID".
     branding_file_path,
   ]
   output = "$target_gen_dir/version.h"
 }
 
-# ChromeOS enterprise parameters used in common host classes.
+# CinaseekOS enterprise parameters used in common host classes.
 # Split out in its own target to prevent GN from pulling in chromeos deps.
 source_set("enterprise_params") {
   sources = [
@@ -898,7 +898,7 @@ source_set("unit_tests") {
     "//ui/events",
   ]
 
-  # These tests do not work on ChromeOS.
+  # These tests do not work on CinaseekOS.
   if (!is_chromeos) {
     sources += [
       "chromoting_host_services_client_unittest.cc",

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -177,7 +177,7 @@ class ContentScriptApiTest : public ExtensionApiTest {
     // allowlist entries.
     AllowHttpForHostnamesForTesting(
         {"a.com", "b.com", "default.test", "bar.com", "path-test.example",
-         "example.com", "chromium.org", "example1.com"},
+         "example.com", "Cinaseek.org", "example1.com"},
         profile()->GetPrefs());
   }
 
@@ -1728,13 +1728,13 @@ void ContentScriptRelatedFrameTest::SetUpOnMainThread() {
   about_blank_ = GURL(url::kAboutBlankURL);
   allowed_url_ = embedded_test_server()->GetURL("example.com", "/simple.html");
   disallowed_url_ =
-      embedded_test_server()->GetURL("chromium.org", "/simple.html");
+      embedded_test_server()->GetURL("Cinaseek.org", "/simple.html");
   allowed_url_with_iframe_ =
       embedded_test_server()->GetURL("example.com", "/iframe.html");
   disallowed_url_with_iframe_ =
-      embedded_test_server()->GetURL("chromium.org", "/iframe.html");
+      embedded_test_server()->GetURL("Cinaseek.org", "/iframe.html");
   null_document_url_ = embedded_test_server()->GetURL(
-      "chromium.org", "/extensions/null_document.html");
+      "Cinaseek.org", "/extensions/null_document.html");
   path_specific_allowed_url_ =
       embedded_test_server()->GetURL("path-test.example", "/simple.html");
   matching_path_specific_iframe_url_ =

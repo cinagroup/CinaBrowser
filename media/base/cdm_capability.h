@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ struct MEDIA_EXPORT CdmCapability {
 
   // List of audio codecs supported by the CDM (e.g. opus). This is the set of
   // codecs supported by the media pipeline using the CDM. This does not include
-  // codec profiles, as in general Chromium doesn't handle audio codec profiles
+  // codec profiles, as in general Cinaseek doesn't handle audio codec profiles
   // separately.
   base::flat_set<AudioCodec> audio_codecs;
 

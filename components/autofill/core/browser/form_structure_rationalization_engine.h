@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ struct EnvironmentCondition {
   raw_ptr<const base::Feature> feature = nullptr;
 };
 
-// Builder class to work around Chromium's "Complex class/struct needs an
+// Builder class to work around Cinaseek's "Complex class/struct needs an
 // explicit out-of-line constructor." code style requirement which prevents the
 // use of designated initializer lists.
 class EnvironmentConditionBuilder {
@@ -144,7 +144,7 @@ struct RationalizationRule {
   std::vector<SetTypeAction> actions;
 };
 
-// Builder class to work around Chromium's "Complex class/struct needs an
+// Builder class to work around Cinaseek's "Complex class/struct needs an
 // explicit out-of-line constructor." code style requirement which prevents the
 // use of designated initializer lists.
 class RationalizationRuleBuilder {

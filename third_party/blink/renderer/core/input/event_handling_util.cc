@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,7 +111,7 @@ bool ShouldDiscardEventTargetingFrame(const WebInputEvent& event,
   //   IntersectionObserver V2 to track the visibility of an element, we
   //   interpret that as a strong signal that the frame is interested in
   //   preventing mis-clicks. This behavior was added by:
-  //   https://chromium-review.googlesource.com/c/chromium/src/+/1686824
+  //   https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1686824
   //
   // - The feature flag kDiscardEventsToRecentlyMovedFrames expands this
   //   behavior to all cross-origin iframes, regardless of whether they are

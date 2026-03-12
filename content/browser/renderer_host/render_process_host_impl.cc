@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3788,7 +3788,7 @@ void RenderProcessHostImpl::PropagateBrowserCommandLineToRenderer(
       blink::switches::kEnableRGBA4444Textures,
       blink::switches::kEnableRasterSideDarkModeForImages,
 #if BUILDFLAG(IS_CHROMEOS)
-      blink::switches::kEnableWebGLImageChromium,
+      blink::switches::kEnableWebGLImageCinaseek,
 #endif
       blink::switches::kForceGpuMemAvailableMb,
       blink::switches::

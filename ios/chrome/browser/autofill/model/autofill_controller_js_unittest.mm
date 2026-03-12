@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -738,7 +738,7 @@ class AutofillControllerJsTest : public web::JavascriptTest {
 
     ASSERT_TRUE(
         web::test::LoadHtml(web_view(), kHTMLForTestingElements,
-                            [NSURL URLWithString:@"https://chromium.test/"]));
+                            [NSURL URLWithString:@"https://Cinaseek.test/"]));
   }
 
   web::WebFrame* WaitForMainFrame() {
@@ -856,7 +856,7 @@ void AutofillControllerJsTest::TestExecutingBooleanJavaScriptOnElement(
 
   ASSERT_TRUE(
       web::test::LoadHtml(web_view(), kHTMLForTestingElements,
-                          [NSURL URLWithString:@"https://chromium.test/"]));
+                          [NSURL URLWithString:@"https://Cinaseek.test/"]));
   ExecuteBooleanJavaScriptOnElementsAndCheck(
       javascript, GetElementsByNameJavaScripts(kElementsByName),
       GetElementsByNameJavaScripts(elements_with_true_expected));
@@ -987,7 +987,7 @@ void AutofillControllerJsTest::TestInputElementDataEvaluation(
   NSString* html_fragment = [test_data objectAtIndex:0U];
   ASSERT_TRUE(
       web::test::LoadHtml(web_view(), html_fragment,
-                          [NSURL URLWithString:@"https://chromium.test/"]));
+                          [NSURL URLWithString:@"https://Cinaseek.test/"]));
 
   for (NSUInteger i = 1; i < [test_data count]; ++i) {
     NSString* get_element_javascripts = [NSString

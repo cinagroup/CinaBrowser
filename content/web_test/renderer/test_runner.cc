@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2763,7 +2763,7 @@ void TestRunner::Reset() {
   http_headers_to_clear_.clear();
   clear_referrer_ = false;
 
-  platform_name_ = "chromium";
+  platform_name_ = "Cinaseek";
 
   weak_factory_.InvalidateWeakPtrs();
   work_queue_.Reset();

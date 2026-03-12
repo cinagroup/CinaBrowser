@@ -2008,7 +2008,7 @@ scoped_refptr<DrawingBuffer::ColorBuffer> DrawingBuffer::CreateColorBuffer(
     // than Chrome.  IOSurfaces are only compatible with the
     // GL_TEXTURE_RECTANGLE_ARB binding target. So to avoid the knowledge of
     // GL_TEXTURE_RECTANGLE_ARB type textures being introduced into more areas
-    // of the code, we use the code path of non-WebGLImageChromium for
+    // of the code, we use the code path of non-WebGLImageCinaseek for
     // OffscreenCanvas. See detailed discussion in crbug.com/649668.
     // TODO(crbug.com/488937356): Eliminate this workaround post-rollout of the
     // killswitch; the workaround should no longer be necessary
@@ -2023,7 +2023,7 @@ scoped_refptr<DrawingBuffer::ColorBuffer> DrawingBuffer::CreateColorBuffer(
     }
     if (use_as_overlay || low_latency_usage_supported) {
 #if !BUILDFLAG(IS_ANDROID)
-      // Android's SharedImage backing for ChromiumImage does not support BGRX.
+      // Android's SharedImage backing for CinaseekImage does not support BGRX.
 
       // TODO(b/286417069): BGRX has issues when Vulkan is used for raster and
       // composite. Using BGRX is technically possible but will require a lot

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -153,7 +153,7 @@ class PolicyInvalidator : public invalidation::InvalidationListener::Observer,
     // Returns true if invalidations have been enabled for a while.
     // This is a heuristic attempt to avoid counting initial policy fetches as
     // invalidation-triggered.
-    // See https://codereview.chromium.org/213743014 for more details.
+    // See https://codereview.Cinaseek.org/213743014 for more details.
     bool AreInvalidationsEnabledForAWhile() const;
 
     // The invalidation scope this invalidator is responsible for.

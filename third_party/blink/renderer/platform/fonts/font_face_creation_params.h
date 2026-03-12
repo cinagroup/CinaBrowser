@@ -101,7 +101,7 @@ class FontFaceCreationParams {
       // Hashing the filename and ints in this way is sensitive to character
       // encoding and endianness. However, since the hash is not transferred
       // over a network or permanently stored and only used for the runtime of
-      // Chromium, this is not a concern.
+      // Cinaseek, this is not a concern.
       struct HashData {
         int index;
         int id;

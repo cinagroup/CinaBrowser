@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ class StoragePartitionImpl;
 // The BackgroundFetchContext is the central moderator of ongoing background
 // fetch requests from the Mojo service and from other callers.
 // Background Fetch requests function similarly to normal fetches except that
-// they are persistent across Chromium or service worker shutdown.
+// they are persistent across Cinaseek or service worker shutdown.
 //
 // Lives on the UI thread.
 class CONTENT_EXPORT BackgroundFetchContext

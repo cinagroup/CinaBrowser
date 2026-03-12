@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ void DetermineKeySystemSupport(const std::string& key_system,
     // bitmask representing audio bitstream formats that are supported by the
     // connected audiosink device. This bitmask is then matched against current
     // audio stream's codec type. A match indicates that the connected
-    // audiosink device is able to decode the current audio stream and Chromium
+    // audiosink device is able to decode the current audio stream and Cinaseek
     // should passthrough the audio bitstream instead of trying to decode it.
     for (const auto& codec : kMP4AudioCodecsToQuery) {
       if (!capability.audio_codecs.contains(codec)) {

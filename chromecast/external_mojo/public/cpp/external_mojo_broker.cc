@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ class ExternalMojoBroker::ConnectorImpl : public mojom::ExternalConnector {
   ConnectorImpl(const ConnectorImpl&) = delete;
   ConnectorImpl& operator=(const ConnectorImpl&) = delete;
 
-  void InitializeChromium(
+  void InitializeCinaseek(
       std::unique_ptr<service_manager::Connector> connector,
       const std::vector<std::string>& external_services_to_proxy) {
     DCHECK(connector);
@@ -307,7 +307,7 @@ class ExternalMojoBroker::ConnectorImpl : public mojom::ExternalConnector {
     AddReceiver(std::move(receiver));
   }
 
-  void BindChromiumConnector(
+  void BindCinaseekConnector(
       mojo::ScopedMessagePipeHandle interface_pipe) override {
     if (!connector_) {
       connector_facade_.AddReceiver(
@@ -456,10 +456,10 @@ ExternalMojoBroker::ExternalMojoBroker(const std::string& broker_path) {
 #endif  // BUILDFLAG(ENABLE_EXTERNAL_MOJO_SERVICES)
 }
 
-void ExternalMojoBroker::InitializeChromium(
+void ExternalMojoBroker::InitializeCinaseek(
     std::unique_ptr<service_manager::Connector> connector,
     const std::vector<std::string>& external_services_to_proxy) {
-  connector_->InitializeChromium(std::move(connector),
+  connector_->InitializeCinaseek(std::move(connector),
                                  external_services_to_proxy);
 }
 

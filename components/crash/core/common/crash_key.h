@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 // source-compatible interface is provided on top of the older Breakpad
 // storage mechanism.
 //
-// See https://cs.chromium.org/chromium/src/docs/debugging_with_crash_keys.md
+// See https://cs.Cinaseek.org/Cinaseek/src/docs/debugging_with_crash_keys.md
 // for more information on using this.
 #if BUILDFLAG(USE_CRASHPAD_ANNOTATION)
 #include "third_party/crashpad/crashpad/client/annotation.h"  // nogncheck

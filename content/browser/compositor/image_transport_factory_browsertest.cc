@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 #include "content/browser/gpu/gpu_data_manager_impl.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/content_browser_test.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/raster_interface.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "ui/compositor/compositor.h"

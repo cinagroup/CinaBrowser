@@ -212,7 +212,7 @@
       "vendor_id": "0x8086",
       "device_id": ["0x0152", "0x0156", "0x015a", "0x0162", "0x0166"],
       "features": [
-        "disable_chromium_framebuffer_multisample"
+        "disable_Cinaseek_framebuffer_multisample"
       ]
     },
     {
@@ -388,7 +388,7 @@
       "gl_vendor": "Intel.*",
       "gl_renderer": "Intel.*BayTrail",
       "features": [
-        "disable_chromium_framebuffer_multisample"
+        "disable_Cinaseek_framebuffer_multisample"
       ]
     },
     {
@@ -986,7 +986,7 @@
       },
       "features": [
         "force_update_scissor_state_when_binding_fbo0",
-        "disable_chromium_framebuffer_multisample"
+        "disable_Cinaseek_framebuffer_multisample"
       ]
     },
     {

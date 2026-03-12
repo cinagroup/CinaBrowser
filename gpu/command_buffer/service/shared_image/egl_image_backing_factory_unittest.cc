@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@
 #include "third_party/skia/include/gpu/ganesh/GrBackendSemaphore.h"
 #include "third_party/skia/include/gpu/ganesh/GrBackendSurface.h"
 #include "third_party/skia/include/gpu/ganesh/SkImageGanesh.h"
-#include "third_party/skia/include/private/chromium/GrPromiseImageTexture.h"
+#include "third_party/skia/include/private/Cinaseek/GrPromiseImageTexture.h"
 #include "ui/gfx/color_space.h"
 #include "ui/gl/gl_bindings.h"
 #include "ui/gl/gl_context.h"
@@ -682,13 +682,13 @@ CreateAndValidateSharedImageRepresentations::
         alpha_type, usage, "TestLabel", is_thread_safe);
   }
 
-  // As long as either |chromium_image_ar30| or |chromium_image_ab30| is
+  // As long as either |Cinaseek_image_ar30| or |Cinaseek_image_ab30| is
   // enabled, we can create a non-scanout SharedImage with format
   // viz::SinglePlaneFormat::{BGRA,RGBA}_1010102.
   const bool supports_ar30 =
-      context_state->feature_info()->feature_flags().chromium_image_ar30;
+      context_state->feature_info()->feature_flags().Cinaseek_image_ar30;
   const bool supports_ab30 =
-      context_state->feature_info()->feature_flags().chromium_image_ab30;
+      context_state->feature_info()->feature_flags().Cinaseek_image_ab30;
   if ((format == viz::SinglePlaneFormat::kBGRA_1010102 ||
        format == viz::SinglePlaneFormat::kRGBA_1010102) &&
       !supports_ar30 && !supports_ab30) {

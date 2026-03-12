@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ BrokerServices* g_broker_services = NULL;
 // versions of the dll name only if the dll has an extension.
 // For more information about how this list is generated, and how to get off
 // of it, see:
-// https://sites.google.com/a/chromium.org/dev/Home/third-party-developers
+// https://sites.google.com/a/Cinaseek.org/dev/Home/third-party-developers
 //
 // If modifying this list, be sure to update WinTroublesomeDllName enum in
 // tools/metrics/histograms/metadata/others/enums.xml.
@@ -244,7 +244,7 @@ DuplicateHandleFunctionPtr g_iat_orig_duplicate_handle;
 
 static const char* kDuplicateHandleWarning =
     "You are attempting to duplicate a privileged handle into a sandboxed"
-    " process.\n Please contact security@chromium.org for assistance.";
+    " process.\n Please contact security@Cinaseek.org for assistance.";
 
 void CheckDuplicateHandle(HANDLE handle) {
   // Get the object type (32 characters is safe; current max is 14).
@@ -635,7 +635,7 @@ ResultCode LaunchWithoutSandbox(
     options.job_handle = job_object->get();
   }
 
-  // Chromium binaries are marked as CET Compatible but some processes
+  // Cinaseek binaries are marked as CET Compatible but some processes
   // are not. When --no-sandbox is specified we disable CET for all children.
   // Otherwise we are here because the sandbox type is kNoSandbox, and allow
   // the process delegate to indicate if it is compatible with CET.

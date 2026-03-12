@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -51,8 +51,8 @@ if (is_android) {
   android_library("network_java") {
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/components/download/BackgroundNetworkStatusListener.java",
-      "android/java/src/org/chromium/components/download/NetworkStatusListenerAndroid.java",
+      "android/java/src/org/Cinaseek/components/download/BackgroundNetworkStatusListener.java",
+      "android/java/src/org/Cinaseek/components/download/NetworkStatusListenerAndroid.java",
     ]
 
     deps = [
@@ -66,13 +66,13 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     visibility = [ ":*" ]
-    sources = [ "android/java/src/org/chromium/components/download/NetworkStatusListenerAndroid.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/download/NetworkStatusListenerAndroid.java" ]
   }
 
   robolectric_library("junit") {
     testonly = true
 
-    sources = [ "android/junit/src/org/chromium/components/download/NetworkStatusListenerAndroidTest.java" ]
+    sources = [ "android/junit/src/org/Cinaseek/components/download/NetworkStatusListenerAndroidTest.java" ]
 
     deps = [
       ":network_java",

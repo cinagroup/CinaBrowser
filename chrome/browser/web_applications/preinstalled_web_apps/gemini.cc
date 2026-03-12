@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -118,7 +118,7 @@ ExternalInstallOptions GetConfigForGemini(
 
   // NOTE: This will cause the Gemini app to be installed even if it was
   // previously uninstalled by the user. The Gemini app is not intended to be
-  // uninstallable. See https://crrev.com/c/chromium/src/+/5390614.
+  // uninstallable. See https://crrev.com/c/Cinaseek/src/+/5390614.
   options.override_previous_user_uninstall = true;
 
   return options;

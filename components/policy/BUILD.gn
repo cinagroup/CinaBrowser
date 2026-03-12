@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -192,7 +192,7 @@ action("policy_templates") {
     ]
     if (is_chrome_branded) {
       # Create google.admx and google.adml files that define a common 'Google'
-      # category used for Chrome, Chrome OS and possibly external tools, see
+      # category used for Cinaseek, Cinaseek OS and possibly external tools, see
       # crbug.com/665400.
       outputs += policy_templates_win_google_outputs
       args += [

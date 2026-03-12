@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -196,19 +196,19 @@ if (is_android) {
       "//chrome/browser/ui/browser_window/test:native_unit_test_support_java",
     ]
     sources = [
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBaseWindow.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindow.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImpl.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowCreatorBridge.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroid.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskBoundsConstraints.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskImpl.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskTrackerFactory.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskTrackerImpl.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/IdSequencer.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/PendingActionManager.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/WindowStateManager.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBaseWindow.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindow.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowCreatorBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroid.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskBoundsConstraints.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskTrackerFactory.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskTrackerImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/IdSequencer.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/PendingActionManager.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/WindowStateManager.java",
     ]
     deps = [
       "//base:base_java",
@@ -240,24 +240,24 @@ if (is_android) {
 
   generate_jni("jni") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBaseWindow.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindow.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImpl.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowCreatorBridge.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroid.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBaseWindow.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindow.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowCreatorBridge.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/BrowserWindowInterfaceIteratorAndroid.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegate.java",
     ]
   }
 
   robolectric_library("junit") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImplUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskBoundsConstraintsUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskImplUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskTrackerImplUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegateUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/ui/browser_window/PendingActionManagerUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/AndroidBrowserWindowCreateParamsImplUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskBoundsConstraintsUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskImplUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskTrackerImplUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/GlobalBrowserCollectionPlatformDelegateUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/PendingActionManagerUnitTest.java",
     ]
     deps = [
       ":java",
@@ -292,7 +292,7 @@ if (is_android) {
 
   android_library("javatests") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/chrome/browser/ui/browser_window/ChromeAndroidTaskIntegrationTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/ui/browser_window/CinaseekAndroidTaskIntegrationTest.java" ]
     deps = [
       ":java",
       "//base:base_java_test_support",

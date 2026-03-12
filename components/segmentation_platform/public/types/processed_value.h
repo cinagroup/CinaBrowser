@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ struct ProcessedValue {
 
   static ProcessedValue FromFloat(float val);
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.segmentation_platform
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.segmentation_platform
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ProcessedValueType
   enum Type {
     UNKNOWN = 0,

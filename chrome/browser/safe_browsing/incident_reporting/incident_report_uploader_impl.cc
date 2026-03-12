@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,8 +44,8 @@ constexpr net::NetworkTrafficAnnotationTag
         "Chrome."
       data:
         "A description of the incident, possible causes and related system "
-        "information. See ClientIncidentReport in 'https://cs.chromium.org/"
-        "chromium/src/components/safe_browsing/csd.proto' for more details."
+        "information. See ClientIncidentReport in 'https://cs.Cinaseek.org/"
+        "Cinaseek/src/components/safe_browsing/csd.proto' for more details."
       destination: GOOGLE_OWNED_SERVICE
     }
     policy {

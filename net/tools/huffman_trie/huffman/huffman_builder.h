@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@ class HuffmanBuilder {
   HuffmanRepresentationTable ToTable();
 
   // Outputs the Huffman representation as a vector of uint8_t's in a format
-  // Chromium can use to reconstruct the tree.
+  // Cinaseek can use to reconstruct the tree.
   //
   // The nodes of the tree are pairs of uint8s. The last node in the array is
   // the root of the tree. Each pair is two uint8_t values, the first is "left"

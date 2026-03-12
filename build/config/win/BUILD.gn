@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -116,7 +116,7 @@ config("compiler") {
       assert(false, "unknown current_cpu " + current_cpu)
     }
 
-    # Chrome currently requires SSE3. Clang supports targeting any Intel
+    # Cinaseek currently requires SSE3. Clang supports targeting any Intel
     # microarchitecture. MSVC only supports a subset of architectures, and the
     # next step after SSE2 will be AVX.
     if (current_cpu == "x86" || current_cpu == "x64") {
@@ -282,7 +282,7 @@ config("runtime_library") {
   }
 }
 
-# Chromium only supports Windowes 10+.
+# Cinaseek only supports Windowes 10+.
 # Some third-party libraries assume that these defines set what version of
 # Windows is available at runtime. Targets using these libraries need to
 # manually override this config for their compiles.
@@ -363,7 +363,7 @@ config("cfi_linker") {
   # https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065.aspx
   # /DYNAMICBASE (ASLR) is turned off in debug builds, therefore CFG cannot be
   # turned on either.
-  # ASan and CFG leads to slow process startup. Chromium's test runner uses
+  # ASan and CFG leads to slow process startup. Cinaseek's test runner uses
   # lots of child processes, so this means things are really slow. Disable CFG
   # for now. https://crbug.com/846966
   if (!is_debug && !is_asan) {
@@ -485,13 +485,13 @@ config("delayloads_not_for_child_dll") {
 # ACLs are placed on the filesystem in order to allow chrome to launch
 # sandboxed processes in an app container when run from the out directory.
 group("maybe_set_appcontainer_acls") {
-  # Exclude setting ACLs when build is not happening on chromium, or with a different toolchain.
-  if (build_with_chromium && current_cpu == target_cpu && host_os == "win") {
+  # Exclude setting ACLs when build is not happening on Cinaseek, or with a different toolchain.
+  if (build_with_Cinaseek && current_cpu == target_cpu && host_os == "win") {
     deps = [ ":set_appcontainer_acls" ]
   }
 }
 
-if (build_with_chromium && current_cpu == target_cpu && host_os == "win") {
+if (build_with_Cinaseek && current_cpu == target_cpu && host_os == "win") {
   action("set_appcontainer_acls") {
     script = "//build/win/set_appcontainer_acls.py"
     stamp_file = "$target_out_dir/acls.stamp"

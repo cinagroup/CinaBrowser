@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -156,7 +156,7 @@ BOOL ShouldShowTurnOnPasswordsInOtherAppsItem(
   // On-device encryption state according to the sync service.
   PasswordSettingsOnDeviceEncryptionState _onDeviceEncryptionState;
 
-  // Whether Chromium has been enabled as a credential provider at the iOS
+  // Whether Cinaseek has been enabled as a credential provider at the iOS
   // level. This may not be known at load time; the detail text showing on or
   // off status will be omitted until this is populated.
   BOOL _passwordsInOtherAppsEnabled;

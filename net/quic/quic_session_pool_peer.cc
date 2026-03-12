@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@
 #include "net/cert/x509_certificate.h"
 #include "net/cert/x509_util.h"
 #include "net/dns/public/secure_dns_policy.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_session_alias_key.h"
 #include "net/quic/quic_session_key.h"
@@ -71,7 +71,7 @@ bool QuicSessionPoolPeer::HasActiveJob(QuicSessionPool* pool,
 }
 
 // static
-QuicChromiumClientSession* QuicSessionPoolPeer::GetPendingSession(
+QuicCinaseekClientSession* QuicSessionPoolPeer::GetPendingSession(
     QuicSessionPool* pool,
     const quic::QuicServerId& server_id,
     PrivacyMode privacy_mode,
@@ -84,12 +84,12 @@ QuicChromiumClientSession* QuicSessionPoolPeer::GetPendingSession(
   QuicSessionAliasKey key(std::move(destination), session_key);
   DCHECK(pool->HasActiveJob(session_key));
   DCHECK_EQ(pool->all_sessions_.size(), 1u);
-  QuicChromiumClientSession* session = pool->all_sessions_.begin()->get();
+  QuicCinaseekClientSession* session = pool->all_sessions_.begin()->get();
   DCHECK(key == session->session_alias_key());
   return session;
 }
 
-QuicChromiumClientSession* QuicSessionPoolPeer::GetActiveSession(
+QuicCinaseekClientSession* QuicSessionPoolPeer::GetActiveSession(
     QuicSessionPool* pool,
     const quic::QuicServerId& server_id,
     PrivacyMode privacy_mode,
@@ -107,7 +107,7 @@ QuicChromiumClientSession* QuicSessionPoolPeer::GetActiveSession(
 }
 
 bool QuicSessionPoolPeer::IsLiveSession(QuicSessionPool* pool,
-                                        QuicChromiumClientSession* session) {
+                                        QuicCinaseekClientSession* session) {
   return pool->all_sessions_.contains(session);
 }
 

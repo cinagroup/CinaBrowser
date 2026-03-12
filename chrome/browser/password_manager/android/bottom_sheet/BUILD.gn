@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,19 +17,19 @@ android_library("java") {
   ]
 
   sources = [
-    "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetProperties.java",
-    "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetView.java",
-    "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetView.java",
+    "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetViewBinder.java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.bottom_sheet"
+  resources_package = "org.Cinaseek.chrome.browser.bottom_sheet"
 }
 
 robolectric_library("junit") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetCoordinatorRobolectricTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetCoordinatorRobolectricTest.java" ]
 
   deps = [
     ":java",
@@ -51,9 +51,9 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.bottom_sheet"
+  resources_package = "org.Cinaseek.chrome.browser.bottom_sheet"
 
-  sources = [ "java/src/org/chromium/chrome/browser/bottom_sheet/SimpleNoticeSheetRenderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/bottom_sheet/SimpleNoticeSheetRenderTest.java" ]
 
   deps = [
     ":java",

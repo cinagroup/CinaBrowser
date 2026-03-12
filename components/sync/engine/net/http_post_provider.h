@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 
 namespace syncer {
 
-// An interface the embedding application (e.g. Chromium) implements to provide
+// An interface the embedding application (e.g. Cinaseek) implements to provide
 // required HTTP POST functionality to the syncer backend. This interface is
 // designed for one-time use. You create one, use it, and create another if you
 // want to make a subsequent POST.

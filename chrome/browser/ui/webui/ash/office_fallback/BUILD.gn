@@ -1,10 +1,10 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//mojo/public/tools/bindings/mojom.gni")
 
-assert(is_chromeos, "The office fallback dialog is ChromeOS only")
+assert(is_chromeos, "The office fallback dialog is CinaseekOS only")
 
 mojom("mojo_bindings") {
   sources = [ "office_fallback.mojom" ]

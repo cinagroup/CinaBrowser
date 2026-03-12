@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,13 +61,13 @@ bool GetManifestPathWithFlags(HKEY root_key,
                               const std::wstring& host_name,
                               std::wstring* result) {
 #if BUILDFLAG(CHROMIUM_BRANDING)
-  static constexpr wchar_t kChromiumNativeMessagingRegistryKey[] =
-      L"SOFTWARE\\Chromium\\NativeMessagingHosts";
+  static constexpr wchar_t kCinaseekNativeMessagingRegistryKey[] =
+      L"SOFTWARE\\Cinaseek\\NativeMessagingHosts";
 
-  // Try to read the path using the Chromium-specific registry for Chromium.
+  // Try to read the path using the Cinaseek-specific registry for Cinaseek.
   // If that fails, fallback to Chrome-specific registry key below.
   if (GetManifestPathWithFlagsFromSubkey(root_key, flags,
-                                         kChromiumNativeMessagingRegistryKey,
+                                         kCinaseekNativeMessagingRegistryKey,
                                          host_name, result)) {
     return true;
   }

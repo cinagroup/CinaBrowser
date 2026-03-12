@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/trusted_vault/TrustedVaultClient.java",
+    "java/src/org/Cinaseek/components/trusted_vault/TrustedVaultClient.java",
   ]
   deps = [
     "//base:base_java",
@@ -24,7 +24,7 @@ android_library("java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/trusted_vault/TrustedVaultClient.java",
+    "java/src/org/Cinaseek/components/trusted_vault/TrustedVaultClient.java",
   ]
 }
 

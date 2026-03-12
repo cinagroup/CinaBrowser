@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -137,7 +137,7 @@ bool NetworkConfigWatcherAppleThread::InitNotificationsHelper() {
       nullptr,    // No description for this.
   };
   base::apple::ScopedCFTypeRef<SCDynamicStoreRef> store(SCDynamicStoreCreate(
-      nullptr, CFSTR("org.chromium"), DynamicStoreCallback, &context));
+      nullptr, CFSTR("org.Cinaseek"), DynamicStoreCallback, &context));
   if (!store) {
     int error = SCError();
     LOG(ERROR) << "SCDynamicStoreCreate failed with Error: " << error << " - "

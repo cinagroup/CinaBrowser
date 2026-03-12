@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -755,7 +755,7 @@ IN_PROC_BROWSER_TEST_P(WebAppFrameViewChromeOSTest, ShowFindIcon) {
   EXPECT_TRUE(find_icon->GetVisible());
 }
 
-// TODO(crbug.com/420040505): Fix failures on the Linux Chromium OS ASan LSan
+// TODO(crbug.com/420040505): Fix failures on the Linux Cinaseek OS ASan LSan
 // Tests bot. (Actually this is flaky on *all* ChromeOS builds.)
 #if BUILDFLAG(IS_CHROMEOS)
 #define MAYBE_ShowTranslateIcon DISABLED_ShowTranslateIcon

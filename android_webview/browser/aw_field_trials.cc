@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -101,9 +101,9 @@ void AwFieldTrials::RegisterFeatureOverrides(base::FeatureList* feature_list) {
   // enable these optimizations in WebView though they are not fundamentally
   // impossible.
   aw_feature_overrides.DisableFeature(
-      blink::features::kLowLatencyCanvas2dImageChromium);
+      blink::features::kLowLatencyCanvas2dImageCinaseek);
   aw_feature_overrides.DisableFeature(
-      blink::features::kLowLatencyWebGLImageChromium);
+      blink::features::kLowLatencyWebGLImageCinaseek);
 
   // Disable Shared Storage on WebView.
   aw_feature_overrides.DisableFeature(network::features::kSharedStorageAPI);
@@ -176,7 +176,7 @@ void AwFieldTrials::RegisterFeatureOverrides(base::FeatureList* feature_list) {
   aw_feature_overrides.DisableFeature(::features::kDigitalGoodsApi);
 
   // COOP is not supported on WebView yet. See:
-  // https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/XBKAGb2_7uAi.
+  // https://groups.google.com/a/Cinaseek.org/forum/#!topic/blink-dev/XBKAGb2_7uAi.
   aw_feature_overrides.DisableFeature(
       network::features::kCrossOriginOpenerPolicy);
 

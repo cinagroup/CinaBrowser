@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ class SystemMemoryListMetricsProvider : public metrics::MetricsProvider {
   // Sets the fields in `memory_list_info` with the counts of pages in the
   // various lists. This call can fail. Returns the status of the
   // NtQuerySystemInformation() call. Can be called on any thread. This is
-  // public for use in other Chromium subsystems.
+  // public for use in other Cinaseek subsystems.
   //
   // This API is undocumented. See ReactOS/PHNT/pinvoke/geoffchappell for
   // documentation on the call, also see MEMINFO events in ETW (via `tracerpt`),
@@ -69,7 +69,7 @@ class SystemMemoryListMetricsProvider : public metrics::MetricsProvider {
   // Run the memory list exhausted interval sampler as its own thread to
   // increase its resiliency to memory exhaustion by reducing its footprint per
   // iteration (constant stack load, mostly use local variables, ditch the
-  // massive Chromium task overhead, permit it to run while the main thread is
+  // massive Cinaseek task overhead, permit it to run while the main thread is
   // stalled).
   class ExhaustedIntervalThreadDelegate
       : public base::DelegateSimpleThread::Delegate {

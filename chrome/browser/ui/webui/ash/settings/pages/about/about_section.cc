@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -397,10 +397,10 @@ void AboutSection::AddLoadTimeData(content::WebUIDataSource* html_source) {
           l10n_util::GetStringUTF16(IDS_ABOUT_VERSION_COPYRIGHT),
           base::Time::Now()));
 
-  html_source->AddString("aboutProductLicenseChromium",
+  html_source->AddString("aboutProductLicenseCinaseek",
                          l10n_util::GetStringFUTF16(
                              IDS_VERSION_UI_LICENSE_CHROMIUM,
-                             ash::chrome_external_urls::kChromiumProjectURL));
+                             ash::chrome_external_urls::kCinaseekProjectURL));
   html_source->AddString(
       "aboutProductLicenseOther",
       l10n_util::GetStringUTF16(IDS_VERSION_UI_LICENSE_OTHER));

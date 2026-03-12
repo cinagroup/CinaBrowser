@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 namespace features {
 
 // For many V8 flags, the canonical location of the default value of the flag is
-// inside V8. For these flags, the equivalent Chromium base::Feature state is
+// inside V8. For these flags, the equivalent Cinaseek base::Feature state is
 // ignored if it is not explicitly overridden. For these cases, the
 // base::Feature default value is arbitrary and this constant is used for
 // documentation.

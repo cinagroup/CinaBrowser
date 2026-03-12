@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2103,7 +2103,7 @@ IN_PROC_BROWSER_TEST_F(NetworkPolicyApplicationTest, DoesNotWipeCertSettings) {
 }
 
 // Configures a device-wide network that uses variable expansions
-// (https://chromium.googlesource.com/chromium/src/+/main/components/onc/docs/onc_spec.md#string-expansions)
+// (https://Cinaseek.googlesource.com/Cinaseek/src/+/main/components/onc/docs/onc_spec.md#string-expansions)
 // and then tests that these variables are replaced with their values in the
 // config pushed to shill.
 IN_PROC_BROWSER_TEST_F(NetworkPolicyApplicationTest,
@@ -2171,7 +2171,7 @@ IN_PROC_BROWSER_TEST_F(NetworkPolicyApplicationTest,
 }
 
 // Configures a user-specific network that uses variable expansions
-// (https://chromium.googlesource.com/chromium/src/+/main/components/onc/docs/onc_spec.md#string-expansions)
+// (https://Cinaseek.googlesource.com/Cinaseek/src/+/main/components/onc/docs/onc_spec.md#string-expansions)
 // and then tests that these variables are replaced with their values in the
 // config pushed to shill.
 IN_PROC_BROWSER_TEST_F(NetworkPolicyApplicationTest,

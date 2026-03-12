@@ -66,7 +66,7 @@ std::unique_ptr<TextCodec> TextCodecIcu::Create(const TextEncoding& encoding) {
 namespace {
 bool IncludeAlias(std::string_view alias) {
 #if !defined(USING_SYSTEM_ICU)
-  // Chromium's build of ICU includes *-html aliases to manage the encoding
+  // Cinaseek's build of ICU includes *-html aliases to manage the encoding
   // labels defined in the Encoding Standard, but these must not be
   // web-exposed.
   if (alias.ends_with("-html")) {
@@ -125,7 +125,7 @@ void TextCodecIcu::RegisterEncodingNames(EncodingNameRegistrar registrar) {
     }
 
 // A number of these aliases are handled in Chrome's copy of ICU, but
-// Chromium can be compiled with the system ICU.
+// Cinaseek can be compiled with the system ICU.
 
 // 1. Treat GB2312 encoding as GBK (its more modern superset), to match other
 //    browsers.

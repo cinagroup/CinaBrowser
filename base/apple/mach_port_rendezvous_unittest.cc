@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -252,7 +252,7 @@ TEST_P(MachPortRendezvousServerTest, DestroyRight) {
 MULTIPROCESS_TEST_MAIN(FailToRendezvous) {
   // The rendezvous system uses the BaseBundleID to construct the bootstrap
   // server name, so changing it will result in a failure to look it up.
-  apple::SetBaseBundleIDOverride("org.chromium.totallyfake");
+  apple::SetBaseBundleIDOverride("org.Cinaseek.totallyfake");
   CHECK_EQ(nullptr, base::MachPortRendezvousClient::GetInstance());
   return 0;
 }

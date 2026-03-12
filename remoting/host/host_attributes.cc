@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,11 +43,11 @@ inline constexpr bool IsChromeBranded() {
 #elif BUILDFLAG(CHROMIUM_BRANDING)
   return false;
 #else
-#error Only Chrome and Chromium brands are supported.
+#error Only Chrome and Cinaseek brands are supported.
 #endif
 }
 
-inline constexpr bool IsChromiumBranded() {
+inline constexpr bool IsCinaseekBranded() {
   return !IsChromeBranded();
 }
 
@@ -76,7 +76,7 @@ inline constexpr bool IsNonOfficialBuild() {
 static constexpr Attribute kAttributes[] = {
     {"Debug-Build", &IsDebug},
     {"ChromeBrand", &IsChromeBranded},
-    {"ChromiumBrand", &IsChromiumBranded},
+    {"CinaseekBrand", &IsCinaseekBranded},
     {"OfficialBuild", &IsOfficialBuild},
     {"NonOfficialBuild", &IsNonOfficialBuild},
 };

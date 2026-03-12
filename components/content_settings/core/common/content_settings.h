@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ class GURL;
 // Different settings that can be assigned for a particular content type.  We
 // give the user the ability to set these on a global and per-origin basis.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.content_settings
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.content_settings
 enum ContentSetting {
   CONTENT_SETTING_DEFAULT = 0,
   CONTENT_SETTING_ALLOW,
@@ -131,7 +131,7 @@ using ProviderType = mojom::ProviderType;
 // |SettingSource::kAllowList|.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.content_settings
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.content_settings
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ContentSettingSource
 enum class SettingSource {
   kNone,

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ int dl_iterate_phdr(int (*cb)(dl_phdr_info* info, size_t size, void* data),
 
 }  // extern "C"
 
-namespace chromium_android_linker {
+namespace Cinaseek_android_linker {
 
 namespace {
 
@@ -273,4 +273,4 @@ TEST_F(LinkerTest, LibraryRangesViaIteratePhdr) {
   EXPECT_EQ(finder.relro_start(), lib_info2.get_relro_start_for_testing());
 }
 
-}  // namespace chromium_android_linker
+}  // namespace Cinaseek_android_linker

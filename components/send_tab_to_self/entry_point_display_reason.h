@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class SendTabToSelfModel;
 
 // A Java counterpart will be generated for this enum.
 // GENERATED_JAVA_ENUM_PACKAGE: (
-//   org.chromium.chrome.browser.share.send_tab_to_self)
+//   org.Cinaseek.chrome.browser.share.send_tab_to_self)
 enum class EntryPointDisplayReason {
   // The send-tab-to-self entry point should be shown because all the conditions
   // are met and the feature is ready to be used.

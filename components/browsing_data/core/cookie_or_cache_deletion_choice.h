@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef COMPONENTS_BROWSING_DATA_CORE_COOKIE_OR_CACHE_DELETION_CHOICE_H_
@@ -11,7 +11,7 @@ namespace browsing_data {
 //
 // A Java counterpart will be generated for this enum so that it can be
 // logged on Android.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.browsing_data
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.browsing_data
 //
 // LINT.IfChange(CookieOrCacheDeletionChoice)
 enum class CookieOrCacheDeletionChoice {

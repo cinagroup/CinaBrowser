@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,7 +19,7 @@ js_type_check("closure_compile") {
 js_library("audio_settings") {
   deps = [
     "//ash/webui/common/resources:cr.m",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [ "$externs_path/chrome_send.js" ]
 }
@@ -27,7 +27,7 @@ js_library("audio_settings") {
 js_library("bluetooth_settings") {
   deps = [
     "//ash/webui/common/resources:web_ui_listener_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [ "$externs_path/chrome_send.js" ]
 }
@@ -35,7 +35,7 @@ js_library("bluetooth_settings") {
 js_library("battery_settings") {
   deps = [
     "//ash/webui/common/resources:web_ui_listener_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [ "$externs_path/chrome_send.js" ]
 }
@@ -43,14 +43,14 @@ js_library("battery_settings") {
 js_library("input_device_settings") {
   deps = [
     "//ash/webui/common/resources:web_ui_listener_behavior",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [ "$externs_path/chrome_send.js" ]
 }
 
 js_library("device_emulator_pages") {
   deps = [
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
   externs_list = [ "$externs_path/chrome_send.js" ]
 }

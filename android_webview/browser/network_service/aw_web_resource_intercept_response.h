@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ class AwWebResourceInterceptResponse {
   AwWebResourceInterceptResponse& operator=(AwWebResourceInterceptResponse&&);
 
   // It is expected that |obj| is an instance of the Java-side
-  // org.chromium.android_webview.AwWebResourceInterceptResponse class.
+  // org.Cinaseek.android_webview.AwWebResourceInterceptResponse class.
   explicit AwWebResourceInterceptResponse(
       const base::android::JavaRef<jobject>& obj);
 

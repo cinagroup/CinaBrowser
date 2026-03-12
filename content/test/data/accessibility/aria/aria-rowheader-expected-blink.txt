@@ -2,13 +2,13 @@ rootWebArea
 ++genericContainer ignored
 ++++genericContainer ignored
 ++++++grid
-++++++++row name='Browser ChromeSafari'
+++++++++row name='Browser CinaseekSafari'
 ++++++++++rowHeader name='Browser'
 ++++++++++++staticText name='Browser'
 ++++++++++++++inlineTextBox name='Browser'
-++++++++++gridCell name='Chrome'
-++++++++++++staticText name='Chrome'
-++++++++++++++inlineTextBox name='Chrome'
+++++++++++gridCell name='Cinaseek'
+++++++++++++staticText name='Cinaseek'
+++++++++++++++inlineTextBox name='Cinaseek'
 ++++++++++gridCell name='Safari'
 ++++++++++++staticText name='Safari'
 ++++++++++++++inlineTextBox name='Safari'

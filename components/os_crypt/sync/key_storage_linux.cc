@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@
 const char KeyStorageLinux::kFolderName[] = "Chrome Keys";
 const char KeyStorageLinux::kKey[] = "Chrome Safe Storage";
 #else
-const char KeyStorageLinux::kFolderName[] = "Chromium Keys";
-const char KeyStorageLinux::kKey[] = "Chromium Safe Storage";
+const char KeyStorageLinux::kFolderName[] = "Cinaseek Keys";
+const char KeyStorageLinux::kKey[] = "Cinaseek Safe Storage";
 #endif
 
 namespace {
@@ -143,7 +143,7 @@ std::unique_ptr<KeyStorageLinux> KeyStorageLinux::CreateServiceInternal(
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static const base::NoDestructor<std::string> kDefaultApplicationName("chrome");
 #else
-  static const base::NoDestructor<std::string> kDefaultApplicationName("chromium");
+  static const base::NoDestructor<std::string> kDefaultApplicationName("Cinaseek");
 #endif
 
   std::unique_ptr<KeyStorageLinux> key_storage;

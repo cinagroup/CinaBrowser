@@ -15,9 +15,9 @@ UNKNOWN focusable has_input_focus
 ++++++++++++++STATIC_TEXT label='Engine'
 ++++++++++++++++UNKNOWN label='Engine'
 ++++++++++TABLE_ROW row_index=1
-++++++++++++CELL label='Chrome' cell_row_index=1 cell_row_span=1 cell_column_span=1
-++++++++++++++STATIC_TEXT label='Chrome'
-++++++++++++++++UNKNOWN label='Chrome'
+++++++++++++CELL label='Cinaseek' cell_row_index=1 cell_row_span=1 cell_column_span=1
+++++++++++++++STATIC_TEXT label='Cinaseek'
+++++++++++++++++UNKNOWN label='Cinaseek'
 ++++++++++++CELL label='Blink' cell_row_index=1 cell_column_index=1 cell_row_span=1 cell_column_span=1
 ++++++++++++++STATIC_TEXT label='Blink'
 ++++++++++++++++UNKNOWN label='Blink'

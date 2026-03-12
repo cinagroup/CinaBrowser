@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ class URLPatternSet {
     // For the following descriptions, consider the two URLPatternSets:
     // Set 1: {"https://example.com/*", "https://*.google.com/*", "http://*/*"}
     // Set 2: {"https://example.com/*", "https://google.com/maps",
-    //         "*://chromium.org/*"}
+    //         "*://Cinaseek.org/*"}
 
     // Only includes patterns that are exactly in both sets. The intersection of
     // the two sets above is {"https://example.com/*"}, since that is the only
@@ -61,8 +61,8 @@ class URLPatternSet {
     //   "https://example.com/*" (contained exactly by each set)
     //   "https://google.com/maps" (contained exactly by set 2 and a strict
     //                              subset of https://*.google.com/* in set 1)
-    //   "http://chromium.org/*" (the overlap between "http://*/*" in set 1 and
-    //                            *://chromium.org/*" in set 2).
+    //   "http://Cinaseek.org/*" (the overlap between "http://*/*" in set 1 and
+    //                            *://Cinaseek.org/*" in set 2).
     // }
     // Note that this is the most computationally expensive - potentially
     // O(n^2) - since it can require comparing each pattern in one set to every

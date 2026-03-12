@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,10 +38,10 @@ namespace ash {
 namespace {
 
 const char kDefaultCellularDevicePath[] = "test_cellular_device";
-const char kDefaultEuiccPath[] = "/org/chromium/Hermes/Euicc/0";
+const char kDefaultEuiccPath[] = "/org/Cinaseek/Hermes/Euicc/0";
 const char kDefaultEid[] = "12345678901234567890123456789012";
 
-const char kTestCarrierProfilePath0[] = "/org/chromium/Hermes/Profile/123";
+const char kTestCarrierProfilePath0[] = "/org/Cinaseek/Hermes/Profile/123";
 const char kTestNetworkServicePath0[] = "/service/cellular123";
 const char kTestCellularIccid0[] = "100000000000000001";
 const char kTestCellularActivationCode0[] = "smdp_address0";
@@ -50,7 +50,7 @@ const char kTestProfileName[] = "TestCellularNetwork";
 const char kTestProfileNickname[] = "TestCellularNetworkNick";
 const char kTestServiceProvider[] = "Test Wireless";
 
-const char kTestCarrierProfilePath1[] = "/org/chromium/Hermes/Profile/124";
+const char kTestCarrierProfilePath1[] = "/org/Cinaseek/Hermes/Profile/124";
 const char kTestNetworkServicePath1[] = "/service/cellular124";
 const char kTestCellularIccid1[] = "100000000000000002";
 const char kTestCellularActivationCode1[] = "smdp_address1";

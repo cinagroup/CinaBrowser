@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace collaboration {
 // LINT.IfChange(ServiceStatus)
 bool ServiceStatus::IsAllowedToJoin() {
   // Please keep logic consistent with
-  // //components/collaboration/public/android/java/src/org/chromium/components/collaboration/ServiceStatus.java.
+  // //components/collaboration/public/android/java/src/org/Cinaseek/components/collaboration/ServiceStatus.java.
   switch (collaboration_status) {
     case CollaborationStatus::kDisabled:
     case CollaborationStatus::kDisabledPending:
@@ -26,7 +26,7 @@ bool ServiceStatus::IsAllowedToJoin() {
 
 bool ServiceStatus::IsAllowedToCreate() {
   // Please keep logic consistent with
-  // //components/collaboration/public/android/java/src/org/chromium/components/collaboration/ServiceStatus.java.
+  // //components/collaboration/public/android/java/src/org/Cinaseek/components/collaboration/ServiceStatus.java.
 
   if (signin_status == SigninStatus::kSigninDisabled) {
     return false;
@@ -45,7 +45,7 @@ bool ServiceStatus::IsAllowedToCreate() {
       return true;
   }
 }
-// LINT.ThenChange(//components/collaboration/public/android/java/src/org/chromium/components/collaboration/ServiceStatus.java)
+// LINT.ThenChange(//components/collaboration/public/android/java/src/org/Cinaseek/components/collaboration/ServiceStatus.java)
 
 bool ServiceStatus::IsAuthenticationValid() const {
   // This is only used in native code.

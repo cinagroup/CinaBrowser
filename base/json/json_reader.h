@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ enum JSONParserOptions {
   // behavior.
   //
   // This set of options is mirrored in Rust
-  // base::JsonOptions::with_chromium_extensions().
+  // base::JsonOptions::with_Cinaseek_extensions().
   JSON_PARSE_CHROMIUM_EXTENSIONS = JSON_ALLOW_COMMENTS |
                                    JSON_ALLOW_NEWLINES_IN_STRINGS |
                                    JSON_ALLOW_X_ESCAPES,

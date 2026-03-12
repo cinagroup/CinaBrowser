@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -229,7 +229,7 @@ TEST_F(AboutThisSiteServiceTest, NotShownWhenNoGoogleDSE) {
   // Changing default provider to other than Google
   TemplateURL* template_url =
       templateService()->Add(std::make_unique<TemplateURL>(TemplateURLData(
-          u"shortname", u"keyword", "https://cs.chromium.org",
+          u"shortname", u"keyword", "https://cs.Cinaseek.org",
           std::string_view(), std::string_view(), std::string_view(),
           std::string_view(), std::string_view(), std::string_view(),
           std::string_view(), std::string_view(), std::string_view(),

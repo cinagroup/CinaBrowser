@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ class NetLogWithSource;
 // OnAddEntry() method, as doing so will result in a deadlock.
 //
 // For a broader introduction see the design document:
-// https://sites.google.com/a/chromium.org/dev/developers/design-documents/network-stack/netlog
+// https://sites.google.com/a/Cinaseek.org/dev/developers/design-documents/network-stack/netlog
 //
 // ==================================
 // Materializing parameters

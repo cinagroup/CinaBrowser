@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,16 +83,16 @@ const char kWebViewUseSeparateResourceContext[] =
 // Override and enable features useful for BSA library testing/debugging.
 const char kDebugBsa[] = "debug-bsa";
 
-// Enables using startup tasks logic for webview chromium initialization which
+// Enables using startup tasks logic for webview Cinaseek initialization which
 // - runs the startup tasks asynchronously if startup is triggered from a
 // background thread. Otherwise runs startup synchronously.
-// - caches any chromium startup exception and rethrows it if startup is retried
+// - caches any Cinaseek startup exception and rethrows it if startup is retried
 // without a restart.
 // Note: WebViewUseStartupTasksLogicP2 and kWebViewStartupTasksYieldToNative
 // also enable the same behaviour as this flag.
 const char kWebViewUseStartupTasksLogic[] = "webview-use-startup-tasks-logic";
 
-// Enables phase 2 of using startup tasks logic for webview chromium
+// Enables phase 2 of using startup tasks logic for webview Cinaseek
 // initialization which also starts browser process asynchronously, when
 // starting webview asynchronously.
 // Note: This also enables the same behaviour as WebViewUseStartupTasksLogic and
@@ -109,7 +109,7 @@ const char kWebViewStartupTasksYieldToNative[] =
 
 // Enables running native startup tasks asynchronously if WebView startup is
 // asynchronous in addition to preventing multiprocess enabled checks from
-// starting chromium.
+// starting Cinaseek.
 const char kWebViewStartupTasksPlusMultiProcess[] =
     "webview-startup-tasks-plus-multi-process";
 

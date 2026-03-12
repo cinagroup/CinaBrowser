@@ -72,7 +72,7 @@ class MODULES_EXPORT MediaStreamAudioDestinationNode final
  private:
   MediaStreamAudioDestinationHandler& GetOwnHandler() const;
 
-  // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/media/capture/README.md#logs
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/refs/heads/main/docs/media/capture/README.md#logs
   void SendLogMessage(const String& function_name, const String& message);
 
   Member<MediaStreamSource> source_;

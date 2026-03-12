@@ -126,7 +126,7 @@ class WebCryptoAesKeyGenParams : public WebCryptoAlgorithmParams {
 
 class WebCryptoHmacImportParams : public WebCryptoAlgorithmParamsWithHash {
  public:
-  // FIXME: Remove this constructor once it is no longer used by Chromium.
+  // FIXME: Remove this constructor once it is no longer used by Cinaseek.
   // http://crbug.com/431085
   explicit WebCryptoHmacImportParams(const WebCryptoAlgorithm& hash)
       : WebCryptoAlgorithmParamsWithHash(hash),

@@ -1,10 +1,10 @@
-# Copyright 2023 The Chromium Authors. All rights reserved.
+# Copyright 2023 The Cinaseek Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//third_party/protobuf/proto_library.gni")
 
-assert(is_chromeos, "Non-ChromeOS builds cannot depend on //chromeos/ash")
+assert(is_chromeos, "Non-CinaseekOS builds cannot depend on //chromeos/ash")
 
 component("carrier_lock") {
   output_name = "ash_carrier_lock"

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,7 +74,7 @@ VideoBitrateAllocation AllocateBitrateForDefaultEncodingWithBitrates(
   CHECK_LE(sl_bitrates.size(), kMaxSpatialLayers);
 
   // The same bitrate factors as the software encoder.
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/video/vpx_video_encoder.cc;l=131;drc=d383d0b3e4f76789a6de2a221c61d3531f4c59da
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/video/vpx_video_encoder.cc;l=131;drc=d383d0b3e4f76789a6de2a221c61d3531f4c59da
   constexpr auto kTemporalLayersBitrateScaleFactors =
       std::to_array<std::array<double, kMaxTemporalLayers>>({
           {1.00, 0.00, 0.00},  // For one temporal layer.

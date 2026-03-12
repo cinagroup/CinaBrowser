@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@
 // - The members have the default values assigned by the compiler.
 //
 // - There is an extra member named kMaxValue which is set equal to the highest
-//   ordinary value.  (The Chromium style checker will verify that kMaxValue
+//   ordinary value.  (The Cinaseek style checker will verify that kMaxValue
 //   really is the maximum value.)
 //
 // - The values in the EnumTable constructor appear in sorted order.
@@ -141,7 +141,7 @@
 //
 // If you roll your own solution, you can't do much better than this without
 // jumping through some hoops.  Obvious improvements, like storing the data in a
-// global base::flat_map, are off-limits because Chromium requires all global
+// global base::flat_map, are off-limits because Cinaseek requires all global
 // variables to have trivial destructors.  A simple chain of "if" statements
 // works fine, but it has a number of drawbacks compared to an EnumTable:
 //
@@ -275,7 +275,7 @@ class EnumTable {
   // by a new value being added to an enum without the new value being added to
   // the corresponding table.  For best results, use an enum class and create a
   // constant named kMaxValue.  For more details, see
-  // https://www.chromium.org/developers/coding-style/chromium-style-checker-errors#TOC-Enumerator-max-values
+  // https://www.Cinaseek.org/developers/coding-style/Cinaseek-style-checker-errors#TOC-Enumerator-max-values
   constexpr EnumTable(base::span<const Entry> data, E max_value)
       : EnumTable(data, true) {
 #ifndef NDEBUG

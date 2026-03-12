@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureList.java",
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureMap.java",
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeSessionState.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekFeatureList.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekFeatureMap.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekSessionState.java",
   ]
   public_deps = [ "//components/cached_flags:java" ]
   deps = [
@@ -34,8 +34,8 @@ android_library("java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureMap.java",
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeSessionState.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekFeatureMap.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekSessionState.java",
   ]
 }
 
@@ -143,7 +143,7 @@ static_library("flags_android_impl") {
 
 java_cpp_strings("chrome_android_java_switches_srcjar") {
   sources = [ "//chrome/common/chrome_switches.cc" ]
-  template = "android/java_templates/ChromeSwitches.java.tmpl"
+  template = "android/java_templates/CinaseekSwitches.java.tmpl"
 }
 
 java_cpp_enum("chrome_browser_flags_enums_srcjar") {
@@ -152,8 +152,8 @@ java_cpp_enum("chrome_browser_flags_enums_srcjar") {
 
 robolectric_library("flags_junit_tests") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/flags/CachedFeatureFlagsAnnotationUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureListUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CachedFeatureFlagsAnnotationUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekFeatureListUnitTest.java",
   ]
   deps = [
     ":java",
@@ -172,8 +172,8 @@ robolectric_library("flags_junit_tests") {
 android_library("javatests") {
   testonly = true
   sources = [
-    "android/java/src/org/chromium/chrome/browser/flags/ChromeFeatureListInstrumentationTest.java",
-    "android/java/src/org/chromium/chrome/browser/flags/FieldTrialsInstrumentationTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/CinaseekFeatureListInstrumentationTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/flags/FieldTrialsInstrumentationTest.java",
   ]
   deps = [
     ":java",

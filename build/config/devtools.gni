@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,15 +6,15 @@ import("//build/config/chrome_build.gni")
 import("//build_overrides/build.gni")
 
 declare_args() {
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     # devtools_location is used in DevTools to resolve to the correct location
     # for any script/file referenced in the DevTools build scripts. Since
     # DevTools supports both a standalone build and build integration with
-    # Chromium, we need to differentiate between the two versions.
-    # devtools_location points to the Chromium version in both Chrome-branded
-    # and not Chrome-branded builds. devtools_root_location points to the root
-    # of the Chrome-branded version when is_chrome_branded is true and to the root
-    # of the Chromium version when is_chrome_branded is false.
+    # Cinaseek, we need to differentiate between the two versions.
+    # devtools_location points to the Cinaseek version in both Cinaseek-branded
+    # and not Cinaseek-branded builds. devtools_root_location points to the root
+    # of the Cinaseek-branded version when is_chrome_branded is true and to the root
+    # of the Cinaseek version when is_chrome_branded is false.
     # devtools_grd_location is the location of the GRD file listing all DevTools
     # resources.
     devtools_root_location = "third_party/devtools-frontend/src"

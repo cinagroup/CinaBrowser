@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -100,7 +100,7 @@ class COMPONENT_EXPORT(WEBNN_SERVICE) Adapter final
   // The `min_required_dml_feature_level` parameter allows us to run a portion
   // of the test suite on machines that have feature levels less than the one
   // that will be required for full WebNN.
-  // TODO(issues.chromium.org/331369802): Remove min/max DML feature level
+  // TODO(issues.Cinaseek.org/331369802): Remove min/max DML feature level
   // parameters for `dml::Adapter` creation in production code.
   static base::expected<scoped_refptr<Adapter>, mojom::ErrorPtr> Create(
       Microsoft::WRL::ComPtr<IUnknown> dxgi_or_dxcore_adapter,

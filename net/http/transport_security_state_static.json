@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -159,15 +159,15 @@
     { "name": "dns.google.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
 
     // Other Google-related domains that must use HTTPS.
-    { "name": "build.chromium.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
-    { "name": "bugs.chromium.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
+    { "name": "build.Cinaseek.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
+    { "name": "bugs.Cinaseek.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "cdn.ampproject.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "chrome.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "chrome-devtools-frontend.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "chromereporting-pa.googleapis.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
-    { "name": "chromiumcodereview.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
+    { "name": "Cinaseekcodereview.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "codereview.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
-    { "name": "codereview.chromium.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
+    { "name": "codereview.Cinaseek.org", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "crbug.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "crosbug.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "crrev.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
@@ -196,7 +196,7 @@
     { "name": "www.googlemail.com", "policy": "google", "mode": "force-https" },
     { "name": "google-analytics.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "stats.g.doubleclick.net", "policy": "google", "mode": "force-https", "include_subdomains": true },
-    { "name": "chromiumbugs.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
+    { "name": "Cinaseekbugs.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "youtube.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "ua5v.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
     { "name": "webfilings.appspot.com", "policy": "google", "mode": "force-https", "include_subdomains": true },
@@ -87906,7 +87906,7 @@
     // Only eTLD+1 domains can be submitted automatically to hstspreload.org,
     // but we allow subdomains in specific circumstances:
     //
-    // https://github.com/chromium/hstspreload.org/wiki/Preload-List-Processes#requirements-for-manual-hsts-entries
+    // https://github.com/Cinaseek/hstspreload.org/wiki/Preload-List-Processes#requirements-for-manual-hsts-entries
     //
     // These are still marked with the `bulk-1-year` policy, since all other
     // requirements apply.
@@ -88039,7 +88039,7 @@
     { "name": "www.figma.com", "policy": "custom", "mode": "force-https", "include_subdomains": false },
     // TODO(elawrence): hstspreload.org can't scan IPv6-only sites due to Google
     // Cloud limitations. Move these entries to the bulk entries once they can
-    // be handled automatically: github.com/chromium/hstspreload.org/issues/43
+    // be handled automatically: github.com/Cinaseek/hstspreload.org/issues/43
     // IPv6
     { "name": "ipv6only.network", "policy": "custom", "mode": "force-https", "include_subdomains": true },
     { "name": "trinity.fr.eu.org", "policy": "custom", "mode": "force-https", "include_subdomains": true },

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -234,7 +234,7 @@ bool GetNetworkList(NetworkInterfaceList* networks, int policy) {
   if (__builtin_available(android 24, *)) {
     // Some Samsung devices with MediaTek processors are with
     // a buggy getifaddrs() implementation,
-    // so use a Chromium's own implementation to workaround.
+    // so use a Cinaseek's own implementation to workaround.
     // See https://crbug.com/1240237 for more context.
     bool use_alternative_getifaddrs =
         std::string_view(base::android::android_info::brand()) == "samsung" &&

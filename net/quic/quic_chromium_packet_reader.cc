@@ -1,8 +1,8 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
 
 #include "base/functional/bind.h"
 #include "base/location.h"
@@ -23,7 +23,7 @@ const size_t kReadBufferSize =
     static_cast<size_t>(quic::kMaxIncomingPacketSize + 1);
 }  // namespace
 
-QuicChromiumPacketReader::QuicChromiumPacketReader(
+QuicCinaseekPacketReader::QuicCinaseekPacketReader(
     std::unique_ptr<DatagramClientSocket> socket,
     const quic::QuicClock* clock,
     Visitor* visitor,
@@ -39,9 +39,9 @@ QuicChromiumPacketReader::QuicChromiumPacketReader(
       read_buffer_(base::MakeRefCounted<IOBufferWithSize>(kReadBufferSize)),
       net_log_(net_log) {}
 
-QuicChromiumPacketReader::~QuicChromiumPacketReader() = default;
+QuicCinaseekPacketReader::~QuicCinaseekPacketReader() = default;
 
-void QuicChromiumPacketReader::StartReading() {
+void QuicCinaseekPacketReader::StartReading() {
   for (;;) {
     if (read_pending_)
       return;
@@ -53,7 +53,7 @@ void QuicChromiumPacketReader::StartReading() {
     read_pending_ = true;
     int rv =
         socket_->Read(read_buffer_.get(), read_buffer_->size(),
-                      base::BindOnce(&QuicChromiumPacketReader::OnReadComplete,
+                      base::BindOnce(&QuicCinaseekPacketReader::OnReadComplete,
                                      weak_factory_.GetWeakPtr()));
     UMA_HISTOGRAM_BOOLEAN("Net.QuicSession.AsyncRead", rv == ERR_IO_PENDING);
     if (rv == ERR_IO_PENDING) {
@@ -68,7 +68,7 @@ void QuicChromiumPacketReader::StartReading() {
       // Schedule the work through the message loop to 1) prevent infinite
       // recursion and 2) avoid blocking the thread for too long.
       base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
-          FROM_HERE, base::BindOnce(&QuicChromiumPacketReader::OnReadComplete,
+          FROM_HERE, base::BindOnce(&QuicCinaseekPacketReader::OnReadComplete,
                                     weak_factory_.GetWeakPtr(), rv));
     } else {
       if (!ProcessReadResult(rv)) {
@@ -78,7 +78,7 @@ void QuicChromiumPacketReader::StartReading() {
   }
 }
 
-void QuicChromiumPacketReader::CloseSocket() {
+void QuicCinaseekPacketReader::CloseSocket() {
   socket_->Close();
 }
 
@@ -87,7 +87,7 @@ static_assert(static_cast<EcnCodePoint>(quic::ECN_NOT_ECT) == ECN_NOT_ECT &&
                   static_cast<EcnCodePoint>(quic::ECN_ECT0) == ECN_ECT0 &&
                   static_cast<EcnCodePoint>(quic::ECN_CE) == ECN_CE,
               "Mismatch ECN codepoint values");
-bool QuicChromiumPacketReader::ProcessReadResult(int result) {
+bool QuicCinaseekPacketReader::ProcessReadResult(int result) {
   read_pending_ = false;
   if (result <= 0 && net_log_.IsCapturing()) {
     net_log_.AddEventWithIntParams(NetLogEventType::QUIC_READ_ERROR,
@@ -127,7 +127,7 @@ bool QuicChromiumPacketReader::ProcessReadResult(int result) {
          self;
 }
 
-void QuicChromiumPacketReader::OnReadComplete(int result) {
+void QuicCinaseekPacketReader::OnReadComplete(int result) {
   if (ProcessReadResult(result)) {
     StartReading();
   }

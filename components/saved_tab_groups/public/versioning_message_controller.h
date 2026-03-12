@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace tab_groups {
 // messages should be shown based on whether the current chrome client is
 // able to support shared tab groups. The UI layer should query this class
 // before showing any versioning messages. Owned by TabGroupSyncService.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_group_sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_group_sync
 class VersioningMessageController {
  public:
   // Enum representing the different types of messages that needs to be

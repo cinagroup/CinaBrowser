@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ class ExtensionAction {
   using TabID = int;
 
   // The action that the UI should take after the ExtensionAction is clicked.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.extensions
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.extensions
   enum class ShowAction {
     kNone,
     kShowPopup,

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ BluetoothLEAdvertisingManagerClient::Properties::Properties(
 BluetoothLEAdvertisingManagerClient::Properties::~Properties() = default;
 
 const char BluetoothLEAdvertisingManagerClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 
 // The BluetoothAdvertisementManagerClient implementation used in production.
 class BluetoothAdvertisementManagerClientImpl

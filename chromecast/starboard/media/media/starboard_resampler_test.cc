@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ TEST(StarboardResamplerTest, PCM8ToS16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatU8,
@@ -80,7 +80,7 @@ TEST(StarboardResamplerTest, PCM8ToS32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS32, ::media::SampleFormat::kSampleFormatU8,
@@ -100,7 +100,7 @@ TEST(StarboardResamplerTest, PCMU8ToFloat) {
                                                buffer_data),
               MatchesFloatSpan(expected_f32_data));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatF32, ::media::SampleFormat::kSampleFormatU8,
@@ -122,7 +122,7 @@ TEST(StarboardResamplerTest, PCMS16ToS16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatS16,
@@ -144,7 +144,7 @@ TEST(StarboardResamplerTest, PCMS16ToS32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS32, ::media::SampleFormat::kSampleFormatS16,
@@ -166,7 +166,7 @@ TEST(StarboardResamplerTest, PCMS16ToFloat) {
                                                base::as_byte_span(buffer_data)),
               MatchesFloatSpan(expected_f32_data));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatF32, ::media::SampleFormat::kSampleFormatS16,
@@ -189,7 +189,7 @@ TEST(StarboardResamplerTest, PCMS24ToS16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatS24,
@@ -213,7 +213,7 @@ TEST(StarboardResamplerTest, PCMS24ToS32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS32, ::media::SampleFormat::kSampleFormatS24,
@@ -233,7 +233,7 @@ TEST(StarboardResamplerTest, PCMS24ToFloat) {
                                                base::as_byte_span(buffer_data)),
               MatchesFloatSpan(expected_f32_data));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatF32, ::media::SampleFormat::kSampleFormatS24,
@@ -255,7 +255,7 @@ TEST(StarboardResamplerTest, PCMS32ToS16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatS32,
@@ -275,7 +275,7 @@ TEST(StarboardResamplerTest, PCMS32ToS32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS32, ::media::SampleFormat::kSampleFormatS32,
@@ -295,7 +295,7 @@ TEST(StarboardResamplerTest, PCMS32ToFloat) {
                                                base::as_byte_span(buffer_data)),
               MatchesFloatSpan(expected_f32_data));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatF32, ::media::SampleFormat::kSampleFormatS32,
@@ -317,7 +317,7 @@ TEST(StarboardResamplerTest, PCMFloatToS16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatF32,
@@ -338,7 +338,7 @@ TEST(StarboardResamplerTest, PCMFloatToS32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS32, ::media::SampleFormat::kSampleFormatF32,
@@ -358,7 +358,7 @@ TEST(StarboardResamplerTest, PCMFloatToFloat) {
                   base::as_byte_span(base::allow_nonunique_obj, buffer_data)),
               MatchesFloatSpan(expected_f32_data));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatF32, ::media::SampleFormat::kSampleFormatF32,
@@ -383,7 +383,7 @@ TEST(StarboardResamplerTest, PushesBufferToStarboardPlanarPCM16) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(ResamplePCMAudioDataForStarboard(
                   kStarboardPcmSampleFormatS16,
                   ::media::SampleFormat::kSampleFormatPlanarS16,
@@ -406,7 +406,7 @@ TEST(StarboardResamplerTest, PushesBufferToStarboardPlanarPCM32) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(ResamplePCMAudioDataForStarboard(
                   kStarboardPcmSampleFormatS16,
                   ::media::SampleFormat::kSampleFormatPlanarS32,
@@ -429,7 +429,7 @@ TEST(StarboardResamplerTest, PushesBufferToStarboardPlanarPCMF32) {
           .as_span(),
       ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(ResamplePCMAudioDataForStarboard(
                   kStarboardPcmSampleFormatS16,
                   ::media::SampleFormat::kSampleFormatPlanarF32,
@@ -471,7 +471,7 @@ TEST(StarboardResamplerTest, PushesBufferToStarboardPlanarPCM32Mono) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(ResamplePCMAudioDataForStarboard(
                   kStarboardPcmSampleFormatS16,
                   ::media::SampleFormat::kSampleFormatPlanarS32,
@@ -496,7 +496,7 @@ TEST(StarboardResamplerTest, PushesBufferToStarboardPlanarPCM32MaxChannels) {
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(ResamplePCMAudioDataForStarboard(
                   kStarboardPcmSampleFormatS16,
                   ::media::SampleFormat::kSampleFormatPlanarS32,
@@ -517,7 +517,7 @@ TEST(StarboardResamplerTest,
                   .as_span(),
               ElementsAreArray(base::as_byte_span(expected_data)));
 
-  // Chromium enum version.
+  // Cinaseek enum version.
   EXPECT_THAT(
       ResamplePCMAudioDataForStarboard(
           kStarboardPcmSampleFormatS16, ::media::SampleFormat::kSampleFormatS16,

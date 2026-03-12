@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, SigninPromoViewMode) {
 };
 
 typedef NS_ENUM(NSInteger, SigninPromoViewStyle) {
-  // Standard style used for most surfaces. It contains user avatar/ chromium
+  // Standard style used for most surfaces. It contains user avatar/ Cinaseek
   // logo, text body, rounded corners colored button and an optional secondary
   // plain button, all stacked vertically.
   SigninPromoViewStyleStandard = 0,

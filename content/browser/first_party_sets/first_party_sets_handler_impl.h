@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ class CONTENT_EXPORT FirstPartySetsHandlerImpl : public FirstPartySetsHandler {
   //
   // If First-Party Sets is disabled, then this method still needs to read the
   // persisted sets, since we may still need to clear data from a previous
-  // invocation of Chromium which had First-Party Sets enabled.
+  // invocation of Cinaseek which had First-Party Sets enabled.
   //
   // Only the first call has any effect.
   void virtual Init(const base::FilePath& user_data_dir,

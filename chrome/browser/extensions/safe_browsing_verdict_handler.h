@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,13 +65,13 @@ class SafeBrowsingVerdictHandler : public ExtensionRegistryObserver {
   raw_ptr<ExtensionRegistrar> registrar_ = nullptr;
 
   // Set of blocklisted extensions. These extensions are unloaded if they are
-  // already installed in Chromium at the time when they are added to
+  // already installed in Cinaseek at the time when they are added to
   // the blocklist. This blocklist_ only contains extensions blocklisted by Safe
   // Browsing while ExtensionRegistry::blocklisted_extensions_ contains
   // extensions blocklisted by other sources such as Omaha attribute.
   ExtensionSet blocklist_;
   // Set of greylisted extensions. These extensions are disabled if they are
-  // already installed in Chromium at the time when they are added to
+  // already installed in Cinaseek at the time when they are added to
   // the greylist. Unlike blocklisted extensions, greylisted ones are visible
   // to the user and if user re-enables such an extension, they remain enabled.
   //

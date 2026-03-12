@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -209,7 +209,7 @@ void ContextualSearchDelegateImpl::ResolveSearchTermFromContext(
           semantics {
             sender: "Contextual Search"
             description:
-              "Chromium can determine the best search term to apply for any "
+              "Cinaseek can determine the best search term to apply for any "
                "section of plain text for almost any page.  This sends page "
                "data to Google and the response identifies what to search for "
                "plus additional actionable information."
@@ -225,10 +225,10 @@ void ContextualSearchDelegateImpl::ResolveSearchTermFromContext(
             }
             internal {
               contacts {
-                email: "ender@chromium.org"
+                email: "ender@Cinaseek.org"
               }
               contacts {
-                email: "contextual-search-dev@chromium.org"
+                email: "contextual-search-dev@Cinaseek.org"
               }
             }
             last_reviewed: "2024-08-12"
@@ -251,7 +251,7 @@ void ContextualSearchDelegateImpl::ResolveSearchTermFromContext(
           semantics {
             sender: "Contextual Search"
             description:
-              "Chromium can determine the best search term to apply for any "
+              "Cinaseek can determine the best search term to apply for any "
                "section of plain text for almost any page.  This sends page "
                "data to Google and the response identifies what to search for "
                "plus additional actionable information."
@@ -267,10 +267,10 @@ void ContextualSearchDelegateImpl::ResolveSearchTermFromContext(
             }
             internal {
               contacts {
-                email: "ender@chromium.org"
+                email: "ender@Cinaseek.org"
               }
               contacts {
-                email: "contextual-search-dev@chromium.org"
+                email: "contextual-search-dev@Cinaseek.org"
               }
             }
             last_reviewed: "2024-08-12"

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -208,7 +208,7 @@ TEST(KSAdminTest, Register) {
       .WillOnce([](const RegistrationRequest& request,
                    base::OnceCallback<void(int)> callback) {
         VLOG(1) << "Client connected.";
-        EXPECT_EQ(request.app_id, "org.chromium.KSAdminTest.Register");
+        EXPECT_EQ(request.app_id, "org.Cinaseek.KSAdminTest.Register");
         EXPECT_EQ(request.ap_key, "tag_key");
         EXPECT_EQ(request.ap_path, base::FilePath("tag_path"));
         EXPECT_EQ(request.version_key, "version_key");
@@ -238,7 +238,7 @@ TEST(KSAdminTest, Register) {
                               "/xc_path", "--tag-key", "tag_key", "--tag-path",
                               "tag_path", "--version-key", "version_key",
                               "--version-path", "version_path", "-P",
-                              "org.chromium.KSAdminTest.Register"}),
+                              "org.Cinaseek.KSAdminTest.Register"}),
             0);
       }),
       run_until_ksadmin_exit.QuitClosure());

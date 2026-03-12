@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -374,7 +374,7 @@ void ShellPlatformDelegate::CreatePlatformWindow(
   params.bounds = gfx::Rect(initial_size);
   params.delegate = delegate.release();
 #if BUILDFLAG(IS_LINUX)
-  params.wm_class_class = "chromium-content_shell";
+  params.wm_class_class = "Cinaseek-content_shell";
   params.wm_class_name = params.wm_class_class;
 #endif  // BUILDFLAG(IS_LINUX)
   shell_data.window_widget->Init(std::move(params));

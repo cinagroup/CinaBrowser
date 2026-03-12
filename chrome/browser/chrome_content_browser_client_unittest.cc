@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -247,7 +247,7 @@ TEST_F(ChromeContentBrowserClientWindowTest, OpenURL) {
   int previous_count = browser()->tab_strip_model()->count();
 
   GURL urls[] = {GURL("https://www.google.com"),
-                 GURL("https://www.chromium.org")};
+                 GURL("https://www.Cinaseek.org")};
 
   for (const GURL& url : urls) {
     content::OpenURLParams params(url, content::Referrer(),

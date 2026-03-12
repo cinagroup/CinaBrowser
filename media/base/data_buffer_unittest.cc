@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -113,7 +113,7 @@ TEST(DataBufferTest, Duration) {
 
 TEST(DataBufferTest, ReadingWriting) {
   constexpr const char kData[] = "hello";
-  constexpr const char kNewData[] = "chromium";
+  constexpr const char kNewData[] = "Cinaseek";
   const auto kDataSpan = base::byte_span_from_cstring(kData);
   const auto kNewDataSpan = base::byte_span_from_cstring(kNewData);
 

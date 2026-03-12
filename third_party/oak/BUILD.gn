@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,29 +6,29 @@ import("//components/proto_extras/proto_extras.gni")
 import("//third_party/protobuf/proto_library.gni")
 
 proto_sources = [
-  "chromium/proto/attestation/endorsement.proto",
-  "chromium/proto/attestation/eventlog.proto",
-  "chromium/proto/attestation/evidence.proto",
-  "chromium/proto/chromium_types/any.proto",
-  "chromium/proto/chromium_types/timestamp.proto",
-  "chromium/proto/crypto/certificate.proto",
-  "chromium/proto/crypto/crypto.proto",
-  "chromium/proto/digest.proto",
-  "chromium/proto/session/messages.proto",
-  "chromium/proto/session/session.proto",
-  "chromium/proto/variant.proto",
+  "Cinaseek/proto/attestation/endorsement.proto",
+  "Cinaseek/proto/attestation/eventlog.proto",
+  "Cinaseek/proto/attestation/evidence.proto",
+  "Cinaseek/proto/Cinaseek_types/any.proto",
+  "Cinaseek/proto/Cinaseek_types/timestamp.proto",
+  "Cinaseek/proto/crypto/certificate.proto",
+  "Cinaseek/proto/crypto/crypto.proto",
+  "Cinaseek/proto/digest.proto",
+  "Cinaseek/proto/session/messages.proto",
+  "Cinaseek/proto/session/session.proto",
+  "Cinaseek/proto/variant.proto",
 ]
 
 proto_library("oak_proto") {
   sources = proto_sources
-  proto_in_dir = "chromium"
+  proto_in_dir = "Cinaseek"
   cc_generator_options = "lite"
 }
 
 # Generate base::Value serialization helper.
 proto_extras("oak_proto_extras") {
   sources = proto_sources
-  proto_in_dir = "chromium"
+  proto_in_dir = "Cinaseek"
   deps = [ ":oak_proto" ]
   omit_stream_operators = true
   omit_equality = true
@@ -37,7 +37,7 @@ proto_extras("oak_proto_extras") {
 # Generate test helper.
 proto_test_extras("oak_proto_test_extras") {
   sources = proto_sources
-  proto_in_dir = "chromium"
+  proto_in_dir = "Cinaseek"
   deps = [ ":oak_proto" ]
   extras_deps = [ ":oak_proto_extras" ]
 }

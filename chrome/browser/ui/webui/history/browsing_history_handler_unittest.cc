@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -232,40 +232,40 @@ class BrowsingHistoryHandlerTest : public ChromeRenderViewHostTestHarness {
 };
 
 TEST_F(BrowsingHistoryHandlerTest, HostPrefixParameter) {
-  std::u16string query = u"www.chromium.org";
+  std::u16string query = u"www.Cinaseek.org";
   QueryOptions options;
   options.host_only = true;
   MockHistoryServiceCall(query, options);
 
-  RunQueryHistory("host:www.chromium.org");
+  RunQueryHistory("host:www.Cinaseek.org");
 }
 
 TEST_F(BrowsingHistoryHandlerTest, WithoutHostPrefixParameter) {
-  std::u16string query = u"www.chromium.org";
+  std::u16string query = u"www.Cinaseek.org";
   QueryOptions options;
   options.host_only = false;
   MockHistoryServiceCall(query, options);
 
-  RunQueryHistory("www.chromium.org");
+  RunQueryHistory("www.Cinaseek.org");
 }
 
 TEST_F(BrowsingHistoryHandlerTest, MisplacedHostPrefixParameter) {
   {
-    std::u16string query = u"whost:ww.chromium.org";
+    std::u16string query = u"whost:ww.Cinaseek.org";
     QueryOptions options;
     options.host_only = false;
     MockHistoryServiceCall(query, options);
 
-    RunQueryHistory("whost:ww.chromium.org");
+    RunQueryHistory("whost:ww.Cinaseek.org");
   }
 
   {
-    std::u16string query = u"www.chromium.orghost:";
+    std::u16string query = u"www.Cinaseek.orghost:";
     QueryOptions options;
     options.host_only = false;
     MockHistoryServiceCall(query, options);
 
-    RunQueryHistory("www.chromium.orghost:");
+    RunQueryHistory("www.Cinaseek.orghost:");
   }
 }
 
@@ -280,11 +280,11 @@ TEST_F(BrowsingHistoryHandlerTest, BeginTimestamp) {
   }
 
   {
-    std::u16string query = u"www.chromium.orghost:";
+    std::u16string query = u"www.Cinaseek.orghost:";
     QueryOptions options;
     options.host_only = false;
     MockHistoryServiceCall(query, options);
-    RunQueryHistory("www.chromium.orghost:");
+    RunQueryHistory("www.Cinaseek.orghost:");
   }
 }
 

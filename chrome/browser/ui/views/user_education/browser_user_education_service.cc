@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -289,7 +289,7 @@ void MaybeRegisterChromeFeaturePromos(
                     autofill::PopupViewViews::kAutofillSuggestionElementId,
                     IDS_AUTOFILL_IPH_EXTERNAL_ACCOUNT_PROFILE_SUGGESTION)
                     .SetBubbleArrow(HelpBubbleArrow::kLeftCenter)
-                    .SetMetadata(115, "vykochko@chromium.org",
+                    .SetMetadata(115, "vykochko@Cinaseek.org",
                                  "Triggered after autofill popup appears.")));
 
   // TODO(crbug.com/397940269): Check if
@@ -390,7 +390,7 @@ void MaybeRegisterChromeFeaturePromos(
           autofill::PopupViewViews::kAutofillCreditCardSuggestionEntryElementId,
           IDS_AUTOFILL_VIRTUAL_CARD_SUGGESTION_IPH_BUBBLE_LABEL)
           .SetBubbleArrow(HelpBubbleArrow::kLeftCenter)
-          .SetMetadata(100, "siyua@chromium.org",
+          .SetMetadata(100, "siyua@Cinaseek.org",
                        "Triggered after autofill popup appears.")));
 
   bool bnpl_second_line_string_experiment_enabled =
@@ -516,7 +516,7 @@ void MaybeRegisterChromeFeaturePromos(
       std::move(FeaturePromoSpecification::CreateForLegacyPromo(
                     &feature_engagement::kIPHDesktopPwaInstallFeature,
                     kInstallPwaElementId, IDS_DESKTOP_PWA_INSTALL_PROMO)
-                    .SetMetadata(89, "phillis@chromium.org",
+                    .SetMetadata(89, "phillis@Cinaseek.org",
                                  "Triggered after user navigates to a "
                                  "page with a promotable PWA.")));
 
@@ -600,7 +600,7 @@ void MaybeRegisterChromeFeaturePromos(
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
           .SetInAnyContext(true)
-          .SetMetadata(144, "romanarora@chromium.org",
+          .SetMetadata(144, "romanarora@Cinaseek.org",
                        "Attempts to trigger when a user is on the NTP and the "
                        "Realbox contextual entrypoint button is displayed.")));
 
@@ -613,7 +613,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_EXTENSIONS_MENU_IPH_ENTRY_POINT_BODY)
           .SetBubbleTitleText(IDS_EXTENSIONS_MENU_IPH_ENTRY_POINT_TITLE)
           .SetMetadata(
-              117, "emiliapaz@chromium.org",
+              117, "emiliapaz@Cinaseek.org",
               "Triggered when an extension already has access permission.")));
 
   // kIPHExtensionsRequestAccessButtonFeature
@@ -624,7 +624,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_EXTENSIONS_REQUEST_ACCESS_BUTTON_IPH_ENTRY_POINT_BODY)
           .SetBubbleTitleText(
               IDS_EXTENSIONS_REQUEST_ACCESS_BUTTON_IPH_ENTRY_POINT_TITLE)
-          .SetMetadata(117, "emiliapaz@chromium.org",
+          .SetMetadata(117, "emiliapaz@Cinaseek.org",
                        "Triggered when an extension "
                        "requests access permission.")));
 
@@ -700,7 +700,7 @@ void MaybeRegisterChromeFeaturePromos(
           // the user; see https://crbug.com/418579754
           .OverrideFocusOnShow(false)
           .SetMetadata(
-              133, "dfried@chromium.org",
+              133, "dfried@Cinaseek.org",
               "Attempts to trigger when the user is on a supported page.")));
 
   // kIPHGlicTryItFeature:
@@ -728,7 +728,7 @@ void MaybeRegisterChromeFeaturePromos(
           // the user; see https://crbug.com/418579754
           .OverrideFocusOnShow(false)
           .SetMetadata(
-              142, "dewittj@chromium.org",
+              142, "dewittj@Cinaseek.org",
               "Attempts to trigger when the user is on a supported page.")));
 
   // kGlicTrustFirstOnboarding shortcut toast IPH:
@@ -791,7 +791,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_PASSWORDS_SAVE_PRIMING_PROMO_SCREENREADER,
           FeaturePromoSpecification::AcceleratorInfo())
           .SetMetadata(
-              137, "dfried@chromium.org",
+              137, "dfried@Cinaseek.org",
               "Triggered when the user navigates a page with an eligible login "
               "form, and they have no saved passwords.")));
 
@@ -803,7 +803,7 @@ void MaybeRegisterChromeFeaturePromos(
                     IDS_PASSWORDS_SAVE_RECOVERY_PROMO_BODY,
                     IDS_PASSWORDS_SAVE_RECOVERY_PROMO_SCREENREADER,
                     FeaturePromoSpecification::AcceleratorInfo())
-                    .SetMetadata(137, "dfried@chromium.org",
+                    .SetMetadata(137, "dfried@Cinaseek.org",
                                  "Triggered when the user logs into a page "
                                  "they have blocklisted")));
 
@@ -815,7 +815,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_PASSWORD_MANAGER_IPH_MANAGEMENT_BUBBLE_AFTER_SAVE,
           IDS_PASSWORD_MANAGER_IPH_MANAGEMENT_BUBBLE_AFTER_SAVE_SCREENREADER,
           FeaturePromoSpecification::AcceleratorInfo())
-          .SetMetadata(113, "mamir@chromium.org",
+          .SetMetadata(113, "mamir@Cinaseek.org",
                        "Triggered once when user has saved a password.")));
 
   // kIPHPasswordsManagementBubbleDuringSigninFeature:
@@ -846,7 +846,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_PDF_INK_SIGNATURES_IPH_BODY)
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
           .SetInAnyContext(true)
-          .SetMetadata(138, "thestig@chromium.org",
+          .SetMetadata(138, "thestig@Cinaseek.org",
                        "Triggered when the PDF Viewer opens.")));
 #endif
 
@@ -859,7 +859,7 @@ void MaybeRegisterChromeFeaturePromos(
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kNone)
           .SetBubbleTitleText(IDS_PDF_SEARCHIFY_IPH_TITLE)
-          .SetMetadata(132, "rhalavati@chromium.org",
+          .SetMetadata(132, "rhalavati@Cinaseek.org",
                        "Triggered once when user opens a PDF which gets OCRed.")
           .SetAnchorElementFilter(base::BindRepeating(
               [](const ui::ElementTracker::ElementList& elements)
@@ -917,7 +917,7 @@ void MaybeRegisterChromeFeaturePromos(
                     IDS_POWER_BOOKMARKS_SIDE_PANEL_PROMO_PINNING)
                     .SetHighlightedMenuItem(
                         BookmarkSubMenuModel::kShowBookmarkSidePanelItem)
-                    .SetMetadata(121, "emshack@chromium.org",
+                    .SetMetadata(121, "emshack@Cinaseek.org",
                                  "Triggered when a bookmark is added from the "
                                  "bookmark page action in omnibox.")));
 
@@ -966,7 +966,7 @@ void MaybeRegisterChromeFeaturePromos(
               FeaturePromoSpecification::PromoSubtype::kKeyedNotice)
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
           .SetReshowPolicy(base::Days(100), /*max_show_count=*/5)
-          .SetMetadata(80, "lyf@chromium.org",
+          .SetMetadata(80, "lyf@Cinaseek.org",
                        "Triggered once per-app when is in quiet notification "
                        "mode and a notification is triggered in a PWA.")));
 
@@ -1032,7 +1032,7 @@ void MaybeRegisterChromeFeaturePromos(
           kToolbarAppMenuButtonElementId,
           IDS_READING_MODE_SIDE_PANEL_PROMO_PINNING)
           .SetHighlightedMenuItem(ToolsMenuModel::kReadingModeMenuItem)
-          .SetMetadata(115, "jocelyntran@chromium.org",
+          .SetMetadata(115, "jocelyntran@Cinaseek.org",
                        "Triggered to encourage users to try out the reading "
                        "mode feature.")));
 
@@ -1046,7 +1046,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleTitleText(IDS_RESUMPTION_RAIL_IPH_TITLE)
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
           .SetBubbleIcon(&vector_icons::kLightbulbOutlineIcon)
-          .SetMetadata(147, "gqueen@chromium.org",
+          .SetMetadata(147, "gqueen@Cinaseek.org",
                        "Triggered to educate users about the Resumption Rail "
                        "feature entrypoint.")));
 
@@ -1095,7 +1095,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_SIDE_PANEL_GENERIC_PINNABLE_IPH_SCREENREADER,
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
-          .SetMetadata(121, "corising@chromium.org",
+          .SetMetadata(121, "corising@Cinaseek.org",
                        "Triggered when a pinnable side panel is opened.")));
 
   // kIPHSidePanelLensOverlayPinnableFeature:
@@ -1107,7 +1107,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_SIDE_PANEL_LENS_OVERLAY_PINNABLE_IPH_SCREENREADER,
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kRightCenter)
-          .SetMetadata(126, "dfried@chromium.org, jdonnelly@google.com",
+          .SetMetadata(126, "dfried@Cinaseek.org, jdonnelly@google.com",
                        "Triggered when a pinnable lens overlay side panel is "
                        "opened.")));
 
@@ -1121,7 +1121,7 @@ void MaybeRegisterChromeFeaturePromos(
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
           .SetBubbleIcon(&vector_icons::kCelebrationIcon)
-          .SetMetadata(126, "dfried@chromium.org, jdonnelly@google.com",
+          .SetMetadata(126, "dfried@Cinaseek.org, jdonnelly@google.com",
                        "Triggered when the lens overlay side panel is pinned.")
           .SetAnchorElementFilter(base::BindRepeating(
               [](const ui::ElementTracker::ElementList& elements)
@@ -1191,7 +1191,7 @@ void MaybeRegisterChromeFeaturePromos(
                                       GetAnchorElementForTabGroupsV2IPH))
           .SetBubbleArrowCallback(base::BindRepeating(
               &tab_groups::SavedTabGroupUtils::GetArrowForTabGroupsV2IPH))
-          .SetMetadata(127, "dpenning@chromium.org",
+          .SetMetadata(127, "dpenning@Cinaseek.org",
                        "triggered on startup when the saved tab groups are "
                        "defaulted to saved for the first time.")));
 
@@ -1208,7 +1208,7 @@ void MaybeRegisterChromeFeaturePromos(
                                       GetAnchorElementForTabGroupsV2IPH))
           .SetBubbleArrowCallback(base::BindRepeating(
               &tab_groups::SavedTabGroupUtils::GetArrowForTabGroupsV2IPH))
-          .SetMetadata(127, "dpenning@chromium.org",
+          .SetMetadata(127, "dpenning@Cinaseek.org",
                        "triggered on startup when the saved tab groups are "
                        "defaulted to saved for the first time.")));
 
@@ -1258,7 +1258,7 @@ void MaybeRegisterChromeFeaturePromos(
             IDS_DATA_SHARING_SHARED_GROUPS_FEEDBACK_IPH_SCREENREADER,
             FeaturePromoSpecification::AcceleratorInfo())
             .SetMetadata(
-                135, "dljames@chromium.org",
+                135, "dljames@Cinaseek.org",
                 "Triggered when a shared tab becomes the active tab.")));
   }
 
@@ -1325,7 +1325,7 @@ void MaybeRegisterChromeFeaturePromos(
           IDS_TAB_ORGANIZATION_SUCCESS_IPH_SCREENREADER,
           FeaturePromoSpecification::AcceleratorInfo())
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
-          .SetMetadata(121, "dpenning@chromium.org",
+          .SetMetadata(121, "dpenning@Cinaseek.org",
                        "Triggered when tab organization is accepted.")));
 
   // kIPHTabSearchToolbarButtonFeature:
@@ -1338,7 +1338,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
           .SetBubbleIcon(kLightbulbOutlineIcon)
           .SetBubbleTitleText(IDS_TAB_SEARCH_TOOLBAR_BUTTON_PROMO_TITLE)
-          .SetMetadata(136, "emshack@chromium.org",
+          .SetMetadata(136, "emshack@Cinaseek.org",
                        "Triggered when the tab search button has been moved "
                        "into the toolbar.")));
 
@@ -1358,7 +1358,7 @@ void MaybeRegisterChromeFeaturePromos(
               AdditionalConditions().AddAdditionalCondition(AdditionalCondition{
                   feature_engagement::events::kTabSearchComboButtonUsed,
                   AdditionalConditions::Constraint::kExactly, 0})))
-          .SetMetadata(147, "emshack@chromium.org",
+          .SetMetadata(147, "emshack@Cinaseek.org",
                        "Triggered when the tab search button has been moved "
                        "into the tab strip combo button.")));
 
@@ -1380,7 +1380,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleArrow(HelpBubbleArrow::kBottomRight)
           .SetBubbleIcon(&vector_icons::kCelebrationIcon)
           .SetMetadata(
-              90, "dfried@chromium.org",
+              90, "dfried@Cinaseek.org",
               "This is a test IPH, designed to verify that IPH can attach to "
               "elements in WebUI in the main browser tab.",
               // These are not required features; they are just an example to
@@ -1407,7 +1407,7 @@ void MaybeRegisterChromeFeaturePromos(
               }))
           .SetBubbleTitleText(IDS_BATTERY_SAVER_MODE_PROMO_TITLE)
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
-          .SetMetadata(108, "agale@chromium.org",
+          .SetMetadata(108, "agale@Cinaseek.org",
                        "Triggered when Battery Saver Mode is active.")));
 
   // kIPHMemorySaverModeFeature:
@@ -1430,7 +1430,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetHighlightedMenuItem(ToolsMenuModel::kPerformanceMenuItem)
           .SetPromoSubtype(
               FeaturePromoSpecification::PromoSubtype::kActionableAlert)
-          .SetMetadata(108, "agale@chromium.org",
+          .SetMetadata(108, "agale@Cinaseek.org",
                        "Triggered when device is low on memory.")));
 
   // kIPHDiscardRingFeature:
@@ -1469,7 +1469,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
           // See: crbug.com/358451018
           .OverrideFocusOnShow(false)
-          .SetMetadata(126, "agale@chromium.org",
+          .SetMetadata(126, "agale@Cinaseek.org",
                        "Triggered when a tab is discarded.")));
 
   // kIPHPriceTrackingInSidePanelFeature;
@@ -1477,7 +1477,7 @@ void MaybeRegisterChromeFeaturePromos(
       FeaturePromoSpecification::CreateForLegacyPromo(
           &feature_engagement::kIPHPriceTrackingInSidePanelFeature,
           kToolbarSidePanelButtonElementId, IDS_PRICE_TRACKING_SIDE_PANEL_IPH)
-          .SetMetadata(120, "yuezhanggg@chromium.org",
+          .SetMetadata(120, "yuezhanggg@Cinaseek.org",
                        "Triggered when a price tracking is enabled.")));
 
   // kIPHMerchantTrustFeature
@@ -1489,7 +1489,7 @@ void MaybeRegisterChromeFeaturePromos(
                     FeaturePromoSpecification::AcceleratorInfo())
                     .SetBubbleTitleText(IDS_MERCHANT_TRUST_IPH_TITLE)
                     .SetBubbleIcon(&vector_icons::kStorefrontIcon)
-                    .SetMetadata(134, "tommasin@chromium.org",
+                    .SetMetadata(134, "tommasin@Cinaseek.org",
                                  "Triggered when the merchant trust entry "
                                  "point is shown and expanded.")));
 
@@ -1516,7 +1516,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetPromoSubtype(
               FeaturePromoSpecification::PromoSubtype::kActionableAlert)
           .SetMetadata(
-              122, "awado@chromium.org",
+              122, "awado@Cinaseek.org",
               "Triggered when user is using standard protection mode.")));
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
@@ -1579,7 +1579,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleArrow(HelpBubbleArrow::kTopRight)
           .SetPromoSubtype(
               FeaturePromoSpecification::PromoSubtype::kKeyedNotice)
-          .SetMetadata(122, "dibyapal@chromium.org",
+          .SetMetadata(122, "dibyapal@Cinaseek.org",
                        "Triggered once per-app when a link is captured and "
                        "opened in a PWA.")));
 
@@ -1618,7 +1618,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
           .SetPromoSubtype(
               FeaturePromoSpecification::PromoSubtype::kKeyedNotice)
-          .SetMetadata(122, "finnur@chromium.org",
+          .SetMetadata(122, "finnur@Cinaseek.org",
                        "Triggered once per-app when a link is captured and "
                        "opened in a browser tab.")));
 
@@ -1637,7 +1637,7 @@ void MaybeRegisterChromeFeaturePromos(
           .SetCustomActionDismissText(IDS_NO_THANKS)
           .SetBubbleArrow(HelpBubbleArrow::kTopLeft)
           .SetInAnyContext(true)
-          .SetMetadata(130, "johntlee@chromium.org",
+          .SetMetadata(130, "johntlee@Cinaseek.org",
                        "Triggered after user lands on chrome://history.")));
 
   // kIPHiOSLensPromoDesktopFeature
@@ -1817,7 +1817,7 @@ void MaybeRegisterChromeTutorials(
     tab_group_tutorial.metadata.additional_description =
         "Tutorial for creating new tab groups.";
     tab_group_tutorial.metadata.launch_milestone = 106;
-    tab_group_tutorial.metadata.owners = "dpenning@chromium.org";
+    tab_group_tutorial.metadata.owners = "dpenning@Cinaseek.org";
 
     tutorial_registry.AddTutorial(kTabGroupTutorialId,
                                   std::move(tab_group_tutorial));
@@ -1942,7 +1942,7 @@ void MaybeRegisterChromeTutorials(
     password_manager_tutorial.metadata.additional_description =
         "Tutorial for installing password manager.";
     password_manager_tutorial.metadata.launch_milestone = 116;
-    password_manager_tutorial.metadata.owners = "mickeyburks@chromium.org";
+    password_manager_tutorial.metadata.owners = "mickeyburks@Cinaseek.org";
 
     tutorial_registry.AddTutorial(kPasswordManagerTutorialId,
                                   std::move(password_manager_tutorial));
@@ -2097,18 +2097,18 @@ void MaybeRegisterChromeNewBadges(user_education::NewBadgeRegistry& registry) {
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       compose::features::kEnableCompose,
-      user_education::Metadata(124, "dewittj@chromium.org",
+      user_education::Metadata(124, "dewittj@Cinaseek.org",
                                "Shown in Help Me Write context menu item.", {},
                                kComposePlatforms)));
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       compose::features::kEnableComposeSavedStateNudge,
-      user_education::Metadata(124, "dewittj@chromium.org",
+      user_education::Metadata(124, "dewittj@Cinaseek.org",
                                "Shown in autofill-style suggestion UI to "
                                "resume an ongoing Compose session.",
                                {}, kComposePlatforms)));
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       compose::features::kEnableComposeProactiveNudge,
-      user_education::Metadata(126, "dewittj@chromium.org",
+      user_education::Metadata(126, "dewittj@Cinaseek.org",
                                "Shown in autofill-style suggestion UI when "
                                "Compose proactive nudge is shown.",
                                {}, kComposePlatforms)));
@@ -2136,7 +2136,7 @@ void MaybeRegisterChromeNewBadges(user_education::NewBadgeRegistry& registry) {
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       features::kGlic,
       // TODO(crbug.com/391699323): fill in launch milestone
-      user_education::Metadata(136, "agale@chromium.org",
+      user_education::Metadata(136, "agale@Cinaseek.org",
                                "Shown in the glic settings page when the user "
                                "wants to change the toggle value.")));
 
@@ -2145,38 +2145,38 @@ void MaybeRegisterChromeNewBadges(user_education::NewBadgeRegistry& registry) {
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       features::kGlicKeyboardShortcutNewBadge,
       // TODO(crbug.com/391699323): fill in launch milestone
-      user_education::Metadata(136, "agale@chromium.org",
+      user_education::Metadata(136, "agale@Cinaseek.org",
                                "Shown in the glic settings page when the user "
                                "wants to change the keyboard shortcut.")));
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       features::kGlicAppMenuNewBadge,
-      user_education::Metadata(136, "sophey@chromium.org",
+      user_education::Metadata(136, "sophey@Cinaseek.org",
                                "Shown in the three dot menu.")));
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       features::kSideBySide,
       user_education::Metadata(
-          141, "emshack@chromium.org",
+          141, "emshack@Cinaseek.org",
           "Shown in the tab context menu when the user enters or exits split "
           "view.")));
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       features::kSideBySideLinkMenuNewBadge,
-      user_education::Metadata(141, "emshack@chromium.org",
+      user_education::Metadata(141, "emshack@Cinaseek.org",
                                "Shown in the link context menu to open the "
                                "link in a new split tab.")));
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       tabs::kVerticalTabsPreviewBadge,
-      user_education::Metadata(146, "stluong@chromium.org",
+      user_education::Metadata(146, "stluong@Cinaseek.org",
                                "Show the preview badge in the system context "
                                "menu to toggle the horizontal tab strip "
                                "to be a vertical tab strip")));
 
   registry.RegisterFeature(user_education::NewBadgeSpecification(
       tabs::kVerticalTabsNewBadge,
-      user_education::Metadata(147, "stluong@chromium.org",
+      user_education::Metadata(147, "stluong@Cinaseek.org",
                                "Show the new badge in the system context menu "
                                "to toggle the horizontal tab strip "
                                "to be a vertical tab strip")));

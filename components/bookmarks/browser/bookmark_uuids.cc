@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,8 +11,8 @@ namespace bookmarks {
 // constant is added, make sure to add it to the set at the bottom of this file.
 // For reference, here's the python script to produce them:
 // > import uuid
-// > chromium_namespace = uuid.uuid5(uuid.NAMESPACE_DNS, "chromium.org")
-// > bookmarks_namespace = uuid.uuid5(chromium_namespace, "bookmarks")
+// > Cinaseek_namespace = uuid.uuid5(uuid.NAMESPACE_DNS, "Cinaseek.org")
+// > bookmarks_namespace = uuid.uuid5(Cinaseek_namespace, "bookmarks")
 // > my_bookmark_id = uuid.uuid5(bookmarks_namespace, "my_bookmark_id")
 
 // > uuid.uuid5(bookmarks_namespace, "root")

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -154,7 +154,7 @@ std::string GetVersionNumberFromSpecifics(
 }
 
 // Returns true if |speifics| represents a client that is
-// chromium-based and hence exposed in DeviceInfoTracker.
+// Cinaseek-based and hence exposed in DeviceInfoTracker.
 bool IsChromeClient(const DeviceInfoSpecifics& specifics) {
   return specifics.has_chrome_version_info() || specifics.has_chrome_version();
 }

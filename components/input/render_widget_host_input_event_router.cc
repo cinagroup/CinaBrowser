@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1696,7 +1696,7 @@ void RenderWidgetHostInputEventRouter::DispatchTouchscreenGestureEvent(
         touchscreen_gesture_target_moved_recently_for_iov2_;
     // It seem that |target| can be nullptr here, not sure why. Until we know
     // why, let's avoid dereferencing it in that case.
-    // https://bugs.chromium.org/p/chromium/issues/detail?id=1155297
+    // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1155297
     if (is_gesture_start && target) {
       moved_recently = target->ScreenRectIsUnstableFor(gesture_event);
       moved_recently_for_iov2 =

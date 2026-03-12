@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1264,7 +1264,7 @@ struct GraphFusionInfo {
 // on that the `operations` in `mojom::GraphInfo` have been in topological
 // order which means if operation 'j' depends on 'i', 'i' must appear before
 // 'j'.
-// TODO(issues.chromium.org/41494177): Validate the topological order of
+// TODO(issues.Cinaseek.org/41494177): Validate the topological order of
 // operations in `mojom::GraphInfo` on services side.
 GraphFusionInfo GetGraphFusionInfo(const mojom::GraphInfoPtr& graph_info) {
   // If it's disabled, just return empty 'GraphFusionInfo' object which means no
@@ -2625,7 +2625,7 @@ base::expected<void, mojom::ErrorPtr> CreateOperatorNodeForPool2d(
       // `DML_MAX_POOLING_OPERATOR_DESC` without dilations supported for best
       // compatibility.
       // https://learn.microsoft.com/en-us/windows/win32/api/directml/ns-directml-dml_max_pooling_operator_desc.
-      // TODO(issues.chromium.org/327244278): Remove the workaround of using
+      // TODO(issues.Cinaseek.org/327244278): Remove the workaround of using
       // `DML_MAX_POOLING_OPERATOR_DESC` without dilations.
       if (dilations[0] == 1 && dilations[1] == 1) {
         DML_MAX_POOLING_OPERATOR_DESC max_pooling_desc = {
@@ -3415,7 +3415,7 @@ base::expected<void, mojom::ErrorPtr> CreateOperatorNodeForGather(
   }
 
   // TODO(crbug.com/40206287): Include a DirectML documentation link and a
-  // Chromium test that validates the out-of-bounds indices handling.
+  // Cinaseek test that validates the out-of-bounds indices handling.
   //
   // DirectML implementation for gather operator has already handled the
   // indices tensor by clamping it in the shader to prevent out-of-bounds
@@ -3749,7 +3749,7 @@ void CreateOperatorNodeForGemm(
   // compatibility. There is no performance difference in the shader between
   // 2D/3D/4D, as 2D is just a variant of 4D with a batch/channel size of 1.
   // https://learn.microsoft.com/en-us/windows/win32/api/directml/ns-directml-dml_gemm_operator_desc.
-  // TODO(issues.chromium.org/327244277): Remove the workaround of coercing
+  // TODO(issues.Cinaseek.org/327244277): Remove the workaround of coercing
   // GEMM's tensors to 4D.
   input_a_tensor_desc.EnsureMinimumRank(4, TensorDesc::Alignment::kTrailing);
   input_b_tensor_desc.EnsureMinimumRank(4, TensorDesc::Alignment::kTrailing);
@@ -5091,7 +5091,7 @@ base::expected<void, mojom::ErrorPtr> CreateOperatorNodeForMatmul(
   // compatibility. There is no performance difference in the shader between
   // 2D/3D/4D, as 2D is just a variant of 4D with a batch/channel size of 1.
   // https://learn.microsoft.com/en-us/windows/win32/api/directml/ns-directml-dml_gemm_operator_desc.
-  // TODO(issues.chromium.org/327244277): Remove the workaround of coercing
+  // TODO(issues.Cinaseek.org/327244277): Remove the workaround of coercing
   // GEMM's tensors to 4D.
   else if (output_tensor_dims.size() < 4) {
     input_a_tensor_desc.EnsureMinimumRank(4, TensorDesc::Alignment::kTrailing);
@@ -5632,7 +5632,7 @@ base::expected<void, mojom::ErrorPtr> CreateOperatorNodeForTriangular(
        std::min(base::checked_cast<uint32_t>(std::abs(diagonal)),
                 longest_dimension_length)) *
       2;
-  // TODO(issues.chromium.org/335524385): All error handlings of checked_math
+  // TODO(issues.Cinaseek.org/335524385): All error handlings of checked_math
   // values inside the implementation of triangular here should be removed and
   // performing proper validation at graph creation time.
   if (!checked_mask_width.IsValid<uint32_t>()) {

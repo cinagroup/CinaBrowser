@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -176,7 +176,7 @@ TEST(ContentUriUtilsTest, GetOrCreateByDisplayName) {
   FilePath child = ContentUriGetChildDocumentOrQuery(
       parent, "child1.txt", "text/plain", is_directory, create);
   EXPECT_EQ(child.value(),
-            "content://org.chromium.native_test.docprov/tree/" +
+            "content://org.Cinaseek.native_test.docprov/tree/" +
                 temp_dir.GetPath().BaseName().value() + "%2Fdir/document/" +
                 temp_dir.GetPath().BaseName().value() + "%2Fdir%2Fchild1.txt");
   EXPECT_FALSE(ContentUriIsCreateChildDocumentQuery(child));
@@ -194,7 +194,7 @@ TEST(ContentUriUtilsTest, GetOrCreateByDisplayName) {
   FilePath query = ContentUriGetChildDocumentOrQuery(
       parent, "child2.txt", "text/plain", is_directory, create);
   EXPECT_EQ(query.value(),
-            "content://org.chromium.native_test.docprov/create-child-document/"
+            "content://org.Cinaseek.native_test.docprov/create-child-document/"
             "tree/" +
                 temp_dir.GetPath().BaseName().value() + "%2Fdir/document/" +
                 temp_dir.GetPath().BaseName().value() +
@@ -213,7 +213,7 @@ TEST(ContentUriUtilsTest, GetOrCreateByDisplayName) {
   create = true;
   child = ContentUriGetDocumentFromQuery(query, create);
   EXPECT_EQ(child.value(),
-            "content://org.chromium.native_test.docprov/tree/" +
+            "content://org.Cinaseek.native_test.docprov/tree/" +
                 temp_dir.GetPath().BaseName().value() + "%2Fdir/document/" +
                 temp_dir.GetPath().BaseName().value() + "%2Fdir%2Fchild2.txt");
   EXPECT_FALSE(ContentUriIsCreateChildDocumentQuery(child));

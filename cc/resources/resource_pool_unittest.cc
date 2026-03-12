@@ -1,10 +1,10 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "cc/resources/resource_pool.h"
 
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 #include <stddef.h>
 
 #include <array>

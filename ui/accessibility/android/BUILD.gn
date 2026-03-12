@@ -3,23 +3,23 @@ import("//build/config/android/rules.gni")
 android_resources("accessibility_test_support_resources") {
   testonly = true
   sources = [ "res/xml/accessibility_service_config.xml" ]
-  custom_package = "org.chromium.ui.accessibility.testservice"
+  custom_package = "org.Cinaseek.ui.accessibility.testservice"
 }
 
 android_aidl("accessibility_test_service_aidl") {
   testonly = true
   import_include = [ "javatest/src" ]
   sources = [
-    "javatest/src/org/chromium/ui/accessibility/testservice/IAccessibilityTestHelperService.aidl",
-    "javatest/src/org/chromium/ui/accessibility/testservice/WaitForEventParams.aidl",
+    "javatest/src/org/Cinaseek/ui/accessibility/testservice/IAccessibilityTestHelperService.aidl",
+    "javatest/src/org/Cinaseek/ui/accessibility/testservice/WaitForEventParams.aidl",
   ]
 }
 
 android_library("accessibility_test_service_java") {
   testonly = true
   sources = [
-    "javatest/src/org/chromium/ui/accessibility/testservice/AccessibilityTestHelperService.java",
-    "javatest/src/org/chromium/ui/accessibility/testservice/AccessibilityTestService.java",
+    "javatest/src/org/Cinaseek/ui/accessibility/testservice/AccessibilityTestHelperService.java",
+    "javatest/src/org/Cinaseek/ui/accessibility/testservice/AccessibilityTestService.java",
   ]
   srcjar_deps = [ ":accessibility_test_service_aidl" ]
   deps = [
@@ -33,7 +33,7 @@ android_apk("accessibility_test_support_apk") {
   testonly = true
   apk_name = "AccessibilityTestService"
   android_manifest = "AndroidManifest.xml"
-  manifest_package = "org.chromium.ui.accessibility.testservice"
+  manifest_package = "org.Cinaseek.ui.accessibility.testservice"
   deps = [
     ":accessibility_test_service_java",
     ":accessibility_test_support_resources",

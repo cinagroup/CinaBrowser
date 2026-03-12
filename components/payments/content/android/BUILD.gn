@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -68,21 +68,21 @@ static_library("android") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/payments/CSPCheckerBridge.java",
-    "java/src/org/chromium/components/payments/ErrorMessageUtil.java",
-    "java/src/org/chromium/components/payments/HasEnrolledInstrumentQuery.java",
-    "java/src/org/chromium/components/payments/JniPaymentApp.java",
-    "java/src/org/chromium/components/payments/JourneyLogger.java",
-    "java/src/org/chromium/components/payments/OriginSecurityChecker.java",
-    "java/src/org/chromium/components/payments/PaymentAppServiceBridge.java",
-    "java/src/org/chromium/components/payments/PaymentHandlerNavigationThrottle.java",
-    "java/src/org/chromium/components/payments/PaymentManifestDownloader.java",
-    "java/src/org/chromium/components/payments/PaymentManifestParser.java",
-    "java/src/org/chromium/components/payments/PaymentRequestWebContentsData.java",
-    "java/src/org/chromium/components/payments/PaymentValidator.java",
-    "java/src/org/chromium/components/payments/SslValidityChecker.java",
-    "java/src/org/chromium/components/payments/UrlUtil.java",
-    "java/src/org/chromium/components/payments/WebPaymentsWebDataService.java",
+    "java/src/org/Cinaseek/components/payments/CSPCheckerBridge.java",
+    "java/src/org/Cinaseek/components/payments/ErrorMessageUtil.java",
+    "java/src/org/Cinaseek/components/payments/HasEnrolledInstrumentQuery.java",
+    "java/src/org/Cinaseek/components/payments/JniPaymentApp.java",
+    "java/src/org/Cinaseek/components/payments/JourneyLogger.java",
+    "java/src/org/Cinaseek/components/payments/OriginSecurityChecker.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppServiceBridge.java",
+    "java/src/org/Cinaseek/components/payments/PaymentHandlerNavigationThrottle.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestDownloader.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestParser.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestWebContentsData.java",
+    "java/src/org/Cinaseek/components/payments/PaymentValidator.java",
+    "java/src/org/Cinaseek/components/payments/SslValidityChecker.java",
+    "java/src/org/Cinaseek/components/payments/UrlUtil.java",
+    "java/src/org/Cinaseek/components/payments/WebPaymentsWebDataService.java",
   ]
 }
 
@@ -119,23 +119,23 @@ android_resources("java_resources") {
 # Minimal target to depend on PaymentDetailsUpdateService. This should be kept
 # as small as possible, as it will always be included in chrome's base module.
 generate_jni("service_jni") {
-  sources = [ "java/src/org/chromium/components/payments/PaymentRequestUpdateEventListener.java" ]
+  sources = [ "java/src/org/Cinaseek/components/payments/PaymentRequestUpdateEventListener.java" ]
 }
 
 android_library("service_java") {
   sources = [
-    "java/src/org/chromium/components/payments/Address.java",
-    "java/src/org/chromium/components/payments/PackageManagerDelegate.java",
-    "java/src/org/chromium/components/payments/PayerData.java",
-    "java/src/org/chromium/components/payments/PaymentAddressTypeConverter.java",
-    "java/src/org/chromium/components/payments/PaymentDetailsUpdateConnection.java",
-    "java/src/org/chromium/components/payments/PaymentDetailsUpdateService.java",
-    "java/src/org/chromium/components/payments/PaymentDetailsUpdateServiceHelper.java",
-    "java/src/org/chromium/components/payments/PaymentRequestUpdateEventListener.java",
-    "java/src/org/chromium/components/payments/intent/WebPaymentIntentHelper.java",
-    "java/src/org/chromium/components/payments/intent/WebPaymentIntentHelperType.java",
-    "java/src/org/chromium/components/payments/service/Reconnectable.java",
-    "java/src/org/chromium/components/payments/service/ServiceReconnector.java",
+    "java/src/org/Cinaseek/components/payments/Address.java",
+    "java/src/org/Cinaseek/components/payments/PackageManagerDelegate.java",
+    "java/src/org/Cinaseek/components/payments/PayerData.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAddressTypeConverter.java",
+    "java/src/org/Cinaseek/components/payments/PaymentDetailsUpdateConnection.java",
+    "java/src/org/Cinaseek/components/payments/PaymentDetailsUpdateService.java",
+    "java/src/org/Cinaseek/components/payments/PaymentDetailsUpdateServiceHelper.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestUpdateEventListener.java",
+    "java/src/org/Cinaseek/components/payments/intent/WebPaymentIntentHelper.java",
+    "java/src/org/Cinaseek/components/payments/intent/WebPaymentIntentHelperType.java",
+    "java/src/org/Cinaseek/components/payments/service/Reconnectable.java",
+    "java/src/org/Cinaseek/components/payments/service/ServiceReconnector.java",
   ]
   deps = [
     ":feature_list_java",
@@ -154,14 +154,14 @@ android_library("service_java") {
 
 generate_jni("feature_list_jni") {
   sources =
-      [ "java/src/org/chromium/components/payments/PaymentFeatureMap.java" ]
+      [ "java/src/org/Cinaseek/components/payments/PaymentFeatureMap.java" ]
 }
 
 android_library("feature_list_java") {
   srcjar_deps = [ ":feature_list_jni" ]
   sources = [
-    "java/src/org/chromium/components/payments/PaymentFeatureList.java",
-    "java/src/org/chromium/components/payments/PaymentFeatureMap.java",
+    "java/src/org/Cinaseek/components/payments/PaymentFeatureList.java",
+    "java/src/org/Cinaseek/components/payments/PaymentFeatureMap.java",
   ]
   deps = [
     "//base:base_java",
@@ -173,42 +173,42 @@ android_library("feature_list_java") {
 
 android_library("full_java") {
   sources = [
-    "java/src/org/chromium/components/payments/AndroidPaymentApp.java",
-    "java/src/org/chromium/components/payments/AndroidPaymentAppFactory.java",
-    "java/src/org/chromium/components/payments/AndroidPaymentAppFinder.java",
-    "java/src/org/chromium/components/payments/BrowserGlobalPaymentFlowManager.java",
-    "java/src/org/chromium/components/payments/BrowserPaymentRequest.java",
-    "java/src/org/chromium/components/payments/CSPCheckerBridge.java",
-    "java/src/org/chromium/components/payments/ErrorMessageUtil.java",
-    "java/src/org/chromium/components/payments/HasEnrolledInstrumentQuery.java",
-    "java/src/org/chromium/components/payments/InvalidPaymentRequest.java",
-    "java/src/org/chromium/components/payments/JniPaymentApp.java",
-    "java/src/org/chromium/components/payments/JourneyLogger.java",
-    "java/src/org/chromium/components/payments/MojoPaymentRequestGateKeeper.java",
-    "java/src/org/chromium/components/payments/OriginSecurityChecker.java",
-    "java/src/org/chromium/components/payments/PaymentAppServiceBridge.java",
-    "java/src/org/chromium/components/payments/PaymentDetailsConverter.java",
-    "java/src/org/chromium/components/payments/PaymentHandlerNavigationThrottle.java",
-    "java/src/org/chromium/components/payments/PaymentManifestDownloader.java",
-    "java/src/org/chromium/components/payments/PaymentManifestParser.java",
-    "java/src/org/chromium/components/payments/PaymentManifestResolver.java",
-    "java/src/org/chromium/components/payments/PaymentManifestVerifier.java",
-    "java/src/org/chromium/components/payments/PaymentNotShownError.java",
-    "java/src/org/chromium/components/payments/PaymentOptionsUtils.java",
-    "java/src/org/chromium/components/payments/PaymentRequestService.java",
-    "java/src/org/chromium/components/payments/PaymentRequestServiceUtil.java",
-    "java/src/org/chromium/components/payments/PaymentRequestWebContentsData.java",
-    "java/src/org/chromium/components/payments/PaymentResponseHelper.java",
-    "java/src/org/chromium/components/payments/PaymentResponseHelperInterface.java",
-    "java/src/org/chromium/components/payments/PaymentUiServiceTestInterface.java",
-    "java/src/org/chromium/components/payments/PaymentValidator.java",
-    "java/src/org/chromium/components/payments/SslValidityChecker.java",
-    "java/src/org/chromium/components/payments/SupportedDelegations.java",
-    "java/src/org/chromium/components/payments/UrlUtil.java",
-    "java/src/org/chromium/components/payments/WebAppManifestSection.java",
-    "java/src/org/chromium/components/payments/WebPaymentsWebDataService.java",
-    "java/src/org/chromium/components/payments/intent/IsReadyToPayServiceHelper.java",
-    "java/src/org/chromium/components/payments/intent/WebPaymentIntentHelperTypeConverter.java",
+    "java/src/org/Cinaseek/components/payments/AndroidPaymentApp.java",
+    "java/src/org/Cinaseek/components/payments/AndroidPaymentAppFactory.java",
+    "java/src/org/Cinaseek/components/payments/AndroidPaymentAppFinder.java",
+    "java/src/org/Cinaseek/components/payments/BrowserGlobalPaymentFlowManager.java",
+    "java/src/org/Cinaseek/components/payments/BrowserPaymentRequest.java",
+    "java/src/org/Cinaseek/components/payments/CSPCheckerBridge.java",
+    "java/src/org/Cinaseek/components/payments/ErrorMessageUtil.java",
+    "java/src/org/Cinaseek/components/payments/HasEnrolledInstrumentQuery.java",
+    "java/src/org/Cinaseek/components/payments/InvalidPaymentRequest.java",
+    "java/src/org/Cinaseek/components/payments/JniPaymentApp.java",
+    "java/src/org/Cinaseek/components/payments/JourneyLogger.java",
+    "java/src/org/Cinaseek/components/payments/MojoPaymentRequestGateKeeper.java",
+    "java/src/org/Cinaseek/components/payments/OriginSecurityChecker.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppServiceBridge.java",
+    "java/src/org/Cinaseek/components/payments/PaymentDetailsConverter.java",
+    "java/src/org/Cinaseek/components/payments/PaymentHandlerNavigationThrottle.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestDownloader.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestParser.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestResolver.java",
+    "java/src/org/Cinaseek/components/payments/PaymentManifestVerifier.java",
+    "java/src/org/Cinaseek/components/payments/PaymentNotShownError.java",
+    "java/src/org/Cinaseek/components/payments/PaymentOptionsUtils.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestService.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestServiceUtil.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestWebContentsData.java",
+    "java/src/org/Cinaseek/components/payments/PaymentResponseHelper.java",
+    "java/src/org/Cinaseek/components/payments/PaymentResponseHelperInterface.java",
+    "java/src/org/Cinaseek/components/payments/PaymentUiServiceTestInterface.java",
+    "java/src/org/Cinaseek/components/payments/PaymentValidator.java",
+    "java/src/org/Cinaseek/components/payments/SslValidityChecker.java",
+    "java/src/org/Cinaseek/components/payments/SupportedDelegations.java",
+    "java/src/org/Cinaseek/components/payments/UrlUtil.java",
+    "java/src/org/Cinaseek/components/payments/WebAppManifestSection.java",
+    "java/src/org/Cinaseek/components/payments/WebPaymentsWebDataService.java",
+    "java/src/org/Cinaseek/components/payments/intent/IsReadyToPayServiceHelper.java",
+    "java/src/org/Cinaseek/components/payments/intent/WebPaymentIntentHelperTypeConverter.java",
   ]
   deps = [
     ":feature_list_java",
@@ -244,26 +244,26 @@ android_library("full_java") {
 # Minimal target that only includes what downstream code depends on.
 generate_jni("minimal_jni") {
   sources = [
-    "java/src/org/chromium/components/payments/PaymentHandlerHost.java",
-    "java/src/org/chromium/components/payments/PaymentRequestSpec.java",
+    "java/src/org/Cinaseek/components/payments/PaymentHandlerHost.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestSpec.java",
   ]
 }
 
 android_library("minimal_java") {
   sources = [
-    "java/src/org/chromium/components/payments/AndroidIntentLauncher.java",
-    "java/src/org/chromium/components/payments/CSPChecker.java",
-    "java/src/org/chromium/components/payments/DialogController.java",
-    "java/src/org/chromium/components/payments/MojoStructCollection.java",
-    "java/src/org/chromium/components/payments/PaymentApp.java",
-    "java/src/org/chromium/components/payments/PaymentAppFactoryDelegate.java",
-    "java/src/org/chromium/components/payments/PaymentAppFactoryInterface.java",
-    "java/src/org/chromium/components/payments/PaymentAppFactoryParams.java",
-    "java/src/org/chromium/components/payments/PaymentAppService.java",
-    "java/src/org/chromium/components/payments/PaymentAppServiceDelegate.java",
-    "java/src/org/chromium/components/payments/PaymentHandlerHost.java",
-    "java/src/org/chromium/components/payments/PaymentRequestParams.java",
-    "java/src/org/chromium/components/payments/PaymentRequestSpec.java",
+    "java/src/org/Cinaseek/components/payments/AndroidIntentLauncher.java",
+    "java/src/org/Cinaseek/components/payments/CSPChecker.java",
+    "java/src/org/Cinaseek/components/payments/DialogController.java",
+    "java/src/org/Cinaseek/components/payments/MojoStructCollection.java",
+    "java/src/org/Cinaseek/components/payments/PaymentApp.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppFactoryDelegate.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppFactoryInterface.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppFactoryParams.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppService.java",
+    "java/src/org/Cinaseek/components/payments/PaymentAppServiceDelegate.java",
+    "java/src/org/Cinaseek/components/payments/PaymentHandlerHost.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestParams.java",
+    "java/src/org/Cinaseek/components/payments/PaymentRequestSpec.java",
   ]
   deps = [
     ":service_java",
@@ -287,7 +287,7 @@ android_library("minimal_java") {
     ":payment_app_type_generated_enum",
     ":spc_transaction_mode_generated_enum",
   ]
-  resources_package = "org.chromium.components.payments"
+  resources_package = "org.Cinaseek.components.payments"
 }
 
 java_group("java") {
@@ -299,10 +299,10 @@ java_group("java") {
 }
 
 android_aidl("payment_details_update_service_aidl") {
-  interface_file = "java/src/org/chromium/components/payments/payment_details_update_service.aidl"
+  interface_file = "java/src/org/Cinaseek/components/payments/payment_details_update_service.aidl"
   sources = [
-    "java/src/org/chromium/components/payments/IPaymentDetailsUpdateService.aidl",
-    "java/src/org/chromium/components/payments/IPaymentDetailsUpdateServiceCallback.aidl",
+    "java/src/org/Cinaseek/components/payments/IPaymentDetailsUpdateService.aidl",
+    "java/src/org/Cinaseek/components/payments/IPaymentDetailsUpdateServiceCallback.aidl",
   ]
 }
 
@@ -342,8 +342,8 @@ java_cpp_enum("spc_transaction_mode_generated_enum") {
 
 robolectric_library("junit_test_support") {
   sources = [
-    "junit/src/org/chromium/components/payments/test_support/DefaultPaymentFeatureConfig.java",
-    "junit/src/org/chromium/components/payments/test_support/PaymentRequestServiceBuilder.java",
+    "junit/src/org/Cinaseek/components/payments/test_support/DefaultPaymentFeatureConfig.java",
+    "junit/src/org/Cinaseek/components/payments/test_support/PaymentRequestServiceBuilder.java",
   ]
   deps = [
     ":java",
@@ -364,13 +364,13 @@ robolectric_library("junit_test_support") {
 
 robolectric_library("junit") {
   sources = [
-    "junit/src/org/chromium/components/payments/BrowserGlobalPaymentFlowManagerUnitTest.java",
-    "junit/src/org/chromium/components/payments/DeduplicatePaymentAppsUnitTest.java",
-    "junit/src/org/chromium/components/payments/PaymentDetailsUpdateConnectionTest.java",
-    "junit/src/org/chromium/components/payments/PaymentManifestResolverTest.java",
-    "junit/src/org/chromium/components/payments/PaymentRequestServiceTest.java",
-    "junit/src/org/chromium/components/payments/intent/WebPaymentIntentHelperTypeConverterTest.java",
-    "junit/src/org/chromium/components/payments/service/ServiceReconnectorUnitTest.java",
+    "junit/src/org/Cinaseek/components/payments/BrowserGlobalPaymentFlowManagerUnitTest.java",
+    "junit/src/org/Cinaseek/components/payments/DeduplicatePaymentAppsUnitTest.java",
+    "junit/src/org/Cinaseek/components/payments/PaymentDetailsUpdateConnectionTest.java",
+    "junit/src/org/Cinaseek/components/payments/PaymentManifestResolverTest.java",
+    "junit/src/org/Cinaseek/components/payments/PaymentRequestServiceTest.java",
+    "junit/src/org/Cinaseek/components/payments/intent/WebPaymentIntentHelperTypeConverterTest.java",
+    "junit/src/org/Cinaseek/components/payments/service/ServiceReconnectorUnitTest.java",
   ]
   deps = [
     ":java",
@@ -399,7 +399,7 @@ robolectric_library("junit") {
 
 android_library("unit_device_javatests") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/components/payments/AndroidPaymentAppUnitTest.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/payments/AndroidPaymentAppUnitTest.java" ]
   deps = [
     ":java",
     ":service_java",
@@ -423,12 +423,12 @@ java_group("javatests") {
 android_library("test_support_java") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/components/payments/MockAndroidIntentLauncher.java",
-    "javatests/src/org/chromium/components/payments/MockPackageManagerDelegate.java",
-    "javatests/src/org/chromium/components/payments/MockPaymentApp.java",
-    "javatests/src/org/chromium/components/payments/MockPaymentAppInstaller.java",
-    "javatests/src/org/chromium/components/payments/MockPaymentManifestDownloader.java",
-    "javatests/src/org/chromium/components/payments/PaymentRequestTestWebPageContents.java",
+    "javatests/src/org/Cinaseek/components/payments/MockAndroidIntentLauncher.java",
+    "javatests/src/org/Cinaseek/components/payments/MockPackageManagerDelegate.java",
+    "javatests/src/org/Cinaseek/components/payments/MockPaymentApp.java",
+    "javatests/src/org/Cinaseek/components/payments/MockPaymentAppInstaller.java",
+    "javatests/src/org/Cinaseek/components/payments/MockPaymentManifestDownloader.java",
+    "javatests/src/org/Cinaseek/components/payments/PaymentRequestTestWebPageContents.java",
   ]
   deps = [
     ":full_java",

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 import("//tools/json_to_struct/json_to_struct.gni")
@@ -31,7 +31,7 @@ action("field_trial_testing_config_action") {
     "--output=$out_name",
   ]
 
-  # At build-time, Android Chrome and WebView use the platform "android", but
+  # At build-time, Android Cinaseek and WebView use the platform "android", but
   # at run-time, variations has separate platforms "android" and
   # "android_webview" . So if building "android", also include WebView.
   if (platform == "android") {

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/renderer_host/JavascriptOptimizerFeatureTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/renderer_host/JavascriptOptimizerFeatureTest.java" ]
   deps = [
     ":test_support_java",
     "//base:base_java_test_support",
@@ -36,7 +36,7 @@ android_library("javatests") {
 
 android_library("test_support_java") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/renderer_host/JavascriptOptimizerFeatureTestHelperAndroid.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/renderer_host/JavascriptOptimizerFeatureTestHelperAndroid.java" ]
   deps = [
     "//content/public/android:content_java",
     "//third_party/jni_zero:jni_zero_java",
@@ -46,7 +46,7 @@ android_library("test_support_java") {
 
 generate_jni("jni_headers") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/renderer_host/JavascriptOptimizerFeatureTestHelperAndroid.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/renderer_host/JavascriptOptimizerFeatureTestHelperAndroid.java" ]
 }
 
 static_library("test_support") {

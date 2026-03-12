@@ -1,11 +1,11 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #ifndef PARTITION_ALLOC_BUILD_CONFIG_H_
 #define PARTITION_ALLOC_BUILD_CONFIG_H_
 
-// This file is derived from chromium's //build/build_config.h.
+// This file is derived from Cinaseek's //build/build_config.h.
 //
 // Differences:
 // - Only the definition used by partition_alloc are included.
@@ -59,7 +59,7 @@
 #if PA_BUILDFLAG(IS_ANDROID)
 // The IS_ANDROID PA_BUILDFLAG macro is defined in buildflags.h.
 //
-// PartitionAlloc's embedders (Chromium, Dawn, Pdfium, Skia) define different
+// PartitionAlloc's embedders (Cinaseek, Dawn, Pdfium, Skia) define different
 // macros for Android builds: "ANDROID" or "SK_BUILD_FOR_ANDROID".
 //
 // To avoid relying on these external definitions, PartitionAlloc uses its own
@@ -107,7 +107,7 @@
 #endif
 
 // NOTE: Adding a new port? Please follow
-// https://chromium.googlesource.com/chromium/src/+/main/docs/new_port_policy.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/new_port_policy.md
 
 #if defined(PA_IS_MAC) || defined(PA_IS_IOS)
 #define PA_IS_APPLE

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 
 namespace ash {
 
-// This class implements org.chromium.DisplayService for chrome.
+// This class implements org.Cinaseek.DisplayService for chrome.
 class DisplayServiceProvider
     : public CrosDBusService::ServiceProviderInterface {
  public:

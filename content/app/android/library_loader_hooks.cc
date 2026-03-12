@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ bool LibraryLoaded(base::android::LibraryProcessType library_process_type) {
                        false);   // Tick count
   if (logging::GetMinLogLevel() != 0 || logging::GetVlogVerbosity() != 0 ||
       DCHECK_IS_ON()) {
-    VLOG(0) << "Chromium logging enabled: level = " << logging::GetMinLogLevel()
+    VLOG(0) << "Cinaseek logging enabled: level = " << logging::GetMinLogLevel()
             << ", default verbosity = " << logging::GetVlogVerbosity();
   }
 

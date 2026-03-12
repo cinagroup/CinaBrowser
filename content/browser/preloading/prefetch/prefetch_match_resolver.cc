@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -462,7 +462,7 @@ void PrefetchMatchResolver::StartWaitFor(const PrefetchKey& prefetch_key,
   CHECK(!candidate_data->timeout_timer);
 
   // TODO(crbug.com/356552413): Merge
-  // https://chromium-review.googlesource.com/c/chromium/src/+/5668924 and
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5668924 and
   // write tests.
   base::TimeDelta timeout = PrefetchBlockUntilHeadTimeout(
       prefetch_container.request().prefetch_type(),

@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/android-10-arm64-rel/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-10-arm64-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "download_xr_test_apks",
                   "mb"
@@ -34,7 +34,7 @@
                   "android",
                   "enable_wpr_tests"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -44,13 +44,13 @@
         {
           "bucket": "ci",
           "builder": "android-10-arm64-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-10-arm64-rel",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         }
       ],
       "retry_failed_shards": true,
@@ -66,7 +66,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -76,11 +76,11 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.android",
+  "builder_group": "Cinaseek.android",
   "gardener_rotations": [
     "android"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
     "android"
   ]

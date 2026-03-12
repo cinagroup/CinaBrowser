@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ void SetModalPresentationStyle(UIViewController* view_controller) {
 }  // namespace
 
 @implementation BringAndroidTabsPromptCoordinator {
-  // Mediator that updates Chromium model objects; serves as a delegate to the
+  // Mediator that updates Cinaseek model objects; serves as a delegate to the
   // view controller.
   BringAndroidTabsPromptMediator* _mediator;
 }

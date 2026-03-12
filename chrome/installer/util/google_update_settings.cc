@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -519,7 +519,7 @@ bool GoogleUpdateSettings::AreAutoupdatesEnabled() {
       GetAppUpdatePolicy(install_static::GetAppGuid(), nullptr);
   return app_policy == AUTOMATIC_UPDATES || app_policy == AUTO_UPDATES_ONLY;
 #else   // BUILDFLAG(GOOGLE_CHROME_BRANDING)
-  // Chromium does not auto update.
+  // Cinaseek does not auto update.
   return false;
 #endif  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 }

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -41,7 +41,7 @@ config("extra_flags") {
 config("stdver") {
   if (is_win) {
     cflags_cc = [
-      # We want to use a uniform C++ version across all of chromium, but
+      # We want to use a uniform C++ version across all of Cinaseek, but
       # upstream libc++ requires C++23 so we have to make an exception here.
       # No other target should override the default -std= flag.
       "-std:c++23preview",
@@ -488,7 +488,7 @@ target(libcxx_target_type, "libc++") {
     visibility +=
         [ "//remoting/host/linux:remoting_me2me_host_copy_user_session" ]
   }
-  if (build_with_chromium && is_win && is_component_build) {
+  if (build_with_Cinaseek && is_win && is_component_build) {
     # PartitionAlloc uses no_default_deps=true when is_win && is_component_build
     # but it depends on libc++. So need to add an explicit dependency on
     # libc++.
@@ -597,7 +597,7 @@ target(libcxx_target_type, "libc++") {
   }
 
   # Enable exceptions and rtti for libc++, but disable them in modules targets
-  # so that modules can be used for other chromium targets which don't enable
+  # so that modules can be used for other Cinaseek targets which don't enable
   # exception and rtti.
   configs -= configs_to_remove + [
                "//build/config/compiler:no_exceptions",
@@ -653,9 +653,9 @@ target(libcxx_target_type, "libc++") {
     } else {
       # This resets the visibility to default only for the various
       # flavors of operator new and operator delete.  These symbols
-      # are weak and get overriden by Chromium-provided ones, but if
+      # are weak and get overriden by Cinaseek-provided ones, but if
       # these symbols had hidden visibility, this would make the
-      # Chromium symbols hidden too because elf visibility rules
+      # Cinaseek symbols hidden too because elf visibility rules
       # require that linkers use the least visible form when merging.
       # We want operator new to be public, so that our allocator is
       # able to intercept allocations from other shared libraries.

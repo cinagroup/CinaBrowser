@@ -1,11 +1,11 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 # Build file for QUICHE, <https://quiche.googlesource.com/quiche/>
 #
 # The following build targets are defined:
-#   - quiche -- the part of QUICHE that is shipped within Chromium proper.
+#   - quiche -- the part of QUICHE that is shipped within Cinaseek proper.
 #   - *_tool_support -- support code used in CLI tools and unit tests.
 #   - *_test_support -- support code only used in unit tests.
 #   - quiche_tests -- all of the QUICHE test targets.

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ extern "C" {
 // happens. For instance glibc 2.33 introduced mallinfo2(), which we don't
 // support... yet?), it MUST be added to build/linux/chrome.map.
 //
-// Otherwise the new symbol is not exported from Chromium's main binary, which
+// Otherwise the new symbol is not exported from Cinaseek's main binary, which
 // is necessary to override libc's weak symbol, which in turn is necessary to
 // intercept calls made by dynamic libraries. See crbug.com/1292206 for such
 // an example.

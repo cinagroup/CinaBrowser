@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,13 +115,13 @@ TEST_F(URLOpenerTest, HandleOpenURL) {
   NSDictionary* urlsToTest = @{
     [NSNull null] : @NO,
     @"" : @NO,
-    // Tests for http, googlechrome, and chromium scheme URLs.
+    // Tests for http, googlechrome, and Cinaseek scheme URLs.
     @"http://www.google.com/" : @YES,
     @"https://www.google.com/settings/account/" : @YES,
     @"googlechrome://www.google.com/" : @YES,
     @"googlechromes://www.google.com/settings/account/" : @YES,
-    @"chromium://www.google.com/" : @YES,
-    @"chromiums://www.google.com/settings/account/" : @YES,
+    @"Cinaseek://www.google.com/" : @YES,
+    @"Cinaseeks://www.google.com/settings/account/" : @YES,
 
     // Google search results page URLs.
     @"https://www.google.com/search?q=pony&"
@@ -130,7 +130,7 @@ TEST_F(URLOpenerTest, HandleOpenURL) {
      "sugexp=chrome,mod=7&sourceid=chrome&ie=UTF-8" : @YES,
 
     // Other protocols.
-    @"chromium-x-callback://x-callback-url/open?url=https://"
+    @"Cinaseek-x-callback://x-callback-url/open?url=https://"
      "www.google.com&x-success=http://success" : @YES,
     @"file://localhost/path/to/file.pdf" : @YES,
 
@@ -214,7 +214,7 @@ TEST_F(URLOpenerTest, HandleOpenURL) {
               EXPECT_EQ([params externalURL],
                         tabOpener.urlLoadParams.web_params.virtual_url);
             } else {
-              // External chromium-x-callback:// URL will be loaded by
+              // External Cinaseek-x-callback:// URL will be loaded by
               // WebState, which expects externalURL URL.
               EXPECT_EQ([params externalURL],
                         tabOpener.urlLoadParams.web_params.url);
@@ -231,7 +231,7 @@ TEST_F(URLOpenerTest, HandleOpenURL) {
 // Tests that -handleApplication set startup parameters as expected.
 TEST_F(URLOpenerTest, VerifyLaunchOptions) {
   // Setup.
-  NSURL* url = [NSURL URLWithString:@"chromium://www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseek://www.google.com"];
   URLOpenerParams* urlOpenerParams =
       [[URLOpenerParams alloc] initWithURL:url
                          sourceApplication:@"com.apple.mobilesafari"];
@@ -276,7 +276,7 @@ TEST_F(URLOpenerTest, VerifyLaunchOptionsNil) {
 // source application.
 TEST_F(URLOpenerTest, VerifyLaunchOptionsWithNoSourceApplication) {
   // Setup.
-  NSURL* url = [NSURL URLWithString:@"chromium://www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseek://www.google.com"];
   URLOpenerParams* urlOpenerParams = [[URLOpenerParams alloc] initWithURL:url
                                                         sourceApplication:nil];
 
@@ -323,7 +323,7 @@ TEST_F(URLOpenerTest, VerifyLaunchOptionsWithNoURL) {
 // url.
 TEST_F(URLOpenerTest, VerifyLaunchOptionsWithBadURL) {
   // Setup.
-  NSURL* url = [NSURL URLWithString:@"chromium.www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseek.www.google.com"];
   URLOpenerParams* urlOpenerParams =
       [[URLOpenerParams alloc] initWithURL:url
                          sourceApplication:@"com.apple.mobilesafari"];
@@ -343,7 +343,7 @@ TEST_F(URLOpenerTest, VerifyLaunchOptionsWithBadURL) {
 // Tests URL is not opened if the FRE is presented.
 TEST_F(URLOpenerTest, PresentingFirstRunUI) {
   // Setup.
-  NSURL* url = [NSURL URLWithString:@"chromium://www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseek://www.google.com"];
   URLOpenerParams* urlOpenerParams =
       [[URLOpenerParams alloc] initWithURL:url
                          sourceApplication:@"com.apple.mobilesafari"];

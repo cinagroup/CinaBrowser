@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,21 +16,21 @@ namespace blink {
 // https://wicg.github.io/nav-speculation/prefetch.html#sec-purpose-header
 //
 // One of the header values defined below should be used when setting this
-// header in Chromium.
+// header in Cinaseek.
 //
 // When adding a new value below, maybe `IsSecPurposeForPrefetch` should be also
 // updated.
 inline constexpr char kSecPurposeHeaderName[] = "Sec-Purpose";
 
 // Returns true if the given `Sec-Purpose` request header value is for prefetch.
-// Note: this assumes the header value is set by Chromium implementation using
+// Note: this assumes the header value is set by Cinaseek implementation using
 // the header values below, as this method doesn't perform full structured
 // header value parsing.
 BLINK_COMMON_EXPORT bool IsSecPurposeForPrefetch(
     std::optional<std::string> sec_purpose_header_value);
 
 // Returns true if the given `Sec-Purpose` request header value is for
-// prerender. Note: this assumes the header value is set by Chromium
+// prerender. Note: this assumes the header value is set by Cinaseek
 // implementation using the header value
 // `kSecPurposePrefetchPrerenderHeaderValue` below, as this method doesn't
 // perform full structured header value parsing.
@@ -54,7 +54,7 @@ inline constexpr char kSecPurposePrefetchPrerenderHeaderValue[] =
 inline constexpr char kSecPurposePrefetchPrerenderPreviewHeaderValue[] =
     "prefetch;prerender;preview";
 
-// The Chromium specific header equivalent for 'Sec-Purpose':
+// The Cinaseek specific header equivalent for 'Sec-Purpose':
 inline constexpr char kPurposeHeaderName[] = "Purpose";
 
 // For more info see

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 
 namespace {
 
-// A helper for |CollectProcessData()|, collecting data on the Chrome/Chromium
+// A helper for |CollectProcessData()|, collecting data on the Chrome/Cinaseek
 // process with PID |pid|. The collected data is added to |processes|.
 void CollectProcessDataForChromeProcess(
     const std::vector<ProcessMemoryInformation>& child_info,
@@ -121,7 +121,7 @@ void MemoryDetails::CollectProcessData(
 
   ProcessMemoryInformationList* chrome_processes = &process_data_[0].processes;
 
-  // Collect data about Chrome/Chromium.
+  // Collect data about Chrome/Cinaseek.
   for (const base::ProcessId& pid : all_pids)
     CollectProcessDataForChromeProcess(child_info, pid, chrome_processes);
 

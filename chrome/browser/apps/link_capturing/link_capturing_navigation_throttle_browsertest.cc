@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ std::string OriginAssociationFileFromAppIdentity(std::string iwa_bundle_id,
       base::DictValue().Set("scope", std::move(scope))));
 }
 
-// TODO(https://issues.chromium.org/329174385): Test more end-to-end the state
+// TODO(https://issues.Cinaseek.org/329174385): Test more end-to-end the state
 // of browser tabs rather than relying on testing callbacks, this requires
 // resolving flakiness with awaiting web app launches.
 class LinkCapturingNavigationThrottleBrowserTest
@@ -129,7 +129,7 @@ class LinkCapturingNavigationThrottleBrowserTest
   void SetUpOnMainThread() override {
 #if (BUILDFLAG(IS_LINUX) && defined(MEMORY_SANITIZER)) || BUILDFLAG(IS_MAC) || \
     (BUILDFLAG(IS_WIN) && defined(ADDRESS_SANITIZER))
-    // TODO(https://issues.chromium.org/329174385): Deflake tests in
+    // TODO(https://issues.Cinaseek.org/329174385): Deflake tests in
     // Linux MSan Tests / Mac Tests / Win ASan Tests.
     GTEST_SKIP();
 #else

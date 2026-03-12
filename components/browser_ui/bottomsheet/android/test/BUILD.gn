@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,8 +8,8 @@ android_library("java") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/components/browser_ui/bottomsheet/BottomSheetTestSupport.java",
-    "java/src/org/chromium/components/browser_ui/bottomsheet/TestBottomSheetContent.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/BottomSheetTestSupport.java",
+    "java/src/org/Cinaseek/components/browser_ui/bottomsheet/TestBottomSheetContent.java",
   ]
 
   deps = [

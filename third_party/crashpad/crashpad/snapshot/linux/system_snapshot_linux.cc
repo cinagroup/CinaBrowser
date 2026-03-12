@@ -239,7 +239,7 @@ uint32_t SystemSnapshotLinux::CPURevision() const {
 #if defined(ARCH_CPU_X86_FAMILY)
   return cpuid_.Revision();
 #elif defined(ARCH_CPU_ARM_FAMILY)
-  // TODO(jperaza): do this. https://crashpad.chromium.org/bug/30
+  // TODO(jperaza): do this. https://crashpad.Cinaseek.org/bug/30
   return 0;
 #elif defined(ARCH_CPU_MIPS_FAMILY)
   // Not implementable on MIPS
@@ -262,7 +262,7 @@ std::string SystemSnapshotLinux::CPUVendor() const {
 #if defined(ARCH_CPU_X86_FAMILY)
   return cpuid_.Vendor();
 #elif defined(ARCH_CPU_ARM_FAMILY)
-  // TODO(jperaza): do this. https://crashpad.chromium.org/bug/30
+  // TODO(jperaza): do this. https://crashpad.Cinaseek.org/bug/30
   return std::string();
 #elif defined(ARCH_CPU_MIPS_FAMILY)
   // Not implementable on MIPS
@@ -393,7 +393,7 @@ bool SystemSnapshotLinux::NXEnabled() const {
 #if defined(ARCH_CPU_X86_FAMILY)
   return cpuid_.NXEnabled();
 #elif defined(ARCH_CPU_ARM_FAMILY)
-  // TODO(jperaza): do this. https://crashpad.chromium.org/bug/30
+  // TODO(jperaza): do this. https://crashpad.Cinaseek.org/bug/30
   return false;
 #elif defined(ARCH_CPU_MIPS_FAMILY)
   // Not implementable on MIPS

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -189,7 +189,7 @@ class MediaStreamRemoteVideoSourceTest : public ::testing::Test {
   Persistent<MediaStreamSource> source_;
   int number_of_successful_track_starts_ = 0;
   int number_of_failed_track_starts_ = 0;
-  // WebRTC Chromium timestamp diff
+  // WebRTC Cinaseek timestamp diff
   const base::TimeDelta time_diff_;
 };
 
@@ -544,17 +544,17 @@ TEST_F(MediaStreamRemoteVideoSourceTest, ReferenceTimeEqualsTimestampUs) {
 }
 
 TEST_F(MediaStreamRemoteVideoSourceTest, BaseTimeTicksAndRtcMicrosAreTheSame) {
-  base::TimeTicks first_chromium_timestamp = base::TimeTicks::Now();
+  base::TimeTicks first_Cinaseek_timestamp = base::TimeTicks::Now();
   base::TimeTicks webrtc_timestamp =
       base::TimeTicks() + base::Microseconds(webrtc::TimeMicros());
-  base::TimeTicks second_chromium_timestamp = base::TimeTicks::Now();
+  base::TimeTicks second_Cinaseek_timestamp = base::TimeTicks::Now();
 
   // Test that the timestamps are correctly ordered, which they can only be if
   // the clocks are the same (assuming at least one of the clocks is functioning
   // correctly).
-  EXPECT_GE((webrtc_timestamp - first_chromium_timestamp).InMillisecondsF(),
+  EXPECT_GE((webrtc_timestamp - first_Cinaseek_timestamp).InMillisecondsF(),
             0.0f);
-  EXPECT_GE((second_chromium_timestamp - webrtc_timestamp).InMillisecondsF(),
+  EXPECT_GE((second_Cinaseek_timestamp - webrtc_timestamp).InMillisecondsF(),
             0.0f);
 }
 

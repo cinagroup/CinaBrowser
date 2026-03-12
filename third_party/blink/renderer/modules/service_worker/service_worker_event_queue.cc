@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -277,7 +277,7 @@ void ServiceWorkerEventQueue::OnNoInflightEvent() {
   DCHECK(!HasInflightEvent());
   if (!queued_online_events_.empty()) {
     // The comment before offline queue removal
-    // https://chromium-review.googlesource.com/c/chromium/src/+/5847475 said:
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5847475 said:
     //
     // > There might be events in the queue because offline (or non-offline)
     // > events can be enqueued during running non-offline (or offline) events.

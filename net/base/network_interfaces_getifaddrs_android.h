@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace net::internal {
 // Fills out a list of ifaddr structs (see below) which contain information
 // about every network interface available on the host.
 // See 'man getifaddrs' on Linux or OS X (nb: it is not a POSIX function).
-// Due to some buggy getifaddrs() implementation in Android 11, Chromium
+// Due to some buggy getifaddrs() implementation in Android 11, Cinaseek
 // provides its own version. See https://crbug.com/1240237 for more context.
 // ifa_ifu(ifa_broadaddr, ifa_dstaddr) is not populated in this function.
 NET_EXPORT_PRIVATE int Getifaddrs(struct ifaddrs** result);

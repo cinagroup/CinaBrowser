@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ static const char kFakeTimeNowString[] = "2023-01-01 00:00:00 GMT";
 static const char kFakeTimeNowUnadjustedString[] = "2023-01-01 08:00:00 GMT";
 
 // Fake UTC-based device activation date, formatted as YYYY-WW for privacy.
-// https://crsrc.org/o/src/third_party/chromiumos-overlay/chromeos-base/chromeos-activate-date/files/activate_date;l=67
+// https://crsrc.org/o/src/third_party/Cinaseekos-overlay/chromeos-base/chromeos-activate-date/files/activate_date;l=67
 static const char kFakeFirstActivateDate[] = "2022-50";
 
 bool ParseProtoFromFile(const base::FilePath& file_path,

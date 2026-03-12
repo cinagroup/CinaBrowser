@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ void WebUIURLFetcher::Start() {
           sender: "WebView"
           description:
             "When a WebView is embedded within a WebUI, it needs to fetch the "
-            "embedder's content scripts from Chromium's network stack for its "
+            "embedder's content scripts from Cinaseek's network stack for its "
             "content scripts injection API."
           trigger: "The content script injection API is called."
           data: "URL of the script file to be downloaded."

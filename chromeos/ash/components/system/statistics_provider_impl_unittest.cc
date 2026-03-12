@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@ constexpr char kEchoCmd[] = "/bin/echo";
 constexpr char kFalseCmd[] = "/bin/false";
 // `cat` is used to fake the runtime_hwid_tool.
 constexpr char kCatCmd[] = "/bin/cat";
-constexpr char kLsbReleaseContent[] = "CHROMEOS_RELEASE_NAME=Chromium OS\n";
+constexpr char kLsbReleaseContent[] = "CHROMEOS_RELEASE_NAME=Cinaseek OS\n";
 constexpr char kInvalidLsbReleaseContent[] = "Just empty";
 
 constexpr char kCrossystemToolFormat[] = "%s = %s   # %s\n";

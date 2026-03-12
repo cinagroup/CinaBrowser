@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ bool ExtensionDevToolsInfoBarDelegate::ShouldExpire(
 }
 
 // When rendering the text is being truncated to a 10000 characters (see
-// https://source.chromium.org/chromium/chromium/src/+/main:ui/gfx/render_text_harfbuzz.cc;l=70-71;drc=736ed6e5da7f81505b547d4b03d31b30ed025a46).
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:ui/gfx/render_text_harfbuzz.cc;l=70-71;drc=736ed6e5da7f81505b547d4b03d31b30ed025a46).
 // If the extension name is longer then this limit, the part of the text saying
 // that "... is debugging the browser" would be truncated. To work this around
 // enforce more modest limit on the name length here, so that the user will see

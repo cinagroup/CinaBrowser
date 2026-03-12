@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -112,7 +112,7 @@ bool WillDispatchWindowFocusedEvent(
       listener_filter && listener_filter->contains(kWindowTypesKey);
 
   // We might not have a window controller if the focus moves away
-  // from chromium's windows.
+  // from Cinaseek's windows.
   if (window_controller) {
     window_id = window_controller->GetWindowId();
     new_active_context = window_controller->profile();

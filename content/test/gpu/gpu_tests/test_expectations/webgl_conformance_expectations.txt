@@ -20,7 +20,7 @@
 # tags: [ desktop
 #         mobile ]
 # Browser
-# tags: [ android-chromium
+# tags: [ android-Cinaseek
 #         android-webview-instrumentation
 #         debug debug-x64
 #         release release-x64
@@ -222,7 +222,7 @@ crbug.com/angleproject/4846 [ mac angle-metal passthrough ] WebglExtension_EXT_s
 crbug.com/angleproject/4846 [ mac angle-metal passthrough ] WebglExtension_EXT_texture_compression_rgtc [ Skip ]
 crbug.com/angleproject/4846 [ mac angle-metal passthrough ] WebglExtension_OES_fbo_render_mipmap [ Skip ]
 
-# Extensions not available on ChromeOS.
+# Extensions not available on CinaseekOS.
 crbug.com/957807 [ chromeos ] WebglExtension_EXT_sRGB [ Skip ]
 crbug.com/957807 [ chromeos ] WebglExtension_EXT_shader_texture_lod [ Skip ]
 crbug.com/957807 [ chromeos ] WebglExtension_EXT_texture_filter_anisotropic [ Skip ]
@@ -230,7 +230,7 @@ crbug.com/957807 [ chromeos ] WebglExtension_WEBGL_compressed_texture_pvrtc [ Sk
 crbug.com/1473838 [ chromeos passthrough ] WebglExtension_EXT_texture_mirror_clamp_to_edge [ Skip ]
 crbug.com/1473838 [ chromeos passthrough ] WebglExtension_WEBGL_polygon_mode [ Skip ]
 
-# Extensions not available on jacuzzi ChromeOS devices.
+# Extensions not available on jacuzzi CinaseekOS devices.
 crbug.com/1486664 [ chromeos cros-chrome chromeos-board-jacuzzi passthrough angle-opengles ] WebglExtension_WEBGL_blend_func_extended [ Skip ]
 crbug.com/1486664 [ chromeos cros-chrome chromeos-board-jacuzzi passthrough ] WebglExtension_EXT_clip_control [ Skip ]
 crbug.com/1486664 [ chromeos cros-chrome chromeos-board-jacuzzi ] WebglExtension_EXT_color_buffer_half_float [ Skip ]
@@ -282,7 +282,7 @@ crbug.com/1417006 [ fuchsia web-engine-shell ] conformance/textures/video/tex-2d
 crbug.com/1417006 [ fuchsia web-engine-shell ] conformance/extensions/oes-texture-float-with-video.html [ Skip ]
 crbug.com/1417006 [ fuchsia web-engine-shell ] conformance/extensions/oes-texture-half-float-with-video.html [ Skip ]
 
-# This test uses H.264 and the ChromeOS and Fuchsia bots aren't compiled with
+# This test uses H.264 and the CinaseekOS and Fuchsia bots aren't compiled with
 # proprietary codecs.
 crbug.com/1136205 [ chromeos ] conformance/textures/misc/video-rotation.html [ Skip ]
 crbug.com/1136205 [ fuchsia ] conformance/textures/misc/video-rotation.html [ Skip ]
@@ -548,7 +548,7 @@ crbug.com/475181552 [ sequoia angle-metal graphite-enabled intel-0x3e9b ] confor
 
 ## Linux / Vulkan / Passthrough command decoder ##
 
-crbug.com/1021428 [ linux angle-vulkan passthrough intel ] WebglExtension_WEBGL_depth_texture [ Failure ]  # finder:disable-unused Not tested in Chromium, but tested by Intel.
+crbug.com/1021428 [ linux angle-vulkan passthrough intel ] WebglExtension_WEBGL_depth_texture [ Failure ]  # finder:disable-unused Not tested in Cinaseek, but tested by Intel.
 
 ## Linux AMD RX 5500 XT ##
 
@@ -657,16 +657,16 @@ crbug.com/416483574 [ android android-brya ] conformance/extensions/webgl-compre
 
 
 ############
-# ChromeOS #
+# CinaseekOS #
 ############
 
-## ChromeOS: affecting all devices. ##
+## CinaseekOS: affecting all devices. ##
 
 # TODO(crbug.com/40207367) uncomment after fix for updated part of test applies
 # crbug.com/957807 [ chromeos ] conformance/context/context-attributes-alpha-depth-stencil-antialias.html [ Failure ]
 
 
-# finder:disable-unused Reported by Intel but not currently testable in Chromium
+# finder:disable-unused Reported by Intel but not currently testable in Cinaseek
 crbug.com/1237319 [ chromeos chromeos-board-eve passthrough intel ] conformance/textures/misc/texture-size-limit.html [ Failure ]
 crbug.com/1237319 [ chromeos angle-opengles passthrough intel ] conformance/extensions/angle-instanced-arrays-out-of-bounds.html [ Failure ]
 # finder:enable-unused

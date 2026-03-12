@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ const GURL GetFrenchUrl() {
 
 - (void)setupStandardBookmarksInStorage:(BookmarkStorageType)storageType {
   const GURL fourthURL = web::test::HttpServer::MakeUrl(
-      "http://ios/testing/data/http_server_files/chromium_logo_page.html");
+      "http://ios/testing/data/http_server_files/Cinaseek_logo_page.html");
 
   NSString* spec1 = base::SysUTF8ToNSString(GetFirstUrl().spec());
   NSString* spec2 = base::SysUTF8ToNSString(GetSecondUrl().spec());

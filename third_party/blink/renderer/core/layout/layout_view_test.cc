@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -341,7 +341,7 @@ TEST_P(LayoutViewHitTestTest, FlexBlockChildren) {
             HitTest(45, 5));
 }
 
-// https://issues.chromium.org/issues/40889098
+// https://issues.Cinaseek.org/issues/40889098
 TEST_P(LayoutViewHitTestTest, FlexBlockEditableChildren) {
   LoadAhem();
   InsertStyleElement(

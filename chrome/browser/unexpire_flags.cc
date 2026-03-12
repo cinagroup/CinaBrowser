@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -115,7 +115,7 @@ bool IsFlagExpired(const flags_ui::FlagsStorage* storage,
   }
 
   // Otherwise, the flag is expired if its expiration mstone is less than the
-  // mstone of this copy of Chromium.
+  // mstone of this copy of Cinaseek.
   return mstone < CHROME_VERSION_MAJOR;
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,9 +28,9 @@ const char kLegacyInitialPreferencesFileName[] =
     "Google Chrome Master Preferences";
 #else
 const NSSearchPathDirectory kSearchPath = NSApplicationSupportDirectory;
-const char kInitialPreferencesDirectory[] = "Chromium";
-const char kInitialPreferencesFileName[] = "Chromium Initial Preferences";
-const char kLegacyInitialPreferencesFileName[] = "Chromium Master Preferences";
+const char kInitialPreferencesDirectory[] = "Cinaseek";
+const char kInitialPreferencesFileName[] = "Cinaseek Initial Preferences";
+const char kLegacyInitialPreferencesFileName[] = "Cinaseek Master Preferences";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 
 }  // namespace
@@ -47,8 +47,8 @@ base::FilePath InitialPrefsPath() {
 
   // On official builds, try
   //~/Library/Application Support/Google/Chrome/Google Chrome Master Preferences
-  // On chromium builds, try
-  //~/Library/Application Support/Chromium/Chromium Master Preferences
+  // On Cinaseek builds, try
+  //~/Library/Application Support/Cinaseek/Cinaseek Master Preferences
   // This intentionally doesn't use eventual --user-data-dir overrides.
   base::FilePath user_application_support_path;
   if (chrome::GetDefaultUserDataDirectory(&user_application_support_path)) {
@@ -64,8 +64,8 @@ base::FilePath InitialPrefsPath() {
   }
 
   // On official builds, try /Library/Google/Google Chrome Master Preferences
-  // On chromium builds, try
-  // /Library/Application Support/Chromium/Chromium Master Preferences
+  // On Cinaseek builds, try
+  // /Library/Application Support/Cinaseek/Cinaseek Master Preferences
   base::FilePath search_path;
   if (!base::apple::GetLocalDirectory(kSearchPath, &search_path)) {
     return base::FilePath();

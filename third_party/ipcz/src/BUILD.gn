@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -40,8 +40,8 @@ source_set("ipcz_header") {
 }
 
 # This template emits two source_set targets for a target "foo": one named
-# "foo_standalone" for use in standalone ipcz library builds with no Chromium
-# dependencies; and one named "foo_chromium" for integration into the Chromium
+# "foo_standalone" for use in standalone ipcz library builds with no Cinaseek
+# dependencies; and one named "foo_Cinaseek" for integration into the Cinaseek
 # build, with dependencies on //base.
 #
 # ipcz_source_set targets can express dependencies on each other with the
@@ -87,9 +87,9 @@ template("ipcz_source_set") {
     defines = [ "IPCZ_STANDALONE" ]
   }
 
-  # We can only emit the Chromium variant if we're in the Chromium build.
+  # We can only emit the Cinaseek variant if we're in the Cinaseek build.
   if (!build_ipcz_standalone) {
-    source_set("${target_name}_chromium") {
+    source_set("${target_name}_Cinaseek") {
       forward_variables_from(invoker,
                              [
                                "visibility",
@@ -111,7 +111,7 @@ template("ipcz_source_set") {
       public_deps += [ "//base" ]
       if (defined(invoker.ipcz_public_deps)) {
         foreach(dep, invoker.ipcz_public_deps) {
-          public_deps += [ "${dep}_chromium" ]
+          public_deps += [ "${dep}_Cinaseek" ]
         }
       }
 
@@ -120,11 +120,11 @@ template("ipcz_source_set") {
           deps = []
         }
         foreach(dep, invoker.ipcz_deps) {
-          deps += [ "${dep}_chromium" ]
+          deps += [ "${dep}_Cinaseek" ]
         }
       }
 
-      # ChromeOS profiling data indicates that ipcz consumes 1.5% of Chrome's
+      # CinaseekOS profiling data indicates that ipcz consumes 1.5% of Cinaseek's
       # cycles on that platform; per go/cr-os, it shouldn't be optimized for
       # size on that platform.
       if (target_name == "ipcz" && is_chromeos) {
@@ -435,10 +435,10 @@ ipcz_source_set("ipcz_tests_sources") {
   configs = [ ":ipcz_include_src_dir" ]
 }
 
-# In Chromium builds, ipcz tests are built into the //ipc:ipc_tests test suite
-# by linking ":ipcz_test_sources_chromium" directly into that target. The
-# standalone ipcz_tests executable is still defined in Chromium builds though so
-# that it gets compile coverage from Chromium infrastructure.
+# In Cinaseek builds, ipcz tests are built into the //ipc:ipc_tests test suite
+# by linking ":ipcz_test_sources_Cinaseek" directly into that target. The
+# standalone ipcz_tests executable is still defined in Cinaseek builds though so
+# that it gets compile coverage from Cinaseek infrastructure.
 test("ipcz_tests") {
   sources = [ "test/run_all_tests.cc" ]
   deps = [

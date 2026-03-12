@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -153,7 +153,7 @@ ScopedJavaLocalRef<jobjectArray> ConvertToJavaAccounts(
         identity_providers_map,
     float device_scale_factor) {
   ScopedJavaLocalRef<jclass> account_clazz = base::android::GetClass(
-      env, "org/chromium/chrome/browser/ui/android/webid/data/Account");
+      env, "org/Cinaseek/chrome/browser/ui/android/webid/data/Account");
   auto array = ScopedJavaLocalRef<jobjectArray>::Adopt(
       env, env->NewObjectArray(accounts.size(), account_clazz.obj(), nullptr));
 
@@ -204,7 +204,7 @@ ScopedJavaLocalRef<jobjectArray> ConvertToJavaIdentityProvidersList(
         identity_providers_map) {
   ScopedJavaLocalRef<jclass> identity_provider_clazz = base::android::GetClass(
       env,
-      "org/chromium/chrome/browser/ui/android/webid/data/IdentityProviderData");
+      "org/Cinaseek/chrome/browser/ui/android/webid/data/IdentityProviderData");
   auto array = ScopedJavaLocalRef<jobjectArray>::Adopt(
       env, env->NewObjectArray(identity_providers_map.size(),
                                identity_provider_clazz.obj(), nullptr));

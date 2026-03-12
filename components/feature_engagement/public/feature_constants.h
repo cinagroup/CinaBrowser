@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -156,7 +156,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHBackNavigationMenuFeature);
 
 // All the features declared for Android below that are also used in Java,
 // should also be declared in:
-// org.chromium.components.feature_engagement.FeatureConstants.
+// org.Cinaseek.components.feature_engagement.FeatureConstants.
 #if BUILDFLAG(IS_ANDROID)
 FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAccountSettingsHistorySync);
 FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAndroidTabDeclutter);

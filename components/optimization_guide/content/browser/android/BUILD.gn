@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -18,15 +18,15 @@ android_library("optimization_guide_content_java") {
   ]
 
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/components/optimization_guide/content/PageContentProtoProviderBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/optimization_guide/content/PageContentProtoProviderBridge.java" ]
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/components/optimization_guide/content/PageContentProtoProviderBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/optimization_guide/content/PageContentProtoProviderBridge.java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/components/optimization_guide/content/PageContentProtoProviderBridgeUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/components/optimization_guide/content/PageContentProtoProviderBridgeUnitTest.java" ]
   deps = [
     ":optimization_guide_content_java",
     "//base:base_java",

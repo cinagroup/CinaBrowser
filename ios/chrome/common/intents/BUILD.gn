@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,11 +7,11 @@ import("//build/ios/intent_definition.gni")
 intent_definition("intents") {
   intent_file = "Intents.intentdefinition"
   intent_names = [
-    "AddBookmarkToChromeIntent",
-    "AddReadingListItemToChromeIntent",
-    "OpenInChromeIncognitoIntent",
-    "OpenInChromeIntent",
-    "SearchInChromeIntent",
+    "AddBookmarkToCinaseekIntent",
+    "AddReadingListItemToCinaseekIntent",
+    "OpenInCinaseekIncognitoIntent",
+    "OpenInCinaseekIntent",
+    "SearchInCinaseekIntent",
     "OpenReadingListIntent",
     "OpenBookmarksIntent",
     "OpenRecentTabsIntent",
@@ -19,7 +19,7 @@ intent_definition("intents") {
     "SearchWithVoiceIntent",
     "OpenNewTabIntent",
     "PlayDinoGameIntent",
-    "SetChromeDefaultBrowserIntent",
+    "SetCinaseekDefaultBrowserIntent",
     "ViewHistoryIntent",
     "OpenNewIncognitoTabIntent",
     "ManagePaymentMethodsIntent",

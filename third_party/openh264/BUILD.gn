@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,7 +13,7 @@ config("config") {
   defines = []
 
   if (is_chromeos && current_cpu == "arm") {
-    # HAVE_NEON and __chromeos__ are needed for enabling NEON on ChromeOS
+    # HAVE_NEON and __chromeos__ are needed for enabling NEON on CinaseekOS
     # devices.
     defines += [
       "HAVE_NEON",
@@ -139,8 +139,8 @@ source_set("common") {
   }
   include_dirs = openh264_common_include_dirs
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":config" ]
   deps = []
   if (use_assembler) {
@@ -165,8 +165,8 @@ source_set("processing") {
   }
   include_dirs = openh264_processing_include_dirs
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":config" ]
   deps = [ ":common" ]
   if (use_assembler) {
@@ -182,8 +182,8 @@ source_set("encoder") {
   }
   include_dirs = openh264_encoder_include_dirs
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":config" ]
 
   # TODO: Remove after fixing always-true condition
@@ -207,8 +207,8 @@ source_set("decoder") {
   sources = openh264_decoder_sources
   include_dirs = openh264_decoder_include_dirs
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ ":config" ]
 
   deps = [

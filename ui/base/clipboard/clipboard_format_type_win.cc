@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -228,7 +228,7 @@ const ClipboardFormatType& ClipboardFormatType::FileDescriptorType() {
 // static
 const ClipboardFormatType& ClipboardFormatType::FileContentZeroType() {
   // This uses a storage media type of TYMED_HGLOBAL, which is not commonly
-  // used with CFSTR_FILECONTENTS (but used in Chromium--see
+  // used with CFSTR_FILECONTENTS (but used in Cinaseek--see
   // OSExchangeDataProviderWin::SetFileContents). Use FileContentAtIndexType
   // if TYMED_ISTREAM and TYMED_ISTORAGE are needed.
   // TODO(crbug.com/41451800): Should TYMED_ISTREAM / TYMED_ISTORAGE be
@@ -292,14 +292,14 @@ const ClipboardFormatType& ClipboardFormatType::WebKitSmartPasteType() {
 const ClipboardFormatType& ClipboardFormatType::DataTransferCustomType() {
   // TODO(http://crbug.com/106449): Standardize this name.
   static base::NoDestructor<ClipboardFormatType> format(
-      RegisterClipboardFormatChecked(L"Chromium Web Custom MIME Data Format"));
+      RegisterClipboardFormatChecked(L"Cinaseek Web Custom MIME Data Format"));
   return *format;
 }
 
 // static
 const ClipboardFormatType& ClipboardFormatType::InternalSourceUrlType() {
   static base::NoDestructor<ClipboardFormatType> format(
-      RegisterClipboardFormatChecked(L"Chromium internal source URL"));
+      RegisterClipboardFormatChecked(L"Cinaseek internal source URL"));
   return *format;
 }
 

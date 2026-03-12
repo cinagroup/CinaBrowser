@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,12 +7,12 @@ import("//build/config/rust.gni")
 import("//build/rust/gni_impl/cpp_api_from_rust.gni")
 import("//build/rust/rust_unit_test.gni")
 
-# The //build directory is re-used for non-Chromium projects. Do not support
+# The //build directory is re-used for non-Cinaseek projects. Do not support
 # cxx bindings in such contexts by default, because //third_party may be
 # missing. Projects that wish to use cxx bindings must explicitly set the
 # enable_rust_cxx GN arg to true.
 if (enable_rust_cxx) {
-  import("//third_party/rust/cxx/chromium_integration/rust_cxx.gni")
+  import("//third_party/rust/cxx/Cinaseek_integration/rust_cxx.gni")
 }
 
 # Creates a Rust target (rlib, executable, proc macro etc.) with ability to
@@ -45,7 +45,7 @@ template("rust_target") {
 
   # NOTE: TargetName=>CrateName mangling algorithm should be updated
   # simultaneously in 3 places: here, //build/rust/rust_static_library.gni,
-  # //build/rust/chromium_prelude/import_attribute.rs
+  # //build/rust/Cinaseek_prelude/import_attribute.rs
   if (defined(invoker.crate_name)) {
     _crate_name = invoker.crate_name
   } else {
@@ -248,7 +248,7 @@ template("rust_target") {
   _cxx_bindings = []
   assert(!defined(invoker.cxx_bindings) || enable_rust_cxx,
          "cxx bindings are not supported when building rust targets " +
-             "outside the Chromium build.")
+             "outside the Cinaseek build.")
   if (defined(invoker.cxx_bindings)) {
     _cxx_bindings = invoker.cxx_bindings
   }
@@ -349,12 +349,12 @@ template("rust_target") {
     _rust_public_deps = _public_deps
     _cxx_deps = _deps
 
-    # Include the `chromium` crate in all first-party code. Third-party code
-    # (and the `chromium` crate itself) opts out by setting
-    # `no_chromium_prelude`.
-    if (!defined(invoker.no_chromium_prelude) || !invoker.no_chromium_prelude) {
-      if (enable_chromium_prelude) {
-        _rust_deps += [ "//build/rust/chromium_prelude" ]
+    # Include the `Cinaseek` crate in all first-party code. Third-party code
+    # (and the `Cinaseek` crate itself) opts out by setting
+    # `no_Cinaseek_prelude`.
+    if (!defined(invoker.no_Cinaseek_prelude) || !invoker.no_Cinaseek_prelude) {
+      if (enable_Cinaseek_prelude) {
+        _rust_deps += [ "//build/rust/Cinaseek_prelude" ]
       }
     }
 
@@ -370,11 +370,11 @@ template("rust_target") {
 
     # When Cronet is built in the Android repo, it builds differently (e.g., it
     # uses stdlib from Android, which includes its own allocator. If we depend
-    # on Chromium's allocator crate, its shims, and libstd's will conflict on
+    # on Cinaseek's allocator crate, its shims, and libstd's will conflict on
     # each other and fail the build (see https://crbug.com/469501106 for more
     # details).
-    # Ideally, we should do the same when building Cronet within Chromium, for
-    # consistency. However, this is currently incompatible with how Chromium
+    # Ideally, we should do the same when building Cronet within Cinaseek, for
+    # consistency. However, this is currently incompatible with how Cinaseek
     # builds rust dependencies (https://crbug.com/469501106 documents the errors
     # encountered when trying this).
     if ((!defined(invoker.no_allocator_crate) || !invoker.no_allocator_crate) &&

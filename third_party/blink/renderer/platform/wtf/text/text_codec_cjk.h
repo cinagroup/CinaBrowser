@@ -42,7 +42,7 @@ namespace blink {
 // * Korean characters (EUC-KR)
 // * Simplified Chinese characters (GB18030, GBK)
 // Note: since setting up Big5 encode table failed with overflow error
-// when we use it with ICU4C bundled with Chromium, we did not include
+// when we use it with ICU4C bundled with Cinaseek, we did not include
 // Big5.
 //
 // ICU4C behaves much different from the WHATWG specification

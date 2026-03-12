@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ class MEDIA_EXPORT AAC {
   std::vector<uint8_t> codec_specific_data_;
 
   // The following variables store audio configuration information that
-  // can be used by Chromium. They are based on the AAC specific
+  // can be used by Cinaseek. They are based on the AAC specific
   // configuration but can be overridden by extensions in elementary
   // stream descriptor.
   uint32_t frequency_ = 0;

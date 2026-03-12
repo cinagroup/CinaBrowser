@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -933,9 +933,9 @@ gpu::ContextResult GLES2DecoderPassthroughImpl::Initialize(
   FAIL_INIT_IF_NOT(feature_info_->feature_flags().angle_robust_client_memory,
                    "missing GL_ANGLE_robust_client_memory");
   FAIL_INIT_IF_NOT(
-      feature_info_->feature_flags().chromium_bind_generates_resource,
+      feature_info_->feature_flags().Cinaseek_bind_generates_resource,
       "missing GL_CHROMIUM_bind_generates_resource");
-  FAIL_INIT_IF_NOT(feature_info_->feature_flags().chromium_copy_texture,
+  FAIL_INIT_IF_NOT(feature_info_->feature_flags().Cinaseek_copy_texture,
                    "missing GL_CHROMIUM_copy_texture");
   FAIL_INIT_IF_NOT(feature_info_->feature_flags().angle_client_arrays,
                    "missing GL_ANGLE_client_arrays");
@@ -1295,13 +1295,13 @@ gpu::Capabilities GLES2DecoderPassthroughImpl::GetCapabilities() {
   caps.texture_format_etc1_npot =
       feature_info_->feature_flags().oes_compressed_etc1_rgb8_texture &&
       !feature_info_->workarounds().etc1_power_of_two_only;
-  caps.sync_query = feature_info_->feature_flags().chromium_sync_query;
+  caps.sync_query = feature_info_->feature_flags().Cinaseek_sync_query;
   caps.texture_rg = feature_info_->feature_flags().ext_texture_rg;
   caps.texture_norm16 = feature_info_->feature_flags().ext_texture_norm16;
   caps.texture_half_float_linear =
       feature_info_->feature_flags().enable_texture_half_float_linear;
-  caps.image_ar30 = feature_info_->feature_flags().chromium_image_ar30;
-  caps.image_ab30 = feature_info_->feature_flags().chromium_image_ab30;
+  caps.image_ar30 = feature_info_->feature_flags().Cinaseek_image_ar30;
+  caps.image_ab30 = feature_info_->feature_flags().Cinaseek_image_ab30;
   if (feature_info_->workarounds().webgl_or_caps_max_texture_size) {
     caps.max_texture_size =
         std::min(caps.max_texture_size,
@@ -1340,7 +1340,7 @@ gpu::GLCapabilities GLES2DecoderPassthroughImpl::GetGLCapabilities() {
         std::min(caps.max_texture_size,
                  feature_info_->workarounds().webgl_or_caps_max_texture_size);
   }
-  caps.sync_query = feature_info_->feature_flags().chromium_sync_query;
+  caps.sync_query = feature_info_->feature_flags().Cinaseek_sync_query;
 
   return caps;
 }

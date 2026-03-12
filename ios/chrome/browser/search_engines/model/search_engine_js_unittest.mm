@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,22 +136,22 @@ class SearchEngineJsTest : public PlatformTest,
 TEST_F(SearchEngineJsTest, TestGetOpenSearchDescriptionDocumentUrlSucceed) {
   web::test::LoadHtml(
       @"<html><link rel='search' type='application/opensearchdescription+xml' "
-      @"title='Chromium Code Search' "
-      @"href='//cs.chromium.org/codesearch/first_opensearch.xml' />"
+      @"title='Cinaseek Code Search' "
+      @"href='//cs.Cinaseek.org/codesearch/first_opensearch.xml' />"
       @"<link rel='search' type='application/opensearchdescription+xml' "
-      @"title='Chromium Code Search 2' "
-      @"href='//cs.chromium.org/codesearch/second_opensearch.xml' />"
+      @"title='Cinaseek Code Search 2' "
+      @"href='//cs.Cinaseek.org/codesearch/second_opensearch.xml' />"
       @"<link href='/favicon.ico' rel='shortcut icon' "
       @"type='image/x-icon'></html>",
-      GURL("https://cs.chromium.org"), web_state());
+      GURL("https://cs.Cinaseek.org"), web_state());
   ASSERT_TRUE(WaitUntilConditionOrTimeout(kWaitForJSCompletionTimeout, ^{
     base::RunLoop().RunUntilIdle();
     return !!last_received_template_url_by_osdd_.web_state;
   }));
 
-  EXPECT_EQ("https://cs.chromium.org/",
+  EXPECT_EQ("https://cs.Cinaseek.org/",
             last_received_template_url_by_osdd_.template_page_url.spec());
-  EXPECT_EQ("https://cs.chromium.org/codesearch/first_opensearch.xml",
+  EXPECT_EQ("https://cs.Cinaseek.org/codesearch/first_opensearch.xml",
             last_received_template_url_by_osdd_.osdd_url.spec());
 }
 
@@ -160,7 +160,7 @@ TEST_F(SearchEngineJsTest, TestGetOpenSearchDescriptionDocumentUrlSucceed) {
 TEST_F(SearchEngineJsTest, TestGetOpenSearchDescriptionDocumentUrlFail) {
   web::test::LoadHtml(@"<html><link href='/favicon.ico' rel='shortcut icon' "
                       @"type='image/x-icon'></html>",
-                      GURL("https://cs.chromium.org"), web_state());
+                      GURL("https://cs.Cinaseek.org"), web_state());
   ASSERT_FALSE(WaitUntilConditionOrTimeout(kWaitForJsNotReturnTimeout, ^{
     base::RunLoop().RunUntilIdle();
     return !!last_received_template_url_by_osdd_.web_state;

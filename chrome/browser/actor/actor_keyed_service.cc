@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -566,7 +566,7 @@ void ActorKeyedService::OnActionsFinished(
     std::move(callback).Run(std::move(action_results));
   } else {
     // RunLater is load bearing. See:
-    // https://chromium-review.googlesource.com/c/chromium/src/+/7552225/comment/b0b7f011_71da3233/
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/7552225/comment/b0b7f011_71da3233/
     RunLater(base::BindOnce(std::move(callback), std::move(action_results)));
   }
 }

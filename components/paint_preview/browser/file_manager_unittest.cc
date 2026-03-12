@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ class FileManagerTest : public ::testing::Test {
 
 TEST_F(FileManagerTest, TestStats) {
   auto manager = base::MakeRefCounted<FileManager>(Dir(), MainTaskRunner());
-  auto valid_key = manager->CreateKey(GURL("https://www.chromium.org"));
+  auto valid_key = manager->CreateKey(GURL("https://www.Cinaseek.org"));
   auto missing_key = manager->CreateKey(GURL("https://www.muimorhc.org"));
   base::FilePath out = manager->CreateOrGetDirectory(valid_key, false)
                            .value_or(base::FilePath());
@@ -154,7 +154,7 @@ TEST_F(FileManagerTest, TestCompression) {
 
 TEST_F(FileManagerTest, TestCompressDirectoryFail) {
   auto manager = base::MakeRefCounted<FileManager>(Dir(), MainTaskRunner());
-  auto key = manager->CreateKey(GURL("https://www.chromium.org"));
+  auto key = manager->CreateKey(GURL("https://www.Cinaseek.org"));
 
   base::FilePath new_directory =
       manager->CreateOrGetDirectory(key, true).value_or(base::FilePath());
@@ -173,7 +173,7 @@ TEST_F(FileManagerTest, TestDeleteArtifacts) {
 
   manager->GetTaskRunner()->PostTask(
       FROM_HERE, base::BindLambdaForTesting([&]() {
-        auto cr_key = manager->CreateKey(GURL("https://www.chromium.org"));
+        auto cr_key = manager->CreateKey(GURL("https://www.Cinaseek.org"));
         base::FilePath cr_directory =
             manager->CreateOrGetDirectory(cr_key, true)
                 .value_or(base::FilePath());
@@ -208,7 +208,7 @@ TEST_F(FileManagerTest, TestDeleteAll) {
   auto manager =
       base::MakeRefCounted<FileManager>(temp_dir.GetPath(), MainTaskRunner());
 
-  auto cr_key = manager->CreateKey(GURL("https://www.chromium.org"));
+  auto cr_key = manager->CreateKey(GURL("https://www.Cinaseek.org"));
   base::FilePath cr_directory =
       manager->CreateOrGetDirectory(cr_key, true).value_or(base::FilePath());
   EXPECT_FALSE(cr_directory.empty());
@@ -240,7 +240,7 @@ TEST_F(FileManagerTest, HandleProto) {
   root_frame->set_is_main_frame(true);
   root_frame->set_file_path("0.skp");
   auto* metadata = original_proto.mutable_metadata();
-  metadata->set_url(GURL("www.chromium.org").spec());
+  metadata->set_url(GURL("www.Cinaseek.org").spec());
 
   EXPECT_TRUE(manager->SerializePaintPreviewProto(key, original_proto, false));
   EXPECT_TRUE(base::PathExists(path.AppendASCII("proto.pb")));
@@ -267,7 +267,7 @@ TEST_F(FileManagerTest, HandleProtoCompressed) {
   root_frame->set_is_main_frame(true);
   root_frame->set_file_path("0.skp");
   auto* metadata = original_proto.mutable_metadata();
-  metadata->set_url(GURL("www.chromium.org").spec());
+  metadata->set_url(GURL("www.Cinaseek.org").spec());
 
   EXPECT_TRUE(manager->SerializePaintPreviewProto(key, original_proto, true));
   EXPECT_TRUE(manager->CaptureExists(key));

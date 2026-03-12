@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ namespace bookmarks {
 const ui::ClipboardFormatType& BookmarkNodeData::GetBookmarkFormatType() {
   static const base::NoDestructor<ui::ClipboardFormatType> format(
       ui::ClipboardFormatType::CustomPlatformType(
-          base::SysNSStringToUTF8(kUTTypeChromiumBookmarkDictionaryList)));
+          base::SysNSStringToUTF8(kUTTypeCinaseekBookmarkDictionaryList)));
 
   return *format;
 }

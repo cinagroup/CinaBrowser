@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,15 +8,15 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/external_intents/ExternalIntentsFeatures.java",
-    "java/src/org/chromium/components/external_intents/ExternalIntentsSwitches.java",
-    "java/src/org/chromium/components/external_intents/ExternalNavigationDelegate.java",
-    "java/src/org/chromium/components/external_intents/ExternalNavigationHandler.java",
-    "java/src/org/chromium/components/external_intents/ExternalNavigationHelper.java",
-    "java/src/org/chromium/components/external_intents/ExternalNavigationParams.java",
-    "java/src/org/chromium/components/external_intents/InterceptNavigationDelegateClient.java",
-    "java/src/org/chromium/components/external_intents/InterceptNavigationDelegateImpl.java",
-    "java/src/org/chromium/components/external_intents/RedirectHandler.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalIntentsFeatures.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalIntentsSwitches.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalNavigationDelegate.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalNavigationHandler.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalNavigationHelper.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalNavigationParams.java",
+    "java/src/org/Cinaseek/components/external_intents/InterceptNavigationDelegateClient.java",
+    "java/src/org/Cinaseek/components/external_intents/InterceptNavigationDelegateImpl.java",
+    "java/src/org/Cinaseek/components/external_intents/RedirectHandler.java",
   ]
 
   deps = [
@@ -39,7 +39,7 @@ android_library("java") {
     "//ui/base/mojom:mojom_java",
     "//url:gurl_java",
   ]
-  resources_package = "org.chromium.components.external_intents"
+  resources_package = "org.Cinaseek.components.external_intents"
 }
 
 android_resources("java_resources") {
@@ -52,8 +52,8 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/external_intents/ExternalIntentsFeatures.java",
-    "java/src/org/chromium/components/external_intents/InterceptNavigationDelegateImpl.java",
+    "java/src/org/Cinaseek/components/external_intents/ExternalIntentsFeatures.java",
+    "java/src/org/Cinaseek/components/external_intents/InterceptNavigationDelegateImpl.java",
   ]
 }
 
@@ -76,8 +76,8 @@ android_library("unit_device_javatests") {
   testonly = true
 
   sources = [
-    "javatests/src/org/chromium/components/external_intents/ExternalNavigationHandlerTest.java",
-    "javatests/src/org/chromium/components/external_intents/RedirectHandlerTest.java",
+    "javatests/src/org/Cinaseek/components/external_intents/ExternalNavigationHandlerTest.java",
+    "javatests/src/org/Cinaseek/components/external_intents/RedirectHandlerTest.java",
   ]
   deps = [
     ":java",
@@ -107,7 +107,7 @@ android_library("test_support_java") {
   testonly = true
 
   srcjar_deps = [ ":test_support_java_jni_headers" ]
-  sources = [ "javatests/src/org/chromium/components/external_intents/TestChildFrameNavigationObserver.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/external_intents/TestChildFrameNavigationObserver.java" ]
 
   deps = [
     "//base:base_java",
@@ -137,5 +137,5 @@ source_set("test_support") {
 generate_jni("test_support_java_jni_headers") {
   testonly = true
 
-  sources = [ "javatests/src/org/chromium/components/external_intents/TestChildFrameNavigationObserver.java" ]
+  sources = [ "javatests/src/org/Cinaseek/components/external_intents/TestChildFrameNavigationObserver.java" ]
 }

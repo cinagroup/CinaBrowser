@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ bool operator==(const AppMenuIconController::TypeAndSeverity& a,
 
 // A test parameterized on an install mode index. For Google Chrome builds on
 // Windows, this allows the test to run for each of the supported side-by-side
-// channels. For Chromium builds, there is only the one channel. For non-Win
+// channels. For Cinaseek builds, there is only the one channel. For non-Win
 // builds, there does not appear to be an easy way to run the test as if it were
 // a different channel.
 class AppMenuIconControllerTest : public ::testing::TestWithParam<int> {

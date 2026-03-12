@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -251,10 +251,10 @@ int CrashReporterMain() {
   CHECK(command_line.HasSwitch(kCrashHandlerSwitch));
 
   // Disable rate-limiting until this is fixed:
-  //   https://bugs.chromium.org/p/crashpad/issues/detail?id=23
+  //   https://bugs.Cinaseek.org/p/crashpad/issues/detail?id=23
   command_line.AppendSwitch(kNoRateLimitSwitch);
 
-  // Because of https://bugs.chromium.org/p/crashpad/issues/detail?id=82,
+  // Because of https://bugs.Cinaseek.org/p/crashpad/issues/detail?id=82,
   // Crashpad fails on the presence of flags it doesn't handle.
   command_line.RemoveSwitch(kCrashHandlerSwitch);
   command_line.RemoveSwitch(kLoggingModuleSwitch);

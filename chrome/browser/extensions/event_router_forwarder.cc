@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,8 +64,8 @@ void EventRouterForwarder::BroadcastEventToRenderers(
     }
   }
 
-  // There should always be at least one profile when running as Chromium.
-  // However, some Chromium embedders are known to run without profiles, in
+  // There should always be at least one profile when running as Cinaseek.
+  // However, some Cinaseek embedders are known to run without profiles, in
   // which case there's nothing to dispatch to.
   if (profiles_to_dispatch_to.size() == 0u)
     return;

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,9 +10,9 @@ import("//build/toolchain/toolchain.gni")
 
 declare_args() {
   # When non empty, overrides the target rpath value. This allows a user to
-  # make a Chromium build where binaries and shared libraries are meant to be
-  # installed into separate directories, like /usr/bin/chromium and
-  # /usr/lib/chromium for instance. It is useful when a build system that
+  # make a Cinaseek build where binaries and shared libraries are meant to be
+  # installed into separate directories, like /usr/bin/Cinaseek and
+  # /usr/lib/Cinaseek for instance. It is useful when a build system that
   # generates a whole target root filesystem (like Yocto) is used on top of gn,
   # especially when cross-compiling.
   # Note: this gn arg is similar to gyp target_rpath generator flag.
@@ -65,7 +65,7 @@ config("symbol_visibility_default") {
 #  }
 config("rpath_for_built_shared_libraries") {
   if (!is_android && current_os != "aix" && !is_castos) {
-    # Note: Android, Aix don't support rpath. Chromecast has its own logic for
+    # Note: Android, Aix don't support rpath. Cinaseekcast has its own logic for
     # setting the rpath in //build/config/chromecast.
     if (current_toolchain != default_toolchain || gcc_target_rpath == "") {
       ldflags = [

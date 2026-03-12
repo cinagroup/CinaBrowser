@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ enum Decoration {
   GRAMMAR,
   LAST = GRAMMAR,
 };
-// LINT.ThenChange(/components/spellcheck/browser/android/java/src/org/chromium/components/spellcheck/SpellingMarker.java:SpellCheckDecoration)
+// LINT.ThenChange(/components/spellcheck/browser/android/java/src/org/Cinaseek/components/spellcheck/SpellingMarker.java:SpellCheckDecoration)
 
 }  // namespace spellcheck
 

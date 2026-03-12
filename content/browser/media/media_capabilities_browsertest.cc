@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -603,7 +603,7 @@ IN_PROC_BROWSER_TEST_P(MediaCapabilitiesTestWithConfigType,
                 config_type, "'video/webm; codecs=\"vp8\"'", kRec2020, kPq,
                 kSmpteSt2086, media::kClearKeyKeySystem));
 
-  // This HDR metadata is unsupported, so no matter the key system, Chromium
+  // This HDR metadata is unsupported, so no matter the key system, Cinaseek
   // should return unsupported.
   EXPECT_EQ(kUnsupported,
             CanDecodeVideoWithHdrMetadataAndKeySystem(

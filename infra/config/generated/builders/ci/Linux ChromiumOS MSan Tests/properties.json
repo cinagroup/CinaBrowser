@@ -1,23 +1,23 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
           {
             "builder_id": {
               "bucket": "ci",
-              "builder": "Linux ChromiumOS MSan Builder",
-              "project": "chromium"
+              "builder": "Linux CinaseekOS MSan Builder",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_msan",
+                "config": "Cinaseek_msan",
                 "target_bits": 64,
                 "target_platform": "chromeos"
               },
@@ -25,25 +25,25 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
           {
             "builder_id": {
               "bucket": "ci",
-              "builder": "Linux ChromiumOS MSan Tests",
-              "project": "chromium"
+              "builder": "Linux CinaseekOS MSan Tests",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_msan",
+                "config": "Cinaseek_msan",
                 "target_bits": 64,
                 "target_platform": "chromeos"
               },
@@ -51,12 +51,12 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
-                "builder": "Linux ChromiumOS MSan Builder",
-                "project": "chromium"
+                "builder": "Linux CinaseekOS MSan Builder",
+                "project": "Cinaseek"
               }
             }
           }
@@ -65,19 +65,19 @@
       "builder_ids": [
         {
           "bucket": "ci",
-          "builder": "Linux ChromiumOS MSan Tests",
-          "project": "chromium"
+          "builder": "Linux CinaseekOS MSan Tests",
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
-          "builder": "linux_chromium_chromeos_msan_rel_ng",
-          "group": "tryserver.chromium.linux"
+          "builder": "linux_Cinaseek_chromeos_msan_rel_ng",
+          "group": "tryserver.Cinaseek.linux"
         }
       ],
       "retry_failed_shards": true,
       "retry_invalid_shards": true,
-      "targets_spec_directory": "infra/config/generated/builders/ci/Linux ChromiumOS MSan Tests/targets"
+      "targets_spec_directory": "infra/config/generated/builders/ci/Linux CinaseekOS MSan Tests/targets"
     }
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -87,12 +87,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.memory",
+  "builder_group": "Cinaseek.memory",
   "gardener_rotations": [
-    "chromium"
+    "Cinaseek"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium"
+    "Cinaseek"
   ]
 }

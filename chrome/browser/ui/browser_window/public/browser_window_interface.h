@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -123,7 +123,7 @@ class BrowserWindowInterface : public content::PageNavigator {
   // Please refrain from adding new types.
   //
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  //   org.chromium.chrome.browser.ui.browser_window)
+  //   org.Cinaseek.chrome.browser.ui.browser_window)
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: BrowserWindowType
   // GENERATED_JAVA_PREFIX_TO_STRIP: TYPE_
   enum Type {

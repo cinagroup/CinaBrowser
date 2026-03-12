@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 #include "gpu/command_buffer/client/raster_implementation.h"
 
 #include <GLES2/gl2.h>
-#include <GLES2/gl2extchromium.h>
+#include <GLES2/gl2extCinaseek.h>
 #include <GLES3/gl32.h>
 #include <stddef.h>
 #include <stdint.h>

@@ -200,7 +200,7 @@ int GenerateDumpMain(int argc, char* argv[]) {
       return EXIT_FAILURE;
     }
 #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-    // TODO(jperaza): https://crashpad.chromium.org/bug/30.
+    // TODO(jperaza): https://crashpad.Cinaseek.org/bug/30.
     DirectPtraceConnection task;
     if (!task.Initialize(options.pid)) {
       return EXIT_FAILURE;

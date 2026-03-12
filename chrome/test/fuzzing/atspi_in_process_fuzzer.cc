@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,20 +107,20 @@ class UiNode {
   std::vector<std::unique_ptr<UiNode>> children_;  // populated on construction
 };
 
-// This fuzzer attempts to explore the space of Chromium UI controls using
-// the ATSPI Linux accessibility API. The hope is that virtually all Chromium
+// This fuzzer attempts to explore the space of Cinaseek UI controls using
+// the ATSPI Linux accessibility API. The hope is that virtually all Cinaseek
 // controls are accessible via this API and thus all possible UI interactions
 // can be explored (at least in future when this fuzzer gets a bit more
 // sophisticated about including more complex HTML pages.)
 //
 // To see the space of controls which the fuzzer explores, either use the
-// 'accerciser' GUI tool or build the Chromium `ax_dump_tree` utility.
+// 'accerciser' GUI tool or build the Cinaseek `ax_dump_tree` utility.
 // (The latter doesn't show so much information but with a few code tweaks
 // you can use base::Value::DebugString to get much more out.)
 //
 // This fuzzer takes pains to use the _names_ of controls wherever possible,
 // rather than ordinals. This should yield more stable test cases which may
-// allow fuzzing infrastructure to test on different Chromium versions to
+// allow fuzzing infrastructure to test on different Cinaseek versions to
 // determine regression or fix ranges (subject to the caveats listed below
 // about this fuzzer's inability to reset UI state right now.)
 // Also, the initial layers of single-child controls are skipped, and that could
@@ -232,7 +232,7 @@ class Database {
 };
 
 AtspiInProcessFuzzer::AtspiInProcessFuzzer() {
-  // For some reason when running as Chromium rather than an official build,
+  // For some reason when running as Cinaseek rather than an official build,
   // our accessibility subsystem gets told "no" by D-Bus when querying whether
   // it should enable accessibility. This overrides that.
   setenv("ACCESSIBILITY_ENABLED", "1", 1);
@@ -402,7 +402,7 @@ int AtspiInProcessFuzzer::HandleAction(
 
     // Inform centipede of the control path we've reached.
     // We give it a hash of the ordinal path to the control - this doesn't
-    // need to be stable across Chromium versions. Each time we
+    // need to be stable across Cinaseek versions. Each time we
     // declare a new hash here, centipede will know that this is an
     // especially interesting input.
     if (control_path_id < kNumControlsToDeclareToCentipede) {
@@ -654,7 +654,7 @@ std::optional<size_t> UiNode::FindMatchingChild(
         auto& control = children_[i];
         std::string& name = control->GetName();
         // Use of .data() below is a workaround for
-        // https://issues.chromium.org/issues/343801371
+        // https://issues.Cinaseek.org/issues/343801371
         if (name == selector.named().name().data()) {
           return i;
         }
@@ -668,7 +668,7 @@ std::optional<size_t> UiNode::FindMatchingChild(
         std::string name = control->GetName();
         // Controls with a name MUST be selected by that name,
         // so the fuzzer creates test cases which are maximally stable
-        // across Chromium versions. So disregard named controls here.
+        // across Cinaseek versions. So disregard named controls here.
         if (name == "") {
           // If the control is anonymous, we allow it to be selected
           // by role name and by an ordinal.
@@ -677,7 +677,7 @@ std::optional<size_t> UiNode::FindMatchingChild(
           // exactly one child control, so test cases should be fairly stable.
           std::string& role = control->GetRole();
           // Use of .data() below is a workaround for
-          // https://issues.chromium.org/issues/343801371
+          // https://issues.Cinaseek.org/issues/343801371
           if (role == selector.anonymous().role().data()) {
             if (to_skip-- == 0) {
               return i;
@@ -1041,7 +1041,7 @@ size_t AtspiInProcessFuzzer::CustomMutator(uint8_t* data,
 // feeding back known strings into libfuzzer's table of recent comparisons.
 // This does allow the fuzzer to make progress, but it's still extremely slow,
 // despite the FindMatchingControl function being structured to allow this.
-// (https://issues.chromium.org/issues/346918512 probably doesn't help).
+// (https://issues.Cinaseek.org/issues/346918512 probably doesn't help).
 //
 // We therefore sometimes use this custom mutator to specify controls
 // which are known to actually exist. This is pushing our luck a little -

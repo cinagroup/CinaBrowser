@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ import {isTextField, sendWebKitMessage, trim} from '//ios/web/public/js_messagin
  * representing an array of objects, each of which represents an Autofill form
  * with information about a form to be filled and/or submitted and it can be
  * translated to class FormData
- * (chromium/src/components/autofill/core/common/form_data.h) for further
+ * (Cinaseek/src/components/autofill/core/common/form_data.h) for further
  * processing.
  */
 
@@ -95,7 +95,7 @@ function isAutofillOptimizationFormSearchEnabled() {
  *
  * It is based on the logic in
  *     bool IsFormInteresting(const FormData& form);
- * in chromium/src/components/autofill/content/renderer/form_cache.cc
+ * in Cinaseek/src/components/autofill/content/renderer/form_cache.cc
  *
  * @param {AutofillFormData} form Form to examine.
  * @return {boolean} Whether the form is sufficiently interesting.
@@ -453,7 +453,7 @@ function clearAutofilledFields(formUniqueID, fieldUniqueID) {
  *
  *     std::vector<FormData> ExtractNewForms();
  *
- * in chromium/src/components/autofill/content/renderer/form_cache.cc.
+ * in Cinaseek/src/components/autofill/content/renderer/form_cache.cc.
  *
  * The difference is in this implementation, the cache is not considered.
  * Initial values of select and checkable elements are not recorded at the
@@ -555,7 +555,7 @@ function extractNewForms(restrictUnownedFieldsToFormlessCheckout) {
  *     void FillFormField(const FormFieldData& data,
  *                        bool is_initiating_node,
  *                        blink::WebFormControlElement* field)
- * in chromium/src/components/autofill/content/renderer/form_autofill_util.cc.
+ * in Cinaseek/src/components/autofill/content/renderer/form_autofill_util.cc.
  *
  * Different from FillFormField(), is_initiating_node is not considered in
  * this implementation.
@@ -606,7 +606,7 @@ function fillFormField(data, field) {
  *     std::vector<blink::WebFormControlElement>
  *     ExtractAutofillableElementsFromSet(
  *         const WebVector<WebFormControlElement>& control_elements);
- * in chromium/src/components/autofill/content/renderer/form_autofill_util.h.
+ * in Cinaseek/src/components/autofill/content/renderer/form_autofill_util.h.
  *
  * @param {Array<FormControlElement>} controlElements Set of control elements.
  * @return {Array<FormControlElement>} The array of autofillable elements.
@@ -629,7 +629,7 @@ function extractAutofillableElementsFromSet(controlElements) {
  * It is based on the logic in
  *     void ExtractAutofillableElementsInForm(
  *         const blink::WebFormElement& form_element);
- * in chromium/src/components/autofill/content/renderer/form_autofill_util.h.
+ * in Cinaseek/src/components/autofill/content/renderer/form_autofill_util.h.
  *
  * @param {HTMLFormElement} formElement A form element to be processed.
  * @return {Array<FormControlElement>} The array of autofillable elements.
@@ -672,7 +672,7 @@ function fillPredictionData(data) {
  *
  * It is based on the logic in
  *     void SanitizedFieldIsEmpty(const std::u16string& value);
- * in chromium/src/components/autofill/common/autofill_util.h.
+ * in Cinaseek/src/components/autofill/common/autofill_util.h.
  *
  * @param {HTMLFormElement} formElement A form element to be processed.
  * @return {Array<FormControlElement>} The array of autofillable elements.

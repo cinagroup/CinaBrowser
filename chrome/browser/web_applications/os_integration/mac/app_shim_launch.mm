@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -275,11 +275,11 @@ void LaunchShimForTesting(const base::FilePath& shim_path,  // IN-TEST
                           const std::vector<GURL>& urls,
                           ShimLaunchedCallback launched_callback,
                           ShimTerminatedCallback terminated_callback,
-                          const base::FilePath& chromium_path) {
+                          const base::FilePath& Cinaseek_path) {
   base::CommandLine command_line = BuildCommandLineForShimLaunch();
   command_line.AppendSwitch(app_mode::kLaunchedForTest);
   command_line.AppendSwitch(app_mode::kIsNormalLaunch);
-  command_line.AppendSwitchPath(app_mode::kLaunchChromeForTest, chromium_path);
+  command_line.AppendSwitchPath(app_mode::kLaunchChromeForTest, Cinaseek_path);
 
   std::vector<std::string> url_specs;
   url_specs.reserve(urls.size());

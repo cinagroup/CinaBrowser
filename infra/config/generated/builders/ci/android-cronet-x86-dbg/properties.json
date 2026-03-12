@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/android-cronet-x86-dbg/gn-args.json"
@@ -10,15 +10,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "COMPILE_AND_TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -33,7 +33,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -41,15 +41,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-10-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -64,12 +64,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           },
@@ -77,15 +77,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-11-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -100,12 +100,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           },
@@ -113,15 +113,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-marshmallow-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -136,12 +136,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           },
@@ -149,15 +149,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-nougat-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -172,12 +172,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           },
@@ -185,15 +185,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-oreo-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -208,12 +208,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           },
@@ -221,15 +221,15 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "android-cronet-x86-dbg-pie-tests",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.android",
+              "builder_group": "Cinaseek.android",
               "execution_mode": "TEST",
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "cronet_builder",
                   "mb"
@@ -244,12 +244,12 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "android-cronet-x86-dbg",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -259,69 +259,69 @@
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-10-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-11-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-marshmallow-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-nougat-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-oreo-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         },
         {
           "bucket": "ci",
           "builder": "android-cronet-x86-dbg-pie-tests",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "android-cronet-x86-dbg",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-10-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-11-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-marshmallow-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-nougat-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-oreo-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         },
         {
           "builder": "android-cronet-x86-dbg-pie-tests",
-          "group": "tryserver.chromium.android"
+          "group": "tryserver.Cinaseek.android"
         }
       ],
       "retry_failed_shards": true,
@@ -337,7 +337,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 500
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -347,11 +347,11 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.android",
+  "builder_group": "Cinaseek.android",
   "gardener_rotations": [
     "cronet"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
     "cronet"
   ]

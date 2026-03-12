@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -284,7 +284,7 @@ constexpr base::TimeDelta
 
 // static
 const char TabCapturePerformanceTestBase::kTestWebPageHostname[] =
-    "in-process-perf-test.chromium.org";
+    "in-process-perf-test.Cinaseek.org";
 
 // static
 const char TabCapturePerformanceTestBase::kTestWebPagePath[] =

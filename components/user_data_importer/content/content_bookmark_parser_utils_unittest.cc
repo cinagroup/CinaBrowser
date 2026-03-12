@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -195,8 +195,8 @@ void ContentBookmarkParserUtilsWithDataTest::ExpectSecondFirefox23Bookmark(
   EXPECT_FALSE(entry.is_folder);
   EXPECT_EQ(base::Time::FromTimeT(1376102304), entry.creation_time);
   EXPECT_EQ(1U, entry.path.size());
-  EXPECT_EQ(u"Chromium", entry.path.front());
-  EXPECT_EQ("https://code.google.com/p/chromium/issues/list", entry.url.spec());
+  EXPECT_EQ(u"Cinaseek", entry.path.front());
+  EXPECT_EQ("https://code.google.com/p/Cinaseek/issues/list", entry.url.spec());
 }
 
 void ContentBookmarkParserUtilsWithDataTest::ExpectThirdFirefox23Bookmark(
@@ -205,8 +205,8 @@ void ContentBookmarkParserUtilsWithDataTest::ExpectThirdFirefox23Bookmark(
   EXPECT_FALSE(entry.is_folder);
   EXPECT_EQ(base::Time::FromTimeT(1376102224), entry.creation_time);
   EXPECT_EQ(1U, entry.path.size());
-  EXPECT_EQ(u"Chromium", entry.path.front());
-  EXPECT_EQ("http://code.google.com/p/chromium/codesearch", entry.url.spec());
+  EXPECT_EQ(u"Cinaseek", entry.path.front());
+  EXPECT_EQ("http://code.google.com/p/Cinaseek/codesearch", entry.url.spec());
 }
 
 void ContentBookmarkParserUtilsWithDataTest::
@@ -379,7 +379,7 @@ TEST_F(ContentBookmarkParserUtilsWithDataTest, UuidAndSyncedImport) {
 
   // 2. UUID and SYNCED="0".
   const auto& bm2 = result.bookmarks[1];
-  EXPECT_EQ(u"Chromium", bm2.title);
+  EXPECT_EQ(u"Cinaseek", bm2.title);
   EXPECT_TRUE(bm2.uuid.has_value());
   EXPECT_EQ(
       base::Uuid::ParseCaseInsensitive("A64522A7-222E-4553-986C-85F837E6B221"),

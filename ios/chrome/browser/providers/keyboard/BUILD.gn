@@ -1,9 +1,9 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_keyboard") {
-  sources = [ "chromium_keyboard.mm" ]
+source_set("Cinaseek_keyboard") {
+  sources = [ "Cinaseek_keyboard.mm" ]
   deps = [
     "//base",
     "//ios/public/provider/chrome/browser/keyboard:keyboard_api",

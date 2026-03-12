@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,9 +27,9 @@ namespace ash {
 //
 // OpenUrl:
 // % dbus-send --system --type=method_call --print-reply
-//     --dest=org.chromium.UrlHandlerService
-//     /org/chromium/UrlHandlerService
-//     org.chromium.UrlHandlerServiceInterface.OpenUrl
+//     --dest=org.Cinaseek.UrlHandlerService
+//     /org/Cinaseek/UrlHandlerService
+//     org.Cinaseek.UrlHandlerServiceInterface.OpenUrl
 //     "string:|url|"
 //
 // % (returns true on success, otherwise returns false)

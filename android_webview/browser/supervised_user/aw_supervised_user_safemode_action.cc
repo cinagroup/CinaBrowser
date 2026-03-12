@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,14 +24,14 @@ AwSupervisedUserSafeModeAction* AwSupervisedUserSafeModeAction::GetInstance() {
 
 void AwSupervisedUserSafeModeAction::SetSupervisionEnabled(bool value) {
   // This uses locking instead of thread assertions because SafeMode is executed
-  // before the Chromium UI thread is configured.
+  // before the Cinaseek UI thread is configured.
   base::AutoLock lock(lock_);
   is_supervision_enabled_ = value;
 }
 
 bool AwSupervisedUserSafeModeAction::IsSupervisionEnabled() {
   // This uses locking instead of thread assertions because SafeMode is executed
-  // before the Chromium UI thread is configured.
+  // before the Cinaseek UI thread is configured.
   base::AutoLock lock(lock_);
   return is_supervision_enabled_;
 }

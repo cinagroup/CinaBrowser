@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,33 +9,33 @@
 
 #include <string>
 
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_packets.h"
 
 namespace net {
 
-class QuicChromiumClientStream;
+class QuicCinaseekClientStream;
 
 namespace test {
 
-class QuicChromiumClientSessionPeer {
+class QuicCinaseekClientSessionPeer {
  public:
-  QuicChromiumClientSessionPeer(const QuicChromiumClientSessionPeer&) = delete;
-  QuicChromiumClientSessionPeer& operator=(
-      const QuicChromiumClientSessionPeer&) = delete;
+  QuicCinaseekClientSessionPeer(const QuicCinaseekClientSessionPeer&) = delete;
+  QuicCinaseekClientSessionPeer& operator=(
+      const QuicCinaseekClientSessionPeer&) = delete;
 
-  static void SetHostname(QuicChromiumClientSession* session,
+  static void SetHostname(QuicCinaseekClientSession* session,
                           const std::string& hostname);
 
-  static QuicChromiumClientStream* CreateOutgoingStream(
-      QuicChromiumClientSession* session);
+  static QuicCinaseekClientStream* CreateOutgoingStream(
+      QuicCinaseekClientSession* session);
 
-  static bool GetSessionGoingAway(QuicChromiumClientSession* session);
+  static bool GetSessionGoingAway(QuicCinaseekClientSession* session);
 
   static MigrationCause GetCurrentMigrationCause(
-      QuicChromiumClientSession* session);
+      QuicCinaseekClientSession* session);
 
-  static void DisableConnectionMigration(QuicChromiumClientSession* session);
+  static void DisableConnectionMigration(QuicCinaseekClientSession* session);
 };
 
 }  // namespace test

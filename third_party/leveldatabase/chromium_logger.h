@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,11 +20,11 @@
 
 namespace leveldb {
 
-class ChromiumLogger : public Logger {
+class CinaseekLogger : public Logger {
  public:
-  explicit ChromiumLogger(base::File file) : file_(std::move(file)) {}
+  explicit CinaseekLogger(base::File file) : file_(std::move(file)) {}
 
-  ~ChromiumLogger() override = default;
+  ~CinaseekLogger() override = default;
 
   void Logv(const char* format, va_list arguments) override {
     std::string str = base::StrCat(

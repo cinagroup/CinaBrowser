@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -142,7 +142,7 @@ group("chrome_app_startup_parameters_fuzzers_deps") {
     "//base/test:test_support",
     "//ios/chrome/app:app_internal",
     "//ios/chrome/app:tests_fake_hook",
-    "//ios/chrome/browser/providers:chromium_providers",
+    "//ios/chrome/browser/providers:Cinaseek_providers",
     "//ios/chrome/browser/settings/ui_bundled",
     "//ios/chrome/browser/sharing/ui_bundled:sharing_internal",
     "//ios/chrome/browser/tabs/model:tabs_internal",

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,8 +13,8 @@
 namespace exo {
 
 // Application Id set by the client. For example:
-// "org.chromium.arc.<task-id>" for ARC++ shell surfaces.
-// "org.chromium.lacros.<window-id>" for Lacros browser shell surfaces.
+// "org.Cinaseek.arc.<task-id>" for ARC++ shell surfaces.
+// "org.Cinaseek.lacros.<window-id>" for Lacros browser shell surfaces.
 extern const ui::ClassProperty<std::string*>* const kApplicationIdKey;
 
 // Whether Restore and Maximize should exit full screen for this window.

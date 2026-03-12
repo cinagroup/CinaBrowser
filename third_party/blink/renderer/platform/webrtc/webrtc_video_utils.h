@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 
 namespace blink {
 
-// This file has helper methods for conversion between chromium types and
+// This file has helper methods for conversion between Cinaseek types and
 // webrtc/api/video types.
 
 media::VideoRotation PLATFORM_EXPORT

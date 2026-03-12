@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -34,7 +34,7 @@ cast_source_set("backend") {
     "//chromecast/media/common:media_resource_tracker",
   ]
 
-  if (enable_chromium_runtime_cast_renderer) {
+  if (enable_Cinaseek_runtime_cast_renderer) {
     deps += [ "//chromecast/media/cma/backend/proxy" ]
   }
 

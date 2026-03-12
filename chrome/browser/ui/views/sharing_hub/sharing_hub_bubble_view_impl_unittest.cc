@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -106,7 +106,7 @@ class SharingHubBubbleTest : public ChromeViewsTestBase {
     auto bubble = std::make_unique<sharing_hub::SharingHubBubbleViewImpl>(
         anchor_widget_->GetRootView(),
         share::ShareAttempt(nullptr, u"Hello!",
-                            GURL("https://www.chromium.org"), ui::ImageModel()),
+                            GURL("https://www.Cinaseek.org"), ui::ImageModel()),
         &controller_);
     bubble_ = bubble.get();
     views::BubbleDialogDelegateView::CreateBubble(std::move(bubble));

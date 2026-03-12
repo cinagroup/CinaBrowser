@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ use_cpuinfo =
     # cpuinfo is not supported on fuchsia.
     !is_fuchsia &&
     # There's a few arm architectures that are not supported by cpuinfo,
-    # especially amongst ChromeOS devices.
+    # especially amongst CinaseekOS devices.
     # See //third_party/cpuinfo/src/src/arm/linux/cp.h.
     (!defined(arm_arch) ||
      (arm_arch != "armv7-a+crc" && arm_arch != "armv8-a+crc" &&

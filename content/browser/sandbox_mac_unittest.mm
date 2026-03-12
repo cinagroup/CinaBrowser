@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -196,8 +196,8 @@ TEST_F(SandboxMacTest, SSLInitTest) {
 
 // This test checks to make sure that `__builtin_available()` (and therefore the
 // Objective-C equivalent `@available()`) work within a sandbox. When revving
-// the macOS releases supported by Chromium, bump this up. This value
-// specifically matches the oldest macOS release supported by Chromium.
+// the macOS releases supported by Cinaseek, bump this up. This value
+// specifically matches the oldest macOS release supported by Cinaseek.
 MULTIPROCESS_TEST_MAIN(BuiltinAvailable) {
   CheckCreateSeatbeltServer();
 

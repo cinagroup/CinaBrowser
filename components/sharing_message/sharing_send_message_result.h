@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // numeric values should never be reused. Please update the enum and suffix
 // named SharingSendMessageResult in enums.xml and histograms.xml when adding
 // a new entry here.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.sharing
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.sharing
 enum class SharingSendMessageResult {
   kSuccessful = 0,
   kDeviceNotFound = 1,

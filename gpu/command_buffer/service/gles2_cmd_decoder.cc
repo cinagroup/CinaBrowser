@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,7 +45,7 @@
 #include "base/trace_event/trace_event.h"
 #include "build/build_config.h"
 #include "gpu/command_buffer/common/debug_marker_manager.h"
-#include "gpu/command_buffer/common/gles2_cmd_copy_texture_chromium_utils.h"
+#include "gpu/command_buffer/common/gles2_cmd_copy_texture_Cinaseek_utils.h"
 #include "gpu/command_buffer/common/gles2_cmd_format.h"
 #include "gpu/command_buffer/common/gles2_cmd_utils.h"
 #include "gpu/command_buffer/common/mailbox.h"
@@ -61,7 +61,7 @@
 #include "gpu/command_buffer/service/gl_utils.h"
 #include "gpu/command_buffer/service/gles2_cmd_clear_framebuffer.h"
 #include "gpu/command_buffer/service/gles2_cmd_copy_tex_image.h"
-#include "gpu/command_buffer/service/gles2_cmd_copy_texture_chromium.h"
+#include "gpu/command_buffer/service/gles2_cmd_copy_texture_Cinaseek.h"
 #include "gpu/command_buffer/service/gles2_cmd_decoder_passthrough.h"
 #include "gpu/command_buffer/service/gles2_cmd_validation.h"
 #include "gpu/command_buffer/service/gles2_query_manager.h"
@@ -722,7 +722,7 @@ class GLES2DecoderImpl : public GLES2Decoder,
   void SetCopyTextureResourceManagerForTest(
       CopyTextureCHROMIUMResourceManager* copy_texture_resource_manager)
       override {
-    copy_texture_chromium_.reset(copy_texture_resource_manager);
+    copy_texture_Cinaseek_.reset(copy_texture_resource_manager);
   }
 
   void SetCopyTexImageBlitterForTest(
@@ -2294,7 +2294,7 @@ class GLES2DecoderImpl : public GLES2Decoder,
   void ClearFramebufferForWorkaround(GLbitfield mask);
 
   bool SupportsSeparateFramebufferBinds() const {
-    return (feature_info_->feature_flags().chromium_framebuffer_multisample ||
+    return (feature_info_->feature_flags().Cinaseek_framebuffer_multisample ||
             feature_info_->IsWebGL2OrES3Context());
   }
 
@@ -2474,7 +2474,7 @@ class GLES2DecoderImpl : public GLES2Decoder,
   bool service_logging_;
 
   std::unique_ptr<CopyTexImageResourceManager> copy_tex_image_blit_;
-  std::unique_ptr<CopyTextureCHROMIUMResourceManager> copy_texture_chromium_;
+  std::unique_ptr<CopyTextureCHROMIUMResourceManager> copy_texture_Cinaseek_;
   std::unique_ptr<ClearFramebufferResourceManager> clear_framebuffer_blit_;
 
   // Cached values of the currently assigned viewport dimensions.
@@ -3305,7 +3305,7 @@ Capabilities GLES2DecoderImpl::GetCapabilities() {
   caps.texture_format_etc1_npot =
       feature_info_->feature_flags().oes_compressed_etc1_rgb8_texture &&
       !workarounds().etc1_power_of_two_only;
-  caps.sync_query = feature_info_->feature_flags().chromium_sync_query;
+  caps.sync_query = feature_info_->feature_flags().Cinaseek_sync_query;
 
   // Only query the kEnableMSAAOnNewIntelGPUs feature flag if the host device
   // is affected by the experiment.
@@ -3320,8 +3320,8 @@ Capabilities GLES2DecoderImpl::GetCapabilities() {
   caps.texture_norm16 = feature_info_->feature_flags().ext_texture_norm16;
   caps.texture_half_float_linear =
       feature_info_->oes_texture_half_float_linear_available();
-  caps.image_ar30 = feature_info_->feature_flags().chromium_image_ar30;
-  caps.image_ab30 = feature_info_->feature_flags().chromium_image_ab30;
+  caps.image_ar30 = feature_info_->feature_flags().Cinaseek_image_ar30;
+  caps.image_ab30 = feature_info_->feature_flags().Cinaseek_image_ab30;
   caps.render_buffer_format_bgra8888 =
       feature_info_->feature_flags().ext_render_buffer_format_bgra8888;
   caps.mesa_framebuffer_flip_y =
@@ -3443,7 +3443,7 @@ GLCapabilities GLES2DecoderImpl::GetGLCapabilities() {
                   &caps.uniform_buffer_offset_alignment, 1);
   }
   if (feature_info_->feature_flags().multisampled_render_to_texture ||
-      feature_info_->feature_flags().chromium_framebuffer_multisample ||
+      feature_info_->feature_flags().Cinaseek_framebuffer_multisample ||
       feature_info_->IsWebGL2OrES3Context()) {
     caps.max_samples = ComputeMaxSamples();
   }
@@ -3451,7 +3451,7 @@ GLCapabilities GLES2DecoderImpl::GetGLCapabilities() {
       feature_info_->feature_flags().occlusion_query_boolean;
   caps.timer_queries = query_manager_->GPUTimingAvailable();
 
-  caps.sync_query = feature_info_->feature_flags().chromium_sync_query;
+  caps.sync_query = feature_info_->feature_flags().Cinaseek_sync_query;
 
   return caps;
 }
@@ -3835,7 +3835,7 @@ void GLES2DecoderImpl::DeleteRenderbuffersHelper(
     GLsizei n,
     const volatile GLuint* client_ids) {
   bool supports_separate_framebuffer_binds =
-     features().chromium_framebuffer_multisample;
+     features().Cinaseek_framebuffer_multisample;
   for (GLsizei ii = 0; ii < n; ++ii) {
     GLuint client_id = UNSAFE_TODO(client_ids[ii]);
     Renderbuffer* renderbuffer = GetRenderbuffer(client_id);
@@ -4407,9 +4407,9 @@ void GLES2DecoderImpl::Destroy(bool have_context) {
       copy_tex_image_blit_.reset();
     }
 
-    if (copy_texture_chromium_.get()) {
-      copy_texture_chromium_->Destroy();
-      copy_texture_chromium_.reset();
+    if (copy_texture_Cinaseek_.get()) {
+      copy_texture_Cinaseek_->Destroy();
+      copy_texture_Cinaseek_.reset();
     }
 
     if (clear_framebuffer_blit_.get()) {
@@ -4496,7 +4496,7 @@ void GLES2DecoderImpl::Destroy(bool have_context) {
   state_.current_program = nullptr;
 
   copy_tex_image_blit_.reset();
-  copy_texture_chromium_.reset();
+  copy_texture_Cinaseek_.reset();
   clear_framebuffer_blit_.reset();
 
   ReportProgress();
@@ -4596,7 +4596,7 @@ error::Error GLES2DecoderImpl::HandleCreateGpuFenceINTERNAL(
   const volatile gles2::cmds::CreateGpuFenceINTERNAL& c =
       *static_cast<const volatile gles2::cmds::CreateGpuFenceINTERNAL*>(
           cmd_data);
-  if (!features().chromium_gpu_fence) {
+  if (!features().Cinaseek_gpu_fence) {
     return error::kUnknownCommand;
   }
   GLuint gpu_fence_id = static_cast<GLuint>(c.gpu_fence_id);
@@ -4610,7 +4610,7 @@ error::Error GLES2DecoderImpl::HandleWaitGpuFenceCHROMIUM(
     const volatile void* cmd_data) {
   const volatile gles2::cmds::WaitGpuFenceCHROMIUM& c =
       *static_cast<const volatile gles2::cmds::WaitGpuFenceCHROMIUM*>(cmd_data);
-  if (!features().chromium_gpu_fence) {
+  if (!features().Cinaseek_gpu_fence) {
     return error::kUnknownCommand;
   }
   GLuint gpu_fence_id = static_cast<GLuint>(c.gpu_fence_id);
@@ -4625,7 +4625,7 @@ error::Error GLES2DecoderImpl::HandleDestroyGpuFenceCHROMIUM(
   const volatile gles2::cmds::DestroyGpuFenceCHROMIUM& c =
       *static_cast<const volatile gles2::cmds::DestroyGpuFenceCHROMIUM*>(
           cmd_data);
-  if (!features().chromium_gpu_fence) {
+  if (!features().Cinaseek_gpu_fence) {
     return error::kUnknownCommand;
   }
   GLuint gpu_fence_id = static_cast<GLuint>(c.gpu_fence_id);
@@ -15080,7 +15080,7 @@ error::Error GLES2DecoderImpl::HandleBeginQueryEXT(
       break;
     case GL_READBACK_SHADOW_COPIES_UPDATED_CHROMIUM:
     case GL_COMMANDS_COMPLETED_CHROMIUM:
-      if (!features().chromium_sync_query) {
+      if (!features().Cinaseek_sync_query) {
         LOCAL_SET_GL_ERROR(
             GL_INVALID_OPERATION, "glBeginQueryEXT",
             "not enabled for commands completed queries");
@@ -15088,7 +15088,7 @@ error::Error GLES2DecoderImpl::HandleBeginQueryEXT(
       }
       break;
     case GL_PROGRAM_COMPLETION_QUERY_CHROMIUM:
-      if (!features().chromium_completion_query) {
+      if (!features().Cinaseek_completion_query) {
         LOCAL_SET_GL_ERROR(GL_INVALID_OPERATION, "glBeginQueryEXT",
                            "not enabled for program completion queries");
         return error::kNoError;
@@ -15661,7 +15661,7 @@ void GLES2DecoderImpl::DoCopyTextureCHROMIUM(
       unpack_flip_y == GL_TRUE, unpack_premultiply_alpha == GL_TRUE,
       unpack_unmultiply_alpha == GL_TRUE);
 
-  copy_texture_chromium_->DoCopyTexture(
+  copy_texture_Cinaseek_->DoCopyTexture(
       this, source_target, source_texture->service_id(), source_level,
       source_internal_format, dest_target, dest_texture->service_id(),
       dest_level, internal_format, source_width, source_height,
@@ -15820,7 +15820,7 @@ void GLES2DecoderImpl::CopySubTextureHelper(const char* function_name,
     method = CopyTextureMethod::DIRECT_DRAW;
   }
 
-  copy_texture_chromium_->DoCopySubTexture(
+  copy_texture_Cinaseek_->DoCopySubTexture(
       this, source_target, source_texture->service_id(), source_level,
       source_internal_format, dest_target, dest_texture->service_id(),
       dest_level, dest_internal_format, xoffset, yoffset, x, y, width, height,
@@ -15869,10 +15869,10 @@ bool GLES2DecoderImpl::InitializeCopyTextureCHROMIUM(
     const char* function_name) {
   // Defer initializing the CopyTextureCHROMIUMResourceManager until it is
   // needed because it takes 10s of milliseconds to initialize.
-  if (!copy_texture_chromium_.get()) {
+  if (!copy_texture_Cinaseek_.get()) {
     LOCAL_COPY_REAL_GL_ERRORS_TO_WRAPPER(function_name);
-    copy_texture_chromium_.reset(CopyTextureCHROMIUMResourceManager::Create());
-    copy_texture_chromium_->Initialize(this, features());
+    copy_texture_Cinaseek_.reset(CopyTextureCHROMIUMResourceManager::Create());
+    copy_texture_Cinaseek_->Initialize(this, features());
     if (LOCAL_PEEK_GL_ERROR(function_name) != GL_NO_ERROR)
       return false;
 

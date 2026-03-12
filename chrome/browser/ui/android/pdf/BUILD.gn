@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 # the base module.
 android_library("pdf_provider_java") {
   sources =
-      [ "java/src/org/chromium/chrome/browser/pdf/PdfContentProvider.java" ]
+      [ "java/src/org/Cinaseek/chrome/browser/pdf/PdfContentProvider.java" ]
   deps = [
     "//base:base_java",
     "//third_party/androidx:androidx_annotation_annotation_java",
@@ -18,17 +18,17 @@ android_library("pdf_provider_java") {
 }
 
 generate_jni("pdf_jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/pdf/PdfUtils.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/pdf/PdfUtils.java" ]
 }
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/pdf/PdfActionsDelegate.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfCoordinator.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfInfo.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfPage.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfToolbar.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfActionsDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfInfo.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfPage.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfToolbar.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfUtils.java",
   ]
   deps = [
     ":java_resources",
@@ -57,7 +57,7 @@ android_library("java") {
     "//url:url_java",
   ]
   srcjar_deps = [ ":pdf_jni_headers" ]
-  resources_package = "org.chromium.chrome.browser.pdf"
+  resources_package = "org.Cinaseek.chrome.browser.pdf"
 }
 
 android_resources("java_resources") {
@@ -70,12 +70,12 @@ android_resources("java_resources") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.pdf"
+  resources_package = "org.Cinaseek.chrome.browser.pdf"
   sources = [
-    "java/src/org/chromium/chrome/browser/pdf/PdfContentProviderUnitTest.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfCoordinatorUnitTest.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfPageUnitTest.java",
-    "java/src/org/chromium/chrome/browser/pdf/PdfUtilsUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfContentProviderUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfCoordinatorUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfPageUnitTest.java",
+    "java/src/org/Cinaseek/chrome/browser/pdf/PdfUtilsUnitTest.java",
   ]
 
   deps = [
@@ -107,7 +107,7 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/pdf/PdfPageTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/pdf/PdfPageTest.java" ]
 
   deps = [
     ":java",

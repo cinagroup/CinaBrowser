@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ namespace {
 
 std::optional<bool> g_use_mappable_shared_images_for_canvas_2d_for_testing;
 std::optional<bool> g_low_latency_usage_supported_for_canvas_2d_for_testing;
-std::optional<bool> g_webgl_image_chromium_enabled_for_testing;
+std::optional<bool> g_webgl_image_Cinaseek_enabled_for_testing;
 
 #if BUILDFLAG(IS_APPLE)
 bool IsDelegatedCompositingEnabled() {
@@ -323,7 +323,7 @@ void SharedGpuContext::Reset() {
   this_ptr->context_provider_factory_.Reset();
   g_use_mappable_shared_images_for_canvas_2d_for_testing.reset();
   g_low_latency_usage_supported_for_canvas_2d_for_testing.reset();
-  g_webgl_image_chromium_enabled_for_testing.reset();
+  g_webgl_image_Cinaseek_enabled_for_testing.reset();
 }
 
 bool SharedGpuContext::IsValidWithoutRestoringForTesting() {
@@ -356,9 +356,9 @@ bool SharedGpuContext::AllowSoftwareToAcceleratedCanvasUpgrade() {
 }
 
 #if BUILDFLAG(IS_ANDROID)
-bool SharedGpuContext::MaySupportWebGLImageChromium() {
-  if (g_webgl_image_chromium_enabled_for_testing) {
-    return g_webgl_image_chromium_enabled_for_testing.value();
+bool SharedGpuContext::MaySupportWebGLImageCinaseek() {
+  if (g_webgl_image_Cinaseek_enabled_for_testing) {
+    return g_webgl_image_Cinaseek_enabled_for_testing.value();
   }
   return ::features::IsAndroidSurfaceControlEnabled();
 }
@@ -439,39 +439,39 @@ bool SharedGpuContext::LowLatencyUsageSupportedForCanvas2D(
   // whether this method can then return true on Apple if
   // IsDelegatedCompositingEnabled() holds.
   return base::FeatureList::IsEnabled(
-      features::kLowLatencyCanvas2dImageChromium);
+      features::kLowLatencyCanvas2dImageCinaseek);
 }
 
 bool SharedGpuContext::LowLatencyUsageSupportedForWebGL() {
-  return MaySupportWebGLImageChromium() &&
-         (WebGLImageChromiumEnabled() ||
+  return MaySupportWebGLImageCinaseek() &&
+         (WebGLImageCinaseekEnabled() ||
           base::FeatureList::IsEnabled(
-              features::kLowLatencyWebGLImageChromium));
+              features::kLowLatencyWebGLImageCinaseek));
 }
 
-bool SharedGpuContext::WebGLImageChromiumEnabled() {
-  if (g_webgl_image_chromium_enabled_for_testing) {
-    return g_webgl_image_chromium_enabled_for_testing.value();
+bool SharedGpuContext::WebGLImageCinaseekEnabled() {
+  if (g_webgl_image_Cinaseek_enabled_for_testing) {
+    return g_webgl_image_Cinaseek_enabled_for_testing.value();
   }
 
 #if BUILDFLAG(IS_APPLE)
   return IsDelegatedCompositingEnabled();
 #elif BUILDFLAG(IS_CHROMEOS)
-  static const bool enable_web_gl_image_chromium =
+  static const bool enable_web_gl_image_Cinaseek =
       base::CommandLine::ForCurrentProcess()->HasSwitch(
-          blink::switches::kEnableWebGLImageChromium);
-  return enable_web_gl_image_chromium;
+          blink::switches::kEnableWebGLImageCinaseek);
+  return enable_web_gl_image_Cinaseek;
 #else
   return false;
 #endif
 }
 
 bool SharedGpuContext::UseOverlaysForWebGL() {
-  return MaySupportWebGLImageChromium() && WebGLImageChromiumEnabled();
+  return MaySupportWebGLImageCinaseek() && WebGLImageCinaseekEnabled();
 }
 
-void SharedGpuContext::SetWebGLImageChromiumEnabledForTesting(bool enable) {
-  g_webgl_image_chromium_enabled_for_testing = enable;
+void SharedGpuContext::SetWebGLImageCinaseekEnabledForTesting(bool enable) {
+  g_webgl_image_Cinaseek_enabled_for_testing = enable;
 }
 
 }  // namespace blink

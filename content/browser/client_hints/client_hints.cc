@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -322,7 +322,7 @@ gfx::Size GetScaledViewportSize(BrowserContext* context,
 
 #if BUILDFLAG(IS_ANDROID)
   // On Android, the viewport is scaled so the width is 980. See
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/css/viewportAndroid.css.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/renderer/core/css/viewportAndroid.css.
   // TODO(crbug.com/40196453): Improve the usefulness of the viewport client
   // hints for navigation requests.
   if (viewport_size.width() > 0) {

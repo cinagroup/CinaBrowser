@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -878,7 +878,7 @@ void VideoTrackRecorderImpl::OnVideoFrame(
     // to complete, the number of outstanding capture buffers is limited for
     // video capture and will eventually lead to the capturer stopping emitting
     // buffers. See
-    // https://source.chromium.org/chromium/chromium/src/+/main:media/capture/video/video_capture_buffer_pool_util.cc.
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/capture/video/video_capture_buffer_pool_util.cc.
     incoming_frame_queue_.push_back(
         MediaStreamFrame{.video_frame = std::move(video_frame),
                          .estimated_capture_time = capture_time});

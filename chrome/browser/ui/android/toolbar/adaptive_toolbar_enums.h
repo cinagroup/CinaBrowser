@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 // Be sure to keep in sync with AdaptiveToolbarButtonVariant in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.toolbar.adaptive
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.toolbar.adaptive
 //
 // LINT.IfChange(AdaptiveToolbarButtonVariant)
 enum class AdaptiveToolbarButtonVariant {

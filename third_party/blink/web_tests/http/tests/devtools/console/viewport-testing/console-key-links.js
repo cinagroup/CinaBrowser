@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ import * as Console from 'devtools/panels/console/console.js';
 
   await TestRunner.evaluateInPagePromise(`
     function fn1() {
-      console.error("Custom error with link www.chromium.org/linkInErrMsg");
+      console.error("Custom error with link www.Cinaseek.org/linkInErrMsg");
     }
 
     //# sourceURL=foo.js
@@ -28,7 +28,7 @@ import * as Console from 'devtools/panels/console/console.js';
 
   TestRunner.runTestSuite([
     async function testNavigatingLinks(next) {
-      await clearAndLog(`console.log("Before");console.log("Text around www.chromium.org/1a multiple links, www.chromium.org/1b");console.log("www.chromium.org/2");`, 3);
+      await clearAndLog(`console.log("Before");console.log("Text around www.Cinaseek.org/1a multiple links, www.Cinaseek.org/1b");console.log("www.Cinaseek.org/2");`, 3);
       await ConsoleTestRunner.waitForRemoteObjectsConsoleMessagesPromise();
 
       TestRunner.addResult(`Setting focus in prompt:`);

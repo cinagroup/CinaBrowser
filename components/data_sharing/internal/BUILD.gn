@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -170,17 +170,17 @@ if (is_android) {
     visibility = [
       ":*",
       "//chrome/android:chrome_all_java",
-      "//chrome/android/javatests:chrome_test_java_org.chromium.chrome.browser.collaboration",
+      "//chrome/android/javatests:chrome_test_java_org.Cinaseek.chrome.browser.collaboration",
       "//components:*",
       "//components/data_sharing/internal:native_test_helper_java",
     ]
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/components/data_sharing/DataSharingConversionBridge.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingNetworkLoaderImpl.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingSDKDelegateBridge.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingServiceImpl.java",
-      "android/java/src/org/chromium/components/data_sharing/ObserverBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingConversionBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingNetworkLoaderImpl.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingSDKDelegateBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/ObserverBridge.java",
     ]
 
     deps = [
@@ -205,11 +205,11 @@ if (is_android) {
     ]
 
     sources = [
-      "android/java/src/org/chromium/components/data_sharing/DataSharingConversionBridge.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingNetworkLoaderImpl.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingSDKDelegateBridge.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingServiceImpl.java",
-      "android/java/src/org/chromium/components/data_sharing/ObserverBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingConversionBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingNetworkLoaderImpl.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingSDKDelegateBridge.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/ObserverBridge.java",
     ]
   }
 
@@ -217,9 +217,9 @@ if (is_android) {
     srcjar_deps = [ ":test_jni_headers" ]
     testonly = true
     sources = [
-      "android/java/src/org/chromium/components/data_sharing/DataSharingSDKDelegateAndroidTestSupport.java",
-      "android/java/src/org/chromium/components/data_sharing/DataSharingSDKDelegateTestImpl.java",
-      "android/java/src/org/chromium/components/data_sharing/TestServiceObserver.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingSDKDelegateAndroidTestSupport.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingSDKDelegateTestImpl.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/TestServiceObserver.java",
     ]
     deps = [
       ":internal_java",
@@ -238,13 +238,13 @@ if (is_android) {
   generate_jni("test_jni_headers") {
     testonly = true
     sources = [
-      "android/java/src/org/chromium/components/data_sharing/DataSharingSDKDelegateAndroidTestSupport.java",
-      "android/java/src/org/chromium/components/data_sharing/TestServiceObserver.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/DataSharingSDKDelegateAndroidTestSupport.java",
+      "android/java/src/org/Cinaseek/components/data_sharing/TestServiceObserver.java",
     ]
   }
 
   robolectric_library("data_sharing_junit_tests") {
-    sources = [ "android/java/src/org/chromium/components/data_sharing/DataSharingNetworkLoaderImplTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/data_sharing/DataSharingNetworkLoaderImplTest.java" ]
 
     deps = [
       ":internal_java",

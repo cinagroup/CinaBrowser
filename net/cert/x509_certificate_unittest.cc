@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -243,9 +243,9 @@ TEST(X509CertificateTest, MultivalueRDN) {
   EXPECT_EQ("", subject.state_or_province_name);
   EXPECT_EQ("US", subject.country_name);
   ASSERT_EQ(1U, subject.organization_names.size());
-  EXPECT_EQ("Chromium", subject.organization_names[0]);
+  EXPECT_EQ("Cinaseek", subject.organization_names[0]);
   ASSERT_EQ(1U, subject.organization_unit_names.size());
-  EXPECT_EQ("Chromium net_unittests", subject.organization_unit_names[0]);
+  EXPECT_EQ("Cinaseek net_unittests", subject.organization_unit_names[0]);
 }
 
 // Test that characters which would normally be escaped in the string form,
@@ -264,10 +264,10 @@ TEST(X509CertificateTest, UnescapedSpecialCharacters) {
   EXPECT_EQ("California", subject.state_or_province_name);
   EXPECT_EQ("US", subject.country_name);
   ASSERT_EQ(1U, subject.organization_names.size());
-  EXPECT_EQ("Chromium = \"net_unittests\"", subject.organization_names[0]);
+  EXPECT_EQ("Cinaseek = \"net_unittests\"", subject.organization_names[0]);
   ASSERT_EQ(2U, subject.organization_unit_names.size());
   EXPECT_EQ("net_unittests", subject.organization_unit_names[0]);
-  EXPECT_EQ("Chromium", subject.organization_unit_names[1]);
+  EXPECT_EQ("Cinaseek", subject.organization_unit_names[1]);
 }
 
 TEST(X509CertificateTest, InvalidPrintableStringIsUtf8) {

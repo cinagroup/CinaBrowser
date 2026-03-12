@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1331,7 +1331,7 @@ gfx::Rect BrowserAccessibilityManager::GetViewBoundsInScreenCoordinates()
   if (delegate) {
     gfx::Rect bounds = delegate->AccessibilityGetViewBounds();
 
-    // http://www.chromium.org/developers/design-documents/blink-coordinate-spaces
+    // http://www.Cinaseek.org/developers/design-documents/blink-coordinate-spaces
     // The bounds returned by the delegate are always in device-independent
     // pixels (DIPs), meaning physical pixels divided by device scale factor
     // (DSF). However, Blink does not apply DSF when going from physical to
@@ -1879,7 +1879,7 @@ BrowserAccessibility* BrowserAccessibilityManager::CachingAsyncHitTest(
     // Transform from screen to viewport to frame coordinates to pass to Blink.
     // Note that page scale (pinch zoom) is independent of device scale factor
     // (display DPI). Only the latter is affected by UseZoomForDSF.
-    // http://www.chromium.org/developers/design-documents/blink-coordinate-spaces
+    // http://www.Cinaseek.org/developers/design-documents/blink-coordinate-spaces
     gfx::Point viewport_point =
         blink_screen_point - screen_view_bounds.OffsetFromOrigin();
     gfx::Point frame_point =

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 #include "net/base/net_error_details.h"
 #include "net/base/net_export.h"
 #include "net/base/network_handle.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/quic/quic_session_alias_key.h"
 #include "net/spdy/multiplexed_session_creation_initiator.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_versions.h"
@@ -37,7 +37,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttempt {
   // Represents a successful QUIC session creation. Used for QUIC session
   // creations that could complete asynchronously.
   struct CreateSessionResult {
-    raw_ptr<QuicChromiumClientSession> session;
+    raw_ptr<QuicCinaseekClientSession> session;
     handles::NetworkHandle network = handles::kInvalidNetworkHandle;
   };
 
@@ -88,7 +88,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttempt {
       IPEndPoint proxy_peer_endpoint,
       quic::ParsedQuicVersion quic_version,
       int cert_verify_flags,
-      std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream,
+      std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream,
       const HttpUserAgentSettings* http_user_agent_settings,
       MultiplexedSessionCreationInitiator session_creation_initiator,
       std::optional<ConnectionManagementConfig> connection_management_config);
@@ -108,7 +108,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttempt {
 
   const ConnectionEndpointMetadata& metadata() const { return metadata_; }
 
-  QuicChromiumClientSession* session() const { return session_.get(); }
+  QuicCinaseekClientSession* session() const { return session_.get(); }
 
   void PopulateNetErrorDetails(NetErrorDetails* details) const;
 
@@ -155,7 +155,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttempt {
   std::unique_ptr<QuicCryptoClientConfigHandle> crypto_client_config_handle_;
 
   // Fields only used for session attempts to a proxy.
-  std::unique_ptr<QuicChromiumClientStream::Handle> proxy_stream_;
+  std::unique_ptr<QuicCinaseekClientStream::Handle> proxy_stream_;
   const raw_ptr<const HttpUserAgentSettings> http_user_agent_settings_;
   const IPEndPoint local_endpoint_;
 
@@ -165,7 +165,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttempt {
   State next_state_ = State::kNone;
   bool in_loop_ = false;
 
-  raw_ptr<QuicChromiumClientSession> session_ = nullptr;
+  raw_ptr<QuicCinaseekClientSession> session_ = nullptr;
   bool session_creation_finished_ = false;
   bool connection_retried_ = false;
 

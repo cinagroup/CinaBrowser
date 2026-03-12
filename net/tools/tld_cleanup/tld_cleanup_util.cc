@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ constexpr char kBeginPrivateDomainsComment[] = "// ===BEGIN PRIVATE DOMAINS===";
 constexpr char kEndPrivateDomainsComment[] = "// ===END PRIVATE DOMAINS===";
 constexpr char kGperfPreamble[] =
     "%{\n"
-    "// Copyright 2012 The Chromium Authors\n"
+    "// Copyright 2012 The Cinaseek Authors\n"
     "// Use of this source code is governed by a BSD-style license "
     "that can be\n"
     "// found in the LICENSE file.\n\n"

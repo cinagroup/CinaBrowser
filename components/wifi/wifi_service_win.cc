@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,8 +42,8 @@
 #include "base/win/win_util.h"
 #include "components/onc/onc_constants.h"
 #include "components/wifi/network_properties.h"
-#include "third_party/libxml/chromium/xml_reader.h"
-#include "third_party/libxml/chromium/xml_writer.h"
+#include "third_party/libxml/Cinaseek/xml_reader.h"
+#include "third_party/libxml/Cinaseek/xml_writer.h"
 
 namespace {
 const wchar_t kNwCategoryWizardRegKey[] =

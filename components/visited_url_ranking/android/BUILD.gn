@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("visited_url_ranking_java") {
   srcjar_deps = [ ":visited_url_ranking_enums_srcjar" ]
   deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
-  resources_package = "org.chromium.components.visited_url_ranking"
+  resources_package = "org.Cinaseek.components.visited_url_ranking"
 }
 
 java_cpp_enum("visited_url_ranking_enums_srcjar") {

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -51,7 +51,7 @@ constexpr char kWorkspaceUrlForUser0[] = "https://docs.google.com/u/0/";
 constexpr char kWorkspaceUrlForUser1[] =
     "https://mail.google.com/foo/bar?authuser=1";
 constexpr char kNonWorkspaceUrl[] = "https://not.workspace.com/";
-constexpr char kUserName[] = "test-user@chromium.org";
+constexpr char kUserName[] = "test-user@Cinaseek.org";
 
 constexpr char kContentAreaUser0[] = "foo@gmail.com";
 constexpr char kContentAreaUser1[] = "bar@gmail.com";

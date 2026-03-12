@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,11 +31,11 @@ using testing::Eq;
 using testing::Return;
 using testing::SaveArg;
 using JTabGroupSyncService =
-    org::chromium::components::tab_group_sync::JTabGroupSyncService;
+    org::Cinaseek::components::tab_group_sync::JTabGroupSyncService;
 using JLocalTabGroupId =
-    org::chromium::components::tab_group_sync::JLocalTabGroupId;
+    org::Cinaseek::components::tab_group_sync::JLocalTabGroupId;
 using JSavedTabGroup =
-    org::chromium::components::tab_group_sync::JSavedTabGroup;
+    org::Cinaseek::components::tab_group_sync::JSavedTabGroup;
 
 namespace tab_groups {
 namespace {

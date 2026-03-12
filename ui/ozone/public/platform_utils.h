@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class COMPONENT_EXPORT(OZONE_BASE) PlatformUtils {
   // any window on screen.
   virtual gfx::ImageSkia GetNativeWindowIcon(intptr_t target_window_id) = 0;
 
-  // Returns a string that labels Chromium's windows for the window manager.
+  // Returns a string that labels Cinaseek's windows for the window manager.
   // By default, the class name is based on the so called desktop base name (see
   // GetDesktopBaseName() in chrome/browser/shell_integration_linux.cc), which,
   // in its turn, depends on the channel.

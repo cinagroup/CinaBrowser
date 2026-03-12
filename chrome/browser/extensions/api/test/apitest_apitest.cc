@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -401,7 +401,7 @@ IN_PROC_BROWSER_TEST_P(TestAPITestWithContextType, AssertEq_Success) {
              chrome.test.assertEq(42, 42);
              chrome.test.assertEq(false, false);
              chrome.test.assertEq(3.14, 3.14);
-             chrome.test.assertEq('chromium', 'chromium');
+             chrome.test.assertEq('Cinaseek', 'Cinaseek');
              chrome.test.assertEq(null, null);
              chrome.test.assertEq(NaN, NaN);
              chrome.test.succeed();

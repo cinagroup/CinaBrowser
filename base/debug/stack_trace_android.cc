@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,16 +88,16 @@ size_t CollectStackTrace(span<const void*> trace) {
 void StackTrace::PrintMessageWithPrefix(cstring_view prefix_string,
                                         cstring_view message) {
   if (!prefix_string.empty()) {
-    __android_log_write(ANDROID_LOG_ERROR, "chromium",
+    __android_log_write(ANDROID_LOG_ERROR, "Cinaseek",
                         StrCat({prefix_string, message}).c_str());
   } else {
-    __android_log_write(ANDROID_LOG_ERROR, "chromium", message.c_str());
+    __android_log_write(ANDROID_LOG_ERROR, "Cinaseek", message.c_str());
   }
 }
 
 void StackTrace::PrintWithPrefixImpl(cstring_view prefix_string) const {
   std::string backtrace = ToStringWithPrefix(prefix_string);
-  __android_log_write(ANDROID_LOG_ERROR, "chromium", backtrace.c_str());
+  __android_log_write(ANDROID_LOG_ERROR, "Cinaseek", backtrace.c_str());
 }
 
 // NOTE: Native libraries in APKs are stripped before installing. Print out the
@@ -115,10 +115,10 @@ void StackTrace::OutputToStreamWithPrefixImpl(
   // UI thread.
   base::ScopedAllowBlocking scoped_allow_blocking;
   if (!ReadProcMaps(&proc_maps)) {
-    __android_log_write(ANDROID_LOG_ERROR, "chromium",
+    __android_log_write(ANDROID_LOG_ERROR, "Cinaseek",
                         "Failed to read /proc/self/maps");
   } else if (!ParseProcMaps(proc_maps, &regions)) {
-    __android_log_write(ANDROID_LOG_ERROR, "chromium",
+    __android_log_write(ANDROID_LOG_ERROR, "Cinaseek",
                         "Failed to parse /proc/self/maps");
   }
 

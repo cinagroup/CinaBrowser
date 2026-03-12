@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,7 +7,7 @@ import("//build/config/coverage/coverage.gni")
 import("//build/config/sanitizers/sanitizers.gni")
 
 declare_args() {
-  # Optimize parts of Chrome's UI written with web technologies (HTML/CSS/JS)
+  # Optimize parts of Cinaseek's UI written with web technologies (HTML/CSS/JS)
   # for runtime performance purposes. This does more work at compile time for
   # speed benefits at runtime (so we skip in debug builds).
   optimize_webui = !is_debug

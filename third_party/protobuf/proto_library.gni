@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -464,7 +464,7 @@ template("proto_library") {
     script = "//tools/protoc_wrapper/protoc_wrapper.py"
     sources = _sources
     inputs = [
-      # System protoc is not used so it's necessary to build a chromium one.
+      # System protoc is not used so it's necessary to build a Cinaseek one.
       _protoc_path,
     ]
     outputs = []

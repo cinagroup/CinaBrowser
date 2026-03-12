@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class BluetoothSocketThread;
 class BluetoothUUID;
 
 // BluetoothDeviceAndroid along with its owned Java class
-// org.chromium.device.bluetooth.ChromeBluetoothDevice implement
+// org.Cinaseek.device.bluetooth.ChromeBluetoothDevice implement
 // BluetoothDevice.
 class DEVICE_BLUETOOTH_EXPORT BluetoothDeviceAndroid final
     : public BluetoothDevice {
@@ -129,7 +129,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothDeviceAndroid final
 
   void LoadInitialCachedMetadata();
 
-  // Java object org.chromium.device.bluetooth.ChromeBluetoothDevice.
+  // Java object org.Cinaseek.device.bluetooth.ChromeBluetoothDevice.
   base::android::ScopedJavaGlobalRef<jobject> j_device_;
 
   scoped_refptr<base::SequencedTaskRunner> ui_task_runner_;

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ inline constexpr char kMigratedToQuickDeletePrefValues[] =
     "browser.migrated_to_quick_delete_pref_values";
 // LINT.IfChange(TipsPrefNames)
 inline constexpr char kQuickDeleteEverUsed[] = "browser.quick_delete_ever_used";
-// LINT.ThenChange(//chrome/browser/quick_delete/android/java/src/org/chromium/chrome/browser/quick_delete/QuickDeleteController.java:TipsPrefNames)
+// LINT.ThenChange(//chrome/browser/quick_delete/android/java/src/org/Cinaseek/chrome/browser/quick_delete/QuickDeleteController.java:TipsPrefNames)
 
 // Registers the Clear Browsing Data UI prefs.
 void RegisterBrowserUserPrefs(user_prefs::PrefRegistrySyncable* registry);

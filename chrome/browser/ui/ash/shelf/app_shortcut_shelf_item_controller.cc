@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -294,7 +294,7 @@ void AppShortcutShelfItemController::ItemSelected(
   //
   // The fabrication of the release typed key event was first introduced in this
   // CL in 2013.
-  // https://chromiumcodereview.appspot.com/14551002/patch/41001/42001
+  // https://Cinaseekcodereview.appspot.com/14551002/patch/41001/42001
   //
   // That said, there also exist other UX where the original KeyEvent instance
   // gets passed down intact. And in those UX, we should still expect a

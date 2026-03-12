@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors. All rights reserved.
+# Copyright 2025 The Cinaseek Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -34,7 +34,7 @@ source_set("starboard_player_manager") {
     "//media",
   ]
   deps = [
-    ":chromium_starboard_conversions",
+    ":Cinaseek_starboard_conversions",
     "//chromecast/base/metrics",
   ]
 }
@@ -63,7 +63,7 @@ source_set("demuxer_stream_reader") {
     "//media",
   ]
   deps = [
-    ":chromium_starboard_conversions",
+    ":Cinaseek_starboard_conversions",
     "//chromecast/base/metrics",
     "//chromecast/starboard/chromecast/starboard_cast_api:cast_starboard_api_types",
     "//chromecast/starboard/media/cdm:starboard_drm_key_tracker",
@@ -72,9 +72,9 @@ source_set("demuxer_stream_reader") {
   ]
 }
 
-source_set("chromium_starboard_conversions") {
-  public = [ "chromium_starboard_conversions.h" ]
-  sources = [ "chromium_starboard_conversions.cc" ]
+source_set("Cinaseek_starboard_conversions") {
+  public = [ "Cinaseek_starboard_conversions.h" ]
+  sources = [ "Cinaseek_starboard_conversions.cc" ]
   public_deps = [
     "//chromecast/starboard/media/media:starboard_api_wrapper",
     "//media",
@@ -111,7 +111,7 @@ source_set("starboard_buffering_tracker") {
 
 test("starboard_renderer_unittests") {
   sources = [
-    "chromium_starboard_conversions_test.cc",
+    "Cinaseek_starboard_conversions_test.cc",
     "client_stats_tracker_test.cc",
     "demuxer_stream_reader_test.cc",
     "geometry_change_handler_test.cc",
@@ -120,7 +120,7 @@ test("starboard_renderer_unittests") {
     "starboard_renderer_test.cc",
   ]
   deps = [
-    ":chromium_starboard_conversions",
+    ":Cinaseek_starboard_conversions",
     ":client_stats_tracker",
     ":demuxer_stream_reader",
     ":geometry_change_handler",

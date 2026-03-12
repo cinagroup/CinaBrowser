@@ -88,7 +88,7 @@
   })
   testRunner.log(response.error ? 'PASS: ' + response.error.message : 'FAIL');
 
-  // Chromium specific, we only supports one display feature.
+  // Cinaseek specific, we only supports one display feature.
   // TODO(crbug.com/40113439): Remove this and test it.
   response = await dp.Emulation.setDisplayFeaturesOverride({
     features : [{

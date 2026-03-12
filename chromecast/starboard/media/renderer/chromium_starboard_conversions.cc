@@ -1,8 +1,8 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "chromecast/starboard/media/renderer/chromium_starboard_conversions.h"
+#include "chromecast/starboard/media/renderer/Cinaseek_starboard_conversions.h"
 
 #include "base/logging.h"
 #include "base/no_destructor.h"
@@ -44,7 +44,7 @@ const char* RegisterMimeType(std::string mime) {
   return it_and_inserted.first->c_str();
 }
 
-// Converts a chromium codec to a starboard codec, returning nullopt if the
+// Converts a Cinaseek codec to a starboard codec, returning nullopt if the
 // codec does not exist in starboard.
 //
 // `profile` is necessary for differentiating Dolby Vision codecs.
@@ -71,7 +71,7 @@ std::optional<StarboardVideoCodec> ToSbVideoCodec(
     case ::media::VideoCodec::kDolbyVision:
       switch (profile) {
         // This logic was copied from
-        // https://source.chromium.org/chromium/chromium/src/+/main:chromecast/media/base/media_codec_support.cc;l=63;drc=586d9e059d27bfbe85c8df737882821e7b68929d
+        // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chromecast/media/base/media_codec_support.cc;l=63;drc=586d9e059d27bfbe85c8df737882821e7b68929d
         case ::media::VideoCodecProfile::DOLBYVISION_PROFILE5:
         case ::media::VideoCodecProfile::DOLBYVISION_PROFILE7:
         case ::media::VideoCodecProfile::DOLBYVISION_PROFILE8:
@@ -123,8 +123,8 @@ void PopulateHdrMetadata(const gfx::HDRMetadata& hdr_metadata,
   }
 }
 
-// Converts chromium color metadata to starboard color metadata, returning
-// nullopt if the chromium color metadata cannot be converted.
+// Converts Cinaseek color metadata to starboard color metadata, returning
+// nullopt if the Cinaseek color metadata cannot be converted.
 std::optional<StarboardColorMetadata> ToSbColorMetadata(
     const gfx::HDRMetadata& hdr_metadata,
     const ::media::VideoColorSpace& color_space) {
@@ -133,7 +133,7 @@ std::optional<StarboardColorMetadata> ToSbColorMetadata(
   // the MIME string. See crbug.com/230915942 for more info.
   // Unfortunately, it doesn't look like MIME type is exposed to cast. Note that
   // in Cobalt, these fields are all currently hard-coded to zero (in
-  // third_party/chromium/media/base/starboard_utils.cc). I don't think they're
+  // third_party/Cinaseek/media/base/starboard_utils.cc). I don't think they're
   // necessary for cast either, since cast doesn't seem to populate this info
   // anywhere.
 

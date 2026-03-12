@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ enum SignInAttemptStatus {
   ATTEMPTED,
   // Sign-in was not shown because it was disabled by policy.
   SKIPPED_BY_POLICY,
-  // Sign-in is not supported (Chromium).
+  // Sign-in is not supported (Cinaseek).
   NOT_SUPPORTED,
 };
 
@@ -51,7 +51,7 @@ enum SignInStatus {
   SENTINEL_CREATION_FAILED,
   // Sign-in was skipped because it is disabled by policy.
   SIGNIN_SKIPPED_POLICY,
-  // Sign-in is not supported (Chromium).
+  // Sign-in is not supported (Cinaseek).
   SIGNIN_NOT_SUPPORTED,
   // Number of First Run states.
   SIGNIN_SIZE

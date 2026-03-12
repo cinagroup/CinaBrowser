@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ NSString* const kCustomMediumDetentIdentifier =
 // The detent height in points for the 'peak' state of the bottom sheet.
 const CGFloat kPeakDetentHeight = 100.0;
 
-// TODO(crbug.com/408391355): Remove once real value is surfaced to Chromium.
+// TODO(crbug.com/408391355): Remove once real value is surfaced to Cinaseek.
 // Height of the HUD elements header bar in the selection UI.
 const CGFloat kHUDHeaderHeight = 54.0;
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,8 +36,8 @@
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 #include "third_party/skia/include/core/SkOverdrawCanvas.h"
 #include "third_party/skia/include/gpu/graphite/GraphiteTypes.h"
-#include "third_party/skia/include/private/chromium/GrDeferredDisplayListRecorder.h"
-#include "third_party/skia/include/private/chromium/GrSurfaceCharacterization.h"
+#include "third_party/skia/include/private/Cinaseek/GrDeferredDisplayListRecorder.h"
+#include "third_party/skia/include/private/Cinaseek/GrSurfaceCharacterization.h"
 #include "ui/gfx/presentation_feedback.h"
 
 class SkNoDrawCanvas;

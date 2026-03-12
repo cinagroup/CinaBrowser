@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -120,7 +120,7 @@ net::NetworkTrafficAnnotationTag DownloadProtectionDelegateDesktop::
       partial_traffic_annotation, R"(
           semantics {
             description:
-              "Chromium checks whether a given download is likely to be "
+              "Cinaseek checks whether a given download is likely to be "
               "dangerous by sending this client download request to Google's "
               "Safe Browsing servers. Safe Browsing server will respond to "
               "this request by sending back a verdict, indicating if this "
@@ -130,15 +130,15 @@ net::NetworkTrafficAnnotationTag DownloadProtectionDelegateDesktop::
               "This request is triggered when a download is about to complete, "
               "the download is not allowlisted, and its file extension is "
               "supported by download protection service (e.g. executables, "
-              "archives). Please refer to https://cs.chromium.org/chromium/src/"
+              "archives). Please refer to https://cs.Cinaseek.org/Cinaseek/src/"
               "chrome/browser/resources/safe_browsing/"
               "download_file_types.asciipb for the complete list of supported "
               "files."
             data:
               "URL of the file to be downloaded, its referrer chain, digest "
               "and other features extracted from the downloaded file. Refer to "
-              "ClientDownloadRequest message in https://cs.chromium.org/"
-              "chromium/src/components/safe_browsing/csd.proto for all "
+              "ClientDownloadRequest message in https://cs.Cinaseek.org/"
+              "Cinaseek/src/components/safe_browsing/csd.proto for all "
               "submitted features."
             user_data {
               type: SENSITIVE_URL

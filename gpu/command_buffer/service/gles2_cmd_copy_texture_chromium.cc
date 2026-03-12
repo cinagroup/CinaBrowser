@@ -1,8 +1,8 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "gpu/command_buffer/service/gles2_cmd_copy_texture_chromium.h"
+#include "gpu/command_buffer/service/gles2_cmd_copy_texture_Cinaseek.h"
 
 #include <stddef.h>
 
@@ -13,7 +13,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
 #include "build/build_config.h"
-#include "gpu/command_buffer/common/gles2_cmd_copy_texture_chromium_utils.h"
+#include "gpu/command_buffer/common/gles2_cmd_copy_texture_Cinaseek_utils.h"
 #include "gpu/command_buffer/service/context_state.h"
 #include "gpu/command_buffer/service/decoder_context.h"
 #include "gpu/command_buffer/service/gl_utils.h"

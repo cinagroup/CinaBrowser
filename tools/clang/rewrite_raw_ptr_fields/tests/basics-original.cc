@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include <cstdint>
@@ -61,7 +61,7 @@ class MyClass {
   std::map<base::span<SomeClass>, base::span<const char>> map_span_field5;
 
   // These fields are not expected to be rewritten.
-  // Commented out due to presubmit failures (char8_t is not allowed in chromium
+  // Commented out due to presubmit failures (char8_t is not allowed in Cinaseek
   // code yet).
   // base::span<const char8_t> const_char8_span;
   // std::optional<base::span<const char8_t>> optional_const_char8_span;

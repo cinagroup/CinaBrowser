@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1022,7 +1022,7 @@ TEST_F(WebCryptoRsaSsaTest, ImportInvalidJwkPrivateKey_MissingMostOptionals) {
 
 TEST_F(WebCryptoRsaSsaTest, ImportInvalidJwkPrivateKey_MissingAllOptionals) {
   // This is a deliberate spec divergence: while JWK allows keys that are
-  // missing all these attributes (because they are all optional), Chromium
+  // missing all these attributes (because they are all optional), Cinaseek
   // doesn't. That's because without those attributes, we wouldn't be able to
   // serialize these keys as PKCS#8 keys anyway, which would break a bunch
   // of assumptions throughout our implementation.

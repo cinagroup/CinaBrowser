@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ import("//build/config/android/rules.gni")
 # TODO(crbug.com/434123514): see if we can remove this stub target.
 android_library("java") {
   visibility = [ "//chrome/android:chrome_all_java" ]
-  sources = [ "java/src/org/chromium/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeFactory.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/ui/extensions/windowing/ExtensionWindowControllerBridgeFactory.java" ]
   deps = [
     "//build/android:build_java",
     "//chrome/browser/profiles/android:java",

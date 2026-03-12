@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ function checkIsDefined(prop) {
 }
 
 var id = 'mnkdjmfihjjihdfnnoiojdccnnfkajpd';
-var host = 'https://' + id + '.chromiumapp.org';
+var host = 'https://' + id + '.Cinaseekapp.org';
 
 chrome.test.runTests([
 

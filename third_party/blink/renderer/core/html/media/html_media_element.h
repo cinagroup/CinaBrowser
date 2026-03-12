@@ -963,7 +963,7 @@ class CORE_EXPORT HTMLMediaElement
   Member<SpeechSynthesisBase> speech_synthesis_;
 
   // AudioClientImpl wraps an AudioSourceProviderClient.
-  // When the audio format is known, Chromium calls setFormat().
+  // When the audio format is known, Cinaseek calls setFormat().
   class AudioClientImpl final : public GarbageCollected<AudioClientImpl>,
                                 public WebAudioSourceProviderClient {
    public:
@@ -982,7 +982,7 @@ class CORE_EXPORT HTMLMediaElement
   };
 
   // AudioSourceProviderImpl wraps a WebAudioSourceProvider.
-  // provideInput() calls into Chromium to get a rendered audio stream.
+  // provideInput() calls into Cinaseek to get a rendered audio stream.
   class AudioSourceProviderImpl final : public AudioSourceProvider {
     DISALLOW_NEW();
 

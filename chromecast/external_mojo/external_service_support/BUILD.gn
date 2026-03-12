@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -132,10 +132,10 @@ source_set("standalone_service_main") {
   public_deps = [ ":service_process" ]
 }
 
-source_set("chromium_service") {
+source_set("Cinaseek_service") {
   sources = [
-    "chromium_service.cc",
-    "chromium_service.h",
+    "Cinaseek_service.cc",
+    "Cinaseek_service.h",
   ]
   deps = [
     ":external_service",

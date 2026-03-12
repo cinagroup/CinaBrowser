@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -709,7 +709,7 @@ IN_PROC_BROWSER_TEST_P(DumpAccessibilityTreeTest,
 }
 
 #if BUILDFLAG(IS_LINUX)
-// Only run on one platform because font family depends on OS (Chromium chooses
+// Only run on one platform because font family depends on OS (Cinaseek chooses
 // the closest available font).
 IN_PROC_BROWSER_TEST_P(DumpAccessibilityTreeTest,
                        AccessibilitySvgRectWithStyle) {

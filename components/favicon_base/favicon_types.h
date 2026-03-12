@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ using FaviconID = int64_t;
 // data is returned.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.favicon
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.favicon
 enum class IconType {
   kInvalid = 0,
   kFavicon,
@@ -148,7 +148,7 @@ struct LargeIconImageResult {
 // favicon server. Used for UMA enum GoogleFaviconServerRequestStatus, so do not
 // change existing values. Insert new values at the end, and update the
 // histogram definition.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.favicon
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.favicon
 enum class GoogleFaviconServerRequestStatus {
   // Request sent out and the favicon successfully fetched.
   SUCCESS = 0,

@@ -23,7 +23,7 @@
   },
   "Comparison Simple Chrome (reclient)": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "Comparison Windows (8 cores) (reclient)": {

@@ -9,8 +9,8 @@ rootWebArea
 ++++++++++++genericContainer ignored
 ++++++++++++++staticText name='%E2%80%9C'
 ++++++++++++++++inlineTextBox name='%E2%80%9C'
-++++++++++staticText name='Chromium Blink'
-++++++++++++inlineTextBox name='Chromium Blink'
+++++++++++staticText name='Cinaseek Blink'
+++++++++++++inlineTextBox name='Cinaseek Blink'
 ++++++++++genericContainer ignored
 ++++++++++++genericContainer ignored
 ++++++++++++++staticText name='%E2%80%9D'

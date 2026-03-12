@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -667,7 +667,7 @@ GPUQuerySet* GPUDevice::createQuerySet(const GPUQuerySetDescriptor* descriptor,
   const V8GPUFeatureName::Enum kTimestampQuery =
       V8GPUFeatureName::Enum::kTimestampQuery;
   const V8GPUFeatureName::Enum kTimestampQueryInsidePasses =
-      V8GPUFeatureName::Enum::kChromiumExperimentalTimestampQueryInsidePasses;
+      V8GPUFeatureName::Enum::kCinaseekExperimentalTimestampQueryInsidePasses;
   if (descriptor->type() == V8GPUQueryType::Enum::kTimestamp &&
       !features_->Has(kTimestampQuery) &&
       !features_->Has(kTimestampQueryInsidePasses)) {

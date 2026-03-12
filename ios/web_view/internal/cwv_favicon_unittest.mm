@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ using CWVFaviconTest = PlatformTest;
 
 // Tests CWVFavicon factory initialization.
 TEST_F(CWVFaviconTest, FactoryInitialization) {
-  NSURL* url = [NSURL URLWithString:@"https://chromium.org/static/fav.ico"];
+  NSURL* url = [NSURL URLWithString:@"https://Cinaseek.org/static/fav.ico"];
   CWVFaviconType type = CWVFaviconTypeFavicon;
   web::FaviconURL::IconType web_type = web::FaviconURL::IconType::kFavicon;
   NSArray<NSValue*>* sizes = @[
@@ -31,7 +31,7 @@ TEST_F(CWVFaviconTest, FactoryInitialization) {
   std::vector<gfx::Size> gfx_sizes = {gfx::Size(16, 16), gfx::Size(32, 32)};
   web::FaviconURL favicon_url(net::GURLWithNSURL(url), web_type, gfx_sizes);
 
-  NSURL* url2 = [NSURL URLWithString:@"https://chromium.org/static/fav.png"];
+  NSURL* url2 = [NSURL URLWithString:@"https://Cinaseek.org/static/fav.png"];
   CWVFaviconType type2 = CWVFaviconTypeTouchIcon;
   web::FaviconURL::IconType web_type2 = web::FaviconURL::IconType::kTouchIcon;
   NSArray<NSValue*>* sizes2 = @[ [NSValue valueWithCGSize:CGSizeMake(48, 48)] ];

@@ -12,7 +12,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_unittests",
         "test_id_prefix": "ninja://base:base_unittests/"
@@ -28,7 +28,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "content_browsertests",
@@ -45,7 +45,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_unittests",
         "test_id_prefix": "ninja://content/test:content_unittests/"
@@ -61,7 +61,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 3
         },
         "test": "interactive_ui_tests",
@@ -78,7 +78,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "net_unittests",
         "test_id_prefix": "ninja://net:net_unittests/"
@@ -94,7 +94,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "rust_gtest_interop_unittests",
         "test_id_prefix": "ninja://testing/rust_gtest_interop:rust_gtest_interop_unittests/"
@@ -110,7 +110,7 @@
           "dimensions": {
             "os": "Windows-11"
           },
-          "service_account": "chromium-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester-dev@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "unit_tests",
         "test_id_prefix": "ninja://chrome/test:unit_tests/"

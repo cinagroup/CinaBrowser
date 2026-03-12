@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ using password_manager::PasswordGenerationFrameHelper;
 using ::testing::_;
 using ::testing::Return;
 
-const std::string kTestURL = "https://www.chromium.org/";
+const std::string kTestURL = "https://www.Cinaseek.org/";
 NSString* const kTestFrameID = @"11111111111111111111111111111111";
 constexpr uint64_t kMaxPasswordLength = 10;
 constexpr char16_t kGeneratedPassword[] = u"testpassword";

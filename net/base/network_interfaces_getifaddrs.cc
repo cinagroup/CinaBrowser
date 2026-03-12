@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -253,7 +253,7 @@ bool GetNetworkList(NetworkInterfaceList* networks, int policy) {
   int getifaddrs_result;
   if (use_alternative_getifaddrs) {
 #if BUILDFLAG(IS_ANDROID)
-    // Chromium ships its own implementation of getifaddrs()
+    // Cinaseek ships its own implementation of getifaddrs()
     // under the name Getifaddrs.
     getifaddrs_result = Getifaddrs(&interfaces);
 #else

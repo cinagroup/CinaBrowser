@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,13 +27,13 @@ android_library("bookmarks_java") {
   ]
   srcjar_deps = [ ":bookmark_type_javagen" ]
   sources = [
-    "java/src/org/chromium/components/bookmarks/BookmarkId.java",
-    "java/src/org/chromium/components/bookmarks/BookmarkItem.java",
+    "java/src/org/Cinaseek/components/bookmarks/BookmarkId.java",
+    "java/src/org/Cinaseek/components/bookmarks/BookmarkItem.java",
   ]
 }
 
 generate_jni("bookmarks_jni_headers") {
-  sources = [ "java/src/org/chromium/components/bookmarks/BookmarkId.java" ]
+  sources = [ "java/src/org/Cinaseek/components/bookmarks/BookmarkId.java" ]
 }
 
 java_cpp_enum("bookmark_type_javagen") {

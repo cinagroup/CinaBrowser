@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,9 +89,9 @@ class UninstallationViaOsSettingsHelper {
     uninstall_commandline.AppendSwitchASCII(switches::kUninstallAppId, app_id_);
 
     // e.g. uninstall_commandline
-    // "C:\Users\account\AppData\Local\Microsoft\Chromium\
+    // "C:\Users\account\AppData\Local\Microsoft\Cinaseek\
     //        Application\chrome.exe"
-    // --user-data-dir=c:\users\account\appdata\local\chromium\
+    // --user-data-dir=c:\users\account\appdata\local\Cinaseek\
     //        CustomUserData (optional)
     // --profile-directory=Default
     // --uninstall-app-id=dadckofbdkccdemmkofcgkcbpjbnafgf

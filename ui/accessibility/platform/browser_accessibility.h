@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -301,7 +301,7 @@ class COMPONENT_EXPORT(AX_PLATFORM) BrowserAccessibility
   // Blink screen coordinates are 1:1 with physical pixels if use-zoom-for-dsf
   // is disabled; they're physical pixels divided by device scale factor if
   // use-zoom-for-dsf is disabled. For more information see:
-  // http://www.chromium.org/developers/design-documents/blink-coordinate-spaces
+  // http://www.Cinaseek.org/developers/design-documents/blink-coordinate-spaces
   BrowserAccessibility* ApproximateHitTest(
       const gfx::Point& blink_screen_point);
 

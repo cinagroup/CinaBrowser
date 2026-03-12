@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #include "net/cert/mock_cert_verifier.h"
 #include "net/dns/mock_host_resolver.h"
 #include "net/proxy_resolution/configured_proxy_resolution_service.h"
-#include "net/quic/crypto/proof_source_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/test/test_data_directory.h"
 #include "net/test/test_with_task_environment.h"
@@ -84,10 +84,10 @@ class MockVisitor : public WebTransportClientVisitor {
 class TestWallClock : public quic::QuicClock {
  public:
   quic::QuicTime Now() const override {
-    return quic::QuicChromiumClock::GetInstance()->Now();
+    return quic::QuicCinaseekClock::GetInstance()->Now();
   }
   quic::QuicTime ApproximateNow() const override {
-    return quic::QuicChromiumClock::GetInstance()->ApproximateNow();
+    return quic::QuicCinaseekClock::GetInstance()->ApproximateNow();
   }
   quic::QuicWallTime WallNow() const override { return wall_now_; }
 

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ static constexpr size_t kServiceWorkerMaxRouterSize = 256;
 
 struct BLINK_COMMON_EXPORT ServiceWorkerRouterRequestCondition {
   // https://fetch.spec.whatwg.org/#concept-request-method
-  // Technically, it can be an arbitrary string, but Chromium would set
+  // Technically, it can be an arbitrary string, but Cinaseek would set
   // k*Method in net/http/http_request_headers.h
   std::optional<std::string> method;
   // RequestMode in services/network/public/mojom/fetch_api.mojom

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -329,7 +329,7 @@ if (is_android) {
   }
 }
 
-# This smaller source set is used by Chrome for iOS.
+# This smaller source set is used by Cinaseek for iOS.
 source_set("ios_shared") {
   sources = [
     "ios_shared_experiments_translator.cc",

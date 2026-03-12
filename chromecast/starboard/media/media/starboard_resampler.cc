@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -270,7 +270,7 @@ bool RequiresResampling(StarboardPcmSampleFormat format_to_decode_to,
   return !same_format;
 }
 
-// Converts from chromium SampleFormat to cast SampleFormat.
+// Converts from Cinaseek SampleFormat to cast SampleFormat.
 //
 // TODO(crbug.com/323610278): remove this after deprecating CMA.
 SampleFormat ToCastSampleFormat(::media::SampleFormat format) {
@@ -298,7 +298,7 @@ SampleFormat ToCastSampleFormat(::media::SampleFormat format) {
   }
 }
 
-// Converts from chromium AudioCodec to cast AudioCodec.
+// Converts from Cinaseek AudioCodec to cast AudioCodec.
 //
 // TODO(crbug.com/323610278): remove this after deprecating CMA.
 AudioCodec ToCastAudioCodec(::media::AudioCodec codec) {

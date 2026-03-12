@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ SkColor ImageTopLeftColor(ui::ImageModel model) {
 
 std::unique_ptr<sharing_hub::PreviewView> BuildTestPreview() {
   auto view = std::make_unique<sharing_hub::PreviewView>(
-      share::ShareAttempt(nullptr, u"Title", GURL("https://www.chromium.org/"),
+      share::ShareAttempt(nullptr, u"Title", GURL("https://www.Cinaseek.org/"),
                           BuildTestImage(SK_ColorRED)));
   return view;
 }
@@ -58,7 +58,7 @@ TEST_F(PreviewViewTest, IncludesTitle) {
 
 TEST_F(PreviewViewTest, IncludesURL) {
   auto view = BuildTestPreview();
-  ASSERT_TRUE(FindLabelWithText(view.get(), u"https://www.chromium.org/"));
+  ASSERT_TRUE(FindLabelWithText(view.get(), u"https://www.Cinaseek.org/"));
 }
 
 TEST_F(PreviewViewTest, IncludesImage) {

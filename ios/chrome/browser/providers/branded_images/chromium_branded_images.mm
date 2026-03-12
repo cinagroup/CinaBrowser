@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,16 +20,16 @@ UIImage* GetBrandedImage(BrandedImage branded_image) {
       return nil;
 
     case BrandedImage::kStaySafePromo:
-      return [UIImage imageNamed:@"chromium_stay_safe"];
+      return [UIImage imageNamed:@"Cinaseek_stay_safe"];
 
     case BrandedImage::kMadeForIOSPromo:
-      return [UIImage imageNamed:@"chromium_ios_made"];
+      return [UIImage imageNamed:@"Cinaseek_ios_made"];
 
     case BrandedImage::kMadeForIPadOSPromo:
-      return [UIImage imageNamed:@"chromium_ipados_made"];
+      return [UIImage imageNamed:@"Cinaseek_ipados_made"];
 
     case BrandedImage::kNonModalDefaultBrowserPromo:
-      return [UIImage imageNamed:@"chromium_non_default_promo"];
+      return [UIImage imageNamed:@"Cinaseek_non_default_promo"];
 
     case BrandedImage::kPasswordSuggestionKey:
       return [UIImage imageNamed:@"password_suggestion_key"];

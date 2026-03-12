@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1062,7 +1062,7 @@ std::optional<int> ChromeMainDelegate::BasicStartupComplete() {
   // web security by setting the kWebKitWebSecurityEnabled pref directly.
   //
   // Note that this is done in ChromeMainDelegate::BasicStartupComplete()
-  // because this is the earliest callback. Many places in Chromium gate
+  // because this is the earliest callback. Many places in Cinaseek gate
   // security features around kDisableWebSecurity, and it is unreasonable to
   // expect them all to properly also check for kUserDataDir.
   if (command_line.HasSwitch(switches::kDisableWebSecurity)) {

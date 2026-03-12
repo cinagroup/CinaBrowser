@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -22,10 +22,10 @@ group("freetype") {
     "//content/test:*",
 
     # The path/label of the PDFium target that depends on `freetype` is
-    # different when building PDFium during Chromium build and during
+    # different when building PDFium during Cinaseek build and during
     # standalone-PDFium-build:
     "//:freetype_common",  # Building standalone PDFium
-    "//third_party/pdfium:freetype_common",  # Building Chromium
+    "//third_party/pdfium:freetype_common",  # Building Cinaseek
 
     # Other dependencies that are PDFium-related:
     "//components/services/font:font_service_unittests",

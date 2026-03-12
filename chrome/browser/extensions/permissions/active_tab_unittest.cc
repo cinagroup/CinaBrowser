@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -253,16 +253,16 @@ TEST_F(ActiveTabTest, GrantToSinglePage) {
   EXPECT_TRUE(IsBlocked(extension_without_active_tab, google));
 
   // Navigating to a new URL should clear the active permissions.
-  GURL chromium("http://www.chromium.org");
-  NavigateAndCommit(chromium);
+  GURL Cinaseek("http://www.Cinaseek.org");
+  NavigateAndCommit(Cinaseek);
 
   EXPECT_TRUE(IsBlocked(extension, google));
   EXPECT_TRUE(IsBlocked(another_extension, google));
   EXPECT_TRUE(IsBlocked(extension_without_active_tab, google));
 
-  EXPECT_TRUE(IsBlocked(extension, chromium));
-  EXPECT_TRUE(IsBlocked(another_extension, chromium));
-  EXPECT_TRUE(IsBlocked(extension_without_active_tab, chromium));
+  EXPECT_TRUE(IsBlocked(extension, Cinaseek));
+  EXPECT_TRUE(IsBlocked(another_extension, Cinaseek));
+  EXPECT_TRUE(IsBlocked(extension_without_active_tab, Cinaseek));
 
   EXPECT_FALSE(HasTabsPermission(extension));
   EXPECT_FALSE(HasTabsPermission(another_extension));
@@ -279,9 +279,9 @@ TEST_F(ActiveTabTest, GrantToSinglePage) {
   EXPECT_TRUE(IsBlocked(another_extension, google));
   EXPECT_TRUE(IsBlocked(extension_without_active_tab, google));
 
-  EXPECT_TRUE(IsAllowed(extension, chromium));
-  EXPECT_TRUE(IsAllowed(another_extension, chromium));
-  EXPECT_TRUE(IsBlocked(extension_without_active_tab, chromium));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek));
+  EXPECT_TRUE(IsAllowed(another_extension, Cinaseek));
+  EXPECT_TRUE(IsBlocked(extension_without_active_tab, Cinaseek));
 
   // Should be able to go back to URLs that were previously cleared.
   NavigateAndCommit(google);
@@ -295,9 +295,9 @@ TEST_F(ActiveTabTest, GrantToSinglePage) {
   EXPECT_TRUE(IsAllowed(another_extension, google));
   EXPECT_TRUE(IsBlocked(extension_without_active_tab, google));
 
-  EXPECT_TRUE(IsBlocked(extension, chromium));
-  EXPECT_TRUE(IsBlocked(another_extension, chromium));
-  EXPECT_TRUE(IsBlocked(extension_without_active_tab, chromium));
+  EXPECT_TRUE(IsBlocked(extension, Cinaseek));
+  EXPECT_TRUE(IsBlocked(another_extension, Cinaseek));
+  EXPECT_TRUE(IsBlocked(extension_without_active_tab, Cinaseek));
 }
 
 TEST_F(ActiveTabTest, CapturingPagesWithActiveTab) {
@@ -386,33 +386,33 @@ TEST_F(ActiveTabTest, SameDocumentNavigations) {
   EXPECT_TRUE(IsAllowed(extension, google));
   EXPECT_TRUE(IsAllowed(extension, google_h1));
 
-  GURL chromium("http://www.chromium.org");
-  NavigateAndCommit(chromium);
+  GURL Cinaseek("http://www.Cinaseek.org");
+  NavigateAndCommit(Cinaseek);
 
   EXPECT_FALSE(IsAllowed(extension, google));
   EXPECT_FALSE(IsAllowed(extension, google_h1));
-  EXPECT_FALSE(IsAllowed(extension, chromium));
+  EXPECT_FALSE(IsAllowed(extension, Cinaseek));
 
   active_tab_permission_granter()->GrantIfRequested(extension.get());
 
   EXPECT_FALSE(IsAllowed(extension, google));
   EXPECT_FALSE(IsAllowed(extension, google_h1));
-  EXPECT_TRUE(IsAllowed(extension, chromium));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek));
 
-  GURL chromium_h1("http://www.chromium.org#h1");
-  NavigateAndCommit(chromium_h1);
+  GURL Cinaseek_h1("http://www.Cinaseek.org#h1");
+  NavigateAndCommit(Cinaseek_h1);
 
   EXPECT_FALSE(IsAllowed(extension, google));
   EXPECT_FALSE(IsAllowed(extension, google_h1));
-  EXPECT_TRUE(IsAllowed(extension, chromium));
-  EXPECT_TRUE(IsAllowed(extension, chromium_h1));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek_h1));
 
   content::NavigationSimulator::Reload(web_contents());
 
   EXPECT_FALSE(IsAllowed(extension, google));
   EXPECT_FALSE(IsAllowed(extension, google_h1));
-  EXPECT_TRUE(IsAllowed(extension, chromium));
-  EXPECT_TRUE(IsAllowed(extension, chromium_h1));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek));
+  EXPECT_TRUE(IsAllowed(extension, Cinaseek_h1));
 }
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)

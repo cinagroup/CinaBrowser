@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1380,7 +1380,7 @@ TEST_F(StyleEngineTest,
   EXPECT_FALSE(GetStyleEngine().NeedsActiveStyleUpdate());
 }
 
-// TODO(futhark@chromium.org): The test cases below where all queries are either
+// TODO(futhark@Cinaseek.org): The test cases below where all queries are either
 // "all" or "not all", we could have detected those and not trigger an active
 // stylesheet update for those cases.
 
@@ -4535,7 +4535,7 @@ TEST_F(StyleEngineSimTest, AboutBlankPageRespectsUserPreferredColorScheme) {
   // This refers to opening about:blank likely via non-programmatic means.
   // We do this to apply DarkMode to newly opened tabs and user initiated
   // navigations directly to about:blank.
-  // See: https://issues.chromium.org/issues/40190899.
+  // See: https://issues.Cinaseek.org/issues/40190899.
 
   LoadURL("about:blank");
   ColorSchemeHelper color_scheme_helper(GetDocument());

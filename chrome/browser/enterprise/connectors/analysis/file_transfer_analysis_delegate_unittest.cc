@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ namespace enterprise_connectors {
 
 namespace {
 
-constexpr char kUserName[] = "test@chromium.org";
+constexpr char kUserName[] = "test@Cinaseek.org";
 
 constexpr char kDmToken[] = "dm_token";
 

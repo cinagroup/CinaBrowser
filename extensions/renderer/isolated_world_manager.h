@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -93,7 +93,7 @@ class IsolatedWorldManager {
   // scripts). Presence in this map indicates there has been a world (i.e., v8
   // context) created at the blink layer at least once in this process.
   struct IsolatedWorldInfo {
-    // Defaults, to appease the Chromium clang plugin.
+    // Defaults, to appease the Cinaseek clang plugin.
     IsolatedWorldInfo();
     ~IsolatedWorldInfo();
     IsolatedWorldInfo(IsolatedWorldInfo&&);

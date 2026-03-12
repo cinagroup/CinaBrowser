@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,12 +89,12 @@ TEST(WebAppInstallUtils, PopulateShortcutItemIcons) {
   auto web_app_info = CreateWebAppInstallInfo();
   WebAppShortcutsMenuItemInfo::Icon icon;
 
-  const GURL kIconUrl1("http://www.chromium.org/shortcuts/icon1.png");
+  const GURL kIconUrl1("http://www.Cinaseek.org/shortcuts/icon1.png");
   {
     WebAppShortcutsMenuItemInfo shortcut_item;
     std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
     shortcut_item.name = std::u16string(kShortcutItemTestName) + u"1";
-    shortcut_item.url = GURL("http://www.chromium.org/shortcuts/action");
+    shortcut_item.url = GURL("http://www.Cinaseek.org/shortcuts/action");
     icon.url = kIconUrl1;
     icon.square_size_px = kIconSize;
     shortcut_manifest_icons.push_back(icon);
@@ -103,7 +103,7 @@ TEST(WebAppInstallUtils, PopulateShortcutItemIcons) {
     web_app_info.shortcuts_menu_item_infos.push_back(std::move(shortcut_item));
   }
 
-  const GURL kIconUrl2("http://www.chromium.org/shortcuts/icon2.png");
+  const GURL kIconUrl2("http://www.Cinaseek.org/shortcuts/icon2.png");
   {
     WebAppShortcutsMenuItemInfo shortcut_item;
     std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
@@ -126,7 +126,7 @@ TEST(WebAppInstallUtils, PopulateShortcutItemIcons) {
     std::vector<SkBitmap> bmp3 = {CreateSquareIcon(32, SK_ColorRED)};
     icons_map.emplace(kIconUrl1, bmp1);
     icons_map.emplace(kIconUrl2, bmp2);
-    icons_map.emplace(GURL("http://www.chromium.org/shortcuts/icon3.png"),
+    icons_map.emplace(GURL("http://www.Cinaseek.org/shortcuts/icon3.png"),
                       bmp3);
     PopulateOtherIcons(&web_app_info, icons_map);
   }
@@ -146,9 +146,9 @@ TEST(WebAppInstallUtils, PopulateShortcutItemIconsNoShortcutIcons) {
   std::vector<SkBitmap> bmp1 = {CreateSquareIcon(32, SK_ColorWHITE)};
   std::vector<SkBitmap> bmp2 = {CreateSquareIcon(32, SK_ColorBLUE)};
   std::vector<SkBitmap> bmp3 = {CreateSquareIcon(32, SK_ColorRED)};
-  icons_map.emplace(GURL("http://www.chromium.org/shortcuts/icon1.png"), bmp1);
-  icons_map.emplace(GURL("http://www.chromium.org/shortcuts/icon2.png"), bmp2);
-  icons_map.emplace(GURL("http://www.chromium.org/shortcuts/icon3.png"), bmp3);
+  icons_map.emplace(GURL("http://www.Cinaseek.org/shortcuts/icon1.png"), bmp1);
+  icons_map.emplace(GURL("http://www.Cinaseek.org/shortcuts/icon2.png"), bmp2);
+  icons_map.emplace(GURL("http://www.Cinaseek.org/shortcuts/icon3.png"), bmp3);
 
   PopulateOtherIcons(&web_app_info, icons_map);
 
@@ -161,10 +161,10 @@ TEST(WebAppInstallUtils, PopulateShortcutItemIconsNoShortcutIcons) {
 TEST(WebAppInstallUtils, PopulateProductIcons_MaskableIcons) {
   // Construct |icons_map| to pass to PopulateProductIcons().
   IconsMap icons_map;
-  const GURL kIconUrl1("http://www.chromium.org/shortcuts/icon1.png");
+  const GURL kIconUrl1("http://www.Cinaseek.org/shortcuts/icon1.png");
   std::vector<SkBitmap> bmp1 = {CreateSquareIcon(32, SK_ColorWHITE)};
   icons_map.emplace(kIconUrl1, bmp1);
-  const GURL kIconUrl2("http://www.chromium.org/shortcuts/icon2.png");
+  const GURL kIconUrl2("http://www.Cinaseek.org/shortcuts/icon2.png");
   std::vector<SkBitmap> bmp2 = {CreateSquareIcon(64, SK_ColorBLUE)};
   icons_map.emplace(kIconUrl2, bmp2);
 
@@ -198,7 +198,7 @@ TEST(WebAppInstallUtils, PopulateProductIcons_MaskableIcons) {
 TEST(WebAppInstallUtils, PopulateProductIcons_MaskableIconsOnly) {
   // Construct |icons_map| to pass to PopulateProductIcons().
   IconsMap icons_map;
-  const GURL kIconUrl1("http://www.chromium.org/shortcuts/icon1.png");
+  const GURL kIconUrl1("http://www.Cinaseek.org/shortcuts/icon1.png");
   std::vector<SkBitmap> bmp1 = {CreateSquareIcon(32, SK_ColorWHITE)};
   icons_map.emplace(kIconUrl1, bmp1);
 
@@ -228,7 +228,7 @@ TEST(WebAppInstallUtils, PopulateProductIconsNoWebAppIconData_WithShortcuts) {
 
   IconsMap icons_map;
   std::vector<SkBitmap> bmp1 = {CreateSquareIcon(32, SK_ColorWHITE)};
-  icons_map.emplace(GURL("http://www.chromium.org/shortcuts/icon1.png"), bmp1);
+  icons_map.emplace(GURL("http://www.Cinaseek.org/shortcuts/icon1.png"), bmp1);
   PopulateProductIcons(&web_app_info, &icons_map);
 
   // Expect to fall back to using icon from icons_map.
@@ -296,11 +296,11 @@ TEST(WebAppInstallUtils, PopulateHomeTabIconsNoHomeTabIcons_TabStrip) {
   std::vector<SkBitmap> bmp1 = {CreateSquareIcon(32, SK_ColorWHITE)};
   std::vector<SkBitmap> bmp2 = {CreateSquareIcon(32, SK_ColorBLUE)};
   std::vector<SkBitmap> bmp3 = {CreateSquareIcon(32, SK_ColorRED)};
-  icons_map.emplace(GURL("http://www.chromium.org/home_tab_icons/icon1.png"),
+  icons_map.emplace(GURL("http://www.Cinaseek.org/home_tab_icons/icon1.png"),
                     bmp1);
-  icons_map.emplace(GURL("http://www.chromium.org/home_tab_icons/icon2.png"),
+  icons_map.emplace(GURL("http://www.Cinaseek.org/home_tab_icons/icon2.png"),
                     bmp2);
-  icons_map.emplace(GURL("http://www.chromium.org/home_tab_icons/icon3.png"),
+  icons_map.emplace(GURL("http://www.Cinaseek.org/home_tab_icons/icon3.png"),
                     bmp3);
 
   PopulateOtherIcons(&web_app_info, icons_map);
@@ -505,12 +505,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
   // manifest icons
   {
     apps::IconInfo info;
-    info.url = GURL("http://www.chromium.org/image/icon1.png");
+    info.url = GURL("http://www.Cinaseek.org/image/icon1.png");
     web_app_info.manifest_icons.push_back(info);
   }
   {
     apps::IconInfo info;
-    info.url = GURL("http://www.chromium.org/image/icon2.png");
+    info.url = GURL("http://www.Cinaseek.org/image/icon2.png");
     web_app_info.manifest_icons.push_back(info);
   }
 
@@ -521,12 +521,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
       std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon2.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon2.png");
         shortcut_manifest_icons.push_back(icon);
       }
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon3.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon3.png");
         shortcut_manifest_icons.push_back(icon);
       }
       shortcut_item.SetShortcutIconInfosForPurpose(
@@ -536,12 +536,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
       std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon3.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon3.png");
         shortcut_manifest_icons.push_back(icon);
       }
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon4.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon4.png");
         shortcut_manifest_icons.push_back(icon);
       }
       shortcut_item.SetShortcutIconInfosForPurpose(
@@ -555,12 +555,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
       std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon4.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon4.png");
         shortcut_manifest_icons.push_back(icon);
       }
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon5.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon5.png");
         shortcut_manifest_icons.push_back(icon);
       }
       shortcut_item.SetShortcutIconInfosForPurpose(
@@ -570,12 +570,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
       std::vector<WebAppShortcutsMenuItemInfo::Icon> shortcut_manifest_icons;
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon5.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon5.png");
         shortcut_manifest_icons.push_back(icon);
       }
       {
         WebAppShortcutsMenuItemInfo::Icon icon;
-        icon.url = GURL("http://www.chromium.org/image/icon6.png");
+        icon.url = GURL("http://www.Cinaseek.org/image/icon6.png");
         shortcut_manifest_icons.push_back(icon);
       }
       shortcut_item.SetShortcutIconInfosForPurpose(
@@ -590,12 +590,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
     std::vector<apps::IconInfo> downloaded_icons;
     {
       apps::IconInfo info;
-      info.url = GURL("http://www.chromium.org/image/icon6.png");
+      info.url = GURL("http://www.Cinaseek.org/image/icon6.png");
       web_app_info.manifest_icons.push_back(info);
     }
     {
       apps::IconInfo info;
-      info.url = GURL("http://www.chromium.org/image/icon7.png");
+      info.url = GURL("http://www.Cinaseek.org/image/icon7.png");
       web_app_info.manifest_icons.push_back(info);
     }
     web_app_info.file_handlers.push_back(file_handler);
@@ -605,12 +605,12 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
     std::vector<apps::IconInfo> downloaded_icons;
     {
       apps::IconInfo info;
-      info.url = GURL("http://www.chromium.org/image/icon7.png");
+      info.url = GURL("http://www.Cinaseek.org/image/icon7.png");
       web_app_info.manifest_icons.push_back(info);
     }
     {
       apps::IconInfo info;
-      info.url = GURL("http://www.chromium.org/image/icon8.png");
+      info.url = GURL("http://www.Cinaseek.org/image/icon8.png");
       web_app_info.manifest_icons.push_back(info);
     }
     web_app_info.file_handlers.push_back(file_handler);
@@ -621,7 +621,7 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
   const size_t download_urls_size = 8;
   EXPECT_EQ(download_urls_size, download_urls.size());
   for (size_t i = 0; i < download_urls_size; i++) {
-    std::string url_str = "http://www.chromium.org/image/icon" +
+    std::string url_str = "http://www.Cinaseek.org/image/icon" +
                           base::NumberToString(i + 1) + ".png";
     EXPECT_EQ(1u, download_urls.count(IconUrlWithSize::CreateForUnspecifiedSize(
                       GURL(url_str))));
@@ -631,7 +631,7 @@ TEST(WebAppInstallUtils, DuplicateIconDownloadURLs) {
 INSTANTIATE_TEST_SUITE_P(, FileHandlersFromManifestTest, testing::Bool());
 
 TEST(WebAppInstallUtils, SetWebAppManifestFields_Summary) {
-  GURL start_url("https://www.chromium.org/index.html");
+  GURL start_url("https://www.Cinaseek.org/index.html");
   auto web_app_info = CreateWebAppInstallInfoFromStartUrl(start_url);
   web_app_info.scope = web_app_info.start_url().GetWithoutFilename();
   web_app_info.title = u"App Name";
@@ -644,7 +644,7 @@ TEST(WebAppInstallUtils, SetWebAppManifestFields_Summary) {
   auto web_app = web_app::test::CreateWebApp(web_app_info.start_url());
   SetWebAppManifestFields(web_app_info, *web_app);
 
-  EXPECT_EQ(web_app->scope(), GURL("https://www.chromium.org/"));
+  EXPECT_EQ(web_app->scope(), GURL("https://www.Cinaseek.org/"));
   EXPECT_EQ(web_app->untranslated_name(), "App Name");
   EXPECT_EQ(web_app->untranslated_description(), "App Description");
   EXPECT_TRUE(web_app->theme_color().has_value());

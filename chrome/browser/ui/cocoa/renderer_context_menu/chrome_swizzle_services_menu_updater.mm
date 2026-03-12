@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,10 +52,10 @@ NSMutableArray* g_filtered_entries_array = nil;
 
   // Remove some services.
   //   - Remove the ones from Safari, as they are redundant to the ones provided
-  //     by Chromium, and confusing to the user due to them switching apps
+  //     by Cinaseek, and confusing to the user due to them switching apps
   //     upon their selection.
   //   - Remove the "Open URL" one provided by SystemUIServer, as it is
-  //     redundant to the one provided by Chromium and has other serious issues.
+  //     redundant to the one provided by Cinaseek and has other serious issues.
   //     (https://crbug.com/960209)
 
   for (_NSServiceEntry* nextEntry in entries) {

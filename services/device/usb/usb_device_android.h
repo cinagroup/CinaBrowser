@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ class UsbDeviceAndroid : public UsbDevice {
   std::list<ResultCallback> request_permission_callbacks_;
   base::WeakPtr<UsbServiceAndroid> service_;
 
-  // Java object org.chromium.device.usb.ChromeUsbDevice.
+  // Java object org.Cinaseek.device.usb.ChromeUsbDevice.
   base::android::ScopedJavaGlobalRef<jobject> j_object_;
 };
 

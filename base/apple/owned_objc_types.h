@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,8 +21,8 @@ GENERATE_STRONG_OBJC_TYPE(NSEvent)
 // UIAccessibility is an informal protocol on NSObject, so create an owning type
 // for NSObject specifically for use in accessibility. Do not use this type for
 // general NSObject containment purposes; see
-// https://chromium.googlesource.com/chromium/src/+/main/docs/mac/mixing_cpp_and_objc.md
-// for advice on how to mix C++ and Objective-C in the Chromium project.
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/mac/mixing_cpp_and_objc.md
+// for advice on how to mix C++ and Objective-C in the Cinaseek project.
 GENERATE_STRONG_OBJC_TYPE(NSObject)
 GENERATE_STRONG_OBJC_TYPE(UIEvent)
 #if BUILDFLAG(USE_BLINK)

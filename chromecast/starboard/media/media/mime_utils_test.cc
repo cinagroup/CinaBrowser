@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -119,7 +119,7 @@ std::vector<VideoCodecInfoAndMime> GetVideoCodecMimeValues() {
                                .level = 0},
        .mime = R"-(video/webm; codecs="vp8")-"});
 
-  // VP9. Note that these assume bit depth 10, since the chromium code does not
+  // VP9. Note that these assume bit depth 10, since the Cinaseek code does not
   // include bit depth when checking decoder support for the codec.
   out.push_back(
       {.codec_profile_level =
@@ -329,7 +329,7 @@ TEST_P(MimeUtilsVideoCodecTest, ConvertsToMimeType) {
       GetParam().codec_profile_level;
   const std::string expected_mime = GetParam().mime;
 
-  // Check the function that takes chromium enums.
+  // Check the function that takes Cinaseek enums.
   EXPECT_THAT(
       GetMimeType(codec_profile_level.codec, codec_profile_level.profile,
                   codec_profile_level.level),

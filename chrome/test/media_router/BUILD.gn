@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ declare_args() {
   # Many of the targets defined in this file have dependencies that cannot be
   # satisfied without additional downstream resources. Explicitly guard them
   # them behind this flag so that we do not attempt to build or isolate targets
-  # in public chromium checkouts.
+  # in public Cinaseek checkouts.
   enable_downstream_media_tests = false
 }
 
@@ -88,7 +88,7 @@ copy("browser_test_resources") {
   ]
 }
 
-# Run separately from the Chromium waterfall. See README.md for details.
+# Run separately from the Cinaseek waterfall. See README.md for details.
 if (enable_downstream_media_tests) {
   group("media_router_e2e_tests") {
     testonly = true

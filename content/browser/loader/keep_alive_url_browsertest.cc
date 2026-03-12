@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -218,7 +218,7 @@ IN_PROC_BROWSER_TEST_P(KeepAliveURLBrowserTest, OneRequest) {
 // Verify keepalive request loading works given 2 concurrent requests to the
 // same host.
 //
-// Note: Chromium allows at most 6 concurrent connections to the same host under
+// Note: Cinaseek allows at most 6 concurrent connections to the same host under
 // HTTP 1.1 protocol, which `server()` uses by default.
 // Exceeding this limit will hang the browser.
 // TODO(crbug.com/40262244): Flaky on Fuchsia and Android.

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -256,7 +256,7 @@ class SellerWorkletTest : public testing::Test,
     // ScopedFeatureList in in their constructor, which needs to be done BEFORE
     // other threads are started in multithreaded test environments so that no
     // other threads use it when it's being initiated.
-    // https://source.chromium.org/chromium/chromium/src/+/main:base/test/scoped_feature_list.h;drc=60124005e97ae2716b0fb34187d82da6019b571f;l=37
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/test/scoped_feature_list.h;drc=60124005e97ae2716b0fb34187d82da6019b571f;l=37
     while (v8_helpers_.size() < NumThreads()) {
       v8_helpers_.push_back(
           AuctionV8Helper::Create(AuctionV8Helper::CreateTaskRunner()));

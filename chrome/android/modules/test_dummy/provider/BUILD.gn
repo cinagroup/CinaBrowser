@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,5 +10,5 @@ android_library("java") {
     "//chrome/browser/test_dummy:java",
     "//components/module_installer/android:module_installer_java",
   ]
-  sources = [ "java/src/org/chromium/chrome/modules/test_dummy/TestDummyModuleProvider.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/modules/test_dummy/TestDummyModuleProvider.java" ]
 }

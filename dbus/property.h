@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -335,7 +335,7 @@ class CHROME_DBUS_EXPORT PropertySet {
   // so this must outlive this class.
   raw_ptr<ObjectProxy, AcrossTasksDanglingUntriaged> object_proxy_;
 
-  // Interface of property, e.g. "org.chromium.ExampleService", this is
+  // Interface of property, e.g. "org.Cinaseek.ExampleService", this is
   // distinct from the interface of the method call itself which is the
   // general D-Bus Properties interface "org.freedesktop.DBus.Properties".
   std::string interface_;

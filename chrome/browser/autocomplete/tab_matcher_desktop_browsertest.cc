@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,8 +42,8 @@ class TabMatcherDesktopTest : public InProcessBrowserTest {
 
 constexpr auto kServiceInitializers =
     std::to_array<TemplateURLService::Initializer>({
-        {"kwa", "https://a.chromium.org/?a={searchTerms}", "ca"},
-        {"kwb", "https://b.chromium.org/?b={searchTerms}", "cb"},
+        {"kwa", "https://a.Cinaseek.org/?a={searchTerms}", "ca"},
+        {"kwb", "https://b.Cinaseek.org/?b={searchTerms}", "cb"},
     });
 
 IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest,
@@ -53,9 +53,9 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest,
           GetProfile(), kServiceInitializers);
   TabMatcherDesktop matcher(service.get(), GetProfile());
 
-  GURL foo("https://foo.chromium.org");
-  GURL bar("https://bar.chromium.org");
-  GURL baz("https://baz.chromium.org");
+  GURL foo("https://foo.Cinaseek.org");
+  GURL bar("https://bar.Cinaseek.org");
+  GURL baz("https://baz.Cinaseek.org");
 
   for (auto url : {foo, bar, baz}) {
     ui_test_utils::NavigateToURLWithDisposition(
@@ -66,14 +66,14 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest,
   EXPECT_TRUE(matcher.IsTabOpenWithURL(foo, nullptr));
   EXPECT_TRUE(matcher.IsTabOpenWithURL(bar, nullptr));
   EXPECT_FALSE(matcher.IsTabOpenWithURL(baz, nullptr));
-  EXPECT_FALSE(matcher.IsTabOpenWithURL(GURL("https://chromium.org"), nullptr));
+  EXPECT_FALSE(matcher.IsTabOpenWithURL(GURL("https://Cinaseek.org"), nullptr));
 }
 
 IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, GetOpenTabsOnlyWithinProfile) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("https://bar.chromium.org")));
+                                           GURL("https://bar.Cinaseek.org")));
   ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("https://foo.chromium.org"),
+      browser(), GURL("https://foo.Cinaseek.org"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
 
@@ -82,7 +82,7 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, GetOpenTabsOnlyWithinProfile) {
       profile_manager, profile_manager->GenerateNextProfileDirectoryPath());
   Browser* browser_with_second_profile = CreateBrowser(second_profile);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser_with_second_profile,
-                                           GURL("https://baz.chromium.org")));
+                                           GURL("https://baz.Cinaseek.org")));
 
   std::unique_ptr<TemplateURLService> service =
       TemplateURLServiceTestUtil::CreateTemplateURLServiceForTesting(
@@ -92,8 +92,8 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, GetOpenTabsOnlyWithinProfile) {
   AutocompleteInput input;
   const auto tabs = matcher.GetOpenTabs(&input);
   ASSERT_EQ(tabs.size(), 2U);
-  EXPECT_EQ(tabs[0].url, GURL("https://bar.chromium.org"));
-  EXPECT_EQ(tabs[1].url, GURL("https://foo.chromium.org"));
+  EXPECT_EQ(tabs[0].url, GURL("https://bar.Cinaseek.org"));
+  EXPECT_EQ(tabs[1].url, GURL("https://foo.Cinaseek.org"));
 }
 
 IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, IsTabOpenUsesCanonicalSearchURL) {
@@ -120,7 +120,7 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, IsTabOpenUsesCanonicalSearchURL) {
         ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
     // The last tab is active. IsTabOpenWithURL() does not match the active tab.
     ui_test_utils::NavigateToURLWithDisposition(
-        browser(), GURL("https://active.chromium.org"),
+        browser(), GURL("https://active.Cinaseek.org"),
         WindowOpenDisposition::NEW_FOREGROUND_TAB,
         ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
 
@@ -143,7 +143,7 @@ IN_PROC_BROWSER_TEST_F(TabMatcherDesktopTest, IsTabOpenUsesCanonicalSearchURL) {
         ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
     // The last tab is active. IsTabOpenWithURL() does not match the active tab.
     ui_test_utils::NavigateToURLWithDisposition(
-        browser(), GURL("https://active.chromium.org"),
+        browser(), GURL("https://active.Cinaseek.org"),
         WindowOpenDisposition::NEW_FOREGROUND_TAB,
         ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
 

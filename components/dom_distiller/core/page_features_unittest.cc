@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -93,7 +93,7 @@ base::ListValue ReadJsonList(const std::string& file_name) {
 
 // This test uses input data of core features and the output of the training
 // pipeline's derived feature extraction to ensure that the extraction that is
-// done in Chromium matches that in the training pipeline.
+// done in Cinaseek matches that in the training pipeline.
 TEST(DomDistillerPageFeaturesTest, TestCalculateDerivedFeatures) {
   // Read the expectations file into a format convenient for testing.
   const std::string kExpectationsFile =

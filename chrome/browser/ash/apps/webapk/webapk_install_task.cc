@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ namespace {
 // The MIME type of the POST data sent to the server.
 constexpr char kProtoMimeType[] = "application/x-protobuf";
 
-constexpr char kRequesterPackageName[] = "org.chromium.arc.webapk";
+constexpr char kRequesterPackageName[] = "org.Cinaseek.arc.webapk";
 
 const char kMinimumIconSize = 64;
 

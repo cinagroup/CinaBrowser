@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -363,7 +363,7 @@ void PrefetchScheduler::Progress() {
   //
   // TODO(crbug.com/406403063): Consider not to limit prefetches with burst
   // priority. See
-  // https://chromium-review.googlesource.com/c/chromium/src/+/6402914/comment/8b5c845f_0b7f6f7e/
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/6402914/comment/8b5c845f_0b7f6f7e/
 
   auto internal = [&](PrefetchSchedulerPriority threshold_priority,
                       size_t active_limit) {

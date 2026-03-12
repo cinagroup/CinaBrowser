@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -211,7 +211,7 @@ std::string UniqueTempDirSuffixArg(const std::string& unique_temp_dir_suffix) {
 }
 
 // Example:
-//   /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone
+//   /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone
 bool GetCloneTempDir(base::FilePath* path) {
   base::FilePath temp_dir;
   if (!GetCleanupOnBootTempDir(&temp_dir)) {
@@ -224,7 +224,7 @@ bool GetCloneTempDir(base::FilePath* path) {
 }
 
 // Example:
-//   /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone/code_sign_clone.tKdILk
+//   /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone/code_sign_clone.tKdILk
 bool CreateUniqueCloneTempDir(base::FilePath* path) {
   base::FilePath clone_temp_dir;
   if (!GetCloneTempDir(&clone_temp_dir)) {
@@ -260,7 +260,7 @@ bool CreateUniqueCloneTempDir(base::FilePath* path) {
 // Example suffix:
 //   tKdILk
 // Example return value:
-//   /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone/code_sign_clone.tKdILk
+//   /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone/code_sign_clone.tKdILk
 // May return an empty path if the constructed path does not resolve.
 base::FilePath GetAbsoluteUniqueCloneTempDirForSuffix(
     const std::string& suffix) {
@@ -414,7 +414,7 @@ bool ValidateUniqueDirSuffix(const std::string& unique_temp_dir_suffix) {
 }
 
 // Example of an expected unique_temp_dir_path:
-//   /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone/code_sign_clone.tKdILk
+//   /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone/code_sign_clone.tKdILk
 // Make sure the path is within GetCloneTempDir() and has a valid prefix.
 bool ValidateUniqueTempDirPath(const base::FilePath& unique_temp_dir_path) {
   base::FilePath clone_temp_dir;
@@ -449,7 +449,7 @@ void RecordCloneCount() {
   //
   // Count the number of entries in the clone temp dir. The count would be 2 in
   // this example:
-  //  /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone/
+  //  /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone/
   //    code_sign_clone.123456
   //    code_sign_clone.654321
   //
@@ -578,7 +578,7 @@ void CodeSignCloneManager::Clone(const base::FilePath& src_path,
   // files.
   //
   // Example `unique_temp_dir_path`:
-  //   /private/var/folders/.../X/org.chromium.Chromium.code_sign_clone/code_sign_clone.tKdILk
+  //   /private/var/folders/.../X/org.Cinaseek.Cinaseek.code_sign_clone/code_sign_clone.tKdILk
   //
   // The clone will be created inside of this directory.
   base::FilePath unique_temp_dir_path;
@@ -603,7 +603,7 @@ void CodeSignCloneManager::Clone(const base::FilePath& src_path,
 
   // Give the clone a ".bundle" extension. Launch Services aggressively tracks
   // the existence of applications, and creating a duplicate copy of the
-  // Chromium app leads to trouble when it comes to Launch Services tracking the
+  // Cinaseek app leads to trouble when it comes to Launch Services tracking the
   // default browser (see https://crbug.com/381199182 for gory details).
   // Labeling the clone a "bundle" is good enough to solve the problem of code
   // signature validation, but avoids issues.

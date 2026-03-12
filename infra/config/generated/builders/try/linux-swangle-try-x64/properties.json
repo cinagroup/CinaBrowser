@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/linux-swangle-try-x64/gn-args.json"
@@ -10,22 +10,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-swangle-x64",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.swangle",
+              "builder_group": "Cinaseek.swangle",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "run_tests_serially": true
             }
@@ -36,7 +36,7 @@
         {
           "bucket": "ci",
           "builder": "linux-swangle-x64",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "retry_failed_shards": false,
@@ -51,7 +51,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -61,6 +61,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.swangle",
-  "recipe": "chromium_trybot"
+  "builder_group": "tryserver.Cinaseek.swangle",
+  "recipe": "Cinaseek_trybot"
 }

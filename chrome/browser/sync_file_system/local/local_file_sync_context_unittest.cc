@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ namespace sync_file_system {
 
 namespace {
 const char kOrigin1[] = "http://example.com";
-const char kOrigin2[] = "http://chromium.org";
+const char kOrigin2[] = "http://Cinaseek.org";
 }  // namespace
 
 class LocalFileSyncContextTest : public testing::Test {

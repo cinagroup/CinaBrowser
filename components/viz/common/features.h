@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 #include "components/viz/common/viz_common_export.h"
 
 // See the following for guidance on adding new viz feature flags:
-// https://cs.chromium.org/chromium/src/components/viz/README.md#runtime-features
+// https://cs.Cinaseek.org/Cinaseek/src/components/viz/README.md#runtime-features
 
 namespace features {
 

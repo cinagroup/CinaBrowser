@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ std::u16string UIThreadSearchTermsData::GetRlzParameterValue(
   std::u16string rlz_string;
 #if BUILDFLAG(ENABLE_RLZ)
   // For organic brandcodes do not use rlz at all. Empty brandcode usually
-  // means a chromium install. This is ok.
+  // means a Cinaseek install. This is ok.
   std::string brand;
   if (google_brand::GetBrand(&brand) && !google_brand::IsOrganic(brand)) {
     // This call will return false the first time(s) it is called until the

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -628,7 +628,7 @@ TEST(HTTPParsersTest, ParseServerTimingHeader) {
 
   // tabs
   /* known failures:
-  https://bugs.chromium.org/p/chromium/issues/detail?id=798446
+  https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=798446
   testServerTimingHeader("metric\t;\t", {{"metric", "0", ""}});
   testServerTimingHeader("metric\t,\t", {{"metric", "0", ""}});
   testServerTimingHeader("metric\t;\tdur\t=\t123.4\t;\tdesc\t=\tdescription",

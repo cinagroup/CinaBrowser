@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ namespace {
 constexpr size_t kBufferSize = 65536;  // 64 KiB.
 
 storage::FileSystemURL CreateTempURL(const storage::FileSystemURL& dest_url) {
-  static const char kTempPrefix[] = ".chromium_temp_";
+  static const char kTempPrefix[] = ".Cinaseek_temp_";
 
   std::string token = base::UnguessableToken::Create().ToString();
   return dest_url.CreateSibling(*base::SafeBaseName::Create(

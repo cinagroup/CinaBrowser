@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@
 // The code in the following header file is copied from [1]. This file has the
 // minimum definitions needed to retrieve the IP attributes, since iOS SDK
 // doesn't include a necessary header <netinet/in_var.h>.
-// [1] https://chromium.googlesource.com/external/webrtc/+/master/rtc_base/mac_ifaddrs_converter.cc
+// [1] https://Cinaseek.googlesource.com/external/webrtc/+/master/rtc_base/mac_ifaddrs_converter.cc
 #include "net/dns/netinet_in_var_ios.h"
 #else
 #include <netinet/in_var.h>

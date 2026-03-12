@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/usb/UsbBridge.java",
-    "java/src/org/chromium/chrome/browser/usb/UsbNotificationManager.java",
-    "java/src/org/chromium/chrome/browser/usb/UsbNotificationManagerDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/usb/UsbBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/usb/UsbNotificationManager.java",
+    "java/src/org/Cinaseek/chrome/browser/usb/UsbNotificationManagerDelegate.java",
   ]
   deps = [
     ":java_resources",
@@ -29,7 +29,7 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.usb"
+  resources_package = "org.Cinaseek.chrome.browser.usb"
 }
 
 android_resources("java_resources") {
@@ -40,12 +40,12 @@ android_resources("java_resources") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/usb/UsbBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/usb/UsbBridge.java" ]
 }
 
 robolectric_library("junit") {
   sources = [
-    "junit/src/org/chromium/chrome/browser/usb/UsbNotificationManagerTest.java",
+    "junit/src/org/Cinaseek/chrome/browser/usb/UsbNotificationManagerTest.java",
   ]
 
   deps = [

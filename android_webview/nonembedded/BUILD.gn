@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@ import("//third_party/protobuf/proto_library.gni")
 
 generate_jni("nonembedded_jni_headers") {
   sources = [
-    "java/src/org/chromium/android_webview/nonembedded/AwComponentUpdateService.java",
-    "java/src/org/chromium/android_webview/nonembedded/NetworkFetcherTask.java",
-    "java/src/org/chromium/android_webview/nonembedded/WebViewApkApplication.java",
-    "java/src/org/chromium/android_webview/services/ComponentsProviderPathUtil.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/AwComponentUpdateService.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/NetworkFetcherTask.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/WebViewApkApplication.java",
+    "java/src/org/Cinaseek/android_webview/services/ComponentsProviderPathUtil.java",
   ]
 }
 
@@ -20,13 +20,13 @@ generate_jni("nonembedded_jni_headers") {
 android_library("nonembedded_java") {
   srcjar_deps = [ ":nonembedded_jni_headers" ]
   sources = [
-    "java/src/org/chromium/android_webview/nonembedded/AwComponentUpdateService.java",
-    "java/src/org/chromium/android_webview/nonembedded/AwNonembeddedUmaRecorder.java",
-    "java/src/org/chromium/android_webview/nonembedded/AwPureJavaExceptionReporter.java",
-    "java/src/org/chromium/android_webview/nonembedded/LicenseActivity.java",
-    "java/src/org/chromium/android_webview/nonembedded/LicenseContentProvider.java",
-    "java/src/org/chromium/android_webview/nonembedded/NetworkFetcherTask.java",
-    "java/src/org/chromium/android_webview/nonembedded/WebViewApkApplication.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/AwComponentUpdateService.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/AwNonembeddedUmaRecorder.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/AwPureJavaExceptionReporter.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/LicenseActivity.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/LicenseContentProvider.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/NetworkFetcherTask.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/WebViewApkApplication.java",
   ]
   deps = [
     ":crash_java",
@@ -57,27 +57,27 @@ android_library("nonembedded_java") {
 
 android_library("devui_java") {
   sources = [
-    "java/src/org/chromium/android_webview/devui/ComponentsListFragment.java",
-    "java/src/org/chromium/android_webview/devui/CrashesListFragment.java",
-    "java/src/org/chromium/android_webview/devui/DevUiBaseFragment.java",
-    "java/src/org/chromium/android_webview/devui/FlagsFragment.java",
-    "java/src/org/chromium/android_webview/devui/HomeFragment.java",
-    "java/src/org/chromium/android_webview/devui/MainActivity.java",
-    "java/src/org/chromium/android_webview/devui/NetLogsFragment.java",
-    "java/src/org/chromium/android_webview/devui/PersistentErrorView.java",
-    "java/src/org/chromium/android_webview/devui/SafeModeFragment.java",
-    "java/src/org/chromium/android_webview/devui/WebViewPackageError.java",
-    "java/src/org/chromium/android_webview/devui/util/ComponentInfo.java",
-    "java/src/org/chromium/android_webview/devui/util/ComponentsInfoLoader.java",
-    "java/src/org/chromium/android_webview/devui/util/CrashBugUrlFactory.java",
-    "java/src/org/chromium/android_webview/devui/util/CrashInfoLoader.java",
-    "java/src/org/chromium/android_webview/devui/util/SafeIntentUtils.java",
-    "java/src/org/chromium/android_webview/devui/util/SafeModeActionInfo.java",
-    "java/src/org/chromium/android_webview/devui/util/SafeModeInfo.java",
-    "java/src/org/chromium/android_webview/devui/util/UnuploadedFilesStateLoader.java",
-    "java/src/org/chromium/android_webview/devui/util/UploadedCrashesInfoLoader.java",
-    "java/src/org/chromium/android_webview/devui/util/WebViewCrashInfoCollector.java",
-    "java/src/org/chromium/android_webview/devui/util/WebViewCrashLogParser.java",
+    "java/src/org/Cinaseek/android_webview/devui/ComponentsListFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/CrashesListFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/DevUiBaseFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/FlagsFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/HomeFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/MainActivity.java",
+    "java/src/org/Cinaseek/android_webview/devui/NetLogsFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/PersistentErrorView.java",
+    "java/src/org/Cinaseek/android_webview/devui/SafeModeFragment.java",
+    "java/src/org/Cinaseek/android_webview/devui/WebViewPackageError.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/ComponentInfo.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/ComponentsInfoLoader.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/CrashBugUrlFactory.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/CrashInfoLoader.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/SafeIntentUtils.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/SafeModeActionInfo.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/SafeModeInfo.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/UnuploadedFilesStateLoader.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/UploadedCrashesInfoLoader.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/WebViewCrashInfoCollector.java",
+    "java/src/org/Cinaseek/android_webview/devui/util/WebViewCrashLogParser.java",
   ]
   deps = [
     ":crash_java",
@@ -99,36 +99,36 @@ android_library("devui_java") {
     "//third_party/androidx:androidx_savedstate_savedstate_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
-  resources_package = "org.chromium.android_webview.devui"
+  resources_package = "org.Cinaseek.android_webview.devui"
 }
 
 android_library("services_java") {
   sources = [
-    "java/src/org/chromium/android_webview/services/AwEntropyState.java",
-    "java/src/org/chromium/android_webview/services/AwMinidumpUploadJobService.java",
-    "java/src/org/chromium/android_webview/services/AwMinidumpUploaderDelegate.java",
-    "java/src/org/chromium/android_webview/services/AwNetLogService.java",
-    "java/src/org/chromium/android_webview/services/AwVariationsSeedFetcher.java",
-    "java/src/org/chromium/android_webview/services/ComponentUpdaterResetSafeModeAction.java",
-    "java/src/org/chromium/android_webview/services/ComponentUpdaterSafeModeUtils.java",
-    "java/src/org/chromium/android_webview/services/ComponentsProviderPathUtil.java",
-    "java/src/org/chromium/android_webview/services/ComponentsProviderService.java",
-    "java/src/org/chromium/android_webview/services/CrashLoggingUtils.java",
-    "java/src/org/chromium/android_webview/services/CrashReceiverService.java",
-    "java/src/org/chromium/android_webview/services/DeveloperModeContentProvider.java",
-    "java/src/org/chromium/android_webview/services/DeveloperUiService.java",
-    "java/src/org/chromium/android_webview/services/MetricsBridgeService.java",
-    "java/src/org/chromium/android_webview/services/MetricsUploadService.java",
-    "java/src/org/chromium/android_webview/services/NonEmbeddedFastVariationsSeedSafeModeAction.java",
-    "java/src/org/chromium/android_webview/services/NonEmbeddedSafeModeAction.java",
-    "java/src/org/chromium/android_webview/services/NonEmbeddedSafeModeActionsSetupCleanup.java",
-    "java/src/org/chromium/android_webview/services/NonembeddedSafeModeActionsList.java",
-    "java/src/org/chromium/android_webview/services/SafeModeContentProvider.java",
-    "java/src/org/chromium/android_webview/services/SafeModeService.java",
-    "java/src/org/chromium/android_webview/services/SafeModeVariationsSeedContentProvider.java",
-    "java/src/org/chromium/android_webview/services/StartupFeatureMetadataHolder.java",
-    "java/src/org/chromium/android_webview/services/VariationsSeedHolder.java",
-    "java/src/org/chromium/android_webview/services/VariationsSeedServer.java",
+    "java/src/org/Cinaseek/android_webview/services/AwEntropyState.java",
+    "java/src/org/Cinaseek/android_webview/services/AwMinidumpUploadJobService.java",
+    "java/src/org/Cinaseek/android_webview/services/AwMinidumpUploaderDelegate.java",
+    "java/src/org/Cinaseek/android_webview/services/AwNetLogService.java",
+    "java/src/org/Cinaseek/android_webview/services/AwVariationsSeedFetcher.java",
+    "java/src/org/Cinaseek/android_webview/services/ComponentUpdaterResetSafeModeAction.java",
+    "java/src/org/Cinaseek/android_webview/services/ComponentUpdaterSafeModeUtils.java",
+    "java/src/org/Cinaseek/android_webview/services/ComponentsProviderPathUtil.java",
+    "java/src/org/Cinaseek/android_webview/services/ComponentsProviderService.java",
+    "java/src/org/Cinaseek/android_webview/services/CrashLoggingUtils.java",
+    "java/src/org/Cinaseek/android_webview/services/CrashReceiverService.java",
+    "java/src/org/Cinaseek/android_webview/services/DeveloperModeContentProvider.java",
+    "java/src/org/Cinaseek/android_webview/services/DeveloperUiService.java",
+    "java/src/org/Cinaseek/android_webview/services/MetricsBridgeService.java",
+    "java/src/org/Cinaseek/android_webview/services/MetricsUploadService.java",
+    "java/src/org/Cinaseek/android_webview/services/NonEmbeddedFastVariationsSeedSafeModeAction.java",
+    "java/src/org/Cinaseek/android_webview/services/NonEmbeddedSafeModeAction.java",
+    "java/src/org/Cinaseek/android_webview/services/NonEmbeddedSafeModeActionsSetupCleanup.java",
+    "java/src/org/Cinaseek/android_webview/services/NonembeddedSafeModeActionsList.java",
+    "java/src/org/Cinaseek/android_webview/services/SafeModeContentProvider.java",
+    "java/src/org/Cinaseek/android_webview/services/SafeModeService.java",
+    "java/src/org/Cinaseek/android_webview/services/SafeModeVariationsSeedContentProvider.java",
+    "java/src/org/Cinaseek/android_webview/services/StartupFeatureMetadataHolder.java",
+    "java/src/org/Cinaseek/android_webview/services/VariationsSeedHolder.java",
+    "java/src/org/Cinaseek/android_webview/services/VariationsSeedServer.java",
   ]
   deps = [
     ":crash_java",
@@ -150,11 +150,11 @@ android_library("services_java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
     "//third_party/jni_zero:jni_zero_java",
   ]
-  resources_package = "org.chromium.android_webview.devui"
+  resources_package = "org.Cinaseek.android_webview.devui"
 }
 
 android_library("util_java") {
-  sources = [ "java/src/org/chromium/android_webview/nonembedded_util/WebViewPackageHelper.java" ]
+  sources = [ "java/src/org/Cinaseek/android_webview/nonembedded_util/WebViewPackageHelper.java" ]
   deps = [
     "//base:base_java",
     "//third_party/androidx:androidx_annotation_annotation_java",
@@ -163,9 +163,9 @@ android_library("util_java") {
 
 android_library("crash_java") {
   sources = [
-    "java/src/org/chromium/android_webview/nonembedded/crash/CrashInfo.java",
-    "java/src/org/chromium/android_webview/nonembedded/crash/CrashUploadUtil.java",
-    "java/src/org/chromium/android_webview/nonembedded/crash/SystemWideCrashDirectories.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/crash/CrashInfo.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/crash/CrashUploadUtil.java",
+    "java/src/org/Cinaseek/android_webview/nonembedded/crash/SystemWideCrashDirectories.java",
   ]
   deps = [
     "//android_webview:common_java",

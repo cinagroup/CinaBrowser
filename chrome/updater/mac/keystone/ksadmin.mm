@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -721,7 +721,7 @@ void KSAdminApp::DoPrintTag(UpdaterScope scope) {
 
         } else {
           // Fallback to print tag from legacy Keystone tickets if there's no
-          // matching app registered with the Chromium updater.
+          // matching app registered with the Cinaseek updater.
           exit_code = std::move(fallback_cb).Run(app_id);
         }
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,12 +52,12 @@ namespace {
 // to inside the container.
 // Please refer to ArcImeService for the implementation details.
 constexpr char kChromeOSIMEIdInArcContainer[] =
-    "org.chromium.arc.ime/.ArcInputMethodService";
+    "org.Cinaseek.arc.ime/.ArcInputMethodService";
 
 // The name of the proxy IME extension that is used when registering ARC IMEs to
 // InputMethodManager.
 constexpr char kArcIMEProxyExtensionName[] =
-    "org.chromium.arc.inputmethod.proxy";
+    "org.Cinaseek.arc.inputmethod.proxy";
 
 void SwitchImeToCallback(const std::string& ime_id,
                          const std::string& component_id,

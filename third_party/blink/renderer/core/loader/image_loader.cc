@@ -801,7 +801,7 @@ void ImageLoader::ImageNotifyFinished(ImageResourceContent* content) {
     // When LazyLoadMediaObserver reports it to be intersecting (or close to)
     // the viewport later (i.e. this <img> proceeds to Step 26 of the spec),
     // actual load/error event will be fired, by going through the loading
-    // process again from `UpdateFromElement()`. Note that in Chromium
+    // process again from `UpdateFromElement()`. Note that in Cinaseek
     // implementation (unlike in the spec), the image content itself can be
     // still loaded/updated even in this case, which can be observed via e.g.
     // <img>'s width/height.

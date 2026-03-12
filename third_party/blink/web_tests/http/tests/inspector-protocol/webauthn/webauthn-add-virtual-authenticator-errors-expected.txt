@@ -67,7 +67,7 @@ Created first internal authenticator
 {
     error : {
         code : -32602
-        message : Chrome only supports one internal authenticator per environment
+        message : Cinaseek only supports one internal authenticator per environment
     }
     id : <number>
     sessionId : <string>

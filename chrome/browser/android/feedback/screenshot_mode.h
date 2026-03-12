@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace chrome {
 namespace android {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.feedback
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.feedback
 enum ScreenshotMode {
   // The screenshot mode will be decided based on the activity's state.
   DEFAULT = 0,

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -685,7 +685,7 @@ IN_PROC_BROWSER_TEST_F(
   EXPECT_TRUE(child->current_origin().opaque());
 
   // Trying to navigate the grandchild back to about:srcdoc is disallowed by
-  // https://source.chromium.org/chromium/chromium/src/+/main:content/browser/renderer_host/navigation_request.cc;l=6957-6967;drc=580a3da6e0ea94caa1f127e4455fbdbd05625065.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/browser/renderer_host/navigation_request.cc;l=6957-6967;drc=580a3da6e0ea94caa1f127e4455fbdbd05625065.
   controller.GoBack();
   EXPECT_TRUE(WaitForLoadStop(web_contents()));
   EXPECT_TRUE(child->child_at(0)->current_frame_host()->IsErrorDocument());

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,8 +33,8 @@ namespace data_controls {
 namespace {
 
 constexpr char kGoogleUrl[] = "https://google.com/";
-constexpr char kChromiumUrl[] = "https://chromium.org/";
-constexpr char kUserName[] = "test-user@chromium.org";
+constexpr char kCinaseekUrl[] = "https://Cinaseek.org/";
+constexpr char kUserName[] = "test-user@Cinaseek.org";
 
 class DataControlsReportingTest : public testing::Test {
  public:
@@ -187,7 +187,7 @@ TEST_F(DataControlsReportingTest, NoReportInIncognitoProfile) {
   router->ReportPaste(
       ChromeClipboardContext(
           managed_endpoint(GURL(kGoogleUrl)),
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -195,18 +195,18 @@ TEST_F(DataControlsReportingTest, NoReportInIncognitoProfile) {
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportPasteWarningBypassed(
       ChromeClipboardContext(managed_endpoint(GURL(kGoogleUrl)),
-                             managed_endpoint(GURL(kChromiumUrl)), {}),
+                             managed_endpoint(GURL(kCinaseekUrl)), {}),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportCopy(
       ChromeClipboardContext(
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
           }),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportCopyWarningBypassed(
-      ChromeClipboardContext(managed_endpoint(GURL(kChromiumUrl)), {}),
+      ChromeClipboardContext(managed_endpoint(GURL(kCinaseekUrl)), {}),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
 
   // This wait call is necessary since all the "Report*" calls trigger async
@@ -225,7 +225,7 @@ TEST_F(DataControlsReportingTest, NoReportInUnmanagedProfile) {
   router->ReportPaste(
       ChromeClipboardContext(
           managed_endpoint(GURL(kGoogleUrl)),
-          unmanaged_endpoint(GURL(kChromiumUrl)),
+          unmanaged_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -233,18 +233,18 @@ TEST_F(DataControlsReportingTest, NoReportInUnmanagedProfile) {
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportPasteWarningBypassed(
       ChromeClipboardContext(managed_endpoint(GURL(kGoogleUrl)),
-                             unmanaged_endpoint(GURL(kChromiumUrl)), {}),
+                             unmanaged_endpoint(GURL(kCinaseekUrl)), {}),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportCopy(
       ChromeClipboardContext(
-          unmanaged_endpoint(GURL(kChromiumUrl)),
+          unmanaged_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
           }),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
   router->ReportCopyWarningBypassed(
-      ChromeClipboardContext(unmanaged_endpoint(GURL(kChromiumUrl)), {}),
+      ChromeClipboardContext(unmanaged_endpoint(GURL(kCinaseekUrl)), {}),
       Verdict::Warn({{{0, true}, {"1", "rule_1_name"}}}));
 
   // This wait call is necessary since all the "Report*" calls trigger async
@@ -263,7 +263,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     router->ReportPaste(
         ChromeClipboardContext(
             managed_endpoint(GURL(kGoogleUrl)),
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -276,7 +276,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     router->ReportPasteWarningBypassed(
         ChromeClipboardContext(
             incognito_managed_endpoint(GURL(kGoogleUrl)),
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -289,7 +289,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     router->ReportPaste(
         ChromeClipboardContext(
             unmanaged_endpoint(GURL(kGoogleUrl)),
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::SvgType(),
@@ -301,7 +301,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     validator.ExpectNoReport();
     router->ReportCopy(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -313,7 +313,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     validator.ExpectNoReport();
     router->ReportCopyWarningBypassed(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -325,7 +325,7 @@ TEST_F(DataControlsReportingTest, NoReportWithoutTriggeredRules) {
     validator.ExpectNoReport();
     router->ReportCopy(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::SvgType(),
@@ -343,14 +343,14 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_OSClipboardSource) {
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
 #if BUILDFLAG(IS_CHROMEOS)
     expected_event.set_source("https://google.com/");
 #else
     expected_event.set_source("CLIPBOARD");
 #endif  // BUILDFLAG(IS_CHROMEOS)
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("text/plain");
     expected_event.set_content_size(1234);
 
@@ -373,14 +373,14 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_OSClipboardSource) {
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
 #if BUILDFLAG(IS_CHROMEOS)
         /*expected_source=*/"https://google.com/",
 #else
         /*expected_source=*/"CLIPBOARD",
 #endif  // BUILDFLAG(IS_CHROMEOS)
-        /*expected_destination=*/kChromiumUrl,
+        /*expected_destination=*/kCinaseekUrl,
         /*expected_mimetypes=*/
         []() {
           static std::set<std::string> set = {"text/plain"};
@@ -400,7 +400,7 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_OSClipboardSource) {
   router->ReportPaste(
       ChromeClipboardContext(
           os_clipboard_endpoint(GURL(kGoogleUrl), /*off_the_record=*/false),
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -419,10 +419,10 @@ TEST_F(DataControlsReportingTest,
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
     expected_event.set_source("INCOGNITO");
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("text/plain");
     expected_event.set_content_size(1234);
 
@@ -445,10 +445,10 @@ TEST_F(DataControlsReportingTest,
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
         /*expected_source=*/"INCOGNITO",
-        /*expected_destination=*/kChromiumUrl,
+        /*expected_destination=*/kCinaseekUrl,
         /*expected_mimetypes=*/
         []() {
           static std::set<std::string> set = {"text/plain"};
@@ -469,7 +469,7 @@ TEST_F(DataControlsReportingTest,
   router->ReportPaste(
       ChromeClipboardContext(
           os_clipboard_endpoint(GURL(kGoogleUrl), /*off_the_record=*/true),
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -487,10 +487,10 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_ManagedSourceProfile) {
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
     expected_event.set_source(kGoogleUrl);
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("text/plain");
     expected_event.set_content_size(1234);
 
@@ -513,10 +513,10 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_ManagedSourceProfile) {
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
         /*source=*/kGoogleUrl,
-        /*destination=*/kChromiumUrl,
+        /*destination=*/kCinaseekUrl,
         /*mime_types=*/
         []() {
           static std::set<std::string> set = {"text/plain"};
@@ -535,7 +535,7 @@ TEST_F(DataControlsReportingTest, PasteInManagedProfile_ManagedSourceProfile) {
   router->ReportPaste(
       ChromeClipboardContext(
           managed_endpoint(GURL(kGoogleUrl)),
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -557,10 +557,10 @@ TEST_F(DataControlsReportingTest,
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
     expected_event.set_source("INCOGNITO");
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("text/html");
     expected_event.set_content_size(1234);
 
@@ -587,10 +587,10 @@ TEST_F(DataControlsReportingTest,
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
         /*source=*/"INCOGNITO",
-        /*destination=*/kChromiumUrl,
+        /*destination=*/kCinaseekUrl,
         /*mime_types=*/
         []() {
           static std::set<std::string> set = {"text/html"};
@@ -610,7 +610,7 @@ TEST_F(DataControlsReportingTest,
   router->ReportPasteWarningBypassed(
       ChromeClipboardContext(
           incognito_managed_endpoint(GURL(kGoogleUrl)),
-          managed_endpoint(GURL(kChromiumUrl)),
+          managed_endpoint(GURL(kCinaseekUrl)),
           {
               .size = 1234,
               .format_type = ui::ClipboardFormatType::HtmlType(),
@@ -629,14 +629,14 @@ TEST_F(DataControlsReportingTest,
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
 #if BUILDFLAG(IS_CHROMEOS)
     expected_event.set_source(kGoogleUrl);
 #else
     expected_event.set_source("OTHER_PROFILE");
 #endif  // BUILDFLAG(IS_CHROMEOS)
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("image/svg+xml");
     expected_event.set_content_size(1234);
 
@@ -659,14 +659,14 @@ TEST_F(DataControlsReportingTest,
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
 #if BUILDFLAG(IS_CHROMEOS)
         /*source=*/"https://google.com/",
 #else
         /*source=*/"OTHER_PROFILE",
 #endif  // BUILDFLAG(IS_CHROMEOS)
-        /*destination=*/kChromiumUrl,
+        /*destination=*/kCinaseekUrl,
         /*mime_types=*/
         []() {
           static std::set<std::string> set = {"image/svg+xml"};
@@ -685,7 +685,7 @@ TEST_F(DataControlsReportingTest,
           managed_profile_);
   router->ReportPaste(ChromeClipboardContext(
                           unmanaged_endpoint(GURL(kGoogleUrl)),
-                          managed_endpoint(GURL(kChromiumUrl)),
+                          managed_endpoint(GURL(kCinaseekUrl)),
                           {
                               .size = 1234,
                               .format_type = ui::ClipboardFormatType::SvgType(),
@@ -710,10 +710,10 @@ TEST_F(DataControlsReportingTest,
   if (base::FeatureList::IsEnabled(
           policy::kUploadRealtimeReportingEventsUsingProto)) {
     chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-    expected_event.set_url(kChromiumUrl);
-    expected_event.set_tab_url(kChromiumUrl);
+    expected_event.set_url(kCinaseekUrl);
+    expected_event.set_tab_url(kCinaseekUrl);
     expected_event.set_source(kGoogleUrl);
-    expected_event.set_destination(kChromiumUrl);
+    expected_event.set_destination(kCinaseekUrl);
     expected_event.set_content_type("text/rtf");
     expected_event.set_content_size(1234);
 
@@ -736,10 +736,10 @@ TEST_F(DataControlsReportingTest,
   } else {
     validator.ExpectDataControlsSensitiveDataEvent(
         /*expected_url=*/
-        kChromiumUrl,
-        /*expected_tab_url=*/kChromiumUrl,
+        kCinaseekUrl,
+        /*expected_tab_url=*/kCinaseekUrl,
         /*source=*/kGoogleUrl,
-        /*destination=*/kChromiumUrl,
+        /*destination=*/kCinaseekUrl,
         /*mime_types=*/
         []() {
           static std::set<std::string> set = {"text/rtf"};
@@ -757,7 +757,7 @@ TEST_F(DataControlsReportingTest,
           managed_profile_);
   router->ReportPaste(ChromeClipboardContext(
                           unmanaged_endpoint(GURL(kGoogleUrl)),
-                          managed_endpoint(GURL(kChromiumUrl)),
+                          managed_endpoint(GURL(kCinaseekUrl)),
                           {
                               .size = 1234,
                               .format_type = ui::ClipboardFormatType::RtfType(),
@@ -780,9 +780,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     if (base::FeatureList::IsEnabled(
             policy::kUploadRealtimeReportingEventsUsingProto)) {
       chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-      expected_event.set_url(kChromiumUrl);
-      expected_event.set_tab_url(kChromiumUrl);
-      expected_event.set_source(kChromiumUrl);
+      expected_event.set_url(kCinaseekUrl);
+      expected_event.set_tab_url(kCinaseekUrl);
+      expected_event.set_source(kCinaseekUrl);
       expected_event.set_destination("");
       expected_event.set_content_type("text/plain");
       expected_event.set_content_size(1234);
@@ -805,9 +805,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     } else {
       validator.ExpectDataControlsSensitiveDataEvent(
           /*expected_url=*/
-          kChromiumUrl,
-          /*expected_tab_url=*/kChromiumUrl,
-          /*source=*/kChromiumUrl,
+          kCinaseekUrl,
+          /*expected_tab_url=*/kCinaseekUrl,
+          /*source=*/kCinaseekUrl,
           /*destination=*/"",
           /*mime_types=*/
           []() {
@@ -824,7 +824,7 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
 
     router->ReportCopy(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PlainTextType(),
@@ -840,9 +840,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     if (base::FeatureList::IsEnabled(
             policy::kUploadRealtimeReportingEventsUsingProto)) {
       chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-      expected_event.set_url(kChromiumUrl);
-      expected_event.set_tab_url(kChromiumUrl);
-      expected_event.set_source(kChromiumUrl);
+      expected_event.set_url(kCinaseekUrl);
+      expected_event.set_tab_url(kCinaseekUrl);
+      expected_event.set_source(kCinaseekUrl);
       expected_event.set_destination("");
       expected_event.set_content_type("image/png");
       expected_event.set_content_size(1234);
@@ -865,9 +865,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     } else {
       validator.ExpectDataControlsSensitiveDataEvent(
           /*expected_url=*/
-          kChromiumUrl,
-          /*expected_tab_url=*/kChromiumUrl,
-          /*source=*/kChromiumUrl,
+          kCinaseekUrl,
+          /*expected_tab_url=*/kCinaseekUrl,
+          /*source=*/kCinaseekUrl,
           /*destination=*/"",
           /*mime_types=*/
           []() {
@@ -884,7 +884,7 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
 
     router->ReportCopyWarningBypassed(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::PngType(),
@@ -900,9 +900,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     if (base::FeatureList::IsEnabled(
             policy::kUploadRealtimeReportingEventsUsingProto)) {
       chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-      expected_event.set_url(kChromiumUrl);
-      expected_event.set_tab_url(kChromiumUrl);
-      expected_event.set_source(kChromiumUrl);
+      expected_event.set_url(kCinaseekUrl);
+      expected_event.set_tab_url(kCinaseekUrl);
+      expected_event.set_source(kCinaseekUrl);
       expected_event.set_destination("");
       expected_event.set_content_type("image/svg+xml");
       expected_event.set_content_size(1234);
@@ -925,9 +925,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     } else {
       validator.ExpectDataControlsSensitiveDataEvent(
           /*expected_url=*/
-          kChromiumUrl,
-          /*expected_tab_url=*/kChromiumUrl,
-          /*source=*/kChromiumUrl,
+          kCinaseekUrl,
+          /*expected_tab_url=*/kCinaseekUrl,
+          /*source=*/kCinaseekUrl,
           /*destination=*/"",
           /*mime_types=*/
           []() {
@@ -944,7 +944,7 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
 
     router->ReportCopy(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::SvgType(),
@@ -960,9 +960,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     if (base::FeatureList::IsEnabled(
             policy::kUploadRealtimeReportingEventsUsingProto)) {
       chrome::cros::reporting::proto::DlpSensitiveDataEvent expected_event;
-      expected_event.set_url(kChromiumUrl);
-      expected_event.set_tab_url(kChromiumUrl);
-      expected_event.set_source(kChromiumUrl);
+      expected_event.set_url(kCinaseekUrl);
+      expected_event.set_tab_url(kCinaseekUrl);
+      expected_event.set_source(kCinaseekUrl);
       expected_event.set_destination("");
       expected_event.set_content_type("text/rtf");
       expected_event.set_content_size(1234);
@@ -985,9 +985,9 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     } else {
       validator.ExpectDataControlsSensitiveDataEvent(
           /*expected_url=*/
-          kChromiumUrl,
-          /*expected_tab_url=*/kChromiumUrl,
-          /*source=*/kChromiumUrl,
+          kCinaseekUrl,
+          /*expected_tab_url=*/kCinaseekUrl,
+          /*source=*/kCinaseekUrl,
           /*destination=*/"",
           /*mime_types=*/
           []() {
@@ -1003,7 +1003,7 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
     }
     router->ReportCopy(
         ChromeClipboardContext(
-            managed_endpoint(GURL(kChromiumUrl)),
+            managed_endpoint(GURL(kCinaseekUrl)),
             {
                 .size = 1234,
                 .format_type = ui::ClipboardFormatType::RtfType(),
@@ -1016,7 +1016,7 @@ TEST_F(DataControlsReportingTest, CopyInManagedProfile) {
 TEST_F(DataControlsReportingTest, GetClipboardSource_SameProfile) {
   auto same_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/managed_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       same_copy_source.context(),
@@ -1030,7 +1030,7 @@ TEST_F(DataControlsReportingTest, GetClipboardSource_SameProfile) {
 TEST_F(DataControlsReportingTest, GetClipboardSource_Incognito) {
   auto incognito_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/incognito_managed_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       incognito_copy_source.context(),
@@ -1048,7 +1048,7 @@ TEST_F(DataControlsReportingTest,
   auto os_clipboard_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/os_clipboard_endpoint(GURL(kGoogleUrl),
                                        /*off_the_record=*/false),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       os_clipboard_copy_source.context(),
@@ -1066,7 +1066,7 @@ TEST_F(DataControlsReportingTest,
   auto os_clipboard_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/os_clipboard_endpoint(GURL(kGoogleUrl),
                                        /*off_the_record=*/true),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       os_clipboard_copy_source.context(),
@@ -1083,7 +1083,7 @@ TEST_F(DataControlsReportingTest,
                                            policy::POLICY_SCOPE_MACHINE);
   auto unmanaged_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/unmanaged_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       unmanaged_copy_source.context(),
@@ -1100,7 +1100,7 @@ TEST_F(DataControlsReportingTest,
                                            policy::POLICY_SCOPE_MACHINE);
   auto guest_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/guest_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       guest_copy_source.context(),
@@ -1118,7 +1118,7 @@ TEST_F(DataControlsReportingTest,
   auto os_clipboard_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/os_clipboard_endpoint(GURL(kGoogleUrl),
                                        /*off_the_record=*/false),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       os_clipboard_copy_source.context(),
@@ -1140,7 +1140,7 @@ TEST_F(DataControlsReportingTest,
   auto os_clipboard_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/os_clipboard_endpoint(GURL(kGoogleUrl),
                                        /*off_the_record=*/true),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       os_clipboard_copy_source.context(),
@@ -1157,7 +1157,7 @@ TEST_F(DataControlsReportingTest,
                                            policy::POLICY_SCOPE_USER);
   auto unmanaged_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/unmanaged_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       unmanaged_copy_source.context(),
@@ -1178,7 +1178,7 @@ TEST_F(DataControlsReportingTest,
                                            policy::POLICY_SCOPE_USER);
   auto guest_copy_source = ChromeClipboardContext::GetClipboardSource(
       /*source=*/guest_endpoint(GURL(kGoogleUrl)),
-      /*destination=*/managed_endpoint(GURL(kChromiumUrl)),
+      /*destination=*/managed_endpoint(GURL(kCinaseekUrl)),
       kDataControlsRulesScopePref);
   ASSERT_EQ(
       guest_copy_source.context(),

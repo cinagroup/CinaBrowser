@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ void ConvertToPointerTouchInfoImpl(const TouchEventPoint& touch_point,
 void ConvertToPointerTouchInfo(const TouchEventPoint& touch_point,
                                POINTER_TOUCH_INFO* pointer_touch_info) {
   // TODO(zijiehe): Use GetFullscreenTopLeft() once
-  // https://chromium-review.googlesource.com/c/581951/ is submitted.
+  // https://Cinaseek-review.googlesource.com/c/581951/ is submitted.
   webrtc::DesktopVector top_left =
       webrtc::GetScreenRect(webrtc::kFullDesktopScreenId, std::wstring())
           .top_left();

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,8 +22,8 @@ class IdentityProviderServiceTest : public PlatformBrowserTest {
 IN_PROC_BROWSER_TEST_F(IdentityProviderServiceTest, FetchData) {
   auto idp_service = std::make_unique<IdentityProviderService>();
   base::test::TestFuture<bool> connected;
-  idp_service->Connect("org.chromium.android_browsertests_apk",
-                       "org.chromium.chrome.browser.webid.TestIdP",
+  idp_service->Connect("org.Cinaseek.android_browsertests_apk",
+                       "org.Cinaseek.chrome.browser.webid.TestIdP",
                        connected.GetCallback());
   ASSERT_TRUE(connected.Get());
 
@@ -50,8 +50,8 @@ IN_PROC_BROWSER_TEST_F(IdentityProviderServiceTest,
   auto idp_service = std::make_unique<IdentityProviderService>();
 
   base::test::TestFuture<bool> connected1;
-  idp_service->Connect("org.chromium.android_browsertests_apk",
-                       "org.chromium.chrome.browser.webid.TestIdP",
+  idp_service->Connect("org.Cinaseek.android_browsertests_apk",
+                       "org.Cinaseek.chrome.browser.webid.TestIdP",
                        connected1.GetCallback());
   ASSERT_TRUE(connected1.Get());
 
@@ -60,8 +60,8 @@ IN_PROC_BROWSER_TEST_F(IdentityProviderServiceTest,
   ASSERT_TRUE(disconnected.Wait());
 
   base::test::TestFuture<bool> connected2;
-  idp_service->Connect("org.chromium.android_browsertests_apk",
-                       "org.chromium.chrome.browser.webid.TestIdP",
+  idp_service->Connect("org.Cinaseek.android_browsertests_apk",
+                       "org.Cinaseek.chrome.browser.webid.TestIdP",
                        connected2.GetCallback());
   ASSERT_TRUE(connected2.Get());
 }
@@ -79,14 +79,14 @@ IN_PROC_BROWSER_TEST_F(IdentityProviderServiceTest, ConnectsTwice) {
   auto idp_service = std::make_unique<IdentityProviderService>();
 
   base::test::TestFuture<bool> connected1;
-  idp_service->Connect("org.chromium.android_browsertests_apk",
-                       "org.chromium.chrome.browser.webid.TestIdP",
+  idp_service->Connect("org.Cinaseek.android_browsertests_apk",
+                       "org.Cinaseek.chrome.browser.webid.TestIdP",
                        connected1.GetCallback());
   ASSERT_TRUE(connected1.Get());
 
   base::test::TestFuture<bool> connected2;
-  idp_service->Connect("org.chromium.android_browsertests_apk",
-                       "org.chromium.chrome.browser.webid.TestIdP",
+  idp_service->Connect("org.Cinaseek.android_browsertests_apk",
+                       "org.Cinaseek.chrome.browser.webid.TestIdP",
                        connected2.GetCallback());
   ASSERT_TRUE(connected2.Get());
 }

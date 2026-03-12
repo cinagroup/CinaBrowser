@@ -53,14 +53,14 @@
   },
   "chromeos-brya-chrome-dchecks-skylab": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/aura:aura_unittests",
@@ -76,7 +76,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//base:base_unittests",
@@ -96,7 +96,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/capture:capture_unittests",
@@ -112,7 +112,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//cc:cc_unittests",
@@ -212,7 +212,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -228,7 +228,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//crypto:crypto_unittests",
@@ -244,7 +244,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/display:display_unittests",
@@ -268,7 +268,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "experiment_percentage": 100,
@@ -284,7 +284,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//google_apis:google_apis_unittests",
@@ -300,7 +300,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ipc:ipc_tests",
@@ -316,7 +316,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/latency:latency_unittests",
@@ -335,7 +335,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media:media_unittests",
@@ -351,7 +351,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/midi:midi_unittests",
@@ -367,7 +367,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//mojo:mojo_unittests",
@@ -386,7 +386,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -402,7 +402,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -418,7 +418,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//pdf:pdf_unittests",
@@ -434,7 +434,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//printing:printing_unittests",
@@ -454,7 +454,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -470,7 +470,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -486,7 +486,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//sql:sql_unittests",
@@ -502,7 +502,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//url:url_unittests",
@@ -522,7 +522,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/gpu/vaapi:vaapi_unittest",
@@ -548,7 +548,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -575,7 +575,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -602,7 +602,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -622,16 +622,16 @@
   },
   "chromeos-eve-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-jacuzzi-chrome-dchecks-skylab": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -727,7 +727,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -745,13 +745,13 @@
   },
   "chromeos-trogdor-chrome-skylab-fyi": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-trogdor-chrome-skylab-tests-fyi": {
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "trogdor",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -847,7 +847,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "trogdor",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",

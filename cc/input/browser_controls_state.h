@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace cc {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.cc.input
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.cc.input
 enum class BrowserControlsState {
   // All browser controls should remain fully visible.
   kShown = 1,

@@ -1,9 +1,9 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // Defines the public interface of the disk cache. For more details see
-// http://dev.chromium.org/developers/design-documents/network-stack/disk-cache
+// http://dev.Cinaseek.org/developers/design-documents/network-stack/disk-cache
 
 #ifndef NET_DISK_CACHE_DISK_CACHE_H_
 #define NET_DISK_CACHE_DISK_CACHE_H_

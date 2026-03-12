@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -33,7 +33,7 @@ source_set("screen_orientation") {
 if (is_android) {
   generate_jni("screen_orientation_jni_headers") {
     visibility = [ ":screen_orientation" ]
-    sources = [ "android/java/src/org/chromium/device/screen_orientation/ScreenOrientationListener.java" ]
+    sources = [ "android/java/src/org/Cinaseek/device/screen_orientation/ScreenOrientationListener.java" ]
   }
 
   android_library("java") {
@@ -41,7 +41,7 @@ if (is_android) {
     # However, various generated targets also need to see this target as a
     # result of //services/device:java depending on it.
     visibility = [ "//services/device:*" ]
-    sources = [ "android/java/src/org/chromium/device/screen_orientation/ScreenOrientationListener.java" ]
+    sources = [ "android/java/src/org/Cinaseek/device/screen_orientation/ScreenOrientationListener.java" ]
     deps = [
       "//base:base_java",
       "//third_party/jni_zero:jni_zero_java",

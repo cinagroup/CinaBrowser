@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ class NET_EXPORT NoVarySearchCacheStorageFileOperations {
     std::vector<uint8_t> contents;
     base::Time last_modified;
 
-    // Required by chromium style plugin.
+    // Required by Cinaseek style plugin.
     LoadResult();
     LoadResult(const LoadResult&);
     LoadResult(LoadResult&&);

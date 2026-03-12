@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ struct ShortcutInfo;
 struct AddToHomescreenParams {
   // This enum backs a UMA histogram, so it should be treated as append-only.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webapps
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webapps
   enum class AppType {
     // Native Android app.
     NATIVE,

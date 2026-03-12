@@ -9,7 +9,7 @@ use_siso_default = false
 _is_ninja_used = path_exists(rebase_path(".ninja_deps", root_build_dir))
 
 if (path_exists("//build/config/siso/.sisoenv") &&
-    defined(build_with_chromium) && build_with_chromium && !_is_ninja_used) {
+    defined(build_with_Cinaseek) && build_with_Cinaseek && !_is_ninja_used) {
   use_siso_default = true
 }
 

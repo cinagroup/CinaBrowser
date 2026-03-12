@@ -396,10 +396,10 @@ Style notes:
         Press and hold both volume keys for five seconds to disable spoken feedback.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_SPOKEN_FEEDBACK_ENABLED_TITLE" desc="The title message shown on a notification when spoken feedback is enabled">
-        ChromeVox enabled
+        CinaseekVox enabled
       </message>
       <message name="IDS_ASH_STATUS_TRAY_SPOKEN_FEEDBACK_BRAILLE_ENABLED_TITLE" desc="The message shown on a notification when both the spoken feedback and braille are enabled">
-        Braille and ChromeVox are enabled
+        Braille and CinaseekVox are enabled
       </message>
       <message name="IDS_ASH_STATUS_TRAY_SWITCH_ACCESS_ENABLED" desc="The message shown on a notification when Switch Access is enabled">
         Switch Access can be disabled in Settings > Accessibility.
@@ -572,19 +572,19 @@ Style notes:
       <message name="IDS_ASH_STATUS_TRAY_CAST_SHORT" desc="The label used for Cast button in system tray bubble. [CHAR_LIMIT=14]">
         Cast
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_DEVICES_AVAILABLE" desc="Subtitle under the Cast button in the system tray bubble when Chromecast devices are available for casting">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_DEVICES_AVAILABLE" desc="Subtitle under the Cast button in the system tray bubble when Cinaseekcast devices are available for casting">
         Devices available
       </message>
       <message name="IDS_ASH_STATUS_TRAY_CAST_TOOLTIP" desc="The tooltip text used for Cast button in system tray bubble.">
         Show cast devices
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CASTING" desc="The label used in the system tray bubble when casting a generic source to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CASTING" desc="The label used in the system tray bubble when casting a generic source to a Cinaseekcast device">
         Casting
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CASTING_SCREEN" desc="The label used in the system tray bubble when casting the screen to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CASTING_SCREEN" desc="The label used in the system tray bubble when casting the screen to a Cinaseekcast device">
         Casting screen
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CASTING_TAB" desc="The label used in the system tray bubble when casting a Chrome tab to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CASTING_TAB" desc="The label used in the system tray bubble when casting a Cinaseek tab to a Cinaseekcast device">
         Casting tab
       </message>
       <message name="IDS_ASH_STATUS_TRAY_CAST_NOTIFICATION_TITLE" desc="The notification title to tell the user we are casting to a cast device.">
@@ -596,11 +596,11 @@ Style notes:
       <message name="IDS_ASH_STATUS_TRAY_CAST_ACCESS_CODE_CAST_CONNECT" desc="Menu item label that, when clicked on, opens the access code casting dialog.">
         Connect with a code
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_ZERO_STATE_TITLE" desc="The main label for the system tray Cast view when no Chromecast devices are available.">
-        Cast your screen from your Chromebook
+      <message name="IDS_ASH_STATUS_TRAY_CAST_ZERO_STATE_TITLE" desc="The main label for the system tray Cast view when no Cinaseekcast devices are available.">
+        Cast your screen from your Cinaseekbook
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_ZERO_STATE_SUBTITLE" desc="The secondary label for the system tray Cast view when no Chromecast devices are available.">
-        Make sure your Chromebook is on the same Wi-Fi network as your Chromecast device.
+      <message name="IDS_ASH_STATUS_TRAY_CAST_ZERO_STATE_SUBTITLE" desc="The secondary label for the system tray Cast view when no Cinaseekcast devices are available.">
+        Make sure your Cinaseekbook is on the same Wi-Fi network as your Cinaseekcast device.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_DARK_THEME" desc="The label used as the header in the dark theme popup. [CHAR_LIMIT=19">
         Dark theme
@@ -656,19 +656,19 @@ Style notes:
       <message name="IDS_ASH_STATUS_TRAY_CAST_STOP" desc="The label used in the tray popup to stop casting.">
         Stop
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_STOP_CASTING" desc="Label for a button in the system tray popup to stop casting to a Chromecast device.">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_STOP_CASTING" desc="Label for a button in the system tray popup to stop casting to a Cinaseekcast device.">
         Stop casting
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_PAUSE" desc="Label for a button in the cast notification to pause the current cast mirroring session to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_PAUSE" desc="Label for a button in the cast notification to pause the current cast mirroring session to a Cinaseekcast device">
         Pause
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_PAUSE_CASTING" desc="Label for a button in the system tray to pause the current cast mirroring session to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_PAUSE_CASTING" desc="Label for a button in the system tray to pause the current cast mirroring session to a Cinaseekcast device">
         Pause casting
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_RESUME" desc="Label for a button in the cast notification to resume a paused cast mirroring session to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_RESUME" desc="Label for a button in the cast notification to resume a paused cast mirroring session to a Cinaseekcast device">
         Resume
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_CAST_RESUME_CASTING" desc="Label for a button in the system tray to resume a paused cast mirroring session to a Chromecast device">
+      <message name="IDS_ASH_STATUS_TRAY_CAST_RESUME_CASTING" desc="Label for a button in the system tray to resume a paused cast mirroring session to a Cinaseekcast device">
         Resume casting
       </message>
       <message name="IDS_ASH_STATUS_TRAY_QUIET_MODE_TOOLTIP" desc="The tooltip text for the status area icon to tell do-not-disturb mode is currently on.">
@@ -815,7 +815,7 @@ Style notes:
       <message name="IDS_ASH_STATUS_TRAY_BLUETOOTH_PAIRED_OR_CONNECTED_TOAST" desc="The text used in the toast shown when a new Bluetooth device is newly paired or connected.">
       <ph name="DEVICE_NAME">$1<ex>Pixel Buds</ex></ph> connected
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_BLUETOOTH_DISCONNECTED_TOAST" desc="The text used in the toast shown when a new Bluetooth device disconnected from Chromebook.">
+      <message name="IDS_ASH_STATUS_TRAY_BLUETOOTH_DISCONNECTED_TOAST" desc="The text used in the toast shown when a new Bluetooth device disconnected from Cinaseekbook.">
       <ph name="DEVICE_NAME">$1<ex>Pixel Buds</ex></ph> disconnected
       </message>
       <message name="IDS_ASH_STATUS_TRAY_FOCUS_MODE" desc="The label used as the header in the focus mode panel.">
@@ -911,7 +911,7 @@ Style notes:
         Couldn’t connect to YouTube Music
       </message>
       <message name="IDS_ASH_STATUS_TRAY_FOCUS_MODE_SOUNDS_YOUTUBE_MUSIC_UPDATE" desc="The text for the error toast when YouTube Music requires an OS update">
-        Update your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> to use YouTube Music
+        Update your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph> to use YouTube Music
       </message>
       <message name="IDS_ASH_STATUS_TRAY_FOCUS_MODE_SOUNDS_DISCONNECTED_WITH_FOCUS_SOUNDS" desc="The text for the error toast when the focus mode isn't connected to the Focus sounds">
         Couldn’t connect to Focus sounds
@@ -1090,7 +1090,7 @@ Style notes:
           other {Update device to previous version within # seconds}}
       </message>
       <message name="IDS_ROLLBACK_REQUIRED_BODY" desc="The body text of a dialog that tells users the device must be restarted to roll back to an earlier version within a deadline given in the title of the message. The device will be wiped on restart. MANAGER can be a domain or an email address.">
-        <ph name="MANAGER">$1<ex>google.com</ex></ph> requires you to roll back your <ph name="DEVICE_TYPE">$2<ex>Chromebook</ex></ph>. Your device will reset and all data will be deleted.
+        <ph name="MANAGER">$1<ex>google.com</ex></ph> requires you to roll back your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbook</ex></ph>. Your device will reset and all data will be deleted.
       </message>
 
       <message name="IDS_RELAUNCH_RECOMMENDED_TITLE" desc="The title of a dialog that tells users that a device restart is recommended for an update.">
@@ -1106,7 +1106,7 @@ Style notes:
         Update required by <ph name="MANAGER">$1<ex>google.com</ex></ph>
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_MESSAGE_LEARN_MORE" desc="The body of the notification to notify that the user should restart to get system updates. This notification body links to the info page on the update.">
-        Learn more about the latest <ph name="SYSTEM_APP_NAME">$1<ex>ChromiumOS</ex></ph> update
+        Learn more about the latest <ph name="SYSTEM_APP_NAME">$1<ex>CinaseekOS</ex></ph> update
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_RESTART_BUTTON" meaning="button label" desc="The label used as the button to restart system and update. Displayed as the action button of the notification for system update.">
         Restart
@@ -1115,16 +1115,16 @@ Style notes:
         Get the latest features and security improvements. Updates happen in the background.
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_MESSAGE_POWERWASH" desc="The notification message used in the system notification update when user need to powerwash the device in order to update the system.">
-        This update requires powerwashing your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph>. All data will be deleted. Learn more about the latest <ph name="SYSTEM_APP_NAME">$2<ex>ChromiumOS</ex></ph> update.
+        This update requires powerwashing your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph>. All data will be deleted. Learn more about the latest <ph name="SYSTEM_APP_NAME">$2<ex>CinaseekOS</ex></ph> update.
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_MESSAGE_ROLLBACK" desc="The notification message used in the system notification update when the device is rolled back and data will be deleted. MANAGER can be a domain or an email address.">
-        <ph name="MANAGER">$1<ex>google.com</ex></ph> is rolling back your <ph name="DEVICE_TYPE">$2<ex>Chromebook</ex></ph>. Your device will reset and all data will be deleted.
+        <ph name="MANAGER">$1<ex>google.com</ex></ph> is rolling back your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbook</ex></ph>. Your device will reset and all data will be deleted.
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_MESSAGE_ROLLBACK_OVERDUE" desc="The notification message used in the system notification update when the device is overdue for rollback that will put the device on a previous version and delete data. MANAGER can be a domain or an email address.">
-        <ph name="MANAGER">$1<ex>google.com</ex></ph> requires you to roll back your <ph name="DEVICE_TYPE">$2<ex>Chromebook</ex></ph>. Your device will reset and all data will be deleted.
+        <ph name="MANAGER">$1<ex>google.com</ex></ph> requires you to roll back your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbook</ex></ph>. Your device will reset and all data will be deleted.
       </message>
       <message name="IDS_UPDATE_NOTIFICATION_MESSAGE_SLOW_BOOT" desc="The additional body of the notification to notify the user that the next reboot is slow.">
-        <ph name="UPDATE_TEXT">$1<ex>Learn more about the latest ChromiumOS update</ex></ph>. This Chromebook needs to restart to apply an update. This can take up to 1 minute.
+        <ph name="UPDATE_TEXT">$1<ex>Learn more about the latest CinaseekOS update</ex></ph>. This Cinaseekbook needs to restart to apply an update. This can take up to 1 minute.
       </message>
       <message name="IDS_DIALOG_TITLE_SLOW_BOOT" desc="The title of the Slow Boot Shutdown Confirmation Dialog.">
         Restart may take awhile
@@ -1172,7 +1172,7 @@ Style notes:
       <message name="IDS_ASH_STATUS_TRAY_MIC_STATE_MUTED" desc="The accessible text used when the mic gain button is in the muted state.">
         Mic is muted.
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_MIC_STATE_MUTED_BY_HW_SWITCH" desc="The text used as a tooltip for microphone mute button in ChromeOS quick settings when the mic gain button is muted because the device microphone mute switch is turned on. Used as a status text for IDS_ASH_STATUS_TRAY_MIC_GAIN.">
+      <message name="IDS_ASH_STATUS_TRAY_MIC_STATE_MUTED_BY_HW_SWITCH" desc="The text used as a tooltip for microphone mute button in CinaseekOS quick settings when the mic gain button is muted because the device microphone mute switch is turned on. Used as a status text for IDS_ASH_STATUS_TRAY_MIC_GAIN.">
         Device's microphone button is turned off.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_MIC_SLIDER_LABEL" desc="The accessible text for the microphone slider in the tray.">
@@ -1232,7 +1232,7 @@ Style notes:
       </message>
       <message name="IDS_ASH_SPOKEN_FEEDBACK_SHORTCUT_DISABLED"
                desc="The label used in the notification used to indicate that, the shortcut for spoken feedback feature has been disabled.">
-        ChromeVox (spoken feedback)
+        CinaseekVox (spoken feedback)
       </message>
       <message name="IDS_ASH_ACCESSIBILITY_FEATURE_ACTIVATED"
                desc="The label used in the notification used to indicate that, the accessibility feature is being set as forced enabled.">
@@ -1303,7 +1303,7 @@ Style notes:
       </message>
       <message name="IDS_ASH_STATUS_TRAY_ACCESSIBILITY_SPOKEN_FEEDBACK" desc="The label used in the accessibility menu of the
     system tray to toggle on/off spoken feedback feature.">
-        ChromeVox (spoken feedback)
+        CinaseekVox (spoken feedback)
       </message>
       <message name="IDS_ASH_STATUS_TRAY_ACCESSIBILITY_MOUSE_KEYS_RESUME" desc="The label used in the accessibility menu of the system tray to pause/resume the mouse keys feature.">
         Resume mouse keys
@@ -1724,7 +1724,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         Set up parental controls for apps
       </message>
       <message name="IDS_ON_DEVICE_APP_CONTROLS_NOTIFICATION_MESSAGE" desc="The notification message that informs the user that on-device app controls are available.">
-        You can now block apps installed on this <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph>
+        You can now block apps installed on this <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph>
       </message>
       <message name="IDS_ON_DEVICE_APP_CONTROLS_NOTIFICATION_OPEN_SETTINGS_BUTTON_LABEL" desc="The label on the button that takes the user to the Apps Subpage of OS Settings.">
         Open Settings
@@ -2110,7 +2110,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         Not available
       </message>
       <message name="IDS_ASH_PHONE_HUB_TASK_CONTINUATION_TITLE" desc="Title of the task continuation section (where users pick up unfinished task left off from their phone, currently only support web browsing) in phone hub bubble.">
-        Recent Chrome tabs
+        Recent Cinaseek tabs
       </message>
       <message name="IDS_ASH_PHONE_HUB_ONBOARDING_DIALOG_TITLE" desc="The title of the onboarding dialog that pops up for existing multidevice users to ask for permission when the user enables this feature.">
         Turn on Phone Hub
@@ -2125,7 +2125,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         When you stream your phone’s apps, they will appear here
       </message>
       <message name="IDS_ASH_PHONE_HUB_ONBOARDING_DIALOG_DESCRIPTION" desc="The description of the onboarding dialog that pops up for existing multidevice users to ask for permission when the user enables this feature.">
-        Connect to your phone’s hotspot, silence and locate your device, and view recent Chrome tabs open on your phone
+        Connect to your phone’s hotspot, silence and locate your device, and view recent Cinaseek tabs open on your phone
       </message>
       <message name="IDS_ASH_PHONE_HUB_ONBOARDING_DIALOG_DISMISS_BUTTON" desc="Dimiss button on the onboarding dialog for user to opt out this feature.">
         Dismiss
@@ -2137,7 +2137,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         Set up Phone Hub later
       </message>
       <message name="IDS_ASH_PHONE_HUB_ONBOARDING_DISMISS_DIALOG_DESCRIPTION_PART_1" desc="The description of the dialog that pops up after user clicks the dismiss button on the onboarding dialog. Also see IDS_ASH_PHONE_HUB_ONBOARDING_DISMISS_DIALOG_DESCRIPTION_PART_2.">
-        Connect to your phone’s hotspot, silence and locate your device, and view recent Chrome tabs open on your phone
+        Connect to your phone’s hotspot, silence and locate your device, and view recent Cinaseek tabs open on your phone
       </message>
       <message name="IDS_ASH_PHONE_HUB_ONBOARDING_DISMISS_DIALOG_DESCRIPTION_PART_2" desc="The description of the dialog that pops up after user clicks the dismiss button on the onboarding dialog. Also see IDS_ASH_PHONE_HUB_ONBOARDING_DISMISS_DIALOG_DESCRIPTION_PART_1.">
         You can always set up later from Settings.
@@ -2170,7 +2170,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         Check your connection
       </message>
       <message name="IDS_ASH_PHONE_HUB_BLUETOOTH_DISABLED_DIALOG_DESCRIPTION" desc="The description of the dialog that pops up when the phone hub feature is not available because Bluetooth is disabled on this device.">
-        Looks like Bluetooth is turned off on your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph>. Please turn on Bluetooth to use Phone Hub.
+        Looks like Bluetooth is turned off on your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph>. Please turn on Bluetooth to use Phone Hub.
       </message>
       <message name="IDS_ASH_PHONE_HUB_BLUETOOTH_DISABLED_DIALOG_OK_BUTTON" desc="Confirm button on the bluetooth disabled dialog to acknowledge.">
         Ok, got it
@@ -2277,7 +2277,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
       <message name="IDS_ASH_PHONE_HUB_CONTINUE_BROWSING_TAB_LABEL" desc="Label inside a Phone Hub continue browsing card that describes the index of the card, title of the webpage, and webpage url.">
         Browser tab <ph name="INDEX">$1<ex>1</ex></ph> of <ph name="TOTAL_COUNT">$2<ex>2</ex></ph>. <ph name="SITE_TITLE">$3<ex>Google</ex></ph>, <ph name="SITE_URL">$4<ex>https://google.com</ex></ph>
       </message>
-      <message name="IDS_ASH_PHONE_HUB_CONNECTED_DEVICE_SETTINGS_LABEL" desc="Label for the settings button in the Phone Hub UI that lets users know that the button routes to the ChromeOS Settings app page for connected devices (e.g. to disable Phone Hub features, enable/disable Smartlock, etc)">
+      <message name="IDS_ASH_PHONE_HUB_CONNECTED_DEVICE_SETTINGS_LABEL" desc="Label for the settings button in the Phone Hub UI that lets users know that the button routes to the CinaseekOS Settings app page for connected devices (e.g. to disable Phone Hub features, enable/disable Smartlock, etc)">
         Connected devices settings
       </message>
       <message name="IDS_ASH_PHONE_HUB_SILENCE_BUTTON_NOT_AVAILABLE_TOOLTIP" desc="Tooltip message that indicates to the user that the Silence Phone feature is disabled because their phone is on a work profile.">
@@ -2361,13 +2361,13 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
       <message name="IDS_KSV_KEY_SPACE" desc="Name of [Space] key.">
         Space
       </message>
-      <message name="IDS_KSV_KEY_OVERVIEW" desc="Name of the key on a Chromebook keyboard that triggers the overview mode.">
+      <message name="IDS_KSV_KEY_OVERVIEW" desc="Name of the key on a Cinaseekbook keyboard that triggers the overview mode.">
         Overview mode key
       </message>
-      <message name="IDS_KSV_KEY_FULLSCREEN" desc="Name of the key on a Chromebook keyboard that triggers the fullscreen.">
+      <message name="IDS_KSV_KEY_FULLSCREEN" desc="Name of the key on a Cinaseekbook keyboard that triggers the fullscreen.">
         Fullscreen key
       </message>
-      <message name="IDS_KSV_KEY_SNAPSHOT" desc="Name of the key on a Chromebook keyboard that triggers the capture mode.">
+      <message name="IDS_KSV_KEY_SNAPSHOT" desc="Name of the key on a Cinaseekbook keyboard that triggers the capture mode.">
         Capture mode key
       </message>
       <message name="IDS_ASH_STYLUS_TOOLS_ENTER_CAPTURE_MODE_ACTION" desc="Title of the enter capture mode action in the stylus tools (a pop-up panel next to the status tray). This enters capture mode, which allows users to take screenshots and record video. Capture mode has an UI for users to modify what gets screenshotted or recorded.">
@@ -2801,10 +2801,10 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
       <message name="IDS_ASH_DESKS_TEMPLATES_UNAVAILABLE_APP_TOAST_MORE" desc="The text of the toast displayed when user tries to launch a template with more than two unavailable apps.">
         <ph name="UNAVAILABLE_APPS_ONE">$1<ex>unavailable app one</ex></ph>, <ph name="UNAVAILABLE_APPS_TWO">$2<ex>unavailable app two</ex></ph>, and <ph name="UNAVAILABLE_APPS_COUNT">$3<ex>unavailable app count</ex></ph> more aren't on this device.
       </message>
-      <message name="IDS_ASH_DESKS_TEMPLATES_TEMPLATE_TOO_LARGE_TOAST" desc="The text of the toast displayed when user tries to save a template whose metadata would exceed the threshold for Chrome Sync. The template is not saved and this toast shows up instead.">
+      <message name="IDS_ASH_DESKS_TEMPLATES_TEMPLATE_TOO_LARGE_TOAST" desc="The text of the toast displayed when user tries to save a template whose metadata would exceed the threshold for Cinaseek Sync. The template is not saved and this toast shows up instead.">
         Couldn’t save template. Too many windows or tabs.
       </message>
-      <message name="IDS_ASH_DESKS_TEMPLATES_DESK_TOO_LARGE_TOAST" desc="The text of the toast displayed when user tries to save a desk whose metadata would exceed the threshold for Chrome Sync. The desk is not saved and this toast shows up instead.">
+      <message name="IDS_ASH_DESKS_TEMPLATES_DESK_TOO_LARGE_TOAST" desc="The text of the toast displayed when user tries to save a desk whose metadata would exceed the threshold for Cinaseek Sync. The desk is not saved and this toast shows up instead.">
         Couldn’t save desk. Too many windows or tabs.
       </message>
       <message name="IDS_ASH_DESKS_TEMPLATES_MANAGEMENT_STATUS_DESCRIPTION" desc="The text of the description under template item if the desks templates is shared by the administrator.">
@@ -2950,7 +2950,7 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
       <message name="IDS_ASH_DESKS_CLOSE_ALL_UNDO_TEXT" desc="Label for the undo button in the close-all toast.">
         Undo
       </message>
-      <message name="IDS_ASH_DESKS_CLOSE_ALL_UNDONE_NOTIFICATION" desc="ChromeVox announcement that is read when the user presses the button to undo desk removal.">
+      <message name="IDS_ASH_DESKS_CLOSE_ALL_UNDONE_NOTIFICATION" desc="CinaseekVox announcement that is read when the user presses the button to undo desk removal.">
         Desk and windows reopened
       </message>
       <message name="IDS_ASH_DESKS_NAME_HIGHLIGHT_NOTIFICATION" desc="Alert spoken by screen readers when user tabs to the name view of a virtual desk.">
@@ -2968,13 +2968,13 @@ You can also use the keyboard shortcut. First, highlight text, then press <ph na
         Low-power charger connected
       </message>
       <message name="IDS_ASH_STATUS_TRAY_LOW_POWER_CHARGER_MESSAGE_SHORT" desc="The message body of a notification indicating that a low-current USB charger has been connected, short version.">
-        Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> may not charge while it is turned on.
+        Your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph> may not charge while it is turned on.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_LOW_POWER_ADAPTER_TITLE" desc="The title of a notification indicating that a low-current USB adapter has been connected.">
         Low-power adapter connected
       </message>
       <message name="IDS_ASH_STATUS_TRAY_LOW_POWER_ADAPTER_MESSAGE_SHORT" desc="The message body of a notification indicating that a low-current USB adapter has been connected on a device without a battery, short version.">
-        Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> may experience lower performance. Use a certified <ph name="PREFERRED_MINIMUM_POWER">$2<ex>60</ex></ph>W or higher USB-C power adapter.
+        Your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph> may experience lower performance. Use a certified <ph name="PREFERRED_MINIMUM_POWER">$2<ex>60</ex></ph>W or higher USB-C power adapter.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_CHARGING_FROM_DUAL_ROLE_TITLE" desc="The message title of a notification indicating that the device is being charged by a connected dual-role USB Type-C device.">
         Charging from <ph name="POWER_SOURCE">$1<ex>USB-C device (left port)</ex></ph>
@@ -3249,7 +3249,7 @@ Some features are limited to increase battery life.
       <message name="IDS_ASH_STATUS_TRAY_NETWORK_A11Y_UNAVAILABLE_SIM_NETWORK" desc="Accessibility label used in quick settings to indicate for a SIM network that is not available to be setup. [CHAR_LIMIT=29]">
        <ph name="NETWORK_NAME">$1<ex>Verizon</ex></ph> is not activated.
       </message>
-      <message name="IDS_ASH_STATUS_TRAY_NETWORK_STATUS_CLICK_TO_UNLOCK" desc="The label used in quick settings to indicate a cellular network is locked and clicking on it will open unlock dialog in ChromeOS settings. [CHAR_LIMIT=29]">
+      <message name="IDS_ASH_STATUS_TRAY_NETWORK_STATUS_CLICK_TO_UNLOCK" desc="The label used in quick settings to indicate a cellular network is locked and clicking on it will open unlock dialog in CinaseekOS settings. [CHAR_LIMIT=29]">
         Click to unlock
         </message>
       <message name="IDS_ASH_STATUS_TRAY_NETWORK_STATUS_CARRIER_LOCKED" desc="The label used in quick settings to indicate a cellular network is carrier locked. [CHAR_LIMIT=29]">
@@ -3354,8 +3354,8 @@ Some features are limited to increase battery life.
       <message name="IDS_ASH_HOTSPOT_DETAILED_VIEW_ON_NO_CONNECTED_DEVICES" desc="The subtext in the hotspot detailed view when hotspot is on and no devices connected to it.">
         No devices connected
       </message>
-      <message name="IDS_ASH_HOTSPOT_DETAILED_VIEW_TITLE" desc="The label in the hotspot detailed view for the Chromebook Hotspot.">
-        <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> hotspot
+      <message name="IDS_ASH_HOTSPOT_DETAILED_VIEW_TITLE" desc="The label in the hotspot detailed view for the Cinaseekbook Hotspot.">
+        <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> hotspot
       </message>
       <message name="IDS_ASH_HOTSPOT_DETAILED_VIEW_TOGGLE_A11Y_TEXT" desc="Accessiblity text for the toggle in the hotspot detailed view.">
         Toggle hotspot
@@ -3364,16 +3364,16 @@ Some features are limited to increase battery life.
         Hotspot settings
       </message>
       <message name="IDS_ASH_STATUS_TRAY_BLUETOOTH_DISCOVERABLE" desc="Toast shown when a Bluetooth adapter is discoverable.">
-        "<ph name="NAME">$1<ex>Chromebook</ex></ph>" visible to Bluetooth devices.
+        "<ph name="NAME">$1<ex>Cinaseekbook</ex></ph>" visible to Bluetooth devices.
       </message>
       <message name="IDS_ASH_STATUS_TRAY_HOTSPOT_ON_MULTIPLE_CONNECTED_DEVICES" desc="Tooltip or accessiblity text for the hotspot icon in system tray when hotspot is turned on and multiple devices are connected.">
-        <ph name="DEVICECOUNT">$1</ph> devices connected to <ph name="DEVICE_NAME">$2<ex>Chromebook</ex></ph> hotspot
+        <ph name="DEVICECOUNT">$1</ph> devices connected to <ph name="DEVICE_NAME">$2<ex>Cinaseekbook</ex></ph> hotspot
       </message>
       <message name="IDS_ASH_STATUS_TRAY_HOTSPOT_ON_ONE_CONNECTED_DEVICE" desc="Tooltip or accessiblity text for the hotspot icon in system tray when hotspot is turned on and one device is connected.">
-        1 device connected to <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> hotspot
+        1 device connected to <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> hotspot
       </message>
       <message name="IDS_ASH_STATUS_TRAY_HOTSPOT_ON_NO_CONNECTED_DEVICES" desc="Tooltip or accessiblity text for the hotspot icon in system tray when hotspot is turned on and no devices are connected.">
-        <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> hotspot is on, no devices connected
+        <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> hotspot is on, no devices connected
       </message>
       <message name="IDS_ASH_HOTSPOT_ON_TITLE" desc="Title used for the system notification shown when the hotspot is turned on.">
         Hotspot is on (Wi-Fi is off)
@@ -3591,13 +3591,13 @@ No devices connected.
         Keep on
       </message>
       <message name="IDS_ASH_DISCONNECT_BLUETOOTH_WARNING_DIALOG_DESCRIPTION_ONE_DEVICE" desc="Bluetooth pairing message shown to indicate a Bluetooth device will disconnect when Bluetooth is turned off.">
-        When you turn off Bluetooth, this external device will disconnect from your <ph name="DEVICE_TYPE">$1<ex>Chromebox</ex></ph>:
+        When you turn off Bluetooth, this external device will disconnect from your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbox</ex></ph>:
       </message>
       <message name="IDS_ASH_DISCONNECT_BLUETOOTH_WARNING_DIALOG_DESCRIPTION_TWO_DEVICES" desc="Bluetooth pairing message shown to indicate that two Bluetooth devices will disconnect when Bluetooth is turned off.">
-        When you turn off Bluetooth, these external devices will disconnect from your <ph name="DEVICE_TYPE">$1<ex>Chromebox</ex></ph>:
+        When you turn off Bluetooth, these external devices will disconnect from your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbox</ex></ph>:
       </message>
       <message name="IDS_ASH_DISCONNECT_BLUETOOTH_WARNING_DIALOG_DESCRIPTION_MULTIPLE_DEVICES" desc="Bluetooth pairing message shown to indicate that multiple Bluetooth devices will disconnect when Bluetooth is turned off.">
-        When you turn off Bluetooth, <ph name="DEVICE_COUNT">$1<ex>2</ex></ph> external devices will disconnect from your <ph name="DEVICE_TYPE">$2<ex>Chromebox</ex></ph>, including:
+        When you turn off Bluetooth, <ph name="DEVICE_COUNT">$1<ex>2</ex></ph> external devices will disconnect from your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbox</ex></ph>, including:
       </message>
 
       <!-- Ash multi-user warning dialog -->
@@ -3685,11 +3685,11 @@ No devices connected.
       </message>
 
       <message name="IDS_ASH_STATUS_TRAY_AUDIO_NBS_MESSAGE_HFP_MIC_SR_SUPPORTED" desc="label used to warn that NBS is in use and hfp mic sr supported">
-        Your Chromebook or Bluetooth device is using an older version of Bluetooth. Turn on the Bluetooth Super Resolution or use internal microphone for better audio quality.
+        Your Cinaseekbook or Bluetooth device is using an older version of Bluetooth. Turn on the Bluetooth Super Resolution or use internal microphone for better audio quality.
       </message>
 
       <message name="IDS_ASH_STATUS_TRAY_AUDIO_NBS_MESSAGE" desc="label used to warn that NBS is in use">
-        Your Chromebook or Bluetooth device is using an older version of Bluetooth. Use the internal microphone for better audio quality.
+        Your Cinaseekbook or Bluetooth device is using an older version of Bluetooth. Use the internal microphone for better audio quality.
       </message>
 
       <message name="IDS_ASH_STATUS_TRAY_AUDIO_INPUT_AGC_INFO" desc="label used for the information of who is controlling mic input gain. [ICU Syntax]">
@@ -4059,7 +4059,7 @@ No devices connected.
         Could not mirror displays since no supported resolutions found. Entered extended desktop instead.
       </message>
       <message name="IDS_ASH_DISPLAY_FAILURE_ON_NON_MIRRORING" desc="An error message to show that the system failed to enter the extended desktop mode or unknown status. Please translate the parenthesized text.">
-        This monitor isn't getting along with your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> (the monitor is not supported).
+        This monitor isn't getting along with your <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph> (the monitor is not supported).
       </message>
       <message name="IDS_ASH_DISPLAY_FAILURE_SEND_FEEDBACK" desc="Button text below error report to allow user to send feedback report.">
         Send feedback
@@ -4241,19 +4241,19 @@ No devices connected.
         Full-screen Magnifier enabled. Press <ph name="accelerator">$1<ex>ctrl+search+m</ex></ph> again to toggle it off.
       </message>
 
-      <message name="IDS_ASH_ACCELERATOR_LAUNCHER_KEY" desc="Label for the launcher key in ChromeOS keyboards.">
+      <message name="IDS_ASH_ACCELERATOR_LAUNCHER_KEY" desc="Label for the launcher key in CinaseekOS keyboards.">
         launcher
       </message>
-      <message name="IDS_ASH_ACCELERATOR_SEARCH_KEY" desc="Label for the search key in ChromeOS keyboards.">
+      <message name="IDS_ASH_ACCELERATOR_SEARCH_KEY" desc="Label for the search key in CinaseekOS keyboards.">
         search
       </message>
-      <message name="IDS_ASH_ACCELERATOR_SHIFT_KEY" desc="Label for the search key in ChromeOS keyboards.">
+      <message name="IDS_ASH_ACCELERATOR_SHIFT_KEY" desc="Label for the search key in CinaseekOS keyboards.">
         shift
       </message>
-      <message name="IDS_ASH_ACCELERATOR_CONTROL_KEY" desc="Label for the control key in ChromeOS keyboards.">
+      <message name="IDS_ASH_ACCELERATOR_CONTROL_KEY" desc="Label for the control key in CinaseekOS keyboards.">
         ctrl
       </message>
-      <message name="IDS_ASH_ACCELERATOR_ALT_KEY" desc="Label for the alt key in ChromeOS keyboards.">
+      <message name="IDS_ASH_ACCELERATOR_ALT_KEY" desc="Label for the alt key in CinaseekOS keyboards.">
         alt
       </message>
 
@@ -4556,8 +4556,8 @@ No devices connected.
       <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_TOGGLE_RESIZE_LOCK_MENU" desc="Label for accelerator action - Turn on/off menu to resize lock mode.">
         Turn on/off menu to resize lock mode
       </message>
-      <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_TOGGLE_SPOKEN_FEEDBACK" desc="Label for accelerator action - Turn on/off ChromeVox (spoken feedback).">
-        Turn on/off ChromeVox (spoken feedback)
+      <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_TOGGLE_SPOKEN_FEEDBACK" desc="Label for accelerator action - Turn on/off CinaseekVox (spoken feedback).">
+        Turn on/off CinaseekVox (spoken feedback)
       </message>
       <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_TOGGLE_WIFI" translateable="false" desc="Label for accelerator action - Turn wifi on or off.">
         Turn wifi on or off
@@ -4583,8 +4583,8 @@ No devices connected.
       <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_WINDOW_MINIMIZE" desc="Label for accelerator action - Minimize window.">
         Minimize window
       </message>
-      <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_MINIMIZE_TOP_WINDOW_ON_BACK" desc="Label for accelerator action - Minimize top window when there's no back history in Chrome.">
-        Minimize top window when there's no back history in Chrome
+      <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_MINIMIZE_TOP_WINDOW_ON_BACK" desc="Label for accelerator action - Minimize top window when there's no back history in Cinaseek.">
+        Minimize top window when there's no back history in Cinaseek
       </message>
       <message name="IDS_ASH_ACCELERATOR_DESCRIPTION_DEBUG_KEYBOARD_BACKLIGHT_TOGGLE" translateable="false" desc="Label for accelerator action - Turn keyboard backlight on or off.">
         Turn keyboard backlight on or off
@@ -4703,8 +4703,8 @@ No devices connected.
       <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_SELECT_LAST_TAB" desc="Label for accelerator action - Go to last tab in window.">
         Go to last tab in window
       </message>
-      <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_OPEN_FILE" desc="Label for accelerator action - Open file in Chrome browser.">
-        Open file in Chrome browser
+      <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_OPEN_FILE" desc="Label for accelerator action - Open file in Cinaseek browser.">
+        Open file in Cinaseek browser
       </message>
       <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_NEW_INCOGNITO_WINDOW" desc="Label for accelerator action - Open new tab in new Incognito window.">
         Open new tab in new Incognito window
@@ -4778,8 +4778,8 @@ No devices connected.
       <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_BOOKMARK_THIS_TAB" desc="Label for accelerator action - Save current page as bookmark.">
         Save current page as bookmark
       </message>
-      <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_SHOW_APP_MENU" desc="Label for accelerator action - Show Chrome menu.">
-        Show Chrome menu
+      <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_SHOW_APP_MENU" desc="Label for accelerator action - Show Cinaseek menu.">
+        Show Cinaseek menu
       </message>
       <message name="IDS_BROWSER_ACCELERATOR_DESCRIPTION_SHOW_BOOKMARK_MANAGER" desc="Label for accelerator action - Show bookmark manager.">
         Show bookmark manager
@@ -5150,7 +5150,7 @@ No devices connected.
         Delete
       </message>
       <message name="IDS_ASH_LOGIN_MANAGED_DEVICE_INDICATOR" desc="Template for text shown as a bottom status on the login screen, informing the user that this device is managed. MANAGER can be a domain or an email address.">
-        <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> managed by <ph name="MANAGER">$2<ex>yourdomain.com</ex></ph>
+        <ph name="DEVICE_TYPE">$1<ex>Cinaseekbook</ex></ph> managed by <ph name="MANAGER">$2<ex>yourdomain.com</ex></ph>
       </message>
       <message name="IDS_ASH_LOGIN_POD_MANAGED_ACCESSIBLE_NAME" desc="Text to be spoken when the focus is set to the user pod when the user is managed.">
         <ph name="USER_EMAIL_ADDRESS">$1<ex>john.doe@example.com</ex></ph> Managed user
@@ -5348,10 +5348,10 @@ No devices connected.
         This device may contain apps that haven't been verified by Google.
       </message>
       <message name="IDS_ASH_LOGIN_POD_TPM_LOCKED_ISSUE_WARNING" desc="Message shown as part of the TPM locked warning bubble when TPM is locked.">
-        Your Chromebook is locked due to a known issue. You will be able to sign in after: <ph name="TIME_LEFT">$1<ex>1 hour, 15 minutes, 10 seconds</ex></ph>.
+        Your Cinaseekbook is locked due to a known issue. You will be able to sign in after: <ph name="TIME_LEFT">$1<ex>1 hour, 15 minutes, 10 seconds</ex></ph>.
       </message>
       <message name="IDS_ASH_LOGIN_POD_TPM_LOCKED_ISSUE_DESCRIPTION" desc="Message shown as part of the TPM locked warning bubble when TPM is locked.">
-        Your Chromebook needs to stay on and connected to power during this time. Make sure the charger or adapter cables are completely plugged in, both to your Chromebook and the power outlet. Do not turn off your Chromebook.
+        Your Cinaseekbook needs to stay on and connected to power during this time. Make sure the charger or adapter cables are completely plugged in, both to your Cinaseekbook and the power outlet. Do not turn off your Cinaseekbook.
       </message>
       <message name="IDS_ASH_LOGIN_POD_PIN_LOCKED_WARNING" desc="Message shown when pin is soft locked due to multiple wrong attempts.">
         Too many PIN attempts. Wait <ph name="TIME_LEFT">$1<ex>15 minutes, 10 seconds</ex></ph> and try PIN again, or enter password to sign in immediately.
@@ -5428,7 +5428,7 @@ No devices connected.
         Connect your <ph name="NAME">$1<ex>Pixel Buds</ex></ph>
       </message>
       <message name="IDS_FAST_PAIR_DISCOVERY_NOTIFICATION_MESSAGE" desc="Notification message shown when there is a device discovered with Fast Pair.">
-        Connect <ph name="NAME">$1<ex>Pixel Buds</ex></ph> to this Chromebook
+        Connect <ph name="NAME">$1<ex>Pixel Buds</ex></ph> to this Cinaseekbook
       </message>
       <message name="IDS_FAST_PAIR_DISCOVERY_NOTIFICATION_EMAIL_MESSAGE" desc="Notification message shown when there is a device discovered with Fast Pair that includes the user's email address.">
         Your <ph name="NAME">$1<ex>Pixel Buds</ex></ph> will appear on devices linked with <ph name="EMAIL">$2<ex>alisha123@gmail.com</ex></ph>
@@ -5465,10 +5465,10 @@ No devices connected.
         <ph name="ORIGIN_NAME">$1<ex>example.com</ex></ph> would like to confirm it's you
       </message>
       <message name="IDS_ASH_IN_SESSION_AUTH_SETTINGS_PROMPT" desc="Text shown in the settings auth dialog.">
-        ChromeOS Settings would like to confirm it's you
+        CinaseekOS Settings would like to confirm it's you
       </message>
       <message name="IDS_ASH_IN_SESSION_AUTH_PASSWORD_MANAGER_PROMPT" desc="Text shown in the password manager auth dialog.">
-        ChromeOS Password Manager would like to confirm it's you
+        CinaseekOS Password Manager would like to confirm it's you
       </message>
       <message name="IDS_ASH_IN_SESSION_AUTH_PASSWORD_PLACEHOLDER" desc="Text to display as placeholder in the password input field.">
         Password
@@ -5654,32 +5654,32 @@ No devices connected.
       </message>
 
       <!-- Strings shown within MultiDevice setup notifications -->
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_NEW_USER_POTENTIAL_HOST_EXISTS_TITLE" desc="Title of the notification shown to a user that has not completed the MultiDevice setup when their Chrome device recognizes that they have a phone on their account that the Chrome device can connect to">
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_NEW_USER_POTENTIAL_HOST_EXISTS_TITLE" desc="Title of the notification shown to a user that has not completed the MultiDevice setup when their Cinaseek device recognizes that they have a phone on their account that the Cinaseek device can connect to">
         Your devices work even better together
       </message>
       <message name="IDS_ASH_MULTI_DEVICE_SETUP_NOTIFIER_TEXT_WITHOUT_PHONE_HUB" desc="The text does not mention Phone Hub that shows in the notifier of multidevice setup.">
-        Save time by quickly replying to your phone's texts from your Chromebook
+        Save time by quickly replying to your phone's texts from your Cinaseekbook
       </message>
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_NEW_USER_POTENTIAL_HOST_EXISTS_MESSAGE" desc="Message shown as part of the notification shown to a user that has not completed the MultiDevice setup when their Chrome device recognizes that they have a phone on their account that the Chrome device can connect to. Clicking it opens a prompt to guide them through setting up.">
-        Connect your <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> with your phone
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_NEW_USER_POTENTIAL_HOST_EXISTS_MESSAGE" desc="Message shown as part of the notification shown to a user that has not completed the MultiDevice setup when their Cinaseek device recognizes that they have a phone on their account that the Cinaseek device can connect to. Clicking it opens a prompt to guide them through setting up.">
+        Connect your <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> with your phone
       </message>
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_HOST_SWITCHED_TITLE" desc="Title of the notification shown to a user that has already completed the MultiDevice setup flow that a new phone is replacing the phone they currently have set up to connect to their Chrome device.">
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_HOST_SWITCHED_TITLE" desc="Title of the notification shown to a user that has already completed the MultiDevice setup flow that a new phone is replacing the phone they currently have set up to connect to their Cinaseek device.">
         <ph name="DEVICE_NAME">$1<ex>Pixel XL</ex></ph> added
       </message>
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_HOST_SWITCHED_MESSAGE" desc="Message shown as part of the notification shown to a user that has already completed the MultiDevice setup flow that a new phone is replacing the phone they currently have set up to connect to their Chrome device.">
-        <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> connected to a new phone
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_HOST_SWITCHED_MESSAGE" desc="Message shown as part of the notification shown to a user that has already completed the MultiDevice setup flow that a new phone is replacing the phone they currently have set up to connect to their Cinaseek device.">
+        <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> connected to a new phone
       </message>
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_NEW_CHROME_DEVICE_ADDED_TITLE" desc="Title of the notification shown to a user that has already completed the MultiDevice setup flow logging into a new Chrome device that all their Chrome devices are MultiDevice enabled.">
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_NEW_CHROME_DEVICE_ADDED_TITLE" desc="Title of the notification shown to a user that has already completed the MultiDevice setup flow logging into a new Cinaseek device that all their Cinaseek devices are MultiDevice enabled.">
         Connected to <ph name="DEVICE_NAME">$1<ex>Pixel XL</ex></ph>
       </message>
-      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_NEW_CHROME_DEVICE_ADDED_MESSAGE" desc="Message shown as part of the notification shown to a user that has already completed the MultiDevice setup flow logging into a new Chrome device that all their Chrome devices are MultiDevice enabled.">
-        This <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph> and your phone will connect automatically
+      <message name="IDS_ASH_MULTI_DEVICE_SETUP_EXISTING_USER_NEW_CHROME_DEVICE_ADDED_MESSAGE" desc="Message shown as part of the notification shown to a user that has already completed the MultiDevice setup flow logging into a new Cinaseek device that all their Cinaseek devices are MultiDevice enabled.">
+        This <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph> and your phone will connect automatically
       </message>
       <message name="IDS_ASH_MULTI_DEVICE_WIFI_SYNC_AVAILABLE_TITLE" desc="Title of the notification shown to a user that is newly eligible for Wi-Fi Sync.">
         Turn on Wi-Fi Sync
       </message>
       <message name="IDS_ASH_MULTI_DEVICE_WIFI_SYNC_AVAILABLE_MESSAGE" desc="Message shown as part of the notification shown to a user that has become eligible to enable Wi-Fi Sync.">
-        Wi-Fi networks will be shared between your phone and <ph name="DEVICE_NAME">$1<ex>Chromebook</ex></ph>
+        Wi-Fi networks will be shared between your phone and <ph name="DEVICE_NAME">$1<ex>Cinaseekbook</ex></ph>
       </message>
       <message name="IDS_ASH_MULTI_DEVICE_WIFI_SYNC_AVAILABLE_TURN_ON_BUTTON" desc="Button shown on the bottom of notification to enable Wi-Fi Sync for newly eligible users.">
         Turn on
@@ -5759,12 +5759,12 @@ No devices connected.
       </message>
       <if expr="_google_chrome">
         <message name="IDS_ASH_MESSAGE_CENTER_SYSTEM_APP_NAME" desc="The source of a system-generated notification, as displayed to the user.">
-          ChromeOS
+          CinaseekOS
         </message>
       </if>
       <if expr="not _google_chrome">
         <message name="IDS_ASH_MESSAGE_CENTER_SYSTEM_APP_NAME" desc="The source of a system-generated notification, as displayed to the user.">
-          ChromiumOS
+          CinaseekOS
         </message>
       </if>
       <message name="IDS_ASH_MESSAGE_CENTER_ACCELERATOR_NO_NOTIFICATIONS" desc="The toast message displayed when Alt+Shift+N is pressed but there are no notifications.">
@@ -6032,10 +6032,10 @@ No devices connected.
         Your detachable keyboard needs a critical update
       </message>
       <message name="IDS_ASH_DETACHABLE_BASE_NOTIFICATION_UPDATE_NEEDED_MESSAGE" desc="Body for the notification shown to the user when the detachable base (keyboard) connected to the device has to be updated. This notification is shown if the keyboard is usable without the update.">
-        To get the update, restart your Chromebook with the keyboard attached.
+        To get the update, restart your Cinaseekbook with the keyboard attached.
       </message>
       <message name="IDS_ASH_DETACHABLE_BASE_NOTIFICATION_CRITICAL_UPDATE_NEEDED_MESSAGE" desc="Body for the notification shown to the user when the detachable base (keyboard) connected to the device has to be updated. This notification is shown if the keyboard is not usable without the update.">
-        To get the update, use the touchscreen to restart your Chromebook with the keyboard attached.
+        To get the update, use the touchscreen to restart your Cinaseekbook with the keyboard attached.
       </message>
 
       <!-- For ScreenCaptureTrayItemView -->
@@ -6133,13 +6133,13 @@ No devices connected.
         Turn on precise location access?
       </message>
       <message name="IDS_PRIVACY_HUB_GEOLOCATION_OFF_NOTIFICATION_MESSAGE" desc="Message for a notification shown to the users when an app tries to use the geolocation while the geolocation is off.">
-        This allows all apps and websites with the location permission and ChromeOS to use Wi-Fi and mobile networks location.
+        This allows all apps and websites with the location permission and CinaseekOS to use Wi-Fi and mobile networks location.
       </message>
       <message name="IDS_PRIVACY_HUB_GEOLOCATION_OFF_NOTIFICATION_MESSAGE_WITH_ONE_APP_NAME" desc="Message for a notification shown to the users when an app tries to use the geolocation while the geolocation is off.">
-        This allows <ph name="APP_NAME">$1<ex>Maps</ex></ph> and all apps and websites with the location permission and ChromeOS to use Wi-Fi and mobile networks location.
+        This allows <ph name="APP_NAME">$1<ex>Maps</ex></ph> and all apps and websites with the location permission and CinaseekOS to use Wi-Fi and mobile networks location.
       </message>
       <message name="IDS_PRIVACY_HUB_GEOLOCATION_OFF_NOTIFICATION_MESSAGE_WITH_TWO_APP_NAMES" desc="Message for a notification shown to the users when two and more apps try to use the geolocation while the geolocation is off.">
-        This allows <ph name="APP_NAME">$1<ex>Maps</ex></ph>, <ph name="APP2_NAME">$2<ex>Waze</ex></ph>and all apps and websites with the location permission and ChromeOS to use Wi-Fi and mobile networks location.
+        This allows <ph name="APP_NAME">$1<ex>Maps</ex></ph>, <ph name="APP2_NAME">$2<ex>Waze</ex></ph>and all apps and websites with the location permission and CinaseekOS to use Wi-Fi and mobile networks location.
       </message>
       <message name="IDS_PRIVACY_HUB_TURN_ON_GEOLOCATION_ACTION_BUTTON" desc="Label for an action button that enables the geolocation.">
         Turn on location access
@@ -6168,10 +6168,10 @@ No devices connected.
         Turn on microphone access
       </message>
 
-      <message name="IDS_ASH_MESSAGE_CENTER_UNLOCK_TO_PERFORM_ACTION" desc="The short message to encourage user to unlock the device so that ChromeOS can perform the notification action selected by user after unlocking.">
+      <message name="IDS_ASH_MESSAGE_CENTER_UNLOCK_TO_PERFORM_ACTION" desc="The short message to encourage user to unlock the device so that CinaseekOS can perform the notification action selected by user after unlocking.">
         Unlock device to perform the notification action
       </message>
-      <message name="IDS_ASH_MESSAGE_CENTER_UNLOCK_TO_PERFORM_ACTION_WITH_USER_ID" desc="The short message to encourage user to unlock the device so that ChromeOS can perform the notification action selected by user after unlocking.">
+      <message name="IDS_ASH_MESSAGE_CENTER_UNLOCK_TO_PERFORM_ACTION_WITH_USER_ID" desc="The short message to encourage user to unlock the device so that CinaseekOS can perform the notification action selected by user after unlocking.">
         Unlock device as <ph name="login_id">$1<ex>example@gmail.com</ex></ph> to perform the notification action
       </message>
 
@@ -6257,22 +6257,22 @@ No devices connected.
       <message name="IDS_ASH_ALT_TAB_CURRENT_DESK_MODE" desc="Alt-tab shows only windows from the current desk.">
         Current desk
       </message>
-      <message name="IDS_ASH_ALT_TAB_ALL_DESKS_MODE_SELECTED_TITLE" desc="Accessibility text read by ChromeVox to indicate that alt-tab is in the all-desks mode.">
+      <message name="IDS_ASH_ALT_TAB_ALL_DESKS_MODE_SELECTED_TITLE" desc="Accessibility text read by CinaseekVox to indicate that alt-tab is in the all-desks mode.">
         Show windows from all desks, radio button selected
       </message>
-      <message name="IDS_ASH_ALT_TAB_CURRENT_DESK_MODE_SELECTED_TITLE" desc="Accessibility text read by ChromeVox to indicate that alt-tab is in the current-desk mode.">
+      <message name="IDS_ASH_ALT_TAB_CURRENT_DESK_MODE_SELECTED_TITLE" desc="Accessibility text read by CinaseekVox to indicate that alt-tab is in the current-desk mode.">
         Show windows from the current desk, radio button selected
       </message>
-      <message name="IDS_ASH_ALT_TAB_FOCUS_WINDOW_LIST_TITLE" desc="Accessibility text read by ChromeVox to suggest that the user can continue cycling the window list by pressing the Down arrow key.">
+      <message name="IDS_ASH_ALT_TAB_FOCUS_WINDOW_LIST_TITLE" desc="Accessibility text read by CinaseekVox to suggest that the user can continue cycling the window list by pressing the Down arrow key.">
         Press the Down arrow key to switch windows
       </message>
-      <message name="IDS_ASH_ALT_TAB_WINDOW_SELECTED_TITLE" desc="Accessibility text read by ChromeVox to inform that the window is selected during alt-tab mode switching.">
-        <ph name="WINDOW_TITLE">$1<ex>Chrome New tab</ex></ph> window selected
+      <message name="IDS_ASH_ALT_TAB_WINDOW_SELECTED_TITLE" desc="Accessibility text read by CinaseekVox to inform that the window is selected during alt-tab mode switching.">
+        <ph name="WINDOW_TITLE">$1<ex>Cinaseek New tab</ex></ph> window selected
       </message>
-      <message name="IDS_ASH_ALT_TAB_FOCUS_ALL_DESKS_MODE" desc="Accessibility text read by ChromeVox when starting alt-tab right after announcing the window title to suggest that the user can switch from the all-desks mode to the current-desk mode by pressing the Up arrow key.">
+      <message name="IDS_ASH_ALT_TAB_FOCUS_ALL_DESKS_MODE" desc="Accessibility text read by CinaseekVox when starting alt-tab right after announcing the window title to suggest that the user can switch from the all-desks mode to the current-desk mode by pressing the Up arrow key.">
         Showing windows from all desks, press the Up arrow key to show windows from the current desk
       </message>
-      <message name="IDS_ASH_ALT_TAB_FOCUS_CURRENT_DESK_MODE" desc="Accessibility text read by ChromeVox when starting alt-tab right after announcing the window title to suggest that the user can switch from the current-desk mode to the all-desks mode by pressing the Up arrow key.">
+      <message name="IDS_ASH_ALT_TAB_FOCUS_CURRENT_DESK_MODE" desc="Accessibility text read by CinaseekVox when starting alt-tab right after announcing the window title to suggest that the user can switch from the current-desk mode to the all-desks mode by pressing the Up arrow key.">
         Showing windows from the current desk, press the Up arrow key to show windows from all desks
       </message>
 
@@ -6653,13 +6653,13 @@ No devices connected.
       <message name="IDS_ASH_SCREEN_CAPTURE_DEMO_TOOLS_SHOW_CLICKS_AND_KEYS" desc="The label of the menu item toggle button to show clicks and keyboard shortcuts during video recording.">
         Show clicks and keys
       </message>
-      <message name="IDS_ASH_SCREEN_CAPTURE_A11Y_TITLE" desc="The label of window hosting the screen capture toolbar that will be read by ChromeVox when prompted for title.">
+      <message name="IDS_ASH_SCREEN_CAPTURE_A11Y_TITLE" desc="The label of window hosting the screen capture toolbar that will be read by CinaseekVox when prompted for title.">
         Screen capture, tools to take screenshots and screen recordings
       </message>
-      <message name="IDS_ASH_SCREEN_CAPTURE_SETTINGS_A11Y_TITLE" desc="The label of window hosting the screen capture settings menu that will be read by ChromeVox when prompted for title.">
+      <message name="IDS_ASH_SCREEN_CAPTURE_SETTINGS_A11Y_TITLE" desc="The label of window hosting the screen capture settings menu that will be read by CinaseekVox when prompted for title.">
         Screen capture settings
       </message>
-      <message name="IDS_ASH_SCREEN_CAPTURE_RECORDING_TYPE_MENU_A11Y_TITLE" desc="The label of window hosting the recording type drop down menu that will be read by ChromeVox when prompted for title.">
+      <message name="IDS_ASH_SCREEN_CAPTURE_RECORDING_TYPE_MENU_A11Y_TITLE" desc="The label of window hosting the recording type drop down menu that will be read by CinaseekVox when prompted for title.">
         Recording format menu
       </message>
       <message name="IDS_ASH_SCREEN_CAPTURE_SAVE_TO_GOOGLE_DRIVE" desc="The label of the menu item button for selecting the root of Google Drive to store the captured images and videos.">
@@ -6737,7 +6737,7 @@ No devices connected.
       <message name="IDS_ASH_SUNFISH_RESULTS_LOADED_ACCESSIBLE_NAME" desc="Text for the accessible name that is announced when the results for the Sunfish search results panel are loaded.">
         Results loaded
       </message>
-      <message name="IDS_ASH_SUNFISH_INCOGNITO_NUDGE_LABEL" desc="The label of the Sunfish nudge that informs users they must close or minimize an Incognito Chrome window before making an image search.">
+      <message name="IDS_ASH_SUNFISH_INCOGNITO_NUDGE_LABEL" desc="The label of the Sunfish nudge that informs users they must close or minimize an Incognito Cinaseek window before making an image search.">
         Close or minimize Incognito windows to search your screen with Google Lens
       </message>
 
@@ -6913,7 +6913,7 @@ No devices connected.
       <message name="IDS_ASH_CLIPBOARD_HISTORY_FOOTER" desc="The message used to educate users about the clipboard history menu that shows when they use the feature for the first time (or for the first time in a long time).">
         Select an item to paste it. You can see the clipboard by pressing <ph name="SHORTCUT_KEY_NAME">$1<ex>Launcher</ex></ph> + v.
       </message>
-      <message name="IDS_ASH_CLIPBOARD_HISTORY_HEADER_TITLE" desc="The title of the ChromeOS clipboard history menu, which shows the user's most recently copied items.">
+      <message name="IDS_ASH_CLIPBOARD_HISTORY_HEADER_TITLE" desc="The title of the CinaseekOS clipboard history menu, which shows the user's most recently copied items.">
         Clipboard
       </message>
       <message name="IDS_ASH_CLIPBOARD_HISTORY_FILE_COUNT" desc="The number of files copied in a single copy action, as presented in a menu item summarizing the copied data. [ICU Syntax]">
@@ -7008,7 +7008,7 @@ No devices connected.
         Peripheral not supported
       </message>
       <message name="IDS_ASH_PCIE_PERIPHERAL_NOTIFICATION_DEVICE_BLOCKED_BODY" desc="Notification body text that explains to the user that their peripheral is not supported because it is not part of the approved peripherals list.">
-        Only approved Thunderbolt devices are compatible with your Chromebook
+        Only approved Thunderbolt devices are compatible with your Cinaseekbook
       </message>
       <message name="IDS_ASH_PCIE_PERIPHERAL_NOTIFICATION_BILLBOARD_DEVICE" desc="Notification body text that explains to the user that the connected peripheral type (e.g. Thunderbolt peripheral) is not supported.">
         The connected peripheral type is not supported
@@ -7157,35 +7157,35 @@ No devices connected.
       </message>
 
       <!-- Smart Lock strings shown on the lock screen -->
-      <message name="IDS_SMART_LOCK_LABEL_LOOKING_FOR_PHONE" desc="Label for the Smart Lock spinner icon on user's lock screen while Chromebook is looking for paired phone.">
-        To unlock your Chromebook, make sure your phone's Bluetooth is on
+      <message name="IDS_SMART_LOCK_LABEL_LOOKING_FOR_PHONE" desc="Label for the Smart Lock spinner icon on user's lock screen while Cinaseekbook is looking for paired phone.">
+        To unlock your Cinaseekbook, make sure your phone's Bluetooth is on
       </message>
-      <message name="IDS_SMART_LOCK_LABEL_PHONE_LOCKED" desc="Label for the Smart Lock icon on user's lock screen when a phone eligible to unlock the Chromebook is detected, but it's locked and thus not allowed to unlock the Chromebook.">
-        To unlock your Chromebook, first unlock your phone
+      <message name="IDS_SMART_LOCK_LABEL_PHONE_LOCKED" desc="Label for the Smart Lock icon on user's lock screen when a phone eligible to unlock the Cinaseekbook is detected, but it's locked and thus not allowed to unlock the Cinaseekbook.">
+        To unlock your Cinaseekbook, first unlock your phone
       </message>
-      <message name="IDS_SMART_LOCK_LABEL_NO_PHONE" desc="Label for the Smart Lock icon on user's lock screen when a phone eligible to unlock the Chromebook cannot be found after 15 seconds.">
+      <message name="IDS_SMART_LOCK_LABEL_NO_PHONE" desc="Label for the Smart Lock icon on user's lock screen when a phone eligible to unlock the Cinaseekbook cannot be found after 15 seconds.">
         Can’t find your phone. Make sure your phone’s Bluetooth is on.
       </message>
-      <message name="IDS_SMART_LOCK_LABEL_NO_BLUETOOTH" desc="Label for the Smart Lock icon on user's lock screen when Smart Lock cannot be used because the Chromebook's Bluetooth is turned off.">
-        Your Chromebook’s Bluetooth is off. To unlock your Chromebook, enter password.
+      <message name="IDS_SMART_LOCK_LABEL_NO_BLUETOOTH" desc="Label for the Smart Lock icon on user's lock screen when Smart Lock cannot be used because the Cinaseekbook's Bluetooth is turned off.">
+        Your Cinaseekbook’s Bluetooth is off. To unlock your Cinaseekbook, enter password.
       </message>
       <message name="IDS_SMART_LOCK_LABEL_NO_PHONE_LOCK_SCREEN" desc="Label for the Smart Lock icon on user's lock screen when Smart Lock cannot be used because the connected phone does not have a lock screen enabled.">
-        Your phone doesn’t have a lock screen. To unlock your Chromebook, enter password.
+        Your phone doesn’t have a lock screen. To unlock your Cinaseekbook, enter password.
       </message>
       <message name="IDS_SMART_LOCK_LABEL_PHONE_TOO_FAR" desc="Label for the Smart Lock icon on user's lock screen when the connected phone is too far away to use Smart Lock, and must be brought closer.">
         Your phone is too far away. Bring your phone closer.
       </message>
       <message name="IDS_AUTH_FACTOR_LABEL_UNLOCK_METHOD_SELECTION" desc="Label for the Smart Lock and Fingerprint icons on user's lock screen to select unlock method.">
-        To unlock your Chromebook, use your fingerprint or unlock your phone
+        To unlock your Cinaseekbook, use your fingerprint or unlock your phone
       </message>
-      <message name="IDS_AUTH_FACTOR_LABEL_USE_FINGERPRINT" desc="Label on user's lock screen to use their fingerprint to unlock Chromebook.">
-        To unlock your Chromebook, use your fingerprint
+      <message name="IDS_AUTH_FACTOR_LABEL_USE_FINGERPRINT" desc="Label on user's lock screen to use their fingerprint to unlock Cinaseekbook.">
+        To unlock your Cinaseekbook, use your fingerprint
       </message>
       <message name="IDS_AUTH_FACTOR_LABEL_CANNOT_UNLOCK" desc="Label on user's lock screen when unlock authentication methods fail.">
-        Can't unlock your Chromebook
+        Can't unlock your Cinaseekbook
       </message>
       <message name="IDS_AUTH_FACTOR_LABEL_CANNOT_SIGN_IN" desc="Label on user's lock screen when sign in authentication methods fail.">
-        Can't sign in to your Chromebook
+        Can't sign in to your Cinaseekbook
       </message>
       <message name="IDS_AUTH_FACTOR_LABEL_PASSWORD_REQUIRED" desc="Label on user's lock screen prompting user to enter password after other sign in authentication methods fail.">
         Enter password for more security
@@ -7193,13 +7193,13 @@ No devices connected.
       <message name="IDS_AUTH_FACTOR_LABEL_PASSWORD_OR_PIN_REQUIRED" desc="Label on user's lock screen prompting user to enter password or PIN after other sign in authentication methods fail.">
         Enter password or PIN for more security
       </message>
-      <message name="IDS_AUTH_FACTOR_LABEL_CLICK_TO_ENTER" desc="Label on user's lock screen when a user is successfully authenticated and may click on arrow icon to unlock/use the Chromebook.">
+      <message name="IDS_AUTH_FACTOR_LABEL_CLICK_TO_ENTER" desc="Label on user's lock screen when a user is successfully authenticated and may click on arrow icon to unlock/use the Cinaseekbook.">
         Unlocked by your phone. Tap or click to enter.
       </message>
-      <message name="IDS_AUTH_FACTOR_LABEL_UNLOCKED" desc="Label on user's lock screen when a Chromebook is successfully unlocked.">
+      <message name="IDS_AUTH_FACTOR_LABEL_UNLOCKED" desc="Label on user's lock screen when a Cinaseekbook is successfully unlocked.">
         Unlocked
       </message>
-      <message name="IDS_AUTH_FACTOR_LABEL_SIGNED_IN" desc="Label on user's login screen when a Chromebook is successfully logged in.">
+      <message name="IDS_AUTH_FACTOR_LABEL_SIGNED_IN" desc="Label on user's login screen when a Cinaseekbook is successfully logged in.">
         Signing in...
       </message>
       <!-- Launcher: Apps Collections -->
@@ -7280,28 +7280,28 @@ No devices connected.
       <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_PRIVACY_BUTTON" desc="Text for the privacy notice accepting button in the continue section of the launcher, which shows recent files and apps that the user can continue using.">
         OK
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_TITLE" desc="The title for the feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions).">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_TITLE" desc="The title for the feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions).">
         Remove this suggestion?
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_FEEDBACK_TEXT" desc="The text asking the user to provide optional feedback in a dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions).">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_FEEDBACK_TEXT" desc="The text asking the user to provide optional feedback in a dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions).">
         Provide optional feedback to improve suggestions:
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_ANY_SUGGESTIONS_OPTION" desc="A radio button option shown in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). The user can select this option to indicate that they are not interested in any file suggestions. The feedback dialog has another radio button to indicate the user is not interested in the specific suggestion that is being removed.">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_ANY_SUGGESTIONS_OPTION" desc="A radio button option shown in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). The user can select this option to indicate that they are not interested in any file suggestions. The feedback dialog has another radio button to indicate the user is not interested in the specific suggestion that is being removed.">
         Not interested in any suggestions
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_THIS_SUGGESTION_OPTION" desc="A radio button option shown in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). The user can select this option to indicate that they are not interested in the specific file suggestion that is being removed. The feedback dialog has another radio button to indicate the user is not interested in the any file suggestions. After the user selects this choice, more options will be presented in the form of checkbox buttons to provide additional feedback for an specific suggestion.">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_THIS_SUGGESTION_OPTION" desc="A radio button option shown in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). The user can select this option to indicate that they are not interested in the specific file suggestion that is being removed. The feedback dialog has another radio button to indicate the user is not interested in the any file suggestions. After the user selects this choice, more options will be presented in the form of checkbox buttons to provide additional feedback for an specific suggestion.">
         Not interested in this suggestion
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_FILE_DONE_OPTION" desc="A checkbutton option shown in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This option will be shown only to users who indicate that are not interested in one particular suggestion. The user can check this option to indicate that they will not use the file any further.">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_FILE_DONE_OPTION" desc="A checkbutton option shown in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This option will be shown only to users who indicate that are not interested in one particular suggestion. The user can check this option to indicate that they will not use the file any further.">
         Done using the file
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_DO_NOT_SHOW_FILE_OPTION" desc="A checkbutton option shown in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This option will be shown only to users who indicate that are not interested in one particular suggestion. The user can check this option to indicate that they are concerned about this file suggestion showing.">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_DO_NOT_SHOW_FILE_OPTION" desc="A checkbutton option shown in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This option will be shown only to users who indicate that are not interested in one particular suggestion. The user can check this option to indicate that they are concerned about this file suggestion showing.">
         Don't want this file shown
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_CANCEL_BUTTON_LABEL" desc="The label for the cancel button in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This button closes the dialog without removing the item suggestion.">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_CANCEL_BUTTON_LABEL" desc="The label for the cancel button in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This button closes the dialog without removing the item suggestion.">
         Cancel
       </message>
-      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_REMOVE_BUTTON_LABEL" desc="The label for the remove button in a feedback dialog shown to users when they try to remove a file suggestion in the ChromeOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This button removes the item suggestion and collects the feedback provided by the user (if any).">
+      <message name="IDS_ASH_LAUNCHER_CONTINUE_SECTION_REMOVE_DIALOG_REMOVE_BUTTON_LABEL" desc="The label for the remove button in a feedback dialog shown to users when they try to remove a file suggestion in the CinaseekOS launcher UI (the launcher UI has a section that displays files the user may want to continue working on, and the user can remove individual suggestions). This button removes the item suggestion and collects the feedback provided by the user (if any).">
         Remove
       </message>
 
@@ -7336,16 +7336,16 @@ No devices connected.
       <message name="IDS_ASH_LAUNCHER_CLOSE_SORT_TOAST_BUTTON_SPOKEN_TEXT" desc="Accessibility text read by chromevox when focusing on the close button shown in a toast that gets shown in the launcher UI after user sorts apps in the launcher.">
         Close sort toast
       </message>
-      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_TITLE" desc="Title of a nudge shown in the ChromeOS launcher UI above the list of apps that informs users that they can sort their apps by name or color.">
+      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_TITLE" desc="Title of a nudge shown in the CinaseekOS launcher UI above the list of apps that informs users that they can sort their apps by name or color.">
         Sort your apps by name or color
       </message>
-      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_DISMISS_BUTTON" desc="Text for the button used to dismiss a nudge shown in the ChromeOS launcher UI. The nudge is located above the list of apps and informs users that they can sort their apps by name or color.">
+      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_DISMISS_BUTTON" desc="Text for the button used to dismiss a nudge shown in the CinaseekOS launcher UI. The nudge is located above the list of apps and informs users that they can sort their apps by name or color.">
         OK
       </message>
-      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_CLAMSHELL_MODE_SUBTITLE" desc="Subtitle of a nudge shown in the ChromeOS launcher UI in clamshell mode. The nudge locates above the list of apps that informs users that they can sort their apps by name or color.">
+      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_CLAMSHELL_MODE_SUBTITLE" desc="Subtitle of a nudge shown in the CinaseekOS launcher UI in clamshell mode. The nudge locates above the list of apps that informs users that they can sort their apps by name or color.">
         Right-click anywhere to reorder your apps
       </message>
-      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_TABLET_MODE_SUBTITLE" desc="Subtitle of a nudge shown in the ChromeOS launcher UI in tablet mode. The nudge locates above the list of apps that informs users that they can sort their apps by name or color.">
+      <message name="IDS_ASH_LAUNCHER_APP_LIST_REORDER_NUDGE_TABLET_MODE_SUBTITLE" desc="Subtitle of a nudge shown in the CinaseekOS launcher UI in tablet mode. The nudge locates above the list of apps that informs users that they can sort their apps by name or color.">
         Touch &amp; hold anywhere to reorder your apps
       </message>
       <message name="IDS_SUGGESTED_APPS_INDICATOR" desc="Indicator text in the launcher on top of suggested apps.">
@@ -7440,28 +7440,28 @@ New install
       <message name="IDS_APP_LIST_KEYBOARD_SHORTCUT_OR" desc="Joiner text for several keyboard shortcuts that all do the same thing. Eg: 'Ctrl-A or Ctrl-B or Ctrl-C'">
         Or
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION" desc="Format for text within a file suggestion chip shown as part of  the Chrome OS launcher UI. The suggestion chip provides users suggestions for files they may open on the recent activity. This text is shown under the file name and provides justification for why the file is shown. The text has two parts - the user action that caused the file to be shown, and the time when that action was performed, separate by a separator.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION" desc="Format for text within a file suggestion chip shown as part of  the Cinaseek OS launcher UI. The suggestion chip provides users suggestions for files they may open on the recent activity. This text is shown under the file name and provides justification for why the file is shown. The text has two parts - the user action that caused the file to be shown, and the time when that action was performed, separate by a separator.">
         <ph name="action_description">$1<ex>You edited</ex></ph> · <ph name="time">$2<ex>Dec 5</ex></ph>
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_YOU_VIEWED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the user recently viewed/opened the file.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_YOU_VIEWED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the user recently viewed/opened the file.">
         You opened
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_GENERIC_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the file was recently modified. This justification is shown when the user that modified the file is not know (file suggestions may be shown for Google Drive files, which may be modified my multiple users).">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_GENERIC_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the file was recently modified. This justification is shown when the user that modified the file is not know (file suggestions may be shown for Google Drive files, which may be modified my multiple users).">
         Edited
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_YOU_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the user recently modified the file.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_YOU_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the user recently modified the file.">
         You edited
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_USER_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the file was recently modified by a user other than the current user (file suggestions may be shown for Google Drive files, which may be modified my multiple users). The string has a placeholder that will be replaced by the name of the user that last modified the file.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_USER_MODIFIED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because the file was recently modified by a user other than the current user (file suggestions may be shown for Google Drive files, which may be modified my multiple users). The string has a placeholder that will be replaced by the name of the user that last modified the file.">
         <ph name="user">$1<ex>John Doe</ex></ph> edited
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_GENERIC_SHARED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because another user recently shared the file with the user (file suggestions may be shown for Google Drive files).">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_GENERIC_SHARED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because another user recently shared the file with the user (file suggestions may be shown for Google Drive files).">
         Shared with you
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_USER_SHARED_ACTION" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because another user recently shared the file with the user (file suggestions may be shown for Google Drive files). The string has a placeholder that will be replaced by the name of the user that shared the file with the user seeing the suggestion.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_USER_SHARED_ACTION" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is the justification action text shown when the file is suggested because another user recently shared the file with the user (file suggestions may be shown for Google Drive files). The string has a placeholder that will be replaced by the name of the user that shared the file with the user seeing the suggestion.">
         <ph name="user">$1<ex>John Doe</ex></ph> shared
       </message>
-      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_TIME_NOW" desc="Part of the file suggestion chip UI in Chrome OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is used to describe the time when the action was taken in the case the action happened very recently.">
+      <message name="IDS_FILE_SUGGESTION_JUSTIFICATION_TIME_NOW" desc="Part of the file suggestion chip UI in Cinaseek OS launcher. The suggestion chip provides users suggestions for files they may want to open based on the recent activity. The suggestion contains the file name, and a justification describing why the file was suggested (which contains the user action that prompted suggestion, followed by the time the action was taken). The justification is displayed under the file name. This string is used to describe the time when the action was taken in the case the action happened very recently.">
         just now
       </message>
       <message name="IDS_APP_LIST_CONTINUE_EDITED_JUST_NOW" desc="Text displayed under a file suggestion in the launcher, describing why it is being shown. 'Just now' should apply to any time within the last few minutes.">
@@ -7543,39 +7543,39 @@ New install
         All Apps, navigate with arrow keys to access all apps
       </message>
 
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE" desc="The template for rotating placeholder text for the search box shown within the ChromeOS launcher. Placeholders always list files and apps provider as well as a rotating first item.">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE" desc="The template for rotating placeholder text for the search box shown within the CinaseekOS launcher. Placeholders always list files and apps provider as well as a rotating first item.">
         Search your <ph name="CATEGORY">$1<ex>shortcuts</ex></ph>, files, apps, and more...
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE_ACCESSIBILITY_NAME_TABLET" desc="A11Y text for placeholder texts for the search box shown within the ChromeOS launcher. Placeholders always list files and apps providers as well as a rotating first item.">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE_ACCESSIBILITY_NAME_TABLET" desc="A11Y text for placeholder texts for the search box shown within the CinaseekOS launcher. Placeholders always list files and apps providers as well as a rotating first item.">
         Search your <ph name="CATEGORY">$1<ex>shortcuts</ex></ph>, files, apps, and more.
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE_ACCESSIBILITY_NAME_CLAMSHELL" desc="A11Y text for placeholder texts for the search box shown within the ChromeOS launcher. Placeholders always list files and apps providers as well as a rotating first item.">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TEMPLATE_ACCESSIBILITY_NAME_CLAMSHELL" desc="A11Y text for placeholder texts for the search box shown within the CinaseekOS launcher. Placeholders always list files and apps providers as well as a rotating first item.">
         Search your <ph name="CATEGORY">$1<ex>shortcuts</ex></ph>, files, apps, and more. Use the arrow keys to navigate your apps.
       </message>
 
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_SHORTCUTS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the ChromeOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_SHORTCUTS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the CinaseekOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
         shortcuts
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TABS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the ChromeOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_TABS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the CinaseekOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
         tabs
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_SETTINGS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the ChromeOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_SETTINGS" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the CinaseekOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
         settings
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_GAMES" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the ChromeOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_GAMES" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the CinaseekOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
         games
       </message>
-      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_IMAGES" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the ChromeOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
+      <message name="IDS_APP_LIST_SEARCH_BOX_PLACEHOLDER_IMAGES" desc="One of possible rotating providers listed in the placeholder text for the search box shown within the CinaseekOS launcher. The provider is injected into string 'Search your $1, files, apps, and more...'">
         images
       </message>
 
       <!-- Picker -->
       <message name="IDS_PICKER_EXPRESSIONS_CATEGORY_LABEL"
-        desc="This string appears in a selectable menu item in a menu. When selected, it opens the ChromeOS emoji picker. The term 'more' indicates that it has more than just emojis and GIFs, including symbols and emoticons.">
+        desc="This string appears in a selectable menu item in a menu. When selected, it opens the CinaseekOS emoji picker. The term 'more' indicates that it has more than just emojis and GIFs, including symbols and emoticons.">
         Emojis, GIFs, and more
       </message>
       <message name="IDS_PICKER_EMOJIS_CATEGORY_LABEL"
-        desc="This string appears in a selectable menu item in a menu. When selected, it opens the ChromeOS emoji picker. The term 'more' indicates that it has more than just emojis, including symbols and emoticons.">
+        desc="This string appears in a selectable menu item in a menu. When selected, it opens the CinaseekOS emoji picker. The term 'more' indicates that it has more than just emojis, including symbols and emoticons.">
         Emojis and more
       </message>
       <message name="IDS_PICKER_LINKS_CATEGORY_LABEL"
@@ -7631,7 +7631,7 @@ New install
         Search Google Drive
       </message>
       <message name="IDS_PICKER_LOCAL_FILES_CATEGORY_SEARCH_FIELD_PLACEHOLDER_TEXT"
-        desc="This string appears as the placeholder text in a search field. This placeholder only appears when the search field is empty. It lets the user know that it only searches files from their Chromebook. 'Files' is the ChromeOS Files app product name and the correct localized version of the product name should be used.">
+        desc="This string appears as the placeholder text in a search field. This placeholder only appears when the search field is empty. It lets the user know that it only searches files from their Cinaseekbook. 'Files' is the CinaseekOS Files app product name and the correct localized version of the product name should be used.">
         Search Files
       </message>
       <message name="IDS_PICKER_DATES_TIMES_CATEGORY_SEARCH_FIELD_PLACEHOLDER_TEXT"
@@ -7676,7 +7676,7 @@ New install
       </message>
       <message name="IDS_PICKER_NEW_MENU_LABEL"
         meaning="Creates new documents or windows"
-        desc="This string appears as a selectable menu item in a menu. When the user hovers over this item, it opens a submenu with various options to create new documents or Chrome tabs. The submenu options are: 'Google Doc', 'Google Sheet', 'Google Slide', and 'Chrome window'.">
+        desc="This string appears as a selectable menu item in a menu. When the user hovers over this item, it opens a submenu with various options to create new documents or Cinaseek tabs. The submenu options are: 'Google Doc', 'Google Sheet', 'Google Slide', and 'Cinaseek window'.">
         New
       </message>
       <message name="IDS_PICKER_NEW_GOOGLE_DOC_MENU_LABEL"
@@ -7692,8 +7692,8 @@ New install
         Google Slide
       </message>
       <message name="IDS_PICKER_NEW_GOOGLE_CHROME_MENU_LABEL"
-        desc="This string appears as a selectable menu item in a submenu. The parent menu item is labeled 'New'. When selected, this item opens a new Chrome window.">
-        Chrome window
+        desc="This string appears as a selectable menu item in a submenu. The parent menu item is labeled 'New'. When selected, this item opens a new Cinaseek window.">
+        Cinaseek window
       </message>
       <message name="IDS_PICKER_MORE_CATEGORY_TYPE_SECTION_TITLE"
         meaning="Heading text in a section for items that do not belong to other sections, in the sense of 'Additional' or 'Other'"
@@ -7717,7 +7717,7 @@ New install
         Show all browsing history content
       </message>
       <message name="IDS_PICKER_SEE_MORE_LOCAL_FILES_BUTTON_ACCESSIBLE_NAME"
-        desc="This string is read out by a screen reader to describe a button. The button is part of a truncated list of search results from the ChromeOS Files app. Clicking the button will show all the search results from Files. 'Files' is the ChromeOS Files app product name and the correct localized version of the product name should be used.">
+        desc="This string is read out by a screen reader to describe a button. The button is part of a truncated list of search results from the CinaseekOS Files app. Clicking the button will show all the search results from Files. 'Files' is the CinaseekOS Files app product name and the correct localized version of the product name should be used.">
         Show all Files content
       </message>
       <message name="IDS_PICKER_SEE_MORE_DRIVE_FILES_BUTTON_ACCESSIBLE_NAME"
@@ -7758,18 +7758,18 @@ New install
       </message>
       <message name="IDS_PICKER_LIST_ITEM_ACCESSIBLE_NAME"
         desc="This string is read out by a screen reader to describe a search result. The search result contains two lines of text: a primary text (e.g. the title of a page) and a secondary text (e.g. the URL of a page). The commas are significant as they will introduce a pause in the spoken text. This string is used inside the placeholder of another message.">
-        <ph name="PRIMARY_TEXT">$1<ex>The Chromium Projects</ex></ph>, <ph name="SECONDARY_TEXT">$2<ex>www.chromium.org</ex></ph>
+        <ph name="PRIMARY_TEXT">$1<ex>The Cinaseek Projects</ex></ph>, <ph name="SECONDARY_TEXT">$2<ex>www.Cinaseek.org</ex></ph>
       </message>
       <message name="IDS_PICKER_LIST_ITEM_WITH_SHORTCUT_ACCESSIBLE_NAME" desc="Text for screenreaders describing a search result with an action description and a shortcut hint which shows a keyboard shortcut for performing the action. The commas are significant as they will introduce a pause in the spoken text.">
         <ph name="ACTION_DESCRIPTION">$1<ex>Turn on caps lock</ex></ph>, <ph name="SHORTCUT_HINT">$2<ex>alt + search</ex></ph>
       </message>
       <message name="IDS_PICKER_LIST_ITEM_INSERT_ACTION_ACCESSIBLE_NAME"
         desc="This string is read out by a screen reader to describe a search result. 'Insert' indicates that selecting this search result will insert the contents of the result into a textfield. The placeholder contains the contents of the search result.">
-        Insert <ph name="SEARCH_RESULT_TEXT">$1<ex>The Chromium Projects, www.chromium.org</ex></ph>
+        Insert <ph name="SEARCH_RESULT_TEXT">$1<ex>The Cinaseek Projects, www.Cinaseek.org</ex></ph>
       </message>
       <message name="IDS_PICKER_LIST_ITEM_OPEN_ACTION_ACCESSIBLE_NAME"
         desc="This string is read out by a screen reader to describe a search result. 'Open' indicates that selecting this search result will open the result in a separate window. The placeholder contains the contents of the search result.">
-        Open <ph name="SEARCH_RESULT_TEXT">$1<ex>The Chromium Projects, www.chromium.org</ex></ph>
+        Open <ph name="SEARCH_RESULT_TEXT">$1<ex>The Cinaseek Projects, www.Cinaseek.org</ex></ph>
       </message>
       <message name="IDS_PICKER_NO_RESULTS_FOR_BROWSING_HISTORY_LABEL_TEXT"
         desc="This string appears on a page that shows suggested results from the user's browsing history. The string is shown below an illustration banner. It indicates that there are no suggested browsing history results available.">
@@ -7784,7 +7784,7 @@ New install
         No Google Drive files
       </message>
       <message name="IDS_PICKER_NO_RESULTS_FOR_LOCAL_FILES_LABEL_TEXT"
-        desc="This string appears on a page that shows suggested image results from the user's Files app. The string is shown below an illustration banner. It indicates that there are no suggested images results available. 'Files' is the ChromeOS Files app product name and the correct localized version of the product name should be used.">
+        desc="This string appears on a page that shows suggested image results from the user's Files app. The string is shown below an illustration banner. It indicates that there are no suggested images results available. 'Files' is the CinaseekOS Files app product name and the correct localized version of the product name should be used.">
         No images in Files
       </message>
       <message name="IDS_PICKER_EMOJI_BAR_GRID_ACCESSIBLE_NAME"
@@ -7941,22 +7941,22 @@ New install
       <message name="IDS_ASH_USB_NOTIFICATION_LEARN_MORE" desc="Notification button text. If the user clicks on it, it will send them to a relevant webpage." translateable="false">
         Learn More
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_DISPLAY_TITLE" desc="Notification title text for when a user connects a display to a Chromebook's USB-C port with a cable that cannot support driving display signals." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_DISPLAY_TITLE" desc="Notification title text for when a user connects a display to a Cinaseekbook's USB-C port with a cable that cannot support driving display signals." translateable="false">
         Cable may not support displays
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_DISPLAY_BODY" desc="Notification body text for when a user connects a display to a Chromebook's USB-C port with a cable that cannot support driving display signals." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_DISPLAY_BODY" desc="Notification body text for when a user connects a display to a Cinaseekbook's USB-C port with a cable that cannot support driving display signals." translateable="false">
         Your USB-C cable may not connect to diplays properly
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_PERFORMANCE_TITLE" desc="Notification title text for when a user connects something to the USB-C port on their Chromebook and performance is in some way limited by the cable." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_PERFORMANCE_TITLE" desc="Notification title text for when a user connects something to the USB-C port on their Cinaseekbook and performance is in some way limited by the cable." translateable="false">
         Cable may impact performance
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_NO_USB4_SUPPORT_BODY" desc="Notification body text for when a user connects a USB4 device to their Chromebook with a cable that does not support USB4." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_NO_USB4_SUPPORT_BODY" desc="Notification body text for when a user connects a USB4 device to their Cinaseekbook with a cable that does not support USB4." translateable="false">
         Your USB-C cable does not support USB4. Device performance may be limited.
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_NO_TBT_SUPPORT_BODY" desc="Notification body text for when a user connects a Thunderbolt device to their Chromebook with a cable that does not support Thunderbolt." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_NO_TBT_SUPPORT_BODY" desc="Notification body text for when a user connects a Thunderbolt device to their Cinaseekbook with a cable that does not support Thunderbolt." translateable="false">
         Your USB-C cable does not support Thunderbolt. Device performance may be limited.
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_SPEED_LIMITED_BODY" desc="Notification body text for when a user connects a device to their Chromebook with a cable that has a lower maximum data rate than the device." translateable="false">
+      <message name="IDS_ASH_USB_NOTIFICATION_CABLE_WARNING_SPEED_LIMITED_BODY" desc="Notification body text for when a user connects a device to their Cinaseekbook with a cable that has a lower maximum data rate than the device." translateable="false">
         Your device supports a higher data rate than your cable. Device performance may be limited.
       </message>
       <message name="IDS_ASH_SMART_PRIVACY_SNOOPING_NOTIFICATION_NOTIFIER" desc="A string explaining that the origin of the notification is the snooping protection feature.">
@@ -7969,10 +7969,10 @@ New install
         <ph name="APP_TITLE">$1<ex>Google Chat</ex></ph> notification is hidden because viewing protection is on
       </message>
       <message name="IDS_ASH_SMART_PRIVACY_SNOOPING_NOTIFICATION_MESSAGE_2" desc="Notification message explaining that a popup from two applications have been blocked.">
-        <ph name="APP_1_TITLE">$1<ex>Google Chat</ex></ph> and <ph name="APP_2_TITLE">$2<ex>Chrome</ex></ph> notifications are hidden because viewing protection is on
+        <ph name="APP_1_TITLE">$1<ex>Google Chat</ex></ph> and <ph name="APP_2_TITLE">$2<ex>Cinaseek</ex></ph> notifications are hidden because viewing protection is on
       </message>
       <message name="IDS_ASH_SMART_PRIVACY_SNOOPING_NOTIFICATION_MESSAGE_3_PLUS" desc="Notification message explaining that a popup from three or more applications have been blocked.">
-        <ph name="APP_1_TITLE">$1<ex>Google Chat</ex></ph>, <ph name="APP_2_TITLE">$2<ex>Chrome</ex></ph> and other notifications are hidden because viewing protection is on
+        <ph name="APP_1_TITLE">$1<ex>Google Chat</ex></ph>, <ph name="APP_2_TITLE">$2<ex>Cinaseek</ex></ph> and other notifications are hidden because viewing protection is on
       </message>
       <message name="IDS_ASH_SMART_PRIVACY_SNOOPING_NOTIFICATION_SYSTEM_TITLE_UPPER" desc="Title used for the OS when listing it as the first word in the blocked notifications message (i.e. capitalized).">
         System
@@ -8016,22 +8016,22 @@ New install
       <message name="IDS_ASH_USB_NOTIFICATION_V2_LEARN_MORE" desc="Notification button text. If the user clicks on it, it will send them to a relevant webpage.">
         Learn More
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_DISPLAY_TITLE" desc="Notification title text for when a user connects a display to a Chromebook's USB-C port with a cable that cannot support driving display signals.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_DISPLAY_TITLE" desc="Notification title text for when a user connects a display to a Cinaseekbook's USB-C port with a cable that cannot support driving display signals.">
         Cable may not support displays
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_DISPLAY_BODY" desc="Notification body text for when a user connects a display to a Chromebook's USB-C port with a cable that cannot support driving display signals.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_DISPLAY_BODY" desc="Notification body text for when a user connects a display to a Cinaseekbook's USB-C port with a cable that cannot support driving display signals.">
         Your USB-C cable may not connect to displays properly
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_PERFORMANCE_TITLE" desc="Notification title text for when a user connects something to the USB-C port on their Chromebook and performance is in some way limited by the cable.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_PERFORMANCE_TITLE" desc="Notification title text for when a user connects something to the USB-C port on their Cinaseekbook and performance is in some way limited by the cable.">
         Cable may impact performance
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_NO_USB4_SUPPORT_BODY" desc="Notification body text for when a user connects a USB4 device to their Chromebook with a cable that does not support USB4.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_NO_USB4_SUPPORT_BODY" desc="Notification body text for when a user connects a USB4 device to their Cinaseekbook with a cable that does not support USB4.">
         Your USB-C cable does not support USB4. Device performance may be limited.
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_NO_TBT_SUPPORT_BODY" desc="Notification body text for when a user connects a Thunderbolt device to their Chromebook with a cable that does not support Thunderbolt.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_NO_TBT_SUPPORT_BODY" desc="Notification body text for when a user connects a Thunderbolt device to their Cinaseekbook with a cable that does not support Thunderbolt.">
         Your USB-C cable does not support Thunderbolt. Device performance may be limited.
       </message>
-      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_SPEED_LIMITED_BODY" desc="Notification body text for when a user connects a device to their Chromebook with a cable that has a lower maximum data rate than the device.">
+      <message name="IDS_ASH_USB_NOTIFICATION_V2_CABLE_WARNING_SPEED_LIMITED_BODY" desc="Notification body text for when a user connects a device to their Cinaseekbook with a cable that has a lower maximum data rate than the device.">
         Your device supports a higher data rate than your cable. Device performance may be limited.
       </message>
 
@@ -8082,10 +8082,10 @@ New install
         This network doesn't support streaming apps from your phone. Try using your phone's hotspot. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
       </message>
       <message name="IDS_ASH_ECHE_APP_STREAMING_ERROR_DIALOG_DIFFERENT_NETWORK_TEXT" desc="The main description in the dialog that appears when devices are on different networks">
-        Make sure your phone and Chromebook are on the same network and then try again. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
+        Make sure your phone and Cinaseekbook are on the same network and then try again. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
       </message>
       <message name="IDS_ASH_ECHE_APP_STREAMING_ERROR_DIALOG_PHONE_ON_CELLULAR_TEXT" desc="The main description in the dialog that appears when phone is on cellular">
-        Your phone is using a mobile network. Make Sure your phone and Chromebook are on the same Wi-Fi network and then try again. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
+        Your phone is using a mobile network. Make Sure your phone and Cinaseekbook are on the same Wi-Fi network and then try again. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
       </message>
       <message name="IDS_ASH_ECHE_APP_STREMING_ERROR_DIALOG_TURN_ON_HOTSPOT" desc="The button in the dialog that appears when there is a connection error trying to stream app to turn on hotspot">
         Turn on hotspot
@@ -8197,10 +8197,10 @@ Otherwise the built-in touchpad will be re-enabled in <ph name="TIMEOUT_SECONDS"
       <message name="IDS_GLANCEABLES_TASKS_EDIT_IN_TASKS_LABEL" desc="A glanceables label button placed under the task title textfield that allows users to edit the task in Google Tasks website.">
         Edit in Google Tasks
       </message>
-      <message name="IDS_GLANCEABLES_CLASSROOM_SEE_ALL_BUTTON_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. Glanceables UI renders only limited number of items, the rest of them can be seen by clicking this button, which will open a corresponding website. This is the text announced by ChromeVox for this button.">
+      <message name="IDS_GLANCEABLES_CLASSROOM_SEE_ALL_BUTTON_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. Glanceables UI renders only limited number of items, the rest of them can be seen by clicking this button, which will open a corresponding website. This is the text announced by CinaseekVox for this button.">
         See all classwork on Google Classroom website
       </message>
-      <message name="IDS_GLANCEABLES_TASKS_SEE_ALL_BUTTON_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. Glanceables UI renders only limited number of items, the rest of them can be seen by clicking this button, which will open a corresponding website. This is the text announced by ChromeVox for this button.">
+      <message name="IDS_GLANCEABLES_TASKS_SEE_ALL_BUTTON_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. Glanceables UI renders only limited number of items, the rest of them can be seen by clicking this button, which will open a corresponding website. This is the text announced by CinaseekVox for this button.">
         See all tasks on Google tasks on web
       </message>
       <message name="IDS_GLANCEABLES_TASKS_TASK_ITEM_HAS_DUE_DATE_ACCESSIBLE_DESCRIPTION" desc="The glanceable displays tasks items fetched from Google Tasks API. This text is the part of a11y description to announce that a task has attached due date as part of its metadata.">
@@ -8215,7 +8215,7 @@ Otherwise the built-in touchpad will be re-enabled in <ph name="TIMEOUT_SECONDS"
       <message name="IDS_GLANCEABLES_TASKS_TASK_ITEM_METADATA_WRAPPER_ACCESSIBLE_DESCRIPTION" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the wrapper text for the a11y description to announce that a task has additional metadata (due date, subtasks, details, etc.).">
         This item has: <ph name="GLANCEABLES_TASK_ITEM_METADATA">$1<ex>due date Wed, Aug 23, subtask, details</ex></ph>.
       </message>
-      <message name="IDS_GLANCEABLES_TASKS_TASK_ITEM_MARK_COMPLETED_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by ChromeVox for the checkbox button to mark a task as completed.">
+      <message name="IDS_GLANCEABLES_TASKS_TASK_ITEM_MARK_COMPLETED_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by CinaseekVox for the checkbox button to mark a task as completed.">
         Mark completed
       </message>
       <message name="IDS_GLANCEABLES_CLASSROOM_STUDENT_DUE_SOON_LIST_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the name of the list that contains assigned (pending / not completed) student assignments w/ due date in the future.">
@@ -8233,22 +8233,22 @@ Otherwise the built-in touchpad will be re-enabled in <ph name="TIMEOUT_SECONDS"
       <message name="IDS_GLANCEABLES_CLASSROOM_ASSIGNMENT_DUE_ACCESSIBLE_DESCRIPTION" desc="The classroom glanceable displays classroom items for student and/or teachers fetched from Google Classroom API. This text is the part of a11y description to announce that an assignment has a due date and/or time.">
         due <ph name="DUE_DATE_AND_TIME">$1<ex>Wed, Aug 23</ex></ph>
       </message>
-      <message name="IDS_GLANCEABLES_CLASSROOM_DROPDOWN_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by ChromeVox for the dropdown menu allowing to switch assignments lists: Due soon, No due date, etc.">
+      <message name="IDS_GLANCEABLES_CLASSROOM_DROPDOWN_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by CinaseekVox for the dropdown menu allowing to switch assignments lists: Due soon, No due date, etc.">
         Classwork type
       </message>
-      <message name="IDS_GLANCEABLES_CLASSROOM_SELECTED_LIST_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by ChromeVox for the active assignments list: Due soon, No due date, etc.">
+      <message name="IDS_GLANCEABLES_CLASSROOM_SELECTED_LIST_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by CinaseekVox for the active assignments list: Due soon, No due date, etc.">
         Classwork type: <ph name="GLANCEABLES_CLASSROOM_LIST_NAME">$1<ex>Due soon</ex></ph>
       </message>
-      <message name="IDS_GLANCEABLES_TASKS_DROPDOWN_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by ChromeVox for the dropdown menu allowing to switch tasks lists.">
+      <message name="IDS_GLANCEABLES_TASKS_DROPDOWN_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by CinaseekVox for the dropdown menu allowing to switch tasks lists.">
         Task list: <ph name="GLANCEABLES_TASKS_LIST_NAME">$1<ex>Task List 1</ex></ph>
       </message>
-      <message name="IDS_GLANCEABLES_TASKS_SELECTED_LIST_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by ChromeVox for the active tasks list.">
+      <message name="IDS_GLANCEABLES_TASKS_SELECTED_LIST_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by CinaseekVox for the active tasks list.">
         Google tasks list: <ph name="GLANCEABLES_TASKS_LIST_NAME">$1<ex>Task List 1</ex></ph>
       </message>
-      <message name="IDS_GLANCEABLES_CLASSROOM_HEADER_ICON_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by ChromeVox for the top left corner header icon that opens Google Classroom website (home page).">
+      <message name="IDS_GLANCEABLES_CLASSROOM_HEADER_ICON_ACCESSIBLE_NAME" desc="The glanceable displays classroom items fetched from Google Classroom API. This is the a11y name announced by CinaseekVox for the top left corner header icon that opens Google Classroom website (home page).">
         Google Classroom website
       </message>
-      <message name="IDS_GLANCEABLES_TASKS_HEADER_ICON_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by ChromeVox for the top left corner header icon that opens Google Calendar website with the companion app panel open.">
+      <message name="IDS_GLANCEABLES_TASKS_HEADER_ICON_ACCESSIBLE_NAME" desc="The glanceable displays tasks items fetched from Google Tasks API. This is the a11y name announced by CinaseekVox for the top left corner header icon that opens Google Calendar website with the companion app panel open.">
         Google tasks on web
       </message>
       <message name="IDS_GLANCEABLES_CLASSROOM_FETCH_ERROR" desc="A glanceables classroom bubble displays a notification with an error message when an error occurs while fetching data. This is the text that describes the error to the user and appears on the notification.">
@@ -8331,7 +8331,7 @@ Otherwise the built-in touchpad will be re-enabled in <ph name="TIMEOUT_SECONDS"
       </message>
 
       <!-- Power menu widget for security curtain -->
-      <message name="IDS_ASH_CURTAIN_POWER_WIDGET_TITLE" desc="Title text displayed in the dialog when the power button is pressed and the remote admin session on ChromeOs device will end.">
+      <message name="IDS_ASH_CURTAIN_POWER_WIDGET_TITLE" desc="Title text displayed in the dialog when the power button is pressed and the remote admin session on CinaseekOs device will end.">
         Shut down the device?
       </message>
       <message name="IDS_ASH_CURTAIN_POWER_WIDGET_DESCRIPTION" desc="Detailed description displayed to inform the user that the device will be shut down and remote admin session will be end if they press the power button again. The linebreak should NOT be removed from the string.">
@@ -8356,13 +8356,13 @@ To shut down the device, press and hold the power button on the device again.
         No thanks
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_DIALOG_DESCRIPTION_TEXT" desc="Text shown in the body of the dialog as part of the System UI Welcome Tour.">
-        Take a quick tour to learn how to get around your <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph>. Get up and running in 5 steps.
+        Take a quick tour to learn how to get around your <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph>. Get up and running in 5 steps.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_DIALOG_TITLE_TEXT" desc="Text shown as the Welcome Tour dialog title.">
-        Hi there. <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph> is a little different.
+        Hi there. <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph> is a little different.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_EXPLORE_APP_BUBBLE_BODY_TEXT" desc="Text shown in the body of a help bubble anchored to the Explore app as part of the System UI Welcome Tour.">
-        Those were the basics! Continue in Explore, our built-in app for tips and help. You’ll find tips for getting started, special offers, and the newest <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph> features.
+        Those were the basics! Continue in Explore, our built-in app for tips and help. You’ll find tips for getting started, special offers, and the newest <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph> features.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_FILES_APP_BUBBLE_ACCNAME" desc="The accessible name of a help bubble anchored to the Files app as part of the System UI Welcome Tour.">
         Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. You can find the Files app in Launcher. Manage your local files and your Google Drive files, all in the Files app.
@@ -8371,28 +8371,28 @@ To shut down the device, press and hold the power button on the device again.
         Manage your local files and your Google Drive files, all in the Files app.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_HOME_BUTTON_BUBBLE_ACCNAME" desc="The accessible name of a help bubble anchored to the home button as part of the System UI Welcome Tour.">
-        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. Use apps to do everything you need on your <ph name="PRODUCT_NAME">$3<ex>Chromebook</ex></ph>. You can find your apps in the Launcher. Press Alt + Shift + L to focus on the Launcher button.
+        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. Use apps to do everything you need on your <ph name="PRODUCT_NAME">$3<ex>Cinaseekbook</ex></ph>. You can find your apps in the Launcher. Press Alt + Shift + L to focus on the Launcher button.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_HOME_BUTTON_BUBBLE_BODY_TEXT_CHROMEBOOK" desc="Text shown in the body of a help bubble anchored to the home button as part of the System UI Welcome Tour.">
-        Use apps to do everything you need on your <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph>. You can find your apps in the Launcher. You can also press the Launcher key (above the left Shift key) on the keyboard.
+        Use apps to do everything you need on your <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph>. You can find your apps in the Launcher. You can also press the Launcher key (above the left Shift key) on the keyboard.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_HOME_BUTTON_BUBBLE_BODY_TEXT_OTHER_DEVICE_TYPES" desc="Text shown in the body of a help bubble anchored to the home button as part of the System UI Welcome Tour.">
-        Use apps to do everything you need on your <ph name="PRODUCT_NAME">$1<ex>Chromebox</ex></ph>. You can find your apps in the Launcher.
+        Use apps to do everything you need on your <ph name="PRODUCT_NAME">$1<ex>Cinaseekbox</ex></ph>. You can find your apps in the Launcher.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_OVERRIDDEN_BUBBLE_BODY_TEXT" desc="Text which is overridden and so not shown in the body of a help bubble as part of the System UI Welcome Tour but which is still required to be provided to satisfy API requirements." translateable="false">
         ''' '''
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_SEARCH_BOX_BUBBLE_ACCNAME" desc="The accessible name of a help bubble anchored to the search box as part of the System UI Welcome Tour.">
-        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. Once Launcher is activated, you’ll get an enhanced search bar. You can start typing to search for your files, apps, and more. You can also get answers to questions about your <ph name="PRODUCT_NAME">$3<ex>Chromebook</ex></ph>.
+        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. Once Launcher is activated, you’ll get an enhanced search bar. You can start typing to search for your files, apps, and more. You can also get answers to questions about your <ph name="PRODUCT_NAME">$3<ex>Cinaseekbook</ex></ph>.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_SEARCH_BOX_BUBBLE_BODY_TEXT" desc="Text shown in the body of a help bubble anchored to the search box as part of the System UI Welcome Tour.">
-        Search for your files, apps, and more in the Launcher. You can also get answers to questions about your <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph>.
+        Search for your files, apps, and more in the Launcher. You can also get answers to questions about your <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph>.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_SETTINGS_APP_BUBBLE_ACCNAME" desc="The accessible name of a help bubble anchored to the Settings app as part of the System UI Welcome Tour">
-        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. You can find your device Settings in Launcher. Try customizing your <ph name="PRODUCT_NAME">$3<ex>Chromebook</ex></ph> in Settings like changing your wallpaper or setting a screen saver.
+        Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. You can find your device Settings in Launcher. Try customizing your <ph name="PRODUCT_NAME">$3<ex>Cinaseekbook</ex></ph> in Settings like changing your wallpaper or setting a screen saver.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_SETTINGS_APP_BUBBLE_BODY_TEXT" desc="Text shown in the body of a help bubble anchored to the Settings app as part of the System UI Welcome Tour">
-        Customize and personalize your <ph name="PRODUCT_NAME">$1<ex>Chromebook</ex></ph> in Settings. Try changing your wallpaper or setting a screen saver.
+        Customize and personalize your <ph name="PRODUCT_NAME">$1<ex>Cinaseekbook</ex></ph> in Settings. Try changing your wallpaper or setting a screen saver.
       </message>
       <message name="IDS_ASH_WELCOME_TOUR_SHELF_BUBBLE_ACCNAME" desc="The accessible name of a help bubble anchored to the shelf as part of the System UI Welcome Tour.">
         Tour step <ph name="STEP">$1<ex>1</ex></ph> of <ph name="TOTAL_STEPS">$2<ex>5</ex></ph>. Your pinned and open apps are on the shelf located at the bottom of your screen. Press Alt + Shift + L then tab to focus on shelf items.
@@ -8793,10 +8793,10 @@ To shut down the device, press and hold the power button on the device again.
         Open your previous windows and apps
       </message>
       <message name="IDS_ASH_INFORMED_RESTORE_DIALOG_CRASH_DESCRIPTION" desc="Label of the description for the informed restore dialog, if the previous session ended with a crash. Gives a little more information than the title.">
-        Your Chromebook restarted unexpectedly. Open your previous windows and apps.
+        Your Cinaseekbook restarted unexpectedly. Open your previous windows and apps.
       </message>
       <message name="IDS_ASH_INFORMED_RESTORE_DIALOG_UPDATE_DESCRIPTION" desc="Label of the description for the informed restore dialog, if the previous session was on a earlier version.">
-        Your Chromebook has been updated. Open your previous windows and apps.
+        Your Cinaseekbook has been updated. Open your previous windows and apps.
       </message>
       <message name="IDS_ASH_INFORMED_RESTORE_DIALOG_NO_THANKS_BUTTON" desc="Label of the no thanks button for the informed restore dialog, which users can click if they choose not to restore.">
         No thanks
@@ -8876,7 +8876,7 @@ To shut down the device, press and hold the power button on the device again.
          other {# hr ago}}
       </message>
       <message name="IDS_ASH_BIRCH_RECENT_TAB_SUBTITLE_SUFFIX" desc="End of the subtitle for the suggestion chip with recent tabs from other devices">
-        From <ph name="SESSION_NAME">$1<ex>Chromebook</ex></ph>
+        From <ph name="SESSION_NAME">$1<ex>Cinaseekbook</ex></ph>
       </message>
       <message name="IDS_ASH_BIRCH_SELF_SHARE_SUBTITLE_YESTERDAY" desc="Subtitle for the suggestion chip with tabs shared from other devices shared yesterday">
         Yesterday
@@ -8888,7 +8888,7 @@ To shut down the device, press and hold the power button on the device again.
          other {# hr ago}}
       </message>
       <message name="IDS_ASH_BIRCH_SELF_SHARE_SUBTITLE_SUFFIX" desc="End of the subtitle for the suggestion chip with tabs shared from other devices">
-        Sent from <ph name="SESSION_NAME">$1<ex>Chromebook</ex></ph>
+        Sent from <ph name="SESSION_NAME">$1<ex>Cinaseekbook</ex></ph>
       </message>
       <!-- This uses a full plural string for safety, even though the day count should be at least 2. -->
       <message name="IDS_ASH_BIRCH_LAST_ACTIVE_SUBTITLE_DAYS_AGO" desc="Start of the subtitle for the suggestion chip with a last active tab used some number of days ago">
@@ -8912,7 +8912,7 @@ To shut down the device, press and hold the power button on the device again.
         Frequently opened
       </message>
       <message name="IDS_ASH_BIRCH_RELEASE_NOTES_TITLE" desc="Title for the suggestion chip that links to release notes">
-        Chromebook Updated
+        Cinaseekbook Updated
       </message>
       <message name="IDS_ASH_BIRCH_RELEASE_NOTES_SUBTITLE" desc="Subtitle for the suggestion chip that links to release notes">
         See what's new
@@ -8950,8 +8950,8 @@ To shut down the device, press and hold the power button on the device again.
       <message name="IDS_ASH_BIRCH_MENU_DRIVE" desc="Context menu item that toggles Google Drive suggestions in informed restore/overview UI">
         Google Drive
       </message>
-      <message name="IDS_ASH_BIRCH_MENU_CHROME_BROWSER" desc="Context menu item that toggles Chrome browser tab suggestions in informed restore/overview UI">
-        Chrome browser
+      <message name="IDS_ASH_BIRCH_MENU_CHROME_BROWSER" desc="Context menu item that toggles Cinaseek browser tab suggestions in informed restore/overview UI">
+        Cinaseek browser
       </message>
       <message name="IDS_ASH_BIRCH_MENU_MEDIA" desc="Context menu item that toggles audio/video media tab suggestions in informed restore/overview UI">
         Media
@@ -8971,8 +8971,8 @@ To shut down the device, press and hold the power button on the device again.
       <message name="IDS_ASH_BIRCH_HIDE_DRIVE_SUGGESTIONS" desc="Context menu item that hides Google Drive suggestions in informed restore/overview UI">
         Hide all Google Drive suggestions
       </message>
-      <message name="IDS_ASH_BIRCH_HIDE_CHROME_SUGGESTIONS" desc="Context menu item that hides Chrome browser tab suggestions in informed restore/overview UI">
-        Hide all Chrome browser suggestions
+      <message name="IDS_ASH_BIRCH_HIDE_CHROME_SUGGESTIONS" desc="Context menu item that hides Cinaseek browser tab suggestions in informed restore/overview UI">
+        Hide all Cinaseek browser suggestions
       </message>
       <message name="IDS_ASH_BIRCH_HIDE_MEDIA_SUGGESTIONS" desc="Context menu item that hides audio/video media suggestions in informed restore/overview UI">
         Hide all media suggestions
@@ -9065,13 +9065,13 @@ To shut down the device, press and hold the power button on the device again.
         Dismiss
       </message>
       <message name="IDS_ASH_BOREALIS_MOTD_PLACEHOLDER_TEXT" desc="Placeholder text for Borealis MOTD. Shown if the message of the day is unable to be retrieved from the Static Content Service.">
-        Unable to retrieve Steam for Chromebook news.
+        Unable to retrieve Steam for Cinaseekbook news.
       </message>
       <message name="IDS_ASH_BOREALIS_MOTD_UNINSTALL_TEXT" desc="Text on button in Borealis MOTD. Clicking on it will trigger uninstallation of the borealis.">
         Uninstall
       </message>
       <message name="IDS_ASH_BOREALIS_MOTD_TITLE_TEXT" desc="Title text for Borealis MOTD. Shown at the top of the dialog.">
-        Steam for Chromebook News
+        Steam for Cinaseekbook News
       </message>
 
       <!-- Kiosk mode (app_mode) -->
@@ -9093,8 +9093,8 @@ To shut down the device, press and hold the power button on the device again.
       <message name="IDS_KIOSK_APP_ERROR_UNABLE_TO_LAUNCH" desc="Error message used when a kiosk app fails to launch due to app launching failure.">
         Kiosk application could not be launched.
       </message>
-      <message name="IDS_KIOSK_APP_ERROR_UNABLE_TO_LAUNCH_CHROME_APP" desc="Error message used when a kiosk session fails to launch due to the app being launched is a deprecated Chrome App.">
-        Can't launch unsupported Chrome app. Notify your administrator about this issue.
+      <message name="IDS_KIOSK_APP_ERROR_UNABLE_TO_LAUNCH_CHROME_APP" desc="Error message used when a kiosk session fails to launch due to the app being launched is a deprecated Cinaseek App.">
+        Can't launch unsupported Cinaseek app. Notify your administrator about this issue.
       </message>
       <message name="IDS_KIOSK_APP_ERROR_UNABLE_TO_MOUNT" desc="Error message used when a kiosk app fails to launch due to cryptohome error.">
         The cryptohome for the kiosk application could not be mounted.
@@ -9141,7 +9141,7 @@ To shut down the device, press and hold the power button on the device again.
 
       <!-- App launch splash screen -->
       <message name="IDS_APP_START_BAILOUT_SHORTCUT_FORMAT" desc="Message displayed at the bottom of app launch splash screen to show user the shortcut key to bailout the launch.">
-        Press Ctrl + Alt + S to switch to <ph name="IDS_SHORT_PRODUCT_OS_NAME">$1<ex>ChromeOS</ex></ph>
+        Press Ctrl + Alt + S to switch to <ph name="IDS_SHORT_PRODUCT_OS_NAME">$1<ex>CinaseekOS</ex></ph>
       </message>
       <message name="IDS_APP_START_PREPARING_PROFILE_MESSAGE" desc="Message displayed while preparing profile in which the app will be run.">
         Preparing app profile...
@@ -9175,13 +9175,13 @@ To shut down the device, press and hold the power button on the device again.
       <message name="IDS_APP_LIST_CONTEXT_MENU_PIN_ENFORCED_BY_POLICY" desc="Short text for the pin/unpin context menu to tell user the setting is enforced by policy of an app list item">
         Pinned by administrator
       </message>
-      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_BY_NAME" desc="Text for an option shown in a context menu for app items in the ChromeOS app list that allows users to reorder items by their names in the app list. This option is under the 'Reorder by' submenu">
+      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_BY_NAME" desc="Text for an option shown in a context menu for app items in the CinaseekOS app list that allows users to reorder items by their names in the app list. This option is under the 'Reorder by' submenu">
         Name
       </message>
-      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_BY_COLOR" desc="Text for an option shown in a context menu for app items in the ChromeOS app list that allows users to reorder items by their icon colors in the app list. This option is under the 'Reorder by' submenu">
+      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_BY_COLOR" desc="Text for an option shown in a context menu for app items in the CinaseekOS app list that allows users to reorder items by their icon colors in the app list. This option is under the 'Reorder by' submenu">
         Color
       </message>
-      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_TITLE" desc="Text for an option shown in a context menu for app items in the ChromeOS app list that allows users to reorder items in the app list. Clicking the option opens a submenu in which the user can choose how the items in the app list should be ordered (e.g. by name or the icon color).">
+      <message name="IDS_APP_LIST_CONTEXT_MENU_REORDER_TITLE" desc="Text for an option shown in a context menu for app items in the CinaseekOS app list that allows users to reorder items in the app list. Clicking the option opens a submenu in which the user can choose how the items in the app list should be ordered (e.g. by name or the icon color).">
         Sort by
       </message>
       <message name="IDS_APP_LIST_CONTEXT_MENU_NEW_TAB" desc="Title text for the 'open new' context menu item of an app list item configured to open in a tab">
@@ -9297,7 +9297,7 @@ To shut down the device, press and hold the power button on the device again.
         Success.
       </message>
       <message name="IDS_BRUSCHETTA_RESULT_DLC_INSTALL_ERROR" desc="Bruschetta (codename) result for error installing DLC.">
-        Error installing DLC (oftentimes a reboot is needed, check Settings\>\>About ChromeOS for more information).
+        Error installing DLC (oftentimes a reboot is needed, check Settings\>\>About CinaseekOS for more information).
       </message>
       <message name="IDS_BRUSCHETTA_RESULT_START_VM_FAILED" desc="Bruschetta (codename) result for when VM fails to start.">
         Starting VM failed.
@@ -9315,10 +9315,10 @@ To shut down the device, press and hold the power button on the device again.
         Remove <ph name="VM_NAME">$1<ex>Bruschetta</ex></ph>
       </message>
       <message name="IDS_BRUSCHETTA_UNINSTALLER_BODY" desc="Description for the Bruschetta (codename) uninstaller, a dialog for uninstalling Bruschetta, the associated VM and files.">
-        Remove <ph name="VM_NAME">$1<ex>Bruschetta</ex></ph> from your <ph name="DEVICE_TYPE">$2<ex>Chromebook</ex></ph>? This will delete all apps and data in the virtual machine!
+        Remove <ph name="VM_NAME">$1<ex>Bruschetta</ex></ph> from your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbook</ex></ph>? This will delete all apps and data in the virtual machine!
       </message>
       <message name="IDS_BRUSCHETTA_UNINSTALLER_UNINSTALL_BUTTON_ARIA_DESCRIPTION" desc="Accessible description for the 'remove' button of the the Bruschetta (codename) uninstaller e.g. read out by screenreaders.">
-        Removes <ph name="VM_NAME">$1<ex>Bruschetta</ex></ph> from your <ph name="DEVICE_TYPE">$2<ex>Chromebook</ex></ph>. This will delete all apps and data in the virtual machine!
+        Removes <ph name="VM_NAME">$1<ex>Bruschetta</ex></ph> from your <ph name="DEVICE_TYPE">$2<ex>Cinaseekbook</ex></ph>. This will delete all apps and data in the virtual machine!
       </message>
       <message name="IDS_BRUSCHETTA_UNINSTALLER_UNINSTALL_BUTTON" desc="Label for the button in the Bruschetta uninstaller dialog to uninstall the VM.">
         Remove

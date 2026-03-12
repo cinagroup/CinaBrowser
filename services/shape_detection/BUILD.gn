@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -118,20 +118,20 @@ source_set("lib") {
 if (is_android) {
   generate_jni("shape_detection_jni_headers") {
     sources = [
-      "android/java/src/org/chromium/shape_detection/InterfaceRegistrar.java",
+      "android/java/src/org/Cinaseek/shape_detection/InterfaceRegistrar.java",
     ]
   }
 
   android_library("shape_detection_java") {
     sources = [
-      "android/java/src/org/chromium/shape_detection/BarcodeDetectionImpl.java",
-      "android/java/src/org/chromium/shape_detection/BarcodeDetectionProviderImpl.java",
-      "android/java/src/org/chromium/shape_detection/BitmapUtils.java",
-      "android/java/src/org/chromium/shape_detection/FaceDetectionImpl.java",
-      "android/java/src/org/chromium/shape_detection/FaceDetectionImplGmsCore.java",
-      "android/java/src/org/chromium/shape_detection/FaceDetectionProviderImpl.java",
-      "android/java/src/org/chromium/shape_detection/InterfaceRegistrar.java",
-      "android/java/src/org/chromium/shape_detection/TextDetectionImpl.java",
+      "android/java/src/org/Cinaseek/shape_detection/BarcodeDetectionImpl.java",
+      "android/java/src/org/Cinaseek/shape_detection/BarcodeDetectionProviderImpl.java",
+      "android/java/src/org/Cinaseek/shape_detection/BitmapUtils.java",
+      "android/java/src/org/Cinaseek/shape_detection/FaceDetectionImpl.java",
+      "android/java/src/org/Cinaseek/shape_detection/FaceDetectionImplGmsCore.java",
+      "android/java/src/org/Cinaseek/shape_detection/FaceDetectionProviderImpl.java",
+      "android/java/src/org/Cinaseek/shape_detection/InterfaceRegistrar.java",
+      "android/java/src/org/Cinaseek/shape_detection/TextDetectionImpl.java",
     ]
 
     deps = [
@@ -147,7 +147,7 @@ if (is_android) {
       "//mojo/public/mojom/base:base_java",
       "//services/shape_detection/public/mojom:mojom_java",
       "//skia/public/mojom:mojom_java",
-      "//third_party/android_deps:chromium_play_services_availability_java",
+      "//third_party/android_deps:Cinaseek_play_services_availability_java",
       "//third_party/jni_zero:jni_zero_java",
       "//ui/gfx/geometry/mojom:mojom_java",
     ]

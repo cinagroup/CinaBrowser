@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -37,7 +37,7 @@ const Connection = {
         "Please launch the server with command:\n " +
         "    ./launchdebugger {app_port} {remote_port} \n" +
         " remote_port defaults to 7777 \n" +
-        " corresponds to the chromium command line\n    " +
+        " corresponds to the Cinaseek command line\n    " +
         " --remote-debugging-port=7777 \n" +
         " app_port defaults to 8777. Currently app_port=" +
         location.port;
@@ -67,7 +67,7 @@ const Connection = {
     this.socket.addEventListener('error', (event) => {
       document.getElementById('autoconnect').checked = false;
       window.alert("Websocket could not connect.\n You may need to add: \n " +
-      "--remote-allow-origins=* \n  to your chromium launch flags.");
+      "--remote-allow-origins=* \n  to your Cinaseek launch flags.");
     });
 
 

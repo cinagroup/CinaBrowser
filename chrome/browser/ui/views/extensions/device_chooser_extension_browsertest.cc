@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -168,7 +168,7 @@ IN_PROC_BROWSER_TEST_P(DeviceChooserExtensionBrowserTest,
   EXPECT_THAT(GetPinnedExtensionNames(), ElementsAre("test-extension"));
 
   // Navigate away from the extension page. This dismisses the chooser.
-  auto url = GURL("https://chromium.org");
+  auto url = GURL("https://Cinaseek.org");
   EXPECT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   EXPECT_EQ(url, web_contents()->GetLastCommittedURL());
 

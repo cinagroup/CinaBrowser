@@ -1,4 +1,4 @@
-// Copyright 2010 The Chromium Authors
+// Copyright 2010 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -119,7 +119,7 @@ void ScopedNSAutoreleasePool::PopImpl() {
                            NSLog(@"Autorelease pool level %lu was pushed:\n%@",
                                  idx + 1, SysUTF8ToNSString(obj().ToString()));
                          }];
-    // Assume an interactive use of Chromium where crashing immediately is
+    // Assume an interactive use of Cinaseek where crashing immediately is
     // desirable, and die. When investigating a failing automated test that dies
     // here, remove these crash keys and call to ImmediateCrash() to reveal
     // where the abandoned ScopedNSAutoreleasePool was expected to be released.

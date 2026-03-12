@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1268,7 +1268,7 @@ std::unique_ptr<app_restore::AppLaunchInfo> ConvertToAppLaunchInfo(
   // This is a short-term fix as `event_flag` is required to launch ArcApp.
   // Currently we don't support persisting user action in template
   // so always default to 0 which is no action.
-  // https://source.chromium.org/chromium/chromium/src/
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/
   // +/main:ui/base/window_open_disposition.cc;l=34
   //
   // TODO(crbug.com/1311801): Add support for actual event_flag values.

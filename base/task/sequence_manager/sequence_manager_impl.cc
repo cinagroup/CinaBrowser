@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1172,7 +1172,7 @@ void SequenceManagerImpl::RecordCrashKeys(const PendingTask& pending_task) {
   // this.
   //
   // See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/debugging_with_crash_keys.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/debugging_with_crash_keys.md
   // for instructions for symbolizing these crash keys.
   //
   // TODO(skyostil): Find a way to extract the destination function address

@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -7,9 +7,9 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/pwd_check_wrapper/GmsCorePasswordCheckController.java",
-    "java/src/org/chromium/chrome/browser/pwd_check_wrapper/PasswordCheckController.java",
-    "java/src/org/chromium/chrome/browser/pwd_check_wrapper/PasswordCheckControllerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/GmsCorePasswordCheckController.java",
+    "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/PasswordCheckController.java",
+    "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/PasswordCheckControllerFactory.java",
   ]
 
   deps = [
@@ -25,14 +25,14 @@ android_library("java") {
     "//third_party/androidx:androidx_annotation_annotation_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.add_username_dialog"
+  resources_package = "org.Cinaseek.chrome.browser.add_username_dialog"
 }
 
 android_library("test_support_java") {
   testonly = true
   sources = [
-    "java/src/org/chromium/chrome/browser/pwd_check_wrapper/FakePasswordCheckController.java",
-    "java/src/org/chromium/chrome/browser/pwd_check_wrapper/FakePasswordCheckControllerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/FakePasswordCheckController.java",
+    "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/FakePasswordCheckControllerFactory.java",
   ]
 
   deps = [
@@ -46,7 +46,7 @@ android_library("test_support_java") {
 
 robolectric_library("junit") {
   testonly = true
-  sources = [ "java/src/org/chromium/chrome/browser/pwd_check_wrapper/GmsCorePasswordCheckControllerTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/pwd_check_wrapper/GmsCorePasswordCheckControllerTest.java" ]
 
   deps = [
     ":java",

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ chromeos_input::UserDataResponse UserDataCApiImpl::ProcessUserDataRequest(
                               /* size= */ bytes.size()};
 
   // This response needs to be deleted manually to avoid a memory leak.
-  // The buffer has to be made persistent in order to be read by chromium.
+  // The buffer has to be made persistent in order to be read by Cinaseek.
   C_SerializedProto c_response =
       shared_library_entry_points_.process_user_data_request(c_request);
   chromeos_input::UserDataResponse response;

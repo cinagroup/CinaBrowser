@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -69,7 +69,7 @@ class PseudoTcpTestBase : public ::testing::Test,
         loss_(0) {
     // Set use of the test RNG to get predictable loss patterns. Otherwise,
     // this test would occasionally get really unlucky loss and time out.
-    // Note: WebRTC's SetRandomTestMode doesn't exist in Chromium, so we rely
+    // Note: WebRTC's SetRandomTestMode doesn't exist in Cinaseek, so we rely
     // on base::RandUint64() for randomness which is already suitable for
     // testing.
   }
@@ -188,7 +188,7 @@ class PseudoTcpTestBase : public ::testing::Test,
     std::string packet(base::as_string_view(buffer));
     ++packets_in_flight_;
 
-    // Post delayed task using Chromium's task scheduling
+    // Post delayed task using Cinaseek's task scheduling
     base::SequencedTaskRunner::GetCurrentDefault()->PostDelayedTask(
         FROM_HERE,
         base::BindOnce(

@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -69,14 +69,14 @@ if (is_android) {
     # External code should depend on ":cc_base_java" instead.
     visibility = [ ":*" ]
     sources = [ "switches.cc" ]
-    class_name = "org.chromium.cc.base.CcSwitches"
+    class_name = "org.Cinaseek.cc.base.CcSwitches"
   }
 
   java_cpp_features("java_features_srcjar") {
     # External code should depend on ":cc_base_java" instead.
     visibility = [ ":*" ]
     sources = [ "features.cc" ]
-    class_name = "org.chromium.cc.base.CcFeatures"
+    class_name = "org.Cinaseek.cc.base.CcFeatures"
   }
 
   android_library("cc_base_java") {

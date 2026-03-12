@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,8 +56,8 @@ IN_PROC_BROWSER_TEST_P(CameraAppIntegrationTest, OtherPageUrlNavigation) {
 // relies on work as expected. The APIs under testing are not owned by CCA team.
 // This test prevents changes to those APIs' implementations from silently
 // breaking CCA.
-// Contacts: chromeos-camera-eng@google.com, wtlee@chromium.org
-// Ported this test from Tast: jamescook@chromium.org
+// Contacts: chromeos-camera-eng@google.com, wtlee@Cinaseek.org
+// Ported this test from Tast: jamescook@Cinaseek.org
 // Bug Component: 978428
 // Bug Component: ChromeOS > Platform > Technologies > Camera > App & Framework
 IN_PROC_BROWSER_TEST_P(CameraAppIntegrationTest, CCAAPI) {

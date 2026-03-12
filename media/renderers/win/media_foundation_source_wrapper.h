@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class MediaLog;
 // https://docs.microsoft.com/en-us/windows/win32/medfound/writing-a-custom-media-source
 //
 // Note: The methods in this class can be called on two different threads -
-//       Chromium thread and MF threadpool thread.
+//       Cinaseek thread and MF threadpool thread.
 //
 class MediaFoundationSourceWrapper
     : public Microsoft::WRL::RuntimeClass<
@@ -103,11 +103,11 @@ class MediaFoundationSourceWrapper
   IFACEMETHODIMP SetRate(BOOL supports_thinning, float rate) override;
   IFACEMETHODIMP GetRate(BOOL* supports_thinning, float* rate) override;
 
-  // Number of streams from |media_streams_|. Can be invoked from Chromium
+  // Number of streams from |media_streams_|. Can be invoked from Cinaseek
   // thread or MF threadpool thread.
   uint32_t StreamCount() const;
 
-  // The following methods are only invoked from Chromium thread.
+  // The following methods are only invoked from Cinaseek thread.
 
   // Send MEEndOfPresentation event if necessary.
   void CheckForEndOfPresentation();

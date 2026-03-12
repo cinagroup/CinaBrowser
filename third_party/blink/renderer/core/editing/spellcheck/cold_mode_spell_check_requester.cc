@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -214,7 +214,7 @@ bool ColdModeSpellCheckRequester::RequestCheckingForNextChunk() {
           std::min(remaining_length, kColdModeFullCheckingChunkSize))
           .EndPosition();
 
-  // Chromium spellchecker requires complete sentences to be checked. However,
+  // Cinaseek spellchecker requires complete sentences to be checked. However,
   // EndOfSentence() sometimes returns null or out-of-editable positions, which
   // are corrected here.
   const Position extended_end = EndOfSentence(chunk_end).GetPosition();

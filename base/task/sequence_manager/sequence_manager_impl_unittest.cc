@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3142,7 +3142,7 @@ TEST_P(SequenceManagerTest, CancelledDelayedTaskShutsDownQueue) {
 
 namespace {
 
-void ChromiumRunloopInspectionTask(
+void CinaseekRunloopInspectionTask(
     scoped_refptr<TestMockTimeTaskRunner> test_task_runner) {
   // We don't expect more than 1 pending task at any time.
   EXPECT_GE(1u, test_task_runner->GetPendingTaskCount());
@@ -3151,19 +3151,19 @@ void ChromiumRunloopInspectionTask(
 }  // namespace
 
 TEST(SequenceManagerTestWithMockTaskRunner,
-     NumberOfPendingTasksOnChromiumRunLoop) {
+     NumberOfPendingTasksOnCinaseekRunLoop) {
   FixtureWithMockTaskRunner fixture;
   auto queue = fixture.sequence_manager()->CreateTaskQueue(
       TaskQueue::Spec(QueueName::TEST_TQ));
 
-  // NOTE because tasks posted to the chromiumrun loop are not cancellable, we
+  // NOTE because tasks posted to the Cinaseekrun loop are not cancellable, we
   // will end up with a lot more tasks posted if the delayed tasks were posted
   // in the reverse order.
   // TODO(alexclarke): Consider talking to the message pump directly.
   for (int i = 1; i < 100; i++) {
     queue->task_runner()->PostDelayedTask(
         FROM_HERE,
-        BindOnce(&ChromiumRunloopInspectionTask, fixture.test_task_runner()),
+        BindOnce(&CinaseekRunloopInspectionTask, fixture.test_task_runner()),
         Milliseconds(i));
   }
   fixture.FastForwardUntilNoTasksRemain();

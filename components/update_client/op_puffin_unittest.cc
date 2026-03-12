@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ TEST_F(PuffOperationTest, Success) {
         ASSERT_TRUE(r.has_value());
         PuffOperation(
             cache,
-            base::MakeRefCounted<PatchChromiumFactory>(
+            base::MakeRefCounted<PatchCinaseekFactory>(
                 base::BindRepeating(&patch::LaunchInProcessFilePatcher))
                 ->Create(),
             MakePingCallback(), MakeStateCallback(), "hash1",
@@ -127,7 +127,7 @@ TEST_F(PuffOperationTest, BadPatch) {
         ASSERT_TRUE(r.has_value());
         PuffOperation(
             cache,
-            base::MakeRefCounted<PatchChromiumFactory>(
+            base::MakeRefCounted<PatchCinaseekFactory>(
                 base::BindRepeating(&patch::LaunchInProcessFilePatcher))
                 ->Create(),
             MakePingCallback(), MakeStateCallback(), "hash1",
@@ -166,7 +166,7 @@ TEST_F(PuffOperationTest, NotInCache) {
 
   PuffOperation(
       cache,
-      base::MakeRefCounted<PatchChromiumFactory>(
+      base::MakeRefCounted<PatchCinaseekFactory>(
           base::BindRepeating(&patch::LaunchInProcessFilePatcher))
           ->Create(),
       MakePingCallback(), MakeStateCallback(), "prev_fp",
@@ -200,7 +200,7 @@ TEST_F(PuffOperationTest, NoCache) {
 
   PuffOperation(
       base::MakeRefCounted<CrxCache>(std::nullopt),
-      base::MakeRefCounted<PatchChromiumFactory>(
+      base::MakeRefCounted<PatchCinaseekFactory>(
           base::BindRepeating(&patch::LaunchInProcessFilePatcher))
           ->Create(),
       MakePingCallback(), MakeStateCallback(), "prev_fp",
@@ -244,7 +244,7 @@ TEST_F(PuffOperationTest, OutHashMismatch) {
         ASSERT_TRUE(r.has_value());
         PuffOperation(
             cache,
-            base::MakeRefCounted<PatchChromiumFactory>(
+            base::MakeRefCounted<PatchCinaseekFactory>(
                 base::BindRepeating(&patch::LaunchInProcessFilePatcher))
                 ->Create(),
             MakePingCallback(), MakeStateCallback(), "hash1", "incorrecthash",

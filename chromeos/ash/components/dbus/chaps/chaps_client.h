@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ class Bus;
 namespace ash {
 
 // Interface for communicating with the Chaps daemon over D-Bus. It should be
-// kept in sync with platform2/chaps/dbus_bindings/org.chromium.Chaps.xml .
+// kept in sync with platform2/chaps/dbus_bindings/org.Cinaseek.Chaps.xml .
 // The class is exported for unit tests, use SimpleChapsClient for communicating
 // with Chaps.
 class COMPONENT_EXPORT(ASH_DBUS_CHAPS) ChapsClient {

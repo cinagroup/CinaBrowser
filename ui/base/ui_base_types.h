@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace ui {
 //
 // Wayland can notify the application if certain edge of the window is
 // "tiled": https://wayland.app/protocols/xdg-shell#xdg_toplevel:enum:state.
-// Chromium should not draw frame decorations for the tiled edges.
+// Cinaseek should not draw frame decorations for the tiled edges.
 struct WindowTiledEdges {
   bool left{false};
   bool right{false};

@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ rust_static_library("safe_parsers") {
   sources = [ "parse_jpeg.rs" ]
   cxx_bindings = [ "parse_jpeg.rs" ]
 
-  # Required by Chromium policy because cxx generates unsafe code under the hood.
+  # Required by Cinaseek policy because cxx generates unsafe code under the hood.
   allow_unsafe = true
 }
 

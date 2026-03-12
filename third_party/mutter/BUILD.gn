@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -202,8 +202,8 @@ source_set("mtk") {
   ]
 
   configs += [ ":pixman" ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":mtk_public_config" ]
 
@@ -478,8 +478,8 @@ source_set("cogl") {
     "src/cogl/cogl/winsys/cogl-winsys-egl.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":cogl_public_config" ]
 
@@ -741,8 +741,8 @@ source_set("clutter") {
     "src/clutter/clutter/clutter-easing.c",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":clutter_public_config" ]
 
@@ -788,8 +788,8 @@ source_set("xcursor") {
 
   configs += [ ":libmutter_config" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 source_set("libmutter") {
@@ -1455,8 +1455,8 @@ source_set("libmutter") {
     ":gbm",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   deps = [
     ":clutter",
@@ -1524,8 +1524,8 @@ shared_library("libdefault") {
   # missing gbm functions in sysroot gbm package.
   configs -= [ "//build/config/compiler:no_unresolved_symbols" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }
 
 executable("mutter") {
@@ -1554,6 +1554,6 @@ executable("mutter") {
   configs -= [ "//build/config/compiler:no_unresolved_symbols" ]
   ldflags += [ "-Wl,--unresolved-symbols=ignore-in-object-files" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -199,7 +199,7 @@ namespace base {
 // std::copy is not optimized.
 // NOTE: This test relies on implementation details of the STL and thus might
 // break in the future during a libc++ roll. If this does happen, please reach
-// out to memory-safety-dev@chromium.org to reevaluate whether this test will
+// out to memory-safety-dev@Cinaseek.org to reevaluate whether this test will
 // still be needed.
 #if defined(_LIBCPP_VERSION)
 TEST(CheckedContiguousIterator, OptimizedCopy) {

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -276,7 +276,7 @@ TEST_F(DropTargetViewTest, DropCallback) {
              MultiContentsDropTargetView::DragType::kLink);
   ASSERT_TRUE(view->GetVisible());
 
-  const GURL url("https://chromium.org");
+  const GURL url("https://Cinaseek.org");
   ui::OSExchangeData data;
   data.SetURL(url, u"");
 

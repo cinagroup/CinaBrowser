@@ -2,9 +2,9 @@
 <!--
 This file aggregates resource GRDPs for developer-facing chrome:// pages
 (DevUI pages) under /components. This is needed by the Developer WebUI Dynamic
-Feature Module (DevUI DFM) for Android Chrome. More info:
+Feature Module (DevUI DFM) for Android Cinaseek. More info:
 * User-facing resources should be aggregated in components_resources.grd.
-* DevUI page resources that are *not* for Android Chrome can be aggregated in
+* DevUI page resources that are *not* for Android Cinaseek can be aggregated in
   components_resources.grd (or browser_resources.grd if applicable).
 -->
 <grit latest_public_release="0" current_release="1">

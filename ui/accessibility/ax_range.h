@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -712,7 +712,7 @@ class AXRange final {
       // Only add rectangles that are not empty and not marked as "offscreen".
       //
       // See the documentation for how bounding boxes are calculated in AXTree:
-      // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/accessibility/offscreen.md
+      // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/accessibility/offscreen.md
       // In cases where the bounding box has a collapsed width, we expand it to
       // a width of 1 to ensure it isn't collapsed. Some screen readers rely on
       // bounding boxes having a non-zero area to function correctly.

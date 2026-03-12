@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -165,7 +165,7 @@ INSTANTIATE_TEST_SUITE_P(
         testing::Values(kExpectedPrimaryManifest)));
 #else
 INSTANTIATE_TEST_SUITE_P(
-    Chromium,
+    Cinaseek,
     CreateVisualElementsManifestWorkItemTest,
     testing::Combine(testing::Values(install_static::CHROMIUM_INDEX),
                      testing::Values(kExpectedPrimaryManifest)));

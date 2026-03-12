@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #include "net/base/features.h"
 #include "net/base/network_change_notifier.h"
 #include "net/dns/mock_host_resolver.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/test/cert_test_util.h"
 #include "net/test/quic_simple_test_server.h"
 #include "net/test/test_data_directory.h"
@@ -192,7 +192,7 @@ IN_PROC_BROWSER_TEST_F(QuicConnectionMigrationTest,
   base::HistogramTester histograms;
 
   // This will close all connections in the middle of a connection migration.
-  net::QuicChromiumClientSession::SetMidMigrationCallbackForTesting(
+  net::QuicCinaseekClientSession::SetMidMigrationCallbackForTesting(
       base::BindLambdaForTesting(
           []() { net::QuicSimpleTestServer::ShutdownDispatcherForTesting(); }));
 

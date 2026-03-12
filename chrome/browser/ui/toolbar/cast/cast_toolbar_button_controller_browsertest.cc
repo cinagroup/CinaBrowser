@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -90,7 +90,7 @@ class CastToolbarButtonControllerBrowserTest : public InProcessBrowserTest {
   // Fake Sources, used for the Routes.
   const media_router::MediaSource cast_source_{"cast:1234"};
   const media_router::MediaSource mirroring_source_{
-      "urn:x-org.chromium.media:source:tab:*"};
+      "urn:x-org.Cinaseek.media:source:tab:*"};
 
   MediaRoute local_mirroring_route_;
   MediaRoute local_cast_route_;

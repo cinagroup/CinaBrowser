@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "builder_db": {
         "entries": [
@@ -7,26 +7,26 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "GPU Linux Builder",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu",
+              "builder_group": "Cinaseek.gpu",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
                 "apply_configs": [
                   "use_clang_coverage",
-                  "chromium_with_telemetry_dependencies"
+                  "Cinaseek_with_telemetry_dependencies"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
@@ -34,17 +34,17 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "Linux Release (NVIDIA)",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.gpu",
+              "builder_group": "Cinaseek.gpu",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
@@ -52,12 +52,12 @@
                 "apply_configs": [
                   "use_clang_coverage"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
                 "builder": "GPU Linux Builder",
-                "project": "chromium"
+                "project": "Cinaseek"
               }
             }
           }
@@ -67,25 +67,25 @@
         {
           "bucket": "ci",
           "builder": "Linux Release (NVIDIA)",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "mirroring_builder_group_and_names": [
         {
           "builder": "gpu-try-linux-nvidia-rel",
-          "group": "tryserver.chromium.linux"
+          "group": "tryserver.Cinaseek.linux"
         },
         {
           "builder": "linux-dcheck-off-rel",
-          "group": "tryserver.chromium.linux"
+          "group": "tryserver.Cinaseek.linux"
         },
         {
           "builder": "linux-full-remote-rel",
-          "group": "tryserver.chromium.linux"
+          "group": "tryserver.Cinaseek.linux"
         },
         {
           "builder": "linux-rel",
-          "group": "tryserver.chromium.linux"
+          "group": "tryserver.Cinaseek.linux"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/Linux Release (NVIDIA)/targets"
@@ -98,12 +98,12 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.gpu",
+  "builder_group": "Cinaseek.gpu",
   "gardener_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ],
-  "recipe": "chromium",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.gpu"
+    "Cinaseek.gpu"
   ]
 }

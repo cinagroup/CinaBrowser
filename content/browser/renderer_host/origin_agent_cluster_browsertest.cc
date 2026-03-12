@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -208,9 +208,9 @@ class OriginAgentClusterBrowserTest
   // Simulate setting the OriginAgentClusterDefaultEnabled enterprise policy.
   void SetEnterprisePolicy(bool value) {
     // Note that the enterprise policy has different 'polarity', and true
-    // means Chromium picks the default and false is legacy behaviour, while
+    // means Cinaseek picks the default and false is legacy behaviour, while
     // ContentBrowserClientShould::DisableOriginAgentClusterDefault is a
-    // disable switch, meaning that false means Chromium picks the default
+    // disable switch, meaning that false means Cinaseek picks the default
     // and true is legacy behaviour.
     browser_client_->should_disable_origin_agent_cluster_default_ = !value;
   }

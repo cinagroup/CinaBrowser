@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -594,7 +594,7 @@ void RequestCoordinator::TryNextRequest(bool is_start_of_processing) {
   // update them.
   if (!is_start_of_processing) {
     // Get current device conditions from the Java side across the bridge.
-    // NetworkChangeNotifier will not have the right conditions if chromium is
+    // NetworkChangeNotifier will not have the right conditions if Cinaseek is
     // in the background in android, so prefer to always get the conditions via
     // the android APIs.
     UpdateCurrentConditionsFromAndroid();

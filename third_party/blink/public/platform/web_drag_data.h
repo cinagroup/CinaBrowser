@@ -113,7 +113,7 @@ class BLINK_PLATFORM_EXPORT WebDragData {
   WebString FilesystemId() const { return filesystem_id_; }
 
   void SetFilesystemId(const WebString& filesystem_id) {
-    // The ID is an opaque string, given by and validated by chromium port.
+    // The ID is an opaque string, given by and validated by Cinaseek port.
     filesystem_id_ = filesystem_id;
   }
 

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -129,9 +129,9 @@ void ZygoteHostImpl::Init(const base::CommandLine& command_line) {
         << "No usable sandbox! If you are running on Ubuntu 23.10+ or another "
            "Linux distro that has disabled unprivileged user namespaces with "
            "AppArmor, see "
-           "https://chromium.googlesource.com/chromium/src/+/main/"
+           "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/"
            "docs/security/apparmor-userns-restrictions.md. Otherwise see "
-           "https://chromium.googlesource.com/chromium/src/+/main/"
+           "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/"
            "docs/linux/suid_sandbox_development.md for more information on "
            "developing with the (older) SUID sandbox. "
            "If you want to live dangerously and need an immediate workaround, "

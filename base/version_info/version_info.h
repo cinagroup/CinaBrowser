@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class Version;
 
 namespace version_info {
 
-// Returns the product name, e.g. "Chromium" or "Google Chrome".
+// Returns the product name, e.g. "Cinaseek" or "Google Chrome".
 constexpr std::string_view GetProductName() {
   return PRODUCT_NAME;
 }
@@ -64,7 +64,7 @@ constexpr std::string_view GetOSType() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return "ChromeOS";
 #else
-  return "ChromiumOS";
+  return "CinaseekOS";
 #endif
 #elif BUILDFLAG(IS_ANDROID)
   return "Android";

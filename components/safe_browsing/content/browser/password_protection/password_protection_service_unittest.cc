@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "components/safe_browsing/content/browser/password_protection/password_protection_service.h"
@@ -1053,7 +1053,7 @@ TEST_P(PasswordProtectionServiceBaseTest, VerifyCanGetReputationOfURL) {
 
   // Main frame URL is anything else.
   EXPECT_TRUE(PasswordProtectionService::CanGetReputationOfURL(
-      GURL("http://www.chromium.org")));
+      GURL("http://www.Cinaseek.org")));
 }
 
 TEST_P(PasswordProtectionServiceBaseTest, TestNoRequestSentForAllowlistedURL) {

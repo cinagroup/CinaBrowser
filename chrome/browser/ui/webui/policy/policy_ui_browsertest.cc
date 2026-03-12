@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -816,7 +816,7 @@ class ExtensionPolicyUITest
   base::test::ScopedFeatureList feature_list_;
 };
 
-// TODO(crbug.com/41429868) Flaky time outs on Linux Chromium OS ASan
+// TODO(crbug.com/41429868) Flaky time outs on Linux Cinaseek OS ASan
 // LSan bot.
 #if defined(ADDRESS_SANITIZER)
 #define MAYBE_ExtensionLoadAndSendPolicy DISABLED_ExtensionLoadAndSendPolicy

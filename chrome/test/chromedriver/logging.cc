@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@
 
 const char* GetPortProtectionMessage() {
   static std::string kPortProtectionMessage = base::StringPrintf(
-      "Please see https://chromedriver.chromium.org/security-considerations "
+      "Please see https://chromedriver.Cinaseek.org/security-considerations "
       "for suggestions on keeping %s safe.",
       kChromeDriverProductShortName);
   return kPortProtectionMessage.c_str();

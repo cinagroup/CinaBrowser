@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ void RunPendingTasks() {
 // match the values of GetStarboardAudioConfig.
 //
 // By default, content is unencrypted. An encryption scheme may be specified.
-::media::AudioDecoderConfig GetChromiumAudioConfig(
+::media::AudioDecoderConfig GetCinaseekAudioConfig(
     ::media::EncryptionScheme encryption_scheme =
         ::media::EncryptionScheme::kUnencrypted) {
   return ::media::AudioDecoderConfig(
@@ -82,7 +82,7 @@ void RunPendingTasks() {
 // match the values of GetStarboardVideoConfig.
 //
 // By default, content is unencrypted. An encryption scheme may be specified.
-::media::VideoDecoderConfig GetChromiumVideoConfig(
+::media::VideoDecoderConfig GetCinaseekVideoConfig(
     ::media::EncryptionScheme encryption_scheme =
         ::media::EncryptionScheme::kUnencrypted) {
   ::media::VideoDecoderConfig video_config(
@@ -97,7 +97,7 @@ void RunPendingTasks() {
 }
 
 // Returns a valid starboard audio config with values arbitrarily set. The
-// values will match the values of GetChromiumAudioConfig.
+// values will match the values of GetCinaseekAudioConfig.
 StarboardAudioSampleInfo GetStarboardAudioConfig() {
   return StarboardAudioSampleInfo{
       .codec = kStarboardAudioCodecAc3,
@@ -114,7 +114,7 @@ StarboardAudioSampleInfo GetStarboardAudioConfig() {
 }
 
 // Returns a valid starboard video config with values arbitrarily set. The
-// values will match the values of GetChromiumVideoConfig.
+// values will match the values of GetCinaseekVideoConfig.
 StarboardVideoSampleInfo GetStarboardVideoConfig() {
   return StarboardVideoSampleInfo{
       .codec = kStarboardVideoCodecH265,
@@ -195,8 +195,8 @@ TEST_F(StarboardPlayerManagerTest,
           _))
       .WillOnce(Return(&sb_player_));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   EXPECT_THAT(
       StarboardPlayerManager::Create(
@@ -224,8 +224,8 @@ TEST_F(StarboardPlayerManagerTest, PlaybackStartCausesSeekInStarboard) {
   EXPECT_CALL(starboard_, SeekTo(&sb_player_, kSeekTime.InMicroseconds(), _))
       .Times(1);
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -275,8 +275,8 @@ TEST_F(StarboardPlayerManagerTest, FlushCausesSeekToCurrentTimeInStarboard) {
   EXPECT_CALL(starboard_, SetPlaybackRate(&sb_player_, DoubleEq(0)))
       .Times(AtLeast(1));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -310,8 +310,8 @@ TEST_F(StarboardPlayerManagerTest, ForwardsPlaybackRateChangesToStarboard) {
   EXPECT_CALL(starboard_, SetPlaybackRate(&sb_player_, DoubleEq(kPlaybackRate)))
       .Times(1);
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -342,8 +342,8 @@ TEST_F(StarboardPlayerManagerTest, ForwardsStreamVolumeChangesToStarboard) {
 
   EXPECT_CALL(starboard_, SetVolume(&sb_player_, DoubleEq(kVolume))).Times(1);
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -381,8 +381,8 @@ TEST_F(StarboardPlayerManagerTest, GetsCurrentMediaTimeFromStarboard) {
             kMediaTime.InMicroseconds();
       }));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -408,8 +408,8 @@ TEST_F(StarboardPlayerManagerTest, GetSbPlayerReturnsTheSbPlayer) {
           _))
       .WillOnce(Return(&sb_player_));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -441,8 +441,8 @@ TEST_F(StarboardPlayerManagerTest,
           _))
       .WillOnce(Return(&sb_player_));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   EXPECT_THAT(
       StarboardPlayerManager::Create(
@@ -531,8 +531,8 @@ TEST_F(StarboardPlayerManagerTest,
                   ElementsAre(MatchesStarboardSampleInfo(expected_audio_info))))
       .Times(1);
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -615,7 +615,7 @@ TEST_F(StarboardPlayerManagerTest,
                   ElementsAre(MatchesStarboardSampleInfo(expected_video_info))))
       .Times(1);
 
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -692,7 +692,7 @@ TEST_F(StarboardPlayerManagerTest,
                   ElementsAre(MatchesStarboardSampleInfo(expected_audio_info))))
       .Times(1);
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
 
   std::unique_ptr<StarboardPlayerManager> player_manager =
       StarboardPlayerManager::Create(
@@ -785,9 +785,9 @@ TEST_F(StarboardPlayerManagerTest,
 
   // Both audio and video streams are encrypted.
   audio_stream_.set_audio_decoder_config(
-      GetChromiumAudioConfig(::media::EncryptionScheme::kCenc));
+      GetCinaseekAudioConfig(::media::EncryptionScheme::kCenc));
   video_stream_.set_video_decoder_config(
-      GetChromiumVideoConfig(::media::EncryptionScheme::kCenc));
+      GetCinaseekVideoConfig(::media::EncryptionScheme::kCenc));
 
   EXPECT_THAT(
       StarboardPlayerManager::Create(
@@ -813,9 +813,9 @@ TEST_F(StarboardPlayerManagerTest,
 
   // Only the audio stream is encrypted.
   audio_stream_.set_audio_decoder_config(
-      GetChromiumAudioConfig(::media::EncryptionScheme::kCenc));
+      GetCinaseekAudioConfig(::media::EncryptionScheme::kCenc));
   video_stream_.set_video_decoder_config(
-      GetChromiumVideoConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekVideoConfig(::media::EncryptionScheme::kUnencrypted));
 
   EXPECT_THAT(
       StarboardPlayerManager::Create(
@@ -841,9 +841,9 @@ TEST_F(StarboardPlayerManagerTest,
 
   // Only the video stream is encrypted.
   audio_stream_.set_audio_decoder_config(
-      GetChromiumAudioConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekAudioConfig(::media::EncryptionScheme::kUnencrypted));
   video_stream_.set_video_decoder_config(
-      GetChromiumVideoConfig(::media::EncryptionScheme::kCenc));
+      GetCinaseekVideoConfig(::media::EncryptionScheme::kCenc));
 
   EXPECT_THAT(
       StarboardPlayerManager::Create(
@@ -871,9 +871,9 @@ TEST_F(StarboardPlayerManagerTest,
 
   // Both streams are unencrypted.
   audio_stream_.set_audio_decoder_config(
-      GetChromiumAudioConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekAudioConfig(::media::EncryptionScheme::kUnencrypted));
   video_stream_.set_video_decoder_config(
-      GetChromiumVideoConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekVideoConfig(::media::EncryptionScheme::kUnencrypted));
 
   // However, a CDM has been created. So we should still pass an SbDrmSystem to
   // SbPlayerCreate.
@@ -907,9 +907,9 @@ TEST_F(
 
   // Both streams are unencrypted.
   audio_stream_.set_audio_decoder_config(
-      GetChromiumAudioConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekAudioConfig(::media::EncryptionScheme::kUnencrypted));
   video_stream_.set_video_decoder_config(
-      GetChromiumVideoConfig(::media::EncryptionScheme::kUnencrypted));
+      GetCinaseekVideoConfig(::media::EncryptionScheme::kUnencrypted));
 
   {
     MockStarboardDrmWrapperClient drm_wrapper_client;
@@ -943,8 +943,8 @@ TEST_F(StarboardPlayerManagerTest, ReportsInitialBufferingMetric) {
           _))
       .WillOnce(DoAll(SaveArg<1>(&callbacks), Return(&sb_player_)));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   int captured_seek_ticket = -1;
   EXPECT_CALL(starboard_, SeekTo(&sb_player_, kSeekTime, _))
@@ -1022,8 +1022,8 @@ TEST_F(StarboardPlayerManagerTest, ReportsBufferingMetricAfterUnderrun) {
   EXPECT_CALL(starboard_, GetPlayerInfo(&sb_player_, NotNull()))
       .WillRepeatedly(WithArg<1>(populate_player_info));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   int captured_seek_ticket = -1;
   EXPECT_CALL(starboard_,
@@ -1164,8 +1164,8 @@ TEST_F(StarboardPlayerManagerTest, ReportsDecodeErrorToClientAndMetricsHelper) {
               RecordApplicationEventWithValue("Cast.Platform.Error",
                                               ::media::PIPELINE_ERROR_DECODE));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   auto player_manager = StarboardPlayerManager::Create(
       &starboard_, &audio_stream_, &video_stream_, &renderer_client_,
@@ -1211,8 +1211,8 @@ TEST_F(StarboardPlayerManagerTest,
                   "Cast.Platform.Error",
                   ::media::PIPELINE_ERROR_HARDWARE_CONTEXT_RESET));
 
-  audio_stream_.set_audio_decoder_config(GetChromiumAudioConfig());
-  video_stream_.set_video_decoder_config(GetChromiumVideoConfig());
+  audio_stream_.set_audio_decoder_config(GetCinaseekAudioConfig());
+  video_stream_.set_video_decoder_config(GetCinaseekVideoConfig());
 
   auto player_manager = StarboardPlayerManager::Create(
       &starboard_, &audio_stream_, &video_stream_, &renderer_client_,

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,10 +31,10 @@ namespace chromeos {
 namespace {
 
 // Info on crash report locations:
-// docs/website/site/chromium-os/packages/crash-reporting/faq/index.md
+// docs/website/site/Cinaseek-os/packages/crash-reporting/faq/index.md
 const constexpr char* kCrashDirs[] = {
     "/home/chronos/crash",      // crashes outside user session. may happen on
-                                // chromium shutdown
+                                // Cinaseek shutdown
     "/home/chronos/user/crash"  // crashes inside user/kiosk session
 };
 

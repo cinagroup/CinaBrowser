@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ std::int64_t InputFile::GetTotalSize() const {
 }
 
 absl::Time InputFile::GetLastModifiedTime() const {
-  // Intentionally left not implemented. Not supported in Chromium Nearby.
+  // Intentionally left not implemented. Not supported in Cinaseek Nearby.
   NOTIMPLEMENTED();
   return absl::Now();
 }

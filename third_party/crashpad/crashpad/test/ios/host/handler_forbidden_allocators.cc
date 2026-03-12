@@ -33,7 +33,7 @@ namespace {
 uint64_t g_main_thread = 0;
 uint64_t g_mach_exception_thread = 0;
 
-// Somewhat simplified logic copied from Chromium's
+// Somewhat simplified logic copied from Cinaseek's
 // base/allocator/partition_allocator/src/partition_alloc/shim/malloc_zone_functions_apple.h.
 // The arrays g_original_zones and g_original_zones_ptr stores all information
 // about malloc zones before they are shimmed. This information needs to be

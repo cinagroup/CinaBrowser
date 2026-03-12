@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ TEST(WebSocketDeflaterTest, WindowBits8) {
   deflater.Initialize(8);
   // Set the head and tail of |input| so that back-reference
   // can be used if the window size is sufficiently-large.
-  const std::string word = "Chromium";
+  const std::string word = "Cinaseek";
   std::string input = word + std::string(256, 'a') + word;
   scoped_refptr<IOBufferWithSize> actual;
 
@@ -121,7 +121,7 @@ TEST(WebSocketDeflaterTest, WindowBits10) {
   deflater.Initialize(10);
   // Set the head and tail of |input| so that back-reference
   // can be used if the window size is sufficiently-large.
-  const std::string word = "Chromium";
+  const std::string word = "Cinaseek";
   std::string input = word + std::string(256, 'a') + word;
   scoped_refptr<IOBufferWithSize> actual;
 

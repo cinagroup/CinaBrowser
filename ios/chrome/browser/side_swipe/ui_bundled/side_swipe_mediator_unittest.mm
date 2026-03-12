@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ TEST_F(SideSwipeMediatorTest, TestConstructor) {
   EXPECT_TRUE(side_swipe_mediator_);
 }
 
-// Tests pages that need to use Chromium native swipe.
+// Tests pages that need to use Cinaseek native swipe.
 TEST_F(SideSwipeMediatorTest, TestEdgeNavigationEnabled) {
   auto fake_web_state = std::make_unique<web::FakeWebState>();
   fake_web_state->SetBrowserState(profile());
@@ -179,7 +179,7 @@ TEST_F(SideSwipeMediatorTest, TestEdgeNavigationEnabled) {
   EXPECT_TRUE(fake_swipe_ui_controller_.trailingEdgeNavigationEnabled);
 }
 
-// Tests that pages with Reader Mode enabled will use Chromium native swipe.
+// Tests that pages with Reader Mode enabled will use Cinaseek native swipe.
 // TODO(crbug.com/438221177): Fails on device.
 #if TARGET_IPHONE_SIMULATOR
 #define MAYBE_TestEdgeNavigationEnabledForReaderMode \

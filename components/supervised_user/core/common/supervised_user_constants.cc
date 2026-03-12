@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -137,7 +137,7 @@ const char kDefaultEmptyFamilyMemberRole[] = "not_in_family";
 
 // LINT.IfChange
 const char kFamilyMemberRoleFeedbackTag[] = "Family_Member_Role";
-// LINT.ThenChange(//chrome/browser/feedback/android/java/src/org/chromium/chrome/browser/feedback/FamilyInfoFeedbackSource.java)
+// LINT.ThenChange(//chrome/browser/feedback/android/java/src/org/Cinaseek/chrome/browser/feedback/FamilyInfoFeedbackSource.java)
 
 const char kClassifiedEarlierThanContentResponseHistogramName[] =
     "SupervisedUsers.ClassifyUrlThrottle.EarlierThanContentResponse";

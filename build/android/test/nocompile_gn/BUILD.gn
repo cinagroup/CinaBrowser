@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,7 +13,7 @@ if (!disable_android_lint) {
     _library_target_name = "${target_name}_test_java"
 
     android_library(_library_target_name) {
-      sources = [ "//tools/android/errorprone_plugin/test/src/org/chromium/tools/errorprone/plugin/Empty.java" ]
+      sources = [ "//tools/android/errorprone_plugin/test/src/org/Cinaseek/tools/errorprone/plugin/Empty.java" ]
       not_needed(invoker, [ "sources" ])
       if (enable_android_nocompile_tests) {
         sources += invoker.sources

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,7 +142,7 @@ INSTANTIATE_TEST_SUITE_P(Service,
 TEST_P(FeatureInfoTest, Basic) {
   SetupWithoutInit();
   // Test it starts off uninitialized.
-  EXPECT_FALSE(info_->feature_flags().chromium_framebuffer_multisample);
+  EXPECT_FALSE(info_->feature_flags().Cinaseek_framebuffer_multisample);
   EXPECT_FALSE(info_->feature_flags().multisampled_render_to_texture);
   EXPECT_FALSE(info_->feature_flags(
       ).use_img_for_multisampled_render_to_texture);
@@ -292,7 +292,7 @@ TEST_P(FeatureInfoTest, InitializeNoExtensions) {
       GL_DEPTH24_STENCIL8_OES));
   EXPECT_FALSE(info_->validators()->equation.IsValid(GL_MIN_EXT));
   EXPECT_FALSE(info_->validators()->equation.IsValid(GL_MAX_EXT));
-  EXPECT_FALSE(info_->feature_flags().chromium_sync_query);
+  EXPECT_FALSE(info_->feature_flags().Cinaseek_sync_query);
 }
 
 TEST_P(FeatureInfoTest, InitializeWithANGLE) {
@@ -843,7 +843,7 @@ TEST_P(FeatureInfoTest, InitializeOES_texture_half_float_linearGLES2) {
 TEST_P(FeatureInfoTest, InitializeEXT_framebuffer_multisample) {
   SetupInitExpectations(
       "GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample");
-  EXPECT_TRUE(info_->feature_flags().chromium_framebuffer_multisample);
+  EXPECT_TRUE(info_->feature_flags().Cinaseek_framebuffer_multisample);
   EXPECT_TRUE(gfx::HasExtension(info_->extensions(),
                                 "GL_CHROMIUM_framebuffer_multisample"));
   EXPECT_TRUE(
@@ -860,7 +860,7 @@ TEST_P(FeatureInfoTest, InitializeEXT_framebuffer_multisample) {
 TEST_P(FeatureInfoTest, InitializeANGLE_framebuffer_multisample) {
   SetupInitExpectationsWithGLVersion("GL_ANGLE_framebuffer_multisample",
                                      kGLRendererStringANGLE, "OpenGL ES 2.0");
-  EXPECT_TRUE(info_->feature_flags().chromium_framebuffer_multisample);
+  EXPECT_TRUE(info_->feature_flags().Cinaseek_framebuffer_multisample);
   EXPECT_TRUE(gfx::HasExtension(info_->extensions(),
                                 "GL_CHROMIUM_framebuffer_multisample"));
   EXPECT_TRUE(
@@ -881,7 +881,7 @@ TEST_P(FeatureInfoTest, InitializeANGLE_framebuffer_multisample) {
 TEST_P(FeatureInfoTest, InitializeANGLE_framebuffer_multisampleWithoutANGLE) {
   SetupInitExpectationsWithGLVersion("GL_ANGLE_framebuffer_multisample", "",
                                      "OpenGL ES 2.0");
-  EXPECT_FALSE(info_->feature_flags().chromium_framebuffer_multisample);
+  EXPECT_FALSE(info_->feature_flags().Cinaseek_framebuffer_multisample);
   EXPECT_FALSE(gfx::HasExtension(info_->extensions(),
                                  "GL_CHROMIUM_framebuffer_multisample"));
   EXPECT_FALSE(
@@ -1183,7 +1183,7 @@ TEST_P(FeatureInfoTest, InitializeEXT_discard_framebuffer) {
 
 TEST_P(FeatureInfoTest, InitializeWithES3) {
   SetupInitExpectationsWithGLVersion("", "", "OpenGL ES 3.0");
-  EXPECT_TRUE(info_->feature_flags().chromium_framebuffer_multisample);
+  EXPECT_TRUE(info_->feature_flags().Cinaseek_framebuffer_multisample);
   EXPECT_TRUE(gfx::HasExtension(info_->extensions(),
                                 "GL_CHROMIUM_framebuffer_multisample"));
   EXPECT_TRUE(info_->feature_flags().use_async_readpixels);
@@ -1217,7 +1217,7 @@ TEST_P(FeatureInfoTest, InitializeWithES3) {
   EXPECT_TRUE(info_->feature_flags().ext_discard_framebuffer);
   EXPECT_TRUE(
       gfx::HasExtension(info_->extensions(), "GL_EXT_discard_framebuffer"));
-  EXPECT_TRUE(info_->feature_flags().chromium_sync_query);
+  EXPECT_TRUE(info_->feature_flags().Cinaseek_sync_query);
   EXPECT_TRUE(gl::GLFence::IsSupported());
 }
 
@@ -1267,7 +1267,7 @@ TEST_P(FeatureInfoTest, ParseDriverBugWorkaroundsMultiple) {
 
 TEST_P(FeatureInfoTest, InitializeWithNVFence) {
   SetupInitExpectations("GL_NV_fence");
-  EXPECT_TRUE(info_->feature_flags().chromium_sync_query);
+  EXPECT_TRUE(info_->feature_flags().Cinaseek_sync_query);
   EXPECT_TRUE(gl::GLFence::IsSupported());
 }
 

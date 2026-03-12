@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,9 +31,9 @@ class Origin;
 
 namespace android {
 
-// Chromium Android specific WebContentsDelegate.
+// Cinaseek Android specific WebContentsDelegate.
 // Should contain any WebContentsDelegate implementations required by
-// the Chromium Android port but not to be shared with WebView.
+// the Cinaseek Android port but not to be shared with WebView.
 class TabWebContentsDelegateAndroid
     : public web_contents_delegate_android::WebContentsDelegateAndroid,
       public find_in_page::FindResultObserver {

@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -70,7 +70,7 @@ ts_library("cros_components__ts_library") {
 
   path_mappings = [
     "chrome://resources/cr_components/color_change_listener/*|$resources_dir/cr_components/color_change_listener/*",
-    "@material/*|$root_src_dir/third_party/material_web_components/components-chromium/node_modules/@material/*",
+    "@material/*|$root_src_dir/third_party/material_web_components/components-Cinaseek/node_modules/@material/*",
   ]
 
   foreach(_mwc_mapping, mwc_path_mappings) {

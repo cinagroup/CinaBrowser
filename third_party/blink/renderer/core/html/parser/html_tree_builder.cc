@@ -594,7 +594,7 @@ void AdjustSVGTagNameCase(AtomicHTMLToken* token) {
     case_map = new PrefixedNameToQualifiedNameMap;
     base::HeapArray<const QualifiedName*> svg_tags = svg_names::GetTags();
     MapLoweredLocalNameToName(case_map, svg_tags);
-    // These tags aren't implemented by Chromium, so they don't exist in
+    // These tags aren't implemented by Cinaseek, so they don't exist in
     // svg_tag_names.json5.
     AddManualLocalName(case_map, "altGlyph");
     AddManualLocalName(case_map, "altGlyphDef");
@@ -617,7 +617,7 @@ void AdjustAttributes(AtomicHTMLToken* token) {
     base::HeapArray<const QualifiedName*> attrs = GetAttrs();
     MapLoweredLocalNameToName(case_map, attrs);
     if (for_svg) {
-      // This attribute isn't implemented by Chromium, so it doesn't exist in
+      // This attribute isn't implemented by Cinaseek, so it doesn't exist in
       // svg_attribute_names.json5.
       AddManualLocalName(case_map, "viewTarget");
     }

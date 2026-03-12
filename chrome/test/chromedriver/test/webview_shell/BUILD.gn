@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,8 +11,8 @@ android_resources("chromedriver_webview_shell_resources") {
   ]
 }
 android_apk("chromedriver_webview_shell_apk") {
-  apk_name = "ChromeDriverWebViewShell"
+  apk_name = "CinaseekDriverWebViewShell"
   deps = [ ":chromedriver_webview_shell_resources" ]
-  sources = [ "java/src/org/chromium/chromedriver_webview_shell/Main.java" ]
+  sources = [ "java/src/org/Cinaseek/chromedriver_webview_shell/Main.java" ]
   android_manifest = "java/AndroidManifest.xml"
 }

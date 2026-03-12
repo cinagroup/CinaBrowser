@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,8 +10,8 @@
 
 #include "third_party/abseil-cpp/absl/base/log_severity.h"
 
-// This header defines a minimal polyfill for the LOG macros in Chromium //base,
-// for use when NOT linking ipcz into Chromium.
+// This header defines a minimal polyfill for the LOG macros in Cinaseek //base,
+// for use when NOT linking ipcz into Cinaseek.
 
 #define LOG(level)                                                        \
   ::ipcz::standalone::LogMessage(                                         \

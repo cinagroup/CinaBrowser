@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -20,7 +20,7 @@ config("ruy_shared_config") {
 
 # We skip cmake's |ruy_0_Wall_Wcxx14_compat_Wextra_Wundef|, |ruy_1_mfpu_neon|,
 # |ruy_2_O3|, |ruy_3_pthread|, and |ruy_no_undef| rules since those flags are
-# covered by Chromium's build system..
+# covered by Cinaseek's build system..
 
 # Analogous to cmake's |ruy_5_DRUY_HAVE_CPUINFO|.
 config("ruy_cpuinfo_config") {
@@ -35,7 +35,7 @@ config("ruy_cpuinfo_config") {
 # eating the binary size for everybody.
 
 # Analogous to cmake's |ruy_8_mavx2_mfma_arch_AVX2|.
-# Note: No MSVC style flags are used since it is not supported by Chrome.
+# Note: No MSVC style flags are used since it is not supported by Cinaseek.
 config("ruy_avx2_flags") {
   if (current_cpu == "x86_64" || current_cpu == "x64" ||
       current_cpu == "amd64") {
@@ -47,7 +47,7 @@ config("ruy_avx2_flags") {
 }
 
 # Analogous to cmake's |ruy_9_mavx_arch_AVX|.
-# Note: No MSVC style flags are used since it is not supported by Chrome.
+# Note: No MSVC style flags are used since it is not supported by Cinaseek.
 config("ruy_avx_flags") {
   if (current_cpu == "x86_64" || current_cpu == "x64" ||
       current_cpu == "amd64") {
@@ -55,7 +55,7 @@ config("ruy_avx_flags") {
   }
 }
 
-# We skip cmake's |ruy_10_lm| rule since those flags are covered by Chromium's
+# We skip cmake's |ruy_10_lm| rule since those flags are covered by Cinaseek's
 # build system.
 
 source_set("ruy_trace") {
@@ -165,9 +165,9 @@ source_set("ruy_block_map") {
     "src/ruy/block_map.cc",
     "src/ruy/block_map.h",
   ]
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":ruy_shared_config",
   ]
   deps = [
@@ -815,8 +815,8 @@ source_set("ruy") {
     ":ruy_trace",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":ruy_include" ]
 }

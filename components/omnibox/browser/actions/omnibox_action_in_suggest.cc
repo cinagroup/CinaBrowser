@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ namespace {
 // UMA reported Type of ActionInSuggest.
 //
 // Automatically generate a corresponding Java enum:
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.omnibox.action
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.omnibox.action
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: ActionInSuggestUmaType
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. The values should remain

@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -107,7 +107,7 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
   // personal gaia id.
   [ChromeEarlGrey setAppGroupCommandToSearchText:@"some text"];
   std::string url_string =
-      "chromium-dev://x-callback-url/app-group-command?gaia_id=";
+      "Cinaseek-dev://x-callback-url/app-group-command?gaia_id=";
   url_string += kPersonalIdentityGaiaID;
   GURL gurl(url_string);
   [ChromeEarlGrey sceneOpenURL:gurl];
@@ -129,7 +129,7 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
   // personal gaia id.
   [ChromeEarlGrey setAppGroupCommandToIncognitoSearchText:@"some text"];
   std::string url_string =
-      "chromium-dev://x-callback-url/app-group-command?gaia_id=";
+      "Cinaseek-dev://x-callback-url/app-group-command?gaia_id=";
   url_string += kPersonalIdentityGaiaID;
   GURL gurl(url_string);
   [ChromeEarlGrey sceneOpenURL:gurl];
@@ -162,7 +162,7 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
   // managed gaia id.
   [ChromeEarlGrey setAppGroupCommandToSearchText:@"some text"];
   std::string url_string =
-      "chromium-dev://x-callback-url/app-group-command?gaia_id=";
+      "Cinaseek-dev://x-callback-url/app-group-command?gaia_id=";
   url_string += kManagedIdentityGaiaID;
   GURL gurl(url_string);
   [ChromeEarlGrey sceneOpenURL:gurl];
@@ -193,7 +193,7 @@ std::unique_ptr<net::test_server::HttpResponse> StandardResponse(
   // managed gaia id.
   [ChromeEarlGrey setAppGroupCommandToIncognitoSearchText:@"some text"];
   std::string url_string =
-      "chromium-dev://x-callback-url/app-group-command?gaia_id=";
+      "Cinaseek-dev://x-callback-url/app-group-command?gaia_id=";
   url_string += kManagedIdentityGaiaID;
   GURL gurl(url_string);
   [ChromeEarlGrey sceneOpenURL:gurl];

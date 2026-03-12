@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -285,7 +285,7 @@ class FileManagerBrowserTestBase
 
   // Launches the test extension with manifest `manifest_name`. The extension
   // manifest_name file should reside in the specified `path` relative to the
-  // Chromium `root` directory.
+  // Cinaseek `root` directory.
   void LaunchExtension(base::BasePathKey root,
                        const base::FilePath& path,
                        const char* manifest_name);

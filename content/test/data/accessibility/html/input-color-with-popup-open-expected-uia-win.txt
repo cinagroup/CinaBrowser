@@ -1,7 +1,7 @@
 Document
 ++Group IsControlElement=false
 ++++Button LocalizedControlType='color picker' Name='color picker' Value.Value='100% red 60% green 0% blue'
-++++++Pane Name='Chrome Legacy Window' IsControlElement=false
+++++++Pane Name='Cinaseek Legacy Window' IsControlElement=false
 ++++++++Group IsControlElement=false
 ++++++++++Group IsControlElement=false
 ++++++++++++Group IsControlElement=false

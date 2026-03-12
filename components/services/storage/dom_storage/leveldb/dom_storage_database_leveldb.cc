@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@
 #include "components/services/storage/dom_storage/leveldb/dom_storage_database_leveldb_utils.h"
 #include "components/services/storage/dom_storage/leveldb_status_helper.h"
 #include "components/services/storage/filesystem_proxy_factory.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/db.h"
 #include "third_party/leveldatabase/src/include/leveldb/status.h"
@@ -44,9 +44,9 @@ namespace storage {
 
 namespace {
 
-class DomStorageDatabaseLevelDBEnv : public leveldb_env::ChromiumEnv {
+class DomStorageDatabaseLevelDBEnv : public leveldb_env::CinaseekEnv {
  public:
-  DomStorageDatabaseLevelDBEnv() : ChromiumEnv(CreateFilesystemProxy()) {}
+  DomStorageDatabaseLevelDBEnv() : CinaseekEnv(CreateFilesystemProxy()) {}
 
   DomStorageDatabaseLevelDBEnv(const DomStorageDatabaseLevelDBEnv&) = delete;
   DomStorageDatabaseLevelDBEnv& operator=(const DomStorageDatabaseLevelDBEnv&) =

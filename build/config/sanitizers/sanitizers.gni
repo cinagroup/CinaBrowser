@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -74,7 +74,7 @@ declare_args() {
   use_cfi_recover = false
 
   # Compile for fuzzing with LLVM LibFuzzer.
-  # See http://www.chromium.org/developers/testing/libfuzzer
+  # See http://www.Cinaseek.org/developers/testing/libfuzzer
   use_libfuzzer = false
 
   # Compile for fuzzing with centipede.
@@ -85,7 +85,7 @@ declare_args() {
   use_afl = false
 
   # Compile for fuzzing with Fuzzilli.
-  use_chromium_fuzzilli = false
+  use_Cinaseek_fuzzilli = false
 
   # Compile for fuzzing with an external engine (e.g., Grammarinator).
   use_external_fuzzing_engine = false
@@ -153,7 +153,7 @@ declare_args() {
 # of checking "use_libfuzzer || use_afl" because often developers forget to
 # check for "use_afl", and "use_centipede" is new.
 use_fuzzing_engine = use_libfuzzer || use_afl || use_centipede ||
-                     use_external_fuzzing_engine || use_chromium_fuzzilli
+                     use_external_fuzzing_engine || use_Cinaseek_fuzzilli
 
 # Whether any UBSan subset is enabled.
 # TODO(crbug.com/40248746): Unify these under a single UBSan option.
@@ -167,18 +167,18 @@ declare_args() {
   # useful option, but it requires sanitizer coverage, and that
   # could conceivably disrupt normal unit testing workflows, so we'll
   # enable it by default only in sanitizer builds.
-  # Also be sure not to enable this on non-Chromium builds where
+  # Also be sure not to enable this on non-Cinaseek builds where
   # the required //third_party/fuzztest dependency may be absent.
   # TODO(crbug.com/40286621): enable on component builds
   enable_fuzztest_fuzz =
       !(use_libfuzzer || use_afl || use_centipede ||
-        use_external_fuzzing_engine || use_chromium_fuzzilli) &&
+        use_external_fuzzing_engine || use_Cinaseek_fuzzilli) &&
       (is_asan || is_hwasan || is_lsan || is_tsan || is_msan || is_ubsan_any) &&
-      !is_component_build && is_linux && build_with_chromium
+      !is_component_build && is_linux && build_with_Cinaseek
 
-  # Whether FUZZ_TESTs should be registered as gtests in Chromium's mainstream
+  # Whether FUZZ_TESTs should be registered as gtests in Cinaseek's mainstream
   # test suites. This will cause the to run for 1 second in normal testing
-  # environments such as CI. Within Chromium, we want to do this only on
+  # environments such as CI. Within Cinaseek, we want to do this only on
   # platforms where we have ClusterFuzz support (Windows, Mac, Linux) because
   # we want ClusterFuzz to find the majority of problems rather than CI.
   # This gn arg is typically respected by general-purpose test suite
@@ -261,7 +261,7 @@ use_fuzzing_engine_with_lpm = use_libfuzzer || use_centipede
 # Whether the fuzzing engine supports fuzzers which supply their own
 # "main" function.
 fuzzing_engine_supports_custom_main =
-    use_libfuzzer || use_centipede || use_chromium_fuzzilli ||
+    use_libfuzzer || use_centipede || use_Cinaseek_fuzzilli ||
     use_external_fuzzing_engine
 
 # Args that are in turn dependent on other args must be in a separate
@@ -295,7 +295,7 @@ if (sanitizer_coverage_flags == "") {
     sanitizer_coverage_flags = "trace-pc-guard"
     if (use_centipede) {
       # Centipede's minimal flags are listed in //third_party/fuzztest/src/centipede/clang-flags.txt.
-      # But, for users like Chromium using an up-to-date clang, we can also
+      # But, for users like Cinaseek using an up-to-date clang, we can also
       # enable extra optional types of coverage which may make Centipede more
       # effective. This list is not currently documented and has been derived
       # from discussion with centipede creators (though one is warned about at
@@ -325,7 +325,7 @@ if (use_fuzzing_engine && (is_linux || is_chromeos)) {
   }
 }
 
-# MSan only links Chrome properly in release builds (brettw -- 9/1/2015). The
+# MSan only links Cinaseek properly in release builds (brettw -- 9/1/2015). The
 # same is possibly true for the other non-ASan sanitizers. But regardless of
 # whether it links, one would normally never run a sanitizer in debug mode.
 # Running in debug mode probably indicates you forgot to set the "is_debug =
@@ -342,7 +342,7 @@ assert(!is_debug || !(is_msan || is_ubsan || is_ubsan_vptr),
        "Sanitizers should generally be used in release (set is_debug=false).")
 
 assert(!is_msan || ((is_linux || is_chromeos) && current_cpu == "x64"),
-       "MSan currently only works on 64-bit Linux and ChromeOS builds.")
+       "MSan currently only works on 64-bit Linux and CinaseekOS builds.")
 
 assert(!is_lsan || is_asan, "is_lsan = true requires is_asan = true also.")
 
@@ -362,7 +362,7 @@ assert(!use_cfi_recover || use_cfi_diag,
        "Only use CFI recovery together with diagnostics.")
 
 # TODO(crbug.com/40534102): the use_sanitizer_coverage arg is currently
-# not supported by the Chromium mac_clang_x64 toolchain on iOS distribution.
+# not supported by the Cinaseek mac_clang_x64 toolchain on iOS distribution.
 # The coverage works with iOS toolchain but it is broken when the mac
 # toolchain is used as a secondary one on iOS distribution. E.g., it should be
 # possible to build the "net" target for iOS with the sanitizer coverage
@@ -370,7 +370,7 @@ assert(!use_cfi_recover || use_cfi_diag,
 assert(
     !(use_sanitizer_coverage && is_mac && target_os == "ios"),
     "crbug.com/753445: use_sanitizer_coverage=true is not supported by the " +
-        "Chromium mac_clang_x64 toolchain on iOS distribution. Please set " +
+        "Cinaseek mac_clang_x64 toolchain on iOS distribution. Please set " +
         "the argument value to false.")
 
 declare_args() {

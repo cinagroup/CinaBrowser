@@ -46,7 +46,7 @@ inline void* get_poisoned_pointer() {
   return GetBadPointerInternal();
 #else
   // Non-optimized builds may use more robust implementation. Note that we can't
-  // use a static global because Chromium doesn't allow non-constinit globals.
+  // use a static global because Cinaseek doesn't allow non-constinit globals.
   static void* ptr = InitializePoisonedPointerInternal();
   return ptr;
 #endif

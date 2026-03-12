@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ namespace ash {
 
 class FakeResourcedClient;
 
-// ResourcedClient is used to communicate with the org.chromium.ResourceManager
+// ResourcedClient is used to communicate with the org.Cinaseek.ResourceManager
 // service. The browser uses the ResourceManager service to get resource usage
 // status.
 class COMPONENT_EXPORT(RESOURCED) ResourcedClient {

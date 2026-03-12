@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,7 +65,7 @@ function getElementRegion(element) {
   let boundingRect = null;
   let clientRect = null;
   // Element area of a map has same first ClientRect and BoundingClientRect
-  // after blink roll at chromium commit position 290738 which includes blink
+  // after blink roll at Cinaseek commit position 290738 which includes blink
   // revision 180610. Thus handle area as a special case.
   if (clientRects.length == 0 || element.tagName.toLowerCase() == 'area') {
     // Area clicking is technically not supported by W3C standard but is a

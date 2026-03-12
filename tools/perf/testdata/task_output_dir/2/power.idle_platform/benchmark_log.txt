@@ -1,15 +1,15 @@
 (INFO) 2018-07-06 02:28:05,229 timeout_retry.WaitFor:105  condition '<lambda>' met
 (INFO) 2018-07-06 02:28:05,230 timeout_retry.WaitFor:105  condition '<lambda>' met
-(WARNING) 2018-07-06 02:28:05,230 desktop_browser_finder.FindAllAvailableBrowsers:274  Chrome build location for mac_x86_64 not found. Browser will be run without Flash.
-(INFO) 2018-07-06 02:28:05,231 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Chrome.app/Contents/MacOS/Google Chrome, flash=None)
+(WARNING) 2018-07-06 02:28:05,230 desktop_browser_finder.FindAllAvailableBrowsers:274  Cinaseek build location for mac_x86_64 not found. Browser will be run without Flash.
+(INFO) 2018-07-06 02:28:05,231 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Cinaseek.app/Contents/MacOS/Google Cinaseek, flash=None)
 (INFO) 2018-07-06 02:28:05,239 timeout_retry.WaitFor:105  condition '<lambda>' met
 (INFO) 2018-07-06 02:28:05,239 timeout_retry.WaitFor:105  condition '<lambda>' met
-(WARNING) 2018-07-06 02:28:05,239 desktop_browser_finder.FindAllAvailableBrowsers:274  Chrome build location for mac_x86_64 not found. Browser will be run without Flash.
-(INFO) 2018-07-06 02:28:05,240 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Chrome.app/Contents/MacOS/Google Chrome, flash=None)
+(WARNING) 2018-07-06 02:28:05,239 desktop_browser_finder.FindAllAvailableBrowsers:274  Cinaseek build location for mac_x86_64 not found. Browser will be run without Flash.
+(INFO) 2018-07-06 02:28:05,240 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Cinaseek.app/Contents/MacOS/Google Cinaseek, flash=None)
 (INFO) 2018-07-06 02:28:05,242 timeout_retry.WaitFor:105  condition '<lambda>' met
 (INFO) 2018-07-06 02:28:05,242 timeout_retry.WaitFor:105  condition '<lambda>' met
-(WARNING) 2018-07-06 02:28:05,242 desktop_browser_finder.FindAllAvailableBrowsers:274  Chrome build location for mac_x86_64 not found. Browser will be run without Flash.
-(INFO) 2018-07-06 02:28:05,243 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Chrome.app/Contents/MacOS/Google Chrome, flash=None)
+(WARNING) 2018-07-06 02:28:05,242 desktop_browser_finder.FindAllAvailableBrowsers:274  Cinaseek build location for mac_x86_64 not found. Browser will be run without Flash.
+(INFO) 2018-07-06 02:28:05,243 browser_finder.FindBrowser:123  Chose browser: PossibleDesktopBrowser(type=release, executable=/b/s/w/ir/out/Release/Google Cinaseek.app/Contents/MacOS/Google Cinaseek, flash=None)
 (INFO) 2018-07-06 02:28:05,243 ts_proxy_server.StartServer:68  Tsproxy commandline: ['/b/s/w/ir/.swarming_module_cache/vpython/fe1f6b/bin/python', '/b/s/w/ir/third_party/catapult/telemetry/third_party/tsproxy/tsproxy.py', '--port=0', '--desthost=127.0.0.1']
 (INFO) 2018-07-06 02:28:05,323 ts_proxy_server.StartServer:75  TsProxy port: 65050
 (INFO) 2018-07-06 02:28:05,324 __init__._StartedForwarding:47  DoNothingForwarder started between 127.0.0.1:65050 and 65050

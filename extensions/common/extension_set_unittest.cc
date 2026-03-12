@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,11 +58,11 @@ TEST(ExtensionSetTest, ExtensionSet) {
       "a", "https://chrome.google.com/launch", "https://chrome.google.com/"));
 
   scoped_refptr<Extension> ext2(CreateTestExtension(
-      "a", "http://code.google.com/p/chromium",
-      "http://code.google.com/p/chromium/"));
+      "a", "http://code.google.com/p/Cinaseek",
+      "http://code.google.com/p/Cinaseek/"));
 
   scoped_refptr<Extension> ext3(CreateTestExtension(
-      "b", "http://dev.chromium.org/", "http://dev.chromium.org/"));
+      "b", "http://dev.Cinaseek.org/", "http://dev.Cinaseek.org/"));
 
   scoped_refptr<Extension> ext4(
       CreateTestExtension("c", std::string(), std::string()));
@@ -107,39 +107,39 @@ TEST(ExtensionSetTest, ExtensionSet) {
   // Get extension by web extent.
   EXPECT_EQ(ext2.get(),
             extensions.GetExtensionOrAppByURL(
-                GURL("http://code.google.com/p/chromium/monkey")));
+                GURL("http://code.google.com/p/Cinaseek/monkey")));
   EXPECT_EQ(ext3.get(),
             extensions.GetExtensionOrAppByURL(
-                GURL("http://dev.chromium.org/design-docs/")));
+                GURL("http://dev.Cinaseek.org/design-docs/")));
   EXPECT_FALSE(extensions.GetExtensionOrAppByURL(
-      GURL("http://blog.chromium.org/")));
+      GURL("http://blog.Cinaseek.org/")));
 
   // Get extension by web extent with filesystem URL. Paths still matter.
   EXPECT_EQ(ext3.get(), extensions.GetExtensionOrAppByURL(
-                            GURL("filesystem:http://dev.chromium.org/foo")));
+                            GURL("filesystem:http://dev.Cinaseek.org/foo")));
   EXPECT_EQ(ext3->id(), extensions.GetExtensionOrAppIDByURL(
-                            GURL("filesystem:http://dev.chromium.org/foo")));
+                            GURL("filesystem:http://dev.Cinaseek.org/foo")));
   EXPECT_EQ(nullptr, extensions.GetExtensionOrAppByURL(
                          GURL("filesystem:http://code.google.com/foo")));
   // TODO(crbug.com/41394231): Support blob URLs. This should return ext3.
   EXPECT_EQ(nullptr, extensions.GetExtensionOrAppByURL(
-                         GURL("blob:http://dev.chromium.org/abcd")));
+                         GURL("blob:http://dev.Cinaseek.org/abcd")));
 
   // Test InSameExtent().
   EXPECT_TRUE(extensions.InSameExtent(
-      GURL("http://code.google.com/p/chromium/monkey/"),
-      GURL("http://code.google.com/p/chromium/")));
+      GURL("http://code.google.com/p/Cinaseek/monkey/"),
+      GURL("http://code.google.com/p/Cinaseek/")));
   EXPECT_FALSE(extensions.InSameExtent(
-      GURL("http://code.google.com/p/chromium/"),
-      GURL("https://code.google.com/p/chromium/")));
+      GURL("http://code.google.com/p/Cinaseek/"),
+      GURL("https://code.google.com/p/Cinaseek/")));
   EXPECT_FALSE(extensions.InSameExtent(
-      GURL("http://code.google.com/p/chromium/"),
-      GURL("http://dev.chromium.org/design-docs/")));
+      GURL("http://code.google.com/p/Cinaseek/"),
+      GURL("http://dev.Cinaseek.org/design-docs/")));
 
   // Both of these should be NULL, which mean true for InSameExtent.
   EXPECT_TRUE(extensions.InSameExtent(
       GURL("http://www.google.com/"),
-      GURL("http://blog.chromium.org/")));
+      GURL("http://blog.Cinaseek.org/")));
 
   // Remove one of the extensions.
   EXPECT_TRUE(extensions.Remove(ext2->id()));

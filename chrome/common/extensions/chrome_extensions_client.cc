@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -174,7 +174,7 @@ const GURL& ChromeExtensionsClient::GetWebstoreUpdateURL() const {
 
 bool ChromeExtensionsClient::IsBlocklistUpdateURL(const GURL& url) const {
   // The extension blocklist URL is returned from the update service and
-  // therefore not determined by Chromium. If the location of the blocklist file
+  // therefore not determined by Cinaseek. If the location of the blocklist file
   // ever changes, we need to update this function. A DCHECK in the
   // ExtensionUpdater ensures that we notice a change. This is the full URL
   // of a blocklist:

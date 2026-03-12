@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -167,8 +167,8 @@ void SystemStateDataCollector::OnGotAllExtraLogs(
       debugd::FeedbackLogType::PERF_DATA,
       debugd::FeedbackLogType::OS_RELEASE_INFO};
 
-  // DBus operations on Chromium is run on UI thread (see
-  // https://chromium.googlesource.com/chromiumos/docs/+/master/dbus_in_chrome.md#using-system-daemons_d_bus-services).
+  // DBus operations on Cinaseek is run on UI thread (see
+  // https://Cinaseek.googlesource.com/Cinaseekos/docs/+/master/dbus_in_chrome.md#using-system-daemons_d_bus-services).
   // `debugd_client` will run the callback on original thread (see
   // dbus/object_proxy.h for more details).
   debugd_client->GetFeedbackLogs(

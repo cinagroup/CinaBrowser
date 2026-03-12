@@ -120,7 +120,7 @@ bool DOMFilePath::IsValidPath(const String& path) {
   }
 
   // While not [yet] restricted by the spec, '\\' complicates implementation for
-  // Chromium.
+  // Cinaseek.
   if (path.contains('\\')) {
     return false;
   }

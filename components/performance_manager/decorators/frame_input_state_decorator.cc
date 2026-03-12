@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -174,7 +174,7 @@ void FrameInputStateDecorator::InputObserver::OnInputEvent(
       return;
     // Pinches and flings are classified as scrolls.
     // Based on
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/input/web_gesture_event.h;l=258;drc=317c59e45d1ed2656fdfd6bfecccfdf6ee8e588e
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/public/common/input/web_gesture_event.h;l=258;drc=317c59e45d1ed2656fdfd6bfecccfdf6ee8e588e
     case blink::WebInputEvent::Type::kGestureScrollBegin:
     case blink::WebInputEvent::Type::kGestureScrollEnd:
     case blink::WebInputEvent::Type::kGestureScrollUpdate:
@@ -186,7 +186,7 @@ void FrameInputStateDecorator::InputObserver::OnInputEvent(
       OnScrollEvent(event);
       return;
     // This is based on input event types defined here:
-    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/mojom/input/input_event.mojom;l=86;drc=5be39635e5385132d645d2810e14614642291981
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/blink/public/mojom/input/input_event.mojom;l=86;drc=5be39635e5385132d645d2810e14614642291981
     case blink::WebInputEvent::Type::kGestureTapDown:
     case blink::WebInputEvent::Type::kGestureTapUnconfirmed:
       // Ignored - let's wait until they're resolved into a more specific

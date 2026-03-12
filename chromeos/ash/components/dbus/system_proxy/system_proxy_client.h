@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ class Bus;
 
 namespace ash {
 
-// SystemProxyClient is used to communicate with the org.chromium.SystemProxy
+// SystemProxyClient is used to communicate with the org.Cinaseek.SystemProxy
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(SYSTEM_PROXY) SystemProxyClient {
@@ -76,8 +76,8 @@ class COMPONENT_EXPORT(SYSTEM_PROXY) SystemProxyClient {
   // Returns the global instance which may be null if not initialized.
   static SystemProxyClient* Get();
 
-  // SystemProxy daemon D-Bus method calls. See org.chromium.SystemProxy.xml and
-  // system_proxy_service.proto in Chromium OS code for the documentation of the
+  // SystemProxy daemon D-Bus method calls. See org.Cinaseek.SystemProxy.xml and
+  // system_proxy_service.proto in Cinaseek OS code for the documentation of the
   // methods and request/response messages.
   virtual void SetAuthenticationDetails(
       const system_proxy::SetAuthenticationDetailsRequest& request,

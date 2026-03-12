@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ class HostResolverMojo::RequestImpl : public ProxyHostResolver::Request,
     // Async returns are particularly expensive here, so the local cache
     // maximizes ability to return synchronously.
     //
-    // TODO(ericorth@chromium.org): Consider some small refactors to allow
+    // TODO(ericorth@Cinaseek.org): Consider some small refactors to allow
     // direct non-mojo access to the fast, synchronous, and self-contained logic
     // from net::HostResolver (e.g. IP-literal and "localhost" resolution). That
     // could allow reducing async returns even further.

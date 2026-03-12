@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -980,9 +980,9 @@ TEST(ArcExternalProtocolDialogTest, TestIsChromeAnAppCandidate) {
 TEST(ArcExternalProtocolDialogTest,
      TestGetActionWithArcImeSettingsActivityBypassesIntentPicker) {
   constexpr char kPackageForOpeningArcImeSettingsPage[] =
-      "org.chromium.arc.applauncher";
+      "org.Cinaseek.arc.applauncher";
   constexpr char kActivityForOpeningArcImeSettingsPage[] =
-      "org.chromium.arc.applauncher.InputMethodSettingsActivity";
+      "org.Cinaseek.arc.applauncher.InputMethodSettingsActivity";
 
   std::vector<ArcIntentHelperMojoDelegate::IntentHandlerInfo> handlers;
   handlers.push_back(Create("ARC IME settings",

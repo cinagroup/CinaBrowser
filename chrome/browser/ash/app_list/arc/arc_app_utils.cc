@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,9 +87,9 @@ namespace {
 // ArcIntentHelperBridge::AppendStringToIntentHelperPackageName.
 // Intent helper strings.
 constexpr char kIntentHelperClassName[] =
-    "org.chromium.arc.intent_helper.SettingsReceiver";
+    "org.Cinaseek.arc.intent_helper.SettingsReceiver";
 constexpr char kSetInTouchModeIntent[] =
-    "org.chromium.arc.intent_helper.SET_IN_TOUCH_MODE";
+    "org.Cinaseek.arc.intent_helper.SET_IN_TOUCH_MODE";
 
 constexpr char kAndroidClockAppId[] = "ddmmnabaeomoacfpfjgghfpocfolhjlg";
 constexpr char kAndroidFilesAppId[] = "gmiohhmfhgfclpeacmdfancbipocempm";

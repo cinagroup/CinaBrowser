@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -279,7 +279,7 @@ void StreamBufferManager::SetUpStreamsAndBuffers(
         NOTREACHED();
       }
     }
-    const ChromiumPixelFormat stream_format =
+    const CinaseekPixelFormat stream_format =
         camera_buffer_factory_->ResolveStreamBufferFormat(
             stream_context->stream->format, stream_context->buffer_usage);
     // Internally we keep track of the VideoPixelFormat that's actually

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,12 +50,12 @@
   // was added implicitly by adding flavors to the owned pasteboard of
   // OwningProvider, so call -types to actually get data.
   //
-  // Merge in the ui::kUTTypeChromiumInitiatedDrag type, so that all of Chromium
+  // Merge in the ui::kUTTypeCinaseekInitiatedDrag type, so that all of Cinaseek
   // is marked to receive the drags. TODO(avi): Wire up MacViews so that
   // BridgedContentView properly registers the result of View::GetDropFormats()
   // rather than OSExchangeDataProviderMac::SupportedPasteboardTypes().
   return [_pasteboardItem.types
-      arrayByAddingObject:ui::kUTTypeChromiumInitiatedDrag];
+      arrayByAddingObject:ui::kUTTypeCinaseekInitiatedDrag];
 }
 
 - (NSPasteboardWritingOptions)writingOptionsForType:(NSString*)type
@@ -69,7 +69,7 @@
 }
 
 - (id)pasteboardPropertyListForType:(NSString*)type {
-  if ([type isEqual:ui::kUTTypeChromiumInitiatedDrag])
+  if ([type isEqual:ui::kUTTypeCinaseekInitiatedDrag])
     return [NSData data];
 
   // Like above, an NSPasteboardItem added to a pasteboard will return nil from
@@ -145,18 +145,18 @@ void OSExchangeDataProviderMac::MarkRendererTaintedFromOrigin(
                          ? [NSString string]
                          : base::SysUTF8ToNSString(origin.Serialize());
   [GetPasteboard() setString:string
-                     forType:kUTTypeChromiumRendererInitiatedDrag];
+                     forType:kUTTypeCinaseekRendererInitiatedDrag];
 }
 
 bool OSExchangeDataProviderMac::IsRendererTainted() const {
   return [GetPasteboard().types
-      containsObject:kUTTypeChromiumRendererInitiatedDrag];
+      containsObject:kUTTypeCinaseekRendererInitiatedDrag];
 }
 
 std::optional<url::Origin> OSExchangeDataProviderMac::GetRendererTaintedOrigin()
     const {
   NSString* item =
-      [GetPasteboard() stringForType:kUTTypeChromiumRendererInitiatedDrag];
+      [GetPasteboard() stringForType:kUTTypeCinaseekRendererInitiatedDrag];
   if (!item) {
     return std::nullopt;
   }
@@ -170,12 +170,12 @@ std::optional<url::Origin> OSExchangeDataProviderMac::GetRendererTaintedOrigin()
 
 void OSExchangeDataProviderMac::MarkAsFromPrivileged() {
   [GetPasteboard() setData:[NSData data]
-                   forType:kUTTypeChromiumPrivilegedInitiatedDrag];
+                   forType:kUTTypeCinaseekPrivilegedInitiatedDrag];
 }
 
 bool OSExchangeDataProviderMac::IsFromPrivileged() const {
   return [GetPasteboard().types
-      containsObject:kUTTypeChromiumPrivilegedInitiatedDrag];
+      containsObject:kUTTypeCinaseekPrivilegedInitiatedDrag];
 }
 
 void OSExchangeDataProviderMac::SetString(std::u16string_view string) {
@@ -345,9 +345,9 @@ NSArray<NSDraggingItem*>* OSExchangeDataProviderMac::GetDraggingItems() const {
 // static
 NSArray* OSExchangeDataProviderMac::SupportedPasteboardTypes() {
   return @[
-    kUTTypeChromiumInitiatedDrag, kUTTypeChromiumPrivilegedInitiatedDrag,
-    kUTTypeChromiumRendererInitiatedDrag, kUTTypeChromiumDataTransferCustomData,
-    kUTTypeWebKitWebUrlsWithTitles, kUTTypeChromiumSourceUrl,
+    kUTTypeCinaseekInitiatedDrag, kUTTypeCinaseekPrivilegedInitiatedDrag,
+    kUTTypeCinaseekRendererInitiatedDrag, kUTTypeCinaseekDataTransferCustomData,
+    kUTTypeWebKitWebUrlsWithTitles, kUTTypeCinaseekSourceUrl,
     NSPasteboardTypeFileURL, NSPasteboardTypeHTML, NSPasteboardTypeRTF,
     NSPasteboardTypeString, NSPasteboardTypeURL
   ];

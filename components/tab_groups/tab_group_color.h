@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ namespace tab_groups {
 // requires adding orange in the other file.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.tab_groups
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.tab_groups
 //
 // LINT.IfChange
 enum class TabGroupColorId {
@@ -49,7 +49,7 @@ enum class TabGroupColorId {
   // Next value: 9
   kNumEntries = 9,
 };
-// LINT.ThenChange(//components/tab_groups/android/java/src/org/chromium/components/tab_groups/TabGroupColorPickerUtils.java)
+// LINT.ThenChange(//components/tab_groups/android/java/src/org/Cinaseek/components/tab_groups/TabGroupColorPickerUtils.java)
 
 using ColorLabelMap = base::flat_map<TabGroupColorId, std::u16string>;
 

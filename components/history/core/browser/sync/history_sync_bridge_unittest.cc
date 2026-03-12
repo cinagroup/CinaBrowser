@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,8 +40,8 @@
 
 namespace history {
 
-constexpr char kTestAppId[] = "org.chromium.dino.stegosaurus";
-constexpr char kTestAppId2[] = "org.chromium.dino.velociraptor";
+constexpr char kTestAppId[] = "org.Cinaseek.dino.stegosaurus";
+constexpr char kTestAppId2[] = "org.Cinaseek.dino.velociraptor";
 
 namespace {
 

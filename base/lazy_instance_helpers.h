@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,8 +53,8 @@ namespace subtle {
 // chrome.dll) because linker is able to fold these for multiple Types but
 // couldn't with the more advanced CreatorFunc template type which in turn
 // improves code locality (and application startup) -- ref.
-// https://chromium-review.googlesource.com/c/chromium/src/+/530984/5/base/lazy_instance.h#140,
-// worsened by https://chromium-review.googlesource.com/c/chromium/src/+/868013
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/530984/5/base/lazy_instance.h#140,
+// worsened by https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/868013
 // and caught then as https://crbug.com/804034.
 template <typename Type>
 Type* GetOrCreateLazyPointer(std::atomic<uintptr_t>& state,

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1254,7 +1254,7 @@ IN_PROC_BROWSER_TEST_F(TabRestoreTest, RestoreWindow_ActiveTabIndex) {
 }
 
 // https://crbug.com/40568506: Timeout flakiness on Mac10.13 Tests (dbg) and
-// PASS/FAIL flakiness on Linux Chromium OS ASan LSan Tests (1) bot.
+// PASS/FAIL flakiness on Linux Cinaseek OS ASan LSan Tests (1) bot.
 #if defined(ADDRESS_SANITIZER) || defined(MEMORY_SANITIZER) || \
     (!defined(NDEBUG) && !BUILDFLAG(IS_WIN))
 #define MAYBE_RestoreTabWithSpecialURL DISABLED_RestoreTabWithSpecialURL
@@ -1285,7 +1285,7 @@ IN_PROC_BROWSER_TEST_F(TabRestoreTest, MAYBE_RestoreTabWithSpecialURL) {
       0);
 }
 
-// https://crbug.com/41287668: Flakiness on linux_chromium_asan_rel_ng bot.
+// https://crbug.com/41287668: Flakiness on linux_Cinaseek_asan_rel_ng bot.
 // https://crbug.com/40568506: Timeout flakiness on Mac10.13 Tests (dbg) bots.
 // Also fails on Linux Tests (dbg).
 #if defined(ADDRESS_SANITIZER) || defined(MEMORY_SANITIZER) || \

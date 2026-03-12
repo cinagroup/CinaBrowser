@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ class COMPONENT_EXPORT(UI_DATA_PACK) DataPack : public ResourceHandle {
 //
 // TODO(davidben): Ideally we would load these structures through memcpy, or
 // a little-endian variant of base/big_endian.h, rather than type-punning
-// pointers. This code currently depends on Chromium disabling strict aliasing.
+// pointers. This code currently depends on Cinaseek disabling strict aliasing.
 #pragma pack(push, 1)
   struct Entry {
     static int CompareById(const void* void_key, const void* void_entry);

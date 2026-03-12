@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -20,7 +20,7 @@ js_library("account_migration_welcome_app") {
     ":account_manager_browser_proxy",
     "//ash/webui/common/resources:assert",
     "//ash/webui/common/resources:load_time_data.m",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 
@@ -29,7 +29,7 @@ js_library("account_manager_error_app") {
     ":account_manager_browser_proxy",
     "//ash/webui/common/resources:assert",
     "//ash/webui/common/resources:load_time_data.m",
-    "//third_party/polymer/v3_0/components-chromium/polymer:polymer_bundled",
+    "//third_party/polymer/v3_0/components-Cinaseek/polymer:polymer_bundled",
   ]
 }
 

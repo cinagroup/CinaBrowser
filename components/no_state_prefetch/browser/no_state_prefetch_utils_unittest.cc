@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ TEST(NoStatePrefetchUtilsTest, DetectGWSOriginURLTest) {
   EXPECT_TRUE(IsGoogleOriginURL(GURL("http://www.google.com:42/")));
 
   EXPECT_FALSE(IsGoogleOriginURL(GURL("http://news.google.com")));
-  EXPECT_FALSE(IsGoogleOriginURL(GURL("http://www.chromium.org")));
+  EXPECT_FALSE(IsGoogleOriginURL(GURL("http://www.Cinaseek.org")));
   EXPECT_FALSE(IsGoogleOriginURL(GURL("what://www.google.com")));
 }
 

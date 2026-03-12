@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -113,7 +113,7 @@ class AppLauncherBrowserAgentTest : public PlatformTest {
     // Create the NavigationManager and populate it with `nav_item_count` items.
     auto navigation_manager = std::make_unique<web::FakeNavigationManager>();
     for (size_t i = 0; i < nav_item_count; ++i) {
-      navigation_manager->AddItem(GURL("http://www.chromium.test"),
+      navigation_manager->AddItem(GURL("http://www.Cinaseek.test"),
                                   ui::PAGE_TRANSITION_LINK);
     }
     // Create the WebState with the fake NavigationManager.
@@ -176,7 +176,7 @@ class AppLauncherBrowserAgentTest : public PlatformTest {
 // Tests that the browser agent shows an alert for app store URLs.
 TEST_F(AppLauncherBrowserAgentTest, AppStoreUrlShowsAlert) {
   const GURL kAppStoreUrl("itms://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 
@@ -210,8 +210,8 @@ TEST_F(AppLauncherBrowserAgentTest, AppStoreUrlShowsAlert) {
 // Tests that the browser agent attempts to launch an external application for
 // mailto URLs.
 TEST_F(AppLauncherBrowserAgentTest, MailToUrlLaunchesApp) {
-  const GURL kMailToUrl("mailto:user@chromium.test");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kMailToUrl("mailto:user@Cinaseek.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 
@@ -232,7 +232,7 @@ TEST_F(AppLauncherBrowserAgentTest, MailToUrlLaunchesApp) {
 // app URLs.
 TEST_F(AppLauncherBrowserAgentTest, AppUrlLaunchesApp) {
   const GURL kAppUrl("some-app://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 
@@ -254,7 +254,7 @@ TEST_F(AppLauncherBrowserAgentTest, AppUrlLaunchesApp) {
 TEST_F(AppLauncherBrowserAgentTest, RepeatedRequestShowsAlert) {
   const base::HistogramTester histogram_tester;
   const GURL kAppUrl("some-app://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 
@@ -294,7 +294,7 @@ TEST_F(AppLauncherBrowserAgentTest, RepeatedRequestShowsAlert) {
 // transition.
 TEST_F(AppLauncherBrowserAgentTest, AppUrlWithoutLinkShowsAlert) {
   const GURL kAppUrl("some-app://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 
@@ -330,7 +330,7 @@ TEST_F(AppLauncherBrowserAgentTest, AppUrlWithoutLinkShowsAlert) {
 // empty session history.
 TEST_F(AppLauncherBrowserAgentTest, ShowDialogInOpener) {
   const GURL kAppStoreUrl("itms://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* opener = AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
   web::WebState* web_state = AddWebState(opener, /*nav_item_count=*/0);
 
@@ -350,7 +350,7 @@ TEST_F(AppLauncherBrowserAgentTest, ShowDialogInOpener) {
 TEST_F(AppLauncherBrowserAgentTest, IncognitoRequestShowsAlert) {
   const base::HistogramTester histogram_tester;
   const GURL kAppUrl("some-app://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1, /*incognito=*/true);
 
@@ -393,7 +393,7 @@ TEST_F(AppLauncherBrowserAgentTest, IncognitoRequestShowsAlert) {
 TEST_F(AppLauncherBrowserAgentTest, NoUserInteractionRequestShowsAlert) {
   const base::HistogramTester histogram_tester;
   const GURL kAppUrl("some-app://1234");
-  const GURL kSourcePageUrl("http://www.chromium.test");
+  const GURL kSourcePageUrl("http://www.Cinaseek.test");
   web::WebState* web_state =
       AddWebState(/*opener=*/nullptr, /*nav_item_count=*/1);
 

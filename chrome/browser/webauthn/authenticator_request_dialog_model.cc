@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ namespace {
 // StepUiType enumerates the different types of UI that can be displayed.
 enum class StepUIType {
   NONE,
-  // A Chromium captive dialog.
+  // A Cinaseek captive dialog.
   DIALOG,
   // A top-level window.
   WINDOW,

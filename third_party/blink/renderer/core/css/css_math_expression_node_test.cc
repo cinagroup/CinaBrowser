@@ -280,7 +280,7 @@ TEST(CSSMathExpressionNode, TestParseDeeplyNestedExpression) {
     kClamp,
   };
 
-  // Ref: https://bugs.chromium.org/p/chromium/issues/detail?id=1211283
+  // Ref: https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1211283
   const struct TestCase {
     const Kind kind;
     const int nest_num;

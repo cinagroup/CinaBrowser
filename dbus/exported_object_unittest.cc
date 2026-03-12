@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,8 +22,8 @@
 namespace dbus {
 namespace {
 
-inline constexpr char kObjectPath[] = "/org/chromium/TestObject";
-inline constexpr char kInterface[] = "org.chromium.TestObject";
+inline constexpr char kObjectPath[] = "/org/Cinaseek/TestObject";
+inline constexpr char kInterface[] = "org.Cinaseek.TestObject";
 
 inline constexpr char kMethodNeverRun[] = "NeverRun";
 inline constexpr char kMethodNotSendingResponse[] = "NotSendingResponse";
@@ -103,7 +103,7 @@ class ExportedObjectTest : public testing::Test {
 // Tests that calling a method that doesn't send a response crashes.
 TEST_F(ExportedObjectTest, NotSendingResponseCrash) {
   const std::string service_name =
-      "org.chromium.NotSendingResponse" +
+      "org.Cinaseek.NotSendingResponse" +
       base::Uuid::GenerateRandomV4().AsLowercaseString();
   ASSERT_TRUE(bus_->Connect());
   bus_->RequestOwnershipAndBlock(service_name,
@@ -126,14 +126,14 @@ TEST_F(ExportedObjectTest, NotSendingResponseCrash) {
 
   EXPECT_CHECK_DEATH_WITH(call_bad_method(),
                           "ResponseSender did not run for "
-                          "org.chromium.TestObject.NotSendingResponse");
+                          "org.Cinaseek.TestObject.NotSendingResponse");
 }
 
 // Tests that an error response is sent when calling a method after a short
 // lived object destruction but before its `ExportedObject` gone.
 TEST_F(ExportedObjectTest, SendFailureForShortLivedObject) {
   const std::string service_name =
-      "org.chromium.ShortLived" +
+      "org.Cinaseek.ShortLived" +
       base::Uuid::GenerateRandomV4().AsLowercaseString();
   ASSERT_TRUE(bus_->Connect());
   bus_->RequestOwnershipAndBlock(service_name,

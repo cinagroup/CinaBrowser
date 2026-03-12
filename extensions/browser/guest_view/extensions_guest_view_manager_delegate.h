@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 namespace extensions {
 
 // ExtensionsGuestViewManagerDelegate implements GuestViewManager functionality
-// specific to Chromium builds that include the extensions module.
+// specific to Cinaseek builds that include the extensions module.
 class ExtensionsGuestViewManagerDelegate
     : public guest_view::GuestViewManagerDelegate {
  public:

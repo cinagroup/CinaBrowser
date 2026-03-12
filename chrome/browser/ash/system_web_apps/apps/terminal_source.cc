@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -106,7 +106,7 @@ void ReadFile(const base::FilePath downloads,
   }
 
   // Terminal gets files from /usr/share/chromeos-assets/crosh-builtin.
-  // In chromium tests, these files don't exist, so we serve dummy values.
+  // In Cinaseek tests, these files don't exist, so we serve dummy values.
   if (!result) {
     static constexpr auto kTestFiles =
         base::MakeFixedFlatMap<std::string_view, std::string_view>({

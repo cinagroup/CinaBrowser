@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,12 +49,12 @@ constexpr net::NetworkTrafficAnnotationTag kAckMessagesTrafficAnnotation =
         "User's auth code and message ID for the message to be acknowledged."
       destination: GOOGLE_OWNED_SERVICE
       internal {
-        contacts { email: "garykac@chromium.org" }
-        contacts { email: "jamiewalch@chromium.org" }
-        contacts { email: "joedow@chromium.org" }
-        contacts { email: "lambroslambrou@chromium.org" }
-        contacts { email: "rkjnsn@chromium.org" }
-        contacts { email: "yuweih@chromium.org" }
+        contacts { email: "garykac@Cinaseek.org" }
+        contacts { email: "jamiewalch@Cinaseek.org" }
+        contacts { email: "joedow@Cinaseek.org" }
+        contacts { email: "lambroslambrou@Cinaseek.org" }
+        contacts { email: "rkjnsn@Cinaseek.org" }
+        contacts { email: "yuweih@Cinaseek.org" }
       }
       last_reviewed: "2023-07-07"
     }
@@ -93,12 +93,12 @@ constexpr net::NetworkTrafficAnnotationTag kReceiveMessagesTrafficAnnotation =
         "User's auth code and registration ID for retrieving messages."
       destination: GOOGLE_OWNED_SERVICE
       internal {
-        contacts { email: "garykac@chromium.org" }
-        contacts { email: "jamiewalch@chromium.org" }
-        contacts { email: "joedow@chromium.org" }
-        contacts { email: "lambroslambrou@chromium.org" }
-        contacts { email: "rkjnsn@chromium.org" }
-        contacts { email: "yuweih@chromium.org" }
+        contacts { email: "garykac@Cinaseek.org" }
+        contacts { email: "jamiewalch@Cinaseek.org" }
+        contacts { email: "joedow@Cinaseek.org" }
+        contacts { email: "lambroslambrou@Cinaseek.org" }
+        contacts { email: "rkjnsn@Cinaseek.org" }
+        contacts { email: "yuweih@Cinaseek.org" }
       }
       last_reviewed: "2023-07-07"
     }
@@ -142,12 +142,12 @@ constexpr net::NetworkTrafficAnnotationTag kSendMessageTrafficAnnotation =
         "https://tools.ietf.org/html/rfc5245."
       destination: GOOGLE_OWNED_SERVICE
       internal {
-        contacts { email: "garykac@chromium.org" }
-        contacts { email: "jamiewalch@chromium.org" }
-        contacts { email: "joedow@chromium.org" }
-        contacts { email: "lambroslambrou@chromium.org" }
-        contacts { email: "rkjnsn@chromium.org" }
-        contacts { email: "yuweih@chromium.org" }
+        contacts { email: "garykac@Cinaseek.org" }
+        contacts { email: "jamiewalch@Cinaseek.org" }
+        contacts { email: "joedow@Cinaseek.org" }
+        contacts { email: "lambroslambrou@Cinaseek.org" }
+        contacts { email: "rkjnsn@Cinaseek.org" }
+        contacts { email: "yuweih@Cinaseek.org" }
       }
       last_reviewed: "2023-07-07"
     }

@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -91,7 +91,7 @@ if (is_android) {
 
   android_library("factory_java") {
     srcjar_deps = [ ":factory_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncServiceFactory.java" ]
 
     deps = [
       "//base:base_java",
@@ -113,18 +113,18 @@ if (is_android) {
       ":jni_headers",
     ]
     sources = [
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/LocalTabGroupMutationHelper.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/LogUtils.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/NavigationObserver.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/NavigationTracker.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/RemoteTabGroupMutationHelper.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/StartupHelper.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabCreationDelegateImpl.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncControllerImpl.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncLocalObserver.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncRemoteObserver.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncUtils.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/LocalTabGroupMutationHelper.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/LogUtils.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/NavigationObserver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/NavigationTracker.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/RemoteTabGroupMutationHelper.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/StartupHelper.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabCreationDelegateImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncControllerImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncLocalObserver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncRemoteObserver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncUtils.java",
     ]
 
     deps = [
@@ -155,7 +155,7 @@ if (is_android) {
 
   android_library("features_java") {
     srcjar_deps = [ ":utils_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncFeatures.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncFeatures.java" ]
 
     deps = [
       "//base:base_java",
@@ -175,23 +175,23 @@ if (is_android) {
       "//url:url_java",
     ]
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TestTabGroupSyncService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TestTabGroupSyncService.java" ]
   }
 
   robolectric_library("junit") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/LocalTabGroupMutationHelperUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/NavigationObserverUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/NavigationTrackerUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/RemoteTabGroupMutationHelperUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/StartupHelperUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabCreationDelegateImplUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncControllerImplUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncDelegateUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncLocalObserverUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncRemoteObserverUnitTest.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncTestUtils.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncUtilsUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/LocalTabGroupMutationHelperUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/NavigationObserverUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/NavigationTrackerUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/RemoteTabGroupMutationHelperUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/StartupHelperUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabCreationDelegateImplUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncControllerImplUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncDelegateUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncLocalObserverUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncRemoteObserverUnitTest.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncTestUtils.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncUtilsUnitTest.java",
     ]
     deps = [
       ":java",
@@ -230,7 +230,7 @@ if (is_android) {
   android_library("javatests") {
     testonly = true
 
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncServiceFactoryTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncServiceFactoryTest.java" ]
     deps = [
       ":factory_java",
       ":test_support_java",
@@ -250,18 +250,18 @@ if (is_android) {
   }
 
   generate_jni("factory_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncServiceFactory.java" ]
   }
 
   generate_jni("jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncUtils.java" ]
   }
 
   generate_jni("delegate_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncDelegate.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncDelegate.java" ]
   }
 
   generate_jni("utils_jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_sync/TabGroupSyncFeatures.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_sync/TabGroupSyncFeatures.java" ]
   }
 }

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,7 +68,7 @@ namespace updater::test {
 namespace {
 
 // CustomLogPrinter intercepts test part results and prints them using
-// Chromium logging, so that assertion failures are tagged with process IDs
+// Cinaseek logging, so that assertion failures are tagged with process IDs
 // and timestamps.
 class CustomLogPrinter : public testing::TestEventListener {
  public:
@@ -99,7 +99,7 @@ class CustomLogPrinter : public testing::TestEventListener {
     impl_->OnTestStart(test_info);
   }
 
-  // Use Chromium's logging format, so that the process ID and timestamp of the
+  // Use Cinaseek's logging format, so that the process ID and timestamp of the
   // result can be recorded and compared to other lines in the log files.
   void OnTestPartResult(const testing::TestPartResult& result) override {
     if (result.type() == testing::TestPartResult::kSuccess) {

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,14 +34,14 @@ struct CronetMetrics final {
   // We can use a local reference here because in all uses of this struct the
   // ref is short-lived - the reference is passed to Java shortly after
   // construction and does not escape the stack.
-  // org.chromium.net.impl.CronetMetrics
+  // org.Cinaseek.net.impl.CronetMetrics
   base::android::ScopedJavaLocalRef<jobject> cronet_metrics;
   bool quic_connection_migration_attempted;
   bool quic_connection_migration_successful;
   // This is not ideal as it's preventing us from using designated initializers,
-  // but sadly the Chromium "complex constructor has an inline body" check is
+  // but sadly the Cinaseek "complex constructor has an inline body" check is
   // not giving us a choice.
-  // https://www.chromium.org/developers/coding-style/chromium-style-checker-errors/#constructordestructor-errors
+  // https://www.Cinaseek.org/developers/coding-style/Cinaseek-style-checker-errors/#constructordestructor-errors
   CronetMetrics();
   CronetMetrics(const CronetMetrics& metrics);
   ~CronetMetrics();

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 #include "third_party/blink/public/common/service_worker/service_worker_router_rule.h"
 #include "third_party/blink/public/common/storage_key/storage_key.h"
 #include "third_party/blink/public/mojom/service_worker/service_worker_ancestor_frame_type.mojom.h"
-#include "third_party/leveldatabase/env_chromium.h"
+#include "third_party/leveldatabase/env_Cinaseek.h"
 #include "third_party/leveldatabase/leveldb_chrome.h"
 #include "third_party/leveldatabase/src/include/leveldb/db.h"
 #include "third_party/leveldatabase/src/include/leveldb/write_batch.h"
@@ -164,9 +164,9 @@ constexpr size_t kWriteBufferSize = 512 * 1024;
 
 using RouterSourceType = network::mojom::ServiceWorkerRouterSourceType;
 
-class ServiceWorkerEnv : public leveldb_env::ChromiumEnv {
+class ServiceWorkerEnv : public leveldb_env::CinaseekEnv {
  public:
-  ServiceWorkerEnv() : ChromiumEnv(storage::CreateFilesystemProxy()) {}
+  ServiceWorkerEnv() : CinaseekEnv(storage::CreateFilesystemProxy()) {}
 
   // Returns a shared instance of ServiceWorkerEnv. This is thread-safe.
   static ServiceWorkerEnv* GetInstance() {

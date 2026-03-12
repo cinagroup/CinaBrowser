@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 @class FormInputAccessoryViewTextData;
 
 // A version of `FormInputAccessoryViewTextData` with all the fields filled in
-// with Chromium data.
-FormInputAccessoryViewTextData* ChromiumAccessoryViewTextData();
+// with Cinaseek data.
+FormInputAccessoryViewTextData* CinaseekAccessoryViewTextData();
 
 #endif  // IOS_CHROME_BROWSER_AUTOFILL_FORM_INPUT_ACCESSORY_PUBLIC_FORM_INPUT_ACCESSORY_CHROMIUM_TEXT_DATA_H_

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,10 +97,10 @@ class PopularSitesTest : public ::testing::Test {
             {kLargeIconUrl, "https://s.ytimg.com/apple-touch-icon.png"},
             {kTitleSource, "1"},  // Title extracted from manifest.
         },
-        kChromium{
-            {kTitle, "The Chromium Project"},
-            {kUrl, "https://www.chromium.org/"},
-            {kFaviconUrl, "https://www.chromium.org/favicon.ico"},
+        kCinaseek{
+            {kTitle, "The Cinaseek Project"},
+            {kUrl, "https://www.Cinaseek.org/"},
+            {kFaviconUrl, "https://www.Cinaseek.org/favicon.ico"},
             // No "title_source" (like in v5 or earlier). Defaults to TITLE_TAG.
         },
         prefs_(new sync_preferences::TestingPrefServiceSyncable()),
@@ -212,7 +212,7 @@ class PopularSitesTest : public ::testing::Test {
 
   const TestPopularSite kWikipedia;
   const TestPopularSite kYouTube;
-  const TestPopularSite kChromium;
+  const TestPopularSite kCinaseek;
 
   base::test::TaskEnvironment task_environment_{
       base::test::SingleThreadTaskEnvironment::MainThreadType::UI};
@@ -285,7 +285,7 @@ TEST_F(PopularSitesTest, Fallback) {
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_5.json");
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_DEFAULT_5.json",
-      {kYouTube, kChromium});
+      {kYouTube, kCinaseek});
 
   PopularSites::SitesVector sites;
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
@@ -298,11 +298,11 @@ TEST_F(PopularSitesTest, Fallback) {
               URLEq("https://s.ytimg.com/apple-touch-icon.png"));
   EXPECT_THAT(sites[0].favicon_url, URLEq(""));
   EXPECT_THAT(sites[0].title_source, Eq(TileTitleSource::MANIFEST));
-  EXPECT_THAT(sites[1].title, Str16Eq("The Chromium Project"));
-  EXPECT_THAT(sites[1].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[1].title, Str16Eq("The Cinaseek Project"));
+  EXPECT_THAT(sites[1].url, URLEq("https://www.Cinaseek.org/"));
   EXPECT_THAT(sites[1].large_icon_url, URLEq(""));
   EXPECT_THAT(sites[1].favicon_url,
-              URLEq("https://www.chromium.org/favicon.ico"));
+              URLEq("https://www.Cinaseek.org/favicon.ico"));
   // Fall back to TITLE_TAG if there is no "title_source". Version 5 or before
   // haven't had this property and get titles from <title> tags exclusively.
   EXPECT_THAT(sites[1].title_source, Eq(TileTitleSource::TITLE_TAG));
@@ -427,10 +427,10 @@ TEST_F(PopularSitesTest, DoesntUseCachedFileIfDownloadForced) {
   // File disappears from server. Download is forced, so we get the new file.
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_5.json",
-      {kChromium});
+      {kCinaseek});
   EXPECT_THAT(FetchPopularSites(/*force_download=*/true, &sites),
               Eq(std::optional<bool>(true)));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
 }
 
 // V7 uses the V5 format. ParseSites() should be detect this, and fall back to
@@ -439,11 +439,11 @@ TEST_F(PopularSitesTest, ParsesV7AsV5) {
   SetCountryAndVersion("ZZ", "7");
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_7.json",
-      {kChromium});
+      {kCinaseek});
   PopularSites::SitesVector sites;
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               Eq(std::optional<bool>(true)));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
   EXPECT_THAT(prefs_->GetInteger(prefs::kPopularSitesVersionPref), Eq(7));
 }
 
@@ -464,10 +464,10 @@ TEST_F(PopularSitesTest, DoesntUseCacheWithDeprecatedVersion) {
   SetCountryAndVersion("ZZ", "6");
   RespondWithV6JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_6.json",
-      {{SectionType::PERSONALIZED, {kChromium}}});
+      {{SectionType::PERSONALIZED, {kCinaseek}}});
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               Eq(std::optional<bool>(true)));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
   EXPECT_THAT(prefs_->GetInteger(prefs::kPopularSitesVersionPref), Eq(6));
 }
 
@@ -476,12 +476,12 @@ TEST_F(PopularSitesTest, FallsBackToDefaultParserIfVersionContainsNoNumber) {
   // The version is used in the URL, as planned when setting it.
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_staging.json",
-      {kChromium});
+      {kCinaseek});
   PopularSites::SitesVector sites;
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               Eq(std::optional<bool>(true)));
   ASSERT_THAT(sites.size(), Eq(1u));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
 }
 
 TEST_F(PopularSitesTest, RefetchesAfterCountryMoved) {
@@ -490,7 +490,7 @@ TEST_F(PopularSitesTest, RefetchesAfterCountryMoved) {
       {kWikipedia});
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZX_5.json",
-      {kChromium});
+      {kCinaseek});
 
   PopularSites::SitesVector sites;
 
@@ -500,11 +500,11 @@ TEST_F(PopularSitesTest, RefetchesAfterCountryMoved) {
               Eq(std::optional<bool>(true)));
   EXPECT_THAT(sites[0].url, URLEq("https://zz.m.wikipedia.org/"));
 
-  // Second request (now in ZX) saves Chromium.
+  // Second request (now in ZX) saves Cinaseek.
   SetCountryAndVersion("ZX", "5");
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               std::optional<bool>(true));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
 }
 
 TEST_F(PopularSitesTest, DoesntCacheInvalidFile) {
@@ -523,11 +523,11 @@ TEST_F(PopularSitesTest, DoesntCacheInvalidFile) {
   // Second request refetches ZZ_9, which now has data.
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_5.json",
-      {kChromium});
+      {kCinaseek});
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               Eq(std::optional<bool>(true)));
   ASSERT_THAT(sites.size(), Eq(1u));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
 }
 
 TEST_F(PopularSitesTest, RefetchesAfterFallback) {
@@ -548,11 +548,11 @@ TEST_F(PopularSitesTest, RefetchesAfterFallback) {
   // Second request refetches ZZ_9, which now has data.
   RespondWithV5JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_5.json",
-      {kChromium});
+      {kCinaseek});
   EXPECT_THAT(FetchPopularSites(/*force_download=*/false, &sites),
               Eq(std::optional<bool>(true)));
   ASSERT_THAT(sites.size(), Eq(1u));
-  EXPECT_THAT(sites[0].url, URLEq("https://www.chromium.org/"));
+  EXPECT_THAT(sites[0].url, URLEq("https://www.Cinaseek.org/"));
 }
 
 TEST_F(PopularSitesTest, ShouldOverrideDirectory) {
@@ -572,7 +572,7 @@ TEST_F(PopularSitesTest, DoesNotFetchExplorationSites) {
   SetCountryAndVersion("ZZ", "6");
   RespondWithV6JSON(
       "https://www.gstatic.com/chrome/ntp/suggested_sites_ZZ_6.json",
-      {{SectionType::PERSONALIZED, {kChromium}},
+      {{SectionType::PERSONALIZED, {kCinaseek}},
        {SectionType::NEWS, {kYouTube}}});
 
   std::map<SectionType, PopularSites::SitesVector> sections;

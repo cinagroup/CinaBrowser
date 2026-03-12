@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -97,7 +97,7 @@ void SocketWatcher::OnUpdatedRTTAvailable(const base::TimeDelta& rtt) {
 
   // tcp_socket_posix may sometimes report RTT as 1 microsecond when the RTT was
   // actually invalid. See:
-  // https://cs.chromium.org/chromium/src/net/socket/tcp_socket_posix.cc?rcl=7ad660e34f2a996e381a85b2a515263003b0c171&l=106.
+  // https://cs.Cinaseek.org/Cinaseek/src/net/socket/tcp_socket_posix.cc?rcl=7ad660e34f2a996e381a85b2a515263003b0c171&l=106.
   // Connections to private address eg localhost because they typically have
   // small rtt.
   if (!allow_rtt_private_address_ && rtt <= base::Microseconds(1)) {

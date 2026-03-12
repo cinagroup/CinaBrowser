@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@
 namespace net {
 
 QuicProxyClientSocket::QuicProxyClientSocket(
-    std::unique_ptr<QuicChromiumClientStream::Handle> stream,
-    std::unique_ptr<QuicChromiumClientSession::Handle> session,
+    std::unique_ptr<QuicCinaseekClientStream::Handle> stream,
+    std::unique_ptr<QuicCinaseekClientSession::Handle> session,
     const ProxyChain& proxy_chain,
     size_t proxy_chain_index,
     const std::string& user_agent,

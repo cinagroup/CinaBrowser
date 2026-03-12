@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,15 +27,15 @@ android_apk("webview_captured_sites_app_apk") {
 robolectric_binary("captured_sites_junit_tests") {
   android_manifest = "java/AndroidManifest.xml"
   sources = [
-    "javatests/src/org/chromium/webview_ui_test/test/robolectric/AutofillProfileTest.java",
-    "javatests/src/org/chromium/webview_ui_test/test/robolectric/CapturedSitesInstructionsTest.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/Action.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/AutofillProfile.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesInstructions.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesSyncWrapper.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesTestRule.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/JavaScriptExecutionViewAction.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/PerformActions.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/robolectric/AutofillProfileTest.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/robolectric/CapturedSitesInstructionsTest.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/Action.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/AutofillProfile.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesInstructions.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesSyncWrapper.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesTestRule.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/JavaScriptExecutionViewAction.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/PerformActions.java",
   ]
   deps = [
     ":webview_captured_sites_app_java",
@@ -55,8 +55,8 @@ robolectric_binary("captured_sites_junit_tests") {
 }
 android_library("webview_captured_sites_app_java") {
   sources = [
-    "../automated_ui_tests/java/src/org/chromium/webview_ui_test/WebViewUiTestActivity.java",
-    "../automated_ui_tests/javatests/src/org/chromium/webview_ui_test/test/util/UseLayout.java",
+    "../automated_ui_tests/java/src/org/Cinaseek/webview_ui_test/WebViewUiTestActivity.java",
+    "../automated_ui_tests/javatests/src/org/Cinaseek/webview_ui_test/test/util/UseLayout.java",
   ]
   deps = [
     ":webview_captured_sites_app_apk_resources",
@@ -74,15 +74,15 @@ instrumentation_test_apk("webview_captured_sites_test_apk") {
   apk_under_test = ":webview_captured_sites_app_apk"
   android_manifest = "javatests/AndroidManifest.xml"
   sources = [
-    "javatests/src/org/chromium/webview_ui_test/test/CapturedSitesTest.java",
-    "javatests/src/org/chromium/webview_ui_test/test/TestAutofillService.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/Action.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/AutofillProfile.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesInstructions.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesSyncWrapper.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/CapturedSitesTestRule.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/JavaScriptExecutionViewAction.java",
-    "javatests/src/org/chromium/webview_ui_test/test/util/PerformActions.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/CapturedSitesTest.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/TestAutofillService.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/Action.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/AutofillProfile.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesInstructions.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesSyncWrapper.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/CapturedSitesTestRule.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/JavaScriptExecutionViewAction.java",
+    "javatests/src/org/Cinaseek/webview_ui_test/test/util/PerformActions.java",
   ]
   deps = [
     ":webview_captured_sites_app_apk_resources",

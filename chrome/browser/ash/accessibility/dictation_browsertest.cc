@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1544,7 +1544,7 @@ IN_PROC_BROWSER_TEST_P(DictationUITest, StandbyHints) {
 // Ensures that Search + D can be used to toggle Dictation when ChromeVox is
 // active. Also verifies that ChromeVox announces hints when they are shown in
 // the Dictation UI.
-// TODO(crbug.com/453928508): Flaky on Linux ChromiumOS MSan Tests, and Debug
+// TODO(crbug.com/453928508): Flaky on Linux CinaseekOS MSan Tests, and Debug
 // bots.
 #if defined(MEMORY_SANITIZER) || !defined(NDEBUG)
 #define MAYBE_ChromeVoxAnnouncesHints DISABLED_ChromeVoxAnnouncesHints
@@ -2338,7 +2338,7 @@ IN_PROC_BROWSER_TEST_P(DictationKeyboardImprovementsTest,
 
 // Verifies that ChromeVox announces a message when when Dictation is toggled
 // when there is no focused editable.
-// TODO(b:259352600): Flaky on MSAN & ASAN and Linux ChromiumOS in general.
+// TODO(b:259352600): Flaky on MSAN & ASAN and Linux CinaseekOS in general.
 IN_PROC_BROWSER_TEST_P(DictationKeyboardImprovementsTest,
                        DISABLED_ToggledWithNoFocusTriggersSpeech) {
   TabAwayFromEditableAndReduceNoFocusedImeTimeout();

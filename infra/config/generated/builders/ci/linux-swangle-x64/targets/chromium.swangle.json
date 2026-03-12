@@ -17,11 +17,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_egl_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_egl_tests/",
@@ -43,11 +43,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles2_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles2_tests/",
@@ -69,11 +69,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles31_rotate180_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles31_rotate180_tests/",
@@ -95,11 +95,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles31_rotate270_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles31_rotate270_tests/",
@@ -121,11 +121,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles31_rotate90_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles31_rotate90_tests/",
@@ -147,11 +147,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "angle_deqp_gles31_tests",
@@ -174,11 +174,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles3_rotate180_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles3_rotate180_tests/",
@@ -200,11 +200,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles3_rotate270_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles3_rotate270_tests/",
@@ -226,11 +226,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_gles3_rotate90_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_gles3_rotate90_tests/",
@@ -252,11 +252,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 4
         },
         "test": "angle_deqp_gles3_tests",
@@ -279,11 +279,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_khr_gles2_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_khr_gles2_tests/",
@@ -305,11 +305,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_khr_gles31_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_khr_gles31_tests/",
@@ -331,11 +331,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "angle_deqp_khr_gles3_tests",
         "test_id_prefix": "ninja://third_party/angle/src/tests:angle_deqp_khr_gles3_tests/",
@@ -357,11 +357,11 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "hard_timeout": 900,
           "io_timeout": 900,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "angle_end2end_tests",

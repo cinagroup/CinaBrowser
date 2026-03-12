@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@ namespace autofill::autofill_metrics {
 // numeric values should never be reused.
 //
 // A java IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class SaveIbanPromptResult {
   // The user explicitly accepted the prompt by clicking the ok button.
   kAccepted = 0,
@@ -42,7 +42,7 @@ enum class SaveIbanPromptResult {
 // numeric values should never be reused.
 //
 // A java IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
 enum class SaveIbanPromptOffer {
   // The prompt is actually shown.
   kShown = 0,

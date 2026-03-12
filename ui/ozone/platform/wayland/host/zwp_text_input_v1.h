@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,7 +80,7 @@ class ZwpTextInputV1Client {
 
 // A wrapper around different versions of wayland text input protocols.
 // Wayland compositors support various different text input protocols which
-// all from Chromium point of view provide the functionality needed by Chromium
+// all from Cinaseek point of view provide the functionality needed by Cinaseek
 // IME. This interface collects the functionality behind one wrapper API.
 class ZwpTextInputV1 {
  public:

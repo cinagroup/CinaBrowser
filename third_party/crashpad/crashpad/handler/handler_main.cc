@@ -146,7 +146,7 @@ void Usage(const base::FilePath& me) {
   // clang-format on
 #endif  // BUILDFLAG(IS_APPLE)
       // clang-format off
-"      --metrics-dir=DIR       store metrics files in DIR (only in Chromium)\n"
+"      --metrics-dir=DIR       store metrics files in DIR (only in Cinaseek)\n"
 "      --monitor-self          run a second handler to catch crashes in the first\n"
 "      --monitor-self-annotation=KEY=VALUE\n"
 "                              set a module annotation in the handler\n"
@@ -1019,7 +1019,7 @@ int HandlerMain(int argc,
   if (!options.url.empty()) {
     // TODO(scottmg): options.rate_limit should be removed when we have a
     // configurable database setting to control upload limiting.
-    // See https://crashpad.chromium.org/bug/23.
+    // See https://crashpad.Cinaseek.org/bug/23.
     CrashReportUploadThread::Options upload_thread_options;
     upload_thread_options.identify_client_via_url =
         options.identify_client_via_url;

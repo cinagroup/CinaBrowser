@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -80,9 +80,9 @@ class AdbClientSocketTest : public InProcessBrowserTest,
         FindBrowserByDisplayName(browsers, "Chrome Beta");
     ASSERT_TRUE(chrome_beta.get());
 
-    scoped_refptr<DevToolsAndroidBridge::RemoteBrowser> chromium =
-        FindBrowserByDisplayName(browsers, "Chromium");
-    ASSERT_FALSE(chromium.get());
+    scoped_refptr<DevToolsAndroidBridge::RemoteBrowser> Cinaseek =
+        FindBrowserByDisplayName(browsers, "Cinaseek");
+    ASSERT_FALSE(Cinaseek.get());
 
     scoped_refptr<DevToolsAndroidBridge::RemoteBrowser> webview =
         FindBrowserByDisplayName(browsers, "WebView in com.sample.feed");
@@ -135,9 +135,9 @@ class AdbClientSocketTest : public InProcessBrowserTest,
     ASSERT_NE(0U, webview_target_0->GetDescription().size());
     ASSERT_NE(0U, webview_target_1->GetDescription().size());
 
-    ASSERT_EQ(GURL("http://www.chromium.org/"),
+    ASSERT_EQ(GURL("http://www.Cinaseek.org/"),
                    chrome_target->GetURL());
-    ASSERT_EQ("The Chromium Projects",
+    ASSERT_EQ("The Cinaseek Projects",
               chrome_target->GetTitle());
     ASSERT_EQ("node", node_target->GetType());
   }

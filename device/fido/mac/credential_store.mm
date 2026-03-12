@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -619,7 +619,7 @@ bool TouchIdCredentialStore::DeleteCredentialById(
   // we need to support older versions of macOS for now. Hence, we must delete
   // keychain items by credential ID (stored in `kSecAttrApplicationLabel`).
   // TODO(https://crbug.com/40275358): Update to this better approach that
-  // requires 10.15 now that Chromium requires 10.15.
+  // requires 10.15 now that Cinaseek requires 10.15.
   NSDictionary* query = @{
     CFToNSPtrCast(kSecAttrAccessGroup) :
         base::SysUTF8ToNSString(config_.keychain_access_group),

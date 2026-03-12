@@ -2,10 +2,10 @@ rootWebArea name='done'
 ++genericContainer ignored
 ++++genericContainer ignored
 ++++++main
-++++++++group name='These radio buttons will randomly not have a label on Chromium web browsers.'
+++++++++group name='These radio buttons will randomly not have a label on Cinaseek web browsers.'
 ++++++++++legend
-++++++++++++staticText name='These radio buttons will randomly not have a label on Chromium web browsers.'
-++++++++++++++inlineTextBox name='These radio buttons will randomly not have a label on Chromium web browsers.'
+++++++++++++staticText name='These radio buttons will randomly not have a label on Cinaseek web browsers.'
+++++++++++++++inlineTextBox name='These radio buttons will randomly not have a label on Cinaseek web browsers.'
 ++++++++++radioButton name='Apple' checkedState=false
 ++++++++++labelText
 ++++++++++++staticText name='Apple'

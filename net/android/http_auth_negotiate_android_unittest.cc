@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ TEST(HttpAuthNegotiateAndroidTest, GenerateAuthToken) {
 
   MockAllowHttpAuthPreferences prefs;
   prefs.set_auth_android_negotiate_account_type(
-      "org.chromium.test.DummySpnegoAuthenticator");
+      "org.Cinaseek.test.DummySpnegoAuthenticator");
   HttpAuthNegotiateAndroid auth(&prefs);
   EXPECT_TRUE(auth.Init(NetLogWithSource()));
 
@@ -48,7 +48,7 @@ TEST(HttpAuthNegotiateAndroidTest, ParseChallenge_FirstRound) {
   // The first round should just consist of an unadorned "Negotiate" header.
   MockAllowHttpAuthPreferences prefs;
   prefs.set_auth_android_negotiate_account_type(
-      "org.chromium.test.DummySpnegoAuthenticator");
+      "org.Cinaseek.test.DummySpnegoAuthenticator");
   HttpAuthNegotiateAndroid auth(&prefs);
   HttpAuthChallengeTokenizer challenge("Negotiate");
   EXPECT_EQ(HttpAuth::AUTHORIZATION_RESULT_ACCEPT,
@@ -60,7 +60,7 @@ TEST(HttpAuthNegotiateAndroidTest, ParseChallenge_UnexpectedTokenFirstRound) {
   // should be treated as an invalid challenge from the server.
   MockAllowHttpAuthPreferences prefs;
   prefs.set_auth_android_negotiate_account_type(
-      "org.chromium.test.DummySpnegoAuthenticator");
+      "org.Cinaseek.test.DummySpnegoAuthenticator");
   HttpAuthNegotiateAndroid auth(&prefs);
   HttpAuthChallengeTokenizer challenge("Negotiate Zm9vYmFy");
   EXPECT_EQ(HttpAuth::AUTHORIZATION_RESULT_INVALID,
@@ -72,7 +72,7 @@ TEST(HttpAuthNegotiateAndroidTest, ParseChallenge_TwoRounds) {
   // have a valid base64 token associated with it.
   MockAllowHttpAuthPreferences prefs;
   prefs.set_auth_android_negotiate_account_type(
-      "org.chromium.test.DummySpnegoAuthenticator");
+      "org.Cinaseek.test.DummySpnegoAuthenticator");
   HttpAuthNegotiateAndroid auth(&prefs);
   HttpAuthChallengeTokenizer first_challenge("Negotiate");
   EXPECT_EQ(HttpAuth::AUTHORIZATION_RESULT_ACCEPT,
@@ -88,7 +88,7 @@ TEST(HttpAuthNegotiateAndroidTest, ParseChallenge_MissingTokenSecondRound) {
   // an authentication challenge rejection from the server or proxy.
   MockAllowHttpAuthPreferences prefs;
   prefs.set_auth_android_negotiate_account_type(
-      "org.chromium.test.DummySpnegoAuthenticator");
+      "org.Cinaseek.test.DummySpnegoAuthenticator");
   HttpAuthNegotiateAndroid auth(&prefs);
   HttpAuthChallengeTokenizer first_challenge("Negotiate");
   EXPECT_EQ(HttpAuth::AUTHORIZATION_RESULT_ACCEPT,

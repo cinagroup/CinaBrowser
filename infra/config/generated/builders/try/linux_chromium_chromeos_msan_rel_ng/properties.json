@@ -1,26 +1,26 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
-        "infra/config/generated/builders/try/linux_chromium_chromeos_msan_rel_ng/gn-args.json"
+        "infra/config/generated/builders/try/linux_Cinaseek_chromeos_msan_rel_ng/gn-args.json"
       ],
       "builder_db": {
         "entries": [
           {
             "builder_id": {
               "bucket": "ci",
-              "builder": "Linux ChromiumOS MSan Builder",
-              "project": "chromium"
+              "builder": "Linux CinaseekOS MSan Builder",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_msan",
+                "config": "Cinaseek_msan",
                 "target_bits": 64,
                 "target_platform": "chromeos"
               },
@@ -28,25 +28,25 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           },
           {
             "builder_id": {
               "bucket": "ci",
-              "builder": "Linux ChromiumOS MSan Tests",
-              "project": "chromium"
+              "builder": "Linux CinaseekOS MSan Tests",
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.memory",
+              "builder_group": "Cinaseek.memory",
               "execution_mode": "TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium_msan",
+                "config": "Cinaseek_msan",
                 "target_bits": 64,
                 "target_platform": "chromeos"
               },
@@ -54,12 +54,12 @@
                 "apply_configs": [
                   "chromeos"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               },
               "parent": {
                 "bucket": "ci",
-                "builder": "Linux ChromiumOS MSan Builder",
-                "project": "chromium"
+                "builder": "Linux CinaseekOS MSan Builder",
+                "project": "Cinaseek"
               }
             }
           }
@@ -68,18 +68,18 @@
       "builder_ids": [
         {
           "bucket": "ci",
-          "builder": "Linux ChromiumOS MSan Builder",
-          "project": "chromium"
+          "builder": "Linux CinaseekOS MSan Builder",
+          "project": "Cinaseek"
         }
       ],
       "builder_ids_in_scope_for_testing": [
         {
           "bucket": "ci",
-          "builder": "Linux ChromiumOS MSan Tests",
-          "project": "chromium"
+          "builder": "Linux CinaseekOS MSan Tests",
+          "project": "Cinaseek"
         }
       ],
-      "targets_spec_directory": "infra/config/generated/builders/try/linux_chromium_chromeos_msan_rel_ng/targets"
+      "targets_spec_directory": "infra/config/generated/builders/try/linux_Cinaseek_chromeos_msan_rel_ng/targets"
     }
   },
   "$build/siso": {
@@ -93,7 +93,7 @@
     "keep_going": 3,
     "output_local_strategy": "minimum",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": -1
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -103,6 +103,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.linux",
-  "recipe": "chromium_trybot"
+  "builder_group": "tryserver.Cinaseek.linux",
+  "recipe": "Cinaseek_trybot"
 }

@@ -17,9 +17,9 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Mac-12",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "updater_tests",
         "test_id_prefix": "ninja://chrome/updater:updater_tests/"
@@ -35,9 +35,9 @@
           "dimensions": {
             "cpu": "x86-64",
             "os": "Mac-12",
-            "pool": "chromium.tests.updater"
+            "pool": "Cinaseek.tests.updater"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "updater_tests_system",
         "test_id_prefix": "ninja://chrome/updater:updater_tests_system/"

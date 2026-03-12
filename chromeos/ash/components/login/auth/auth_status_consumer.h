@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ class UserContext;
 
 // An interface that defines the callbacks for objects that the
 // Authenticator class will call to report the success/failure of
-// authentication for Chromium OS.
+// authentication for Cinaseek OS.
 class COMPONENT_EXPORT(CHROMEOS_ASH_COMPONENTS_LOGIN_AUTH) AuthStatusConsumer
     : public base::CheckedObserver {
  public:

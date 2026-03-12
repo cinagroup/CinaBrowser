@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,19 +66,19 @@ class TemplateUrlServiceAndroidUnitTest
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, SetPlayAPISearchEngine) {
   base::HistogramTester histogram_tester;
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
 
-  auto short_name = ToLocalJavaString(u"Chromium Search");
+  auto short_name = ToLocalJavaString(u"Cinaseek Search");
   auto jkeyword = ToLocalJavaString(keyword);
   auto search_url =
-      ToLocalJavaString("http://chromium.org/search?q={searchTerms}");
-  auto suggest_url = ToLocalJavaString("http://chromium.org/search/suggest");
-  auto favicon_url = ToLocalJavaString("http://chromium.org/search/favicon");
-  auto new_tab_url = ToLocalJavaString("https://chromium.org/search/newtab");
-  auto image_url = ToLocalJavaString("https://chromium.org/search/img");
+      ToLocalJavaString("http://Cinaseek.org/search?q={searchTerms}");
+  auto suggest_url = ToLocalJavaString("http://Cinaseek.org/search/suggest");
+  auto favicon_url = ToLocalJavaString("http://Cinaseek.org/search/favicon");
+  auto new_tab_url = ToLocalJavaString("https://Cinaseek.org/search/newtab");
+  auto image_url = ToLocalJavaString("https://Cinaseek.org/search/img");
   auto image_url_post_params = ToLocalJavaString("param");
   auto image_translate_url =
-      ToLocalJavaString("https://chromium.org/search/transl");
+      ToLocalJavaString("https://Cinaseek.org/search/transl");
   auto image_translate_source_language_param_key = ToLocalJavaString("s");
   auto image_translate_target_language_param_key = ToLocalJavaString("t");
 
@@ -106,11 +106,11 @@ TEST_F(TemplateUrlServiceAndroidUnitTest, SetPlayAPISearchEngine) {
 }
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, RemoveSearchEngine) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   TemplateURLData data;
   data.SetShortName(u"Delete Test");
   data.SetKeyword(keyword);
-  data.SetURL("http://chromium.org/search/delete");
+  data.SetURL("http://Cinaseek.org/search/delete");
   template_url_service().Add(std::make_unique<TemplateURL>(data));
   ASSERT_TRUE(template_url_service().GetTemplateURLForKeyword(keyword));
 
@@ -133,18 +133,18 @@ TEST_F(TemplateUrlServiceAndroidUnitTest,
 }
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, EditSearchEngine) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   TemplateURLData data;
   data.SetShortName(u"Edit Test");
   data.SetKeyword(keyword);
-  data.SetURL("http://chromium.org/search/edit");
+  data.SetURL("http://Cinaseek.org/search/edit");
   template_url_service().Add(std::make_unique<TemplateURL>(data));
 
   ASSERT_TRUE(template_url_service().GetTemplateURLForKeyword(keyword));
 
   const std::u16string new_short_name = u"New Edit Test";
-  const std::u16string new_keyword = u"new_chromium";
-  const std::string new_url = "http://chromium.org/search/edit_new";
+  const std::u16string new_keyword = u"new_Cinaseek";
+  const std::string new_url = "http://Cinaseek.org/search/edit_new";
 
   EXPECT_TRUE(template_url_service_android().EditSearchEngine(
       env(), keyword, new_short_name, new_keyword, new_url));
@@ -159,9 +159,9 @@ TEST_F(TemplateUrlServiceAndroidUnitTest, EditSearchEngine) {
 }
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, AddSearchEngine) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   const std::u16string short_name = u"Add Test";
-  const std::string search_url = "http://chromium.org/search/add";
+  const std::string search_url = "http://Cinaseek.org/search/add";
 
   EXPECT_TRUE(template_url_service_android().AddSearchEngine(
       env(), short_name, keyword, search_url));
@@ -175,15 +175,15 @@ TEST_F(TemplateUrlServiceAndroidUnitTest, AddSearchEngine) {
 }
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, AddSearchEngineFailed_KeywordExists) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   TemplateURLData data;
   data.SetShortName(u"Existing");
   data.SetKeyword(keyword);
-  data.SetURL("http://chromium.org/search/existing");
+  data.SetURL("http://Cinaseek.org/search/existing");
   template_url_service().Add(std::make_unique<TemplateURL>(data));
 
   const std::u16string short_name = u"Existing2";
-  const std::string search_url = "http://chromium.org/search/add";
+  const std::string search_url = "http://Cinaseek.org/search/add";
 
   EXPECT_FALSE(template_url_service_android().AddSearchEngine(
       env(), short_name, keyword, search_url));
@@ -191,19 +191,19 @@ TEST_F(TemplateUrlServiceAndroidUnitTest, AddSearchEngineFailed_KeywordExists) {
 
 TEST_F(TemplateUrlServiceAndroidUnitTest,
        EditSearchEngineFailed_PrepopulatedEngine) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   TemplateURLData data;
   data.SetShortName(u"Edit Test");
   data.SetKeyword(keyword);
-  data.SetURL("http://chromium.org/search/edit");
+  data.SetURL("http://Cinaseek.org/search/edit");
   data.prepopulate_id = 1;
   template_url_service().Add(std::make_unique<TemplateURL>(data));
 
   ASSERT_TRUE(template_url_service().GetTemplateURLForKeyword(keyword));
 
   const std::u16string new_short_name = u"New Edit Test";
-  const std::u16string new_keyword = u"new_chromium";
-  const std::string new_url = "http://chromium.org/search/edit_new";
+  const std::u16string new_keyword = u"new_Cinaseek";
+  const std::string new_url = "http://Cinaseek.org/search/edit_new";
 
   // EditSearchEngine should fail if we try to edit the url of a prepopulated
   // engine.
@@ -381,11 +381,11 @@ TEST_F(TemplateUrlServiceAndroidUnitTest, FilterTemplateUrlsByCategory) {
 }
 
 TEST_F(TemplateUrlServiceAndroidUnitTest, ActivateAndDeactivateSearchEngine) {
-  const std::u16string keyword = u"chromium";
+  const std::u16string keyword = u"Cinaseek";
   TemplateURLData data;
   data.SetShortName(u"Activate Test");
   data.SetKeyword(keyword);
-  data.SetURL("http://chromium.org/search/activate");
+  data.SetURL("http://Cinaseek.org/search/activate");
   template_url_service().Add(std::make_unique<TemplateURL>(data));
   EXPECT_EQ(
       template_url_service().GetTemplateURLForKeyword(keyword)->is_active(),

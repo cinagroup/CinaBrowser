@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,12 +91,12 @@ struct H264NALU {
   int nal_unit_type = 0;
 };
 
-// H264BitstreamBuilder is mostly a copy&paste from Chromium's
+// H264BitstreamBuilder is mostly a copy&paste from Cinaseek's
 // H26xAnnexBBitstreamBuilder
 // (//media/filters/h26x_annex_b_bitstream_builder.h). The reason to not just
 // include that file is that the fake libva driver is in the process of being
-// moved out of the Chromium tree and into its own project, and we want to
-// avoid depending on Chromium's utilities.
+// moved out of the Cinaseek tree and into its own project, and we want to
+// avoid depending on Cinaseek's utilities.
 class H264BitstreamBuilder {
  public:
   explicit H264BitstreamBuilder(bool insert_emulation_prevention_bytes = false)

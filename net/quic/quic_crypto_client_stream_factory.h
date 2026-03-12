@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace quic {
 class ProofVerifyContext;
 }  // namespace quic
 namespace net {
-class QuicChromiumClientSession;
+class QuicCinaseekClientSession;
 }  // namespace net
 namespace quic {
 class QuicCryptoClientConfig;
@@ -32,7 +32,7 @@ class NET_EXPORT QuicCryptoClientStreamFactory {
   virtual std::unique_ptr<quic::QuicCryptoClientStream>
   CreateQuicCryptoClientStream(
       const quic::QuicServerId& server_id,
-      QuicChromiumClientSession* session,
+      QuicCinaseekClientSession* session,
       std::unique_ptr<quic::ProofVerifyContext> proof_verify_context,
       quic::QuicCryptoClientConfig* crypto_config) = 0;
 

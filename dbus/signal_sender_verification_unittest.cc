@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,17 +53,17 @@ class SignalSenderVerificationTest : public testing::Test {
     bus_ = new Bus(std::move(bus_options));
     object_proxy_ = bus_->GetObjectProxy(
         test_service_->service_name(),
-        ObjectPath("/org/chromium/TestObject"));
+        ObjectPath("/org/Cinaseek/TestObject"));
     ASSERT_TRUE(bus_->HasDBusThread());
 
     object_proxy_->SetNameOwnerChangedCallback(base::BindRepeating(
         &SignalSenderVerificationTest::OnNameOwnerChanged,
         base::Unretained(this), &on_name_owner_changed_called_));
 
-    // Connect to the "Test" signal of "org.chromium.TestInterface" from
+    // Connect to the "Test" signal of "org.Cinaseek.TestInterface" from
     // the remote object.
     object_proxy_->ConnectToSignal(
-        "org.chromium.TestInterface", "Test",
+        "org.Cinaseek.TestInterface", "Test",
         base::BindRepeating(&SignalSenderVerificationTest::OnTestSignal,
                             base::Unretained(this)),
         base::BindOnce(&SignalSenderVerificationTest::OnConnected,
@@ -314,13 +314,13 @@ TEST_F(SignalSenderVerificationTest, DISABLED_TestOwnerStealing) {
   SafeServiceStop(&stealable_test_service);
 }
 
-// Fails on Linux ChromiumOS Tests
+// Fails on Linux CinaseekOS Tests
 TEST_F(SignalSenderVerificationTest, DISABLED_TestMultipleObjects) {
   const char kMessage[] = "hello, world";
 
   ObjectProxy* object_proxy2 = bus_->GetObjectProxy(
       test_service_->service_name(),
-      ObjectPath("/org/chromium/DifferentObject"));
+      ObjectPath("/org/Cinaseek/DifferentObject"));
 
   bool second_name_owner_changed_called = false;
   object_proxy2->SetNameOwnerChangedCallback(base::BindRepeating(
@@ -330,7 +330,7 @@ TEST_F(SignalSenderVerificationTest, DISABLED_TestMultipleObjects) {
   // Connect to a signal on the additional remote object to trigger the
   // name owner matching.
   object_proxy2->ConnectToSignal(
-      "org.chromium.DifferentTestInterface", "Test",
+      "org.Cinaseek.DifferentTestInterface", "Test",
       base::BindRepeating(&SignalSenderVerificationTest::OnTestSignal,
                           base::Unretained(this)),
       base::BindOnce(&SignalSenderVerificationTest::OnConnected,

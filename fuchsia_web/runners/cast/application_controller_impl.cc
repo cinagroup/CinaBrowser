@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,14 +16,14 @@
 
 ApplicationControllerImpl::ApplicationControllerImpl(
     fuchsia::web::Frame* frame,
-    fidl::Client<chromium_cast::ApplicationContext>& context,
+    fidl::Client<Cinaseek_cast::ApplicationContext>& context,
     uint64_t trace_flow_id)
     : frame_(frame), trace_flow_id_(trace_flow_id) {
   DCHECK(context);
   DCHECK(frame_);
 
   auto application_controller_endpoints =
-      fidl::CreateEndpoints<chromium_cast::ApplicationController>();
+      fidl::CreateEndpoints<Cinaseek_cast::ApplicationController>();
   ZX_CHECK(application_controller_endpoints.is_ok(),
            application_controller_endpoints.status_value());
   binding_.emplace(async_get_default_dispatcher(),
@@ -31,7 +31,7 @@ ApplicationControllerImpl::ApplicationControllerImpl(
                    [](fidl::UnbindInfo info) {
                      LOG_IF(WARNING, info.status() != ZX_ERR_PEER_CLOSED &&
                                          info.status() != ZX_ERR_CANCELED)
-                         << "Unbound from chromium.cast.ApplicationController: "
+                         << "Unbound from Cinaseek.cast.ApplicationController: "
                          << info;
                    });
   auto result = context->SetApplicationController(

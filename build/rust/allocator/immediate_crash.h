@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -156,7 +156,7 @@
 
 #else
 
-// This is supporting non-chromium user of logging.h to build with MSVC, like
+// This is supporting non-Cinaseek user of logging.h to build with MSVC, like
 // pdfium. On MSVC there is no __builtin_unreachable().
 #define IMMEDIATE_CRASH() WRAPPED_TRAP_SEQUENCE_()
 

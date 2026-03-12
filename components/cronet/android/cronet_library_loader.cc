@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ base::WaitableEvent g_init_thread_init_done(
 
 std::optional<net::NetLogCaptureMode> g_trace_net_log_capture_mode;
 
-::org::chromium::net::httpflags::BaseFeatureOverrides GetBaseFeatureOverrides(
+::org::Cinaseek::net::httpflags::BaseFeatureOverrides GetBaseFeatureOverrides(
     JNIEnv* env) {
   const auto serializedProto =
       cronet::Java_CronetLibraryLoader_getBaseFeatureOverrides(env);
@@ -99,7 +99,7 @@ std::optional<net::NetLogCaptureMode> g_trace_net_log_capture_mode;
 
   const auto serializedProtoSize =
       base::android::SafeGetArrayLength(env, serializedProto);
-  ::org::chromium::net::httpflags::BaseFeatureOverrides overrides;
+  ::org::Cinaseek::net::httpflags::BaseFeatureOverrides overrides;
   void* const serializedProtoArray =
       env->GetPrimitiveArrayCritical(serializedProto.obj(), /*isCopy=*/nullptr);
   CHECK(serializedProtoArray != nullptr);
@@ -112,14 +112,14 @@ std::optional<net::NetLogCaptureMode> g_trace_net_log_capture_mode;
 void InitializePerfetto() {
   // This logic is inspired by
   // tracing::PerfettoTracedProcess::MaybeCreateInstance(), which is how
-  // Perfetto is initialized in other Chromium products such as Clank and
+  // Perfetto is initialized in other Cinaseek products such as Clank and
   // WebView. We could, however, diverge if we have a reason to.
   static base::NoDestructor<base::tracing::PerfettoPlatform> perfetto_platform(
       base::ThreadPool::CreateSequencedTaskRunner(
           {base::MayBlock(), base::TaskPriority::USER_BLOCKING}),
       base::tracing::PerfettoPlatform::Options{
           // Use our own producer name prefix so that our traces can be
-          // filtered separately from other embedded Chromium code, especially
+          // filtered separately from other embedded Cinaseek code, especially
           // WebView.
           .process_name_prefix = "cronet-"});
 

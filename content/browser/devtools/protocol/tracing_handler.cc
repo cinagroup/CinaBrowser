@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -254,7 +254,7 @@ void AddPidsToProcessFilter(
 }
 
 bool IsChromeDataSource(const std::string& data_source_name) {
-  return base::StartsWith(data_source_name, "org.chromium.") ||
+  return base::StartsWith(data_source_name, "org.Cinaseek.") ||
          data_source_name == "track_event";
 }
 

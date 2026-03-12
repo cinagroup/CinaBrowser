@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ class Clock;
 // and enums.xml
 // LINT.IfChange
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.ssl
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.ssl
 enum class HttpsFirstModeSetting {
   kDisabled = 0,
   // DEPRECATED: A separate Incognito setting never shipped.

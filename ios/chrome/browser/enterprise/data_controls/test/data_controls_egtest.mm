@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,21 +32,21 @@ NSString* const kBlockCopyingLinkFailedMessage =
 const char kArticlePath[] = "/article.html";
 // URL to a page with a static message.
 const char kDestinationPageUrl[] = "/destination";
-// Path to a page containing the chromium logo and the text `kLogoPageText`.
-const char kLogoPagePath[] = "/chromium_logo_page.html";
-// The DOM element ID of the chromium image on the logo page.
-const char kLogoPageChromiumImageId[] = "chromium_image";
+// Path to a page containing the Cinaseek logo and the text `kLogoPageText`.
+const char kLogoPagePath[] = "/Cinaseek_logo_page.html";
+// The DOM element ID of the Cinaseek image on the logo page.
+const char kLogoPageCinaseekImageId[] = "Cinaseek_image";
 // The text of the message on the logo page.
-const char kLogoPageText[] = "Page with some text and the chromium logo image.";
+const char kLogoPageText[] = "Page with some text and the Cinaseek logo image.";
 
 // Returns an ElementSelector for long pressing the first link in the page.
 ElementSelector* ElementSelectorToLongPressLink() {
   return [ElementSelector selectorWithCSSSelector:"a"];
 }
 
-// Returns an ElementSelector for the chromium image on the logo page.
-ElementSelector* LogoPageChromiumImageIdSelector() {
-  return [ElementSelector selectorWithElementID:kLogoPageChromiumImageId];
+// Returns an ElementSelector for the Cinaseek image on the logo page.
+ElementSelector* LogoPageCinaseekImageIdSelector() {
+  return [ElementSelector selectorWithElementID:kLogoPageCinaseekImageId];
 }
 
 // Matcher for the copy link button in the context menu.
@@ -108,7 +108,7 @@ void TapOnContextMenuButton(id<GREYMatcher> context_menu_item_button) {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
   TapOnContextMenuButton(CopyImageButton());
 
   // Check that the snackbar is shown.
@@ -132,7 +132,7 @@ void TapOnContextMenuButton(id<GREYMatcher> context_menu_item_button) {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
   TapOnContextMenuButton(CopyImageButton());
 
   // Tap the "Copy anyways" button on the warning dialog.
@@ -162,7 +162,7 @@ void TapOnContextMenuButton(id<GREYMatcher> context_menu_item_button) {
   [ChromeEarlGrey waitForWebStateContainingText:kLogoPageText];
 
   [ChromeEarlGreyUI
-      longPressElementOnWebView:LogoPageChromiumImageIdSelector()];
+      longPressElementOnWebView:LogoPageCinaseekImageIdSelector()];
   TapOnContextMenuButton(CopyImageButton());
 
   // Tap the "cancel" button on the warning dialog.

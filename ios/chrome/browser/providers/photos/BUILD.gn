@@ -1,9 +1,9 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_photos") {
-  sources = [ "chromium_photos.mm" ]
+source_set("Cinaseek_photos") {
+  sources = [ "Cinaseek_photos.mm" ]
   deps = [
     "//ios/chrome/browser/photos/model",
     "//ios/public/provider/chrome/browser/photos:photos_api",

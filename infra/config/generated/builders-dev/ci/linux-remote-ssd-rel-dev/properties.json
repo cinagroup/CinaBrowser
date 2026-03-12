@@ -1,8 +1,8 @@
 {
-  "$build/chromium_swarming": {
+  "$build/Cinaseek_swarming": {
     "verbose": true
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders-dev/ci/linux-remote-ssd-rel-dev/gn-args.json"
@@ -13,21 +13,21 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-remote-ssd-rel-dev",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.dev",
+              "builder_group": "Cinaseek.dev",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -37,7 +37,7 @@
         {
           "bucket": "ci",
           "builder": "linux-remote-ssd-rel-dev",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders-dev/ci/linux-remote-ssd-rel-dev/targets"
@@ -51,7 +51,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted",
+    "project": "rbe-Cinaseek-trusted",
     "remote_jobs": 250
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -61,6 +61,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.dev",
-  "recipe": "chromium"
+  "builder_group": "Cinaseek.dev",
+  "recipe": "Cinaseek"
 }

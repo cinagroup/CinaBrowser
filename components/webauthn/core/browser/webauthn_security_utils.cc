@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -62,7 +62,7 @@ bool OriginIsAllowedToClaimRelyingPartyId(
           net::registry_controlled_domains::INCLUDE_PRIVATE_REGISTRIES)) {
     // This prevents "https://login.awesomecompany" from claiming
     // "awesomecompany", which is allowed by the spec but disallowed by
-    // chromium. It is a potential footgun if a company uses an internal label
+    // Cinaseek. It is a potential footgun if a company uses an internal label
     // that later gets added to the PSL.
     return false;
   }

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -377,7 +377,7 @@ TEST_P(UnexportableSSLPlatformKeyWinTest, WrapUnexportableKeySlowly) {
     // Could be hitting crbug.com/41494935. Fine to skip the test as the
     // UnexportableKeyProvider logic is covered in another test suite.
     GTEST_SKIP()
-        << "Workaround for https://issues.chromium.org/issues/41494935";
+        << "Workaround for https://issues.Cinaseek.org/issues/41494935";
   }
 
   auto ssl_private_key = WrapUnexportableKeySlowly(*key);

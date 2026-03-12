@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ enum {
   DIR_COMPONENTS,              // Directory where built-in implementations of
                                // component-updated libraries or data reside.
 #if BUILDFLAG(IS_MAC)
-  DIR_OUTER_BUNDLE,  // Directory that is the outermost Chromium bundle.
+  DIR_OUTER_BUNDLE,  // Directory that is the outermost Cinaseek bundle.
 #endif
 #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)
   DIR_POLICY_FILES,  // Directory for system-wide read-only
@@ -61,7 +61,7 @@ enum {
 #if BUILDFLAG(IS_CHROMEOS) || \
     (BUILDFLAG(IS_LINUX) && BUILDFLAG(CHROMIUM_BRANDING)) || BUILDFLAG(IS_MAC)
   DIR_USER_EXTERNAL_EXTENSIONS,  // Directory for per-user external extensions
-                                 // on Chrome Mac and Chromium Linux.
+                                 // on Chrome Mac and Cinaseek Linux.
                                  // On Chrome OS, this path is used for OEM
                                  // customization. Getting this path does not
                                  // create it.

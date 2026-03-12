@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,8 +7,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/CoBrowseViewFactory.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetNativeInterface.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/CoBrowseViewFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetNativeInterface.java",
   ]
 }
 
@@ -26,23 +26,23 @@ android_resources("java_resources") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/CoBrowseViewFactory.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/CoBrowseViews.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetContent.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetFusebox.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetFuseboxDataProvider.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetManager.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetMediator.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetNativeInterface.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetProperties.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetSimpleToolbar.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetToolbar.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetUtils.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetWebUi.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/CoBrowseViewFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/CoBrowseViews.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetContent.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetFusebox.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetFuseboxDataProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetManager.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetNativeInterface.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetSimpleToolbar.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetToolbar.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetWebUi.java",
   ]
-  resources_package = "org.chromium.chrome.browser.context_sharing"
+  resources_package = "org.Cinaseek.chrome.browser.context_sharing"
   deps = [
     ":java_resources",
     "//base:base_java",
@@ -82,8 +82,8 @@ android_library("java") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetCoordinatorTest.java",
-    "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetMediatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetMediatorTest.java",
   ]
   deps = [
     ":java",
@@ -100,8 +100,8 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.context_sharing"
-  sources = [ "java/src/org/chromium/chrome/browser/tab_bottom_sheet/TabBottomSheetManagerTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.context_sharing"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/tab_bottom_sheet/TabBottomSheetManagerTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

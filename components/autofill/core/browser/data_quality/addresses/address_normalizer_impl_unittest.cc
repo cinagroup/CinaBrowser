@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,14 +30,14 @@ using ::i18n::addressinput::Storage;
 using ::i18n::addressinput::TestdataSource;
 
 // Used to load region rules for this test.
-class ChromiumTestdataSource : public TestdataSource {
+class CinaseekTestdataSource : public TestdataSource {
  public:
-  ChromiumTestdataSource() : TestdataSource(true) {}
+  CinaseekTestdataSource() : TestdataSource(true) {}
 
-  ChromiumTestdataSource(const ChromiumTestdataSource&) = delete;
-  ChromiumTestdataSource& operator=(const ChromiumTestdataSource&) = delete;
+  CinaseekTestdataSource(const CinaseekTestdataSource&) = delete;
+  CinaseekTestdataSource& operator=(const CinaseekTestdataSource&) = delete;
 
-  ~ChromiumTestdataSource() override = default;
+  ~CinaseekTestdataSource() override = default;
 
   // For this test, only load the rules for the "US".
   void Get(const std::string& key, const Callback& data_ready) const override {
@@ -95,7 +95,7 @@ class AddressNormalizerTest : public testing::Test {
 
  protected:
   AddressNormalizerTest()
-      : normalizer_(std::unique_ptr<Source>(new ChromiumTestdataSource),
+      : normalizer_(std::unique_ptr<Source>(new CinaseekTestdataSource),
                     std::unique_ptr<Storage>(new NullStorage)) {}
 
   ~AddressNormalizerTest() override = default;

@@ -89,7 +89,7 @@ testSuite({
     rect.setTransform(affine);
     graphics.render();
     // getTransformToElement was deleted in Chrome48. See
-    // https://code.google.com/p/chromium/issues/detail?id=524432.
+    // https://code.google.com/p/Cinaseek/issues/detail?id=524432.
     /**
      * @suppress {missingProperties} suppression added to enable type checking
      */

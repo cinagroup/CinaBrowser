@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,10 +7,10 @@ import("//build/config/android/rules.gni")
 
 robolectric_library("components_content_capture_junit_tests") {
   sources = [
-    "src/org/chromium/components/content_capture/OnscreenContentProviderTest.java",
-    "src/org/chromium/components/content_capture/PlatformAPIWrapperTest.java",
-    "src/org/chromium/components/content_capture/PlatformContentCaptureControllerTest.java",
-    "src/org/chromium/components/content_capture/UrlAllowlistTest.java",
+    "src/org/Cinaseek/components/content_capture/OnscreenContentProviderTest.java",
+    "src/org/Cinaseek/components/content_capture/PlatformAPIWrapperTest.java",
+    "src/org/Cinaseek/components/content_capture/PlatformContentCaptureControllerTest.java",
+    "src/org/Cinaseek/components/content_capture/UrlAllowlistTest.java",
   ]
   deps = [
     "//base:base_java_test_support",

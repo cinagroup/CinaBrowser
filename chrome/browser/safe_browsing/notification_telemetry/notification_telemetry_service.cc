@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -71,8 +71,8 @@ constexpr net::NetworkTrafficAnnotationTag
             data:
               "The service worker scope URL and the URLs of the imported "
               "scripts that don't match the scope origin. See "
-              "ServiceWorkerRegistrationIncident in 'https://cs.chromium.org/ "
-              "chromium/src/components/safe_browsing/csd.proto' for details."
+              "ServiceWorkerRegistrationIncident in 'https://cs.Cinaseek.org/ "
+              "Cinaseek/src/components/safe_browsing/csd.proto' for details."
             destination: GOOGLE_OWNED_SERVICE
             internal {
               contacts {

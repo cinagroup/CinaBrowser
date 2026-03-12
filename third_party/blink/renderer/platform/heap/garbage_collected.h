@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ T* MakeGarbageCollected(AdditionalBytes additional_bytes, Args&&... args) {
 
 namespace base::internal {
 
-// v8 lives outside the Chromium repository and cannot rely on //base concepts
+// v8 lives outside the Cinaseek repository and cannot rely on //base concepts
 // like `DISALLOW_UNRETAINED()`.
 template <typename T>
   requires cppgc::IsGarbageCollectedOrMixinTypeV<T>

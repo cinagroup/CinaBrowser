@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,15 +45,15 @@
 #include "net/log/net_log.h"
 #include "net/log/net_log_with_source.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_data.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_session_peer.h"
-#include "net/quic/quic_chromium_connection_helper.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session_peer.h"
+#include "net/quic/quic_Cinaseek_connection_helper.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_utils.h"
 #include "net/quic/quic_server_info.h"
@@ -115,7 +115,7 @@
 #include "url/url_constants.h"
 
 namespace net {
-class QuicChromiumClientStream;
+class QuicCinaseekClientStream;
 class SpdySession;
 class WebSocketEndpointLockManager;
 class X509Certificate;
@@ -1192,7 +1192,7 @@ class WebSocketQuicStreamAdapterTest
     EXPECT_TRUE(mock_quic_data_.AllWriteDataConsumed());
   }
 
-  net::QuicChromiumClientSession::Handle* GetQuicSessionHandle() {
+  net::QuicCinaseekClientSession::Handle* GetQuicSessionHandle() {
     return session_handle_.get();
   }
 
@@ -1260,12 +1260,12 @@ class WebSocketQuicStreamAdapterTest
     socket->Connect(peer_addr_);
 
     runner_ = base::MakeRefCounted<TestTaskRunner>(&clock_);
-    helper_ = std::make_unique<QuicChromiumConnectionHelper>(
+    helper_ = std::make_unique<QuicCinaseekConnectionHelper>(
         &clock_, &random_generator_);
     alarm_factory_ =
-        std::make_unique<QuicChromiumAlarmFactory>(runner_.get(), &clock_);
+        std::make_unique<QuicCinaseekAlarmFactory>(runner_.get(), &clock_);
     // Ownership of 'writer' is passed to 'QuicConnection'.
-    QuicChromiumPacketWriter* writer = new QuicChromiumPacketWriter(
+    QuicCinaseekPacketWriter* writer = new QuicCinaseekPacketWriter(
         socket.get(), base::SingleThreadTaskRunner::GetCurrentDefault().get());
     quic::QuicConnection* connection = new quic::QuicConnection(
         connection_id_, quic::QuicSocketAddress(),
@@ -1287,7 +1287,7 @@ class WebSocketQuicStreamAdapterTest
     base::TimeTicks dns_end = base::TimeTicks::Now();
     base::TimeTicks dns_start = dns_end - base::Milliseconds(1);
 
-    session_ = std::make_unique<QuicChromiumClientSession>(
+    session_ = std::make_unique<QuicCinaseekClientSession>(
         connection, std::move(socket),
         /*stream_factory=*/nullptr, &crypto_client_stream_factory_, &clock_,
         &transport_security_state_, &ssl_config_service_,
@@ -1351,18 +1351,18 @@ class WebSocketQuicStreamAdapterTest
  protected:
   QuicTestPacketMaker client_maker_;
   QuicTestPacketMaker server_maker_;
-  std::unique_ptr<QuicChromiumClientSession> session_;
+  std::unique_ptr<QuicCinaseekClientSession> session_;
 
  private:
   quic::MockClock clock_;
-  std::unique_ptr<QuicChromiumClientSession::Handle> session_handle_;
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session_handle_;
   scoped_refptr<TestTaskRunner> runner_;
-  ProofVerifyDetailsChromium verify_details_;
+  ProofVerifyDetailsCinaseek verify_details_;
   MockCryptoClientStreamFactory crypto_client_stream_factory_;
   SSLConfigServiceDefaults ssl_config_service_;
   quic::test::MockConnectionIdGenerator connection_id_generator_;
-  std::unique_ptr<QuicChromiumConnectionHelper> helper_;
-  std::unique_ptr<QuicChromiumAlarmFactory> alarm_factory_;
+  std::unique_ptr<QuicCinaseekConnectionHelper> helper_;
+  std::unique_ptr<QuicCinaseekAlarmFactory> alarm_factory_;
   testing::StrictMock<quic::test::MockQuicConnectionVisitor> visitor_;
   TransportSecurityState transport_security_state_;
   IPAddress ip_;
@@ -1425,7 +1425,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, Disconnect) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1480,17 +1480,17 @@ TEST_P(WebSocketQuicStreamAdapterTest, AsyncAdapterCreation) {
 
   Initialize();
 
-  std::vector<QuicChromiumClientStream*> streams;
+  std::vector<QuicCinaseekClientStream*> streams;
 
   for (size_t i = 0; i < kMaxOpenStreams; i++) {
-    QuicChromiumClientStream* stream =
-        QuicChromiumClientSessionPeer::CreateOutgoingStream(session_.get());
+    QuicCinaseekClientStream* stream =
+        QuicCinaseekClientSessionPeer::CreateOutgoingStream(session_.get());
     ASSERT_TRUE(stream);
     streams.push_back(stream);
     EXPECT_EQ(i + 1, session_->GetNumActiveStreams());
   }
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1537,7 +1537,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, SendRequestHeadersThenDisconnect) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
   TestWebSocketQuicStreamAdapterCompletionCallback callback;
@@ -1585,7 +1585,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, OnHeadersReceivedThenDisconnect) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1650,7 +1650,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, Read) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1744,7 +1744,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, ReadIntoSmallBuffer) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
   TestWebSocketQuicStreamAdapterCompletionCallback callback;
@@ -1858,7 +1858,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, Write) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1953,7 +1953,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, ReadCallbackDestroysAdapter) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -1993,7 +1993,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, ReadCallbackDestroysAdapter) {
 
   // The error is ERR_QUIC_PROTOCOL_ERROR because:
   // 1. Socket returns ERR_CONNECTION_CLOSED
-  // 2. QuicChromiumPacketReader::OnReadError converts this to
+  // 2. QuicCinaseekPacketReader::OnReadError converts this to
   //    QUIC_PACKET_READ_ERROR
   // 3. WebSocketQuicSpdyStream::MapQuicErrorToNetError maps any non-zero
   //    connection_error() to ERR_QUIC_PROTOCOL_ERROR
@@ -2041,7 +2041,7 @@ TEST_P(WebSocketQuicStreamAdapterTest,
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -2196,7 +2196,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, WritePendingWhenBufferFull) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -2360,7 +2360,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, RstStreamReceivedWhileWritePending) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -2471,7 +2471,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, ConnectionCloseTriggersOnClose) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -2543,7 +2543,7 @@ TEST_P(WebSocketQuicStreamAdapterTest,
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 
@@ -2664,7 +2664,7 @@ TEST_P(WebSocketQuicStreamAdapterTest, WriteCallbackDestroysAdapter) {
 
   Initialize();
 
-  net::QuicChromiumClientSession::Handle* session_handle =
+  net::QuicCinaseekClientSession::Handle* session_handle =
       GetQuicSessionHandle();
   ASSERT_TRUE(session_handle);
 

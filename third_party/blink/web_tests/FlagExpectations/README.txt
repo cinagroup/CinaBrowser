@@ -25,5 +25,5 @@ The entries in the file is the same as the main TestExpectations file, e.g.
 This file will override the main TestExpectations file when the above command
 is run.
 
-[1] https://chromium.googlesource.com/chromium/src/+/main/docs/testing/web_tests.md#flag_specific-or-additional_driver_flag
-[2] https://chromium.googlesource.com/chromium/src/+/main/docs/testing/web_tests.md#Choosing-between-flag_specific-and-virtual-test-suite
+[1] https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/testing/web_tests.md#flag_specific-or-additional_driver_flag
+[2] https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/testing/web_tests.md#Choosing-between-flag_specific-and-virtual-test-suite

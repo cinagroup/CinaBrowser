@@ -1,8 +1,8 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file tests that Web Workers (a Content feature) work in the Chromium
+// This file tests that Web Workers (a Content feature) work in the Cinaseek
 // embedder.
 
 #include "base/feature_list.h"

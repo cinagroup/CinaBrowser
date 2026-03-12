@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -178,7 +178,7 @@ class NewTabPageCoordinatorTest : public PlatformTest {
           test_discover_feed_service->get_eligibility_handler();
       // Create non-NTP WebState
       browser_.get()->GetWebStateList()->InsertWebState(
-          CreateWebState("http://chromium.org"),
+          CreateWebState("http://Cinaseek.org"),
           WebStateList::InsertionParams::Automatic().Activate());
       favicon::WebFaviconDriver::CreateForWebState(
           browser_.get()->GetWebStateList()->GetActiveWebState(),

@@ -1,11 +1,11 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file is auto-generated from
 //    gpu/config/process_json.py
-// It's formatted by clang-format using chromium coding style:
-//    clang-format -i -style=chromium filename
+// It's formatted by clang-format using Cinaseek coding style:
+//    clang-format -i -style=Cinaseek filename
 // DO NOT EDIT!
 
 #include "gpu/config/gpu_control_list_testing_autogen.h"

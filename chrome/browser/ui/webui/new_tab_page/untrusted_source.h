@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 class Profile;
 
 // Serves chrome-untrusted://new-tab-page/* sources which can return content
-// from outside the chromium codebase. The chrome-untrusted://new-tab-page/*
+// from outside the Cinaseek codebase. The chrome-untrusted://new-tab-page/*
 // sources can only be embedded in the chrome://new-tab-page by using an
 // <iframe>.
 //
@@ -85,7 +85,7 @@ class UntrustedSource : public content::URLDataSource,
       one_google_bar_callbacks_;
   // This dangling raw_ptr occurred in:
   // browser_tests: All/TabSharingUIViewsBrowserTest.ChangeCapturedTabFavicon/0
-  // https://ci.chromium.org/ui/p/chromium-m113/builders/try/win-rel/958/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FTabSharingUIViewsBrowserTest.ChangeCapturedTabFavicon%2FAll.0+VHash%3Abdbee181b3e0309b
+  // https://ci.Cinaseek.org/ui/p/Cinaseek-m113/builders/try/win-rel/958/test-results?q=ExactID%3Aninja%3A%2F%2Fchrome%2Ftest%3Abrowser_tests%2FTabSharingUIViewsBrowserTest.ChangeCapturedTabFavicon%2FAll.0+VHash%3Abdbee181b3e0309b
   raw_ptr<OneGoogleBarService, FlakyDanglingUntriaged> one_google_bar_service_;
   base::ScopedObservation<OneGoogleBarService, OneGoogleBarServiceObserver>
       one_google_bar_service_observation_{this};

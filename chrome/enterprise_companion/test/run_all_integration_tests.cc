@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
   // can break the updater on the system.
   if (!std::getenv("ISOLATED_OUTDIR") &&
       std::string_view(PRODUCT_FULLNAME_STRING) !=
-          "ChromiumEnterpriseCompanion") {
+          "CinaseekEnterpriseCompanion") {
     VLOG(1) << "Running branded enterprise companion tests can break the "
                "updater for the branded browser. If you don't care about "
                "broken updaters and want to run the branded enterprise "

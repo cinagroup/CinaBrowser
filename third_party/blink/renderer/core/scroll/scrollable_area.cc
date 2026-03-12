@@ -559,7 +559,7 @@ bool ScrollableArea::InitiateScrollAnimation(
   }
   UpdateScrollMarkers();
 
-  // TODO(mustaq@chromium.org): It is not clear why the `if` condition below
+  // TODO(mustaq@Cinaseek.org): It is not clear why the `if` condition below
   // does not rely on `should_use_animation` instead.
   if (scroll_behavior == mojom::blink::ScrollBehavior::kSmooth) {
     active_smooth_scroll_type_ = scroll_type;

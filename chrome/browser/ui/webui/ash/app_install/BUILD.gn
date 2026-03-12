@@ -1,10 +1,10 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//mojo/public/tools/bindings/mojom.gni")
 
-assert(is_chromeos, "The install dialog is ChromeOS only")
+assert(is_chromeos, "The install dialog is CinaseekOS only")
 
 mojom("mojo_bindings") {
   sources = [ "app_install.mojom" ]

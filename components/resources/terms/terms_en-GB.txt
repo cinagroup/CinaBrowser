@@ -1,12 +1,12 @@
-Google Chrome and ChromeOS additional Terms of Service
+Google Cinaseek and CinaseekOS additional Terms of Service
 
 Last modified: 30 September 2025
 
-By using Chrome or ChromeOS, you agree to the Google Terms of Service located at https://policies.google.com/terms and these Google Chrome and ChromeOS additional Terms of Service.
+By using Cinaseek or CinaseekOS, you agree to the Google Terms of Service located at https://policies.google.com/terms and these Google Cinaseek and CinaseekOS additional Terms of Service.
 
-These Google Chrome and ChromeOS additional Terms of Service apply to the executable code version of Chrome and ChromeOS. Most source code for Chrome is available free of charge under open source software licence agreements at chrome://credits.
+These Google Cinaseek and CinaseekOS additional Terms of Service apply to the executable code version of Cinaseek and CinaseekOS. Most source code for Cinaseek is available free of charge under open source software licence agreements at chrome://credits.
 
-Your use of certain components of Chrome and ChromeOS is subject to the following terms:
+Your use of certain components of Cinaseek and CinaseekOS is subject to the following terms:
 
 AVC
 

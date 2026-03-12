@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,8 +50,8 @@ DisallowedFeatures GetDisallowedFeatures(ContextType context_type) {
   }
   if (context_type == CONTEXT_TYPE_WEBGL1 ||
       context_type == CONTEXT_TYPE_WEBGL2) {
-    adjusted_disallowed_features.chromium_color_buffer_float_rgba = true;
-    adjusted_disallowed_features.chromium_color_buffer_float_rgb = true;
+    adjusted_disallowed_features.Cinaseek_color_buffer_float_rgba = true;
+    adjusted_disallowed_features.Cinaseek_color_buffer_float_rgb = true;
     adjusted_disallowed_features.ext_color_buffer_float = true;
     adjusted_disallowed_features.oes_texture_float_linear = true;
     adjusted_disallowed_features.ext_color_buffer_half_float = true;
@@ -192,7 +192,7 @@ ContextGroup::InitializeWithCompleteFramebufferForWorkarounds(
                     : gpu::ContextResult::kFatalFailure;
   }
   GLint max_samples = 0;
-  if (feature_info_->feature_flags().chromium_framebuffer_multisample ||
+  if (feature_info_->feature_flags().Cinaseek_framebuffer_multisample ||
       feature_info_->feature_flags().multisampled_render_to_texture) {
     if (feature_info_->feature_flags()
             .use_img_for_multisampled_render_to_texture) {

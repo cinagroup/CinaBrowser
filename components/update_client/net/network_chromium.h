@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,20 +19,20 @@ namespace update_client {
 
 using SendCookiesPredicate = base::RepeatingCallback<bool(const GURL& url)>;
 
-class NetworkFetcherChromiumFactory : public NetworkFetcherFactory {
+class NetworkFetcherCinaseekFactory : public NetworkFetcherFactory {
  public:
-  NetworkFetcherChromiumFactory(
+  NetworkFetcherCinaseekFactory(
       scoped_refptr<network::SharedURLLoaderFactory> shared_url_network_factory,
       SendCookiesPredicate cookie_predicate);
 
-  NetworkFetcherChromiumFactory(const NetworkFetcherChromiumFactory&) = delete;
-  NetworkFetcherChromiumFactory& operator=(
-      const NetworkFetcherChromiumFactory&) = delete;
+  NetworkFetcherCinaseekFactory(const NetworkFetcherCinaseekFactory&) = delete;
+  NetworkFetcherCinaseekFactory& operator=(
+      const NetworkFetcherCinaseekFactory&) = delete;
 
   std::unique_ptr<NetworkFetcher> Create() const override;
 
  protected:
-  ~NetworkFetcherChromiumFactory() override;
+  ~NetworkFetcherCinaseekFactory() override;
 
  private:
   scoped_refptr<network::SharedURLLoaderFactory> shared_url_network_factory_;

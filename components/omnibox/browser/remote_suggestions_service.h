@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -219,7 +219,7 @@ class RemoteSuggestionsService : public KeyedService {
   //
   // When `timeout` is not empty, its value is set in `SimpleURLLoadaer` used
   // internally. When the timeout occurs, a nullptr is passed to the callback:
-  // https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/simple_url_loader.cc;l=758-764;drc=128f35b3fb019f2fa67e1e798e113ed95f766096
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/network/public/cpp/simple_url_loader.cc;l=758-764;drc=128f35b3fb019f2fa67e1e798e113ed95f766096
   std::unique_ptr<network::SimpleURLLoader> StartZeroPrefixSuggestionsRequest(
       RemoteRequestType request_type,
       bool is_off_the_record,

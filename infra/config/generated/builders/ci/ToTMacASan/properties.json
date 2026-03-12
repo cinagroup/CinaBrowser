@@ -1,8 +1,8 @@
 {
-  "$build/chromium": {
+  "$build/Cinaseek": {
     "fail_build_on_clang_warnings": true
   },
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/ci/ToTMacASan/gn-args.json"
@@ -13,12 +13,12 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "ToTMacASan",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.clang",
+              "builder_group": "Cinaseek.clang",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
@@ -31,7 +31,7 @@
                 "apply_configs": [
                   "clang_tot"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -41,7 +41,7 @@
         {
           "bucket": "ci",
           "builder": "ToTMacASan",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/ci/ToTMacASan/targets"
@@ -55,7 +55,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-trusted"
+    "project": "rbe-Cinaseek-trusted"
   },
   "$recipe_engine/resultdb/test_presentation": {
     "column_keys": [],
@@ -64,14 +64,14 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.clang",
+  "builder_group": "Cinaseek.clang",
   "gardener_rotations": [
-    "chromium.clang"
+    "Cinaseek.clang"
   ],
-  "perf_dashboard_machine_group": "ChromiumClang",
-  "recipe": "chromium",
+  "perf_dashboard_machine_group": "CinaseekClang",
+  "recipe": "Cinaseek",
   "sheriff_rotations": [
-    "chromium.clang"
+    "Cinaseek.clang"
   ],
   "xcode_build_version": "14c18"
 }

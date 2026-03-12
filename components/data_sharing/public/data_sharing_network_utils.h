@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ inline constexpr net::NetworkTrafficAnnotationTag
     internal {
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"}
-      contacts{email : "nyquist@chromium.org"}
+      contacts{email : "nyquist@Cinaseek.org"}
     }
     user_data {
       type: HW_OS_INFO
@@ -95,7 +95,7 @@ inline constexpr net::NetworkTrafficAnnotationTag kReadGroupsTrafficAnnotation =
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"} contacts {
       email:
-        "nyquist@chromium.org"
+        "nyquist@Cinaseek.org"
       }
     }
     user_data {
@@ -133,7 +133,7 @@ inline constexpr net::NetworkTrafficAnnotationTag
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"} contacts {
       email:
-        "nyquist@chromium.org"
+        "nyquist@Cinaseek.org"
       }
     }
     user_data {
@@ -173,7 +173,7 @@ inline constexpr net::NetworkTrafficAnnotationTag
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"} contacts {
       email:
-        "nyquist@chromium.org"
+        "nyquist@Cinaseek.org"
       }
     }
     user_data {
@@ -211,7 +211,7 @@ inline constexpr net::NetworkTrafficAnnotationTag kLookupTrafficAnnotation =
     internal {
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"}
-      contacts{email : "nyquist@chromium.org"}
+      contacts{email : "nyquist@Cinaseek.org"}
     }
     user_data {
       type: GAID_ID
@@ -247,7 +247,7 @@ inline constexpr net::NetworkTrafficAnnotationTag
     internal {
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"}
-      contacts{email : "nyquist@chromium.org"}
+      contacts{email : "nyquist@Cinaseek.org"}
     }
     user_data {
       type: HW_OS_INFO
@@ -282,7 +282,7 @@ inline constexpr net::NetworkTrafficAnnotationTag kLeaveGroupTrafficAnnotation =
     internal {
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"}
-      contacts{email : "nyquist@chromium.org"}
+      contacts{email : "nyquist@Cinaseek.org"}
     }
     user_data {
       type: HW_OS_INFO
@@ -317,7 +317,7 @@ inline constexpr net::NetworkTrafficAnnotationTag kJoinGroupTrafficAnnotation =
     internal {
       contacts{email : "chrome-tab-group-eng@google.com"}
       contacts{email : "ritikagup@google.com"}
-      contacts{email : "nyquist@chromium.org"}
+      contacts{email : "nyquist@Cinaseek.org"}
     }
     user_data {
       type: HW_OS_INFO

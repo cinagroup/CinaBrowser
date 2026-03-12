@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ static NSString* kDialogMessage = @"message";
 // Test fixture for JavaScript alert dialog overlays.
 class JavaScriptAlertDialogOverlayTest : public PlatformTest {
  protected:
-  JavaScriptAlertDialogOverlayTest() : url_(GURL("http://www.chromium.test")) {}
+  JavaScriptAlertDialogOverlayTest() : url_(GURL("http://www.Cinaseek.test")) {}
 
   std::unique_ptr<OverlayRequest> CreateMainFrameRequest() {
     url::Origin main_frame_origin = url::Origin::Create(url_);
@@ -54,7 +54,7 @@ TEST_F(JavaScriptAlertDialogOverlayTest, MainFrameDialogTitleAndMessage) {
   ASSERT_TRUE(config);
 
   // Check the title and message strings.
-  EXPECT_NSEQ(@"www.chromium.test says", config->title());
+  EXPECT_NSEQ(@"www.Cinaseek.test says", config->title());
   EXPECT_EQ(kDialogMessage, config->message());
 }
 

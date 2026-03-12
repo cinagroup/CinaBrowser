@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -114,7 +114,7 @@ constexpr FilePath::CharType kArcExternalFilesRoot[] =
     FILE_PATH_LITERAL("/external_files");
 // Sync with the volume provider in ARC++ side.
 constexpr char kArcStorageContentUrlPrefix[] =
-    "content://org.chromium.arc.volumeprovider/";
+    "content://org.Cinaseek.arc.volumeprovider/";
 // A predefined removable media UUID for testing. Defined in
 // chromeos/ash/experiences/arc/volume_mounter/arc_volume_mounter_bridge.cc.
 // TODO(crbug.com/1274481): Move ash-wide constants to a common place.
@@ -124,7 +124,7 @@ constexpr char kArcRemovableMediaUuidForTesting[] =
 // chromeos/ash/experiences/arc/volume_mounter/arc_volume_mounter_bridge.cc.
 // TODO(crbug.com/255484683): Move MyFiles constants to a common place.
 constexpr char kArcMyFilesContentUrlPrefix[] =
-    "content://org.chromium.arc.volumeprovider/"
+    "content://org.Cinaseek.arc.volumeprovider/"
     "0000000000000000000000000000CAFEF00D2019/";
 
 // Helper function for |ConvertToContentUrls|.
@@ -343,7 +343,7 @@ const char kFuseBox[] = "fusebox";
 // This means that the "volumetype.etc" string value *can* be the same as a
 // FuseBox subdir string value, as they're both prefixed with "volumetype.",
 // but they don't *have* to be. Specifically, the "etc" may contain identifiers
-// that other in-process Chromium code wants to parse but those identifiers
+// that other in-process Cinaseek code wants to parse but those identifiers
 // might be longer than Linux's NAME_MAX.
 const char kFuseBoxMountNamePrefix[] = "fubomona:";
 
@@ -861,7 +861,7 @@ bool ConvertPathToArcUrl(const FilePath& path,
     // TODO(b/157297349) Remove this condition.
     if (arc::IsArcVmEnabled()) {
       *arc_url_out =
-          GURL("content://org.chromium.arc.volumeprovider/MyDrive/")
+          GURL("content://org.Cinaseek.arc.volumeprovider/MyDrive/")
               .Resolve(base::EscapePath(relative_path.AsUTF8Unsafe()));
       *requires_sharing_out = true;
       return true;
@@ -879,7 +879,7 @@ bool ConvertPathToArcUrl(const FilePath& path,
       // For ARCVM, we can use ArcVolumeProvider URL and ask Seneschal to share
       // the path to ARCVM so ARCVM does not need to talk through Chrome.
       *arc_url_out =
-          GURL("content://org.chromium.arc.volumeprovider/crostini/")
+          GURL("content://org.Cinaseek.arc.volumeprovider/crostini/")
               .Resolve(base::EscapePath(relative_path.AsUTF8Unsafe()));
       *requires_sharing_out = true;
       return true;
@@ -894,7 +894,7 @@ bool ConvertPathToArcUrl(const FilePath& path,
     // TODO(b/157297349) Remove this condition.
     if (arc::IsArcVmEnabled()) {
       *arc_url_out =
-          GURL("content://org.chromium.arc.volumeprovider/archive/")
+          GURL("content://org.Cinaseek.arc.volumeprovider/archive/")
               .Resolve(base::EscapePath(relative_path.AsUTF8Unsafe()));
       *requires_sharing_out = true;
       return true;
@@ -912,7 +912,7 @@ bool ConvertPathToArcUrl(const FilePath& path,
         // TODO(b/157297349) Remove this condition.
         if (arc::IsArcVmEnabled()) {
           *arc_url_out =
-              GURL(StrCat({"content://org.chromium.arc.volumeprovider/smb/",
+              GURL(StrCat({"content://org.Cinaseek.arc.volumeprovider/smb/",
                            share->mount_id(), "/"}))
                   .Resolve(base::EscapePath(relative_path.AsUTF8Unsafe()));
           *requires_sharing_out = true;
@@ -928,7 +928,7 @@ bool ConvertPathToArcUrl(const FilePath& path,
   if (SetRelativePath(FilePath(kFuseBoxMediaPath), path, &relative_path)) {
     if (arc::IsArcVmEnabled()) {
       *arc_url_out =
-          GURL("content://org.chromium.arc.volumeprovider/fusebox/")
+          GURL("content://org.Cinaseek.arc.volumeprovider/fusebox/")
               .Resolve(base::EscapePath(relative_path.AsUTF8Unsafe()));
       *requires_sharing_out = true;
       return true;

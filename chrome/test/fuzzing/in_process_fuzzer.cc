@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,14 +66,14 @@ bool InProcessFuzzer::UseSingleProcessMode() {
 }
 
 base::CommandLine::StringVector
-InProcessFuzzer::GetChromiumCommandLineArguments() {
+InProcessFuzzer::GetCinaseekCommandLineArguments() {
   base::CommandLine::StringVector empty;
   return empty;
 }
 
 void InProcessFuzzer::SetUp() {
   // Overrides the default 60s run loop timeout set by `BrowserTestBase`. See
-  // https://source.chromium.org/chromium/chromium/src/+/main:content/public/test/browser_test_base.cc?q=ScopedRunLoopTimeout.
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/public/test/browser_test_base.cc?q=ScopedRunLoopTimeout.
   // All of the fuzzing engines that we use are having timeouts features, and
   // this timeout can vary depending on the number of tested testcases. We must
   // let the engines handle timeouts, and set the maximum here.
@@ -141,7 +141,7 @@ void InProcessFuzzer::SetUpOnMainThread() {
   // As of now, since both in-process stack traces and the crashpad handler are
   // being disabled, this is the only signal that we need to reset since it's
   // being set in
-  // https://source.chromium.org/chromium/chromium/src/+/main:content/public/test/browser_test_base.cc?q=SignalHandler
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/public/test/browser_test_base.cc?q=SignalHandler
   signal(SIGSEGV, SIG_DFL);
 #endif  // BUILDFLAG(MEMORY_TOOL_REPLACES_ALLOCATOR)
 #endif  // BUILDFLAG(IS_POSIX)
@@ -258,10 +258,10 @@ class ChildProcessTestLauncherDelegate : public content::TestLauncherDelegate {
   int RunTestSuite(int argc, char** argv) override {
     LOG(FATAL)
         << "Trying to run tests in child.\n"
-        << "It looks like you may be trying to pass Chromium command line "
+        << "It looks like you may be trying to pass Cinaseek command line "
            "arguments to the fuzzer. This fuzzer does not accept "
-           "Chromium arguments on its command line (subclasses can "
-           "override InProcessFuzzer::GetChromiumCommandLineArguments() "
+           "Cinaseek arguments on its command line (subclasses can "
+           "override InProcessFuzzer::GetCinaseekCommandLineArguments() "
            "to modify these). The command line arguments passed to the "
            "fuzzing engine should use single dashes (e.g. -runs=1).";
   }
@@ -285,24 +285,24 @@ int main(int argc, char** argv) {
   // Oh dear, you've got to the part of the code relating to command lines.
   // I'm sorry.
   // Here are our constraints:
-  // * Both libfuzzer/centipede and Chromium expect a full command line
+  // * Both libfuzzer/centipede and Cinaseek expect a full command line
   // * We set the format of neither command line
-  // * Chromium will launch other Chromium processes, giving them a command
+  // * Cinaseek will launch other Cinaseek processes, giving them a command
   // line.
   // * The centipede runner will launch our fuzzer, giving it a command line.
   // So, at this point, we have to figure out heuristics for what's up.
   // Are we the original fuzzer process, in which case we pass the CLI to
-  // libfuzzer/centipede, and ask for a suitable Chromium command line from
-  // our fuzz test? Or, are we a child Chromium process which has been
-  // launched from a previous Chromium process? Well, dear reader, there are
+  // libfuzzer/centipede, and ask for a suitable Cinaseek command line from
+  // our fuzz test? Or, are we a child Cinaseek process which has been
+  // launched from a previous Cinaseek process? Well, dear reader, there are
   // no telltail arguments guaranteed to be on either, so we're going to
   // use a heuristic. If the first argument starts with --, we're assuming
-  // we're a Chromium child.
+  // we're a Cinaseek child.
 
   if (base::CommandLine::ForCurrentProcess()->argv().size() > 1) {
     if (base::StartsWith(base::CommandLine::ForCurrentProcess()->argv()[1],
                          FILE_PATH_LITERAL("--"))) {
-      // If we're a Chromium child, we don't alter the command-line,
+      // If we're a Cinaseek child, we don't alter the command-line,
       // and in fact the libfuzzer code will never run, so we don't need to
       // pass any arguments through to libfuzzer.
       // Ensure we don't create the InProcessFuzzer in this branch as it
@@ -329,13 +329,13 @@ int main(int argc, char** argv) {
 #endif  // BUILDFLAG(IS_WIN)
   base::CommandLine::StringType executable_name =
       base::CommandLine::ForCurrentProcess()->argv().at(0);
-  base::CommandLine::StringVector chromium_arguments =
-      fuzzer->GetChromiumCommandLineArguments();
-  chromium_arguments.insert(chromium_arguments.begin(), executable_name);
-  chromium_arguments.push_back(FILE_PATH_LITERAL("--single-process-tests"));
+  base::CommandLine::StringVector Cinaseek_arguments =
+      fuzzer->GetCinaseekCommandLineArguments();
+  Cinaseek_arguments.insert(Cinaseek_arguments.begin(), executable_name);
+  Cinaseek_arguments.push_back(FILE_PATH_LITERAL("--single-process-tests"));
   if (fuzzer->UseSingleProcessMode()) {
-    chromium_arguments.push_back(FILE_PATH_LITERAL("--single-process"));
-    chromium_arguments.push_back(
+    Cinaseek_arguments.push_back(FILE_PATH_LITERAL("--single-process"));
+    Cinaseek_arguments.push_back(
         FILE_PATH_LITERAL("--disable-crashpad-for-testing"));
   } else {
 #if BUILDFLAG(IS_CENTIPEDE)
@@ -352,19 +352,19 @@ int main(int argc, char** argv) {
     unsetenv("CENTIPEDE_RUNNER_FLAGS");
 #endif
   }
-  chromium_arguments.push_back(FILE_PATH_LITERAL("--no-zygote"));
-  chromium_arguments.push_back(FILE_PATH_LITERAL("--no-sandbox"));
-  chromium_arguments.push_back(FILE_PATH_LITERAL("--disable-gpu"));
-  chromium_arguments.push_back(
+  Cinaseek_arguments.push_back(FILE_PATH_LITERAL("--no-zygote"));
+  Cinaseek_arguments.push_back(FILE_PATH_LITERAL("--no-sandbox"));
+  Cinaseek_arguments.push_back(FILE_PATH_LITERAL("--disable-gpu"));
+  Cinaseek_arguments.push_back(
       FILE_PATH_LITERAL("--enable-unsafe-swiftshader"));
 #if defined(MEMORY_TOOL_REPLACES_ALLOCATOR)
   // We disable in-process stack trace handling in case we're using memory
   // tools so that we get better reporting on what happened in case of
   // SIGSEGV.
-  chromium_arguments.push_back(
+  Cinaseek_arguments.push_back(
       FILE_PATH_LITERAL("--disable-in-process-stack-traces"));
 #endif
-  base::CommandLine::ForCurrentProcess()->InitFromArgv(chromium_arguments);
+  base::CommandLine::ForCurrentProcess()->InitFromArgv(Cinaseek_arguments);
 
   // Various bits of setup are done by base::TestSuite::Initialize.
   // As we're not a functional test suite, most of those things are not

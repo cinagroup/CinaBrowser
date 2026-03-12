@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -75,7 +75,7 @@ TEST_F(WebViewDeviceAccountsProviderImplTest, GetAllAccounts) {
       OCMStrictProtocolMock(@protocol(CWVSyncControllerDataSource));
   CWVSyncController.dataSource = data_source;
 
-  CWVIdentity* identity = [[CWVIdentity alloc] initWithEmail:@"foo@chromium.org"
+  CWVIdentity* identity = [[CWVIdentity alloc] initWithEmail:@"foo@Cinaseek.org"
                                                     fullName:nil
                                                       gaiaID:@"gaia-id"];
   OCMExpect([data_source allKnownIdentities]).andReturn(@[ identity ]);
@@ -86,7 +86,7 @@ TEST_F(WebViewDeviceAccountsProviderImplTest, GetAllAccounts) {
 
   ASSERT_EQ(1UL, accounts.size());
   DeviceAccountsProvider::DeviceAccountInfo account_info = accounts[0];
-  EXPECT_EQ("foo@chromium.org", account_info.GetEmail());
+  EXPECT_EQ("foo@Cinaseek.org", account_info.GetEmail());
   EXPECT_EQ(GaiaId("gaia-id"), account_info.GetGaiaId());
 
   [data_source verify];

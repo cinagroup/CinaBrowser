@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -67,7 +67,7 @@ bool CrashUtil::CollectDumpstate(const base::FilePath& minidump_path,
           switches::kDumpstateBinPath);
 
   // In case of CastCore + Chrome runtime, dumpstate path is passed to runtime
-  // through command line. If that's missing, then it's likely not a Chromium
+  // through command line. If that's missing, then it's likely not a Cinaseek
   // runtime build and fall back to the default path.
   if (!result.empty()) {
     dumpstate_bin_path = result.value();
@@ -103,7 +103,7 @@ bool CrashUtil::RequestUploadCrashDump(
     uint64_t crashed_pid,
     uint64_t crashed_process_start_time_ms,
     const std::vector<Attachment>* attachments) {
-  // Remove IO restrictions from this thread. Chromium IO functions must be used
+  // Remove IO restrictions from this thread. Cinaseek IO functions must be used
   // to access the file system and upload information to the crash server.
   base::ScopedAllowBlocking allow_blocking;
 

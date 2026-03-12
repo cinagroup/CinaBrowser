@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,7 @@ namespace {
 class AndroidErrBuffer : public std::stringbuf {
  protected:
   int sync() override {
-    __android_log_write(ANDROID_LOG_ERROR, "chromium", str().c_str());
+    __android_log_write(ANDROID_LOG_ERROR, "Cinaseek", str().c_str());
     return 0;
   }
 };

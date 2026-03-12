@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,8 +36,8 @@ class COMPONENT_EXPORT(CDM_FACTORY_DAEMON) CdmFactoryDaemonClient {
   CdmFactoryDaemonClient(const CdmFactoryDaemonClient&) = delete;
   CdmFactoryDaemonClient& operator=(const CdmFactoryDaemonClient&) = delete;
 
-  // CdmFactoryDaemon D-Bus method calls. See org.chromium.CdmFactoryDaemon.xml
-  // in Chromium OS code for the documentation of the methods and
+  // CdmFactoryDaemon D-Bus method calls. See org.Cinaseek.CdmFactoryDaemon.xml
+  // in Cinaseek OS code for the documentation of the methods and
   // request/response messages.
   virtual void BootstrapMojoConnection(
       base::ScopedFD fd,

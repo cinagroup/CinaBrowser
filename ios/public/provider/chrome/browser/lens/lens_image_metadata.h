@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 // Represents a Lens metadata object.
 // It is designed to be mostly opaque and used as a type safe mechanism of
-// transferring information between Lens components at Chromium level.
+// transferring information between Lens components at Cinaseek level.
 @protocol LensImageMetadata <NSObject>
 
 // Whether the image was capture with the camera.

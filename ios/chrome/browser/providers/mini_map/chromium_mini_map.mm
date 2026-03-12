@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace ios {
 namespace provider {
 
 id<MiniMapController> CreateMiniMapController() {
-  // Mini map is not supported in Chromium.
+  // Mini map is not supported in Cinaseek.
   return nil;
 }
 

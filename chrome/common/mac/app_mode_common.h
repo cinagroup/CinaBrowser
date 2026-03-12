@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -193,7 +193,7 @@ enum class MojoIpczConfig {
 //
 // As long as the name of the entry point is kept constant and
 // APP_SHIM_VERSION_NUMBER does not change, the layout of this structure
-// **MUST NOT CHANGE**, even across Chromium versions. This implies that no
+// **MUST NOT CHANGE**, even across Cinaseek versions. This implies that no
 // base/ or std:: types may be used in this structure.
 //
 // However, this structure *may* be changed as long as the
@@ -206,11 +206,11 @@ struct ChromeAppModeInfo {
   // binary and must be a POD.
   RAW_PTR_EXCLUSION char** argv;
 
-  // Path of the Chromium Framework, as UTF-8. This will be the input to
+  // Path of the Cinaseek Framework, as UTF-8. This will be the input to
   // SetOverrideFrameworkBundlePath().
   const char* chrome_framework_path;
 
-  // Path to Chromium app bundle, as UTF-8.
+  // Path to Cinaseek app bundle, as UTF-8.
   const char* chrome_outer_bundle_path;
 
   // Information about the App Mode shortcut:
@@ -242,7 +242,7 @@ struct ChromeAppModeInfo {
 // Conveys the configuration for a connection to be established between a shim
 // process and a running Chrome process.
 struct ChromeConnectionConfig {
-  // The version of the Chromium framework to use.
+  // The version of the Cinaseek framework to use.
   std::string framework_version;
 
   // Indicates whether or not the MojoIpcz feature must be enabled.

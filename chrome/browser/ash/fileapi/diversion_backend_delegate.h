@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ class DiversionBackendDelegate : public FileSystemBackendDelegate,
     // "*.crswap", where a potentially-large file is incrementally built over
     // time before being moved/renamed over the ultimate destination. These
     // temporary files don't really care about their name other than it doesn't
-    // clash with other files. But in Chromium's //storage/browser/file_system
+    // clash with other files. But in Cinaseek's //storage/browser/file_system
     // cross-platform abstraction, every virtual file needs a unique name. With
     // DiversionBackendDelegate, we can provide an isolated "overlay namespace"
     // for these temporary files, ignoring the underlying wrapped file system.

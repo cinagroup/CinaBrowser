@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -478,7 +478,7 @@ MultiWordSuggester::SuggestionState::ValidateSuggestion(
     return MultiWordSuggestionState::kOther;
   }
 
-  // IME service works with UTF8 whereas here in Chromium surrounding text is
+  // IME service works with UTF8 whereas here in Cinaseek surrounding text is
   // UTF16. The length of the surrounding text from the IME service was
   // calculated on a UTF8 string, so transforming context.last_n_chars to
   // UTF16 would invalidate the length sent from IME service.

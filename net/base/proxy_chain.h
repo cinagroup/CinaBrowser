@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -232,7 +232,7 @@ class NET_EXPORT ProxyChain {
 
   // Owners of `ProxyChain` can use to store private information. For example,
   // Cronet uses this to map each net::ProxyChain to a specific
-  // org.chromium.net.Proxy.Callback, when necessary. This does not get
+  // org.Cinaseek.net.Proxy.Callback, when necessary. This does not get
   // persisted during calls to the `Persist` method.
   // Note: the value of this field does not affect the validity of this
   // ProxyChain.

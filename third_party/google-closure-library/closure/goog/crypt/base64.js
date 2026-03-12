@@ -479,7 +479,7 @@ goog.crypt.base64.decodeStringToUint8Array = function(input) {
   //
   // It would be correct to simply always call subarray, but we avoid doing so
   // to avoid potential poor performance from chrome.
-  // See https://bugs.chromium.org/p/v8/issues/detail?id=7161
+  // See https://bugs.Cinaseek.org/p/v8/issues/detail?id=7161
   return outLen !== approxByteLength ? output.subarray(0, outLen) : output;
 };
 

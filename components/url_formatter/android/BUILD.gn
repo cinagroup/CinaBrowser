@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -21,13 +21,13 @@ if (is_android) {
     ]
 
     sources =
-        [ "java/src/org/chromium/components/url_formatter/UrlFormatter.java" ]
+        [ "java/src/org/Cinaseek/components/url_formatter/UrlFormatter.java" ]
   }
 
   android_library("unit_device_javatests") {
     testonly = true
 
-    sources = [ "javatests/src/org/chromium/components/url_formatter/UrlFormatterUnitTest.java" ]
+    sources = [ "javatests/src/org/Cinaseek/components/url_formatter/UrlFormatterUnitTest.java" ]
     deps = [
       ":url_formatter_java",
       "//base:base_java",
@@ -44,5 +44,5 @@ if (is_android) {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/url_formatter/UrlFormatter.java" ]
+      [ "java/src/org/Cinaseek/components/url_formatter/UrlFormatter.java" ]
 }

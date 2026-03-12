@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace infobars {
 class InfoBarAndroid : public InfoBar {
  public:
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.infobar
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.infobar
   // GENERATED_JAVA_PREFIX_TO_STRIP: ACTION_
   enum ActionType {
     ACTION_NONE = 0,
@@ -26,7 +26,7 @@ class InfoBarAndroid : public InfoBar {
     ACTION_TRANSLATE_SHOW_ORIGINAL = 4,
   };
 
-  // A function that maps from Chromium IDs to Drawable IDs.
+  // A function that maps from Cinaseek IDs to Drawable IDs.
   using ResourceIdMapper = base::RepeatingCallback<int(int)>;
 
   explicit InfoBarAndroid(std::unique_ptr<InfoBarDelegate> delegate);

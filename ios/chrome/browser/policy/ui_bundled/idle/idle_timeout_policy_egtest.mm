@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -127,7 +127,7 @@ void VerifyIdleTimeoutDialogDismissedOnDialogExpiry() {
       @"The confirmation dialog should be dismissed after 30 seconds.");
 }
 
-// Clicks `Continue using Chromium` when the idle timeout dialog is shown.
+// Clicks `Continue using Cinaseek` when the idle timeout dialog is shown.
 void WaitForIdleTimeoutScreenAndClickContinue() {
   // Wait and verify that the dialog is shown.
   [ChromeEarlGrey waitForMatcher:GetIdleTimeoutDialogMatcher()];

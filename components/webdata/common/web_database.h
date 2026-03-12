@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,7 +41,7 @@ class WEBDATA_EXPORT WebDatabase {
   //
   // To determine this migration window, we support the same Chrome versions
   // that Chrome Sync does. Any database version that was added before the
-  // oldest Chrome version that sync supports can be dropped from the Chromium
+  // oldest Chrome version that sync supports can be dropped from the Cinaseek
   // codebase (i.e., increment `kDeprecatedVersionNumber` and remove related
   // tests + support files).
   //

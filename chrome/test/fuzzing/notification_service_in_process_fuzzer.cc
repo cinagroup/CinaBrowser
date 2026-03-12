@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@ class NotificationServiceInProcessFuzzer
       domatolpm::generated::notification_service_fuzzer_grammar::fuzzcase;
   NotificationServiceInProcessFuzzer() = default;
 
-  base::CommandLine::StringVector GetChromiumCommandLineArguments() override;
+  base::CommandLine::StringVector GetCinaseekCommandLineArguments() override;
   void SetUpOnMainThread() override;
   int Fuzz(const FuzzCase& fuzz_case) override;
 };
@@ -42,7 +42,7 @@ class NotificationServiceInProcessFuzzer
 REGISTER_BINARY_PROTO_IN_PROCESS_FUZZER(NotificationServiceInProcessFuzzer)
 
 base::CommandLine::StringVector
-NotificationServiceInProcessFuzzer::GetChromiumCommandLineArguments() {
+NotificationServiceInProcessFuzzer::GetCinaseekCommandLineArguments() {
   return {FILE_PATH_LITERAL("--enable-blink-features=MojoJS")};
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@
 #include "components/viz/common/traced_value.h"
 #include "components/viz/common/transition_utils.h"
 #include "components/viz/common/view_transition_element_resource_id.h"
-#include "gpu/GLES2/gl2extchromium.h"
+#include "gpu/GLES2/gl2extCinaseek.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
 #include "gpu/command_buffer/client/context_support.h"
 #include "gpu/command_buffer/client/raster_interface.h"
@@ -5357,7 +5357,7 @@ void LayerTreeHostImpl::SetFullViewportDamage() {
   // the internal viewport rect. In the case of Android WebView,
   // GetDeviceViewport returns the external viewport, but we still want to use
   // the internal viewport's origin for setting the damage.
-  // See https://chromium-review.googlesource.com/c/chromium/src/+/1257555.
+  // See https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/1257555.
   SetViewportDamage(gfx::Rect(active_tree_->internal_device_viewport().origin(),
                               active_tree_->GetDeviceViewport().size()));
 }

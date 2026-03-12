@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2471,7 +2471,7 @@ class HostedAppOriginIsolationTest : public HostedOrWebAppTest {
 };
 
 // This test case implements creis@'s repro case from
-// https://bugs.chromium.org/p/chromium/issues/detail?id=1141721#c32.
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1141721#c32.
 // Prior to the fix, we end up putting the app's extension url into the opt-in
 // list, then later the second navigation tries to compare an effective URL to
 // the actual (extension) url in the ProcessLocks in CanAccessDataForOrigin,

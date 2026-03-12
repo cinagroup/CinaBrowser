@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,7 +19,7 @@ template("missing_symbol_test") {
   }
 
   android_library(target_name) {
-    sources = [ "//tools/android/errorprone_plugin/test/src/org/chromium/tools/errorprone/plugin/Empty.java" ]
+    sources = [ "//tools/android/errorprone_plugin/test/src/org/Cinaseek/tools/errorprone/plugin/Empty.java" ]
     not_needed(invoker,
                [
                  "sources",

@@ -14,12 +14,12 @@ Setting cookie by URL with expires: {
     sessionId : <string>
 }
 All cookies before deletion: Num of cookies 2
-name: cookie1, value: .domain, domain: .chromium.org, path: /path, session
-name: cookie2, value: .domain, domain: .chromium.org, path: /pathB, expires
+name: cookie1, value: .domain, domain: .Cinaseek.org, path: /path, session
+name: cookie2, value: .domain, domain: .Cinaseek.org, path: /pathB, expires
 Delete cookie1: {
 }
 Attempt to delete cookie2 with wrong path: {
 }
 All cookies after deletion: Num of cookies 1
-name: cookie2, value: .domain, domain: .chromium.org, path: /pathB, expires
+name: cookie2, value: .domain, domain: .Cinaseek.org, path: /pathB, expires
 

@@ -1,4 +1,4 @@
-# Copyright 2018 The Chromium Authors
+# Copyright 2018 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -84,11 +84,11 @@ static_library("unrar") {
     ]
   }
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
 
-    # This must be after no_chromium_code for warning flags to be ordered
+    # This must be after no_Cinaseek_code for warning flags to be ordered
     # correctly.
     ":unrar_warnings",
   ]

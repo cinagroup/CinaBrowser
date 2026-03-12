@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -122,7 +122,7 @@ class COMPONENT_EXPORT(VIZ_SHARED_IMAGE_FORMAT) SharedImageFormat final {
   // SharedImageFormat::SetPrefersExternalSampler() before creating a
   // mappableSI. SI will internally take care of clearing it back to false by
   // using this method in case it is determined that the it's backed by shared
-  // memory. https://issues.chromium.org/339546249.
+  // memory. https://issues.Cinaseek.org/339546249.
   void ClearPrefersExternalSampler() {
 #if BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_ANDROID)
     CHECK(is_multi_plane() &&

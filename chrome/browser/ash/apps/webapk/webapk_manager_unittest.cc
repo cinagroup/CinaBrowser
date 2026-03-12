@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ constexpr char kTestAppUrl[] = "https://www.example.com/";
 constexpr char kTestAppActionUrl[] = "https://www.example.com/share";
 constexpr char kTestManifestUrl[] = "https://www.example.com/manifest.json";
 constexpr char kTestShareTextParam[] = "share_text";
-constexpr char kTestWebApkPackageName[] = "org.chromium.webapk.some_package";
+constexpr char kTestWebApkPackageName[] = "org.Cinaseek.webapk.some_package";
 const std::u16string kTestAppTitle = u"Test App";
 
 std::unique_ptr<web_app::WebAppInstallInfo> BuildDefaultWebAppInfo(
@@ -203,7 +203,7 @@ TEST_F(WebApkManagerTest, IgnoresAlreadyInstalledWebApkOnStartup) {
   auto app_id_2 =
       web_app::test::InstallWebApp(profile(), std::move(app_info_2));
   apps::webapk_prefs::AddWebApk(profile(), app_id_1,
-                                "org.chromium.webapk.some_package");
+                                "org.Cinaseek.webapk.some_package");
 
   StartWebApkManager();
 
@@ -349,19 +349,19 @@ TEST_F(WebApkManagerTest, RemovesWebApksWhenPolicyDisabled) {
 
 TEST_F(WebApkManagerTest, RemovesUntrackedInstalledWebApk) {
   std::vector<arc::mojom::ArcPackageInfoPtr> packages;
-  packages.push_back(GetArcPackage("org.chromium.webapk.package1"));
-  packages.push_back(GetArcPackage("org.chromium.webapk.package2"));
+  packages.push_back(GetArcPackage("org.Cinaseek.webapk.package1"));
+  packages.push_back(GetArcPackage("org.Cinaseek.webapk.package2"));
 
   auto app_id =
       web_app::test::InstallWebApp(profile(), BuildDefaultWebAppInfo());
   apps::webapk_prefs::AddWebApk(profile(), app_id,
-                                "org.chromium.webapk.package1");
+                                "org.Cinaseek.webapk.package1");
   StartWebApkManager();
 
   arc_app_test()->app_instance()->SendRefreshPackageList(std::move(packages));
 
   ASSERT_TRUE(ArcAppListPrefs::Get(profile())->GetPackage(
-      "org.chromium.webapk.package1"));
+      "org.Cinaseek.webapk.package1"));
   ASSERT_FALSE(ArcAppListPrefs::Get(profile())->GetPackage(
-      "org.chromium.webapk.package2"));
+      "org.Cinaseek.webapk.package2"));
 }

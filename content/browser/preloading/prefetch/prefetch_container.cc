@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -302,7 +302,7 @@ PrefetchContainer::~PrefetchContainer() {
   is_in_dtor_ = true;
 
   // Ideally, this method should be called just before dtor.
-  // https://chromium-review.googlesource.com/c/chromium/src/+/5657659/comments/0cfb14c0_3050963e
+  // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5657659/comments/0cfb14c0_3050963e
   //
   // TODO(crbug.com/356314759): Do it.
   OnWillBeDestroyed();
@@ -1557,7 +1557,7 @@ void PrefetchContainer::MakeInitialResourceRequest() {
   // Request headers. Headers should be applied in the following order, and the
   // latter (if any) should override the former.
   // [1] `request().additional_headers()`
-  // [2] Chromium's default headers
+  // [2] Cinaseek's default headers
   // [3] WebContents overrides
   //     (`MaybeApplyOverrideForWebContentsUserAgentHeader()`)
   // [4] DevTools overrides

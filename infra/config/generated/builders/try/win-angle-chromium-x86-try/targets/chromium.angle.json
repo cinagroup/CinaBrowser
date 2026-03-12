@@ -1,5 +1,5 @@
 {
-  "win-angle-chromium-x86-builder": {
+  "win-angle-Cinaseek-x86-builder": {
     "additional_compile_targets": [
       "telemetry_gpu_integration_test"
     ]

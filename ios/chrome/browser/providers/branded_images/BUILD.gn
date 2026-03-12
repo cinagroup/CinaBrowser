@@ -1,9 +1,9 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-source_set("chromium_branded_images") {
-  sources = [ "chromium_branded_images.mm" ]
+source_set("Cinaseek_branded_images") {
+  sources = [ "Cinaseek_branded_images.mm" ]
   deps = [
     "//ios/chrome/app/theme",
     "//ios/chrome/browser/providers/branded_images/resources",

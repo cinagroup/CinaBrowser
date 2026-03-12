@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@
 #pragma mark - Private
 
 // Helper method that takes the user's interaction with the prompt as
-// `actionType` and logs a respective metric and notifies Chromium that the
+// `actionType` and logs a respective metric and notifies Cinaseek that the
 // prompt has disappeared.
 - (void)onPromptDisappear:(bring_android_tabs::PromptActionType)actionType {
   base::UmaHistogramEnumeration(bring_android_tabs::kPromptActionHistogramName,

@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -81,7 +81,7 @@ viz_test("viz_perftests") {
 
   data = [ "//components/test/data/viz/" ]
 
-  # This target should not require the Chrome executable to run.
+  # This target should not require the Cinaseek executable to run.
   assert_no_deps = [ "//chrome" ]
 
   data_deps = [
@@ -95,7 +95,7 @@ if (is_android) {
     # External code should depend on ":viz_java" instead.
     visibility = [ ":*" ]
     sources = [ "common/features.cc" ]
-    class_name = "org.chromium.components.viz.common.VizFeatures"
+    class_name = "org.Cinaseek.components.viz.common.VizFeatures"
   }
 
   android_library("viz_java") {

@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,15 +16,15 @@ using base::android::ScopedJavaLocalRef;
 
 namespace data_sharing::conversion {
 
-// Creates an object of org.chromium.components.data_sharing.GroupMember.
+// Creates an object of org.Cinaseek.components.data_sharing.GroupMember.
 ScopedJavaLocalRef<jobject> CreateJavaGroupMember(JNIEnv* env,
                                                   const GroupMember& member);
 
-// Creates an object of org.chromium.components.data_sharing.GroupToken.
+// Creates an object of org.Cinaseek.components.data_sharing.GroupToken.
 ScopedJavaLocalRef<jobject> CreateJavaGroupToken(JNIEnv* env,
                                                  const GroupToken& token);
 
-// Creates an object of org.chromium.components.data_sharing.GroupData.
+// Creates an object of org.Cinaseek.components.data_sharing.GroupData.
 ScopedJavaLocalRef<jobject> CreateJavaGroupData(JNIEnv* env,
                                                 const GroupData& group_data);
 
@@ -33,7 +33,7 @@ ScopedJavaLocalRef<jobjectArray> CreateGroupedDataArray(
     const std::set<GroupData>& data);
 
 // Creates an object of
-// org.chromium.components.data_sharing.SharedTabGroupPreview.
+// org.Cinaseek.components.data_sharing.SharedTabGroupPreview.
 ScopedJavaLocalRef<jobject> CreateJavaSharedTabGroupPreview(
     JNIEnv* env,
     const SharedTabGroupPreview& preview);

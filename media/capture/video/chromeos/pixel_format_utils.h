@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,14 +17,14 @@ namespace media {
 // A collection of the various pixel formats we need to look up.  We need to
 // resolve the HAL pixel format to VideoPixelFormat for VideoCaptureDevice, and
 // to viz::SharedImageFormat for (previous) gpu::GpuMemoryBufferManager.
-struct ChromiumPixelFormat {
+struct CinaseekPixelFormat {
   VideoPixelFormat video_format;
   viz::SharedImageFormat si_format;
 };
 
-// Converts the HAL pixel format |from| to Chromium pixel format.  Returns
+// Converts the HAL pixel format |from| to Cinaseek pixel format.  Returns
 // empty vector if |from| is not supported.
-std::vector<ChromiumPixelFormat> HalPixelFormatToChromiumPixelFormat(
+std::vector<CinaseekPixelFormat> HalPixelFormatToCinaseekPixelFormat(
     cros::mojom::HalPixelFormat from);
 
 // Converts the video pixel format |from| to DRM pixel format.  Returns 0

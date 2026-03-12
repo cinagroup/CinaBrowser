@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,9 +8,9 @@ import("//build/config/android/rules.gni")
 android_library("battery_monitor_java") {
   visibility = [ "//services/device:*" ]
   sources = [
-    "java/src/org/chromium/device/battery/BatteryMonitorFactory.java",
-    "java/src/org/chromium/device/battery/BatteryMonitorImpl.java",
-    "java/src/org/chromium/device/battery/BatteryStatusManager.java",
+    "java/src/org/Cinaseek/device/battery/BatteryMonitorFactory.java",
+    "java/src/org/Cinaseek/device/battery/BatteryMonitorImpl.java",
+    "java/src/org/Cinaseek/device/battery/BatteryStatusManager.java",
   ]
 
   deps = [

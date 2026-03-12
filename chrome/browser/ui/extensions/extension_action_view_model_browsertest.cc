@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -347,7 +347,7 @@ IN_PROC_BROWSER_TEST_P(ExtensionActionViewModelFeatureRolloutBrowserTest,
   ASSERT_TRUE(model);
 
   // Initially load on a site that the extension doesn't have permissions to.
-  AddTab(GURL("https://www.chromium.org/"));
+  AddTab(GURL("https://www.Cinaseek.org/"));
   content::WebContents* web_contents = GetActiveWebContents();
 
   std::unique_ptr<IconWithBadgeImageSource> image_source =
@@ -565,7 +565,7 @@ IN_PROC_BROWSER_TEST_P(ExtensionActionViewModelGrayscaleTest, GrayscaleIcon) {
                                                                   extension);
     permissions_modifier.SetWithholdHostPermissions(true);
     const GURL kHasPermissionUrl("https://www.google.com/");
-    const GURL kNoPermissionsUrl("https://www.chromium.org/");
+    const GURL kNoPermissionsUrl("https://www.Cinaseek.org/");
 
     // Make sure UserScriptListener doesn't hold up the navigation.
     extensions::ExtensionsBrowserClient::Get()
@@ -1201,7 +1201,7 @@ IN_PROC_BROWSER_TEST_P(ExtensionActionViewModelFeatureRolloutBrowserTest,
   ExtensionActionViewModel* const model = GetViewModelForId(extension->id());
   ASSERT_TRUE(model);
 
-  AddTab(GURL("https://www.chromium.org/"));
+  AddTab(GURL("https://www.Cinaseek.org/"));
   content::WebContents* web_contents = GetActiveWebContents();
   int tab_id = sessions::SessionTabHelper::IdForTab(web_contents).id();
 

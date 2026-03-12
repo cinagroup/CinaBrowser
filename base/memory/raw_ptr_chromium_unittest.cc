@@ -1,12 +1,12 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 #include "base/memory/raw_ptr.h"
 
-// This file contains tests related to raw_ptr, that test Chromium-specific
+// This file contains tests related to raw_ptr, that test Cinaseek-specific
 // configuration.
 
-// Chromium expects these to be always enabled.
+// Cinaseek expects these to be always enabled.
 static_assert(raw_ptr<int>::kZeroOnConstruct);
 static_assert(raw_ptr<int>::kZeroOnMove);

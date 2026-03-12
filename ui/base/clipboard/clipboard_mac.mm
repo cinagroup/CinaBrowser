@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -170,7 +170,7 @@ void ClipboardMac::GetSourceInternal(ClipboardBuffer buffer,
   DCHECK(CalledOnValidThread());
   DCHECK_EQ(buffer, ClipboardBuffer::kCopyPaste);
 
-  NSString* source_url = [pasteboard stringForType:kUTTypeChromiumSourceUrl];
+  NSString* source_url = [pasteboard stringForType:kUTTypeCinaseekSourceUrl];
 
   if (!source_url) {
     std::move(callback).Run(std::nullopt);
@@ -300,9 +300,9 @@ void ClipboardMac::ReadAvailableTypes(
              std::vector<std::u16string> types) {
             NSPasteboard* pb = GetPasteboard();
             if ([pb.types
-                    containsObject:kUTTypeChromiumDataTransferCustomData]) {
+                    containsObject:kUTTypeCinaseekDataTransferCustomData]) {
               NSData* data =
-                  [pb dataForType:kUTTypeChromiumDataTransferCustomData];
+                  [pb dataForType:kUTTypeCinaseekDataTransferCustomData];
               if ([data length]) {
                 ReadCustomDataTypes(base::apple::NSDataToSpan(data), &types);
               }
@@ -420,8 +420,8 @@ void ClipboardMac::ReadDataTransferCustomData(
 
   std::u16string result;
   NSPasteboard* pb = GetPasteboard();
-  if ([[pb types] containsObject:kUTTypeChromiumDataTransferCustomData]) {
-    NSData* data = [pb dataForType:kUTTypeChromiumDataTransferCustomData];
+  if ([[pb types] containsObject:kUTTypeCinaseekDataTransferCustomData]) {
+    NSData* data = [pb dataForType:kUTTypeCinaseekDataTransferCustomData];
     if ([data length]) {
       if (std::optional<std::u16string> maybe_result =
               ReadCustomDataForType(base::apple::NSDataToSpan(data), type);
@@ -524,7 +524,7 @@ void ClipboardMac::WritePortableAndPlatformRepresentationsInternal(
     // exists a method -[NSPasteboard _setShouldExcludeFromHistory:] which is
     // more explicitly an "exclude from history" method than the "set an
     // expiration" method used here. However, it is not available on all macOS
-    // releases that Chromium supports. When Chromium requires macOS 26+, it
+    // releases that Cinaseek supports. When Cinaseek requires macOS 26+, it
     // might be worthwhile looking into whether that is a better choice.
     [GetPasteboard()
         _setExpirationDate:[NSDate dateWithTimeIntervalSinceNow:5 * 60]];
@@ -544,7 +544,7 @@ void ClipboardMac::WritePortableAndPlatformRepresentationsInternal(
 
   if (data_src && data_src->IsUrlType()) {
     [pasteboard setString:base::SysUTF8ToNSString(data_src->GetURL()->spec())
-                  forType:kUTTypeChromiumSourceUrl];
+                  forType:kUTTypeCinaseekSourceUrl];
   }
 
   // If not actively monitoring, notify immediately. Otherwise, when monitoring,

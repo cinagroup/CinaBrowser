@@ -1393,7 +1393,7 @@ class Vector : private VectorBuffer<T, INLINE_CAPACITY, Allocator> {
   // std sort algorithms. Use of the iterators that involves manually adjusting
   // their positions would require UNSAFE_BUFFERS and the code should satisfy
   // the requirements of UNSAFE_BUFFERS. See the macro definition in
-  // https://source.chromium.org/chromium/chromium/src/+/main:base/compiler_specific.h
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:base/compiler_specific.h
   // for more.
   iterator begin() { return iterator(data()); }
   iterator end() { return iterator(DataEnd()); }

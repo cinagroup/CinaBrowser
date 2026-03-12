@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ std::string IOSChromeGCMProfileServiceFactory::GetProductCategoryForSubtypes() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return "com.chrome.ios";
 #else
-  return "org.chromium.ios";
+  return "org.Cinaseek.ios";
 #endif
 }
 

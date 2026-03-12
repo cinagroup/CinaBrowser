@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -265,7 +265,7 @@ TEST_F(InstalledLoaderUnitTestWithRegularUser,
   ScriptingPermissionsModifier modifier(profile(), extension);
   modifier.SetWithholdHostPermissions(true);
   modifier.GrantHostPermission(GURL("https://example.com/"));
-  modifier.GrantHostPermission(GURL("https://chromium.org/"));
+  modifier.GrantHostPermission(GURL("https://Cinaseek.org/"));
 
   base::HistogramTester histograms;
   InstalledLoader loader(profile());

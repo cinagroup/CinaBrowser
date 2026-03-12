@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ class TabListInterfaceObserver : public base::CheckedObserver {
   // TODO(https://crbug.com/433545116): This may not be called in all situations
   // on Android platforms, such as if a tab that was closed is re-introduced
   // (see also tabClosureUndone() here:
-  // https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/tabmodel/android/java/src/org/chromium/chrome/browser/tabmodel/TabModelObserver.java;drc=e2bb611334ebe2b1cbe519ff183f5178896b8c55;l=140).
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/browser/tabmodel/android/java/src/org/Cinaseek/chrome/browser/tabmodel/TabModelObserver.java;drc=e2bb611334ebe2b1cbe519ff183f5178896b8c55;l=140).
   virtual void OnTabAdded(TabListInterface& tab_list,
                           tabs::TabInterface* tab,
                           int index) {}

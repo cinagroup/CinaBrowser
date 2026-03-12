@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -171,7 +171,7 @@ extern "C" IOS_INIT_EXPORT void ChildProcessHandleNewConnection(
     DCHECK_EQ(pthread_attr_init(&attr), 0);
     // iOS default secondary thread stack is 512KB, which is insufficient for
     // V8 which expects ~984KB (V8_DEFAULT_STACK_SIZE_KB in
-    // v8/src/common/globals.h). Use Chromium's default thread stack size
+    // v8/src/common/globals.h). Use Cinaseek's default thread stack size
     // (1MB on iOS).
     DCHECK_EQ(pthread_attr_setstacksize(
                   &attr, base::PlatformThread::GetDefaultThreadStackSize()),

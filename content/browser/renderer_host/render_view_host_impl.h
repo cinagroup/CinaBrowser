@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -88,7 +88,7 @@ using WillSendWebPreferencesCallbackForTesting = base::RepeatingClosure;
 // (if frame specific) or PageImpl (if page specific).
 //
 // For context, please see https://crbug.com/467770 and
-// https://www.chromium.org/developers/design-documents/site-isolation.
+// https://www.Cinaseek.org/developers/design-documents/site-isolation.
 class CONTENT_EXPORT RenderViewHostImpl
     : public RenderViewHost,
       public RenderWidgetHostOwnerDelegate,

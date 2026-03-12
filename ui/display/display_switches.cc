@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,7 +61,7 @@ const char kUseFirstDisplayAsInternal[] = "use-first-display-as-internal";
 
 // Additional display properties are provided through this switch that are
 // beyond what is available via EDID encoded as JSON. Please see
-// `https://chromium.googlesource.com/chromiumos/platform2/+/dd10a5ae3618bb9dc5fb47ac415ebef6e9a3827d/chromeos-config/README.md#displays`
+// `https://Cinaseek.googlesource.com/Cinaseekos/platform2/+/dd10a5ae3618bb9dc5fb47ac415ebef6e9a3827d/chromeos-config/README.md#displays`
 // for the data format.
 const char kDisplayProperties[] = "display-properties";
 

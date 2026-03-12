@@ -1,11 +1,11 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//chrome/common/features.gni")
 import("//crypto/features.gni")
 
-assert(!is_ios, "Chromium/iOS shouldn't use anything in //chrome")
+assert(!is_ios, "Cinaseek/iOS shouldn't use anything in //chrome")
 
 static_library("net") {
   sources = [

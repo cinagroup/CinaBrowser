@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -96,7 +96,7 @@ class PrefetchPageLoadMetricsObserverTest
       plm_observer_ = nullptr;
   page_load_metrics::mojom::PageLoadTiming timing_;
 
-  GURL navigation_url_{"https://chromium.org"};
+  GURL navigation_url_{"https://Cinaseek.org"};
   bool in_main_frame_ = true;
 };
 

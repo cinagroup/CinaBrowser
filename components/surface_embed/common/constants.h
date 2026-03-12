@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace surface_embed {
 
 // MIME type of the internal surface-embed plugin.
 inline constexpr char kInternalPluginMimeType[] =
-    "application/x-chromium-surface-embed";
+    "application/x-Cinaseek-surface-embed";
 
 }  // namespace surface_embed
 

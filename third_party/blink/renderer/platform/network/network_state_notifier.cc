@@ -55,7 +55,7 @@ constexpr size_t kNumEffectiveConnectionTypes =
 
 // Typical HTTP RTT value corresponding to a given WebEffectiveConnectionType
 // value. Taken from
-// https://cs.chromium.org/chromium/src/net/nqe/network_quality_estimator_params.cc.
+// https://cs.Cinaseek.org/Cinaseek/src/net/nqe/network_quality_estimator_params.cc.
 constexpr std::array<base::TimeDelta, kNumEffectiveConnectionTypes>
     kTypicalHttpRttEffectiveConnectionType = {
         base::Milliseconds(0),    base::Milliseconds(0),
@@ -64,7 +64,7 @@ constexpr std::array<base::TimeDelta, kNumEffectiveConnectionTypes>
 
 // Typical downlink throughput (in Mbps) value corresponding to a given
 // WebEffectiveConnectionType value. Taken from
-// https://cs.chromium.org/chromium/src/net/nqe/network_quality_estimator_params.cc.
+// https://cs.Cinaseek.org/Cinaseek/src/net/nqe/network_quality_estimator_params.cc.
 constexpr std::array<double, kNumEffectiveConnectionTypes>
     kTypicalDownlinkMbpsEffectiveConnectionType = {0,     0,     0.040,
                                                    0.075, 0.400, 1.600};

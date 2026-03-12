@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -225,7 +225,7 @@ void TerminateProcessWithHistograms(const base::Process& process,
 // Microsoft's Softricity virtualization breaks the sandbox processes.
 // So, if we detect the Softricity DLL we use WMI Win32_Process.Create to
 // break out of the virtualization environment.
-// http://code.google.com/p/chromium/issues/detail?id=43650
+// http://code.google.com/p/Cinaseek/issues/detail?id=43650
 bool ProcessSingleton::EscapeVirtualization(
     const base::FilePath& user_data_dir) {
   TRACE_EVENT0("startup", "ProcessSingleton:EscapeVirtualization");

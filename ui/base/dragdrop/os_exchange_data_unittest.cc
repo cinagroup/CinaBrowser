@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -238,7 +238,7 @@ TEST_F(OSExchangeDataTest, TestFileToURLConversion) {
 
 TEST_F(OSExchangeDataTest, TestPickledData) {
   const ClipboardFormatType kTestFormat =
-      ClipboardFormatType::CustomPlatformType("application/vnd.chromium.test");
+      ClipboardFormatType::CustomPlatformType("application/vnd.Cinaseek.test");
 
   const OSExchangeData copy([&] {
     OSExchangeData data;

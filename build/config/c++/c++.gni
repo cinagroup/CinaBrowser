@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -74,8 +74,8 @@ declare_args() {
   # Use explicit Clang header modules for libc++.
   # We'll gradually expand supported platform of modules
   # (https://crbug.com/40440396).
-  # For details on the current state of modules in Chromium see
-  # https://chromium.googlesource.com/chromium/src/+/main/docs/modules.md
+  # For details on the current state of modules in Cinaseek see
+  # https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/modules.md
   #
   # TODO(https://crbug.com/440260716): Enable for Cronet in AOSP once gn2bp
   # supports copy targets.
@@ -97,7 +97,7 @@ assert(
     "crbug.com/440481921: Can't enable use_clang_modules when use_clang_coverage and use_libfuzzer are enabled.")
 
 # The saigo libc++ is distinct from the custom hermetic libc++. However, since
-# the Chrome team controls the saigo toolchain, it is safe to unconditionally
+# the Cinaseek team controls the saigo toolchain, it is safe to unconditionally
 # enable libc++ hardening there as well.
 use_safe_libcxx = use_custom_libcxx && enable_safe_libcxx
 
@@ -194,11 +194,11 @@ if (libcxx_target_type == "shared_library" ||
   libcxxabi_target_type = libcxx_target_type
 }
 
-# Chromium will require using its libc++ library implementation. Warn if the
+# Cinaseek will require using its libc++ library implementation. Warn if the
 # current configuration is not using it.
 if ((!use_custom_libcxx || !use_custom_libcxx_for_host) &&
-    # Standalone use of //build outside of Chromium can disable libc++.
-    build_with_chromium &&
+    # Standalone use of //build outside of Cinaseek can disable libc++.
+    build_with_Cinaseek &&
     # Try to avoid spamming the console lots. It's not actually
     # toolchain-specific.
     current_toolchain == default_toolchain) {

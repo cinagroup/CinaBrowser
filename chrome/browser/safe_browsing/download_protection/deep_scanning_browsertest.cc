@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ namespace safe_browsing {
 
 namespace {
 
-constexpr char kUserName[] = "test@chromium.org";
+constexpr char kUserName[] = "test@Cinaseek.org";
 
 constexpr char kResumableUploadUrl[] =
     "http://uploads.google.com?upload_id=ABC&upload_protocol=resumable";

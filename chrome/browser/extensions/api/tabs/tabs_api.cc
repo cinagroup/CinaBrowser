@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1967,7 +1967,7 @@ ExtensionFunction::ResponseAction TabsCreateFunction::Run() {
   // TODO(https://crbug.com/468223125): Why do we check if it's not a normal
   // browser *and* it's attempting to close? Should that be *or*? This goes
   // back to the dawn of time, AKA the initial implementation in 2014:
-  // https://codereview.chromium.org/245933002.
+  // https://codereview.Cinaseek.org/245933002.
   if (browser && browser->GetType() != BrowserWindowInterface::TYPE_NORMAL &&
       browser->GetBrowserForMigrationOnly()->IsAttemptingToCloseBrowser()) {
     browser = nullptr;

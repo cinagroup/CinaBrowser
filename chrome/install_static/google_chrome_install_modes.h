@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -87,7 +87,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
                                 0x1c09,
                                 0x475b,
                                 {0xa8, 0xd7, 0x9e, 0x58, 0xbf, 0x45, 0x53,
-                                 0x3e}},  // ISystemTraceSessionChromium IID
+                                 0x3e}},  // ISystemTraceSessionCinaseek IID
                                           // and TypeLib
         .default_channel_name = L"",      // The empty string means "stable".
         .channel_strategy = ChannelStrategy::FLOATING,
@@ -154,7 +154,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
                                 0x9a08,
                                 0x422a,
                                 {0xb6, 0xc6, 0xb7, 0xb8, 0xd3, 0x76, 0xa1,
-                                 0x2c}},  // ISystemTraceSessionChromium IID and
+                                 0x2c}},  // ISystemTraceSessionCinaseek IID and
                                           // TypeLib
         .default_channel_name = L"beta",  // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,
@@ -228,7 +228,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
                                 0x9334,
                                 0x46ed,
                                 {0xb0, 0xcf, 0xdd, 0x17, 0x80, 0x15, 0x8d,
-                                 0x55}},  // ISystemTraceSessionChromium IID and
+                                 0x55}},  // ISystemTraceSessionCinaseek IID and
                                           // TypeLib
         .default_channel_name = L"dev",   // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,
@@ -303,7 +303,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
                                 0x68d1,
                                 0x4826,
                                 {0xa6, 0x12, 0xa1, 0x80, 0xb3, 0x57, 0x03,
-                                 0x75}},  // ISystemTraceSessionChromium IID and
+                                 0x75}},  // ISystemTraceSessionCinaseek IID and
                                           // TypeLib
         .default_channel_name = L"canary",  // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,

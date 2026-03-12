@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@ inline constexpr SkColor kNTPLightIconColor = gfx::kGoogleGrey100;
 inline constexpr SkColor kNTPDarkIconColor = gfx::kGoogleGrey900;
 
 // Javascript bindings for the chrome.embeddedSearch APIs. See
-// https://www.chromium.org/embeddedsearch.
+// https://www.Cinaseek.org/embeddedsearch.
 class SearchBoxExtension {
  public:
   SearchBoxExtension() = delete;

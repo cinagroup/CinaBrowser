@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -239,7 +239,7 @@ TEST(V8ScriptValueSerializerForModulesTest, DecodeRTCCertificate) {
 
   V8TestingScope scope;
 
-  // This is encoded data generated from Chromium (around M55).
+  // This is encoded data generated from Cinaseek (around M55).
   ScriptState* script_state = scope.GetScriptState();
   Vector<uint8_t> encoded_data = ToVector(kEcdsaCertificateEncoded);
   scoped_refptr<SerializedScriptValue> input = SerializedValue(encoded_data);
@@ -1195,7 +1195,7 @@ TEST(V8ScriptValueSerializerForModulesTest, DecodeDOMFileSystem) {
   test::TaskEnvironment task_environment;
   V8TestingScope scope;
 
-  // This is encoded data generated from Chromium (around M56).
+  // This is encoded data generated from Cinaseek (around M56).
   ScriptState* script_state = scope.GetScriptState();
   scoped_refptr<SerializedScriptValue> input = SerializedValue(
       {0xff, 0x09, 0x3f, 0x00, 0x64, 0x01, 0x1d, 0x68, 0x74, 0x74, 0x70, 0x5f,

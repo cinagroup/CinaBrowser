@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,8 +9,8 @@ android_library("test_support_java") {
   testonly = true
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/TestSurveyUtils.java",
-    "java/src/org/chromium/chrome/browser/ui/hats/TestSurveyUtilsBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/TestSurveyUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/TestSurveyUtilsBridge.java",
   ]
   public_deps = [ "//chrome/browser/ui/android/hats:java" ]
   deps = [
@@ -44,6 +44,6 @@ source_set("test_support") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/chrome/browser/ui/hats/TestSurveyUtilsBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/ui/hats/TestSurveyUtilsBridge.java",
   ]
 }

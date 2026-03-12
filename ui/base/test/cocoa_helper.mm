@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@
 }
 
 // Enables users to write debugging code to help diagnose failures to close
-// CocoaTestHelperWindow. Debugging code is not usually committed in Chromium,
+// CocoaTestHelperWindow. Debugging code is not usually committed in Cinaseek,
 // but because it's difficult to correctly override retain/release in ARC, this
 // is left in.
 #if 0

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -500,7 +500,7 @@ void TabAndroid::DestroyWebContents() {
   // renderer process. Otherwise, we go with the slow path where renderer
   // process shuts down itself when ref count becomes 0.
   // This helps the render process exit quickly which avoids some issues
-  // during shutdown. See https://codereview.chromium.org/146693011/
+  // during shutdown. See https://codereview.Cinaseek.org/146693011/
   // and http://crbug.com/41086630 for details.
   content::RenderProcessHost* process =
       web_contents()->GetPrimaryMainFrame()->GetProcess();

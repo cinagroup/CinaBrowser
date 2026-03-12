@@ -4,14 +4,14 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "trichrome_chrome_bundle_smoke_test"
           ],
@@ -31,7 +31,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -44,7 +44,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "trichrome_chrome_bundle_smoke_test",
         "test_id_prefix": "ninja://chrome/android:trichrome_chrome_bundle_smoke_test/"
@@ -56,14 +56,14 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "android_webview_unittests"
           ],
@@ -83,7 +83,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -96,7 +96,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "android_webview_unittests",
         "test_id_prefix": "ninja://android_webview/test:android_webview_unittests/"
@@ -104,14 +104,14 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "system_webview_shell_layout_test_apk"
           ],
@@ -131,7 +131,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -144,7 +144,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "system_webview_shell_layout_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/system_webview_shell:system_webview_shell_layout_test_apk/"
@@ -153,14 +153,14 @@
         "args": [
           "--store-tombstones",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_cts_tests"
           ],
@@ -176,7 +176,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -187,7 +187,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -200,7 +200,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_cts_tests",
@@ -211,14 +211,14 @@
           "--disable-field-trial-config",
           "--store-tombstones",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_cts_tests_no_field_trial"
           ],
@@ -234,7 +234,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -245,7 +245,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -258,7 +258,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_cts_tests",
@@ -269,14 +269,14 @@
           "--use-apk-under-test-flags-file",
           "--webview-mutations-enabled",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk_mutations"
           ],
@@ -296,7 +296,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -309,7 +309,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "webview_instrumentation_test_apk",
@@ -320,14 +320,14 @@
           "--disable-field-trial-config",
           "--use-apk-under-test-flags-file",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_instrumentation_test_apk_no_field_trial"
           ],
@@ -347,7 +347,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -360,7 +360,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 12
         },
         "test": "webview_instrumentation_test_apk",
@@ -369,14 +369,14 @@
       {
         "args": [
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_ui_test_app_test_apk"
           ],
@@ -396,7 +396,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -409,7 +409,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webview_ui_test_app_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/automated_ui_tests:webview_ui_test_app_test_apk/"
@@ -418,14 +418,14 @@
         "args": [
           "--disable-field-trial-config",
           "--avd-config=../../tools/android/avd/proto/android_31_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_31_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_ui_test_app_test_apk_no_field_trial"
           ],
@@ -445,7 +445,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -458,7 +458,7 @@
               "caches": "android_31_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webview_ui_test_app_test_apk",
         "test_id_prefix": "ninja://android_webview/tools/automated_ui_tests:webview_ui_test_app_test_apk/"
@@ -471,14 +471,14 @@
         "args": [
           "--store-tombstones",
           "--avd-config=../../tools/android/avd/proto/android_33_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_33_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_32_cts_tests"
           ],
@@ -494,7 +494,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -505,7 +505,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -518,7 +518,7 @@
               "caches": "android_33_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_32_cts_tests",
@@ -528,14 +528,14 @@
         "args": [
           "--store-tombstones",
           "--avd-config=../../tools/android/avd/proto/android_33_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_33_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_cts_tests"
           ],
@@ -551,7 +551,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -562,7 +562,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -575,7 +575,7 @@
               "caches": "android_33_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_cts_tests",
@@ -586,14 +586,14 @@
           "--disable-field-trial-config",
           "--store-tombstones",
           "--avd-config=../../tools/android/avd/proto/android_33_google_apis_x64.textpb",
-          "--gs-results-bucket=chromium-result-details",
+          "--gs-results-bucket=Cinaseek-result-details",
           "--recover-devices"
         ],
         "description": "Run with android_33_google_apis_x64",
         "merge": {
           "args": [
             "--bucket",
-            "chromium-result-details",
+            "Cinaseek-result-details",
             "--test-name",
             "webview_64_cts_tests_no_field_trial"
           ],
@@ -609,7 +609,7 @@
         "swarming": {
           "cipd_packages": [
             {
-              "cipd_package": "chromium/android_webview/tools/cts_archive",
+              "cipd_package": "Cinaseek/android_webview/tools/cts_archive",
               "location": "android_webview/tools/cts_archive/cipd",
               "revision": "oW6-jyOPGwPJeLlaldYwrxZoYqzXpjO1OZUdyF3Qq7sC"
             }
@@ -620,7 +620,7 @@
             "device_os": null,
             "device_type": null,
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests.avd"
+            "pool": "Cinaseek.tests.avd"
           },
           "named_caches": [
             {
@@ -633,7 +633,7 @@
               "caches": "android_33_google_apis_x64"
             }
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 2
         },
         "test": "webview_64_cts_tests",

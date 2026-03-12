@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -90,9 +90,9 @@ declare_args() {
 
 # Mutex priority inheritance is disabled by default due to security
 # vulnerabilities in older versions of Linux kernel and glibc. However,
-# Chromecast builds have full control over the platform and ensure that
+# Cinaseekcast builds have full control over the platform and ensure that
 # the kernel and glibc versions used have patched the vulnerabilities,
-# so it is safe to use mutex priority inheritance on Chromecast platform.
+# so it is safe to use mutex priority inheritance on Cinaseekcast platform.
 assert(!enable_mutex_priority_inheritance ||
            (is_castos || is_cast_android || is_android),
        "Do not enable PI mutexes without consulting the security team")
@@ -969,7 +969,7 @@ component("base") {
     "vlog.h",
   ]
 
-  # Various files that are unused in the Chromium build, but presumably here to
+  # Various files that are unused in the Cinaseek build, but presumably here to
   # make downstream's life easier. They are not included in the main sources
   # list to avoid breaking GN formatting's auto-sorting.
   sources += [
@@ -1439,7 +1439,7 @@ component("base") {
     public_deps += [ "//third_party/jni_zero" ]
   }  # is_android || is_robolectric
 
-  # Chromeos.
+  # Cinaseekos.
   if (is_chromeos) {
     sources += [
       "logging_chromeos.cc",
@@ -2404,7 +2404,7 @@ component("base") {
       "time/time_now_posix.cc",
     ]
 
-    # TODO(b/167763382) Find an alternate solution for Chromecast devices, since
+    # TODO(b/167763382) Find an alternate solution for Cinaseekcast devices, since
     # adding the icui18n and icuuc deps significantly increases the binary size.
     # This dependency was added to deal with Y2038 problem where time_t is
     # represented via int32. However, Android builds specifically have time64
@@ -2442,7 +2442,7 @@ component("base") {
     sources += [ "power_monitor/power_monitor_device_source_stub.cc" ]
   }
 
-  # On ARC++-enabled ChromeOS system, we need TimeTicks::FromUptimeMillis to
+  # On ARC++-enabled CinaseekOS system, we need TimeTicks::FromUptimeMillis to
   # interpret time values sent from Android container.
   if (is_android || is_chromeos) {
     sources += [ "time/time_android.cc" ]
@@ -2691,7 +2691,7 @@ if (is_linux || is_chromeos) {
 }
 
 # Build flags for Control Flow Integrity
-# https://www.chromium.org/developers/testing/control-flow-integrity
+# https://www.Cinaseek.org/developers/testing/control-flow-integrity
 buildflag_header("cfi_buildflags") {
   header = "cfi_buildflags.h"
 
@@ -3081,7 +3081,7 @@ test("base_perftests") {
 
   if (is_fuchsia) {
     # Run these performance tests against the actual system.
-    run_as_chromium_system_test = true
+    run_as_Cinaseek_system_test = true
   }
 
   if (!is_official_build) {
@@ -3428,11 +3428,11 @@ if (is_android) {
 
     # TODO(crbug.com/40158212): Move partition_alloc tests into its repository.
     #
-    # Note: This requires checking `build_with_chromium` because partition_alloc
-    # do not provide ":unittests" when built outside of chromium.
-    # "//base" is a dependency of WebRTC where `build_with_chromium` is false.
+    # Note: This requires checking `build_with_Cinaseek` because partition_alloc
+    # do not provide ":unittests" when built outside of Cinaseek.
+    # "//base" is a dependency of WebRTC where `build_with_Cinaseek` is false.
     # TODO(42223878): Remove standalone WebRTC dependency on //base.
-    if (build_with_chromium) {
+    if (build_with_Cinaseek) {
       deps += [
         "allocator/partition_allocator/src/partition_alloc:death_unittests",
       ]
@@ -3565,7 +3565,7 @@ test("base_unittests") {
     "memory/platform_shared_memory_region_unittest.cc",
     "memory/protected_memory_unittest.cc",
     "memory/ptr_util_unittest.cc",
-    "memory/raw_ptr_chromium_unittest.cc",
+    "memory/raw_ptr_Cinaseek_unittest.cc",
     "memory/raw_span_unittest.cc",
     "memory/ref_counted_memory_unittest.cc",
     "memory/ref_counted_unittest.cc",
@@ -3898,11 +3898,11 @@ test("base_unittests") {
 
   # TODO(crbug.com/40158212): Move partition_alloc tests into its repository.
   #
-  # Note: This requires checking `build_with_chromium` because partition_alloc
-  # do not provide ":unittests" when built outside of chromium.
-  # "//base" is a dependency of WebRTC where `build_with_chromium` is false.
+  # Note: This requires checking `build_with_Cinaseek` because partition_alloc
+  # do not provide ":unittests" when built outside of Cinaseek.
+  # "//base" is a dependency of WebRTC where `build_with_Cinaseek` is false.
   # TODO(42223878): Remove standalone WebRTC dependency on //base.
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     deps += [ "allocator/partition_allocator/src/partition_alloc:unittests" ]
   }
 
@@ -4590,7 +4590,7 @@ if (enable_nocompile_tests) {
 if (is_android || is_robolectric) {
   generate_jni("base_junit_tests_jni") {
     testonly = true
-    sources = [ "android/junit/src/org/chromium/base/JniCallbacksTest.java" ]
+    sources = [ "android/junit/src/org/Cinaseek/base/JniCallbacksTest.java" ]
   }
 
   shared_library_with_jni("libbase_junit_tests") {
@@ -4617,13 +4617,13 @@ if (is_android) {
   generate_jni("base_minimal_jni") {
     enable_definition_macros = true
     sources = [
-      "android/java/src/org/chromium/base/IntStringCallback.java",
-      "android/java/src/org/chromium/base/JNIUtils.java",
-      "android/java/src/org/chromium/base/JavaExceptionReporter.java",
-      "android/java/src/org/chromium/base/JniCallbackImpl.java",
-      "android/java/src/org/chromium/base/Token.java",
-      "android/java/src/org/chromium/base/TokenBase.java",
-      "android/java/src/org/chromium/base/UnguessableToken.java",
+      "android/java/src/org/Cinaseek/base/IntStringCallback.java",
+      "android/java/src/org/Cinaseek/base/JNIUtils.java",
+      "android/java/src/org/Cinaseek/base/JavaExceptionReporter.java",
+      "android/java/src/org/Cinaseek/base/JniCallbackImpl.java",
+      "android/java/src/org/Cinaseek/base/Token.java",
+      "android/java/src/org/Cinaseek/base/TokenBase.java",
+      "android/java/src/org/Cinaseek/base/UnguessableToken.java",
     ]
     public_deps = [ ":android_runtime_jni_headers" ]
   }
@@ -4631,19 +4631,19 @@ if (is_android) {
   # JNI not supported in Robolectric.
   generate_jni("base_jni") {
     sources = [
-      "android/java/src/org/chromium/base/ApkAssets.java",
-      "android/java/src/org/chromium/base/BaseFeatureMap.java",
-      "android/java/src/org/chromium/base/CpuFeatures.java",
-      "android/java/src/org/chromium/base/EventLog.java",
-      "android/java/src/org/chromium/base/FieldTrialList.java",
-      "android/java/src/org/chromium/base/ImportantFileWriterAndroid.java",
-      "android/java/src/org/chromium/base/InputHintChecker.java",
-      "android/java/src/org/chromium/base/JavaHandlerThread.java",
-      "android/java/src/org/chromium/base/LocaleUtils.java",
-      "android/java/src/org/chromium/base/PathService.java",
-      "android/java/src/org/chromium/base/PowerMonitor.java",
-      "android/java/src/org/chromium/base/PowerMonitorReading.java",
-      "android/java/src/org/chromium/base/RadioUtils.java",
+      "android/java/src/org/Cinaseek/base/ApkAssets.java",
+      "android/java/src/org/Cinaseek/base/BaseFeatureMap.java",
+      "android/java/src/org/Cinaseek/base/CpuFeatures.java",
+      "android/java/src/org/Cinaseek/base/EventLog.java",
+      "android/java/src/org/Cinaseek/base/FieldTrialList.java",
+      "android/java/src/org/Cinaseek/base/ImportantFileWriterAndroid.java",
+      "android/java/src/org/Cinaseek/base/InputHintChecker.java",
+      "android/java/src/org/Cinaseek/base/JavaHandlerThread.java",
+      "android/java/src/org/Cinaseek/base/LocaleUtils.java",
+      "android/java/src/org/Cinaseek/base/PathService.java",
+      "android/java/src/org/Cinaseek/base/PowerMonitor.java",
+      "android/java/src/org/Cinaseek/base/PowerMonitorReading.java",
+      "android/java/src/org/Cinaseek/base/RadioUtils.java",
     ]
 
     public_deps = [
@@ -4668,7 +4668,7 @@ if (is_android) {
       "features.cc",
       "task/task_features.cc",
     ]
-    class_name = "org.chromium.base.BaseFeatures"
+    class_name = "org.Cinaseek.base.BaseFeatures"
   }
 
   android_library("base_switches_java") {
@@ -4679,19 +4679,19 @@ if (is_android) {
     # External code should depend on ":base_java" instead.
     visibility = [ ":*" ]
     sources = [ "base_switches.h" ]
-    template = "android/java/src/org/chromium/base/BaseSwitches.java.tmpl"
+    template = "android/java/src/org/Cinaseek/base/BaseSwitches.java.tmpl"
   }
 
   generate_jni("process_launcher_jni") {
     sources = [
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessService.java",
-      "android/java/src/org/chromium/base/process_launcher/ScopedServiceBindingBatch.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessService.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ScopedServiceBindingBatch.java",
     ]
   }
 
   generate_jni("clang_profiler_jni") {
     sources = [
-      "test/android/javatests/src/org/chromium/base/test/ClangProfiler.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/ClangProfiler.java",
     ]
   }
 
@@ -4699,21 +4699,21 @@ if (is_android) {
     if (use_clang_profiling) {
       srcjar_deps = [ ":clang_profiler_jni" ]
       sources = [
-        "test/android/javatests/src/org/chromium/base/test/ClangProfiler.java",
+        "test/android/javatests/src/org/Cinaseek/base/test/ClangProfiler.java",
       ]
     } else {
-      sources = [ "test/android/javatests/src/stub/org/chromium/base/test/ClangProfiler.java" ]
+      sources = [ "test/android/javatests/src/stub/org/Cinaseek/base/test/ClangProfiler.java" ]
     }
     deps = [ "//third_party/jni_zero:jni_zero_java" ]
   }
 
   generate_jni("path_utils_jni") {
-    sources = [ "android/java/src/org/chromium/base/PathUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/PathUtils.java" ]
   }
 
   android_library("path_utils_java") {
     srcjar_deps = [ ":path_utils_jni" ]
-    sources = [ "android/java/src/org/chromium/base/PathUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/PathUtils.java" ]
     deps = [
       ":log_java",
       ":resetters_java",
@@ -4724,12 +4724,12 @@ if (is_android) {
   }
 
   generate_jni("file_utils_jni") {
-    sources = [ "android/java/src/org/chromium/base/FileUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/FileUtils.java" ]
   }
 
   android_library("file_utils_java") {
     srcjar_deps = [ ":file_utils_jni" ]
-    sources = [ "android/java/src/org/chromium/base/FileUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/FileUtils.java" ]
     deps = [
       ":file_provider_utils_java",
       ":log_java",
@@ -4757,25 +4757,25 @@ if (is_android) {
       "//third_party/jni_zero:jni_zero_java",
     ]
     sources = [
-      "android/java/src/org/chromium/base/process_launcher/BindService.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildConnectionAllocator.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessConnection.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessConnectionState.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessConstants.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessLauncher.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessService.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildProcessServiceDelegate.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildServiceConnection.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildServiceConnectionController.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildServiceConnectionDelegate.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildServiceConnectionFactory.java",
-      "android/java/src/org/chromium/base/process_launcher/ChildServiceConnectionImpl.java",
-      "android/java/src/org/chromium/base/process_launcher/LegacyChildServiceConnectionController.java",
-      "android/java/src/org/chromium/base/process_launcher/RebindServiceConnection.java",
-      "android/java/src/org/chromium/base/process_launcher/RebindingChildServiceConnectionController.java",
-      "android/java/src/org/chromium/base/process_launcher/ScopedServiceBindingBatch.java",
-      "android/java/src/org/chromium/base/process_launcher/ScopedServiceBindingBatchDuration.java",
-      "android/java/src/org/chromium/base/process_launcher/ScopedServiceBindingBatchImpl.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/BindService.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildConnectionAllocator.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessConnection.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessConnectionState.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessConstants.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessLauncher.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessService.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildProcessServiceDelegate.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildServiceConnection.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildServiceConnectionController.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildServiceConnectionDelegate.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildServiceConnectionFactory.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ChildServiceConnectionImpl.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/LegacyChildServiceConnectionController.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/RebindServiceConnection.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/RebindingChildServiceConnectionController.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ScopedServiceBindingBatch.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ScopedServiceBindingBatchDuration.java",
+      "android/java/src/org/Cinaseek/base/process_launcher/ScopedServiceBindingBatchImpl.java",
     ]
   }
 
@@ -4796,54 +4796,54 @@ if (is_android) {
     # New additions should have their own independent android_library. Please
     # do no append to this list.
     sources = [
-      "android/java/src/org/chromium/base/ApkAssets.java",
-      "android/java/src/org/chromium/base/BaseFeatureList.java",
-      "android/java/src/org/chromium/base/BaseFeatureMap.java",
-      "android/java/src/org/chromium/base/BinderCallsListener.java",
-      "android/java/src/org/chromium/base/CallbackController.java",
-      "android/java/src/org/chromium/base/CancelableRunnable.java",
-      "android/java/src/org/chromium/base/CollectionUtil.java",
-      "android/java/src/org/chromium/base/CpuFeatures.java",
-      "android/java/src/org/chromium/base/DiscardableReferencePool.java",
-      "android/java/src/org/chromium/base/EventLog.java",
-      "android/java/src/org/chromium/base/FieldTrialList.java",
-      "android/java/src/org/chromium/base/ImportantFileWriterAndroid.java",
-      "android/java/src/org/chromium/base/InputHintChecker.java",
-      "android/java/src/org/chromium/base/IntStringCallback.java",
-      "android/java/src/org/chromium/base/IntentUtils.java",
-      "android/java/src/org/chromium/base/JavaExceptionReporter.java",
-      "android/java/src/org/chromium/base/JavaHandlerThread.java",
-      "android/java/src/org/chromium/base/JniCallbackImpl.java",
-      "android/java/src/org/chromium/base/JniOnceCallback.java",
-      "android/java/src/org/chromium/base/JniOnceCallback2.java",
-      "android/java/src/org/chromium/base/JniOnceRunnable.java",
-      "android/java/src/org/chromium/base/JniRepeatingCallback.java",
-      "android/java/src/org/chromium/base/JniRepeatingCallback2.java",
-      "android/java/src/org/chromium/base/JniRepeatingRunnable.java",
-      "android/java/src/org/chromium/base/LocaleUtils.java",
-      "android/java/src/org/chromium/base/MathUtils.java",
-      "android/java/src/org/chromium/base/PackageManagerUtils.java",
-      "android/java/src/org/chromium/base/PathService.java",
-      "android/java/src/org/chromium/base/PostNativeFlag.java",
-      "android/java/src/org/chromium/base/PowerMonitor.java",
-      "android/java/src/org/chromium/base/PowerMonitorReading.java",
-      "android/java/src/org/chromium/base/RadioUtils.java",
-      "android/java/src/org/chromium/base/RequiredCallback.java",
-      "android/java/src/org/chromium/base/Token.java",
-      "android/java/src/org/chromium/base/TokenBase.java",
-      "android/java/src/org/chromium/base/UnguessableToken.java",
-      "android/java/src/org/chromium/base/UserData.java",
-      "android/java/src/org/chromium/base/UserDataHost.java",
-      "android/java/src/org/chromium/base/ValueChangedCallback.java",
+      "android/java/src/org/Cinaseek/base/ApkAssets.java",
+      "android/java/src/org/Cinaseek/base/BaseFeatureList.java",
+      "android/java/src/org/Cinaseek/base/BaseFeatureMap.java",
+      "android/java/src/org/Cinaseek/base/BinderCallsListener.java",
+      "android/java/src/org/Cinaseek/base/CallbackController.java",
+      "android/java/src/org/Cinaseek/base/CancelableRunnable.java",
+      "android/java/src/org/Cinaseek/base/CollectionUtil.java",
+      "android/java/src/org/Cinaseek/base/CpuFeatures.java",
+      "android/java/src/org/Cinaseek/base/DiscardableReferencePool.java",
+      "android/java/src/org/Cinaseek/base/EventLog.java",
+      "android/java/src/org/Cinaseek/base/FieldTrialList.java",
+      "android/java/src/org/Cinaseek/base/ImportantFileWriterAndroid.java",
+      "android/java/src/org/Cinaseek/base/InputHintChecker.java",
+      "android/java/src/org/Cinaseek/base/IntStringCallback.java",
+      "android/java/src/org/Cinaseek/base/IntentUtils.java",
+      "android/java/src/org/Cinaseek/base/JavaExceptionReporter.java",
+      "android/java/src/org/Cinaseek/base/JavaHandlerThread.java",
+      "android/java/src/org/Cinaseek/base/JniCallbackImpl.java",
+      "android/java/src/org/Cinaseek/base/JniOnceCallback.java",
+      "android/java/src/org/Cinaseek/base/JniOnceCallback2.java",
+      "android/java/src/org/Cinaseek/base/JniOnceRunnable.java",
+      "android/java/src/org/Cinaseek/base/JniRepeatingCallback.java",
+      "android/java/src/org/Cinaseek/base/JniRepeatingCallback2.java",
+      "android/java/src/org/Cinaseek/base/JniRepeatingRunnable.java",
+      "android/java/src/org/Cinaseek/base/LocaleUtils.java",
+      "android/java/src/org/Cinaseek/base/MathUtils.java",
+      "android/java/src/org/Cinaseek/base/PackageManagerUtils.java",
+      "android/java/src/org/Cinaseek/base/PathService.java",
+      "android/java/src/org/Cinaseek/base/PostNativeFlag.java",
+      "android/java/src/org/Cinaseek/base/PowerMonitor.java",
+      "android/java/src/org/Cinaseek/base/PowerMonitorReading.java",
+      "android/java/src/org/Cinaseek/base/RadioUtils.java",
+      "android/java/src/org/Cinaseek/base/RequiredCallback.java",
+      "android/java/src/org/Cinaseek/base/Token.java",
+      "android/java/src/org/Cinaseek/base/TokenBase.java",
+      "android/java/src/org/Cinaseek/base/UnguessableToken.java",
+      "android/java/src/org/Cinaseek/base/UserData.java",
+      "android/java/src/org/Cinaseek/base/UserDataHost.java",
+      "android/java/src/org/Cinaseek/base/ValueChangedCallback.java",
     ]
 
-    resources_package = "org.chromium.base"
+    resources_package = "org.Cinaseek.base"
 
     proguard_configs = [ "android/proguard/shared_with_cronet.flags" ]
 
     # DO NOT ADD TO THIS LIST.
     # base_java is a blob of targets that are being consumed by almost every product and
-    # library in Chromium, adding new java modules here means that all consumers will be
+    # library in Cinaseek, adding new java modules here means that all consumers will be
     # impacted (eg: This could have severe consequences as Cronet can't depend on Guava /
     # AndroidX).
     #
@@ -4885,7 +4885,7 @@ if (is_android) {
 
     if (!is_cronet_build) {
       proguard_configs += [
-        "android/proguard/chromium_apk.flags",
+        "android/proguard/Cinaseek_apk.flags",
         "android/proguard/remove_logging.flags",
       ]
     }
@@ -4893,8 +4893,8 @@ if (is_android) {
 
   generate_jni("metrics_jni") {
     sources = [
-      "android/java/src/org/chromium/base/metrics/NativeUmaRecorder.java",
-      "android/java/src/org/chromium/base/metrics/StatisticsRecorderAndroid.java",
+      "android/java/src/org/Cinaseek/base/metrics/NativeUmaRecorder.java",
+      "android/java/src/org/Cinaseek/base/metrics/StatisticsRecorderAndroid.java",
     ]
   }
 
@@ -4903,17 +4903,17 @@ if (is_android) {
   }
 
   generate_jni("jni_android_jni") {
-    sources = [ "android/java/src/org/chromium/base/JniAndroid.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/JniAndroid.java" ]
   }
 
   android_library("pii_elider_java") {
-    sources = [ "android/java/src/org/chromium/base/PiiElider.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/PiiElider.java" ]
     deps = [ ":tasks_java" ]
   }
 
   android_library("jni_android_java") {
     srcjar_deps = [ ":jni_android_jni" ]
-    sources = [ "android/java/src/org/chromium/base/JniAndroid.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/JniAndroid.java" ]
     deps = [
       ":log_java",
       ":pii_elider_java",
@@ -4925,12 +4925,12 @@ if (is_android) {
   # Separated out for cronet.
   android_library("metrics_ScopedSysTraceEvent_java") {
     sources = [
-      "android/java/src/org/chromium/base/metrics/ScopedSysTraceEvent.java",
+      "android/java/src/org/Cinaseek/base/metrics/ScopedSysTraceEvent.java",
     ]
   }
 
   android_library("command_line_init_utils_java") {
-    sources = [ "android/java/src/org/chromium/base/CommandLineInitUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/CommandLineInitUtil.java" ]
     deps = [
       ":build_info_java",
       ":command_line_java",
@@ -4939,28 +4939,28 @@ if (is_android) {
     ]
   }
   android_library("file_provider_utils_java") {
-    sources = [ "android/java/src/org/chromium/base/FileProviderUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/FileProviderUtils.java" ]
   }
   generate_jni("features_jni") {
     sources = [
-      "android/java/src/org/chromium/base/FeatureList.java",
-      "android/java/src/org/chromium/base/FeatureMap.java",
-      "android/java/src/org/chromium/base/Features.java",
+      "android/java/src/org/Cinaseek/base/FeatureList.java",
+      "android/java/src/org/Cinaseek/base/FeatureMap.java",
+      "android/java/src/org/Cinaseek/base/Features.java",
     ]
   }
   android_library("features_java") {
     srcjar_deps = [ ":features_jni" ]
     sources = [
-      "android/java/src/org/chromium/base/FeatureList.java",
-      "android/java/src/org/chromium/base/FeatureMap.java",
-      "android/java/src/org/chromium/base/FeatureOverrides.java",
-      "android/java/src/org/chromium/base/FeatureParam.java",
-      "android/java/src/org/chromium/base/Features.java",
-      "android/java/src/org/chromium/base/Flag.java",
-      "android/java/src/org/chromium/base/MutableBooleanParamWithSafeDefault.java",
-      "android/java/src/org/chromium/base/MutableFlagWithSafeDefault.java",
-      "android/java/src/org/chromium/base/MutableIntParamWithSafeDefault.java",
-      "android/java/src/org/chromium/base/MutableParamWithSafeDefault.java",
+      "android/java/src/org/Cinaseek/base/FeatureList.java",
+      "android/java/src/org/Cinaseek/base/FeatureMap.java",
+      "android/java/src/org/Cinaseek/base/FeatureOverrides.java",
+      "android/java/src/org/Cinaseek/base/FeatureParam.java",
+      "android/java/src/org/Cinaseek/base/Features.java",
+      "android/java/src/org/Cinaseek/base/Flag.java",
+      "android/java/src/org/Cinaseek/base/MutableBooleanParamWithSafeDefault.java",
+      "android/java/src/org/Cinaseek/base/MutableFlagWithSafeDefault.java",
+      "android/java/src/org/Cinaseek/base/MutableIntParamWithSafeDefault.java",
+      "android/java/src/org/Cinaseek/base/MutableParamWithSafeDefault.java",
     ]
     deps = [
       ":library_loader_java",
@@ -4972,15 +4972,15 @@ if (is_android) {
   }
 
   android_library("wrapped_class_loader_java") {
-    sources = [ "android/java/src/org/chromium/base/WrappedClassLoader.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/WrappedClassLoader.java" ]
   }
 
   generate_jni("bundle_utils_jni") {
-    sources = [ "android/java/src/org/chromium/base/BundleUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/BundleUtils.java" ]
   }
   android_library("bundle_utils_java") {
     srcjar_deps = [ ":bundle_utils_jni" ]
-    sources = [ "android/java/src/org/chromium/base/BundleUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/BundleUtils.java" ]
     deps = [
       ":log_java",
       ":metrics_java",
@@ -4993,7 +4993,7 @@ if (is_android) {
   }
 
   android_library("jni_utils_java") {
-    sources = [ "android/java/src/org/chromium/base/JNIUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/JNIUtils.java" ]
     deps = [
       ":bundle_utils_java",
       ":log_java",
@@ -5005,16 +5005,16 @@ if (is_android) {
   android_library("metrics_java") {
     srcjar_deps = [ ":metrics_enum_srcjar" ]
     sources = [
-      "android/java/src/org/chromium/base/metrics/CachingUmaRecorder.java",
-      "android/java/src/org/chromium/base/metrics/HistogramBucket.java",
-      "android/java/src/org/chromium/base/metrics/NativeUmaRecorder.java",
-      "android/java/src/org/chromium/base/metrics/NoopUmaRecorder.java",
-      "android/java/src/org/chromium/base/metrics/RecordHistogram.java",
-      "android/java/src/org/chromium/base/metrics/RecordUserAction.java",
-      "android/java/src/org/chromium/base/metrics/StatisticsRecorderAndroid.java",
-      "android/java/src/org/chromium/base/metrics/TimingMetric.java",
-      "android/java/src/org/chromium/base/metrics/UmaRecorder.java",
-      "android/java/src/org/chromium/base/metrics/UmaRecorderHolder.java",
+      "android/java/src/org/Cinaseek/base/metrics/CachingUmaRecorder.java",
+      "android/java/src/org/Cinaseek/base/metrics/HistogramBucket.java",
+      "android/java/src/org/Cinaseek/base/metrics/NativeUmaRecorder.java",
+      "android/java/src/org/Cinaseek/base/metrics/NoopUmaRecorder.java",
+      "android/java/src/org/Cinaseek/base/metrics/RecordHistogram.java",
+      "android/java/src/org/Cinaseek/base/metrics/RecordUserAction.java",
+      "android/java/src/org/Cinaseek/base/metrics/StatisticsRecorderAndroid.java",
+      "android/java/src/org/Cinaseek/base/metrics/TimingMetric.java",
+      "android/java/src/org/Cinaseek/base/metrics/UmaRecorder.java",
+      "android/java/src/org/Cinaseek/base/metrics/UmaRecorderHolder.java",
     ]
     deps = [
       ":callback_java",
@@ -5037,10 +5037,10 @@ if (is_android) {
 
   generate_jni("memory_jni") {
     sources = [
-      "android/java/src/org/chromium/base/MemoryPressureListener.java",
-      "android/java/src/org/chromium/base/memory/JavaHeapDumpGenerator.java",
-      "android/java/src/org/chromium/base/memory/MemoryInfoBridge.java",
-      "android/java/src/org/chromium/base/memory/MemoryPurgeManager.java",
+      "android/java/src/org/Cinaseek/base/MemoryPressureListener.java",
+      "android/java/src/org/Cinaseek/base/memory/JavaHeapDumpGenerator.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryInfoBridge.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryPurgeManager.java",
     ]
   }
 
@@ -5050,14 +5050,14 @@ if (is_android) {
       ":memory_pressure_level_enum_srcjar",
     ]
     sources = [
-      "android/java/src/org/chromium/base/MemoryPressureListener.java",
-      "android/java/src/org/chromium/base/memory/JavaHeapDumpGenerator.java",
-      "android/java/src/org/chromium/base/memory/MemoryInfoBridge.java",
-      "android/java/src/org/chromium/base/memory/MemoryPressureCallback.java",
-      "android/java/src/org/chromium/base/memory/MemoryPressureMonitor.java",
-      "android/java/src/org/chromium/base/memory/MemoryPressureUma.java",
-      "android/java/src/org/chromium/base/memory/MemoryPurgeManager.java",
-      "android/java/src/org/chromium/base/memory/SelfFreezeCallback.java",
+      "android/java/src/org/Cinaseek/base/MemoryPressureListener.java",
+      "android/java/src/org/Cinaseek/base/memory/JavaHeapDumpGenerator.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryInfoBridge.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryPressureCallback.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryPressureMonitor.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryPressureUma.java",
+      "android/java/src/org/Cinaseek/base/memory/MemoryPurgeManager.java",
+      "android/java/src/org/Cinaseek/base/memory/SelfFreezeCallback.java",
     ]
     deps = [
       ":library_loader_java",
@@ -5074,9 +5074,9 @@ if (is_android) {
 
   android_library("lifetime_java") {
     sources = [
-      "android/java/src/org/chromium/base/lifetime/DestroyChecker.java",
-      "android/java/src/org/chromium/base/lifetime/Destroyable.java",
-      "android/java/src/org/chromium/base/lifetime/LifetimeAssert.java",
+      "android/java/src/org/Cinaseek/base/lifetime/DestroyChecker.java",
+      "android/java/src/org/Cinaseek/base/lifetime/Destroyable.java",
+      "android/java/src/org/Cinaseek/base/lifetime/LifetimeAssert.java",
     ]
     deps = [
       ":tasks_java",
@@ -5085,7 +5085,7 @@ if (is_android) {
   }
 
   android_library("promise_java") {
-    sources = [ "android/java/src/org/chromium/base/Promise.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/Promise.java" ]
     deps = [
       ":callback_java",
       ":tasks_java",
@@ -5095,9 +5095,9 @@ if (is_android) {
 
   android_library("unowned_user_data_java") {
     sources = [
-      "android/java/src/org/chromium/base/UnownedUserDataHost.java",
-      "android/java/src/org/chromium/base/UnownedUserDataKey.java",
-      "android/java/src/org/chromium/base/UnownedUserDataListener.java",
+      "android/java/src/org/Cinaseek/base/UnownedUserDataHost.java",
+      "android/java/src/org/Cinaseek/base/UnownedUserDataKey.java",
+      "android/java/src/org/Cinaseek/base/UnownedUserDataListener.java",
     ]
     deps = [
       ":lifetime_java",
@@ -5108,25 +5108,25 @@ if (is_android) {
 
   android_library("supplier_java") {
     sources = [
-      "android/java/src/org/chromium/base/supplier/BaseObservableSupplierImpl.java",
-      "android/java/src/org/chromium/base/supplier/LazyOneshotSupplier.java",
-      "android/java/src/org/chromium/base/supplier/LazyOneshotSupplierImpl.java",
-      "android/java/src/org/chromium/base/supplier/MonotonicObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/NonNullObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/NullableObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/ObservableSupplierImpl.java",
-      "android/java/src/org/chromium/base/supplier/ObservableSuppliers.java",
-      "android/java/src/org/chromium/base/supplier/OneShotCallback.java",
-      "android/java/src/org/chromium/base/supplier/OneshotSupplier.java",
-      "android/java/src/org/chromium/base/supplier/OneshotSupplierImpl.java",
-      "android/java/src/org/chromium/base/supplier/SettableMonotonicObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/SettableNonNullObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/SettableNullableObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/SupplierUtils.java",
-      "android/java/src/org/chromium/base/supplier/SyncOneshotSupplier.java",
-      "android/java/src/org/chromium/base/supplier/SyncOneshotSupplierImpl.java",
-      "android/java/src/org/chromium/base/supplier/TransitiveObservableSupplier.java",
-      "android/java/src/org/chromium/base/supplier/UnwrapObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/BaseObservableSupplierImpl.java",
+      "android/java/src/org/Cinaseek/base/supplier/LazyOneshotSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/LazyOneshotSupplierImpl.java",
+      "android/java/src/org/Cinaseek/base/supplier/MonotonicObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/NonNullObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/NullableObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/ObservableSupplierImpl.java",
+      "android/java/src/org/Cinaseek/base/supplier/ObservableSuppliers.java",
+      "android/java/src/org/Cinaseek/base/supplier/OneShotCallback.java",
+      "android/java/src/org/Cinaseek/base/supplier/OneshotSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/OneshotSupplierImpl.java",
+      "android/java/src/org/Cinaseek/base/supplier/SettableMonotonicObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/SettableNonNullObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/SettableNullableObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/SupplierUtils.java",
+      "android/java/src/org/Cinaseek/base/supplier/SyncOneshotSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/SyncOneshotSupplierImpl.java",
+      "android/java/src/org/Cinaseek/base/supplier/TransitiveObservableSupplier.java",
+      "android/java/src/org/Cinaseek/base/supplier/UnwrapObservableSupplier.java",
     ]
     deps = [
       ":callback_java",
@@ -5141,21 +5141,21 @@ if (is_android) {
   }
 
   android_library("time_utils_java") {
-    sources = [ "android/java/src/org/chromium/base/TimeUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/TimeUtils.java" ]
   }
 
   generate_jni("callback_jni") {
     sources = [
-      "android/java/src/org/chromium/base/Callback.java",
-      "android/java/src/org/chromium/base/Callback2.java",
+      "android/java/src/org/Cinaseek/base/Callback.java",
+      "android/java/src/org/Cinaseek/base/Callback2.java",
     ]
   }
 
   android_library("callback_java") {
     sources = [
-      "android/java/src/org/chromium/base/Callback.java",
-      "android/java/src/org/chromium/base/Callback2.java",
-      "android/java/src/org/chromium/base/CallbackUtils.java",
+      "android/java/src/org/Cinaseek/base/Callback.java",
+      "android/java/src/org/Cinaseek/base/Callback2.java",
+      "android/java/src/org/Cinaseek/base/CallbackUtils.java",
     ]
     deps = [
       ":callback_jni_java",
@@ -5173,14 +5173,14 @@ if (is_android) {
 
   generate_jni("library_loader_jni") {
     sources = [
-      "android/java/src/org/chromium/base/library_loader/LibraryLoader.java",
-      "android/java/src/org/chromium/base/library_loader/LibraryPrefetcher.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LibraryLoader.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LibraryPrefetcher.java",
     ]
   }
 
   android_library("screen_off_broadcast_receiver_java") {
     sources =
-        [ "android/java/src/org/chromium/base/ScreenOffBroadcastReceiver.java" ]
+        [ "android/java/src/org/Cinaseek/base/ScreenOffBroadcastReceiver.java" ]
     deps = [
       ":tasks_java",
       "//third_party/androidx:androidx_annotation_annotation_java",
@@ -5189,16 +5189,16 @@ if (is_android) {
 
   # JNI that is also supported in the Robolectric toolchain.
   generate_jni("tasks_minimal_jni") {
-    sources = [ "android/java/src/org/chromium/base/TraceEvent.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/TraceEvent.java" ]
   }
 
   generate_jni("tasks_jni") {
     sources = [
-      "android/java/src/org/chromium/base/ApplicationStatus.java",
-      "android/java/src/org/chromium/base/EarlyTraceEvent.java",
-      "android/java/src/org/chromium/base/ThreadUtils.java",
-      "android/java/src/org/chromium/base/task/PostTask.java",
-      "android/java/src/org/chromium/base/task/TaskRunnerImpl.java",
+      "android/java/src/org/Cinaseek/base/ApplicationStatus.java",
+      "android/java/src/org/Cinaseek/base/EarlyTraceEvent.java",
+      "android/java/src/org/Cinaseek/base/ThreadUtils.java",
+      "android/java/src/org/Cinaseek/base/task/PostTask.java",
+      "android/java/src/org/Cinaseek/base/task/TaskRunnerImpl.java",
     ]
   }
 
@@ -5211,7 +5211,7 @@ if (is_android) {
 
   # This is a separate target because it depends on guava.
   android_library("task_executor_java") {
-    sources = [ "android/java/src/org/chromium/base/task/ChromiumExecutorServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/task/CinaseekExecutorServiceFactory.java" ]
 
     deps = [
       ":tasks_java",
@@ -5224,14 +5224,14 @@ if (is_android) {
     sources = [
       # Dependencies added after this comment is tech-debt, should be untangled
       # and moved to their own separate android_library.
-      "android/java/src/org/chromium/base/ApiCompatibilityUtils.java",
-      "android/java/src/org/chromium/base/ApplicationStatus.java",
-      "android/java/src/org/chromium/base/ContextUtils.java",
-      "android/java/src/org/chromium/base/EarlyTraceEvent.java",
-      "android/java/src/org/chromium/base/ObserverList.java",
-      "android/java/src/org/chromium/base/StrictModeContext.java",
-      "android/java/src/org/chromium/base/ThreadUtils.java",
-      "android/java/src/org/chromium/base/TraceEvent.java",
+      "android/java/src/org/Cinaseek/base/ApiCompatibilityUtils.java",
+      "android/java/src/org/Cinaseek/base/ApplicationStatus.java",
+      "android/java/src/org/Cinaseek/base/ContextUtils.java",
+      "android/java/src/org/Cinaseek/base/EarlyTraceEvent.java",
+      "android/java/src/org/Cinaseek/base/ObserverList.java",
+      "android/java/src/org/Cinaseek/base/StrictModeContext.java",
+      "android/java/src/org/Cinaseek/base/ThreadUtils.java",
+      "android/java/src/org/Cinaseek/base/TraceEvent.java",
 
       # End of cyclic dependencies.
       # The root of the problem stems from the fact that tasks/* depends
@@ -5239,20 +5239,20 @@ if (is_android) {
       # dependency between AsyncTask -> TraceEvent -> ThreadUtil ->
       # PostTask -> AsyncTask. This should be solved by making everything inside
       # task/* self contained.
-      "android/java/src/org/chromium/base/task/AsyncTask.java",
-      "android/java/src/org/chromium/base/task/BackgroundOnlyAsyncTask.java",
-      "android/java/src/org/chromium/base/task/ChainedTasks.java",
-      "android/java/src/org/chromium/base/task/ChromeThreadPoolExecutor.java",
-      "android/java/src/org/chromium/base/task/Location.java",
-      "android/java/src/org/chromium/base/task/LocationAwareExecutor.java",
-      "android/java/src/org/chromium/base/task/PostTask.java",
-      "android/java/src/org/chromium/base/task/SequencedTaskRunner.java",
-      "android/java/src/org/chromium/base/task/SequencedTaskRunnerImpl.java",
-      "android/java/src/org/chromium/base/task/SerialExecutor.java",
-      "android/java/src/org/chromium/base/task/TaskOriginException.java",
-      "android/java/src/org/chromium/base/task/TaskRunner.java",
-      "android/java/src/org/chromium/base/task/TaskRunnerImpl.java",
-      "android/java/src/org/chromium/base/task/UiThreadTaskRunnerImpl.java",
+      "android/java/src/org/Cinaseek/base/task/AsyncTask.java",
+      "android/java/src/org/Cinaseek/base/task/BackgroundOnlyAsyncTask.java",
+      "android/java/src/org/Cinaseek/base/task/ChainedTasks.java",
+      "android/java/src/org/Cinaseek/base/task/CinaseekThreadPoolExecutor.java",
+      "android/java/src/org/Cinaseek/base/task/Location.java",
+      "android/java/src/org/Cinaseek/base/task/LocationAwareExecutor.java",
+      "android/java/src/org/Cinaseek/base/task/PostTask.java",
+      "android/java/src/org/Cinaseek/base/task/SequencedTaskRunner.java",
+      "android/java/src/org/Cinaseek/base/task/SequencedTaskRunnerImpl.java",
+      "android/java/src/org/Cinaseek/base/task/SerialExecutor.java",
+      "android/java/src/org/Cinaseek/base/task/TaskOriginException.java",
+      "android/java/src/org/Cinaseek/base/task/TaskRunner.java",
+      "android/java/src/org/Cinaseek/base/task/TaskRunnerImpl.java",
+      "android/java/src/org/Cinaseek/base/task/UiThreadTaskRunnerImpl.java",
     ]
     public_deps = [
       ":tasks_jni_java",
@@ -5273,17 +5273,17 @@ if (is_android) {
   }
   android_library("log_java") {
     sources = [
-      "android/java/src/org/chromium/base/JavaUtils.java",
-      "android/java/src/org/chromium/base/Log.java",
+      "android/java/src/org/Cinaseek/base/JavaUtils.java",
+      "android/java/src/org/Cinaseek/base/Log.java",
     ]
     deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
   }
 
   generate_jni("command_line_jni") {
-    sources = [ "android/java/src/org/chromium/base/CommandLine.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/CommandLine.java" ]
   }
   android_library("command_line_java") {
-    sources = [ "android/java/src/org/chromium/base/CommandLine.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/CommandLine.java" ]
     deps = [
       ":log_java",
       ":resetters_java",
@@ -5295,7 +5295,7 @@ if (is_android) {
   }
 
   generate_jni("content_uri_utils_jni") {
-    sources = [ "android/java/src/org/chromium/base/ContentUriUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/ContentUriUtils.java" ]
   }
   android_library("content_uri_utils_java") {
     srcjar_deps = [ ":content_uri_utils_jni" ]
@@ -5308,11 +5308,11 @@ if (is_android) {
       "//third_party/androidx:androidx_documentfile_documentfile_java",
       "//third_party/jni_zero:jni_zero_java",
     ]
-    sources = [ "android/java/src/org/chromium/base/ContentUriUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/ContentUriUtils.java" ]
   }
 
   generate_jni("virtual_document_path_jni") {
-    sources = [ "android/java/src/org/chromium/base/VirtualDocumentPath.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/VirtualDocumentPath.java" ]
   }
   android_library("virtual_document_path_java") {
     srcjar_deps = [ ":virtual_document_path_jni" ]
@@ -5322,14 +5322,14 @@ if (is_android) {
       "//third_party/androidx:androidx_annotation_annotation_jvm_java",
       "//third_party/jni_zero:jni_zero_java",
     ]
-    sources = [ "android/java/src/org/chromium/base/VirtualDocumentPath.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/VirtualDocumentPath.java" ]
   }
 
   android_library("activity_state_java") {
     srcjar_deps = [ ":application_status_enum_srcjar" ]
     sources = [
-      "android/java/src/org/chromium/base/ActivityLifecycleCallbacksAdapter.java",
-      "android/java/src/org/chromium/base/ActivityState.java",
+      "android/java/src/org/Cinaseek/base/ActivityLifecycleCallbacksAdapter.java",
+      "android/java/src/org/Cinaseek/base/ActivityState.java",
     ]
     deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
   }
@@ -5344,7 +5344,7 @@ if (is_android) {
       ":tasks_java",
       "//third_party/androidx:androidx_annotation_annotation_java",
     ]
-    sources = [ "android/java/src/org/chromium/base/ServiceLoaderUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/ServiceLoaderUtil.java" ]
   }
 
   android_library("resetters_java") {
@@ -5352,14 +5352,14 @@ if (is_android) {
       "//third_party/androidx:androidx_annotation_annotation_experimental_java",
       "//third_party/androidx:androidx_annotation_annotation_java",
     ]
-    sources = [ "android/java/src/org/chromium/base/ResettersForTesting.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/ResettersForTesting.java" ]
   }
 
   generate_jni("build_info_jni") {
     sources = [
-      "android/java/src/org/chromium/base/AndroidInfo.java",
-      "android/java/src/org/chromium/base/ApkInfo.java",
-      "android/java/src/org/chromium/base/DeviceInfo.java",
+      "android/java/src/org/Cinaseek/base/AndroidInfo.java",
+      "android/java/src/org/Cinaseek/base/ApkInfo.java",
+      "android/java/src/org/Cinaseek/base/DeviceInfo.java",
     ]
   }
 
@@ -5381,15 +5381,15 @@ if (is_android) {
       "//third_party/jni_zero:jni_zero_java",
     ]
     sources = [
-      "android/java/src/org/chromium/base/AndroidInfo.java",
-      "android/java/src/org/chromium/base/ApkInfo.java",
-      "android/java/src/org/chromium/base/DeviceInfo.java",
-      "android/java/src/org/chromium/base/PackageUtils.java",
+      "android/java/src/org/Cinaseek/base/AndroidInfo.java",
+      "android/java/src/org/Cinaseek/base/ApkInfo.java",
+      "android/java/src/org/Cinaseek/base/DeviceInfo.java",
+      "android/java/src/org/Cinaseek/base/PackageUtils.java",
     ]
   }
 
   generate_jni("sys_utils_jni") {
-    sources = [ "android/java/src/org/chromium/base/SysUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/SysUtils.java" ]
   }
 
   java_cpp_enum("sys_utils_enum_srcjar") {
@@ -5401,7 +5401,7 @@ if (is_android) {
       ":sys_utils_enum_srcjar",
       ":sys_utils_jni",
     ]
-    sources = [ "android/java/src/org/chromium/base/SysUtils.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/SysUtils.java" ]
     deps = [
       ":base_switches_java",
       ":command_line_java",
@@ -5414,23 +5414,23 @@ if (is_android) {
   }
 
   android_library("stream_util_java") {
-    sources = [ "android/java/src/org/chromium/base/StreamUtil.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/StreamUtil.java" ]
   }
 
   android_aidl("relro_aidl") {
     import_include = [ "android/java/src" ]
     sources = [
-      "android/java/src/org/chromium/base/library_loader/IRelroLibInfo.aidl",
+      "android/java/src/org/Cinaseek/base/library_loader/IRelroLibInfo.aidl",
     ]
     cpp_root_names = [ "RelroLibInfo" ]
-    cpp_package_name = "org/chromium/base/library_loader"
+    cpp_package_name = "org/Cinaseek/base/library_loader"
   }
 
   # These files would make more sense to be in //ui/android but are required by
   # other files in //base.
   if (!is_cronet_build) {
     android_library("ui_java") {
-      sources = [ "android/java/src/org/chromium/base/ui/KeyboardUtils.java" ]
+      sources = [ "android/java/src/org/Cinaseek/base/ui/KeyboardUtils.java" ]
       deps = [
         ":build_info_java",
         ":log_java",
@@ -5447,13 +5447,13 @@ if (is_android) {
       ":relro_aidl",
     ]
     sources = [
-      "android/java/src/org/chromium/base/library_loader/LibraryLoader.java",
-      "android/java/src/org/chromium/base/library_loader/LibraryPrefetcher.java",
-      "android/java/src/org/chromium/base/library_loader/Linker.java",
-      "android/java/src/org/chromium/base/library_loader/LinkerJni.java",
-      "android/java/src/org/chromium/base/library_loader/LoaderErrors.java",
-      "android/java/src/org/chromium/base/library_loader/NativeLibraryPreloader.java",
-      "android/java/src/org/chromium/base/library_loader/ProcessInitException.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LibraryLoader.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LibraryPrefetcher.java",
+      "android/java/src/org/Cinaseek/base/library_loader/Linker.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LinkerJni.java",
+      "android/java/src/org/Cinaseek/base/library_loader/LoaderErrors.java",
+      "android/java/src/org/Cinaseek/base/library_loader/NativeLibraryPreloader.java",
+      "android/java/src/org/Cinaseek/base/library_loader/ProcessInitException.java",
     ]
 
     deps = [
@@ -5477,7 +5477,7 @@ if (is_android) {
   }
 
   generate_jni("base_shared_preferences_jni") {
-    sources = [ "android/java/src/org/chromium/base/shared_preferences/SharedPreferencesManager.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/shared_preferences/SharedPreferencesManager.java" ]
   }
 
   android_library("base_shared_preferences_java") {
@@ -5490,12 +5490,12 @@ if (is_android) {
     ]
 
     sources = [
-      "android/java/src/org/chromium/base/shared_preferences/KeyPrefix.java",
-      "android/java/src/org/chromium/base/shared_preferences/KnownPreferenceKeyRegistries.java",
-      "android/java/src/org/chromium/base/shared_preferences/PreferenceKeyChecker.java",
-      "android/java/src/org/chromium/base/shared_preferences/PreferenceKeyRegistry.java",
-      "android/java/src/org/chromium/base/shared_preferences/SharedPreferencesManager.java",
-      "android/java/src/org/chromium/base/shared_preferences/StrictPreferenceKeyChecker.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/KeyPrefix.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/KnownPreferenceKeyRegistries.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/PreferenceKeyChecker.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/PreferenceKeyRegistry.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/SharedPreferencesManager.java",
+      "android/java/src/org/Cinaseek/base/shared_preferences/StrictPreferenceKeyChecker.java",
     ]
   }
 
@@ -5510,14 +5510,14 @@ if (is_android) {
       "//third_party/androidx:androidx_core_core_java",
     ]
     sources = [
-      "android/java/src/org/chromium/base/AconfigFlaggedApiDelegate.java",
-      "android/java/src/org/chromium/base/BindingRequestQueue.java",
-      "android/java/src/org/chromium/base/PasswordEchoSettingDelegate.java",
-      "android/java/src/org/chromium/base/SelectionActionMenuClientWrapper.java",
-      "android/java/src/org/chromium/base/serial/SerialManager.java",
-      "android/java/src/org/chromium/base/serial/SerialPort.java",
-      "android/java/src/org/chromium/base/serial/SerialPortListener.java",
-      "android/java/src/org/chromium/base/serial/SerialPortResponse.java",
+      "android/java/src/org/Cinaseek/base/AconfigFlaggedApiDelegate.java",
+      "android/java/src/org/Cinaseek/base/BindingRequestQueue.java",
+      "android/java/src/org/Cinaseek/base/PasswordEchoSettingDelegate.java",
+      "android/java/src/org/Cinaseek/base/SelectionActionMenuClientWrapper.java",
+      "android/java/src/org/Cinaseek/base/serial/SerialManager.java",
+      "android/java/src/org/Cinaseek/base/serial/SerialPort.java",
+      "android/java/src/org/Cinaseek/base/serial/SerialPortListener.java",
+      "android/java/src/org/Cinaseek/base/serial/SerialPortResponse.java",
     ]
   }
 
@@ -5532,12 +5532,12 @@ if (is_android) {
     ]
 
     sources = [
-      "android/java/src/org/chromium/base/cached_flags/ValuesReturned.java",
+      "android/java/src/org/Cinaseek/base/cached_flags/ValuesReturned.java",
     ]
   }
 
   android_library("holder_java") {
-    sources = [ "android/java/src/org/chromium/base/Holder.java" ]
+    sources = [ "android/java/src/org/Cinaseek/base/Holder.java" ]
 
     deps = [
       ":callback_java",
@@ -5548,25 +5548,25 @@ if (is_android) {
   android_aidl("build_info_aidl") {
     import_include = [ "android/java/src" ]
     sources = [
-      "android/java/src/org/chromium/base/IAndroidInfo.aidl",
-      "android/java/src/org/chromium/base/IApkInfo.aidl",
-      "android/java/src/org/chromium/base/IDeviceInfo.aidl",
+      "android/java/src/org/Cinaseek/base/IAndroidInfo.aidl",
+      "android/java/src/org/Cinaseek/base/IApkInfo.aidl",
+      "android/java/src/org/Cinaseek/base/IDeviceInfo.aidl",
     ]
     cpp_root_names = [
       "AndroidInfo",
       "ApkInfo",
       "DeviceInfo",
     ]
-    cpp_package_name = "org/chromium/base"
+    cpp_package_name = "org/Cinaseek/base"
   }
 
   android_aidl("process_launcher_aidl") {
     import_include = [ "android/java/src" ]
     sources = [
-      "android/java/src/org/chromium/base/process_launcher/IChildProcessArgs.aidl",
-      "android/java/src/org/chromium/base/process_launcher/IChildProcessService.aidl",
-      "android/java/src/org/chromium/base/process_launcher/IFileDescriptorInfo.aidl",
-      "android/java/src/org/chromium/base/process_launcher/IParentProcess.aidl",
+      "android/java/src/org/Cinaseek/base/process_launcher/IChildProcessArgs.aidl",
+      "android/java/src/org/Cinaseek/base/process_launcher/IChildProcessService.aidl",
+      "android/java/src/org/Cinaseek/base/process_launcher/IFileDescriptorInfo.aidl",
+      "android/java/src/org/Cinaseek/base/process_launcher/IParentProcess.aidl",
     ]
     cpp_root_names = [
       "ChildProcessArgs",
@@ -5574,7 +5574,7 @@ if (is_android) {
       "FileDescriptorInfo",
       "ParentProcess",
     ]
-    cpp_package_name = "org/chromium/base/process_launcher"
+    cpp_package_name = "org/Cinaseek/base/process_launcher"
     deps = [
       ":build_info_aidl",
       ":relro_aidl",
@@ -5604,31 +5604,31 @@ if (is_android) {
     sources = [
       # AssertsTest doesn't really belong in //base but it's preferable to
       # stick it here than create another target for a single test.
-      "android/javatests/src/org/chromium/base/AdvancedMockContextTest.java",
-      "android/javatests/src/org/chromium/base/AssertsTest.java",
-      "android/javatests/src/org/chromium/base/BinderCallsListenerTest.java",
-      "android/javatests/src/org/chromium/base/CommandLineFlagsTest.java",
-      "android/javatests/src/org/chromium/base/CommandLineTest.java",
-      "android/javatests/src/org/chromium/base/EarlyTraceEventTest.java",
-      "android/javatests/src/org/chromium/base/IntentUtilsTest.java",
-      "android/javatests/src/org/chromium/base/LocaleUtilsTest.java",
-      "android/javatests/src/org/chromium/base/ObserverListTest.java",
-      "android/javatests/src/org/chromium/base/PackageUtilsTest.java",
-      "android/javatests/src/org/chromium/base/StrictModeContextTest.java",
-      "android/javatests/src/org/chromium/base/UserDataHostTest.java",
-      "android/javatests/src/org/chromium/base/VirtualDocumentPathTest.java",
-      "android/javatests/src/org/chromium/base/library_loader/EarlyNativeTest.java",
-      "android/javatests/src/org/chromium/base/metrics/RecordHistogramTest.java",
-      "android/javatests/src/org/chromium/base/metrics/ScopedSysTraceEventTest.java",
-      "android/javatests/src/org/chromium/base/task/AsyncTaskTest.java",
-      "android/javatests/src/org/chromium/base/task/ChainedTasksTest.java",
-      "android/javatests/src/org/chromium/base/task/PostTaskTest.java",
-      "android/javatests/src/org/chromium/base/task/SequencedTaskRunnerImplTest.java",
-      "android/javatests/src/org/chromium/base/test/metrics/HistogramWatcherTestBase.java",
-      "android/javatests/src/org/chromium/base/test/metrics/HistogramWatcherTransitionToNativeTest.java",
-      "android/javatests/src/org/chromium/base/test/metrics/HistogramWatcherWithNativeTest.java",
-      "android/javatests/src/org/chromium/base/test/metrics/HistogramWatcherWithoutNativeTest.java",
-      "android/javatests/src/org/chromium/base/util/GarbageCollectionTestUtilsTest.java",
+      "android/javatests/src/org/Cinaseek/base/AdvancedMockContextTest.java",
+      "android/javatests/src/org/Cinaseek/base/AssertsTest.java",
+      "android/javatests/src/org/Cinaseek/base/BinderCallsListenerTest.java",
+      "android/javatests/src/org/Cinaseek/base/CommandLineFlagsTest.java",
+      "android/javatests/src/org/Cinaseek/base/CommandLineTest.java",
+      "android/javatests/src/org/Cinaseek/base/EarlyTraceEventTest.java",
+      "android/javatests/src/org/Cinaseek/base/IntentUtilsTest.java",
+      "android/javatests/src/org/Cinaseek/base/LocaleUtilsTest.java",
+      "android/javatests/src/org/Cinaseek/base/ObserverListTest.java",
+      "android/javatests/src/org/Cinaseek/base/PackageUtilsTest.java",
+      "android/javatests/src/org/Cinaseek/base/StrictModeContextTest.java",
+      "android/javatests/src/org/Cinaseek/base/UserDataHostTest.java",
+      "android/javatests/src/org/Cinaseek/base/VirtualDocumentPathTest.java",
+      "android/javatests/src/org/Cinaseek/base/library_loader/EarlyNativeTest.java",
+      "android/javatests/src/org/Cinaseek/base/metrics/RecordHistogramTest.java",
+      "android/javatests/src/org/Cinaseek/base/metrics/ScopedSysTraceEventTest.java",
+      "android/javatests/src/org/Cinaseek/base/task/AsyncTaskTest.java",
+      "android/javatests/src/org/Cinaseek/base/task/ChainedTasksTest.java",
+      "android/javatests/src/org/Cinaseek/base/task/PostTaskTest.java",
+      "android/javatests/src/org/Cinaseek/base/task/SequencedTaskRunnerImplTest.java",
+      "android/javatests/src/org/Cinaseek/base/test/metrics/HistogramWatcherTestBase.java",
+      "android/javatests/src/org/Cinaseek/base/test/metrics/HistogramWatcherTransitionToNativeTest.java",
+      "android/javatests/src/org/Cinaseek/base/test/metrics/HistogramWatcherWithNativeTest.java",
+      "android/javatests/src/org/Cinaseek/base/test/metrics/HistogramWatcherWithoutNativeTest.java",
+      "android/javatests/src/org/Cinaseek/base/util/GarbageCollectionTestUtilsTest.java",
     ]
     srcjar_deps = [ ":base_javatests_jni" ]
   }
@@ -5644,13 +5644,13 @@ if (is_android) {
 
   generate_jni("base_javatests_jni") {
     testonly = true
-    sources = [ "android/javatests/src/org/chromium/base/library_loader/EarlyNativeTest.java" ]
+    sources = [ "android/javatests/src/org/Cinaseek/base/library_loader/EarlyNativeTest.java" ]
   }
 
   android_library("base_java_url_utils_for_test") {
     testonly = true
     sources = [
-      "test/android/javatests/src/org/chromium/base/test/util/UrlUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/UrlUtils.java",
     ]
 
     deps = [
@@ -5694,86 +5694,86 @@ if (is_android) {
     ]
 
     sources = [
-      "test/android/javatests/src/org/chromium/base/test/ActivityFinisher.java",
-      "test/android/javatests/src/org/chromium/base/test/BaseChromiumAndroidJUnitRunner.java",
-      "test/android/javatests/src/org/chromium/base/test/BaseJUnit4ClassRunner.java",
-      "test/android/javatests/src/org/chromium/base/test/LoadNative.java",
-      "test/android/javatests/src/org/chromium/base/test/NativeCoverageInstrumentationRunListener.java",
-      "test/android/javatests/src/org/chromium/base/test/ScreenshotOnFailureStatement.java",
-      "test/android/javatests/src/org/chromium/base/test/SharedPreferencesTestUtil.java",
-      "test/android/javatests/src/org/chromium/base/test/TestTraceEvent.java",
-      "test/android/javatests/src/org/chromium/base/test/params/BaseJUnit4RunnerDelegate.java",
-      "test/android/javatests/src/org/chromium/base/test/params/BlockJUnit4RunnerDelegate.java",
-      "test/android/javatests/src/org/chromium/base/test/params/MethodParamAnnotationRule.java",
-      "test/android/javatests/src/org/chromium/base/test/params/MethodParamRule.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterAnnotations.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterProvider.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterSet.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedCommandLineFlags.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedFrameworkMethod.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedRunner.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedRunnerDelegate.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedRunnerDelegateCommon.java",
-      "test/android/javatests/src/org/chromium/base/test/params/ParameterizedRunnerDelegateFactory.java",
-      "test/android/javatests/src/org/chromium/base/test/params/SkipCommandLineParameterization.java",
-      "test/android/javatests/src/org/chromium/base/test/util/AdvancedMockContext.java",
-      "test/android/javatests/src/org/chromium/base/test/util/AndroidSdkLevelSkipCheck.java",
-      "test/android/javatests/src/org/chromium/base/test/util/AnnotationProcessingUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/AnnotationRule.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ApplicationContextWrapper.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ApplicationTestUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/BaseRestrictions.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Batch.java",
-      "test/android/javatests/src/org/chromium/base/test/util/CallbackHelper.java",
-      "test/android/javatests/src/org/chromium/base/test/util/CommandLineFlags.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Criteria.java",
-      "test/android/javatests/src/org/chromium/base/test/util/CriteriaHelper.java",
-      "test/android/javatests/src/org/chromium/base/test/util/CriteriaNotSatisfiedException.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DestroyableHolder.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DisableIf.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DisableIfSkipCheck.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DisabledTest.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DoNotBatch.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DoNotRevive.java",
-      "test/android/javatests/src/org/chromium/base/test/util/DumpThreadsOnFailureRule.java",
-      "test/android/javatests/src/org/chromium/base/test/util/EnormousTest.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Feature.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Features.java",
-      "test/android/javatests/src/org/chromium/base/test/util/FieldTrials.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ForgivingClickAction.java",
-      "test/android/javatests/src/org/chromium/base/test/util/HistogramWatcher.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ImportantFormFactors.java",
-      "test/android/javatests/src/org/chromium/base/test/util/InMemorySharedPreferences.java",
-      "test/android/javatests/src/org/chromium/base/test/util/InMemorySharedPreferencesContext.java",
-      "test/android/javatests/src/org/chromium/base/test/util/IntegrationTest.java",
-      "test/android/javatests/src/org/chromium/base/test/util/KeyUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/LooperUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Manual.java",
-      "test/android/javatests/src/org/chromium/base/test/util/MaxAndroidSdkLevel.java",
-      "test/android/javatests/src/org/chromium/base/test/util/MinAndroidSdkLevel.java",
-      "test/android/javatests/src/org/chromium/base/test/util/PayloadCallbackHelper.java",
-      "test/android/javatests/src/org/chromium/base/test/util/RawFailureHandler.java",
-      "test/android/javatests/src/org/chromium/base/test/util/RequiresRestart.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Restriction.java",
-      "test/android/javatests/src/org/chromium/base/test/util/RestrictionSkipCheck.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ScalableTimeout.java",
-      "test/android/javatests/src/org/chromium/base/test/util/SkipCheck.java",
-      "test/android/javatests/src/org/chromium/base/test/util/TestAnimations.java",
-      "test/android/javatests/src/org/chromium/base/test/util/TestFileUtil.java",
-      "test/android/javatests/src/org/chromium/base/test/util/TestThreadUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/TimeoutTimer.java",
-      "test/android/javatests/src/org/chromium/base/test/util/UserActionTester.java",
-      "test/android/javatests/src/org/chromium/base/test/util/VeryLongPressAction.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ViewActionOnDescendant.java",
-      "test/android/javatests/src/org/chromium/base/test/util/ViewPrinter.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/ActivityFinisher.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/BaseCinaseekAndroidJUnitRunner.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/BaseJUnit4ClassRunner.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/LoadNative.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/NativeCoverageInstrumentationRunListener.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/ScreenshotOnFailureStatement.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/SharedPreferencesTestUtil.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/TestTraceEvent.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/BaseJUnit4RunnerDelegate.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/BlockJUnit4RunnerDelegate.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/MethodParamAnnotationRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/MethodParamRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterAnnotations.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterProvider.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterSet.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedCommandLineFlags.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedFrameworkMethod.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedRunner.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedRunnerDelegate.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedRunnerDelegateCommon.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/ParameterizedRunnerDelegateFactory.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/params/SkipCommandLineParameterization.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/AdvancedMockContext.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/AndroidSdkLevelSkipCheck.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/AnnotationProcessingUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/AnnotationRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ApplicationContextWrapper.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ApplicationTestUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/BaseRestrictions.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Batch.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/CallbackHelper.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/CommandLineFlags.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Criteria.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/CriteriaHelper.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/CriteriaNotSatisfiedException.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DestroyableHolder.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DisableIf.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DisableIfSkipCheck.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DisabledTest.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DoNotBatch.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DoNotRevive.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/DumpThreadsOnFailureRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/EnormousTest.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Feature.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Features.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/FieldTrials.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ForgivingClickAction.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/HistogramWatcher.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ImportantFormFactors.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/InMemorySharedPreferences.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/InMemorySharedPreferencesContext.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/IntegrationTest.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/KeyUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/LooperUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Manual.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/MaxAndroidSdkLevel.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/MinAndroidSdkLevel.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/PayloadCallbackHelper.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/RawFailureHandler.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/RequiresRestart.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Restriction.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/RestrictionSkipCheck.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ScalableTimeout.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/SkipCheck.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/TestAnimations.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/TestFileUtil.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/TestThreadUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/TimeoutTimer.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/UserActionTester.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/VeryLongPressAction.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ViewActionOnDescendant.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/ViewPrinter.java",
     ]
     if (is_cronet_for_aosp_build) {
-      sources += [ "//components/cronet/android/platform-only/org/chromium/base/test/util/PackageManagerWrapper.java" ]
+      sources += [ "//components/cronet/android/platform-only/org/Cinaseek/base/test/util/PackageManagerWrapper.java" ]
     } else {
-      sources += [ "test/android/javatests/src/org/chromium/base/test/util/PackageManagerWrapper.java" ]
+      sources += [ "test/android/javatests/src/org/Cinaseek/base/test/util/PackageManagerWrapper.java" ]
     }
     if (!is_cronet_build) {
-      sources += [ "test/android/javatests/src/org/chromium/base/test/BaseActivityTestRule.java" ]
+      sources += [ "test/android/javatests/src/org/Cinaseek/base/test/BaseActivityTestRule.java" ]
     }
     if (use_clang_coverage) {
       mergeable_android_manifests = [
@@ -5784,7 +5784,7 @@ if (is_android) {
 
   generate_jni("base_java_test_support_uncommon_jni") {
     testonly = true
-    sources = [ "test/android/javatests/src/org/chromium/base/test/task/ThreadPoolTestHelpers.java" ]
+    sources = [ "test/android/javatests/src/org/Cinaseek/base/test/task/ThreadPoolTestHelpers.java" ]
   }
 
   android_library("base_java_test_support_uncommon") {
@@ -5801,14 +5801,14 @@ if (is_android) {
 
     srcjar_deps = [ ":base_java_test_support_uncommon_jni" ]
     sources = [
-      "test/android/javatests/src/org/chromium/base/FakeTimeTestRule.java",
-      "test/android/javatests/src/org/chromium/base/test/SetUpStatement.java",
-      "test/android/javatests/src/org/chromium/base/test/SetUpTestRule.java",
-      "test/android/javatests/src/org/chromium/base/test/task/SchedulerTestHelpers.java",
-      "test/android/javatests/src/org/chromium/base/test/task/ThreadPoolTestHelpers.java",
-      "test/android/javatests/src/org/chromium/base/test/util/CloseableOnMainThread.java",
-      "test/android/javatests/src/org/chromium/base/test/util/InstrumentationUtils.java",
-      "test/android/javatests/src/org/chromium/base/test/util/Matchers.java",
+      "test/android/javatests/src/org/Cinaseek/base/FakeTimeTestRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/SetUpStatement.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/SetUpTestRule.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/task/SchedulerTestHelpers.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/task/ThreadPoolTestHelpers.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/CloseableOnMainThread.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/InstrumentationUtils.java",
+      "test/android/javatests/src/org/Cinaseek/base/test/util/Matchers.java",
     ]
   }
 
@@ -5819,19 +5819,19 @@ if (is_android) {
     deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
     public_deps = [ ":process_launcher_java" ]
 
-    sources = [ "test/android/javatests/src/org/chromium/base/process_launcher/TestChildProcessConnection.java" ]
+    sources = [ "test/android/javatests/src/org/Cinaseek/base/process_launcher/TestChildProcessConnection.java" ]
   }
 
   robolectric_library("base_junit_test_support") {
     sources = [
-      "test/android/junit/src/org/chromium/base/test/BaseRobolectricAndroidConfigurer.java",
-      "test/android/junit/src/org/chromium/base/test/BaseRobolectricTestListener.java",
-      "test/android/junit/src/org/chromium/base/test/BaseRobolectricTestRule.java",
-      "test/android/junit/src/org/chromium/base/test/BaseRobolectricTestRunner.java",
-      "test/android/junit/src/org/chromium/base/test/BaseTimeLimitedStatement.java",
-      "test/android/junit/src/org/chromium/base/test/RobolectricUtil.java",
-      "test/android/junit/src/org/chromium/base/test/util/BaseFlagTestRule.java",
-      "test/android/junit/src/org/chromium/base/test/util/TestRunnerTestRule.java",
+      "test/android/junit/src/org/Cinaseek/base/test/BaseRobolectricAndroidConfigurer.java",
+      "test/android/junit/src/org/Cinaseek/base/test/BaseRobolectricTestListener.java",
+      "test/android/junit/src/org/Cinaseek/base/test/BaseRobolectricTestRule.java",
+      "test/android/junit/src/org/Cinaseek/base/test/BaseRobolectricTestRunner.java",
+      "test/android/junit/src/org/Cinaseek/base/test/BaseTimeLimitedStatement.java",
+      "test/android/junit/src/org/Cinaseek/base/test/RobolectricUtil.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/BaseFlagTestRule.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/TestRunnerTestRule.java",
     ]
 
     # Make sure robolectric tests have classes filtered out of base_java by
@@ -5852,7 +5852,7 @@ if (is_android) {
 
   robolectric_library("jni_callbacks_junit_tests_java") {
     testonly = true
-    sources = [ "android/junit/src/org/chromium/base/JniCallbacksTest.java" ]
+    sources = [ "android/junit/src/org/Cinaseek/base/JniCallbacksTest.java" ]
     srcjar_deps = [ ":base_junit_tests_jni" ]
     deps = [
       ":base_java",
@@ -5865,74 +5865,74 @@ if (is_android) {
   robolectric_binary("base_junit_tests") {
     shared_libraries = [ ":libbase_junit_tests($robolectric_toolchain)" ]
     sources = [
-      "android/junit/src/org/chromium/base/ApplicationStatusTest.java",
-      "android/junit/src/org/chromium/base/CallbackControllerTest.java",
-      "android/junit/src/org/chromium/base/CollectionUtilTest.java",
-      "android/junit/src/org/chromium/base/CommandLineTest.java",
-      "android/junit/src/org/chromium/base/DiscardableReferencePoolTest.java",
-      "android/junit/src/org/chromium/base/FeatureOverridesUnitTest.java",
-      "android/junit/src/org/chromium/base/FileUtilsTest.java",
-      "android/junit/src/org/chromium/base/FlagUnitTest.java",
-      "android/junit/src/org/chromium/base/LogTest.java",
-      "android/junit/src/org/chromium/base/MathUtilsTest.java",
-      "android/junit/src/org/chromium/base/MutableBooleanParamWithSafeDefaultUnitTest.java",
-      "android/junit/src/org/chromium/base/MutableFlagWithSafeDefaultUnitTest.java",
-      "android/junit/src/org/chromium/base/MutableIntParamWithSafeDefaultUnitTest.java",
-      "android/junit/src/org/chromium/base/PackageUtilsUnitTest.java",
-      "android/junit/src/org/chromium/base/PathUtilsTest.java",
-      "android/junit/src/org/chromium/base/PiiEliderTest.java",
-      "android/junit/src/org/chromium/base/PostNativeFlagUnitTest.java",
-      "android/junit/src/org/chromium/base/PromiseTest.java",
-      "android/junit/src/org/chromium/base/ResettersForTestingTest.java",
-      "android/junit/src/org/chromium/base/ScreenOffBroadcastReceiverTest.java",
-      "android/junit/src/org/chromium/base/ThreadUtilsTest.java",
-      "android/junit/src/org/chromium/base/TimeUtilsTest.java",
-      "android/junit/src/org/chromium/base/TokenUnitTest.java",
-      "android/junit/src/org/chromium/base/TraceEventTest.java",
-      "android/junit/src/org/chromium/base/UnownedUserDataHostTest.java",
-      "android/junit/src/org/chromium/base/UnownedUserDataKeyTest.java",
-      "android/junit/src/org/chromium/base/ValueChangedCallbackTest.java",
-      "android/junit/src/org/chromium/base/library_loader/LinkerTest.java",
-      "android/junit/src/org/chromium/base/lifetime/LifetimeAssertUnitTest.java",
-      "android/junit/src/org/chromium/base/memory/MemoryPressureMonitorTest.java",
-      "android/junit/src/org/chromium/base/memory/MemoryPurgeManagerTest.java",
-      "android/junit/src/org/chromium/base/metrics/CachingUmaRecorderTest.java",
-      "android/junit/src/org/chromium/base/process_launcher/ChildConnectionAllocatorTest.java",
-      "android/junit/src/org/chromium/base/process_launcher/ChildProcessConnectionTest.java",
-      "android/junit/src/org/chromium/base/process_launcher/ScopedServiceBindingBatchImplTest.java",
-      "android/junit/src/org/chromium/base/shared_preferences/KeyPrefixTest.java",
-      "android/junit/src/org/chromium/base/shared_preferences/KnownPreferenceKeyRegistriesTest.java",
-      "android/junit/src/org/chromium/base/shared_preferences/SharedPreferencesManagerTest.java",
-      "android/junit/src/org/chromium/base/shared_preferences/StrictPreferenceKeyCheckerTest.java",
-      "android/junit/src/org/chromium/base/supplier/LazyOneshotSupplierImplTest.java",
-      "android/junit/src/org/chromium/base/supplier/LazyOneshotSupplierTest.java",
-      "android/junit/src/org/chromium/base/supplier/ObservableSupplierImplTest.java",
-      "android/junit/src/org/chromium/base/supplier/OneShotCallbackTest.java",
-      "android/junit/src/org/chromium/base/supplier/OneshotSupplierImplTest.java",
-      "android/junit/src/org/chromium/base/supplier/SupplierUtilsTest.java",
-      "android/junit/src/org/chromium/base/supplier/SyncOneshotSupplierImplTest.java",
-      "android/junit/src/org/chromium/base/supplier/TransitiveObservableSupplierTest.java",
-      "android/junit/src/org/chromium/base/supplier/UnwrapObservableSupplierTest.java",
-      "android/junit/src/org/chromium/base/task/AsyncTaskThreadTest.java",
-      "android/junit/src/org/chromium/base/task/ChromiumExecutorServiceFactoryTest.java",
-      "android/junit/src/org/chromium/base/task/SequencedTaskRunnerTaskMigrationTest.java",
-      "android/junit/src/org/chromium/base/util/GarbageCollectionTestUtilsUnitTest.java",
-      "test/android/junit/src/org/chromium/base/test/SetUpStatementTest.java",
-      "test/android/junit/src/org/chromium/base/test/TestListInstrumentationRunListenerTest.java",
-      "test/android/junit/src/org/chromium/base/test/params/ExampleParameterizedTest.java",
-      "test/android/junit/src/org/chromium/base/test/params/ParameterizedRunnerDelegateCommonTest.java",
-      "test/android/junit/src/org/chromium/base/test/params/ParameterizedRunnerDelegateFactoryTest.java",
-      "test/android/junit/src/org/chromium/base/test/params/ParameterizedRunnerTest.java",
-      "test/android/junit/src/org/chromium/base/test/params/ParameterizedTestNameTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/AndroidSdkLevelSkipCheckTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/AnnotationProcessingUtilsTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/CommandLineFlagsNoClassAnnotationCheckTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/CommandLineFlagsWithClassAnnotationCheckTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/DisableIfTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/DisabledTestForClassRobolectricTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/DisabledTestRobolectricTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/RestrictionSkipCheckTest.java",
-      "test/android/junit/src/org/chromium/base/test/util/SkipCheckTest.java",
+      "android/junit/src/org/Cinaseek/base/ApplicationStatusTest.java",
+      "android/junit/src/org/Cinaseek/base/CallbackControllerTest.java",
+      "android/junit/src/org/Cinaseek/base/CollectionUtilTest.java",
+      "android/junit/src/org/Cinaseek/base/CommandLineTest.java",
+      "android/junit/src/org/Cinaseek/base/DiscardableReferencePoolTest.java",
+      "android/junit/src/org/Cinaseek/base/FeatureOverridesUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/FileUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/FlagUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/LogTest.java",
+      "android/junit/src/org/Cinaseek/base/MathUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/MutableBooleanParamWithSafeDefaultUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/MutableFlagWithSafeDefaultUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/MutableIntParamWithSafeDefaultUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/PackageUtilsUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/PathUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/PiiEliderTest.java",
+      "android/junit/src/org/Cinaseek/base/PostNativeFlagUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/PromiseTest.java",
+      "android/junit/src/org/Cinaseek/base/ResettersForTestingTest.java",
+      "android/junit/src/org/Cinaseek/base/ScreenOffBroadcastReceiverTest.java",
+      "android/junit/src/org/Cinaseek/base/ThreadUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/TimeUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/TokenUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/TraceEventTest.java",
+      "android/junit/src/org/Cinaseek/base/UnownedUserDataHostTest.java",
+      "android/junit/src/org/Cinaseek/base/UnownedUserDataKeyTest.java",
+      "android/junit/src/org/Cinaseek/base/ValueChangedCallbackTest.java",
+      "android/junit/src/org/Cinaseek/base/library_loader/LinkerTest.java",
+      "android/junit/src/org/Cinaseek/base/lifetime/LifetimeAssertUnitTest.java",
+      "android/junit/src/org/Cinaseek/base/memory/MemoryPressureMonitorTest.java",
+      "android/junit/src/org/Cinaseek/base/memory/MemoryPurgeManagerTest.java",
+      "android/junit/src/org/Cinaseek/base/metrics/CachingUmaRecorderTest.java",
+      "android/junit/src/org/Cinaseek/base/process_launcher/ChildConnectionAllocatorTest.java",
+      "android/junit/src/org/Cinaseek/base/process_launcher/ChildProcessConnectionTest.java",
+      "android/junit/src/org/Cinaseek/base/process_launcher/ScopedServiceBindingBatchImplTest.java",
+      "android/junit/src/org/Cinaseek/base/shared_preferences/KeyPrefixTest.java",
+      "android/junit/src/org/Cinaseek/base/shared_preferences/KnownPreferenceKeyRegistriesTest.java",
+      "android/junit/src/org/Cinaseek/base/shared_preferences/SharedPreferencesManagerTest.java",
+      "android/junit/src/org/Cinaseek/base/shared_preferences/StrictPreferenceKeyCheckerTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/LazyOneshotSupplierImplTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/LazyOneshotSupplierTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/ObservableSupplierImplTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/OneShotCallbackTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/OneshotSupplierImplTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/SupplierUtilsTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/SyncOneshotSupplierImplTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/TransitiveObservableSupplierTest.java",
+      "android/junit/src/org/Cinaseek/base/supplier/UnwrapObservableSupplierTest.java",
+      "android/junit/src/org/Cinaseek/base/task/AsyncTaskThreadTest.java",
+      "android/junit/src/org/Cinaseek/base/task/CinaseekExecutorServiceFactoryTest.java",
+      "android/junit/src/org/Cinaseek/base/task/SequencedTaskRunnerTaskMigrationTest.java",
+      "android/junit/src/org/Cinaseek/base/util/GarbageCollectionTestUtilsUnitTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/SetUpStatementTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/TestListInstrumentationRunListenerTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/params/ExampleParameterizedTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/params/ParameterizedRunnerDelegateCommonTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/params/ParameterizedRunnerDelegateFactoryTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/params/ParameterizedRunnerTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/params/ParameterizedTestNameTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/AndroidSdkLevelSkipCheckTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/AnnotationProcessingUtilsTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/CommandLineFlagsNoClassAnnotationCheckTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/CommandLineFlagsWithClassAnnotationCheckTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/DisableIfTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/DisabledTestForClassRobolectricTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/DisabledTestRobolectricTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/RestrictionSkipCheckTest.java",
+      "test/android/junit/src/org/Cinaseek/base/test/util/SkipCheckTest.java",
     ]
     deps = [
       ":base_java",
@@ -5963,7 +5963,7 @@ if (is_android) {
   # so separate it out to its own robolectric library
   robolectric_library("location_junit_tests") {
     force_java_location_rewrite = true
-    sources = [ "android/junit/src/org/chromium/base/task/LocationTest.java" ]
+    sources = [ "android/junit/src/org/Cinaseek/base/task/LocationTest.java" ]
     deps = [
       ":base_java",
       ":base_java_test_support",
@@ -5987,13 +5987,13 @@ if (is_android) {
   generate_jni("base_profiler_test_support_jni") {
     testonly = true
     sources =
-        [ "android/javatests/src/org/chromium/base/profiler/TestSupport.java" ]
+        [ "android/javatests/src/org/Cinaseek/base/profiler/TestSupport.java" ]
   }
 
   android_library("base_profiler_test_support_java") {
     testonly = true
     sources =
-        [ "android/javatests/src/org/chromium/base/profiler/TestSupport.java" ]
+        [ "android/javatests/src/org/Cinaseek/base/profiler/TestSupport.java" ]
     srcjar_deps = [ ":base_profiler_test_support_jni" ]
 
     deps = [ "//third_party/jni_zero:jni_zero_java" ]
@@ -6002,7 +6002,7 @@ if (is_android) {
   generate_jni("base_unittest_support_jni") {
     testonly = true
     sources =
-        [ "test/android/java/src/org/chromium/base/JniAndroidTestUtils.java" ]
+        [ "test/android/java/src/org/Cinaseek/base/JniAndroidTestUtils.java" ]
   }
 
   # Used by gtests and not by robolectric / instrumentation tests.
@@ -6018,9 +6018,9 @@ if (is_android) {
     srcjar_deps = [ ":base_unittest_support_jni" ]
 
     sources = [
-      "test/android/java/src/org/chromium/base/ContentUriTestUtils.java",
-      "test/android/java/src/org/chromium/base/JavaHandlerThreadHelpers.java",
-      "test/android/java/src/org/chromium/base/JniAndroidTestUtils.java",
+      "test/android/java/src/org/Cinaseek/base/ContentUriTestUtils.java",
+      "test/android/java/src/org/Cinaseek/base/JavaHandlerThreadHelpers.java",
+      "test/android/java/src/org/Cinaseek/base/JniAndroidTestUtils.java",
     ]
   }
 }  # is_android
@@ -6213,10 +6213,10 @@ process_version("check_version_internal") {
   # depends on it. This dependency currently breaks webrtc which pulls in //base
   # (but not //chrome). crbug.com/webrtc/13662 tracks removing webrtc's
   # dependency on //base. For now we fake the check version far into the future.
-  # This breaks check_unittest.cc when built outside of chromium, but webrtc
+  # This breaks check_unittest.cc when built outside of Cinaseek, but webrtc
   # doesn't need to build base_unittests. If this is required in the future, but
   # we haven't moved chrome/VERSION, we should ifdef out those tests.
-  if (build_with_chromium) {
+  if (build_with_Cinaseek) {
     sources = [ "//chrome/VERSION" ]
     extra_args = [
       "-e",

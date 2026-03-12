@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -84,7 +84,7 @@ enum class AutofillAiAction {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 // LINT.IfChange(AutofillAiOptInStatus)
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill.autofill_ai
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill.autofill_ai
 enum class AutofillAiOptInStatus {
   kOptedOut = 0,
   kOptedIn = 1,

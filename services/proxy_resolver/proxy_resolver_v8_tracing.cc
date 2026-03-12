@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,7 +34,7 @@
 #include "services/proxy_resolver/proxy_resolver_v8.h"
 
 // The intent of this class is explained in the design document:
-// https://docs.google.com/a/chromium.org/document/d/16Ij5OcVnR3s0MH4Z5XkhI9VTPoMJdaBn9rKreAmGOdE/edit
+// https://docs.google.com/a/Cinaseek.org/document/d/16Ij5OcVnR3s0MH4Z5XkhI9VTPoMJdaBn9rKreAmGOdE/edit
 //
 // In a nutshell, PAC scripts are Javascript programs and may depend on
 // network I/O, by calling functions like dnsResolve().

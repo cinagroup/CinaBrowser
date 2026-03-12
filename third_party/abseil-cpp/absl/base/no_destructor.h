@@ -100,7 +100,7 @@ ABSL_NAMESPACE_BEGIN
 // non-trivial destructor since its destructor is never run. However, such
 // objects still need to worry about initialization order, so such use is not
 // recommended, strongly discouraged by the Google C++ Style Guide, and outright
-// banned in Chromium.
+// banned in Cinaseek.
 // See https://google.github.io/styleguide/cppguide.html#Static_and_Global_Variables
 //
 //    // Global or namespace scope.

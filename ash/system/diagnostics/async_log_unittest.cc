@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -128,7 +128,7 @@ TEST_F(AsyncLogTest, WriteMultipleLines) {
 // CreateFile() to free functions in an anonymous namespace, which prevented
 // access to member variables from an async task.
 //
-// This test was once disabled by chromium gardeners due to flakiness caused by
+// This test was once disabled by Cinaseek gardeners due to flakiness caused by
 // a minor flaw. It used to be that all 10 AsyncLog objects inside the for loop
 // was trying to write to the same file path asynchronously all at once. A
 // DCHECK() failure would quickly emerge inside AsyncLog::CreateFile(), as

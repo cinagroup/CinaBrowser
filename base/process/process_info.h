@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,8 +40,8 @@ BASE_EXPORT bool IsCurrentProcessInAppContainer();
 
 #if BUILDFLAG(IS_MAC)
 // Checks if the responsible process has Bluetooth metadata in its Info.plist
-// file. See https://bugs.chromium.org/p/chromium/issues/detail?id=945969 and
-// https://bugs.chromium.org/p/chromium/issues/detail?id=996993.
+// file. See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=945969 and
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=996993.
 BASE_EXPORT bool DoesResponsibleProcessHaveBluetoothMetadata();
 #endif
 

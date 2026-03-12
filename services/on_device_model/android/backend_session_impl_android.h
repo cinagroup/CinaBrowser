@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ class BackendSessionImplAndroid : public BackendSession {
   // The result of a generate call.
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.on_device_model
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.on_device_model
   enum class GenerateResult {
     kSuccess = 0,
     kUnknownError = 1,

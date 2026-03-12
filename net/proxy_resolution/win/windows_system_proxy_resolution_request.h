@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ class NET_EXPORT WindowsSystemProxyResolutionRequest
 
   // Callback for when the cross-process proxy resolution has completed. The
   // |proxy_list| is the list of proxies returned by WinHttp translated into
-  // Chromium-friendly terms. The |winhttp_status| describes the status of the
+  // Cinaseek-friendly terms. The |winhttp_status| describes the status of the
   // proxy resolution request. If WinHttp fails for some reason, |windows_error|
   // contains the specific error returned by WinHttp.
   virtual void ProxyResolutionComplete(const ProxyList& proxy_list,

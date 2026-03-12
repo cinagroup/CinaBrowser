@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -104,7 +104,7 @@ if (host_os == "win") {
 }
 
 # This variable is true if the current toolchain is one of the target
-# toolchains, i.e. a toolchain which is being used to build the main Chrome
+# toolchains, i.e. a toolchain which is being used to build the main Cinaseek
 # binary. This generally means "not the host toolchain", but in the case where
 # we're targeting the host it's true then as well. We do require current_os to
 # match target_os so that for example we avoid considering Android as a target

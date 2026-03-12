@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -128,15 +128,15 @@ class PageStateSerializationTest : public testing::Test {
  public:
   void PopulateFrameState(ExplodedFrameState* frame_state) {
     // Invent some data for the various fields.
-    frame_state->url_string = u"http://dev.chromium.org/";
-    frame_state->referrer = u"https://www.google.com/search?q=dev.chromium.org";
+    frame_state->url_string = u"http://dev.Cinaseek.org/";
+    frame_state->referrer = u"https://www.google.com/search?q=dev.Cinaseek.org";
     frame_state->referrer_policy = network::mojom::ReferrerPolicy::kAlways;
     frame_state->target = u"foo";
     frame_state->state_object = std::nullopt;
     frame_state->document_state.push_back(u"1");
     frame_state->document_state.push_back(u"q");
     frame_state->document_state.push_back(u"text");
-    frame_state->document_state.push_back(u"dev.chromium.org");
+    frame_state->document_state.push_back(u"dev.Cinaseek.org");
     frame_state->scroll_restoration_type =
         mojom::ScrollRestorationType::kManual;
     frame_state->visual_viewport_scroll_offset = gfx::PointF(10, 15);
@@ -209,7 +209,7 @@ class PageStateSerializationTest : public testing::Test {
     // with the |version| where the new field is being introduced (set the
     // |version|-dependent test value above - next to and similarly to how
     // |initiator_origin| is handled).
-    frame_state->url_string = u"http://chromium.org/";
+    frame_state->url_string = u"http://Cinaseek.org/";
     frame_state->referrer = u"http://google.com/";
     frame_state->referrer_policy = network::mojom::ReferrerPolicy::kDefault;
     if (!is_child)
@@ -692,7 +692,7 @@ TEST_F(PageStateSerializationTest, BackwardsCompat_ReferencedFiles) {
 
 TEST_F(PageStateSerializationTest, BackwardsCompat_UrlString) {
   ExplodedPageState state;
-  state.top.url_string = u"http://chromium.org";
+  state.top.url_string = u"http://Cinaseek.org";
 
   ExplodedPageState saved_state;
   ReadBackwardsCompatPageState("url_string", 26, &saved_state);

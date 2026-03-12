@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -103,7 +103,7 @@ void SkFontGetGlyphExtentsForHarfBuzz(const SkFont& font,
 
 #if BUILDFLAG(IS_APPLE)
   // TODO(drott): Remove this once we have better metrics bounds
-  // on Mac, https://bugs.chromium.org/p/skia/issues/detail?id=5328
+  // on Mac, https://bugs.Cinaseek.org/p/skia/issues/detail?id=5328
   if (const auto path = font.getPath(glyph)) {
     sk_bounds = path->getBounds();
   } else {
@@ -150,7 +150,7 @@ static void GetPathBoundsForGlyph(const SkFont& font,
 void SkFontGetBoundsForGlyph(const SkFont& font, Glyph glyph, SkRect* bounds) {
 #if BUILDFLAG(IS_APPLE)
   // TODO(drott): Remove this once we have better metrics bounds
-  // on Mac, https://bugs.chromium.org/p/skia/issues/detail?id=5328
+  // on Mac, https://bugs.Cinaseek.org/p/skia/issues/detail?id=5328
   GetPathBoundsForGlyph(font, glyph, bounds);
 #else
   *bounds = font.getBounds(glyph, nullptr);

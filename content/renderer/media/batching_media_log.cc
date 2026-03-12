@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ std::string ToJSON(const media::MediaLogRecord& event) {
   return base::WriteJson(event.params).value_or("");
 }
 
-// Print an event to the chromium log.
+// Print an event to the Cinaseek log.
 // TODO(tmathmeyer) replace this with a log-only EventHandler.
 void Log(const media::MediaLogRecord& event) {
   if (event.type == media::MediaLogRecord::Type::kMediaStatus) {

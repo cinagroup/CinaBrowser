@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -104,7 +104,7 @@ class SearchEngineTabHelperTest : public PlatformTest {
 // Tests that SearchEngineTabHelper can add TemplateURL to TemplateURLService
 // when a OSDD <link> is found in web page.
 TEST_F(SearchEngineTabHelperTest, AddTemplateURLByOpenSearch) {
-  GURL page_url("https://chromium.test");
+  GURL page_url("https://Cinaseek.test");
   GURL osdd_url = server_.GetURL(kOpenSearchXmlFilePath);
 
   // Record the original TemplateURLs in TemplateURLService.
@@ -134,12 +134,12 @@ TEST_F(SearchEngineTabHelperTest, AddTemplateURLByOpenSearch) {
     }
   }
   ASSERT_TRUE(new_url);
-  EXPECT_EQ(u"chromium.test", new_url->data().keyword());
+  EXPECT_EQ(u"Cinaseek.test", new_url->data().keyword());
   EXPECT_EQ(u"Chrooome", new_url->data().short_name());
   EXPECT_EQ(
-      "https://chromium.test/index.php?title=chrooome&search={searchTerms}",
+      "https://Cinaseek.test/index.php?title=chrooome&search={searchTerms}",
       new_url->data().url());
-  EXPECT_EQ(GURL("https://chromium.test/favicon.ico"),
+  EXPECT_EQ(GURL("https://Cinaseek.test/favicon.ico"),
             new_url->data().favicon_url);
 }
 
@@ -147,9 +147,9 @@ TEST_F(SearchEngineTabHelperTest, AddTemplateURLByOpenSearch) {
 // when a <form> submission generates a searchable URL and leads to a successful
 // navigation.
 TEST_F(SearchEngineTabHelperTest, AddTemplateURLBySearchableURL) {
-  GURL page_url("https://chromium.test");
+  GURL page_url("https://Cinaseek.test");
   GURL searchable_url(
-      "https://chromium.test/index.php?title=chrooome&search={searchTerms}");
+      "https://Cinaseek.test/index.php?title=chrooome&search={searchTerms}");
   // HTML of the search engine page, with a <form> navigates to pony.html as
   // search result page.
   NSString* html = [NSString
@@ -184,8 +184,8 @@ TEST_F(SearchEngineTabHelperTest, AddTemplateURLBySearchableURL) {
     }
   }
   ASSERT_TRUE(new_url);
-  EXPECT_EQ(u"chromium.test", new_url->data().keyword());
-  EXPECT_EQ(u"chromium.test", new_url->data().short_name());
+  EXPECT_EQ(u"Cinaseek.test", new_url->data().keyword());
+  EXPECT_EQ(u"Cinaseek.test", new_url->data().short_name());
   EXPECT_EQ(searchable_url.spec(), new_url->data().url());
   const GURL expected_favicon_url = GURL(page_url.spec() + "favicon.ico");
   EXPECT_EQ(expected_favicon_url, new_url->data().favicon_url);
@@ -238,7 +238,7 @@ class SearchEngineTabHelperIncognitoTest : public SearchEngineTabHelperTest {
 // mode.
 TEST_F(SearchEngineTabHelperIncognitoTest,
        NotAddTemplateURLByOpenSearchUnderIncognito) {
-  GURL page_url("https://chromium.test");
+  GURL page_url("https://Cinaseek.test");
   GURL osdd_url = server_.GetURL(kOpenSearchXmlFilePath);
 
   // Record the original TemplateURLs in TemplateURLService.
@@ -264,9 +264,9 @@ TEST_F(SearchEngineTabHelperIncognitoTest,
 // leads to a successful navigation under incognito mode.
 TEST_F(SearchEngineTabHelperIncognitoTest,
        NotAddTemplateURLBySearchableURLUnderIncognito) {
-  GURL page_url("https://chromium.test");
+  GURL page_url("https://Cinaseek.test");
   GURL searchable_url(
-      "https://chromium.test/index.php?title=chrooome&search={searchTerms}");
+      "https://Cinaseek.test/index.php?title=chrooome&search={searchTerms}");
   // HTML of the search engine page, with a <form> navigates to pony.html as
   // search result page.
   NSString* html = [NSString

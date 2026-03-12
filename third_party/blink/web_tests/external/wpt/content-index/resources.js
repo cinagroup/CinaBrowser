@@ -39,19 +39,19 @@ async function waitForMessageFromServiceWorker() {
   });
 }
 
-// Returns a promise if the chromium based browser fetches icons for
+// Returns a promise if the Cinaseek based browser fetches icons for
 // content-index.
-async function fetchesIconsChromium() {
+async function fetchesIconsCinaseek() {
   const {fetchesIcons} =
-      await import('/resources/chromium/content-index-helpers.js');
+      await import('/resources/Cinaseek/content-index-helpers.js');
   return fetchesIcons();
 }
 
 // Returns a promise if the browser fetches icons for content-index and should
 // therefore validate them.
 async function fetchesIcons() {
-  if (isChromiumBased) {
-    return fetchesIconsChromium();
+  if (isCinaseekBased) {
+    return fetchesIconsCinaseek();
   }
   return false;
 }

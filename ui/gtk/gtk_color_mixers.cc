@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ void AddGtkNativeColorMixer(ui::ColorProvider* provider,
   ui::ColorMixer& mixer = provider->AddMixer();
 
   const std::string header_selector =
-      key.frame_type == ui::ColorProviderKey::FrameType::kChromium
+      key.frame_type == ui::ColorProviderKey::FrameType::kCinaseek
           ? "headerbar.header-bar.titlebar"
           : "menubar";
   const std::string header_selector_inactive = header_selector + ":backdrop";

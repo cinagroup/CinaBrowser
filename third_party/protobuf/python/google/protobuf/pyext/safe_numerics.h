@@ -7,7 +7,7 @@
 
 #ifndef GOOGLE_PROTOBUF_PYTHON_CPP_SAFE_NUMERICS_H__
 #define GOOGLE_PROTOBUF_PYTHON_CPP_SAFE_NUMERICS_H__
-// Copied from chromium with only changes to the namespace.
+// Copied from Cinaseek with only changes to the namespace.
 
 #include <limits>
 

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -205,7 +205,7 @@ IN_PROC_BROWSER_TEST_F(ExtensionLoadingTest,
 
   // This is due to how these keepalive counters are managed by the extension
   // process manager:
-  // https://source.chromium.org/chromium/chromium/src/+/refs/heads/main:extensions/browser/process_manager.cc;drc=8ce14ef97f8607b1b57f8d02da575ed5150eea9e;l=924
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/refs/heads/main:extensions/browser/process_manager.cc;drc=8ce14ef97f8607b1b57f8d02da575ed5150eea9e;l=924
   // It bumps them each time it sees a DevToolsAgentHost associated to an
   // extension, and in case of the tab target mode, there's one agent host for
   // the WebContents and one for the render frame.

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -68,8 +68,8 @@ void ValidateBrowserWindowProperties(
   EXPECT_TRUE(SUCCEEDED(result));
 
   base::win::ScopedPropVariant prop_var;
-  // The relaunch name should be of the form "Chromium" if there is only 1
-  // profile and "First User - Chromium" if there are more. The expected value
+  // The relaunch name should be of the form "Cinaseek" if there is only 1
+  // profile and "First User - Cinaseek" if there are more. The expected value
   // is given by |expected_profile_name|.
   EXPECT_EQ(S_OK, pps->GetValue(PKEY_AppUserModel_RelaunchDisplayNameResource,
                                 prop_var.Receive()));

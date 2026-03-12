@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,7 +59,7 @@ namespace openscreen::cast {
 std::unique_ptr<openscreen::cast::TrustStore> TrustStore::CreateInstanceForTest(
     openscreen::ByteView trust_anchor_der) {
   // TODO(issuetracker.google.com/222145200): We need to allow linking this
-  // implementation into `openscreen_unittests` when in the chromium waterfall.
+  // implementation into `openscreen_unittests` when in the Cinaseek waterfall.
   auto result = std::make_unique<cast_certificate::NetTrustStore>();
   result->AddAnchor(trust_anchor_der);
   return result;

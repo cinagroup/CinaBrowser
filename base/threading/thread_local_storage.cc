@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ namespace {
 // global (static) array.
 // We use the single OS-level TLS slot (giving us one pointer per thread) to
 // hold a pointer to a per-thread array (table) of slots that we allocate to
-// Chromium consumers.
+// Cinaseek consumers.
 
 // g_native_tls_key is the one native TLS that we use. It stores our table.
 
@@ -236,7 +236,7 @@ TlsVectorState GetTlsVectorStateAndValue(PlatformThreadLocalStorage::TLSKey key,
   // here.
   //
   // Note that this likely ends up being even faster than thread_local for
-  // typical Chromium builds where the code is in a dynamic library. For the
+  // typical Cinaseek builds where the code is in a dynamic library. For the
   // static executable case, this is likely equivalent.
   static_assert(
       std::is_same_v<PlatformThreadLocalStorage::TLSKey, pthread_key_t>,
@@ -254,7 +254,7 @@ TlsVectorState GetTlsVectorStateAndValue(PlatformThreadLocalStorage::TLSKey key,
 #endif
 }
 
-// This function is called to initialize our entire Chromium TLS system.
+// This function is called to initialize our entire Cinaseek TLS system.
 // It may be called very early, and we need to complete most all of the setup
 // (initialization) before calling *any* memory allocator functions, which may
 // recursively depend on this initialization.

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4231,7 +4231,7 @@ void RenderFrameHostImpl::InitializePolicyContainerHost(
     // COOP, COEP and DIP are used to determine the SiteInstance. It means that
     // if SiteInstance has been inherited, COOP,COEP and DIP  must also be
     // inherited to avoid creating inconsistencies. See:
-    // https://chromium-review.googlesource.com/c/chromium/src/+/3645368
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3645368
     //
     // TODO(crbug.com/40849161): What makes sense for GuestView?
     const PolicyContainerPolicies& parent_policies =
@@ -9909,7 +9909,7 @@ void RenderFrameHostImpl::OpenURL(blink::mojom::OpenURLParamsPtr params) {
   RenderFrameHostOwner* owner = owner_;
   // Inactive documents are not allowed to initiate navigations.
   // Also, see a similar check in RenderFrameHostImpl::BeginNavigation at
-  // https://source.chromium.org/chromium/chromium/src/+/main:content/browser/renderer_host/render_frame_host_impl.cc;l=7761-7769;drc=6dc39d60fea45c003424272efdb4c366119a9d7f
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/browser/renderer_host/render_frame_host_impl.cc;l=7761-7769;drc=6dc39d60fea45c003424272efdb4c366119a9d7f
   if (!owner) {
     return;
   }
@@ -18720,7 +18720,7 @@ void RenderFrameHostImpl::SetLifecycleState(LifecycleStateImpl new_state) {
   static const base::NoDestructor<base::StateTransitions<LifecycleStateImpl>>
       allowed_transitions(
           // For a graph of state transitions, see
-          // https://chromium.googlesource.com/chromium/src/+/HEAD/docs/render-frame-host-lifecycle-state.png
+          // https://Cinaseek.googlesource.com/Cinaseek/src/+/HEAD/docs/render-frame-host-lifecycle-state.png
           // To update the graph, see the corresponding .gv file.
 
           // RenderFrameHost is only set speculative during its creation and no

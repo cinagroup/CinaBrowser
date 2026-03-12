@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ WEB_ENGINE_EXPORT void SetCorsExemptHeaders(
     const std::vector<std::string>& headers);
 
 // Returns true if the header with |header_name| may bypass CORS when injected.
-// Matching of |header_name| is case insensitive, as Chromium's net internals
+// Matching of |header_name| is case insensitive, as Cinaseek's net internals
 // don't normalize the casing of header names.
 // May only be called after SetCorsExemptHeaders() is invoked.
 WEB_ENGINE_EXPORT bool IsHeaderCorsExempt(std::string_view header_name);

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -57,7 +57,7 @@ bool ValidateRect(const gfx::RectF& rect) {
 }
 
 uint32_t GetPresentationKindFlags(uint32_t flags) {
-  // Wayland spec has different meaning of VSync. In Chromium, VSync means to
+  // Wayland spec has different meaning of VSync. In Cinaseek, VSync means to
   // update the begin frame vsync timing based on presentation feedback.
   uint32_t presentation_flags = gfx::PresentationFeedback::kVSync;
 
@@ -403,7 +403,7 @@ std::optional<bool> WaylandFrameManager::ApplySurfaceConfigure(
   }
 
   // Besides the actual wayland surface scale, `config.surface_scale_factor`
-  // also contains chromium's ui scale, which is irrelevant to the wayland
+  // also contains Cinaseek's ui scale, which is irrelevant to the wayland
   // compositor, thus it must be factored out here. This assumes that:
   // - window's ui_scale will always be set to 1 when per-surface scaling is not
   //   enabled.

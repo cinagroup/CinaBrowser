@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -42,7 +42,7 @@ class ExternalConnector {
   static std::unique_ptr<ExternalConnector> Create(
       mojo::PendingRemote<external_mojo::mojom::ExternalConnector> remote);
 
-  // Acquires a connector from the BrokerService via the Chromium service
+  // Acquires a connector from the BrokerService via the Cinaseek service
   // manager.
   static std::unique_ptr<ExternalConnector> Create(
       ::service_manager::Connector* connector);
@@ -108,8 +108,8 @@ class ExternalConnector {
   virtual mojo::PendingRemote<external_mojo::mojom::ExternalConnector>
   RequestConnector() = 0;
 
-  // Sends a request for a Chromium ServiceManager connector.
-  virtual void SendChromiumConnectorRequest(
+  // Sends a request for a Cinaseek ServiceManager connector.
+  virtual void SendCinaseekConnectorRequest(
       mojo::ScopedMessagePipeHandle request) = 0;
 
   // Query the list of available services from this connector.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -121,7 +121,7 @@ class RulesRegistryService : public BrowserContextKeyedAPI,
       int rules_registry_id,
       RulesCacheDelegate::Type cache_delegate_type);
 
-  // Registers the default RulesRegistries used in Chromium.
+  // Registers the default RulesRegistries used in Cinaseek.
   void EnsureDefaultRulesRegistriesRegistered();
 
   // Maps <event name, rules registry ID> to RuleRegistries that handle these

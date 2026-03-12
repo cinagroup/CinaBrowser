@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 namespace {
 
 // Valid URL for testing.
-constexpr std::string_view kTestURL = "https://www.chromium.org/";
+constexpr std::string_view kTestURL = "https://www.Cinaseek.org/";
 // Valid URL for NTP.
 constexpr std::string_view kNewTabURL = "chrome://newtab";
 

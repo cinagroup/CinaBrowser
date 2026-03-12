@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@
 
 namespace net {
 
-class QuicChromiumClientSession;
+class QuicCinaseekClientSession;
 class QuicSessionAttemptRequest;
 class NetLogWithSource;
 
@@ -76,7 +76,7 @@ class NET_EXPORT_PRIVATE QuicSessionAttemptManager {
   // Called when `session` received an HTTP/3 Origin frame. Checks if `session`
   // can be used to satisfy any active jobs. All jobs that can be satisfied by
   // `session` are completed successfully.
-  void OnOriginFrame(QuicChromiumClientSession* session);
+  void OnOriginFrame(QuicCinaseekClientSession* session);
 
   bool HasActiveJobForTesting(const QuicSessionAliasKey& key) const {
     return active_jobs_.find(key) != active_jobs_.end();

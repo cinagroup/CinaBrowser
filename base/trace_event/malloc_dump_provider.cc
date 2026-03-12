@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -185,7 +185,7 @@ void ReportAppleAllocStats(size_t* total_virtual_size,
   // peak size. This is not very useful, so we just use stats.size_in_use for
   // resident_size, even though it's an underestimate and fails to account for
   // fragmentation. See
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=695263#c1.
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=695263#c1.
   *resident_size += stats.size_in_use;
 }
 #endif

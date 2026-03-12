@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,8 +6,8 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/tabstrip/TabStripSceneLayerHolder.java",
-    "java/src/org/chromium/chrome/browser/tabstrip/TabStripTopControlLayer.java",
+    "java/src/org/Cinaseek/chrome/browser/tabstrip/TabStripSceneLayerHolder.java",
+    "java/src/org/Cinaseek/chrome/browser/tabstrip/TabStripTopControlLayer.java",
   ]
   deps = [
     "//base:log_java",
@@ -24,13 +24,13 @@ android_library("java") {
 
 android_library("enums_java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/tabstrip/StripVisibilityState.java",
+    "java/src/org/Cinaseek/chrome/browser/tabstrip/StripVisibilityState.java",
   ]
   deps = [ "//third_party/androidx:androidx_annotation_annotation_java" ]
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/chrome/browser/tabstrip/TabStripTopControlLayerUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/tabstrip/TabStripTopControlLayerUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_java_test_support",

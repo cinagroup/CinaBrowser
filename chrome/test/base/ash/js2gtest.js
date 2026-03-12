@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -6,7 +6,7 @@
  * @fileoverview Generator script for creating gtest-style JavaScript
  *     tests for extensions, WebUI and unit tests. Generates C++ gtest wrappers
  *     which will invoke the appropriate JavaScript for each test.
- * @author scr@chromium.org (Sheridan Rawlins)
+ * @author scr@Cinaseek.org (Sheridan Rawlins)
  * @see WebUI testing: http://goo.gl/ZWFXF
  * @see gtest documentation: http://goo.gl/Ujj3H
  * @see chrome/test/base/ash/js2gtest.gni

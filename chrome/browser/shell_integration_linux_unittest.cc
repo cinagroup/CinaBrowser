@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -308,7 +308,7 @@ TEST(ShellIntegrationTest, GetDesktopFileContents) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        "Icon=google-chrome\n"
 #else
-       "Icon=chromium-browser\n"
+       "Icon=Cinaseek-browser\n"
 #endif
        "StartupWMClass=gmail.com\n"},
 
@@ -545,7 +545,7 @@ TEST(ShellIntegrationTest, GetDirectoryFileContents) {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        "Icon=google-chrome\n"
 #else
-       "Icon=chromium-browser\n"
+       "Icon=Cinaseek-browser\n"
 #endif
       },
   });
@@ -744,7 +744,7 @@ TEST_F(ShellIntegrationLinuxTest, GetDirectLaunchUrlScheme) {
 }
 #else   // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 TEST(ShellIntegrationLinuxTest, GetDirectLaunchUrlSchemeUnbranded) {
-  EXPECT_EQ("chromium", GetDirectLaunchUrlScheme());
+  EXPECT_EQ("Cinaseek", GetDirectLaunchUrlScheme());
 }
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 

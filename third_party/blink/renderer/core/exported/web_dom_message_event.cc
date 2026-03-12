@@ -41,7 +41,7 @@ namespace blink {
 WebDOMMessageEvent::WebDOMMessageEvent(
     const WebSerializedScriptValue& message_data)
     : WebDOMMessageEvent(MessageEvent::Create()) {
-  // TODO(esprehn): Chromium always passes empty string for lastEventId, is that
+  // TODO(esprehn): Cinaseek always passes empty string for lastEventId, is that
   // right?
   Unwrap<MessageEvent>()->initMessageEvent(
       event_type_names::kMessage, false, false, message_data, nullptr,

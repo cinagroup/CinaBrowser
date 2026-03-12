@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -61,8 +61,8 @@ Status Device::SetUp(const std::string& package,
   std::string known_device_socket;
   std::string known_exec_name;
   bool use_debug_flag = false;
-  if (package.compare("org.chromium.content_shell_apk") == 0) {
-    // Chromium content shell.
+  if (package.compare("org.Cinaseek.content_shell_apk") == 0) {
+    // Cinaseek content shell.
     known_activity = ".ContentShellActivity";
     known_device_socket = "content_shell_devtools_remote";
     command_line_file = "/data/local/tmp/content-shell-command-line";

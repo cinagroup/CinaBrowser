@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace privacy_guide_metrics {
 // resources/settings/metrics_browser_proxy.ts.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_guide
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_guide
 enum class PrivacyGuideSettingsStates {
   kMSBBOnToOn = 0,
   kMSBBOnToOff = 1,
@@ -52,7 +52,7 @@ enum class PrivacyGuideSettingsStates {
 // resources/settings/metrics_browser_proxy.ts.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_guide
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_guide
 enum class PrivacyGuideInteractions {
   kWelcomeNextButton = 0,
   kMSBBNextButton = 1,
@@ -79,7 +79,7 @@ enum class PrivacyGuideInteractions {
 // resources/settings/metrics_browser_proxy.ts.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.privacy_guide
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.privacy_guide
 enum class PrivacyGuideStepsEligibleAndReached {
   kMSBBEligible = 0,
   kMSBBReached = 1,

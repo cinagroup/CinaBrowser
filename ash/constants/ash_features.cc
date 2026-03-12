@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -284,7 +284,7 @@ BASE_FEATURE(kCrosSwitcher, base::FEATURE_ENABLED_BY_DEFAULT);
 // Indicates whether the camera super resolution is supported. Note that this
 // feature is overridden by login_manager based on whether a per-board build
 // sets the USE camera_feature_super_res flag. Refer to:
-// chromiumos/src/platform2/login_manager/chrome_setup.cc
+// Cinaseekos/src/platform2/login_manager/chrome_setup.cc
 BASE_FEATURE(kCameraSuperResSupported, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enable Big GL when using Borealis.
@@ -437,7 +437,7 @@ BASE_FEATURE(kCrostiniContainerless, base::FEATURE_ENABLED_BY_DEFAULT);
 // Enables or disables Crostini GPU support.
 // Note that this feature can be overridden by login_manager based on
 // whether a per-board build sets the USE virtio_gpu flag.
-// Refer to: chromiumos/src/platform2/login_manager/chrome_setup.cc
+// Refer to: Cinaseekos/src/platform2/login_manager/chrome_setup.cc
 BASE_FEATURE(kCrostiniGpuSupport, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Force enable recreating the LXD DB at LXD launch.

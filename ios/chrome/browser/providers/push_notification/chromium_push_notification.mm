@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,9 +11,9 @@ namespace ios {
 namespace provider {
 namespace {
 
-// Domain for Chromium push_notification error API.
-NSString* const kChromiumPushNotificationErrorDomain =
-    @"chromium_push_notification_error_domain";
+// Domain for Cinaseek push_notification error API.
+NSString* const kCinaseekPushNotificationErrorDomain =
+    @"Cinaseek_push_notification_error_domain";
 
 // Helper method that asynchronously invoke `completion_handler`
 // with an `NSFeatureUnsupportedError` on the current sequence.
@@ -22,14 +22,14 @@ void FailWithUnsupportedFeatureError(
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
       FROM_HERE, base::BindOnce(^() {
         NSError* error =
-            [NSError errorWithDomain:kChromiumPushNotificationErrorDomain
+            [NSError errorWithDomain:kCinaseekPushNotificationErrorDomain
                                 code:NSFeatureUnsupportedError
                             userInfo:nil];
         completion_handler(error);
       }));
 }
 
-class ChromiumPushNotificationService final : public PushNotificationService {
+class CinaseekPushNotificationService final : public PushNotificationService {
  public:
   // PushNotificationService implementation.
   void RegisterDevice(PushNotificationConfiguration* config,
@@ -47,46 +47,46 @@ class ChromiumPushNotificationService final : public PushNotificationService {
                       CompletionHandler completion_handler) final;
 };
 
-void ChromiumPushNotificationService::RegisterDevice(
+void CinaseekPushNotificationService::RegisterDevice(
     PushNotificationConfiguration* config,
     void (^completion_handler)(NSError* error)) {
-  // Chromium does not initialize the device's connection to the push
+  // Cinaseek does not initialize the device's connection to the push
   // notification server. As a result, the `completion_handler` is called with
   // a NSFeatureUnsupportedError.
   FailWithUnsupportedFeatureError(completion_handler);
 }
 
-void ChromiumPushNotificationService::UnregisterDevice(
+void CinaseekPushNotificationService::UnregisterDevice(
     void (^completion_handler)(NSError* error)) {
-  // Chromium does not unregister the device on the push notification server. As
+  // Cinaseek does not unregister the device on the push notification server. As
   // a result, the `completion_handler` is called with a
   // NSFeatureUnsupportedError.
   FailWithUnsupportedFeatureError(completion_handler);
 }
 
-bool ChromiumPushNotificationService::DeviceTokenIsSet() const {
+bool CinaseekPushNotificationService::DeviceTokenIsSet() const {
   return false;
 }
 
-std::string ChromiumPushNotificationService::GetRepresentativeTargetIdForGaiaId(
+std::string CinaseekPushNotificationService::GetRepresentativeTargetIdForGaiaId(
     const GaiaId& gaia_id) {
   return "";
 }
 
-void ChromiumPushNotificationService::SetAccountsToDevice(
+void CinaseekPushNotificationService::SetAccountsToDevice(
     NSArray<NSString*>* account_ids,
     void (^completion_handler)(NSError* error)) {
-  // Chromium does not initialize the device's connection to the push
+  // Cinaseek does not initialize the device's connection to the push
   // notification server. As a result, the `completion_handler` is called with
   // a NSFeatureUnsupportedError.
   FailWithUnsupportedFeatureError(completion_handler);
 }
 
-void ChromiumPushNotificationService::SetPreferences(
+void CinaseekPushNotificationService::SetPreferences(
     const GaiaId& account_id,
     PreferenceMap preference_map,
     CompletionHandler completion_handler) {
-  // Chromium does not initialize the device's connection to the push
+  // Cinaseek does not initialize the device's connection to the push
   // notification server. As a result, the `completion_handler` is called with
   // a NSFeatureUnsupportedError.
   FailWithUnsupportedFeatureError(completion_handler);
@@ -94,7 +94,7 @@ void ChromiumPushNotificationService::SetPreferences(
 }  // namespace
 
 std::unique_ptr<PushNotificationService> CreatePushNotificationService() {
-  return std::make_unique<ChromiumPushNotificationService>();
+  return std::make_unique<CinaseekPushNotificationService>();
 }
 
 }  // namespace provider

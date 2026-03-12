@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ namespace {
 
 using testing::DoAll;
 
-const char kExportedCallbackPath[] = "/org/chromium/some/callback";
+const char kExportedCallbackPath[] = "/org/Cinaseek/some/callback";
 
 const char kTestSender[] = ":0.1";
 

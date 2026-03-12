@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,16 +9,16 @@ if (is_android) {
   android_library("java") {
     srcjar_deps = [ ":jni_headers" ]
     sources = [
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsBottomSheetContent.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionBinder.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionCoordinator.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionMediator.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionProperties.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsServiceFactory.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionEventObserver.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionMetricsService.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionMetricsServiceFactory.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionMetricsTracker.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsBottomSheetContent.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionBinder.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionCoordinator.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionMediator.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionProperties.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsServiceFactory.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionEventObserver.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionMetricsService.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionMetricsServiceFactory.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionMetricsTracker.java",
     ]
 
     deps = [
@@ -41,15 +41,15 @@ if (is_android) {
       "//ui/android:ui_java",
       "//url:url_java",
     ]
-    resources_package = "org.chromium.chrome.browser.tab_group_suggestion"
+    resources_package = "org.Cinaseek.chrome.browser.tab_group_suggestion"
   }
 
   android_library("toolbar_java") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonController.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerFactory.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerImpl.java",
-      "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonDataProvider.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonController.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerFactory.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerImpl.java",
+      "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonDataProvider.java",
     ]
 
     deps = [
@@ -67,7 +67,7 @@ if (is_android) {
       "//ui/android:ui_java",
     ]
     resources_package =
-        "org.chromium.chrome.browser.tab_group_suggestion.toolbar"
+        "org.Cinaseek.chrome.browser.tab_group_suggestion.toolbar"
   }
 
   android_resources("java_resources") {
@@ -83,19 +83,19 @@ if (is_android) {
   }
 
   generate_jni("jni_headers") {
-    sources = [ "android/java/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsServiceFactory.java" ]
+    sources = [ "android/java/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsServiceFactory.java" ]
   }
 
   robolectric_library("junit") {
     testonly = true
-    resources_package = "org.chromium.chrome.browser.tab_group_suggestion"
+    resources_package = "org.Cinaseek.chrome.browser.tab_group_suggestion"
 
     sources = [
-      "android/junit/src/org/chromium/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionMediatorUnitTest.java",
-      "android/junit/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionEventObserverUnitTest.java",
-      "android/junit/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionMetricsServiceUnitTest.java",
-      "android/junit/src/org/chromium/chrome/browser/tab_group_suggestion/SuggestionMetricsTrackerUnitTest.java",
-      "android/junit/src/org/chromium/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerImplUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/tab_group_suggestion/GroupSuggestionsPromotionMediatorUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionEventObserverUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionMetricsServiceUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/tab_group_suggestion/SuggestionMetricsTrackerUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/tab_group_suggestion/toolbar/GroupSuggestionsButtonControllerImplUnitTest.java",
     ]
 
     deps = [

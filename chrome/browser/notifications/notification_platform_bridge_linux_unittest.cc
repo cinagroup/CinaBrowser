@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -301,7 +301,7 @@ class FakeNotificationProxy : public dbus::ObjectProxy {
       auto response = dbus::Response::CreateEmpty();
       dbus::MessageWriter writer(response.get());
       writer.AppendString(server_name_);     // name
-      writer.AppendString("chromium");       // vendor
+      writer.AppendString("Cinaseek");       // vendor
       writer.AppendString(server_version_);  // version
       writer.AppendString("1.2");            // spec_version
       std::move(callback).Run(response.get(), nullptr);

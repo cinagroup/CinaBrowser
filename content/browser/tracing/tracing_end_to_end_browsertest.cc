@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,11 +48,11 @@ namespace {
 const char kDetailedDumpMode[] = "detailed";
 const char kBackgroundDumpMode[] = "background";
 
-perfetto::protos::gen::ChromiumHistogramSamplesConfig::HistogramSample
+perfetto::protos::gen::CinaseekHistogramSamplesConfig::HistogramSample
 MakeHistogramSample(const std::string& name,
                     std::optional<int64_t> min_value = std::nullopt,
                     std::optional<int64_t> max_value = std::nullopt) {
-  perfetto::protos::gen::ChromiumHistogramSamplesConfig::HistogramSample sample;
+  perfetto::protos::gen::CinaseekHistogramSamplesConfig::HistogramSample sample;
   sample.set_histogram_name(name);
   if (min_value) {
     sample.set_min_value(*min_value);
@@ -65,7 +65,7 @@ MakeHistogramSample(const std::string& name,
 
 perfetto::protos::gen::TraceConfig TraceConfigWithHistograms(
     const std::vector<
-        perfetto::protos::gen::ChromiumHistogramSamplesConfig::HistogramSample>&
+        perfetto::protos::gen::CinaseekHistogramSamplesConfig::HistogramSample>&
         histograms) {
   auto perfetto_config = base::test::DefaultTraceConfig("-*", false);
 
@@ -75,11 +75,11 @@ perfetto::protos::gen::TraceConfig TraceConfigWithHistograms(
   histogram_source_config->set_target_buffer(0);
 
   if (!histograms.empty()) {
-    perfetto::protos::gen::ChromiumHistogramSamplesConfig histogram_config;
+    perfetto::protos::gen::CinaseekHistogramSamplesConfig histogram_config;
     for (const auto& histogram : histograms) {
       *histogram_config.add_histograms() = histogram;
     }
-    histogram_source_config->set_chromium_histogram_samples_raw(
+    histogram_source_config->set_Cinaseek_histogram_samples_raw(
         histogram_config.SerializeAsString());
   }
 
@@ -107,7 +107,7 @@ perfetto::protos::gen::TraceConfig TraceConfigWithMemoryDumps(
   auto perfetto_config = base::test::DefaultTraceConfig(
       "-*,disabled-by-default-memory-infra", false);
   auto* ds = perfetto_config.add_data_sources();
-  ds->mutable_config()->set_name("org.chromium.memory_instrumentation");
+  ds->mutable_config()->set_name("org.Cinaseek.memory_instrumentation");
   ds->mutable_config()->mutable_chrome_config()->set_trace_config(
       trace_event_config_str);
   return perfetto_config;
@@ -120,7 +120,7 @@ perfetto::protos::gen::TraceConfig TraceConfigWithMetadata(
 
   auto* data_source = perfetto_config.add_data_sources();
   auto* source_config = data_source->mutable_config();
-  source_config->set_name("org.chromium.trace_metadata2");
+  source_config->set_name("org.Cinaseek.trace_metadata2");
 
   return perfetto_config;
 }
@@ -131,7 +131,7 @@ perfetto::protos::gen::TraceConfig TraceConfigWithSamplerProfiler() {
 
   auto* data_source = perfetto_config.add_data_sources();
   auto* source_config = data_source->mutable_config();
-  source_config->set_name("org.chromium.sampler_profiler");
+  source_config->set_name("org.Cinaseek.sampler_profiler");
 
   return perfetto_config;
 }
@@ -143,7 +143,7 @@ perfetto::protos::gen::TraceConfig TraceConfigWithMetadataMultisession(
 
   auto* data_source = perfetto_config.add_data_sources();
   auto* source_config = data_source->mutable_config();
-  source_config->set_name("org.chromium.trace_metadata2");
+  source_config->set_name("org.Cinaseek.trace_metadata2");
 
   return perfetto_config;
 }
@@ -398,7 +398,7 @@ class FakeUnwinder : public base::Unwinder {
 
 // Note that this is relevant only for Android, since TracingSamplingProfiler
 // ignores any provided unwinder factory for non-Android platforms:
-// https://source.chromium.org/chromium/chromium/src/+/main:services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc;l=905-908;drc=70d839a3b8bcf1ef43c42a54a4b27f14ee149750
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc;l=905-908;drc=70d839a3b8bcf1ef43c42a54a4b27f14ee149750
 base::StackSamplingProfiler::UnwindersFactory MakeFakeUnwinder() {
   return base::BindOnce([] {
     auto fake_unwinder = std::make_unique<FakeUnwinder>();
@@ -507,7 +507,7 @@ IN_PROC_BROWSER_TEST_F(TracingEndToEndBrowserTest,
       result.value(),
       ::testing::ElementsAre(
           std::vector<std::string>{"name"},
-          std::vector<std::string>{"org.chromium.content_browsertests_apk"}));
+          std::vector<std::string>{"org.Cinaseek.content_browsertests_apk"}));
 }
 
 IN_PROC_BROWSER_TEST_F(TracingEndToEndBrowserTest,

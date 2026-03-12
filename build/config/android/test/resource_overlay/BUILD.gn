@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -59,9 +59,9 @@ test_resources("both_tagged_root_resources") {
 android_library("unit_device_javatests") {
   testonly = true
   sources = [
-    "java/src/org/chromium/build/resource_overlay/ResourceOverlayTest.java",
+    "java/src/org/Cinaseek/build/resource_overlay/ResourceOverlayTest.java",
   ]
-  resources_package = "org.chromium.build.resource_overlay"
+  resources_package = "org.Cinaseek.build.resource_overlay"
   deps = [
     ":both_tagged_root_resources",
     ":dependency_tagged_root_resources",

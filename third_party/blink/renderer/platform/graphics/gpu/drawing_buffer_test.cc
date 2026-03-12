@@ -358,13 +358,13 @@ TEST_F(DrawingBufferTest, verifyInsertAndWaitSyncTokenCorrectly) {
   testing::Mock::VerifyAndClearExpectations(gl_);
 }
 
-class DrawingBufferImageChromiumTest : public DrawingBufferTest {
+class DrawingBufferImageCinaseekTest : public DrawingBufferTest {
  public:
-  DrawingBufferImageChromiumTest() = default;
+  DrawingBufferImageCinaseekTest() = default;
 
  protected:
   void SetUp() override {
-    SharedGpuContext::SetWebGLImageChromiumEnabledForTesting(true);
+    SharedGpuContext::SetWebGLImageCinaseekEnabledForTesting(true);
     gfx::Size initial_size(kInitialWidth, kInitialHeight);
     auto gl = std::make_unique<GLES2InterfaceForTests>();
     auto provider =
@@ -386,7 +386,7 @@ class DrawingBufferImageChromiumTest : public DrawingBufferTest {
   GLuint image_id0_;
 };
 
-TEST_F(DrawingBufferImageChromiumTest, VerifyResizingReallocatesImages) {
+TEST_F(DrawingBufferImageCinaseekTest, VerifyResizingReallocatesImages) {
   GLES2InterfaceForTests* gl_ = drawing_buffer_->ContextGLForTests();
   gpu::TestSharedImageInterface* sii =
       drawing_buffer_->SharedImageInterfaceForTests();
@@ -710,7 +710,7 @@ TEST_F(DrawingBufferTest,
   drawing_buffer_->BeginDestruction();
 }
 
-TEST_F(DrawingBufferImageChromiumTest,
+TEST_F(DrawingBufferImageCinaseekTest,
        VerifyLowLatencyRenderingIsSetWhenDesynchronizedIsTrue) {
   gfx::Size initial_size(kInitialWidth, kInitialHeight);
   auto gl = std::make_unique<GLES2InterfaceForTests>();

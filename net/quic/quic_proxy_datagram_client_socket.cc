@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -66,7 +66,7 @@ bool QuicProxyDatagramClientSocket::IsConnectedForTesting() const {
 int QuicProxyDatagramClientSocket::ConnectViaStream(
     const IPEndPoint& local_address,
     const IPEndPoint& proxy_peer_address,
-    std::unique_ptr<QuicChromiumClientStream::Handle> stream,
+    std::unique_ptr<QuicCinaseekClientStream::Handle> stream,
     CompletionOnceCallback callback) {
   DCHECK(connect_callback_.is_null());
 

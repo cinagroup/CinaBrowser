@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ using ::testing::InvokeWithoutArgs;
 namespace remoting {
 
 namespace {
-const char kTestEmailAddress[] = "faux_remote_user@chromium_test.com";
+const char kTestEmailAddress[] = "faux_remote_user@Cinaseek_test.com";
 }  // namespace
 
 class StubIt2MeConfirmationDialog : public It2MeConfirmationDialog {
@@ -107,7 +107,7 @@ class It2MeConfirmationDialogProxyTest : public testing::Test {
   // |dialog_| is owned by |dialog_proxy_| but we keep an alias for testing.
   // This dangling raw_ptr occurred in:
   // remoting_unittests: It2MeConfirmationDialogProxyTest.Show
-  // https://ci.chromium.org/ui/p/chromium/builders/try/linux-rel/1425645/test-results?q=ExactID%3Aninja%3A%2F%2Fremoting%3Aremoting_unittests%2FIt2MeConfirmationDialogProxyTest.Show+VHash%3A5b63361209a49b2c
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/linux-rel/1425645/test-results?q=ExactID%3Aninja%3A%2F%2Fremoting%3Aremoting_unittests%2FIt2MeConfirmationDialogProxyTest.Show+VHash%3A5b63361209a49b2c
   raw_ptr<StubIt2MeConfirmationDialog, FlakyDanglingUntriaged> dialog_ =
       nullptr;
   std::unique_ptr<It2MeConfirmationDialogProxy> dialog_proxy_;

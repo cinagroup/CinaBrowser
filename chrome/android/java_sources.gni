@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,19 +10,19 @@ import("//device/vr/buildflags/buildflags.gni")
 
 # Only used for testing, should not be shipped to end users.
 if (enable_offline_pages_harness) {
-  chrome_java_sources += [ "java/src/org/chromium/chrome/browser/offlinepages/evaluation/OfflinePageEvaluationBridge.java" ]
+  chrome_java_sources += [ "java/src/org/Cinaseek/chrome/browser/offlinepages/evaluation/OfflinePageEvaluationBridge.java" ]
 }
 
 if (enable_arcore) {
   chrome_java_sources += [
-    "java/src/org/chromium/chrome/browser/vr/ArCompositorDelegateImpl.java",
-    "java/src/org/chromium/chrome/browser/vr/ArCompositorDelegateProviderImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/vr/ArCompositorDelegateImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/vr/ArCompositorDelegateProviderImpl.java",
   ]
 }
 
 if (enable_cardboard) {
   chrome_java_sources += [
-    "java/src/org/chromium/chrome/browser/vr/VrCompositorDelegateImpl.java",
-    "java/src/org/chromium/chrome/browser/vr/VrCompositorDelegateProviderImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/vr/VrCompositorDelegateImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/vr/VrCompositorDelegateProviderImpl.java",
   ]
 }

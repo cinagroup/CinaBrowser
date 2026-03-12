@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -92,7 +92,7 @@ proto_extras("saas_usage_report_event_extras") {
   protobuf_full_support = true
 }
 
-# Google3_protos that are not available in the Chromium repository.
+# Google3_protos that are not available in the Cinaseek repository.
 fuzzable_proto_library("google3_protos") {
   proto_in_dir = "//"
   sources = [ "google3_protos.proto" ]

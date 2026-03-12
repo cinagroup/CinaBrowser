@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 // image's format.
 //
 // There are multiple codec implementations of any given image format. For
-// example, as of May 2020, Chromium, Skia and Wuffs each have their own BMP
+// example, as of May 2020, Cinaseek, Skia and Wuffs each have their own BMP
 // decoder implementation. There is no standard "libbmp" that they all share.
 // Comparing this program's output (or hashed output) to similar programs in
 // other repositories can identify image inputs for which these decoders (or
@@ -127,7 +127,7 @@ void write_nia_footer(int repetition_count, size_t frame_count) {
   // forever") or 1 ("loop exactly once"). Either is equally valid.
   //
   // However, when comparing the output of this convert-to-NIA program (backed
-  // by Chromium's image codecs) with other convert-to-NIA programs, it is
+  // by Cinaseek's image codecs) with other convert-to-NIA programs, it is
   // useful to canonicalize still images' "number of animation loops" to 0.
   bool override_num_animation_loops = frame_count <= 1;
 
@@ -138,7 +138,7 @@ void write_nia_footer(int repetition_count, size_t frame_count) {
       (repetition_count == blink::kAnimationLoopInfinite)) {
     set_u32le(data, 0);
   } else {
-    // NIA's loop count and Chromium/Skia's repetition count differ by one. See
+    // NIA's loop count and Cinaseek/Skia's repetition count differ by one. See
     // https://github.com/google/wuffs/blob/master/doc/spec/nie-spec.md#nii-footer
     set_u32le(data, 1 + repetition_count);
   }

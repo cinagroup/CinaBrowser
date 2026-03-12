@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,8 +14,8 @@
 #import "net/base/apple/url_conversions.h"
 
 // Activity types.
-NSString* const kLoadURLActivityType = @"org.chromium.load.url";
-NSString* const kLoadIncognitoURLActivityType = @"org.chromium.load.otr-url";
+NSString* const kLoadURLActivityType = @"org.Cinaseek.load.url";
+NSString* const kLoadIncognitoURLActivityType = @"org.Cinaseek.load.otr-url";
 
 // User info keys.
 NSString* const kURLKey = @"LoadParams_URL";

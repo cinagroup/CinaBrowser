@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class ImageDecoder;
 // Enumerate the possible image fetcher combinations to allow the service to
 // configure the correct one. New values should be added at the end and things
 // should not be renumbered.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.image_fetcher
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.image_fetcher
 enum class ImageFetcherConfig {
   kNetworkOnly = 0,
   kDiskCacheOnly = 1,

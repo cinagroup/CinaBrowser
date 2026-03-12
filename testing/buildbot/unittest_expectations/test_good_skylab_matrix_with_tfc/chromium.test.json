@@ -14,7 +14,7 @@
         "cros_test_tags_exclude": [
           "informational"
         ],
-        "dut_pool": "chromium",
+        "dut_pool": "Cinaseek",
         "name": "chrome_all_tast_tests",
         "shard_level_retries_on_ctp": 1,
         "test": "chrome_all_tast_tests",

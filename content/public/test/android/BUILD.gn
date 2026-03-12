@@ -4,7 +4,7 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("test_support_content_jni_headers") {
   testonly = true
-  sources = [ "javatests/src/org/chromium/content_public/browser/test/NestedSystemMessageHandler.java" ]
+  sources = [ "javatests/src/org/Cinaseek/content_public/browser/test/NestedSystemMessageHandler.java" ]
 }
 
 android_library("android_test_message_pump_support_java") {
@@ -13,7 +13,7 @@ android_library("android_test_message_pump_support_java") {
     "//base:base_java_test_support",
     "//third_party/jni_zero:jni_zero_java",
   ]
-  sources = [ "javatests/src/org/chromium/content_public/browser/test/NestedSystemMessageHandler.java" ]
+  sources = [ "javatests/src/org/Cinaseek/content_public/browser/test/NestedSystemMessageHandler.java" ]
 }
 
 android_library("content_java_test_support") {
@@ -46,34 +46,34 @@ android_library("content_java_test_support") {
   ]
   srcjar_deps = [ ":content_test_jni" ]
   sources = [
-    "javatests/src/org/chromium/content_public/browser/test/ContentJUnit4ClassRunner.java",
-    "javatests/src/org/chromium/content_public/browser/test/ContentJUnit4RunnerDelegate.java",
-    "javatests/src/org/chromium/content_public/browser/test/NativeLibraryTestUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/RenderFrameHostTestExt.java",
-    "javatests/src/org/chromium/content_public/browser/test/mock/MockNavigationController.java",
-    "javatests/src/org/chromium/content_public/browser/test/mock/MockRenderFrameHost.java",
-    "javatests/src/org/chromium/content_public/browser/test/mock/MockWebContents.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/BackgroundSyncNetworkUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/ChildProcessUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/ClickUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/Coordinates.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/DOMUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/DomAutomationController.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/FencedFrameUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/HistoryUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/JavaScriptUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/PrefetchTestUtil.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/RenderProcessHostUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestCallbackHelperContainer.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestInputMethodManagerWrapper.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestSelectionDropdownMenuDelegate.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestSelectionPopupController.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestTouchUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TestWebContentsObserver.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/TouchCommon.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/UiThreadSchedulerTestUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/UiUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/WebContentsUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/ContentJUnit4ClassRunner.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/ContentJUnit4RunnerDelegate.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/NativeLibraryTestUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/RenderFrameHostTestExt.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/mock/MockNavigationController.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/mock/MockRenderFrameHost.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/mock/MockWebContents.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/BackgroundSyncNetworkUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/ChildProcessUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/ClickUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/Coordinates.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/DOMUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/DomAutomationController.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/FencedFrameUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/HistoryUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/JavaScriptUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/PrefetchTestUtil.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/RenderProcessHostUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestCallbackHelperContainer.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestInputMethodManagerWrapper.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestSelectionDropdownMenuDelegate.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestSelectionPopupController.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestTouchUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TestWebContentsObserver.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/TouchCommon.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/UiThreadSchedulerTestUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/UiUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/WebContentsUtils.java",
   ]
 }
 
@@ -91,22 +91,22 @@ android_library("content_transit_java") {
     "//third_party/hamcrest:hamcrest_java",
   ]
   sources = [
-    "javatests/src/org/chromium/content_public/browser/test/transit/HtmlConditions.java",
-    "javatests/src/org/chromium/content_public/browser/test/transit/HtmlElement.java",
-    "javatests/src/org/chromium/content_public/browser/test/transit/HtmlElementSpec.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/transit/HtmlConditions.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/transit/HtmlElement.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/transit/HtmlElementSpec.java",
   ]
 }
 
 generate_jni("content_test_jni") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/content_public/browser/test/RenderFrameHostTestExt.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/DOMUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/FencedFrameUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/PrefetchTestUtil.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/RenderProcessHostUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/UiThreadSchedulerTestUtils.java",
-    "javatests/src/org/chromium/content_public/browser/test/util/WebContentsUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/RenderFrameHostTestExt.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/DOMUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/FencedFrameUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/PrefetchTestUtil.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/RenderProcessHostUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/UiThreadSchedulerTestUtils.java",
+    "javatests/src/org/Cinaseek/content_public/browser/test/util/WebContentsUtils.java",
   ]
 }
 

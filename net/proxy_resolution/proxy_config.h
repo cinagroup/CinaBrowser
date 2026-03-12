@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class ProxyInfo;
 // precedence.
 //
 // For more details see:
-// http://www.chromium.org/developers/design-documents/network-stack/proxy-settings-fallback
+// http://www.Cinaseek.org/developers/design-documents/network-stack/proxy-settings-fallback
 class NET_EXPORT ProxyConfig {
  public:
   // ProxyRules describes the "manual" proxy settings.

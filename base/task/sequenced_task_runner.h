@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -333,7 +333,7 @@ class BASE_EXPORT SequencedTaskRunner : public TaskRunner {
   // directly instead of going through this API.
   //
   // See
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks.md#Posting-to-the-Current-Virtual_Thread
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/threading_and_tasks.md#Posting-to-the-Current-Virtual_Thread
   // for details
   [[nodiscard]] static const scoped_refptr<SequencedTaskRunner>&
   GetCurrentDefault();

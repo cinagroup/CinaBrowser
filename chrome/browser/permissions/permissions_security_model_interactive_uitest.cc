@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -871,12 +871,12 @@ IN_PROC_BROWSER_TEST_F(PermissionsSecurityModelInteractiveUITest,
   VerifyPermissionsForFile(main_rfh, /*expect_granted=*/true);
 
   content::EvalJsResult result = content::EvalJs(
-      embedder_contents, "history.pushState({}, {}, 'https://chromium.org');");
+      embedder_contents, "history.pushState({}, {}, 'https://Cinaseek.org');");
   EXPECT_TRUE(result.is_ok());
-  EXPECT_EQ("https://chromium.org/", main_rfh->GetLastCommittedURL().spec());
+  EXPECT_EQ("https://Cinaseek.org/", main_rfh->GetLastCommittedURL().spec());
   EXPECT_TRUE(main_rfh->GetLastCommittedOrigin().GetURL().SchemeIsFile());
 
-  // `https://chromium.org` is used for permissions verification.
+  // `https://Cinaseek.org` is used for permissions verification.
 #if BUILDFLAG(IS_ANDROID)
   VerifyPermissionsForFile(main_rfh, /*expect_granted=*/false);
 #else

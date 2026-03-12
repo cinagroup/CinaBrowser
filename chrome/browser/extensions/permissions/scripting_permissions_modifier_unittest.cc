@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -158,10 +158,10 @@ TEST_F(ScriptingPermissionsModifierUnitTest, WithholdHostPermissionsOnInstall) {
   InitializeEmptyExtensionService();
 
   constexpr char kHostGoogle[] = "https://google.com/*";
-  constexpr char kHostChromium[] = "https://chromium.org/*";
+  constexpr char kHostCinaseek[] = "https://Cinaseek.org/*";
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("a")
-          .AddHostPermissions({kHostGoogle, kHostChromium})
+          .AddHostPermissions({kHostGoogle, kHostCinaseek})
           .AddContentScript("foo.js", {kHostGoogle})
           .SetLocation(ManifestLocation::kInternal)
           .AddFlags(Extension::WITHHOLD_PERMISSIONS)
@@ -179,17 +179,17 @@ TEST_F(ScriptingPermissionsModifierUnitTest, WithholdHostPermissionsOnInstall) {
   {
     SCOPED_TRACE("Initial state");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium},
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek},
                                  {kHostGoogle});
   }
 
   // Grant one of the permissions manually.
   ScriptingPermissionsModifier modifier(profile(), extension);
-  modifier.GrantHostPermission(GURL(kHostChromium));
+  modifier.GrantHostPermission(GURL(kHostCinaseek));
 
   {
     SCOPED_TRACE("After granting single");
-    CheckActiveHostPermissions(*extension, {kHostChromium}, {});
+    CheckActiveHostPermissions(*extension, {kHostCinaseek}, {});
     CheckWithheldHostPermissions(*extension, {kHostGoogle}, {kHostGoogle});
   }
 
@@ -199,7 +199,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest, WithholdHostPermissionsOnInstall) {
   // All requested permissions should now be granted granted.
   {
     SCOPED_TRACE("After setting to not withhold");
-    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostChromium},
+    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostCinaseek},
                                {kHostGoogle});
     CheckWithheldHostPermissions(*extension, {}, {});
   }
@@ -213,14 +213,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   InitializeEmptyExtensionService();
 
   constexpr char kHostGoogle[] = "https://google.com/*";
-  constexpr char kHostChromium[] = "https://chromium.org/*";
+  constexpr char kHostCinaseek[] = "https://Cinaseek.org/*";
   TestExtensionDir test_extension_dir;
   test_extension_dir.WriteManifest(
       R"({
            "name": "foo",
            "manifest_version": 2,
            "version": "1",
-           "permissions": ["https://google.com/*", "https://chromium.org/*"]
+           "permissions": ["https://google.com/*", "https://Cinaseek.org/*"]
          })");
   ChromeTestExtensionLoader loader(profile());
   loader.add_creation_flag(Extension::WITHHOLD_PERMISSIONS);
@@ -241,14 +241,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Initial state");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Reload after initial state");
     extension = reload_extension();
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   // Grant one of the permissions and check it persists after reload.
@@ -257,14 +257,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Granting single");
     CheckActiveHostPermissions(*extension, {kHostGoogle}, {});
-    CheckWithheldHostPermissions(*extension, {kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Reload after granting single");
     extension = reload_extension();
     CheckActiveHostPermissions(*extension, {kHostGoogle}, {});
-    CheckWithheldHostPermissions(*extension, {kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostCinaseek}, {});
   }
 
   // Set permissions not to be withheld at all and check it persists after
@@ -273,14 +273,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
       .SetWithholdHostPermissions(false);
   {
     SCOPED_TRACE("Setting to not withhold");
-    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
     CheckWithheldHostPermissions(*extension, {}, {});
   }
 
   {
     SCOPED_TRACE("Reload after setting to not withhold");
     extension = reload_extension();
-    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
     CheckWithheldHostPermissions(*extension, {}, {});
   }
 
@@ -291,14 +291,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Setting back to withhold");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Reload after setting back to withhold");
     extension = reload_extension();
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 }
 
@@ -310,14 +310,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   InitializeEmptyExtensionService();
 
   constexpr char kHostGoogle[] = "https://google.com/*";
-  constexpr char kHostChromium[] = "https://chromium.org/*";
+  constexpr char kHostCinaseek[] = "https://Cinaseek.org/*";
   TestExtensionDir test_extension_dir;
   constexpr char kManifestTemplate[] =
       R"({
            "name": "foo",
            "manifest_version": 2,
            "version": "%s",
-           "permissions": ["https://google.com/*", "https://chromium.org/*"]
+           "permissions": ["https://google.com/*", "https://Cinaseek.org/*"]
          })";
 
   test_extension_dir.WriteManifest(base::StringPrintf(kManifestTemplate, "1"));
@@ -353,14 +353,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Initial state");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Update after initial state");
     extension = update_extension("2");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   // Grant one of the permissions and check it persists after update.
@@ -369,14 +369,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Granting single");
     CheckActiveHostPermissions(*extension, {kHostGoogle}, {});
-    CheckWithheldHostPermissions(*extension, {kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Update after granting single");
     extension = update_extension("3");
     CheckActiveHostPermissions(*extension, {kHostGoogle}, {});
-    CheckWithheldHostPermissions(*extension, {kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostCinaseek}, {});
   }
 
   // Set permissions not to be withheld at all and check it persists after
@@ -385,14 +385,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
       .SetWithholdHostPermissions(false);
   {
     SCOPED_TRACE("Setting to not withhold");
-    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
     CheckWithheldHostPermissions(*extension, {}, {});
   }
 
   {
     SCOPED_TRACE("Update after setting to not withhold");
     extension = update_extension("4");
-    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckActiveHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
     CheckWithheldHostPermissions(*extension, {}, {});
   }
 
@@ -403,14 +403,14 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   {
     SCOPED_TRACE("Setting back to withhold");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 
   {
     SCOPED_TRACE("Update after setting back to withhold");
     extension = update_extension("5");
     CheckActiveHostPermissions(*extension, {}, {});
-    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostChromium}, {});
+    CheckWithheldHostPermissions(*extension, {kHostGoogle, kHostCinaseek}, {});
   }
 }
 
@@ -460,7 +460,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest, GrantHostPermission) {
   modifier.SetWithholdHostPermissions(true);
 
   const GURL kUrl("https://www.google.com/");
-  const GURL kUrl2("https://www.chromium.org/");
+  const GURL kUrl2("https://www.Cinaseek.org/");
 
   PermissionsManager* permissions_manager = PermissionsManager::Get(profile());
   EXPECT_FALSE(permissions_manager->HasGrantedHostPermission(*extension, kUrl));
@@ -525,7 +525,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest, GrantedOptionalHostPermission) {
 
   ScriptingPermissionsModifier modifier(profile(), extension);
 
-  const GURL kUrl("https://www.chromium.org/");
+  const GURL kUrl("https://www.Cinaseek.org/");
   const GURL kOtherUrl("https://www.example.com/");
 
   PermissionsManager* permissions_manager = PermissionsManager::Get(profile());
@@ -584,7 +584,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   InitializeEmptyExtensionService();
 
   const GURL kExampleCom("https://example.com/");
-  const GURL kChromiumOrg("https://chromium.org/");
+  const GURL kCinaseekOrg("https://Cinaseek.org/");
   const URLPatternSet kExampleComPatternSet({URLPattern(
       Extension::kValidHostPermissionSchemes, "https://example.com/")});
 
@@ -608,7 +608,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_TRUE(extension->permissions_data()
                   ->active_permissions()
                   .explicit_hosts()
-                  .MatchesURL(kChromiumOrg));
+                  .MatchesURL(kCinaseekOrg));
 
   ScriptingPermissionsModifier(profile(), extension)
       .SetWithholdHostPermissions(true);
@@ -619,7 +619,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_FALSE(extension->permissions_data()
                    ->active_permissions()
                    .explicit_hosts()
-                   .MatchesURL(kChromiumOrg));
+                   .MatchesURL(kCinaseekOrg));
 
   ScriptingPermissionsModifier(profile(), extension)
       .GrantHostPermission(kExampleCom);
@@ -630,7 +630,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_FALSE(extension->permissions_data()
                    ->active_permissions()
                    .explicit_hosts()
-                   .MatchesURL(kChromiumOrg));
+                   .MatchesURL(kCinaseekOrg));
 
   {
     TestExtensionRegistryObserver observer(ExtensionRegistry::Get(profile()));
@@ -644,7 +644,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_FALSE(extension->permissions_data()
                    ->active_permissions()
                    .explicit_hosts()
-                   .MatchesURL(kChromiumOrg));
+                   .MatchesURL(kCinaseekOrg));
 }
 
 // Test ScriptingPermissionsModifier::RemoveAllGrantedHostPermissions() revokes
@@ -662,11 +662,11 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension), testing::IsEmpty());
 
   modifier.GrantHostPermission(GURL("https://example.com"));
-  modifier.GrantHostPermission(GURL("https://chromium.org"));
+  modifier.GrantHostPermission(GURL("https://Cinaseek.org"));
 
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension),
               testing::UnorderedElementsAre("https://example.com/*",
-                                            "https://chromium.org/*"));
+                                            "https://Cinaseek.org/*"));
 
   modifier.RemoveAllGrantedHostPermissions();
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension), testing::IsEmpty());
@@ -682,7 +682,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("test")
           .AddHostPermissions(
-              {"https://example.com/*", "https://chromium.org/*"})
+              {"https://example.com/*", "https://Cinaseek.org/*"})
           .Build();
   ScriptingPermissionsModifier modifier(profile(), extension.get());
 
@@ -691,11 +691,11 @@ TEST_F(ScriptingPermissionsModifierUnitTest,
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension), testing::IsEmpty());
 
   modifier.GrantHostPermission(GURL("https://example.com"));
-  modifier.GrantHostPermission(GURL("https://chromium.org"));
+  modifier.GrantHostPermission(GURL("https://Cinaseek.org"));
 
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension),
               testing::UnorderedElementsAre("https://example.com/*",
-                                            "https://chromium.org/*"));
+                                            "https://Cinaseek.org/*"));
 
   modifier.RemoveAllGrantedHostPermissions();
   EXPECT_THAT(GetEffectivePatternsAsStrings(*extension), testing::IsEmpty());
@@ -744,7 +744,7 @@ TEST_F(ScriptingPermissionsModifierUnitTest, HasBroadGrantedHostPermissions) {
     bool expected_broad_permissions;
   } test_cases[] = {{{}, false},
                     {{"https://www.google.com/*"}, false},
-                    {{"https://www.google.com/*", "*://chromium.org/*"}, false},
+                    {{"https://www.google.com/*", "*://Cinaseek.org/*"}, false},
                     {{"*://*.google.*/*"}, false},
                     {{"<all_urls>"}, true},
                     {{"https://*/*"}, true},

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -216,7 +216,7 @@ int main(int argc, char** argv) {
   // Otherwise, don't run branded updater tests on a developer's system because
   // doing so breaks the updater on the system.
   using std::operator""sv;
-  if constexpr ("ChromiumUpdater"sv.compare(PRODUCT_FULLNAME_STRING)) {
+  if constexpr ("CinaseekUpdater"sv.compare(PRODUCT_FULLNAME_STRING)) {
     if (!std::getenv("ISOLATED_OUTDIR")) {
       LOG(ERROR)
           << "Running branded updater tests breaks the updater for "

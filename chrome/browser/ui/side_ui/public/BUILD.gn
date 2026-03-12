@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,10 +13,10 @@ android_resources("java_resources") {
 # Public Java interfaces
 android_library("java") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiContainer.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiObserver.java",
-    "android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiStateProvider.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiContainer.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiObserver.java",
+    "android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiStateProvider.java",
   ]
   deps = [
     "//build/android:build_java",
@@ -27,5 +27,5 @@ android_library("java") {
 # Public Java factory
 android_library_factory("factory_java") {
   deps = [ ":java" ]
-  sources = [ "//chrome/browser/ui/side_ui/internal/android/java/src/org/chromium/chrome/browser/ui/side_ui/SideUiCoordinatorFactory.java" ]
+  sources = [ "//chrome/browser/ui/side_ui/internal/android/java/src/org/Cinaseek/chrome/browser/ui/side_ui/SideUiCoordinatorFactory.java" ]
 }

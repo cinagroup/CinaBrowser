@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -205,7 +205,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest, DevicesMustBeList) {
     [
       {
         "devices": 1,
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -285,7 +285,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest, VendorIdMustBeInt) {
     [
       {
         "devices": [{"vendor_id": "not_an_int"}],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -323,7 +323,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest, VendorIdOutOfRange) {
     [
       {
         "devices": [{"vendor_id": 1000000}],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -361,7 +361,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest,
     [
       {
         "devices": [{"product_id": 1234}],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -403,7 +403,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest, ProductIdMustBeInt) {
             "product_id": "not_an_int"
           }
         ],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 
@@ -446,7 +446,7 @@ TEST_F(SerialAllowUsbDevicesForUrlsPolicyHandlerTest, ProductIdOutOfRange) {
             "product_id": 1000000
           }
         ],
-        "urls": ["https://chromium.org"]
+        "urls": ["https://Cinaseek.org"]
       }
     ])";
 

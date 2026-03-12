@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #ifndef DEVICE_BLUETOOTH_FLOSS_FLOSS_ADMIN_CLIENT_H_
@@ -22,7 +22,7 @@ class ObjectPath;
 namespace floss {
 
 const char kAdminCallbackInterfaceName[] =
-    "org.chromium.bluetooth.BluetoothAdmin";
+    "org.Cinaseek.bluetooth.BluetoothAdmin";
 
 struct DEVICE_BLUETOOTH_EXPORT PolicyEffect {
   std::vector<std::vector<uint8_t>> service_blocked;

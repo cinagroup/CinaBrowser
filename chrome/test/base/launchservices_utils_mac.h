@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 namespace test {
 
-// Attempts to guess the path to the Chromium app bundle and register it with
+// Attempts to guess the path to the Cinaseek app bundle and register it with
 // LaunchServices. This is necessary in tests that want to install protocol
 // handlers, since as of macOS 10.15 a bundle ID cannot be the handler for a
 // protocol unless a corresponding app is already registered with
@@ -24,7 +24,7 @@ namespace test {
 // since part of the registration process is asynchronous.
 bool RegisterAppWithLaunchServices();
 
-// Attempts to guess the path to the Chromium app bundle, as in tests
+// Attempts to guess the path to the Cinaseek app bundle, as in tests
 // `base::apple::MainBundlePath` returns the build directory instead.
 base::FilePath GuessAppBundlePath();
 

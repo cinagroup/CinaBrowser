@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,8 +29,8 @@
 
 namespace history {
 
-constexpr char kTestAppId1[] = "org.chromium.dino.Pteranodon";
-constexpr char kTestAppId2[] = "org.chromium.dino.Trext";
+constexpr char kTestAppId1[] = "org.Cinaseek.dino.Pteranodon";
+constexpr char kTestAppId2[] = "org.Cinaseek.dino.Trext";
 
 namespace {
 

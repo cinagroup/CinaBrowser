@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@ class LongScreenshotsTabService : public paint_preview::PaintPreviewBaseService,
   //
   // A Java counterpart will be generated for this enum.
   // GENERATED_JAVA_ENUM_PACKAGE: (
-  // org.chromium.chrome.browser.share.long_screenshots.bitmap_generation)
+  // org.Cinaseek.chrome.browser.share.long_screenshots.bitmap_generation)
   enum Status {
     kUnknown = 0,
     kOk = 1,

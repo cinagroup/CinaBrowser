@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -400,7 +400,7 @@ class NET_EXPORT TransportSecurityState {
   // This method is used by Cronet only and *** MUST NOT *** be used by any
   // other consumer. For more information see "How does key pinning interact
   // with local proxies and filters?" at
-  // https://www.chromium.org/Home/chromium-security/security-faq
+  // https://www.Cinaseek.org/Home/Cinaseek-security/security-faq
   void SetEnablePublicKeyPinningBypassForLocalTrustAnchors(bool value);
 
   void AssertCalledOnValidThread() const {

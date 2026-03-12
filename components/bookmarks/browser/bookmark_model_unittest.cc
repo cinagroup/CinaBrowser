@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3830,8 +3830,8 @@ TEST_F(BookmarkModelTest, IsVisible) {
 
   // Make the local bookmark bar node non-empty. Nodes that were previously
   // hidden because there were no local bookmarks are now visible.
-  model_->AddURL(model_->bookmark_bar_node(), 0, u"Chromium",
-                 GURL("http://www.chromium.org"));
+  model_->AddURL(model_->bookmark_bar_node(), 0, u"Cinaseek",
+                 GURL("http://www.Cinaseek.org"));
   EXPECT_TRUE(model_->bookmark_bar_node()->IsVisible());
 #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
   // On mobile, the other node is always hidden when empty and the mobile node
@@ -3845,8 +3845,8 @@ TEST_F(BookmarkModelTest, IsVisible) {
 #endif
 
   // Make the account mobile node folder non-empty. It is now visible.
-  model_->AddURL(model_->account_mobile_node(), 0, u"Chromium",
-                 GURL("http://www.chromium.org"));
+  model_->AddURL(model_->account_mobile_node(), 0, u"Cinaseek",
+                 GURL("http://www.Cinaseek.org"));
   EXPECT_TRUE(model_->account_mobile_node()->IsVisible());
 }
 

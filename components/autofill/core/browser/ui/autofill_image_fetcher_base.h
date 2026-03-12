@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ namespace autofill {
 class AutofillImageFetcherBase {
  public:
   // The types of images supported by the `AutofillImageFetcher` API.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   enum class ImageType {
     // Art image icons used for credit card display in the payments TTF bottom
     // sheet.
@@ -52,7 +52,7 @@ class AutofillImageFetcherBase {
   };
 
   // Different sizes in which we show the credit card / bank account art images.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.autofill
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.autofill
   enum class ImageSize {
     kSmall = 0,
     kLarge = 1,

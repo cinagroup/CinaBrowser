@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ class OffscreenDocumentManager : public KeyedService,
 
  private:
   struct OffscreenDocumentData {
-    // Appease Chromium clang plugin with out-of-line ctors/dtors.
+    // Appease Cinaseek clang plugin with out-of-line ctors/dtors.
     OffscreenDocumentData();
     OffscreenDocumentData(OffscreenDocumentData&&);
     ~OffscreenDocumentData();

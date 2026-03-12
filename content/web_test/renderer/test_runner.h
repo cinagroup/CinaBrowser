@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -543,7 +543,7 @@ class TestRunner {
 
   WorkQueue work_queue_;
 
-  // Bound variable to return the name of this platform (chromium).
+  // Bound variable to return the name of this platform (Cinaseek).
   std::string platform_name_;
 
   // Flags controlling what content gets dumped as a layout text result.

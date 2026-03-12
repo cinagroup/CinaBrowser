@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@
 
 namespace cronet {
 
-// Adapter for org.chromium.net.impl.CompletionOnceCallback.
+// Adapter for org.Cinaseek.net.impl.CompletionOnceCallback.
 // TODO(https://crbug.com/442514750): Consider moving to
 // base::android::ToJniCallback instead.
 class CompletionOnceCallbackAdapter final {

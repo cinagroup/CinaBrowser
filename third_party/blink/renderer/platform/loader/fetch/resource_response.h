@@ -535,7 +535,7 @@ class PLATFORM_EXPORT ResourceResponse final {
   // https://fetch.spec.whatwg.org/#concept-response-timing-allow-passed
   bool timing_allow_passed_ : 1;
 
-  // Was the resource fetched over SPDY.  See http://dev.chromium.org/spdy
+  // Was the resource fetched over SPDY.  See http://dev.Cinaseek.org/spdy
   bool was_fetched_via_spdy_ : 1;
 
   // Was the resource fetched over a ServiceWorker.

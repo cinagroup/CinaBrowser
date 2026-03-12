@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -607,7 +607,7 @@ void FFmpegDemuxerStream::FlushBuffers(bool preserve_packet_position) {
 
   // H264 and AAC require that we resend the header after flush.
   // Reset bitstream for converter to do so.
-  // This is related to chromium issue 140371 (http://crbug.com/140371).
+  // This is related to Cinaseek issue 140371 (http://crbug.com/140371).
   ResetBitstreamConverter();
 
   if (!preserve_packet_position) {

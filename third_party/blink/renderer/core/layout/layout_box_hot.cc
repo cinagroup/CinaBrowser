@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -387,7 +387,7 @@ const LayoutResult* LayoutBox::CachedLayoutResult(
         // TODO(layout-dev): This likely shouldn't be scoped to just OOFs, but
         // scoping it more widely results in several perf regressions[1].
         //
-        // [1] https://bugs.chromium.org/p/chromium/issues/detail?id=1362550
+        // [1] https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1362550
         if (node.IsOutOfFlowPositioned()) {
           // If the fragmentainer size has changed, and there previously was
           // space shortage reported, we should re-run layout to avoid reporting

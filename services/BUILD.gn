@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,7 +27,7 @@ test("services_unittests") {
   }
 
   # If your service does not run on iOS, its tests should go in the !iOS
-  # section below. If you are unsure, contact blundell@chromium.org.
+  # section below. If you are unsure, contact blundell@Cinaseek.org.
   deps = [
     "//services/cert_verifier:tests",
     "//services/cert_verifier/cert_net_url_loader:tests",
@@ -158,12 +158,12 @@ if (!is_ios) {
 if (is_android) {
   robolectric_binary("services_junit_tests") {
     sources = [
-      "device/generic_sensor/android/junit/src/org/chromium/device/sensors/PlatformSensorAndProviderTest.java",
-      "device/geolocation/android/junit/src/org/chromium/device/geolocation/LocationProviderTest.java",
-      "device/nfc/android/junit/src/org/chromium/device/nfc/NFCTest.java",
-      "device/nfc/android/junit/src/org/chromium/device/nfc/NfcBlocklistTest.java",
-      "device/serial/android/javatests/src/org/chromium/device/serial/ChromeSerialManagerTest.java",
-      "shape_detection/android/junit/src/org/chromium/shape_detection/BitmapUtilsTest.java",
+      "device/generic_sensor/android/junit/src/org/Cinaseek/device/sensors/PlatformSensorAndProviderTest.java",
+      "device/geolocation/android/junit/src/org/Cinaseek/device/geolocation/LocationProviderTest.java",
+      "device/nfc/android/junit/src/org/Cinaseek/device/nfc/NFCTest.java",
+      "device/nfc/android/junit/src/org/Cinaseek/device/nfc/NfcBlocklistTest.java",
+      "device/serial/android/javatests/src/org/Cinaseek/device/serial/CinaseekSerialManagerTest.java",
+      "shape_detection/android/junit/src/org/Cinaseek/shape_detection/BitmapUtilsTest.java",
     ]
     deps = [
       "$google_play_services_package:google_play_services_base_java",
@@ -204,10 +204,10 @@ if (is_android) {
   android_library("services_javatests") {
     testonly = true
     sources = [
-      "shape_detection/android/javatests/src/org/chromium/shape_detection/BarcodeDetectionImplTest.java",
-      "shape_detection/android/javatests/src/org/chromium/shape_detection/FaceDetectionImplTest.java",
-      "shape_detection/android/javatests/src/org/chromium/shape_detection/TestUtils.java",
-      "shape_detection/android/javatests/src/org/chromium/shape_detection/TextDetectionImplTest.java",
+      "shape_detection/android/javatests/src/org/Cinaseek/shape_detection/BarcodeDetectionImplTest.java",
+      "shape_detection/android/javatests/src/org/Cinaseek/shape_detection/FaceDetectionImplTest.java",
+      "shape_detection/android/javatests/src/org/Cinaseek/shape_detection/TestUtils.java",
+      "shape_detection/android/javatests/src/org/Cinaseek/shape_detection/TextDetectionImplTest.java",
     ]
     deps = [
       "$google_play_services_package:google_play_services_base_java",
@@ -222,7 +222,7 @@ if (is_android) {
       "//services/shape_detection:shape_detection_java",
       "//services/shape_detection/public/mojom:mojom_java",
       "//skia/public/mojom:mojom_java",
-      "//third_party/android_deps:chromium_play_services_availability_java",
+      "//third_party/android_deps:Cinaseek_play_services_availability_java",
       "//third_party/androidx:androidx_test_runner_java",
       "//third_party/google-truth:google_truth_java",
       "//third_party/hamcrest:hamcrest_java",

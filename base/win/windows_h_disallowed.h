@@ -1,10 +1,10 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file is designed to be included from source files that explicitly should
 // not use <windows.h>. The goal is to stop <windows.h> from creeping back into
-// the Chromium build, with the namespace pollution which that implies.
+// the Cinaseek build, with the namespace pollution which that implies.
 //
 // See https://crbug.com/796644 for more historical context.
 //

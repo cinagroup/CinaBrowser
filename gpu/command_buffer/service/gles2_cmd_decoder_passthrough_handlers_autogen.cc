@@ -1,11 +1,11 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 // This file is auto-generated from
 // gpu/command_buffer/build_gles2_cmd_buffer.py
-// It's formatted by clang-format using chromium coding style:
-//    clang-format -i -style=chromium filename
+// It's formatted by clang-format using Cinaseek coding style:
+//    clang-format -i -style=Cinaseek filename
 // DO NOT EDIT!
 
 #include "gpu/command_buffer/service/gles2_cmd_decoder_passthrough.h"
@@ -3710,7 +3710,7 @@ error::Error GLES2DecoderPassthroughImpl::HandleBlitFramebufferCHROMIUM(
   const volatile gles2::cmds::BlitFramebufferCHROMIUM& c =
       *static_cast<const volatile gles2::cmds::BlitFramebufferCHROMIUM*>(
           cmd_data);
-  if (!features().chromium_framebuffer_multisample) {
+  if (!features().Cinaseek_framebuffer_multisample) {
     return error::kUnknownCommand;
   }
 
@@ -3740,7 +3740,7 @@ GLES2DecoderPassthroughImpl::HandleRenderbufferStorageMultisampleCHROMIUM(
       *static_cast<
           const volatile gles2::cmds::RenderbufferStorageMultisampleCHROMIUM*>(
           cmd_data);
-  if (!features().chromium_framebuffer_multisample) {
+  if (!features().Cinaseek_framebuffer_multisample) {
     return error::kUnknownCommand;
   }
 

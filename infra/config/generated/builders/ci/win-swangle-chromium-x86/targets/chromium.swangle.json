@@ -1,5 +1,5 @@
 {
-  "win-swangle-chromium-x86": {
+  "win-swangle-Cinaseek-x86": {
     "isolated_scripts": [
       {
         "args": [
@@ -29,10 +29,10 @@
             "cpu": "x86-64",
             "gpu": "none",
             "os": "Windows-10-19045",
-            "pool": "chromium.tests.gpu"
+            "pool": "Cinaseek.tests.gpu"
           },
           "idempotent": false,
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "telemetry_gpu_integration_test",
         "test_id_prefix": "ninja://chrome/test:telemetry_gpu_integration_test/"

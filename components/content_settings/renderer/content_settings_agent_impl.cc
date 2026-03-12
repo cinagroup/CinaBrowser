@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -170,7 +170,7 @@ void ContentSettingsAgentImpl::DidCommitProvisionalLoad(
 #if DCHECK_IS_ON()
   GURL url = frame->GetDocument().Url();
   // If we start failing this DCHECK, please makes sure we don't regress
-  // this bug: http://code.google.com/p/chromium/issues/detail?id=79304
+  // this bug: http://code.google.com/p/Cinaseek/issues/detail?id=79304
   DCHECK(frame->GetDocument().GetSecurityOrigin().ToString() == "null" ||
          !url.SchemeIs(url::kDataScheme));
 #endif

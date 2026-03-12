@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -111,13 +111,13 @@ TEST_F(HTMLInputElementTest, FilteredDataListOptionsForMultipleEmail) {
     <input id=test value='foo@example.com, tkent' list=dl3 type=email
     multiple>
     <datalist id=dl3>
-    <option>keishi@chromium.org</option>
-    <option>tkent@chromium.org</option>
+    <option>keishi@Cinaseek.org</option>
+    <option>tkent@Cinaseek.org</option>
     </datalist>
   )HTML");
   auto options = TestElement().FilteredDataListOptions();
   EXPECT_EQ(1u, options.size());
-  EXPECT_EQ("tkent@chromium.org", options[0]->value().Utf8());
+  EXPECT_EQ("tkent@Cinaseek.org", options[0]->value().Utf8());
 }
 
 TEST_F(HTMLInputElementTest, FilteredDataListOptionsDynamicContain) {

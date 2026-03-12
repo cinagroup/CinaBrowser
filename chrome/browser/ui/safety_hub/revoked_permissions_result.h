@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ struct ContentSettingEntry {
 };
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.safety_hub
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.safety_hub
 // LINT.IfChange(PermissionsRevocationType)
 enum class PermissionsRevocationType {
   kUnusedPermissions,

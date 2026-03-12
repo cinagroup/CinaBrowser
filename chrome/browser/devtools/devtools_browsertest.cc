@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -3174,7 +3174,7 @@ IN_PROC_BROWSER_TEST_F(DevToolsTest, MAYBE_TestOpenInNewTabFilter) {
       {"blob:chrome://inspect", "about:blank"},
       {self_filesystem_url, self_filesystem_url},
       {"filesystem:chrome://inspect", "about:blank"},
-      {"view-source:http://chromium.org", "about:blank"},
+      {"view-source:http://Cinaseek.org", "about:blank"},
       {"file:///", "about:blank"},
       {"about://gpu", "about:blank"},
       {"chrome://gpu", "about:blank"},

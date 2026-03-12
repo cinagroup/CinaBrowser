@@ -890,7 +890,7 @@ std::pair<bool, size_t> WebSocketChannelImpl::SendMessageData(
         // passed on to the network service.
         //
         // The corresponding bug for this is
-        // https://bugs.chromium.org/p/chromium/issues/detail?id=937790
+        // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=937790
         // The corresponding test case is
         // browser_tests WebRequestApiTest.WebSocketCleanClose.
         if (client_) {

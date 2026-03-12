@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -254,15 +254,15 @@ TEST_F(ClipboardMacTest, SourceTracking) {
   ASSERT_TRUE(source->IsUrlType());
   ASSERT_EQ(*source->GetURL(), google_url);
 
-  GURL chromium_url = GURL("https://chromium.org");
+  GURL Cinaseek_url = GURL("https://Cinaseek.org");
   WritePortableAndPlatformRepresentations(
-      clipboard_mac, std::make_unique<DataTransferEndpoint>(chromium_url),
+      clipboard_mac, std::make_unique<DataTransferEndpoint>(Cinaseek_url),
       pasteboard->get());
 
   source = GetSource(clipboard_mac, pasteboard->get());
   ASSERT_TRUE(source);
   ASSERT_TRUE(source->IsUrlType());
-  ASSERT_EQ(*source->GetURL(), chromium_url);
+  ASSERT_EQ(*source->GetURL(), Cinaseek_url);
 
   Clear(clipboard_mac, pasteboard->get());
   ASSERT_FALSE(GetSource(clipboard_mac, pasteboard->get()));

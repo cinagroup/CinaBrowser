@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 namespace offline_items_collection {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.offline_items_collection
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.offline_items_collection
 // GENERATED_JAVA_PREFIX_TO_STRIP: FILTER_
 enum OfflineItemFilter {
   FILTER_PAGE = 0,

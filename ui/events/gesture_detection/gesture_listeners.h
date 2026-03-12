@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -29,7 +29,7 @@ class GESTURE_DETECTION_EXPORT GestureListener {
                        const MotionEvent& e2,
                        float velocity_x,
                        float velocity_y) = 0;
-  // Added for Chromium (Aura).
+  // Added for Cinaseek (Aura).
   virtual bool OnSwipe(const MotionEvent& e1,
                        const MotionEvent& e2,
                        float velocity_x,

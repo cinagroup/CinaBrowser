@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,14 +59,14 @@
 #include "net/log/test_net_log.h"
 #include "net/log/test_net_log_util.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
 #include "net/quic/mock_quic_data.h"
 #include "net/quic/properties_based_quic_server_info.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_session_peer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session_peer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_http_utils.h"
@@ -125,7 +125,7 @@ namespace net::test {
 
 class QuicHttpStreamPeer {
  public:
-  static QuicChromiumClientSession::Handle* GetSessionHandle(
+  static QuicCinaseekClientSession::Handle* GetSessionHandle(
       HttpStream* stream) {
     return static_cast<QuicHttpStream*>(stream)->quic_session();
   }
@@ -441,7 +441,7 @@ void QuicSessionPoolTest::VerifyServerMigration(const quic::QuicConfig& config,
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.SetConfig(config);
   // Use cold start mode to send crypto message for handshake.
@@ -517,7 +517,7 @@ void QuicSessionPoolTest::VerifyServerMigration(const quic::QuicConfig& config,
   EXPECT_EQ(OK, stream->InitializeStream(true, DEFAULT_PRIORITY, net_log_,
                                          CompletionOnceCallback()));
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_FALSE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
@@ -566,7 +566,7 @@ void QuicSessionPoolTest::VerifyInitialization(
   quic_params_->idle_connection_timeout = base::Seconds(500);
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.set_handshake_mode(
@@ -781,7 +781,7 @@ TEST_P(QuicSessionPoolTest, CreateSyncQuicSession) {
   base::test::ScopedFeatureList scoped_feature_list;
   scoped_feature_list.InitAndDisableFeature(net::features::kAsyncQuicSession);
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -818,7 +818,7 @@ TEST_P(QuicSessionPoolTest, CreateSyncQuicSession) {
 
 TEST_P(QuicSessionPoolTest, CreateAsyncQuicSession) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -857,7 +857,7 @@ TEST_P(QuicSessionPoolTest, SyncCreateZeroRtt) {
   scoped_feature_list.InitAndDisableFeature(net::features::kAsyncQuicSession);
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -883,7 +883,7 @@ TEST_P(QuicSessionPoolTest, SyncCreateZeroRtt) {
 TEST_P(QuicSessionPoolTest, AsyncCreateZeroRtt) {
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -914,7 +914,7 @@ TEST_P(QuicSessionPoolTest, AsyncZeroRtt) {
   Initialize();
 
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -947,7 +947,7 @@ TEST_P(QuicSessionPoolTest, AsyncZeroRtt) {
 
 TEST_P(QuicSessionPoolTest, DefaultInitialRtt) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -961,7 +961,7 @@ TEST_P(QuicSessionPoolTest, DefaultInitialRtt) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(session->require_confirmation());
   EXPECT_EQ(100000u, session->connection()->GetStats().srtt_us);
   ASSERT_FALSE(crypto_client_stream_factory_.last_stream()
@@ -971,7 +971,7 @@ TEST_P(QuicSessionPoolTest, DefaultInitialRtt) {
 
 TEST_P(QuicSessionPoolTest, FactoryDestroyedWhenJobPending) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -998,7 +998,7 @@ TEST_P(QuicSessionPoolTest, RequireConfirmation) {
                                             "192.168.0.1", "");
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(false);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1020,7 +1020,7 @@ TEST_P(QuicSessionPoolTest, RequireConfirmation) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(session->require_confirmation());
 }
 
@@ -1032,7 +1032,7 @@ TEST_P(QuicSessionPoolTest, RequireConfirmationAsyncQuicSession) {
                                             "192.168.0.1", "");
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(false);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1055,7 +1055,7 @@ TEST_P(QuicSessionPoolTest, RequireConfirmationAsyncQuicSession) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(session->require_confirmation());
 }
 
@@ -1070,7 +1070,7 @@ TEST_P(QuicSessionPoolTest, DontRequireConfirmationFromSameIP) {
   http_server_properties_->SetLastLocalAddressWhenQuicWorked(
       IPAddress(192, 0, 2, 33));
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1087,7 +1087,7 @@ TEST_P(QuicSessionPoolTest, DontRequireConfirmationFromSameIP) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_FALSE(session->require_confirmation());
 
   crypto_client_stream_factory_.last_stream()
@@ -1103,7 +1103,7 @@ TEST_P(QuicSessionPoolTest, CachedInitialRtt) {
   quic_params_->estimate_initial_rtt = true;
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1117,7 +1117,7 @@ TEST_P(QuicSessionPoolTest, CachedInitialRtt) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_EQ(10000u, session->connection()->GetStats().srtt_us);
   ASSERT_TRUE(crypto_client_stream_factory_.last_stream()
                   ->negotiated_config()
@@ -1156,7 +1156,7 @@ TEST_P(QuicSessionPoolTest, CachedInitialRttWithNetworkAnonymizationKey) {
         NetworkAnonymizationKey()}) {
     SCOPED_TRACE(network_anonymization_key.ToDebugString());
 
-    ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+    ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
     crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
     QuicTestPacketMaker packet_maker(
@@ -1178,7 +1178,7 @@ TEST_P(QuicSessionPoolTest, CachedInitialRttWithNetworkAnonymizationKey) {
     std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
     EXPECT_TRUE(stream.get());
 
-    QuicChromiumClientSession* session = GetActiveSession(
+    QuicCinaseekClientSession* session = GetActiveSession(
         kDefaultDestination, PRIVACY_MODE_DISABLED, network_anonymization_key);
     if (network_anonymization_key == kNetworkAnonymizationKey1) {
       EXPECT_EQ(10000, session->connection()->GetStats().srtt_us);
@@ -1205,7 +1205,7 @@ TEST_P(QuicSessionPoolTest, 2gInitialRtt) {
   quic_params_->estimate_initial_rtt = true;
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1219,7 +1219,7 @@ TEST_P(QuicSessionPoolTest, 2gInitialRtt) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_EQ(1000000u, session->connection()->GetStats().srtt_us);
   ASSERT_TRUE(crypto_client_stream_factory_.last_stream()
                   ->negotiated_config()
@@ -1236,7 +1236,7 @@ TEST_P(QuicSessionPoolTest, 3gInitialRtt) {
   quic_params_->estimate_initial_rtt = true;
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1250,7 +1250,7 @@ TEST_P(QuicSessionPoolTest, 3gInitialRtt) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_EQ(400000u, session->connection()->GetStats().srtt_us);
   ASSERT_TRUE(crypto_client_stream_factory_.last_stream()
                   ->negotiated_config()
@@ -1262,7 +1262,7 @@ TEST_P(QuicSessionPoolTest, 3gInitialRtt) {
 
 TEST_P(QuicSessionPoolTest, GoAway) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1276,7 +1276,7 @@ TEST_P(QuicSessionPoolTest, GoAway) {
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
 
   session->OnHttp3GoAway(0);
 
@@ -1317,7 +1317,7 @@ TEST_P(QuicSessionPoolTest, ServerNetworkStatsWithNetworkAnonymizationKey) {
   for (size_t i = 0; i < std::size(kNetworkAnonymizationKeys); ++i) {
     SCOPED_TRACE(i);
 
-    ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+    ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
     crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
     QuicTestPacketMaker packet_maker(
@@ -1339,7 +1339,7 @@ TEST_P(QuicSessionPoolTest, ServerNetworkStatsWithNetworkAnonymizationKey) {
     std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
     EXPECT_TRUE(stream.get());
 
-    QuicChromiumClientSession* session =
+    QuicCinaseekClientSession* session =
         GetActiveSession(kDefaultDestination, PRIVACY_MODE_DISABLED,
                          kNetworkAnonymizationKeys[i]);
 
@@ -1411,7 +1411,7 @@ TEST_P(QuicSessionPoolTest, PooledWithDifferentIpSession) {
   quic_params_->supported_versions = {version_};
   quic_params_->enable_origin_frame = true;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1543,7 +1543,7 @@ TEST_P(QuicSessionPoolTest, PoolingSkipDns) {
   quic_params_->enable_origin_frame = true;
   quic_params_->skip_dns_with_origin_frame = true;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1592,7 +1592,7 @@ TEST_P(QuicSessionPoolTest,
        IgnoreIpMatchingWhenFindingExistingSessionsAndSkipDns) {
   quic_params_->ignore_ip_matching_when_finding_existing_sessions = true;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1636,7 +1636,7 @@ TEST_P(QuicSessionPoolTest,
 TEST_P(QuicSessionPoolTest, Pooling) {
   quic_params_->supported_versions = {version_};
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -1771,7 +1771,7 @@ TEST_P(QuicSessionPoolTest, PoolingWithServerMigration) {
   VerifyServerMigration(config, alt_address);
 
   // Close server-migrated session.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   session->CloseSessionOnError(0u, quic::QUIC_NO_ERROR,
                                quic::ConnectionCloseBehavior::SILENT_CLOSE);
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
@@ -1794,7 +1794,7 @@ TEST_P(QuicSessionPoolTest, PoolingWithServerMigration) {
                         ConstructInitialSettingsPacket(packet_number++));
   socket_data1.AddSocketDataToFactory(socket_factory_.get());
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   quic::QuicConfig config2;
   crypto_client_stream_factory_.SetConfig(config2);
@@ -1826,7 +1826,7 @@ TEST_P(QuicSessionPoolTest, PoolingWithServerMigration) {
 
 TEST_P(QuicSessionPoolTest, NoPoolingAfterGoAway) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -1896,7 +1896,7 @@ TEST_P(QuicSessionPoolTest, HttpsPooling) {
   url::SchemeHostPort server1(url::kHttpsScheme, kDefaultServerHostName, 443);
   url::SchemeHostPort server2(url::kHttpsScheme, kServer2HostName, 443);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   host_resolver_->set_synchronous_mode(true);
@@ -1938,7 +1938,7 @@ TEST_P(QuicSessionPoolTest, HttpsPoolingWithMatchingPins) {
   HashValue primary_pin(HASH_VALUE_SHA256);
   EXPECT_TRUE(primary_pin.FromString(
       "sha256/Nn8jk5By4Vkq6BeOVZ7R7AC6XUUBZsWmUbJR1f1Y5FY="));
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   verify_details.cert_verify_result.public_key_hashes.push_back(
       primary_pin.sha256hashvalue());
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -1989,7 +1989,7 @@ TEST_P(QuicSessionPoolTest, NoHttpsPoolingWithDifferentPins) {
   transport_security_state_.SetPinningListAlwaysTimelyForTesting(true);
   ScopedTransportSecurityStateSource scoped_security_state_source;
 
-  ProofVerifyDetailsChromium verify_details1 = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details1 = DefaultProofVerifyDetails();
   uint8_t bad_pin = 3;
   verify_details1.cert_verify_result.public_key_hashes.push_back(
       test::GetTestHashValue(bad_pin));
@@ -1998,7 +1998,7 @@ TEST_P(QuicSessionPoolTest, NoHttpsPoolingWithDifferentPins) {
   HashValue primary_pin(HASH_VALUE_SHA256);
   EXPECT_TRUE(primary_pin.FromString(
       "sha256/Nn8jk5By4Vkq6BeOVZ7R7AC6XUUBZsWmUbJR1f1Y5FY="));
-  ProofVerifyDetailsChromium verify_details2 = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details2 = DefaultProofVerifyDetails();
   verify_details2.cert_verify_result.public_key_hashes.push_back(
       primary_pin.sha256hashvalue());
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -2032,7 +2032,7 @@ TEST_P(QuicSessionPoolTest, NoHttpsPoolingWithDifferentPins) {
 
 TEST_P(QuicSessionPoolTest, Goaway) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -2054,7 +2054,7 @@ TEST_P(QuicSessionPoolTest, Goaway) {
 
   // Mark the session as going away.  Ensure that while it is still alive
   // that it is no longer active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   pool_->OnSessionGoingAway(session);
   EXPECT_EQ(true, QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
@@ -2082,7 +2082,7 @@ TEST_P(QuicSessionPoolTest, Goaway) {
 
 TEST_P(QuicSessionPoolTest, MaxOpenStream) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   quic::QuicStreamId stream_id = GetNthClientInitiatedBidirectionalStreamId(0);
@@ -2168,7 +2168,7 @@ TEST_P(QuicSessionPoolTest, MaxOpenStream) {
   // Force close of the connection to suppress the generation of RST
   // packets when streams are torn down, which wouldn't be relevant to
   // this test anyway.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   session->connection()->CloseConnection(
       quic::QUIC_PUBLIC_RESET, "test",
       quic::ConnectionCloseBehavior::SILENT_CLOSE);
@@ -2275,7 +2275,7 @@ TEST_P(QuicSessionPoolTest, AsyncCancelCreate) {
 
 TEST_P(QuicSessionPoolTest, CloseAllSessions) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -2358,7 +2358,7 @@ TEST_P(QuicSessionPoolTest,
   // Verify new requests can be sent normally without hanging.
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.Reset();
   MockQuicData socket_data2(version_);
@@ -2413,7 +2413,7 @@ TEST_P(QuicSessionPoolTest,
   // Verify new requests can be sent normally without hanging.
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.Reset();
   MockQuicData socket_data2(version_);
@@ -2473,7 +2473,7 @@ TEST_P(QuicSessionPoolTest,
   // Verify new requests can be sent normally without hanging.
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.Reset();
   MockQuicData socket_data2(version_);
@@ -2531,7 +2531,7 @@ TEST_P(QuicSessionPoolTest,
   // Verify new requests can be sent normally without hanging.
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.Reset();
   MockQuicData socket_data2(version_);
@@ -2577,7 +2577,7 @@ TEST_P(QuicSessionPoolTest, CloseSessionDuringCreation) {
       /*SocketPerformanceWatcherFactory*/ nullptr,
       &crypto_client_stream_factory_, &context_);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -2612,7 +2612,7 @@ TEST_P(QuicSessionPoolTest, CloseSessionDuringCreation) {
       ProxyChain::Direct(), SessionUsage::kDestination,
       /*require_dns_https_alpn=*/false,
       /*disable_cert_verification_network_fetches=*/false));
-  QuicChromiumClientSession* session = QuicSessionPoolPeer::GetActiveSession(
+  QuicCinaseekClientSession* session = QuicSessionPoolPeer::GetActiveSession(
       &factory, server_id, PRIVACY_MODE_DISABLED, NetworkAnonymizationKey());
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(&factory, session));
 
@@ -2632,7 +2632,7 @@ TEST_P(QuicSessionPoolTest, CloseSessionsOnIPAddressChanged) {
   // migrate_sessions_on_network_change_v2 == false.
   quic_params_->migrate_sessions_on_network_change_v2 = false;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -2667,7 +2667,7 @@ TEST_P(QuicSessionPoolTest, CloseSessionsOnIPAddressChanged) {
 
   // Check an active session exists for the destination.
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
 
   EXPECT_TRUE(http_server_properties_->HasLastLocalAddressWhenQuicWorked());
@@ -2691,7 +2691,7 @@ TEST_P(QuicSessionPoolTest, CloseSessionsOnIPAddressChanged) {
   // Check a new active session exists for the destination and the old session
   // is no longer live.
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
-  QuicChromiumClientSession* session2 = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session2 = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session2));
 
   stream.reset();  // Will reset stream 3.
@@ -2710,7 +2710,7 @@ TEST_P(QuicSessionPoolTest, GoAwaySessionsOnIPAddressChanged) {
   // migrate_sessions_on_network_change_v2 == false.
   quic_params_->migrate_sessions_on_network_change_v2 = false;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -2753,7 +2753,7 @@ TEST_P(QuicSessionPoolTest, GoAwaySessionsOnIPAddressChanged) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -2787,7 +2787,7 @@ TEST_P(QuicSessionPoolTest, GoAwaySessionsOnIPAddressChanged) {
   // Check an active session exists for the destination.
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
-  QuicChromiumClientSession* session2 = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session2 = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session2));
 
   stream.reset();
@@ -2801,7 +2801,7 @@ TEST_P(QuicSessionPoolTest, GoAwaySessionsOnIPAddressChanged) {
 TEST_P(QuicSessionPoolTest, OnIPAddressChangedWithConnectionMigration) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -2865,7 +2865,7 @@ TEST_P(QuicSessionPoolTest, MigrateOnNetworkMadeDefaultWithAsyncWrite) {
 // OnNetworkMadeDefault is delivered to session.
 void QuicSessionPoolTest::TestMigrationOnNetworkMadeDefault(IoMode write_mode) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -2945,7 +2945,7 @@ void QuicSessionPoolTest::TestMigrationOnNetworkMadeDefault(IoMode write_mode) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -3017,7 +3017,7 @@ void QuicSessionPoolTest::TestMigrationOnNetworkMadeDefault(IoMode write_mode) {
 // will not attempt to write new packets until the socket level is unblocked.
 TEST_P(QuicSessionPoolTest, MigratedToBlockedSocketAfterProbing) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -3108,7 +3108,7 @@ TEST_P(QuicSessionPoolTest, MigratedToBlockedSocketAfterProbing) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -3181,7 +3181,7 @@ TEST_P(QuicSessionPoolTest, MigratedToBlockedSocketAfterProbing) {
 // - no new network is connected, migration times out. Session is closed.
 TEST_P(QuicSessionPoolTest, MigrationTimeoutWithNoNewNetwork) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Using a testing task runner so that we can control time.
@@ -3209,7 +3209,7 @@ TEST_P(QuicSessionPoolTest, MigrationTimeoutWithNoNewNetwork) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -3260,7 +3260,7 @@ void QuicSessionPoolTest::TestOnNetworkMadeDefaultNonMigratableStream(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -3348,7 +3348,7 @@ void QuicSessionPoolTest::TestOnNetworkMadeDefaultNonMigratableStream(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -3381,7 +3381,7 @@ void QuicSessionPoolTest::TestOnNetworkMadeDefaultNonMigratableStream(
 TEST_P(QuicSessionPoolTest, OnNetworkMadeDefaultConnectionMigrationDisabled) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -3417,11 +3417,11 @@ TEST_P(QuicSessionPoolTest, OnNetworkMadeDefaultConnectionMigrationDisabled) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
-  QuicChromiumClientSessionPeer::DisableConnectionMigration(session);
+  QuicCinaseekClientSessionPeer::DisableConnectionMigration(session);
 
   // Trigger connection migration. Since there is a non-migratable stream,
   // this should cause session to continue but be marked as going away.
@@ -3454,7 +3454,7 @@ void QuicSessionPoolTest::TestOnNetworkDisconnectedNonMigratableStream(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -3539,7 +3539,7 @@ void QuicSessionPoolTest::TestOnNetworkDisconnectedNonMigratableStream(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -3570,7 +3570,7 @@ void QuicSessionPoolTest::TestOnNetworkDisconnectedNonMigratableStream(
 TEST_P(QuicSessionPoolTest, OnNetworkDisconnectedConnectionMigrationDisabled) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -3596,11 +3596,11 @@ TEST_P(QuicSessionPoolTest, OnNetworkDisconnectedConnectionMigrationDisabled) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
-  QuicChromiumClientSessionPeer::DisableConnectionMigration(session);
+  QuicCinaseekClientSessionPeer::DisableConnectionMigration(session);
 
   // Trigger connection migration.
   scoped_mock_network_change_notifier_->mock_network_change_notifier()
@@ -3628,7 +3628,7 @@ void QuicSessionPoolTest::TestOnNetworkMadeDefaultNoOpenStreams(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -3684,7 +3684,7 @@ void QuicSessionPoolTest::TestOnNetworkMadeDefaultNoOpenStreams(
   EXPECT_TRUE(stream.get());
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_FALSE(session->HasActiveRequestStreams());
@@ -3720,7 +3720,7 @@ void QuicSessionPoolTest::TestOnNetworkDisconnectedNoOpenStreams(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -3795,7 +3795,7 @@ void QuicSessionPoolTest::TestMigrationOnNetworkDisconnected(
       {kDefaultNetworkForTests, kNewNetworkForTests});
   scoped_mock_network_change_notifier_->mock_network_change_notifier()
       ->NotifyNetworkMadeDefault(kDefaultNetworkForTests);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -3836,7 +3836,7 @@ void QuicSessionPoolTest::TestMigrationOnNetworkDisconnected(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -3933,7 +3933,7 @@ TEST_P(QuicSessionPoolTest,
   scoped_mock_network_change_notifier_->mock_network_change_notifier()
       ->NotifyNetworkMadeDefault(kDefaultNetworkForTests);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -4031,14 +4031,14 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session to the destination is alive and active.
-  QuicChromiumClientSession* destination_session =
+  QuicCinaseekClientSession* destination_session =
       GetActiveSession(kDefaultDestination, PRIVACY_MODE_DISABLED,
                        NetworkAnonymizationKey(), proxy_chain);
   EXPECT_TRUE(
       QuicSessionPoolPeer::IsLiveSession(pool_.get(), destination_session));
 
   // Ensure that the session to the proxy is alive and active.
-  QuicChromiumClientSession* proxy_session = GetActiveSession(
+  QuicCinaseekClientSession* proxy_session = GetActiveSession(
       proxy_origin, PRIVACY_MODE_DISABLED, NetworkAnonymizationKey(),
       ProxyChain::ForIpProtection({}), SessionUsage::kProxy,
       /*require_dns_https_alpn=*/false,
@@ -4148,7 +4148,7 @@ TEST_P(QuicSessionPoolTest, MigrateOnPathDegradingWithProxiedSession) {
   scoped_mock_network_change_notifier_->mock_network_change_notifier()
       ->NotifyNetworkMadeDefault(kDefaultNetworkForTests);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -4249,14 +4249,14 @@ TEST_P(QuicSessionPoolTest, MigrateOnPathDegradingWithProxiedSession) {
                                          CompletionOnceCallback()));
 
   // Ensure that session to the destination is alive and active.
-  QuicChromiumClientSession* destination_session =
+  QuicCinaseekClientSession* destination_session =
       GetActiveSession(kDefaultDestination, PRIVACY_MODE_DISABLED,
                        NetworkAnonymizationKey(), proxy_chain);
   EXPECT_TRUE(
       QuicSessionPoolPeer::IsLiveSession(pool_.get(), destination_session));
 
   // Ensure that the session to the proxy is alive and active.
-  QuicChromiumClientSession* proxy_session = GetActiveSession(
+  QuicCinaseekClientSession* proxy_session = GetActiveSession(
       proxy_origin, PRIVACY_MODE_DISABLED, NetworkAnonymizationKey(),
       ProxyChain::ForIpProtection({}), SessionUsage::kProxy,
       /*require_dns_https_alpn=*/false,
@@ -4378,7 +4378,7 @@ TEST_P(QuicSessionPoolTest, MigrateOnPathDegradingWithProxiedSession) {
 // - new network is made default.
 TEST_P(QuicSessionPoolTest, NewNetworkConnectedAfterNoNetwork) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -4415,7 +4415,7 @@ TEST_P(QuicSessionPoolTest, NewNetworkConnectedAfterNoNetwork) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -4515,7 +4515,7 @@ TEST_P(QuicSessionPoolTest, NewNetworkConnectedAfterNoNetwork) {
 TEST_P(QuicSessionPoolTest, MigrateToProbingSocket) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -4606,7 +4606,7 @@ TEST_P(QuicSessionPoolTest, MigrateToProbingSocket) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -4685,7 +4685,7 @@ void QuicSessionPoolTest::TestMigrationOnPathDegrading(
     bool async_write_before) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -4772,7 +4772,7 @@ void QuicSessionPoolTest::TestMigrationOnPathDegrading(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -4842,7 +4842,7 @@ void QuicSessionPoolTest::TestMigrationOnPathDegrading(
 TEST_P(QuicSessionPoolTest, MigrateSessionEarlyProbingWriterError) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -4910,7 +4910,7 @@ TEST_P(QuicSessionPoolTest, MigrateSessionEarlyProbingWriterError) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -4967,7 +4967,7 @@ TEST_P(QuicSessionPoolTest,
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -5042,7 +5042,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_path2, session);
@@ -5111,7 +5111,7 @@ TEST_P(QuicSessionPoolTest, MultiPortSessionWithMigration) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Using a testing task runner so that we can control time.
@@ -5191,7 +5191,7 @@ TEST_P(QuicSessionPoolTest, MultiPortSessionWithMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   // Manually initialize the connection's self address. In real life, the
@@ -5212,8 +5212,8 @@ TEST_P(QuicSessionPoolTest, MultiPortSessionWithMigration) {
                                     callback_.callback()));
   // Disable connection migration on the request streams.
   // This should have no effect for port migration.
-  QuicChromiumClientStream* chrome_stream =
-      static_cast<QuicChromiumClientStream*>(
+  QuicCinaseekClientStream* chrome_stream =
+      static_cast<QuicCinaseekClientStream*>(
           quic::test::QuicSessionPeer::GetStream(
               session, GetNthClientInitiatedBidirectionalStreamId(0)));
   EXPECT_TRUE(chrome_stream);
@@ -5266,7 +5266,7 @@ TEST_P(QuicSessionPoolTest, SuccessfullyMigratedToServerPreferredAddress) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   quic::QuicConfig config;
   config.SetIPv4AlternateServerAddressToSend(
@@ -5317,7 +5317,7 @@ TEST_P(QuicSessionPoolTest, SuccessfullyMigratedToServerPreferredAddress) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   ASSERT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_FALSE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_FALSE(
       session->connection()->GetStats().server_preferred_address_validated);
   EXPECT_FALSE(session->connection()
@@ -5349,7 +5349,7 @@ TEST_P(QuicSessionPoolTest, FailedToValidateServerPreferredAddress) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   quic::QuicConfig config;
   config.SetIPv4AlternateServerAddressToSend(
@@ -5399,7 +5399,7 @@ TEST_P(QuicSessionPoolTest, FailedToValidateServerPreferredAddress) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   ASSERT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_FALSE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_FALSE(
       session->connection()->GetStats().server_preferred_address_validated);
   EXPECT_FALSE(session->connection()
@@ -5438,7 +5438,7 @@ TEST_P(QuicSessionPoolTest, ServerMigrationDisabled) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   quic::QuicConfig config;
   config.SetIPv4AlternateServerAddressToSend(ToQuicSocketAddress(alt_address));
@@ -5498,7 +5498,7 @@ TEST_P(QuicSessionPoolTest, ServerMigrationDisabled) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -5530,7 +5530,7 @@ TEST_P(QuicSessionPoolTest, PortMigrationDisabledOnPathDegrading) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -5573,7 +5573,7 @@ TEST_P(QuicSessionPoolTest, PortMigrationDisabledOnPathDegrading) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -5584,8 +5584,8 @@ TEST_P(QuicSessionPoolTest, PortMigrationDisabledOnPathDegrading) {
                                     callback_.callback()));
   // Disable connection migration on the request streams.
   // This should have no effect for port migration.
-  QuicChromiumClientStream* chrome_stream =
-      static_cast<QuicChromiumClientStream*>(
+  QuicCinaseekClientStream* chrome_stream =
+      static_cast<QuicCinaseekClientStream*>(
           quic::test::QuicSessionPeer::GetStream(
               session, GetNthClientInitiatedBidirectionalStreamId(0)));
   EXPECT_TRUE(chrome_stream);
@@ -5600,7 +5600,7 @@ TEST_P(QuicSessionPoolTest, PortMigrationDisabledOnPathDegrading) {
   quic::test::QuicConnectionPeer::SetSelfAddress(session->connection(),
                                                  ToQuicSocketAddress(ip));
 
-  QuicChromiumClientSessionPeer::DisableConnectionMigration(session);
+  QuicCinaseekClientSessionPeer::DisableConnectionMigration(session);
 
   // Cause the connection to report path degrading to the session.
   // Session will start to probe a different port.
@@ -5622,7 +5622,7 @@ TEST_P(QuicSessionPoolTest,
        PortMigrationProbingReceivedStatelessReset_PathValidator) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -5684,7 +5684,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -5808,7 +5808,7 @@ TEST_P(
   url::SchemeHostPort server1(url::kHttpsScheme, kDefaultServerHostName, 443);
   url::SchemeHostPort server2(url::kHttpsScheme, kServer2HostName, 443);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -5833,8 +5833,8 @@ TEST_P(
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2.get());
 
-  QuicChromiumClientSession* session1 = GetActiveSession(server1);
-  QuicChromiumClientSession* session2 = GetActiveSession(server2);
+  QuicCinaseekClientSession* session1 = GetActiveSession(server1);
+  QuicCinaseekClientSession* session2 = GetActiveSession(server2);
   EXPECT_NE(session1, session2);
 
   // Cause QUIC stream to be created and send GET so session1 has an open
@@ -5872,9 +5872,9 @@ TEST_P(
   crypto_client_stream_factory_.streams()[0]->setHandshakeConfirmedForce(false);
   crypto_client_stream_factory_.streams()[1]->setHandshakeConfirmedForce(false);
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle1 =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle1 =
       session1->CreateHandle(server1);
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle2 =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle2 =
       session2->CreateHandle(server2);
   mock_ncn->NotifyNetworkDisconnected(kDefaultNetworkForTests);
   mock_ncn->NotifyNetworkMadeDefault(kNewNetworkForTests);
@@ -5905,7 +5905,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
@@ -5924,14 +5924,14 @@ TEST_P(QuicSessionPoolTest,
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   crypto_client_stream_factory_.last_stream()->setHandshakeConfirmedForce(
       false);
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle =
       session->CreateHandle(kDefaultDestination);
   mock_ncn->NotifyNetworkDisconnected(kDefaultNetworkForTests);
   mock_ncn->NotifyNetworkConnected(kNewNetworkForTests);
@@ -5959,7 +5959,7 @@ TEST_P(
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -5988,12 +5988,12 @@ TEST_P(
   EXPECT_TRUE(stream.get());
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_FALSE(session->HasActiveRequestStreams());
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle =
       session->CreateHandle(kDefaultDestination);
   mock_ncn->NotifyNetworkDisconnected(kDefaultNetworkForTests);
   mock_ncn->NotifyNetworkConnected(kNewNetworkForTests);
@@ -6021,7 +6021,7 @@ TEST_P(
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6062,7 +6062,7 @@ TEST_P(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6072,7 +6072,7 @@ TEST_P(
   EXPECT_EQ(OK, stream->SendRequest(request_headers, &response,
                                     callback_.callback()));
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle =
       session->CreateHandle(kDefaultDestination);
   mock_ncn->NotifyNetworkDisconnected(kDefaultNetworkForTests);
   mock_ncn->NotifyNetworkConnected(kNewNetworkForTests);
@@ -6098,7 +6098,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6139,7 +6139,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6149,7 +6149,7 @@ TEST_P(QuicSessionPoolTest,
   EXPECT_EQ(OK, stream->SendRequest(request_headers, &response,
                                     callback_.callback()));
 
-  std::unique_ptr<QuicChromiumClientSession::Handle> handle =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> handle =
       session->CreateHandle(kDefaultDestination);
   mock_ncn->NotifyNetworkDisconnected(kDefaultNetworkForTests);
   mock_ncn->NotifyNetworkConnected(kNewNetworkForTests);
@@ -6178,7 +6178,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
@@ -6213,7 +6213,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6226,7 +6226,7 @@ TEST_P(QuicSessionPoolTest,
       0, quic::QUIC_TOO_MANY_RTOS, quic::ConnectionCloseBehavior::SILENT_CLOSE);
   session->MigrateToSocket(
       quic::QuicSocketAddress(), quic::QuicSocketAddress(), nullptr,
-      std::make_unique<QuicChromiumPacketWriter>(nullptr, task_runner.get()));
+      std::make_unique<QuicCinaseekPacketWriter>(nullptr, task_runner.get()));
 }
 
 // Regression test for https://crbug.com/1465889
@@ -6245,7 +6245,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   int packet_num = 1;
@@ -6282,7 +6282,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6315,7 +6315,7 @@ TEST_P(QuicSessionPoolTest,
 }
 
 void QuicSessionPoolTest::TestSimplePortMigrationOnPathDegrading() {
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6395,7 +6395,7 @@ void QuicSessionPoolTest::TestSimplePortMigrationOnPathDegrading() {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -6407,8 +6407,8 @@ void QuicSessionPoolTest::TestSimplePortMigrationOnPathDegrading() {
                                     callback_.callback()));
   // Disable connection migration on the request streams.
   // This should have no effect for port migration.
-  QuicChromiumClientStream* chrome_stream =
-      static_cast<QuicChromiumClientStream*>(
+  QuicCinaseekClientStream* chrome_stream =
+      static_cast<QuicCinaseekClientStream*>(
           quic::test::QuicSessionPeer::GetStream(
               session, GetNthClientInitiatedBidirectionalStreamId(0)));
   EXPECT_TRUE(chrome_stream);
@@ -6473,7 +6473,7 @@ void QuicSessionPoolTest::TestSimplePortMigrationOnPathDegrading() {
   // alive.
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
-  chrome_stream = static_cast<QuicChromiumClientStream*>(
+  chrome_stream = static_cast<QuicCinaseekClientStream*>(
       quic::test::QuicSessionPeer::GetStream(
           session, GetNthClientInitiatedBidirectionalStreamId(0)));
   EXPECT_TRUE(chrome_stream);
@@ -6489,7 +6489,7 @@ TEST_P(QuicSessionPoolTest, MultiplePortMigrationsExceedsMaxLimit_iQUICStyle) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6526,7 +6526,7 @@ TEST_P(QuicSessionPoolTest, MultiplePortMigrationsExceedsMaxLimit_iQUICStyle) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6685,7 +6685,7 @@ TEST_P(QuicSessionPoolTest,
   scoped_mock_network_change_notifier_->mock_network_change_notifier()
       ->NotifyNetworkMadeDefault(kDefaultNetworkForTests);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6760,7 +6760,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -6772,8 +6772,8 @@ TEST_P(QuicSessionPoolTest,
                                     callback_.callback()));
   // Disable connection migration on the request streams.
   // This should have no effect for port migration.
-  QuicChromiumClientStream* chrome_stream =
-      static_cast<QuicChromiumClientStream*>(
+  QuicCinaseekClientStream* chrome_stream =
+      static_cast<QuicCinaseekClientStream*>(
           quic::test::QuicSessionPeer::GetStream(
               session, GetNthClientInitiatedBidirectionalStreamId(0)));
   EXPECT_TRUE(chrome_stream);
@@ -6849,7 +6849,7 @@ TEST_P(QuicSessionPoolTest,
 TEST_P(QuicSessionPoolTest, DoNotMigrateToBadSocketOnPathDegrading) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -6911,7 +6911,7 @@ TEST_P(QuicSessionPoolTest, DoNotMigrateToBadSocketOnPathDegrading) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -6973,7 +6973,7 @@ void QuicSessionPoolTest::TestMigrateSessionWithDrainingStream(
     IoMode write_mode_for_queued_packet) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -7055,7 +7055,7 @@ void QuicSessionPoolTest::TestMigrateSessionWithDrainingStream(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -7118,7 +7118,7 @@ void QuicSessionPoolTest::TestMigrateSessionWithDrainingStream(
 // when the alternate network is connected after path has been degrading.
 TEST_P(QuicSessionPoolTest, MigrateOnNewNetworkConnectAfterPathDegrading) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -7202,7 +7202,7 @@ TEST_P(QuicSessionPoolTest, MigrateOnNewNetworkConnectAfterPathDegrading) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -7299,7 +7299,7 @@ TEST_P(QuicSessionPoolTest,
   url::SchemeHostPort server1(url::kHttpsScheme, kDefaultServerHostName, 443);
   url::SchemeHostPort server2(url::kHttpsScheme, kServer2HostName, 443);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -7324,8 +7324,8 @@ TEST_P(QuicSessionPoolTest,
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2.get());
 
-  QuicChromiumClientSession* session1 = GetActiveSession(server1);
-  QuicChromiumClientSession* session2 = GetActiveSession(server2);
+  QuicCinaseekClientSession* session1 = GetActiveSession(server1);
+  QuicCinaseekClientSession* session2 = GetActiveSession(server2);
   EXPECT_NE(session1, session2);
 
   // Cause QUIC stream to be created and send GET so session1 has an open
@@ -7402,7 +7402,7 @@ TEST_P(QuicSessionPoolTest,
 //   session is not marked as going away.
 TEST_P(QuicSessionPoolTest, MigrateOnPathDegradingWithNoNewNetwork) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData quic_data(version_);
@@ -7452,7 +7452,7 @@ TEST_P(QuicSessionPoolTest, MigrateOnPathDegradingWithNoNewNetwork) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -7506,7 +7506,7 @@ void QuicSessionPoolTest::TestMigrateSessionEarlyNonMigratableStream(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -7594,7 +7594,7 @@ void QuicSessionPoolTest::TestMigrateSessionEarlyNonMigratableStream(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -7629,7 +7629,7 @@ void QuicSessionPoolTest::TestMigrateSessionEarlyNonMigratableStream(
 TEST_P(QuicSessionPoolTest, MigrateSessionEarlyConnectionMigrationDisabled) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -7665,11 +7665,11 @@ TEST_P(QuicSessionPoolTest, MigrateSessionEarlyConnectionMigrationDisabled) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
-  QuicChromiumClientSessionPeer::DisableConnectionMigration(session);
+  QuicCinaseekClientSessionPeer::DisableConnectionMigration(session);
 
   // Trigger connection migration. Since there is a non-migratable stream,
   // this should cause session to be continue without migrating.
@@ -7697,7 +7697,7 @@ TEST_P(QuicSessionPoolTest, MigrateSessionEarlyConnectionMigrationDisabled) {
 TEST_P(QuicSessionPoolTest, MigrateSessionOnAsyncWriteError) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -7800,7 +7800,7 @@ TEST_P(QuicSessionPoolTest, MigrateSessionOnAsyncWriteError) {
                                           CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_EQ(2u, session->GetNumActiveStreams());
@@ -7866,7 +7866,7 @@ TEST_P(QuicSessionPoolTest, MigrateSessionOnAsyncWriteError) {
 TEST_P(QuicSessionPoolTest, MigrateBackToDefaultPostMigrationOnWriteError) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -7937,7 +7937,7 @@ TEST_P(QuicSessionPoolTest, MigrateBackToDefaultPostMigrationOnWriteError) {
                                           CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_EQ(1u, session->GetNumActiveStreams());
@@ -8070,7 +8070,7 @@ TEST_P(QuicSessionPoolTest,
   // Ensure that session is alive but not active.
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
   EXPECT_TRUE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
-  QuicChromiumClientSession* session = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetPendingSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_EQ(0u, task_runner->GetPendingTaskCount());
 
@@ -8130,7 +8130,7 @@ void QuicSessionPoolTest::TestNoAlternateNetworkBeforeHandshake(
   // Ensure that session is alive but not active.
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
   EXPECT_TRUE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
-  QuicChromiumClientSession* session = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetPendingSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_EQ(0u, task_runner->GetPendingTaskCount());
 
@@ -8270,7 +8270,7 @@ void QuicSessionPoolTest::TestNewConnectionOnAlternateNetworkBeforeHandshake(
   // Ensure that session is alive but not active.
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
   EXPECT_TRUE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
-  QuicChromiumClientSession* session = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetPendingSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_EQ(0u, task_runner->GetPendingTaskCount());
   EXPECT_FALSE(failed_on_default_network_);
@@ -8291,7 +8291,7 @@ void QuicSessionPoolTest::TestNewConnectionOnAlternateNetworkBeforeHandshake(
   // Verify a new session is created on the alternate network.
   EXPECT_TRUE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
-  QuicChromiumClientSession* session2 = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session2 = GetPendingSession(kDefaultDestination);
   EXPECT_NE(session, session2);
   EXPECT_TRUE(failed_on_default_network_);
 
@@ -8377,7 +8377,7 @@ TEST_P(QuicSessionPoolTest, MigrationOnWriteErrorBeforeHandshakeConfirmed) {
   // Verify new requests can be sent normally.
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.Reset();
   MockQuicData socket_data2(version_);
@@ -8468,7 +8468,7 @@ TEST_P(QuicSessionPoolTest,
   EXPECT_FALSE(HasActiveSession(kDefaultDestination));
   EXPECT_TRUE(HasActiveJob(kDefaultDestination, PRIVACY_MODE_DISABLED));
   base::RunLoop().RunUntilIdle();
-  QuicChromiumClientSession* session = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetPendingSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
 
   // Confirm the handshake on the alternate network.
@@ -8512,7 +8512,7 @@ TEST_P(QuicSessionPoolTest,
 void QuicSessionPoolTest::TestMigrationOnWriteError(IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -8545,7 +8545,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteError(IoMode write_error_mode) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -8628,7 +8628,7 @@ TEST_P(QuicSessionPoolTest, MigrateSessionOnWriteErrorAsync) {
 void QuicSessionPoolTest::TestMigrationOnWriteErrorNoNewNetwork(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Use the test task runner, to force the migration alarm timeout later.
@@ -8658,7 +8658,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorNoNewNetwork(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -8736,7 +8736,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithMultipleRequests(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -8831,7 +8831,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithMultipleRequests(
                                           CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_EQ(2u, session->GetNumActiveStreams());
@@ -8885,7 +8885,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMixedStreams(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -8982,7 +8982,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMixedStreams(
                                           CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_EQ(2u, session->GetNumActiveStreams());
@@ -9037,7 +9037,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMixedStreams2(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -9140,7 +9140,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMixedStreams2(
                                           CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_EQ(2u, session->GetNumActiveStreams());
@@ -9191,7 +9191,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorNonMigratableStream(
   quic_params_->migrate_idle_sessions = migrate_idle_sessions;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -9264,7 +9264,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorNonMigratableStream(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -9320,7 +9320,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMigrationDisabled(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -9347,11 +9347,11 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorMigrationDisabled(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
-  QuicChromiumClientSessionPeer::DisableConnectionMigration(session);
+  QuicCinaseekClientSessionPeer::DisableConnectionMigration(session);
 
   // Send GET request on stream. This should cause a write error, which triggers
   // a connection migration attempt.
@@ -9395,7 +9395,7 @@ void QuicSessionPoolTest::TestMigrationOnMultipleWriteErrors(
     IoMode write_error_mode_on_new_network) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -9445,7 +9445,7 @@ void QuicSessionPoolTest::TestMigrationOnMultipleWriteErrors(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   MaybeMakeNewConnectionIdAvailableToSession(cid_on_new_path, session);
@@ -9539,7 +9539,7 @@ void QuicSessionPoolTest::
         bool disconnected) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -9570,7 +9570,7 @@ void QuicSessionPoolTest::
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -9691,7 +9691,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithNotificationQueuedLater(
     bool disconnected) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -9722,7 +9722,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithNotificationQueuedLater(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -9847,7 +9847,7 @@ TEST_P(QuicSessionPoolTest,
 void QuicSessionPoolTest::TestMigrationOnWriteErrorPauseBeforeConnected(
     IoMode write_error_mode) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -9881,7 +9881,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorPauseBeforeConnected(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -9990,7 +9990,7 @@ TEST_P(QuicSessionPoolTest,
 TEST_P(QuicSessionPoolTest, IgnoreWriteErrorFromOldWriterAfterMigration) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -10030,7 +10030,7 @@ TEST_P(QuicSessionPoolTest, IgnoreWriteErrorFromOldWriterAfterMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -10108,7 +10108,7 @@ TEST_P(QuicSessionPoolTest, IgnoreWriteErrorFromOldWriterAfterMigration) {
 TEST_P(QuicSessionPoolTest, IgnoreReadErrorFromOldReaderAfterMigration) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -10143,7 +10143,7 @@ TEST_P(QuicSessionPoolTest, IgnoreReadErrorFromOldReaderAfterMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -10234,7 +10234,7 @@ TEST_P(QuicSessionPoolTest, IgnoreReadErrorFromOldReaderAfterMigration) {
 TEST_P(QuicSessionPoolTest, IgnoreReadErrorOnOldReaderDuringMigration) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -10269,7 +10269,7 @@ TEST_P(QuicSessionPoolTest, IgnoreReadErrorOnOldReaderDuringMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -10360,7 +10360,7 @@ TEST_P(QuicSessionPoolTest, IgnoreReadErrorOnOldReaderDuringMigration) {
 TEST_P(QuicSessionPoolTest, DefaultRetransmittableOnWireTimeoutForMigration) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -10369,7 +10369,7 @@ TEST_P(QuicSessionPoolTest, DefaultRetransmittableOnWireTimeoutForMigration) {
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   quic::QuicConnectionId cid_on_new_path =
@@ -10468,7 +10468,7 @@ TEST_P(QuicSessionPoolTest, DefaultRetransmittableOnWireTimeoutForMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Now notify network is disconnected, cause the migration to complete
@@ -10525,7 +10525,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeoutForMigration) {
   quic_params_->retransmittable_on_wire_timeout = custom_timeout_value;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -10534,7 +10534,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeoutForMigration) {
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   quic::QuicConnectionId cid_on_new_path =
@@ -10632,7 +10632,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeoutForMigration) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Now notify network is disconnected, cause the migration to complete
@@ -10688,7 +10688,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeout) {
   constexpr base::TimeDelta custom_timeout_value = base::Milliseconds(200);
   quic_params_->retransmittable_on_wire_timeout = custom_timeout_value;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -10696,7 +10696,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeout) {
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   MockQuicData socket_data1(version_);
@@ -10762,7 +10762,7 @@ TEST_P(QuicSessionPoolTest, CustomRetransmittableOnWireTimeout) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Complete migration.
@@ -10817,7 +10817,7 @@ TEST_P(QuicSessionPoolTest, NoRetransmittableOnWireTimeout) {
   quic_params_->estimate_initial_rtt = true;
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -10825,7 +10825,7 @@ TEST_P(QuicSessionPoolTest, NoRetransmittableOnWireTimeout) {
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   MockQuicData socket_data1(version_);
@@ -10887,7 +10887,7 @@ TEST_P(QuicSessionPoolTest, NoRetransmittableOnWireTimeout) {
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Complete migration.
@@ -10939,7 +10939,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->retransmittable_on_wire_timeout = custom_timeout_value;
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -10947,7 +10947,7 @@ TEST_P(QuicSessionPoolTest,
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   MockQuicData socket_data1(version_);
@@ -11013,7 +11013,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Complete migration.
@@ -11070,7 +11070,7 @@ TEST_P(QuicSessionPoolTest,
   quic_params_->migrate_sessions_on_network_change_v2 = true;
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -11078,7 +11078,7 @@ TEST_P(QuicSessionPoolTest,
   auto task_runner = base::MakeRefCounted<base::TestMockTimeTaskRunner>();
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), task_runner.get());
   QuicSessionPoolPeer::SetAlarmFactory(
-      pool_.get(), std::make_unique<QuicChromiumAlarmFactory>(
+      pool_.get(), std::make_unique<QuicCinaseekAlarmFactory>(
                        task_runner.get(), context_.clock()));
 
   MockQuicData socket_data1(version_);
@@ -11140,7 +11140,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Complete migration.
@@ -11190,7 +11190,7 @@ TEST_P(QuicSessionPoolTest,
        IgnoreReadErrorOnOldReaderDuringPendingMigrationOnWriteError) {
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -11225,7 +11225,7 @@ TEST_P(QuicSessionPoolTest,
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -11340,7 +11340,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithMultipleNotifications(
     IoMode write_error_mode,
     bool disconnect_before_connect) {
   InitializeConnectionMigrationV2Test({kDefaultNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
@@ -11371,7 +11371,7 @@ void QuicSessionPoolTest::TestMigrationOnWriteErrorWithMultipleNotifications(
                                          CompletionOnceCallback()));
 
   // Ensure that session is alive and active.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   quic::QuicConnectionId cid_on_new_path =
@@ -11488,7 +11488,7 @@ TEST_P(QuicSessionPoolTest, DefaultIdleMigrationPeriod) {
   quic_params_->migrate_idle_sessions = true;
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -11709,7 +11709,7 @@ TEST_P(QuicSessionPoolTest, CustomIdleMigrationPeriod) {
   quic_params_->idle_session_migration_period = base::Seconds(15);
   InitializeConnectionMigrationV2Test(
       {kDefaultNetworkForTests, kNewNetworkForTests});
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   client_maker_.set_save_packet_frames(true);
 
@@ -11893,7 +11893,7 @@ TEST_P(QuicSessionPoolTest, CustomIdleMigrationPeriod) {
 
 TEST_P(QuicSessionPoolTest, OnCertDBChanged) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -11914,7 +11914,7 @@ TEST_P(QuicSessionPoolTest, OnCertDBChanged) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream);
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
 
   // Synthesize a CertDatabase change notification and verify that stream saw
   // the event.
@@ -11934,7 +11934,7 @@ TEST_P(QuicSessionPoolTest, OnCertDBChanged) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2);
-  QuicChromiumClientSession* session2 = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session2 = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_NE(session, session2);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
@@ -11951,7 +11951,7 @@ TEST_P(QuicSessionPoolTest, OnCertDBChanged) {
 
 TEST_P(QuicSessionPoolTest, OnCertVerifierChanged) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -11972,7 +11972,7 @@ TEST_P(QuicSessionPoolTest, OnCertVerifierChanged) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream);
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
 
   // Synthesize a CertVerifier change notification and verify that stream saw
   // the event.
@@ -11992,7 +11992,7 @@ TEST_P(QuicSessionPoolTest, OnCertVerifierChanged) {
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2);
-  QuicChromiumClientSession* session2 = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session2 = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
   EXPECT_NE(session, session2);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
@@ -12092,7 +12092,7 @@ TEST_P(QuicSessionPoolTest, CryptoConfigWhenProofIsInvalid) {
 TEST_P(QuicSessionPoolTest, EnableNotLoadFromDiskCache) {
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   QuicSessionPoolPeer::SetTaskRunner(pool_.get(), runner_.get());
@@ -12126,7 +12126,7 @@ TEST_P(QuicSessionPoolTest, EnableNotLoadFromDiskCache) {
 TEST_P(QuicSessionPoolTest, ReducePingTimeoutOnConnectionTimeOutOpenStreams) {
   quic_params_->reduced_ping_timeout = base::Seconds(10);
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
@@ -12161,7 +12161,7 @@ TEST_P(QuicSessionPoolTest, ReducePingTimeoutOnConnectionTimeOutOpenStreams) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
 
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
@@ -12196,7 +12196,7 @@ TEST_P(QuicSessionPoolTest, ReducePingTimeoutOnConnectionTimeOutOpenStreams) {
   builder2.callback = callback2.callback();
   EXPECT_EQ(ERR_IO_PENDING, builder2.CallRequest());
   EXPECT_THAT(callback2.WaitForResult(), IsOk());
-  QuicChromiumClientSession* session2 = GetActiveSession(server2);
+  QuicCinaseekClientSession* session2 = GetActiveSession(server2);
 
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2.get());
@@ -12473,7 +12473,7 @@ TEST_P(QuicSessionPoolTest,
       MockCryptoClientStream::ZERO_RTT);
   const quic::QuicConfig* config = QuicSessionPoolPeer::GetConfig(pool_.get());
   EXPECT_EQ(500, config->IdleNetworkTimeout().ToSeconds());
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
 
   for (int i = 0; i < kNumSessionsToMake; ++i) {
     SCOPED_TRACE(i);
@@ -12583,7 +12583,7 @@ TEST_P(QuicSessionPoolTest,
 TEST_P(QuicSessionPoolTest, YieldAfterPackets) {
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   QuicSessionPoolPeer::SetYieldAfterPackets(pool_.get(), 0);
 
@@ -12599,21 +12599,21 @@ TEST_P(QuicSessionPoolTest, YieldAfterPackets) {
   host_resolver_->rules()->AddIPLiteralRule(kDefaultServerHostName,
                                             "192.168.0.1", "");
 
-  // Set up the TaskObserver to verify QuicChromiumPacketReader::StartReading
+  // Set up the TaskObserver to verify QuicCinaseekPacketReader::StartReading
   // posts a task.
   // TODO(rtenneti): Change SpdySessionTestTaskObserver to NetTestTaskObserver??
-  SpdySessionTestTaskObserver observer("quic_chromium_packet_reader.cc",
+  SpdySessionTestTaskObserver observer("quic_Cinaseek_packet_reader.cc",
                                        "StartReading");
 
   RequestBuilder builder(this);
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
-  // Call run_loop so that QuicChromiumPacketReader::OnReadComplete() gets
+  // Call run_loop so that QuicCinaseekPacketReader::OnReadComplete() gets
   // called.
   base::RunLoop().RunUntilIdle();
 
   // Verify task that the observer's executed_count is 1, which indicates
-  // QuicChromiumPacketReader::StartReading() has posted only one task and
+  // QuicCinaseekPacketReader::StartReading() has posted only one task and
   // yielded the read.
   EXPECT_EQ(1u, observer.executed_count());
 
@@ -12626,7 +12626,7 @@ TEST_P(QuicSessionPoolTest, YieldAfterPackets) {
 TEST_P(QuicSessionPoolTest, YieldAfterDuration) {
   Initialize();
   pool_->set_has_quic_ever_worked_on_current_network(true);
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   QuicSessionPoolPeer::SetYieldAfterDuration(
       pool_.get(), quic::QuicTime::Delta::FromMilliseconds(-1));
@@ -12643,21 +12643,21 @@ TEST_P(QuicSessionPoolTest, YieldAfterDuration) {
   host_resolver_->rules()->AddIPLiteralRule(kDefaultServerHostName,
                                             "192.168.0.1", "");
 
-  // Set up the TaskObserver to verify QuicChromiumPacketReader::StartReading
+  // Set up the TaskObserver to verify QuicCinaseekPacketReader::StartReading
   // posts a task.
   // TODO(rtenneti): Change SpdySessionTestTaskObserver to NetTestTaskObserver??
-  SpdySessionTestTaskObserver observer("quic_chromium_packet_reader.cc",
+  SpdySessionTestTaskObserver observer("quic_Cinaseek_packet_reader.cc",
                                        "StartReading");
 
   RequestBuilder builder(this);
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
-  // Call run_loop so that QuicChromiumPacketReader::OnReadComplete() gets
+  // Call run_loop so that QuicCinaseekPacketReader::OnReadComplete() gets
   // called.
   base::RunLoop().RunUntilIdle();
 
   // Verify task that the observer's executed_count is 1, which indicates
-  // QuicChromiumPacketReader::StartReading() has posted only one task and
+  // QuicCinaseekPacketReader::StartReading() has posted only one task and
   // yielded the read.
   EXPECT_EQ(1u, observer.executed_count());
 
@@ -12676,7 +12676,7 @@ TEST_P(QuicSessionPoolTest, PoolByOrigin) {
   url::SchemeHostPort destination2(url::kHttpsScheme, "second.example.com",
                                    443);
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -12701,9 +12701,9 @@ TEST_P(QuicSessionPoolTest, PoolByOrigin) {
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2.get());
 
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_TRUE(session1->SharesSameSession(*session2));
   EXPECT_EQ(quic::QuicServerId(kDefaultServerHostName, kDefaultServerPort),
@@ -12835,7 +12835,7 @@ TEST_P(QuicSessionPoolWithDestinationTest, InvalidCertificate) {
   ASSERT_FALSE(cert->VerifyNameMatch(origin1_.host()));
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -12866,7 +12866,7 @@ TEST_P(QuicSessionPoolWithDestinationTest, SharedCertificate) {
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -12896,9 +12896,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, SharedCertificate) {
   std::unique_ptr<HttpStream> stream2 = CreateStream(&builder2.request);
   EXPECT_TRUE(stream2.get());
 
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_TRUE(session1->SharesSameSession(*session2));
 
@@ -12926,12 +12926,12 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentPrivacyMode) {
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -12970,9 +12970,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentPrivacyMode) {
   // The second request does not pool to the first session because
   // `privacy_mode` does not match. Instead, another session is opened to the
   // same destination but with a different `quic::QuicServerId`.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
 
@@ -13004,12 +13004,12 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentSecureDnsPolicy) {
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -13047,9 +13047,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentSecureDnsPolicy) {
 
   // The second request does not pool to the first session, because
   // `secure_dns_policy` does not match.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
   socket_data1.ExpectAllReadDataConsumed();
@@ -13077,12 +13077,12 @@ TEST_P(QuicSessionPoolWithDestinationTest,
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -13130,9 +13130,9 @@ TEST_P(QuicSessionPoolWithDestinationTest,
   // The second request does not pool to the first session because
   // `disable_cert_verification_network_fetches` in the QuicSessionKey does not
   // match.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
   socket_data1.ExpectAllReadDataConsumed();
@@ -13163,12 +13163,12 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentProxyChain) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy1_origin.host()));
   ASSERT_TRUE(cert->VerifyNameMatch(proxy2_origin.host()));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -13269,9 +13269,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentProxyChain) {
 
   // The second request does not pool to the first session because `proxy_chain`
   // does not match.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
 
@@ -13301,12 +13301,12 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentSessionUsage) {
   ASSERT_TRUE(cert->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -13348,9 +13348,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, DifferentSessionUsage) {
 
   // The second request does not pool to the first session because
   // `session_usage` does not match.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
   socket_data1.ExpectAllReadDataConsumed();
@@ -13376,7 +13376,7 @@ TEST_P(QuicSessionPoolWithDestinationTest, DisjointCertificate) {
   ASSERT_FALSE(cert1->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert1->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details1;
+  ProofVerifyDetailsCinaseek verify_details1;
   verify_details1.cert_verify_result.verified_cert = cert1;
   verify_details1.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details1);
@@ -13386,7 +13386,7 @@ TEST_P(QuicSessionPoolWithDestinationTest, DisjointCertificate) {
   ASSERT_TRUE(cert2->VerifyNameMatch(origin2_.host()));
   ASSERT_FALSE(cert2->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details2;
+  ProofVerifyDetailsCinaseek verify_details2;
   verify_details2.cert_verify_result.verified_cert = cert2;
   verify_details2.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details2);
@@ -13423,9 +13423,9 @@ TEST_P(QuicSessionPoolWithDestinationTest, DisjointCertificate) {
   // The second request does not pool to the first session because the
   // certificate does not match. Instead, another session is opened to the same
   // destination but with a different `quic::QuicServerId`.
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_FALSE(session1->SharesSameSession(*session2));
 
@@ -13513,7 +13513,7 @@ TEST_P(QuicSessionPoolTest, ConfigConnectionOptions) {
 // QuicSessionRequest::Request().
 TEST_P(QuicSessionPoolTest, HostResolverUsesRequestPriority) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -13536,7 +13536,7 @@ TEST_P(QuicSessionPoolTest, HostResolverUsesRequestPriority) {
 
 TEST_P(QuicSessionPoolTest, HostResolverRequestReprioritizedOnSetPriority) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -13574,7 +13574,7 @@ TEST_P(QuicSessionPoolTest, HostResolverUsesParams) {
       features::kPartitionConnectionsByNetworkIsolationKey);
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -13617,7 +13617,7 @@ TEST_P(QuicSessionPoolTest, ConfigMaxTimeBeforeCryptoHandshake) {
 // handshake fails.
 TEST_P(QuicSessionPoolTest, ResultAfterQuicSessionCreationCallbackFail) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -13649,7 +13649,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterQuicSessionCreationCallbackFail) {
 // handshake succeeds synchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterQuicSessionCreationCallbackSuccessSync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -13680,7 +13680,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterQuicSessionCreationCallbackSuccessSync) {
 TEST_P(QuicSessionPoolTest,
        ResultAfterQuicSessionCreationCallbackSuccessAsync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   crypto_client_stream_factory_.set_handshake_mode(
@@ -13715,7 +13715,7 @@ TEST_P(QuicSessionPoolTest,
 // succeeds asynchronously, then crypto handshake fails synchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackAsyncSync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   host_resolver_->set_ondemand_mode(true);
@@ -13760,7 +13760,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackAsyncSync) {
 // succeeds asynchronously, then crypto handshake fails asynchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackAsyncAsync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   host_resolver_->set_ondemand_mode(true);
@@ -13810,7 +13810,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackAsyncAsync) {
 // succeeds synchronously, then crypto handshake fails synchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackSyncSync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   host_resolver_->set_synchronous_mode(true);
@@ -13838,7 +13838,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackSyncSync) {
 // succeeds synchronously, then crypto handshake fails asynchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackSyncAsync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Host resolution will succeed synchronously, but Request() as a whole
@@ -13876,7 +13876,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackSyncAsync) {
 // synchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackFailSync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Host resolution will fail synchronously.
@@ -13899,7 +13899,7 @@ TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackFailSync) {
 // asynchronously.
 TEST_P(QuicSessionPoolTest, ResultAfterHostResolutionCallbackFailAsync) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   host_resolver_->rules()->AddSimulatedFailure(kDefaultServerHostName);
@@ -13929,7 +13929,7 @@ TEST_P(QuicSessionPoolTest, Tag) {
   auto* socket_factory =
       static_cast<MockTaggingClientSocketFactory*>(socket_factory_.get());
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Prepare to establish two QUIC sessions.
@@ -13959,7 +13959,7 @@ TEST_P(QuicSessionPoolTest, Tag) {
   EXPECT_EQ(socket_factory->GetLastProducedUDPSocket()->tag(), tag1);
   EXPECT_TRUE(socket_factory->GetLastProducedUDPSocket()
                   ->tagged_before_data_transferred());
-  std::unique_ptr<QuicChromiumClientSession::Handle> stream1 =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> stream1 =
       builder1.request.ReleaseSessionHandle();
   EXPECT_TRUE(stream1);
   EXPECT_TRUE(stream1->IsConnected());
@@ -13969,7 +13969,7 @@ TEST_P(QuicSessionPoolTest, Tag) {
   builder2.socket_tag = tag1;
   rv = builder2.CallRequest();
   EXPECT_THAT(callback_.GetResult(rv), IsOk());
-  std::unique_ptr<QuicChromiumClientSession::Handle> stream2 =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> stream2 =
       builder2.request.ReleaseSessionHandle();
   EXPECT_TRUE(stream2);
   EXPECT_TRUE(stream2->IsConnected());
@@ -13983,7 +13983,7 @@ TEST_P(QuicSessionPoolTest, Tag) {
   EXPECT_EQ(socket_factory->GetLastProducedUDPSocket()->tag(), tag2);
   EXPECT_TRUE(socket_factory->GetLastProducedUDPSocket()
                   ->tagged_before_data_transferred());
-  std::unique_ptr<QuicChromiumClientSession::Handle> stream3 =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> stream3 =
       builder3.request.ReleaseSessionHandle();
   EXPECT_TRUE(stream3);
   EXPECT_TRUE(stream3->IsConnected());
@@ -13997,7 +13997,7 @@ TEST_P(QuicSessionPoolTest, Tag) {
 
 TEST_P(QuicSessionPoolTest, ReadErrorClosesConnection) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14014,7 +14014,7 @@ TEST_P(QuicSessionPoolTest, ReadErrorClosesConnection) {
   EXPECT_TRUE(stream.get());
 
   // Ensure that the session is alive and active before we read the error.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -14026,7 +14026,7 @@ TEST_P(QuicSessionPoolTest, ReadErrorClosesConnection) {
 
 TEST_P(QuicSessionPoolTest, MessageTooBigReadErrorDoesNotCloseConnection) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14043,7 +14043,7 @@ TEST_P(QuicSessionPoolTest, MessageTooBigReadErrorDoesNotCloseConnection) {
   EXPECT_TRUE(stream.get());
 
   // Ensure that the session is alive and active before we read the error.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -14055,7 +14055,7 @@ TEST_P(QuicSessionPoolTest, MessageTooBigReadErrorDoesNotCloseConnection) {
 
 TEST_P(QuicSessionPoolTest, ZeroLengthReadDoesNotCloseConnection) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14072,7 +14072,7 @@ TEST_P(QuicSessionPoolTest, ZeroLengthReadDoesNotCloseConnection) {
   EXPECT_TRUE(stream.get());
 
   // Ensure that the session is alive and active before we read the error.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
@@ -14089,7 +14089,7 @@ TEST_P(QuicSessionPoolTest, DnsAliasesCanBeAccessedFromStream) {
       kDefaultServerHostName, "192.168.0.1", std::move(dns_aliases));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14118,7 +14118,7 @@ TEST_P(QuicSessionPoolTest, NoAdditionalDnsAliases) {
       kDefaultServerHostName, "192.168.0.1", std::move(dns_aliases));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14147,7 +14147,7 @@ TEST_P(QuicSessionPoolTest, DoNotUseDnsAliases) {
       kDefaultServerHostName, "192.168.0.1", std::move(dns_aliases));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14179,7 +14179,7 @@ TEST_P(QuicSessionPoolTest, ConnectErrorInCreateWithDnsAliases) {
       kDefaultServerHostName, "192.168.0.1", std::move(dns_aliases));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14264,7 +14264,7 @@ void QuicSessionPoolTest::TestRequireDnsHttpsAlpn(
           /*aliases=*/std::set<std::string>{kDefaultServerHostName}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14427,7 +14427,7 @@ TEST_P(QuicSessionPoolDnsAliasPoolingTest, IPPooling) {
   ASSERT_TRUE(cert->VerifyNameMatch(kOrigin1.host()));
   ASSERT_TRUE(cert->VerifyNameMatch(kOrigin2.host()));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -14482,9 +14482,9 @@ TEST_P(QuicSessionPoolDnsAliasPoolingTest, IPPooling) {
       ProxyChain::Direct(), session_usage, /*require_dns_https_alpn=*/false,
       expected_disable_cert_verification_network_fetches));
 
-  QuicChromiumClientSession::Handle* session1 =
+  QuicCinaseekClientSession::Handle* session1 =
       QuicHttpStreamPeer::GetSessionHandle(stream1.get());
-  QuicChromiumClientSession::Handle* session2 =
+  QuicCinaseekClientSession::Handle* session2 =
       QuicHttpStreamPeer::GetSessionHandle(stream2.get());
   EXPECT_TRUE(session1->SharesSameSession(*session2));
 
@@ -14501,7 +14501,7 @@ TEST_P(QuicSessionPoolDnsAliasPoolingTest, IPPooling) {
 // Test that, even if DNS does not provide ECH keys, ECH GREASE is enabled.
 TEST_P(QuicSessionPoolTest, EchGrease) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14513,7 +14513,7 @@ TEST_P(QuicSessionPoolTest, EchGrease) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_TRUE(config.ech_grease_enabled);
@@ -14534,7 +14534,7 @@ TEST_P(QuicSessionPoolTest, EchWithQuicFromAltSvc) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14546,7 +14546,7 @@ TEST_P(QuicSessionPoolTest, EchWithQuicFromAltSvc) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_EQ(std::string(endpoint.metadata.ech_config_list.begin(),
@@ -14569,7 +14569,7 @@ TEST_P(QuicSessionPoolTest, EchWithQuicFromHttpsRecord) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14583,7 +14583,7 @@ TEST_P(QuicSessionPoolTest, EchWithQuicFromHttpsRecord) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(
+  QuicCinaseekClientSession* session = GetActiveSession(
       kDefaultDestination, PRIVACY_MODE_DISABLED, NetworkAnonymizationKey(),
       ProxyChain::Direct(), SessionUsage::kDestination,
       /*require_dns_https_alpn=*/true);
@@ -14612,7 +14612,7 @@ TEST_P(QuicSessionPoolTest, EchDisabled) {
   ssl_config_service_.UpdateSSLConfigAndNotify(ssl_config);
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14626,7 +14626,7 @@ TEST_P(QuicSessionPoolTest, EchDisabled) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(
+  QuicCinaseekClientSession* session = GetActiveSession(
       kDefaultDestination, PRIVACY_MODE_DISABLED, NetworkAnonymizationKey(),
       ProxyChain::Direct(), SessionUsage::kDestination,
       /*require_dns_https_alpn=*/true);
@@ -14654,7 +14654,7 @@ TEST_P(QuicSessionPoolTest, EchSvcbReliant) {
       MockHostResolverBase::RuleResolver::RuleResult(std::move(endpoints)));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14690,7 +14690,7 @@ TEST_P(QuicSessionPoolTest, EchDisabledSvcbOptional) {
   ssl_config_service_.UpdateSSLConfigAndNotify(ssl_config);
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14723,7 +14723,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsNotConfigured) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14737,7 +14737,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsNotConfigured) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_EQ(config.trust_anchor_ids, std::nullopt);
@@ -14769,7 +14769,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDs) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14783,7 +14783,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDs) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_EQ(config.trust_anchor_ids, "\x03\x01\x02\x03");
@@ -14816,7 +14816,7 @@ TEST_P(QuicSessionPoolTest, MtcTrustAnchorIDs) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14830,7 +14830,7 @@ TEST_P(QuicSessionPoolTest, MtcTrustAnchorIDs) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_EQ(config.trust_anchor_ids, "\x03\x01\x02\x03\x02\x01\x01");
@@ -14864,7 +14864,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsNotAdvertisedInDns) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14878,7 +14878,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsNotAdvertisedInDns) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_EQ(config.trust_anchor_ids, "");
@@ -14911,7 +14911,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsDisabled) {
       MockHostResolverBase::RuleResolver::RuleResult({endpoint}));
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14925,7 +14925,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsDisabled) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   ASSERT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   ASSERT_TRUE(session);
   quic::QuicSSLConfig config = session->GetSSLConfig();
   EXPECT_FALSE(config.trust_anchor_ids);
@@ -14939,7 +14939,7 @@ TEST_P(QuicSessionPoolTest, TrustAnchorIDsDisabled) {
 
 TEST_P(QuicSessionPoolTest, CreateSessionAttempt) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14968,7 +14968,7 @@ TEST_P(QuicSessionPoolTest, CreateSessionAttempt) {
 
 TEST_P(QuicSessionPoolTest, NotifyConnectionChangeOnSessionClose) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -14999,7 +14999,7 @@ TEST_P(QuicSessionPoolTest, NotifyConnectionChangeOnSessionClose) {
   EXPECT_EQ(ERR_IO_PENDING, builder.CallRequest());
   EXPECT_THAT(callback_.WaitForResult(), IsOk());
 
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
 
   // Close the connection
   session->connection()->CloseConnection(
@@ -15015,7 +15015,7 @@ TEST_P(QuicSessionPoolTest, NotifyConnectionChangeOnSessionClose) {
 
 TEST_P(QuicSessionPoolTest, NotifyConnectionChangeOnConnectionFailure) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -15058,7 +15058,7 @@ TEST_P(QuicSessionPoolTest, NotifyConnectionChangeOnNetworkChangeEvent) {
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -15118,7 +15118,7 @@ TEST_P(QuicSessionPoolTest, SendPingOnExistingSession) {
 
   // Ensure that we have an active session.
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_TRUE(QuicSessionPoolPeer::IsLiveSession(pool_.get(), session));
 
   // Build a session with `ConnectionKeepAliveConfig`.
@@ -15146,7 +15146,7 @@ TEST_P(QuicSessionPoolTest, DebuggingSniDefaultHost) {
   quic_params_->enable_debugging_sni_in_transport_param = true;
 
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -15176,7 +15176,7 @@ TEST_P(QuicSessionPoolTest, DebuggingSniGoogleHost) {
   quic_params_->enable_debugging_sni_in_transport_param = true;
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = GoogleProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = GoogleProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -15269,7 +15269,7 @@ TEST_P(QuicSessionPoolTest,
   socket_factory_ = std::make_unique<TestPortMigrationSocketFactory>();
   Initialize();
 
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
   crypto_client_stream_factory_.set_handshake_mode(
       MockCryptoClientStream::COLD_START_WITH_CHLO_SENT);
@@ -15307,7 +15307,7 @@ TEST_P(QuicSessionPoolTest,
 
   // NotifySessionOneRttKeyAvailable() makes handshake confirmed.
   // So manually set encryption level.
-  QuicChromiumClientSession* session = GetPendingSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetPendingSession(kDefaultDestination);
   session->connection()->InstallDecrypter(
       quic::ENCRYPTION_FORWARD_SECURE,
       std::make_unique<quic::test::StrictTaggingDecrypter>(
@@ -15391,7 +15391,7 @@ TEST_P(QuicSessionPoolTest, CanUseExistingSessionForWebSocket_NoSessionExists) {
 TEST_P(QuicSessionPoolTest,
        CanUseExistingSessionForWebSocket_NoExtendedConnect) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   // Set up a normal QUIC session (server does NOT send
@@ -15409,7 +15409,7 @@ TEST_P(QuicSessionPoolTest,
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // The session exists but does NOT have Extended CONNECT support.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_FALSE(session->allow_extended_connect());
 
   QuicSessionKey session_key(
@@ -15432,7 +15432,7 @@ TEST_P(QuicSessionPoolTest,
 TEST_P(QuicSessionPoolTest,
        CanUseExistingSessionForWebSocket_WithExtendedConnect) {
   Initialize();
-  ProofVerifyDetailsChromium verify_details = DefaultProofVerifyDetails();
+  ProofVerifyDetailsCinaseek verify_details = DefaultProofVerifyDetails();
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
 
   MockQuicData socket_data(version_);
@@ -15471,7 +15471,7 @@ TEST_P(QuicSessionPoolTest,
   EXPECT_TRUE(HasActiveSession(kDefaultDestination));
 
   // Before receiving server SETTINGS, Extended CONNECT is not yet available.
-  QuicChromiumClientSession* session = GetActiveSession(kDefaultDestination);
+  QuicCinaseekClientSession* session = GetActiveSession(kDefaultDestination);
   EXPECT_FALSE(session->allow_extended_connect());
 
   // Resume the socket to deliver the server SETTINGS frame.

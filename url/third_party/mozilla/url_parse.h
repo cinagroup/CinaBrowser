@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -386,7 +386,7 @@ Parsed ParsePathUrl(std::u16string_view url, bool trim_path_end);
 // 2. Rolling quiche into openscreen, and making the change in openscreen to use
 // ParseNonSpecialUrl() instead of ParsePathURL().
 // 3. Removing all traces of ParsePathURL() from
-// url/third_party/mozilla/url_parse here in chromium.
+// url/third_party/mozilla/url_parse here in Cinaseek.
 UNSAFE_BUFFER_USAGE COMPONENT_EXPORT(URL) void ParsePathURL(const char* url,
                                                             int url_len,
                                                             bool trim_path_end,

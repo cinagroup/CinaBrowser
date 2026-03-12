@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,17 +8,17 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "android/java/src/org/chromium/chrome/browser/util/AfterStartupTaskUtils.java",
-    "android/java/src/org/chromium/chrome/browser/util/AndroidTaskUtils.java",
-    "android/java/src/org/chromium/chrome/browser/util/BrowserUiUtils.java",
-    "android/java/src/org/chromium/chrome/browser/util/ChromeAccessibilityUtil.java",
-    "android/java/src/org/chromium/chrome/browser/util/ChromeFileProvider.java",
-    "android/java/src/org/chromium/chrome/browser/util/ChromePackageNameVariant.java",
-    "android/java/src/org/chromium/chrome/browser/util/DefaultBrowserInfo.java",
-    "android/java/src/org/chromium/chrome/browser/util/HashUtil.java",
-    "android/java/src/org/chromium/chrome/browser/util/PictureInPictureWindowOptions.java",
-    "android/java/src/org/chromium/chrome/browser/util/PlatformUtil.java",
-    "android/java/src/org/chromium/chrome/browser/util/WindowFeatures.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/AfterStartupTaskUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/AndroidTaskUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/BrowserUiUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/CinaseekAccessibilityUtil.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/CinaseekFileProvider.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/CinaseekPackageNameVariant.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/DefaultBrowserInfo.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/HashUtil.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/PictureInPictureWindowOptions.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/PlatformUtil.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/WindowFeatures.java",
   ]
   deps = [
     "//base:base_java",
@@ -37,16 +37,16 @@ android_library("java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/util/AfterStartupTaskUtils.java",
-    "android/java/src/org/chromium/chrome/browser/util/PlatformUtil.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/AfterStartupTaskUtils.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/PlatformUtil.java",
   ]
 }
 
 robolectric_library("junit_tests") {
   sources = [
-    "android/java/src/org/chromium/chrome/browser/util/ChromeFileProviderTest.java",
-    "android/java/src/org/chromium/chrome/browser/util/HashUtilTest.java",
-    "android/java/src/org/chromium/chrome/browser/util/PlatformUtilTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/CinaseekFileProviderTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/HashUtilTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/util/PlatformUtilTest.java",
   ]
   deps = [
     ":java",

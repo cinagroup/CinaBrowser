@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -115,7 +115,7 @@ static_library("utility") {
       ]
     }
     if (!is_mac && !is_chromeos) {
-      # NSS decryptor is not needed on ChromeOS. Additionally, it depends on
+      # NSS decryptor is not needed on CinaseekOS. Additionally, it depends on
       # system NSS that is unavailable on MacOS/Fuchsia.
       sources += [
         "importer/nss_decryptor.cc",
@@ -215,7 +215,7 @@ static_library("utility") {
     deps += [ "//chrome/services/pdf:lib" ]
   }
 
-  # NSS decryptor is not needed on ChromeOS.
+  # NSS decryptor is not needed on CinaseekOS.
   if (!is_chromeos && use_nss_certs) {
     sources += [
       "importer/nss_decryptor_system_nss.cc",

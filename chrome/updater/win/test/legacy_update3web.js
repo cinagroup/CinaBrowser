@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -8,7 +8,7 @@
 //
 // Usage:
 // ```
-//   cscript legacy_update3web.js {0|1==Chromium|Chrome Branded} {AppId}
+//   cscript legacy_update3web.js {0|1==Cinaseek|Chrome Branded} {AppId}
 //       {is_system: 0|1} {0|1|2|3==CheckForUpdate|Install|Update|LaunchCommand}
 //       {command_id?}`
 // ```
@@ -27,7 +27,7 @@
 //   [State][16][No update available!]
 // ```
 //
-// To launch a command registered as `test-command-exe` on `Chromium` AppId
+// To launch a command registered as `test-command-exe` on `Cinaseek` AppId
 // `{23E39345-8B3C-4DF4-9CA6-53EA97B6C7A9}`, here is the command line and sample
 // output:
 // ```
@@ -76,7 +76,7 @@ var COMMAND_STATUS_ERROR = COMMAND_STATUS_RUNNING + 1;
 var COMMAND_STATUS_COMPLETE = COMMAND_STATUS_ERROR + 1;
 
 function update3webProgId(is_chrome_branded, is_system) {
-  return (is_chrome_branded ? 'Google' : 'Chromium') + 'Update.Update3Web' +
+  return (is_chrome_branded ? 'Google' : 'Cinaseek') + 'Update.Update3Web' +
          (is_system ? 'Machine' : 'User');
 }
 
@@ -413,7 +413,7 @@ try {
   if (!parseAndRun()) {
     WScript.Echo(
         'Usage: ' +
-        '{0|1==Chromium|Chrome Branded} ' +
+        '{0|1==Cinaseek|Chrome Branded} ' +
         '{AppId} ' +
         '{is_system: 0|1} ' +
         '{0|1|2|3==CheckForUpdate|Install|Update|LaunchCommand} ' +

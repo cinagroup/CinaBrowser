@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ struct MEDIA_EXPORT AudioDeviceDescription {
   // id is formatted as "applicationLoopback:<application id>"
   static const char kApplicationLoopbackDeviceId[];
 
-  // Prefix of the device id for loopback of a whole chromium instance when
+  // Prefix of the device id for loopback of a whole Cinaseek instance when
   // restrictOwnAudio is enabled. The full device id is formatted as
   // "restrictOwnAudioBrowserLoopback:<browser process id>"
   static const char kRestrictOwnAudioBrowserLoopbackDeviceId[];

@@ -34,7 +34,7 @@
 #include "util/process/process_memory_linux.h"
 
 #if !BUILDFLAG(IS_ANDROID)
-// TODO(jperaza): This symbol isn't defined when building in chromium for
+// TODO(jperaza): This symbol isn't defined when building in Cinaseek for
 // Android. There may be another symbol to use.
 extern "C" {
 #if defined(ARCH_CPU_MIPS_FAMILY)

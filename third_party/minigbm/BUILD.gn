@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@ assert(is_linux || is_chromeos)
 
 declare_args() {
   # Controls whether the build should use the version of minigbm library shipped
-  # with the system. In release builds of desktop Linux and Chrome OS we use the
+  # with the system. In release builds of desktop Linux and Cinaseek OS we use the
   # system version.
   use_system_minigbm = is_linux && !is_castos
 
@@ -78,8 +78,8 @@ if (!use_system_minigbm) {
       "src/virtgpu_virgl.c",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
-    configs += [ "//build/config/compiler:no_chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
+    configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
     deps = [ "//build/config/linux/libdrm" ]
     public_configs = [ ":minigbm_config" ]
@@ -93,7 +93,7 @@ if (!use_system_minigbm) {
         [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
   }
 
-  # This target is used for Chromecast build, which expects the resulting lib
+  # This target is used for Cinaseekcast build, which expects the resulting lib
   # to have a name <GN target name> + .so
   group("libminigbm") {
     deps = [ ":minigbm" ]

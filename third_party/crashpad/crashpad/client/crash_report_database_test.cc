@@ -528,7 +528,7 @@ TEST_F(CrashReportDatabaseTest, InterruptedIOSUploads) {
   time_t ten_minutes_ago = time(nullptr) - 10 * 60;
   ASSERT_TRUE(
       WriteXattrTimeT(report.file_path,
-                      "org.chromium.crashpad.database.upload_start_time",
+                      "org.Cinaseek.crashpad.database.upload_start_time",
                       ten_minutes_ago));
 
   std::vector<CrashReportDatabase::Report> reports;

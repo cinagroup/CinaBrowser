@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 // A Java counterpart will be generated for this enum.
 // Please treat this list as append only and keep it in sync with
 // Android.Download.Rename.Result in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.offline_items_collection
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.offline_items_collection
 enum class RenameResult {
   SUCCESS = 0,                // Rename filename successfully
   FAILURE_NAME_CONFLICT = 1,  // Filename already exists

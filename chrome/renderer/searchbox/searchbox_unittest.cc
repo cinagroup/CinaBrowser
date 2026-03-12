@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 namespace {
 
 const char* kUrlString1 = "http://www.google.com";
-const char* kUrlString2 = "http://www.chromium.org/path/q=3#r=4";
+const char* kUrlString2 = "http://www.Cinaseek.org/path/q=3#r=4";
 const char* kUrlString3 = "http://www.youtube.com:8080/hosps";
 
 // Mock helper to test internal::TranslateIconRestrictedUrl().

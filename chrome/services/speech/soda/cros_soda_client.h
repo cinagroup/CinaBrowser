@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 namespace soda {
 
 // Client that wraps the ML Service connection for SODA on Chrome.
-// TODO(robsc@chromium): Move this to
+// TODO(robsc@Cinaseek): Move this to
 // chromeos/services/machine_learning/public/cpp as SodaClient.
 class CrosSodaClient : public chromeos::machine_learning::mojom::SodaClient {
  public:

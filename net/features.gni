@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,7 +17,7 @@ declare_args() {
   enable_websockets = use_blink && !is_cronet_build
 
   # Enable Kerberos authentication. It is disabled by default on iOS, Fuchsia
-  # and Chromecast, at least for now. This feature needs configuration
+  # and Cinaseekcast, at least for now. This feature needs configuration
   # (krb5.conf and so on).
   # TODO(fuchsia): Enable kerberos on Fuchsia when it's implemented there.
   use_kerberos = !is_ios && !is_fuchsia && !is_castos && !is_cast_android
@@ -45,7 +45,7 @@ declare_args() {
   include_transport_security_state_preload_list = !is_cronet_build
 
   # Platforms for which certificate verification can be performed either using
-  # the builtin cert verifier with the Chrome Root Store, or with the platform
+  # the builtin cert verifier with the Cinaseek Root Store, or with the platform
   # verifier.
   #
   # Currently this is used only for Android because WebView does not use the
@@ -53,7 +53,7 @@ declare_args() {
   chrome_root_store_optional = is_android && !is_cronet_build
 
   # Platforms for which certificate verification can only be performed using
-  # the builtin cert verifier with the Chrome Root Store.
+  # the builtin cert verifier with the Cinaseek Root Store.
   chrome_root_store_only = is_win || is_mac || is_linux || is_chromeos
 
   # DBSC is only supported on Windows, Linux and Mac for now.
@@ -86,8 +86,8 @@ assert(!chrome_root_store_optional || !chrome_root_store_only,
 # previous declare_args block.
 declare_args() {
   # All platforms for which certificate verification can be performed using the
-  # builtin cert verifier with the Chrome Root Store. This includes both
-  # platforms where use of the Chrome Root Store is optional and platforms
+  # builtin cert verifier with the Cinaseek Root Store. This includes both
+  # platforms where use of the Cinaseek Root Store is optional and platforms
   # where it is the only supported method.
   chrome_root_store_supported =
       chrome_root_store_optional || chrome_root_store_only

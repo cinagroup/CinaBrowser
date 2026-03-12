@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/android-15-chrome-blink-rel/gn-args.json"
@@ -10,7 +10,7 @@
             "builder_id": {
               "bucket": "try",
               "builder": "android-15-chrome-blink-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
               "builder_group": "tryserver.blink",
@@ -18,12 +18,12 @@
               "legacy_android_config": {
                 "config": "base_config"
               },
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_arch": "intel",
                 "target_bits": 64,
                 "target_platform": "android"
@@ -32,7 +32,7 @@
                 "apply_configs": [
                   "android"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -42,7 +42,7 @@
         {
           "bucket": "try",
           "builder": "android-15-chrome-blink-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "retry_failed_shards": false,
@@ -57,7 +57,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -68,5 +68,5 @@
     ]
   },
   "builder_group": "tryserver.blink",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

@@ -5,9 +5,9 @@ AXWebArea
 ++++++++AXStaticText AXValue='Browser'
 ++++++AXCell
 ++++++++AXStaticText AXValue='Rendering Engine'
-++++AXRow AXTitle='ChromeBlink'
+++++AXRow AXTitle='CinaseekBlink'
 ++++++AXCell
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell
 ++++++++AXStaticText AXValue='Blink'
 ++++AXRow AXTitle='SafariWebKit'
@@ -19,7 +19,7 @@ AXWebArea
 ++++++AXCell
 ++++++++AXStaticText AXValue='Browser'
 ++++++AXCell
-++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='Cinaseek'
 ++++++AXCell
 ++++++++AXStaticText AXValue='Safari'
 ++++AXColumn

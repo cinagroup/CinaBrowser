@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -14,7 +14,7 @@ namespace base {
 namespace android {
 
 // The process the shared library is loaded in.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.base.library_loader
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.base.library_loader
 enum LibraryProcessType {
   // The LibraryLoad has not been initialized.
   PROCESS_UNINITIALIZED = 0,
@@ -40,7 +40,7 @@ BASE_EXPORT void SetNativeInitializationHook(
 
 // Record any pending renderer histogram value as histograms.  Pending values
 // are set by
-// JNI_LibraryLoader_RegisterChromiumAndroidLinkerRendererHistogram().
+// JNI_LibraryLoader_RegisterCinaseekAndroidLinkerRendererHistogram().
 BASE_EXPORT void RecordLibraryLoaderRendererHistograms();
 
 // Typedef for hook function to be called (indirectly from Java) once the

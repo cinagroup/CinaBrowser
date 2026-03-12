@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ using testing::Return;
 namespace {
 NSString* const kTestFromLangCode = @"ja";
 NSString* const kTestToLangCode = @"en";
-NSString* const kTestPageHost = @"www.chromium.org";
+NSString* const kTestPageHost = @"www.Cinaseek.org";
 }  // namespace
 
 class MockWebViewTranslateClient : public WebViewTranslateClient {

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -369,7 +369,7 @@ class GLES2_IMPL_EXPORT GLES2Implementation : public GLES2Interface,
   void SendErrorMessage(std::string message, int32_t id);
   void CallDeferredErrorCallbacks();
 
-  bool IsChromiumFramebufferMultisampleAvailable();
+  bool IsCinaseekFramebufferMultisampleAvailable();
 
   bool IsExtensionAvailableHelper(
       const char* extension, ExtensionStatus* status);
@@ -664,7 +664,7 @@ class GLES2_IMPL_EXPORT GLES2Implementation : public GLES2Interface,
   DebugMarkerManager debug_marker_manager_;
   std::string this_in_hex_;
 
-  ExtensionStatus chromium_framebuffer_multisample_;
+  ExtensionStatus Cinaseek_framebuffer_multisample_;
 
   GLStaticState static_state_;
   ClientContextState state_;

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -262,7 +262,7 @@ class PermissionsClient {
       const std::vector<std::string>& optional_permissions,
       PermissionsUpdatedCallback callback);
 
-  // Converts the given chromium |resource_id| (e.g.
+  // Converts the given Cinaseek |resource_id| (e.g.
   // IDR_INFOBAR_TRANSLATE) to an Android drawable resource ID.
   // Returns 0 if a mapping wasn't found.
   virtual int MapToJavaDrawableId(int resource_id);

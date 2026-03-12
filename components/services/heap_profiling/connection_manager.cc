@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,7 +73,7 @@ struct ConnectionManager::Connection {
   // sampling_rate) when size < sampling_rate. When size >= sampling_rate, the
   // aggregate probability of an allocation being recorded is 1.0, but the math
   // and details are tricky. See
-  // https://bugs.chromium.org/p/chromium/issues/detail?id=810748#c4.
+  // https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=810748#c4.
   // A |sampling_rate| of 1 is equivalent to recording all allocations.
   uint32_t sampling_rate = 1;
 

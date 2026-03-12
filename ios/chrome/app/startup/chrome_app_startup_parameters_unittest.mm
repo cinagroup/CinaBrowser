@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -59,8 +59,8 @@ TEST_F(AppStartupParametersTest, ParseURLWithOneProtocol) {
 }
 
 TEST_F(AppStartupParametersTest, ParseURLWithEmptyParsedURL) {
-  // Test chromium://
-  NSURL* url = [NSURL URLWithString:@"chromium://"];
+  // Test Cinaseek://
+  NSURL* url = [NSURL URLWithString:@"Cinaseek://"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
              sourceApplication:nil
@@ -71,7 +71,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithEmptyParsedURL) {
 }
 
 TEST_F(AppStartupParametersTest, ParseURLWithParsedURLDefaultToHttp) {
-  NSURL* url = [NSURL URLWithString:@"chromium://www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseek://www.google.com"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
              sourceApplication:nil
@@ -93,7 +93,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithInvalidParsedURL) {
 }
 
 TEST_F(AppStartupParametersTest, ParseURLWithHttpsParsedURL) {
-  NSURL* url = [NSURL URLWithString:@"chromiums://www.google.com"];
+  NSURL* url = [NSURL URLWithString:@"Cinaseeks://www.google.com"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
              sourceApplication:nil
@@ -129,7 +129,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithHttpsURL) {
 
 TEST_F(AppStartupParametersTest, ParseURLWithXCallbackURL) {
   NSURL* url =
-      [NSURL URLWithString:@"chromium-x-callback://x-callback-url/open?"
+      [NSURL URLWithString:@"Cinaseek-x-callback://x-callback-url/open?"
                             "url=https://www.google.com"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
@@ -141,7 +141,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithXCallbackURL) {
 
 TEST_F(AppStartupParametersTest, ParseURLWithXCallbackURLAndExtraParams) {
   NSURL* url =
-      [NSURL URLWithString:@"chromium-x-callback://x-callback-url/open?"
+      [NSURL URLWithString:@"Cinaseek-x-callback://x-callback-url/open?"
                             "url=https://www.google.com&"
                             "x-success=http://success"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
@@ -154,7 +154,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithXCallbackURLAndExtraParams) {
 
 TEST_F(AppStartupParametersTest, ParseURLWithMalformedXCallbackURL) {
   NSURL* url = [NSURL
-      URLWithString:@"chromium-x-callback://x-callback-url/open?url=foobar&"
+      URLWithString:@"Cinaseek-x-callback://x-callback-url/open?url=foobar&"
                      "x-source=myapp&x-success=http://success"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
@@ -167,7 +167,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithMalformedXCallbackURL) {
 TEST_F(AppStartupParametersTest, ParseURLWithJavascriptURLInXCallbackURL) {
   NSURL* url = [NSURL
       URLWithString:
-          @"chromium-x-callback://x-callback-url/open?url="
+          @"Cinaseek-x-callback://x-callback-url/open?url="
            "javascript:window.open()&x-source=myapp&x-success=http://success"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
@@ -179,7 +179,7 @@ TEST_F(AppStartupParametersTest, ParseURLWithJavascriptURLInXCallbackURL) {
 
 TEST_F(AppStartupParametersTest, ParseURLWithChromeURLInXCallbackURL) {
   NSURL* url =
-      [NSURL URLWithString:@"chromium-x-callback://x-callback-url/open?url="
+      [NSURL URLWithString:@"Cinaseek-x-callback://x-callback-url/open?url="
                             "chrome:passwords"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
@@ -714,14 +714,14 @@ TEST_F(AppStartupParametersTest,
       /*ACTION_SKIPPED_DEFAULT_BROWSER_SETTINGS_FOR_NTP*/ 3, 1);
 }
 
-// Tests that the external action scheme is handled with a Chromium-flavored
+// Tests that the external action scheme is handled with a Cinaseek-flavored
 // URL.
-TEST_F(AppStartupParametersTest, ExternalActionSchemeChromiumURLHandled) {
+TEST_F(AppStartupParametersTest, ExternalActionSchemeCinaseekURLHandled) {
   ClearDefaultBrowserPromoData();
 
   base::HistogramTester histogram_tester;
   NSURL* url =
-      [NSURL URLWithString:@"chromium://ChromeExternalAction/OpenNTP?test=4"];
+      [NSURL URLWithString:@"Cinaseek://ChromeExternalAction/OpenNTP?test=4"];
   ChromeAppStartupParameters* params = [ChromeAppStartupParameters
       startupParametersWithURL:url
              sourceApplication:nil

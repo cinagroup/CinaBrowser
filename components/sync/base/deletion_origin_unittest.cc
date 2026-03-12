@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ TEST(DeletionOriginTest, ShouldConvertToProto) {
   const sync_pb::DeletionOrigin proto =
       DeletionOrigin::FromLocation(kLocation).ToProto(kTestVersion);
 
-  EXPECT_EQ(proto.chromium_version(), kTestVersion);
+  EXPECT_EQ(proto.Cinaseek_version(), kTestVersion);
   EXPECT_EQ(proto.file_name_hash(),
             base::PersistentHash(kLocation.file_name()));
   EXPECT_EQ(proto.file_line_number(), kLocation.line_number());

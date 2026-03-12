@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -150,8 +150,8 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
             fake_accessibility_helper_instance_->filter_type());
   EXPECT_FALSE(fake_accessibility_helper_instance_->explore_by_touch_enabled());
 
-  auto shell_surface1 = MakeTestArcWindow("org.chromium.arc.1");
-  auto shell_surface2 = MakeTestArcWindow("org.chromium.arc.2");
+  auto shell_surface1 = MakeTestArcWindow("org.Cinaseek.arc.1");
+  auto shell_surface2 = MakeTestArcWindow("org.Cinaseek.arc.2");
 
   wm::ActivationClient* activation_client =
       ash::Shell::Get()->activation_client();
@@ -201,13 +201,13 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
                        RequestTreeSyncOnWindowIdChange) {
-  auto shell_surface1 = MakeTestArcWindow("org.chromium.arc.1");
+  auto shell_surface1 = MakeTestArcWindow("org.Cinaseek.arc.1");
   aura::Window* window1 = shell_surface1->GetWidget()->GetNativeWindow();
   aura::Window child_window1 = aura::Window(nullptr);
   child_window1.Init(ui::LAYER_NOT_DRAWN);
   window1->AddChild(&child_window1);
 
-  auto shell_surface2 = MakeTestArcWindow("org.chromium.arc.2");
+  auto shell_surface2 = MakeTestArcWindow("org.Cinaseek.arc.2");
   aura::Window* window2 = shell_surface2->GetWidget()->GetNativeWindow();
   aura::Window child_window2 = aura::Window(nullptr);
   child_window2.Init(ui::LAYER_NOT_DRAWN);
@@ -262,7 +262,7 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
                        FocusHighlight) {
   AccessibilityManager::Get()->SetFocusHighlightEnabled(true);
 
-  auto shell_surface = MakeTestArcWindow("org.chromium.arc.1");
+  auto shell_surface = MakeTestArcWindow("org.Cinaseek.arc.1");
   wm::ActivationClient* activation_client =
       ash::Shell::Get()->activation_client();
   activation_client->ActivateWindow(
@@ -330,7 +330,7 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest, PerformAction) {
-  auto shell_surface = MakeTestArcWindow("org.chromium.arc.1");
+  auto shell_surface = MakeTestArcWindow("org.Cinaseek.arc.1");
   AccessibilityManager::Get()->EnableSpokenFeedback(true);
 
   ArcAccessibilityHelperBridge* bridge =
@@ -371,7 +371,7 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest, PerformAction) {
 
 IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
                        PerformActionWithParams) {
-  auto shell_surface = MakeTestArcWindow("org.chromium.arc.1");
+  auto shell_surface = MakeTestArcWindow("org.Cinaseek.arc.1");
   AccessibilityManager::Get()->EnableSpokenFeedback(true);
 
   ArcAccessibilityHelperBridge* bridge =
@@ -418,7 +418,7 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest,
                        GetTextLocation) {
-  auto shell_surface = MakeTestArcWindow("org.chromium.arc.1");
+  auto shell_surface = MakeTestArcWindow("org.Cinaseek.arc.1");
   AccessibilityManager::Get()->SetSelectToSpeakEnabled(true);
 
   ArcAccessibilityHelperBridge* bridge =
@@ -466,7 +466,7 @@ IN_PROC_BROWSER_TEST_F(ArcAccessibilityHelperBridgeBrowserTest, Histogram) {
   base::HistogramTester histogram_tester;
 
   // Prepare ARC and non-ARC windows
-  auto arc_shell_surface = MakeTestArcWindow("org.chromium.arc.1");
+  auto arc_shell_surface = MakeTestArcWindow("org.Cinaseek.arc.1");
   wm::ActivationClient* activation_client =
       ash::Shell::Get()->activation_client();
 

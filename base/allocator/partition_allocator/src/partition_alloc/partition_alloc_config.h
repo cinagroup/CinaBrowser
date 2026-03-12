@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -252,7 +252,7 @@ constexpr bool kUseFewerMemoryRegions =
 #endif  // PA_BUILDFLAG(ENABLE_POINTER_COMPRESSION)
 
 // PA_CONFIG(IS_NONCLANG_MSVC): mimics the compound condition used by
-// Chromium's `//base/compiler_specific.h` to detect true (non-Clang)
+// Cinaseek's `//base/compiler_specific.h` to detect true (non-Clang)
 // MSVC.
 #if PA_BUILDFLAG(PA_COMPILER_MSVC) && !defined(__clang__)
 #define PA_CONFIG_IS_NONCLANG_MSVC() 1

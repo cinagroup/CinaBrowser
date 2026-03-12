@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -242,7 +242,7 @@ WebEngineContentRendererClient::GetSupportedKeySystems(
         media::CdmSessionType::kTemporary};
 
     // Fuchsia always decrypts audio into clear buffers and return them back to
-    // Chromium. Hardware secured decoders are only available for supported
+    // Cinaseek. Hardware secured decoders are only available for supported
     // video codecs.
     // TODO(crbug.com/42050020): Replace these hardcoded values with a query to
     // the fuchsia.mediacodec FIDL service.
@@ -289,7 +289,7 @@ bool WebEngineContentRendererClient::IsDecoderSupportedVideoType(
   return IsSupportedHardwareVideoCodec(type);
 }
 
-// TODO(crbug.com/40682958): Look into the ChromiumContentRendererClient version
+// TODO(crbug.com/40682958): Look into the CinaseekContentRendererClient version
 // of this method and how it may apply here.
 bool WebEngineContentRendererClient::DeferMediaLoad(
     content::RenderFrame* render_frame,

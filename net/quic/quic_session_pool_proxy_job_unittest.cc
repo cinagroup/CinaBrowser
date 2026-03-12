@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@
 #include "net/base/test_completion_callback.h"
 #include "net/cert/x509_certificate.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_session_pool.h"
@@ -75,7 +75,7 @@ TEST_P(QuicSessionPoolProxyJobTest, CreateProxiedQuicSession) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -131,7 +131,7 @@ TEST_P(QuicSessionPoolProxyJobTest, CreateProxiedQuicSession) {
   ASSERT_EQ(OK, callback_.WaitForResult());
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
-  QuicChromiumClientSession* session =
+  QuicCinaseekClientSession* session =
       GetActiveSession(origin, PRIVACY_MODE_DISABLED, nak, proxy_chain);
   ASSERT_TRUE(session);
 
@@ -148,7 +148,7 @@ TEST_P(QuicSessionPoolProxyJobTest, CreateProxiedQuicSession) {
 
   // Check that the session to the proxy is keyed by an empty NAK and always
   // uses RFCv1.
-  QuicChromiumClientSession* proxy_session = GetActiveSession(
+  QuicCinaseekClientSession* proxy_session = GetActiveSession(
       proxy_origin, PRIVACY_MODE_DISABLED, nak, ProxyChain::ForIpProtection({}),
       SessionUsage::kProxy, /*require_dns_https_alpn=*/false,
       /*disable_cert_verification_network_fetches=*/true);
@@ -187,7 +187,7 @@ TEST_P(QuicSessionPoolProxyJobTest, DoubleProxiedQuicSession) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy1_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -340,7 +340,7 @@ TEST_P(QuicSessionPoolProxyJobTest, DoubleProxiedQuicSession) {
   ASSERT_EQ(OK, callback_.WaitForResult());
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
-  QuicChromiumClientSession* session = GetActiveSession(
+  QuicCinaseekClientSession* session = GetActiveSession(
       origin, PRIVACY_MODE_DISABLED, endpoint_nak, proxy_chain);
   ASSERT_TRUE(session);
 
@@ -357,7 +357,7 @@ TEST_P(QuicSessionPoolProxyJobTest, DoubleProxiedQuicSession) {
 
   // Check that the session to proxy1 uses an empty NAK and RFCv1.
   auto proxy_nak = NetworkAnonymizationKey();
-  QuicChromiumClientSession* proxy1_session =
+  QuicCinaseekClientSession* proxy1_session =
       GetActiveSession(proxy1_origin, PRIVACY_MODE_DISABLED, proxy_nak,
                        ProxyChain::ForIpProtection({}), SessionUsage::kProxy,
                        /*require_dns_https_alpn=*/false,
@@ -368,7 +368,7 @@ TEST_P(QuicSessionPoolProxyJobTest, DoubleProxiedQuicSession) {
   EXPECT_EQ(proxy1_session->GetQuicVersion(), quic::ParsedQuicVersion::RFCv1());
 
   // Check that the session to proxy2 uses the endpoint NAK and RFCv1.
-  QuicChromiumClientSession* proxy2_session = GetActiveSession(
+  QuicCinaseekClientSession* proxy2_session = GetActiveSession(
       proxy2_origin, PRIVACY_MODE_DISABLED, endpoint_nak,
       ProxyChain::ForIpProtection({ProxyServer::FromSchemeHostAndPort(
           ProxyServer::SCHEME_QUIC, proxy1_origin.host(), 443)}),
@@ -412,7 +412,7 @@ TEST_P(QuicSessionPoolProxyJobTest, PoolDeletedDuringSessionCreation) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy1_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -461,7 +461,7 @@ TEST_P(QuicSessionPoolProxyJobTest, CreateProxySessionFails) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -502,7 +502,7 @@ TEST_P(QuicSessionPoolProxyJobTest, CreateSessionFails) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -569,7 +569,7 @@ TEST_P(QuicSessionPoolProxyJobTest,
   ASSERT_TRUE(cert->VerifyNameMatch(proxy_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);
@@ -637,7 +637,7 @@ TEST_P(QuicSessionPoolProxyJobTest,
   ASSERT_EQ(OK, callback_.WaitForResult());
   std::unique_ptr<HttpStream> stream = CreateStream(&builder.request);
   EXPECT_TRUE(stream.get());
-  QuicChromiumClientSession* session =
+  QuicCinaseekClientSession* session =
       GetActiveSession(origin, PRIVACY_MODE_DISABLED, nak, proxy_chain);
   ASSERT_TRUE(session);
 
@@ -668,7 +668,7 @@ TEST_P(QuicSessionPoolProxyJobTest, RequestSessionAgainInCallback) {
   ASSERT_TRUE(cert->VerifyNameMatch(proxy_origin.host()));
   ASSERT_FALSE(cert->VerifyNameMatch(kDifferentHostname));
 
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   crypto_client_stream_factory_.AddProofVerifyDetails(&verify_details);

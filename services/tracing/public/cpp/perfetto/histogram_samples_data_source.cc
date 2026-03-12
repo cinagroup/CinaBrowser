@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,12 +83,12 @@ HistogramSamplesDataSource::HistogramSamplesDataSource() = default;
 HistogramSamplesDataSource::~HistogramSamplesDataSource() = default;
 
 void HistogramSamplesDataSource::OnSetup(const SetupArgs& args) {
-  if (args.config->chromium_histogram_samples_raw().empty()) {
+  if (args.config->Cinaseek_histogram_samples_raw().empty()) {
     return;
   }
-  perfetto::protos::gen::ChromiumHistogramSamplesConfig config;
-  if (!config.ParseFromString(args.config->chromium_histogram_samples_raw())) {
-    DLOG(ERROR) << "Failed to parse chromium_histogram_samples";
+  perfetto::protos::gen::CinaseekHistogramSamplesConfig config;
+  if (!config.ParseFromString(args.config->Cinaseek_histogram_samples_raw())) {
+    DLOG(ERROR) << "Failed to parse Cinaseek_histogram_samples";
     return;
   }
   filter_histogram_names_ = config.filter_histogram_names();

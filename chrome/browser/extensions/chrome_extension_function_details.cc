@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -75,7 +75,7 @@ WindowController* ChromeExtensionFunctionDetails::GetCurrentWindowController()
   // all of this profile's browser windows may have been closed.
   // A similar situation may arise during shutdown.
   // TODO(rafaelw): Delay creation of background_page until the browser
-  // is available. http://code.google.com/p/chromium/issues/detail?id=13284
+  // is available. http://code.google.com/p/Cinaseek/issues/detail?id=13284
   return window_controller;
 }
 

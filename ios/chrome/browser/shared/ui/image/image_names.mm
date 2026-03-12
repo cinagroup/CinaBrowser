@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,25 +27,25 @@ NSString* const kGooglePasswordManagerWidgetPromoDisabledImage =
 NSString* const kGoogleSettingsPasswordsInOtherAppsBannerImage =
     @"google_settings_passwords_in_other_apps_banner";
 #else
-NSString* const kChromiumDefaultBrowserIllustrationImage =
-    @"chromium_default_browser_illustration";
-NSString* const kChromiumDefaultBrowserScreenBannerImage =
-    @"chromium_default_browser_screen_banner";
-NSString* const kChromiumGuidedTourBannerImage = @"chromium_guided_tour_banner";
-NSString* const kChromiumNotificationsOptInBannerImage =
-    @"chromium_notifications_opt_in_banner";
-NSString* const kChromiumNotificationsOptInBannerLandscapeImage =
-    @"chromium_notifications_opt_in_banner_landscape";
-NSString* const kChromiumPasswordManagerWidgetPromoImage =
-    @"chromium_password_manager_widget_promo";
-NSString* const kChromiumPasswordManagerWidgetPromoDisabledImage =
-    @"chromium_password_manager_widget_promo_disabled";
-NSString* const kChromiumSearchEngineChoiceIcon =
-    @"chromium_search_engine_choice_icon";
-NSString* const kChromiumSettingsPasswordsInOtherAppsBannerImage =
-    @"chromium_settings_passwords_in_other_apps_banner";
-NSString* const kChromiumSigninBannerImage = @"chromium_signin_banner";
-NSString* const kChromiumSigninPromoLogoImage = @"chromium_signin_promo_logo";
+NSString* const kCinaseekDefaultBrowserIllustrationImage =
+    @"Cinaseek_default_browser_illustration";
+NSString* const kCinaseekDefaultBrowserScreenBannerImage =
+    @"Cinaseek_default_browser_screen_banner";
+NSString* const kCinaseekGuidedTourBannerImage = @"Cinaseek_guided_tour_banner";
+NSString* const kCinaseekNotificationsOptInBannerImage =
+    @"Cinaseek_notifications_opt_in_banner";
+NSString* const kCinaseekNotificationsOptInBannerLandscapeImage =
+    @"Cinaseek_notifications_opt_in_banner_landscape";
+NSString* const kCinaseekPasswordManagerWidgetPromoImage =
+    @"Cinaseek_password_manager_widget_promo";
+NSString* const kCinaseekPasswordManagerWidgetPromoDisabledImage =
+    @"Cinaseek_password_manager_widget_promo_disabled";
+NSString* const kCinaseekSearchEngineChoiceIcon =
+    @"Cinaseek_search_engine_choice_icon";
+NSString* const kCinaseekSettingsPasswordsInOtherAppsBannerImage =
+    @"Cinaseek_settings_passwords_in_other_apps_banner";
+NSString* const kCinaseekSigninBannerImage = @"Cinaseek_signin_banner";
+NSString* const kCinaseekSigninPromoLogoImage = @"Cinaseek_signin_promo_logo";
 
 #endif  // BUILDFLAG(IOS_USE_BRANDED_ASSETS)
 

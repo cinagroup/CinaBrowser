@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ class JsInProcessFuzzer : public InProcessFuzzer {
  public:
   JsInProcessFuzzer();
   void SetUpOnMainThread() override;
-  base::CommandLine::StringVector GetChromiumCommandLineArguments() override;
+  base::CommandLine::StringVector GetCinaseekCommandLineArguments() override;
 
   int Fuzz(const uint8_t* data, size_t size) override;
 };
@@ -109,7 +109,7 @@ void JsInProcessFuzzer::SetUpOnMainThread() {
 }
 
 base::CommandLine::StringVector
-JsInProcessFuzzer::GetChromiumCommandLineArguments() {
+JsInProcessFuzzer::GetCinaseekCommandLineArguments() {
 #if BUILDFLAG(IS_FUZZILLI)
   base::FilePath dir_parent("/tmp/fuzzilli_tmp");
   base::ScopedTempDir dir;

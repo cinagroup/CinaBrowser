@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,7 +94,7 @@ using testing::_;
 
 namespace {
 
-// TODO(https://issues.chromium.org/issues/434006732): switch to
+// TODO(https://issues.Cinaseek.org/issues/434006732): switch to
 // crypto::sign::Sign() once that supports all the algorithms needed here.
 bool RsaSignRawData(uint16_t openssl_signature_algorithm,
                     const std::vector<uint8_t>& input,

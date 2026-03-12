@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 #include "net/storage_access_api/status.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "services/network/public/mojom/network_context.mojom.h"
-#include "third_party/oak/chromium/proto/session/session.pb.h"
+#include "third_party/oak/Cinaseek/proto/session/session.pb.h"
 
 namespace private_ai {
 namespace {
@@ -48,7 +48,7 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
           data: "This contains an encrypted request."
           internal {
             contacts {
-                email: "dullweber@chromium.org"
+                email: "dullweber@Cinaseek.org"
             }
           }
           destination: GOOGLE_OWNED_SERVICE

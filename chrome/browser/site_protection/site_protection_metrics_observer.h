@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace site_protection {
 
 // A class to log metrics related to different heuristics for assessing the
 // site's familiarity to the user. These metrics will be used to create
-// heuristics for whether Chromium should enable extra protections.
+// heuristics for whether Cinaseek should enable extra protections.
 class SiteProtectionMetricsObserver
     : public content::WebContentsUserData<SiteProtectionMetricsObserver>,
       public content::WebContentsObserver,

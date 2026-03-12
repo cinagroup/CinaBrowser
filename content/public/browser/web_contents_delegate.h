@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -356,7 +356,7 @@ class CONTENT_EXPORT WebContentsDelegate {
 
   // Called when an external drag event enters the web contents window. Return
   // true to allow dragging and dropping on the web contents window or false to
-  // cancel the operation. This method is used by Chromium Embedded Framework.
+  // cancel the operation. This method is used by Cinaseek Embedded Framework.
   virtual bool CanDragEnter(WebContents* source,
                             const DropData& data,
                             blink::DragOperationsMask operations_allowed);

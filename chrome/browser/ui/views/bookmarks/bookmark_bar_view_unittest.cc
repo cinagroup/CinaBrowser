@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -586,7 +586,7 @@ TEST_F(BookmarkBarViewTest, DropCallbackTest) {
   gfx::Point bar_loc;
   views::View::ConvertPointToScreen(bookmark_bar_view(), &bar_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(bar_loc),
                                    gfx::PointF(bar_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -611,7 +611,7 @@ TEST_F(BookmarkBarViewTest, MutateModelDuringDrag) {
   views::View::ConvertPointToScreen(test_helper_->GetBookmarkButton(5),
                                     &drop_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(drop_loc),
                                    gfx::PointF(drop_loc),
                                    ui::DragDropTypes::DRAG_COPY);
@@ -630,7 +630,7 @@ TEST_F(BookmarkBarViewTest, DropCallback_InvalidatePtrTest) {
   gfx::Point bar_loc;
   views::View::ConvertPointToScreen(bookmark_bar_view(), &bar_loc);
   ui::OSExchangeData drop_data;
-  drop_data.SetURL(GURL("http://www.chromium.org/"), std::u16string(u"z"));
+  drop_data.SetURL(GURL("http://www.Cinaseek.org/"), std::u16string(u"z"));
   ui::DropTargetEvent target_event(drop_data, gfx::PointF(bar_loc),
                                    gfx::PointF(bar_loc),
                                    ui::DragDropTypes::DRAG_COPY);

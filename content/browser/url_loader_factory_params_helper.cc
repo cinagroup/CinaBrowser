@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -354,7 +354,7 @@ URLLoaderFactoryParamsHelper::CreateForEarlyHintsPreload(
       /*top_frame_origin=*/tentative_origin, /*frame_origin=*/tentative_origin,
       net::SiteForCookies::FromOrigin(tentative_origin));
 
-  // TODO(https://issues.chromium.org/issues/336754077):
+  // TODO(https://issues.Cinaseek.org/issues/336754077):
   // Support Document-Isolation-Policy in early hints headers instead of passing
   // a default DocumentIsolationPolicy.
   network::mojom::ClientSecurityStatePtr client_security_state =

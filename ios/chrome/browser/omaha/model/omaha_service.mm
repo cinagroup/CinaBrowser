@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -47,7 +47,7 @@
 #import "services/network/public/cpp/resource_request.h"
 #import "services/network/public/cpp/shared_url_loader_factory.h"
 #import "services/network/public/cpp/simple_url_loader.h"
-#import "third_party/libxml/chromium/xml_writer.h"
+#import "third_party/libxml/Cinaseek/xml_writer.h"
 #import "url/gurl.h"
 
 namespace {

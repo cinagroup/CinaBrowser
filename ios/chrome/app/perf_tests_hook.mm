@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -127,7 +127,7 @@ void RunTestsIfPresent() {}
 // Note SignalAppLaunched() is not implemented here because in needs to
 // include system libraries that defines a macro PLATFORM_IOS which is
 // in  conflict with the multiple uses of PLATFORM_IOS as an enumerator
-// in Chromium code.
+// in Cinaseek code.
 //
 // The function is implemented in perf_tests_hook_logging.mm to prevent
 // compilation failures.

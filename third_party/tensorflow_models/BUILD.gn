@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ config("tensorflow-models-config") {
     "src/research/seq_flow_lite",
 
     # Include the "libutf" and "icu4c" subdirectories which redirects the
-    # includes for those libraries to their Chromium versions without needing
+    # includes for those libraries to their Cinaseek versions without needing
     # patches.
     "shims",
   ]
@@ -47,8 +47,8 @@ static_library("tflite_custom_ops") {
     "//third_party/tflite",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
 
   public_configs = [ ":tensorflow-models-config" ]
 }

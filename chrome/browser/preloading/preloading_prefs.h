@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@ enum class NetworkPredictionOptions {
 // arbitrarily. Prefer using PreloadPagesState over NetworkPredictionOptions to
 // avoid having to deal with deprecated values.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.prefetch.settings
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.prefetch.settings
 enum class PreloadPagesState {
   // The user is not opted into preloading.
   kNoPreloading = 0,

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@
 
 @protocol PageSideSwipeCommands
 
-// Updates the edge swipe precedence between Chromium native swipe and the
+// Updates the edge swipe precedence between Cinaseek native swipe and the
 // default WebView swipe for the currently active web state.
 - (void)updateEdgeSwipePrecedenceForActiveWebState;
 

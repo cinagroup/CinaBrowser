@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -583,7 +583,7 @@ IN_PROC_BROWSER_TEST_P(SoftNavigationTest, ImageLargestContentfulPaint) {
       ukm::builders::SoftNavigation::
           kPaintTiming_LargestContentfulPaintRequestPriorityName);
 
-  // https://source.chromium.org/chromium/chromium/src/+/main:net/base/request_priority.h
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:net/base/request_priority.h
   // 4 is MEDIUM request priority.
   EXPECT_EQ(source_id_to_lcp_request_priority.cbegin()->second, 4u);
 
@@ -682,7 +682,7 @@ IN_PROC_BROWSER_TEST_P(SoftNavigationTest, BackButton) {
 
   // Now we simulate the back button. However, a regular back-button click or
   // content::HistoryGoBack would trigger this intervention:
-  // https://chromium.googlesource.com/chromium/src/+/main/docs/history_manipulation_intervention.md
+  // https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/history_manipulation_intervention.md
   // Therefore we use -1 history offsets, which are like long-press back-button
   // menu clicks. This is simpler (and perhaps slightly more robust) than
   // avoiding the intervention by adding a user activation to the page.

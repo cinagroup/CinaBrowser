@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@
 #include "base/memory/ptr_util.h"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/starboard/media/media/drm_util.h"
-#include "chromecast/starboard/media/renderer/chromium_starboard_conversions.h"
+#include "chromecast/starboard/media/renderer/Cinaseek_starboard_conversions.h"
 
 namespace chromecast {
 namespace media {
@@ -390,7 +390,7 @@ void StarboardPlayerManager::OnPlayerError(
   // changed, e.g. due to a hardware change like unplugging an external GPU).
   //
   // See
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/base/pipeline_impl.cc;l=986;drc=1fb4c56b03b105b03c45627871b15b8933ed8a11
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/base/pipeline_impl.cc;l=986;drc=1fb4c56b03b105b03c45627871b15b8933ed8a11
   // and
   // https://github.com/youtube/cobalt/blob/6a2df0d123c68a3a29555dedf25fdbc5d161b3c9/starboard/player.h#L69
   const ::media::PipelineStatusCodes pipeline_error =

@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2962,7 +2962,7 @@ TEST_F(FlexLayoutTest, PreferredSizeZeroPreventsFlex_Vertical) {
 }
 
 // Test case should be fixed by:
-// https://chromium-review.googlesource.com/c/chromium/src/+/2420128
+// https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/2420128
 // Specifically, a label in a flex layout should report preferred height of
 // |max_lines| * |line_height| when width is zero, which should affect the
 // height bound of the layout.

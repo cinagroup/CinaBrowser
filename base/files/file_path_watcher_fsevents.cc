@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -73,7 +73,7 @@ FilePath ResolvePath(const FilePath& path) {
 
 FilePathWatcherFSEvents::FilePathWatcherFSEvents()
     : queue_(dispatch_queue_create(
-          base::StringPrintf("org.chromium.base.FilePathWatcher.%p", this)
+          base::StringPrintf("org.Cinaseek.base.FilePathWatcher.%p", this)
               .c_str(),
           DISPATCH_QUEUE_SERIAL)) {}
 

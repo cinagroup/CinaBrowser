@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/build/win-rbe-untrusted-test/gn-args.json"
@@ -10,23 +10,23 @@
             "builder_id": {
               "bucket": "build",
               "builder": "win-rbe-untrusted-test",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.build",
+              "builder_group": "Cinaseek.build",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_platform": "win"
               },
               "legacy_gclient_config": {
                 "apply_configs": [
                   "siso_latest"
                 ],
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -36,7 +36,7 @@
         {
           "bucket": "build",
           "builder": "win-rbe-untrusted-test",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ]
     }
@@ -56,7 +56,7 @@
     ],
     "output_local_strategy": "greedy",
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted-test",
+    "project": "rbe-Cinaseek-untrusted-test",
     "remote_jobs": -1
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -66,6 +66,6 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "chromium.build",
+  "builder_group": "Cinaseek.build",
   "recipe": "chrome_build/build_perf_siso"
 }

@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,8 +9,8 @@ import("//tools/grit/grit_rule.gni")
 
 generate_jni("jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetBridge.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/Credential.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/Credential.java",
   ]
   visibility = [
     ":*",
@@ -20,42 +20,42 @@ generate_jni("jni") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/ManualFillingProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetBridge.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewHolder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/Credential.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/CredentialFillRequest.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryChipGroup.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryIphUtils.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryRecyclerViewMcp.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryStyle.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/bar_component/NotchedKeyboardAccessoryOutlineProvider.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessoryPagerAdapter.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetMediator.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetMetricsRecorder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetProperties.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetView.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetViewBinder.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/sheet_component/NoSwipeViewPager.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/utils/InsecureFillingDialogUtils.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/utils/ManualFillingMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/ManualFillingProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewHolder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/Credential.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/CredentialFillRequest.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryChipGroup.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryIphUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryRecyclerViewMcp.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryStyle.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/KeyboardAccessoryViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/bar_component/NotchedKeyboardAccessoryOutlineProvider.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/button_group_component/KeyboardAccessoryButtonGroupViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessoryPagerAdapter.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetMetricsRecorder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetView.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/AccessorySheetViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/sheet_component/NoSwipeViewPager.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/utils/InsecureFillingDialogUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/utils/ManualFillingMetricsRecorder.java",
   ]
   srcjar_deps = [ ":jni" ]
   deps = [
@@ -95,7 +95,7 @@ android_library("java") {
     "//chrome/android/features/keyboard_accessory/*",
     "//chrome/browser/keyboard_accessory/android/test/*",
   ]
-  resources_package = "org.chromium.chrome.browser.keyboard_accessory"
+  resources_package = "org.Cinaseek.chrome.browser.keyboard_accessory"
 }
 
 android_resources("java_resources") {
@@ -145,9 +145,9 @@ android_library("test_java") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetIntegrationTest.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetRenderTest.java",
-    "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewTest.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetIntegrationTest.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetRenderTest.java",
+    "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetViewTest.java",
   ]
 
   deps = [
@@ -188,14 +188,14 @@ android_library("test_java") {
     ":*",
     "//chrome/android/features/keyboard_accessory/*",
   ]
-  resources_package = "org.chromium.chrome.browser.keyboard_accessory"
+  resources_package = "org.Cinaseek.chrome.browser.keyboard_accessory"
 }
 
 # TODO(crbug.com): Make this the `robolectric_binary` instead.
 robolectric_library("junit_tests") {
   testonly = true
 
-  sources = [ "java/src/org/chromium/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetControllerTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/keyboard_accessory/all_passwords_bottom_sheet/AllPasswordsBottomSheetControllerTest.java" ]
 
   deps = [
     ":java",

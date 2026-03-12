@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -12,7 +12,7 @@ import("//testing/test.gni")
 import("//tools/generate_stubs/rules.gni")
 
 assert(is_linux || is_chromeos,
-       "This file should only be referenced on Linux or Chrome OS")
+       "This file should only be referenced on Linux or Cinaseek OS")
 assert(use_gio, "GIO is required for building with GTK")
 
 source_set("gtk_types") {

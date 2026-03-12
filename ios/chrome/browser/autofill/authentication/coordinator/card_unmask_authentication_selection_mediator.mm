@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,7 +46,7 @@ CardUnmaskAuthenticationSelectionMediator::
 CardUnmaskAuthenticationSelectionMediator::
     ~CardUnmaskAuthenticationSelectionMediator() {
   if (!was_dismissed_ && model_controller_) {
-    // Our coordinator is stopping (e.g. closing Chromium, or view has been
+    // Our coordinator is stopping (e.g. closing Cinaseek, or view has been
     // swiped away). We must call OnDialogClosed on the model_controller_ before
     // this mediator is destroyed.
     model_controller_->OnDialogClosed(

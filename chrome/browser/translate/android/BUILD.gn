@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,8 +7,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/chrome/browser/translate/AutoTranslateSnackbarController.java" ]
-  resources_package = "org.chromium.chrome.browser.translate"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/translate/AutoTranslateSnackbarController.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.translate"
   deps = [
     "//base:base_java",
     "//build/android:build_java",
@@ -39,12 +39,12 @@ static_library("android") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/translate/AutoTranslateSnackbarController.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/translate/AutoTranslateSnackbarController.java" ]
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.translate"
-  sources = [ "java/src/org/chromium/chrome/browser/translate/AutoTranslateSnackbarControllerTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.translate"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/translate/AutoTranslateSnackbarControllerTest.java" ]
   deps = [
     ":java",
     "//base:base_java",
@@ -64,8 +64,8 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.translate"
-  sources = [ "java/src/org/chromium/chrome/browser/translate/AutoTranslateSnackbarControllerJavaTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.translate"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/translate/AutoTranslateSnackbarControllerJavaTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

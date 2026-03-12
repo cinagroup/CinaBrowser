@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ namespace ash {
 class AuthFailure;
 class UserContext;
 
-// An interface for objects that will authenticate a Chromium OS user.
+// An interface for objects that will authenticate a Cinaseek OS user.
 // Callbacks will be called on the UI thread:
 // 1. On successful authentication, will call consumer_->OnAuthSuccess().
 // 2. On failure, will call consumer_->OnAuthFailure().

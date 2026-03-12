@@ -1,6 +1,6 @@
 set(plugin_sources
   BlinkDataMemberTypeChecker.cpp
-  ChromeClassTester.cpp
+  CinaseekClassTester.cpp
   FilteredASTConsumer.cpp
   FindBadConstructsAction.cpp
   FindBadConstructsConsumer.cpp

@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace password_manager {
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused. To be kept in sync with
 // PasswordCheckReferrerAndroid in enums.xml.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.password_manager
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.password_manager
 // GENERATED_JAVA_CLASS_NAME_OVERRIDE: PasswordCheckReferrer
 enum class PasswordCheckReferrerAndroid {
   // Corresponds to the Settings > Passwords page.

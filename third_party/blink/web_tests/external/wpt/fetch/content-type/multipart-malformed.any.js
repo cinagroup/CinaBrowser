@@ -1,4 +1,4 @@
-// This is a repro for Chromium issue https://crbug.com/1412007.
+// This is a repro for Cinaseek issue https://crbug.com/1412007.
 promise_test(t => {
   const form_string =
     "--Boundary_with_capital_letters\r\n" +

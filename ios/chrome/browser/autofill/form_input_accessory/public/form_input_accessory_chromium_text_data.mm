@@ -1,8 +1,8 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#import "ios/chrome/browser/autofill/form_input_accessory/public/form_input_accessory_chromium_text_data.h"
+#import "ios/chrome/browser/autofill/form_input_accessory/public/form_input_accessory_Cinaseek_text_data.h"
 
 #import "ios/chrome/common/ui/elements/form_input_accessory_view_text_data.h"
 #import "ios/chrome/grit/ios_strings.h"
@@ -10,7 +10,7 @@
 
 using l10n_util::GetNSString;
 
-FormInputAccessoryViewTextData* ChromiumAccessoryViewTextData() {
+FormInputAccessoryViewTextData* CinaseekAccessoryViewTextData() {
   return [[FormInputAccessoryViewTextData alloc]
                           initWithCloseButtonTitle:
                               GetNSString(IDS_IOS_AUTOFILL_INPUT_BAR_DONE)

@@ -15,7 +15,7 @@
           "dimensions": {
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_unittests",
         "test_id_prefix": "ninja://base:base_unittests/"
@@ -31,7 +31,7 @@
           "dimensions": {
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "highway_tests",
         "test_id_prefix": "ninja://third_party/highway:highway_tests/"
@@ -56,7 +56,7 @@
           "dimensions": {
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "chrome_sizes",
         "test_id_prefix": "ninja://chrome/test:chrome_sizes/"
@@ -73,7 +73,7 @@
             "integrity": "high",
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "mini_installer_tests",
         "test_id_prefix": "ninja://chrome/test/mini_installer:mini_installer_tests/"
@@ -90,7 +90,7 @@
           "dimensions": {
             "os": "Windows-10-19045"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "polymer_tools_python_unittests",
         "test_id_prefix": "ninja://tools/polymer:polymer_tools_python_unittests/"

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -179,8 +179,8 @@ ScopedAppGLStateRestoreImpl::~ScopedAppGLStateRestoreImpl() {
   DCHECK(ClearGLErrors(false, NULL));
   RestoreHWUIState();
 
-  // Do not leak GLError out of chromium.
-  ClearGLErrors(true, "Chromium GLError");
+  // Do not leak GLError out of Cinaseek.
+  ClearGLErrors(true, "Cinaseek GLError");
 }
 
 void ScopedAppGLStateRestoreImpl::RestoreHWUIState() {

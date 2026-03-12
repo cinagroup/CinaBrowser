@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -58,7 +58,7 @@ class ExternalConnectorImpl : public ExternalConnector {
   std::unique_ptr<ExternalConnector> Clone() override;
   mojo::PendingRemote<external_mojo::mojom::ExternalConnector>
   RequestConnector() override;
-  void SendChromiumConnectorRequest(
+  void SendCinaseekConnectorRequest(
       mojo::ScopedMessagePipeHandle request) override;
   void QueryServiceList(
       base::OnceCallback<

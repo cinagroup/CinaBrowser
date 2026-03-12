@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ struct DescriptionAndStyles {
 
 // The container for the result from parsing descriptions and styles.
 struct DescriptionAndStylesResult {
-  // Chromium's clang plugin about non-trivial structs needing out-of-line
+  // Cinaseek's clang plugin about non-trivial structs needing out-of-line
   // constructors requires us to go a little ham here.
   DescriptionAndStylesResult();
   DescriptionAndStylesResult(const DescriptionAndStylesResult&) = delete;

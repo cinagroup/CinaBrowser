@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -133,14 +133,14 @@ class EmbeddedTestServerHandle {
 class EmbeddedTestServer {
  public:
   // Below line is for //net/android:net_java_test_support_enums_srcjar
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.test
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.test
   enum Type {
     TYPE_HTTP,
     TYPE_HTTPS,
   };
 
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.test
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.test
   enum ServerCertificate {
     CERT_OK,
 
@@ -214,7 +214,7 @@ class EmbeddedTestServer {
     // Enumerates the types of OCSP response that the testserver can produce.
     //
     // Below line is for //net/android:net_java_test_support_enums_srcjar
-    // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.net.test
+    // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.net.test
     enum class ResponseType {
       // OCSP will not be enabled for the corresponding config.
       kOff,

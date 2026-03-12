@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -463,7 +463,7 @@ std::optional<DanglingPointerFreeInfo> TakeDanglingPointerFreeInfo(
 }
 
 // Extract from the StackTrace output, the signature of the pertinent caller.
-// This function is meant to be used only by Chromium developers, to list what
+// This function is meant to be used only by Cinaseek developers, to list what
 // are all the dangling raw_ptr occurrences in a table.
 std::string ExtractDanglingPtrSignature(std::string_view stacktrace) {
   std::vector<std::string_view> lines = SplitStringPiece(
@@ -654,7 +654,7 @@ void DanglingRawPtrReleased(uintptr_t id) {
     print_traces(stack_trace_release, task_trace_release, error);
 
     error << "Please check for more information on:\n";
-    error << "https://chromium.googlesource.com/chromium/src/+/main/docs/";
+    error << "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/";
     error << "dangling_ptr_guide.md\n";
     error << "\n";
   }
@@ -790,7 +790,7 @@ void UnretainedDanglingRawPtrDetectedCrash(uintptr_t id) {
       "\n"
       "\n"
       "Please check for more information on:\n"
-      "https://chromium.googlesource.com/chromium/src/+/main/docs/"
+      "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/"
       "unretained_dangling_ptr_guide.md\n";
   debug::TaskTrace task_trace;
   debug::StackTrace stack_trace;

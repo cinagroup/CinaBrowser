@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -342,7 +342,7 @@ IN_PROC_BROWSER_TEST_F(NarratorContainmentEnabledBrowserTest,
   ASSERT_TRUE(class_name.Get());
 
   // Windows Narrator’s Scan Mode only contains navigation within web content when the UIA
-  // parent of the document reports the class name "Chrome_WidgetWin_1". Chromium currently
+  // parent of the document reports the class name "Chrome_WidgetWin_1". Cinaseek currently
   // supplies that via a temporary mitigation in ViewAccessibility::OnViewAddedToWidget(),
   // gated by features::kFixNarratorWebContentContainment.
   //

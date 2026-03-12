@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -267,7 +267,7 @@ class AddCookieWebView : public StubWebView {
 }  // namespace
 
 TEST(WindowCommandsTest, ExecuteAddCookie_Valid) {
-  AddCookieWebView webview = AddCookieWebView("http://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("http://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("name", "testcookie");
@@ -281,7 +281,7 @@ TEST(WindowCommandsTest, ExecuteAddCookie_Valid) {
 }
 
 TEST(WindowCommandsTest, ExecuteAddCookie_NameMissing) {
-  AddCookieWebView webview = AddCookieWebView("http://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("http://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("value", "cookievalue");
@@ -296,7 +296,7 @@ TEST(WindowCommandsTest, ExecuteAddCookie_NameMissing) {
 }
 
 TEST(WindowCommandsTest, ExecuteAddCookie_MissingValue) {
-  AddCookieWebView webview = AddCookieWebView("http://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("http://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("name", "testcookie");
@@ -311,7 +311,7 @@ TEST(WindowCommandsTest, ExecuteAddCookie_MissingValue) {
 }
 
 TEST(WindowCommandsTest, ExecuteAddCookie_DomainInvalid) {
-  AddCookieWebView webview = AddCookieWebView("file://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("file://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("name", "testcookie");
@@ -325,7 +325,7 @@ TEST(WindowCommandsTest, ExecuteAddCookie_DomainInvalid) {
 }
 
 TEST(WindowCommandsTest, ExecuteAddCookie_SameSiteEmpty) {
-  AddCookieWebView webview = AddCookieWebView("https://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("https://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("name", "testcookie");
@@ -339,7 +339,7 @@ TEST(WindowCommandsTest, ExecuteAddCookie_SameSiteEmpty) {
 }
 
 TEST(WindowCommandsTest, ExecuteAddCookie_SameSiteNotSet) {
-  AddCookieWebView webview = AddCookieWebView("ftp://chromium.org");
+  AddCookieWebView webview = AddCookieWebView("ftp://Cinaseek.org");
   base::DictValue params;
   base::DictValue cookie_params;
   cookie_params.Set("name", "testcookie");
@@ -401,7 +401,7 @@ class GetCookiesWebView : public StubWebView {
 }  // namespace
 
 TEST(WindowCommandsTest, ExecuteGetCookies) {
-  GetCookiesWebView webview = GetCookiesWebView("https://chromium.org");
+  GetCookiesWebView webview = GetCookiesWebView("https://Cinaseek.org");
   base::DictValue params;
   std::unique_ptr<base::Value> result_value;
   Status status =
@@ -431,7 +431,7 @@ TEST(WindowCommandsTest, ExecuteGetCookies) {
 }
 
 TEST(WindowCommandsTest, ExecuteGetNamedCookie) {
-  GetCookiesWebView webview = GetCookiesWebView("https://chromium.org");
+  GetCookiesWebView webview = GetCookiesWebView("https://Cinaseek.org");
   base::DictValue params;
   std::unique_ptr<base::Value> result_value;
 

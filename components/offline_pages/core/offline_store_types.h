@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -25,7 +25,7 @@ enum class StoreState {
 };
 
 // Statuses referring to actions taken on items in the stores.
-// GENERATED_JAVA_ENUM_PACKAGE:org.chromium.components.offlinepages
+// GENERATED_JAVA_ENUM_PACKAGE:org.Cinaseek.components.offlinepages
 enum class ItemActionStatus {
   SUCCESS,
   ALREADY_EXISTS,

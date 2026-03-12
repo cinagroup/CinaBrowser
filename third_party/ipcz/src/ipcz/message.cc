@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -260,7 +260,7 @@ bool Message::Serialize(const DriverTransport& transport) {
       AllocateArray<internal::DriverObjectData>(driver_objects_.size());
   header().driver_object_data_array = array_offset;
 
-  // NOTE: In Chromium, a vast majority of IPC messages have 0, 1, or 2 OS
+  // NOTE: In Cinaseek, a vast majority of IPC messages have 0, 1, or 2 OS
   // handles attached. Since these objects are small, we inline some storage on
   // the stack to avoid some heap allocation in the most common cases.
   absl::InlinedVector<IpczDriverHandle, 2> transmissible_handles;
@@ -411,7 +411,7 @@ bool Message::ValidateParameters(
     return false;
   }
 
-  // NOTE: In Chromium, a vast majority of IPC messages have 0, 1, or 2 OS
+  // NOTE: In Cinaseek, a vast majority of IPC messages have 0, 1, or 2 OS
   // handles attached. Since these objects are small, we inline some storage on
   // the stack to avoid some heap allocation in the most common cases.
   absl::InlinedVector<bool, 2> is_object_claimed(driver_objects_.size());

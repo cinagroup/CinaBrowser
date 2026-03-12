@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -374,7 +374,7 @@ void GPU::RequestAdapterImpl(
         execution_context,
         "Beware! featureLevel was set to \"compatibility\", but this request "
         "is being ignored. Compatibility restrictions will start being "
-        "enforced as soon as Chromium ships Compatibility Mode, potentially "
+        "enforced as soon as Cinaseek ships Compatibility Mode, potentially "
         "breaking this webpage. See "
         "https://github.com/gpuweb/gpuweb/issues/4266");
   }

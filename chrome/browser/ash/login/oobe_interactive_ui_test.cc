@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -928,7 +928,7 @@ void OobeZeroTouchInteractiveUITest::ZeroTouchEndToEnd() {
 }
 
 // crbug.com/40642229. Disabled on MSAN since they time out.
-// crbug.com/1055853: EndToEnd is flaky on Linux Chromium OS ASan LSan
+// crbug.com/1055853: EndToEnd is flaky on Linux Cinaseek OS ASan LSan
 #if defined(MEMORY_SANITIZER) || defined(ADDRESS_SANITIZER) || \
     defined(LEAK_SANITIZER) || !defined(NDEBUG)
 #define MAYBE_EndToEnd DISABLED_EndToEnd

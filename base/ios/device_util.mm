@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@
 namespace {
 
 // Client ID key in the user preferences.
-NSString* const kLegacyClientIdPreferenceKey = @"ChromiumClientID";
+NSString* const kLegacyClientIdPreferenceKey = @"CinaseekClientID";
 NSString* const kClientIdPreferenceKey = @"ChromeClientID";
 // Current hardware type. This is used to detect that a device has been backed
 // up and restored to another device, and allows regenerating a new device id.

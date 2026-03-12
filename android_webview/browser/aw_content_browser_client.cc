@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -622,7 +622,7 @@ bool AwContentBrowserClient::CanCreateWindow(
 }
 
 base::FilePath AwContentBrowserClient::GetDefaultDownloadDirectory() {
-  // Android WebView does not currently use the Chromium downloads system.
+  // Android WebView does not currently use the Cinaseek downloads system.
   // Download requests are cancelled immediately when recognized. However the
   // download system still tries to start up and calls this before recognizing
   // the request has been cancelled.
@@ -630,7 +630,7 @@ base::FilePath AwContentBrowserClient::GetDefaultDownloadDirectory() {
 }
 
 std::string AwContentBrowserClient::GetDefaultDownloadName() {
-  NOTREACHED() << "Android WebView does not use chromium downloads";
+  NOTREACHED() << "Android WebView does not use Cinaseek downloads";
 }
 
 std::optional<base::FilePath>

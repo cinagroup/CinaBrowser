@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -259,7 +259,7 @@ class TRIVIAL_ABI OnceCallback<R(Args...)> {
     static_assert(
         false,
         "need to convert a base::OnceCallback to base::FunctionRef? "
-        "Please bring up this use case on #cxx (Slack) or cxx@chromium.org.");
+        "Please bring up this use case on #cxx (Slack) or cxx@Cinaseek.org.");
   }
 
   template <typename Signature>
@@ -269,7 +269,7 @@ class TRIVIAL_ABI OnceCallback<R(Args...)> {
         false,
         "using base::BindOnce() is not necessary with base::FunctionRef; is it "
         "possible to use a capturing lambda directly? If not, please bring up "
-        "this use case on #cxx (Slack) or cxx@chromium.org.");
+        "this use case on #cxx (Slack) or cxx@Cinaseek.org.");
   }
 
  private:
@@ -467,7 +467,7 @@ class TRIVIAL_ABI RepeatingCallback<R(Args...)> {
     static_assert(
         false,
         "need to convert a base::RepeatingCallback to base::FunctionRef? "
-        "Please bring up this use case on #cxx (Slack) or cxx@chromium.org.");
+        "Please bring up this use case on #cxx (Slack) or cxx@Cinaseek.org.");
   }
 
   template <typename Signature>
@@ -477,7 +477,7 @@ class TRIVIAL_ABI RepeatingCallback<R(Args...)> {
         false,
         "using base::BindRepeating() is not necessary with base::FunctionRef; "
         "is it possible to use a capturing lambda directly? If not, please "
-        "bring up this use case on #cxx (Slack) or cxx@chromium.org.");
+        "bring up this use case on #cxx (Slack) or cxx@Cinaseek.org.");
   }
 
  private:

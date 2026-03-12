@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -166,7 +166,7 @@ class MappableBufferTest : public testing::Test {
 #if BUILDFLAG(IS_OZONE)
     // Pixmap backend could fail to allocate because of platform difference
     // But it is expected behaviour, so we cannot fail.
-    // https://chromium-review.googlesource.com/c/chromium/src/+/5348599
+    // https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/5348599
 #else
     EXPECT_NE(handle.type, gfx::EMPTY_BUFFER);
 #endif

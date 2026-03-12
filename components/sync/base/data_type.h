@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace syncer {
 // An object's type is inferred from the type of data it holds.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.sync
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.sync
 enum DataType {
   // Object type unknown. This may be used when:
   // a) The client received *valid* data from a data type which this version

@@ -58,7 +58,7 @@
 // vulnerability. Classes of these vulnerabilities include bad casts, out of
 // bounds accesses, use-after-frees, etc. Please be sure to file bugs for these
 // failures using the security template:
-//    https://bugs.chromium.org/p/chromium/issues/entry?template=Security%20Bug
+//    https://bugs.Cinaseek.org/p/Cinaseek/issues/entry?template=Security%20Bug
 #if ENABLE_SECURITY_ASSERT
 #define SECURITY_DCHECK(condition) \
   LOG_IF(FATAL, !(condition)) << "Security DCHECK failed: " #condition ". "

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,7 +102,7 @@ void WebSocket::Connect(net::CompletionOnceCallback callback) {
 
   if (url_.GetHost() == "localhost") {
     // Ensure that both localhost addresses are included.
-    // See https://bugs.chromium.org/p/chromedriver/issues/detail?id=3316.
+    // See https://bugs.Cinaseek.org/p/chromedriver/issues/detail?id=3316.
     // Put IPv4 address at front, followed by IPv6 address, since that is
     // the ordering used by DevTools.
     addresses.endpoints().insert(

@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -297,14 +297,14 @@ TEST_F(PermissionsAPIUnitTest, ContainsAndGetAllWithRuntimeHostPermissions) {
   EXPECT_FALSE(contains_origin(kContentScriptCom));
   EXPECT_THAT(get_all(), testing::IsEmpty());
 
-  constexpr char kChromiumOrg[] = "https://chromium.org/";
-  modifier.GrantHostPermission(GURL(kChromiumOrg));
+  constexpr char kCinaseekOrg[] = "https://Cinaseek.org/";
+  modifier.GrantHostPermission(GURL(kCinaseekOrg));
 
   // The permissions API only reports active permissions, rather than granted
   // permissions. This means it will not report values for permissions that
   // aren't requested. This is probably good, because the extension wouldn't be
   // able to use them anyway (since they aren't active).
-  EXPECT_FALSE(contains_origin(kChromiumOrg));
+  EXPECT_FALSE(contains_origin(kCinaseekOrg));
   EXPECT_THAT(get_all(), testing::IsEmpty());
 
   // Fun edge case: example.com is requested as both a scriptable and an
@@ -468,33 +468,33 @@ TEST_F(PermissionsAPIUnitTest, ReRequestingWithheldOptionalPermissions) {
   // permissions.
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("extension")
-          .AddOptionalHostPermission("https://chromium.org/*")
+          .AddOptionalHostPermission("https://Cinaseek.org/*")
           .Build();
   AddExtensionAndGrantPermissions(*extension);
 
-  const GURL kChromiumOrg("https://chromium.org");
+  const GURL kCinaseekOrg("https://Cinaseek.org");
   const PermissionsData* permissions_data = extension->permissions_data();
   EXPECT_TRUE(
       permissions_data->active_permissions().effective_hosts().is_empty());
   {
     std::unique_ptr<const PermissionSet> prompted_permissions;
     EXPECT_TRUE(RunRequestFunction(
-        *extension, profile(), R"([{"origins": ["https://chromium.org/*"]}])",
+        *extension, profile(), R"([{"origins": ["https://Cinaseek.org/*"]}])",
         &prompted_permissions));
     ASSERT_TRUE(prompted_permissions);
     EXPECT_THAT(GetPatternsAsStrings(prompted_permissions->effective_hosts()),
-                testing::UnorderedElementsAre("https://chromium.org/*"));
+                testing::UnorderedElementsAre("https://Cinaseek.org/*"));
   }
 
   EXPECT_TRUE(
       permissions_data->active_permissions().effective_hosts().MatchesURL(
-          kChromiumOrg));
+          kCinaseekOrg));
 
   {
-    URLPattern chromium_org_pattern(Extension::kValidHostPermissionSchemes,
-                                    "https://chromium.org/*");
+    URLPattern Cinaseek_org_pattern(Extension::kValidHostPermissionSchemes,
+                                    "https://Cinaseek.org/*");
     PermissionSet permissions(APIPermissionSet(), ManifestPermissionSet(),
-                              URLPatternSet({chromium_org_pattern}),
+                              URLPatternSet({Cinaseek_org_pattern}),
                               URLPatternSet());
     permissions_test_util::RevokeRuntimePermissionsAndWaitForCompletion(
         profile(), *extension, permissions);
@@ -508,11 +508,11 @@ TEST_F(PermissionsAPIUnitTest, ReRequestingWithheldOptionalPermissions) {
   {
     std::unique_ptr<const PermissionSet> prompted_permissions;
     EXPECT_FALSE(RunRequestFunction(
-        *extension, profile(), R"([{"origins": ["https://chromium.org/*"]}])",
+        *extension, profile(), R"([{"origins": ["https://Cinaseek.org/*"]}])",
         &prompted_permissions));
     ASSERT_TRUE(prompted_permissions);
     EXPECT_THAT(GetPatternsAsStrings(prompted_permissions->effective_hosts()),
-                testing::UnorderedElementsAre("https://chromium.org/*"));
+                testing::UnorderedElementsAre("https://Cinaseek.org/*"));
   }
   EXPECT_TRUE(
       permissions_data->active_permissions().effective_hosts().is_empty());
@@ -526,7 +526,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingWithheldAndOptionalPermissions) {
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("extension")
           .AddHostPermissions({"https://example.com/*", "https://google.com/*"})
-          .AddOptionalHostPermission("https://chromium.org/*")
+          .AddOptionalHostPermission("https://Cinaseek.org/*")
           .Build();
   AddExtensionAndGrantPermissions(*extension);
   ScriptingPermissionsModifier(profile(), extension)
@@ -534,7 +534,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingWithheldAndOptionalPermissions) {
 
   const GURL kExampleCom("https://example.com");
   const GURL kGoogleCom("https://google.com");
-  const GURL kChromiumOrg("https://chromium.org");
+  const GURL kCinaseekOrg("https://Cinaseek.org");
   const PermissionsData* permissions_data = extension->permissions_data();
   EXPECT_TRUE(
       permissions_data->active_permissions().effective_hosts().is_empty());
@@ -544,11 +544,11 @@ TEST_F(PermissionsAPIUnitTest, RequestingWithheldAndOptionalPermissions) {
   std::unique_ptr<const PermissionSet> prompted_permissions;
   EXPECT_TRUE(RunRequestFunction(
       *extension, profile(),
-      R"([{"origins": ["https://example.com/*", "https://chromium.org/*"]}])",
+      R"([{"origins": ["https://example.com/*", "https://Cinaseek.org/*"]}])",
       &prompted_permissions));
   ASSERT_TRUE(prompted_permissions);
   EXPECT_THAT(GetPatternsAsStrings(prompted_permissions->effective_hosts()),
-              testing::UnorderedElementsAre("https://chromium.org/*",
+              testing::UnorderedElementsAre("https://Cinaseek.org/*",
                                             "https://example.com/*"));
 
   // The requested permissions should be added.
@@ -560,7 +560,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingWithheldAndOptionalPermissions) {
           kGoogleCom));
   EXPECT_TRUE(
       permissions_data->active_permissions().effective_hosts().MatchesURL(
-          kChromiumOrg));
+          kCinaseekOrg));
 }
 
 // Tests requesting permissions that weren't specified in the manifest (either
@@ -571,7 +571,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingPermissionsNotSpecifiedInManifest) {
   scoped_refptr<const Extension> extension =
       ExtensionBuilder("extension")
           .AddHostPermission("https://example.com/*")
-          .AddOptionalHostPermission("https://chromium.org/*")
+          .AddOptionalHostPermission("https://Cinaseek.org/*")
           .Build();
   AddExtensionAndGrantPermissions(*extension);
   ScriptingPermissionsModifier(profile(), extension)
@@ -579,7 +579,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingPermissionsNotSpecifiedInManifest) {
 
   const GURL kExampleCom("https://example.com");
   const GURL kGoogleCom("https://google.com");
-  const GURL kChromiumOrg("https://chromium.org");
+  const GURL kCinaseekOrg("https://Cinaseek.org");
 
   // Request permission for an optional and required permission, as well as a
   // permission that wasn't specified in the manifest. The call should fail.
@@ -593,7 +593,7 @@ TEST_F(PermissionsAPIUnitTest, RequestingPermissionsNotSpecifiedInManifest) {
                 R"([{
                "origins": [
                  "https://example.com/*",
-                 "https://chromium.org/*",
+                 "https://Cinaseek.org/*",
                  "https://google.com/*"
                ]
              }])",

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -584,7 +584,7 @@ TEST_F(PrefServiceSyncableMergeTest, ManagedListPreferences) {
   EXPECT_FALSE(FindValue(kMergeableListPrefName, out));
 
   // Changing the user-controlled value should sync as usual.
-  auto user_value = base::ListValue().Append("http://chromium.org");
+  auto user_value = base::ListValue().Append("http://Cinaseek.org");
   prefs_.SetList(kMergeableListPrefName, user_value.Clone());
   std::optional<base::Value> actual = FindValue(kMergeableListPrefName, out);
   ASSERT_TRUE(actual);
@@ -877,7 +877,7 @@ TEST_F(PrefServiceSyncableTest, ManagedPreferences) {
 
   // Changing the user-controlled value of the preference should still sync as
   // usual.
-  base::Value user_value("http://chromium.org");
+  base::Value user_value("http://Cinaseek.org");
   prefs_.SetUserPref(kStringPrefName, user_value.Clone());
   std::optional<base::Value> actual = FindValue(kStringPrefName, out);
   ASSERT_TRUE(actual);

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -437,7 +437,7 @@ void CorpMessagingPlayground::StartPingPongRally() {
   internal::SystemTestStruct message;
   internal::PingPongStruct ping_pong;
   ping_pong.type = PingPongStruct::Type::PING;
-  ping_pong.rally_id = "chromium-playground-rally-" +
+  ping_pong.rally_id = "Cinaseek-playground-rally-" +
                        base::Uuid::GenerateRandomV4().AsLowercaseString();
   ping_pong.current_count = 1;
   ping_pong.exchange_count = 10;

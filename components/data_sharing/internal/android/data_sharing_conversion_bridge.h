@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,14 +21,14 @@ namespace data_sharing {
 class DataSharingConversionBridge {
  public:
   // Creates an object of
-  // org.chromium.components.data_sharing.DataSharingService.
+  // org.Cinaseek.components.data_sharing.DataSharingService.
   //   GroupDataOrFailureOutcome.
   static ScopedJavaLocalRef<jobject> CreateGroupDataOrFailureOutcome(
       JNIEnv* env,
       const DataSharingService::GroupDataOrFailureOutcome& data);
 
   // Creates an object of
-  // org.chromium.components.data_sharing.DataSharingService.
+  // org.Cinaseek.components.data_sharing.DataSharingService.
   //   GroupsDataSetOrFailureOutcome.
   static ScopedJavaLocalRef<jobject> CreateGroupDataSetOrFailureOutcome(
       JNIEnv* env,
@@ -41,13 +41,13 @@ class DataSharingConversionBridge {
                                                                     int value);
 
   // Creates an object of
-  // org.chromium.components.data_sharing.DataSharingService.ParseUrlResult.
+  // org.Cinaseek.components.data_sharing.DataSharingService.ParseUrlResult.
   static ScopedJavaLocalRef<jobject> CreateParseUrlResult(
       JNIEnv* env,
       const ParseUrlResult& data);
 
   // Creates an object of
-  // org.chromium.components.data_sharing.DataSharingService.
+  // org.Cinaseek.components.data_sharing.DataSharingService.
   //   SharedDataPreviewOrFailureOutcome.
   static ScopedJavaLocalRef<jobject> CreateSharedDataPreviewOrFailureOutcome(
       JNIEnv* env,

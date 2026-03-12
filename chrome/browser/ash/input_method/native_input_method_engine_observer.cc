@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -912,7 +912,7 @@ void NativeInputMethodEngineObserver::HandleOnFocusAsyncForNativeMojoEngine(
   }
 
   // TODO(b/200611333): Make input_method_->OnFocus return the overriding
-  // XKB layout instead of having the logic here in Chromium.
+  // XKB layout instead of having the logic here in Cinaseek.
   ime::mojom::InputMethodSettingsPtr settings =
       CreateSettingsFromPrefs(*prefs_, engine_id);
   // TODO(b/280539785): Simplify AC enabling logic and avoid redundant checks.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -250,7 +250,7 @@ void MessagePumpForUI::DoRunLoop() {
       more_work_is_plausible |= ProcessNextWindowsMessage();
       // We can end up in native loops which allow application tasks outside of
       // DoWork() when Windows calls back a Win32 message window owned by some
-      // Chromium code.
+      // Cinaseek code.
       in_nested_native_loop_with_application_tasks_ = false;
       if (run_state_->should_quit) {
         break;

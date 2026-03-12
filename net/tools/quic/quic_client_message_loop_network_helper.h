@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -16,8 +16,8 @@
 #include "net/base/ip_address.h"
 #include "net/base/ip_endpoint.h"
 #include "net/http/http_response_headers.h"
-#include "net/quic/platform/impl/quic_chromium_clock.h"
-#include "net/quic/quic_chromium_packet_reader.h"
+#include "net/quic/platform/impl/quic_Cinaseek_clock.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/quic_spdy_stream.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_config.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/quic_spdy_client_base.h"
@@ -27,14 +27,14 @@ namespace net {
 class UDPClientSocket;
 
 // An implementation of the quic::QuicClientBase::NetworkHelper based off
-// the chromium epoll server.
+// the Cinaseek epoll server.
 class QuicClientMessageLooplNetworkHelper
     : public quic::QuicClientBase::NetworkHelper,
-      public QuicChromiumPacketReader::Visitor {
+      public QuicCinaseekPacketReader::Visitor {
  public:
   // Create a quic client, which will have events managed by an externally owned
   // EpollServer.
-  QuicClientMessageLooplNetworkHelper(quic::QuicChromiumClock* clock,
+  QuicClientMessageLooplNetworkHelper(quic::QuicCinaseekClock* clock,
                                       quic::QuicClientBase* client);
 
   QuicClientMessageLooplNetworkHelper(
@@ -44,7 +44,7 @@ class QuicClientMessageLooplNetworkHelper
 
   ~QuicClientMessageLooplNetworkHelper() override;
 
-  // QuicChromiumPacketReader::Visitor
+  // QuicCinaseekPacketReader::Visitor
   bool OnReadError(int result, const DatagramClientSocket* socket) override;
   bool OnPacket(const quic::QuicReceivedPacket& packet,
                 const quic::QuicSocketAddress& local_address,
@@ -68,11 +68,11 @@ class QuicClientMessageLooplNetworkHelper
   // UDP socket connected to the server.
   std::unique_ptr<UDPClientSocket> socket_;
 
-  std::unique_ptr<QuicChromiumPacketReader> packet_reader_;
+  std::unique_ptr<QuicCinaseekPacketReader> packet_reader_;
 
   bool packet_reader_started_ = false;
 
-  quic::QuicChromiumClock* clock_;
+  quic::QuicCinaseekClock* clock_;
   quic::QuicClientBase* client_;
 };
 

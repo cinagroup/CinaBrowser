@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -910,7 +910,7 @@ class NoLocalCompileHintsBrowserTest : public CompileHintsBrowserTest {
 };
 
 IN_PROC_BROWSER_TEST_F(NoLocalCompileHintsBrowserTest, NoCompileHints) {
-  // TODO(chromium:1495723): Migrate this test to use use counters once we no
+  // TODO(Cinaseek:1495723): Migrate this test to use use counters once we no
   // longer have the histograms.
 
   // With this, we can query the code cache in a unified way in platforms which
@@ -977,7 +977,7 @@ IN_PROC_BROWSER_TEST_F(NoLocalCompileHintsBrowserTest, NoCompileHints) {
 }
 
 IN_PROC_BROWSER_TEST_F(LocalCompileHintsBrowserTest, LocalCompileHints) {
-  // TODO(chromium:1495723): Migrate this test to use use counters once we no
+  // TODO(Cinaseek:1495723): Migrate this test to use use counters once we no
   // longer have the histograms.
 
   // With this, we can query the code cache in a unified way in platforms which

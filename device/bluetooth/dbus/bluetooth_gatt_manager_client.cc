@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,9 +19,9 @@
 namespace bluez {
 
 const char BluetoothGattManagerClient::kNoResponseError[] =
-    "org.chromium.Error.NoResponse";
+    "org.Cinaseek.Error.NoResponse";
 const char BluetoothGattManagerClient::kUnknownGattManager[] =
-    "org.chromium.Error.UnknownGattManager";
+    "org.Cinaseek.Error.UnknownGattManager";
 
 namespace {
 

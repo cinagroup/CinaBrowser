@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ class MEDIA_EXPORT KeySystems {
   // out of date. Calls the `done_cb` when done.
   virtual void UpdateIfNeeded(base::OnceClosure done_cb) = 0;
 
-  // Gets the base key system name, e.g. "org.chromium.foo".
+  // Gets the base key system name, e.g. "org.Cinaseek.foo".
   virtual std::string GetBaseKeySystemName(
       const std::string& key_system) const = 0;
 

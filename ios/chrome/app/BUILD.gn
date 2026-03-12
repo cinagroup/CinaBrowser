@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -317,7 +317,7 @@ source_set("perf_tests_hook") {
 tweak_info_plist("info_plist") {
   info_plists = [
     "resources/Info.plist",
-    "resources/ChromeAddition+Info.plist",
+    "resources/CinaseekAddition+Info.plist",
   ]
   if (ios_enable_background_mode) {
     info_plists += [ "resources/Background+Info.plist" ]
@@ -343,13 +343,13 @@ tweak_info_plist("info_plist") {
     deps += ios_chrome_info_plist_addition_targets
   }
   args = [
-    "--branding=$chromium_short_name",
+    "--branding=$Cinaseek_short_name",
     "--add-gtm-metadata=1",
   ]
 }
 
 compile_entitlements("entitlements") {
-  entitlements_templates = [ "resources/Chrome.entitlements" ]
+  entitlements_templates = [ "resources/Cinaseek.entitlements" ]
   if (ios_chrome_entitlements_additions != []) {
     entitlements_templates += ios_chrome_entitlements_additions
   }
@@ -360,7 +360,7 @@ compile_entitlements("entitlements") {
     entitlements_templates += [ "//content/app/ios/appex/app.entitlements" ]
   }
   substitutions = [ "IOS_BUNDLE_ID_PREFIX=$ios_app_bundle_id_prefix" ]
-  output_name = "$target_gen_dir/$chromium_short_name.entitlements"
+  output_name = "$target_gen_dir/$Cinaseek_short_name.entitlements"
 }
 
 if (ios_enable_credential_provider_extension) {
@@ -821,11 +821,11 @@ ios_framework_bundle("early_partition_alloc_framework") {
 }
 
 chrome_app("chrome") {
-  output_name = chromium_short_name
+  output_name = Cinaseek_short_name
 
   entitlements_target = ":entitlements"
   info_plist_target = ":info_plist"
-  bundle_identifier = "$ios_chromium_bundle_id"
+  bundle_identifier = "$ios_Cinaseek_bundle_id"
   if (ios_chrome_orderfile != "") {
     orderfile_path = ios_chrome_orderfile
   }
@@ -903,9 +903,9 @@ chrome_app("chrome") {
   }
 
   extra_substitutions = [
-    "CHROMIUM_BUNDLE_ID=$ios_chromium_bundle_id",
-    "CHROMIUM_HANDOFF_ID=$chromium_handoff_id",
-    "CHROMIUM_SHORT_NAME=$chromium_short_name",
+    "CHROMIUM_BUNDLE_ID=$ios_Cinaseek_bundle_id",
+    "CHROMIUM_HANDOFF_ID=$Cinaseek_handoff_id",
+    "CHROMIUM_SHORT_NAME=$Cinaseek_short_name",
     "CHROMIUM_URL_SCHEME_1=$url_unsecure_scheme",
     "CHROMIUM_URL_SCHEME_2=$url_secure_scheme",
     "CHROMIUM_URL_SCHEME_3=$url_x_callback_scheme",
@@ -926,7 +926,7 @@ chrome_app("chrome") {
   # is a stop-gap solution.
   if (target_environment == "catalyst" ||
       ios_provider_target !=
-      "//ios/chrome/browser/providers:chromium_providers") {
+      "//ios/chrome/browser/providers:Cinaseek_providers") {
     assert_no_deps += [
       "//ios/third_party/lottie:lottie+bundle",
       "//ios/third_party/lottie:lottie+link",

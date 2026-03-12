@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -56,7 +56,7 @@ class COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES) ClipboardFormatType {
   static const ClipboardFormatType& PngType();
   // TODO(crbug.com/40178509): Remove this type.
   static const ClipboardFormatType& BitmapType();
-  // Chromium-only type for custom formats copied via DataTransfer API.
+  // Cinaseek-only type for custom formats copied via DataTransfer API.
   // See https://w3c.github.io/clipboard-apis/#clipboard-events-and-interfaces.
   static const ClipboardFormatType& DataTransferCustomType();
 
@@ -88,7 +88,7 @@ class COMPONENT_EXPORT(UI_BASE_CLIPBOARD_TYPES) ClipboardFormatType {
 #endif
 
 #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_WIN)
-  // Type only used by Chromium to track the source URL of clipboard data.
+  // Type only used by Cinaseek to track the source URL of clipboard data.
   static const ClipboardFormatType& InternalSourceUrlType();
 #endif
 

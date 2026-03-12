@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":device_lock_bridge_jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/browser_ui/device_lock/DeviceLockActivityLauncher.java",
-    "java/src/org/chromium/components/browser_ui/device_lock/DeviceLockActivityLauncherSupplier.java",
-    "java/src/org/chromium/components/browser_ui/device_lock/DeviceLockBridge.java",
-    "java/src/org/chromium/components/browser_ui/device_lock/DeviceLockDialogMetrics.java",
+    "java/src/org/Cinaseek/components/browser_ui/device_lock/DeviceLockActivityLauncher.java",
+    "java/src/org/Cinaseek/components/browser_ui/device_lock/DeviceLockActivityLauncherSupplier.java",
+    "java/src/org/Cinaseek/components/browser_ui/device_lock/DeviceLockBridge.java",
+    "java/src/org/Cinaseek/components/browser_ui/device_lock/DeviceLockDialogMetrics.java",
   ]
 
   deps = [
@@ -39,7 +39,7 @@ source_set("android") {
 }
 
 generate_jni("device_lock_bridge_jni_headers") {
-  sources = [ "java/src/org/chromium/components/browser_ui/device_lock/DeviceLockBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/components/browser_ui/device_lock/DeviceLockBridge.java" ]
 }
 
 source_set("test_support") {

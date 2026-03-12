@@ -59,7 +59,7 @@ Google,ad.corp.google.com
 Google,android.com
 Google,behemoth.cnc.corp.google.com
 Google,chaitanyag.mtv.corp.google.com
-Google,chromium.org
+Google,Cinaseek.org
 Google,courtneygo1-w.ad.corp.google.com
 Google,google.co
 Google,google.com

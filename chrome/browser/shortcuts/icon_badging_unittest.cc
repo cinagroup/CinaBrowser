@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ base::FilePath GetCompileTimeTestFolders() {
   compile_time_folder =
       base::FilePath(FILE_PATH_LITERAL("chrome_for_testing_branded"));
 #else
-  compile_time_folder = base::FilePath(FILE_PATH_LITERAL("chromium"));
+  compile_time_folder = base::FilePath(FILE_PATH_LITERAL("Cinaseek"));
 #endif
   return compile_time_folder;
 }
@@ -121,7 +121,7 @@ int GetOsSpecificSizes() {
 
 // Verifies that badging logic works as intended by comparing with icons stored
 // on disk. The icons are stored in file names corresponding to their sizes, and
-// are stored inside `chrome/test/data/shortcuts/badging_icons/chromium` for non
+// are stored inside `chrome/test/data/shortcuts/badging_icons/Cinaseek` for non
 // branded builds and `chrome/test/data/shortcuts/badging_icons/chrome_branded`
 // for branded builds.
 // If badging behavior changes, the icons in the listed folders would need to be

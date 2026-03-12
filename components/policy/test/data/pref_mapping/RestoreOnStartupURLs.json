@@ -12,13 +12,13 @@
       {
         "policies": {
           "RestoreOnStartupURLs": [
-            "chromium.org"
+            "Cinaseek.org"
           ]
         },
         "prefs": {
           "session.startup_urls": {
             "value": [
-              "chromium.org"
+              "Cinaseek.org"
             ]
           }
         }

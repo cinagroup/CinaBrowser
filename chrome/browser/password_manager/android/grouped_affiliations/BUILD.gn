@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -23,7 +23,7 @@ static_library("public") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetBridge.java" ]
 }
 
 java_cpp_enum("java_enum_srcjar") {
@@ -38,9 +38,9 @@ android_library("java") {
     ":jni_headers",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetBridge.java",
-    "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetController.java",
-    "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetView.java",
+    "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetController.java",
+    "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetView.java",
   ]
 
   deps = [
@@ -56,7 +56,7 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.grouped_affiliations"
+  resources_package = "org.Cinaseek.chrome.browser.grouped_affiliations"
 }
 
 android_resources("java_resources") {
@@ -90,9 +90,9 @@ source_set("unit_tests") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.grouped_affiliations"
+  resources_package = "org.Cinaseek.chrome.browser.grouped_affiliations"
 
-  sources = [ "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetModuleTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetModuleTest.java" ]
 
   deps = [
     ":java",
@@ -115,9 +115,9 @@ robolectric_library("junit") {
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.grouped_affiliations"
+  resources_package = "org.Cinaseek.chrome.browser.grouped_affiliations"
 
-  sources = [ "java/src/org/chromium/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetRenderTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/grouped_affiliations/AcknowledgeGroupedCredentialSheetRenderTest.java" ]
 
   deps = [
     ":java",

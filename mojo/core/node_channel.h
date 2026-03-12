@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -216,7 +216,7 @@ class MOJO_SYSTEM_IMPL_EXPORT NodeChannel
 
   // This dangling raw_ptr occurred in:
   // mojo_unittests: NodeChannelTest.MessagesCannotBeSmallerThanOldestVersion
-  // https://ci.chromium.org/ui/p/chromium/builders/try/linux-rel/1425190/test-results?q=ExactID%3Aninja%3A%2F%2Fmojo%3Amojo_unittests%2FNodeChannelTest.MessagesCannotBeSmallerThanOldestVersion+VHash%3A589215eb23c7875a
+  // https://ci.Cinaseek.org/ui/p/Cinaseek/builders/try/linux-rel/1425190/test-results?q=ExactID%3Aninja%3A%2F%2Fmojo%3Amojo_unittests%2FNodeChannelTest.MessagesCannotBeSmallerThanOldestVersion+VHash%3A589215eb23c7875a
   const raw_ptr<Delegate, FlakyDanglingUntriaged> delegate_;
   const ProcessErrorCallback process_error_callback_;
 

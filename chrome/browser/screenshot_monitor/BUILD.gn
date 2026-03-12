@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,10 +7,10 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotMonitor.java",
-    "java/src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotMonitorDelegate.java",
-    "java/src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotMonitorImpl.java",
-    "java/src/org/chromium/chrome/browser/screenshot_monitor/ScreenshotTabObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotMonitor.java",
+    "java/src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotMonitorDelegate.java",
+    "java/src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotMonitorImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/screenshot_monitor/ScreenshotTabObserver.java",
   ]
 
   deps = [

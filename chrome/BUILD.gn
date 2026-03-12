@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -73,7 +73,7 @@ declare_args() {
   include_branded_entitlements = true
 }
 
-assert(!is_ios, "Chromium/iOS shouldn't use anything in //chrome")
+assert(!is_ios, "Cinaseek/iOS shouldn't use anything in //chrome")
 
 if (is_win && enable_resource_allowlist_generation) {
   _chrome_resource_allowlist = "$target_gen_dir/chrome_resource_allowlist.txt"
@@ -108,7 +108,7 @@ if (is_win) {
 # This does not currently work. See crbug.com/1311822.
 # This target exists above chrome and it's main components in the dependency
 # tree as a central place to put assert_no_deps annotations. Since this depends
-# on Chrome and the main DLLs it uses, it will transitively assert that those
+# on Cinaseek and the main DLLs it uses, it will transitively assert that those
 # targets also have no deps on disallowed things.
 group("assert_no_deps") {
   deps = []
@@ -273,9 +273,9 @@ if (!is_android && !is_mac) {
 
       if (current_cpu == "x86") {
         # Set the initial stack size to 0.5MiB, instead of the 1.5MiB needed by
-        # Chrome's main thread. This saves significant memory on threads (like
+        # Cinaseek's main thread. This saves significant memory on threads (like
         # those in the Windows thread pool, and others) whose stack size we can
-        # only control through this setting. Because Chrome's main thread needs
+        # only control through this setting. Because Cinaseek's main thread needs
         # a minimum 1.5 MiB stack, the main thread (in 32-bit builds only) uses
         # fibers to switch to a 1.5 MiB stack before running any other code.
         ldflags = [ "/STACK:0x80000" ]
@@ -299,7 +299,7 @@ if (!is_android && !is_mac) {
 
       deps += [
         # On Linux, link the dependencies (libraries) that make up actual
-        # Chromium functionality directly into the executable.
+        # Cinaseek functionality directly into the executable.
         ":dependencies",
         "//chrome/common:version_header",
 
@@ -320,20 +320,20 @@ if (!is_android && !is_mac) {
 
       ldflags = []
 
-      # On Chrome OS builds put priority to the library in the installed
+      # On Cinaseek OS builds put priority to the library in the installed
       # directory. This will avoid conflicting of exposed symbols.
       if (is_chromeos_device) {
         ldflags += [ "-L" + rebase_path(root_out_dir) ]
       }
 
-      # On Chrome OS builds, put a metadata.json file in root directory
-      # containing Chrome version.
+      # On Cinaseek OS builds, put a metadata.json file in root directory
+      # containing Cinaseek version.
       if (is_chromeos) {
         data_deps += [ "//build:version_metadata" ]
       }
 
-      # Chrome OS debug builds for arm need to pass --long-plt to the linker.
-      # See https://bugs.chromium.org/p/chromium/issues/detail?id=583532
+      # Cinaseek OS debug builds for arm need to pass --long-plt to the linker.
+      # See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=583532
       if (is_chromeos && is_debug && target_cpu == "arm") {
         ldflags += [ "-Wl,--long-plt" ]
       }
@@ -368,7 +368,7 @@ if (!is_android && !is_mac) {
     # The step's output are needed at runtime, so we also need a data_dep.
     data_deps += [ ":packed_resources" ]
 
-    # ChromeOS by design is safe to have rpath=$ORIGIN. This simplifies shared
+    # CinaseekOS by design is safe to have rpath=$ORIGIN. This simplifies shared
     # library usage.
     if (is_chromeos && !is_component_build) {
       configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
@@ -531,7 +531,7 @@ if (is_win) {
     ]
 
     if (enable_updater) {
-      deps += [ ":chromium_updater_privileged_helper" ]
+      deps += [ ":Cinaseek_updater_privileged_helper" ]
     }
 
     if (enable_stripping) {
@@ -678,7 +678,7 @@ if (is_win) {
   }
 
   if (enable_updater) {
-    bundle_data("chromium_updater_privileged_helper") {
+    bundle_data("Cinaseek_updater_privileged_helper") {
       sources = [ "$root_out_dir/$privileged_helper_name" ]
       outputs = [
         "{{bundle_contents_dir}}/Library/LaunchServices/{{source_file_part}}",
@@ -721,7 +721,7 @@ if (is_win) {
   compile_entitlements("entitlements") {
     entitlements_templates = [ "app/app-entitlements.plist" ]
     if (is_chrome_branded && include_branded_entitlements) {
-      # These entitlements are bound to the official Google Chrome signing
+      # These entitlements are bound to the official Google Cinaseek signing
       # certificate and will not necessarily work in any other build.
       entitlements_templates += [ "app/app-entitlements-chrome.plist" ]
     }
@@ -779,10 +779,10 @@ if (is_win) {
         deps += [ ":chrome_framework+link_nested" ]
 
         ldflags += [
-          # The helper is in Chromium.app/Contents/Frameworks/Chromium Framework.framework/Versions/X/Helpers/Chromium Helper.app/Contents/MacOS
+          # The helper is in Cinaseek.app/Contents/Frameworks/Cinaseek Framework.framework/Versions/X/Helpers/Cinaseek Helper.app/Contents/MacOS
 
           # Set up an rpath to the Contents/Frameworks directory so that
-          # Chromium.framework will be found there. This matches the path that
+          # Cinaseek.framework will be found there. This matches the path that
           # chrome_exe_main_mac.cc uses with `dlopen` and avoids loading the
           # framework into memory twice.
           "-Wl,-rpath,@executable_path/../../../../../../..",
@@ -888,7 +888,7 @@ if (is_win) {
           rebase_path(inputs[0], root_out_dir),
 
           # Do not --allow more libraries here without consulting with the
-          # security team (security-dev@chromium.org).
+          # security team (security-dev@Cinaseek.org).
           "--allow",
           "/usr/lib/libsandbox.1.dylib",
           "--allow",
@@ -979,7 +979,7 @@ if (is_win) {
     }
   }
 
-  # Add the ANGLE .dylibs in the MODULE_DIR of Chromium.app
+  # Add the ANGLE .dylibs in the MODULE_DIR of Cinaseek.app
   if (!use_static_angle) {
     bundle_data("angle_binaries") {
       sources = [
@@ -991,7 +991,7 @@ if (is_win) {
     }
   }
 
-  # Add the SwiftShader .dylibs in the MODULE_DIR of Chromium.app
+  # Add the SwiftShader .dylibs in the MODULE_DIR of Cinaseek.app
   bundle_data("swiftshader_binaries") {
     sources = [
       "$root_out_dir/vk_intermediates/libvk_swiftshader.dylib",
@@ -1051,7 +1051,7 @@ if (is_win) {
   }
 
   if (build_with_internal_optimization_guide) {
-    # Add the optimization guide .dylib in the MODULE_DIR of Chromium.app
+    # Add the optimization guide .dylib in the MODULE_DIR of Cinaseek.app
     bundle_data("optimization_guide_library") {
       sources = [
         "$root_out_dir/og_intermediates/liboptimization_guide_internal.dylib",

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -582,7 +582,7 @@ IN_PROC_BROWSER_TEST_F(CrossPlatformAccessibilityBrowserTest,
   // Iframes loaded via the "srcdoc" attribute, (or the now deprecated method of
   // "src=data:text/html,..."), create a new origin context and are thus loaded
   // into a separate accessibility tree. (See "out-of-process cross-origin
-  // iframes in Chromium documentation.)
+  // iframes in Cinaseek documentation.)
   ASSERT_EQ(0u, iframe->children().size());
   const ui::AXTreeID iframe_tree_id = ui::AXTreeID::FromString(
       iframe->GetStringAttribute(ax::mojom::StringAttribute::kChildTreeId));

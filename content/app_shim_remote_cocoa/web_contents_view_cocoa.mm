@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -198,7 +198,7 @@ STATIC_ASSERT_ENUM(NSDragOperationMove, ui::DragDropTypes::DRAG_MOVE);
   [self registerForDraggedTypes:@[
     NSPasteboardTypeFileURL, NSPasteboardTypeHTML, NSPasteboardTypeRTF,
     NSPasteboardTypeString, NSPasteboardTypeURL,
-    ui::kUTTypeChromiumInitiatedDrag, ui::kUTTypeChromiumDataTransferCustomData,
+    ui::kUTTypeCinaseekInitiatedDrag, ui::kUTTypeCinaseekDataTransferCustomData,
     ui::kUTTypeWebKitWebUrlsWithTitles
   ]];
 }

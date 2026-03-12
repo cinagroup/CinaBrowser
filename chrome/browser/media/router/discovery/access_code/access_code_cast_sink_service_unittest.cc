@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1159,7 +1159,7 @@ TEST_F(AccessCodeCastSinkServiceTest, HandleMediaRouteAdded) {
   cast_sink1.set_cast_data(cast_data1);
 
   const MediaRoute::Id fake_route_1 =
-      "urn:x-org.chromium:media:route:1/" + cast_sink1.id() + "/http://foo.com";
+      "urn:x-org.Cinaseek:media:route:1/" + cast_sink1.id() + "/http://foo.com";
 
   // cast_sink2 is a new access code sink.
   MediaSinkInternal cast_sink2 = CreateCastSink(2);
@@ -1168,7 +1168,7 @@ TEST_F(AccessCodeCastSinkServiceTest, HandleMediaRouteAdded) {
   cast_sink2.set_cast_data(cast_data2);
 
   const MediaRoute::Id fake_route_2 =
-      "urn:x-org.chromium:media:route:2/" + cast_sink2.id() + "/http://foo.com";
+      "urn:x-org.Cinaseek:media:route:2/" + cast_sink2.id() + "/http://foo.com";
 
   // cast_sink3 is a saved access code sink.
   MediaSinkInternal cast_sink3 = CreateCastSink(3);
@@ -1177,7 +1177,7 @@ TEST_F(AccessCodeCastSinkServiceTest, HandleMediaRouteAdded) {
   cast_sink3.set_cast_data(cast_data3);
 
   const MediaRoute::Id fake_route_3 =
-      "urn:x-org.chromium:media:route:3/" + cast_sink3.id() + "/http://foo.com";
+      "urn:x-org.Cinaseek:media:route:3/" + cast_sink3.id() + "/http://foo.com";
 
   // The histogram should start with nothing logged.
   histogram_tester.ExpectTotalCount(
@@ -1253,7 +1253,7 @@ TEST_F(AccessCodeCastSinkServiceTest, RecordRouteDuration) {
 
   // Now add a non-local route
   std::string route_id =
-      "urn:x-org.chromium:media:route:2/" + cast_sink1.id() + "/http://foo.com";
+      "urn:x-org.Cinaseek:media:route:2/" + cast_sink1.id() + "/http://foo.com";
   MediaRoute remote_route = MediaRoute(route_id, MediaSource("access_code"),
                                        cast_sink1.id(), "access_sink",
                                        /*is_local=*/false);

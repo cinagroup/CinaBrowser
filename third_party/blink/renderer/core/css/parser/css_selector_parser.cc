@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1351,7 +1351,7 @@ base::span<CSSSelector> CSSSelectorParser::ConsumeCompoundSelector(
   // The explicit case is when we simply have a tag; e.g. if someone wrote
   // div.foo.bar, we've added .foo.bar earlier and are prepending div now.
   //
-  // TODO(futhark@chromium.org): Prepending a type selector to the compound is
+  // TODO(futhark@Cinaseek.org): Prepending a type selector to the compound is
   // unnecessary if this compound is an argument to a pseudo selector like
   // :not(), since a type selector will be prepended at the top level of the
   // selector if necessary. We need to propagate that context information here
@@ -1390,7 +1390,7 @@ bool CSSSelectorParser::ConsumeSimpleSelector(CSSParserTokenStream& stream,
   } else {
     return false;
   }
-  // TODO(futhark@chromium.org): crbug.com/578131
+  // TODO(futhark@Cinaseek.org): crbug.com/578131
   // The UASheetMode check is a work-around to allow this selector in
   // mediaControls(New).css:
   // video::-webkit-media-text-track-region-container.scrolling

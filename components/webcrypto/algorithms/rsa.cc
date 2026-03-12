@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,7 +30,7 @@ namespace webcrypto {
 namespace {
 
 // Describes the RSA components for a parsed key. The names of the properties
-// correspond with those from the JWK spec. Note that Chromium's WebCrypto
+// correspond with those from the JWK spec. Note that Cinaseek's WebCrypto
 // implementation does not support multi-primes, so there is no parsed field
 // for "oth".
 struct JwkRsaInfo {
@@ -84,7 +84,7 @@ Status ReadRsaKeyJwk(base::span<const uint8_t> key_data,
     return status;
 
   // The "p", "q", "dp", "dq", and "qi" properties are optional in the JWA
-  // spec. However they are required by Chromium's WebCrypto implementation.
+  // spec. However they are required by Cinaseek's WebCrypto implementation.
 
   status = jwk.GetBigInteger("p", &result->p);
   if (status.IsError())

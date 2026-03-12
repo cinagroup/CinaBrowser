@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,7 +142,7 @@ void AccessTokenFetcher::VerifyScopeAccess() {
         NOTREACHED() << base::StringPrintf(
             "You are attempting to access a privileged scope '%s' without the "
             "required access, please file a bug for access at "
-            "https://bugs.chromium.org/p/chromium/issues/"
+            "https://bugs.Cinaseek.org/p/Cinaseek/issues/"
             "list?q=component:Services>SignIn.",
             scope.c_str());
     }

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -38,7 +38,7 @@ bool CrashpadWin::Initialize() {
   }
 
   // Leave metrics_path empty because this option is not used (or supported) on
-  // non-Chromium builds.
+  // non-Cinaseek builds.
   base::FilePath metrics_path;
 
   std::map<std::string, std::string> annotations;

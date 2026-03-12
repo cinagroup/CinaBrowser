@@ -1,7 +1,7 @@
 {
   "name": "javascript-coverage-node-modules",
   "version": "1.0.0",
-  "author": "benreich@chromium.org",
+  "author": "benreich@Cinaseek.org",
   "dependencies": {
     "argparse": "2.0.1",
     "istanbul-lib-coverage": "3.2.0",

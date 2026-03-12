@@ -1,4 +1,4 @@
-# Copyright 2013 The Chromium Authors
+# Copyright 2013 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -198,8 +198,8 @@ source_set("webgpu_sources") {
 
 component("gles2_utils") {
   sources = [
-    "gles2_cmd_copy_texture_chromium_utils.cc",
-    "gles2_cmd_copy_texture_chromium_utils.h",
+    "gles2_cmd_copy_texture_Cinaseek_utils.cc",
+    "gles2_cmd_copy_texture_Cinaseek_utils.h",
     "gles2_cmd_utils.cc",
     "gles2_cmd_utils.h",
     "gles2_utils_export.h",

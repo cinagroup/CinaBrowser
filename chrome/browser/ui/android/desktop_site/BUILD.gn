@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//build/config/android/rules.gni")
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/desktop_site/DesktopSiteUtils.java",
+    "java/src/org/Cinaseek/chrome/browser/desktop_site/DesktopSiteUtils.java",
   ]
   deps = [
     "//base:base_java",
@@ -31,7 +31,7 @@ android_library("java") {
 }
 
 robolectric_library("junit") {
-  sources = [ "java/src/org/chromium/chrome/browser/desktop_site/DesktopSiteUtilsUnitTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/desktop_site/DesktopSiteUtilsUnitTest.java" ]
   deps = [
     ":java",
     "//base:base_java",

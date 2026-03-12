@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,18 +6,18 @@ import("//build/config/android/rules.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 _jni_sources = [
-  "java/src/org/chromium/components/policy/CombinedPolicyProvider.java",
-  "java/src/org/chromium/components/policy/PolicyCacheUpdater.java",
-  "java/src/org/chromium/components/policy/PolicyConverter.java",
-  "java/src/org/chromium/components/policy/PolicyMap.java",
-  "java/src/org/chromium/components/policy/PolicyService.java",
+  "java/src/org/Cinaseek/components/policy/CombinedPolicyProvider.java",
+  "java/src/org/Cinaseek/components/policy/PolicyCacheUpdater.java",
+  "java/src/org/Cinaseek/components/policy/PolicyConverter.java",
+  "java/src/org/Cinaseek/components/policy/PolicyMap.java",
+  "java/src/org/Cinaseek/components/policy/PolicyService.java",
 ]
 
 java_cpp_strings("java_switches_srcjar") {
   # External code should depend on ":policy_java" instead.
   visibility = [ ":*" ]
   sources = [ "//components/policy/core/common/policy_switches.cc" ]
-  class_name = "org.chromium.components.policy.PolicySwitches"
+  class_name = "org.Cinaseek.components.policy.PolicySwitches"
 }
 
 android_library("policy_java") {
@@ -33,11 +33,11 @@ android_library("policy_java") {
   ]
 
   sources = _jni_sources + [
-              "java/src/org/chromium/components/policy/AbstractAppRestrictionsProvider.java",
-              "java/src/org/chromium/components/policy/AppRestrictionsProvider.java",
-              "java/src/org/chromium/components/policy/PolicyCache.java",
-              "java/src/org/chromium/components/policy/PolicyCacheProvider.java",
-              "java/src/org/chromium/components/policy/PolicyProvider.java",
+              "java/src/org/Cinaseek/components/policy/AbstractAppRestrictionsProvider.java",
+              "java/src/org/Cinaseek/components/policy/AppRestrictionsProvider.java",
+              "java/src/org/Cinaseek/components/policy/PolicyCache.java",
+              "java/src/org/Cinaseek/components/policy/PolicyCacheProvider.java",
+              "java/src/org/Cinaseek/components/policy/PolicyProvider.java",
             ]
 }
 
@@ -52,8 +52,8 @@ android_library("policy_java_test_support") {
     "//third_party/junit",
   ]
   sources = [
-    "javatests/src/org/chromium/components/policy/test/PolicyData.java",
-    "javatests/src/org/chromium/components/policy/test/annotations/Policies.java",
+    "javatests/src/org/Cinaseek/components/policy/test/PolicyData.java",
+    "javatests/src/org/Cinaseek/components/policy/test/annotations/Policies.java",
   ]
 }
 
@@ -64,12 +64,12 @@ generate_jni("jni_headers") {
 
 robolectric_library("components_policy_junit_tests") {
   sources = [
-    "junit/src/org/chromium/components/policy/AbstractAppRestrictionsProviderTest.java",
-    "junit/src/org/chromium/components/policy/CombinedPolicyProviderTest.java",
-    "junit/src/org/chromium/components/policy/PolicyCacheProviderTest.java",
-    "junit/src/org/chromium/components/policy/PolicyCacheTest.java",
-    "junit/src/org/chromium/components/policy/PolicyConverterTest.java",
-    "junit/src/org/chromium/components/policy/test/annotations/PoliciesTest.java",
+    "junit/src/org/Cinaseek/components/policy/AbstractAppRestrictionsProviderTest.java",
+    "junit/src/org/Cinaseek/components/policy/CombinedPolicyProviderTest.java",
+    "junit/src/org/Cinaseek/components/policy/PolicyCacheProviderTest.java",
+    "junit/src/org/Cinaseek/components/policy/PolicyCacheTest.java",
+    "junit/src/org/Cinaseek/components/policy/PolicyConverterTest.java",
+    "junit/src/org/Cinaseek/components/policy/test/annotations/PoliciesTest.java",
   ]
   deps = [
     ":policy_java",
@@ -87,9 +87,9 @@ robolectric_library("components_policy_junit_tests") {
 }
 
 _test_jni_sources = [
-  "javatests/src/org/chromium/components/policy/test/PolicyCacheUpdaterTestSupporter.java",
-  "javatests/src/org/chromium/components/policy/test/PolicyMapTestSupporter.java",
-  "javatests/src/org/chromium/components/policy/test/PolicyServiceTestSupporter.java",
+  "javatests/src/org/Cinaseek/components/policy/test/PolicyCacheUpdaterTestSupporter.java",
+  "javatests/src/org/Cinaseek/components/policy/test/PolicyMapTestSupporter.java",
+  "javatests/src/org/Cinaseek/components/policy/test/PolicyServiceTestSupporter.java",
 ]
 
 android_library("native_test_support_java") {

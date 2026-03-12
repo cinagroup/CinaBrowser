@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -26,7 +26,7 @@ class JourneyLogger {
 
   // The different sections of a Payment Request. Used to record journey
   // stats.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: Section
   enum Section {
     SECTION_CONTACT_INFO = 0,
@@ -37,7 +37,7 @@ class JourneyLogger {
 
   // Used to log different parameters' effect on whether the transaction was
   // completed.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: CompletionStatus
   enum CompletionStatus {
     COMPLETION_STATUS_COMPLETED = 0,
@@ -50,7 +50,7 @@ class JourneyLogger {
 
   // Used to record the different events that happened during the Payment
   // Request.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: Event2
   enum class Event2 {
     // Initiated means the PaymentRequest object was constructed.
@@ -119,7 +119,7 @@ class JourneyLogger {
   };
 
   // The reason why the Payment Request was aborted.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: AbortReason
   enum AbortReason {
     ABORT_REASON_ABORTED_BY_USER = 0,
@@ -139,7 +139,7 @@ class JourneyLogger {
   };
 
   // The categories of the payment methods.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: PaymentMethodCategory
   enum class PaymentMethodCategory {
     kBasicCard = 0,
@@ -154,7 +154,7 @@ class JourneyLogger {
   // Records different checkout steps for payment requests. The difference
   // between number of requests recorded for each step and its successor shows
   // the drop-off that happened during that step.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.payments
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.payments
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: CheckoutFunnelStep
   enum class CheckoutFunnelStep {
     // Payment request has been initiated.
@@ -253,7 +253,7 @@ class JourneyLogger {
   static const int NUMBER_OF_SECTIONS = 3;
 
   // Note: These constants should always be in sync with their counterpart in
-  // components/payments/content/android/java/src/org/chromium/components/
+  // components/payments/content/android/java/src/org/Cinaseek/components/
   // payments/JourneyLogger.java.
   // The minimum expected value of CustomCountHistograms is always set to 1. It
   // is still possible to log the value 0 to that type of histogram.

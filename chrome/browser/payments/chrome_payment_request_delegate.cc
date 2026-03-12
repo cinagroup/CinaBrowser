@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,8 +45,8 @@
 #include "services/metrics/public/cpp/ukm_recorder.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/mojom/permissions_policy/permissions_policy_feature.mojom-shared.h"
-#include "third_party/libaddressinput/chromium/chrome_metadata_source.h"
-#include "third_party/libaddressinput/chromium/chrome_storage_impl.h"
+#include "third_party/libaddressinput/Cinaseek/chrome_metadata_source.h"
+#include "third_party/libaddressinput/Cinaseek/chrome_storage_impl.h"
 
 #if BUILDFLAG(IS_MAC)
 #include "chrome/common/chrome_version.h"

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 #include "components/cronet/android/test/cronet_test_util.h"
 #include "net/base/ip_address.h"
 #include "net/base/ip_endpoint.h"
-#include "net/quic/crypto/proof_source_chromium.h"
+#include "net/quic/crypto/proof_source_Cinaseek.h"
 #include "net/test/test_data_directory.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/quic_backend_response.h"
 #include "net/third_party/quiche/src/quiche/quic/tools/quic_memory_cache_backend.h"
@@ -76,8 +76,8 @@ void StartOnServerThread(const base::FilePath& test_files_root,
 
   // Set up server certs.
   base::FilePath directory = test_data_dir.Append("net/data/ssl/certificates");
-  std::unique_ptr<net::ProofSourceChromium> proof_source(
-      new net::ProofSourceChromium());
+  std::unique_ptr<net::ProofSourceCinaseek> proof_source(
+      new net::ProofSourceCinaseek());
   CHECK(proof_source->Initialize(directory.Append("quic-chain.pem"),
                                  directory.Append("quic-leaf-cert.key"),
                                  base::FilePath()));

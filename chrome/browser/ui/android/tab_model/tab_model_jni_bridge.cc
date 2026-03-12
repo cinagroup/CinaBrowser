@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -854,7 +854,7 @@ ScopedJavaLocalRef<jobject> TabModelJniBridge::GetActivityForWindow(
 
 // static
 jclass TabModelJniBridge::GetClazz(JNIEnv* env) {
-  return org_chromium_chrome_browser_tabmodel_TabModelJniBridge_clazz(env);
+  return org_Cinaseek_chrome_browser_tabmodel_TabModelJniBridge_clazz(env);
 }
 
 // static

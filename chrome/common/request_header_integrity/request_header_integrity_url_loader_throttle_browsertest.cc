@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -83,7 +83,7 @@ class RequestHeaderIntegrityURLLoaderThrottleBrowserTest
         &RequestHeaderIntegrityURLLoaderThrottleBrowserTest::RequestHandler,
         base::Unretained(this)));
 
-    server().SetCertHostnames({"www.google.com", "www.chromium.org"});
+    server().SetCertHostnames({"www.google.com", "www.Cinaseek.org"});
     ASSERT_TRUE(server().InitializeAndListen());
     server().StartAcceptingConnections();
   }
@@ -114,20 +114,20 @@ class RequestHeaderIntegrityURLLoaderThrottleBrowserTest
     return server().GetURL("www.google.com", "/dynamic_script.js");
   }
 
-  GURL GetChromiumUrl() const {
-    return server().GetURL("www.chromium.org", "/");
+  GURL GetCinaseekUrl() const {
+    return server().GetURL("www.Cinaseek.org", "/");
   }
 
-  GURL GetChromiumToChromiumRedirectUrl() {
-    return server().GetURL("www.chromium.org", "/redirectChromiumToChromium");
+  GURL GetCinaseekToCinaseekRedirectUrl() {
+    return server().GetURL("www.Cinaseek.org", "/redirectCinaseekToCinaseek");
   }
 
-  GURL GetChromiumToGoogleRedirectUrl() {
-    return server().GetURL("www.chromium.org", "/redirectChromiumToGoogle");
+  GURL GetCinaseekToGoogleRedirectUrl() {
+    return server().GetURL("www.Cinaseek.org", "/redirectCinaseekToGoogle");
   }
 
-  GURL GetGoogleToChromiumRedirectUrl() {
-    return server().GetURL("www.google.com", "/redirectGoogleToChromium");
+  GURL GetGoogleToCinaseekRedirectUrl() {
+    return server().GetURL("www.google.com", "/redirectGoogleToCinaseek");
   }
 
   GURL GetGoogleToGoogleRedirectUrl() {
@@ -244,17 +244,17 @@ class RequestHeaderIntegrityURLLoaderThrottleBrowserTest
         )");
       http_response->set_content_type("text/javascript");
     } else if (request.relative_url ==
-               GetChromiumToChromiumRedirectUrl().GetPath()) {
+               GetCinaseekToCinaseekRedirectUrl().GetPath()) {
       http_response->set_code(net::HTTP_FOUND);
-      http_response->AddCustomHeader("Location", GetChromiumUrl().spec());
+      http_response->AddCustomHeader("Location", GetCinaseekUrl().spec());
     } else if (request.relative_url ==
-               GetChromiumToGoogleRedirectUrl().GetPath()) {
+               GetCinaseekToGoogleRedirectUrl().GetPath()) {
       http_response->set_code(net::HTTP_FOUND);
       http_response->AddCustomHeader("Location", GetGoogleUrl().spec());
     } else if (request.relative_url ==
-               GetGoogleToChromiumRedirectUrl().GetPath()) {
+               GetGoogleToCinaseekRedirectUrl().GetPath()) {
       http_response->set_code(net::HTTP_FOUND);
-      http_response->AddCustomHeader("Location", GetChromiumUrl().spec());
+      http_response->AddCustomHeader("Location", GetCinaseekUrl().spec());
     } else if (request.relative_url ==
                GetGoogleToGoogleRedirectUrl().GetPath()) {
       http_response->set_code(net::HTTP_FOUND);
@@ -303,22 +303,22 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       HeadersNotAddedForChromium) {
-  GURL chromium_url = GetChromiumUrl();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), chromium_url));
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, LASTCHANGE_YEAR_HEADER_NAME));
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, VALIDATE_HEADER_NAME));
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, COPYRIGHT_HEADER_NAME));
+                       HeadersNotAddedForCinaseek) {
+  GURL Cinaseek_url = GetCinaseekUrl();
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), Cinaseek_url));
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, LASTCHANGE_YEAR_HEADER_NAME));
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, VALIDATE_HEADER_NAME));
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, COPYRIGHT_HEADER_NAME));
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       HeadersNotAddedForChromiumPrefetch) {
-  GURL chromium_url = GetChromiumUrl();
-  StartPrefetch(chromium_url);
-  WaitForRequest(chromium_url);
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, LASTCHANGE_YEAR_HEADER_NAME));
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, VALIDATE_HEADER_NAME));
-  EXPECT_FALSE(HasReceivedHeader(chromium_url, COPYRIGHT_HEADER_NAME));
+                       HeadersNotAddedForCinaseekPrefetch) {
+  GURL Cinaseek_url = GetCinaseekUrl();
+  StartPrefetch(Cinaseek_url);
+  WaitForRequest(Cinaseek_url);
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, LASTCHANGE_YEAR_HEADER_NAME));
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, VALIDATE_HEADER_NAME));
+  EXPECT_FALSE(HasReceivedHeader(Cinaseek_url, COPYRIGHT_HEADER_NAME));
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
@@ -346,10 +346,10 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromChromiumToChromium) {
+                       RedirectFromCinaseekToCinaseek) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GetChromiumToChromiumRedirectUrl()));
-  GURL target_url = GetChromiumUrl();
+                                           GetCinaseekToCinaseekRedirectUrl()));
+  GURL target_url = GetCinaseekUrl();
   WaitForRequest(target_url);
   EXPECT_FALSE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
   EXPECT_FALSE(HasReceivedHeader(target_url, VALIDATE_HEADER_NAME));
@@ -357,9 +357,9 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromChromiumToChromiumPrefetch) {
-  StartPrefetch(GetChromiumToChromiumRedirectUrl());
-  GURL target_url = GetChromiumUrl();
+                       RedirectFromCinaseekToCinaseekPrefetch) {
+  StartPrefetch(GetCinaseekToCinaseekRedirectUrl());
+  GURL target_url = GetCinaseekUrl();
   WaitForRequest(target_url);
   EXPECT_FALSE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
   EXPECT_FALSE(HasReceivedHeader(target_url, VALIDATE_HEADER_NAME));
@@ -367,9 +367,9 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromChromiumToGoogle) {
+                       RedirectFromCinaseekToGoogle) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GetChromiumToGoogleRedirectUrl()));
+                                           GetCinaseekToGoogleRedirectUrl()));
   GURL target_url = GetGoogleUrl();
   WaitForRequest(target_url);
   EXPECT_TRUE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
@@ -378,8 +378,8 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromChromiumToGooglePrefetch) {
-  StartPrefetch(GetChromiumToGoogleRedirectUrl());
+                       RedirectFromCinaseekToGooglePrefetch) {
+  StartPrefetch(GetCinaseekToGoogleRedirectUrl());
   GURL target_url = GetGoogleUrl();
   WaitForRequest(target_url);
   EXPECT_TRUE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
@@ -388,10 +388,10 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromGoogleToChromium) {
+                       RedirectFromGoogleToCinaseek) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GetGoogleToChromiumRedirectUrl()));
-  GURL target_url = GetChromiumUrl();
+                                           GetGoogleToCinaseekRedirectUrl()));
+  GURL target_url = GetCinaseekUrl();
   WaitForRequest(target_url);
   EXPECT_FALSE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
   EXPECT_FALSE(HasReceivedHeader(target_url, VALIDATE_HEADER_NAME));
@@ -399,9 +399,9 @@ IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(RequestHeaderIntegrityURLLoaderThrottleBrowserTest,
-                       RedirectFromGoogleToChromiumPrefetch) {
-  StartPrefetch(GetGoogleToChromiumRedirectUrl());
-  GURL target_url = GetChromiumUrl();
+                       RedirectFromGoogleToCinaseekPrefetch) {
+  StartPrefetch(GetGoogleToCinaseekRedirectUrl());
+  GURL target_url = GetCinaseekUrl();
   WaitForRequest(target_url);
   EXPECT_FALSE(HasReceivedHeader(target_url, LASTCHANGE_YEAR_HEADER_NAME));
   EXPECT_FALSE(HasReceivedHeader(target_url, VALIDATE_HEADER_NAME));

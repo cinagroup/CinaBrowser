@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace ash {
 // profiles on ChromeOS. If the ash requirements ever change, this should be
 // merged with ChromePolicyBlocklistServiceFactory, as this setup is rather
 // confusing.
-// https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/ash/DEPS;l=11;drc=ecce9a63db1b3bc7b616f0c9222d93233c587fd6
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/browser/ash/DEPS;l=11;drc=ecce9a63db1b3bc7b616f0c9222d93233c587fd6
 class COMPONENT_EXPORT(CHROMEOS_ASH_COMPONENTS_POLICY)
     AshPolicyBlocklistServiceFactory
     : public BrowserContextKeyedServiceFactory {

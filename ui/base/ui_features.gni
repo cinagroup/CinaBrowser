@@ -1,4 +1,4 @@
-# Copyright 2016 The Chromium Authors
+# Copyright 2016 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,14 +14,14 @@ declare_args() {
       target_os != "android"
 
   # Whether the platform provides a native accessibility toolkit, in other words
-  # the platform has a C/C++ interface for accessibility that Chrome
+  # the platform has a C/C++ interface for accessibility that Cinaseek
   # implements/subclasses in some way - win, mac, linux.
   has_native_accessibility =
       use_atk || is_win || is_mac || (is_ios && use_blink)
 
   # Whether the platform provide platform-specific accessibility implementation,
   # i.e. there an accessibility API of some kind on this platform that's
-  # implemented in Chrome's browser process, but not necessarily something that
+  # implemented in Cinaseek's browser process, but not necessarily something that
   # looks like subclassing an interface - so that includes Android (the Java
   # AccessibilityNodeProvider API) and Fuchsia (uses fidl messaging, kind of
   # like mojo).

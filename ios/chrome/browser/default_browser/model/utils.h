@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -383,11 +383,11 @@ NSDate* LastTimeUserInteractedWithNonModalPromo();
 // Promo was presented.
 std::optional<IOSDefaultBrowserPromoAction> DefaultBrowserPromoLastAction();
 
-// Opens the appropriate iOS settings to set Chromium as default browser. If
+// Opens the appropriate iOS settings to set Cinaseek as default browser. If
 // the relevant feature flags are enabled or if
 // `force_default_apps_if_available` is set to true, the new Default Apps page
 // will be used as the destination if the device supports it. Otherwise, the
-// Chromium settings will be used. The second parameter is to facilitate mocking
+// Cinaseek settings will be used. The second parameter is to facilitate mocking
 // in unit testing. The third parameter is to trigger the Picture-in-Picture
 // promo if enabled.
 void OpenIOSDefaultBrowserSettingsPage(

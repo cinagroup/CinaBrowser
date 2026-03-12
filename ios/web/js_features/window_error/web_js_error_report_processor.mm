@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -333,7 +333,7 @@ void WebJsErrorReportProcessor::SendErrorReport(
           cookies_allowed: NO
           setting:
             "You can enable or disable this feature via 'Automatically send "
-            "usage statistics and crash reports to Google' in Chromium's "
+            "usage statistics and crash reports to Google' in Cinaseek's "
             "settings under Advanced, Privacy. This feature is enabled by "
             "default."
           chrome_policy {

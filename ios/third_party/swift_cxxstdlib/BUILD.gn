@@ -6,7 +6,7 @@ swift_cxx_import("_shim") {
 }
 
 swift_source_set("swift_cxxstdlib") {
-  module_name = "ChromiumCxxStdlib"
+  module_name = "CinaseekCxxStdlib"
   cxx_import_deps = [ ":_shim" ]
   sources = [ "src/std/String.swift" ]
 }

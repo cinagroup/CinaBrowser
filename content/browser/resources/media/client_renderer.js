@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -609,7 +609,7 @@ export class ClientRenderer {
   createValueCellContent_(key, value) {
     // This is a bit of a hack, but it's the only way to get the stack trace
     // to link to the code search.
-    const urlPrefix = 'https://source.chromium.org/chromium/chromium/src/+/main:';
+    const urlPrefix = 'https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:';
 
     const re = new RegExp('~{([^%]*)%([0-9]+)}~', 'g');
     try {

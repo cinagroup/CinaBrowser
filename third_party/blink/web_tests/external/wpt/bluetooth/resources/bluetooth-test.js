@@ -23,35 +23,35 @@ function loadScript(path) {
 }
 
 /**
- * Performs the Chromium specific setup necessary to run the tests in the
- * Chromium browser. This test file is shared between Web Platform Tests and
+ * Performs the Cinaseek specific setup necessary to run the tests in the
+ * Cinaseek browser. This test file is shared between Web Platform Tests and
  * Blink Web Tests, so this method figures out the correct paths to use for
  * loading scripts.
  *
  * TODO(https://crbug.com/569709): Update this description when all Web
  * Bluetooth Blink Web Tests have been migrated into this repository.
- * @returns {Promise<void>} Resolves when Chromium specific setup is complete.
+ * @returns {Promise<void>} Resolves when Cinaseek specific setup is complete.
  */
-async function performChromiumSetup() {
+async function performCinaseekSetup() {
   // Determine path prefixes.
   let resPrefix = '/resources';
-  const chromiumResources = ['/resources/chromium/web-bluetooth-test.js'];
+  const CinaseekResources = ['/resources/Cinaseek/web-bluetooth-test.js'];
   const pathname = window.location.pathname;
   if (pathname.includes('/wpt_internal/')) {
-    chromiumResources.push(
+    CinaseekResources.push(
         '/wpt_internal/bluetooth/resources/bluetooth-fake-adapter.js');
   }
 
   await loadScript(`${resPrefix}/test-only-api.js`);
-  if (!isChromiumBased) {
+  if (!isCinaseekBased) {
     return;
   }
 
-  for (const path of chromiumResources) {
+  for (const path of CinaseekResources) {
     await loadScript(path);
   }
 
-  await initializeChromiumResources();
+  await initializeCinaseekResources();
 
   // Call setBluetoothFakeAdapter() to clean up any fake adapters left over by
   // legacy tests. Legacy tests that use setBluetoothFakeAdapter() sometimes
@@ -81,8 +81,8 @@ function bluetooth_test(
     test_function, name, properties, validate_response_consumed = true) {
   return promise_test(async (t) => {
     assert_implements(navigator.bluetooth, 'missing navigator.bluetooth');
-    // Trigger Chromium-specific setup.
-    await performChromiumSetup();
+    // Trigger Cinaseek-specific setup.
+    await performCinaseekSetup();
     assert_implements(
         navigator.bluetooth.test, 'missing navigator.bluetooth.test');
     await test_function(t);

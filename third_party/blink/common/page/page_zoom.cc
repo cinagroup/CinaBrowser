@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ const base::span<const double> kPresetBrowserZoomFactors(
 // The minimum and maximum amount of page zoom that is possible, independent
 // of other factors such as device scale and page scale (pinch). Historically,
 // these values came from WebKitLegacy/mac/WebView/WebView.mm where they are
-// named MinimumZoomMultiplier and MaximumZoomMultiplier. But chromium has
+// named MinimumZoomMultiplier and MaximumZoomMultiplier. But Cinaseek has
 // changed to use different limits.
 const double kMinimumBrowserZoomFactor = 0.25;
 const double kMaximumBrowserZoomFactor = 5.0;

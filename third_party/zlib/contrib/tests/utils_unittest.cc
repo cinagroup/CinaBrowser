@@ -1,6 +1,6 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
-// found in the Chromium source repository LICENSE file.
+// found in the Cinaseek source repository LICENSE file.
 
 #include "infcover.h"
 
@@ -1004,7 +1004,7 @@ TEST(ZlibTest, DeflateZFixedCorruption) {
   // https://www.openwall.com/lists/oss-security/2022/03/26/1
   // The upstream fix,
   // https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531,
-  // was merged in Chromium in #583975.
+  // was merged in Cinaseek in #583975.
 
   z_stream stream;
   stream.zalloc = Z_NULL;

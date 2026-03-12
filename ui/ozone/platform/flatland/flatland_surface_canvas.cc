@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -139,7 +139,7 @@ FlatlandSurfaceCanvas::FlatlandSurfaceCanvas(
     fuchsia::ui::composition::Allocator* flatland_allocator)
     : sysmem_allocator_(sysmem_allocator),
       flatland_allocator_(flatland_allocator),
-      flatland_("Chromium FlatlandSurface",
+      flatland_("Cinaseek FlatlandSurface",
                 base::BindOnce(&FlatlandSurfaceCanvas::OnFlatlandError,
                                base::Unretained(this))) {
   DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);

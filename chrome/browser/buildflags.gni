@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,7 +11,7 @@ declare_args() {
   # By default, only branded builds integrate with automatic updates.
   enable_updater = is_chrome_branded && !is_fuchsia && target_os != "android"
 
-  # Detect updates and notify the user for Google Chrome across all platforms.
-  # Chromium does not use an auto-updater.
+  # Detect updates and notify the user for Google Cinaseek across all platforms.
+  # Cinaseek does not use an auto-updater.
   enable_update_notifications = is_chrome_branded
 }

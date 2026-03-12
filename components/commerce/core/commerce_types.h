@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace commerce {
 
 // Discount cluster types.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.commerce.core
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.commerce.core
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
@@ -38,7 +38,7 @@ enum class DiscountClusterType {
 
 // Discount types.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.commerce.core
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.commerce.core
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 //
@@ -91,7 +91,7 @@ struct MerchantInfo {
 
 // Position of current price with respect to the typical price range.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.commerce.core
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.commerce.core
 enum class PriceBucket {
   kUnknown = 0,
   kLowPrice = 1,

@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//extensions/buildflags/buildflags.gni")
 
 assert(enable_extensions_core)
 
-# The collection of keyed service factories related to Chrome's extensions
+# The collection of keyed service factories related to Cinaseek's extensions
 # layer. This is a separate directory and target so that separate builds
 # (like the experimental desktop android build) can depend on this without
 # needing to depend on all of //chrome/browser/extensions.

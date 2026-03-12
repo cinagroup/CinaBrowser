@@ -1,4 +1,4 @@
-# Copyright 2017 The Chromium Authors
+# Copyright 2017 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -14,7 +14,7 @@ declare_args() {
   ios_enable_dangling_raw_ptr_checks = true
 
   # Control whether //ios/chrome and //ios/web targets are build. This
-  # is used by bots from projects based on top of Chromium that want to
+  # is used by bots from projects based on top of Cinaseek that want to
   # only reuse shared code (//ios/net, //remoting/ios, ...).
   # This is false by default on iOS-based platforms like tvOS.
   ios_build_chrome = target_platform == "iphoneos"

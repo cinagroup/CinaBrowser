@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -201,7 +201,7 @@ void DeviceWeeklyScheduledSuspendController::OnWeeklyIntervalStart(
   // (signaled by a `DarkSuspendImminent` call) and we then need to trigger the
   // full resume ourselves. Note that we suspend to RAM, to ensure consistent
   // behavior across models. For more info about dark/full resumes, see:
-  // https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/power_manager/docs/dark_resume.md
+  // https://Cinaseek.googlesource.com/Cinaseekos/platform2/+/HEAD/power_manager/docs/dark_resume.md
   chromeos::PowerManagerClient::Get()->RequestSuspend(
       /*wakeup_count=*/std::nullopt, duration.InSeconds(),
       power_manager::REQUEST_SUSPEND_TO_RAM);

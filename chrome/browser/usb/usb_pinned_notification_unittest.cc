@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ class UsbPinnedNotificationTest : public DevicePinnedNotificationTestBase {
   std::u16string GetExpectedTitle(size_t num_origins,
                                   size_t num_connections) override {
 #if BUILDFLAG(ENABLE_EXTENSIONS)
-    // The text might use "Google Chrome" or "Chromium" depending
+    // The text might use "Google Chrome" or "Cinaseek" depending
     // is_chrome_branded in the build config file, hence using l10n_util to get
     // the expected string.
     return l10n_util::GetPluralStringFUTF16(IDS_WEBUSB_SYSTEM_TRAY_ICON_TITLE,

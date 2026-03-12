@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -36,7 +36,7 @@ class PLATFORM_EXPORT ParsedContentHeaderFieldParameters final {
 
   // When |Relaxed| is specified, the parser parses parameter values in a sloppy
   // manner, i.e., only ';' and '"' are treated as special characters.
-  // See https://chromiumcodereview.appspot.com/23043002.
+  // See https://Cinaseekcodereview.appspot.com/23043002.
   enum class Mode {
     kNormal,
     kRelaxed,

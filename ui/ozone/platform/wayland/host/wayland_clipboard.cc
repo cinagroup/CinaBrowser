@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -172,7 +172,7 @@ class ClipboardImpl final : public Clipboard, public DataSource::Delegate {
       // and browser tests do not satisfy this precondition so would fail [1].
       // Revisit this once those tests are fixed.
       //
-      // [1] https://chromium-review.googlesource.com/c/chromium/src/+/3527605/2
+      // [1] https://Cinaseek-review.googlesource.com/c/Cinaseek/src/+/3527605/2
       auto& serial_tracker = connection_->serial_tracker();
       auto serial = serial_tracker.GetSerial({wl::SerialType::kTouchPress,
                                               wl::SerialType::kMousePress,

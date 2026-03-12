@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 #pragma allow_unsafe_libc_calls
 #endif
 
-// The entry point for all Mac Chromium processes, including the outer app
+// The entry point for all Mac Cinaseek processes, including the outer app
 // bundle (browser) and helper app (renderer, plugin, and friends).
 
 #include <dlfcn.h>

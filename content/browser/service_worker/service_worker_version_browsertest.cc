@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1309,7 +1309,7 @@ IN_PROC_BROWSER_TEST_F(ServiceWorkerVersionBrowserTest,
 // Due to the nature of what this is testing, this test depends on the system
 // clock being reasonable during the test. So it might break on daylight savings
 // leap or something:
-// https://groups.google.com/a/chromium.org/d/msg/chromium-dev/C3EvKPrb0XM/4Jv02SpNYncJ
+// https://groups.google.com/a/Cinaseek.org/d/msg/Cinaseek-dev/C3EvKPrb0XM/4Jv02SpNYncJ
 IN_PROC_BROWSER_TEST_F(ServiceWorkerVersionBrowserTest,
                        UpdateBypassesCacheAfter24Hours) {
   const char kScope[] = "/service_worker/handle_fetch.html";

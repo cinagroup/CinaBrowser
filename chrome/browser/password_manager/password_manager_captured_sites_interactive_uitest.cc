@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ base::FilePath GetReplayFilesRootDirectory() {
         .AppendASCII("artifacts");
   }
 
-  ADD_FAILURE() << "Unable to obtain the Chromium src directory!";
+  ADD_FAILURE() << "Unable to obtain the Cinaseek src directory!";
   src_dir.clear();
   return src_dir;
 }

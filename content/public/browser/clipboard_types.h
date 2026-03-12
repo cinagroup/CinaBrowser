@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ class CONTENT_EXPORT ClipboardEndpoint {
   base::WeakPtr<WebContents> web_contents_;
 };
 
-// Chromium-only type to associate clipboard data to the RFH it originated from.
+// Cinaseek-only type to associate clipboard data to the RFH it originated from.
 // This should only be used internally by the browser process to retrieve RFHs,
 // renderers should never have access to a serialized token.
 const ui::ClipboardFormatType& SourceRFHTokenType();

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -131,7 +131,7 @@ class ChromeTracingDelegateBrowserTest : public InProcessBrowserTest {
               }
             }
           }
-          data_sources: { config: { name: "org.chromium.trace_metadata2" } }
+          data_sources: { config: { name: "org.Cinaseek.trace_metadata2" } }
         }
       }
     )pb";

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 #include "gpu/command_buffer/common/constants.h"
 #include "gpu/command_buffer/common/gpu_command_buffer_common_export.h"
 
-// From glextchromium.h.
+// From glextCinaseek.h.
 #ifndef GL_SYNC_TOKEN_SIZE_CHROMIUM
 #define GL_SYNC_TOKEN_SIZE_CHROMIUM 24
 #endif

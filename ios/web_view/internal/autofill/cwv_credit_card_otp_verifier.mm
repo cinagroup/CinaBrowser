@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,7 +18,7 @@
 #import "ui/base/l10n/l10n_util_mac.h"
 
 NSErrorDomain const CWVCreditCardOTPVerifierErrorDomain =
-    @"org.chromium.chromewebview.CreditCardOTPVerifierErrorDomain";
+    @"org.Cinaseek.chromewebview.CreditCardOTPVerifierErrorDomain";
 
 namespace ios_web_view {
 

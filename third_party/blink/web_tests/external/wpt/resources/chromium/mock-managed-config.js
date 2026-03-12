@@ -5,7 +5,7 @@ import{ManagedConfigurationObserverRemote, ManagedConfigurationService, ManagedC
 
 self.ManagedConfigTest = (() => {
   // Class that mocks ManagedConfigurationService interface defined in
-  // https://source.chromium.org/chromium/chromium/src/third_party/blink/public/mojom/device/device.mojom
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/third_party/blink/public/mojom/device/device.mojom
   class MockManagedConfig {
     constructor() {
       this.receiver_ = new ManagedConfigurationServiceReceiver(this);
@@ -61,7 +61,7 @@ self.ManagedConfigTest = (() => {
     mockManagedConfig: null
   }
 
-  class ManagedConfigTestChromium {
+  class ManagedConfigTestCinaseek {
     constructor() {
       Object.freeze(this);  // Make it immutable.
     }
@@ -87,5 +87,5 @@ self.ManagedConfigTest = (() => {
     }
   }
 
-  return ManagedConfigTestChromium;
+  return ManagedConfigTestCinaseek;
 })();

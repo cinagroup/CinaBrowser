@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ namespace media {
 // If a MIME type cannot be determined, an empty string is returned.
 std::string GetMimeType(VideoCodec codec, VideoProfile profile, int32_t level);
 
-// Same as above, but uses chromium enums.
+// Same as above, but uses Cinaseek enums.
 std::string GetMimeType(::media::VideoCodec codec,
                         ::media::VideoCodecProfile profile,
                         uint32_t level);
@@ -36,7 +36,7 @@ std::string GetMimeType(::media::VideoCodec codec,
 // If a MIME type cannot be determined, an empty string is returned.
 std::string GetMimeType(AudioCodec codec);
 
-// Same as above, but uses the chromium version of the codec enum.
+// Same as above, but uses the Cinaseek version of the codec enum.
 std::string GetMimeType(::media::AudioCodec codec);
 
 }  // namespace media

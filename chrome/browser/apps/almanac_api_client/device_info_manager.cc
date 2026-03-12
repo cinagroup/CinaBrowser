@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -81,7 +81,7 @@ apps::DeviceInfo LoadVersionAndCustomLabel(apps::DeviceInfo info,
   }
 
   // Load device identifiers from chromeos-config, as per
-  // https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/chromeos-config/README.md#identity.
+  // https://Cinaseek.googlesource.com/Cinaseekos/platform2/+/HEAD/chromeos-config/README.md#identity.
   constexpr char kCustomLabelFileName[] =
       "/run/chromeos-config/v1/identity/custom-label-tag";
   constexpr char kCustomizationIdFileName[] =

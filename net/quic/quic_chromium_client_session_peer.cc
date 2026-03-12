@@ -1,8 +1,8 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_client_session_peer.h"
+#include "net/quic/quic_Cinaseek_client_session_peer.h"
 
 #include <string>
 
@@ -17,8 +17,8 @@
 #include "net/traffic_annotation/network_traffic_annotation_test_helper.h"
 namespace net::test {
 // static
-void QuicChromiumClientSessionPeer::SetHostname(
-    QuicChromiumClientSession* session,
+void QuicCinaseekClientSessionPeer::SetHostname(
+    QuicCinaseekClientSession* session,
     const std::string& hostname) {
   quic::QuicServerId server_id(hostname,
                                session->session_key_.server_id().port());
@@ -33,8 +33,8 @@ void QuicChromiumClientSessionPeer::SetHostname(
 }
 
 // static
-QuicChromiumClientStream* QuicChromiumClientSessionPeer::CreateOutgoingStream(
-    QuicChromiumClientSession* session) {
+QuicCinaseekClientStream* QuicCinaseekClientSessionPeer::CreateOutgoingStream(
+    QuicCinaseekClientSession* session) {
   return session->ShouldCreateOutgoingBidirectionalStream()
              ? session->CreateOutgoingReliableStreamImpl(
                    TRAFFIC_ANNOTATION_FOR_TESTS)
@@ -42,20 +42,20 @@ QuicChromiumClientStream* QuicChromiumClientSessionPeer::CreateOutgoingStream(
 }
 
 // static
-bool QuicChromiumClientSessionPeer::GetSessionGoingAway(
-    QuicChromiumClientSession* session) {
+bool QuicCinaseekClientSessionPeer::GetSessionGoingAway(
+    QuicCinaseekClientSession* session) {
   return session->going_away_;
 }
 
 // static
-MigrationCause QuicChromiumClientSessionPeer::GetCurrentMigrationCause(
-    QuicChromiumClientSession* session) {
+MigrationCause QuicCinaseekClientSessionPeer::GetCurrentMigrationCause(
+    QuicCinaseekClientSession* session) {
   return session->current_migration_cause_;
 }
 
 // static
-void QuicChromiumClientSessionPeer::DisableConnectionMigration(
-    QuicChromiumClientSession* session) {
+void QuicCinaseekClientSessionPeer::DisableConnectionMigration(
+    QuicCinaseekClientSession* session) {
   session->connection_migration_disabled_ = true;
 }
 

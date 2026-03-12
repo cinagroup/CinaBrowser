@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -57,17 +57,17 @@ static_library("android") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/infobars/ConfirmInfoBar.java",
-    "java/src/org/chromium/components/infobars/InfoBar.java",
-    "java/src/org/chromium/components/infobars/InfoBarAnimationListener.java",
-    "java/src/org/chromium/components/infobars/InfoBarCompactLayout.java",
-    "java/src/org/chromium/components/infobars/InfoBarContainerLayout.java",
-    "java/src/org/chromium/components/infobars/InfoBarControlLayout.java",
-    "java/src/org/chromium/components/infobars/InfoBarInteractionHandler.java",
-    "java/src/org/chromium/components/infobars/InfoBarLayout.java",
-    "java/src/org/chromium/components/infobars/InfoBarMessageView.java",
-    "java/src/org/chromium/components/infobars/InfoBarUiItem.java",
-    "java/src/org/chromium/components/infobars/InfoBarWrapper.java",
+    "java/src/org/Cinaseek/components/infobars/ConfirmInfoBar.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBar.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarAnimationListener.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarCompactLayout.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarContainerLayout.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarControlLayout.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarInteractionHandler.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarLayout.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarMessageView.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarUiItem.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarWrapper.java",
   ]
   deps = [
     ":infobar_android_enums_java",
@@ -85,7 +85,7 @@ android_library("java") {
     "//ui/android:ui_java",
   ]
 
-  resources_package = "org.chromium.components.infobars"
+  resources_package = "org.Cinaseek.components.infobars"
 }
 
 java_cpp_enum("infobar_android_enums") {
@@ -100,15 +100,15 @@ android_library("infobar_android_enums_java") {
 
 generate_jni("jni_headers") {
   sources = [
-    "java/src/org/chromium/components/infobars/ConfirmInfoBar.java",
-    "java/src/org/chromium/components/infobars/InfoBar.java",
+    "java/src/org/Cinaseek/components/infobars/ConfirmInfoBar.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBar.java",
   ]
 }
 
 android_library("unit_device_javatests") {
   testonly = true
   sources = [
-    "java/src/org/chromium/components/infobars/InfoBarControlLayoutTest.java",
+    "java/src/org/Cinaseek/components/infobars/InfoBarControlLayoutTest.java",
   ]
   deps = [
     ":java",
@@ -121,5 +121,5 @@ android_library("unit_device_javatests") {
     "//third_party/androidx:androidx_test_runner_java",
     "//third_party/junit",
   ]
-  resources_package = "org.chromium.components.infobars.test"
+  resources_package = "org.Cinaseek.components.infobars.test"
 }

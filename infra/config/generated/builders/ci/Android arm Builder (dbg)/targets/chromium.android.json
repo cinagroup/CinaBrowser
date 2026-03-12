@@ -20,9 +20,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "android_webview_junit_tests",
         "test_id_prefix": "ninja://android_webview/test:android_webview_junit_tests/"
@@ -43,9 +43,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "base_junit_tests",
         "test_id_prefix": "ninja://base:base_junit_tests/"
@@ -66,9 +66,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "build_junit_tests",
         "test_id_prefix": "ninja://build/android:build_junit_tests/"
@@ -89,9 +89,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "chrome_java_test_pagecontroller_junit_tests",
         "test_id_prefix": "ninja://chrome/test/android:chrome_java_test_pagecontroller_junit_tests/"
@@ -113,9 +113,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com",
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com",
           "shards": 10
         },
         "test": "chrome_junit_tests",
@@ -137,9 +137,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "components_junit_tests",
         "test_id_prefix": "ninja://components:components_junit_tests/"
@@ -160,9 +160,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "content_junit_tests",
         "test_id_prefix": "ninja://content/public/android:content_junit_tests/"
@@ -183,9 +183,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "device_junit_tests",
         "test_id_prefix": "ninja://device:device_junit_tests/"
@@ -206,9 +206,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "junit_unit_tests",
         "test_id_prefix": "ninja://testing/android/junit:junit_unit_tests/"
@@ -229,9 +229,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "keyboard_accessory_junit_tests",
         "test_id_prefix": "ninja://chrome/android/features/keyboard_accessory:keyboard_accessory_junit_tests/"
@@ -252,9 +252,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "media_base_junit_tests",
         "test_id_prefix": "ninja://media/base/android:media_base_junit_tests/"
@@ -275,9 +275,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "module_installer_junit_tests",
         "test_id_prefix": "ninja://components/module_installer/android:module_installer_junit_tests/"
@@ -298,9 +298,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "net_junit_tests",
         "test_id_prefix": "ninja://net/android:net_junit_tests/"
@@ -321,9 +321,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "one_time_tokens_junit_tests",
         "test_id_prefix": "ninja://components/one_time_tokens/android/backend/sms:one_time_tokens_junit_tests/"
@@ -344,9 +344,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "paint_preview_junit_tests",
         "test_id_prefix": "ninja://components/paint_preview/player/android:paint_preview_junit_tests/"
@@ -367,9 +367,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "password_manager_junit_tests",
         "test_id_prefix": "ninja://chrome/browser/password_manager/android:password_manager_junit_tests/"
@@ -390,9 +390,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "services_junit_tests",
         "test_id_prefix": "ninja://services:services_junit_tests/"
@@ -413,9 +413,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "touch_to_fill_junit_tests",
         "test_id_prefix": "ninja://chrome/browser/touch_to_fill/password_manager/android:touch_to_fill_junit_tests/"
@@ -436,9 +436,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "ui_junit_tests",
         "test_id_prefix": "ninja://ui:ui_junit_tests/"
@@ -459,9 +459,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webapk_client_junit_tests",
         "test_id_prefix": "ninja://chrome/android/webapk/libs/client:webapk_client_junit_tests/"
@@ -482,9 +482,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webapk_shell_apk_h2o_junit_tests",
         "test_id_prefix": "ninja://chrome/android/webapk/shell_apk:webapk_shell_apk_h2o_junit_tests/"
@@ -505,9 +505,9 @@
             "cores": "8",
             "cpu": "x86-64",
             "os": "Ubuntu-22.04",
-            "pool": "chromium.tests"
+            "pool": "Cinaseek.tests"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "webapk_shell_apk_junit_tests",
         "test_id_prefix": "ninja://chrome/android/webapk/shell_apk:webapk_shell_apk_junit_tests/"

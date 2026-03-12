@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class BaseUrlInheritanceIframeTest : public ContentBrowserTest {
   }
 };  // class BaseUrlInheritanceIframeTest
 
-// A test to ensure that a baseURI exceeding chromium's maximum length for urls
+// A test to ensure that a baseURI exceeding Cinaseek's maximum length for urls
 // is not inherited.
 IN_PROC_BROWSER_TEST_F(BaseUrlInheritanceIframeTest,
                        InheritedBaseUrlIsLessThan2MB) {
@@ -51,7 +51,7 @@ IN_PROC_BROWSER_TEST_F(BaseUrlInheritanceIframeTest,
                             .root();
 
   // The following JS modifies the document state so its baseURL exceeds the
-  // maximum length of URL that chromium supports.
+  // maximum length of URL that Cinaseek supports.
   EXPECT_LT(url::kMaxURLChars, EvalJs(root,
                                       R"(
                                         path = "xxxxxxxx";

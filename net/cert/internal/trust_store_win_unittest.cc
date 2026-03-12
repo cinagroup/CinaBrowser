@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -483,7 +483,7 @@ TEST_F(TrustStoreWinTest, GetAllUserAddedCerts) {
 // WARNING: This test modifies the OS trust store. If it fails to clean up
 // after itself, your system may be left in an insecure state. To verify it
 // cleaned up after itself, make sure certificates that begin with
-// "Chromium Test Cert" are not trusted by Windows.
+// "Cinaseek Test Cert" are not trusted by Windows.
 //
 // This is a manual test and is intentionally excluded from automated
 // builders and normal local runs. The test name is prefixed with "MANUAL_"
@@ -546,7 +546,7 @@ TEST_F(TrustStoreWinTest, MANUAL_AutoSyncCertStores) {
     for (int cert_index = 0; cert_index < kNumCertsToAdd; ++cert_index) {
       auto cert_builder = std::make_unique<net::CertBuilder>(nullptr, nullptr);
       cert_builder->SetSubjectCommonName(base::StrCat(
-          {"Chromium Test Cert - Iteration ", base::NumberToString(iteration),
+          {"Cinaseek Test Cert - Iteration ", base::NumberToString(iteration),
            " - Cert ", base::NumberToString(cert_index)}));
       cert_builder->SetBasicConstraints(/*is_ca=*/true, /*path_len=*/-1);
       cert_builder->SetValidity(not_before, not_after);

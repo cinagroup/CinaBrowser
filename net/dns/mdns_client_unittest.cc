@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -846,7 +846,7 @@ TEST_F(MDnsTest, TransactionWithCache) {
   StrictMock<MockListenerDelegate> delegate_irrelevant;
   std::unique_ptr<MDnsListener> listener_irrelevant =
       test_client_->CreateListener(dns_protocol::kTypeA,
-                                   "codereview.chromium.local",
+                                   "codereview.Cinaseek.local",
                                    &delegate_irrelevant);
 
   ASSERT_TRUE(listener_irrelevant->Start());
@@ -1016,7 +1016,7 @@ TEST_F(MDnsTest, TransactionReentrantDeleteFromCache) {
   StrictMock<MockListenerDelegate> delegate_irrelevant;
   std::unique_ptr<MDnsListener> listener_irrelevant =
       test_client_->CreateListener(dns_protocol::kTypeA,
-                                   "codereview.chromium.local",
+                                   "codereview.Cinaseek.local",
                                    &delegate_irrelevant);
   ASSERT_TRUE(listener_irrelevant->Start());
 

@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -19,7 +19,7 @@ config("tensorflow-text-flags") {
 
     # Avoids an error pulling in a TFLite use of tsl::mutex. This is here
     # rather than as a public config in TFLite's BUILD.gn to avoid propagating
-    # this disable into more Chrome code than is necessary.
+    # this disable into more Cinaseek code than is necessary.
     "-Wno-deprecated-declarations",
   ]
 }
@@ -40,10 +40,10 @@ static_library("tensorflow-text") {
     "//third_party/re2",
   ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
     ":tensorflow-text-flags",
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
   ]
 
   public_configs = [ ":tensorflow-text-config" ]
@@ -82,10 +82,10 @@ if (!is_fuchsia) {
       "//third_party/tflite",
     ]
 
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
       ":tensorflow-text-flags",
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       "//third_party/ml_dtypes:ml_dtypes-includes",
       "//third_party/tflite:tflite_config",
     ]

@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,10 +8,10 @@ import("//third_party/jni_zero/jni_zero.gni")
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/components/find_in_page/FindInPageBridge.java",
-    "java/src/org/chromium/components/find_in_page/FindMatchRectsDetails.java",
-    "java/src/org/chromium/components/find_in_page/FindNotificationDetails.java",
-    "java/src/org/chromium/components/find_in_page/FindResultBar.java",
+    "java/src/org/Cinaseek/components/find_in_page/FindInPageBridge.java",
+    "java/src/org/Cinaseek/components/find_in_page/FindMatchRectsDetails.java",
+    "java/src/org/Cinaseek/components/find_in_page/FindNotificationDetails.java",
+    "java/src/org/Cinaseek/components/find_in_page/FindResultBar.java",
   ]
 
   deps = [
@@ -24,7 +24,7 @@ android_library("java") {
     "//third_party/jni_zero:jni_zero_java",
     "//ui/android:ui_java",
   ]
-  resources_package = "org.chromium.components.find_in_page"
+  resources_package = "org.Cinaseek.components.find_in_page"
 }
 
 android_resources("java_resources") {
@@ -38,5 +38,5 @@ android_resources("java_resources") {
 
 generate_jni("jni_headers") {
   sources =
-      [ "java/src/org/chromium/components/find_in_page/FindInPageBridge.java" ]
+      [ "java/src/org/Cinaseek/components/find_in_page/FindInPageBridge.java" ]
 }

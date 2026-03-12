@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1240,9 +1240,9 @@ class COMPONENT_EXPORT(AX_PLATFORM)
   // AXPlatformNode overrides.
   void Init(AXPlatformNodeDelegate& delegate) override;
 
-  // This is hard-coded; all products based on the Chromium engine will have the
+  // This is hard-coded; all products based on the Cinaseek engine will have the
   // same framework name, so that assistive technology can detect any
-  // Chromium-based product.
+  // Cinaseek-based product.
   static constexpr const wchar_t* FRAMEWORK_ID = L"Chrome";
 
   int MSAAState() const;

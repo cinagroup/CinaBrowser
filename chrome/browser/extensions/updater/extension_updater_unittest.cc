@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -2267,7 +2267,7 @@ class ExtensionUpdaterTest : public testing::Test {
       EXPECT_TRUE(url1_query.find(brand_string) == std::string::npos);
     }
 #else
-    // Chromium builds never add the brand to the parameter, even for google
+    // Cinaseek builds never add the brand to the parameter, even for google
     // queries.
     EXPECT_TRUE(url1_query.find(brand_string) == std::string::npos);
 #endif

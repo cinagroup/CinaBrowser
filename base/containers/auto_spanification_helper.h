@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -178,7 +178,7 @@ inline T& ToPointer(T& value) {
 // order to not evaluate arguments multiple times. It also introduces a C++ code
 // block where we can define temporary variables.
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkBitmap.h;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b;l=936
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/include/core/SkBitmap.h;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b;l=936
 #define UNSAFE_SKBITMAP_GETADDR32(arg_self, arg_x, arg_y) \
   ([](auto&& self, int x, int y) {                        \
     uint32_t* row = self->getAddr32(x, y);                \
@@ -187,8 +187,8 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<uint32_t>(row, size));  \
   }(::base::spanification_internal::ToPointer(arg_self), arg_x, arg_y))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkBitmap.h;l=283;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkBitmap.h;l=293;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/include/core/SkBitmap.h;l=283;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/include/core/SkBitmap.h;l=293;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b
 #define UNSAFE_SKBITMAP_TO_BYTES_SPAN(arg_self)              \
   ([](auto&& self) {                                         \
     uint8_t* row = static_cast<uint8_t*>(self->getPixels()); \
@@ -198,8 +198,8 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<uint8_t>(row, size));      \
   }(::base::spanification_internal::ToPointer(arg_self)))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkPixmap.h;l=483;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b;bpv=1;bpt=1
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkPixmap.h;l=231;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/include/core/SkPixmap.h;l=483;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b;bpv=1;bpt=1
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/include/core/SkPixmap.h;l=231;drc=f72bd467feb15edd9323e46eab1b74ab6025bc5b
 #define UNSAFE_SKPIXMAP_TO_BYTES_SPAN(arg_self)                  \
   ([](auto&& self) {                                             \
     uint8_t* row = static_cast<uint8_t*>(self->writable_addr()); \
@@ -209,8 +209,8 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<uint8_t>(row, size));          \
   }(::base::spanification_internal::ToPointer(arg_self)))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:cc/paint/paint_canvas.h;l=66;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/src/core/SkCanvas.cpp;l=1264;drc=6c24069ae3996c883ea5d5886d0c013cb78f8394;bpv=1;bpt=1
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:cc/paint/paint_canvas.h;l=66;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/skia/src/core/SkCanvas.cpp;l=1264;drc=6c24069ae3996c883ea5d5886d0c013cb78f8394;bpv=1;bpt=1
 #define UNSAFE_PAINTCANVAS_TOP_LAYER_TO_BYTES_SPAN(arg_self, arg_info,        \
                                                    arg_row_bytes, arg_origin) \
   ([](auto&& self, SkImageInfo* info, size_t* rowBytes, SkIPoint* origin) {   \
@@ -229,7 +229,7 @@ inline T& ToPointer(T& value) {
   }(::base::spanification_internal::ToPointer(arg_self), arg_info,            \
     arg_row_bytes, arg_origin))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/boringssl/src/include/openssl/pool.h;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b;l=81
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/boringssl/src/include/openssl/pool.h;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b;l=81
 #define UNSAFE_CRYPTO_BUFFER_DATA(arg_buf)                    \
   ([](const CRYPTO_BUFFER* buf) {                             \
     const uint8_t* data = CRYPTO_BUFFER_data(buf);            \
@@ -237,7 +237,7 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<const uint8_t>(data, len)); \
   }(arg_buf))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/harfbuzz-ng/src/src/hb-buffer.h;drc=ea6a172f84f2cbcfed803b5ae71064c7afb6b5c2;l=647
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/harfbuzz-ng/src/src/hb-buffer.h;drc=ea6a172f84f2cbcfed803b5ae71064c7afb6b5c2;l=647
 #define UNSAFE_HB_BUFFER_GET_GLYPH_INFOS(arg_buffer, arg_length)     \
   ([](hb_buffer_t* buffer, unsigned int* length) {                   \
     unsigned int len;                                                \
@@ -247,7 +247,7 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<hb_glyph_info_t>(info, len));      \
   }(arg_buffer, arg_length))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:third_party/harfbuzz-ng/src/src/hb-buffer.h;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b;l=651
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:third_party/harfbuzz-ng/src/src/hb-buffer.h;drc=c76e4f83a8c5786b463c3e55c070a21ac751b96b;l=651
 #define UNSAFE_HB_BUFFER_GET_GLYPH_POSITIONS(arg_buffer, arg_length)        \
   ([](hb_buffer_t* buffer, unsigned int* length) {                          \
     unsigned int len;                                                       \
@@ -261,7 +261,7 @@ inline T& ToPointer(T& value) {
     return UNSAFE_TODO(base::span<hb_glyph_position_t>(pos, len));          \
   }(arg_buffer, arg_length))
 
-// https://source.chromium.org/chromium/chromium/src/+/main:remoting/host/xsession_chooser_linux.cc;drc=fca90714b3949f0f4c27f26ef002fe8d33f3cb73;l=274
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:remoting/host/xsession_chooser_linux.cc;drc=fca90714b3949f0f4c27f26ef002fe8d33f3cb73;l=274
 // https://web.mit.edu/barnowl/share/gtk-doc/html/glib/glib-Miscellaneous-Utility-Functions.html#g-get-system-data-dirs
 #define UNSAFE_G_GET_SYSTEM_DATA_DIRS()                             \
   ([]() {                                                           \

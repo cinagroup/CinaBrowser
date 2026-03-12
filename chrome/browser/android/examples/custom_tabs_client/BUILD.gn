@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -71,17 +71,17 @@ android_resources("chrome_tabs_client_example_apk_resources") {
 
 android_apk("custom_tabs_client_example_apk") {
   sources = [
-    "src/java/org/chromium/customtabsclient/BottomBarManager.java",
-    "src/java/org/chromium/customtabsclient/BrowserActionsReceiver.java",
-    "src/java/org/chromium/customtabsclient/ContextualMenuItemReceiver.java",
-    "src/java/org/chromium/customtabsclient/CustomTabsPackageHelper.java",
-    "src/java/org/chromium/customtabsclient/MainActivity.java",
-    "src/java/org/chromium/customtabsclient/MyApplication.java",
-    "src/java/org/chromium/customtabsclient/SessionHelper.java",
-    "src/java/org/chromium/customtabsclient/shared/CustomTabsHelper.java",
-    "src/java/org/chromium/customtabsclient/shared/KeepAliveService.java",
-    "src/java/org/chromium/customtabsclient/shared/ServiceConnection.java",
-    "src/java/org/chromium/customtabsclient/shared/ServiceConnectionCallback.java",
+    "src/java/org/Cinaseek/customtabsclient/BottomBarManager.java",
+    "src/java/org/Cinaseek/customtabsclient/BrowserActionsReceiver.java",
+    "src/java/org/Cinaseek/customtabsclient/ContextualMenuItemReceiver.java",
+    "src/java/org/Cinaseek/customtabsclient/CustomTabsPackageHelper.java",
+    "src/java/org/Cinaseek/customtabsclient/MainActivity.java",
+    "src/java/org/Cinaseek/customtabsclient/MyApplication.java",
+    "src/java/org/Cinaseek/customtabsclient/SessionHelper.java",
+    "src/java/org/Cinaseek/customtabsclient/shared/CustomTabsHelper.java",
+    "src/java/org/Cinaseek/customtabsclient/shared/KeepAliveService.java",
+    "src/java/org/Cinaseek/customtabsclient/shared/ServiceConnection.java",
+    "src/java/org/Cinaseek/customtabsclient/shared/ServiceConnectionCallback.java",
   ]
 
   android_manifest = "src/AndroidManifest.xml"

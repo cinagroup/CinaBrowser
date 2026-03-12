@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -60,7 +60,7 @@ SoftwareOutputDeviceWinSwapChain::SoftwareOutputDeviceWinSwapChain(
 
 SoftwareOutputDeviceWinSwapChain::~SoftwareOutputDeviceWinSwapChain() {
   output_backing_->UnregisterClient(this);
-  // If DWM.exe crashes, the Chromium window will become black until the next
+  // If DWM.exe crashes, the Cinaseek window will become black until the next
   // commit. Therefore clear the root visual manually and proactively commit.
   dcomp_root_visual_.Reset();
   dcomp_target_.Reset();

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ bool HostMatches(const network::mojom::blink::CSPSource& source,
 
 bool HostMatches(const network::mojom::blink::CSPSource& source,
                  const KURL& url) {
-  // Chromium currently has an issue handling non-special URLs. The url.Host()
+  // Cinaseek currently has an issue handling non-special URLs. The url.Host()
   // function returns an empty string for them. See
   // crbug.com/40063064 for details.
   //

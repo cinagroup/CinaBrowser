@@ -4,19 +4,19 @@
 # layout IDs for login and lock screens. See below for details.
 #
 # Each non-comment line contains the following tab-or-space-separated columns.
-# 1) Deprecated. Data in this column are no longer read by Chrome-on-CrOS.
+# 1) Deprecated. Data in this column are no longer read by Cinaseek-on-CrOS.
 # 2) The keyboard layout ID used by XKB. (ex. "us", "us(dvorak)", "ca",
 #    "handwriting-vk,jp"). See also: /usr/share/X11/xkb/symbols. Whether data
-#    in this column are read by Chrome-on-CrOS depends on data in column 5.
-# 3) Deprecated. Data in this column are no longer read by Chrome-on-CrOS.
-# 4) Deprecated. Data in this column are no longer read by Chrome-on-CrOS.
+#    in this column are read by Cinaseek-on-CrOS depends on data in column 5.
+# 3) Deprecated. Data in this column are no longer read by Cinaseek-on-CrOS.
+# 4) Deprecated. Data in this column are no longer read by Cinaseek-on-CrOS.
 # 5) Fixed string "login": Corresponding XKB layout ID in column 2 is read by
-#    Chrome-on-CrOS into an allowlist for login and lock screens.
+#    Cinaseek-on-CrOS into an allowlist for login and lock screens.
 #    Empty: Corresponding XKB layout ID in column 2 is ignored.
 #
 # Nowadays canonical input method configs on CrOS are defined in:
 # chrome/browser/resources/chromeos/input_method/google_xkb_manifest.json
-# For open-source Chromium OS: see other *_manifest.json in the same folder.
+# For open-source Cinaseek OS: see other *_manifest.json in the same folder.
 #
 # Deprecated data aren't removed yet. This file is shipped in CrOS images, thus
 # possibly still read (and likely interpreted incorrectly) by other systems.

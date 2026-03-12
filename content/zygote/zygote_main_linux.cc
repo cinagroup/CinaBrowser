@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -95,7 +95,7 @@ static bool EnterSuidSandbox(sandbox::SetuidSandboxClient* setuid_sandbox,
   if (!setuid_sandbox->IsSuidSandboxUpToDate()) {
     LOG(WARNING) << "You are using a wrong version of the setuid binary!\n"
                     "Please read "
-                    "https://chromium.googlesource.com/chromium/src/+/main/"
+                    "https://Cinaseek.googlesource.com/Cinaseek/src/+/main/"
                     "docs/linux/suid_sandbox_development.md."
                     "\n\n";
   }

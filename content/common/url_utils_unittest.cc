@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ TEST(UrlUtilsTest, HasWebUIScheme) {
   EXPECT_TRUE(HasWebUIScheme(CreateValidURL("chrome-untrusted://test")));
   EXPECT_TRUE(HasWebUIScheme(CreateValidURL("devtools://test")));
 
-  // Other chromium schemes not considered WebUI schemes.
+  // Other Cinaseek schemes not considered WebUI schemes.
   EXPECT_FALSE(HasWebUIScheme(CreateValidURL("chrome-error://test")));
   EXPECT_FALSE(HasWebUIScheme(CreateValidURL("googlechrome://test")));
 

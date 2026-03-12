@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/mac13.arm64-blink-rel/gn-args.json"
@@ -10,22 +10,22 @@
             "builder_id": {
               "bucket": "try",
               "builder": "mac13.arm64-blink-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
               "builder_group": "tryserver.blink",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "mac"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -35,7 +35,7 @@
         {
           "bucket": "try",
           "builder": "mac13.arm64-blink-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "retry_failed_shards": true,
@@ -50,7 +50,7 @@
     "enable_cloud_trace": true,
     "experiments": [],
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -61,5 +61,5 @@
     ]
   },
   "builder_group": "tryserver.blink",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

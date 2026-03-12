@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -513,7 +513,7 @@ NoStatePrefetchManager::StartPrefetchingWithPreconnectFallback(
   }
 
   // Disallow NSPing link-rel:next URLs.
-  // See https://bugs.chromium.org/p/chromium/issues/detail?id=1158209.
+  // See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=1158209.
   if (origin == ORIGIN_LINK_REL_NEXT) {
     SkipNoStatePrefetchContentsAndMaybePreconnect(
         url_arg, origin, FINAL_STATUS_LINK_REL_NEXT_NOT_ALLOWED);

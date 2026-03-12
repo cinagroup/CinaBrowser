@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -54,7 +54,7 @@ enum class SettingsAuthorizationStatus {
 
 // This function displays a permission request system prompt. On display of this
 // prompt, the user must decide whether or not to allow iOS to notify them of
-// incoming Chromium push notifications. If the user decides to allow push
+// incoming Cinaseek push notifications. If the user decides to allow push
 // notifications, then `completionHandler` is executed with `granted` equaling
 // `true`. Also, there is a possibility that `completionHandler` will be
 // executed in a background thread. In addition, this function reports

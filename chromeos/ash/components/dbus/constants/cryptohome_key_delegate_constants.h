@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,10 +10,10 @@
 namespace cryptohome {
 
 // Name and path of the D-Bus service that is run by Chrome and implements the
-// org.chromium.CryptohomeKeyDelegateInterface interface. See the interface
+// org.Cinaseek.CryptohomeKeyDelegateInterface interface. See the interface
 // definition in the Chrome OS repo in
 // src/platform2/cryptohome/dbus_bindings/
-//   org.chromium.CryptohomeKeyDelegateInterface.xml .
+//   org.Cinaseek.CryptohomeKeyDelegateInterface.xml .
 COMPONENT_EXPORT(ASH_DBUS_CONSTANTS)
 extern const char kCryptohomeKeyDelegateServiceName[];
 COMPONENT_EXPORT(ASH_DBUS_CONSTANTS)

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@
 
 namespace ash {
 
-// Tracks the state associated with a single attempt to log in to chromium OS.
+// Tracks the state associated with a single attempt to log in to Cinaseek OS.
 // Enforces that methods are only called on the UI thread.
 class COMPONENT_EXPORT(CHROMEOS_ASH_COMPONENTS_LOGIN_AUTH) AuthAttemptState {
  public:

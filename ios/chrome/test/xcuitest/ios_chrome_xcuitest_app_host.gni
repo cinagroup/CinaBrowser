@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import("//ios/build/chrome_build.gni")
 import("//ios/chrome/app/chrome_app.gni")
 import("//ios/public/provider/chrome/browser/build_config.gni")
 
-# Template to build a simple Chrome host app for XCUITests.
+# Template to build a simple Cinaseek host app for XCUITests.
 #
 # Arguments
 #
@@ -59,7 +59,7 @@ template("ios_chrome_xcuitest_app_host") {
     info_plist_target = ":$_tweak_info_plist"
     extra_substitutions = [
       "CHROMIUM_BUNDLE_ID=$bundle_identifier",
-      "CHROMIUM_HANDOFF_ID=$chromium_handoff_id",
+      "CHROMIUM_HANDOFF_ID=$Cinaseek_handoff_id",
       "CHROMIUM_SHORT_NAME=$target_name",
       "CHROMIUM_URL_CHANNEL_SCHEME=$url_channel_scheme",
       "CHROMIUM_URL_SCHEME_1=$url_unsecure_scheme",

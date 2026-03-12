@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,8 +22,8 @@
 #include "net/proxy_resolution/configured_proxy_resolution_service.h"
 #include "net/proxy_resolution/proxy_resolution_request.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
 #include "net/spdy/spdy_http_utils.h"
 #include "net/third_party/quiche/src/quiche/quic/core/http/web_transport_http3.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_connection.h"
@@ -70,8 +70,8 @@ std::set<std::string> HostsFromSchemeHostPorts(
 }
 
 // A version of WebTransportFingerprintProofVerifier that enforces
-// Chromium-specific policies.
-class ChromiumWebTransportFingerprintProofVerifier
+// Cinaseek-specific policies.
+class CinaseekWebTransportFingerprintProofVerifier
     : public quic::WebTransportFingerprintProofVerifier {
  public:
   using WebTransportFingerprintProofVerifier::
@@ -100,14 +100,14 @@ std::unique_ptr<quic::ProofVerifier> CreateProofVerifier(
         context->quic_context()->params()->webtransport_developer_mode) {
       hostnames_to_allow_unknown_roots.insert("");
     }
-    return std::make_unique<ProofVerifierChromium>(
+    return std::make_unique<ProofVerifierCinaseek>(
         context->cert_verifier(), context->transport_security_state(),
         context->sct_auditing_delegate(),
         std::move(hostnames_to_allow_unknown_roots), anonymization_key);
   }
 
   auto verifier =
-      std::make_unique<ChromiumWebTransportFingerprintProofVerifier>(
+      std::make_unique<CinaseekWebTransportFingerprintProofVerifier>(
           context->quic_context()->clock(), kCustomCertificateMaxValidityDays);
   for (const quic::CertificateFingerprint& fingerprint :
        parameters.server_certificate_fingerprints) {
@@ -377,7 +377,7 @@ DedicatedWebTransportHttp3Client::DedicatedWebTransportHttp3Client(
                                       NetLogSourceType::WEB_TRANSPORT_CLIENT)),
       task_runner_(base::SingleThreadTaskRunner::GetCurrentDefault().get()),
       alarm_factory_(
-          std::make_unique<QuicChromiumAlarmFactory>(task_runner_,
+          std::make_unique<QuicCinaseekAlarmFactory>(task_runner_,
                                                      quic_context_->clock())),
       // TODO(vasilvv): proof verifier should have proper error reporting
       // (currently, all certificate verification errors result in "TLS
@@ -611,7 +611,7 @@ int DedicatedWebTransportHttp3Client::DoConnect() {
   next_connect_state_ = CONNECT_STATE_CONNECT_CONFIGURE;
 
   // TODO(vasilvv): consider unifying parts of this code with QuicSocketFactory
-  // (which currently has a lot of code specific to QuicChromiumClientSession).
+  // (which currently has a lot of code specific to QuicCinaseekClientSession).
   socket_ = context_->GetNetworkSessionContext()
                 ->client_socket_factory->CreateDatagramClientSocket(
                     DatagramSocket::DEFAULT_BIND, net_log_.net_log(),
@@ -643,7 +643,7 @@ void DedicatedWebTransportHttp3Client::CreateConnection() {
       connection_id, quic::QuicSocketAddress(),
       ToQuicSocketAddress(server_address), quic_context_->helper(),
       alarm_factory_.get(),
-      new QuicChromiumPacketWriter(socket_.get(), task_runner_),
+      new QuicCinaseekPacketWriter(socket_.get(), task_runner_),
       /* owns_writer */ true, quic::Perspective::IS_CLIENT, supported_versions_,
       connection_id_generator_);
   connection_ = connection.get();
@@ -659,7 +659,7 @@ void DedicatedWebTransportHttp3Client::CreateConnection() {
         original_supported_versions_);
   }
 
-  packet_reader_ = std::make_unique<QuicChromiumPacketReader>(
+  packet_reader_ = std::make_unique<QuicCinaseekPacketReader>(
       std::move(socket_), quic_context_->clock(), this,
       kQuicYieldAfterPacketsRead,
       quic::QuicTime::Delta::FromMilliseconds(
@@ -961,7 +961,7 @@ bool DedicatedWebTransportHttp3Client::OnPacket(
 
 int DedicatedWebTransportHttp3Client::HandleWriteError(
     int error_code,
-    scoped_refptr<QuicChromiumPacketWriter::ReusableIOBuffer> /*last_packet*/) {
+    scoped_refptr<QuicCinaseekPacketWriter::ReusableIOBuffer> /*last_packet*/) {
   return error_code;
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ const std::u16string kSharedTabName = u"example.com";
 const std::u16string kAppName = u"sharing.com";
 const std::u16string kSinkName = u"Living Room TV";
 
-const std::u16string kCapturedUrl = u"https://captured.chromium.org/";
-const std::u16string kCapturingUrl = u"https://capturing.chromium.org/";
+const std::u16string kCapturedUrl = u"https://captured.Cinaseek.org/";
+const std::u16string kCapturingUrl = u"https://capturing.Cinaseek.org/";
 
 }  // namespace
 

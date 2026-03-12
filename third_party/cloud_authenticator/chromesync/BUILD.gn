@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,6 +9,6 @@ rust_static_library("chromesync") {
   sources = [ "src/lib.rs" ]
   inputs = [ "sync_pb.rs" ]
   deps = [ "//third_party/rust/prost/v0_14:lib" ]
-  no_chromium_prelude = true
+  no_Cinaseek_prelude = true
   testonly = true
 }

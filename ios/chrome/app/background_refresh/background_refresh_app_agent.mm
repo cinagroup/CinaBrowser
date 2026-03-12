@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@
 // General note on threading: the IOS task scheduler invokes the configured
 // blocks on a non-main thread. This class's primary job is to route background
 // refresh work to the specific classes (instances of AppRefreshProvider) which
-// actually perform the refresh tasks. In order for this to happen on Chromium
+// actually perform the refresh tasks. In order for this to happen on Cinaseek
 // threads, all of the task dispatch and management work is done on the main
 // thread. The methods that handle that work are thus main-sequence affine, and
 // are guarded by a sequence checker. The configured methods that handle task
@@ -151,7 +151,7 @@
   };
 
   // TODO(crbug.com/354919106):  Consider moving this task to a queue known to
-  // Chromium, so it's easy to safely thread hop.
+  // Cinaseek, so it's easy to safely thread hop.
   [BGTaskScheduler.sharedScheduler
       registerForTaskWithIdentifier:kAppBackgroundRefreshTaskIdentifier
                          usingQueue:nil

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ namespace {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 const char16_t kBrowserWindowTitle[] = u"Chrome - New Tab";
 #else
-const char16_t kBrowserWindowTitle[] = u"Chromium - New Tab";
+const char16_t kBrowserWindowTitle[] = u"Cinaseek - New Tab";
 #endif
 
 class ShelfIntegrationTest : public AshIntegrationTest {

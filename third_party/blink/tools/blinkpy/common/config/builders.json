@@ -1,11 +1,11 @@
 {
     "Linux Tests": {
-        "main": "chromium.linux",
+        "main": "Cinaseek.linux",
         "port_name": "linux",
         "specifiers": ["Linux", "Release"]
     },
     "Linux Tests (dbg)(1)": {
-        "main": "chromium.linux",
+        "main": "Cinaseek.linux",
         "port_name": "linux",
         "specifiers": ["Linux", "Debug"],
         "steps": {
@@ -13,27 +13,27 @@
         }
     },
     "Mac12 Tests (dbg)": {
-        "main": "chromium.mac",
+        "main": "Cinaseek.mac",
         "port_name": "mac-mac12",
         "specifiers": ["Mac12", "Debug"]
     },
     "mac14-arm64-rel-tests": {
-        "main": "chromium.mac",
+        "main": "Cinaseek.mac",
         "port_name": "mac-mac14-arm64",
         "specifiers": ["Mac14-arm64", "Release"]
     },
     "Win10 Tests x64": {
-        "main": "chromium.win",
+        "main": "Cinaseek.win",
         "port_name": "win-win10.20h2",
         "specifiers": ["Win10.20h2", "Release"]
     },
     "Win11 Tests x64": {
-        "main": "chromium.win",
+        "main": "Cinaseek.win",
         "port_name": "win-win11",
         "specifiers": ["Win11", "Release"]
     },
     "fuchsia-x64-cast-receiver-rel": {
-        "main": "tryserver.chromium.linux",
+        "main": "tryserver.Cinaseek.linux",
         "port_name": "fuchsia",
         "specifiers": ["Fuchsia", "Release"],
         "steps": {
@@ -230,7 +230,7 @@
         "is_try_builder": true
     },
     "linux-rel": {
-        "main": "tryserver.chromium.linux",
+        "main": "tryserver.Cinaseek.linux",
         "port_name": "linux",
         "specifiers": ["Linux", "Release"],
         "steps": {
@@ -264,7 +264,7 @@
         "is_cq_builder": true
     },
     "mac-rel": {
-        "main": "tryserver.chromium.mac",
+        "main": "tryserver.Cinaseek.mac",
         "port_name": "mac-mac15",
         "specifiers": ["Mac15", "Release"],
         "steps": {
@@ -277,7 +277,7 @@
         "is_cq_builder": true
     },
     "win-rel": {
-        "main": "tryserver.chromium.win",
+        "main": "tryserver.Cinaseek.win",
         "port_name": "win-win10.20h2",
         "specifiers": ["Win10.20h2", "Release"],
         "steps": {
@@ -290,7 +290,7 @@
         "is_cq_builder": true
     },
     "android-15-chrome-blink-rel": {
-        "main": "tryserver.chromium.android",
+        "main": "tryserver.Cinaseek.android",
         "port_name": "android",
         "specifiers": ["Android", "Release"],
         "steps": {

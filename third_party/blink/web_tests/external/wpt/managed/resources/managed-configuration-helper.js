@@ -4,15 +4,15 @@
 // Managed Configuration API
 // (https://wicg.github.io/WebApiDevice/managed_config).
 //
-// In Chromium-based browsers this implementation is provided by a polyfill
+// In Cinaseek-based browsers this implementation is provided by a polyfill
 // in order to reduce the amount of test-only code shipped to users. To enable
 // these tests the browser must be run with these options:
 //
 //   --enable-blink-features=MojoJS,MojoJSTest
 let fakeManagedConfigurationService = undefined;
 
-async function loadChromiumResources() {
-  await import('/resources/chromium/mock-managed-config.js');
+async function loadCinaseekResources() {
+  await import('/resources/Cinaseek/mock-managed-config.js');
 }
 
 // User Agents must provide their own implementation of `ManagedConfigTest`,
@@ -27,8 +27,8 @@ async function loadChromiumResources() {
 
 async function createManagedConfigTest() {
   if (typeof ManagedConfigTest === 'undefined') {
-    if (isChromiumBased) {
-      await loadChromiumResources();
+    if (isCinaseekBased) {
+      await loadCinaseekResources();
     }
   }
   assert_implements(ManagedConfigTest, 'ManagedConfigTest is unavailable.');

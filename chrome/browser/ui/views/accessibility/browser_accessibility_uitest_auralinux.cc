@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ IN_PROC_BROWSER_TEST_F(AuraLinuxAccessibilityInProcessBrowserTest,
       browser_view->GetWidget()->GetRootView()->GetNativeViewAccessible();
   EXPECT_NE(nullptr, native_view_accessible);
 
-  // The root view has a child that is a client role for Chromium. Also, there
+  // The root view has a child that is a client role for Cinaseek. Also, there
   // can be one more hidden child that is `AnnounceTextView`, created by
   // `PdfOcrController` when it announces text via `RootView::AnnounceTextAs()`
   // on Linux.

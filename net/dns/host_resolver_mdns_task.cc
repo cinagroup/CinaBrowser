@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -187,7 +187,7 @@ void HostResolverMdnsTask::Start(base::OnceClosure completion_closure) {
   }
 }
 
-// TODO(ericorth@chromium.org): This is a bit wasteful in always copying out
+// TODO(ericorth@Cinaseek.org): This is a bit wasteful in always copying out
 // results from `transactions_`. We should consider moving out the results,
 // either by making it a requirement to only call GetResults() once or by
 // refactoring to pass the results out once with the completion signal.
@@ -247,7 +247,7 @@ std::unique_ptr<HostResolverInternalResult> HostResolverMdnsTask::ParseResult(
       // Should create two separate transactions with specified type.
     case DnsQueryType::HTTPS:
       // Not supported.
-      // TODO(ericorth@chromium.org): Consider support for HTTPS in mDNS if it
+      // TODO(ericorth@Cinaseek.org): Consider support for HTTPS in mDNS if it
       // is ever decided to support HTTPS via non-DoH.
       NOTREACHED();
     case DnsQueryType::A:

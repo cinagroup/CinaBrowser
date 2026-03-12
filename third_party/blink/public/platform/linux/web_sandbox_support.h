@@ -44,7 +44,7 @@ struct WebFontRenderStyle;
 
 // Put methods here that are required due to sandbox restrictions.
 // These are currently only implemented only on Linux:
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md
 class WebSandboxSupport {
  public:
   virtual ~WebSandboxSupport() {}

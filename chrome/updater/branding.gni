@@ -1,4 +1,4 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,29 +7,29 @@ import("//build/config/chrome_build.gni")
 if (is_chrome_branded) {
   import("//chrome/updater/internal/branding_google.gni")
 } else {
-  browser_name = "Chromium"
-  browser_product_name = "Chromium"
-  crash_product_name = "ChromiumUpdater"
+  browser_name = "Cinaseek"
+  browser_product_name = "Cinaseek"
+  crash_product_name = "CinaseekUpdater"
   crash_upload_url = "https://clients2.google.com/cr/staging_report"
   help_center_url = "http://support.google.com/installer/"
   app_logo_url = "https://dl.google.com/update2/installers/icons/"
-  keystone_app_name = "ChromiumSoftwareUpdate"
-  keystone_bundle_identifier = "org.chromium.Keystone"
-  mac_browser_bundle_identifier = "org.chromium.Chromium"
-  mac_updater_bundle_identifier = "org.chromium.ChromiumUpdater"
-  privileged_helper_bundle_name = "ChromiumUpdaterPrivilegedHelper"
-  privileged_helper_name = "org.chromium.Chromium.UpdaterPrivilegedHelper"
-  updater_app_icon_path = "//chrome/app/theme/chromium/mac/app.icns"
-  updater_company_full_name = "Chromium Authors"
-  updater_company_short_name = "Chromium"
-  updater_company_short_name_lowercase = "chromium"
+  keystone_app_name = "CinaseekSoftwareUpdate"
+  keystone_bundle_identifier = "org.Cinaseek.Keystone"
+  mac_browser_bundle_identifier = "org.Cinaseek.Cinaseek"
+  mac_updater_bundle_identifier = "org.Cinaseek.CinaseekUpdater"
+  privileged_helper_bundle_name = "CinaseekUpdaterPrivilegedHelper"
+  privileged_helper_name = "org.Cinaseek.Cinaseek.UpdaterPrivilegedHelper"
+  updater_app_icon_path = "//chrome/app/theme/Cinaseek/mac/app.icns"
+  updater_company_full_name = "Cinaseek Authors"
+  updater_company_short_name = "Cinaseek"
+  updater_company_short_name_lowercase = "Cinaseek"
   updater_company_short_name_uppercase = "CHROMIUM"
   updater_copyright =
-      "Copyright 2020 The Chromium Authors. All rights reserved."
-  updater_product_full_name = "ChromiumUpdater"
-  updater_product_full_name_dashed_lowercase = "chromium-updater"
-  updater_product_full_display_name = "Chromium Updater"
-  updater_metainstaller_name = "Chromium Installer"
+      "Copyright 2020 The Cinaseek Authors. All rights reserved."
+  updater_product_full_name = "CinaseekUpdater"
+  updater_product_full_name_dashed_lowercase = "Cinaseek-updater"
+  updater_product_full_display_name = "Cinaseek Updater"
+  updater_metainstaller_name = "Cinaseek Installer"
   mac_team_identifier = "PLACEHOLDER"
   updater_appid = "{6e8ffa8f-e7e2-4000-9884-589283c27015}"
   browser_appid = "{5d8d08af-2df9-4da2-86c1-eac353a0ca32}"
@@ -39,7 +39,7 @@ if (is_chrome_branded) {
   legacy_service_name_prefix = "cupdate"
   prefs_access_mutex = "{A6B9ECD5-772A-4D3F-BFEB-CF9340534A3E}"
   setup_mutex_prefix = "{25569F82-3B67-4185-8127-88E4CF803680}"
-  grdfile_name = "chromium_strings"
+  grdfile_name = "Cinaseek_strings"
   extra_args_is_chrome_branded = "IS_CHROME_BRANDED=False"
   update_check_url = "https://omaha-qa.sandbox.google.com/service/update2/json"
   updater_event_logging_url = "https://play.googleapis.com/staging/log/"

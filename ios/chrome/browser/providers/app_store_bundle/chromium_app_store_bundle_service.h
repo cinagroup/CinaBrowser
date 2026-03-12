@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,13 +7,13 @@
 
 #import "ios/chrome/browser/app_store_bundle/model/app_store_bundle_service.h"
 
-// App store bundle service for Chromium build.
-class ChromiumAppStoreBundleService : public AppStoreBundleService {
+// App store bundle service for Cinaseek build.
+class CinaseekAppStoreBundleService : public AppStoreBundleService {
  public:
-  ChromiumAppStoreBundleService() = default;
-  ChromiumAppStoreBundleService(const ChromiumAppStoreBundleService&) = delete;
-  ChromiumAppStoreBundleService& operator=(
-      const ChromiumAppStoreBundleService&) = delete;
+  CinaseekAppStoreBundleService() = default;
+  CinaseekAppStoreBundleService(const CinaseekAppStoreBundleService&) = delete;
+  CinaseekAppStoreBundleService& operator=(
+      const CinaseekAppStoreBundleService&) = delete;
 
   // AppStoreBundleService
   int GetInstalledAppCount() final;

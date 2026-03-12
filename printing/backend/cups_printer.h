@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,7 +48,7 @@ class COMPONENT_EXPORT(PRINT_BACKEND) CupsOptionProvider {
   virtual ipp_attribute_t* GetMediaColDatabase() const = 0;
 
   // Returns the human-readable display name for an option value. Used to get
-  // fallback display names for non-standard values that Chromium doesn't have
+  // fallback display names for non-standard values that Cinaseek doesn't have
   // built-in localizations for.
   virtual const char* GetLocalizedOptionValueName(const char* option_name,
                                                   const char* value) const = 0;

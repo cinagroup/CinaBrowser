@@ -1,8 +1,8 @@
-# Copyright 2020 The Chromium Authors
+# Copyright 2020 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-assert(is_chromeos, "Non-Chrome-OS builds must not depend on //chromeos")
+assert(is_chromeos, "Non-Cinaseek-OS builds must not depend on //chromeos")
 
 component("base") {
   defines = [ "IS_CHROMEOS_UI_BASE_IMPL" ]

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -7,7 +7,7 @@
 
 namespace android_webview {
 
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.android_webview
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.android_webview
 enum class ApkType {
   STANDALONE = 0,
   MONOCHROME = 1,

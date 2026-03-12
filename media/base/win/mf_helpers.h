@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ inline std::string PrintHr(logging::SystemErrorCode error_code) {
 // these when necessary, e.g. in places where we deal with a lot of Windows API
 // calls, for each of which we have to check the returned HRESULT.
 // See discussion thread at:
-// https://groups.google.com/a/chromium.org/d/msg/cxx/zw5Xmcs--S4/r7Fwb-TsCAAJ
+// https://groups.google.com/a/Cinaseek.org/d/msg/cxx/zw5Xmcs--S4/r7Fwb-TsCAAJ
 
 #define RETURN_IF_FAILED(expr)                                         \
   do {                                                                 \

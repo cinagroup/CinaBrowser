@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,7 +10,7 @@ executable("gen_dbus_interface") {
 
 source_set("interface_headers") {
   sources = [
-    "org_chromium_TestInterface.h",
+    "org_Cinaseek_TestInterface.h",
     "org_freedesktop_DBus_ObjectManager.h",
     "org_freedesktop_DBus_Properties.h",
     "org_freedesktop_login1_Manager.h",

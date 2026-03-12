@@ -1,11 +1,11 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/config/android/rules.gni")
 
 android_library("java") {
-  sources = [ "java/src/org/chromium/chrome/modules/stack_unwinder/StackUnwinderModuleContents.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/modules/stack_unwinder/StackUnwinderModuleContents.java" ]
   deps = [
     "//components/module_installer/android:module_installer_java",
     "//components/module_installer/android:module_interface_java",

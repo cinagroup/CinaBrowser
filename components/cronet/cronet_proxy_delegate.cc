@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ void CronetProxyDelegate::OnResolveProxy(
 std::optional<bool> CronetProxyDelegate::CanFalloverToNextProxyOverride(
     const net::ProxyChain& proxy_chain,
     int net_error) {
-  // We promise this in org.chromium.net.ProxyOptions's documentation.
+  // We promise this in org.Cinaseek.net.ProxyOptions's documentation.
   return true;
 }
 
@@ -103,7 +103,7 @@ CronetProxyDelegate::OnBeforeTunnelRequest(
                     "proxy_chain", proxy_chain.ToDebugString(), "proxy_index",
                     proxy_index);
   CHECK(proxy_chain.opaque_data().has_value());
-  // org.chromium.net.Proxy.Callback#onBeforeTunnelRequest always continues
+  // org.Cinaseek.net.Proxy.Callback#onBeforeTunnelRequest always continues
   // asynchronously. So, from //net's perspective, this always ends up in
   // `net::ERR_IO_PENDING`.
   network_tasks_->OnBeforeTunnelRequest(*proxy_chain.opaque_data(),
@@ -122,7 +122,7 @@ net::Error CronetProxyDelegate::OnTunnelHeadersReceived(
                     "proxy_chain", proxy_chain.ToDebugString(), "proxy_index",
                     proxy_index);
   CHECK(proxy_chain.opaque_data().has_value());
-  // org.chromium.net.Proxy.Callback#onTunnelHeadersReceived always continues
+  // org.Cinaseek.net.Proxy.Callback#onTunnelHeadersReceived always continues
   // asynchronously. So, from //net's perspective, this always ends up in
   // `net::ERR_IO_PENDING`.
   network_tasks_->OnTunnelHeadersReceived(

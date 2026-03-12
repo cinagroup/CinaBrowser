@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ using alert_overlays::ButtonConfig;
 class JavaScriptConfirmDialogOverlayTest : public PlatformTest {
  protected:
   JavaScriptConfirmDialogOverlayTest()
-      : url_("http://www.chromium.test"), message_(@"message") {}
+      : url_("http://www.Cinaseek.test"), message_(@"message") {}
 
   std::unique_ptr<OverlayRequest> CreateMainFrameRequest() {
     url::Origin main_frame_origin = url::Origin::Create(url_);
@@ -51,7 +51,7 @@ TEST_F(JavaScriptConfirmDialogOverlayTest, MainFrameDialogTitleAndMessage) {
   ASSERT_TRUE(config);
 
   // Check the title and message strings.
-  EXPECT_NSEQ(@"www.chromium.test says", config->title());
+  EXPECT_NSEQ(@"www.Cinaseek.test says", config->title());
   EXPECT_EQ(message_, config->message());
 }
 

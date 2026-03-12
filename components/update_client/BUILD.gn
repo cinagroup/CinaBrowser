@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import("//testing/libfuzzer/fuzzer_test.gni")
 
 source_set("network_impl") {
   sources = [
-    "net/network_chromium.h",
+    "net/network_Cinaseek.h",
     "net/network_impl.cc",
     "net/network_impl.h",
   ]
@@ -291,7 +291,7 @@ bundle_data("unit_tests_bundle_data") {
 bundle_data("recovery_component_tests_bundle_data") {
   visibility = [ "//chrome/test:unit_tests" ]
   testonly = true
-  sources = [ "//components/test/data/update_client/ChromeRecovery.crx3" ]
+  sources = [ "//components/test/data/update_client/CinaseekRecovery.crx3" ]
   outputs = [ "{{bundle_resources_dir}}/" +
               "{{source_root_relative_dir}}/{{source_file_part}}" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 // numeric values should never be reused.
 //
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.crash.anr
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.crash.anr
 enum class AnrSkippedReason {
   kFilesystemReadFailure = 0,
   kFilesystemWriteFailure = 1,

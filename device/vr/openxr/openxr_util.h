@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@
 #include "ui/gfx/geometry/transform_util.h"
 
 namespace device {
-// These macros aren't common in Chromium and generally discouraged, so define
+// These macros aren't common in Cinaseek and generally discouraged, so define
 // all OpenXR helper macros here so they can be kept track of. This file
 // should not be included outside of device/vr/openxr.
 

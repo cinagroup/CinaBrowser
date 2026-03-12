@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -89,7 +89,7 @@ const char kEnableRasterSideDarkModeForImages[] =
 // Enables WebGL rendering into a scanout buffer for overlay support.
 // Restricted to ChromeOS, where this functionality is enabled on a per-board
 // basis.
-const char kEnableWebGLImageChromium[] = "enable-webgl-image-chromium";
+const char kEnableWebGLImageCinaseek[] = "enable-webgl-image-Cinaseek";
 #endif
 
 // Enable rasterizer that writes directly to GPU memory associated with tiles.

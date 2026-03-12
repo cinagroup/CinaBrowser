@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ using ::testing::_;
 using ::testing::Eq;
 using ::testing::WithArgs;
 
-// This is a mock for the Chromium media::ProvisionFetcher (and not Fuchsia's
+// This is a mock for the Cinaseek media::ProvisionFetcher (and not Fuchsia's
 // similarly named ProvisioningFetcher protocol).
 class MockProvisionFetcher : public ProvisionFetcher {
  public:

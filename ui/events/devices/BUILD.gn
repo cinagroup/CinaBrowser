@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -91,7 +91,7 @@ component("devices") {
 
 if (is_android) {
   generate_jni("ui_events_devices_jni_headers") {
-    sources = [ "../../android/java/src/org/chromium/ui/events/devices/InputDeviceObserver.java" ]
+    sources = [ "../../android/java/src/org/Cinaseek/ui/events/devices/InputDeviceObserver.java" ]
   }
 }
 

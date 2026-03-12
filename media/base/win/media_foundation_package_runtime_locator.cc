@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -132,7 +132,7 @@ struct DllModuleInfo {
 //   canPlayType(), MediaSource: isTypeSupported(), and
 //   mediaCapabilities.decodingInfo().
 //   2. Loading codec libraries from codec packages into process memory.
-//   Typically, the codec library is loaded into the Chromium GPU process before
+//   Typically, the codec library is loaded into the Cinaseek GPU process before
 //   it is sandboxed, aiming to resolve 'access denied' issues.
 // It provides a static method to obtain a single instance of
 // MediaFoundationPackageRuntimeLocator on-demand, which persists in process

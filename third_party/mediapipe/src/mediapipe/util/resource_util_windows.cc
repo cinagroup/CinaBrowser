@@ -21,14 +21,14 @@ namespace internal {
 absl::Status DefaultGetResourceContents(const std::string& path,
                                         std::string* output,
                                         bool read_as_binary) {
-  return absl::UnimplementedError("not suported in chromium");
+  return absl::UnimplementedError("not suported in Cinaseek");
 }
 
 }  // namespace internal
 
 absl::StatusOr<std::string> PathToResourceAsFile(const std::string& path,
                                                  bool /*shadow_copy*/) {
-  return absl::UnimplementedError("not suported in chromium");
+  return absl::UnimplementedError("not suported in Cinaseek");
 }
 
 }  // namespace mediapipe

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -108,7 +108,7 @@ component("freetype") {
   ]
 
   # ftsystem.c provides implementations of FT_Memory and FT_Stream_Open.
-  # While Chromium itself avoids using this code, any build of Chromium which
+  # While Cinaseek itself avoids using this code, any build of Cinaseek which
   # depends on //third_party/fontconfig:fontconfig with use_bundled_fontconfig
   # will make heavy use of these implementations, so use the best available.
   if (is_posix || is_fuchsia) {
@@ -138,7 +138,7 @@ component("freetype") {
   }
 
   if (is_linux || is_chromeos || is_cast_android) {
-    # Needed for content_shell on Linux and Chromecast, since fontconfig
+    # Needed for content_shell on Linux and Cinaseekcast, since fontconfig
     # requires FT_Get_BDF_Property.
     sources += [ "src/src/base/ftbdf.c" ]
 
@@ -161,8 +161,8 @@ component("freetype") {
   } else {
     configs += [ "//third_party/harfbuzz-ng:harfbuzz_config" ]
   }
-  configs -= [ "//build/config/compiler:chromium_code" ]
-  configs += [ "//build/config/compiler:no_chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
+  configs += [ "//build/config/compiler:no_Cinaseek_code" ]
   configs += [ "//build/config/sanitizers:cfi_icall_generalize_pointers" ]
   configs += [ ":freetype-warnings" ]
 

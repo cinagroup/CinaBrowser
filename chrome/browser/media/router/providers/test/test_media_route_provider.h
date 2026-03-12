@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,9 +74,9 @@ class TestMediaRouteProvider : public mojom::MediaRouteProvider,
   void set_empty_sink_list() { sinks_ = {}; }
 
   void set_unsupported_media_sources_list() {
-    unsupported_media_sources_ = {"urn:x-org.chromium.media:source:tab:0",
-                                  "urn:x-org.chromium.media:source:tab:*",
-                                  "urn:x-org.chromium.media:source:desktop",
+    unsupported_media_sources_ = {"urn:x-org.Cinaseek.media:source:tab:0",
+                                  "urn:x-org.Cinaseek.media:source:tab:*",
+                                  "urn:x-org.Cinaseek.media:source:desktop",
                                   "https://www.example.com/presentation.html"};
   }
 

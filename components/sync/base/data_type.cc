@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ static_assert(63 == syncer::GetNumDataTypes(),
 
 static_assert(63 == syncer::GetNumDataTypes(),
               "When adding a new type, follow the integration checklist in "
-              "https://www.chromium.org/developers/design-documents/sync/"
+              "https://www.Cinaseek.org/developers/design-documents/sync/"
               "integration-checklist/");
 
 // kSpecificsFieldNumberToDataTypeMap must have size syncer::GetNumDataTypes().

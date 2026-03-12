@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -128,7 +128,7 @@ VideoDecoder::Result Vp9Decoder::DecodeNextFrame() {
 
   const VAProfile profile = GetProfile(frame_hdr);
   // Note: some streams may fail to decode; see
-  // https://source.chromium.org/chromium/chromium/src/+/main:media/gpu/vp9_decoder.cc;l=249-285;drc=3893688a88eb1b4cf39e346fd8f8c743ad255469
+  // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:media/gpu/vp9_decoder.cc;l=249-285;drc=3893688a88eb1b4cf39e346fd8f8c743ad255469
   if (!va_config_ || va_config_->profile() != profile) {
     va_context_.reset();
     va_config_ = std::make_unique<ScopedVAConfig>(*va_device_, profile,

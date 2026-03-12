@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,7 +15,7 @@ namespace net {
 // Implementation of ProxyResolverFactory that uses the Apple CFProxySupport to
 // implement proxies.
 // TODO(kapishnikov): make ProxyResolverApple async as per
-// https://bugs.chromium.org/p/chromium/issues/detail?id=166387#c95
+// https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=166387#c95
 class NET_EXPORT ProxyResolverFactoryApple : public ProxyResolverFactory {
  public:
   ProxyResolverFactoryApple();

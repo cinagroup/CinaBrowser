@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ AutofillEntityDataManagerFactory::BuildServiceInstanceForBrowserContext(
       StrikeDatabaseFactory::GetForProfile(profile),
       AccessibilityAnnotationServiceFactory::GetForProfile(profile),
       GeoIpCountryCode(GetCountryCodeFromVariations()));
-  // LINT.ThenChange(//chrome/browser/autofill/android/java/src/org/chromium/chrome/browser/autofill/autofill_ai/EntityDataManagerFactory.java:AutofillAiCreateDataManager)
+  // LINT.ThenChange(//chrome/browser/autofill/android/java/src/org/Cinaseek/chrome/browser/autofill/autofill_ai/EntityDataManagerFactory.java:AutofillAiCreateDataManager)
 }
 
 bool AutofillEntityDataManagerFactory::ServiceIsCreatedWithBrowserContext()

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@
 namespace {
 // LINT.IfChange(InvalidContentOffset)
 const float kInvalidContentOffset = -10001.f;
-// LINT.ThenChange(//chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/TopToolbarOverlayMediator.java:InvalidContentOffset)
+// LINT.ThenChange(//chrome/browser/ui/android/toolbar/java/src/org/Cinaseek/chrome/browser/toolbar/top/TopToolbarOverlayMediator.java:InvalidContentOffset)
 }  // namespace
 
 namespace android {

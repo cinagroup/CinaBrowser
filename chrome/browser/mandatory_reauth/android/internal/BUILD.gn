@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -7,18 +7,18 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetControllerBridge.java",
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetViewBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetControllerBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetViewBridge.java",
   ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheet.java",
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetControllerBridge.java",
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetCoordinator.java",
-    "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetViewBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheet.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetControllerBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetViewBridge.java",
   ]
 
   deps = [
@@ -33,7 +33,7 @@ android_library("java") {
     "//ui/android:ui_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.mandatory_reauth"
+  resources_package = "org.Cinaseek.chrome.browser.mandatory_reauth"
 }
 
 android_resources("java_resources") {
@@ -50,9 +50,9 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.mandatory_reauth"
+  resources_package = "org.Cinaseek.chrome.browser.mandatory_reauth"
 
-  sources = [ "java/src/org/chromium/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetModuleTest.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/mandatory_reauth/MandatoryReauthOptInBottomSheetModuleTest.java" ]
 
   deps = [
     ":java",

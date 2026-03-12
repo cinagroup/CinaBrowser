@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -17,7 +17,7 @@ enum AspectRatioFit { kAspectRatioFitShrink, kAspectRatioFitGrow };
 // PhysicalSize is the size of a rect (typically a fragment) in the physical
 // coordinate system.
 // For more information about physical and logical coordinate systems, see:
-// https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/third_party/blink/renderer/core/layout/README.md#coordinate-spaces
 struct PLATFORM_EXPORT PhysicalSize {
   constexpr PhysicalSize() = default;
   constexpr PhysicalSize(LayoutUnit width, LayoutUnit height)

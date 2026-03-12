@@ -4748,7 +4748,7 @@ String AXObject::SimplifyName(const String& str,
 #if DCHECK_IS_ON()
       if (AXObjectCache().IsInternalUICheckerOn(*this)) {
         DCHECK(false)
-            << "A prohibited accessible name was used in chromium web UI:\n"
+            << "A prohibited accessible name was used in Cinaseek web UI:\n"
             << GetProhibitedNameError(str, name_from)
             << "* URL: " << GetDocument()->Url()
             << "\n* Outer html: " << GetElement()->outerHTML()
@@ -4817,7 +4817,7 @@ bool AXObject::IsNameProhibited() const {
     // TODO(crbug.com/350528330): Test to see whether the following content
     // works in all screen readers we support, and if not, we should return true
     // here: <div tabindex="0" aria-label="Some label"></div>. Either way,
-    // we should still disallow this pattern in Chromium Web UI.
+    // we should still disallow this pattern in Cinaseek Web UI.
     return false;
   }
 

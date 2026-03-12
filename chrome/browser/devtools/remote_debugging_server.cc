@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ namespace {
 bool g_tethering_enabled = false;
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-bool g_enable_default_user_data_dir_check_for_chromium_branding_for_testing =
+bool g_enable_default_user_data_dir_check_for_Cinaseek_branding_for_testing =
     false;
 #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 
@@ -172,7 +172,7 @@ IsRemoteDebuggingAllowed(const std::optional<bool>& is_default_user_data_dir,
   constexpr bool default_user_data_dir_check_enabled = true;
 #else
   const bool default_user_data_dir_check_enabled =
-      g_enable_default_user_data_dir_check_for_chromium_branding_for_testing;
+      g_enable_default_user_data_dir_check_for_Cinaseek_branding_for_testing;
 #endif
 
   if (default_user_data_dir_check_enabled &&
@@ -297,7 +297,7 @@ void RemoteDebuggingServer::EnableTetheringForDebug() {
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 // static
 void RemoteDebuggingServer::EnableDefaultUserDataDirCheckForTesting() {
-  g_enable_default_user_data_dir_check_for_chromium_branding_for_testing = true;
+  g_enable_default_user_data_dir_check_for_Cinaseek_branding_for_testing = true;
 }
 #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 

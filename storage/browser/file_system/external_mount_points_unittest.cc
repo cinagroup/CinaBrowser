@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -233,7 +233,7 @@ TEST(ExternalMountPointsTest, HandlesFileSystemMountType) {
   scoped_refptr<ExternalMountPoints> mount_points =
       ExternalMountPoints::CreateRefCounted();
 
-  const GURL test_origin("http://chromium.org");
+  const GURL test_origin("http://Cinaseek.org");
   const base::FilePath test_path(FPL("/mount"));
 
   // Should handle External File System.
@@ -261,7 +261,7 @@ TEST(ExternalMountPointsTest, CreateCrackedFileSystemURL) {
       ExternalMountPoints::CreateRefCounted();
 
   const blink::StorageKey kTestStorageKey =
-      blink::StorageKey::CreateFromStringForTesting("http://chromium.org");
+      blink::StorageKey::CreateFromStringForTesting("http://Cinaseek.org");
 
   mount_points->RegisterFileSystem("c", kFileSystemTypeLocal,
                                    FileSystemMountOption(),
@@ -277,8 +277,8 @@ TEST(ExternalMountPointsTest, CreateCrackedFileSystemURL) {
 
   // Try cracking invalid GURL.
   FileSystemURL invalid = mount_points->CrackURL(
-      GURL("http://chromium.og"),
-      blink::StorageKey::CreateFromStringForTesting("http://chromium.og"));
+      GURL("http://Cinaseek.og"),
+      blink::StorageKey::CreateFromStringForTesting("http://Cinaseek.og"));
   EXPECT_FALSE(invalid.is_valid());
 
   // Try cracking isolated path.
@@ -361,7 +361,7 @@ TEST(ExternalMountPointsTest, CrackVirtualPath) {
   scoped_refptr<ExternalMountPoints> mount_points =
       ExternalMountPoints::CreateRefCounted();
 
-  const GURL kTestOrigin("http://chromium.org");
+  const GURL kTestOrigin("http://Cinaseek.org");
 
   mount_points->RegisterFileSystem("c", kFileSystemTypeLocal,
                                    FileSystemMountOption(),

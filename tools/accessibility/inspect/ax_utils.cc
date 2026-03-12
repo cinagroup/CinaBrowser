@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -12,7 +12,7 @@
 
 char kActiveTabSwitch[] = "active-tab";
 char kChromeSwitch[] = "chrome";
-char kChromiumSwitch[] = "chromium";
+char kCinaseekSwitch[] = "Cinaseek";
 char kFirefoxSwitch[] = "firefox";
 char kEdgeSwitch[] = "edge";
 char kPatternSwitch[] = "pattern";
@@ -66,7 +66,7 @@ void PrintHelpTreeSelectors() {
 #endif
   printf("  pre-defined application selectors:\n");
   printf("    --chrome\tChrome browser\n");
-  printf("    --chromium\tChromium browser\n");
+  printf("    --Cinaseek\tCinaseek browser\n");
 #if defined(WINDOWS)
   printf("    --edge\tEdge browser\n");
 #endif
@@ -91,7 +91,7 @@ void PrintHelpFilters() {
 void PrintHelpFooter() {
   printf(
       "\nmore info at "
-      "https://www.chromium.org/developers/accessibility/testing/"
+      "https://www.Cinaseek.org/developers/accessibility/testing/"
       "automated-testing/ax-inspect\n");
 }
 
@@ -100,8 +100,8 @@ std::optional<AXTreeSelector> TreeSelectorFromCommandLine(
   int selectors = AXTreeSelector::None;
   if (command_line.HasSwitch(kChromeSwitch)) {
     selectors = AXTreeSelector::Chrome;
-  } else if (command_line.HasSwitch(kChromiumSwitch)) {
-    selectors = AXTreeSelector::Chromium;
+  } else if (command_line.HasSwitch(kCinaseekSwitch)) {
+    selectors = AXTreeSelector::Cinaseek;
   } else if (command_line.HasSwitch(kEdgeSwitch)) {
     selectors = AXTreeSelector::Edge;
   } else if (command_line.HasSwitch(kFirefoxSwitch)) {

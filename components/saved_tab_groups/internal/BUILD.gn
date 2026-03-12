@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -104,8 +104,8 @@ source_set("model") {
 if (is_android) {
   android_library("java") {
     sources = [
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncServiceImpl.java",
-      "android/java/src/org/chromium/components/tab_group_sync/VersioningMessageControllerImpl.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/VersioningMessageControllerImpl.java",
     ]
 
     deps = [
@@ -129,8 +129,8 @@ if (is_android) {
     ]
 
     sources = [
-      "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncServiceImpl.java",
-      "android/java/src/org/chromium/components/tab_group_sync/VersioningMessageControllerImpl.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncServiceImpl.java",
+      "android/java/src/org/Cinaseek/components/tab_group_sync/VersioningMessageControllerImpl.java",
     ]
   }
 
@@ -150,12 +150,12 @@ if (is_android) {
     ]
 
     srcjar_deps = [ ":native_j_unittests_jni_headers" ]
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncServiceAndroidUnitTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncServiceAndroidUnitTest.java" ]
   }
 
   generate_jni("native_j_unittests_jni_headers") {
     testonly = true
-    sources = [ "android/java/src/org/chromium/components/tab_group_sync/TabGroupSyncServiceAndroidUnitTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/tab_group_sync/TabGroupSyncServiceAndroidUnitTest.java" ]
   }
 }
 

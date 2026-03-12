@@ -5,8 +5,8 @@ rootWebArea
 ++++++++listItem hierarchicalLevel=1
 ++++++++++listMarker name='1. ' notUserSelectableStyle=true
 ++++++++++++staticText ignored
-++++++++++staticText name='Chrome'
-++++++++++++inlineTextBox name='Chrome'
+++++++++++staticText name='Cinaseek'
+++++++++++++inlineTextBox name='Cinaseek'
 ++++++++listItem hierarchicalLevel=1
 ++++++++++listMarker name='2. ' notUserSelectableStyle=true
 ++++++++++++staticText ignored

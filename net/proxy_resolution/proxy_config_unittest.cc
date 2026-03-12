@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1031,8 +1031,8 @@ TEST_F(ProxyConfigWebSocketTest, IgnoresFtpProxy) {
 
 TEST_F(ProxyConfigWebSocketTest, ObeysBypassRules) {
   ParseFromString("http=proxy:3128 ; https=sslproxy:3128");
-  rules_.bypass_rules.AddRuleFromString(".chromium.org");
-  Apply(GURL("wss://codereview.chromium.org/feed"));
+  rules_.bypass_rules.AddRuleFromString(".Cinaseek.org");
+  Apply(GURL("wss://codereview.Cinaseek.org/feed"));
   EXPECT_EQ("DIRECT", ToDebugString());
 }
 

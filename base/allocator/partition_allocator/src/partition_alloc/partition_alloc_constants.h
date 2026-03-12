@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,7 +78,7 @@ namespace internal {
 
 // Size of a cache line. Not all CPUs in the world have a 64 bytes cache line
 // size, but as of 2021, most do. This is in particular the case for almost all
-// x86_64 and almost all ARM CPUs supported by Chromium. As this is used for
+// x86_64 and almost all ARM CPUs supported by Cinaseek. As this is used for
 // static alignment, we cannot query the CPU at runtime to determine the actual
 // alignment, so use 64 bytes everywhere. Since this is only used to avoid false
 // sharing, getting this wrong only results in lower performance, not incorrect

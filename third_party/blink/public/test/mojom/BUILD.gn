@@ -1,4 +1,4 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -13,7 +13,7 @@ if (is_android) {
 }
 
 # These two targets include all mojom interfaces which are used for test
-# automation in content_shell, as a separate ChromeDriver-based code path uses
+# automation in content_shell, as a separate CinaseekDriver-based code path uses
 # CDP to achieve the same results.
 
 mojom("core_test_automation") {

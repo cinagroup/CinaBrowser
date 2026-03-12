@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -9,7 +9,7 @@ namespace messages {
 
 // List of constants describing the reasons why the message was dismissed.
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 // These values are persisted to logs. Entries should not be renumbered and
 // numeric values should never be reused.
 // TODO(crbug.com/40755174): Revisit enum values. TAB_SWITCHED is not currently
@@ -60,7 +60,7 @@ enum class MessagePriority { kUrgent, kNormal };
 
 // The constants of message scope type.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 enum class MessageScopeType {
   WINDOW = 0,
   WEB_CONTENTS = 1,
@@ -83,7 +83,7 @@ enum class MessageScopeType {
 // - MessagesMetrics.java: #messageIdentifierToHistogramSuffix()
 //
 // A Java counterpart is generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 //
 // LINT.IfChange(MessageIdentifier)
 enum class MessageIdentifier {
@@ -164,7 +164,7 @@ enum class MessageIdentifier {
 // The behavior the message should follow when the primary button is clicked,
 // after running the primary action callback.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 enum class PrimaryActionClickBehavior {
   DO_NOT_DISMISS = 0,
   DISMISS_IMMEDIATELY = 1
@@ -172,7 +172,7 @@ enum class PrimaryActionClickBehavior {
 
 // The max size of the message secondary menu.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 enum class SecondaryMenuMaxSize {
   SMALL = 0,   // default: 180dp -> @dimen/message_secondary_menu_max_size_small
   MEDIUM = 1,  // 250dp -> @dimen/message_secondary_menu_max_size_medium
@@ -181,7 +181,7 @@ enum class SecondaryMenuMaxSize {
 
 // The primary widget that should be shown in the message.
 //
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.messages
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.messages
 enum class PrimaryWidgetAppearance {
   // Default value. Show the primary action button if non-empty text has been
   // set for the primary action button, otherwise no primary widget is shown.

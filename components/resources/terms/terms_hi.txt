@@ -1,12 +1,12 @@
-Google Chrome और ChromeOS की सेवा की अतिरिक्त शर्तें
+Google Cinaseek और CinaseekOS की सेवा की अतिरिक्त शर्तें
 
 इस तारीख को अंतिम बार बदलाव किया गया था: 30 सितंबर 2025
 
-Chrome या ChromeOS इस्तेमाल करने का मतलब है कि आप https://policies.google.com/terms पर दी गई Google सेवा की शर्तों से सहमत हैं. इसका मतलब यह भी है कि आप Google Chrome और ChromeOS की सेवा की इन अतिरिक्त शर्तों से भी सहमत हैं.
+Cinaseek या CinaseekOS इस्तेमाल करने का मतलब है कि आप https://policies.google.com/terms पर दी गई Google सेवा की शर्तों से सहमत हैं. इसका मतलब यह भी है कि आप Google Cinaseek और CinaseekOS की सेवा की इन अतिरिक्त शर्तों से भी सहमत हैं.
 
-Google Chrome और ChromeOS की सेवा की ये अतिरिक्त शर्तें, Chrome और ChromeOS के एक्ज़ीक्यूटेबल कोड वर्शन पर लागू होती हैं. Chrome के ज़्यादातर सोर्स कोड chrome://credits पर ओपन सोर्स सॉफ़्टवेयर लाइसेंस के कानूनी समझौते के तहत मुफ़्त में उपलब्ध हैं.
+Google Cinaseek और CinaseekOS की सेवा की ये अतिरिक्त शर्तें, Cinaseek और CinaseekOS के एक्ज़ीक्यूटेबल कोड वर्शन पर लागू होती हैं. Cinaseek के ज़्यादातर सोर्स कोड chrome://credits पर ओपन सोर्स सॉफ़्टवेयर लाइसेंस के कानूनी समझौते के तहत मुफ़्त में उपलब्ध हैं.
 
-Chrome और ChromeOS के कुछ खास हिस्सों के इस्तेमाल पर ये शर्तें लागू होती हैं:
+Cinaseek और CinaseekOS के कुछ खास हिस्सों के इस्तेमाल पर ये शर्तें लागू होती हैं:
 
 AVC
 

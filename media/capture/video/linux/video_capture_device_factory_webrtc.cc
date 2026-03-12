@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ void VideoCaptureDeviceFactoryWebRtc::FinishGetDevicesInfo() {
 
           VideoCaptureFormat supported_format;
           supported_format.pixel_format =
-              WebRtcVideoTypeToChromiumPixelFormat(capability.videoType);
+              WebRtcVideoTypeToCinaseekPixelFormat(capability.videoType);
           supported_format.frame_rate = capability.maxFPS;
           supported_format.frame_size.SetSize(capability.width,
                                               capability.height);
@@ -134,7 +134,7 @@ bool VideoCaptureDeviceFactoryWebRtc::IsAvailable() {
 }
 
 webrtc::VideoType
-VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeFromChromiumPixelFormat(
+VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeFromCinaseekPixelFormat(
     VideoPixelFormat pixel_format) {
   for (const auto& type_and_format : kSupportedFormats) {
     if (type_and_format.pixel_format == pixel_format) {
@@ -145,7 +145,7 @@ VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeFromChromiumPixelFormat(
 }
 
 VideoPixelFormat
-VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToChromiumPixelFormat(
+VideoCaptureDeviceFactoryWebRtc::WebRtcVideoTypeToCinaseekPixelFormat(
     webrtc::VideoType video_type) {
   for (const auto& type_and_format : kSupportedFormats) {
     if (type_and_format.video_type == video_type) {

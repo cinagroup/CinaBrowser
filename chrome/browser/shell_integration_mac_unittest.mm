@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -43,7 +43,7 @@ TEST(ShellIntegrationMacTest, GetDirectLaunchUrlScheme) {
 }
 #else  // !BUILDFLAG(GOOGLE_CHROME_BRANDING)
 TEST(ShellIntegrationMacTest, GetDirectLaunchUrlSchemeUnbranded) {
-  EXPECT_EQ("chromium", GetDirectLaunchUrlScheme());
+  EXPECT_EQ("Cinaseek", GetDirectLaunchUrlScheme());
 }
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
 

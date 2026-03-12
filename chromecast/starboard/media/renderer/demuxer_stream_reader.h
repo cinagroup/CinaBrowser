@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -127,7 +127,7 @@ class DemuxerStreamReader {
   // StarboardAudioSampleInfo contains a const void* audio_specific_config. That
   // field can point to the extra data of this config, so we should ensure that
   // the ptr remains valid until the next buffer is read.
-  ::media::AudioDecoderConfig chromium_audio_config_;
+  ::media::AudioDecoderConfig Cinaseek_audio_config_;
   std::optional<StarboardAudioSampleInfo> audio_sample_info_;
   std::optional<StarboardVideoSampleInfo> video_sample_info_;
   bool first_video_frame_ = true;

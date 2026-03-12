@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -234,7 +234,7 @@ class MockUnwinder : public base::Unwinder {
 
 // Note that this is relevant only for Android, since TracingSamplingProfiler
 // ignores any provided unwinder factory for non-Android platforms:
-// https://source.chromium.org/chromium/chromium/src/+/main:services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc;l=905-908;drc=70d839a3b8bcf1ef43c42a54a4b27f14ee149750
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc;l=905-908;drc=70d839a3b8bcf1ef43c42a54a4b27f14ee149750
 base::StackSamplingProfiler::UnwindersFactory
 MakeMockUnwinderFactoryWithExpectations() {
   if (!TracingSamplerProfiler::IsStackUnwindingSupportedForTesting()) {

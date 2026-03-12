@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -128,7 +128,7 @@
 // 2. The filename and line number where the log was instantiated
 //
 // Additional logging-related information can be found here:
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/debugging.md#Logging
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/debugging.md#Logging
 
 namespace partition_alloc::internal::logging {
 

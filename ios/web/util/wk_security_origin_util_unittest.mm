@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,12 +40,12 @@ TEST_F(WKSecurityOriginUtilTest, GURLOriginWithNilWKSecurityOrigin) {
 TEST_F(WKSecurityOriginUtilTest, GURLOriginWithValidWKSecurityOrigin) {
   WKSecurityOriginStub* origin = [[WKSecurityOriginStub alloc] init];
   [origin setProtocol:@"http"];
-  [origin setHost:@"chromium.org"];
+  [origin setHost:@"Cinaseek.org"];
   [origin setPort:80];
 
   GURL url(
       GURLOriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(origin)));
-  EXPECT_EQ("http://chromium.org/", url.spec());
+  EXPECT_EQ("http://Cinaseek.org/", url.spec());
   EXPECT_TRUE(url.GetPort().empty());
 }
 
@@ -53,12 +53,12 @@ TEST_F(WKSecurityOriginUtilTest, GURLOriginWithValidWKSecurityOrigin) {
 TEST_F(WKSecurityOriginUtilTest, GURLOriginWithDefaultPort) {
   WKSecurityOriginStub* origin = [[WKSecurityOriginStub alloc] init];
   [origin setProtocol:@"http"];
-  [origin setHost:@"chromium.org"];
+  [origin setHost:@"Cinaseek.org"];
   [origin setPort:0];
 
   GURL url(
       GURLOriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(origin)));
-  EXPECT_EQ("http://chromium.org/", url.spec());
+  EXPECT_EQ("http://Cinaseek.org/", url.spec());
   EXPECT_TRUE(url.GetPort().empty());
 }
 
@@ -66,12 +66,12 @@ TEST_F(WKSecurityOriginUtilTest, GURLOriginWithDefaultPort) {
 TEST_F(WKSecurityOriginUtilTest, GURLOriginWithNonDefaultPort) {
   WKSecurityOriginStub* origin = [[WKSecurityOriginStub alloc] init];
   [origin setProtocol:@"http"];
-  [origin setHost:@"chromium.org"];
+  [origin setHost:@"Cinaseek.org"];
   [origin setPort:123];
 
   GURL url(
       GURLOriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(origin)));
-  EXPECT_EQ("http://chromium.org:123/", url.spec());
+  EXPECT_EQ("http://Cinaseek.org:123/", url.spec());
   EXPECT_EQ("123", url.GetPort());
 }
 
@@ -100,12 +100,12 @@ TEST_F(WKSecurityOriginUtilTest, OriginWithNilWKSecurityOrigin) {
 TEST_F(WKSecurityOriginUtilTest, OriginWithValidWKSecurityOrigin) {
   WKSecurityOriginStub* wk_origin = [[WKSecurityOriginStub alloc] init];
   [wk_origin setProtocol:@"http"];
-  [wk_origin setHost:@"chromium.org"];
+  [wk_origin setHost:@"Cinaseek.org"];
   [wk_origin setPort:80];
 
   url::Origin origin(
       OriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(wk_origin)));
-  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://chromium.org/")));
+  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://Cinaseek.org/")));
   EXPECT_EQ(80, origin.port());
 }
 
@@ -113,12 +113,12 @@ TEST_F(WKSecurityOriginUtilTest, OriginWithValidWKSecurityOrigin) {
 TEST_F(WKSecurityOriginUtilTest, OriginWithDefaultPort) {
   WKSecurityOriginStub* wk_origin = [[WKSecurityOriginStub alloc] init];
   [wk_origin setProtocol:@"http"];
-  [wk_origin setHost:@"chromium.org"];
+  [wk_origin setHost:@"Cinaseek.org"];
   [wk_origin setPort:0];
 
   url::Origin origin(
       OriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(wk_origin)));
-  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://chromium.org/")));
+  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://Cinaseek.org/")));
   EXPECT_EQ(80, origin.port());
 }
 
@@ -126,12 +126,12 @@ TEST_F(WKSecurityOriginUtilTest, OriginWithDefaultPort) {
 TEST_F(WKSecurityOriginUtilTest, OriginWithNonDefaultPort) {
   WKSecurityOriginStub* wk_origin = [[WKSecurityOriginStub alloc] init];
   [wk_origin setProtocol:@"http"];
-  [wk_origin setHost:@"chromium.org"];
+  [wk_origin setHost:@"Cinaseek.org"];
   [wk_origin setPort:123];
 
   url::Origin origin(
       OriginWithWKSecurityOrigin(static_cast<WKSecurityOrigin*>(wk_origin)));
-  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://chromium.org:123/")));
+  EXPECT_TRUE(origin.IsSameOriginWith(GURL("http://Cinaseek.org:123/")));
   EXPECT_EQ(123, origin.port());
 }
 

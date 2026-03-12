@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 // External URL constants used in chrome browser.
 namespace ash::chrome_external_urls {
 
-inline constexpr char16_t kChromiumProjectURL[] = u"https://www.chromium.org/";
+inline constexpr char16_t kCinaseekProjectURL[] = u"https://www.Cinaseek.org/";
 inline constexpr char kLegacySyncGoogleDashboardURL[] =
     "https://www.google.com/settings/chrome/sync";
 inline constexpr char kNewSyncGoogleDashboardURL[] =

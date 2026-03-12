@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -27,12 +27,12 @@ static_library("android") {
 }
 
 generate_jni("feature_list_jni") {
-  sources = [ "java/src/org/chromium/components/stylus_handwriting/StylusHandwritingFeatureMap.java" ]
+  sources = [ "java/src/org/Cinaseek/components/stylus_handwriting/StylusHandwritingFeatureMap.java" ]
 }
 
 android_library("feature_list_java") {
   srcjar_deps = [ ":feature_list_jni" ]
-  sources = [ "java/src/org/chromium/components/stylus_handwriting/StylusHandwritingFeatureMap.java" ]
+  sources = [ "java/src/org/Cinaseek/components/stylus_handwriting/StylusHandwritingFeatureMap.java" ]
   deps = [
     "//base:base_java",
     "//third_party/jni_zero:jni_zero_java",
@@ -56,36 +56,36 @@ android_library("java") {
   ]
   srcjar_deps = [ ":direct_writing_service_aidl" ]
   sources = [
-    "java/src/org/chromium/components/stylus_handwriting/AndroidStylusWritingHandler.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingBundleUtil.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingConstants.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingServiceBinder.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingServiceCallback.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingServiceConfiguration.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingSettingsHelper.java",
-    "java/src/org/chromium/components/stylus_handwriting/DirectWritingTrigger.java",
-    "java/src/org/chromium/components/stylus_handwriting/DisabledStylusWritingHandler.java",
-    "java/src/org/chromium/components/stylus_handwriting/StylusApiOption.java",
-    "java/src/org/chromium/components/stylus_handwriting/StylusWritingController.java",
-    "java/src/org/chromium/components/stylus_handwriting/StylusWritingSettingsState.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/AndroidStylusWritingHandler.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingBundleUtil.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingConstants.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingServiceBinder.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingServiceCallback.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingServiceConfiguration.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingSettingsHelper.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DirectWritingTrigger.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/DisabledStylusWritingHandler.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/StylusApiOption.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/StylusWritingController.java",
+    "java/src/org/Cinaseek/components/stylus_handwriting/StylusWritingSettingsState.java",
   ]
 }
 
 robolectric_library("junit_test_support") {
   sources = [
-    "junit/src/org/chromium/components/stylus_handwriting/test_support/ShadowGlobalSettings.java",
-    "junit/src/org/chromium/components/stylus_handwriting/test_support/ShadowSecureSettings.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/test_support/ShadowGlobalSettings.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/test_support/ShadowSecureSettings.java",
   ]
   deps = [ ":java" ]
 }
 
 robolectric_library("stylus_handwriting_junit_tests") {
   sources = [
-    "junit/src/org/chromium/components/stylus_handwriting/AndroidStylusWritingHandlerTest.java",
-    "junit/src/org/chromium/components/stylus_handwriting/DirectWritingServiceBinderTest.java",
-    "junit/src/org/chromium/components/stylus_handwriting/DirectWritingServiceCallbackTest.java",
-    "junit/src/org/chromium/components/stylus_handwriting/DirectWritingTriggerTest.java",
-    "junit/src/org/chromium/components/stylus_handwriting/StylusWritingControllerTest.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/AndroidStylusWritingHandlerTest.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/DirectWritingServiceBinderTest.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/DirectWritingServiceCallbackTest.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/DirectWritingTriggerTest.java",
+    "junit/src/org/Cinaseek/components/stylus_handwriting/StylusWritingControllerTest.java",
   ]
   deps = [
     ":java",

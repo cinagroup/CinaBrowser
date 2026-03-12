@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -44,7 +44,7 @@ namespace sandbox {
 // the actual libc symbol, ignoring any symbols in the current module. In the
 // sandboxed process, we need to either proxy the call to the parent over the
 // IPC back-channel (see
-// https://chromium.googlesource.com/chromium/src/+/main/docs/linux/sandbox_ipc.md),
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/linux/sandbox_ipc.md),
 // or if the libc call is not allowed ("first-party case") then we should
 // generate a crash dump and possibly continue with the libc call.
 //

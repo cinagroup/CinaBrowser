@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@
 namespace blink {
 // Used for histograms. See PhysicalKeyboardShortcut in
 // tools/metrics/histograms/enums.xml &
-// content/public/android/java/src/org/chromium/content_public/browser/KeyboardShortcutRecorder.java
+// content/public/android/java/src/org/Cinaseek/content_public/browser/KeyboardShortcutRecorder.java
 enum class KeyboardShortcut {
   // The values should not be reordered or deleted and new entries should only
   // be added at the end (otherwise it will cause problems interpreting logs)

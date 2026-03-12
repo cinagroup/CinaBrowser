@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -533,7 +533,7 @@ class CONTENT_EXPORT RenderWidgetHostImpl
   // but only one FrameTree can have page focus (e.g., an inner frame
   // tree (fenced frame) will not have focus if the primary frame tree has
   // focus. See
-  // https://www.chromium.org/developers/design-documents/aura/focus-and-activation.
+  // https://www.Cinaseek.org/developers/design-documents/aura/focus-and-activation.
   bool is_active() const { return is_active_; }
 
   // Called to notify the RenderWidget that it has lost the pointer lock.
@@ -572,7 +572,7 @@ class CONTENT_EXPORT RenderWidgetHostImpl
   //
   // This is called after either navigation (for non-prerender pages) or
   // activation (for prerender pages).
-  // TODO(mustaq@chromium.org): Is this still correct for prerendered pages?
+  // TODO(mustaq@Cinaseek.org): Is this still correct for prerendered pages?
   void InitializePaintHolding(bool active);
 
   // Customize the value of `new_content_rendering_delay_` for testing.
@@ -716,7 +716,7 @@ class CONTENT_EXPORT RenderWidgetHostImpl
   // Don't check whether we expected a resize ack during web tests.
   static void DisableResizeAckCheckForTesting();
 
-  // TODO(mustaq@chromium.org): Fix the odd name, should be capitalized!
+  // TODO(mustaq@Cinaseek.org): Fix the odd name, should be capitalized!
   input::InputRouter* input_router();
 
   void SetForceEnableZoom(bool);

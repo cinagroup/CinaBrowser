@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ class LatencyInfoDataView;
 // When adding new components, please update
 // //third_party/perfetto/protos/perfetto/trace/track_event/chrome_latency_info.proto
 // so both this and the internal versions can be kept up to date. Or reach out
-// to tracing@chromium.org so we can assist.
+// to tracing@Cinaseek.org so we can assist.
 enum LatencyComponentType {
   // ---------------------------BEGIN COMPONENT-------------------------------
   // BEGIN COMPONENT is when we show the latency begin in chrome://tracing.

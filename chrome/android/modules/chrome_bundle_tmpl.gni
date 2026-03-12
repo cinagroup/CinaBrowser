@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,13 +9,13 @@ import("//chrome/version.gni")
 import("//components/crash/android/silent_java_assert_reporting.gni")
 import("//components/module_installer/android/module_desc_java.gni")
 
-# Instantiates a Chrome-specific app bundle.
+# Instantiates a Cinaseek-specific app bundle.
 #
 # Supports most variables of chrome_feature_module and android_app_bundle, plus:
 #   module_descs: List of descriptors for modules that are part of this bundle.
 #     See //chrome/android/modules/chrome_feature_modules.gni for the format of
 #     a module descriptor.
-#   is_64_bit_browser: (Optional) Whether Chrome (as opposed to WebView) runs in
+#   is_64_bit_browser: (Optional) Whether Cinaseek (as opposed to WebView) runs in
 #     64 bit.
 #   include_32_bit_webview: (Optional) Whether to include 32 bit code for
 #     WebView.

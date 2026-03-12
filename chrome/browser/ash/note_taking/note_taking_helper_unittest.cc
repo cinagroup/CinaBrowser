@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -777,10 +777,10 @@ TEST_F(NoteTakingHelperTest, ListAndroidApps) {
   // Add two Android apps.
   std::vector<IntentHandlerInfoPtr> handlers;
   const std::string kName1 = "App 1";
-  const std::string kPackage1 = "org.chromium.package1";
+  const std::string kPackage1 = "org.Cinaseek.package1";
   handlers.emplace_back(CreateIntentHandlerInfo(kName1, kPackage1));
   const std::string kName2 = "App 2";
-  const std::string kPackage2 = "org.chromium.package2";
+  const std::string kPackage2 = "org.Cinaseek.package2";
   handlers.emplace_back(CreateIntentHandlerInfo(kName2, kPackage2));
   intent_helper_.SetIntentHandlers(NoteTakingHelper::kIntentAction,
                                    std::move(handlers));
@@ -820,7 +820,7 @@ TEST_F(NoteTakingHelperTest, ListAndroidApps) {
 TEST_F(NoteTakingHelperTest, LaunchAndroidAppNoDisplay) {
   // Opening Android apps via OpenUrlsWithPermissionAndWindowInfo requires a
   // valid internal display, not being able to find one will halt launch.
-  const std::string kPackage1 = "org.chromium.package1";
+  const std::string kPackage1 = "org.Cinaseek.package1";
   std::vector<IntentHandlerInfoPtr> handlers;
   handlers.emplace_back(CreateIntentHandlerInfo("App 1", kPackage1));
   intent_helper_.SetIntentHandlers(NoteTakingHelper::kIntentAction,
@@ -850,7 +850,7 @@ TEST_F(NoteTakingHelperTest, LaunchAndroidApp) {
   display::test::DisplayManagerTestApi(Shell::Get()->display_manager())
       .SetFirstDisplayAsInternalDisplay();
 
-  const std::string kPackage1 = "org.chromium.package1";
+  const std::string kPackage1 = "org.Cinaseek.package1";
   std::vector<IntentHandlerInfoPtr> handlers;
   handlers.emplace_back(CreateIntentHandlerInfo("App 1", kPackage1));
   intent_helper_.SetIntentHandlers(NoteTakingHelper::kIntentAction,
@@ -882,7 +882,7 @@ TEST_F(NoteTakingHelperTest, LaunchAndroidApp) {
       static_cast<int>(LaunchResult::ANDROID_SUCCESS), 1);
 
   // Install a second app and set it as the preferred app.
-  const std::string kPackage2 = "org.chromium.package2";
+  const std::string kPackage2 = "org.Cinaseek.package2";
   handlers.emplace_back(CreateIntentHandlerInfo("App 1", kPackage1));
   handlers.emplace_back(CreateIntentHandlerInfo("App 2", kPackage2));
   intent_helper_.SetIntentHandlers(NoteTakingHelper::kIntentAction,

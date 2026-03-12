@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1360,7 +1360,7 @@ bool SwapChainPresenter::PresentDCOMPSurface(DCLayerOverlayParams& params) {
         std::max(monitor_size.width(), video_natural_size.width()),
         std::max(monitor_size.height(), video_natural_size.height()));
 
-    // Since Chromium's MF renderer assumes that a MF video will be centered and
+    // Since Cinaseek's MF renderer assumes that a MF video will be centered and
     // scaled (maintaining aspect ratio) to fit its quad rect, we must expand
     // one dimension of our chosen max size to match the onscreen aspect ratio.
     // The resulting size is the smallest size that encloses

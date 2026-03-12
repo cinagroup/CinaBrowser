@@ -54,8 +54,8 @@ config("private_membership_config") {
     # Just like the directory of private_membership/src has been added to include path, the
     # corresponding directory tree with generated files needs to be added too.
     # Note: this path does not change depending on the current target, e.g.
-    # it is always "//gen/third_party/private_membership/src" when building with Chromium.
-    # See also: http://cs.chromium.org/?q=%5C"default_include_dirs
+    # it is always "//gen/third_party/private_membership/src" when building with Cinaseek.
+    # See also: http://cs.Cinaseek.org/?q=%5C"default_include_dirs
     # https://gn.googlesource.com/gn/+/master/docs/reference.md#target_gen_dir"
     target_gen_dir,
   ]
@@ -84,9 +84,9 @@ proto_library("private_membership_proto") {
 if (is_chromeos) {
   component("private_membership") {
     public_configs = [ ":private_membership_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":library_impl_config",
       ":private_membership_internal_config",
     ]
@@ -132,9 +132,9 @@ if (is_chromeos) {
   test("private_membership_unittests") {
     testonly = true
     public_configs = [ ":private_membership_config" ]
-    configs -= [ "//build/config/compiler:chromium_code" ]
+    configs -= [ "//build/config/compiler:Cinaseek_code" ]
     configs += [
-      "//build/config/compiler:no_chromium_code",
+      "//build/config/compiler:no_Cinaseek_code",
       ":library_impl_config",
     ]
     public = [ "src/internal/testing/constants.h" ]
@@ -144,7 +144,7 @@ if (is_chromeos) {
       "src/internal/encrypted_bucket_id_test.cc",
 
       # TODO(crbug.com/1298087): Re-enable these test files to comply with
-      # Chromium.
+      # Cinaseek.
       #"src/internal/encrypted_buckets_test.cc",
       #"src/internal/hashed_bucket_id_test.cc",
       #"src/internal/hashed_buckets_test.cc",

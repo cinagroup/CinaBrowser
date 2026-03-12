@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -78,17 +78,17 @@ namespace {
 using ::ash::system::TimezoneSettings;
 
 constexpr char kSetFontScaleAction[] =
-    "org.chromium.arc.intent_helper.SET_FONT_SCALE";
+    "org.Cinaseek.arc.intent_helper.SET_FONT_SCALE";
 constexpr char kSetPageZoomAction[] =
-    "org.chromium.arc.intent_helper.SET_PAGE_ZOOM";
-constexpr char kSetProxyAction[] = "org.chromium.arc.intent_helper.SET_PROXY";
+    "org.Cinaseek.arc.intent_helper.SET_PAGE_ZOOM";
+constexpr char kSetProxyAction[] = "org.Cinaseek.arc.intent_helper.SET_PROXY";
 
 constexpr char kArcProxyBypassListDelimiter[] = ",";
 
 constexpr float kAndroidFontScaleNormal = 1;
 
 // These values are based on
-// https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/resources/ash/settings/a11y_page/captions_subpage.ts;l=142;drc=0918c7f73782a9575396f0c6b80a722b5a3d255a
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:chrome/browser/resources/ash/settings/a11y_page/captions_subpage.ts;l=142;drc=0918c7f73782a9575396f0c6b80a722b5a3d255a
 constexpr char kTextShadowRaised[] = "-2px -2px 4px rgba(0, 0, 0, 0.5)";
 constexpr char kTextShadowDepressed[] = "2px 2px 4px rgba(0, 0, 0, 0.5)";
 constexpr char kTextShadowUniform[] =
@@ -641,13 +641,13 @@ void ArcSettingsServiceImpl::SyncAppTimeSettings() {
 void ArcSettingsServiceImpl::SyncAccessibilityLargeMouseCursorEnabled() const {
   SendBoolPrefSettingsBroadcast(
       ash::prefs::kAccessibilityLargeCursorEnabled,
-      "org.chromium.arc.intent_helper.ACCESSIBILITY_LARGE_POINTER_ICON");
+      "org.Cinaseek.arc.intent_helper.ACCESSIBILITY_LARGE_POINTER_ICON");
 }
 
 void ArcSettingsServiceImpl::SyncAccessibilityVirtualKeyboardEnabled() const {
   SendBoolPrefSettingsBroadcast(
       ash::prefs::kAccessibilityVirtualKeyboardEnabled,
-      "org.chromium.arc.intent_helper.SET_SHOW_IME_WITH_HARD_KEYBOARD");
+      "org.Cinaseek.arc.intent_helper.SET_SHOW_IME_WITH_HARD_KEYBOARD");
 }
 
 void ArcSettingsServiceImpl::SyncBackupEnabled() const {
@@ -722,13 +722,13 @@ void ArcSettingsServiceImpl::SyncLocale() const {
   base::DictValue extras;
   extras.Set("locale", locale);
   extras.Set("preferredLanguages", preferred_languages);
-  SendSettingsBroadcast("org.chromium.arc.intent_helper.SET_LOCALE", extras);
+  SendSettingsBroadcast("org.Cinaseek.arc.intent_helper.SET_LOCALE", extras);
 }
 
 void ArcSettingsServiceImpl::SyncLocationServiceEnabled() const {
   SendBoolPrefSettingsBroadcast(
       prefs::kArcLocationServiceEnabled,
-      "org.chromium.arc.intent_helper.SET_LOCATION_SERVICE_ENABLED");
+      "org.Cinaseek.arc.intent_helper.SET_LOCATION_SERVICE_ENABLED");
 }
 
 void ArcSettingsServiceImpl::SyncProxySettings() const {
@@ -853,7 +853,7 @@ void ArcSettingsServiceImpl::SyncReportingConsent(bool initial_sync) const {
   }
   base::DictValue extras;
   extras.Set("reportingConsent", consent);
-  SendSettingsBroadcast("org.chromium.arc.intent_helper.SET_REPORTING_CONSENT",
+  SendSettingsBroadcast("org.Cinaseek.arc.intent_helper.SET_REPORTING_CONSENT",
                         extras);
 }
 
@@ -871,7 +871,7 @@ void ArcSettingsServiceImpl::SyncTimeZone() const {
   std::u16string timezoneID = timezone_settings->GetCurrentTimezoneID();
   base::DictValue extras;
   extras.Set("olsonTimeZone", timezoneID);
-  SendSettingsBroadcast("org.chromium.arc.intent_helper.SET_TIME_ZONE", extras);
+  SendSettingsBroadcast("org.Cinaseek.arc.intent_helper.SET_TIME_ZONE", extras);
 }
 
 void ArcSettingsServiceImpl::SyncTimeZoneByGeolocation() const {
@@ -881,7 +881,7 @@ void ArcSettingsServiceImpl::SyncTimeZoneByGeolocation() const {
                                          registrar_.prefs(), false) !=
                                  ash::system::TimeZoneResolverManager::
                                      TimeZoneResolveMethod::DISABLED);
-  SendSettingsBroadcast("org.chromium.arc.intent_helper.SET_AUTO_TIME_ZONE",
+  SendSettingsBroadcast("org.Cinaseek.arc.intent_helper.SET_AUTO_TIME_ZONE",
                         extras);
 }
 
@@ -893,7 +893,7 @@ void ArcSettingsServiceImpl::SyncUse24HourClock() const {
   bool use24HourClock = pref->GetValue()->GetBool();
   base::DictValue extras;
   extras.Set("use24HourClock", use24HourClock);
-  SendSettingsBroadcast("org.chromium.arc.intent_helper.SET_USE_24_HOUR_CLOCK",
+  SendSettingsBroadcast("org.Cinaseek.arc.intent_helper.SET_USE_24_HOUR_CLOCK",
                         extras);
 }
 
@@ -914,19 +914,19 @@ void ArcSettingsServiceImpl::SyncUserGeolocation() const {
 
   SendBoolValueSettingsBroadcast(
       enabled_for_arc, !pref->IsUserModifiable(),
-      "org.chromium.arc.intent_helper.SET_USER_GEOLOCATION");
+      "org.Cinaseek.arc.intent_helper.SET_USER_GEOLOCATION");
 }
 
 void ArcSettingsServiceImpl::SyncUserGeolocationAccuracy() const {
   SendBoolPrefSettingsBroadcast(
       ash::prefs::kUserGeolocationAccuracyEnabled,
-      "org.chromium.arc.intent_helper.SET_USER_GEOLOCATION_ACCURACY_ENABLED");
+      "org.Cinaseek.arc.intent_helper.SET_USER_GEOLOCATION_ACCURACY_ENABLED");
 }
 
 void ArcSettingsServiceImpl::SyncConsumerAutoUpdateToggle() const {
   SendBoolLocalStatePrefSettingsBroadcast(
       ::prefs::kConsumerAutoUpdateToggle,
-      "org.chromium.arc.intent_helper.SET_CONSUMER_AUTO_UPDATE");
+      "org.Cinaseek.arc.intent_helper.SET_CONSUMER_AUTO_UPDATE");
 }
 
 void ArcSettingsServiceImpl::ResetFontScaleToDefault() const {

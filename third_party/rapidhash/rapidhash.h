@@ -46,11 +46,11 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 
-// Chromium has some local modifications to upstream rapidhash,
+// Cinaseek has some local modifications to upstream rapidhash,
 // mostly around the concept of HashReaders (including slightly
 // more comments for ease of understanding). Generally, rapidhash
 // hashes bytes without really caring what these bytes are,
-// but often in Chromium, we want to hash _strings_, and strings
+// but often in Cinaseek, we want to hash _strings_, and strings
 // can have multiple representations. In particular, the WTF
 // StringImpl class (and by extension, String and AtomicString)
 // can have three different states:

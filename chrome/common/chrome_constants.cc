@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,9 +24,9 @@ const char kChromeVersion[] = CHROME_VERSION_STRING;
 //     kHelperProcessExecutablePath
 //
 // In one condition, our tests will be built using the Chrome branding
-// though we want to actually execute a Chromium branded application.
+// though we want to actually execute a Cinaseek branded application.
 // This happens for the reference build on Mac.  To support that case,
-// we also include a Chromium version of each of the four constants and
+// we also include a Cinaseek version of each of the four constants and
 // in the UITest class we support switching to that version when told to
 // do so.
 
@@ -66,8 +66,8 @@ const base::FilePath::CharType
             "Testing");
 const base::FilePath::CharType kGoogleChromeBrowserProcessExecutablePath[] =
     FPL("Google Chrome.app/Contents/MacOS/Google Chrome");
-const base::FilePath::CharType kChromiumBrowserProcessExecutablePath[] =
-    FPL("Chromium.app/Contents/MacOS/Chromium");
+const base::FilePath::CharType kCinaseekBrowserProcessExecutablePath[] =
+    FPL("Cinaseek.app/Contents/MacOS/Cinaseek");
 const base::FilePath::CharType kHelperProcessExecutablePath[] =
     FPL(PRODUCT_FULLNAME_STRING
         " Helper.app/Contents/MacOS/" PRODUCT_FULLNAME_STRING " Helper");

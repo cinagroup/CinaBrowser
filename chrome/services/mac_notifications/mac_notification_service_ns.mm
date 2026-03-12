@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@
 #include "ui/gfx/image/image.h"
 #include "url/origin.h"
 
-// This class implements the Chromium interface to a deprecated API. It is in
+// This class implements the Cinaseek interface to a deprecated API. It is in
 // the process of being replaced, and warnings about its deprecation are not
 // helpful. https://crbug.com/1127306
 #pragma clang diagnostic push

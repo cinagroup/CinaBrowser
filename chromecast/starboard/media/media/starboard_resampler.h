@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -32,7 +32,7 @@ base::HeapArray<uint8_t> ResamplePCMAudioDataForStarboard(
     int audio_channels,
     base::span<const uint8_t> in_data);
 
-// Same as above, but uses chromium enums instead of cast ones.
+// Same as above, but uses Cinaseek enums instead of cast ones.
 base::HeapArray<uint8_t> ResamplePCMAudioDataForStarboard(
     StarboardPcmSampleFormat format_to_decode_to,
     ::media::SampleFormat format_to_decode_from,

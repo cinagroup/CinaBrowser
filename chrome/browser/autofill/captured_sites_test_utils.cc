@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -413,7 +413,7 @@ std::vector<CapturedSiteParams> GetCapturedSites(
   if (!base::ReadFileToString(config_file_path, &json_text)) {
     LOG(WARNING) << "Could not read json file: " << config_file_path;
     LOG(WARNING)
-        << "Did you forget to set checkout_chromium_autofill_test_dependencies "
+        << "Did you forget to set checkout_Cinaseek_autofill_test_dependencies "
            "to True in .gclient and gclient sync?";
     return sites;
   }
@@ -695,7 +695,7 @@ bool WebPageReplayServerWrapper::Start(
   std::vector<std::string> args;
   base::FilePath src_dir;
   if (!base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &src_dir)) {
-    ADD_FAILURE() << "Failed to extract the Chromium source directory!";
+    ADD_FAILURE() << "Failed to extract the Cinaseek source directory!";
     return false;
   }
 
@@ -839,7 +839,7 @@ bool WebPageReplayServerWrapper::RunWebPageReplayCmd(
   base::LaunchOptions options = base::LaunchOptionsForTest();
   base::FilePath exe_dir;
   if (!base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &exe_dir)) {
-    ADD_FAILURE() << "Failed to extract the Chromium source directory!";
+    ADD_FAILURE() << "Failed to extract the Cinaseek source directory!";
     return false;
   }
 
@@ -886,7 +886,7 @@ bool WebPageReplayServerWrapper::RunWebPageReplayCmd(
   // WPR releases. The custom files are made to work on iOS.
   base::FilePath src_dir;
   if (!base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &src_dir)) {
-    ADD_FAILURE() << "Failed to extract the Chromium source directory!";
+    ADD_FAILURE() << "Failed to extract the Cinaseek source directory!";
     return false;
   }
 

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -288,9 +288,9 @@ std::vector<TestUpdaterVersion> GetRealUpdaterLowerVersions(
   std::string arch;
 #if BUILDFLAG(CHROMIUM_BRANDING)
 #if defined(ARCH_CPU_ARM64)
-  arch = "chromium_mac_arm64";
+  arch = "Cinaseek_mac_arm64";
 #elif defined(ARCH_CPU_X86_64)
-  arch = "chromium_mac_amd64";
+  arch = "Cinaseek_mac_amd64";
 #endif
 #elif BUILDFLAG(GOOGLE_CHROME_BRANDING)
   arch = "chrome_mac_universal";
@@ -344,10 +344,10 @@ void ExpectLegacyUpdaterMigrated(UpdaterScope scope) {
 
   // Uninstalled app should be migrated.
   EXPECT_TRUE(
-      persisted_data->GetProductVersion("com.chromium.NonExistApp").IsValid());
+      persisted_data->GetProductVersion("com.Cinaseek.NonExistApp").IsValid());
 
   // App Kipple.
-  const std::string kKippleApp = "com.chromium.kipple";
+  const std::string kKippleApp = "com.Cinaseek.kipple";
   EXPECT_EQ(persisted_data->GetProductVersion(kKippleApp),
             base::Version("1.2.3.4"));
   EXPECT_EQ(persisted_data->GetExistenceCheckerPath(kKippleApp),
@@ -360,7 +360,7 @@ void ExpectLegacyUpdaterMigrated(UpdaterScope scope) {
   EXPECT_EQ(persisted_data->GetDateLastRollCall(kKippleApp), -1);
 
   // App PopularApp.
-  const std::string kPopularApp = "com.chromium.PopularApp";
+  const std::string kPopularApp = "com.Cinaseek.PopularApp";
   EXPECT_EQ(persisted_data->GetProductVersion(kPopularApp),
             base::Version("101.100.1000.9999"));
   EXPECT_EQ(persisted_data->GetExistenceCheckerPath(kPopularApp),
@@ -377,7 +377,7 @@ void ExpectLegacyUpdaterMigrated(UpdaterScope scope) {
   EXPECT_EQ(persisted_data->GetCohortHint(kPopularApp), "TestCohortHint");
 
   // App CorruptedApp (client-regulated counting data is corrupted).
-  const std::string kCorruptedApp = "com.chromium.CorruptedApp";
+  const std::string kCorruptedApp = "com.Cinaseek.CorruptedApp";
   EXPECT_EQ(persisted_data->GetProductVersion(kCorruptedApp),
             base::Version("1.2.1"));
   EXPECT_EQ(persisted_data->GetExistenceCheckerPath(kCorruptedApp),
@@ -583,7 +583,7 @@ void ExpectKSAdminXattrBrand(UpdaterScope scope,
 void ExpectCRURegistrationCannotFindKSAdmin() {
   @autoreleasepool {
     CRURegistration* registration = [[CRURegistration alloc]
-               initWithAppId:@"org.chromium.ChromiumUpdater.CannotFindKSAdmin"
+               initWithAppId:@"org.Cinaseek.CinaseekUpdater.CannotFindKSAdmin"
         existenceCheckerPath:@"IGNORED during this test"];
     NSURL* got_ksadmin = [registration syncFindBestKSAdmin];
     EXPECT_FALSE(got_ksadmin)
@@ -595,7 +595,7 @@ void ExpectCRURegistrationCannotFindKSAdmin() {
 void ExpectCRURegistrationFindsKSAdmin(UpdaterScope scope) {
   @autoreleasepool {
     CRURegistration* registration = [[CRURegistration alloc]
-               initWithAppId:@"org.chromium.ChromiumUpdater.FindsKSAdmin"
+               initWithAppId:@"org.Cinaseek.CinaseekUpdater.FindsKSAdmin"
         existenceCheckerPath:@"IGNORED during this test"];
     NSURL* got_ksadmin = [registration syncFindBestKSAdmin];
     EXPECT_TRUE(got_ksadmin);

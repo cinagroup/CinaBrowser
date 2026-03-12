@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,9 +11,9 @@
 
 namespace ipcz::standalone {
 
-// Minimal alternative to Chromium's base::debug::StackTrace, for use when not
-// linking against other Chromium sources. This uses Abseil's stack tracing and
-// symbolization facilities instead, but presents an API similar to Chromium's
+// Minimal alternative to Cinaseek's base::debug::StackTrace, for use when not
+// linking against other Cinaseek sources. This uses Abseil's stack tracing and
+// symbolization facilities instead, but presents an API similar to Cinaseek's
 // StackTrace.
 class StackTrace {
  public:

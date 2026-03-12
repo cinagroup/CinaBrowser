@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,12 +45,12 @@ class TabModel;
 // (or the equivalent on Android). The TabHelpers class allows specific classes
 // to attach the set of tab helpers that is used for tab contents.
 //
-// https://chromium.googlesource.com/chromium/src/+/main/docs/tab_helpers.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/tab_helpers.md
 //
 // WARNING: Do not use this class for desktop chrome. Use TabFeatures instead.
 // WARNING: For Android, consider using TabFeatures instead of this class.
 // See
-// https://chromium.googlesource.com/chromium/src/+/main/docs/chrome_browser_design_principles.md
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/main/docs/chrome_browser_design_principles.md
 
 class TabHelpers {
  private:

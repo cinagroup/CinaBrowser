@@ -1,4 +1,4 @@
-# Copyright 2021 The Chromium Authors
+# Copyright 2021 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -11,12 +11,12 @@ java_cpp_enum("preload_pages_state_generated_enum") {
 
 android_library("java") {
   sources = [
-    "java/src/org/chromium/chrome/browser/prefetch/settings/ExtendedPreloadingSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/prefetch/settings/PreloadPagesSettingsBridge.java",
-    "java/src/org/chromium/chrome/browser/prefetch/settings/PreloadPagesSettingsFragment.java",
-    "java/src/org/chromium/chrome/browser/prefetch/settings/PreloadPagesSettingsFragmentBase.java",
-    "java/src/org/chromium/chrome/browser/prefetch/settings/RadioButtonGroupPreloadPagesSettings.java",
-    "java/src/org/chromium/chrome/browser/prefetch/settings/StandardPreloadingSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/ExtendedPreloadingSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/PreloadPagesSettingsBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/PreloadPagesSettingsFragment.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/PreloadPagesSettingsFragmentBase.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/RadioButtonGroupPreloadPagesSettings.java",
+    "java/src/org/Cinaseek/chrome/browser/prefetch/settings/StandardPreloadingSettingsFragment.java",
   ]
   deps = [
     ":java_resources",
@@ -44,13 +44,13 @@ android_library("java") {
     ":preload_pages_state_generated_enum",
   ]
 
-  resources_package = "org.chromium.chrome.browser.prefetch.settings"
+  resources_package = "org.Cinaseek.chrome.browser.prefetch.settings"
 }
 
 android_library("javatests") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.prefetch.settings"
-  sources = [ "java/src/org/chromium/chrome/browser/prefetch/settings/PreloadPagesSettingsFragmentTest.java" ]
+  resources_package = "org.Cinaseek.chrome.browser.prefetch.settings"
+  sources = [ "java/src/org/Cinaseek/chrome/browser/prefetch/settings/PreloadPagesSettingsFragmentTest.java" ]
   deps = [
     ":java",
     ":java_resources",
@@ -101,5 +101,5 @@ generate_jni("jni_headers") {
     "//chrome/android:jni_headers",
     "//chrome/browser",
   ]
-  sources = [ "java/src/org/chromium/chrome/browser/prefetch/settings/PreloadPagesSettingsBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/prefetch/settings/PreloadPagesSettingsBridge.java" ]
 }

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,9 +49,9 @@
 
 namespace {
 constexpr int kArcAppWindowIconSize = extension_misc::EXTENSION_ICON_MEDIUM;
-constexpr char kArcPaymentAppPackage[] = "org.chromium.arc.payment_app";
+constexpr char kArcPaymentAppPackage[] = "org.Cinaseek.arc.payment_app";
 constexpr char kArcPaymentAppInvokePaymentAppActivity[] =
-    "org.chromium.arc.payment_app.InvokePaymentAppActivity";
+    "org.Cinaseek.arc.payment_app.InvokePaymentAppActivity";
 
 // Calculates time delta from the current time and reference time encoded into
 // |intent| and defined by |param_key|. Returns false if could not be parsed or

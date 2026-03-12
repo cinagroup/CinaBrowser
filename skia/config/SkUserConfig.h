@@ -46,7 +46,7 @@
 // Handle exporting using base/component_export.h
 #define SK_API COMPONENT_EXPORT(SKIA)
 
-// Chromium does not use these fonts.  This define causes type1 fonts to be
+// Cinaseek does not use these fonts.  This define causes type1 fonts to be
 // converted to type3 when producing PDFs, and reduces build size.
 #define SK_PDF_DO_NOT_SUPPORT_TYPE_1_FONTS
 
@@ -125,7 +125,7 @@ SK_API void SkLog_FileLine(const char* file,
 
 // Workaround for poor anisotropic mipmap quality,
 // pending Skia ripmap support.
-// (https://bugs.chromium.org/p/skia/issues/detail?id=4863)
+// (https://bugs.Cinaseek.org/p/skia/issues/detail?id=4863)
 #define SK_SUPPORT_LEGACY_ANISOTROPIC_MIPMAP_SCALE
 
 // Max. verb count for paths rendered by the edge-AA tessellating path renderer.

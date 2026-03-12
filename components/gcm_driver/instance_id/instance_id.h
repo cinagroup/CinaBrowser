@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -52,7 +52,7 @@ class InstanceID {
   };
 
   // Flags to be used to create a token. These might be platform specific.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.gcm_driver
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.gcm_driver
   // GENERATED_JAVA_CLASS_NAME_OVERRIDE: InstanceIDFlags
   enum class Flags {
     // Whether delivery of received messages should be deferred until there is a

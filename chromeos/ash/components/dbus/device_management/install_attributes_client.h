@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,7 +20,7 @@ class Bus;
 namespace ash {
 
 // InstallAttributesClient is used to communicate with the
-// org.chromium.InstallAttributes interface within org.chromium.DeviceManagement
+// org.Cinaseek.InstallAttributes interface within org.Cinaseek.DeviceManagement
 // service exposed by device_managementd. All method should be called from the origin
 // thread (UI thread) which initializes the DBusThreadManager instance.
 class COMPONENT_EXPORT(DEVICE_MANAGEMENT_CLIENT) InstallAttributesClient {

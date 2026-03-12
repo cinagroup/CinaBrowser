@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1623,7 +1623,7 @@ TEST_F(HistoryBackendTest, AddPageVisitRedirectBackForward) {
   ASSERT_TRUE(backend_.get());
 
   GURL url1("http://www.google.com");
-  GURL url2("http://www.chromium.org");
+  GURL url2("http://www.Cinaseek.org");
 
   // Clear all history.
   backend_->DeleteAllHistory();

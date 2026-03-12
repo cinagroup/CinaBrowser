@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ const DBusTypeInfo& GetDBusTypeInfo<AdapterWithEnabled>(
 
 // static
 const char FlossManagerClient::kExportedCallbacksPath[] =
-    "/org/chromium/bluetooth/manager/callback";
+    "/org/Cinaseek/bluetooth/manager/callback";
 
 // static
 const char FlossManagerClient::kObjectManagerPath[] = "/";

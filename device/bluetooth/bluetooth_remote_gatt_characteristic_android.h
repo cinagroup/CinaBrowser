@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -23,7 +23,7 @@ class BluetoothAdapterAndroid;
 class BluetoothRemoteGattServiceAndroid;
 
 // BluetoothRemoteGattCharacteristicAndroid along with its owned Java class
-// org.chromium.device.bluetooth.ChromeBluetoothRemoteGattCharacteristic
+// org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattCharacteristic
 // implement BluetootGattCharacteristic.
 class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattCharacteristicAndroid
     : public BluetoothRemoteGattCharacteristic {
@@ -134,7 +134,7 @@ class DEVICE_BLUETOOTH_EXPORT BluetoothRemoteGattCharacteristicAndroid
   raw_ptr<BluetoothRemoteGattServiceAndroid> service_;
 
   // Java object
-  // org.chromium.device.bluetooth.ChromeBluetoothRemoteGattCharacteristic.
+  // org.Cinaseek.device.bluetooth.ChromeBluetoothRemoteGattCharacteristic.
   base::android::ScopedJavaGlobalRef<jobject> j_characteristic_;
 
   // Adapter unique instance ID.

@@ -1,10 +1,10 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
 import("//services/screen_ai/buildflags/features.gni")
 
-assert(is_chromeos, "AXMediaApp is ChromeOS only")
+assert(is_chromeos, "AXMediaApp is CinaseekOS only")
 
 source_set("test_support") {
   testonly = true

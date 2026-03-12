@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -55,7 +55,7 @@ import("//ui/views/features.gni")
 import("//ui/webui/webui_features.gni")
 import("//v8/gni/v8.gni")
 
-assert(!is_ios, "Chromium/iOS shouldn't use anything in //chrome")
+assert(!is_ios, "Cinaseek/iOS shouldn't use anything in //chrome")
 assert(!is_fuchsia, "Fuchsia shouldn't use anything in //chrome")
 assert(enable_supervised_users)
 
@@ -110,23 +110,23 @@ if (is_android) {
       "//third_party/jni_zero:jni_zero_java",
     ]
     sources = [
-      "../android/java/src/org/chromium/chrome/browser/tab/TabAndroidTestHelper.java",
-      "//chrome/android/java/src/org/chromium/chrome/browser/app/tabwindow/TabWindowManagerNativeTestSupport.java",
-      "android/test_support/src/org/chromium/chrome/test_support/FamilyInfoFeedbackSourceTestBridge.java",
-      "android/test_support/src/org/chromium/chrome/test_support/PaymentRequestTestBridge.java",
+      "../android/java/src/org/Cinaseek/chrome/browser/tab/TabAndroidTestHelper.java",
+      "//chrome/android/java/src/org/Cinaseek/chrome/browser/app/tabwindow/TabWindowManagerNativeTestSupport.java",
+      "android/test_support/src/org/Cinaseek/chrome/test_support/FamilyInfoFeedbackSourceTestBridge.java",
+      "android/test_support/src/org/Cinaseek/chrome/test_support/PaymentRequestTestBridge.java",
     ]
   }
 
   generate_jni("test_support_jni_headers") {
     testonly = true
     sources = [
-      "//chrome/android/java/src/org/chromium/chrome/browser/app/tabwindow/TabWindowManagerNativeTestSupport.java",
-      "android/test_support/src/org/chromium/chrome/test_support/FamilyInfoFeedbackSourceTestBridge.java",
+      "//chrome/android/java/src/org/Cinaseek/chrome/browser/app/tabwindow/TabWindowManagerNativeTestSupport.java",
+      "android/test_support/src/org/Cinaseek/chrome/test_support/FamilyInfoFeedbackSourceTestBridge.java",
     ]
   }
   generate_jni("payment_test_support_jni_headers") {
     testonly = true
-    sources = [ "android/test_support/src/org/chromium/chrome/test_support/PaymentRequestTestBridge.java" ]
+    sources = [ "android/test_support/src/org/Cinaseek/chrome/test_support/PaymentRequestTestBridge.java" ]
   }
 }
 
@@ -1255,7 +1255,7 @@ if (is_android) {
       script = "//testing/scripts/run_gpu_integration_test_as_googletest.py"
       args = [
         "@WrappedPath(../../content/test/gpu/run_gpu_integration_test.py)",
-        "--chromium-output-directory=@WrappedPath(.)",
+        "--Cinaseek-output-directory=@WrappedPath(.)",
       ]
       data_deps = [
         "//content/test:telemetry_gpu_integration_test_support",
@@ -1277,7 +1277,7 @@ if (is_android) {
     script = "//testing/scripts/run_gpu_integration_test_as_googletest.py"
     args = [
       "@WrappedPath(../../content/test/gpu/run_gpu_integration_test.py)",
-      "--chromium-output-directory=@WrappedPath(.)",
+      "--Cinaseek-output-directory=@WrappedPath(.)",
     ]
 
     data_deps = [
@@ -1822,7 +1822,7 @@ source_set("platform_browser_tests") {
       ]
     }
 
-    # ChromeOS and Android don't use the download bubble UI.
+    # CinaseekOS and Android don't use the download bubble UI.
     if (is_win || is_mac || is_linux) {
       deps += [ "//chrome/browser/ui/download" ]
     }
@@ -2171,8 +2171,8 @@ if (is_android) {
     ]
 
     # TODO(crbug.com/40626932): This is needed for ShellManager which is what
-    # the ChromeBrowserTestsActivity is using to build the java UI. It's
-    # likely we want to replace it with something new that uses ChromeWindow
+    # the CinaseekBrowserTestsActivity is using to build the java UI. It's
+    # likely we want to replace it with something new that uses CinaseekWindow
     # and CompositorViewHolder instead.
     deps += [ "//content/shell:content_shell_lib" ]
 
@@ -2426,9 +2426,9 @@ if (is_android) {
       "//ui/android:ui_full_java",
     ]
     sources = [
-      "android/browsertests_apk/src/org/chromium/android_browsertests_apk/ChromeBrowserTestsActivity.java",
-      "android/browsertests_apk/src/org/chromium/android_browsertests_apk/ChromeBrowserTestsApplication.java",
-      "android/browsertests_apk/src/org/chromium/android_browsertests_apk/ChromeBrowserTestsInstrumentationTestRunner.java",
+      "android/browsertests_apk/src/org/Cinaseek/android_browsertests_apk/CinaseekBrowserTestsActivity.java",
+      "android/browsertests_apk/src/org/Cinaseek/android_browsertests_apk/CinaseekBrowserTestsApplication.java",
+      "android/browsertests_apk/src/org/Cinaseek/android_browsertests_apk/CinaseekBrowserTestsInstrumentationTestRunner.java",
     ]
   }
 
@@ -4413,7 +4413,7 @@ if (!is_android) {
       if (enable_printing) {
         sources += [ "../browser/pdf/pdf_extension_printing_test.cc" ]
 
-        # TODO(crbug.com/40892214): All printToPdf tests consistently fail on ChromeOS
+        # TODO(crbug.com/40892214): All printToPdf tests consistently fail on CinaseekOS
         if (!is_chromeos) {
           sources += [
             "../browser/devtools/protocol/devtools_printtopdf_browsertest.cc",
@@ -4604,7 +4604,7 @@ if (!is_android) {
         "//components/system_media_controls",
         "//content/test:test_support",
         "//mojo/core/embedder",
-        "//third_party/ipcz/src:ipcz_chromium",
+        "//third_party/ipcz/src:ipcz_Cinaseek",
         "//third_party/ocmock",
         "//ui/accelerated_widget_mac",
       ]
@@ -6032,7 +6032,7 @@ if (!is_android) {
     if (is_linux || is_chromeos || is_win) {
       sources += [
         # This test is for the spelling options submenu that's only for Windows,
-        # ChromeOS, and Linux.
+        # CinaseekOS, and Linux.
         "../browser/renderer_context_menu/spelling_options_submenu_observer_browsertest.cc",
       ]
     }
@@ -6192,7 +6192,7 @@ if (!is_android) {
       ]
 
       # Extension approvals tests for Windows/Linux/Mac platforms only.
-      # ChromeOS has a different platform-specific approval flow.
+      # CinaseekOS has a different platform-specific approval flow.
       # TODOO(crbug.com/437238062): Move this test to c/b/ui/extensions once tests are enabled on Android.
       sources += [ "../browser/ui/supervised_user/extension_install_blocked_by_parent_dialog_browsertest.cc" ]
 
@@ -6306,7 +6306,7 @@ group("telemetry_perf_unittests_base") {
 _telemetry_perf_args = [
   "../../tools/perf/run_tests",
   "-v",
-  "--chromium-output-directory=@WrappedPath(.)",
+  "--Cinaseek-output-directory=@WrappedPath(.)",
 ]
 if (is_debug) {
   _telemetry_perf_args += [ "--browser=debug" ]
@@ -6427,7 +6427,7 @@ template("performance_test_suite_template_base") {
     } else {
       args = [ "../../tools/perf/run_benchmark" ]
     }
-    args += [ "--chromium-output-directory=@WrappedPath(.)" ]
+    args += [ "--Cinaseek-output-directory=@WrappedPath(.)" ]
 
     if (is_desktop_android) {
       data = [ "//third_party/crossbench-web-tests" ]
@@ -9519,7 +9519,7 @@ test("unit_tests") {
         # Mac.
         "../browser/spellchecker/spellcheck_service_unittest.cc",
 
-        # This tests Chrome's spellchecker which Mac doesn't use.
+        # This tests Cinaseek's spellchecker which Mac doesn't use.
         "../tools/convert_dict/aff_reader_unittest.cc",
         "../tools/convert_dict/convert_dict_unittest.cc",
       ]
@@ -10026,7 +10026,7 @@ test("unit_tests") {
 
       deps += [ "//components/enterprise:test_support" ]
 
-      # The Chrome OS implementation of Native Messaging does not use the source
+      # The Cinaseek OS implementation of Native Messaging does not use the source
       # files corresponding to these tests.
       sources += [
         "../browser/extensions/api/messaging/native_message_process_host_unittest.cc",
@@ -11489,9 +11489,9 @@ if (!is_android) {
   }
 }
 
-# Interactive UI test target can't run on ChromeOS device. See
+# Interactive UI test target can't run on CinaseekOS device. See
 # //docs/testing/chromeos_integration for how to create an integration
-# test that works on ChromeOS VM/Device.
+# test that works on CinaseekOS VM/Device.
 if (!is_android && !is_chromeos_device) {
   test("interactive_ui_tests") {
     use_xvfb = use_xvfb_in_this_config
@@ -11961,7 +11961,7 @@ if (!is_android && !is_chromeos_device) {
       ]
 
       if (is_chromeos) {
-        # For ChromeVox tests.
+        # For CinaseekVox tests.
         data_deps +=
             [ "//chrome/browser/resources/chromeos/accessibility:build" ]
         data += [ "$root_out_dir/resources/chromeos/" ]
@@ -12376,14 +12376,14 @@ if (!is_android && !is_chromeos_device) {
         deps += [ "//components/printing/common:mojo_interfaces" ]
       }
     } else {  # ! is_chromeos
-      # Non-ChromeOS notifications tests.
+      # Non-CinaseekOS notifications tests.
       sources += [
         "../browser/notifications/notification_interactive_uitest.cc",
         "../browser/notifications/notification_interactive_uitest_support.cc",
         "../browser/notifications/notification_interactive_uitest_support.h",
       ]
 
-      # Non-ChromeOS tests.
+      # Non-CinaseekOS tests.
       deps += [ "//chrome/browser/ui/signin:interactive_ui_tests" ]
     }
 
@@ -12642,8 +12642,8 @@ if (is_android) {
   generate_jni("sync_integration_test_support_jni_headers") {
     testonly = true
     sources = [
-      "../android/javatests/src/org/chromium/chrome/browser/sync/SyncTestSigninUtils.java",
-      "../android/javatests/src/org/chromium/chrome/browser/sync/SyncTestTabGroupHelpers.java",
+      "../android/javatests/src/org/Cinaseek/chrome/browser/sync/SyncTestSigninUtils.java",
+      "../android/javatests/src/org/Cinaseek/chrome/browser/sync/SyncTestTabGroupHelpers.java",
     ]
   }
 
@@ -12673,8 +12673,8 @@ if (is_android) {
     ]
 
     sources = [
-      "../android/javatests/src/org/chromium/chrome/browser/sync/SyncTestSigninUtils.java",
-      "../android/javatests/src/org/chromium/chrome/browser/sync/SyncTestTabGroupHelpers.java",
+      "../android/javatests/src/org/Cinaseek/chrome/browser/sync/SyncTestSigninUtils.java",
+      "../android/javatests/src/org/Cinaseek/chrome/browser/sync/SyncTestTabGroupHelpers.java",
     ]
   }
 }
@@ -12744,7 +12744,7 @@ if (!is_android) {
       deps += [ "//ui/views" ]
     }
 
-    # This target should not require the Chrome executable to run.
+    # This target should not require the Cinaseek executable to run.
     assert_no_deps = [ "//chrome" ]
   }
 
@@ -12753,7 +12753,7 @@ if (!is_android) {
     sources = [ "../browser/load_library_perf_test.cc" ]
 
     # This test deliberately does not depend in chrome's test support targets.
-    # This is a small test and Chrome's test support targets bring in the
+    # This is a small test and Cinaseek's test support targets bring in the
     # world, causing link time to explode. Please don't add more dependencies
     # here without understanding how it affects link time (and factor them
     # differently if possible).
@@ -12778,7 +12778,7 @@ if (!is_android) {
       ]
     }
 
-    # This target should not require the Chrome executable to run.
+    # This target should not require the Cinaseek executable to run.
     assert_no_deps = [ "//chrome" ]
   }
 
@@ -12896,7 +12896,7 @@ if (!is_android) {
       "../../tools/perf/run_telemetry_tests",
       "-v",
       "--jobs=1",
-      "--chromium-output-directory=@WrappedPath(.)",
+      "--Cinaseek-output-directory=@WrappedPath(.)",
       "--chrome-root=@WrappedPath(../../)",
     ]
     if (is_debug) {

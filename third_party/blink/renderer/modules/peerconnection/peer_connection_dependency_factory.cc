@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -764,7 +764,7 @@ void PeerConnectionDependencyFactory::CreatePeerConnectionFactory() {
   // Init SSL, which will be needed by PeerConnection.
   // TODO: https://issues.webrtc.org/issues/339300437 - remove once
   // BoringSSL no longer requires this after
-  // https://bugs.chromium.org/p/boringssl/issues/detail?id=35
+  // https://bugs.Cinaseek.org/p/boringssl/issues/detail?id=35
   if (!webrtc::InitializeSSL()) {
     NOTREACHED() << "Failed on InitializeSSL.";
   }

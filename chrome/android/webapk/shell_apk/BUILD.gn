@@ -1,4 +1,4 @@
-# Copyright 2015 The Chromium Authors
+# Copyright 2015 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -17,8 +17,8 @@ h2o_junit_manifest_target_name = "h2o_j_unit_manifest_target"
 # Stamped out copy of the runtime-library, used for fail-safe code in when using an
 # old copy of the runtime library.
 android_library("compiled_in_runtime_library_java") {
-  chromium_code = false
-  sources = [ "src/org/chromium/webapk/lib/runtime_library/IWebApkApi.java" ]
+  Cinaseek_code = false
+  sources = [ "src/org/Cinaseek/webapk/lib/runtime_library/IWebApkApi.java" ]
 }
 
 mustache_pass("generate_chromeos_manifest_for_upload") {
@@ -52,30 +52,30 @@ template("webapk_java") {
                            ])
 
     sources = [
-      "src/org/chromium/webapk/shell_apk/DexLoader.java",
-      "src/org/chromium/webapk/shell_apk/HostBrowserClassLoader.java",
-      "src/org/chromium/webapk/shell_apk/HostBrowserLauncher.java",
-      "src/org/chromium/webapk/shell_apk/HostBrowserLauncherParams.java",
-      "src/org/chromium/webapk/shell_apk/HostBrowserUtils.java",
-      "src/org/chromium/webapk/shell_apk/IdentityService.java",
-      "src/org/chromium/webapk/shell_apk/InstallHostBrowserDialog.java",
-      "src/org/chromium/webapk/shell_apk/LaunchHostBrowserSelector.java",
-      "src/org/chromium/webapk/shell_apk/ManageDataLauncherActivity.java",
-      "src/org/chromium/webapk/shell_apk/NotificationPermissionRequestActivity.java",
-      "src/org/chromium/webapk/shell_apk/PermissionStatus.java",
-      "src/org/chromium/webapk/shell_apk/PrefUtils.java",
-      "src/org/chromium/webapk/shell_apk/TransparentLauncherActivity.java",
-      "src/org/chromium/webapk/shell_apk/WebApkSharedPreferences.java",
-      "src/org/chromium/webapk/shell_apk/WebApkUtils.java",
-      "src/org/chromium/webapk/shell_apk/h2o/H2OLauncher.java",
-      "src/org/chromium/webapk/shell_apk/h2o/H2OMainActivity.java",
-      "src/org/chromium/webapk/shell_apk/h2o/H2OOpaqueMainActivity.java",
-      "src/org/chromium/webapk/shell_apk/h2o/H2OTransparentLauncherActivity.java",
-      "src/org/chromium/webapk/shell_apk/h2o/LaunchTrigger.java",
-      "src/org/chromium/webapk/shell_apk/h2o/SplashActivity.java",
-      "src/org/chromium/webapk/shell_apk/h2o/SplashContentProvider.java",
-      "src/org/chromium/webapk/shell_apk/h2o/SplashUtils.java",
-      "src/org/chromium/webapk/shell_apk/h2o/SplashUtilsForS.java",
+      "src/org/Cinaseek/webapk/shell_apk/DexLoader.java",
+      "src/org/Cinaseek/webapk/shell_apk/HostBrowserClassLoader.java",
+      "src/org/Cinaseek/webapk/shell_apk/HostBrowserLauncher.java",
+      "src/org/Cinaseek/webapk/shell_apk/HostBrowserLauncherParams.java",
+      "src/org/Cinaseek/webapk/shell_apk/HostBrowserUtils.java",
+      "src/org/Cinaseek/webapk/shell_apk/IdentityService.java",
+      "src/org/Cinaseek/webapk/shell_apk/InstallHostBrowserDialog.java",
+      "src/org/Cinaseek/webapk/shell_apk/LaunchHostBrowserSelector.java",
+      "src/org/Cinaseek/webapk/shell_apk/ManageDataLauncherActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/NotificationPermissionRequestActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/PermissionStatus.java",
+      "src/org/Cinaseek/webapk/shell_apk/PrefUtils.java",
+      "src/org/Cinaseek/webapk/shell_apk/TransparentLauncherActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/WebApkSharedPreferences.java",
+      "src/org/Cinaseek/webapk/shell_apk/WebApkUtils.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/H2OLauncher.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/H2OMainActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/H2OOpaqueMainActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/H2OTransparentLauncherActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/LaunchTrigger.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/SplashActivity.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/SplashContentProvider.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/SplashUtils.java",
+      "src/org/Cinaseek/webapk/shell_apk/h2o/SplashUtilsForS.java",
     ]
     deps += [
       "//chrome/android/webapk/libs/common:common_java",
@@ -91,8 +91,8 @@ template("webapk_with_service_java") {
   android_library(target_name) {
     forward_variables_from(invoker, [ "deps" ])
     sources = [
-      "src/org/chromium/webapk/shell_apk/WebApkServiceFactory.java",
-      "src/org/chromium/webapk/shell_apk/WebApkServiceImplWrapper.java",
+      "src/org/Cinaseek/webapk/shell_apk/WebApkServiceFactory.java",
+      "src/org/Cinaseek/webapk/shell_apk/WebApkServiceImplWrapper.java",
     ]
     deps += [
       ":compiled_in_runtime_library_java",
@@ -245,7 +245,7 @@ template("webapk_tmpl") {
   }
 
   webapk_java(_java_without_services_target_name) {
-    resources_package = "org.chromium.webapk.shell_apk"
+    resources_package = "org.Cinaseek.webapk.shell_apk"
     deps = [
       ":$_manifest_target_name",
       ":$_resources_target_name",
@@ -292,22 +292,22 @@ java_strings_grd("webapk_strings_grd") {
 webapk_tmpl("webapk_chromeos") {
   config_file = "manifest/bound_manifest_config.json"
   manifest_to_upload_dep = ":generate_chromeos_manifest_for_upload"
-  apk_name = "WebApkChromeos"
-  apk_package_name = "org.chromium.webapk.chromeos"
+  apk_name = "WebApkCinaseekos"
+  apk_package_name = "org.Cinaseek.webapk.chromeos"
 }
 
 webapk_tmpl("unbound_webapk") {
   config_file = "manifest/unbound_manifest_config.json"
   manifest_to_upload_dep = ":generate_manifest_for_upload"
   apk_name = "UnboundWebApk"
-  apk_package_name = "org.chromium.arbitrarypackage"
+  apk_package_name = "org.Cinaseek.arbitrarypackage"
 }
 
 webapk_tmpl("webapk") {
   config_file = "manifest/bound_manifest_config.json"
   manifest_to_upload_dep = ":generate_manifest_for_upload"
   apk_name = "WebApk"
-  apk_package_name = "org.chromium.webapk"
+  apk_package_name = "org.Cinaseek.webapk"
 }
 
 group("new_splash_webapk") {
@@ -321,7 +321,7 @@ webapk_tmpl("javatests_webapk") {
   manifest_to_upload_dep = ":generate_manifest_for_upload"
   delta_config_file = "manifest/javatest_manifest_config_delta.json"
   apk_name = "JavatestsWebApk"
-  apk_package_name = "org.chromium.webapk.test"
+  apk_package_name = "org.Cinaseek.webapk.test"
 }
 
 # Used by webapk_shell_apk_h2o_junit_tests
@@ -329,7 +329,7 @@ webapk_tmpl("h2o_j_unit_webapk") {
   config_file = "manifest/bound_manifest_config.json"
   manifest_to_upload_dep = ":generate_manifest_for_upload"
   apk_name = "H2OJUnitWebApk"
-  apk_package_name = "org.chromium.webapk.h2o.junit_webapk"
+  apk_package_name = "org.Cinaseek.webapk.h2o.junit_webapk"
   manifest_output = h2o_junit_manifest_output
   manifest_target_name = h2o_junit_manifest_target_name
 }
@@ -337,8 +337,8 @@ webapk_tmpl("h2o_j_unit_webapk") {
 android_library("shell_apk_javatests") {
   testonly = true
   sources = [
-    "javatests/src/org/chromium/webapk/shell_apk/DexLoaderTest.java",
-    "javatests/src/org/chromium/webapk/shell_apk/h2o/SplashUtilsTest.java",
+    "javatests/src/org/Cinaseek/webapk/shell_apk/DexLoaderTest.java",
+    "javatests/src/org/Cinaseek/webapk/shell_apk/h2o/SplashUtilsTest.java",
   ]
   deps = [
     ":webapk_generated_webapk_java",
@@ -354,15 +354,15 @@ android_library("shell_apk_javatests") {
 }
 
 robolectric_binary("webapk_shell_apk_junit_tests") {
-  package_name = "org.chromium.test"
+  package_name = "org.Cinaseek.test"
   sources = [
-    "junit/src/org/chromium/webapk/shell_apk/HostBrowserClassLoaderTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/HostBrowserLauncherParamsTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/HostBrowserUtilsTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/MainActivityTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/TestBrowserInstaller.java",
-    "junit/src/org/chromium/webapk/shell_apk/WebApkServiceImplWrapperTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/WebApkUtilsTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/HostBrowserClassLoaderTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/HostBrowserLauncherParamsTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/HostBrowserUtilsTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/MainActivityTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/TestBrowserInstaller.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/WebApkServiceImplWrapperTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/WebApkUtilsTest.java",
   ]
   deps = [
     ":compiled_in_runtime_library_java",
@@ -378,12 +378,12 @@ robolectric_binary("webapk_shell_apk_junit_tests") {
 }
 
 robolectric_binary("webapk_shell_apk_h2o_junit_tests") {
-  package_name = "org.chromium.test"
+  package_name = "org.Cinaseek.test"
   sources = [
-    "junit/src/org/chromium/webapk/shell_apk/TestBrowserInstaller.java",
-    "junit/src/org/chromium/webapk/shell_apk/h2o/LaunchTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/h2o/SplashActivityTest.java",
-    "junit/src/org/chromium/webapk/shell_apk/h2o/SplashUtilsUnitTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/TestBrowserInstaller.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/h2o/LaunchTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/h2o/SplashActivityTest.java",
+    "junit/src/org/Cinaseek/webapk/shell_apk/h2o/SplashUtilsUnitTest.java",
   ]
   deps = [
     ":${h2o_junit_manifest_target_name}",

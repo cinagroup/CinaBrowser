@@ -1,8 +1,8 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 
 #include <string>
 #include <utility>
@@ -17,7 +17,7 @@
 #include "base/task/sequenced_task_runner.h"
 #include "net/base/io_buffer.h"
 #include "net/base/net_errors.h"
-#include "net/quic/quic_chromium_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 
 namespace net {
@@ -44,7 +44,7 @@ void RecordRetryCount(int count) {
 }
 
 const net::NetworkTrafficAnnotationTag kTrafficAnnotation =
-    net::DefineNetworkTrafficAnnotation("quic_chromium_packet_writer", R"(
+    net::DefineNetworkTrafficAnnotation("quic_Cinaseek_packet_writer", R"(
         semantics {
           sender: "QUIC Packet Writer"
           description:
@@ -65,11 +65,11 @@ const net::NetworkTrafficAnnotationTag kTrafficAnnotation =
         comments:
           "All requests that are received by QUIC streams have network traffic "
           "annotation, but the annotation is not passed to the writer function "
-          "due to technial overheads. Please see QuicChromiumClientSession and "
-          "QuicChromiumClientStream classes for references."
+          "due to technial overheads. Please see QuicCinaseekClientSession and "
+          "QuicCinaseekClientStream classes for references."
     )");
 
-EcnCodePoint QuicheEcnToChromiumEcn(const quic::QuicEcnCodepoint codepoint) {
+EcnCodePoint QuicheEcnToCinaseekEcn(const quic::QuicEcnCodepoint codepoint) {
   switch (codepoint) {
     case quic::ECN_NOT_ECT:
       return ECN_NOT_ECT;
@@ -87,12 +87,12 @@ EcnCodePoint QuicheEcnToChromiumEcn(const quic::QuicEcnCodepoint codepoint) {
 
 }  // namespace
 
-QuicChromiumPacketWriter::ReusableIOBuffer::ReusableIOBuffer(size_t capacity)
+QuicCinaseekPacketWriter::ReusableIOBuffer::ReusableIOBuffer(size_t capacity)
     : IOBufferWithSize(capacity), capacity_(capacity) {}
 
-QuicChromiumPacketWriter::ReusableIOBuffer::~ReusableIOBuffer() = default;
+QuicCinaseekPacketWriter::ReusableIOBuffer::~ReusableIOBuffer() = default;
 
-void QuicChromiumPacketWriter::ReusableIOBuffer::Set(const char* buffer,
+void QuicCinaseekPacketWriter::ReusableIOBuffer::Set(const char* buffer,
                                                      size_t buf_len) {
   CHECK_LE(buf_len, capacity_);
   CHECK(HasOneRef());
@@ -101,7 +101,7 @@ void QuicChromiumPacketWriter::ReusableIOBuffer::Set(const char* buffer,
       base::as_bytes(UNSAFE_TODO(base::span(buffer, buf_len))));
 }
 
-QuicChromiumPacketWriter::QuicChromiumPacketWriter(
+QuicCinaseekPacketWriter::QuicCinaseekPacketWriter(
     DatagramClientSocket* socket,
     base::SequencedTaskRunner* task_runner)
     : socket_(socket),
@@ -109,23 +109,23 @@ QuicChromiumPacketWriter::QuicChromiumPacketWriter(
           quic::kMaxOutgoingPacketSize)) {
   retry_timer_.SetTaskRunner(task_runner);
   write_callback_ = base::BindRepeating(
-      &QuicChromiumPacketWriter::OnWriteComplete, weak_factory_.GetWeakPtr());
+      &QuicCinaseekPacketWriter::OnWriteComplete, weak_factory_.GetWeakPtr());
 }
 
-QuicChromiumPacketWriter::~QuicChromiumPacketWriter() {
+QuicCinaseekPacketWriter::~QuicCinaseekPacketWriter() {
   UMA_HISTOGRAM_ENUMERATION(
       "Net.QuicSession.OutgoingEcn",
       static_cast<EcnPermutations>(outgoing_ecn_history_));
 }
 
-void QuicChromiumPacketWriter::set_force_write_blocked(
+void QuicCinaseekPacketWriter::set_force_write_blocked(
     bool force_write_blocked) {
   force_write_blocked_ = force_write_blocked;
   if (!IsWriteBlocked() && delegate_ != nullptr)
     delegate_->OnWriteUnblocked();
 }
 
-void QuicChromiumPacketWriter::SetPacket(const char* buffer, size_t buf_len) {
+void QuicCinaseekPacketWriter::SetPacket(const char* buffer, size_t buf_len) {
   if (!packet_) [[unlikely]] {
     packet_ = base::MakeRefCounted<ReusableIOBuffer>(
         std::max(buf_len, static_cast<size_t>(quic::kMaxOutgoingPacketSize)));
@@ -143,7 +143,7 @@ void QuicChromiumPacketWriter::SetPacket(const char* buffer, size_t buf_len) {
   packet_->Set(buffer, buf_len);
 }
 
-quic::WriteResult QuicChromiumPacketWriter::WritePacket(
+quic::WriteResult QuicCinaseekPacketWriter::WritePacket(
     const char* buffer,
     size_t buf_len,
     const quiche::QuicheIpAddress& self_address,
@@ -152,7 +152,7 @@ quic::WriteResult QuicChromiumPacketWriter::WritePacket(
     const quic::QuicPacketWriterParams& params) {
   CHECK(!IsWriteBlocked());
   SetPacket(buffer, buf_len);
-  EcnCodePoint new_ecn = QuicheEcnToChromiumEcn(params.ecn_codepoint);
+  EcnCodePoint new_ecn = QuicheEcnToCinaseekEcn(params.ecn_codepoint);
   outgoing_ecn_history_ |= (1 << static_cast<uint8_t>(new_ecn));
   if (new_ecn != outgoing_ecn_) {
     socket_->SetTos(DSCP_NO_CHANGE, new_ecn);
@@ -161,7 +161,7 @@ quic::WriteResult QuicChromiumPacketWriter::WritePacket(
   return WritePacketToSocketImpl();
 }
 
-void QuicChromiumPacketWriter::WritePacketToSocket(
+void QuicCinaseekPacketWriter::WritePacketToSocket(
     scoped_refptr<ReusableIOBuffer> packet) {
   CHECK(!force_write_blocked_);
   CHECK(!IsWriteBlocked());
@@ -171,7 +171,7 @@ void QuicChromiumPacketWriter::WritePacketToSocket(
     OnWriteComplete(result.error_code);
 }
 
-quic::WriteResult QuicChromiumPacketWriter::WritePacketToSocketImpl() {
+quic::WriteResult QuicCinaseekPacketWriter::WritePacketToSocketImpl() {
   base::TimeTicks now = base::TimeTicks::Now();
 
   // When the connection is closed, the socket is cleaned up. If socket is
@@ -212,7 +212,7 @@ quic::WriteResult QuicChromiumPacketWriter::WritePacketToSocketImpl() {
   return quic::WriteResult(status, rv);
 }
 
-void QuicChromiumPacketWriter::RetryPacketAfterNoBuffers() {
+void QuicCinaseekPacketWriter::RetryPacketAfterNoBuffers() {
   DCHECK_GT(retry_count_, 0);
   if (socket_) {
     quic::WriteResult result = WritePacketToSocketImpl();
@@ -222,19 +222,19 @@ void QuicChromiumPacketWriter::RetryPacketAfterNoBuffers() {
   }
 }
 
-bool QuicChromiumPacketWriter::IsWriteBlocked() const {
+bool QuicCinaseekPacketWriter::IsWriteBlocked() const {
   return (force_write_blocked_ || write_in_progress_);
 }
 
-void QuicChromiumPacketWriter::SetWritable() {
+void QuicCinaseekPacketWriter::SetWritable() {
   write_in_progress_ = false;
 }
 
-std::optional<int> QuicChromiumPacketWriter::MessageTooBigErrorCode() const {
+std::optional<int> QuicCinaseekPacketWriter::MessageTooBigErrorCode() const {
   return ERR_MSG_TOO_BIG;
 }
 
-void QuicChromiumPacketWriter::OnWriteComplete(int rv) {
+void QuicCinaseekPacketWriter::OnWriteComplete(int rv) {
   DCHECK_NE(rv, ERR_IO_PENDING);
   write_in_progress_ = false;
   if (delegate_ == nullptr)
@@ -268,7 +268,7 @@ void QuicChromiumPacketWriter::OnWriteComplete(int rv) {
     delegate_->OnWriteUnblocked();
 }
 
-bool QuicChromiumPacketWriter::MaybeRetryAfterWriteError(int rv) {
+bool QuicCinaseekPacketWriter::MaybeRetryAfterWriteError(int rv) {
   if (rv != ERR_NO_BUFFER_SPACE)
     return false;
 
@@ -279,41 +279,41 @@ bool QuicChromiumPacketWriter::MaybeRetryAfterWriteError(int rv) {
 
   retry_timer_.Start(
       FROM_HERE, base::Milliseconds(UINT64_C(1) << retry_count_),
-      base::BindOnce(&QuicChromiumPacketWriter::RetryPacketAfterNoBuffers,
+      base::BindOnce(&QuicCinaseekPacketWriter::RetryPacketAfterNoBuffers,
                      weak_factory_.GetWeakPtr()));
   retry_count_++;
   write_in_progress_ = true;
   return true;
 }
 
-quic::QuicByteCount QuicChromiumPacketWriter::GetMaxPacketSize(
+quic::QuicByteCount QuicCinaseekPacketWriter::GetMaxPacketSize(
     const quic::QuicSocketAddress& peer_address) const {
   return quic::kMaxOutgoingPacketSize;
 }
 
-bool QuicChromiumPacketWriter::SupportsReleaseTime() const {
+bool QuicCinaseekPacketWriter::SupportsReleaseTime() const {
   return false;
 }
 
-bool QuicChromiumPacketWriter::IsBatchMode() const {
+bool QuicCinaseekPacketWriter::IsBatchMode() const {
   return false;
 }
 
-bool QuicChromiumPacketWriter::SupportsEcn() const {
+bool QuicCinaseekPacketWriter::SupportsEcn() const {
   return true;
 }
 
-quic::QuicPacketBuffer QuicChromiumPacketWriter::GetNextWriteLocation(
+quic::QuicPacketBuffer QuicCinaseekPacketWriter::GetNextWriteLocation(
     const quiche::QuicheIpAddress& self_address,
     const quic::QuicSocketAddress& peer_address) {
   return {nullptr, nullptr};
 }
 
-quic::WriteResult QuicChromiumPacketWriter::Flush() {
+quic::WriteResult QuicCinaseekPacketWriter::Flush() {
   return quic::WriteResult(quic::WRITE_STATUS_OK, 0);
 }
 
-bool QuicChromiumPacketWriter::OnSocketClosed(DatagramClientSocket* socket) {
+bool QuicCinaseekPacketWriter::OnSocketClosed(DatagramClientSocket* socket) {
   if (socket_ == socket) {
     socket_ = nullptr;
     return true;
@@ -321,14 +321,14 @@ bool QuicChromiumPacketWriter::OnSocketClosed(DatagramClientSocket* socket) {
   return false;
 }
 
-void QuicChromiumPacketWriter::RegisterQuicConnectionClosePayload(
+void QuicCinaseekPacketWriter::RegisterQuicConnectionClosePayload(
     base::span<uint8_t> payload) {
   if (socket_) {
     socket_->RegisterQuicConnectionClosePayload(payload);
   }
 }
 
-void QuicChromiumPacketWriter::UnregisterQuicConnectionClosePayload() {
+void QuicCinaseekPacketWriter::UnregisterQuicConnectionClosePayload() {
   if (socket_) {
     socket_->UnregisterQuicConnectionClosePayload();
   }

@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -46,10 +46,10 @@ TEST(TermBreakIteratorTest, LowerToUpper) {
 }
 
 TEST(TermBreakIteratorTest, AlphaNumber) {
-  std::u16string word(u"Chromium26.0.0.0");
+  std::u16string word(u"Cinaseek26.0.0.0");
   TermBreakIterator iter(word);
   EXPECT_TRUE(iter.Advance());
-  EXPECT_EQ(u"Chromium", iter.GetCurrentTerm());
+  EXPECT_EQ(u"Cinaseek", iter.GetCurrentTerm());
   EXPECT_TRUE(iter.Advance());
   EXPECT_EQ(u"26.0.0.0", iter.GetCurrentTerm());
   EXPECT_FALSE(iter.Advance());  // Test unexpected advance after end.

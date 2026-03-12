@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -85,7 +85,7 @@ bool SourceAllowHost(const mojom::CSPSource& source, const std::string& host) {
 }
 
 bool SourceAllowHost(const mojom::CSPSource& source, const GURL& url) {
-  // Chromium currently has an issue handling non-special URLs. The url.host()
+  // Cinaseek currently has an issue handling non-special URLs. The url.host()
   // function returns an empty string for them. See
   // crbug.com/40063064 for details.
   //

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,11 +16,11 @@ class Bus;
 
 namespace chromeos {
 
-// TpmManagerClient is used to communicate with the org.chromium.TpmManager
+// TpmManagerClient is used to communicate with the org.Cinaseek.TpmManager
 // service. All method should be called from the origin thread (UI thread) which
 // initializes the DBusThreadManager instance.
 // For more information, please see
-// "chromium/src/third_party/cros_system_api/dbus/tpm_manager" for detailed
+// "Cinaseek/src/third_party/cros_system_api/dbus/tpm_manager" for detailed
 // definitions of the D-Bus methods and their arguments.
 class COMPONENT_EXPORT(CHROMEOS_DBUS_TPM_MANAGER) TpmManagerClient {
  public:

@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -48,11 +48,11 @@ declare_args() {
 
   # If true, the WebView renderer extensions library will be used.
   #
-  # Android WebView and Chrome on Android both use the same build configuration
+  # Android WebView and Cinaseek on Android both use the same build configuration
   # for Blink, and may use a common installation of the Blink libraries on a
-  # device. There is no precise concept of "is_webview". As such, Chrome on
+  # device. There is no precise concept of "is_webview". As such, Cinaseek on
   # Android technically has the WebView extensions available in its version of
-  # Blink; however, the extensions are default-disabled. Chrome (and any other
+  # Blink; however, the extensions are default-disabled. Cinaseek (and any other
   # non-WebView products) should never attempt to enable the extensions at
   # runtime.
   use_blink_extensions_webview = is_android

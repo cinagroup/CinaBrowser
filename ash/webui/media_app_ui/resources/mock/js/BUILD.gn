@@ -1,4 +1,4 @@
-# Copyright 2019 The Chromium Authors
+# Copyright 2019 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -6,7 +6,7 @@ import("//ash/webui/media_app_ui/media_app_files.gni")
 import("//tools/typescript/ts_library.gni")
 import("//ui/webui/resources/tools/optimize_webui.gni")
 
-assert(is_chromeos, "Media App is ChromeOS only")
+assert(is_chromeos, "Media App is CinaseekOS only")
 
 # Copy all the required files for TSC to this directory.
 mock_ts_root_dir = "$target_gen_dir/stage_ts"

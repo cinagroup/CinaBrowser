@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -161,7 +161,7 @@ TEST(URLRequestContextConfigTest, TestExperimentalOptionParsing) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -350,7 +350,7 @@ TEST(URLRequestContextConfigTest, SetSupportedQuicVersionByAlpn) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -403,7 +403,7 @@ TEST(URLRequestContextConfigTest, SetUnsupportedQuicVersion) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -458,7 +458,7 @@ TEST(URLRequestContextConfigTest, SetObsoleteQuicVersion) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -514,7 +514,7 @@ TEST(URLRequestContextConfigTest, SetQuicServerMigrationOptions) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -571,7 +571,7 @@ TEST(URLRequestContextConfigTest,
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -625,7 +625,7 @@ TEST(URLRequestContextConfigTest, SetQuicConnectionMigrationV2Options) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -698,7 +698,7 @@ TEST(URLRequestContextConfigTest, SetQuicAllowPortMigration) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -750,7 +750,7 @@ TEST(URLRequestContextConfigTest, DisableQuicRetryWithoutAltSvcOnQuicErrors) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -802,7 +802,7 @@ TEST(URLRequestContextConfigTest, BrokenAlternativeServiceDelayParams1) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -861,7 +861,7 @@ TEST(URLRequestContextConfigTest, BrokenAlternativeServiceDelayParams2) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -920,7 +920,7 @@ TEST(URLRequestContextConfigTest, DelayMainJobWithAvailableSpdySession) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -972,7 +972,7 @@ TEST(URLRequestContextConfigTest, SetDisableTlsZeroRtt) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1025,7 +1025,7 @@ TEST(URLRequestContextConfigTest, SetQuicHostWhitelist) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1080,7 +1080,7 @@ TEST(URLRequestContextConfigTest, SetQuicMaxTimeBeforeCryptoHandshake) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1135,7 +1135,7 @@ TEST(URLURLRequestContextConfigTest, SetQuicConnectionOptions) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1198,7 +1198,7 @@ TEST(URLURLRequestContextConfigTest, SetAcceptLanguageAndUserAgent) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1251,7 +1251,7 @@ TEST(URLURLRequestContextConfigTest, TurningOffQuic) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1325,7 +1325,7 @@ TEST(URLRequestContextConfigTest, SetSpdyGoAwayOnIPChange) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1378,7 +1378,7 @@ TEST(URLRequestContextConfigTest, WrongSpdyGoAwayOnIPChangeValue) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1425,7 +1425,7 @@ TEST(URLRequestContextConfigTest, BidiStreamDetectBrokenConnection) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1474,7 +1474,7 @@ TEST(URLRequestContextConfigTest, WrongBidiStreamDetectBrokenConnectionValue) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.
@@ -1521,7 +1521,7 @@ TEST(URLRequestContextConfigTest, HttpsSvcbOptions) {
           // in the cache.
           false,
           // Storage path for http cache and cookie storage.
-          "/data/data/org.chromium.net/app_cronet_test/test_storage",
+          "/data/data/org.Cinaseek.net/app_cronet_test/test_storage",
           // Accept-Language request header field.
           "foreign-language",
           // User-Agent request header field.

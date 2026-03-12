@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -16,7 +16,7 @@ namespace content {
 // you want (it's implicit if you don't specify this trait). Only explicitly
 // specify this trait if you carefully isolated a set of tasks that have no
 // ordering requirements with anything else (in doubt, consult with
-// scheduler-dev@chromium.org).
+// scheduler-dev@Cinaseek.org).
 enum class BrowserTaskType {
   // A catch all for tasks that don't fit the types below.
   kDefault,

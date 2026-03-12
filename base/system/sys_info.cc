@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -168,9 +168,9 @@ bool SysInfo::Is6GbDevice() {
 
 #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)
 
-// TODO(crbug.com/40264947): This method is for chromium native code.
+// TODO(crbug.com/40264947): This method is for Cinaseek native code.
 // We need to update the java-side code, i.e.
-// base/android/java/src/org/chromium/base/SysUtils.java,
+// base/android/java/src/org/Cinaseek/base/SysUtils.java,
 // and to make the selected components in java to see this feature.
 bool SysInfo::IsLowEndDeviceOrPartialLowEndModeEnabled() {
 #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)
@@ -218,7 +218,7 @@ bool DetectLowEndDevice() {
   return ram_size > ByteSize(0) &&
          ram_size <= MiBU(checked_cast<unsigned>(
                          features::kLowMemoryDeviceThresholdMB.Get()));
-  // LINT.ThenChange(//base/android/java/src/org/chromium/base/SysUtils.java)
+  // LINT.ThenChange(//base/android/java/src/org/Cinaseek/base/SysUtils.java)
 }
 
 // static

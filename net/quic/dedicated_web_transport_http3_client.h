@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -15,8 +15,8 @@
 #include "net/dns/host_resolver.h"
 #include "net/log/net_log_with_source.h"
 #include "net/proxy_resolution/proxy_info.h"
-#include "net/quic/quic_chromium_packet_reader.h"
-#include "net/quic/quic_chromium_packet_writer.h"
+#include "net/quic/quic_Cinaseek_packet_reader.h"
+#include "net/quic/quic_Cinaseek_packet_writer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_event_logger.h"
 #include "net/quic/web_transport_client.h"
@@ -37,15 +37,15 @@
 namespace net {
 
 class ProxyResolutionRequest;
-class QuicChromiumAlarmFactory;
+class QuicCinaseekAlarmFactory;
 class URLRequestContext;
 
 // Creates a dedicated HTTP/3 connection for a WebTransport session.
 class NET_EXPORT DedicatedWebTransportHttp3Client
     : public WebTransportClient,
       public quic::WebTransportVisitor,
-      public QuicChromiumPacketReader::Visitor,
-      public QuicChromiumPacketWriter::Delegate {
+      public QuicCinaseekPacketReader::Visitor,
+      public QuicCinaseekPacketWriter::Delegate {
  public:
   // |visitor| and |context| must outlive this object.
   DedicatedWebTransportHttp3Client(
@@ -85,15 +85,15 @@ class NET_EXPORT DedicatedWebTransportHttp3Client
   void OnCanCreateNewOutgoingBidirectionalStream() override;
   void OnCanCreateNewOutgoingUnidirectionalStream() override;
 
-  // QuicChromiumPacketReader::Visitor methods.
+  // QuicCinaseekPacketReader::Visitor methods.
   bool OnReadError(int result, const DatagramClientSocket* socket) override;
   bool OnPacket(const quic::QuicReceivedPacket& packet,
                 const quic::QuicSocketAddress& local_address,
                 const quic::QuicSocketAddress& peer_address) override;
 
-  // QuicChromiumPacketWriter::Delegate methods.
+  // QuicCinaseekPacketWriter::Delegate methods.
   int HandleWriteError(int error_code,
-                       scoped_refptr<QuicChromiumPacketWriter::ReusableIOBuffer>
+                       scoped_refptr<QuicCinaseekPacketWriter::ReusableIOBuffer>
                            last_packet) override;
   void OnWriteError(int error_code) override;
   void OnWriteUnblocked() override;
@@ -170,7 +170,7 @@ class NET_EXPORT DedicatedWebTransportHttp3Client
   // |original_supported_versions_|. This prevents version downgrade attacks.
   quic::ParsedQuicVersionVector original_supported_versions_;
   // TODO(vasilvv): move some of those into QuicContext.
-  std::unique_ptr<QuicChromiumAlarmFactory> alarm_factory_;
+  std::unique_ptr<QuicCinaseekAlarmFactory> alarm_factory_;
   quic::QuicCryptoClientConfig crypto_config_;
 
   WebTransportState state_ = WebTransportState::NEW;
@@ -189,7 +189,7 @@ class NET_EXPORT DedicatedWebTransportHttp3Client
   // This must be destroyed after `session_`, as it owns the underlying socket
   // and `session_` owns the packet writer, which has a raw pointer to the
   // socket.
-  std::unique_ptr<QuicChromiumPacketReader> packet_reader_;
+  std::unique_ptr<QuicCinaseekPacketReader> packet_reader_;
   // This must be destroyed after `session_` whose destruction may access it
   // (the raw_ptr) via OnConnectStreamDeleted().
   raw_ptr<quic::WebTransportSession> web_transport_session_ = nullptr;

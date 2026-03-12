@@ -1,4 +1,4 @@
-# Copyright 2022 The Chromium Authors
+# Copyright 2022 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -55,11 +55,11 @@ source_set("cpuinfo") {
   ]
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/sanitizers:default_sanitizer_flags",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":cpuinfo_config",
   ]
 
@@ -81,11 +81,11 @@ source_set("os_specific") {
   }
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/sanitizers:default_sanitizer_flags",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":cpuinfo_include",
     ":cpuinfo_config",
   ]
@@ -120,9 +120,9 @@ source_set("cpu_specific") {
   # build config.
   deps = [ ":x86_cache" ]
 
-  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs -= [ "//build/config/compiler:Cinaseek_code" ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":cpuinfo_config",
     ":cpuinfo_include",
   ]
@@ -138,11 +138,11 @@ source_set("x86_cache") {
   }
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/sanitizers:default_sanitizer_flags",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":cpuinfo_include",
     ":cpuinfo_config",
   ]
@@ -238,11 +238,11 @@ source_set("cpu_and_os_specific") {
   }
 
   configs -= [
-    "//build/config/compiler:chromium_code",
+    "//build/config/compiler:Cinaseek_code",
     "//build/config/sanitizers:default_sanitizer_flags",
   ]
   configs += [
-    "//build/config/compiler:no_chromium_code",
+    "//build/config/compiler:no_Cinaseek_code",
     ":cpuinfo_include",
     ":cpuinfo_config",
   ]

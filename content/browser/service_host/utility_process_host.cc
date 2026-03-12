@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -347,7 +347,7 @@ bool UtilityProcessHost::StartProcess() {
   int child_flags = options_.child_flags_;
 
   // When running under gdb, forking /proc/self/exe ends up forking the gdb
-  // executable instead of Chromium. It is almost safe to assume that no
+  // executable instead of Cinaseek. It is almost safe to assume that no
   // updates will happen while a developer is running with
   // |switches::kUtilityCmdPrefix|. See ChildProcessHost::GetChildPath() for
   // a similar case with Valgrind.

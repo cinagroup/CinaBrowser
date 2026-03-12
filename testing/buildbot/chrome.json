@@ -3,12 +3,12 @@
   "AAAAA2 See generate_buildbot_json.py to make changes": {},
   "chromeos-arm64-generic-cfi-thin-lto-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-betty-cfi-thin-lto-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-betty-cfi-thin-lto-chrome-tests": {
@@ -98,7 +98,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -117,7 +117,7 @@
   },
   "chromeos-betty-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-betty-chrome-cqtast": {
@@ -156,14 +156,14 @@
   },
   "chromeos-betty-chrome-dchecks": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/aura:aura_unittests",
@@ -179,7 +179,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//base:base_unittests",
@@ -199,7 +199,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/capture:capture_unittests",
@@ -215,7 +215,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//cc:cc_unittests",
@@ -315,7 +315,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -331,7 +331,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//crypto:crypto_unittests",
@@ -347,7 +347,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/display:display_unittests",
@@ -371,7 +371,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -387,7 +387,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//google_apis:google_apis_unittests",
@@ -403,7 +403,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ipc:ipc_tests",
@@ -419,7 +419,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/latency:latency_unittests",
@@ -438,7 +438,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media:media_unittests",
@@ -454,7 +454,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/midi:midi_unittests",
@@ -470,7 +470,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//mojo:mojo_unittests",
@@ -489,7 +489,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.net_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//net:net_unittests",
@@ -508,7 +508,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -524,7 +524,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -540,7 +540,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//pdf:pdf_unittests",
@@ -556,7 +556,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//printing:printing_unittests",
@@ -576,7 +576,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -592,7 +592,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -608,7 +608,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//sql:sql_unittests",
@@ -624,7 +624,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//url:url_unittests",
@@ -644,7 +644,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -670,7 +670,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -697,7 +697,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -724,7 +724,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -748,7 +748,7 @@
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/aura:aura_unittests",
@@ -764,7 +764,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//base:base_unittests",
@@ -784,7 +784,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/capture:capture_unittests",
@@ -800,7 +800,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//cc:cc_unittests",
@@ -816,7 +816,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -832,7 +832,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//crypto:crypto_unittests",
@@ -848,7 +848,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/display:display_unittests",
@@ -872,7 +872,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -888,7 +888,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//google_apis:google_apis_unittests",
@@ -904,7 +904,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ipc:ipc_tests",
@@ -920,7 +920,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/latency:latency_unittests",
@@ -939,7 +939,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media:media_unittests",
@@ -955,7 +955,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/midi:midi_unittests",
@@ -971,7 +971,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//mojo:mojo_unittests",
@@ -990,7 +990,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.net_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//net:net_unittests",
@@ -1009,7 +1009,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -1025,7 +1025,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -1041,7 +1041,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//pdf:pdf_unittests",
@@ -1057,7 +1057,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//printing:printing_unittests",
@@ -1077,7 +1077,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -1093,7 +1093,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -1109,7 +1109,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//sql:sql_unittests",
@@ -1125,7 +1125,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//url:url_unittests",
@@ -1145,7 +1145,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -1171,7 +1171,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1198,7 +1198,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1225,7 +1225,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1337,7 +1337,7 @@
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/aura:aura_unittests",
@@ -1353,7 +1353,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//base:base_unittests",
@@ -1373,7 +1373,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/capture:capture_unittests",
@@ -1389,7 +1389,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//cc:cc_unittests",
@@ -1489,7 +1489,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -1505,7 +1505,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//crypto:crypto_unittests",
@@ -1521,7 +1521,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/display:display_unittests",
@@ -1545,7 +1545,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -1561,7 +1561,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//google_apis:google_apis_unittests",
@@ -1577,7 +1577,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ipc:ipc_tests",
@@ -1593,7 +1593,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/latency:latency_unittests",
@@ -1612,7 +1612,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media:media_unittests",
@@ -1628,7 +1628,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//media/midi:midi_unittests",
@@ -1644,7 +1644,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//mojo:mojo_unittests",
@@ -1663,7 +1663,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.betty.net_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//net:net_unittests",
@@ -1682,7 +1682,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -1698,7 +1698,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -1714,7 +1714,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//pdf:pdf_unittests",
@@ -1730,7 +1730,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//printing:printing_unittests",
@@ -1750,7 +1750,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -1766,7 +1766,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -1782,7 +1782,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//sql:sql_unittests",
@@ -1798,7 +1798,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "module_name": "//url:url_unittests",
@@ -1818,7 +1818,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "betty",
         "dut_pool": "vmlab",
         "experiment_percentage": 100,
@@ -1844,7 +1844,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1871,7 +1871,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1898,7 +1898,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "betty",
         "dut_pool": "vmlab",
@@ -1918,19 +1918,19 @@
   },
   "chromeos-brya-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-brya-chrome-skylab": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/aura:aura_unittests",
@@ -1946,7 +1946,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//base:base_unittests",
@@ -1966,7 +1966,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/capture:capture_unittests",
@@ -1982,7 +1982,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//cc:cc_unittests",
@@ -2082,7 +2082,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -2098,7 +2098,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//crypto:crypto_unittests",
@@ -2114,7 +2114,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/display:display_unittests",
@@ -2138,7 +2138,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "experiment_percentage": 100,
@@ -2154,7 +2154,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//google_apis:google_apis_unittests",
@@ -2170,7 +2170,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ipc:ipc_tests",
@@ -2186,7 +2186,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/latency:latency_unittests",
@@ -2205,7 +2205,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media:media_unittests",
@@ -2221,7 +2221,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/midi:midi_unittests",
@@ -2237,7 +2237,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//mojo:mojo_unittests",
@@ -2256,7 +2256,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -2272,7 +2272,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -2288,7 +2288,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//pdf:pdf_unittests",
@@ -2304,7 +2304,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//printing:printing_unittests",
@@ -2324,7 +2324,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -2340,7 +2340,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -2356,7 +2356,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//sql:sql_unittests",
@@ -2372,7 +2372,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//url:url_unittests",
@@ -2392,7 +2392,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/gpu/vaapi:vaapi_unittest",
@@ -2418,7 +2418,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -2445,7 +2445,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -2472,7 +2472,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -2496,7 +2496,7 @@
         "args": [
           "--ozone-platform=headless"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/aura:aura_unittests",
@@ -2512,7 +2512,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//base:base_unittests",
@@ -2532,7 +2532,7 @@
           "--test-launcher-jobs=1",
           "--gtest_filter=-*UsingRealWebcam_CaptureMjpeg*"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/capture:capture_unittests",
@@ -2548,7 +2548,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//cc:cc_unittests",
@@ -2648,7 +2648,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -2664,7 +2664,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//crypto:crypto_unittests",
@@ -2680,7 +2680,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/display:display_unittests",
@@ -2704,7 +2704,7 @@
           "LIBVA_DRIVER_NAME",
           "libfake"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "experiment_percentage": 100,
@@ -2720,7 +2720,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//google_apis:google_apis_unittests",
@@ -2736,7 +2736,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ipc:ipc_tests",
@@ -2752,7 +2752,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/latency:latency_unittests",
@@ -2771,7 +2771,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.media_unittests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media:media_unittests",
@@ -2787,7 +2787,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/midi:midi_unittests",
@@ -2803,7 +2803,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//mojo:mojo_unittests",
@@ -2822,7 +2822,7 @@
         "args": [
           "--stop-ui"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone/gl:ozone_gl_unittests",
@@ -2838,7 +2838,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//ui/ozone:ozone_unittests",
@@ -2854,7 +2854,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//pdf:pdf_unittests",
@@ -2870,7 +2870,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//printing:printing_unittests",
@@ -2890,7 +2890,7 @@
           "--stop-ui",
           "--test-launcher-jobs=1"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//chrome/browser/metrics/perf:profile_provider_unittest",
@@ -2906,7 +2906,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//testing/rust_gtest_interop:rust_gtest_interop_unittests",
@@ -2922,7 +2922,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//sql:sql_unittests",
@@ -2938,7 +2938,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//url:url_unittests",
@@ -2958,7 +2958,7 @@
           "--stop-ui",
           "--gtest_filter=\"VaapiTest.*\""
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "brya",
         "cros_model": "kano",
         "module_name": "//media/gpu/vaapi:vaapi_unittest",
@@ -2984,7 +2984,7 @@
           "../../media/test/data/av1-1-b8-02-allintra.ivf",
           "../../media/test/data/av1-1-b8-02-allintra.ivf.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -3011,7 +3011,7 @@
           "../../media/test/data/test-25fps.vp8",
           "../../media/test/data/test-25fps.vp8.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -3038,7 +3038,7 @@
           "../../media/test/data/test-25fps.vp9",
           "../../media/test/data/test-25fps.vp9.json"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "ci_only": true,
         "cros_board": "brya",
         "cros_model": "kano",
@@ -3058,13 +3058,13 @@
   },
   "chromeos-jacuzzi-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-jacuzzi-chrome-tests": {
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -3160,7 +3160,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "jacuzzi",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -3178,13 +3178,13 @@
   },
   "chromeos-octopus-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-octopus-chrome-tests": {
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "octopus",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -3230,7 +3230,7 @@
   },
   "chromeos-reven-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-reven-chrome-tests": {
@@ -3323,7 +3323,7 @@
         "args": [
           "--test-launcher-filter-file=../../testing/buildbot/filters/chromeos.reven.chromeos_integration_tests.filter"
         ],
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "reven-vmtest",
         "dut_pool": "vmlab",
         "module_name": "//chrome/test:chromeos_integration_tests",
@@ -3342,13 +3342,13 @@
   },
   "chromeos-trogdor-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-trogdor-chrome-tests": {
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "trogdor",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -3444,7 +3444,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "trogdor",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -3462,16 +3462,16 @@
   },
   "chromeos-volteer-chrome": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ]
   },
   "chromeos-volteer-chrome-skylab": {
     "additional_compile_targets": [
-      "chromiumos_preflight"
+      "Cinaseekos_preflight"
     ],
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -3567,7 +3567,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -3586,7 +3586,7 @@
   "chromeos-volteer-chrome-tests": {
     "skylab_tests": [
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//base:base_unittests",
         "module_scheme": "gtest",
@@ -3682,7 +3682,7 @@
         "variant_id": "LKGM"
       },
       {
-        "autotest_name": "chromium",
+        "autotest_name": "Cinaseek",
         "cros_board": "volteer",
         "module_name": "//chrome/test:chromeos_integration_tests",
         "module_scheme": "gtest",
@@ -4439,9 +4439,9 @@
         "merge": {
           "script": "//testing/merge_scripts/standard_gtest_merge.py"
         },
-        "module_name": "//third_party/leveldatabase:env_chromium_unittests",
+        "module_name": "//third_party/leveldatabase:env_Cinaseek_unittests",
         "module_scheme": "gtest",
-        "name": "env_chromium_unittests",
+        "name": "env_Cinaseek_unittests",
         "swarming": {
           "dimensions": {
             "os": "Ubuntu-22.04",
@@ -4450,8 +4450,8 @@
           },
           "service_account": "chrome-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
-        "test": "env_chromium_unittests",
-        "test_id_prefix": "ninja://third_party/leveldatabase:env_chromium_unittests/"
+        "test": "env_Cinaseek_unittests",
+        "test_id_prefix": "ninja://third_party/leveldatabase:env_Cinaseek_unittests/"
       },
       {
         "merge": {

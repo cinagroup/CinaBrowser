@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -33,7 +33,7 @@
 #include "ui/views/window/dialog_client_view.h"
 
 // These tests are disabled under MSAN. The enclave subprocess is written in
-// Rust and FFI from Rust to C++ doesn't work in Chromium at this time
+// Rust and FFI from Rust to C++ doesn't work in Cinaseek at this time
 // (crbug.com/1369167).
 #if !defined(MEMORY_SANITIZER)
 

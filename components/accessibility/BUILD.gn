@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -44,13 +44,13 @@ source_set("penguin") {
 
 if (is_android) {
   generate_jni("penguin_jni_headers") {
-    sources = [ "android/java/src/org/chromium/components/accessibility/penguin/PenguinClient.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/accessibility/penguin/PenguinClient.java" ]
   }
 
   android_library("penguin_java") {
     srcjar_deps = [ ":penguin_jni_headers" ]
 
-    sources = [ "android/java/src/org/chromium/components/accessibility/penguin/PenguinClient.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/accessibility/penguin/PenguinClient.java" ]
 
     deps = [
       "//content/public/android:content_full_java",

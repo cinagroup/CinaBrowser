@@ -1,4 +1,4 @@
-// Copyright 2026 The Chromium Authors
+// Copyright 2026 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -94,7 +94,7 @@ void LocalNetworkAccessCompatPermissionContext::RequestPermission(
 // unlikely to be needed as when
 // network::features::kLocalNetworkAccessChecksSplitPermissions is enabled
 // (which is the only time this class should be used), local-network or
-// loopback-network should be checked in the Chromium implementation, but is
+// loopback-network should be checked in the Cinaseek implementation, but is
 // done 1) as a defense-in-depth measure, and 2) to ensure web-facing backward
 // compatibility so that the result of permission.query({name:
 // 'local-network-access'}) is mostly correctly feature-policy gated.

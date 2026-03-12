@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -4840,7 +4840,7 @@ IN_PROC_BROWSER_TEST_P(
   } else {
     // TODO(crbug.com/367440964): The origin of the same-document navigation is
     // currently used in place of the actual initiator_origin:
-    // https://source.chromium.org/chromium/chromium/src/+/main:content/browser/renderer_host/navigation_request.cc;l=1495-1497;drc=e66b343b5554785a32ad988bfe5c3c524f5e1857
+    // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:content/browser/renderer_host/navigation_request.cc;l=1495-1497;drc=e66b343b5554785a32ad988bfe5c3c524f5e1857
     EXPECT_EQ(url::Origin::Create(c_url_with_fragment),
               GetInitiatorOrigin(rfh_c));
   }

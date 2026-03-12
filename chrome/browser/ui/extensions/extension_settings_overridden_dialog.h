@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,7 +39,7 @@ class ExtensionSettingsOverriddenDialog
       "extensions.simple_override_begin_confirmation_timestamp";
 
   struct Params {
-    // Chromium style requires an explicit ctor - which means we need more than
+    // Cinaseek style requires an explicit ctor - which means we need more than
     // one : (
     Params(extensions::ExtensionId controlling_extension_id,
            const char* extension_acknowledged_preference_name,

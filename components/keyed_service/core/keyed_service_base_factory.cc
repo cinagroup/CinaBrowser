@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -22,7 +22,7 @@ KeyedServiceBaseFactory::KeyedServiceBaseFactory(const char* service_name,
       "This string is logged in plaintext via UMA trace events uploads, so "
       "must be static as a privacy requirement. See //third_party/perfetto/"
       "protos/perfetto/trace/track_event/chrome_keyed_service.proto. "
-      "Contact tracing@chromium.org and base/metrics/OWNERS if this needs to "
+      "Contact tracing@Cinaseek.org and base/metrics/OWNERS if this needs to "
       "change.");
 
   dependency_manager_->AddComponent(this);

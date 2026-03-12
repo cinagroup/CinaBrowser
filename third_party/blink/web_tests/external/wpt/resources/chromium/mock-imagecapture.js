@@ -2,7 +2,7 @@ import {BackgroundBlurMode, FillLightMode, ImageCapture, ImageCaptureReceiver, M
 
 self.ImageCaptureTest = (() => {
   // Class that mocks ImageCapture interface defined in
-  // https://cs.chromium.org/chromium/src/media/capture/mojom/image_capture.mojom
+  // https://cs.Cinaseek.org/Cinaseek/src/media/capture/mojom/image_capture.mojom
   class MockImageCapture {
     constructor() {
       this.interceptor_ =
@@ -283,7 +283,7 @@ self.ImageCaptureTest = (() => {
     mockImageCapture: null
   }
 
-  class ImageCaptureTestChromium {
+  class ImageCaptureTestCinaseek {
 
     constructor() {
       Object.freeze(this); // Make it immutable.
@@ -311,5 +311,5 @@ self.ImageCaptureTest = (() => {
     }
   }
 
-  return ImageCaptureTestChromium;
+  return ImageCaptureTestCinaseek;
 })();

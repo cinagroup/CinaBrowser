@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class PermissionsDialogOverlayTest : public PlatformTest {
   std::unique_ptr<OverlayRequest> CreateRequest(
       NSArray<NSNumber*>* permissions) {
     return OverlayRequest::CreateWithConfig<PermissionsDialogRequest>(
-        GURL("http://www.chromium.test"), permissions);
+        GURL("http://www.Cinaseek.test"), permissions);
   }
 };
 
@@ -36,7 +36,7 @@ TEST_F(PermissionsDialogOverlayTest, DialogTitleCameraOnly) {
   AlertRequest* config = request->GetConfig<AlertRequest>();
   ASSERT_TRUE(config);
   NSString* expected_string = l10n_util::GetNSStringF(
-      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.chromium.test",
+      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.Cinaseek.test",
       l10n_util::GetStringUTF16(
           IDS_IOS_PERMISSIONS_ALERT_DIALOG_PERMISSION_CAMERA));
   // Check strings.
@@ -66,7 +66,7 @@ TEST_F(PermissionsDialogOverlayTest, DialogMicrophoneOnly) {
   AlertRequest* config = request->GetConfig<AlertRequest>();
   ASSERT_TRUE(config);
   NSString* expected_string = l10n_util::GetNSStringF(
-      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.chromium.test",
+      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.Cinaseek.test",
       l10n_util::GetStringUTF16(
           IDS_IOS_PERMISSIONS_ALERT_DIALOG_PERMISSION_MICROPHONE));
   // Check strings.
@@ -96,7 +96,7 @@ TEST_F(PermissionsDialogOverlayTest, DialogCameraAndMicrophone) {
   AlertRequest* config = request->GetConfig<AlertRequest>();
   ASSERT_TRUE(config);
   NSString* expected_string = l10n_util::GetNSStringF(
-      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.chromium.test",
+      IDS_IOS_PERMISSIONS_ALERT_DIALOG_MESSAGE, u"www.Cinaseek.test",
       l10n_util::GetStringUTF16(
           IDS_IOS_PERMISSIONS_ALERT_DIALOG_PERMISSION_CAMERA_AND_MICROPHONE));
   // Check strings.

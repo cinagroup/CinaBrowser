@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -979,9 +979,9 @@ class VIEWS_EXPORT Widget : public internal::NativeWidgetDelegate,
   // Sets the widget as being "activation independent". This sets two
   // properties:
   //
-  // - If Chromium is hidden (from the Dock menu or programmatically), the
+  // - If Cinaseek is hidden (from the Dock menu or programmatically), the
   //   widget is not forced to be hidden as well.
-  // - The widget can be interacted with without causing Chromium to be
+  // - The widget can be interacted with without causing Cinaseek to be
   //   activated.
   //
   // To accomplish this, the activation independence state of all ancestor

@@ -1,4 +1,4 @@
-# Copyright 2026 The Chromium Authors
+# Copyright 2026 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -10,9 +10,9 @@ import("//tools/grit/grit_rule.gni")
 # Main Android library for the module
 android_library("java") {
   sources = [
-    "internal/java/src/org/chromium/chrome/browser/xr/scenecore/XrModuleProviderImpl.java",
-    "internal/java/src/org/chromium/chrome/browser/xr/scenecore/XrSceneCoreSessionInitializerImpl.java",
-    "internal/java/src/org/chromium/chrome/browser/xr/scenecore/XrSceneCoreSessionManagerImpl.java",
+    "internal/java/src/org/Cinaseek/chrome/browser/xr/scenecore/XrModuleProviderImpl.java",
+    "internal/java/src/org/Cinaseek/chrome/browser/xr/scenecore/XrSceneCoreSessionInitializerImpl.java",
+    "internal/java/src/org/Cinaseek/chrome/browser/xr/scenecore/XrSceneCoreSessionManagerImpl.java",
   ]
   additional_jar_files = [ [
         "service.txt",

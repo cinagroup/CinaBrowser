@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -39,8 +39,8 @@ namespace {
 constexpr char kBrowserDisplayName[] = "google-chrome";
 #define PRODUCT_STRING "Google Chrome"
 #else
-constexpr char kBrowserDisplayName[] = "chromium-browser";
-#define PRODUCT_STRING "Chromium"
+constexpr char kBrowserDisplayName[] = "Cinaseek-browser";
+#define PRODUCT_STRING "Cinaseek"
 #endif
 
 #if defined(DLOPEN_PULSEAUDIO)
@@ -59,7 +59,7 @@ void DestroyContext(pa_context* context) {
   pa_context_unref(context);
 }
 
-pa_channel_position ChromiumToPAChannelPosition(Channels channel) {
+pa_channel_position CinaseekToPAChannelPosition(Channels channel) {
   switch (channel) {
     // PulseAudio does not differentiate between left/right and
     // stereo-left/stereo-right, both translate to front-left/front-right.
@@ -366,7 +366,7 @@ pa_channel_map ChannelLayoutToPAChannelMap(ChannelLayout channel_layout) {
       if (channel_index < 0)
         continue;
 
-      channel_map_span[channel_index] = ChromiumToPAChannelPosition(ch);
+      channel_map_span[channel_index] = CinaseekToPAChannelPosition(ch);
     }
   }
 

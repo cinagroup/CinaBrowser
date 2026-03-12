@@ -1,4 +1,4 @@
-# Copyright 2014 The Chromium Authors
+# Copyright 2014 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -145,24 +145,24 @@ if (_is_default_toolchain) {
       "java/res_base/font/chrome_google_sans_text_medium.xml",
       "java/res_base/values/values.xml",
       "java/res_base/xml/network_security_config.xml",
-      "java/res_chromium_base/drawable/themed_app_icon.xml",
-      "java/res_chromium_base/mipmap-hdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-hdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-hdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-mdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-mdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-mdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-nodpi/layered_app_icon_foreground.xml",
-      "java/res_chromium_base/mipmap-xhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-xxhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xxhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xxhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/values/channel_constants.xml",
+      "java/res_Cinaseek_base/drawable/themed_app_icon.xml",
+      "java/res_Cinaseek_base/mipmap-hdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-hdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-hdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-nodpi/layered_app_icon_foreground.xml",
+      "java/res_Cinaseek_base/mipmap-xhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/values/channel_constants.xml",
     ]
   }
 
@@ -769,7 +769,7 @@ if (_is_default_toolchain) {
       "//services/shape_detection:shape_detection_java",
       "//services/shape_detection/public/mojom:mojom_java",
       "//skia/public/mojom:mojom_java",
-      "//third_party/android_deps:chromium_play_services_availability_java",
+      "//third_party/android_deps:Cinaseek_play_services_availability_java",
       "//third_party/android_deps:com_airbnb_android_lottie_java",
       "//third_party/android_deps:com_google_code_findbugs_jsr305_java",
       "//third_party/android_deps:com_google_errorprone_error_prone_annotations_java",
@@ -860,7 +860,7 @@ if (_is_default_toolchain) {
     annotation_processor_deps =
         [ "//components/module_installer/android:module_interface_processor" ]
 
-    resources_package = "org.chromium.chrome"
+    resources_package = "org.Cinaseek.chrome"
 
     # TODO(crbug.com/40106499): Instead of adding source files, add it as a separate
     # dependency when circular deps is resolved.
@@ -883,7 +883,7 @@ if (_is_default_toolchain) {
 
     if (enable_printing) {
       sources +=
-          [ "java/src/org/chromium/chrome/browser/printing/TabPrinter.java" ]
+          [ "java/src/org/Cinaseek/chrome/browser/printing/TabPrinter.java" ]
       deps += [
         "//base:supplier_java",
         "//printing:printing_java",
@@ -908,7 +908,7 @@ if (_is_default_toolchain) {
   # strict mode code when detection is disabled.
   java_cpp_template("chrome_strict_mode_switch") {
     sources = [
-      "java/src/org/chromium/chrome/browser/ChromeStrictModeSwitch.template",
+      "java/src/org/Cinaseek/chrome/browser/CinaseekStrictModeSwitch.template",
     ]
 
     # Strict mode detection is disabled for canary channel in order to catch bugs
@@ -922,7 +922,7 @@ if (_is_default_toolchain) {
   }
 
   generate_product_config_srcjar("chrome_product_config") {
-    java_package = "org.chromium.chrome.browser"
+    java_package = "org.Cinaseek.chrome.browser"
   }
 
   # This is a list of all chrome module java dependencies. New features should be
@@ -1017,7 +1017,7 @@ if (_is_default_toolchain) {
   }
 
   proto_java_library("system_ai_service_proto_java") {
-    proto_path = "java/src/org/chromium/chrome/browser/ai/proto"
+    proto_path = "java/src/org/Cinaseek/chrome/browser/ai/proto"
     sources = [ "$proto_path/system_ai_provider_service.proto" ]
   }
 
@@ -1057,52 +1057,52 @@ if (_is_default_toolchain) {
     ]
 
     deps = [
-      "junit:chrome_junit_tests_org.chromium.chrome.browser",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.app",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.autofill",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.background_sync",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.bookmarks",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.browserservices",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.chrome_item_picker",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.compositor",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.contextmenu",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.contextualsearch",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.customtabs",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.data_sharing",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.download",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.dragdrop",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.feed",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.firstrun",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.fullscreen",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.history",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.homepage",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.hub",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.media",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.notifications",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.ntp",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.offlinepages",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.omaha",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.page_info",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.password_manager",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.permissions",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.price_tracking",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.privacy_sandbox",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.search_engines",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.searchwidget",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.segmentation_platform",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.settings",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.share",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.signin",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.suggestions",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.sync",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.sync.synced_set_up",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.tab",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.tabbed_mode",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.tabmodel",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.tasks",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.toolbar",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.ui",
-      "junit:chrome_junit_tests_org.chromium.chrome.browser.webapps",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.app",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.autofill",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.background_sync",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.bookmarks",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.browserservices",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.chrome_item_picker",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.compositor",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.contextmenu",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.contextualsearch",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.customtabs",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.data_sharing",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.download",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.dragdrop",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.feed",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.firstrun",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.fullscreen",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.history",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.homepage",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.hub",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.media",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.notifications",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.ntp",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.offlinepages",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.omaha",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.page_info",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.password_manager",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.permissions",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.price_tracking",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.privacy_sandbox",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.search_engines",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.searchwidget",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.segmentation_platform",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.settings",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.share",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.signin",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.suggestions",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.sync",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.sync.synced_set_up",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.tab",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.tabbed_mode",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.tabmodel",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.tasks",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.toolbar",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.ui",
+      "junit:chrome_junit_tests_org.Cinaseek.chrome.browser.webapps",
       "junit:chrome_junit_tests_various",
       "//chrome/android/features/android_library_factory:junit_tests",
       "//chrome/browser/actor/android:junit",
@@ -1247,7 +1247,7 @@ if (_is_default_toolchain) {
 
   android_library("xr_java") {
     sources = [
-      "java/src/org/chromium/chrome/browser/xr/scenecore/XrModuleProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/xr/scenecore/XrModuleProvider.java",
     ]
 
     deps = [
@@ -1268,14 +1268,14 @@ if (_is_default_toolchain) {
   # Files used by chrome integration and unit javatests.
   android_library("chrome_unit_test_util_java") {
     testonly = true
-    resources_package = "org.chromium.chrome"
+    resources_package = "org.Cinaseek.chrome"
 
     sources = [
-      "javatests/src/org/chromium/chrome/browser/compositor/bottombar/OverlayPanelManagerWrapper.java",
-      "javatests/src/org/chromium/chrome/browser/customtabs/CustomTabsIntentTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/download/MockDownloadNotificationService.java",
-      "javatests/src/org/chromium/chrome/browser/download/TestDownloadDirectoryProvider.java",
-      "javatests/src/org/chromium/chrome/browser/tabmodel/TestTabModelDirectory.java",
+      "javatests/src/org/Cinaseek/chrome/browser/compositor/bottombar/OverlayPanelManagerWrapper.java",
+      "javatests/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsIntentTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/download/MockDownloadNotificationService.java",
+      "javatests/src/org/Cinaseek/chrome/browser/download/TestDownloadDirectoryProvider.java",
+      "javatests/src/org/Cinaseek/chrome/browser/tabmodel/TestTabModelDirectory.java",
     ]
 
     deps = [
@@ -1301,27 +1301,27 @@ if (_is_default_toolchain) {
   generate_jni("chrome_test_util_jni") {
     testonly = true
     sources = [
-      "javatests/src/org/chromium/chrome/browser/FederatedIdentityTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/PwaRestoreBottomSheetTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/customtabs/CustomTabsTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/FederatedIdentityTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/PwaRestoreBottomSheetTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsTestUtils.java",
     ]
   }
 
   # Files used for both chrome tests and VR/AR tests
   android_library("chrome_test_util_java") {
     testonly = true
-    resources_package = "org.chromium.chrome"
+    resources_package = "org.Cinaseek.chrome"
 
     srcjar_deps = [ ":chrome_test_util_jni" ]
     sources = [
-      "javatests/src/org/chromium/chrome/browser/FederatedIdentityTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/PwaRestoreBottomSheetTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/customtabs/CustomTabActivityTestRule.java",
-      "javatests/src/org/chromium/chrome/browser/customtabs/CustomTabsTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/modaldialog/ChromeModalDialogTestUtils.java",
-      "javatests/src/org/chromium/chrome/browser/payments/PaymentRequestTestRule.java",
-      "javatests/src/org/chromium/chrome/browser/webapps/TestFetchStorageCallback.java",
-      "javatests/src/org/chromium/chrome/browser/webapps/WebappActivityTestRule.java",
+      "javatests/src/org/Cinaseek/chrome/browser/FederatedIdentityTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/PwaRestoreBottomSheetTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/customtabs/CustomTabActivityTestRule.java",
+      "javatests/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/modaldialog/CinaseekModalDialogTestUtils.java",
+      "javatests/src/org/Cinaseek/chrome/browser/payments/PaymentRequestTestRule.java",
+      "javatests/src/org/Cinaseek/chrome/browser/webapps/TestFetchStorageCallback.java",
+      "javatests/src/org/Cinaseek/chrome/browser/webapps/WebappActivityTestRule.java",
     ]
 
     public_deps = [ ":chrome_unit_test_util_java" ]
@@ -1379,12 +1379,12 @@ if (_is_default_toolchain) {
     testonly = true
 
     deps = [
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.actor",
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.compositor",
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.contextmenu",
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.customtabs",
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.download",
-      "javatests:chrome_unit_test_java_org.chromium.chrome.browser.share",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.actor",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.compositor",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.contextmenu",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.customtabs",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.download",
+      "javatests:chrome_unit_test_java_org.Cinaseek.chrome.browser.share",
       "javatests:chrome_unit_test_java_various",
       "//chrome/browser/download/android:download_java_tests",
       "//url:url_java_unit_tests",
@@ -1397,61 +1397,61 @@ if (_is_default_toolchain) {
     testonly = true
 
     mergeable_android_manifests =
-        [ "javatests/AndroidManifest_ChromeTests.xml" ]
+        [ "javatests/AndroidManifest_CinaseekTests.xml" ]
 
     deps = [
-      "javatests:chrome_test_java_org.chromium.chrome.browser",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.actor",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.app",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.appearance",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.autofill",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.bookmarkswidget",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.browser_controls",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.browserservices",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.browsing_data",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.chrome_item_picker",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.collaboration",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.compositor",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.contextualsearch",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.customtabs",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.device_dialog",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.display_cutout",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.dom_distiller",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.download",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.feedback",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.firstrun",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.gesturenav",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.hardware_acceleration",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.incognito",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.media",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.metrics",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.notifications",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.ntp",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.offlinepages",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.omnibox",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.page_info",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.partnercustomizations",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.password_manager",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.payments",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.permissions",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.prefs",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.privacy",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.profiles",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.provider",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.search_engines",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.settings",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.share",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.signin",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.site_settings",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.suggestions",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.swiperefresh",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.sync",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.tab",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.tab_group_sync",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.tabmodel",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.tasks",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.toolbar",
-      "javatests:chrome_test_java_org.chromium.chrome.browser.webapps",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.actor",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.app",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.appearance",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.autofill",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.bookmarkswidget",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.browser_controls",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.browserservices",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.browsing_data",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.chrome_item_picker",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.collaboration",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.compositor",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.contextualsearch",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.customtabs",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.device_dialog",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.display_cutout",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.dom_distiller",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.download",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.feedback",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.firstrun",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.gesturenav",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.hardware_acceleration",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.incognito",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.media",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.metrics",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.notifications",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.ntp",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.offlinepages",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.omnibox",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.page_info",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.partnercustomizations",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.password_manager",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.payments",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.permissions",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.prefs",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.privacy",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.profiles",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.provider",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.search_engines",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.settings",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.share",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.signin",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.site_settings",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.suggestions",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.swiperefresh",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.sync",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.tab",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.tab_group_sync",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.tabmodel",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.tasks",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.toolbar",
+      "javatests:chrome_test_java_org.Cinaseek.chrome.browser.webapps",
       "javatests:chrome_test_java_various",
       "//chrome/browser/android/browserservices/verification:javatests",
       "//chrome/browser/android/httpclient:javatests",
@@ -1610,16 +1610,16 @@ if (_is_default_toolchain) {
       testonly = true
 
       sources = [
-        "javatests/src/org/chromium/chrome/browser/vr/WebXrTestFramework.java",
-        "javatests/src/org/chromium/chrome/browser/vr/XrTestFramework.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/ChromeTabbedActivityXrTestRule.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/CustomTabActivityXrTestRule.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/WebappActivityXrTestRule.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/XrActivityRestriction.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/XrActivityRestrictionRule.java",
-        "javatests/src/org/chromium/chrome/browser/vr/rules/XrTestRule.java",
-        "javatests/src/org/chromium/chrome/browser/vr/util/PermissionUtils.java",
-        "javatests/src/org/chromium/chrome/browser/vr/util/XrTestRuleUtils.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrTestFramework.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/XrTestFramework.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CinaseekTabbedActivityXrTestRule.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CustomTabActivityXrTestRule.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/WebappActivityXrTestRule.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/XrActivityRestriction.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/XrActivityRestrictionRule.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/rules/XrTestRule.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/util/PermissionUtils.java",
+        "javatests/src/org/Cinaseek/chrome/browser/vr/util/XrTestRuleUtils.java",
       ]
 
       deps = chrome_test_xr_java_deps
@@ -1637,12 +1637,12 @@ if (_is_default_toolchain) {
       # All files necessary for VR instrumentation tests
       android_library("chrome_test_vr_java") {
         testonly = true
-        resources_package = "org.chromium.chrome.vr"
+        resources_package = "org.Cinaseek.chrome.vr"
 
         sources = [
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrVrPermissionTestFramework.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrVrTestFramework.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/VrTestRule.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrPermissionTestFramework.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrTestFramework.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/VrTestRule.java",
         ]
 
         deps = [
@@ -1667,16 +1667,16 @@ if (_is_default_toolchain) {
 
         if (enable_cardboard) {
           sources += [
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardDeviceTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardInputTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardPermissionTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardQrCodeTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardTabTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/WebXrVrCardboardTransitionTest.java",
-            "javatests/src/org/chromium/chrome/browser/vr/rules/ChromeTabbedActivityVrCardboardTestRule.java",
-            "javatests/src/org/chromium/chrome/browser/vr/rules/CustomTabActivityVrCardboardTestRule.java",
-            "javatests/src/org/chromium/chrome/browser/vr/rules/WebappActivityVrCardboardTestRule.java",
-            "javatests/src/org/chromium/chrome/browser/vr/util/VrCardboardTestRuleUtils.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardDeviceTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardInputTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardPermissionTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardQrCodeTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardTabTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrVrCardboardTransitionTest.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CinaseekTabbedActivityVrCardboardTestRule.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CustomTabActivityVrCardboardTestRule.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/rules/WebappActivityVrCardboardTestRule.java",
+            "javatests/src/org/Cinaseek/chrome/browser/vr/util/VrCardboardTestRuleUtils.java",
           ]
         }
       }
@@ -1688,22 +1688,22 @@ if (_is_default_toolchain) {
         testonly = true
 
         sources = [
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArAnchorsTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArCameraAccessTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArDepthSensingTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArHitTestTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArLightEstimationTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArSanityTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArSessionTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArTestFramework.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrArViewportScaleTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/WebXrInputTransferTest.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/ArPlaybackFile.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/ArTestRule.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/ChromeTabbedActivityArTestRule.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/CustomTabActivityArTestRule.java",
-          "javatests/src/org/chromium/chrome/browser/vr/rules/WebappActivityArTestRule.java",
-          "javatests/src/org/chromium/chrome/browser/vr/util/ArTestRuleUtils.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArAnchorsTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArCameraAccessTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArDepthSensingTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArHitTestTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArLightEstimationTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArSanityTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArSessionTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArTestFramework.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrArViewportScaleTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/WebXrInputTransferTest.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/ArPlaybackFile.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/ArTestRule.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CinaseekTabbedActivityArTestRule.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/CustomTabActivityArTestRule.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/rules/WebappActivityArTestRule.java",
+          "javatests/src/org/Cinaseek/chrome/browser/vr/util/ArTestRuleUtils.java",
         ]
 
         deps = [ "//chrome/android:chrome_test_xr_java" ]
@@ -1721,24 +1721,24 @@ if (_is_default_toolchain) {
   android_resources("chrome_public_apk_base_module_resources") {
     resource_overlay = true
     sources = [
-      "java/res_chromium_base/drawable/themed_app_icon.xml",
-      "java/res_chromium_base/mipmap-hdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-hdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-hdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-mdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-mdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-mdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-nodpi/layered_app_icon_foreground.xml",
-      "java/res_chromium_base/mipmap-xhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-xxhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xxhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xxhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/app_icon.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/layered_app_icon.png",
-      "java/res_chromium_base/mipmap-xxxhdpi/layered_app_icon_background.png",
-      "java/res_chromium_base/values/channel_constants.xml",
+      "java/res_Cinaseek_base/drawable/themed_app_icon.xml",
+      "java/res_Cinaseek_base/mipmap-hdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-hdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-hdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-mdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-nodpi/layered_app_icon_foreground.xml",
+      "java/res_Cinaseek_base/mipmap-xhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/layered_app_icon.png",
+      "java/res_Cinaseek_base/mipmap-xxxhdpi/layered_app_icon_background.png",
+      "java/res_Cinaseek_base/values/channel_constants.xml",
     ]
 
     # Dep needed to ensure override works properly.
@@ -1795,7 +1795,7 @@ if (_is_default_toolchain) {
   # resources. The generated target names are derived from input variables.
   #
   # Variables:
-  #    is_monochrome: If true, generate Monochrome targets rather than Chrome.
+  #    is_monochrome: If true, generate Monochrome targets rather than Cinaseek.
   #    is_trichrome: (Optional) Generate Trichrome targets that use monochrome
   #      library targets but don't include webview resources.
   #    is_bundle_module: (Optional) If true, generate targets for base bundle
@@ -1944,10 +1944,10 @@ if (_is_default_toolchain) {
   generate_jni("test_support_jni_headers") {
     testonly = true
     sources = [
-      "javatests/src/org/chromium/chrome/browser/gesturenav/ScreenshotCaptureTestHelper.java",
-      "javatests/src/org/chromium/chrome/browser/offlinepages/OfflineTestUtil.java",
-      "javatests/src/org/chromium/chrome/browser/sync/FakeServerHelper.java",
-      "javatests/src/org/chromium/chrome/browser/test/MockCertVerifierRuleAndroid.java",
+      "javatests/src/org/Cinaseek/chrome/browser/gesturenav/ScreenshotCaptureTestHelper.java",
+      "javatests/src/org/Cinaseek/chrome/browser/offlinepages/OfflineTestUtil.java",
+      "javatests/src/org/Cinaseek/chrome/browser/sync/FakeServerHelper.java",
+      "javatests/src/org/Cinaseek/chrome/browser/test/MockCertVerifierRuleAndroid.java",
     ]
   }
 
@@ -1956,10 +1956,10 @@ if (_is_default_toolchain) {
     testonly = true
     srcjar_deps = [ ":test_support_jni_headers" ]
     sources = [
-      "javatests/src/org/chromium/chrome/browser/gesturenav/ScreenshotCaptureTestHelper.java",
-      "javatests/src/org/chromium/chrome/browser/offlinepages/OfflineTestUtil.java",
-      "javatests/src/org/chromium/chrome/browser/sync/FakeServerHelper.java",
-      "javatests/src/org/chromium/chrome/browser/test/MockCertVerifierRuleAndroid.java",
+      "javatests/src/org/Cinaseek/chrome/browser/gesturenav/ScreenshotCaptureTestHelper.java",
+      "javatests/src/org/Cinaseek/chrome/browser/offlinepages/OfflineTestUtil.java",
+      "javatests/src/org/Cinaseek/chrome/browser/sync/FakeServerHelper.java",
+      "javatests/src/org/Cinaseek/chrome/browser/test/MockCertVerifierRuleAndroid.java",
     ]
     deps = [
       ":chrome_java",
@@ -2023,7 +2023,7 @@ if (_is_default_toolchain) {
 
   chrome_public_apk_or_module_tmpl("chrome_public_apk") {
     target_type = "android_apk"
-    apk_name = "ChromePublic"
+    apk_name = "CinaseekPublic"
     if (defined(android_app_secondary_abi)) {
       # Ensure 64-bit chrome does not depend on 32-bit things.
       assert_no_deps =
@@ -2039,13 +2039,13 @@ if (_is_default_toolchain) {
   }
 
   chrome_public_bundle("chrome_public_bundle") {
-    bundle_name = "ChromePublic"
+    bundle_name = "CinaseekPublic"
   }
 
   generate_jni("base_module_jni") {
     sources = [
-      "java/src/org/chromium/chrome/browser/init/InitializeFeatureList.java",
-      "java/src/org/chromium/chrome/browser/metrics/UmaUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/init/InitializeFeatureList.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/UmaUtils.java",
     ]
   }
 
@@ -2053,55 +2053,55 @@ if (_is_default_toolchain) {
   # is in a DFM.
   android_library("base_module_java") {
     sources = [
-      "java/src/org/chromium/chrome/app/TrichromeZygotePreload.java",
-      "java/src/org/chromium/chrome/browser/DeferredStartupHandler.java",
-      "java/src/org/chromium/chrome/browser/actor/ActorForegroundService.java",
-      "java/src/org/chromium/chrome/browser/app/bluetooth/BluetoothNotificationService.java",
-      "java/src/org/chromium/chrome/browser/app/serial/SerialNotificationService.java",
-      "java/src/org/chromium/chrome/browser/app/usb/UsbNotificationService.java",
-      "java/src/org/chromium/chrome/browser/backup/ChromeBackupAgent.java",
-      "java/src/org/chromium/chrome/browser/base/ApplicationInitHook.java",
-      "java/src/org/chromium/chrome/browser/base/ColdStartTracker.java",
-      "java/src/org/chromium/chrome/browser/base/DexFixer.java",
-      "java/src/org/chromium/chrome/browser/base/DexFixerReason.java",
-      "java/src/org/chromium/chrome/browser/base/SplitChromeApplication.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatAppComponentFactory.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatApplication.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatBackupAgent.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatContentProvider.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatCustomTabsService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatGcmListenerService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatIntentService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatJobService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatMinidumpUploadJobService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatRemoteViewsService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatService.java",
-      "java/src/org/chromium/chrome/browser/base/SplitCompatUtils.java",
-      "java/src/org/chromium/chrome/browser/base/SplitPreloader.java",
-      "java/src/org/chromium/chrome/browser/bookmarkswidget/BookmarkWidgetService.java",
-      "java/src/org/chromium/chrome/browser/crash/ApplicationStatusTracker.java",
-      "java/src/org/chromium/chrome/browser/crash/ChromeMinidumpUploadJobService.java",
-      "java/src/org/chromium/chrome/browser/crash/MinidumpUploadService.java",
-      "java/src/org/chromium/chrome/browser/customtabs/CustomTabsConnectionService.java",
-      "java/src/org/chromium/chrome/browser/data_import/DataImporterService.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadBroadcastManager.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadForegroundService.java",
-      "java/src/org/chromium/chrome/browser/incognito/IncognitoNotificationService.java",
-      "java/src/org/chromium/chrome/browser/init/InitializeFeatureList.java",
-      "java/src/org/chromium/chrome/browser/media/MediaCaptureNotificationService.java",
-      "java/src/org/chromium/chrome/browser/media/ui/ChromeMediaNotificationControllerServices.java",
-      "java/src/org/chromium/chrome/browser/metrics/SimpleStartupForegroundSessionDetector.java",
-      "java/src/org/chromium/chrome/browser/metrics/UmaUtils.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationIntentInterceptorService.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationJobService.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationService.java",
-      "java/src/org/chromium/chrome/browser/photo_picker/DecoderService.java",
-      "java/src/org/chromium/chrome/browser/provider/ChromeBrowserProvider.java",
-      "java/src/org/chromium/chrome/browser/provider/PageContentProvider.java",
-      "java/src/org/chromium/chrome/browser/services/gcm/ChromeGcmListenerService.java",
-      "java/src/org/chromium/chrome/browser/services/gcm/GCMBackgroundService.java",
-      "java/src/org/chromium/chrome/browser/services/gcm/InvalidationGcmUpstreamSender.java",
-      "java/src/org/chromium/chrome/browser/tracing/TracingNotificationService.java",
+      "java/src/org/Cinaseek/chrome/app/TrichromeZygotePreload.java",
+      "java/src/org/Cinaseek/chrome/browser/DeferredStartupHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/actor/ActorForegroundService.java",
+      "java/src/org/Cinaseek/chrome/browser/app/bluetooth/BluetoothNotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/app/serial/SerialNotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/app/usb/UsbNotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/backup/CinaseekBackupAgent.java",
+      "java/src/org/Cinaseek/chrome/browser/base/ApplicationInitHook.java",
+      "java/src/org/Cinaseek/chrome/browser/base/ColdStartTracker.java",
+      "java/src/org/Cinaseek/chrome/browser/base/DexFixer.java",
+      "java/src/org/Cinaseek/chrome/browser/base/DexFixerReason.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCinaseekApplication.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatAppComponentFactory.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatApplication.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatBackupAgent.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatContentProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatCustomTabsService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatGcmListenerService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatIntentService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatJobService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatMinidumpUploadJobService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatRemoteViewsService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatService.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitCompatUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/base/SplitPreloader.java",
+      "java/src/org/Cinaseek/chrome/browser/bookmarkswidget/BookmarkWidgetService.java",
+      "java/src/org/Cinaseek/chrome/browser/crash/ApplicationStatusTracker.java",
+      "java/src/org/Cinaseek/chrome/browser/crash/CinaseekMinidumpUploadJobService.java",
+      "java/src/org/Cinaseek/chrome/browser/crash/MinidumpUploadService.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsConnectionService.java",
+      "java/src/org/Cinaseek/chrome/browser/data_import/DataImporterService.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadBroadcastManager.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadForegroundService.java",
+      "java/src/org/Cinaseek/chrome/browser/incognito/IncognitoNotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/init/InitializeFeatureList.java",
+      "java/src/org/Cinaseek/chrome/browser/media/MediaCaptureNotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/media/ui/CinaseekMediaNotificationControllerServices.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/SimpleStartupForegroundSessionDetector.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/UmaUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationIntentInterceptorService.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationJobService.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationService.java",
+      "java/src/org/Cinaseek/chrome/browser/photo_picker/DecoderService.java",
+      "java/src/org/Cinaseek/chrome/browser/provider/CinaseekBrowserProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/provider/PageContentProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/services/gcm/CinaseekGcmListenerService.java",
+      "java/src/org/Cinaseek/chrome/browser/services/gcm/GCMBackgroundService.java",
+      "java/src/org/Cinaseek/chrome/browser/services/gcm/InvalidationGcmUpstreamSender.java",
+      "java/src/org/Cinaseek/chrome/browser/tracing/TracingNotificationService.java",
     ]
     deps = [
       ":chrome_base_module_resources",
@@ -2175,7 +2175,7 @@ if (_is_default_toolchain) {
     # can provide their own implementations.
     jar_excluded_patterns = [ "*/ProductConfig.class" ]
 
-    resources_package = "org.chromium.chrome.base"
+    resources_package = "org.Cinaseek.chrome.base"
   }
 
   if (android_64bit_target_cpu && !defined(android_app_secondary_abi)) {
@@ -2267,7 +2267,7 @@ if (_is_default_toolchain) {
   # scoped, and do not leave lingering state after execution.
   # TODO(crbug.com/40193330): Set clear rules for what tests can be added here.
   chrome_public_test_apk_tmpl("chrome_public_unit_test_apk") {
-    apk_name = "ChromePublicUnitTest"
+    apk_name = "CinaseekPublicUnitTest"
     deps = [
       ":chrome_unit_test_java",
       "//build/config/android/test/resource_overlay:unit_device_javatests",
@@ -2340,7 +2340,7 @@ if (_is_default_toolchain) {
 
   # TODO(crbug.com/40193330): Rename to chrome_public_integration_test_apk
   chrome_public_test_apk_tmpl("chrome_public_test_apk") {
-    apk_name = "ChromePublicTest"
+    apk_name = "CinaseekPublicTest"
     deps = [
       ":chrome_test_apk_template_resources",
       ":chrome_test_java",
@@ -2399,14 +2399,14 @@ if (_is_default_toolchain) {
     # will associate the given package with the given website.
     extra_args = [
       "--approve-app-links",
-      "org.chromium.chrome.tests.support:www.example.com",
+      "org.Cinaseek.chrome.tests.support:www.example.com",
     ]
   }
 
   if (enable_vr) {
-    # //chrome/android/javatests/src/org/chromium/chrome/browser/vr/README.md
+    # //chrome/android/javatests/src/org/Cinaseek/chrome/browser/vr/README.md
     chrome_public_test_apk_tmpl("chrome_public_test_vr_apk") {
-      apk_name = "ChromePublicTestVr"
+      apk_name = "CinaseekPublicTestVr"
       manifest_package = chrome_public_manifest_package
 
       deps = [
@@ -2419,9 +2419,9 @@ if (_is_default_toolchain) {
   if (enable_arcore) {
     # In order to run this test, first run:
     #   DOWNLOAD_XR_TEST_APKS=1 third_party/arcore-android-sdk/test-apks/update.py
-    # See also: //chrome/android/javatests/src/org/chromium/chrome/browser/vr/README.md
+    # See also: //chrome/android/javatests/src/org/Cinaseek/chrome/browser/vr/README.md
     chrome_public_test_apk_tmpl("chrome_public_test_ar_apk") {
-      apk_name = "ChromePublicTestAr"
+      apk_name = "CinaseekPublicTestAr"
       deps = [ ":chrome_test_ar_java" ]
 
       if (target_cpu == "arm64") {
@@ -2441,16 +2441,16 @@ if (_is_default_toolchain) {
     }
   }
 
-  # Chrome smoke test is a minimal test to ensure Chrome is not DOA.  It is
-  # designed to be runnable against uninstrumented Chrome apks.
+  # Cinaseek smoke test is a minimal test to ensure Cinaseek is not DOA.  It is
+  # designed to be runnable against uninstrumented Cinaseek apks.
   android_test_apk("chrome_smoke_test_apk") {
-    apk_name = "ChromeSmokeTest"
+    apk_name = "CinaseekSmokeTest"
     android_manifest =
-        "javatests/src/org/chromium/chrome/test/smoke/AndroidManifest.xml"
+        "javatests/src/org/Cinaseek/chrome/test/smoke/AndroidManifest.xml"
     testonly = true
     sources = [
-      "javatests/src/org/chromium/chrome/test/smoke/ChromeTabSwitcherTest.java",
-      "javatests/src/org/chromium/chrome/test/smoke/utilities/FirstRunNavigator.java",
+      "javatests/src/org/Cinaseek/chrome/test/smoke/CinaseekTabSwitcherTest.java",
+      "javatests/src/org/Cinaseek/chrome/test/smoke/utilities/FirstRunNavigator.java",
     ]
     deps = [
       "//base:base_java",
@@ -2483,18 +2483,18 @@ if (_is_default_toolchain) {
     android_test_apk = ":chrome_smoke_test_apk"
     additional_apks = [ "//net/android:net_test_support_apk" ]
     if (!is_java_debug) {
-      proguard_mapping_path = "$root_build_dir/apks/ChromePublic.apk.mapping"
+      proguard_mapping_path = "$root_build_dir/apks/CinaseekPublic.apk.mapping"
     }
 
     extra_args = _common_smoke_test_args
   }
 
   android_test_apk("chrome_bundle_smoke_test_apk") {
-    apk_name = "ChromeBundleSmokeTest"
-    android_manifest = "javatests/src/org/chromium/chrome/test/smoke/AndroidManifest_bundle.xml"
+    apk_name = "CinaseekBundleSmokeTest"
+    android_manifest = "javatests/src/org/Cinaseek/chrome/test/smoke/AndroidManifest_bundle.xml"
     testonly = true
     sources = [
-      "javatests/src/org/chromium/chrome/test/smoke/ChromeBundleSmokeTest.java",
+      "javatests/src/org/Cinaseek/chrome/test/smoke/CinaseekBundleSmokeTest.java",
     ]
 
     # Used as test_apk for bundle smoke tests, which are also never_incremental.
@@ -2517,12 +2517,12 @@ if (_is_default_toolchain) {
     # Make extra args be passed through to the bundle under test (see below).
     "--use-apk-under-test-flags-file",
 
-    # Enable breakpad dumps in order to detect Chrome crashes (because the
+    # Enable breakpad dumps in order to detect Cinaseek crashes (because the
     # test intentionally does not set <instrumentation android:targetPackage> to
     # the bundle under test.)
     "--enable-breakpad-dump",
 
-    # Chrome crashes at startup if strict mode is turned on.
+    # Cinaseek crashes at startup if strict mode is turned on.
     "--strict-mode=off",
 
     # These args are passed through to the bundle under test.
@@ -2598,14 +2598,14 @@ if (_is_default_toolchain) {
         additional_apks = [ "//chrome/android:trichrome_library_64_apk" ]
         if (!is_java_debug) {
           proguard_mapping_path =
-              "$root_build_dir/apks/TrichromeChrome64.aab.mapping"
+              "$root_build_dir/apks/TrichromeCinaseek64.aab.mapping"
         }
       } else {
         apk_under_test = "//chrome/android:trichrome_chrome_64_32_bundle_apks"
         additional_apks = [ "//chrome/android:trichrome_library_64_32_apk" ]
         if (!is_java_debug) {
           proguard_mapping_path =
-              "$root_build_dir/apks/TrichromeChrome6432.aab.mapping"
+              "$root_build_dir/apks/TrichromeCinaseek6432.aab.mapping"
         }
       }
     } else {
@@ -2614,7 +2614,7 @@ if (_is_default_toolchain) {
           [ "//chrome/android:$_main_trichrome_library_apk_target" ]
       if (!is_java_debug) {
         proguard_mapping_path =
-            "$root_build_dir/apks/TrichromeChrome.aab.mapping"
+            "$root_build_dir/apks/TrichromeCinaseek.aab.mapping"
       }
     }
   }
@@ -2687,7 +2687,7 @@ if (_is_default_toolchain) {
 
     chrome_public_bundle(_main_trichrome_chrome_bundle_target) {
       is_trichrome = true
-      bundle_name = "TrichromeChrome"
+      bundle_name = "TrichromeCinaseek"
       static_library_provider = ":$_main_trichrome_library_apk_target"
       if (android_64bit_target_cpu) {
         is_64_bit_browser = false
@@ -2706,24 +2706,24 @@ if (_is_default_toolchain) {
     # Creates .zip of .apk splits suitable for the Android system image.
     system_image_apks("trichrome_chrome_system_zip") {
       apk_or_bundle_target = ":$_main_trichrome_chrome_bundle_target"
-      input_apk_or_bundle = "$root_out_dir/apks/TrichromeChrome.aab"
-      output = "$root_out_dir/apks/TrichromeChromeSystem.zip"
-      stub_output = "$root_out_dir/apks/TrichromeChrome-Stub.apk"
+      input_apk_or_bundle = "$root_out_dir/apks/TrichromeCinaseek.aab"
+      output = "$root_out_dir/apks/TrichromeCinaseekSystem.zip"
+      stub_output = "$root_out_dir/apks/TrichromeCinaseek-Stub.apk"
     }
 
     # Combines all splits into a single .apk for the Android system image.
     system_image_apks("trichrome_chrome_system_apk") {
       apk_or_bundle_target = ":$_main_trichrome_chrome_bundle_target"
-      input_apk_or_bundle = "$root_out_dir/apks/TrichromeChrome.aab"
-      output = "$root_out_dir/apks/TrichromeChromeSystem.apk"
+      input_apk_or_bundle = "$root_out_dir/apks/TrichromeCinaseek.aab"
+      output = "$root_out_dir/apks/TrichromeCinaseekSystem.apk"
       fuse_apk = true
     }
 
     # Used for binary size monitoring things:
     if (is_official_build && defined(android_app_secondary_abi)) {
       _trichrome_library_basename = "TrichromeLibrary.apk"
-      _trichrome_chrome_basename = "TrichromeChrome.minimal.apks"
-      _trichrome_chrome_bundle = "TrichromeChrome.aab"
+      _trichrome_chrome_basename = "TrichromeCinaseek.minimal.apks"
+      _trichrome_chrome_bundle = "TrichromeCinaseek.aab"
       _trichrome_webview_basename = "TrichromeWebView.minimal.apks"
       _trichrome_webview_bundle = "TrichromeWebView.aab"
       _ssargs_filename = "Trichrome.ssargs"
@@ -2743,12 +2743,12 @@ if (_is_default_toolchain) {
           ssargs_path = "$root_build_dir/apks/Trichrome64.ssargs"
           abi_filter = android_app_abi
           trichrome_library_basename = "TrichromeLibrary64.apk"
-          trichrome_chrome_basename = "TrichromeChrome64.minimal.apks"
+          trichrome_chrome_basename = "TrichromeCinaseek64.minimal.apks"
           trichrome_webview_basename = "TrichromeWebView64.minimal.apks"
         }
         create_app_bundle_minimal_apks("trichrome_chrome_64_minimal_apks") {
           deps = [ ":trichrome_chrome_64_bundle" ]
-          bundle_path = "$root_build_dir/apks/TrichromeChrome64.aab"
+          bundle_path = "$root_build_dir/apks/TrichromeCinaseek64.aab"
         }
         group("trichrome_64_minimal_apks") {
           deps = [
@@ -2759,8 +2759,8 @@ if (_is_default_toolchain) {
         }
 
         _trichrome_library_32_basename = "TrichromeLibrary32.apk"
-        _trichrome_chrome_32_basename = "TrichromeChrome32.minimal.apks"
-        _trichrome_chrome_32_bundle = "TrichromeChrome32.aab"
+        _trichrome_chrome_32_basename = "TrichromeCinaseek32.minimal.apks"
+        _trichrome_chrome_32_bundle = "TrichromeCinaseek32.aab"
         _trichrome_webview_32_basename = "TrichromeWebView32.minimal.apks"
         _trichrome_webview_32_bundle = "TrichromeWebView32.aab"
         _ssargs_32_filename = "Trichrome32.ssargs"
@@ -2776,7 +2776,7 @@ if (_is_default_toolchain) {
 
         create_app_bundle_minimal_apks("trichrome_chrome_32_minimal_apks") {
           deps = [ ":trichrome_chrome_32_bundle" ]
-          bundle_path = "$root_build_dir/apks/TrichromeChrome32.aab"
+          bundle_path = "$root_build_dir/apks/TrichromeCinaseek32.aab"
         }
         group("trichrome_32_minimal_apks") {
           deps = [
@@ -2795,7 +2795,7 @@ if (_is_default_toolchain) {
       } else {
         create_app_bundle_minimal_apks("trichrome_chrome_minimal_apks") {
           deps = [ ":$_main_trichrome_chrome_bundle_target" ]
-          bundle_path = "$root_build_dir/apks/TrichromeChrome.aab"
+          bundle_path = "$root_build_dir/apks/TrichromeCinaseek.aab"
         }
         group("trichrome_32_minimal_apks") {
           deps = [
@@ -2828,7 +2828,7 @@ if (_is_default_toolchain) {
         android_size_bot_config("resource_size_config_trichrome") {
           name = "Trichrome"
           mapping_files = [
-            "apks/TrichromeChrome32.aab.mapping",
+            "apks/TrichromeCinaseek32.aab.mapping",
             "apks/TrichromeWebView32.aab.mapping",
           ]
 
@@ -2888,7 +2888,7 @@ if (_is_default_toolchain) {
   if (android_64bit_target_cpu) {
     chrome_public_bundle("trichrome_chrome_64_bundle") {
       is_trichrome = true
-      bundle_name = "TrichromeChrome64"
+      bundle_name = "TrichromeCinaseek64"
       is_64_bit_browser = true
       include_32_bit_webview = false
       static_library_provider = ":trichrome_library_64_apk"
@@ -2905,7 +2905,7 @@ if (_is_default_toolchain) {
     if (defined(android_app_secondary_abi)) {
       chrome_public_bundle("trichrome_chrome_64_32_bundle") {
         is_trichrome = true
-        bundle_name = "TrichromeChrome6432"
+        bundle_name = "TrichromeCinaseek6432"
         is_64_bit_browser = true
         include_32_bit_webview = true
         static_library_provider = ":trichrome_library_64_32_apk"
@@ -2920,7 +2920,7 @@ if (_is_default_toolchain) {
       }
       chrome_public_bundle("trichrome_chrome_32_bundle") {
         is_trichrome = true
-        bundle_name = "TrichromeChrome32"
+        bundle_name = "TrichromeCinaseek32"
         is_64_bit_browser = false
         include_64_bit_webview = false
         static_library_provider = ":trichrome_library_32_apk"
@@ -2938,213 +2938,213 @@ if (_is_default_toolchain) {
 
   generate_jni("chrome_jni_headers") {
     sources = [
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/BitmapDownloadRequest.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/link_to_text/LinkToTextBridge.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabService.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabServiceFactory.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/qrcode/QRCodeGenerator.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/screenshot/EditorScreenshotTask.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/send_tab_to_self/MetricsRecorder.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/send_tab_to_self/NotificationManager.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/send_tab_to_self/PageContext.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/send_tab_to_self/SendTabToSelfAndroidBridge.java",
-      "../browser/share/android/java/src/org/chromium/chrome/browser/share/send_tab_to_self/TargetDeviceInfo.java",
-      "java/src/org/chromium/chrome/browser/DevToolsServer.java",
-      "java/src/org/chromium/chrome/browser/IntentHandler.java",
-      "java/src/org/chromium/chrome/browser/KeyboardShortcuts.java",
-      "java/src/org/chromium/chrome/browser/PlayServicesVersionInfo.java",
-      "java/src/org/chromium/chrome/browser/RecentlyClosedEntriesManager.java",
-      "java/src/org/chromium/chrome/browser/RecentlyClosedWindowMetadata.java",
-      "java/src/org/chromium/chrome/browser/ServiceTabLauncher.java",
-      "java/src/org/chromium/chrome/browser/ShortcutHelper.java",
-      "java/src/org/chromium/chrome/browser/WarmupManager.java",
-      "java/src/org/chromium/chrome/browser/about_settings/AboutSettingsBridge.java",
-      "java/src/org/chromium/chrome/browser/accessibility/settings/AccessibilitySettingsBridge.java",
-      "java/src/org/chromium/chrome/browser/announcement/AnnouncementNotificationManager.java",
-      "java/src/org/chromium/chrome/browser/app/flags/ChromeCachedFlags.java",
-      "java/src/org/chromium/chrome/browser/app/send_tab_to_self/SendTabToSelfNotificationReceiver.java",
-      "java/src/org/chromium/chrome/browser/app/tab_activity_glue/ReparentingTask.java",
-      "java/src/org/chromium/chrome/browser/app/tabmodel/TabGroupSyncDepsProvider.java",
-      "java/src/org/chromium/chrome/browser/app/tabmodel/TabStoragePackager.java",
-      "java/src/org/chromium/chrome/browser/app/tabwindow/TabWindowManagerObserver.java",
-      "java/src/org/chromium/chrome/browser/autofill/AutofillExpirationDateFixFlowBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/AutofillFallbackSurfaceLauncher.java",
-      "java/src/org/chromium/chrome/browser/autofill/AutofillNameFixFlowBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/AutofillSnackbarController.java",
-      "java/src/org/chromium/chrome/browser/autofill/CardUnmaskBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/CreditCardScannerBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/iban/AutofillSaveIbanBottomSheetBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetBridge.java",
-      "java/src/org/chromium/chrome/browser/autofill/settings/AutofillPaymentMethodsDelegate.java",
-      "java/src/org/chromium/chrome/browser/autofill/settings/SettingsNavigationHelper.java",
-      "java/src/org/chromium/chrome/browser/autofill/settings/VirtualCardEnrollmentFields.java",
-      "java/src/org/chromium/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetBridge.java",
-      "java/src/org/chromium/chrome/browser/background_sync/BackgroundSyncBackgroundTask.java",
-      "java/src/org/chromium/chrome/browser/background_sync/BackgroundSyncBackgroundTaskScheduler.java",
-      "java/src/org/chromium/chrome/browser/background_sync/GooglePlayServicesChecker.java",
-      "java/src/org/chromium/chrome/browser/background_sync/PeriodicBackgroundSyncChromeWakeUpTask.java",
-      "java/src/org/chromium/chrome/browser/background_task_scheduler/ChromeBackgroundTaskFactory.java",
-      "java/src/org/chromium/chrome/browser/background_task_scheduler/ProxyNativeTask.java",
-      "java/src/org/chromium/chrome/browser/backup/ChromeBackupAgentImpl.java",
-      "java/src/org/chromium/chrome/browser/backup/ChromeBackupWatcher.java",
-      "java/src/org/chromium/chrome/browser/backup/DictPrefBackupSerializer.java",
-      "java/src/org/chromium/chrome/browser/browserservices/digitalgoods/SiteIsolator.java",
-      "java/src/org/chromium/chrome/browser/browserservices/permissiondelegation/InstalledWebappBridge.java",
-      "java/src/org/chromium/chrome/browser/browserservices/permissiondelegation/InstalledWebappGeolocationBridge.java",
-      "java/src/org/chromium/chrome/browser/browsing_data/BrowsingDataBridge.java",
-      "java/src/org/chromium/chrome/browser/browsing_data/BrowsingDataCounterBridge.java",
-      "java/src/org/chromium/chrome/browser/browsing_data/UrlFilterBridge.java",
-      "java/src/org/chromium/chrome/browser/complex_tasks/TaskTabHelper.java",
-      "java/src/org/chromium/chrome/browser/compositor/CompositorView.java",
-      "java/src/org/chromium/chrome/browser/compositor/LayerTitleCache.java",
-      "java/src/org/chromium/chrome/browser/compositor/bottombar/OverlayPanelContent.java",
-      "java/src/org/chromium/chrome/browser/compositor/scene_layer/ContextualSearchSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/compositor/scene_layer/SolidColorSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/compositor/scene_layer/StaticTabSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/compositor/scene_layer/TabStripSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/compositor/scene_layer/ToolbarSwipeSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/contextmenu/ContextMenuHelper.java",
-      "java/src/org/chromium/chrome/browser/contextualsearch/ContextualSearchContext.java",
-      "java/src/org/chromium/chrome/browser/contextualsearch/ContextualSearchManager.java",
-      "java/src/org/chromium/chrome/browser/contextualsearch/ContextualSearchPolicy.java",
-      "java/src/org/chromium/chrome/browser/contextualsearch/ContextualSearchTabHelper.java",
-      "java/src/org/chromium/chrome/browser/crash/MinidumpUploadServiceImpl.java",
-      "java/src/org/chromium/chrome/browser/customtabs/CustomTabAuthUrlHeuristics.java",
-      "java/src/org/chromium/chrome/browser/customtabs/CustomTabsConnection.java",
-      "java/src/org/chromium/chrome/browser/customtabs/CustomTabsOpenTimeRecorder.java",
-      "java/src/org/chromium/chrome/browser/customtabs/content/WebAppLaunchHandler.java",
-      "java/src/org/chromium/chrome/browser/customtabs/features/TabInteractionRecorder.java",
-      "java/src/org/chromium/chrome/browser/data_import/DataImporterBridge.java",
-      "java/src/org/chromium/chrome/browser/datareduction/DataSaverOSSetting.java",
-      "java/src/org/chromium/chrome/browser/device_dialog/ChromeBluetoothChooserAndroidDelegate.java",
-      "java/src/org/chromium/chrome/browser/device_dialog/ChromeBluetoothScanningPromptAndroidDelegate.java",
-      "java/src/org/chromium/chrome/browser/device_dialog/SerialChooserDialog.java",
-      "java/src/org/chromium/chrome/browser/device_dialog/UsbChooserDialog.java",
-      "java/src/org/chromium/chrome/browser/dom_distiller/DomDistillerServiceFactory.java",
-      "java/src/org/chromium/chrome/browser/dom_distiller/DomDistillerTabUtils.java",
-      "java/src/org/chromium/chrome/browser/dom_distiller/DomDistillerUiUtils.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadController.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadItem.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadManagerService.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadMessageBridge.java",
-      "java/src/org/chromium/chrome/browser/download/DownloadUtils.java",
-      "java/src/org/chromium/chrome/browser/download/DuplicateDownloadDialogBridge.java",
-      "java/src/org/chromium/chrome/browser/download/OpenDownloadDialogBridge.java",
-      "java/src/org/chromium/chrome/browser/download/service/DownloadBackgroundTask.java",
-      "java/src/org/chromium/chrome/browser/download/service/DownloadBackgroundTaskCallback.java",
-      "java/src/org/chromium/chrome/browser/download/service/DownloadTaskScheduler.java",
-      "java/src/org/chromium/chrome/browser/feedback/ConnectivityChecker.java",
-      "java/src/org/chromium/chrome/browser/feedback/ScreenshotTask.java",
-      "java/src/org/chromium/chrome/browser/firstrun/FirstRunUtils.java",
-      "java/src/org/chromium/chrome/browser/flags/BadFlagsSnackbarManager.java",
-      "java/src/org/chromium/chrome/browser/gesturenav/GestureNavigationUtils.java",
-      "java/src/org/chromium/chrome/browser/gesturenav/OverscrollSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/history/BrowsingHistoryBridge.java",
-      "java/src/org/chromium/chrome/browser/history/HistoryDeletionBridge.java",
-      "java/src/org/chromium/chrome/browser/history/HistoryDeletionInfo.java",
-      "java/src/org/chromium/chrome/browser/infobar/AutofillSaveCardInfoBar.java",
-      "java/src/org/chromium/chrome/browser/infobar/InfoBarContainer.java",
-      "java/src/org/chromium/chrome/browser/infobar/KnownInterceptionDisclosureInfoBar.java",
-      "java/src/org/chromium/chrome/browser/init/NativeStartupBridge.java",
-      "java/src/org/chromium/chrome/browser/lens/LensPolicyUtils.java",
-      "java/src/org/chromium/chrome/browser/login/ChromeHttpAuthHandler.java",
-      "java/src/org/chromium/chrome/browser/media/AutoPictureInPicturePermissionController.java",
-      "java/src/org/chromium/chrome/browser/media/DocumentPictureInPictureActivity.java",
-      "java/src/org/chromium/chrome/browser/media/MediaCaptureDevicesDispatcherAndroid.java",
-      "java/src/org/chromium/chrome/browser/media/PictureInPictureActivity.java",
-      "java/src/org/chromium/chrome/browser/media/router/ChromeMediaRouterClient.java",
-      "java/src/org/chromium/chrome/browser/metrics/LaunchMetrics.java",
-      "java/src/org/chromium/chrome/browser/metrics/UmaSessionStats.java",
-      "java/src/org/chromium/chrome/browser/metrics/VariationsSession.java",
-      "java/src/org/chromium/chrome/browser/mojo/ChromeInterfaceRegistrar.java",
-      "java/src/org/chromium/chrome/browser/navigation_predictor/NavigationPredictorBridge.java",
-      "java/src/org/chromium/chrome/browser/notifications/ActionInfo.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationPlatformBridge.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationSuspender.java",
-      "java/src/org/chromium/chrome/browser/notifications/NotificationTriggerScheduler.java",
-      "java/src/org/chromium/chrome/browser/notifications/PushMessagingServiceBridge.java",
-      "java/src/org/chromium/chrome/browser/notifications/scheduler/DisplayAgent.java",
-      "java/src/org/chromium/chrome/browser/notifications/scheduler/NotificationSchedulerTask.java",
-      "java/src/org/chromium/chrome/browser/notifications/scheduler/TipsAgent.java",
-      "java/src/org/chromium/chrome/browser/ntp/RecentTabsPagePrefs.java",
-      "java/src/org/chromium/chrome/browser/ntp/RecentlyClosedBridge.java",
-      "java/src/org/chromium/chrome/browser/ntp/RecentlyClosedTab.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/AutoFetchNotifier.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/BackgroundSchedulerBridge.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/OfflinePageArchivePublisherBridge.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/OfflinePageBridge.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/PublishPageCallback.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/RequestCoordinatorBridge.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/SavePageRequest.java",
-      "java/src/org/chromium/chrome/browser/offlinepages/downloads/OfflinePageDownloadBridge.java",
-      "java/src/org/chromium/chrome/browser/page_info/PageInfoAboutThisSiteController.java",
-      "java/src/org/chromium/chrome/browser/password_manager/AccountChooserDialog.java",
-      "java/src/org/chromium/chrome/browser/password_manager/AutoSigninFirstRunDialog.java",
-      "java/src/org/chromium/chrome/browser/password_manager/AutoSigninSnackbarController.java",
-      "java/src/org/chromium/chrome/browser/password_manager/Credential.java",
-      "java/src/org/chromium/chrome/browser/password_manager/CredentialLeakDialogBridge.java",
-      "java/src/org/chromium/chrome/browser/password_manager/PasswordCheckupLauncher.java",
-      "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerErrorMessageHelperBridge.java",
-      "java/src/org/chromium/chrome/browser/password_manager/PasswordManagerLauncher.java",
-      "java/src/org/chromium/chrome/browser/payments/ServiceWorkerPaymentAppBridge.java",
-      "java/src/org/chromium/chrome/browser/permissions/PermissionBlockedDialog.java",
-      "java/src/org/chromium/chrome/browser/permissions/PermissionUpdateRequester.java",
-      "java/src/org/chromium/chrome/browser/policy/PolicyAuditor.java",
-      "java/src/org/chromium/chrome/browser/policy/PolicyAuditorBridge.java",
-      "java/src/org/chromium/chrome/browser/printing/TabPrinter.java",
-      "java/src/org/chromium/chrome/browser/privacy/settings/PrivacyPreferencesManagerImpl.java",
-      "java/src/org/chromium/chrome/browser/push_messaging/PushMessagingServiceObserver.java",
-      "java/src/org/chromium/chrome/browser/renderer_host/ChromeNavigationUiData.java",
-      "java/src/org/chromium/chrome/browser/resources/ResourceMapper.java",
-      "java/src/org/chromium/chrome/browser/rlz/RevenueStats.java",
-      "java/src/org/chromium/chrome/browser/rlz/RlzPingHandler.java",
-      "java/src/org/chromium/chrome/browser/safe_browsing/SafeBrowsingPasswordReuseDialogBridge.java",
-      "java/src/org/chromium/chrome/browser/safe_browsing/SafeBrowsingReferringAppBridge.java",
-      "java/src/org/chromium/chrome/browser/safe_browsing/SafeBrowsingSettingsNavigation.java",
-      "java/src/org/chromium/chrome/browser/segmentation_platform/ContextualPageActionController.java",
-      "java/src/org/chromium/chrome/browser/sharing/SharingJNIBridge.java",
-      "java/src/org/chromium/chrome/browser/sharing/click_to_call/ClickToCallMessageHandler.java",
-      "java/src/org/chromium/chrome/browser/sharing/sms_fetcher/SmsFetcherMessageHandler.java",
-      "java/src/org/chromium/chrome/browser/signin/SigninBridge.java",
-      "java/src/org/chromium/chrome/browser/signin/SigninManagerImpl.java",
-      "java/src/org/chromium/chrome/browser/site_settings/ChromeSiteSettingsDelegate.java",
-      "java/src/org/chromium/chrome/browser/status_indicator/StatusIndicatorSceneLayer.java",
-      "java/src/org/chromium/chrome/browser/suggestions/mostvisited/MostVisitedSites.java",
-      "java/src/org/chromium/chrome/browser/suggestions/mostvisited/MostVisitedSitesBridge.java",
-      "java/src/org/chromium/chrome/browser/supervised_user/ChildAccountService.java",
-      "java/src/org/chromium/chrome/browser/tab/TabAndroidTestHelper.java",
-      "java/src/org/chromium/chrome/browser/tab/TabBrowserControlsConstraintsHelper.java",
-      "java/src/org/chromium/chrome/browser/tab/TabFavicon.java",
-      "java/src/org/chromium/chrome/browser/tab/TabImpl.java",
-      "java/src/org/chromium/chrome/browser/tab/TabWebContentsDelegateAndroidImpl.java",
-      "java/src/org/chromium/chrome/browser/tab/tab_restore/HistoricalTabSaverImpl.java",
-      "java/src/org/chromium/chrome/browser/tabmodel/TabCollectionTabModelImpl.java",
-      "java/src/org/chromium/chrome/browser/tabmodel/TabModelJniBridge.java",
-      "java/src/org/chromium/chrome/browser/tabmodel/TabModelObserverJniBridge.java",
-      "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodControllerBridge.java",
-      "java/src/org/chromium/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewBridge.java",
-      "java/src/org/chromium/chrome/browser/ui/ExclusiveAccessBubble.java",
-      "java/src/org/chromium/chrome/browser/ui/ExclusiveAccessContext.java",
-      "java/src/org/chromium/chrome/browser/ui/ExclusiveAccessManager.java",
-      "java/src/org/chromium/chrome/browser/usage_stats/UsageStatsBridge.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkDataProvider.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkHandlerDelegate.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkInstallService.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkInstaller.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkPostShareTargetNavigator.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkSyncService.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkUpdateDataFetcher.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebApkUpdateManager.java",
-      "java/src/org/chromium/chrome/browser/webapps/WebappRegistry.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/BitmapDownloadRequest.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/link_to_text/LinkToTextBridge.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabService.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/long_screenshots/bitmap_generation/LongScreenshotsTabServiceFactory.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/qrcode/QRCodeGenerator.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/screenshot/EditorScreenshotTask.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/MetricsRecorder.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/NotificationManager.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/PageContext.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/SendTabToSelfAndroidBridge.java",
+      "../browser/share/android/java/src/org/Cinaseek/chrome/browser/share/send_tab_to_self/TargetDeviceInfo.java",
+      "java/src/org/Cinaseek/chrome/browser/DevToolsServer.java",
+      "java/src/org/Cinaseek/chrome/browser/IntentHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/KeyboardShortcuts.java",
+      "java/src/org/Cinaseek/chrome/browser/PlayServicesVersionInfo.java",
+      "java/src/org/Cinaseek/chrome/browser/RecentlyClosedEntriesManager.java",
+      "java/src/org/Cinaseek/chrome/browser/RecentlyClosedWindowMetadata.java",
+      "java/src/org/Cinaseek/chrome/browser/ServiceTabLauncher.java",
+      "java/src/org/Cinaseek/chrome/browser/ShortcutHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/WarmupManager.java",
+      "java/src/org/Cinaseek/chrome/browser/about_settings/AboutSettingsBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/accessibility/settings/AccessibilitySettingsBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/announcement/AnnouncementNotificationManager.java",
+      "java/src/org/Cinaseek/chrome/browser/app/flags/CinaseekCachedFlags.java",
+      "java/src/org/Cinaseek/chrome/browser/app/send_tab_to_self/SendTabToSelfNotificationReceiver.java",
+      "java/src/org/Cinaseek/chrome/browser/app/tab_activity_glue/ReparentingTask.java",
+      "java/src/org/Cinaseek/chrome/browser/app/tabmodel/TabGroupSyncDepsProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/app/tabmodel/TabStoragePackager.java",
+      "java/src/org/Cinaseek/chrome/browser/app/tabwindow/TabWindowManagerObserver.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/AutofillExpirationDateFixFlowBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/AutofillFallbackSurfaceLauncher.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/AutofillNameFixFlowBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/AutofillSnackbarController.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/CardUnmaskBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/CreditCardScannerBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/iban/AutofillSaveIbanBottomSheetBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/save_card/AutofillSaveCardBottomSheetBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/settings/AutofillPaymentMethodsDelegate.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/settings/SettingsNavigationHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/settings/VirtualCardEnrollmentFields.java",
+      "java/src/org/Cinaseek/chrome/browser/autofill/vcn/AutofillVcnEnrollBottomSheetBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/background_sync/BackgroundSyncBackgroundTask.java",
+      "java/src/org/Cinaseek/chrome/browser/background_sync/BackgroundSyncBackgroundTaskScheduler.java",
+      "java/src/org/Cinaseek/chrome/browser/background_sync/GooglePlayServicesChecker.java",
+      "java/src/org/Cinaseek/chrome/browser/background_sync/PeriodicBackgroundSyncCinaseekWakeUpTask.java",
+      "java/src/org/Cinaseek/chrome/browser/background_task_scheduler/CinaseekBackgroundTaskFactory.java",
+      "java/src/org/Cinaseek/chrome/browser/background_task_scheduler/ProxyNativeTask.java",
+      "java/src/org/Cinaseek/chrome/browser/backup/CinaseekBackupAgentImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/backup/CinaseekBackupWatcher.java",
+      "java/src/org/Cinaseek/chrome/browser/backup/DictPrefBackupSerializer.java",
+      "java/src/org/Cinaseek/chrome/browser/browserservices/digitalgoods/SiteIsolator.java",
+      "java/src/org/Cinaseek/chrome/browser/browserservices/permissiondelegation/InstalledWebappBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/browserservices/permissiondelegation/InstalledWebappGeolocationBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/browsing_data/BrowsingDataBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/browsing_data/BrowsingDataCounterBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/browsing_data/UrlFilterBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/complex_tasks/TaskTabHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/CompositorView.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/LayerTitleCache.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/bottombar/OverlayPanelContent.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/scene_layer/ContextualSearchSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/scene_layer/SolidColorSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/scene_layer/StaticTabSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/scene_layer/TabStripSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/compositor/scene_layer/ToolbarSwipeSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/contextmenu/ContextMenuHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchContext.java",
+      "java/src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchManager.java",
+      "java/src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchPolicy.java",
+      "java/src/org/Cinaseek/chrome/browser/contextualsearch/ContextualSearchTabHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/crash/MinidumpUploadServiceImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/CustomTabAuthUrlHeuristics.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsConnection.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/CustomTabsOpenTimeRecorder.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/content/WebAppLaunchHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/customtabs/features/TabInteractionRecorder.java",
+      "java/src/org/Cinaseek/chrome/browser/data_import/DataImporterBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/datareduction/DataSaverOSSetting.java",
+      "java/src/org/Cinaseek/chrome/browser/device_dialog/CinaseekBluetoothChooserAndroidDelegate.java",
+      "java/src/org/Cinaseek/chrome/browser/device_dialog/CinaseekBluetoothScanningPromptAndroidDelegate.java",
+      "java/src/org/Cinaseek/chrome/browser/device_dialog/SerialChooserDialog.java",
+      "java/src/org/Cinaseek/chrome/browser/device_dialog/UsbChooserDialog.java",
+      "java/src/org/Cinaseek/chrome/browser/dom_distiller/DomDistillerServiceFactory.java",
+      "java/src/org/Cinaseek/chrome/browser/dom_distiller/DomDistillerTabUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/dom_distiller/DomDistillerUiUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadController.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadItem.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadManagerService.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadMessageBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DownloadUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/download/DuplicateDownloadDialogBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/download/OpenDownloadDialogBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/download/service/DownloadBackgroundTask.java",
+      "java/src/org/Cinaseek/chrome/browser/download/service/DownloadBackgroundTaskCallback.java",
+      "java/src/org/Cinaseek/chrome/browser/download/service/DownloadTaskScheduler.java",
+      "java/src/org/Cinaseek/chrome/browser/feedback/ConnectivityChecker.java",
+      "java/src/org/Cinaseek/chrome/browser/feedback/ScreenshotTask.java",
+      "java/src/org/Cinaseek/chrome/browser/firstrun/FirstRunUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/flags/BadFlagsSnackbarManager.java",
+      "java/src/org/Cinaseek/chrome/browser/gesturenav/GestureNavigationUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/gesturenav/OverscrollSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/history/BrowsingHistoryBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/history/HistoryDeletionBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/history/HistoryDeletionInfo.java",
+      "java/src/org/Cinaseek/chrome/browser/infobar/AutofillSaveCardInfoBar.java",
+      "java/src/org/Cinaseek/chrome/browser/infobar/InfoBarContainer.java",
+      "java/src/org/Cinaseek/chrome/browser/infobar/KnownInterceptionDisclosureInfoBar.java",
+      "java/src/org/Cinaseek/chrome/browser/init/NativeStartupBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/lens/LensPolicyUtils.java",
+      "java/src/org/Cinaseek/chrome/browser/login/CinaseekHttpAuthHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/media/AutoPictureInPicturePermissionController.java",
+      "java/src/org/Cinaseek/chrome/browser/media/DocumentPictureInPictureActivity.java",
+      "java/src/org/Cinaseek/chrome/browser/media/MediaCaptureDevicesDispatcherAndroid.java",
+      "java/src/org/Cinaseek/chrome/browser/media/PictureInPictureActivity.java",
+      "java/src/org/Cinaseek/chrome/browser/media/router/CinaseekMediaRouterClient.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/LaunchMetrics.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/UmaSessionStats.java",
+      "java/src/org/Cinaseek/chrome/browser/metrics/VariationsSession.java",
+      "java/src/org/Cinaseek/chrome/browser/mojo/CinaseekInterfaceRegistrar.java",
+      "java/src/org/Cinaseek/chrome/browser/navigation_predictor/NavigationPredictorBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/ActionInfo.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationPlatformBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationSuspender.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/NotificationTriggerScheduler.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/PushMessagingServiceBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/scheduler/DisplayAgent.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/scheduler/NotificationSchedulerTask.java",
+      "java/src/org/Cinaseek/chrome/browser/notifications/scheduler/TipsAgent.java",
+      "java/src/org/Cinaseek/chrome/browser/ntp/RecentTabsPagePrefs.java",
+      "java/src/org/Cinaseek/chrome/browser/ntp/RecentlyClosedBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/ntp/RecentlyClosedTab.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/AutoFetchNotifier.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/BackgroundSchedulerBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageArchivePublisherBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/OfflinePageBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/PublishPageCallback.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/RequestCoordinatorBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/SavePageRequest.java",
+      "java/src/org/Cinaseek/chrome/browser/offlinepages/downloads/OfflinePageDownloadBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/page_info/PageInfoAboutThisSiteController.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/AccountChooserDialog.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/AutoSigninFirstRunDialog.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/AutoSigninSnackbarController.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/Credential.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/CredentialLeakDialogBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordCheckupLauncher.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerErrorMessageHelperBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/password_manager/PasswordManagerLauncher.java",
+      "java/src/org/Cinaseek/chrome/browser/payments/ServiceWorkerPaymentAppBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/permissions/PermissionBlockedDialog.java",
+      "java/src/org/Cinaseek/chrome/browser/permissions/PermissionUpdateRequester.java",
+      "java/src/org/Cinaseek/chrome/browser/policy/PolicyAuditor.java",
+      "java/src/org/Cinaseek/chrome/browser/policy/PolicyAuditorBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/printing/TabPrinter.java",
+      "java/src/org/Cinaseek/chrome/browser/privacy/settings/PrivacyPreferencesManagerImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/push_messaging/PushMessagingServiceObserver.java",
+      "java/src/org/Cinaseek/chrome/browser/renderer_host/CinaseekNavigationUiData.java",
+      "java/src/org/Cinaseek/chrome/browser/resources/ResourceMapper.java",
+      "java/src/org/Cinaseek/chrome/browser/rlz/RevenueStats.java",
+      "java/src/org/Cinaseek/chrome/browser/rlz/RlzPingHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/safe_browsing/SafeBrowsingPasswordReuseDialogBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/safe_browsing/SafeBrowsingReferringAppBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/safe_browsing/SafeBrowsingSettingsNavigation.java",
+      "java/src/org/Cinaseek/chrome/browser/segmentation_platform/ContextualPageActionController.java",
+      "java/src/org/Cinaseek/chrome/browser/sharing/SharingJNIBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/sharing/click_to_call/ClickToCallMessageHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/sharing/sms_fetcher/SmsFetcherMessageHandler.java",
+      "java/src/org/Cinaseek/chrome/browser/signin/SigninBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/signin/SigninManagerImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/site_settings/CinaseekSiteSettingsDelegate.java",
+      "java/src/org/Cinaseek/chrome/browser/status_indicator/StatusIndicatorSceneLayer.java",
+      "java/src/org/Cinaseek/chrome/browser/suggestions/mostvisited/MostVisitedSites.java",
+      "java/src/org/Cinaseek/chrome/browser/suggestions/mostvisited/MostVisitedSitesBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/supervised_user/ChildAccountService.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/TabAndroidTestHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/TabBrowserControlsConstraintsHelper.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/TabFavicon.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/TabImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/TabWebContentsDelegateAndroidImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/tab/tab_restore/HistoricalTabSaverImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/tabmodel/TabCollectionTabModelImpl.java",
+      "java/src/org/Cinaseek/chrome/browser/tabmodel/TabModelJniBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/tabmodel/TabModelObserverJniBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodControllerBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/touch_to_fill/payments/TouchToFillPaymentMethodViewBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/ui/ExclusiveAccessBubble.java",
+      "java/src/org/Cinaseek/chrome/browser/ui/ExclusiveAccessContext.java",
+      "java/src/org/Cinaseek/chrome/browser/ui/ExclusiveAccessManager.java",
+      "java/src/org/Cinaseek/chrome/browser/usage_stats/UsageStatsBridge.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkDataProvider.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkHandlerDelegate.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkInstallService.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkInstaller.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkPostShareTargetNavigator.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkSyncService.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkUpdateDataFetcher.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebApkUpdateManager.java",
+      "java/src/org/Cinaseek/chrome/browser/webapps/WebappRegistry.java",
     ]
 
     if (enable_screen_capture) {
-      sources += [ "java/src/org/chromium/chrome/browser/media/MediaCapturePickerManagerBridge.java" ]
+      sources += [ "java/src/org/Cinaseek/chrome/browser/media/MediaCapturePickerManagerBridge.java" ]
     }
 
     # Used for testing only, should not be shipped to end users.
     if (enable_offline_pages_harness) {
-      sources += [ "java/src/org/chromium/chrome/browser/offlinepages/evaluation/OfflinePageEvaluationBridge.java" ]
+      sources += [ "java/src/org/Cinaseek/chrome/browser/offlinepages/evaluation/OfflinePageEvaluationBridge.java" ]
     }
 
     public_deps = [
@@ -3285,7 +3285,7 @@ if (_is_default_toolchain) {
     }
   }
 
-  # Chrome APK's native library.
+  # Cinaseek APK's native library.
   template("libchrome_impl") {
     chrome_common_shared_library(target_name) {
       sources = [ "../browser/android/chrome_entry_point.cc" ]
@@ -3329,7 +3329,7 @@ if (_is_default_toolchain) {
   }
 }
 
-# Trichrome equivalent of Chrome's APK or bundle library template.
+# Trichrome equivalent of Cinaseek's APK or bundle library template.
 template("libmonochrome_tmpl") {
   chrome_common_shared_library(target_name) {
     sources = [ "../browser/android/monochrome_entry_point.cc" ]

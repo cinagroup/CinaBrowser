@@ -51,7 +51,7 @@ Statistics.LayoutTypes = {
 /**
  * The commit type for stats.
  * Keep this in sync with the enum IMECommitType2 in histograms.xml file in
- * chromium.
+ * Cinaseek.
  * Please append new items at the end.
  *
  * @enum {number}

@@ -1,4 +1,4 @@
 {
-  "builder_group": "tryserver.chromium.linux",
-  "recipe": "chromium/compilator"
+  "builder_group": "tryserver.Cinaseek.linux",
+  "recipe": "Cinaseek/compilator"
 }

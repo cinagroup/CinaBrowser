@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -21,7 +21,7 @@ constexpr char kDescription[] = "The green one";
 constexpr char kManufacturer[] = "Manufacturer";
 constexpr char kModel[] = "MODEL";
 constexpr char kMakeAndModel[] = "Manufacturer MODEL";
-constexpr char kUri[] = "ipps://notaprinter.chromium.org:123/ipp/print";
+constexpr char kUri[] = "ipps://notaprinter.Cinaseek.org:123/ipp/print";
 constexpr char kUuid[] = "UUIDUUIDUUID";
 const base::Time kUpdateTime = base::Time::FromInternalValue(22114455660000);
 

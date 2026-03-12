@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -45,8 +45,8 @@ source_set("unit_tests") {
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/page_image_service/ImageServiceBridge.java",
-    "java/src/org/chromium/chrome/browser/page_image_service/ImageServiceMetrics.java",
+    "java/src/org/Cinaseek/chrome/browser/page_image_service/ImageServiceBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/page_image_service/ImageServiceMetrics.java",
   ]
   deps = [
     "//base:base_java",
@@ -64,14 +64,14 @@ android_library("java") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/page_image_service/ImageServiceBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/page_image_service/ImageServiceBridge.java" ]
 }
 
 robolectric_library("junit") {
   testonly = true
-  resources_package = "org.chromium.chrome.browser.page_image_service"
+  resources_package = "org.Cinaseek.chrome.browser.page_image_service"
 
-  sources = [ "junit/src/org/chromium/chrome/browser/page_image_service/ImageServiceBridgeUnitTest.java" ]
+  sources = [ "junit/src/org/Cinaseek/chrome/browser/page_image_service/ImageServiceBridgeUnitTest.java" ]
 
   deps = [
     ":java",

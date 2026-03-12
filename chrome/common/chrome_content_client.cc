@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -126,7 +126,7 @@ void ChromeContentClient::AddPlugins(
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr char16_t kPDFPluginName[] = u"Chrome PDF Plugin";
 #else
-  static constexpr char16_t kPDFPluginName[] = u"Chromium PDF Plugin";
+  static constexpr char16_t kPDFPluginName[] = u"Cinaseek PDF Plugin";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
   static constexpr char16_t kPDFPluginDescription[] = u"Built-in PDF viewer";
   static constexpr char kPDFPluginExtension[] = "pdf";

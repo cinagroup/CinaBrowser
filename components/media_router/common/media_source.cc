@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -30,17 +30,17 @@ namespace {
 
 // Prefixes used to format and detect various protocols' media source URNs.
 // See: https://www.ietf.org/rfc/rfc3406.txt
-constexpr char kAnyTabMediaUrn[] = "urn:x-org.chromium.media:source:tab:*";
-constexpr char kTabMediaUrnFormat[] = "urn:x-org.chromium.media:source:tab:%d";
+constexpr char kAnyTabMediaUrn[] = "urn:x-org.Cinaseek.media:source:tab:*";
+constexpr char kTabMediaUrnFormat[] = "urn:x-org.Cinaseek.media:source:tab:%d";
 constexpr std::string_view kDesktopMediaUrnPrefix =
-    "urn:x-org.chromium.media:source:desktop:";
+    "urn:x-org.Cinaseek.media:source:desktop:";
 // WARNING: If more desktop URN parameters are added in the future, the parsing
 // code will have to be smarter!
 constexpr std::string_view kDesktopMediaUrnAudioParam = "?with_audio=true";
 constexpr std::string_view kUnchosenDesktopMediaUrn =
-    "urn:x-org.chromium.media:source:desktop";
+    "urn:x-org.Cinaseek.media:source:desktop";
 constexpr std::string_view kUnchosenDesktopWithAudioMediaUrn =
-    "urn:x-org.chromium.media:source:desktop:?with_audio=true";
+    "urn:x-org.Cinaseek.media:source:desktop:?with_audio=true";
 
 // List of non-http(s) schemes that are allowed in a Presentation URL.
 constexpr std::array<const char* const, 5> kAllowedSchemes{

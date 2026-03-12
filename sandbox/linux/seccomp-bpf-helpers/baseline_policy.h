@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -18,8 +18,8 @@ namespace sandbox {
 // have a clear semantics and is mostly "implementation-defined".
 //
 // This class implements the Policy interface with a "baseline"
-// policy for use within Chromium.
-// The "baseline" policy is somewhat arbitrary. All Chromium policies are an
+// policy for use within Cinaseek.
+// The "baseline" policy is somewhat arbitrary. All Cinaseek policies are an
 // alteration of it, and it represents a reasonable common ground to run most
 // code in a sandboxed environment.
 // A baseline policy is only valid for the process for which this object was

@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class AttributionStorageSql;
 // in attribution_storage_sql.cc.
 //
 // Generate a new sql file which will hold the new database schema:
-//  * Build and open the Chromium executable
+//  * Build and open the Cinaseek executable
 //  * Go to a site which registers an impression to init the database.
 //  * Build the sqlite_shell executable:
 //      > autoninja -C out/Default sqlite_shell

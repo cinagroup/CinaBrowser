@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -991,7 +991,7 @@ TEST(StringNumberConversionsTest, HexEncode) {
 }
 
 // Test cases of known-bad strtod conversions that motivated the use of dmg_fp.
-// See https://bugs.chromium.org/p/chromium/issues/detail?id=593512.
+// See https://bugs.Cinaseek.org/p/Cinaseek/issues/detail?id=593512.
 TEST(StringNumberConversionsTest, StrtodFailures) {
   static const struct {
     const char* input;

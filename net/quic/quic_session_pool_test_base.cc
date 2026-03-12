@@ -1,4 +1,4 @@
-// Copyright 2024 The Chromium Authors
+// Copyright 2024 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -48,14 +48,14 @@
 #include "net/http/transport_security_state.h"
 #include "net/http/transport_security_state_test_util.h"
 #include "net/quic/address_utils.h"
-#include "net/quic/crypto/proof_verifier_chromium.h"
+#include "net/quic/crypto/proof_verifier_Cinaseek.h"
 #include "net/quic/mock_crypto_client_stream_factory.h"
 #include "net/quic/mock_quic_context.h"
 #include "net/quic/mock_quic_data.h"
 #include "net/quic/properties_based_quic_server_info.h"
-#include "net/quic/quic_chromium_alarm_factory.h"
-#include "net/quic/quic_chromium_client_session.h"
-#include "net/quic/quic_chromium_client_session_peer.h"
+#include "net/quic/quic_Cinaseek_alarm_factory.h"
+#include "net/quic/quic_Cinaseek_client_session.h"
+#include "net/quic/quic_Cinaseek_client_session_peer.h"
 #include "net/quic/quic_context.h"
 #include "net/quic/quic_http_stream.h"
 #include "net/quic/quic_http_utils.h"
@@ -214,7 +214,7 @@ void QuicSessionPoolTestBase::MaybeMakeNewConnectionIdAvailableToSession(
 
 std::unique_ptr<HttpStream> QuicSessionPoolTestBase::CreateStream(
     QuicSessionRequest* request) {
-  std::unique_ptr<QuicChromiumClientSession::Handle> session =
+  std::unique_ptr<QuicCinaseekClientSession::Handle> session =
       request->ReleaseSessionHandle();
   if (!session || !session->IsConnected()) {
     return nullptr;
@@ -253,7 +253,7 @@ bool QuicSessionPoolTestBase::HasActiveJob(
 }
 
 // Get the pending, not activated session, if there is only one session alive.
-QuicChromiumClientSession* QuicSessionPoolTestBase::GetPendingSession(
+QuicCinaseekClientSession* QuicSessionPoolTestBase::GetPendingSession(
     const url::SchemeHostPort& scheme_host_port) {
   quic::QuicServerId server_id(scheme_host_port.host(),
                                scheme_host_port.port());
@@ -261,7 +261,7 @@ QuicChromiumClientSession* QuicSessionPoolTestBase::GetPendingSession(
       pool_.get(), server_id, PRIVACY_MODE_DISABLED, scheme_host_port);
 }
 
-QuicChromiumClientSession* QuicSessionPoolTestBase::GetActiveSession(
+QuicCinaseekClientSession* QuicSessionPoolTestBase::GetActiveSession(
     const url::SchemeHostPort& scheme_host_port,
     PrivacyMode privacy_mode,
     const NetworkAnonymizationKey& network_anonymization_key,
@@ -304,7 +304,7 @@ int QuicSessionPoolTestBase::GetSourcePortForNewSessionInner(
   EXPECT_TRUE(stream.get());
   stream.reset();
 
-  QuicChromiumClientSession* session = GetActiveSession(destination);
+  QuicCinaseekClientSession* session = GetActiveSession(destination);
 
   if (socket_count + 1 != socket_factory_->udp_client_socket_ports().size()) {
     ADD_FAILURE();
@@ -324,24 +324,24 @@ int QuicSessionPoolTestBase::GetSourcePortForNewSessionInner(
   return socket_factory_->udp_client_socket_ports()[socket_count];
 }
 
-ProofVerifyDetailsChromium
+ProofVerifyDetailsCinaseek
 QuicSessionPoolTestBase::DefaultProofVerifyDetails() {
   // Load a certificate that is valid for *.example.org
   scoped_refptr<X509Certificate> test_cert(
       ImportCertFromFile(GetTestCertsDirectory(), "wildcard.pem"));
   EXPECT_TRUE(test_cert.get());
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = test_cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   return verify_details;
 }
 
-ProofVerifyDetailsChromium QuicSessionPoolTestBase::GoogleProofVerifyDetails() {
+ProofVerifyDetailsCinaseek QuicSessionPoolTestBase::GoogleProofVerifyDetails() {
   // Load a certificate that is valid for *.google.com
   scoped_refptr<X509Certificate> test_cert(
       ImportCertFromFile(GetTestCertsDirectory(), "google_wildcard.pem"));
   EXPECT_TRUE(test_cert.get());
-  ProofVerifyDetailsChromium verify_details;
+  ProofVerifyDetailsCinaseek verify_details;
   verify_details.cert_verify_result.verified_cert = test_cert;
   verify_details.cert_verify_result.is_issued_by_known_root = true;
   return verify_details;

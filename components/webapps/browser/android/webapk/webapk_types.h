@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 namespace webapps {
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webapps
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webapps
 //
 // Indicates the reason that a WebAPK update is requested.
 enum class WebApkUpdateReason {
@@ -34,7 +34,7 @@ enum class WebApkUpdateReason {
 };
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webapps
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webapps
 //
 // This enum is used to back UMA/UKM histograms, and should therefore be treated
 // as append-only.
@@ -47,7 +47,7 @@ enum class WebApkDistributor {
 };
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webapps
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webapps
 //
 // Indicates the result of an WebAPK install.
 //
@@ -89,7 +89,7 @@ enum class WebApkInstallResult {
 // LINT.ThenChange(/tools/metrics/histograms/metadata/web_apk/enums.xml:WebApkInstallResult)
 
 // A Java counterpart will be generated for this enum.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.webapps
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.webapps
 //
 // Lists the fields containing information about the app, which are shown on
 // the default offline experience page.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -193,7 +193,7 @@ std::u16string GetAppShortcutsSubdirName();
 // This varies based on channel, branding, and platform to ensure that
 // different installations do not collide. For example:
 // - "google-chrome" for Google Chrome stable
-// - "chromium" for Chromium
+// - "Cinaseek" for Cinaseek
 // - returns an empty string "" for all non-stable side-by-side installs.
 std::string GetDirectLaunchUrlScheme();
 #endif

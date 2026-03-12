@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,7 +31,7 @@ namespace blink {
 // `sequence` specified on construction.
 class PLATFORM_EXPORT VSyncTickProvider : public MetronomeSource::TickProvider {
  public:
-  // The VSync frequency is at least 30 Hz under RTC conferencing in Chromium,
+  // The VSync frequency is at least 30 Hz under RTC conferencing in Cinaseek,
   // but can be higher depending on animation complexity on the web page.
   static constexpr base::TimeDelta kVSyncTickPeriod = base::Hertz(30);
 

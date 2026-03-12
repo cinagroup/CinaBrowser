@@ -1,5 +1,5 @@
 {
-  "$build/chromium_tests_builder_config": {
+  "$build/Cinaseek_tests_builder_config": {
     "builder_config": {
       "additional_exclusions": [
         "infra/config/generated/builders/try/linux-blink-web-tests-force-accessibility-rel/gn-args.json"
@@ -10,22 +10,22 @@
             "builder_id": {
               "bucket": "ci",
               "builder": "linux-blink-web-tests-force-accessibility-rel",
-              "project": "chromium"
+              "project": "Cinaseek"
             },
             "builder_spec": {
-              "builder_group": "chromium.accessibility",
+              "builder_group": "Cinaseek.accessibility",
               "execution_mode": "COMPILE_AND_TEST",
-              "legacy_chromium_config": {
+              "legacy_Cinaseek_config": {
                 "apply_configs": [
                   "mb"
                 ],
                 "build_config": "Release",
-                "config": "chromium",
+                "config": "Cinaseek",
                 "target_bits": 64,
                 "target_platform": "linux"
               },
               "legacy_gclient_config": {
-                "config": "chromium"
+                "config": "Cinaseek"
               }
             }
           }
@@ -35,7 +35,7 @@
         {
           "bucket": "ci",
           "builder": "linux-blink-web-tests-force-accessibility-rel",
-          "project": "chromium"
+          "project": "Cinaseek"
         }
       ],
       "targets_spec_directory": "infra/config/generated/builders/try/linux-blink-web-tests-force-accessibility-rel/targets"
@@ -50,7 +50,7 @@
     "experiments": [],
     "keep_going": 3,
     "profile_mode": "cloud",
-    "project": "rbe-chromium-untrusted",
+    "project": "rbe-Cinaseek-untrusted",
     "remote_jobs": 150
   },
   "$recipe_engine/resultdb/test_presentation": {
@@ -60,7 +60,7 @@
       "v.test_suite"
     ]
   },
-  "builder_group": "tryserver.chromium.accessibility",
+  "builder_group": "tryserver.Cinaseek.accessibility",
   "cq": "path-based",
-  "recipe": "chromium_trybot"
+  "recipe": "Cinaseek_trybot"
 }

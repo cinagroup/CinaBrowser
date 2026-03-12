@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -77,7 +77,7 @@ class InfoBarDelegate {
   // infobars specific to particular OSes/platforms.
   // NEW VALUES MUST BE APPENDED AND AVOID CHANGING ANY PRE-EXISTING VALUES.
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.infobar
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.infobar
   // LINT.IfChange(InfoBarIdentifier)
   enum InfoBarIdentifier {
     INVALID = -1,

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -11,7 +11,7 @@ namespace actor::ui {
 
 // Tab-scoped state.
 struct HandoffButtonState {
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.actor.ui
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.actor.ui
   enum class ControlOwnership {
     // Represents the state where the client has control over the tab.
     kClient,

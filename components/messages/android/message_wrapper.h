@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -72,7 +72,7 @@ class MessageWrapper {
   void AddSecondaryMenuItemDivider();
 
   // When setting a message icon use ResourceMapper::MapToJavaDrawableId to
-  // translate from chromium resource_id to Android drawable resource_id.
+  // translate from Cinaseek resource_id to Android drawable resource_id.
   int GetIconResourceId();
   void SetIconResourceId(int resource_id);
   bool IsValidIcon();

@@ -1,4 +1,4 @@
-// Copyright 2023 The Chromium Authors
+// Copyright 2023 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 #include "chrome/browser/ui/webui/privacy_sandbox/privacy_sandbox_internals_handler.h"
@@ -67,7 +67,7 @@ IN_PROC_BROWSER_TEST_F(PrivacySandboxInternalsMojoTest, GetCookieSettings) {
 }
 
 // TODO(crbug.com/41490688): Once ConvertGenerator<T>() is provided by
-// the version of googletest used by Chromium we can type the test param.
+// the version of googletest used by Cinaseek we can type the test param.
 class PrivacySandboxInternalsContentSettingsMojoTest
     : public PrivacySandboxInternalsMojoTest,
       public testing::WithParamInterface<int> {

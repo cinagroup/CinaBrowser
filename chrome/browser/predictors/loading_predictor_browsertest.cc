@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -105,7 +105,7 @@ using testing::SizeIs;
 
 namespace predictors {
 
-const char kChromiumUrl[] = "http://chromium.org";
+const char kCinaseekUrl[] = "http://Cinaseek.org";
 
 const char kHtmlSubresourcesPath[] = "/predictors/html_subresources.html";
 // The embedded test server runs on test.com.
@@ -949,9 +949,9 @@ IN_PROC_BROWSER_TEST_F(LoadingPredictorBrowserTest, DnsPrefetch) {
       net::NetworkAnonymizationKey::CreateSameSite(site);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   preconnect_manager_observer()->WaitUntilHostLookedUp(
-      GURL(kChromiumUrl).GetHost(), network_anonymization_key);
+      GURL(kCinaseekUrl).GetHost(), network_anonymization_key);
   EXPECT_TRUE(preconnect_manager_observer()->HostFound(
-      GURL(kChromiumUrl).GetHost(), network_anonymization_key));
+      GURL(kCinaseekUrl).GetHost(), network_anonymization_key));
 }
 
 // Tests that preconnect warms up a socket connection to a test server.
@@ -3044,7 +3044,7 @@ IN_PROC_BROWSER_TEST_F(FencedFrameLoadingPredictorBrowserTest, DnsPrefetch) {
       fenced_frame_rfh->GetIsolationInfoForSubresources()
           .network_anonymization_key();
 
-  GURL dns_prefetch_url("https://chromium.org");
+  GURL dns_prefetch_url("https://Cinaseek.org");
 
   // Add a link element in fenced frame that does a DNS prefetch.
   EXPECT_TRUE(ExecJs(fenced_frame_rfh, content::JsReplace(R"(
@@ -3086,7 +3086,7 @@ IN_PROC_BROWSER_TEST_F(FencedFrameLoadingPredictorBrowserTest,
       fenced_frame_rfh->GetIsolationInfoForSubresources()
           .network_anonymization_key();
 
-  GURL dns_prefetch_url("https://chromium.org");
+  GURL dns_prefetch_url("https://Cinaseek.org");
 
   // Disable fenced frame untrusted network access, then add a link element
   // that does a DNS prefetch.
@@ -3139,7 +3139,7 @@ IN_PROC_BROWSER_TEST_F(FencedFrameLoadingPredictorBrowserTest,
   ASSERT_EQ(child_frames.size(), 1u);
   content::RenderFrameHost* fenced_frame_rfh = child_frames[0];
 
-  GURL dns_prefetch_url("https://chromium.org");
+  GURL dns_prefetch_url("https://Cinaseek.org");
   GURL navigation_url =
       embedded_https_test_server().GetURL("a.test", relative_url);
 
@@ -3226,7 +3226,7 @@ IN_PROC_BROWSER_TEST_F(FencedFrameLoadingPredictorBrowserTest,
       fenced_frame_rfh->GetIsolationInfoForSubresources()
           .network_anonymization_key();
 
-  GURL dns_prefetch_url("https://chromium.org");
+  GURL dns_prefetch_url("https://Cinaseek.org");
   GURL navigation_url =
       embedded_https_test_server().GetURL("a.test", relative_url);
 

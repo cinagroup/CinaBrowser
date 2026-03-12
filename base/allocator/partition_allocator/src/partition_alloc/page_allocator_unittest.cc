@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -129,7 +129,7 @@ TEST(PartitionAllocPageAllocatorTest, AllocFailure) {
       AllocPages(size, PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kInaccessible),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   if (!result) {
     // We triggered allocation failure. Our reservation should have been
     // released, and we should be able to make a new reservation.
@@ -141,7 +141,7 @@ TEST(PartitionAllocPageAllocatorTest, AllocFailure) {
   EXPECT_FALSE(ReserveAddressSpace(EasyAllocSize()));
 }
 
-// TODO(crbug.com/41344946): Test failed on chromium.win/Win10 Tests x64.
+// TODO(crbug.com/41344946): Test failed on Cinaseek.win/Win10 Tests x64.
 #if PA_BUILDFLAG(IS_WIN) && PA_BUILDFLAG(PA_ARCH_CPU_64_BITS)
 #define MAYBE_ReserveAddressSpace DISABLED_ReserveAddressSpace
 #else
@@ -173,7 +173,7 @@ TEST(PartitionAllocPageAllocatorTest, AllocAndFreePages) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWrite),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   int* buffer0 = reinterpret_cast<int*>(buffer);
   *buffer0 = 42;
@@ -194,7 +194,7 @@ TEST(PartitionAllocPageAllocatorTest, AllocPagesAligned) {
           0, size, alignment, offset,
           PageAccessibilityConfiguration(
               PageAccessibilityConfiguration::kReadWrite),
-          PageTag::kChromium);
+          PageTag::kCinaseek);
       EXPECT_TRUE(buffer);
       EXPECT_EQ(buffer % alignment, offset);
       FreePages(buffer, size);
@@ -211,7 +211,7 @@ TEST(PartitionAllocPageAllocatorTest,
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   int* buffer0 = reinterpret_cast<int*>(buffer);
   *buffer0 = 42;
@@ -241,7 +241,7 @@ TEST(PartitionAllocPageAllocatorTest,
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWrite),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   ptrdiff_t function_range =
       reinterpret_cast<char*>(arm_bti_test_function_end) -
       reinterpret_cast<char*>(arm_bti_test_function);
@@ -304,7 +304,7 @@ TEST(PartitionAllocPageAllocatorTest,
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   int* buffer0 = reinterpret_cast<int*>(buffer);
   // Assign an 0x1 tag to the first granule of buffer.
@@ -369,7 +369,7 @@ TEST(PartitionAllocPageAllocatorTest,
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteTagged),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   int* buffer0 = reinterpret_cast<int*>(buffer);
   __arm_mte_set_tag(__arm_mte_increment_tag(buffer0, 0x1));
@@ -453,7 +453,7 @@ TEST(PartitionAllocPageAllocatorTest, InaccessiblePages) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kInaccessible),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
 
   FAULT_TEST_BEGIN()
@@ -487,7 +487,7 @@ TEST(PartitionAllocPageAllocatorTest, ReadExecutePages) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadExecute),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(buffer);
   int* buffer0 = reinterpret_cast<int*>(buffer);
   // Reading from buffer should succeed.
@@ -515,7 +515,7 @@ TEST(PartitionAllocPageAllocatorTest, PageTagging) {
       AllocPages(size, PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kInaccessible),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   ASSERT_TRUE(buffer);
 
   auto is_region_named = [](uintptr_t start_address) {
@@ -528,7 +528,7 @@ TEST(PartitionAllocPageAllocatorTest, PageTagging) {
     for (const auto& region : regions) {
       if (region.start == start_address) {
         found = true;
-        return "[anon:chromium]" == region.path;
+        return "[anon:Cinaseek]" == region.path;
       }
     }
     EXPECT_TRUE(found);
@@ -559,7 +559,7 @@ TEST(PartitionAllocPageAllocatorTest, DecommitErasesMemory) {
   uintptr_t buffer = AllocPages(size, PageAllocationGranularity(),
                                 PageAccessibilityConfiguration(
                                     PageAccessibilityConfiguration::kReadWrite),
-                                PageTag::kChromium);
+                                PageTag::kCinaseek);
   ASSERT_TRUE(buffer);
 
   PA_UNSAFE_TODO(memset(reinterpret_cast<void*>(buffer), 42, size));
@@ -586,7 +586,7 @@ TEST(PartitionAllocPageAllocatorTest, DecommitAndZero) {
   uintptr_t buffer = AllocPages(size, PageAllocationGranularity(),
                                 PageAccessibilityConfiguration(
                                     PageAccessibilityConfiguration::kReadWrite),
-                                PageTag::kChromium);
+                                PageTag::kCinaseek);
   ASSERT_TRUE(buffer);
 
   PA_UNSAFE_TODO(memset(reinterpret_cast<void*>(buffer), 42, size));
@@ -640,7 +640,7 @@ TEST(PartitionAllocPageAllocatorTest, MappedPagesAccounting) {
         0, size, alignment, offset,
         PageAccessibilityConfiguration(
             PageAccessibilityConfiguration::kInaccessible),
-        PageTag::kChromium);
+        PageTag::kCinaseek);
     ASSERT_TRUE(data);
 
     EXPECT_EQ(mapped_size_before + size, GetTotalMappedSize());
@@ -671,7 +671,7 @@ TEST(PartitionAllocPageAllocatorTest, MAYBE_AllocInaccessibleWillJitLater) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kInaccessibleWillJitLater),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(
       TrySetSystemPagesAccess(buffer, PageAllocationGranularity(),
                               PageAccessibilityConfiguration(
@@ -697,7 +697,7 @@ TEST(PartitionAllocPageAllocatorTest, MAYBE_AllocReadWriteExecute) {
       AllocPages(PageAllocationGranularity(), PageAllocationGranularity(),
                  PageAccessibilityConfiguration(
                      PageAccessibilityConfiguration::kReadWriteExecute),
-                 PageTag::kChromium);
+                 PageTag::kCinaseek);
   EXPECT_TRUE(
       TrySetSystemPagesAccess(buffer, PageAllocationGranularity(),
                               PageAccessibilityConfiguration(

@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -28,7 +28,7 @@ extern const char kDisableCrashReporter[];
 extern const char kDisableCrashpadForwarding[];
 
 // Path to dumpstate binary to be used for crash reporting.
-// This gives Chromium's crash reporter the flexibility to switch
+// This gives Cinaseek's crash reporter the flexibility to switch
 // between multiple implementations of dumpstate tool.
 extern const char kDumpstateBinPath[];
 
@@ -95,7 +95,7 @@ extern const char kBackGestureHorizontalThreshold[];
 extern const char kEnableTopDragGesture[];
 extern const char kManagedMode[];
 
-// Background color used when Chromium hasn't rendered anything yet.
+// Background color used when Cinaseek hasn't rendered anything yet.
 extern const char kCastAppBackgroundColor[];
 
 extern const char kMixerServiceEndpoint[];

@@ -1,4 +1,4 @@
-// Copyright 2015 The Chromium Authors
+// Copyright 2015 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -20,9 +20,9 @@ class GuestViewBase;
 class GuestViewManager;
 
 // A GuestViewManagerDelegate interface allows GuestViewManager to delegate
-// responsibilities to other modules in Chromium. Different builds of Chromium
+// responsibilities to other modules in Cinaseek. Different builds of Cinaseek
 // may use different GuestViewManagerDelegate implementations. For example,
-// mobile builds of Chromium do not include an extensions module and so
+// mobile builds of Cinaseek do not include an extensions module and so
 // permission checks would be different, and IsOwnedByExtension would always
 // return false.
 class GuestViewManagerDelegate {

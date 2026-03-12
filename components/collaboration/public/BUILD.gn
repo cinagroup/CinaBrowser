@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -175,9 +175,9 @@ if (is_android) {
 
   android_library("core_java") {
     sources = [
-      "android/java/src/org/chromium/components/collaboration/CollaborationControllerDelegate.java",
-      "android/java/src/org/chromium/components/collaboration/CollaborationService.java",
-      "android/java/src/org/chromium/components/collaboration/ServiceStatus.java",
+      "android/java/src/org/Cinaseek/components/collaboration/CollaborationControllerDelegate.java",
+      "android/java/src/org/Cinaseek/components/collaboration/CollaborationService.java",
+      "android/java/src/org/Cinaseek/components/collaboration/ServiceStatus.java",
     ]
 
     deps = [
@@ -211,11 +211,11 @@ if (is_android) {
       "//components/collaboration/internal:core_internal",
     ]
 
-    sources = [ "android/java/src/org/chromium/components/collaboration/ServiceStatus.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/ServiceStatus.java" ]
   }
 
   android_library("comments_java") {
-    sources = [ "android/java/src/org/chromium/components/collaboration/comments/CommentsService.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/comments/CommentsService.java" ]
 
     deps = [
       "//base:callback_java",
@@ -236,15 +236,15 @@ if (is_android) {
 
   android_library("messaging_java") {
     sources = [
-      "android/java/src/org/chromium/components/collaboration/messaging/ActivityLogItem.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/ActivityLogQueryParams.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/InstantMessage.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/MessageAttribution.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/MessageUtils.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/MessagingBackendService.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/PersistentMessage.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/TabGroupMessageMetadata.java",
-      "android/java/src/org/chromium/components/collaboration/messaging/TabMessageMetadata.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/ActivityLogItem.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/ActivityLogQueryParams.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/InstantMessage.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/MessageAttribution.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/MessageUtils.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/MessagingBackendService.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/PersistentMessage.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/TabGroupMessageMetadata.java",
+      "android/java/src/org/Cinaseek/components/collaboration/messaging/TabMessageMetadata.java",
     ]
 
     deps = [
@@ -269,7 +269,7 @@ if (is_android) {
   }
 
   robolectric_library("junit_messaging") {
-    sources = [ "android/java/src/org/chromium/components/collaboration/messaging/MessageUtilsUnitTest.java" ]
+    sources = [ "android/java/src/org/Cinaseek/components/collaboration/messaging/MessageUtilsUnitTest.java" ]
     deps = [
       ":java",
       "//base:base_java",

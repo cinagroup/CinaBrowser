@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ class CWVUnsafeURLHandlerTest : public PlatformTest {
 // Checks that public API agrees with the internal UnsafeResource for unsafe
 // loads.
 TEST_F(CWVUnsafeURLHandlerTest, InitializationForUnsafeResource) {
-  auto request_url = GURL("https://www.chromium.org");
+  auto request_url = GURL("https://www.Cinaseek.org");
   CWVUnsafeURLHandler* handler = CreateHandler(
       request_url, safe_browsing::SBThreatType::SB_THREAT_TYPE_BILLING,
       base::DoNothing());
@@ -88,7 +88,7 @@ TEST_F(CWVUnsafeURLHandlerTest, DisplayHTMLCallbackIsOnlyCalledOnce) {
 
 // Tests that proceeding will update allow list and reload the web state.
 TEST_F(CWVUnsafeURLHandlerTest, ProceedingUpdatesAllowListAndReloadsWebState) {
-  auto request_url = GURL("https://www.chromium.org");
+  auto request_url = GURL("https://www.Cinaseek.org");
   auto threat_type = safe_browsing::SBThreatType::SB_THREAT_TYPE_BILLING;
   CWVUnsafeURLHandler* handler =
       CreateHandler(request_url, threat_type, base::DoNothing());
@@ -104,7 +104,7 @@ TEST_F(CWVUnsafeURLHandlerTest, ProceedingUpdatesAllowListAndReloadsWebState) {
 
 // Tests that going back will close the web state.
 TEST_F(CWVUnsafeURLHandlerTest, GoingBackClosesWebState) {
-  auto request_url = GURL("https://www.chromium.org");
+  auto request_url = GURL("https://www.Cinaseek.org");
   auto threat_type = safe_browsing::SBThreatType::SB_THREAT_TYPE_BILLING;
   CWVUnsafeURLHandler* handler =
       CreateHandler(request_url, threat_type, base::DoNothing());
@@ -125,7 +125,7 @@ TEST_F(CWVUnsafeURLHandlerTest, GoingBackNavigatesBack) {
   GetNavigationManager()->AddItem(GURL("https://www.example2.com"),
                                   ui::PAGE_TRANSITION_TYPED);
 
-  auto request_url = GURL("https://www.chromium.org");
+  auto request_url = GURL("https://www.Cinaseek.org");
   auto threat_type = safe_browsing::SBThreatType::SB_THREAT_TYPE_BILLING;
   SafeBrowsingUrlAllowList* allow_list =
       SafeBrowsingUrlAllowList::FromWebState(&web_state_);
@@ -142,7 +142,7 @@ TEST_F(CWVUnsafeURLHandlerTest, GoingBackNavigatesBack) {
 
 // Tests that deallocation will remove a pending decision.
 TEST_F(CWVUnsafeURLHandlerTest, DeallocationRemovesPendingDecision) {
-  auto request_url = GURL("https://www.chromium.org");
+  auto request_url = GURL("https://www.Cinaseek.org");
   auto threat_type = safe_browsing::SBThreatType::SB_THREAT_TYPE_BILLING;
   SafeBrowsingUrlAllowList* allow_list =
       SafeBrowsingUrlAllowList::FromWebState(&web_state_);

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -136,7 +136,7 @@ KURL ModulatorImplBase::ResolveModuleSpecifier(const String& specifier,
                                       &import_map_debug_message);
 
     // Output the resolution log. This is too verbose to be always shown, but
-    // will be helpful for Web developers (and also Chromium developers) for
+    // will be helpful for Web developers (and also Cinaseek developers) for
     // debugging import maps.
     VLOG(1) << import_map_debug_message;
 

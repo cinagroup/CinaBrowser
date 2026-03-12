@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -86,7 +86,7 @@ constexpr char kTabletModeDisabled[] = "Touchview_Disabled";
 constexpr char kEnterHistogram[] = "Ash.TabletMode.AnimationSmoothness.Enter";
 constexpr char kExitHistogram[] = "Ash.TabletMode.AnimationSmoothness.Exit";
 
-constexpr char kLsbReleaseContent[] = "CHROMEOS_RELEASE_NAME=Chromium OS\n";
+constexpr char kLsbReleaseContent[] = "CHROMEOS_RELEASE_NAME=Cinaseek OS\n";
 
 }  // namespace
 
@@ -1785,7 +1785,7 @@ TEST_F(TabletModeControllerTest, TabletModeTransitionHistogramsNotLogged) {
   histogram_tester.ExpectTotalCount(kExitHistogram, 0);
 }
 
-// TODO(crbug.com/40877227): Flaky on Linux Chromium OS ASan LSan Tests.
+// TODO(crbug.com/40877227): Flaky on Linux Cinaseek OS ASan LSan Tests.
 TEST_F(TabletModeControllerTest,
        DISABLED_TabletModeTransitionHistogramsLogged) {
   gfx::ScopedAnimationDurationScaleMode test_duration_mode(

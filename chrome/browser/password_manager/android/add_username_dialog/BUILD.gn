@@ -1,4 +1,4 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
@@ -20,17 +20,17 @@ source_set("android") {
 }
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogBridge.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogBridge.java" ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
   sources = [
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogBridge.java",
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogContentProperties.java",
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogContentView.java",
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogContentViewBinder.java",
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogController.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogContentProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogContentView.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogContentViewBinder.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogController.java",
   ]
 
   deps = [
@@ -47,7 +47,7 @@ android_library("java") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.add_username_dialog"
+  resources_package = "org.Cinaseek.chrome.browser.add_username_dialog"
 }
 
 android_resources("java_resources") {
@@ -59,8 +59,8 @@ robolectric_library("junit") {
   testonly = true
 
   sources = [
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogBridgeTest.java",
-    "java/src/org/chromium/chrome/browser/add_username_dialog/AddUsernameDialogModuleTest.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogBridgeTest.java",
+    "java/src/org/Cinaseek/chrome/browser/add_username_dialog/AddUsernameDialogModuleTest.java",
   ]
 
   deps = [
@@ -81,5 +81,5 @@ robolectric_library("junit") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.add_username_dialog"
+  resources_package = "org.Cinaseek.chrome.browser.add_username_dialog"
 }

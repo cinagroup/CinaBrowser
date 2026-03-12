@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -82,7 +82,7 @@ bool PathProviderPosix(int key, FilePath* result) {
       }
 
       DLOG(ERROR) << "Couldn't find your source root.  "
-                  << "Try running from your chromium/src directory.";
+                  << "Try running from your Cinaseek/src directory.";
       return false;
     }
     case DIR_USER_DESKTOP:

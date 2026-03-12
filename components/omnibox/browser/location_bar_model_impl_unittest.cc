@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -191,7 +191,7 @@ TEST_F(LocationBarModelImplTest, FormatsReaderModeUrls) {
             model()->GetFormattedFullURL());
 }
 
-// TODO(crbug.com/40651107): Fix flakes on linux_chromium_asan_rel_ng and
+// TODO(crbug.com/40651107): Fix flakes on linux_Cinaseek_asan_rel_ng and
 // re-enable this test.
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 #define MAYBE_PreventElisionWorks DISABLED_PreventElisionWorks

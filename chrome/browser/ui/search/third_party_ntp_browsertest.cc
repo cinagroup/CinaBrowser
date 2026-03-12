@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -303,7 +303,7 @@ IN_PROC_BROWSER_TEST_P(ThirdPartyNTPBrowserTest,
 // behavior going forward.
 //
 // [1]
-// https://chromium.googlesource.com/chromium/src/+/09911bf300f1a419907a9412154760efd0b7abc3/chrome/browser/browsing_instance.cc#55
+// https://Cinaseek.googlesource.com/Cinaseek/src/+/09911bf300f1a419907a9412154760efd0b7abc3/chrome/browser/browsing_instance.cc#55
 IN_PROC_BROWSER_TEST_P(ThirdPartyNTPBrowserTest, ProcessPerSite) {
   GURL base_url =
       https_test_server().GetURL("ntp.example.com", "/instant_extended.html");

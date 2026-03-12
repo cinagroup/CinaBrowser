@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -70,7 +70,7 @@ using ::testing::NiceMock;
 using ::testing::UnorderedElementsAre;
 
 constexpr std::string_view kDefaultTestUrl{"https://www.google.com"};
-constexpr std::string_view kCrossOriginTestUrl{"https://www.chromium.org"};
+constexpr std::string_view kCrossOriginTestUrl{"https://www.Cinaseek.org"};
 constexpr char kTestUserEmail[] = "user@example.com";
 
 #if BUILDFLAG(IS_CHROMEOS)

@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -403,7 +403,7 @@ class IdentityTestEnvironment : public IdentityManager::DiagnosticsObserver,
   // NOTE: This constructor is for usage only in the special case of embedder
   // unittests that must use the IdentityManager instance associated with the
   // Profile. If you think you have another use case for it, contact
-  // blundell@chromium.org.
+  // blundell@Cinaseek.org.
   IdentityTestEnvironment(IdentityManager* identity_manager,
                           SigninClient* signin_client);
 

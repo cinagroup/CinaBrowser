@@ -1,4 +1,4 @@
-// Copyright 2022 The Chromium Authors
+// Copyright 2022 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -13,7 +13,7 @@ namespace {
 // A null implementation of TrustedVaultClient used for the public builds. It
 // fails all method calls (as it should only be called after the user has been
 // signed-in which is not supported by public build).
-class ChromiumTrustedVaultClientBackend final
+class CinaseekTrustedVaultClientBackend final
     : public TrustedVaultClientBackend {
  public:
   // TrustedVaultClientBackend implementation.
@@ -51,21 +51,21 @@ class ChromiumTrustedVaultClientBackend final
       UpdateGPMPinCompletionCallback completion) final;
 };
 
-void ChromiumTrustedVaultClientBackend::FetchKeys(
+void CinaseekTrustedVaultClientBackend::FetchKeys(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     KeysFetchedCallback completion) {
   NOTREACHED();
 }
 
-void ChromiumTrustedVaultClientBackend::MarkLocalKeysAsStale(
+void CinaseekTrustedVaultClientBackend::MarkLocalKeysAsStale(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     base::OnceClosure completion) {
   NOTREACHED();
 }
 
-void ChromiumTrustedVaultClientBackend::GetDegradedRecoverabilityStatus(
+void CinaseekTrustedVaultClientBackend::GetDegradedRecoverabilityStatus(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     base::OnceCallback<void(bool)> completion) {
@@ -73,7 +73,7 @@ void ChromiumTrustedVaultClientBackend::GetDegradedRecoverabilityStatus(
 }
 
 TrustedVaultClientBackend::CancelDialogCallback
-ChromiumTrustedVaultClientBackend::Reauthentication(
+CinaseekTrustedVaultClientBackend::Reauthentication(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     trusted_vault::TrustedVaultUserActionTriggerForUMA trigger,
@@ -83,7 +83,7 @@ ChromiumTrustedVaultClientBackend::Reauthentication(
 }
 
 TrustedVaultClientBackend::CancelDialogCallback
-ChromiumTrustedVaultClientBackend::FixDegradedRecoverability(
+CinaseekTrustedVaultClientBackend::FixDegradedRecoverability(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     UIViewController* presenting_view_controller,
@@ -91,20 +91,20 @@ ChromiumTrustedVaultClientBackend::FixDegradedRecoverability(
   NOTREACHED();
 }
 
-void ChromiumTrustedVaultClientBackend::ClearLocalData(
+void CinaseekTrustedVaultClientBackend::ClearLocalData(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     base::OnceCallback<void(bool)> completion) {
   // Do nothing.
 }
 
-void ChromiumTrustedVaultClientBackend::GetPublicKeyForIdentity(
+void CinaseekTrustedVaultClientBackend::GetPublicKeyForIdentity(
     id<SystemIdentity> identity,
     GetPublicKeyCallback completion) {
   NOTREACHED();
 }
 
-void ChromiumTrustedVaultClientBackend::UpdateGPMPinForAccount(
+void CinaseekTrustedVaultClientBackend::UpdateGPMPinForAccount(
     id<SystemIdentity> identity,
     trusted_vault::SecurityDomainId security_domain_id,
     UINavigationController* navigationController,
@@ -117,7 +117,7 @@ void ChromiumTrustedVaultClientBackend::UpdateGPMPinForAccount(
 
 std::unique_ptr<TrustedVaultClientBackend> CreateTrustedVaultClientBackend(
     TrustedVaultConfiguration* configuration) {
-  return std::make_unique<ChromiumTrustedVaultClientBackend>();
+  return std::make_unique<CinaseekTrustedVaultClientBackend>();
 }
 
 }  // namespace provider

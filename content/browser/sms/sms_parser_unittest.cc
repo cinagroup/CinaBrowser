@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,7 +65,7 @@ TEST(SmsParserTest, FtpScheme) {
 }
 
 TEST(SmsParserTest, Mailto) {
-  ASSERT_FALSE(SmsParser::Parse("@mailto:goto@chromium.org #123").IsValid());
+  ASSERT_FALSE(SmsParser::Parse("@mailto:goto@Cinaseek.org #123").IsValid());
 }
 
 TEST(SmsParserTest, MissingOneTimeCodeParameter) {

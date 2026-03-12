@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -142,7 +142,7 @@ void FakeFlossAdapterClient::StartDiscovery(ResponseCallback<Void> callback) {
     fail_discovery_ = std::nullopt;
 
     std::move(callback).Run(base::unexpected(
-        Error("org.chromium.bluetooth.Bluetooth.FooError", "Foo error")));
+        Error("org.Cinaseek.bluetooth.Bluetooth.FooError", "Foo error")));
     return;
   }
 
@@ -191,7 +191,7 @@ void FakeFlossAdapterClient::CreateBond(ResponseCallback<bool> callback,
     fail_bonding_ = std::nullopt;
 
     std::move(callback).Run(base::unexpected(
-        Error("org.chromium.Error.Failed", "Bonding failed by request")));
+        Error("org.Cinaseek.Error.Failed", "Bonding failed by request")));
     return;
   }
 
@@ -255,7 +255,7 @@ void FakeFlossAdapterClient::CreateBond(ResponseCallback<bool> callback,
 
     PostDelayedTask(base::BindOnce(
         std::move(callback),
-        base::unexpected(Error("org.chromium.bluetooth.UnknownDevice", ""))));
+        base::unexpected(Error("org.Cinaseek.bluetooth.UnknownDevice", ""))));
   }
 }
 
@@ -267,7 +267,7 @@ void FakeFlossAdapterClient::CreateBond(
     fail_bonding_ = std::nullopt;
 
     std::move(callback).Run(base::unexpected(
-        Error("org.chromium.Error.Failed", "Bonding failed by request")));
+        Error("org.Cinaseek.Error.Failed", "Bonding failed by request")));
     return;
   }
 
@@ -337,7 +337,7 @@ void FakeFlossAdapterClient::CreateBond(
 
     PostDelayedTask(base::BindOnce(
         std::move(callback),
-        base::unexpected(Error("org.chromium.bluetooth.UnknownDevice", ""))));
+        base::unexpected(Error("org.Cinaseek.bluetooth.UnknownDevice", ""))));
   }
 }
 

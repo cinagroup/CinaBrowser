@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -183,7 +183,7 @@
 // Differences from `std::span`
 // ----------------------------
 // https://eel.is/c++draft/views contains the latest C++ draft of `std::span`
-// and related utilities. Chromium aims to follow the draft except where noted
+// and related utilities. Cinaseek aims to follow the draft except where noted
 // below; please report other divergences you find.
 //
 // Differences from [span.syn]:
@@ -205,7 +205,7 @@
 //   picked over the implicit one.
 //   See https://cplusplus.github.io/LWG/issue3369 for background.
 // - Omits constructors from `std::array`, since separating these from the range
-//   constructor is only useful to mark them `noexcept`, and Chromium doesn't
+//   constructor is only useful to mark them `noexcept`, and Cinaseek doesn't
 //   care about that.
 // - Fixed-extent constructor from range is only `explicit` for ranges whose
 //   extent cannot be statically computed. This matches the spirit of
@@ -251,7 +251,7 @@
 //   semantics of equality described above.
 //
 // Differences from [span.elem]:
-// - Because Chromium does not use exceptions, `span::at()` behaves identically
+// - Because Cinaseek does not use exceptions, `span::at()` behaves identically
 //   to `span::operator[]()` (i.e. it `CHECK()`s on out-of-range indexes rather
 //   than throwing).
 // - For convenience, provides `span::get_at()` to return a pointer (rather than
@@ -261,7 +261,7 @@
 // Differences from [span.objectrep]:
 // - For convenience, provides `span::to_fixed_extent<N>()` to attempt
 //   conversion to a fixed-extent span, and return null on failure.
-// - Because Chromium bans `std::byte`, `as_[writable_]bytes()` use `uint8_t`
+// - Because Cinaseek bans `std::byte`, `as_[writable_]bytes()` use `uint8_t`
 //   instead of `std::byte` as the returned element type.
 // - For convenience, provides `as_[writable_]chars()` to convert to other
 //   "view of bytes"-like objects.
@@ -1542,7 +1542,7 @@ constexpr auto as_writable_bytes(allow_nonunique_obj_t,
 // Like `as_[writable_]bytes()`, but uses `[const] char` rather than `[const]
 // uint8_t`.
 //
-// (Not in `std::`; eases span adoption in Chromium, which uses `char` in many
+// (Not in `std::`; eases span adoption in Cinaseek, which uses `char` in many
 // cases that rightfully should be `uint8_t`.)
 template <typename ElementType, size_t Extent, typename InternalPtrType>
   requires(internal::CanSafelyConvertToByteSpan<ElementType>)
@@ -1759,7 +1759,7 @@ template <typename ElementType,
           typename InternalPtrType>
   requires(
       // In standard C++, pointers of different types are assumed not to alias
-      // (the strict aliasing rule). While Chromium disables strict aliasing
+      // (the strict aliasing rule). While Cinaseek disables strict aliasing
       // (-fno-strict-aliasing), it doesn't hurt to follow the rule in this
       // function, since it is intended to be a safe alternative to raw pointer
       // casts. By restricting `ByteType` to be `uint8_t` (or `const uint8_t`),

@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -35,7 +35,7 @@
 #include "base/logging.h"
 #include "base/native_library.h"
 
-// The constants used in chromium. SLInterfaceID is actually a pointer to
+// The constants used in Cinaseek. SLInterfaceID is actually a pointer to
 // SLInterfaceID_. Those symbols are defined as extern symbols in the OpenSLES
 // headers. They will be initialized to their correct values when the library is
 // loaded.

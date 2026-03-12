@@ -3,8 +3,8 @@ import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni") {
   sources = [
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerObserver.java",
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerServiceBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerServiceBridge.java",
   ]
 }
 
@@ -14,15 +14,15 @@ android_library("java") {
     "//chrome/android:chrome_all_java",
   ]
   sources = [
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerFactory.java",
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerImpl.java",
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerObserver.java",
-    "java/src/org/chromium/chrome/browser/task_manager/TaskManagerServiceBridge.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/PropertyStringifier.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerActivity.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerCoordinator.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerMediator.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerProperties.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerFactory.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerImpl.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerObserver.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/TaskManagerServiceBridge.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/PropertyStringifier.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerActivity.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerCoordinator.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerMediator.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerProperties.java",
   ]
 
   deps = [
@@ -45,7 +45,7 @@ android_library("java") {
     "//chrome/browser/task_manager:java_enum_srcjar",
   ]
 
-  resources_package = "org.chromium.chrome.browser.task_manager.ui"
+  resources_package = "org.Cinaseek.chrome.browser.task_manager.ui"
 }
 
 android_resources("java_resources") {
@@ -61,9 +61,9 @@ android_resources("java_resources") {
 
 robolectric_library("junit") {
   sources = [
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerActivityTest.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerCoordinatorTest.java",
-    "java/src/org/chromium/chrome/browser/task_manager/ui/TaskManagerMediatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerActivityTest.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerCoordinatorTest.java",
+    "java/src/org/Cinaseek/chrome/browser/task_manager/ui/TaskManagerMediatorTest.java",
   ]
   deps = [
     ":java",
@@ -80,5 +80,5 @@ robolectric_library("junit") {
     "//ui/android:ui_no_recycler_view_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.task_manager.ui"
+  resources_package = "org.Cinaseek.chrome.browser.task_manager.ui"
 }

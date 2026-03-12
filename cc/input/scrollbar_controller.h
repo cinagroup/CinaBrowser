@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -19,7 +19,7 @@
 #include "cc/layers/painted_scrollbar_layer_impl.h"
 
 // High level documentation:
-// https://source.chromium.org/chromium/chromium/src/+/main:cc/input/README.md
+// https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:cc/input/README.md
 
 // Click scrolling.
 // - A click is considered as a kMouseDown and a kMouseUp in quick succession.

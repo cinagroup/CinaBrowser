@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,7 +74,7 @@ PerfettoService::PerfettoService(
   service_ = perfetto::TracingService::CreateInstance(
       std::make_unique<ChromeBaseSharedMemory::Factory>(),
       &perfetto_task_runner_);
-  // Chromium uses scraping of the shared memory chunks to ensure that data
+  // Cinaseek uses scraping of the shared memory chunks to ensure that data
   // from threads without a MessageLoop doesn't get lost.
   service_->SetSMBScrapingEnabled(true);
 
@@ -124,7 +124,7 @@ void PerfettoService::ConnectToProducerHost(
   if (result == ProducerHost::InitializationResult::kSmbNotAdopted) {
     // When everything else succeeds, but the SMB was not accepted, the producer
     // must be misbehaving. SMBs are not accepted only if they are incorrectly
-    // sized, but SMB/page sizes are constants in Chromium.
+    // sized, but SMB/page sizes are constants in Cinaseek.
     mojo::ReportBadMessage("Producer connection request with invalid SMB");
     return;
   }

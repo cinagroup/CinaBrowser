@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -40,7 +40,7 @@ class EndToEndSyncTest : public testing::Test {
     client_bus_ = new Bus(std::move(client_bus_options));
     object_proxy_ = client_bus_->GetObjectProxy(
         test_service_->service_name(),
-        ObjectPath("/org/chromium/TestObject"));
+        ObjectPath("/org/Cinaseek/TestObject"));
     ASSERT_FALSE(client_bus_->HasDBusThread());
   }
 
@@ -62,7 +62,7 @@ TEST_F(EndToEndSyncTest, Echo) {
   const std::string kHello = "hello";
 
   // Create the method call.
-  MethodCall method_call("org.chromium.TestInterface", "Echo");
+  MethodCall method_call("org.Cinaseek.TestInterface", "Echo");
   MessageWriter writer(&method_call);
   writer.AppendString(kHello);
 
@@ -82,7 +82,7 @@ TEST_F(EndToEndSyncTest, Timeout) {
   const std::string kHello = "hello";
 
   // Create the method call.
-  MethodCall method_call("org.chromium.TestInterface", "DelayedEcho");
+  MethodCall method_call("org.Cinaseek.TestInterface", "DelayedEcho");
   MessageWriter writer(&method_call);
   writer.AppendString(kHello);
 
@@ -94,7 +94,7 @@ TEST_F(EndToEndSyncTest, Timeout) {
 }
 
 TEST_F(EndToEndSyncTest, NonexistentMethod) {
-  MethodCall method_call("org.chromium.TestInterface", "Nonexistent");
+  MethodCall method_call("org.Cinaseek.TestInterface", "Nonexistent");
 
   const int timeout_ms = ObjectProxy::TIMEOUT_USE_DEFAULT;
   auto result = object_proxy_->CallMethodAndBlock(&method_call, timeout_ms);
@@ -102,7 +102,7 @@ TEST_F(EndToEndSyncTest, NonexistentMethod) {
 }
 
 TEST_F(EndToEndSyncTest, BrokenMethod) {
-  MethodCall method_call("org.chromium.TestInterface", "BrokenMethod");
+  MethodCall method_call("org.Cinaseek.TestInterface", "BrokenMethod");
 
   const int timeout_ms = ObjectProxy::TIMEOUT_USE_DEFAULT;
   auto result = object_proxy_->CallMethodAndBlock(&method_call, timeout_ms);
@@ -115,9 +115,9 @@ TEST_F(EndToEndSyncTest, InvalidServiceName) {
 
   // Replace object proxy with new one.
   object_proxy_ = client_bus_->GetObjectProxy(
-      invalid_service_name, ObjectPath("/org/chromium/TestObject"));
+      invalid_service_name, ObjectPath("/org/Cinaseek/TestObject"));
 
-  MethodCall method_call("org.chromium.TestInterface", "Echo");
+  MethodCall method_call("org.Cinaseek.TestInterface", "Echo");
 
   const int timeout_ms = ObjectProxy::TIMEOUT_USE_DEFAULT;
   auto result = object_proxy_->CallMethodAndBlock(&method_call, timeout_ms);
@@ -129,7 +129,7 @@ TEST_F(EndToEndSyncTest, ConnectToSignalAndBlock) {
   base::RunLoop run_loop;
   std::string test_signal_string;
   EXPECT_TRUE(object_proxy_->ConnectToSignalAndBlock(
-      "org.chromium.TestInterface", "Test",
+      "org.Cinaseek.TestInterface", "Test",
       base::BindRepeating(
           [](base::OnceClosure quit_closure, std::string* return_string,
              Signal* signal) {

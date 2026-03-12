@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,17 +24,17 @@ extern NSString* const kGooglePasswordManagerWidgetPromoImage;
 extern NSString* const kGooglePasswordManagerWidgetPromoDisabledImage;
 extern NSString* const kGoogleSettingsPasswordsInOtherAppsBannerImage;
 #else
-extern NSString* const kChromiumDefaultBrowserIllustrationImage;
-extern NSString* const kChromiumDefaultBrowserScreenBannerImage;
-extern NSString* const kChromiumGuidedTourBannerImage;
-extern NSString* const kChromiumNotificationsOptInBannerImage;
-extern NSString* const kChromiumNotificationsOptInBannerLandscapeImage;
-extern NSString* const kChromiumPasswordManagerWidgetPromoImage;
-extern NSString* const kChromiumPasswordManagerWidgetPromoDisabledImage;
-extern NSString* const kChromiumSearchEngineChoiceIcon;
-extern NSString* const kChromiumSettingsPasswordsInOtherAppsBannerImage;
-extern NSString* const kChromiumSigninBannerImage;
-extern NSString* const kChromiumSigninPromoLogoImage;
+extern NSString* const kCinaseekDefaultBrowserIllustrationImage;
+extern NSString* const kCinaseekDefaultBrowserScreenBannerImage;
+extern NSString* const kCinaseekGuidedTourBannerImage;
+extern NSString* const kCinaseekNotificationsOptInBannerImage;
+extern NSString* const kCinaseekNotificationsOptInBannerLandscapeImage;
+extern NSString* const kCinaseekPasswordManagerWidgetPromoImage;
+extern NSString* const kCinaseekPasswordManagerWidgetPromoDisabledImage;
+extern NSString* const kCinaseekSearchEngineChoiceIcon;
+extern NSString* const kCinaseekSettingsPasswordsInOtherAppsBannerImage;
+extern NSString* const kCinaseekSigninBannerImage;
+extern NSString* const kCinaseekSigninPromoLogoImage;
 #endif  // BUILDFLAG(IOS_USE_BRANDED_ASSETS)
 
 // Custom image names.

@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ namespace content::indexed_db {
 
 // This class manages all the active/open backing stores for IndexedDB, of which
 // there is at most one per bucket. It also serves as the central liaison to
-// other Chromium components such as the quota manager. It runs on its own
+// other Cinaseek components such as the quota manager. It runs on its own
 // thread, so almost all interaction is declared via a mojo interface.
 class CONTENT_EXPORT IndexedDBContextImpl
     : public storage::mojom::IndexedDBControl,

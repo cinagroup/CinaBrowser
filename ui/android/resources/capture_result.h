@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -24,7 +24,7 @@ class SkBitmap;
 namespace ui {
 
 // This class is a mirror of
-// org.chromium.ui.resources.dynamics.CaptureResult.
+// org.Cinaseek.ui.resources.dynamics.CaptureResult.
 // It uses ScopedJavaLocalRef, meaning that the class is only usable as
 // a stack-based object in a single thread.
 class UI_ANDROID_EXPORT CaptureResult {

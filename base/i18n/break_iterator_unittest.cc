@@ -1,4 +1,4 @@
-// Copyright 2011 The Chromium Authors
+// Copyright 2011 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -510,7 +510,7 @@ TEST(BreakIteratorTest, BreakCharacter) {
   }
 }
 
-// Test for https://code.google.com/p/chromium/issues/detail?id=411213
+// Test for https://code.google.com/p/Cinaseek/issues/detail?id=411213
 // We should be able to get valid substrings with GetString() function
 // after setting new content by calling SetText().
 TEST(BreakIteratorTest, GetStringAfterSetText) {

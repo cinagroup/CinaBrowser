@@ -1,4 +1,4 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -31,8 +31,8 @@ class FakeOmniboxPedal : public OmniboxPedal {
 }  // namespace
 
 TEST(AutocompleteMatchTypeTest, AccessibilityLabelHistory) {
-  const std::u16string& kTestUrl = u"https://www.chromium.org";
-  const std::u16string& kTestTitle = u"The Chromium Projects";
+  const std::u16string& kTestUrl = u"https://www.Cinaseek.org";
+  const std::u16string& kTestTitle = u"The Cinaseek Projects";
 
   // Test plain url.
   AutocompleteMatch match;

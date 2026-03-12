@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -755,9 +755,9 @@ DropData PopulateDropDataFromPasteboard(NSPasteboard* pboard) {
   NSArray* types = [pboard types];
 
   drop_data.did_originate_from_renderer =
-      [types containsObject:ui::kUTTypeChromiumRendererInitiatedDrag];
+      [types containsObject:ui::kUTTypeCinaseekRendererInitiatedDrag];
   drop_data.is_from_privileged =
-      [types containsObject:ui::kUTTypeChromiumPrivilegedInitiatedDrag];
+      [types containsObject:ui::kUTTypeCinaseekPrivilegedInitiatedDrag];
 
   // Get URL if possible. To avoid exposing file system paths to web content,
   // filenames in the drag are not converted to file URLs.
@@ -780,8 +780,8 @@ DropData PopulateDropDataFromPasteboard(NSPasteboard* pboard) {
   if ([types containsObject:NSPasteboardTypeHTML]) {
     NSString* html = [pboard stringForType:NSPasteboardTypeHTML];
     drop_data.html = base::SysNSStringToUTF16(html);
-  } else if ([types containsObject:ui::kUTTypeChromiumImageAndHtml]) {
-    NSString* html = [pboard stringForType:ui::kUTTypeChromiumImageAndHtml];
+  } else if ([types containsObject:ui::kUTTypeCinaseekImageAndHtml]) {
+    NSString* html = [pboard stringForType:ui::kUTTypeCinaseekImageAndHtml];
     drop_data.html = base::SysNSStringToUTF16(html);
   } else if ([types containsObject:NSPasteboardTypeRTF]) {
     NSString* html = ui::clipboard_util::GetHTMLFromRTFOnPasteboard(pboard);
@@ -792,9 +792,9 @@ DropData PopulateDropDataFromPasteboard(NSPasteboard* pboard) {
   drop_data.filenames = ui::clipboard_util::FilesFromPasteboard(pboard);
 
   // Get custom MIME data.
-  if ([types containsObject:ui::kUTTypeChromiumDataTransferCustomData]) {
+  if ([types containsObject:ui::kUTTypeCinaseekDataTransferCustomData]) {
     NSData* customData =
-        [pboard dataForType:ui::kUTTypeChromiumDataTransferCustomData];
+        [pboard dataForType:ui::kUTTypeCinaseekDataTransferCustomData];
     if (std::optional<std::unordered_map<std::u16string, std::u16string>>
             maybe_custom_data = ui::ReadCustomDataIntoMap(
                 base::apple::NSDataToSpan(customData));

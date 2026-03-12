@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -53,7 +53,7 @@ bool LooksLikePacScript(const std::u16string& script) {
 // compatibility hasn't been an issue.
 //
 // For more details, also check out this comment:
-// http://code.google.com/p/chromium/issues/detail?id=18575#c20
+// http://code.google.com/p/Cinaseek/issues/detail?id=18575#c20
 const char kWpadUrl[] = "http://wpad/wpad.dat";
 const int kQuickCheckDelayMs = 1000;
 

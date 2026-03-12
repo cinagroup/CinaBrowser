@@ -1,4 +1,4 @@
-// Copyright 2014 The Chromium Authors
+// Copyright 2014 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -74,8 +74,8 @@ const char kCrx[] = "chromecrx";
 const char kWebView[] = "googleandroidwebview";
 const char kIOsWebView[] = "googleioswebview";
 #else
-const char kChrome[] = "chromium";
-const char kCrx[] = "chromiumcrx";
+const char kChrome[] = "Cinaseek";
+const char kCrx[] = "Cinaseekcrx";
 const char kWebView[] = "androidwebview";
 const char kIOsWebView[] = "ioswebview";
 #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)

@@ -1,8 +1,8 @@
-// Copyright 2017 The Chromium Authors
+// Copyright 2017 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// OME for the chromium gerrit codereview site.
+// OME for the Cinaseek gerrit codereview site.
 
 let clicked_element = null;
 

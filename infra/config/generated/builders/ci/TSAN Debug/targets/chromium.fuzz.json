@@ -1,7 +1,7 @@
 {
   "TSAN Debug": {
     "additional_compile_targets": [
-      "chromium_builder_asan"
+      "Cinaseek_builder_asan"
     ]
   }
 }

@@ -1,10 +1,10 @@
-# Copyright 2025 The Chromium Authors
+# Copyright 2025 The Cinaseek Authors
 # Use of this source code is governed by a BSD - style license that can be
 # found in the LICENSE file.
 
 import("//build/buildflag_header.gni")
 
-assert(is_chromeos, "Boca Receiver App is ChromeOS only")
+assert(is_chromeos, "Boca Receiver App is CinaseekOS only")
 
 static_library("boca_receiver_app_ui") {
   sources = [

@@ -1,11 +1,11 @@
-# Copyright 2023 The Chromium Authors
+# Copyright 2023 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
 import("//build/config/android/rules.gni")
 
 android_library("java") {
-  resources_package = "org.chromium.chrome.browser.hub"
+  resources_package = "org.Cinaseek.chrome.browser.hub"
   visibility = [
     ":*",
     "//chrome/android:*",
@@ -17,54 +17,54 @@ android_library("java") {
     "//chrome/test/android:chrome_java_transit",
   ]
   sources = [
-    "android/java/src/org/chromium/chrome/browser/hub/ApplyButtonData.java",
-    "android/java/src/org/chromium/chrome/browser/hub/EmptyHubBottomToolbarDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/hub/FadeHubLayoutAnimationFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/FadeHubLayoutAnimationFactoryImpl.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonHelper.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonMediator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonProperties.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonViewBinder.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarDelegate.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarDelegateFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarMediator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarProperties.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarView.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarViewBinder.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubColorBlendAnimatorSetHelper.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubColorMixerImpl.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubColorSchemeUpdate.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubColors.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubLayoutAnimationRunnerFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubLayoutAnimationRunnerImpl.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubManagerFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubManagerImpl.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostMediator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostProperties.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostView.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostViewBinder.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubSearchBoxBackgroundCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubSearchBoxBackgroundProperties.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubSearchBoxBackgroundViewBinder.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarCoordinator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarMediator.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarProperties.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarView.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarViewBinder.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneBackStackHandler.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneManagerImpl.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneTransitionHelper.java",
-    "android/java/src/org/chromium/chrome/browser/hub/ShrinkExpandHubLayoutAnimationFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/ShrinkExpandHubLayoutAnimatorProvider.java",
-    "android/java/src/org/chromium/chrome/browser/hub/SingleHubViewColorBlend.java",
-    "android/java/src/org/chromium/chrome/browser/hub/TabListHubLayoutAnimationFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/TabListHubLayoutAnimatorProvider.java",
-    "android/java/src/org/chromium/chrome/browser/hub/TranslateHubLayoutAnimationFactory.java",
-    "android/java/src/org/chromium/chrome/browser/hub/TranslateHubLayoutAnimationFactoryImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/ApplyButtonData.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/EmptyHubBottomToolbarDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/FadeHubLayoutAnimationFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/FadeHubLayoutAnimationFactoryImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonHelper.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonMediator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarDelegate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarDelegateFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarMediator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarView.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubColorBlendAnimatorSetHelper.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubColorMixerImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubColorSchemeUpdate.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubColors.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubLayoutAnimationRunnerFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubLayoutAnimationRunnerImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubManagerFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubManagerImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostMediator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostView.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubSearchBoxBackgroundCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubSearchBoxBackgroundProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubSearchBoxBackgroundViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarCoordinator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarMediator.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarProperties.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarView.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarViewBinder.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneBackStackHandler.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneManagerImpl.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneTransitionHelper.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/ShrinkExpandHubLayoutAnimationFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/ShrinkExpandHubLayoutAnimatorProvider.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/SingleHubViewColorBlend.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/TabListHubLayoutAnimationFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/TabListHubLayoutAnimatorProvider.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/TranslateHubLayoutAnimationFactory.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/TranslateHubLayoutAnimationFactoryImpl.java",
   ]
   deps = [
     ":java_resources",
@@ -130,9 +130,9 @@ android_resources("java_resources") {
 }
 
 android_library("unit_device_javatests") {
-  resources_package = "org.chromium.chrome.browser.hub"
+  resources_package = "org.Cinaseek.chrome.browser.hub"
   testonly = true
-  sources = [ "android/java/src/org/chromium/chrome/browser/hub/HubToolbarViewRenderTest.java" ]
+  sources = [ "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarViewRenderTest.java" ]
   deps = [
     ":java",
     ":java_resources",
@@ -167,29 +167,29 @@ android_library("unit_device_javatests") {
 }
 
 robolectric_library("junit") {
-  resources_package = "org.chromium.chrome.browser.hub"
+  resources_package = "org.Cinaseek.chrome.browser.hub"
   sources = [
-    "android/java/src/org/chromium/chrome/browser/hub/FadeHubLayoutAnimationFactoryImplUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonMediatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubActionButtonViewUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarCoordinatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarMediatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubBottomToolbarViewUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubColorMixerImplUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubCoordinatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubLayoutAnimationRunnerImplUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubManagerImplUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostMediatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubPaneHostViewUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubSearchBoxBackgroundViewBinderUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarCoordinatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarMediatorUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/HubToolbarViewUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneBackStackHandlerUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneManagerImplUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/PaneTransitionHelperUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/ShrinkExpandHubLayoutAnimatorProviderUnitTest.java",
-    "android/java/src/org/chromium/chrome/browser/hub/TranslateHubLayoutAnimationFactoryImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/FadeHubLayoutAnimationFactoryImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonMediatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubActionButtonViewUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarCoordinatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarMediatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubBottomToolbarViewUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubColorMixerImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubCoordinatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubLayoutAnimationRunnerImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubManagerImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostMediatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubPaneHostViewUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubSearchBoxBackgroundViewBinderUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarCoordinatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarMediatorUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/HubToolbarViewUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneBackStackHandlerUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneManagerImplUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/PaneTransitionHelperUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/ShrinkExpandHubLayoutAnimatorProviderUnitTest.java",
+    "android/java/src/org/Cinaseek/chrome/browser/hub/TranslateHubLayoutAnimationFactoryImplUnitTest.java",
   ]
   deps = [
     ":java",

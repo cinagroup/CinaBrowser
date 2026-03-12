@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,7 +50,7 @@ bool AudioInitializeConfig(sandbox::TargetConfig* config) {
   // WASAPIAudioInputStream::Open() will fail with error code E_ACCESSDENIED
   // (0x80070005) when trying to get a reference to ISimpleAudioVolume
   // interface. See
-  // https://cs.chromium.org/chromium/src/media/audio/win/audio_low_latency_input_win.cc
+  // https://cs.Cinaseek.org/Cinaseek/src/media/audio/win/audio_low_latency_input_win.cc
   // Use USER_RESTRICTED_NON_ADMIN over USER_NON_ADMIN to prevent failures when
   // AppLocker and similar application whitelisting solutions are in place.
   DCHECK(!config->IsConfigured());

@@ -14,9 +14,9 @@
         "swarming": {
           "dimensions": {
             "os": "Ubuntu-24.04",
-            "pool": "chromium.tests.multiscreen"
+            "pool": "Cinaseek.tests.multiscreen"
           },
-          "service_account": "chromium-tester@chops-service-accounts.iam.gserviceaccount.com"
+          "service_account": "Cinaseek-tester@chops-service-accounts.iam.gserviceaccount.com"
         },
         "test": "interactive_ui_tests",
         "test_id_prefix": "ninja://chrome/test:interactive_ui_tests/"

@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -317,7 +317,7 @@ std::string PushMessagingServiceImpl::GetProductCategoryForSubtypes() const {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return "com.chrome.fuchsia";
 #else
-  return "org.chromium.fuchsia";
+  return "org.Cinaseek.fuchsia";
 #endif
 }
 

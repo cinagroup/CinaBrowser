@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -65,7 +65,7 @@ GPUAdapter::GPUAdapter(
     propertiesChain = &(*propertiesChain)->nextInChain;
   }
   if (GetHandle().HasFeature(
-          wgpu::FeatureName::ChromiumExperimentalSubgroupMatrix)) {
+          wgpu::FeatureName::CinaseekExperimentalSubgroupMatrix)) {
     *propertiesChain = &subgroup_matrix_configs_;
     propertiesChain = &(*propertiesChain)->nextInChain;
   }

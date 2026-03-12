@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -92,7 +92,7 @@ inline constexpr char kProfilingAtStart[] = "profiling-at-start";
 inline constexpr char kProfilingFile[] = "profiling-file";
 
 // Controls whether profile data is periodically flushed to a file. Normally
-// the data gets written on exit but cases exist where chromium doesn't exit
+// the data gets written on exit but cases exist where Cinaseek doesn't exit
 // cleanly (especially when using single-process). A time in seconds can be
 // specified.
 inline constexpr char kProfilingFlush[] = "profiling-flush";

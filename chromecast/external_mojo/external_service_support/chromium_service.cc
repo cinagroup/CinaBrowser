@@ -1,8 +1,8 @@
-// Copyright 2019 The Chromium Authors
+// Copyright 2019 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "chromecast/external_mojo/external_service_support/chromium_service.h"
+#include "chromecast/external_mojo/external_service_support/Cinaseek_service.h"
 
 #include <utility>
 
@@ -30,32 +30,32 @@ void OnStartCallback(
         control_receiver) {
   DCHECK(connector);
   if (connector_receiver.is_valid()) {
-    connector->SendChromiumConnectorRequest(connector_receiver.PassPipe());
+    connector->SendCinaseekConnectorRequest(connector_receiver.PassPipe());
   }
 }
 
 }  // namespace
 
-ChromiumServiceWrapper::ChromiumServiceWrapper(
+CinaseekServiceWrapper::CinaseekServiceWrapper(
     ExternalConnector* connector,
     mojo::Remote<service_manager::mojom::Service> service_remote,
-    std::unique_ptr<service_manager::Service> chromium_service,
+    std::unique_ptr<service_manager::Service> Cinaseek_service,
     const std::string& service_name)
     : service_remote_(std::move(service_remote)),
-      chromium_service_(std::move(chromium_service)) {
+      Cinaseek_service_(std::move(Cinaseek_service)) {
   DCHECK(connector);
-  DCHECK(chromium_service_);
+  DCHECK(Cinaseek_service_);
 
   connector->RegisterService(service_name,
                              service_receiver_.BindNewPipeAndPassRemote());
 }
 
-ChromiumServiceWrapper::~ChromiumServiceWrapper() = default;
+CinaseekServiceWrapper::~CinaseekServiceWrapper() = default;
 
-void ChromiumServiceWrapper::OnBindInterface(
+void CinaseekServiceWrapper::OnBindInterface(
     const std::string& interface_name,
     mojo::ScopedMessagePipeHandle interface_pipe) {
-  chromium_service_->OnBindInterface(
+  Cinaseek_service_->OnBindInterface(
       service_manager::BindSourceInfo(
           service_manager::Identity("unique", base::Token::CreateRandom(),
                                     base::Token::CreateRandom(),
@@ -65,7 +65,7 @@ void ChromiumServiceWrapper::OnBindInterface(
 }
 
 mojo::PendingReceiver<service_manager::mojom::Service>
-CreateChromiumServiceReceiver(
+CreateCinaseekServiceReceiver(
     ExternalConnector* connector,
     mojo::Remote<service_manager::mojom::Service>* service_remote,
     service_manager::Identity identity) {
@@ -83,10 +83,10 @@ CreateChromiumServiceReceiver(
   return receiver;
 }
 
-std::unique_ptr<service_manager::Connector> CreateChromiumConnector(
+std::unique_ptr<service_manager::Connector> CreateCinaseekConnector(
     ExternalConnector* connector) {
   mojo::MessagePipe pipe;
-  connector->SendChromiumConnectorRequest(std::move(pipe.handle1));
+  connector->SendCinaseekConnectorRequest(std::move(pipe.handle1));
   return std::make_unique<service_manager::Connector>(
       mojo::Remote<service_manager::mojom::Connector>(
           mojo::PendingRemote<service_manager::mojom::Connector>(

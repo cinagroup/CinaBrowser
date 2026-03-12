@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -49,7 +49,7 @@ void CheckIcuDataResources() {
 //
 void InitializeIcu(const char* exec_path) {
   // ICU can't load the data file by itself because ICU tries to load the
-  // versioned data file (e.g., "icudt73l.dat"), while the Chromium build system
+  // versioned data file (e.g., "icudt73l.dat"), while the Cinaseek build system
   // creates the unversioned data file (e.g., "icudtl.dat").
   std::filesystem::path path{exec_path};
   path = path.parent_path() / "icudt" U_ICUDATA_TYPE_LETTER ".dat";

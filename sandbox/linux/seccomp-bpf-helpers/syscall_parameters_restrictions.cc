@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -582,7 +582,7 @@ SANDBOX_EXPORT bpf_dsl::ResultExpr RestrictMemfdCreateWithFallback(
   return If((flags & ~(kDefaultAllowedMemfdFlags)) == 0, Allow())
       // ChromeOS uses ~0 as the flags to check if memfd_create exists (will
       // return -EINVAL).
-      // https://source.chromium.org/chromium/chromium/src/+/main:mojo/core/channel_linux.cc;drc=c4987dbe36be309f8db36cba174310cb8a23e989;l=918
+      // https://source.Cinaseek.org/Cinaseek/Cinaseek/src/+/main:mojo/core/channel_linux.cc;drc=c4987dbe36be309f8db36cba174310cb8a23e989;l=918
       // Instead of doing something fancy to avoid this, just allow the syscall.
       // ~0 will always be invalid; even if every flag bit gets a usage in the
       // future, `flags` still encodes the huge page size which must be a power

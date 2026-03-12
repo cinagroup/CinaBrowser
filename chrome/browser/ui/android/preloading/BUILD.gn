@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,12 +8,12 @@ import("//chrome/browser/buildflags.gni")
 import("//third_party/jni_zero/jni_zero.gni")
 
 generate_jni("jni_headers") {
-  sources = [ "java/src/org/chromium/chrome/browser/preloading/AndroidPrerenderManager.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/preloading/AndroidPrerenderManager.java" ]
 }
 
 android_library("java") {
   srcjar_deps = [ ":jni_headers" ]
-  sources = [ "java/src/org/chromium/chrome/browser/preloading/AndroidPrerenderManager.java" ]
+  sources = [ "java/src/org/Cinaseek/chrome/browser/preloading/AndroidPrerenderManager.java" ]
 
   public_deps = []
 
@@ -29,7 +29,7 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
-  resources_package = "org.chromium.chrome.browser.preloading"
+  resources_package = "org.Cinaseek.chrome.browser.preloading"
 }
 
 source_set("preloading") {

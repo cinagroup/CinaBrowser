@@ -1,4 +1,4 @@
-// Copyright 2012 The Chromium Authors
+// Copyright 2012 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -45,11 +45,11 @@ class TabModel : public TabListInterface {
  public:
   // LINT.IfChange(kInvalidIndex)
   // Keep this in sync with
-  // chrome/browser/tabmodel/android/java/src/org/chromium/chrome/browser/tabmodel/TabList.java
+  // chrome/browser/tabmodel/android/java/src/org/Cinaseek/chrome/browser/tabmodel/TabList.java
   static constexpr int kInvalidIndex = -1;
-  // LINT.ThenChange(//chrome/browser/tabmodel/android/java/src/org/chromium/chrome/browser/tabmodel/TabList.java:INVALID_TAB_INDEX)
+  // LINT.ThenChange(//chrome/browser/tabmodel/android/java/src/org/Cinaseek/chrome/browser/tabmodel/TabList.java:INVALID_TAB_INDEX)
 
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tabmodel
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tabmodel
   enum class TabModelType {
     // A standard tab model that contains tabs from a profile.
     kStandard,
@@ -72,7 +72,7 @@ class TabModel : public TabListInterface {
   // Values must be numbered from 0 and can't have gaps.
   // This enum is used to back a histogram, entries should not be renumbered or
   // reused.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tab
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tab
   enum class TabLaunchType {
     // Opened from a link. Sets up a relationship between the newly created tab
     // and its parent.
@@ -194,12 +194,12 @@ class TabModel : public TabListInterface {
   //
   // Multiple lines are not supported by IFTTT.
   // clang-format off
-  // LINT.ThenChange(//tools/metrics/histograms/metadata/new_tab_page/enums.xml:TabLaunchType,//chrome/android/java/src/org/chromium/chrome/browser/tabmodel/ChromeTabCreator.java,//chrome/browser/tabpersistence/android/java/src/org/chromium/chrome/browser/tabpersistence/flatbuffer/tab_state_common.fbs,//chrome/browser/tabpersistence/android/java/src/org/chromium/chrome/browser/tabpersistence/FlatBufferTabStateSerializer.java)
+  // LINT.ThenChange(//tools/metrics/histograms/metadata/new_tab_page/enums.xml:TabLaunchType,//chrome/android/java/src/org/Cinaseek/chrome/browser/tabmodel/ChromeTabCreator.java,//chrome/browser/tabpersistence/android/java/src/org/Cinaseek/chrome/browser/tabpersistence/flatbuffer/tab_state_common.fbs,//chrome/browser/tabpersistence/android/java/src/org/Cinaseek/chrome/browser/tabpersistence/FlatBufferTabStateSerializer.java)
   // clang-format on
 
   // Various ways tabs can be closed.
   // Values must be numbered from 0 and can't have gaps.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tab
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tab
   enum class TabClosingSource {
     // Tab closing from all other sources.
     UNKNOWN,
@@ -211,7 +211,7 @@ class TabModel : public TabListInterface {
 
   // Various ways tabs can be selected.
   // Values must be numbered from 0 and can't have gaps.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tab
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tab
   enum class TabSelectionType {
     // Selection of adjacent tab when the active tab is closed in foreground.
     FROM_CLOSE,
@@ -233,7 +233,7 @@ class TabModel : public TabListInterface {
 
   // Various types of user agent.
   // Values must be numbered from 0 and can't have gaps.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.tab
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.tab
   enum class TabUserAgent {
     // Choose user agent based on default setting.
     DEFAULT,

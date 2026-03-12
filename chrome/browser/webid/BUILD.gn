@@ -1,4 +1,4 @@
-# Copyright 2024 The Chromium Authors
+# Copyright 2024 The Cinaseek Authors
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -8,12 +8,12 @@ if (is_android) {
 
   android_library("java") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/webid/DigitalCredentialsCreationDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/webid/DigitalCredentialsPresentationDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/webid/DigitalIdentityProvider.java",
-      "android/java/src/org/chromium/chrome/browser/webid/IdentityCredentialsDelegate.java",
-      "android/java/src/org/chromium/chrome/browser/webid/IdentityProviderService.java",
-      "android/java/src/org/chromium/chrome/browser/webid/TestIdP.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/DigitalCredentialsCreationDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/DigitalCredentialsPresentationDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/DigitalIdentityProvider.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/IdentityCredentialsDelegate.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/IdentityProviderService.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/TestIdP.java",
     ]
     deps = [
       "$google_play_services_package:google_play_services_identity_credentials_java",
@@ -35,16 +35,16 @@ if (is_android) {
 
   generate_jni("jni_headers") {
     sources = [
-      "android/java/src/org/chromium/chrome/browser/webid/DigitalIdentityProvider.java",
-      "android/java/src/org/chromium/chrome/browser/webid/IdentityProviderService.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/DigitalIdentityProvider.java",
+      "android/java/src/org/Cinaseek/chrome/browser/webid/IdentityProviderService.java",
     ]
   }
 
   robolectric_library("junit") {
     testonly = true
     sources = [
-      "android/junit/src/org/chromium/chrome/browser/webid/DigitalCredentialsPresentationDelegateTest.java",
-      "android/junit/src/org/chromium/chrome/browser/webid/DigitalIdentityProviderUnitTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/webid/DigitalCredentialsPresentationDelegateTest.java",
+      "android/junit/src/org/Cinaseek/chrome/browser/webid/DigitalIdentityProviderUnitTest.java",
     ]
 
     deps = [

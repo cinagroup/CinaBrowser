@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -357,7 +357,7 @@ ResultExpr EvaluateSyscallImpl(int fs_denied_errno,
   }
 
   // https://crbug.com/644759
-  // https://chromium-review.googlesource.com/c/crashpad/crashpad/+/3278691
+  // https://Cinaseek-review.googlesource.com/c/crashpad/crashpad/+/3278691
   if (sysno == __NR_rt_tgsigqueueinfo) {
     const Arg<pid_t> tgid(0);
     return If(tgid == current_pid, Allow())

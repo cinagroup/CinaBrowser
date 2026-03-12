@@ -1,4 +1,4 @@
-// Copyright 2021 The Chromium Authors
+// Copyright 2021 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -55,7 +55,7 @@ class COMPONENT_EXPORT(UI_BASE_IME_FUCHSIA) KeyboardClient
   std::optional<fidl::ServerBinding<fuchsia_ui_input3::KeyboardListener>>
       binding_;
 
-  // Dispatches events into Chromium once they have been converted to
+  // Dispatches events into Cinaseek once they have been converted to
   // ui::KeyEvents.
   const raw_ptr<InputEventSink> event_sink_;
 };

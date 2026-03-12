@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors
+// Copyright 2018 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -58,7 +58,7 @@ class DownloadItemRenameHandler;
 class COMPONENTS_DOWNLOAD_EXPORT DownloadItem : public base::SupportsUserData {
  public:
   // A Java counterpart will be generated for this enum.
-  // GENERATED_JAVA_ENUM_PACKAGE: org.chromium.components.download
+  // GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.components.download
   enum DownloadState {
     // Download is actively progressing.
     IN_PROGRESS = 0,

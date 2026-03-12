@@ -1,4 +1,4 @@
-// Copyright 2016 The Chromium Authors
+// Copyright 2016 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -64,7 +64,7 @@ class PlatformSensorAndroid : public PlatformSensor {
       const PlatformSensorConfiguration& configuration) override;
 
  private:
-  // Java object org.chromium.device.sensors.PlatformSensor
+  // Java object org.Cinaseek.device.sensors.PlatformSensor
   base::android::ScopedJavaGlobalRef<jobject> j_object_;
   const scoped_refptr<base::SequencedTaskRunner> sequenced_task_runner_ =
       base::ThreadPool::CreateSequencedTaskRunner({base::MayBlock()});

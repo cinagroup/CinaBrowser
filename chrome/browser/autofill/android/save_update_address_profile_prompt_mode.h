@@ -1,4 +1,4 @@
-// Copyright 2025 The Chromium Authors
+// Copyright 2025 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -10,7 +10,7 @@ namespace autofill {
 // This describes the different modes for the save/update address profile
 // prompt. This is used to tailor the UI of the prompt in Android. A java
 // IntDef@ is generated from this.
-// GENERATED_JAVA_ENUM_PACKAGE: org.chromium.chrome.browser.autofill
+// GENERATED_JAVA_ENUM_PACKAGE: org.Cinaseek.chrome.browser.autofill
 enum class SaveUpdateAddressProfilePromptMode {
   // The prompt is for creating a new address profile from settings.
   kCreateNewProfile,

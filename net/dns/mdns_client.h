@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors
+// Copyright 2013 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -91,7 +91,7 @@ class NET_EXPORT MDnsTransaction {
 // Created by the MDnsClient (see |MDnsClient::CreateListener|) and used to keep
 // track of listeners.
 //
-// TODO(ericorth@chromium.org): Consider moving this inside MDnsClient to better
+// TODO(ericorth@Cinaseek.org): Consider moving this inside MDnsClient to better
 // organize the namespace and avoid confusion with
 // net::HostResolver::MdnsListener.
 class NET_EXPORT MDnsListener {

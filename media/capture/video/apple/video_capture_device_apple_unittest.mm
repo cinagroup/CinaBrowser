@@ -1,4 +1,4 @@
-// Copyright 2020 The Chromium Authors
+// Copyright 2020 The Cinaseek Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -125,7 +125,7 @@ TEST(VideoCaptureDeviceMacTest, FindBestCaptureFormat) {
       @[ fmt_640_480_2vuy_30_60, fmt_640_480_2vuy_30 ], 640, 480, 30);
   EXPECT_EQ(result, fmt_640_480_2vuy_30);
 
-  // Prefer the Chromium format order.
+  // Prefer the Cinaseek format order.
   result = FindBestCaptureFormat(@[ fmt_640_480_yuvs_30, fmt_640_480_2vuy_30 ],
                                  640, 480, 30);
   EXPECT_EQ(result, fmt_640_480_2vuy_30);
